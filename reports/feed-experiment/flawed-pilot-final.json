@@ -1,0 +1,2287 @@
+{
+  "generated_at": 1790704991.9311063,
+  "generated_utc": "2026-09-29T18:03:11+00:00",
+  "comparison_status": "early_stop_due_quantity_bug",
+  "decision": "Do not rank feeds from this pilot: aged one-lot exit residuals censor closed-trade outcomes. Repeat both feeds after the execution fix.",
+  "config_equal": true,
+  "pair_count": {
+    "depth": 21,
+    "bbo": 21
+  },
+  "pair_differences": {
+    "depth_only": [],
+    "bbo_only": [],
+    "economics_differ": []
+  },
+  "portfolio_names_match": true,
+  "pilot_start_at": {
+    "depth": 1790703889.3686838,
+    "bbo": 1790703889.363804
+  },
+  "pilot_start_gap_seconds": 0.00487971305847168,
+  "checkpoint_at": {
+    "depth": 1790704880.2127538,
+    "bbo": 1790704880.212181
+  },
+  "checkpoint_utc": {
+    "depth": "2026-09-29T18:01:20+00:00",
+    "bbo": "2026-09-29T18:01:20+00:00"
+  },
+  "checkpoint_skew_seconds": 0.0005726814270019531,
+  "common_retained_cutoff": 1790704880.212181,
+  "common_retained_cutoff_utc": "2026-09-29T18:01:20+00:00",
+  "common_duration_seconds": 990.8483769893646,
+  "snapshot_performance_separate_times": {
+    "depth": {
+      "snapshot_at": 1790704880.2833946,
+      "snapshot_utc": "2026-09-29T18:01:20+00:00",
+      "snapshot_age_seconds": 111.64771175384521,
+      "snapshot_minus_checkpoint_seconds": 0.07064080238342285,
+      "status": "stopped",
+      "hl_quote_mode": "depth",
+      "cpu_percent_one_core": 24.761317371311193,
+      "loop_lag_p95_ms": 2.343603875488043,
+      "book_events_per_second": 324.20589089572843
+    },
+    "bbo": {
+      "snapshot_at": 1790704880.3165784,
+      "snapshot_utc": "2026-09-29T18:01:20+00:00",
+      "snapshot_age_seconds": 111.61452794075012,
+      "snapshot_minus_checkpoint_seconds": 0.10439729690551758,
+      "status": "stopped",
+      "hl_quote_mode": "bbo_plus_depth",
+      "cpu_percent_one_core": 34.69314582275817,
+      "loop_lag_p95_ms": 3.3107148483395576,
+      "book_events_per_second": 400.82239857035637
+    }
+  },
+  "retention": {
+    "depth": {
+      "stored_closed_at_own_checkpoint": 1636,
+      "queried_closed": 1636,
+      "query_truncated": false
+    },
+    "bbo": {
+      "stored_closed_at_own_checkpoint": 409,
+      "queried_closed": 409,
+      "query_truncated": false
+    }
+  },
+  "portfolios_independent_do_not_sum": {
+    "confirmed": {
+      "depth": {
+        "closed_exact": 0,
+        "closed_estimated": 0,
+        "closed_total": 0,
+        "closed_pnl_exact_usd": 0.0,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 0,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": 0.0,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.0,
+        "capital_costs_usd": 0.0,
+        "mean_pnl_per_closed_usd": null,
+        "win_fraction": null
+      },
+      "bbo": {
+        "closed_exact": 0,
+        "closed_estimated": 0,
+        "closed_total": 0,
+        "closed_pnl_exact_usd": 0.0,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 0,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": 0.0,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.0,
+        "capital_costs_usd": 0.0,
+        "mean_pnl_per_closed_usd": null,
+        "win_fraction": null
+      },
+      "outstanding_at_checkpoint": {
+        "depth": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        },
+        "bbo": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        }
+      },
+      "difference_bbo_minus_depth": {
+        "closed_total": 0,
+        "closed_pnl_total_usd": 0.0,
+        "wins": 0,
+        "aborted": 0
+      },
+      "retained_diagnostics": {
+        "depth": {
+          "retained_closed_own_checkpoint": 0,
+          "retained_closed_common_cutoff": 0,
+          "lifetime_closed_at_own_checkpoint": 0,
+          "coverage_fraction_own_checkpoint": null,
+          "common_cutoff_fraction_of_lifetime": null,
+          "paired": 0,
+          "failed_hedge": 0,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 0,
+          "filled_entry_legs": 0,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 0,
+          "entry_observation_coverage_fraction": null,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {},
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {}
+        },
+        "bbo": {
+          "retained_closed_own_checkpoint": 0,
+          "retained_closed_common_cutoff": 0,
+          "lifetime_closed_at_own_checkpoint": 0,
+          "coverage_fraction_own_checkpoint": null,
+          "common_cutoff_fraction_of_lifetime": null,
+          "paired": 0,
+          "failed_hedge": 0,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 0,
+          "filled_entry_legs": 0,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 0,
+          "entry_observation_coverage_fraction": null,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {},
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {}
+        }
+      }
+    },
+    "conservative": {
+      "depth": {
+        "closed_exact": 0,
+        "closed_estimated": 0,
+        "closed_total": 0,
+        "closed_pnl_exact_usd": 0.0,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 0,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": 0.0,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.0,
+        "capital_costs_usd": 0.0,
+        "mean_pnl_per_closed_usd": null,
+        "win_fraction": null
+      },
+      "bbo": {
+        "closed_exact": 0,
+        "closed_estimated": 0,
+        "closed_total": 0,
+        "closed_pnl_exact_usd": 0.0,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 0,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": 0.0,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.0,
+        "capital_costs_usd": 0.0,
+        "mean_pnl_per_closed_usd": null,
+        "win_fraction": null
+      },
+      "outstanding_at_checkpoint": {
+        "depth": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        },
+        "bbo": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        }
+      },
+      "difference_bbo_minus_depth": {
+        "closed_total": 0,
+        "closed_pnl_total_usd": 0.0,
+        "wins": 0,
+        "aborted": 0
+      },
+      "retained_diagnostics": {
+        "depth": {
+          "retained_closed_own_checkpoint": 0,
+          "retained_closed_common_cutoff": 0,
+          "lifetime_closed_at_own_checkpoint": 0,
+          "coverage_fraction_own_checkpoint": null,
+          "common_cutoff_fraction_of_lifetime": null,
+          "paired": 0,
+          "failed_hedge": 0,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 0,
+          "filled_entry_legs": 0,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 0,
+          "entry_observation_coverage_fraction": null,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {},
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {}
+        },
+        "bbo": {
+          "retained_closed_own_checkpoint": 0,
+          "retained_closed_common_cutoff": 0,
+          "lifetime_closed_at_own_checkpoint": 0,
+          "coverage_fraction_own_checkpoint": null,
+          "common_cutoff_fraction_of_lifetime": null,
+          "paired": 0,
+          "failed_hedge": 0,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 0,
+          "filled_entry_legs": 0,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 0,
+          "entry_observation_coverage_fraction": null,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {},
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {}
+        }
+      }
+    },
+    "convergence": {
+      "depth": {
+        "closed_exact": 1,
+        "closed_estimated": 0,
+        "closed_total": 1,
+        "closed_pnl_exact_usd": -0.8075227316796685,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -0.8075227316796685,
+        "wins": 0,
+        "losses": 1,
+        "flat": 0,
+        "aborted": 1,
+        "entry_attempts": 2,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": -0.8075227316796685,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.49857767000000003,
+        "capital_costs_usd": 5.061679661647748e-06,
+        "mean_pnl_per_closed_usd": -0.8075227316796685,
+        "win_fraction": 0.0
+      },
+      "bbo": {
+        "closed_exact": 0,
+        "closed_estimated": 0,
+        "closed_total": 0,
+        "closed_pnl_exact_usd": 0.0,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 0,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": 0.0,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.0,
+        "capital_costs_usd": 0.0,
+        "mean_pnl_per_closed_usd": null,
+        "win_fraction": null
+      },
+      "outstanding_at_checkpoint": {
+        "depth": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        },
+        "bbo": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        }
+      },
+      "difference_bbo_minus_depth": {
+        "closed_total": -1,
+        "closed_pnl_total_usd": 0.8075227316796685,
+        "wins": 0,
+        "aborted": -1
+      },
+      "retained_diagnostics": {
+        "depth": {
+          "retained_closed_own_checkpoint": 1,
+          "retained_closed_common_cutoff": 1,
+          "lifetime_closed_at_own_checkpoint": 1,
+          "coverage_fraction_own_checkpoint": 1.0,
+          "common_cutoff_fraction_of_lifetime": 1.0,
+          "paired": 0,
+          "failed_hedge": 1,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 1,
+          "filled_entry_legs": 1,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 2,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {
+            "None": 1
+          },
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {
+            "crypto": {
+              "closed": 1,
+              "pnl_usd": -0.8075227316796685,
+              "failed_hedges": 1
+            }
+          }
+        },
+        "bbo": {
+          "retained_closed_own_checkpoint": 0,
+          "retained_closed_common_cutoff": 0,
+          "lifetime_closed_at_own_checkpoint": 0,
+          "coverage_fraction_own_checkpoint": null,
+          "common_cutoff_fraction_of_lifetime": null,
+          "paired": 0,
+          "failed_hedge": 0,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 0,
+          "filled_entry_legs": 0,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 0,
+          "entry_observation_coverage_fraction": null,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {},
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {}
+        }
+      }
+    },
+    "cooldown": {
+      "depth": {
+        "closed_exact": 15,
+        "closed_estimated": 0,
+        "closed_total": 15,
+        "closed_pnl_exact_usd": -17.577659370285925,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -17.577659370285925,
+        "wins": 0,
+        "losses": 15,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 15,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": -17.577659370285925,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 7.485231582499999,
+        "capital_costs_usd": 7.478778592159443e-05,
+        "mean_pnl_per_closed_usd": -1.1718439580190616,
+        "win_fraction": 0.0
+      },
+      "bbo": {
+        "closed_exact": 38,
+        "closed_estimated": 0,
+        "closed_total": 38,
+        "closed_pnl_exact_usd": -51.122217507968955,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -51.122217507968955,
+        "wins": 0,
+        "losses": 38,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 39,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": -51.122217507968955,
+        "fees_usd": 7.036600495499998,
+        "funding_usd": 0.0,
+        "other_costs_usd": 18.969700665499992,
+        "capital_costs_usd": 0.0008180115687902158,
+        "mean_pnl_per_closed_usd": -1.345321513367604,
+        "win_fraction": 0.0
+      },
+      "outstanding_at_checkpoint": {
+        "depth": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        },
+        "bbo": {
+          "total": 1,
+          "status_counts": {
+            "EXITING": 1
+          },
+          "filled_exposure_positions": 1,
+          "pending_entries": 0,
+          "pending_exits": 1,
+          "pending_funding": 0,
+          "oldest_age_seconds": 259.46124362945557,
+          "oldest_exit_request_age_seconds": 248.9213593006134,
+          "aged_one_lot_exit_residuals": [
+            {
+              "position_id": "1790704620750937-367-cooldown",
+              "asset": "XAG",
+              "venue": "hyperliquid",
+              "remaining": 0.00999999999999801,
+              "lot_step": 0.01,
+              "age_seconds": 259.46124362945557
+            }
+          ],
+          "aged_one_lot_exit_residual_count": 1
+        }
+      },
+      "difference_bbo_minus_depth": {
+        "closed_total": 23,
+        "closed_pnl_total_usd": -33.544558137683026,
+        "wins": 0,
+        "aborted": 0
+      },
+      "retained_diagnostics": {
+        "depth": {
+          "retained_closed_own_checkpoint": 15,
+          "retained_closed_common_cutoff": 15,
+          "lifetime_closed_at_own_checkpoint": 15,
+          "coverage_fraction_own_checkpoint": 1.0,
+          "common_cutoff_fraction_of_lifetime": 1.0,
+          "paired": 0,
+          "failed_hedge": 15,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 15,
+          "filled_entry_legs": 15,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 30,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {
+            "None": 15
+          },
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 10,
+              "pnl_usd": -7.962248441181265,
+              "failed_hedges": 10
+            },
+            "crypto": {
+              "closed": 5,
+              "pnl_usd": -9.615410929104659,
+              "failed_hedges": 5
+            }
+          }
+        },
+        "bbo": {
+          "retained_closed_own_checkpoint": 38,
+          "retained_closed_common_cutoff": 38,
+          "lifetime_closed_at_own_checkpoint": 38,
+          "coverage_fraction_own_checkpoint": 1.0,
+          "common_cutoff_fraction_of_lifetime": 1.0,
+          "paired": 23,
+          "failed_hedge": 15,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 75,
+          "filled_entry_legs": 75,
+          "hyperliquid_filled_entry_legs": 38,
+          "all_entry_legs": 76,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": 1.0,
+          "entry_book_source_counts": {
+            "None": 37,
+            "bbo": 38
+          },
+          "hyperliquid_entry_book_source_counts": {
+            "bbo": 38
+          },
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 23,
+            "median": 691.9193267822266,
+            "p95": 1115.084171295166,
+            "mean": 763.0349138508673
+          },
+          "exit_request_to_closed_ms": {
+            "count": 23,
+            "median": 657.3610305786133,
+            "p95": 2531.7678451538086,
+            "mean": 983.6265729821247
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 23,
+            "median": -0.08232740880009526,
+            "p95": 0.0492344307000796,
+            "mean": -0.13935919402608676
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 23,
+            "median": -2.0693519743430975,
+            "p95": -1.9180419105067168,
+            "mean": -2.189709395188663
+          },
+          "retained_categories": {
+            "crypto": {
+              "closed": 7,
+              "pnl_usd": -15.88095385207693,
+              "failed_hedges": 6
+            },
+            "RWA/xyz": {
+              "closed": 31,
+              "pnl_usd": -35.24126365589203,
+              "failed_hedges": 9
+            }
+          }
+        }
+      }
+    },
+    "plus": {
+      "depth": {
+        "closed_exact": 470,
+        "closed_estimated": 1,
+        "closed_total": 471,
+        "closed_pnl_exact_usd": -501.58436351754335,
+        "closed_pnl_estimated_usd": -0.9274934393310804,
+        "closed_pnl_total_usd": -502.51185695687445,
+        "wins": 1,
+        "losses": 470,
+        "flat": 0,
+        "aborted": 1,
+        "entry_attempts": 473,
+        "winning_sum_usd": 1.5536480556971126,
+        "losing_sum_usd": -504.0655050125715,
+        "fees_usd": 47.469441175199954,
+        "funding_usd": 0.0079828086,
+        "other_costs_usd": 234.4075288390003,
+        "capital_costs_usd": 0.0024179511227914426,
+        "mean_pnl_per_closed_usd": -1.0669041548978226,
+        "win_fraction": 0.0021231422505307855
+      },
+      "bbo": {
+        "closed_exact": 181,
+        "closed_estimated": 1,
+        "closed_total": 182,
+        "closed_pnl_exact_usd": -249.3129855120463,
+        "closed_pnl_estimated_usd": -1.676588898262397,
+        "closed_pnl_total_usd": -250.9895744103087,
+        "wins": 0,
+        "losses": 182,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 186,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": -250.9895744103087,
+        "fees_usd": 48.27641599255,
+        "funding_usd": -0.00224573494,
+        "other_costs_usd": 89.672447487,
+        "capital_costs_usd": 0.004183849617855641,
+        "mean_pnl_per_closed_usd": -1.3790635956610369,
+        "win_fraction": 0.0
+      },
+      "outstanding_at_checkpoint": {
+        "depth": {
+          "total": 1,
+          "status_counts": {
+            "EXITING": 1
+          },
+          "filled_exposure_positions": 1,
+          "pending_entries": 0,
+          "pending_exits": 1,
+          "pending_funding": 0,
+          "oldest_age_seconds": 3.4294896125793457,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        },
+        "bbo": {
+          "total": 4,
+          "status_counts": {
+            "EXITING": 3,
+            "OPEN": 1
+          },
+          "filled_exposure_positions": 4,
+          "pending_entries": 0,
+          "pending_exits": 3,
+          "pending_funding": 0,
+          "oldest_age_seconds": 819.1230494976044,
+          "oldest_exit_request_age_seconds": 808.4196848869324,
+          "aged_one_lot_exit_residuals": [
+            {
+              "position_id": "1790704061089131-171-plus",
+              "asset": "NVDA",
+              "venue": "hyperliquid",
+              "remaining": 0.0009999999999994874,
+              "lot_step": 0.001,
+              "age_seconds": 819.1230494976044
+            },
+            {
+              "position_id": "1790704159129393-247-plus",
+              "asset": "XAG",
+              "venue": "hyperliquid",
+              "remaining": 0.00999999999999801,
+              "lot_step": 0.01,
+              "age_seconds": 721.0827879905701
+            }
+          ],
+          "aged_one_lot_exit_residual_count": 2
+        }
+      },
+      "difference_bbo_minus_depth": {
+        "closed_total": -289,
+        "closed_pnl_total_usd": 251.52228254656575,
+        "wins": -1,
+        "aborted": -1
+      },
+      "retained_diagnostics": {
+        "depth": {
+          "retained_closed_own_checkpoint": 471,
+          "retained_closed_common_cutoff": 471,
+          "lifetime_closed_at_own_checkpoint": 471,
+          "coverage_fraction_own_checkpoint": 1.0,
+          "common_cutoff_fraction_of_lifetime": 1.0,
+          "paired": 2,
+          "failed_hedge": 469,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 474,
+          "filled_entry_legs": 474,
+          "hyperliquid_filled_entry_legs": 3,
+          "all_entry_legs": 942,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": 1.0,
+          "entry_book_source_counts": {
+            "None": 471,
+            "l2book": 3
+          },
+          "hyperliquid_entry_book_source_counts": {
+            "l2book": 3
+          },
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 2,
+            "median": 1836.6341590881348,
+            "p95": 1906.2159061431885,
+            "mean": 1836.6341590881348
+          },
+          "exit_request_to_closed_ms": {
+            "count": 2,
+            "median": 796.5908050537109,
+            "p95": 796.8592643737793,
+            "mean": 796.5908050537109
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 2,
+            "median": -0.00685850830001733,
+            "p95": 0.0,
+            "mean": -0.00685850830001733
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 2,
+            "median": -1.9285335969116746,
+            "p95": -1.8175480147618714,
+            "mean": -1.9285335969116746
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 397,
+              "pnl_usd": -372.1683411251962,
+              "failed_hedges": 395
+            },
+            "crypto": {
+              "closed": 74,
+              "pnl_usd": -130.34351583167862,
+              "failed_hedges": 74
+            }
+          }
+        },
+        "bbo": {
+          "retained_closed_own_checkpoint": 182,
+          "retained_closed_common_cutoff": 182,
+          "lifetime_closed_at_own_checkpoint": 182,
+          "coverage_fraction_own_checkpoint": 1.0,
+          "common_cutoff_fraction_of_lifetime": 1.0,
+          "paired": 118,
+          "failed_hedge": 64,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 360,
+          "filled_entry_legs": 360,
+          "hyperliquid_filled_entry_legs": 180,
+          "all_entry_legs": 364,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": 1.0,
+          "entry_book_source_counts": {
+            "bbo": 174,
+            "None": 180,
+            "l2book": 6
+          },
+          "hyperliquid_entry_book_source_counts": {
+            "bbo": 174,
+            "l2book": 6
+          },
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 118,
+            "median": 626.3893842697144,
+            "p95": 1327.460527420044,
+            "mean": 722.4670870829436
+          },
+          "exit_request_to_closed_ms": {
+            "count": 118,
+            "median": 701.9494771957397,
+            "p95": 2591.809034347534,
+            "mean": 1006.6255472474179
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 118,
+            "median": 0.0,
+            "p95": 0.10927453599989878,
+            "mean": -0.05783871813007761
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 118,
+            "median": -1.9444011801510919,
+            "p95": -1.68796884859304,
+            "mean": -2.070906067320457
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 135,
+              "pnl_usd": -158.67031046984943,
+              "failed_hedges": 21
+            },
+            "crypto": {
+              "closed": 47,
+              "pnl_usd": -92.3192639404594,
+              "failed_hedges": 43
+            }
+          }
+        }
+      }
+    },
+    "premium": {
+      "depth": {
+        "closed_exact": 25,
+        "closed_estimated": 0,
+        "closed_total": 25,
+        "closed_pnl_exact_usd": -50.82209650321703,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -50.82209650321703,
+        "wins": 1,
+        "losses": 24,
+        "flat": 0,
+        "aborted": 1,
+        "entry_attempts": 26,
+        "winning_sum_usd": 1.374724364454047,
+        "losing_sum_usd": -52.19682086767108,
+        "fees_usd": 14.29000692777,
+        "funding_usd": 0.0,
+        "other_costs_usd": 12.390210886999997,
+        "capital_costs_usd": 0.00012968844759622583,
+        "mean_pnl_per_closed_usd": -2.032883860128681,
+        "win_fraction": 0.04
+      },
+      "bbo": {
+        "closed_exact": 29,
+        "closed_estimated": 0,
+        "closed_total": 29,
+        "closed_pnl_exact_usd": -62.31342006883574,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -62.31342006883574,
+        "wins": 0,
+        "losses": 29,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 30,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": -62.31342006883574,
+        "fees_usd": 24.47117016311999,
+        "funding_usd": 0.0,
+        "other_costs_usd": 14.042220338,
+        "capital_costs_usd": 0.0003578135154501029,
+        "mean_pnl_per_closed_usd": -2.148738623063301,
+        "win_fraction": 0.0
+      },
+      "outstanding_at_checkpoint": {
+        "depth": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        },
+        "bbo": {
+          "total": 1,
+          "status_counts": {
+            "OPEN": 1
+          },
+          "filled_exposure_positions": 1,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": 7.202170372009277,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        }
+      },
+      "difference_bbo_minus_depth": {
+        "closed_total": 4,
+        "closed_pnl_total_usd": -11.491323565618707,
+        "wins": -1,
+        "aborted": -1
+      },
+      "retained_diagnostics": {
+        "depth": {
+          "retained_closed_own_checkpoint": 25,
+          "retained_closed_common_cutoff": 25,
+          "lifetime_closed_at_own_checkpoint": 25,
+          "coverage_fraction_own_checkpoint": 1.0,
+          "common_cutoff_fraction_of_lifetime": 1.0,
+          "paired": 0,
+          "failed_hedge": 25,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 25,
+          "filled_entry_legs": 25,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 50,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {
+            "None": 25
+          },
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 3,
+              "pnl_usd": -4.0491083255150135,
+              "failed_hedges": 3
+            },
+            "crypto": {
+              "closed": 22,
+              "pnl_usd": -46.772988177702025,
+              "failed_hedges": 22
+            }
+          }
+        },
+        "bbo": {
+          "retained_closed_own_checkpoint": 29,
+          "retained_closed_common_cutoff": 29,
+          "lifetime_closed_at_own_checkpoint": 29,
+          "coverage_fraction_own_checkpoint": 1.0,
+          "common_cutoff_fraction_of_lifetime": 1.0,
+          "paired": 9,
+          "failed_hedge": 20,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 56,
+          "filled_entry_legs": 56,
+          "hyperliquid_filled_entry_legs": 28,
+          "all_entry_legs": 58,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": 1.0,
+          "entry_book_source_counts": {
+            "bbo": 28,
+            "None": 28
+          },
+          "hyperliquid_entry_book_source_counts": {
+            "bbo": 28
+          },
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 9,
+            "median": 537.2240543365479,
+            "p95": 1660.191535949707,
+            "mean": 720.7234700520834
+          },
+          "exit_request_to_closed_ms": {
+            "count": 9,
+            "median": 2662.7867221832275,
+            "p95": 5580.9783935546875,
+            "mean": 2699.460771348741
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 9,
+            "median": -0.2688586479999928,
+            "p95": 0.14525767580012117,
+            "mean": -0.3345444326689275
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 9,
+            "median": -3.218805193282402,
+            "p95": -2.5545289831777525,
+            "mean": -3.733437708095312
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 11,
+              "pnl_usd": -18.724799386206705,
+              "failed_hedges": 6
+            },
+            "crypto": {
+              "closed": 18,
+              "pnl_usd": -43.58862068262905,
+              "failed_hedges": 14
+            }
+          }
+        }
+      }
+    },
+    "shadow_baseline": {
+      "depth": {
+        "closed_exact": 561,
+        "closed_estimated": 1,
+        "closed_total": 562,
+        "closed_pnl_exact_usd": -532.0706718607128,
+        "closed_pnl_estimated_usd": -0.8275981497810805,
+        "closed_pnl_total_usd": -532.8982700104939,
+        "wins": 1,
+        "losses": 561,
+        "flat": 0,
+        "aborted": 1,
+        "entry_attempts": 566,
+        "winning_sum_usd": 1.1738163149394831,
+        "losing_sum_usd": -534.0720863254335,
+        "fees_usd": 0.5353685568,
+        "funding_usd": 0.0079828086,
+        "other_costs_usd": 279.9589439270002,
+        "capital_costs_usd": 0.002871335293844245,
+        "mean_pnl_per_closed_usd": -0.9482175622962524,
+        "win_fraction": 0.0017793594306049821
+      },
+      "bbo": {
+        "closed_exact": 80,
+        "closed_estimated": 0,
+        "closed_total": 80,
+        "closed_pnl_exact_usd": -92.27336569761096,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -92.27336569761096,
+        "wins": 0,
+        "losses": 80,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 84,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": -92.27336569761096,
+        "fees_usd": 11.5551528975,
+        "funding_usd": 0.0,
+        "other_costs_usd": 39.64877364449998,
+        "capital_costs_usd": 0.001937379608002132,
+        "mean_pnl_per_closed_usd": -1.153417071220137,
+        "win_fraction": 0.0
+      },
+      "outstanding_at_checkpoint": {
+        "depth": {
+          "total": 3,
+          "status_counts": {
+            "EXITING": 3
+          },
+          "filled_exposure_positions": 3,
+          "pending_entries": 0,
+          "pending_exits": 3,
+          "pending_funding": 0,
+          "oldest_age_seconds": 3.4598774909973145,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        },
+        "bbo": {
+          "total": 4,
+          "status_counts": {
+            "EXITING": 4
+          },
+          "filled_exposure_positions": 4,
+          "pending_entries": 0,
+          "pending_exits": 4,
+          "pending_funding": 0,
+          "oldest_age_seconds": 855.6226394176483,
+          "oldest_exit_request_age_seconds": 844.9216606616974,
+          "aged_one_lot_exit_residuals": [
+            {
+              "position_id": "1790704024589541-141-shadow_baseline",
+              "asset": "XAG",
+              "venue": "hyperliquid",
+              "remaining": 0.009999999999999787,
+              "lot_step": 0.01,
+              "age_seconds": 855.6226394176483
+            },
+            {
+              "position_id": "1790704050651502-168-shadow_baseline",
+              "asset": "NVDA",
+              "venue": "hyperliquid",
+              "remaining": 0.0009999999999996678,
+              "lot_step": 0.001,
+              "age_seconds": 829.5606784820557
+            },
+            {
+              "position_id": "1790704174805889-256-shadow_baseline",
+              "asset": "XAG",
+              "venue": "hyperliquid",
+              "remaining": 0.009999999999999565,
+              "lot_step": 0.01,
+              "age_seconds": 705.4062914848328
+            },
+            {
+              "position_id": "1790704216844821-285-shadow_baseline",
+              "asset": "META",
+              "venue": "hyperliquid",
+              "remaining": 0.0009999999999999454,
+              "lot_step": 0.001,
+              "age_seconds": 663.3673596382141
+            }
+          ],
+          "aged_one_lot_exit_residual_count": 4
+        }
+      },
+      "difference_bbo_minus_depth": {
+        "closed_total": -482,
+        "closed_pnl_total_usd": 440.6249043128829,
+        "wins": -1,
+        "aborted": -1
+      },
+      "retained_diagnostics": {
+        "depth": {
+          "retained_closed_own_checkpoint": 562,
+          "retained_closed_common_cutoff": 562,
+          "lifetime_closed_at_own_checkpoint": 562,
+          "coverage_fraction_own_checkpoint": 1.0,
+          "common_cutoff_fraction_of_lifetime": 1.0,
+          "paired": 2,
+          "failed_hedge": 560,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 565,
+          "filled_entry_legs": 565,
+          "hyperliquid_filled_entry_legs": 3,
+          "all_entry_legs": 1124,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": 1.0,
+          "entry_book_source_counts": {
+            "None": 562,
+            "l2book": 3
+          },
+          "hyperliquid_entry_book_source_counts": {
+            "l2book": 3
+          },
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 2,
+            "median": 1836.6341590881348,
+            "p95": 1906.2159061431885,
+            "mean": 1836.6341590881348
+          },
+          "exit_request_to_closed_ms": {
+            "count": 2,
+            "median": 796.5908050537109,
+            "p95": 796.8592643737793,
+            "mean": 796.5908050537109
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 2,
+            "median": -0.006859261550017481,
+            "p95": 0.0,
+            "mean": -0.006859261550017481
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 2,
+            "median": -1.8785836427866747,
+            "p95": -1.7675933067618712,
+            "mean": -1.8785836427866747
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 479,
+              "pnl_usd": -393.4321089906119,
+              "failed_hedges": 477
+            },
+            "crypto": {
+              "closed": 83,
+              "pnl_usd": -139.4661610198821,
+              "failed_hedges": 83
+            }
+          }
+        },
+        "bbo": {
+          "retained_closed_own_checkpoint": 80,
+          "retained_closed_common_cutoff": 80,
+          "lifetime_closed_at_own_checkpoint": 80,
+          "coverage_fraction_own_checkpoint": 1.0,
+          "common_cutoff_fraction_of_lifetime": 1.0,
+          "paired": 54,
+          "failed_hedge": 26,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 159,
+          "filled_entry_legs": 159,
+          "hyperliquid_filled_entry_legs": 79,
+          "all_entry_legs": 160,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": 1.0,
+          "entry_book_source_counts": {
+            "bbo": 77,
+            "None": 80,
+            "l2book": 2
+          },
+          "hyperliquid_entry_book_source_counts": {
+            "bbo": 77,
+            "l2book": 2
+          },
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 54,
+            "median": 693.5988664627075,
+            "p95": 1522.6616859436035,
+            "mean": 803.9311921155012
+          },
+          "exit_request_to_closed_ms": {
+            "count": 54,
+            "median": 787.8540754318237,
+            "p95": 4169.6977615356445,
+            "mean": 1254.6961881496288
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 54,
+            "median": 0.0,
+            "p95": 0.1371000000000322,
+            "mean": -0.01369907015185458
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 54,
+            "median": -1.8006788129810762,
+            "p95": -1.3588332094097808,
+            "mean": -1.8075812260938509
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 64,
+              "pnl_usd": -63.0111930273227,
+              "failed_hedges": 10
+            },
+            "crypto": {
+              "closed": 16,
+              "pnl_usd": -29.26217267028828,
+              "failed_hedges": 16
+            }
+          }
+        }
+      }
+    },
+    "standard": {
+      "depth": {
+        "closed_exact": 561,
+        "closed_estimated": 1,
+        "closed_total": 562,
+        "closed_pnl_exact_usd": -532.0706718607128,
+        "closed_pnl_estimated_usd": -0.8275981497810805,
+        "closed_pnl_total_usd": -532.8982700104939,
+        "wins": 1,
+        "losses": 561,
+        "flat": 0,
+        "aborted": 1,
+        "entry_attempts": 566,
+        "winning_sum_usd": 1.1738163149394831,
+        "losing_sum_usd": -534.0720863254335,
+        "fees_usd": 0.5353685568,
+        "funding_usd": 0.0079828086,
+        "other_costs_usd": 279.9589439270002,
+        "capital_costs_usd": 0.002871335293844245,
+        "mean_pnl_per_closed_usd": -0.9482175622962524,
+        "win_fraction": 0.0017793594306049821
+      },
+      "bbo": {
+        "closed_exact": 80,
+        "closed_estimated": 0,
+        "closed_total": 80,
+        "closed_pnl_exact_usd": -92.27336569761096,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -92.27336569761096,
+        "wins": 0,
+        "losses": 80,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 84,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": -92.27336569761096,
+        "fees_usd": 11.5551528975,
+        "funding_usd": 0.0,
+        "other_costs_usd": 39.64877364449998,
+        "capital_costs_usd": 0.001937379608002132,
+        "mean_pnl_per_closed_usd": -1.153417071220137,
+        "win_fraction": 0.0
+      },
+      "outstanding_at_checkpoint": {
+        "depth": {
+          "total": 3,
+          "status_counts": {
+            "EXITING": 3
+          },
+          "filled_exposure_positions": 3,
+          "pending_entries": 0,
+          "pending_exits": 3,
+          "pending_funding": 0,
+          "oldest_age_seconds": 3.4598774909973145,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        },
+        "bbo": {
+          "total": 4,
+          "status_counts": {
+            "EXITING": 4
+          },
+          "filled_exposure_positions": 4,
+          "pending_entries": 0,
+          "pending_exits": 4,
+          "pending_funding": 0,
+          "oldest_age_seconds": 855.6226394176483,
+          "oldest_exit_request_age_seconds": 844.9216606616974,
+          "aged_one_lot_exit_residuals": [
+            {
+              "position_id": "1790704024589541-140-standard",
+              "asset": "XAG",
+              "venue": "hyperliquid",
+              "remaining": 0.009999999999999787,
+              "lot_step": 0.01,
+              "age_seconds": 855.6226394176483
+            },
+            {
+              "position_id": "1790704050651502-167-standard",
+              "asset": "NVDA",
+              "venue": "hyperliquid",
+              "remaining": 0.0009999999999996678,
+              "lot_step": 0.001,
+              "age_seconds": 829.5606784820557
+            },
+            {
+              "position_id": "1790704174805889-255-standard",
+              "asset": "XAG",
+              "venue": "hyperliquid",
+              "remaining": 0.009999999999999565,
+              "lot_step": 0.01,
+              "age_seconds": 705.4062914848328
+            },
+            {
+              "position_id": "1790704216844821-284-standard",
+              "asset": "META",
+              "venue": "hyperliquid",
+              "remaining": 0.0009999999999999454,
+              "lot_step": 0.001,
+              "age_seconds": 663.3673596382141
+            }
+          ],
+          "aged_one_lot_exit_residual_count": 4
+        }
+      },
+      "difference_bbo_minus_depth": {
+        "closed_total": -482,
+        "closed_pnl_total_usd": 440.6249043128829,
+        "wins": -1,
+        "aborted": -1
+      },
+      "retained_diagnostics": {
+        "depth": {
+          "retained_closed_own_checkpoint": 562,
+          "retained_closed_common_cutoff": 562,
+          "lifetime_closed_at_own_checkpoint": 562,
+          "coverage_fraction_own_checkpoint": 1.0,
+          "common_cutoff_fraction_of_lifetime": 1.0,
+          "paired": 2,
+          "failed_hedge": 560,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 565,
+          "filled_entry_legs": 565,
+          "hyperliquid_filled_entry_legs": 3,
+          "all_entry_legs": 1124,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": 1.0,
+          "entry_book_source_counts": {
+            "None": 562,
+            "l2book": 3
+          },
+          "hyperliquid_entry_book_source_counts": {
+            "l2book": 3
+          },
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 2,
+            "median": 1836.6341590881348,
+            "p95": 1906.2159061431885,
+            "mean": 1836.6341590881348
+          },
+          "exit_request_to_closed_ms": {
+            "count": 2,
+            "median": 796.5908050537109,
+            "p95": 796.8592643737793,
+            "mean": 796.5908050537109
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 2,
+            "median": -0.006859261550017481,
+            "p95": 0.0,
+            "mean": -0.006859261550017481
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 2,
+            "median": -1.8785836427866747,
+            "p95": -1.7675933067618712,
+            "mean": -1.8785836427866747
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 479,
+              "pnl_usd": -393.4321089906119,
+              "failed_hedges": 477
+            },
+            "crypto": {
+              "closed": 83,
+              "pnl_usd": -139.4661610198821,
+              "failed_hedges": 83
+            }
+          }
+        },
+        "bbo": {
+          "retained_closed_own_checkpoint": 80,
+          "retained_closed_common_cutoff": 80,
+          "lifetime_closed_at_own_checkpoint": 80,
+          "coverage_fraction_own_checkpoint": 1.0,
+          "common_cutoff_fraction_of_lifetime": 1.0,
+          "paired": 54,
+          "failed_hedge": 26,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 159,
+          "filled_entry_legs": 159,
+          "hyperliquid_filled_entry_legs": 79,
+          "all_entry_legs": 160,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": 1.0,
+          "entry_book_source_counts": {
+            "bbo": 77,
+            "None": 80,
+            "l2book": 2
+          },
+          "hyperliquid_entry_book_source_counts": {
+            "bbo": 77,
+            "l2book": 2
+          },
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 54,
+            "median": 693.5988664627075,
+            "p95": 1522.6616859436035,
+            "mean": 803.9311921155012
+          },
+          "exit_request_to_closed_ms": {
+            "count": 54,
+            "median": 787.8540754318237,
+            "p95": 4169.6977615356445,
+            "mean": 1254.6961881496288
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 54,
+            "median": 0.0,
+            "p95": 0.1371000000000322,
+            "mean": -0.01369907015185458
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 54,
+            "median": -1.8006788129810762,
+            "p95": -1.3588332094097808,
+            "mean": -1.8075812260938509
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 64,
+              "pnl_usd": -63.0111930273227,
+              "failed_hedges": 10
+            },
+            "crypto": {
+              "closed": 16,
+              "pnl_usd": -29.26217267028828,
+              "failed_hedges": 16
+            }
+          }
+        }
+      }
+    }
+  },
+  "retained_route_rows_top_by_count": [
+    {
+      "portfolio": "plus",
+      "route": "META|hyperliquid:xyz:META|rh_lighter:13",
+      "depth": {
+        "closed": 144,
+        "pnl_usd": -142.8000350324399,
+        "failed_hedges": 144,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      },
+      "bbo": {
+        "closed": 82,
+        "pnl_usd": -100.93991881158749,
+        "failed_hedges": 10,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      }
+    },
+    {
+      "portfolio": "plus",
+      "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41",
+      "depth": {
+        "closed": 176,
+        "pnl_usd": -162.4827996176283,
+        "failed_hedges": 175,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      },
+      "bbo": {
+        "closed": 23,
+        "pnl_usd": -25.22046788161646,
+        "failed_hedges": 3,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "shadow_baseline",
+      "route": "META|hyperliquid:xyz:META|rh_lighter:13",
+      "depth": {
+        "closed": 163,
+        "pnl_usd": -145.69154444391202,
+        "failed_hedges": 163,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      },
+      "bbo": {
+        "closed": 26,
+        "pnl_usd": -28.699629436867394,
+        "failed_hedges": 2,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      }
+    },
+    {
+      "portfolio": "standard",
+      "route": "META|hyperliquid:xyz:META|rh_lighter:13",
+      "depth": {
+        "closed": 163,
+        "pnl_usd": -145.69154444391202,
+        "failed_hedges": 163,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      },
+      "bbo": {
+        "closed": 26,
+        "pnl_usd": -28.699629436867394,
+        "failed_hedges": 2,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      }
+    },
+    {
+      "portfolio": "shadow_baseline",
+      "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41",
+      "depth": {
+        "closed": 176,
+        "pnl_usd": -145.4224234090541,
+        "failed_hedges": 175,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      },
+      "bbo": {
+        "closed": 11,
+        "pnl_usd": -11.009331904253063,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "standard",
+      "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41",
+      "depth": {
+        "closed": 176,
+        "pnl_usd": -145.4224234090541,
+        "failed_hedges": 175,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      },
+      "bbo": {
+        "closed": 11,
+        "pnl_usd": -11.009331904253063,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "shadow_baseline",
+      "route": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15",
+      "depth": {
+        "closed": 108,
+        "pnl_usd": -80.50859068769579,
+        "failed_hedges": 107,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      },
+      "bbo": {
+        "closed": 13,
+        "pnl_usd": -12.71124321171561,
+        "failed_hedges": 2,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      }
+    },
+    {
+      "portfolio": "standard",
+      "route": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15",
+      "depth": {
+        "closed": 108,
+        "pnl_usd": -80.50859068769579,
+        "failed_hedges": 107,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      },
+      "bbo": {
+        "closed": 13,
+        "pnl_usd": -12.71124321171561,
+        "failed_hedges": 2,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      }
+    },
+    {
+      "portfolio": "plus",
+      "route": "CASHCAT|lighter:221|hyperliquid:CASHCAT",
+      "depth": {
+        "closed": 72,
+        "pnl_usd": -126.20415623702712,
+        "failed_hedges": 72,
+        "wins": 1,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      },
+      "bbo": {
+        "closed": 47,
+        "pnl_usd": -92.3192639404594,
+        "failed_hedges": 43,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      }
+    },
+    {
+      "portfolio": "shadow_baseline",
+      "route": "CASHCAT|lighter:221|hyperliquid:CASHCAT",
+      "depth": {
+        "closed": 81,
+        "pnl_usd": -134.62513793445356,
+        "failed_hedges": 81,
+        "wins": 1,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      },
+      "bbo": {
+        "closed": 16,
+        "pnl_usd": -29.26217267028828,
+        "failed_hedges": 16,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      }
+    },
+    {
+      "portfolio": "standard",
+      "route": "CASHCAT|lighter:221|hyperliquid:CASHCAT",
+      "depth": {
+        "closed": 81,
+        "pnl_usd": -134.62513793445356,
+        "failed_hedges": 81,
+        "wins": 1,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      },
+      "bbo": {
+        "closed": 16,
+        "pnl_usd": -29.26217267028828,
+        "failed_hedges": 16,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      }
+    },
+    {
+      "portfolio": "plus",
+      "route": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15",
+      "depth": {
+        "closed": 64,
+        "pnl_usd": -55.76024629371333,
+        "failed_hedges": 63,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      },
+      "bbo": {
+        "closed": 15,
+        "pnl_usd": -16.090853786720757,
+        "failed_hedges": 4,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      }
+    },
+    {
+      "portfolio": "premium",
+      "route": "CASHCAT|lighter:221|hyperliquid:CASHCAT",
+      "depth": {
+        "closed": 21,
+        "pnl_usd": -45.22843048182318,
+        "failed_hedges": 21,
+        "wins": 1,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      },
+      "bbo": {
+        "closed": 18,
+        "pnl_usd": -43.58862068262905,
+        "failed_hedges": 14,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      }
+    },
+    {
+      "portfolio": "shadow_baseline",
+      "route": "XAG|hyperliquid:xyz:SILVER|lighter:93",
+      "depth": {
+        "closed": 25,
+        "pnl_usd": -17.467063932574952,
+        "failed_hedges": 25,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      },
+      "bbo": {
+        "closed": 14,
+        "pnl_usd": -10.590988474486625,
+        "failed_hedges": 5,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "standard",
+      "route": "XAG|hyperliquid:xyz:SILVER|lighter:93",
+      "depth": {
+        "closed": 25,
+        "pnl_usd": -17.467063932574952,
+        "failed_hedges": 25,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      },
+      "bbo": {
+        "closed": 14,
+        "pnl_usd": -10.590988474486625,
+        "failed_hedges": 5,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "cooldown",
+      "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41",
+      "depth": {
+        "closed": 9,
+        "pnl_usd": -7.143818164095599,
+        "failed_hedges": 9,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      },
+      "bbo": {
+        "closed": 12,
+        "pnl_usd": -12.196935168074809,
+        "failed_hedges": 2,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "cooldown",
+      "route": "META|hyperliquid:xyz:META|rh_lighter:13",
+      "depth": {
+        "closed": 1,
+        "pnl_usd": -0.8184302770856655,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      },
+      "bbo": {
+        "closed": 15,
+        "pnl_usd": -18.63646256287644,
+        "failed_hedges": 5,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      }
+    },
+    {
+      "portfolio": "plus",
+      "route": "META|hyperliquid:xyz:META|lighter:117",
+      "depth": {
+        "closed": 6,
+        "pnl_usd": -4.417228735449244,
+        "failed_hedges": 6,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      },
+      "bbo": {
+        "closed": 9,
+        "pnl_usd": -10.367672672095463,
+        "failed_hedges": 2,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      }
+    },
+    {
+      "portfolio": "plus",
+      "route": "XAG|hyperliquid:xyz:SILVER|lighter:93",
+      "depth": {
+        "closed": 7,
+        "pnl_usd": -6.7080314459650054,
+        "failed_hedges": 7,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      },
+      "bbo": {
+        "closed": 6,
+        "pnl_usd": -6.051397317829197,
+        "failed_hedges": 2,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "cooldown",
+      "route": "CASHCAT|lighter:221|hyperliquid:CASHCAT",
+      "depth": {
+        "closed": 5,
+        "pnl_usd": -9.615410929104659,
+        "failed_hedges": 5,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      },
+      "bbo": {
+        "closed": 7,
+        "pnl_usd": -15.88095385207693,
+        "failed_hedges": 6,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      }
+    },
+    {
+      "portfolio": "premium",
+      "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41",
+      "depth": {
+        "closed": 2,
+        "pnl_usd": -2.536034363410197,
+        "failed_hedges": 2,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      },
+      "bbo": {
+        "closed": 5,
+        "pnl_usd": -8.083634282852053,
+        "failed_hedges": 3,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "premium",
+      "route": "META|hyperliquid:xyz:META|rh_lighter:13",
+      "depth": {
+        "closed": 1,
+        "pnl_usd": -1.513073962104817,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      },
+      "bbo": {
+        "closed": 6,
+        "pnl_usd": -10.641165103354652,
+        "failed_hedges": 3,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      }
+    },
+    {
+      "portfolio": "shadow_baseline",
+      "route": "META|hyperliquid:xyz:META|lighter:117",
+      "depth": {
+        "closed": 7,
+        "pnl_usd": -4.342486517374992,
+        "failed_hedges": 7,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      },
+      "bbo": null
+    },
+    {
+      "portfolio": "standard",
+      "route": "META|hyperliquid:xyz:META|lighter:117",
+      "depth": {
+        "closed": 7,
+        "pnl_usd": -4.342486517374992,
+        "failed_hedges": 7,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      },
+      "bbo": null
+    },
+    {
+      "portfolio": "cooldown",
+      "route": "META|hyperliquid:xyz:META|lighter:117",
+      "depth": null,
+      "bbo": {
+        "closed": 2,
+        "pnl_usd": -2.7534306397799684,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      }
+    },
+    {
+      "portfolio": "convergence",
+      "route": "XPL|lighter:71|hyperliquid:XPL",
+      "depth": {
+        "closed": 1,
+        "pnl_usd": -0.8075227316796685,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "XPL"
+      },
+      "bbo": null
+    },
+    {
+      "portfolio": "cooldown",
+      "route": "XAG|hyperliquid:xyz:SILVER|lighter:93",
+      "depth": null,
+      "bbo": {
+        "closed": 1,
+        "pnl_usd": -0.6261751305709636,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "cooldown",
+      "route": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15",
+      "depth": null,
+      "bbo": {
+        "closed": 1,
+        "pnl_usd": -1.0282601545898462,
+        "failed_hedges": 0,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      }
+    },
+    {
+      "portfolio": "plus",
+      "route": "CASHCAT|hyperliquid:CASHCAT|lighter:221",
+      "depth": {
+        "closed": 1,
+        "pnl_usd": -3.2321367759718393,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      },
+      "bbo": null
+    },
+    {
+      "portfolio": "plus",
+      "route": "XPL|lighter:71|hyperliquid:XPL",
+      "depth": {
+        "closed": 1,
+        "pnl_usd": -0.9072228186796685,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "XPL"
+      },
+      "bbo": null
+    },
+    {
+      "portfolio": "premium",
+      "route": "XPL|lighter:71|hyperliquid:XPL",
+      "depth": {
+        "closed": 1,
+        "pnl_usd": -1.544557695878845,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "XPL"
+      },
+      "bbo": null
+    },
+    {
+      "portfolio": "shadow_baseline",
+      "route": "CASHCAT|hyperliquid:CASHCAT|lighter:221",
+      "depth": {
+        "closed": 1,
+        "pnl_usd": -4.033500353748839,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      },
+      "bbo": null
+    },
+    {
+      "portfolio": "shadow_baseline",
+      "route": "XPL|lighter:71|hyperliquid:XPL",
+      "depth": {
+        "closed": 1,
+        "pnl_usd": -0.8075227316796685,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "XPL"
+      },
+      "bbo": null
+    },
+    {
+      "portfolio": "standard",
+      "route": "CASHCAT|hyperliquid:CASHCAT|lighter:221",
+      "depth": {
+        "closed": 1,
+        "pnl_usd": -4.033500353748839,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      },
+      "bbo": null
+    },
+    {
+      "portfolio": "standard",
+      "route": "XPL|lighter:71|hyperliquid:XPL",
+      "depth": {
+        "closed": 1,
+        "pnl_usd": -0.8075227316796685,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "XPL"
+      },
+      "bbo": null
+    }
+  ],
+  "retained_route_rows_omitted": 0,
+  "comparability_flags": [
+    "aged_one_lot_exit_residual_censoring",
+    "early_stop_due_quantity_bug"
+  ],
+  "limitations": [
+    "Cumulative ledger totals are each run's latest checkpoint and cannot be rewound to the common cutoff.",
+    "Retained trade diagnostics use the common earlier checkpoint cutoff and may omit pruned trades.",
+    "Depth and BBO portfolios share opportunities; portfolio P&L must not be summed as independent returns.",
+    "The feed cohorts may have different numbers and mixes of attempted trades; net P&L alone cannot rank feeds.",
+    "Public displayed quotes and paper fills do not prove executable orders.",
+    "CPU and p95 lag are separate snapshot observations, not one synchronized measurement.",
+    "Entry-edge deterioration is measured only for paired, full planned size; exit delay requires exit_requested_at.",
+    "Only trades settled by the common earlier checkpoint enter retained comparisons; open and unsettled positions stay separate."
+  ]
+}
