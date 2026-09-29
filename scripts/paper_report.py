@@ -3,9 +3,18 @@
 import argparse
 from collections import defaultdict
 import json
+import math
 from pathlib import Path
 import sqlite3
 import time
+
+def latency_summary(stats):
+    observed=stats.get("observed",0);triggered=stats.get("triggered",0);missing=stats.get("missing",0)
+    return dict(stats,actual_delay_mean_ms=stats.get("actual_delay_ms_sum",0)/observed if observed else None,
+        observed_coverage_fraction=observed/triggered if triggered else None,
+        survival_fraction_of_observed=stats.get("survived",0)/observed if observed else None,
+        missing_fraction=missing/triggered if triggered else None,
+        pending=max(0,triggered-observed-missing))
 
 
 def report(path):
@@ -21,8 +30,14 @@ def report(path):
         top=[json.loads(r[0]) for r in db.execute('SELECT payload FROM top_signals ORDER BY score DESC LIMIT 10')]
     finally:db.close()
     engine=state['engine'];portfolios={}
+    by_id={p['id']:p for p in trades};by_id.update(engine['positions'])
+    trades=list(by_id.values())
     grouped=defaultdict(lambda:{'closed':0,'wins':0,'net_pnl_usd':0.0})
+    fill_delays=defaultdict(list)
     for p in trades:
+        for leg in p['legs']:
+            if leg.get('entry_time') is not None:
+                fill_delays[leg['venue']].append((leg['entry_time']-p['created_at'])*1000)
         if p['status'] not in ('CLOSED','CLOSED_ESTIMATED'):continue
         g=grouped[p['strategy']+'|'+p['asset']+'|'+p['pair_id']]
         pnl=p.get('net_pnl',p.get('net_pnl_usd',0))
@@ -39,7 +54,9 @@ def report(path):
     return {'checkpoint_at':updated,'checkpoint_age_seconds':max(0,time.time()-updated),
         'portfolios':portfolios,'top_signals_not_trade_pnl':top,
         'retained_trade_groups_not_lifetime_totals':dict(grouped),
-        'retained_trade_count':len(trades),'latency':engine.get('probe_stats',{}),
+        'retained_trade_count':len(trades),'latency':{k:latency_summary(v) for k,v in engine.get('probe_stats',{}).items()},
+        'retained_entry_fill_delay_ms_by_venue':{k:{'count':len(v),'median':sorted(v)[len(v)//2],
+            'p95':sorted(v)[math.ceil(.95*len(v))-1],'max':max(v)} for k,v in fill_delays.items()},
         'latency_by_strategy':engine.get('probe_stats_by_strategy',{}),
         'episodes':{'retained':len(episodes),'right_censored':sum(e.get('right_censored',False) for e in episodes),
             'single_sample':sum(e.get('samples',0)==1 for e in episodes),

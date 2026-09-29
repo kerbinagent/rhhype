@@ -38,6 +38,21 @@ def resident_memory_mb():
     except (OSError,ValueError,IndexError):return None
 
 
+async def checkpoint_to_store(engine,store,state,trades,signals,evidence):
+    """Failed persistence keeps its records queued with the matching ledger."""
+    work=asyncio.create_task(asyncio.to_thread(store.checkpoint,state,trades=trades,signals=signals,evidence=evidence))
+    try:
+        try:await asyncio.shield(work)
+        except asyncio.CancelledError:
+            await work
+            raise
+    except Exception:
+        engine.transitions=trades+engine.transitions
+        engine.signals=signals+engine.signals
+        engine.evidence=evidence+engine.evidence
+        raise
+
+
 class BookRing:
     """Sampling and explicit memory budget independent of message frequency."""
     def __init__(self,max_bytes=16*1024*1024,seconds=30,sample_interval=.5):
@@ -256,10 +271,7 @@ async def run(args,store,config):
                 state={'engine':copy.deepcopy(engine.export_state()),'funding':funding.dump_state(),'saved_at':now,
                        'runtime_model':4}
                 # Slow serialization/SQLite work stays out of the feed event loop.
-                work=asyncio.create_task(asyncio.to_thread(store.checkpoint,state,trades=trades,signals=signals,evidence=evidence))
-                try:await asyncio.shield(work)
-                except asyncio.CancelledError:
-                    await work;raise
+                await checkpoint_to_store(engine,store,state,trades,signals,evidence)
                 metrics=await asyncio.to_thread(store.snapshot,now)
                 mono=time.monotonic();book_rate=(engine.stats['book_events']-rate_sample[1])/max(.001,mono-rate_sample[0])
                 rate_sample=(mono,engine.stats['book_events'])

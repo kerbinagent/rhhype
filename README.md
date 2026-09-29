@@ -15,7 +15,7 @@ The main distinction is between Robinhood Uniswap stock tokens, Robinhood's sepa
 
 Runs the streaming paper-trade monitor: Hyperliquid versus Robinhood Lighter, Lighter Core and Aster, across every eligible matched perpetual market. The TUI separates **closed paper P&L**, **open liquidation estimates**, and **top 10 entry signals**. Standard, Plus and Premium accounts have independent capital and fee assumptions. Delayed entry/exit fills, partial hedges, settled funding, and all four trading fees are modeled.
 
-See [monitor instructions](research/monitor.md) for background launch, restart, limits, latency diagnostics and costs. Default output is now `data/paper-monitor`; your old `data/monitor` results are preserved. The old signal-only collector remains available with `scripts/monitor.py --legacy` and its [original guide](research/monitor-legacy.md).
+See [monitor instructions](research/monitor.md) for background launch, restart, limits, latency diagnostics and costs. See [implementation validation](reports/paper-monitor-validation.md) for live results and tests. Default output is now `data/paper-monitor`; your old `data/monitor` results are preserved. The old signal-only collector remains available with `scripts/monitor.py --legacy` and its [original guide](research/monitor-legacy.md).
 
 ## Reproduce the frozen analysis
 

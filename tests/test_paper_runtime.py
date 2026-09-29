@@ -1,12 +1,14 @@
 """Runtime resource bounds and partial-close settlement intervals."""
 import copy
+import asyncio
 import json
 from pathlib import Path
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from paper_monitor import BookRing, position_funding_segments, arguments, config_from
+from paper_monitor import BookRing, position_funding_segments, arguments, config_from, checkpoint_to_store
 from paper_engine import PaperEngine
 from paper_report import report
 from paper_store import PaperStore
@@ -79,6 +81,22 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual(config.notional,1000)
         self.assertEqual(config.strategies,('standard','plus','premium'))
         self.assertEqual(config.holding_seconds,300)
+
+
+class CheckpointFailureTests(unittest.IsolatedAsyncioTestCase):
+    async def test_failed_write_does_not_drop_drained_records(self):
+        engine=PaperEngine([])
+        engine.signals=[{'route':'newer'}]
+        class FailingStore:
+            def checkpoint(self,*args,**kwargs):raise RuntimeError('disk unavailable')
+        async def synchronous_thread(fn,*args,**kwargs):return fn(*args,**kwargs)
+        with patch('paper_monitor.asyncio.to_thread',new=synchronous_thread):
+            with self.assertRaisesRegex(RuntimeError,'disk unavailable'):
+                await checkpoint_to_store(engine,FailingStore(),{},[{'id':'closed-trade'}],
+                    [{'route':'older'}],[('fill',{},'fill',1000)])
+        self.assertEqual(engine.transitions,[{'id':'closed-trade'}])
+        self.assertEqual([x['route'] for x in engine.signals],['older','newer'])
+        self.assertEqual(engine.evidence[0][0],'fill')
 
 
 if __name__=='__main__':unittest.main()
