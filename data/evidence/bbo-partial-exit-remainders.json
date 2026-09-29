@@ -1,0 +1,906 @@
+{
+  "checkpoint_at": 1790704880.212181,
+  "source": "paper-monitor-feed-bbo",
+  "reason": "float remainder below one venue lot after partial exits",
+  "positions": [
+    {
+      "asset": "XAG",
+      "closed_at": null,
+      "created_at": 1790704024.5895417,
+      "exit_due": 1790704035.2809954,
+      "exit_reason": "max_hold",
+      "exit_requested_at": 1790704035.2905204,
+      "exit_trigger_pnl_usd": null,
+      "id": "1790704024589541-141-shadow_baseline",
+      "legs": [
+        {
+          "entry_fee": 0.08981033940000002,
+          "entry_fee_bps": 0.9,
+          "entry_observation": {
+            "attempted_quantity": 16.42,
+            "attempted_value": 997.8926600000002,
+            "book_engine_time": 1790704025.009,
+            "book_received_at": 1790704025.2809954,
+            "book_source": "bbo",
+            "eligible_quantity": 1252.57,
+            "observed_at": 1790704025.2809954,
+            "price_limit": 60.83277199999999,
+            "receipt_age_seconds": 0.0,
+            "side_quantity": 1252.57,
+            "signal_to_receipt_seconds": 0.6914536952972412,
+            "source_age_seconds": 0.27199530601501465
+          },
+          "entry_result": "filled",
+          "entry_time": 1790704025.2809954,
+          "entry_value": 997.8926600000002,
+          "entry_vwap": 60.773,
+          "exit_fee": 0.0897530508,
+          "exit_fills": [
+            {
+              "fee": 0.0009298269000000001,
+              "fee_bps": 0.9,
+              "quantity": 0.17,
+              "timestamp": 1790704035.6946316,
+              "value": 10.331410000000002
+            },
+            {
+              "fee": 0.009953962200000001,
+              "fee_bps": 0.9,
+              "quantity": 1.82,
+              "timestamp": 1790704036.0966973,
+              "value": 110.59958
+            },
+            {
+              "fee": 0.009024345,
+              "fee_bps": 0.9,
+              "quantity": 1.65,
+              "timestamp": 1790704036.6918654,
+              "value": 100.2705
+            },
+            {
+              "fee": 0.009024345,
+              "fee_bps": 0.9,
+              "quantity": 1.65,
+              "timestamp": 1790704037.3368723,
+              "value": 100.2705
+            },
+            {
+              "fee": 0.0009297657000000001,
+              "fee_bps": 0.9,
+              "quantity": 0.17,
+              "timestamp": 1790704037.9185736,
+              "value": 10.33073
+            },
+            {
+              "fee": 0.059890806,
+              "fee_bps": 0.9,
+              "quantity": 10.95,
+              "timestamp": 1790704038.5779805,
+              "value": 665.4534
+            }
+          ],
+          "exit_time": null,
+          "exit_value": 997.25612,
+          "fee_bps": 0.9,
+          "fees_usd": 0.17956339020000003,
+          "intent": null,
+          "key": "hyperliquid:xyz:SILVER",
+          "market": "xyz:SILVER",
+          "min_notional": 10.0,
+          "min_qty": 0.0,
+          "price_pnl": -0.02881000000000533,
+          "quantity": 16.42,
+          "remaining": 0.009999999999999787,
+          "side": "long",
+          "step": "0.01",
+          "venue": "hyperliquid"
+        },
+        {
+          "entry_fee": 0.0,
+          "entry_fee_bps": 0,
+          "entry_observation": {
+            "attempted_quantity": 16.42,
+            "attempted_value": 998.9626790000001,
+            "book_engine_time": 1790704025.170528,
+            "book_received_at": 1790704025.2442842,
+            "book_source": null,
+            "eligible_quantity": 6983.669999999999,
+            "observed_at": 1790704025.2442842,
+            "price_limit": 60.77732742515225,
+            "receipt_age_seconds": 0.0,
+            "side_quantity": 35336.74,
+            "signal_to_receipt_seconds": 0.6547424793243408,
+            "source_age_seconds": 0.07375621795654297
+          },
+          "entry_result": "filled",
+          "entry_time": 1790704025.2442842,
+          "entry_value": 998.9626790000001,
+          "entry_vwap": 60.838165590742996,
+          "exit_fee": 0.0,
+          "exit_fills": [
+            {
+              "fee": 0.0,
+              "fee_bps": 0,
+              "quantity": 16.42,
+              "timestamp": 1790704035.8440378,
+              "value": 999.303392
+            }
+          ],
+          "exit_time": 1790704035.8440378,
+          "exit_value": 999.303392,
+          "fee_bps": 0,
+          "fees_usd": 0.0,
+          "intent": null,
+          "key": "rh_lighter:41",
+          "market": 41,
+          "min_notional": 10.0,
+          "min_qty": 0.15,
+          "price_pnl": -0.340712999999937,
+          "quantity": 16.42,
+          "remaining": 0,
+          "side": "short",
+          "step": "0.01",
+          "venue": "rh_lighter"
+        }
+      ],
+      "open_funding": {
+        "cashflow_usd": -3.8002499999999193e-06,
+        "complete": true,
+        "covered_until": 1790704832.0912602,
+        "estimated": true,
+        "events": [
+          {
+            "cashflow_usd": -3.8002499999999193e-06,
+            "market": "xyz:SILVER",
+            "quality": "estimated",
+            "quantity": 0.009999999999999787,
+            "rate_fraction": 6.25e-06,
+            "reference_price": 60.804,
+            "reference_skew_seconds": 0.1732015609741211,
+            "reference_time": 1790704799.8267984,
+            "side": "long",
+            "source": "sampled_oracle_price",
+            "time": 1790704800,
+            "venue": "hyperliquid"
+          }
+        ],
+        "missing": [],
+        "venue_results": {
+          "hyperliquid": {
+            "cashflow_usd": -3.8002499999999193e-06,
+            "complete": true,
+            "covered_until": 1790704832.0912602,
+            "estimated": true,
+            "events": [
+              {
+                "cashflow_usd": -3.8002499999999193e-06,
+                "market": "xyz:SILVER",
+                "quality": "estimated",
+                "quantity": 0.009999999999999787,
+                "rate_fraction": 6.25e-06,
+                "reference_price": 60.804,
+                "reference_skew_seconds": 0.1732015609741211,
+                "reference_time": 1790704799.8267984,
+                "side": "long",
+                "source": "sampled_oracle_price",
+                "time": 1790704800,
+                "venue": "hyperliquid"
+              }
+            ],
+            "missing": []
+          },
+          "rh_lighter": {
+            "cashflow_usd": 0,
+            "complete": true,
+            "covered_until": 1790704035.8440378,
+            "estimated": false,
+            "events": [],
+            "missing": []
+          }
+        }
+      },
+      "opened_at": 1790704025.2809954,
+      "pair_id": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41",
+      "reserved": {
+        "hyperliquid": 1000.68,
+        "rh_lighter": 1000.5
+      },
+      "signal": {
+        "asset": "XAG",
+        "buy": "hyperliquid:xyz:SILVER",
+        "buy_fee_bps": 0.9,
+        "buy_generation": "0e6cac807e3b494793ed22bc583633f3:hyperliquid:0:1",
+        "buy_received": 1790704024.5133996,
+        "buy_source_time": 1790704024.279,
+        "buy_value": 997.87624,
+        "entry_policy": {
+          "confirmation_expiry_seconds": null,
+          "confirmation_min_seconds": null,
+          "entry_skew_limit_seconds": 1.0,
+          "forecast_is_historical_spread": false,
+          "policy": "shadow_baseline",
+          "reason": "allowed",
+          "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41",
+          "training_skew_limit_seconds": 1.0,
+          "version": 3
+        },
+        "lifetime_is_sampled": true,
+        "net_edge_bps": 4.08175143669788,
+        "net_edge_usd": 0.4073082776266679,
+        "notional": 1000,
+        "opening_edge_usd": 0.9966301384000412,
+        "pair_id": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41",
+        "quantity": 16.42,
+        "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41",
+        "sell": "rh_lighter:41",
+        "sell_fee_bps": 0,
+        "sell_generation": "0e6cac807e3b494793ed22bc583633f3:rh_lighter:0:1",
+        "sell_received": 1790704024.4903743,
+        "sell_source_time": 1790704024.403173,
+        "sell_value": 998.9626790000001,
+        "skew_ms": 23.0252742767334,
+        "source_skew_ms": 124.17292594909668,
+        "strategy": "shadow_baseline",
+        "timestamp": 1790704024.5895417
+      },
+      "status": "EXITING",
+      "strategy": "shadow_baseline"
+    },
+    {
+      "asset": "NVDA",
+      "closed_at": null,
+      "created_at": 1790704050.6515026,
+      "exit_due": 1790704061.3087795,
+      "exit_reason": "max_hold",
+      "exit_requested_at": 1790704061.3095362,
+      "exit_trigger_pnl_usd": null,
+      "id": "1790704050651502-168-shadow_baseline",
+      "legs": [
+        {
+          "entry_fee": 0.08983206719999999,
+          "entry_fee_bps": 0.9,
+          "entry_observation": {
+            "attempted_quantity": 4.364,
+            "attempted_value": 998.1340799999999,
+            "book_engine_time": 1790704051.003,
+            "book_received_at": 1790704051.3087795,
+            "book_source": "bbo",
+            "eligible_quantity": 112.054,
+            "observed_at": 1790704051.3087795,
+            "price_limit": 228.94871999999998,
+            "receipt_age_seconds": 0.0,
+            "side_quantity": 112.054,
+            "signal_to_receipt_seconds": 0.6572768688201904,
+            "source_age_seconds": 0.30577945709228516
+          },
+          "entry_result": "filled",
+          "entry_time": 1790704051.3087795,
+          "entry_value": 998.1340799999999,
+          "entry_vwap": 228.72,
+          "exit_fee": 0.08979043679999998,
+          "exit_fills": [
+            {
+              "fee": 0.028750679099999996,
+              "fee_bps": 0.9,
+              "quantity": 1.397,
+              "timestamp": 1790704061.8452864,
+              "value": 319.45198999999997
+            },
+            {
+              "fee": 0.028750679099999996,
+              "fee_bps": 0.9,
+              "quantity": 1.397,
+              "timestamp": 1790704062.480155,
+              "value": 319.45198999999997
+            },
+            {
+              "fee": 0.0322890786,
+              "fee_bps": 0.9,
+              "quantity": 1.569,
+              "timestamp": 1790704062.9318147,
+              "value": 358.76754
+            }
+          ],
+          "exit_time": null,
+          "exit_value": 997.6715199999999,
+          "fee_bps": 0.9,
+          "fees_usd": 0.179622504,
+          "intent": null,
+          "key": "hyperliquid:xyz:NVDA",
+          "market": "xyz:NVDA",
+          "min_notional": 10.0,
+          "min_qty": 0.0,
+          "price_pnl": -0.23384000000004335,
+          "quantity": 4.364,
+          "remaining": 0.0009999999999996678,
+          "side": "long",
+          "step": "0.001",
+          "venue": "hyperliquid"
+        },
+        {
+          "entry_fee": 0.0,
+          "entry_fee_bps": 0,
+          "entry_observation": {
+            "attempted_quantity": 4.364,
+            "attempted_value": 998.9196,
+            "book_engine_time": 1790704051.090331,
+            "book_received_at": 1790704051.1927576,
+            "book_source": null,
+            "eligible_quantity": 1741.3642,
+            "observed_at": 1790704051.1927576,
+            "price_limit": 228.6711,
+            "receipt_age_seconds": 0.0,
+            "side_quantity": 6260.9291,
+            "signal_to_receipt_seconds": 0.541254997253418,
+            "source_age_seconds": 0.10242652893066406
+          },
+          "entry_result": "filled",
+          "entry_time": 1790704051.1927576,
+          "entry_value": 998.9196,
+          "entry_vwap": 228.9,
+          "exit_fee": 0.0,
+          "exit_fills": [
+            {
+              "fee": 0.0,
+              "fee_bps": 0,
+              "quantity": 4.364,
+              "timestamp": 1790704061.7891805,
+              "value": 999.09416
+            }
+          ],
+          "exit_time": 1790704061.7891805,
+          "exit_value": 999.09416,
+          "fee_bps": 0,
+          "fees_usd": 0.0,
+          "intent": null,
+          "key": "rh_lighter:15",
+          "market": 15,
+          "min_notional": 10.0,
+          "min_qty": 0.04,
+          "price_pnl": -0.17456000000004224,
+          "quantity": 4.364,
+          "remaining": 0,
+          "side": "short",
+          "step": "0.0001",
+          "venue": "rh_lighter"
+        }
+      ],
+      "open_funding": {
+        "cashflow_usd": -1.496426122999503e-06,
+        "complete": true,
+        "covered_until": 1790704801.859147,
+        "estimated": true,
+        "events": [
+          {
+            "cashflow_usd": -1.496426122999503e-06,
+            "market": "xyz:NVDA",
+            "quality": "estimated",
+            "quantity": 0.0009999999999996678,
+            "rate_fraction": 6.5699e-06,
+            "reference_price": 227.77,
+            "reference_skew_seconds": 0.17334794998168945,
+            "reference_time": 1790704799.826652,
+            "side": "long",
+            "source": "sampled_oracle_price",
+            "time": 1790704800,
+            "venue": "hyperliquid"
+          }
+        ],
+        "missing": [],
+        "venue_results": {
+          "hyperliquid": {
+            "cashflow_usd": -1.496426122999503e-06,
+            "complete": true,
+            "covered_until": 1790704801.859147,
+            "estimated": true,
+            "events": [
+              {
+                "cashflow_usd": -1.496426122999503e-06,
+                "market": "xyz:NVDA",
+                "quality": "estimated",
+                "quantity": 0.0009999999999996678,
+                "rate_fraction": 6.5699e-06,
+                "reference_price": 227.77,
+                "reference_skew_seconds": 0.17334794998168945,
+                "reference_time": 1790704799.826652,
+                "side": "long",
+                "source": "sampled_oracle_price",
+                "time": 1790704800,
+                "venue": "hyperliquid"
+              }
+            ],
+            "missing": []
+          },
+          "rh_lighter": {
+            "cashflow_usd": 0,
+            "complete": true,
+            "covered_until": 1790704061.7891805,
+            "estimated": false,
+            "events": [],
+            "missing": []
+          }
+        }
+      },
+      "opened_at": 1790704051.3087795,
+      "pair_id": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15",
+      "reserved": {
+        "hyperliquid": 1000.68,
+        "rh_lighter": 1000.5
+      },
+      "signal": {
+        "asset": "NVDA",
+        "buy": "hyperliquid:xyz:NVDA",
+        "buy_fee_bps": 0.9,
+        "buy_generation": "0e6cac807e3b494793ed22bc583633f3:hyperliquid:0:1",
+        "buy_received": 1790704050.5510461,
+        "buy_source_time": 1790704050.196,
+        "buy_value": 998.1340799999999,
+        "entry_policy": {
+          "confirmation_expiry_seconds": null,
+          "confirmation_min_seconds": null,
+          "entry_skew_limit_seconds": 1.0,
+          "forecast_is_historical_spread": false,
+          "policy": "shadow_baseline",
+          "reason": "allowed",
+          "route": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15",
+          "training_skew_limit_seconds": 1.0,
+          "version": 3
+        },
+        "lifetime_is_sampled": true,
+        "net_edge_bps": 1.065632410042877,
+        "net_edge_usd": 0.10636440252163297,
+        "notional": 1000,
+        "opening_edge_usd": 0.6956879328000195,
+        "pair_id": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15",
+        "quantity": 4.364,
+        "route": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15",
+        "sell": "rh_lighter:15",
+        "sell_fee_bps": 0,
+        "sell_generation": "0e6cac807e3b494793ed22bc583633f3:rh_lighter:0:1",
+        "sell_received": 1790704050.639718,
+        "sell_source_time": 1790704050.567277,
+        "sell_value": 998.9196,
+        "skew_ms": 88.67192268371582,
+        "source_skew_ms": 371.27685546875,
+        "strategy": "shadow_baseline",
+        "timestamp": 1790704050.6515026
+      },
+      "status": "EXITING",
+      "strategy": "shadow_baseline"
+    },
+    {
+      "asset": "XAG",
+      "closed_at": null,
+      "created_at": 1790704174.8058896,
+      "exit_reason": "entry_failure",
+      "id": "1790704174805889-256-shadow_baseline",
+      "legs": [
+        {
+          "entry_fee": 0.0453501963,
+          "entry_fee_bps": 0.9,
+          "entry_observation": {
+            "attempted_quantity": 8.29,
+            "attempted_value": 503.89106999999996,
+            "book_engine_time": 1790704175.02,
+            "book_received_at": 1790704175.3085876,
+            "book_source": "bbo",
+            "eligible_quantity": 8.29,
+            "observed_at": 1790704175.3085876,
+            "price_limit": 60.83877799999999,
+            "receipt_age_seconds": 0.0,
+            "side_quantity": 8.29,
+            "signal_to_receipt_seconds": 0.5026979446411133,
+            "source_age_seconds": 0.2885875701904297
+          },
+          "entry_result": "partial",
+          "entry_time": 1790704175.3085876,
+          "entry_value": 503.89106999999996,
+          "entry_vwap": 60.783,
+          "exit_fee": 0.0452962521,
+          "exit_fills": [
+            {
+              "fee": 0.0363245184,
+              "fee_bps": 0.9,
+              "quantity": 6.64,
+              "timestamp": 1790704175.746015,
+              "value": 403.60576
+            },
+            {
+              "fee": 0.0009300105000000001,
+              "fee_bps": 0.9,
+              "quantity": 0.17,
+              "timestamp": 1790704176.216266,
+              "value": 10.333450000000001
+            },
+            {
+              "fee": 0.0080417232,
+              "fee_bps": 0.9,
+              "quantity": 1.47,
+              "timestamp": 1790704176.793642,
+              "value": 89.35248
+            }
+          ],
+          "exit_time": null,
+          "exit_value": 503.29169,
+          "fee_bps": 0.9,
+          "fees_usd": 0.0906464484,
+          "intent": null,
+          "key": "hyperliquid:xyz:SILVER",
+          "market": "xyz:SILVER",
+          "min_notional": 10.0,
+          "min_qty": 0.0,
+          "price_pnl": 0.008450000000001623,
+          "quantity": 8.29,
+          "remaining": 0.009999999999999565,
+          "side": "long",
+          "step": "0.01",
+          "venue": "hyperliquid"
+        },
+        {
+          "entry_fee": 0.0,
+          "entry_fee_bps": 0,
+          "entry_observation": {
+            "attempted_quantity": 16.42,
+            "attempted_value": 998.7153020000001,
+            "book_engine_time": 1790704175.239489,
+            "book_received_at": 1790704175.3001268,
+            "book_source": null,
+            "eligible_quantity": 17484.33,
+            "observed_at": 1790704175.3001268,
+            "price_limit": 60.7607784,
+            "receipt_age_seconds": 0.0,
+            "side_quantity": 69414.81,
+            "signal_to_receipt_seconds": 0.49423718452453613,
+            "source_age_seconds": 0.060637712478637695
+          },
+          "entry_result": "filled",
+          "entry_time": 1790704175.3001268,
+          "entry_value": 998.7153020000001,
+          "entry_vwap": 60.8231,
+          "exit_fee": 0.0,
+          "exit_fills": [
+            {
+              "fee": 0.0,
+              "fee_bps": 0,
+              "quantity": 16.42,
+              "timestamp": 1790704176.0072768,
+              "value": 998.7563520000001
+            }
+          ],
+          "exit_time": 1790704176.0072768,
+          "exit_value": 998.7563520000001,
+          "fee_bps": 0,
+          "fees_usd": 0.0,
+          "intent": null,
+          "key": "lighter:93",
+          "market": 93,
+          "min_notional": 10.0,
+          "min_qty": 0.08,
+          "price_pnl": -0.04105000000004111,
+          "quantity": 16.42,
+          "remaining": 0,
+          "side": "short",
+          "step": "0.01",
+          "venue": "lighter"
+        }
+      ],
+      "open_funding": {
+        "cashflow_usd": -3.800249999999835e-06,
+        "complete": true,
+        "covered_until": 1790704832.343457,
+        "estimated": true,
+        "events": [
+          {
+            "cashflow_usd": -3.800249999999835e-06,
+            "market": "xyz:SILVER",
+            "quality": "estimated",
+            "quantity": 0.009999999999999565,
+            "rate_fraction": 6.25e-06,
+            "reference_price": 60.804,
+            "reference_skew_seconds": 0.1732015609741211,
+            "reference_time": 1790704799.8267984,
+            "side": "long",
+            "source": "sampled_oracle_price",
+            "time": 1790704800,
+            "venue": "hyperliquid"
+          }
+        ],
+        "missing": [],
+        "venue_results": {
+          "hyperliquid": {
+            "cashflow_usd": -3.800249999999835e-06,
+            "complete": true,
+            "covered_until": 1790704832.343457,
+            "estimated": true,
+            "events": [
+              {
+                "cashflow_usd": -3.800249999999835e-06,
+                "market": "xyz:SILVER",
+                "quality": "estimated",
+                "quantity": 0.009999999999999565,
+                "rate_fraction": 6.25e-06,
+                "reference_price": 60.804,
+                "reference_skew_seconds": 0.1732015609741211,
+                "reference_time": 1790704799.8267984,
+                "side": "long",
+                "source": "sampled_oracle_price",
+                "time": 1790704800,
+                "venue": "hyperliquid"
+              }
+            ],
+            "missing": []
+          },
+          "lighter": {
+            "cashflow_usd": 0,
+            "complete": true,
+            "covered_until": 1790704176.0072768,
+            "estimated": false,
+            "events": [],
+            "missing": []
+          }
+        }
+      },
+      "opened_at": 1790704175.3085876,
+      "pair_id": "XAG|hyperliquid:xyz:SILVER|lighter:93",
+      "reserved": {
+        "hyperliquid": 1000.68,
+        "lighter": 1000.5
+      },
+      "signal": {
+        "asset": "XAG",
+        "buy": "hyperliquid:xyz:SILVER",
+        "buy_fee_bps": 0.9,
+        "buy_generation": "0e6cac807e3b494793ed22bc583633f3:hyperliquid:0:1",
+        "buy_received": 1790704174.7406108,
+        "buy_source_time": 1790704174.484,
+        "buy_value": 997.9747600000001,
+        "entry_policy": {
+          "confirmation_expiry_seconds": null,
+          "confirmation_min_seconds": null,
+          "entry_skew_limit_seconds": 1.0,
+          "forecast_is_historical_spread": false,
+          "policy": "shadow_baseline",
+          "reason": "allowed",
+          "route": "XAG|hyperliquid:xyz:SILVER|lighter:93",
+          "training_skew_limit_seconds": 1.0,
+          "version": 3
+        },
+        "lifetime_is_sampled": true,
+        "net_edge_bps": 0.3697443237667451,
+        "net_edge_usd": 0.03689955027724798,
+        "notional": 1000,
+        "opening_edge_usd": 0.626094271600003,
+        "pair_id": "XAG|hyperliquid:xyz:SILVER|lighter:93",
+        "quantity": 16.42,
+        "route": "XAG|hyperliquid:xyz:SILVER|lighter:93",
+        "sell": "lighter:93",
+        "sell_fee_bps": 0,
+        "sell_generation": "0e6cac807e3b494793ed22bc583633f3:lighter:0:1",
+        "sell_received": 1790704174.8032737,
+        "sell_source_time": 1790704174.706899,
+        "sell_value": 998.6906720000001,
+        "skew_ms": 62.66283988952637,
+        "source_skew_ms": 222.8989601135254,
+        "strategy": "shadow_baseline",
+        "timestamp": 1790704174.8058896
+      },
+      "status": "EXITING",
+      "strategy": "shadow_baseline"
+    },
+    {
+      "asset": "META",
+      "closed_at": null,
+      "created_at": 1790704216.8448215,
+      "exit_due": 1790704227.503617,
+      "exit_reason": "max_hold",
+      "exit_requested_at": 1790704227.5052712,
+      "exit_trigger_pnl_usd": null,
+      "id": "1790704216844821-285-shadow_baseline",
+      "legs": [
+        {
+          "entry_fee": 0.08981558099999999,
+          "entry_fee_bps": 0.9,
+          "entry_observation": {
+            "attempted_quantity": 1.371,
+            "attempted_value": 997.9508999999999,
+            "book_engine_time": 1790704217.253,
+            "book_received_at": 1790704217.503617,
+            "book_source": "bbo",
+            "eligible_quantity": 1.374,
+            "observed_at": 1790704217.503617,
+            "price_limit": 728.6379099999999,
+            "receipt_age_seconds": 0.0,
+            "side_quantity": 1.374,
+            "signal_to_receipt_seconds": 0.6587955951690674,
+            "source_age_seconds": 0.25061702728271484
+          },
+          "entry_result": "filled",
+          "entry_time": 1790704217.503617,
+          "entry_value": 997.9508999999999,
+          "entry_vwap": 727.9,
+          "exit_fee": 0.08974130040000002,
+          "exit_fills": [
+            {
+              "fee": 0.06825871080000001,
+              "fee_bps": 0.9,
+              "quantity": 1.042,
+              "timestamp": 1790704228.0273595,
+              "value": 758.43012
+            },
+            {
+              "fee": 0.021482589600000004,
+              "fee_bps": 0.9,
+              "quantity": 0.328,
+              "timestamp": 1790704228.7445796,
+              "value": 238.69544000000002
+            }
+          ],
+          "exit_time": null,
+          "exit_value": 997.12556,
+          "fee_bps": 0.9,
+          "fees_usd": 0.17955688139999998,
+          "intent": null,
+          "key": "hyperliquid:xyz:META",
+          "market": "xyz:META",
+          "min_notional": 10.0,
+          "min_qty": 0.0,
+          "price_pnl": -0.09744000000003439,
+          "quantity": 1.371,
+          "remaining": 0.0009999999999999454,
+          "side": "long",
+          "step": "0.001",
+          "venue": "hyperliquid"
+        },
+        {
+          "entry_fee": 0.0,
+          "entry_fee_bps": 0,
+          "entry_observation": {
+            "attempted_quantity": 1.371,
+            "attempted_value": 998.7460960000001,
+            "book_engine_time": 1790704217.429976,
+            "book_received_at": 1790704217.4980006,
+            "book_source": null,
+            "eligible_quantity": 233.90259999999998,
+            "observed_at": 1790704217.4980006,
+            "price_limit": 727.74153,
+            "receipt_age_seconds": 0.0,
+            "side_quantity": 1585.4916,
+            "signal_to_receipt_seconds": 0.6531791687011719,
+            "source_age_seconds": 0.0680246353149414
+          },
+          "entry_result": "filled",
+          "entry_time": 1790704217.4980006,
+          "entry_value": 998.7460960000001,
+          "entry_vwap": 728.4800116703137,
+          "exit_fee": 0.0,
+          "exit_fills": [
+            {
+              "fee": 0.0,
+              "fee_bps": 0,
+              "quantity": 1.371,
+              "timestamp": 1790704227.9987946,
+              "value": 998.89689
+            }
+          ],
+          "exit_time": 1790704227.9987946,
+          "exit_value": 998.89689,
+          "fee_bps": 0,
+          "fees_usd": 0.0,
+          "intent": null,
+          "key": "rh_lighter:13",
+          "market": 13,
+          "min_notional": 10.0,
+          "min_qty": 0.02,
+          "price_pnl": -0.15079399999990528,
+          "quantity": 1.371,
+          "remaining": 0,
+          "side": "short",
+          "step": "0.0001",
+          "venue": "rh_lighter"
+        }
+      ],
+      "open_funding": {
+        "cashflow_usd": -4.561499999999751e-06,
+        "complete": true,
+        "covered_until": 1790704803.8519585,
+        "estimated": true,
+        "events": [
+          {
+            "cashflow_usd": -4.561499999999751e-06,
+            "market": "xyz:META",
+            "quality": "estimated",
+            "quantity": 0.0009999999999999454,
+            "rate_fraction": 6.25e-06,
+            "reference_price": 729.84,
+            "reference_skew_seconds": 0.17322683334350586,
+            "reference_time": 1790704799.8267732,
+            "side": "long",
+            "source": "sampled_oracle_price",
+            "time": 1790704800,
+            "venue": "hyperliquid"
+          }
+        ],
+        "missing": [],
+        "venue_results": {
+          "hyperliquid": {
+            "cashflow_usd": -4.561499999999751e-06,
+            "complete": true,
+            "covered_until": 1790704803.8519585,
+            "estimated": true,
+            "events": [
+              {
+                "cashflow_usd": -4.561499999999751e-06,
+                "market": "xyz:META",
+                "quality": "estimated",
+                "quantity": 0.0009999999999999454,
+                "rate_fraction": 6.25e-06,
+                "reference_price": 729.84,
+                "reference_skew_seconds": 0.17322683334350586,
+                "reference_time": 1790704799.8267732,
+                "side": "long",
+                "source": "sampled_oracle_price",
+                "time": 1790704800,
+                "venue": "hyperliquid"
+              }
+            ],
+            "missing": []
+          },
+          "rh_lighter": {
+            "cashflow_usd": 0,
+            "complete": true,
+            "covered_until": 1790704227.9987946,
+            "estimated": false,
+            "events": [],
+            "missing": []
+          }
+        }
+      },
+      "opened_at": 1790704217.503617,
+      "pair_id": "META|hyperliquid:xyz:META|rh_lighter:13",
+      "reserved": {
+        "hyperliquid": 1000.68,
+        "rh_lighter": 1000.5
+      },
+      "signal": {
+        "asset": "META",
+        "buy": "hyperliquid:xyz:META",
+        "buy_fee_bps": 0.9,
+        "buy_generation": "0e6cac807e3b494793ed22bc583633f3:hyperliquid:0:1",
+        "buy_received": 1790704216.6105607,
+        "buy_source_time": 1790704216.322,
+        "buy_value": 997.96461,
+        "entry_policy": {
+          "confirmation_expiry_seconds": null,
+          "confirmation_min_seconds": null,
+          "entry_skew_limit_seconds": 1.0,
+          "forecast_is_historical_spread": false,
+          "policy": "shadow_baseline",
+          "reason": "allowed",
+          "route": "META|hyperliquid:xyz:META|rh_lighter:13",
+          "training_skew_limit_seconds": 1.0,
+          "version": 3
+        },
+        "lifetime_is_sampled": true,
+        "net_edge_bps": 0.8890949327062951,
+        "net_edge_usd": 0.08872852777712141,
+        "notional": 1000,
+        "opening_edge_usd": 0.6779431851000666,
+        "pair_id": "META|hyperliquid:xyz:META|rh_lighter:13",
+        "quantity": 1.371,
+        "route": "META|hyperliquid:xyz:META|rh_lighter:13",
+        "sell": "rh_lighter:13",
+        "sell_fee_bps": 0,
+        "sell_generation": "0e6cac807e3b494793ed22bc583633f3:rh_lighter:0:1",
+        "sell_received": 1790704216.788976,
+        "sell_source_time": 1790704216.702711,
+        "sell_value": 998.7323700000001,
+        "skew_ms": 178.41529846191406,
+        "source_skew_ms": 380.7110786437988,
+        "strategy": "shadow_baseline",
+        "timestamp": 1790704216.8448215
+      },
+      "status": "EXITING",
+      "strategy": "shadow_baseline"
+    }
+  ]
+}

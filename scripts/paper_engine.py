@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import copy
 from dataclasses import dataclass, asdict
-from decimal import Decimal, ROUND_FLOOR
+from decimal import Decimal, ROUND_FLOOR, ROUND_HALF_UP
 import math
 import time
 from collections import Counter, defaultdict, deque
@@ -90,24 +90,46 @@ def snapshot_probe_book(book):
     return fixed
 
 
+def _canonical_lot_quantity(quantity, step):
+    """Remove float subtraction noise from a quantity known to be in lots.
+
+    Only a tiny error around the nearest lot is corrected. Book liquidity is
+    never passed through this helper: insufficient displayed size must remain
+    insufficient, however close it is to a whole lot.
+    """
+    amount, lot = Decimal(str(quantity)), Decimal(str(step))
+    if amount <= 0 or lot <= 0:
+        return amount
+    nearest = (amount / lot).to_integral_value(rounding=ROUND_HALF_UP) * lot
+    tolerance = min(lot * Decimal('0.000001'), max(
+        Decimal('1e-15'), lot * Decimal('1e-10'), amount * Decimal('1e-14')))
+    return nearest if abs(amount - nearest) <= tolerance else amount
+
+
 def available_fill(levels, desired, step, price_limit=None, buy=True):
     """IOC-style partial execution at displayed depth, rounded to venue lot size."""
     eligible=[]
     for p,q in levels:
         if price_limit is not None and ((buy and p>price_limit) or (not buy and p<price_limit)): break
         eligible.append((p,q))
-    available=min(desired,sum(q for _,q in eligible))
     step=Decimal(str(step))
-    qty=float((Decimal(str(available))/step).to_integral_value(rounding=ROUND_FLOOR)*step)
-    if desired-qty < max(1e-10,desired*1e-10):qty=desired
+    desired_lots=_canonical_lot_quantity(desired,step)
+    displayed=sum((Decimal(str(q)) for _,q in eligible),Decimal(0))
+    available=min(desired_lots,displayed)
+    qty=float((available/step).to_integral_value(rounding=ROUND_FLOOR)*step)
     if qty<=0:return 0.0,0.0,levels
-    value=walk(eligible,qty)
-    if value is None:return 0.0,0.0,levels
-    left=qty;remaining=[]
+    left=Decimal(str(qty));value=Decimal(0)
+    for price,size in eligible:
+        taken=min(left,Decimal(str(size)))
+        value+=Decimal(str(price))*taken
+        left-=taken
+        if left==0:break
+    if left>0:return 0.0,0.0,levels
+    left=Decimal(str(qty));remaining=[]
     for p,q in levels:
-        taken=min(left,q);left-=taken
-        if q-taken>1e-12:remaining.append((p,q-taken))
-    return qty,value,remaining
+        size=Decimal(str(q));taken=min(left,size);left-=taken
+        if size>taken:remaining.append((p,float(size-taken)))
+    return qty,float(value),remaining
 
 
 class PaperEngine:
@@ -419,12 +441,13 @@ class PaperEngine:
                 pnl=(value-leg['entry_vwap']*q)*(1 if leg['side']=='long' else -1)
                 ledger['wallets'][leg['venue']]+=pnl
                 leg['price_pnl']+=pnl;leg['exit_value']+=value;leg['exit_fee']+=fee
-                leg['remaining']=max(0,leg['remaining']-q)
+                balance=_canonical_lot_quantity(leg['remaining'],leg['step'])-Decimal(str(q))
+                leg['remaining']=float(max(Decimal(0),balance))
                 leg['exit_fills'].append({'timestamp':now,'quantity':q,'value':value,'fee':fee,
                                           'fee_bps':fill_fee_bps})
                 if len(leg['exit_fills'])>256:
                     leg['exit_fills'].pop(0);p['funding_history_truncated']=True
-                if leg['remaining']<=1e-9:leg['exit_time']=now
+                if leg['remaining']==0:leg['exit_time']=now
             self.stats['fills']+=1
             self.evidence.append((f"{p['id']}:{leg['venue']}:{intent['kind']}:{now}",
                 {'position_id':p['id'],'leg':leg['key'],'intent':intent,'fill_quantity':q,'fill_value':value,
@@ -434,7 +457,7 @@ class PaperEngine:
         self.stats['partial_fills']+=int(0<q<intent['quantity']-1e-9)
         self.stats['unfilled_intents']+=int(q==0)
         leg['intent']=None
-        if not entry and leg['remaining']>1e-9:self._exit_intent(p,leg,now)
+        if not entry and leg['remaining']>0:self._exit_intent(p,leg,now)
 
     def _book_evidence(self,b):
         return {k:b.get(k) for k in ('venue','market','received','engine_time','sequence','generation','valid')} | {
@@ -443,6 +466,7 @@ class PaperEngine:
     def _exit_intent(self,p,leg,now):
         b=self.books.get(leg['key'],{})
         delay=taker_delay(leg,p['strategy'],self.config)
+        leg['remaining']=float(_canonical_lot_quantity(leg['remaining'],leg['step']))
         leg['intent']={'kind':'exit','quantity':leg['remaining'],'created':now,'due':now+delay,
                        'expires':now+delay+self.config.fill_timeout_seconds,'generation':b.get('generation')}
 
@@ -462,7 +486,7 @@ class PaperEngine:
                 self.ledgers[p['strategy']]['aborted_trades']+=1
                 self.transitions.append(copy.deepcopy(p));self._remove_position(p['id'])
                 return
-        if p['status']=='EXITING' and all(leg['remaining']<=1e-9 for leg in p['legs']):
+        if p['status']=='EXITING' and all(leg['remaining']==0 for leg in p['legs']):
             p['status']='AWAITING_FUNDING';p['closed_at']=now
             p['price_pnl']=sum(leg['price_pnl'] for leg in p['legs'])
             p['fees_usd']=sum(leg['fees_usd'] for leg in p['legs'])
@@ -952,6 +976,8 @@ class PaperEngine:
         # exits are reissued on a valid new generation in tick after timeout.
         for p in self.positions.values():
             for leg in p['legs']:
+                if leg.get('remaining',0)>0 and leg.get('step'):
+                    leg['remaining']=float(_canonical_lot_quantity(leg['remaining'],leg['step']))
                 if leg.get('intent'):leg['intent']['generation']='restart-invalidated'
 
     def drain(self):
