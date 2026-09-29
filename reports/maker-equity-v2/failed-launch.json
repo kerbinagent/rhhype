@@ -1,17 +1,16 @@
 {
-  "pid": 2173403,
-  "launched_at": "2026-09-29T20:22:56.619563+00:00",
-  "verified_running_at": "2026-09-29T20:22:57.619876+00:00",
+  "pid": 2167455,
+  "launched_at": "2026-09-29T20:20:29.872548+00:00",
   "duration_seconds": 420,
   "commit": "e6d5706",
-  "output": "/home/harry/projects/research/rhhype/data/raw/maker-capture/20260929T2022Z",
+  "output": "/home/harry/projects/research/rhhype/data/raw/maker-capture/20260929T2020Z",
   "command": [
     "/home/harry/projects/research/rhhype/.venv/bin/python",
     "/home/harry/projects/research/rhhype/scripts/maker_capture.py",
     "--markets",
     "/home/harry/projects/research/rhhype/reports/maker-equity-v2/market-plan.json",
     "--out",
-    "/home/harry/projects/research/rhhype/data/raw/maker-capture/20260929T2022Z",
+    "/home/harry/projects/research/rhhype/data/raw/maker-capture/20260929T2020Z",
     "--assets",
     "NVDA",
     "XAG",
@@ -20,5 +19,6 @@
     "--max-bytes",
     "25000000"
   ],
-  "status": "running_verified_capture_file_created"
+  "status": "failed_before_capture",
+  "reason": "wrapper pre-created directory required absent by capture CLI"
 }

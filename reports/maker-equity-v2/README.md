@@ -2,6 +2,11 @@
 
 Status: code and method audited and frozen before capture.
 
+Verified capture start: **20:22:56 UTC**, PID 2173403, scheduled duration
+420 seconds with a 25 MB cap. An earlier 20:20 launch failed before data
+collection because the wrapper created a directory the CLI requires absent;
+`failed-launch.json` records it. The method was unchanged before relaunch.
+
 This is one prospective post-market window, limited to 420 seconds and 25 MB
 of compressed capture. The [method](../../research/maker-equity-plan.md),
 public fee inputs, selected market metadata and source hashes must be frozen

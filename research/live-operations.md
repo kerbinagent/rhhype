@@ -193,10 +193,14 @@ paired quote experiment, not a fill simulator or cash profit tally.
   [Final evidence](../reports/impulse-v1/README.md): one NVDA/Core arm rejected
   at confirmation, zero selected entries, zero accounting residuals. Frozen
   method/code hashes matched; no policy promoted and no timing/profit inference.
-- NVDA/XAG maker capture PID **2167455** began **20:20:30 UTC** from **e6d5706**.
-  Output `data/raw/maker-capture/20260929T2020Z`, 420 seconds / 25 MB maximum;
-  expected stop **20:27:30 UTC** or earlier at the byte cap. It has fresh public
-  unit/fee evidence and audited delayed hedge/exit rules. No orders are sent.
+- NVDA/XAG maker launch PID 2167455 at 20:20:30 failed before collection:
+  root's wrapper had created the output directory, whereas `maker_capture.py`
+  requires it absent. No data were collected; `failed-launch.json` preserves
+  that attempt. Corrected PID **2173403** began **20:22:56 UTC** from **e6d5706**,
+  with its process and capture file verified one second later. Output
+  `data/raw/maker-capture/20260929T2022Z`, 420 seconds / 25 MB maximum; expected
+  stop **20:29:57 UTC** or earlier at the byte cap. Frozen unit/fee evidence
+  and delayed hedge/exit rules were unchanged. No orders are sent.
 - A separate HL-first paper experiment is being implemented. Both its control
   and treatment will use the same WebSocket stream, without extra REST calls.
   Version 1 requires a full original-size HL fill before sending the other
