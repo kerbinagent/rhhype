@@ -39,7 +39,10 @@ def _targets(engine, now):
     selector=getattr(engine,'selector',None)
     if selector:
         for candidate in selector.pending_confirmation_targets(now):
-            if not candidate['due']<=now<=candidate['expires']:continue
+            # Begin observing immediately: waiting until the confirmation due
+            # time can let the older venue quote fail skew before we refresh it.
+            # The selector still enforces the full wait and post-due sources.
+            if not candidate.get('refresh_after',candidate['due'])<=now<=candidate['expires']:continue
             for market_key in (candidate['buy'],candidate['sell']):
                 if market_key.startswith('hyperliquid:'):
                     targets[market_key]=min(4,targets.get(market_key,4))

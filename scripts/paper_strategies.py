@@ -303,6 +303,7 @@ class StrategySelector:
         """Bounded refresh targets; callers schedule them below execution work."""
         self._expire_candidates(now)
         return [{'route': route, 'buy': c.buy, 'sell': c.sell,
+                 'refresh_after': c.armed_at,
                  'due': c.armed_at + CONFIRM_SECONDS,
                  'expires': c.armed_at + CONFIRM_EXPIRY_SECONDS}
                 for route, c in self.candidates.items()]

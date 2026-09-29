@@ -142,6 +142,14 @@ if __name__ == '__main__':
 
 
 class ConfirmationRefreshTests(unittest.TestCase):
+    def test_armed_confirmation_refreshes_before_due_without_changing_due(self):
+        engine,key=fixture();now=time.time();engine.positions={}
+        candidate={'buy':key,'sell':'lighter:1','refresh_after':now-.1,
+                   'due':now+.9,'expires':now+3.9}
+        engine.selector=SimpleNamespace(pending_confirmation_targets=lambda t:[candidate])
+        self.assertEqual(_targets(engine,now)[key],4)
+        self.assertGreater(candidate['due'],now)
+
     def test_confirmations_use_spare_capacity_without_displacing_exits(self):
         engine,key=fixture();now=time.time()
         engine.selector=SimpleNamespace(pending_confirmation_targets=lambda t:[

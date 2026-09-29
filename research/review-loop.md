@@ -166,3 +166,38 @@ limits: reports/strategy-experiments/probe-profile.md. Lag subsequently recovere
 to about 14 ms before deployment, so the earlier spike was not constant saturation.
 All 141 tests pass, including continuous-load confirmation scheduling, candidate
 accounting/restart, immutable probe observations, accounting and terminal behavior.
+
+Deployed at 16:57:57 UTC, collector PID 1627074. First health check: all feeds
+connected, 63.6% of one core, 17.2 ms p95 lag, 896 books/s, 107 MiB RSS; models
+were still warming. Lifecycle counters start fresh with zero residual. Financial
+reconciliation passes within $7e-11; all existing portfolios retained.
+
+## Review 3: 2026-09-29 17:06:50 UTC
+
+Window 16:46:51–17:06:50; next due 17:26:33 UTC. Counts reconcile with the
+cumulative ledger; no profitable paired trade was observed in this interval.
+
+| Standard-fee policy | Closes | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 265 | -285.59 | 260 | 5 |
+| Cooldown | 34 | -35.46 | 34 | 0 |
+| Historical median | 11 | -11.20 | 0 | 11 |
+| Conservative | 0 | 0 | 0 | 0 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+Median also had one no-fill abort; all twelve HL entry legs hit price limits.
+Original Standard's one positive close was a failed hedge, not paired arbitrage.
+All newly pending records from the 17:00 funding boundary subsequently settled;
+only the two historical 16:00 Aster timing ambiguities remain. Financial audit
+passes within $7e-11. All feeds connected, 70.3% of one core, 18.1 ms p95 lag,
+837 books/s, 151 MiB RSS.
+
+New lifecycle counters (since 16:57:57) identify six distinct armed candidates:
+five ended at the skew gate, one lost its economic edge, zero remained pending.
+The accounting residual is zero. Priority-4 made no requests because candidates
+ended before the prior `arm+1s` refresh eligibility. Change refresh eligibility
+to arm time; keep the one-second confirmation delay, both post-due source times,
+all forecast/depth/budget checks and the four-second expiry. This improves the
+observation attempt without fabricating a surviving opportunity. Existing
+execution/risk scheduling shares and request cap remain unchanged. Thirty-one
+focused refresh/selector/shadow tests pass before deployment.
