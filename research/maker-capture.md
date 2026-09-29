@@ -1,6 +1,6 @@
 # Bounded public maker research capture
 
-**Status:** the first bounded capture ran September 29, 18:23:22–18:29:56 UTC, and stopped at its 25 MB cap. It retained 68,229 records with no manifest errors; stopped-archive analysis is in progress. [`scripts/maker_capture.py`](../scripts/maker_capture.py) records public BTC/ETH quote and trade streams for later queue-ahead and adverse-price research. It does not submit orders, authenticate, request private data, or calculate maker P&L.
+**Status:** the first bounded capture ran September 29, 18:23:22–18:29:56 UTC, and stopped at its 25 MB cap. It retained 68,229 records with no manifest errors; [stopped-archive analysis](maker-capture-analysis.md) is complete. [`scripts/maker_capture.py`](../scripts/maker_capture.py) records public BTC/ETH quote and trade streams for later queue-ahead and adverse-price research. It does not submit orders, authenticate, request private data, or calculate maker P&L.
 
 ## Sources and frozen markets
 

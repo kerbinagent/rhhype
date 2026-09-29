@@ -1,0 +1,2632 @@
+{
+  "generated_at": 1790707581.191024,
+  "generated_utc": "2026-09-29T18:46:21+00:00",
+  "comparison_status": "duration_reached",
+  "decision": "No automatic feed promotion; evaluate after a matched, sufficiently populated run.",
+  "config_equal": true,
+  "pair_count": {
+    "depth": 21,
+    "bbo": 21
+  },
+  "pair_differences": {
+    "depth_only": [],
+    "bbo_only": [],
+    "economics_differ": []
+  },
+  "portfolio_names_match": true,
+  "pilot_start_at": {
+    "depth": 1790705152.2779834,
+    "bbo": 1790705152.2817612
+  },
+  "pilot_start_gap_seconds": 0.003777742385864258,
+  "checkpoint_at": {
+    "depth": 1790707552.2855322,
+    "bbo": 1790707552.2891557
+  },
+  "checkpoint_utc": {
+    "depth": "2026-09-29T18:45:52+00:00",
+    "bbo": "2026-09-29T18:45:52+00:00"
+  },
+  "checkpoint_skew_seconds": 0.003623485565185547,
+  "common_retained_cutoff": 1790707552.2855322,
+  "common_retained_cutoff_utc": "2026-09-29T18:45:52+00:00",
+  "common_duration_seconds": 2400.0075488090515,
+  "snapshot_performance_separate_times": {
+    "depth": {
+      "snapshot_at": 1790707552.4260917,
+      "snapshot_utc": "2026-09-29T18:45:52+00:00",
+      "snapshot_age_seconds": 28.76493239402771,
+      "snapshot_minus_checkpoint_seconds": 0.14055943489074707,
+      "status": "stopped",
+      "hl_quote_mode": "depth",
+      "cpu_percent_one_core": 26.64702802456218,
+      "loop_lag_p95_ms": 3.0184320639818907,
+      "book_events_per_second": 202.38152003049726,
+      "latency_probes": {
+        "aggregate_fee_scenario_observations_correlated": {
+          "100": {
+            "triggered": 3135,
+            "observed": 0,
+            "survived": 0,
+            "missing": 3135,
+            "pending": 0,
+            "observed_coverage_fraction": 0.0,
+            "actual_delay_ms_sum": null,
+            "average_actual_delay_ms": null,
+            "minimum_actual_delay_ms": null,
+            "maximum_actual_delay_ms": null,
+            "validation_errors": []
+          },
+          "300": {
+            "triggered": 3135,
+            "observed": 0,
+            "survived": 0,
+            "missing": 3135,
+            "pending": 0,
+            "observed_coverage_fraction": 0.0,
+            "actual_delay_ms_sum": null,
+            "average_actual_delay_ms": null,
+            "minimum_actual_delay_ms": null,
+            "maximum_actual_delay_ms": null,
+            "validation_errors": []
+          },
+          "500": {
+            "triggered": 3135,
+            "observed": 0,
+            "survived": 0,
+            "missing": 3135,
+            "pending": 0,
+            "observed_coverage_fraction": 0.0,
+            "actual_delay_ms_sum": null,
+            "average_actual_delay_ms": null,
+            "minimum_actual_delay_ms": null,
+            "maximum_actual_delay_ms": null,
+            "validation_errors": []
+          },
+          "1000": {
+            "triggered": 3135,
+            "observed": 0,
+            "survived": 0,
+            "missing": 3135,
+            "pending": 0,
+            "observed_coverage_fraction": 0.0,
+            "actual_delay_ms_sum": null,
+            "average_actual_delay_ms": null,
+            "minimum_actual_delay_ms": null,
+            "maximum_actual_delay_ms": null,
+            "validation_errors": []
+          }
+        },
+        "by_instrumented_strategy": {
+          "standard": {
+            "100": {
+              "triggered": 1729,
+              "observed": 0,
+              "survived": 0,
+              "missing": 1729,
+              "pending": 0,
+              "observed_coverage_fraction": 0.0,
+              "actual_delay_ms_sum": null,
+              "average_actual_delay_ms": null,
+              "minimum_actual_delay_ms": null,
+              "maximum_actual_delay_ms": null,
+              "validation_errors": []
+            },
+            "300": {
+              "triggered": 1729,
+              "observed": 0,
+              "survived": 0,
+              "missing": 1729,
+              "pending": 0,
+              "observed_coverage_fraction": 0.0,
+              "actual_delay_ms_sum": null,
+              "average_actual_delay_ms": null,
+              "minimum_actual_delay_ms": null,
+              "maximum_actual_delay_ms": null,
+              "validation_errors": []
+            },
+            "500": {
+              "triggered": 1729,
+              "observed": 0,
+              "survived": 0,
+              "missing": 1729,
+              "pending": 0,
+              "observed_coverage_fraction": 0.0,
+              "actual_delay_ms_sum": null,
+              "average_actual_delay_ms": null,
+              "minimum_actual_delay_ms": null,
+              "maximum_actual_delay_ms": null,
+              "validation_errors": []
+            },
+            "1000": {
+              "triggered": 1729,
+              "observed": 0,
+              "survived": 0,
+              "missing": 1729,
+              "pending": 0,
+              "observed_coverage_fraction": 0.0,
+              "actual_delay_ms_sum": null,
+              "average_actual_delay_ms": null,
+              "minimum_actual_delay_ms": null,
+              "maximum_actual_delay_ms": null,
+              "validation_errors": []
+            }
+          },
+          "plus": {
+            "100": {
+              "triggered": 1353,
+              "observed": 0,
+              "survived": 0,
+              "missing": 1353,
+              "pending": 0,
+              "observed_coverage_fraction": 0.0,
+              "actual_delay_ms_sum": null,
+              "average_actual_delay_ms": null,
+              "minimum_actual_delay_ms": null,
+              "maximum_actual_delay_ms": null,
+              "validation_errors": []
+            },
+            "300": {
+              "triggered": 1353,
+              "observed": 0,
+              "survived": 0,
+              "missing": 1353,
+              "pending": 0,
+              "observed_coverage_fraction": 0.0,
+              "actual_delay_ms_sum": null,
+              "average_actual_delay_ms": null,
+              "minimum_actual_delay_ms": null,
+              "maximum_actual_delay_ms": null,
+              "validation_errors": []
+            },
+            "500": {
+              "triggered": 1353,
+              "observed": 0,
+              "survived": 0,
+              "missing": 1353,
+              "pending": 0,
+              "observed_coverage_fraction": 0.0,
+              "actual_delay_ms_sum": null,
+              "average_actual_delay_ms": null,
+              "minimum_actual_delay_ms": null,
+              "maximum_actual_delay_ms": null,
+              "validation_errors": []
+            },
+            "1000": {
+              "triggered": 1353,
+              "observed": 0,
+              "survived": 0,
+              "missing": 1353,
+              "pending": 0,
+              "observed_coverage_fraction": 0.0,
+              "actual_delay_ms_sum": null,
+              "average_actual_delay_ms": null,
+              "minimum_actual_delay_ms": null,
+              "maximum_actual_delay_ms": null,
+              "validation_errors": []
+            }
+          },
+          "premium": {
+            "100": {
+              "triggered": 53,
+              "observed": 0,
+              "survived": 0,
+              "missing": 53,
+              "pending": 0,
+              "observed_coverage_fraction": 0.0,
+              "actual_delay_ms_sum": null,
+              "average_actual_delay_ms": null,
+              "minimum_actual_delay_ms": null,
+              "maximum_actual_delay_ms": null,
+              "validation_errors": []
+            },
+            "300": {
+              "triggered": 53,
+              "observed": 0,
+              "survived": 0,
+              "missing": 53,
+              "pending": 0,
+              "observed_coverage_fraction": 0.0,
+              "actual_delay_ms_sum": null,
+              "average_actual_delay_ms": null,
+              "minimum_actual_delay_ms": null,
+              "maximum_actual_delay_ms": null,
+              "validation_errors": []
+            },
+            "500": {
+              "triggered": 53,
+              "observed": 0,
+              "survived": 0,
+              "missing": 53,
+              "pending": 0,
+              "observed_coverage_fraction": 0.0,
+              "actual_delay_ms_sum": null,
+              "average_actual_delay_ms": null,
+              "minimum_actual_delay_ms": null,
+              "maximum_actual_delay_ms": null,
+              "validation_errors": []
+            },
+            "1000": {
+              "triggered": 53,
+              "observed": 0,
+              "survived": 0,
+              "missing": 53,
+              "pending": 0,
+              "observed_coverage_fraction": 0.0,
+              "actual_delay_ms_sum": null,
+              "average_actual_delay_ms": null,
+              "minimum_actual_delay_ms": null,
+              "maximum_actual_delay_ms": null,
+              "validation_errors": []
+            }
+          }
+        }
+      }
+    },
+    "bbo": {
+      "snapshot_at": 1790707552.4221542,
+      "snapshot_utc": "2026-09-29T18:45:52+00:00",
+      "snapshot_age_seconds": 28.768869876861572,
+      "snapshot_minus_checkpoint_seconds": 0.13299846649169922,
+      "status": "stopped",
+      "hl_quote_mode": "bbo_plus_depth",
+      "cpu_percent_one_core": 28.026544103043364,
+      "loop_lag_p95_ms": 4.547329153865576,
+      "book_events_per_second": 244.55472988828382,
+      "latency_probes": {
+        "aggregate_fee_scenario_observations_correlated": {
+          "100": {
+            "triggered": 6297,
+            "observed": 6090,
+            "survived": 4116,
+            "missing": 207,
+            "pending": 0,
+            "observed_coverage_fraction": 0.9671272034302049,
+            "actual_delay_ms_sum": 3493827.483154297,
+            "average_actual_delay_ms": 573.699094114006,
+            "minimum_actual_delay_ms": 323.136962890625,
+            "maximum_actual_delay_ms": 1892.2685546875,
+            "validation_errors": []
+          },
+          "300": {
+            "triggered": 6297,
+            "observed": 6045,
+            "survived": 3980,
+            "missing": 252,
+            "pending": 0,
+            "observed_coverage_fraction": 0.9599809433063363,
+            "actual_delay_ms_sum": 4683775.429931641,
+            "average_actual_delay_ms": 774.8181025527941,
+            "minimum_actual_delay_ms": 536.89892578125,
+            "maximum_actual_delay_ms": 1996.972900390625,
+            "validation_errors": []
+          },
+          "500": {
+            "triggered": 6297,
+            "observed": 6040,
+            "survived": 3943,
+            "missing": 257,
+            "pending": 0,
+            "observed_coverage_fraction": 0.9591869144036843,
+            "actual_delay_ms_sum": 5940720.165283203,
+            "average_actual_delay_ms": 983.5629412720535,
+            "minimum_actual_delay_ms": 735.1611328125,
+            "maximum_actual_delay_ms": 2282.30615234375,
+            "validation_errors": []
+          },
+          "1000": {
+            "triggered": 6297,
+            "observed": 5990,
+            "survived": 3867,
+            "missing": 307,
+            "pending": 0,
+            "observed_coverage_fraction": 0.9512466253771638,
+            "actual_delay_ms_sum": 8905713.649169922,
+            "average_actual_delay_ms": 1486.7635474407216,
+            "minimum_actual_delay_ms": 1223.477783203125,
+            "maximum_actual_delay_ms": 2836.824462890625,
+            "validation_errors": []
+          }
+        },
+        "by_instrumented_strategy": {
+          "standard": {
+            "100": {
+              "triggered": 3333,
+              "observed": 3225,
+              "survived": 2285,
+              "missing": 108,
+              "pending": 0,
+              "observed_coverage_fraction": 0.9675967596759676,
+              "actual_delay_ms_sum": 1847784.3332519531,
+              "average_actual_delay_ms": 572.9563824037064,
+              "minimum_actual_delay_ms": 323.136962890625,
+              "maximum_actual_delay_ms": 1892.2685546875,
+              "validation_errors": []
+            },
+            "300": {
+              "triggered": 3333,
+              "observed": 3207,
+              "survived": 2216,
+              "missing": 126,
+              "pending": 0,
+              "observed_coverage_fraction": 0.9621962196219622,
+              "actual_delay_ms_sum": 2475437.4157714844,
+              "average_actual_delay_ms": 771.885692476297,
+              "minimum_actual_delay_ms": 536.89892578125,
+              "maximum_actual_delay_ms": 1992.43603515625,
+              "validation_errors": []
+            },
+            "500": {
+              "triggered": 3333,
+              "observed": 3204,
+              "survived": 2198,
+              "missing": 129,
+              "pending": 0,
+              "observed_coverage_fraction": 0.9612961296129613,
+              "actual_delay_ms_sum": 3143203.5349121094,
+              "average_actual_delay_ms": 981.024823630496,
+              "minimum_actual_delay_ms": 735.1611328125,
+              "maximum_actual_delay_ms": 2282.30615234375,
+              "validation_errors": []
+            },
+            "1000": {
+              "triggered": 3333,
+              "observed": 3178,
+              "survived": 2161,
+              "missing": 155,
+              "pending": 0,
+              "observed_coverage_fraction": 0.9534953495349535,
+              "actual_delay_ms_sum": 4719653.983886719,
+              "average_actual_delay_ms": 1485.1019458422652,
+              "minimum_actual_delay_ms": 1223.477783203125,
+              "maximum_actual_delay_ms": 2672.908935546875,
+              "validation_errors": []
+            }
+          },
+          "plus": {
+            "100": {
+              "triggered": 2840,
+              "observed": 2744,
+              "survived": 1803,
+              "missing": 96,
+              "pending": 0,
+              "observed_coverage_fraction": 0.9661971830985916,
+              "actual_delay_ms_sum": 1578711.369140625,
+              "average_actual_delay_ms": 575.3321316110149,
+              "minimum_actual_delay_ms": 323.136962890625,
+              "maximum_actual_delay_ms": 1638.5966796875,
+              "validation_errors": []
+            },
+            "300": {
+              "triggered": 2840,
+              "observed": 2718,
+              "survived": 1736,
+              "missing": 122,
+              "pending": 0,
+              "observed_coverage_fraction": 0.9570422535211267,
+              "actual_delay_ms_sum": 2118663.884765625,
+              "average_actual_delay_ms": 779.493703004277,
+              "minimum_actual_delay_ms": 536.89892578125,
+              "maximum_actual_delay_ms": 1996.972900390625,
+              "validation_errors": []
+            },
+            "500": {
+              "triggered": 2840,
+              "observed": 2717,
+              "survived": 1717,
+              "missing": 123,
+              "pending": 0,
+              "observed_coverage_fraction": 0.9566901408450704,
+              "actual_delay_ms_sum": 2683974.6264648438,
+              "average_actual_delay_ms": 987.8449122064202,
+              "minimum_actual_delay_ms": 744.861572265625,
+              "maximum_actual_delay_ms": 2282.30615234375,
+              "validation_errors": []
+            },
+            "1000": {
+              "triggered": 2840,
+              "observed": 2692,
+              "survived": 1684,
+              "missing": 148,
+              "pending": 0,
+              "observed_coverage_fraction": 0.9478873239436619,
+              "actual_delay_ms_sum": 4011908.646484375,
+              "average_actual_delay_ms": 1490.3078181591288,
+              "minimum_actual_delay_ms": 1223.477783203125,
+              "maximum_actual_delay_ms": 2836.824462890625,
+              "validation_errors": []
+            }
+          },
+          "premium": {
+            "100": {
+              "triggered": 124,
+              "observed": 121,
+              "survived": 28,
+              "missing": 3,
+              "pending": 0,
+              "observed_coverage_fraction": 0.9758064516129032,
+              "actual_delay_ms_sum": 67331.78076171875,
+              "average_actual_delay_ms": 556.4609980307334,
+              "minimum_actual_delay_ms": 360.977783203125,
+              "maximum_actual_delay_ms": 1505.89599609375,
+              "validation_errors": []
+            },
+            "300": {
+              "triggered": 124,
+              "observed": 120,
+              "survived": 28,
+              "missing": 4,
+              "pending": 0,
+              "observed_coverage_fraction": 0.967741935483871,
+              "actual_delay_ms_sum": 89674.12939453125,
+              "average_actual_delay_ms": 747.2844116210938,
+              "minimum_actual_delay_ms": 556.43701171875,
+              "maximum_actual_delay_ms": 1602.794677734375,
+              "validation_errors": []
+            },
+            "500": {
+              "triggered": 124,
+              "observed": 119,
+              "survived": 28,
+              "missing": 5,
+              "pending": 0,
+              "observed_coverage_fraction": 0.9596774193548387,
+              "actual_delay_ms_sum": 113542.00390625,
+              "average_actual_delay_ms": 954.1344866071429,
+              "minimum_actual_delay_ms": 782.68505859375,
+              "maximum_actual_delay_ms": 2137.2607421875,
+              "validation_errors": []
+            },
+            "1000": {
+              "triggered": 124,
+              "observed": 120,
+              "survived": 22,
+              "missing": 4,
+              "pending": 0,
+              "observed_coverage_fraction": 0.967741935483871,
+              "actual_delay_ms_sum": 174151.01879882812,
+              "average_actual_delay_ms": 1451.2584899902345,
+              "minimum_actual_delay_ms": 1257.983154296875,
+              "maximum_actual_delay_ms": 2261.22021484375,
+              "validation_errors": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "retention": {
+    "depth": {
+      "stored_closed_at_own_checkpoint": 1992,
+      "queried_closed": 1992,
+      "query_truncated": false
+    },
+    "bbo": {
+      "stored_closed_at_own_checkpoint": 1989,
+      "queried_closed": 1989,
+      "query_truncated": false
+    }
+  },
+  "portfolios_independent_do_not_sum": {
+    "confirmed": {
+      "depth": {
+        "closed_exact": 0,
+        "closed_estimated": 0,
+        "closed_total": 0,
+        "closed_pnl_exact_usd": 0.0,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 0,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": 0.0,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.0,
+        "capital_costs_usd": 0.0,
+        "mean_pnl_per_closed_usd": null,
+        "win_fraction": null
+      },
+      "bbo": {
+        "closed_exact": 0,
+        "closed_estimated": 0,
+        "closed_total": 0,
+        "closed_pnl_exact_usd": 0.0,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 0,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": 0.0,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.0,
+        "capital_costs_usd": 0.0,
+        "mean_pnl_per_closed_usd": null,
+        "win_fraction": null
+      },
+      "outstanding_at_checkpoint": {
+        "depth": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        },
+        "bbo": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        }
+      },
+      "difference_bbo_minus_depth": {
+        "closed_total": 0,
+        "closed_pnl_total_usd": 0.0,
+        "wins": 0,
+        "aborted": 0
+      },
+      "retained_diagnostics": {
+        "depth": {
+          "retained_closed_own_checkpoint": 0,
+          "retained_closed_common_cutoff": 0,
+          "lifetime_closed_at_own_checkpoint": 0,
+          "coverage_fraction_own_checkpoint": null,
+          "common_cutoff_fraction_of_lifetime": null,
+          "paired": 0,
+          "failed_hedge": 0,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 0,
+          "filled_entry_legs": 0,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 0,
+          "entry_observation_coverage_fraction": null,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {},
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {}
+        },
+        "bbo": {
+          "retained_closed_own_checkpoint": 0,
+          "retained_closed_common_cutoff": 0,
+          "lifetime_closed_at_own_checkpoint": 0,
+          "coverage_fraction_own_checkpoint": null,
+          "common_cutoff_fraction_of_lifetime": null,
+          "paired": 0,
+          "failed_hedge": 0,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 0,
+          "filled_entry_legs": 0,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 0,
+          "entry_observation_coverage_fraction": null,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {},
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {}
+        }
+      }
+    },
+    "conservative": {
+      "depth": {
+        "closed_exact": 0,
+        "closed_estimated": 0,
+        "closed_total": 0,
+        "closed_pnl_exact_usd": 0.0,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 0,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": 0.0,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.0,
+        "capital_costs_usd": 0.0,
+        "mean_pnl_per_closed_usd": null,
+        "win_fraction": null
+      },
+      "bbo": {
+        "closed_exact": 0,
+        "closed_estimated": 0,
+        "closed_total": 0,
+        "closed_pnl_exact_usd": 0.0,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 0,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": 0.0,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.0,
+        "capital_costs_usd": 0.0,
+        "mean_pnl_per_closed_usd": null,
+        "win_fraction": null
+      },
+      "outstanding_at_checkpoint": {
+        "depth": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        },
+        "bbo": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        }
+      },
+      "difference_bbo_minus_depth": {
+        "closed_total": 0,
+        "closed_pnl_total_usd": 0.0,
+        "wins": 0,
+        "aborted": 0
+      },
+      "retained_diagnostics": {
+        "depth": {
+          "retained_closed_own_checkpoint": 0,
+          "retained_closed_common_cutoff": 0,
+          "lifetime_closed_at_own_checkpoint": 0,
+          "coverage_fraction_own_checkpoint": null,
+          "common_cutoff_fraction_of_lifetime": null,
+          "paired": 0,
+          "failed_hedge": 0,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 0,
+          "filled_entry_legs": 0,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 0,
+          "entry_observation_coverage_fraction": null,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {},
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {}
+        },
+        "bbo": {
+          "retained_closed_own_checkpoint": 0,
+          "retained_closed_common_cutoff": 0,
+          "lifetime_closed_at_own_checkpoint": 0,
+          "coverage_fraction_own_checkpoint": null,
+          "common_cutoff_fraction_of_lifetime": null,
+          "paired": 0,
+          "failed_hedge": 0,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 0,
+          "filled_entry_legs": 0,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 0,
+          "entry_observation_coverage_fraction": null,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {},
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {}
+        }
+      }
+    },
+    "convergence": {
+      "depth": {
+        "closed_exact": 0,
+        "closed_estimated": 0,
+        "closed_total": 0,
+        "closed_pnl_exact_usd": 0.0,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 0,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": 0.0,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.0,
+        "capital_costs_usd": 0.0,
+        "mean_pnl_per_closed_usd": null,
+        "win_fraction": null
+      },
+      "bbo": {
+        "closed_exact": 0,
+        "closed_estimated": 0,
+        "closed_total": 0,
+        "closed_pnl_exact_usd": 0.0,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 0,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": 0.0,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.0,
+        "capital_costs_usd": 0.0,
+        "mean_pnl_per_closed_usd": null,
+        "win_fraction": null
+      },
+      "outstanding_at_checkpoint": {
+        "depth": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        },
+        "bbo": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        }
+      },
+      "difference_bbo_minus_depth": {
+        "closed_total": 0,
+        "closed_pnl_total_usd": 0.0,
+        "wins": 0,
+        "aborted": 0
+      },
+      "retained_diagnostics": {
+        "depth": {
+          "retained_closed_own_checkpoint": 0,
+          "retained_closed_common_cutoff": 0,
+          "lifetime_closed_at_own_checkpoint": 0,
+          "coverage_fraction_own_checkpoint": null,
+          "common_cutoff_fraction_of_lifetime": null,
+          "paired": 0,
+          "failed_hedge": 0,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 0,
+          "filled_entry_legs": 0,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 0,
+          "entry_observation_coverage_fraction": null,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {},
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {}
+        },
+        "bbo": {
+          "retained_closed_own_checkpoint": 0,
+          "retained_closed_common_cutoff": 0,
+          "lifetime_closed_at_own_checkpoint": 0,
+          "coverage_fraction_own_checkpoint": null,
+          "common_cutoff_fraction_of_lifetime": null,
+          "paired": 0,
+          "failed_hedge": 0,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 0,
+          "filled_entry_legs": 0,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 0,
+          "entry_observation_coverage_fraction": null,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {},
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {}
+        }
+      }
+    },
+    "cooldown": {
+      "depth": {
+        "closed_exact": 12,
+        "closed_estimated": 0,
+        "closed_total": 12,
+        "closed_pnl_exact_usd": -12.36432664158841,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -12.36432664158841,
+        "wins": 0,
+        "losses": 12,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 12,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": -12.36432664158841,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 5.9916469605,
+        "capital_costs_usd": 5.9681088425207145e-05,
+        "mean_pnl_per_closed_usd": -1.0303605534657008,
+        "win_fraction": 0.0
+      },
+      "bbo": {
+        "closed_exact": 113,
+        "closed_estimated": 0,
+        "closed_total": 113,
+        "closed_pnl_exact_usd": -123.06953407094399,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -123.06953407094399,
+        "wins": 0,
+        "losses": 113,
+        "flat": 0,
+        "aborted": 1,
+        "entry_attempts": 114,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": -123.06953407094399,
+        "fees_usd": 20.0588169285,
+        "funding_usd": 0.0,
+        "other_costs_usd": 56.41646835950001,
+        "capital_costs_usd": 0.0033217829434778337,
+        "mean_pnl_per_closed_usd": -1.0891109209818053,
+        "win_fraction": 0.0
+      },
+      "outstanding_at_checkpoint": {
+        "depth": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        },
+        "bbo": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        }
+      },
+      "difference_bbo_minus_depth": {
+        "closed_total": 101,
+        "closed_pnl_total_usd": -110.70520742935558,
+        "wins": 0,
+        "aborted": 1
+      },
+      "retained_diagnostics": {
+        "depth": {
+          "retained_closed_own_checkpoint": 4,
+          "retained_closed_common_cutoff": 4,
+          "lifetime_closed_at_own_checkpoint": 12,
+          "coverage_fraction_own_checkpoint": 0.3333333333333333,
+          "common_cutoff_fraction_of_lifetime": 0.3333333333333333,
+          "paired": 0,
+          "failed_hedge": 4,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 4,
+          "filled_entry_legs": 4,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 8,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {
+            "None": 4
+          },
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 4,
+              "pnl_usd": -3.126778724746794,
+              "failed_hedges": 4
+            }
+          }
+        },
+        "bbo": {
+          "retained_closed_own_checkpoint": 85,
+          "retained_closed_common_cutoff": 85,
+          "lifetime_closed_at_own_checkpoint": 113,
+          "coverage_fraction_own_checkpoint": 0.7522123893805309,
+          "common_cutoff_fraction_of_lifetime": 0.7522123893805309,
+          "paired": 73,
+          "failed_hedge": 12,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 170,
+          "filled_entry_legs": 170,
+          "hyperliquid_filled_entry_legs": 85,
+          "all_entry_legs": 170,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": 1.0,
+          "entry_book_source_counts": {
+            "bbo": 85,
+            "None": 85
+          },
+          "hyperliquid_entry_book_source_counts": {
+            "bbo": 85
+          },
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 73,
+            "median": 666.2209033966064,
+            "p95": 1148.2841968536377,
+            "mean": 730.0736871484207
+          },
+          "exit_request_to_closed_ms": {
+            "count": 73,
+            "median": 723.6952781677246,
+            "p95": 2004.4944286346436,
+            "mean": 919.6182897646133
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 73,
+            "median": -2.2737367544323206e-13,
+            "p95": 0.06516586439987804,
+            "mean": -0.06610358690000974
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 73,
+            "median": -1.9899751814228939,
+            "p95": -1.6931489469447647,
+            "mean": -2.0347925897693404
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 82,
+              "pnl_usd": -82.09722692403449,
+              "failed_hedges": 10
+            },
+            "crypto": {
+              "closed": 3,
+              "pnl_usd": -5.3109495680117105,
+              "failed_hedges": 2
+            }
+          }
+        }
+      }
+    },
+    "plus": {
+      "depth": {
+        "closed_exact": 1299,
+        "closed_estimated": 0,
+        "closed_total": 1299,
+        "closed_pnl_exact_usd": -1195.4097847012201,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -1195.4097847012201,
+        "wins": 6,
+        "losses": 1293,
+        "flat": 0,
+        "aborted": 2,
+        "entry_attempts": 1303,
+        "winning_sum_usd": 9.171994173961002,
+        "losing_sum_usd": -1204.5817788751813,
+        "fees_usd": 130.29652548819996,
+        "funding_usd": 0.0,
+        "other_costs_usd": 649.6079303319983,
+        "capital_costs_usd": 0.006570730200940286,
+        "mean_pnl_per_closed_usd": -0.9202538758284989,
+        "win_fraction": 0.004618937644341801
+      },
+      "bbo": {
+        "closed_exact": 757,
+        "closed_estimated": 0,
+        "closed_total": 757,
+        "closed_pnl_exact_usd": -846.5557726806115,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -846.5557726806115,
+        "wins": 1,
+        "losses": 756,
+        "flat": 0,
+        "aborted": 1,
+        "entry_attempts": 761,
+        "winning_sum_usd": 1.2285201566064181,
+        "losing_sum_usd": -847.7842928372178,
+        "fees_usd": 189.38305324204993,
+        "funding_usd": 0.0,
+        "other_costs_usd": 377.1215610875002,
+        "capital_costs_usd": 0.02053912426194672,
+        "mean_pnl_per_closed_usd": -1.1183035306216798,
+        "win_fraction": 0.001321003963011889
+      },
+      "outstanding_at_checkpoint": {
+        "depth": {
+          "total": 2,
+          "status_counts": {
+            "AWAITING_FUNDING": 2
+          },
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 2,
+          "oldest_age_seconds": 4.6066975593566895,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        },
+        "bbo": {
+          "total": 3,
+          "status_counts": {
+            "OPEN": 3
+          },
+          "filled_exposure_positions": 3,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": 11.510963916778564,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        }
+      },
+      "difference_bbo_minus_depth": {
+        "closed_total": -542,
+        "closed_pnl_total_usd": 348.8540120206086,
+        "wins": -5,
+        "aborted": -1
+      },
+      "retained_diagnostics": {
+        "depth": {
+          "retained_closed_own_checkpoint": 552,
+          "retained_closed_common_cutoff": 552,
+          "lifetime_closed_at_own_checkpoint": 1299,
+          "coverage_fraction_own_checkpoint": 0.42494226327944573,
+          "common_cutoff_fraction_of_lifetime": 0.42494226327944573,
+          "paired": 0,
+          "failed_hedge": 552,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 552,
+          "filled_entry_legs": 552,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 1104,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {
+            "None": 552
+          },
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 543,
+              "pnl_usd": -490.7856751174612,
+              "failed_hedges": 543
+            },
+            "crypto": {
+              "closed": 9,
+              "pnl_usd": -14.663735550421887,
+              "failed_hedges": 9
+            }
+          }
+        },
+        "bbo": {
+          "retained_closed_own_checkpoint": 563,
+          "retained_closed_common_cutoff": 563,
+          "lifetime_closed_at_own_checkpoint": 757,
+          "coverage_fraction_own_checkpoint": 0.7437252311756936,
+          "common_cutoff_fraction_of_lifetime": 0.7437252311756936,
+          "paired": 442,
+          "failed_hedge": 121,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 1114,
+          "filled_entry_legs": 1114,
+          "hyperliquid_filled_entry_legs": 551,
+          "all_entry_legs": 1126,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": 1.0,
+          "entry_book_source_counts": {
+            "bbo": 534,
+            "None": 563,
+            "l2book": 17
+          },
+          "hyperliquid_entry_book_source_counts": {
+            "bbo": 534,
+            "l2book": 17
+          },
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 442,
+            "median": 665.6737327575684,
+            "p95": 1416.7745113372803,
+            "mean": 755.4924132057984
+          },
+          "exit_request_to_closed_ms": {
+            "count": 442,
+            "median": 738.7113571166992,
+            "p95": 1838.7513160705566,
+            "mean": 913.7186043942137
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 442,
+            "median": 0.0,
+            "p95": 0.08754787860010371,
+            "mean": -0.023046246531222798
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 442,
+            "median": -1.9883418424995236,
+            "p95": -1.5651570263723036,
+            "mean": -1.9870477533921034
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 537,
+              "pnl_usd": -580.9982997350157,
+              "failed_hedges": 95
+            },
+            "crypto": {
+              "closed": 26,
+              "pnl_usd": -51.14974383757912,
+              "failed_hedges": 26
+            }
+          }
+        }
+      }
+    },
+    "premium": {
+      "depth": {
+        "closed_exact": 50,
+        "closed_estimated": 0,
+        "closed_total": 50,
+        "closed_pnl_exact_usd": -78.42386133191845,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -78.42386133191845,
+        "wins": 1,
+        "losses": 49,
+        "flat": 0,
+        "aborted": 1,
+        "entry_attempts": 51,
+        "winning_sum_usd": 2.3337220140731123,
+        "losing_sum_usd": -80.75758334599156,
+        "fees_usd": 32.35411617731999,
+        "funding_usd": 0.0,
+        "other_costs_usd": 24.5170673925,
+        "capital_costs_usd": 0.0002517620987083606,
+        "mean_pnl_per_closed_usd": -1.5684772266383689,
+        "win_fraction": 0.02
+      },
+      "bbo": {
+        "closed_exact": 76,
+        "closed_estimated": 0,
+        "closed_total": 76,
+        "closed_pnl_exact_usd": -137.7247160362675,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -137.7247160362675,
+        "wins": 0,
+        "losses": 76,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 76,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": -137.7247160362675,
+        "fees_usd": 60.53911008472,
+        "funding_usd": 0.0,
+        "other_costs_usd": 37.4993992825,
+        "capital_costs_usd": 0.0014256690480631432,
+        "mean_pnl_per_closed_usd": -1.8121673162666776,
+        "win_fraction": 0.0
+      },
+      "outstanding_at_checkpoint": {
+        "depth": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        },
+        "bbo": {
+          "total": 0,
+          "status_counts": {},
+          "filled_exposure_positions": 0,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": null,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        }
+      },
+      "difference_bbo_minus_depth": {
+        "closed_total": 26,
+        "closed_pnl_total_usd": -59.30085470434905,
+        "wins": -1,
+        "aborted": -1
+      },
+      "retained_diagnostics": {
+        "depth": {
+          "retained_closed_own_checkpoint": 14,
+          "retained_closed_common_cutoff": 14,
+          "lifetime_closed_at_own_checkpoint": 50,
+          "coverage_fraction_own_checkpoint": 0.28,
+          "common_cutoff_fraction_of_lifetime": 0.28,
+          "paired": 0,
+          "failed_hedge": 14,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 14,
+          "filled_entry_legs": 14,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 28,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {
+            "None": 14
+          },
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 13,
+              "pnl_usd": -21.23901726839004,
+              "failed_hedges": 13
+            },
+            "crypto": {
+              "closed": 1,
+              "pnl_usd": -2.087383092406881,
+              "failed_hedges": 1
+            }
+          }
+        },
+        "bbo": {
+          "retained_closed_own_checkpoint": 58,
+          "retained_closed_common_cutoff": 58,
+          "lifetime_closed_at_own_checkpoint": 76,
+          "coverage_fraction_own_checkpoint": 0.7631578947368421,
+          "common_cutoff_fraction_of_lifetime": 0.7631578947368421,
+          "paired": 31,
+          "failed_hedge": 27,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 115,
+          "filled_entry_legs": 115,
+          "hyperliquid_filled_entry_legs": 57,
+          "all_entry_legs": 116,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": 1.0,
+          "entry_book_source_counts": {
+            "bbo": 57,
+            "None": 58
+          },
+          "hyperliquid_entry_book_source_counts": {
+            "bbo": 57
+          },
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 31,
+            "median": 582.3242664337158,
+            "p95": 1307.6200485229492,
+            "mean": 664.8325689377323
+          },
+          "exit_request_to_closed_ms": {
+            "count": 31,
+            "median": 702.3708820343018,
+            "p95": 3880.0337314605713,
+            "mean": 1133.3237771065005
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 31,
+            "median": -0.1617113812000519,
+            "p95": 1.1357581541915351e-13,
+            "mean": -0.21942555965839766
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 31,
+            "median": -2.694545597468257,
+            "p95": -2.2951397535867306,
+            "mean": -2.7793628624013684
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 48,
+              "pnl_usd": -79.46997463832678,
+              "failed_hedges": 18
+            },
+            "crypto": {
+              "closed": 10,
+              "pnl_usd": -26.771476047025814,
+              "failed_hedges": 9
+            }
+          }
+        }
+      }
+    },
+    "shadow_baseline": {
+      "depth": {
+        "closed_exact": 1599,
+        "closed_estimated": 0,
+        "closed_total": 1599,
+        "closed_pnl_exact_usd": -1274.896811849168,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -1274.896811849168,
+        "wins": 9,
+        "losses": 1590,
+        "flat": 0,
+        "aborted": 2,
+        "entry_attempts": 1604,
+        "winning_sum_usd": 9.435443183918297,
+        "losing_sum_usd": -1284.332255033086,
+        "fees_usd": 0.5388961878,
+        "funding_usd": 0.0,
+        "other_costs_usd": 799.4169365934988,
+        "capital_costs_usd": 0.008087972150019837,
+        "mean_pnl_per_closed_usd": -0.7973088254216185,
+        "win_fraction": 0.005628517823639775
+      },
+      "bbo": {
+        "closed_exact": 852,
+        "closed_estimated": 0,
+        "closed_total": 852,
+        "closed_pnl_exact_usd": -840.7860578621635,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -840.7860578621635,
+        "wins": 0,
+        "losses": 852,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 855,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": -840.7860578621635,
+        "fees_usd": 131.8399500123002,
+        "funding_usd": 0.0,
+        "other_costs_usd": 425.0766288505001,
+        "capital_costs_usd": 0.023991520961394966,
+        "mean_pnl_per_closed_usd": -0.9868380960823515,
+        "win_fraction": 0.0
+      },
+      "outstanding_at_checkpoint": {
+        "depth": {
+          "total": 3,
+          "status_counts": {
+            "AWAITING_FUNDING": 2,
+            "EXITING": 1
+          },
+          "filled_exposure_positions": 1,
+          "pending_entries": 0,
+          "pending_exits": 1,
+          "pending_funding": 2,
+          "oldest_age_seconds": 4.6066975593566895,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        },
+        "bbo": {
+          "total": 3,
+          "status_counts": {
+            "OPEN": 3
+          },
+          "filled_exposure_positions": 3,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": 10.074146032333374,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        }
+      },
+      "difference_bbo_minus_depth": {
+        "closed_total": -747,
+        "closed_pnl_total_usd": 434.1107539870045,
+        "wins": -9,
+        "aborted": -2
+      },
+      "retained_diagnostics": {
+        "depth": {
+          "retained_closed_own_checkpoint": 711,
+          "retained_closed_common_cutoff": 711,
+          "lifetime_closed_at_own_checkpoint": 1599,
+          "coverage_fraction_own_checkpoint": 0.4446529080675422,
+          "common_cutoff_fraction_of_lifetime": 0.4446529080675422,
+          "paired": 0,
+          "failed_hedge": 711,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 711,
+          "filled_entry_legs": 711,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 1422,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {
+            "None": 711
+          },
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 703,
+              "pnl_usd": -547.256646500849,
+              "failed_hedges": 703
+            },
+            "crypto": {
+              "closed": 8,
+              "pnl_usd": -14.194529293883816,
+              "failed_hedges": 8
+            }
+          }
+        },
+        "bbo": {
+          "retained_closed_own_checkpoint": 641,
+          "retained_closed_common_cutoff": 641,
+          "lifetime_closed_at_own_checkpoint": 852,
+          "coverage_fraction_own_checkpoint": 0.7523474178403756,
+          "common_cutoff_fraction_of_lifetime": 0.7523474178403756,
+          "paired": 525,
+          "failed_hedge": 116,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 1270,
+          "filled_entry_legs": 1270,
+          "hyperliquid_filled_entry_legs": 629,
+          "all_entry_legs": 1282,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": 1.0,
+          "entry_book_source_counts": {
+            "bbo": 615,
+            "None": 641,
+            "l2book": 14
+          },
+          "hyperliquid_entry_book_source_counts": {
+            "bbo": 615,
+            "l2book": 14
+          },
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 525,
+            "median": 661.3905429840088,
+            "p95": 1372.2929954528809,
+            "mean": 765.2194281986782
+          },
+          "exit_request_to_closed_ms": {
+            "count": 525,
+            "median": 726.9728183746338,
+            "p95": 2368.8907623291016,
+            "mean": 952.789500100272
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 525,
+            "median": 0.0,
+            "p95": 0.08753999999998996,
+            "mean": -0.009093387048766713
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 525,
+            "median": -1.8589032938347625,
+            "p95": -1.3735690257551214,
+            "mean": -1.8425985633995112
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 631,
+              "pnl_usd": -608.9459018800828,
+              "failed_hedges": 106
+            },
+            "crypto": {
+              "closed": 10,
+              "pnl_usd": -20.142043277509863,
+              "failed_hedges": 10
+            }
+          }
+        }
+      }
+    },
+    "standard": {
+      "depth": {
+        "closed_exact": 1599,
+        "closed_estimated": 0,
+        "closed_total": 1599,
+        "closed_pnl_exact_usd": -1274.896811849168,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -1274.896811849168,
+        "wins": 9,
+        "losses": 1590,
+        "flat": 0,
+        "aborted": 2,
+        "entry_attempts": 1604,
+        "winning_sum_usd": 9.435443183918297,
+        "losing_sum_usd": -1284.332255033086,
+        "fees_usd": 0.5388961878,
+        "funding_usd": 0.0,
+        "other_costs_usd": 799.4169365934988,
+        "capital_costs_usd": 0.008087972150019837,
+        "mean_pnl_per_closed_usd": -0.7973088254216185,
+        "win_fraction": 0.005628517823639775
+      },
+      "bbo": {
+        "closed_exact": 852,
+        "closed_estimated": 0,
+        "closed_total": 852,
+        "closed_pnl_exact_usd": -840.7860578621635,
+        "closed_pnl_estimated_usd": 0.0,
+        "closed_pnl_total_usd": -840.7860578621635,
+        "wins": 0,
+        "losses": 852,
+        "flat": 0,
+        "aborted": 0,
+        "entry_attempts": 855,
+        "winning_sum_usd": 0.0,
+        "losing_sum_usd": -840.7860578621635,
+        "fees_usd": 131.8399500123002,
+        "funding_usd": 0.0,
+        "other_costs_usd": 425.0766288505001,
+        "capital_costs_usd": 0.023991520961394966,
+        "mean_pnl_per_closed_usd": -0.9868380960823515,
+        "win_fraction": 0.0
+      },
+      "outstanding_at_checkpoint": {
+        "depth": {
+          "total": 3,
+          "status_counts": {
+            "AWAITING_FUNDING": 2,
+            "EXITING": 1
+          },
+          "filled_exposure_positions": 1,
+          "pending_entries": 0,
+          "pending_exits": 1,
+          "pending_funding": 2,
+          "oldest_age_seconds": 4.6066975593566895,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        },
+        "bbo": {
+          "total": 3,
+          "status_counts": {
+            "OPEN": 3
+          },
+          "filled_exposure_positions": 3,
+          "pending_entries": 0,
+          "pending_exits": 0,
+          "pending_funding": 0,
+          "oldest_age_seconds": 10.074146032333374,
+          "oldest_exit_request_age_seconds": null,
+          "aged_one_lot_exit_residuals": [],
+          "aged_one_lot_exit_residual_count": 0
+        }
+      },
+      "difference_bbo_minus_depth": {
+        "closed_total": -747,
+        "closed_pnl_total_usd": 434.1107539870045,
+        "wins": -9,
+        "aborted": -2
+      },
+      "retained_diagnostics": {
+        "depth": {
+          "retained_closed_own_checkpoint": 711,
+          "retained_closed_common_cutoff": 711,
+          "lifetime_closed_at_own_checkpoint": 1599,
+          "coverage_fraction_own_checkpoint": 0.4446529080675422,
+          "common_cutoff_fraction_of_lifetime": 0.4446529080675422,
+          "paired": 0,
+          "failed_hedge": 711,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 711,
+          "filled_entry_legs": 711,
+          "hyperliquid_filled_entry_legs": 0,
+          "all_entry_legs": 1422,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": null,
+          "entry_book_source_counts": {
+            "None": 711
+          },
+          "hyperliquid_entry_book_source_counts": {},
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "exit_request_to_closed_ms": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 0,
+            "median": null,
+            "p95": null,
+            "mean": null
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 703,
+              "pnl_usd": -547.256646500849,
+              "failed_hedges": 703
+            },
+            "crypto": {
+              "closed": 8,
+              "pnl_usd": -14.194529293883816,
+              "failed_hedges": 8
+            }
+          }
+        },
+        "bbo": {
+          "retained_closed_own_checkpoint": 642,
+          "retained_closed_common_cutoff": 642,
+          "lifetime_closed_at_own_checkpoint": 852,
+          "coverage_fraction_own_checkpoint": 0.7535211267605634,
+          "common_cutoff_fraction_of_lifetime": 0.7535211267605634,
+          "paired": 526,
+          "failed_hedge": 116,
+          "other_or_unknown_pairing": 0,
+          "entry_observation_legs": 1272,
+          "filled_entry_legs": 1272,
+          "hyperliquid_filled_entry_legs": 630,
+          "all_entry_legs": 1284,
+          "entry_observation_coverage_fraction": 1.0,
+          "paired_exit_request_coverage_fraction": 1.0,
+          "entry_book_source_counts": {
+            "bbo": 616,
+            "None": 642,
+            "l2book": 14
+          },
+          "hyperliquid_entry_book_source_counts": {
+            "bbo": 616,
+            "l2book": 14
+          },
+          "paired_created_to_last_entry_fill_ms": {
+            "count": 526,
+            "median": 660.8291864395142,
+            "p95": 1372.2929954528809,
+            "mean": 764.7640777631404
+          },
+          "exit_request_to_closed_ms": {
+            "count": 526,
+            "median": 726.9041538238525,
+            "p95": 2368.8907623291016,
+            "mean": 951.9842047201817
+          },
+          "same_size_actual_minus_signal_entry_edge_usd": {
+            "count": 526,
+            "median": 0.0,
+            "p95": 0.08753999999998996,
+            "mean": -0.009082293157038943
+          },
+          "same_size_net_trade_minus_signal_entry_edge_usd": {
+            "count": 526,
+            "median": -1.8590134264457174,
+            "p95": -1.3735690257551214,
+            "mean": -1.8433155513443682
+          },
+          "retained_categories": {
+            "RWA/xyz": {
+              "closed": 632,
+              "pnl_usd": -610.0303915410772,
+              "failed_hedges": 106
+            },
+            "crypto": {
+              "closed": 10,
+              "pnl_usd": -20.142043277509863,
+              "failed_hedges": 10
+            }
+          }
+        }
+      }
+    }
+  },
+  "retained_route_rows_top_by_count": [
+    {
+      "portfolio": "standard",
+      "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41",
+      "depth": {
+        "closed": 206,
+        "pnl_usd": -170.20419164369963,
+        "failed_hedges": 206,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      },
+      "bbo": {
+        "closed": 177,
+        "pnl_usd": -179.83678567711166,
+        "failed_hedges": 41,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "shadow_baseline",
+      "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41",
+      "depth": {
+        "closed": 206,
+        "pnl_usd": -170.20419164369963,
+        "failed_hedges": 206,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      },
+      "bbo": {
+        "closed": 176,
+        "pnl_usd": -178.75229601611736,
+        "failed_hedges": 41,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "plus",
+      "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41",
+      "depth": {
+        "closed": 206,
+        "pnl_usd": -190.78081158074954,
+        "failed_hedges": 206,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      },
+      "bbo": {
+        "closed": 167,
+        "pnl_usd": -188.27291361653673,
+        "failed_hedges": 28,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "shadow_baseline",
+      "route": "META|hyperliquid:xyz:META|rh_lighter:13",
+      "depth": {
+        "closed": 195,
+        "pnl_usd": -167.4444979430824,
+        "failed_hedges": 195,
+        "wins": 1,
+        "category": "RWA/xyz",
+        "asset": "META"
+      },
+      "bbo": {
+        "closed": 151,
+        "pnl_usd": -168.64548235987772,
+        "failed_hedges": 11,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      }
+    },
+    {
+      "portfolio": "standard",
+      "route": "META|hyperliquid:xyz:META|rh_lighter:13",
+      "depth": {
+        "closed": 195,
+        "pnl_usd": -167.4444979430824,
+        "failed_hedges": 195,
+        "wins": 1,
+        "category": "RWA/xyz",
+        "asset": "META"
+      },
+      "bbo": {
+        "closed": 151,
+        "pnl_usd": -168.64548235987772,
+        "failed_hedges": 11,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      }
+    },
+    {
+      "portfolio": "shadow_baseline",
+      "route": "XAG|hyperliquid:xyz:SILVER|lighter:93",
+      "depth": {
+        "closed": 143,
+        "pnl_usd": -90.45592460096768,
+        "failed_hedges": 143,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      },
+      "bbo": {
+        "closed": 172,
+        "pnl_usd": -134.22391832559114,
+        "failed_hedges": 47,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "standard",
+      "route": "XAG|hyperliquid:xyz:SILVER|lighter:93",
+      "depth": {
+        "closed": 143,
+        "pnl_usd": -90.45592460096768,
+        "failed_hedges": 143,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      },
+      "bbo": {
+        "closed": 172,
+        "pnl_usd": -134.22391832559114,
+        "failed_hedges": 47,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "plus",
+      "route": "META|hyperliquid:xyz:META|rh_lighter:13",
+      "depth": {
+        "closed": 152,
+        "pnl_usd": -146.15219148826063,
+        "failed_hedges": 152,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      },
+      "bbo": {
+        "closed": 144,
+        "pnl_usd": -177.41524267720484,
+        "failed_hedges": 6,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      }
+    },
+    {
+      "portfolio": "shadow_baseline",
+      "route": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15",
+      "depth": {
+        "closed": 155,
+        "pnl_usd": -116.46460267210632,
+        "failed_hedges": 155,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      },
+      "bbo": {
+        "closed": 126,
+        "pnl_usd": -121.35403099961412,
+        "failed_hedges": 6,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      }
+    },
+    {
+      "portfolio": "standard",
+      "route": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15",
+      "depth": {
+        "closed": 155,
+        "pnl_usd": -116.46460267210632,
+        "failed_hedges": 155,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      },
+      "bbo": {
+        "closed": 126,
+        "pnl_usd": -121.35403099961412,
+        "failed_hedges": 6,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      }
+    },
+    {
+      "portfolio": "plus",
+      "route": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15",
+      "depth": {
+        "closed": 131,
+        "pnl_usd": -112.40955324279741,
+        "failed_hedges": 131,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      },
+      "bbo": {
+        "closed": 111,
+        "pnl_usd": -118.23502345612087,
+        "failed_hedges": 9,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      }
+    },
+    {
+      "portfolio": "plus",
+      "route": "XAG|hyperliquid:xyz:SILVER|lighter:93",
+      "depth": {
+        "closed": 52,
+        "pnl_usd": -39.68691111254136,
+        "failed_hedges": 52,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      },
+      "bbo": {
+        "closed": 107,
+        "pnl_usd": -89.7735299484342,
+        "failed_hedges": 50,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "premium",
+      "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41",
+      "depth": {
+        "closed": 11,
+        "pnl_usd": -18.10228294827668,
+        "failed_hedges": 11,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      },
+      "bbo": {
+        "closed": 42,
+        "pnl_usd": -69.57230450387019,
+        "failed_hedges": 18,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "plus",
+      "route": "CASHCAT|lighter:221|hyperliquid:CASHCAT",
+      "depth": {
+        "closed": 9,
+        "pnl_usd": -14.663735550421887,
+        "failed_hedges": 9,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      },
+      "bbo": {
+        "closed": 24,
+        "pnl_usd": -49.297151730160145,
+        "failed_hedges": 24,
+        "wins": 1,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      }
+    },
+    {
+      "portfolio": "cooldown",
+      "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41",
+      "depth": {
+        "closed": 2,
+        "pnl_usd": -1.6684837969974204,
+        "failed_hedges": 2,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      },
+      "bbo": {
+        "closed": 30,
+        "pnl_usd": -30.677988245729658,
+        "failed_hedges": 3,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "cooldown",
+      "route": "META|hyperliquid:xyz:META|rh_lighter:13",
+      "depth": null,
+      "bbo": {
+        "closed": 24,
+        "pnl_usd": -26.900930516830897,
+        "failed_hedges": 2,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      }
+    },
+    {
+      "portfolio": "cooldown",
+      "route": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15",
+      "depth": {
+        "closed": 2,
+        "pnl_usd": -1.4582949277493735,
+        "failed_hedges": 2,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      },
+      "bbo": {
+        "closed": 19,
+        "pnl_usd": -17.5362908757122,
+        "failed_hedges": 2,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      }
+    },
+    {
+      "portfolio": "shadow_baseline",
+      "route": "CASHCAT|lighter:221|hyperliquid:CASHCAT",
+      "depth": {
+        "closed": 8,
+        "pnl_usd": -14.194529293883816,
+        "failed_hedges": 8,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      },
+      "bbo": {
+        "closed": 10,
+        "pnl_usd": -20.142043277509863,
+        "failed_hedges": 10,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      }
+    },
+    {
+      "portfolio": "standard",
+      "route": "CASHCAT|lighter:221|hyperliquid:CASHCAT",
+      "depth": {
+        "closed": 8,
+        "pnl_usd": -14.194529293883816,
+        "failed_hedges": 8,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      },
+      "bbo": {
+        "closed": 10,
+        "pnl_usd": -20.142043277509863,
+        "failed_hedges": 10,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      }
+    },
+    {
+      "portfolio": "premium",
+      "route": "CASHCAT|lighter:221|hyperliquid:CASHCAT",
+      "depth": {
+        "closed": 1,
+        "pnl_usd": -2.087383092406881,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      },
+      "bbo": {
+        "closed": 10,
+        "pnl_usd": -26.771476047025814,
+        "failed_hedges": 9,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      }
+    },
+    {
+      "portfolio": "cooldown",
+      "route": "XAG|hyperliquid:xyz:SILVER|lighter:93",
+      "depth": null,
+      "bbo": {
+        "closed": 8,
+        "pnl_usd": -6.098662922921487,
+        "failed_hedges": 3,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    },
+    {
+      "portfolio": "plus",
+      "route": "META|hyperliquid:xyz:META|lighter:117",
+      "depth": {
+        "closed": 2,
+        "pnl_usd": -1.7562076931123425,
+        "failed_hedges": 2,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      },
+      "bbo": {
+        "closed": 6,
+        "pnl_usd": -5.855063383984361,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      }
+    },
+    {
+      "portfolio": "shadow_baseline",
+      "route": "META|hyperliquid:xyz:META|lighter:117",
+      "depth": {
+        "closed": 3,
+        "pnl_usd": -2.246473710763175,
+        "failed_hedges": 3,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      },
+      "bbo": {
+        "closed": 5,
+        "pnl_usd": -5.365034058734332,
+        "failed_hedges": 0,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      }
+    },
+    {
+      "portfolio": "standard",
+      "route": "META|hyperliquid:xyz:META|lighter:117",
+      "depth": {
+        "closed": 3,
+        "pnl_usd": -2.246473710763175,
+        "failed_hedges": 3,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      },
+      "bbo": {
+        "closed": 5,
+        "pnl_usd": -5.365034058734332,
+        "failed_hedges": 0,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      }
+    },
+    {
+      "portfolio": "premium",
+      "route": "META|hyperliquid:xyz:META|rh_lighter:13",
+      "depth": {
+        "closed": 2,
+        "pnl_usd": -3.136734320113357,
+        "failed_hedges": 2,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      },
+      "bbo": {
+        "closed": 4,
+        "pnl_usd": -7.424008592015081,
+        "failed_hedges": 0,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      }
+    },
+    {
+      "portfolio": "cooldown",
+      "route": "CASHCAT|lighter:221|hyperliquid:CASHCAT",
+      "depth": null,
+      "bbo": {
+        "closed": 2,
+        "pnl_usd": -3.984629095129887,
+        "failed_hedges": 2,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "CASHCAT"
+      }
+    },
+    {
+      "portfolio": "plus",
+      "route": "ZEC|rh_lighter:4|hyperliquid:ZEC",
+      "depth": null,
+      "bbo": {
+        "closed": 2,
+        "pnl_usd": -1.852592107418972,
+        "failed_hedges": 2,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "ZEC"
+      }
+    },
+    {
+      "portfolio": "shadow_baseline",
+      "route": "NVDA|hyperliquid:xyz:NVDA|lighter:110",
+      "depth": {
+        "closed": 1,
+        "pnl_usd": -0.4409559302302158,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      },
+      "bbo": {
+        "closed": 1,
+        "pnl_usd": -0.6051401201479927,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      }
+    },
+    {
+      "portfolio": "standard",
+      "route": "NVDA|hyperliquid:xyz:NVDA|lighter:110",
+      "depth": {
+        "closed": 1,
+        "pnl_usd": -0.4409559302302158,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      },
+      "bbo": {
+        "closed": 1,
+        "pnl_usd": -0.6051401201479927,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      }
+    },
+    {
+      "portfolio": "cooldown",
+      "route": "META|hyperliquid:xyz:META|lighter:117",
+      "depth": null,
+      "bbo": {
+        "closed": 1,
+        "pnl_usd": -0.883354362840251,
+        "failed_hedges": 0,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "META"
+      }
+    },
+    {
+      "portfolio": "cooldown",
+      "route": "ZEC|rh_lighter:4|hyperliquid:ZEC",
+      "depth": null,
+      "bbo": {
+        "closed": 1,
+        "pnl_usd": -1.3263204728818234,
+        "failed_hedges": 0,
+        "wins": 0,
+        "category": "crypto",
+        "asset": "ZEC"
+      }
+    },
+    {
+      "portfolio": "plus",
+      "route": "NVDA|hyperliquid:xyz:NVDA|lighter:110",
+      "depth": null,
+      "bbo": {
+        "closed": 1,
+        "pnl_usd": -0.4421551374344014,
+        "failed_hedges": 0,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      }
+    },
+    {
+      "portfolio": "plus",
+      "route": "COIN|hyperliquid:xyz:COIN|lighter:109",
+      "depth": null,
+      "bbo": {
+        "closed": 1,
+        "pnl_usd": -1.0043715153003057,
+        "failed_hedges": 1,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "COIN"
+      }
+    },
+    {
+      "portfolio": "premium",
+      "route": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15",
+      "depth": null,
+      "bbo": {
+        "closed": 1,
+        "pnl_usd": -1.334884040786741,
+        "failed_hedges": 0,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "NVDA"
+      }
+    },
+    {
+      "portfolio": "premium",
+      "route": "XAG|hyperliquid:xyz:SILVER|lighter:93",
+      "depth": null,
+      "bbo": {
+        "closed": 1,
+        "pnl_usd": -1.1387775016547712,
+        "failed_hedges": 0,
+        "wins": 0,
+        "category": "RWA/xyz",
+        "asset": "XAG"
+      }
+    }
+  ],
+  "retained_route_rows_omitted": 0,
+  "comparability_flags": [
+    "retained_trades_pruned_or_query_limited"
+  ],
+  "limitations": [
+    "Cumulative ledger totals are each run's latest checkpoint and cannot be rewound to the common cutoff.",
+    "Retained trade diagnostics use the common earlier checkpoint cutoff and may omit pruned trades.",
+    "Depth and BBO portfolios share opportunities; portfolio P&L must not be summed as independent returns.",
+    "The feed cohorts may have different numbers and mixes of attempted trades; net P&L alone cannot rank feeds.",
+    "Public displayed quotes and paper fills do not prove executable orders.",
+    "CPU and p95 lag are separate snapshot observations, not one synchronized measurement.",
+    "Latency probes are cumulative at each JSON snapshot time, separate from ledger checkpoint times. Fee-scenario observations share market signals and are correlated.",
+    "Probe survival means the delayed opening edge remained positive; it is not completed-trade profitability. Only count, sum, minimum, and maximum delay are recorded, so no delay p95 is available.",
+    "Entry-edge deterioration is measured only for paired, full planned size; exit delay requires exit_requested_at.",
+    "Only trades settled by the common earlier checkpoint enter retained comparisons; open and unsettled positions stay separate."
+  ]
+}

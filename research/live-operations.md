@@ -1,6 +1,6 @@
 # Active paper research operations
 
-Last updated: 2026-09-29 18:35 UTC. All processes below are paper simulation or
+Last updated: 2026-09-29 18:47 UTC. All processes below are paper simulation or
 public quote observation. No private keys or real orders are involved.
 
 | Process | PID | Output | Expected end |
@@ -9,10 +9,10 @@ public quote observation. No private keys or real orders are involved.
 | Scheduled audit capture, 1,200s cadence | 1749934 | data/strategy-reviews | Continuous |
 | Legacy horizon v1, depth | stopped | data/horizon-research | Ended 18:14 UTC |
 | Legacy horizon v1, BBO | stopped | data/horizon-research-bbo | Ended 18:23:39 UTC |
-| Horizon v2, BBO, four frozen models | 1806918 | data/horizon-research-v2-bbo | ~18:45 UTC |
-| Corrected paper source pilot, depth | 1807958 | data/paper-monitor-feed-v2-depth | ~18:46 UTC |
-| Corrected paper source pilot, BBO | 1807959 | data/paper-monitor-feed-v2-bbo | ~18:46 UTC |
-| Fixed-original-quantity quote study | 1876679 | data/fixed-markout-research-v1-bbo | 18:43:22 UTC |
+| Horizon v2, BBO, four frozen models | stopped | data/horizon-research-v2-bbo | Ended 18:45:22 UTC |
+| Corrected paper source pilot, depth | stopped | data/paper-monitor-feed-v2-depth | Ended 18:45:52 UTC |
+| Corrected paper source pilot, BBO | stopped | data/paper-monitor-feed-v2-bbo | Ended 18:45:52 UTC |
+| Fixed-original-quantity quote study | stopped | data/fixed-markout-research-v1-bbo | Ended 18:43:22 UTC |
 | BTC/ETH public trade/quote capture | stopped | data/raw/maker-capture/20260929T1823Z | Ended 18:29:56 UTC at cap |
 
 Do not assume a PID is still live: verify `/proc/<pid>/cmdline` and snapshot
@@ -22,7 +22,7 @@ report is [flawed-pilot-final.md](../reports/feed-experiment/flawed-pilot-final.
 
 ## Next review and interpretation
 
-The automatic loop captured the 18:26:33 scheduled review. **Next: 18:46:33 UTC**.
+The automatic loop captured the 18:46:33 scheduled review. **Next: 19:06:33 UTC**.
 Read `data/strategy-reviews/latest.json`; do not also run a one-shot capture
 against that output, because it advances the same baseline. The scheduler
 collects evidence; the active agent researches and evaluates changes.
@@ -41,8 +41,8 @@ v1. Improved quote MAE does not establish a profitable execution policy.
 
 ## Current evidence and decisions
 
-- Production review 7: baseline 185 closes / -$201.31; historical median four
-  closes / -$5.73; confirmed and conservative no entries. No thresholds relaxed.
+- Production review 8: baseline 182 closes / -$198.08; historical median eight
+  closes / -$12.16; confirmed and conservative no entries. No thresholds relaxed.
 - Chronological holdout: 527 closes / -$624.27. All selected entry filters lose.
   [Filter study](../reports/filter-experiments/REPORT.md).
 - Same holdout still loses $228.90 with both trading fees and modeled 5 bp
@@ -97,7 +97,8 @@ Standard fees are frozen from current discovery metadata; four fee notionals,
 original-size future exits, censored depth, and frozen forecast selections are
 recorded. It is an optimistic zero-entry-latency quote screen, not filled P&L.
 All four forecast models have predeclared $0/$0.25 screens; the linear forecast
-is primary and persistence a reference. Offline analysis is being prepared.
+is primary and persistence a reference. The [stopped analysis](../reports/fixed-markout-v1/README.md) is archived: 1,595
+matched quotes, one positive after four fees, none after extra reserve.
 
 Maker capture also started at 18:23:22 UTC from d880579. It uses public BTC/ETH
 quotes/trades on HL, Core and RH, with a hard ten-minute/25-MB total cap. The
@@ -108,4 +109,28 @@ not an executable quote, proven queue position or maker fill. No maker P&L
 classifier is deployed.
 
 Maker capture reached its 25 MB total cap at 18:29:56 UTC after 68,229 records;
-manifest errors were empty. Stopped-archive analysis is in progress.
+manifest errors were empty. [Stopped-archive analysis](maker-capture-analysis.md) is complete: no positive
+BTC/ETH four-taker quote outcome at any tested 1/2/5/10s horizon.
+
+
+## Completed round at 18:47 UTC
+
+- [Corrected matched source pilots](../reports/feed-experiment/corrected-pilot-final.md):
+  BBO improves observation coverage and enables paired entries; both baselines
+  lose. Their disabled REST and incomplete retained rows limit comparison to
+  production. Positions at duration end remain frozen, explicitly reported.
+- [Horizon v2](../reports/horizon-v2/README.md): conditional-linear MAE 0.927bp
+  versus persistence 1.094bp over 2,797 matched scored anchors. No profit claim.
+- [Fixed quantity](../reports/fixed-markout-v1/README.md): 2,134 anchors, 1,595
+  matched, 539 censored; primary screen selects zero; four observed secondary
+  median-screen selections all lose. No strategy promoted.
+- [Maker archive](maker-capture-analysis.md): 394 seconds, bounded 25MB;
+  startup replay excluded. Maker quote/trade-flow overlaps are not fills or
+  profitable unwinds. All eight venue/horizon four-taker groups have zero
+  positive after-fee displayed markouts.
+
+Only production collector PID 1922387 and audit scheduler PID 1749934 continue.
+Scheduled captures are automatic; AI research/strategy decisions need an active
+session. Next useful research is a predeclared maker post-flow hedge and unwind
+study with explicit queue/acknowledgement assumptions, not relaxing taker gates.
+No further background experiment directories are being created.

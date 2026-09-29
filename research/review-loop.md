@@ -419,3 +419,51 @@ At 18:38, the fixed-quantity pilot had scored crypto and equity/metal routes,
 including BTC/ETH/SOL/ZEC/XRP/HYPE, NVDA/META/XAG and a small COIN sample.
 All four frozen model screens had selected zero positive-after-four-fee
 anchors so far. This interim diagnostic does not replace the stopped report.
+
+
+## Review 8: 2026-09-29 18:46:33 UTC scheduled capture
+
+SQLite checkpoint 18:46:31.988; window starts 18:26:31.324. Retained completion
+coverage is complete for all eight portfolios; no winning closes in this window.
+
+| Standard-fee policy | Closes | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 182 | -198.078 | 180 | 2 |
+| Cooldown | 57 | -66.903 | 56 | 1 |
+| Historical median | 8 | -12.158 | 1 | 7 |
+| Conservative | 0 | 0 | 0 | 0 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+Lifecycle cumulative: 35 arms; 20 skew, six budget/depth, four economic, four
+forecast, one invalid-quote terminal; zero entries and residual zero. CPU 67.58%
+of one core; p95 loop lag 18.50ms; RSS 162.27MiB; 936 books/s. All four feeds
+connected. This window includes the two display/checkpoint deployments.
+Next scheduled audit: 19:06:33 UTC. Thresholds and execution assumptions unchanged.
+
+Finite studies completed and archived:
+
+- Corrected no-REST source pilots: depth baseline 1,599 closes / -$1,274.90;
+  BBO 852 / -$840.79. Do not rank by total: activity and retained coverage differ
+  (44.5% versus 75.2% for baseline diagnostics). Retained depth closes are failed
+  hedges; BBO has 525 paired and 116 failed. No aged one-lot residuals. Duration
+  stop leaves some exposure frozen; reported P&L excludes those unfinished trades.
+  BBO 100ms probe observed 6,090/6,297 (96.7%), actual mean 573.7ms; delayed
+  opening-edge survival is not round-trip profit. Production keeps REST/depth.
+- Horizon v2: 2,797 common scored anchors, conditional-linear MAE 0.927bp versus
+  persistence 1.094bp. Smaller quote error is not economic profitability.
+- Fixed original quantity: 2,134 anchors, 1,595 matched, 539 censored, no export
+  drops. One after-four-fee positive (NVDA +$0.3014), negative after reserve
+  (-$0.1985), not selected by any frozen screen. Primary screen selected zero;
+  historical-median selected five, four observed/all negative, one censored.
+- Maker archive: five focused analyzer tests passed after independent audit
+  found/fixed historical HL trades preceding first BBO. Fee-positive opening
+  allowances with public trade-flow evidence do not establish a maker fill or
+  closing P&L. Four-taker BTC/ETH controls at 1/2/5/10 seconds produced no positive
+  after-fee displayed markouts on either HL/Core or HL/RH complete-book subsets.
+
+Decision: no tested strategy promoted. Forecast improvement and transport speed
+are useful engineering results; neither supplies a positive net trading edge.
+The next maker investigation requires post-flow hedge and unwind evidence and
+explicit queue/acknowledgement assumptions, rather than reclassifying opening
+quotes as profits. Automatic 20-minute evidence capture continues; active AI
+research decisions do not execute outside an active session.

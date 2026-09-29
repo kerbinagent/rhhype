@@ -32,3 +32,22 @@ The generated Markdown gives the compact review. The JSON includes per-route
 and per-category retained diagnostics, coverage fractions, source counts,
 separate checkpoint and performance timestamps, and comparability flags.
 
+
+
+## Corrected forty-minute pilot, September 29
+
+[Final comparison](corrected-pilot-final.md) uses the two stopped
+`data/paper-monitor-feed-v2-*` directories at 18:45:52 UTC. Decimal-lot execution
+fix 16be742 was loaded at launch; no old one-lot residual appeared. Both pilots
+disable targeted REST, unlike production. BBO improves quote observation and
+paired execution coverage but does not establish profitability. Retention
+removed older trades, so lifetime ledgers and retained diagnostics are separate.
+Some positions remain frozen at the scheduled duration stop; the report lists
+them and does not invent closing fills. The raw stopped directories are retained
+locally, and can reproduce the report with:
+
+```bash
+.venv/bin/python scripts/compare_feed_experiments.py \
+  --depth data/paper-monitor-feed-v2-depth \
+  --bbo data/paper-monitor-feed-v2-bbo --name corrected-pilot-final
+```
