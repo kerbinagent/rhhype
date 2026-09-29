@@ -1,0 +1,14 @@
+{
+  "name": "hl_meta_native",
+  "method": "POST",
+  "url": "https://api.hyperliquid.xyz/info",
+  "json_body": {
+    "type": "meta"
+  },
+  "request_started_utc_ns": 1790716125292053035,
+  "response_completed_utc_ns": 1790716125530185810,
+  "status": 200,
+  "raw_file": "hl_meta_native.json",
+  "raw_bytes": 17628,
+  "sha256": "aa725f96351e898c95ab7cbc4062208200ea4fa7346478a10f60748e928b82e5"
+}

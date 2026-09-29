@@ -1,0 +1,26 @@
+{
+  "capital_rate_annual": 0.05,
+  "combined_usd_net": "conditional on USDG=USDC=USD parity; conversion and transfer not modeled",
+  "dust": "below-minimum hedge or exit remains unresolved; reduce-only exceptions not assumed",
+  "fee_tier": "public base rates, no user volume/staking/referral/builder adjustments",
+  "funding": "hour-crossing exposure unresolved without sourced settlement cash",
+  "hl_contract_source": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/contract-specifications",
+  "hl_fee_source": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees",
+  "hl_minimum_source": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/error-responses",
+  "hl_native_taker_bps": 4.5,
+  "hl_price_rule_source": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/tick-and-lot-size",
+  "hl_selected_xyz_taker_bps": 0.9,
+  "initial_wallet_per_venue": "2 * branch budget; separate USDG and USDC wallets",
+  "primary_size_usd": 1000,
+  "private_fills": "not observed; every maker fill is a counterfactual public-flow scenario",
+  "promotion": "20-minute holdout is descriptive feasibility only; no production promotion",
+  "reserve_bps": 5,
+  "rh_tier_source": "https://apidocs.rh.lighter.xyz/docs/account-types",
+  "sizes_usd": [
+    100,
+    250,
+    500,
+    1000
+  ],
+  "timing": "public-book timing proxies; source clocks are not calibrated private execution clocks"
+}

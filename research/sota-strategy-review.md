@@ -80,7 +80,9 @@ to pay for a Hyperliquid hedge, inventory risk, and a fully costed unwind.
 A new venue could have less competition, but also thinner flow, less stable
 references, or sparse executable depth. We must measure both possibilities.
 
-Use $25/$50/$100/$250 orders, with $1,000 as a capacity control. Treat the
+Following the user's size clarification, use **$100/$250/$500/$1,000** orders,
+with **$1,000 as the primary benchmark**. Smaller sizes need new evidence
+before inclusion. Treat the
 RH Lighter domain separately from Core Lighter and canonical Robinhood
 Chain AMMs. Start with comparable crypto contracts and separate NVDA/XAG
 cohorts; expand only after contract and feed checks. Volume, spread, flow
@@ -111,8 +113,8 @@ marginal cash flow against existing dated lots and their remaining exit
 liabilities. Hedging net delta to zero does not remove opposite venue
 positions, margin use, funding or basis risk.
 
-A $0.10 target means 40 bp at $25, 20 bp at $50, 10 bp at $100 and 4 bp at
-$250. Accordingly, report **net > 0**, **net >= $0.10**, net basis points,
+A $0.10 target means 10 bp at $100, 4 bp at $250, 2 bp at $500 and 1 bp at
+$1,000. Accordingly, report **net > 0**, **net >= $0.10**, net basis points,
 net dollars per hour and capital usage separately. Small positive cents
 must not be inflated into a large income estimate by recounting the same
 quote. The existing monitor target remains unchanged.

@@ -1,0 +1,26 @@
+{
+  "calibration_seconds": 1800,
+  "derived_cap_bytes": 128000000,
+  "files": {
+    "reports/rh-small-maker-v1/assumptions.json": "214dcb4496164928d5800192fba68c9f923c0802c4a159ec257f4819d2bf1878",
+    "reports/rh-small-maker-v1/metadata/hl_meta_native.json": "aa725f96351e898c95ab7cbc4062208200ea4fa7346478a10f60748e928b82e5",
+    "reports/rh-small-maker-v1/metadata/hl_meta_native.request.json": "d556f4d9b41f13d3330dd3f3057c82b2f30a963f62042b18128ef366053b9503",
+    "reports/rh-small-maker-v1/metadata/hl_meta_xyz.json": "a1ebdfb64dae0d4836a32c68f4601f9aae66eb2f05d5fd994a7139769f057f3d",
+    "reports/rh-small-maker-v1/metadata/hl_meta_xyz.request.json": "aeef68c2bfca5d71dc5ed886b6dfa3cb30f19e43e53271509f93a395cc4529e3",
+    "reports/rh-small-maker-v1/metadata/market_plan.json": "6f16e506bb0bde92b77eae0213cb7972d8fb5a313ad728fb02f58313172bd749",
+    "reports/rh-small-maker-v1/metadata/normalized.json": "7a64a5c93e9fa21ff822d83013a90d178ed277bd7c18413a97e83154e0b3baa8",
+    "reports/rh-small-maker-v1/metadata/rh_order_book_details.json": "edc5f30f01d16491292f0fb7527e4b613835f87c9c3d81a89ce3f223a56aed9a",
+    "reports/rh-small-maker-v1/metadata/rh_order_book_details.request.json": "1211b5952d6cce71ed7a765759202535d4623b05495457ea9f9461779cd4979c",
+    "reports/rh-small-maker-v1/method.md": "00224de4ec8723b584eb67389136525702ca3f151c56b0bf2558913a8166929d",
+    "reports/rh-small-maker-v1/policy-metadata-premium.json": "f6afa706e5198d5260e6d7bcddffabd173cc26b1484301cba9dd3c84bedcbf29",
+    "reports/rh-small-maker-v1/policy-metadata-standard.json": "6fc5a7aa37acd237a7536e5ab8c648722dbbf3051aec9f839efebd30e6346d12",
+    "research/rh-small-maker-plan.md": "00224de4ec8723b584eb67389136525702ca3f151c56b0bf2558913a8166929d",
+    "scripts/maker_capture.py": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9",
+    "scripts/rh_maker_capture.py": "8a075d1b454752e0852f1a8ab6d40189c60bfba7bf62c7ff781b7349571b45b4"
+  },
+  "frozen_at": "2026-09-29T21:21:06.220215+00:00",
+  "holdout_seconds": 1200,
+  "implementation_freeze": "Lifecycle/replay implementation must be frozen before holdout begins; no holdout outcome may choose parameters.",
+  "phase": "method_and_capture_freeze",
+  "raw_cap_bytes": 384000000
+}

@@ -1,0 +1,15 @@
+{
+  "name": "hl_meta_xyz",
+  "method": "POST",
+  "url": "https://api.hyperliquid.xyz/info",
+  "json_body": {
+    "type": "meta",
+    "dex": "xyz"
+  },
+  "request_started_utc_ns": 1790716125531502448,
+  "response_completed_utc_ns": 1790716125692453102,
+  "status": 200,
+  "raw_file": "hl_meta_xyz.json",
+  "raw_bytes": 26934,
+  "sha256": "a1ebdfb64dae0d4836a32c68f4601f9aae66eb2f05d5fd994a7139769f057f3d"
+}
