@@ -161,7 +161,20 @@ class PaperEngine:
         ledger=self.ledgers[strategy]
         unrealized=self._unrealized_for_venue(strategy,venue,now)
         if unrealized is None:return None
-        return ledger['wallets'].get(venue,0)-self._reserved(strategy,venue)+min(0,unrealized)
+        funding_reserve=0.0
+        boundary=int(now//3600)*3600
+        for p in self.positions.values():
+            if p['strategy']!=strategy or not any(l['venue']==venue for l in p['legs']):continue
+            crossed=any(l['entry_time'] is not None and l['entry_time']<boundary for l in p['legs'])
+            if not crossed:continue
+            funding=p.get('funding') if p['status']=='AWAITING_FUNDING' else p.get('open_funding')
+            if (not funding or not funding.get('complete') or
+                    (p['status']!='AWAITING_FUNDING' and funding.get('covered_until',0)<boundary)):
+                return None
+            events=funding.get('events',[])
+            if abs(sum(e.get('cashflow_usd',0) for e in events)-funding['cashflow_usd'])>1e-7:return None
+            funding_reserve+=sum(min(0,float(e['cashflow_usd'])) for e in events if e.get('venue')==venue)
+        return ledger['wallets'].get(venue,0)-self._reserved(strategy,venue)+min(0,unrealized)+funding_reserve
 
     def _cancel_entry(self,p,now,reason):
         for leg in p['legs']:
@@ -215,6 +228,8 @@ class PaperEngine:
                     self._exit_intent(p,leg,now)
                     continue
                 if now<intent['due'] or now>intent['expires']:continue
+                if book.get('engine_time') is not None and book['engine_time']<intent['due']:
+                    self.stats['pre_delay_source_books']+=1;continue
                 self._fill(p,leg,intent,book,remaining[p['strategy']],now)
             self._transition(p,now)
         self._probe_update(k,now)
@@ -474,6 +489,7 @@ class PaperEngine:
         for pid,p in list(self.probes.items()):
             s=p['signal']
             if k not in (s['buy'],s['sell']) or now<p['due']:continue
+            if self.books[k].get('engine_time') is not None and self.books[k]['engine_time']<p['due']:continue
             if self.books[k].get('generation')!=p['generations'][k]:
                 self._finish_probe(pid,'missing','generation_changed');continue
             p['after'].setdefault(k,copy.deepcopy(self.books[k]))

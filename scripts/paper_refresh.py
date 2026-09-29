@@ -74,6 +74,13 @@ async def run_hl_refresh(engine, client, on_book, stop: asyncio.Event, *,
     last_request = defaultdict(float)
     inflight = set()
     tasks = set()
+    failures = []
+
+    def completed(task):
+        tasks.discard(task)
+        if not task.cancelled():
+            error=task.exception()
+            if error is not None and not failures:failures.append(error)
     # Urgent entries/exits get three of six turns; held exposure and probes
     # retain scheduled opportunities even during a sustained entry burst.
     # When no orders are pending, held marks win fallback slots; abundant
@@ -107,7 +114,7 @@ async def run_hl_refresh(engine, client, on_book, stop: asyncio.Event, *,
             engine.stats['target_refresh_successes'] += 1
         except asyncio.CancelledError:
             raise
-        except (aiohttp.ClientError, OSError, RuntimeError, KeyError, TypeError, ValueError,
+        except (aiohttp.ClientError, OSError, RuntimeError, KeyError, TypeError, ValueError, AttributeError, IndexError,
                 asyncio.TimeoutError) as exc:
             # A failed targeted request must not poison a healthy stream book.
             engine.stats['target_refresh_errors'] += 1
@@ -117,6 +124,7 @@ async def run_hl_refresh(engine, client, on_book, stop: asyncio.Event, *,
 
     try:
         while not stop.is_set():
+            if failures:raise failures[0]
             now = time.time()
             targets = _targets(engine, now)
             if len(last_request) > 512:
@@ -147,7 +155,7 @@ async def run_hl_refresh(engine, client, on_book, stop: asyncio.Event, *,
                 task = asyncio.create_task(refresh(market_key, _market_for_key(engine, market_key),
                                                    current['generation'], now))
                 tasks.add(task)
-                task.add_done_callback(tasks.discard)
+                task.add_done_callback(completed)
             try:
                 await asyncio.wait_for(stop.wait(), timeout=interval)
             except asyncio.TimeoutError:
@@ -156,3 +164,4 @@ async def run_hl_refresh(engine, client, on_book, stop: asyncio.Event, *,
         for task in tasks:
             task.cancel()
         await asyncio.gather(*tasks, return_exceptions=True)
+    if failures:raise failures[0]

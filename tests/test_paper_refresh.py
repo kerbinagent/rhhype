@@ -83,6 +83,13 @@ class RefreshTests(unittest.IsolatedAsyncioTestCase):
         self.assertTrue(engine.books[key]['valid'])
         self.assertEqual(published, [])
 
+    async def test_unexpected_worker_failure_reaches_supervisor(self):
+        engine,key=fixture();stop=asyncio.Event()
+        class Client:
+            async def book(self,market):raise AssertionError('unexpected implementation failure')
+        with self.assertRaises(AssertionError):
+            await asyncio.wait_for(run_hl_refresh(engine,Client(),lambda _:None,stop),1)
+
     def test_priorities_and_held_market_after_discovery(self):
         engine, key = fixture()
         now = time.time()

@@ -52,6 +52,25 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual(engine.books['hyperliquid:BTC']['bids'][0][0],99)
         self.assertEqual(engine.stats['out_of_order_engine_times'],1)
 
+    def test_delayed_fill_waits_for_post_delay_source_time(self):
+        from test_paper_engine import engine,book
+        e=engine();position=next(iter(e.positions.values()))
+        e.receive(book('hyperliquid','BTC',1000.3,99.99,100)|{'engine_time':1000.1})
+        self.assertEqual(position['legs'][0]['quantity'],0)
+        e.receive(book('hyperliquid','BTC',1000.4,99.99,100)|{'engine_time':1000.25})
+        self.assertGreater(position['legs'][0]['quantity'],0)
+
+    def test_unposted_funding_losses_reduce_spendable_cash(self):
+        from test_paper_engine import engine,book,EngineTests
+        e=engine();p=EngineTests().open_position(e)
+        before=e.cash_available('standard','hyperliquid',1000.5)
+        e.receive(book('hyperliquid','BTC',3601,99.99,100))
+        e.receive(book('rh_lighter',1,3601,102,102.01))
+        self.assertIsNone(e.cash_available('standard','hyperliquid',3601))
+        p['open_funding']={'complete':True,'covered_until':3600,'cashflow_usd':1,
+            'events':[{'venue':'hyperliquid','cashflow_usd':-2},{'venue':'rh_lighter','cashflow_usd':3}]}
+        self.assertAlmostEqual(e.cash_available('standard','hyperliquid',3601),before-2)
+
     def test_default_stream_and_fully_collateralized_scenarios(self):
         args=arguments(['--no-tui'])
         config=config_from(args)

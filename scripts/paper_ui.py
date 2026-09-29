@@ -165,7 +165,7 @@ def _diagnostic_line(snapshot: dict) -> str:
     parts = []
     for venue, state in list(feeds.items())[:5]:
         if isinstance(state, dict):
-            label = state.get("status", "?")
+            label = state.get("status", "up" if state.get("connected") else "down" if "connected" in state else "?")
         else:
             label = state
         parts.append(f"{_label(venue)} {_label(label)}")
@@ -182,10 +182,13 @@ def _storage_line(snapshot: dict) -> str:
     details = []
     probe_delays = sorted((k for k, v in latency.items() if isinstance(v, dict)),
                           key=lambda key: _number(key) if _number(key) is not None else math.inf)
-    for delay in probe_delays[:2]:
-        stats = latency[delay]
-        details.append(f"{_label(delay)}ms {_int(stats.get('survived'))}/"
-                       f"{_int(stats.get('observed'))} survived")
+    if probe_delays:
+        delay=probe_delays[0];stats=latency[delay]
+        observed=_int(stats.get('observed'))
+        elapsed=_number(stats.get('actual_delay_ms_sum'))
+        actual=f"{elapsed/observed:.0f}ms" if observed and elapsed is not None else "?"
+        return (f"Probe {delay}ms target: {_int(stats.get('survived'))}/{observed} positive, "
+                f"{_int(stats.get('missing'))} missing; actual avg {actual}")
     for data, keys in ((latency, ("p50_ms", "p95_ms", "poll_interval_ms")),
                        (storage, ("rows", "max_rows", "bytes", "max_bytes"))):
         for key in keys:

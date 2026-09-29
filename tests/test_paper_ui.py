@@ -60,7 +60,7 @@ class LayoutTests(unittest.TestCase):
         self.assertIn("NOT trade P&L", joined)
         self.assertIn("Pen funding", joined)
         self.assertIn("? unknown", joined)
-        self.assertIn("100ms 3/4 survived", joined)
+        self.assertIn("100ms target: 3/4 positive, 1 missing", joined)
         self.assertIn("Closed win/loss sums USD", joined)
         self.assertIn("Std +15.1/-2.8", joined)
 
