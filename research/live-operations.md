@@ -260,3 +260,14 @@ Production monitor and 20-minute review loop continue independently.
   begins. The experiment method was fixed before capture. No private orders.
 - Latest production exposure check found actual held positions below ten
   seconds; old XAG records are flat funding settlements, not stale exposure.
+
+## Status at 21:47 UTC
+
+- Review 17 was actively read on schedule; next due 22:06:33 UTC. All four
+  production feeds connected; 66.06% of one core, 12.15ms p95 loop lag.
+- RH maker capture remains collecting (20 MiB at 21:45, 384 MB cap), with
+  holdout planned 21:51:32–22:11:32. Implementation freeze **38950ef** at
+  21:38:24 records source hashes and 46 focused tests; no capture outcomes
+  have been inspected. Production directory was 52 MiB and reviews 500 KiB.
+- Separate historical hedge-venue comparison and symmetric maker-sell
+  follow-up preserve the current frozen pilot.

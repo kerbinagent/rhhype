@@ -11,6 +11,8 @@ joining the RH best bid. Portfolios reuse public events and cannot be added.
 
 - [Frozen method](method.md), committed before collection in **9054b25**.
 - [Capture/source freeze](capture-freeze.json) and [verified launch](launch.json).
+- [Replay implementation freeze](implementation-freeze.json), recorded at
+  21:38:24 UTC before the holdout, with 46 focused tests passing.
 - [Public raw metadata and grids](metadata/normalized.json).
 - [Standard policy inputs](policy-metadata-standard.json),
   [Premium policy inputs](policy-metadata-premium.json), and
@@ -34,7 +36,7 @@ After a terminal capture manifest exists, reproduce with:
 Output must be a new directory. The coordinator verifies frozen metadata
 and raw hashes, uses the fixed chronological split, reports all 96 branch
 outcomes and keeps open obligations unknown. It never sends orders.
-Lifecycle implementation and tests must be frozen before the holdout starts;
+Lifecycle implementation and tests were frozen before the holdout starts;
 the method was fixed before capture. Test fixtures use synthetic data.
 
 These are public-flow counterfactuals under stated timing assumptions.

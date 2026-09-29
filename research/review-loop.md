@@ -682,3 +682,31 @@ plus 128 MB derived maximum. Holdout begins about 21:51:32; capture stops
 about 22:11:32. Lifecycle/replay code is being tested before the holdout.
 No outcomes from this capture have been used to change its policy.
 Next scheduled review **21:46:33 UTC / 5:46 p.m. ET**.
+
+## Review 17: 2026-09-29 21:46:33 UTC, actively reviewed on schedule
+
+| Standard-fee policy | Completed | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 91 | -97.583 | 91 | 0 |
+| Cooldown | 46 | -48.763 | 46 | 0 |
+| Historical median | 2 | -2.783 | 0 | 2 |
+| Conservative | 0 | 0 | 0 | 0 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+All retained outcomes exact under the paper model, with full window coverage
+and zero wins. Median gate also had one zero-fill abort. Baseline lost
+$27.7722 before $23.8670 trading fees, $45.9409 extra reserve, and $0.0033
+capital: reducing costs alone does not repair those realized price paths.
+Baseline paired entry median 1.261s/p95 1.745s; exit request to flat median
+1.106s/p95 1.977s. CPU 66.06% of one core, p95 loop lag 12.15ms, RSS
+217.11MiB, 578 books/s; all four feeds connected. Confirmation 99 arms,
+zero entries/pending/residual: 64 skew, 19 forecast, seven depth/budget,
+seven economics, two invalid cancellations. No replacement policy promoted.
+
+RH maker replay implementation was frozen at 21:38:24 in **38950ef**,
+before the 21:51:32 holdout, with 46 focused tests passing. The capture
+continues toward its planned 22:11:32 stop; its outcomes remain unread.
+Separate stopped-archive research compares Core versus HL hedge costs and
+preregisters a mirrored RH maker-sell follow-up on new data. Current study
+stays $100/$250/$500/$1,000, primary $1,000, buy-side only.
+Next scheduled review **22:06:33 UTC / 6:06 p.m. ET**.

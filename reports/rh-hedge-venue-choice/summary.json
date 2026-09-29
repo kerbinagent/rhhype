@@ -1,0 +1,281 @@
+{
+  "method": "HL L2 receipt anchors spaced >=5s per asset; same RH anchor/quantity; all three venues fresh at entry and first matched observation in +10\u201316s",
+  "freshness": "receipt<=1s, source<=2s, cross-venue receipt/source skew<=1s",
+  "sizes_usd": [
+    100,
+    250,
+    500,
+    1000
+  ],
+  "groups": {
+    "BTC:100": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_exit_matched": 75,
+        "invalid_size": 0,
+        "rh_exit_depth": 0,
+        "hyperliquid_depth": 0,
+        "lighter_depth": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_usd": "0.086801099",
+      "core_lower_total_hurdle_count": 75,
+      "core_higher_total_hurdle_count": 0,
+      "equal_total_hurdle_count": 0
+    },
+    "BTC:250": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_exit_matched": 75,
+        "invalid_size": 0,
+        "rh_exit_depth": 0,
+        "hyperliquid_depth": 0,
+        "lighter_depth": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_usd": "0.2172659580",
+      "core_lower_total_hurdle_count": 75,
+      "core_higher_total_hurdle_count": 0,
+      "equal_total_hurdle_count": 0
+    },
+    "BTC:500": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_exit_matched": 75,
+        "invalid_size": 0,
+        "rh_exit_depth": 0,
+        "hyperliquid_depth": 0,
+        "lighter_depth": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_usd": "0.4352585580",
+      "core_lower_total_hurdle_count": 75,
+      "core_higher_total_hurdle_count": 0,
+      "equal_total_hurdle_count": 0
+    },
+    "BTC:1000": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_exit_matched": 75,
+        "invalid_size": 0,
+        "rh_exit_depth": 0,
+        "hyperliquid_depth": 0,
+        "lighter_depth": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_usd": "0.867609570",
+      "core_lower_total_hurdle_count": 75,
+      "core_higher_total_hurdle_count": 0,
+      "equal_total_hurdle_count": 0
+    },
+    "ETH:100": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_exit_matched": 75,
+        "invalid_size": 0,
+        "rh_exit_depth": 0,
+        "hyperliquid_depth": 0,
+        "lighter_depth": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_usd": "0.0919096850",
+      "core_lower_total_hurdle_count": 75,
+      "core_higher_total_hurdle_count": 0,
+      "equal_total_hurdle_count": 0
+    },
+    "ETH:250": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_exit_matched": 75,
+        "invalid_size": 0,
+        "rh_exit_depth": 0,
+        "hyperliquid_depth": 0,
+        "lighter_depth": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_usd": "0.231715080",
+      "core_lower_total_hurdle_count": 75,
+      "core_higher_total_hurdle_count": 0,
+      "equal_total_hurdle_count": 0
+    },
+    "ETH:500": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_exit_matched": 75,
+        "invalid_size": 0,
+        "rh_exit_depth": 0,
+        "hyperliquid_depth": 0,
+        "lighter_depth": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_usd": "0.46343016",
+      "core_lower_total_hurdle_count": 75,
+      "core_higher_total_hurdle_count": 0,
+      "equal_total_hurdle_count": 0
+    },
+    "ETH:1000": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_exit_matched": 75,
+        "invalid_size": 0,
+        "rh_exit_depth": 0,
+        "hyperliquid_depth": 0,
+        "lighter_depth": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_usd": "0.92686032",
+      "core_lower_total_hurdle_count": 75,
+      "core_higher_total_hurdle_count": 0,
+      "equal_total_hurdle_count": 0
+    },
+    "NVDA:100": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_exit_matched": 52,
+        "invalid_size": 0,
+        "rh_exit_depth": 0,
+        "hyperliquid_depth": 0,
+        "lighter_depth": 0,
+        "complete_common": 52
+      },
+      "median_core_minus_hl_usd": "0.0192631086",
+      "core_lower_total_hurdle_count": 52,
+      "core_higher_total_hurdle_count": 0,
+      "equal_total_hurdle_count": 0
+    },
+    "NVDA:250": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_exit_matched": 52,
+        "invalid_size": 0,
+        "rh_exit_depth": 0,
+        "hyperliquid_depth": 0,
+        "lighter_depth": 0,
+        "complete_common": 52
+      },
+      "median_core_minus_hl_usd": "0.0482017512",
+      "core_lower_total_hurdle_count": 52,
+      "core_higher_total_hurdle_count": 0,
+      "equal_total_hurdle_count": 0
+    },
+    "NVDA:500": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_exit_matched": 52,
+        "invalid_size": 0,
+        "rh_exit_depth": 0,
+        "hyperliquid_depth": 0,
+        "lighter_depth": 0,
+        "complete_common": 52
+      },
+      "median_core_minus_hl_usd": "0.09317081115",
+      "core_lower_total_hurdle_count": 52,
+      "core_higher_total_hurdle_count": 0,
+      "equal_total_hurdle_count": 0
+    },
+    "NVDA:1000": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_exit_matched": 52,
+        "invalid_size": 0,
+        "rh_exit_depth": 0,
+        "hyperliquid_depth": 0,
+        "lighter_depth": 0,
+        "complete_common": 52
+      },
+      "median_core_minus_hl_usd": "0.16986685275",
+      "core_lower_total_hurdle_count": 52,
+      "core_higher_total_hurdle_count": 0,
+      "equal_total_hurdle_count": 0
+    },
+    "XAG:100": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_exit_matched": 68,
+        "invalid_size": 0,
+        "rh_exit_depth": 0,
+        "hyperliquid_depth": 0,
+        "lighter_depth": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_usd": "0.0132049278",
+      "core_lower_total_hurdle_count": 65,
+      "core_higher_total_hurdle_count": 3,
+      "equal_total_hurdle_count": 0
+    },
+    "XAG:250": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_exit_matched": 68,
+        "invalid_size": 0,
+        "rh_exit_depth": 0,
+        "hyperliquid_depth": 0,
+        "lighter_depth": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_usd": "0.0321483314",
+      "core_lower_total_hurdle_count": 65,
+      "core_higher_total_hurdle_count": 3,
+      "equal_total_hurdle_count": 0
+    },
+    "XAG:500": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_exit_matched": 68,
+        "invalid_size": 0,
+        "rh_exit_depth": 0,
+        "hyperliquid_depth": 0,
+        "lighter_depth": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_usd": "0.0633979920",
+      "core_lower_total_hurdle_count": 65,
+      "core_higher_total_hurdle_count": 3,
+      "equal_total_hurdle_count": 0
+    },
+    "XAG:1000": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_exit_matched": 68,
+        "invalid_size": 0,
+        "rh_exit_depth": 0,
+        "hyperliquid_depth": 0,
+        "lighter_depth": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_usd": "0.1241187354",
+      "core_lower_total_hurdle_count": 66,
+      "core_higher_total_hurdle_count": 2,
+      "equal_total_hurdle_count": 0
+    }
+  },
+  "rows": 1080,
+  "source_sha256": {
+    "crypto_frames": "5f6ade0523703efe0ecd40c17ead0782eccc3bf7f780ae17364d8c26fc56567d",
+    "rwa_reconstructed_books": "a1996d671d380a1880564165fabb0482df75ae9aaa71f25cb5e325aa2fa02786",
+    "rh_hl_metadata": "7a64a5c93e9fa21ff822d83013a90d178ed277bd7c18413a97e83154e0b3baa8",
+    "core_metadata": "8e68dcbb5df14210fc29e4002128460db5579bc8de1b0974ceeef683c2b1d232",
+    "script": "030ca84e7a789c23ac31335a2563375ef1fd247eac4892bf3be769fca5523741"
+  },
+  "notes": [
+    "No hypothetical maker order was placed or fill observed.",
+    "Exit books at +10s are static fresh observations, not fill-time execution.",
+    "USDG/USDC collateral conversion and funding are not modeled."
+  ]
+}
