@@ -30,6 +30,7 @@ ASTER_SNAPSHOT = "https://fapi.asterdex.com/fapi/v3/depth"
 # Exceeding the bound invalidates instead of silently corrupting future depth.
 STATE_LIMIT = 5000
 BUFFER_LIMIT = 4096
+LIGHTER_KEEPALIVE_SECONDS = 30.0
 
 
 def _levels(rows, *, lighter=False):
@@ -82,7 +83,7 @@ class StreamManager:
 
     def _status(self, venue, **changes):
         counts = self.counters[venue]
-        for key in ("connected", "subscriptions", "messages", "reconnects", "gaps", "errors"):
+        for key in ("connected", "subscriptions", "messages", "reconnects", "gaps", "errors", "keepalives"):
             if key in changes and isinstance(changes[key], int) and key != "connected":
                 counts[key] += changes[key]
         if set(changes) == {"messages"}:
@@ -378,13 +379,24 @@ class StreamManager:
                                                 f"market_stats/{m['market']}"})
                             await asyncio.sleep(0.02)
                     self._status(venue, subscriptions=2 * len(group))
+                    next_keepalive = time.monotonic() + LIGHTER_KEEPALIVE_SECONDS
                     while not stop.is_set():
+                        # aiohttp's heartbeat resets on incoming traffic. Lighter
+                        # instead requires an outbound frame at least every 120s,
+                        # including while subscribed markets are continuously busy.
+                        if venue in ("lighter", "rh_lighter") and time.monotonic() >= next_keepalive:
+                            await ws.send_json({"type": "ping"})
+                            self._status(venue, keepalives=1, last_keepalive_at=time.time())
+                            next_keepalive = time.monotonic() + LIGHTER_KEEPALIVE_SECONDS
                         try:
                             frame = await ws.receive(timeout=2)
                         except asyncio.TimeoutError:
                             continue
                         if frame.type in (aiohttp.WSMsgType.CLOSED, aiohttp.WSMsgType.CLOSE,
                                           aiohttp.WSMsgType.ERROR):
+                            self._status(venue, last_disconnect_at=time.time(),
+                                         last_close_code=ws.close_code,
+                                         last_close_reason=str(frame.extra or frame.data or frame.type.name)[:160])
                             break
                         if frame.type != aiohttp.WSMsgType.TEXT:
                             continue

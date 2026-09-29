@@ -55,7 +55,7 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual(engine.stats['out_of_order_engine_times'],1)
 
     def test_delayed_fill_waits_for_post_delay_source_time(self):
-        from test_paper_engine import engine,book
+        from tests.test_paper_engine import engine,book
         e=engine();position=next(iter(e.positions.values()))
         e.receive(book('hyperliquid','BTC',1000.3,99.99,100)|{'engine_time':1000.1})
         self.assertEqual(position['legs'][0]['quantity'],0)
@@ -63,7 +63,7 @@ class RuntimeTests(unittest.TestCase):
         self.assertGreater(position['legs'][0]['quantity'],0)
 
     def test_unposted_funding_losses_reduce_spendable_cash(self):
-        from test_paper_engine import engine,book,EngineTests
+        from tests.test_paper_engine import engine,book,EngineTests
         e=engine();p=EngineTests().open_position(e)
         before=e.cash_available('standard','hyperliquid',1000.5)
         e.receive(book('hyperliquid','BTC',3601,99.99,100))
@@ -80,7 +80,9 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual(config.margin_fraction,1)
         self.assertEqual(config.notional,1000)
         self.assertEqual(config.strategies,('standard','plus','premium'))
-        self.assertEqual(config.holding_seconds,300)
+        self.assertEqual(config.holding_seconds,10)
+        self.assertEqual(config.take_profit_usd,.10)
+        self.assertIsNone(config_from(arguments(['--no-tui','--no-take-profit'])).take_profit_usd)
 
 
 class CheckpointFailureTests(unittest.IsolatedAsyncioTestCase):

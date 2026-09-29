@@ -155,8 +155,10 @@ def _position_line(snapshot: dict) -> str:
         age_text = f"{int(age)}s" if age is not None else "?"
         pnl = _cash(pos.get("liquidation_pnl"), 7).strip()
         status = _label(pos.get("status", "?"))
+        remaining=_number(pos.get('exit_in_seconds'))
+        timing=f"exit in {max(0,math.ceil(remaining))}s" if remaining is not None else age_text
         summaries.append(f"{_label(pos.get('asset', '?'))}/{_label(pos.get('strategy', '?'))} "
-                         f"{status} {age_text} {pnl}")
+                         f"{status} {timing} {pnl}")
     return "Positions: " + " | ".join(summaries) + (f" | +{len(positions)-2} more" if len(positions) > 2 else "")
 
 
@@ -170,8 +172,12 @@ def _diagnostic_line(snapshot: dict) -> str:
             label = state.get("status", "up" if state.get("connected") else "down" if "connected" in state else "?")
         else:
             label = state
-        parts.append(f"{_label(venue)} {_label(label)}")
-    return "Feeds: " + " | ".join(parts)
+        name={"hyperliquid":"HL","lighter":"Lighter","rh_lighter":"RH","aster":"Aster"}.get(venue,venue)
+        parts.append(f"{_label(name)} {_label(label)}")
+    cpu=_number(snapshot.get('cpu_percent_one_core'));lag=_number(snapshot.get('loop_lag_p95_ms'))
+    performance=f" | CPU {cpu:.0f}% lag {lag:.0f}ms" if cpu is not None and lag is not None else ""
+    if snapshot.get('performance_status')=='busy':performance+=" BUSY"
+    return "Feeds: " + " ".join(parts) + performance
 
 
 def _storage_line(snapshot: dict) -> str:

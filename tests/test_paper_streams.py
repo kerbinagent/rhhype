@@ -127,3 +127,37 @@ class StreamTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class KeepaliveTests(unittest.IsolatedAsyncioTestCase):
+    async def test_busy_inbound_feed_still_sends_regular_outbound_keepalives(self):
+        import time
+        from types import SimpleNamespace
+        from unittest.mock import patch
+        import aiohttp
+        stop=asyncio.Event()
+        class BusySocket:
+            close_code=None
+            def __init__(self):self.last_sent=time.monotonic();self.pings=[];self.expired=False
+            async def send_json(self,message):
+                self.last_sent=time.monotonic()
+                if message.get('type')=='ping':self.pings.append(self.last_sent)
+            async def receive(self,timeout):
+                await asyncio.sleep(.001)
+                if time.monotonic()-self.last_sent>.08:
+                    self.expired=True;stop.set()
+                    return SimpleNamespace(type=aiohttp.WSMsgType.CLOSE,data=1000,extra='keepalive expired')
+                return SimpleNamespace(type=aiohttp.WSMsgType.TEXT,data='{"type":"update/market_stats","market_stats":{}}')
+            async def __aenter__(self):return self
+            async def __aexit__(self,*args):pass
+        ws=BusySocket()
+        class Session:
+            def ws_connect(self,*args,**kwargs):return ws
+        manager=StreamManager(Session(),[market('lighter',1)],lambda _:None,lambda *_:None)
+        async def finish():await asyncio.sleep(.20);stop.set()
+        with patch('scripts.paper_streams.LIGHTER_KEEPALIVE_SECONDS',.02):
+            await asyncio.gather(manager._connection('lighter',[market('lighter',1)],stop,0),finish())
+        self.assertFalse(ws.expired)
+        self.assertGreaterEqual(len(ws.pings),4)
+        self.assertGreater(manager.counters['lighter']['messages'],20)
+        self.assertEqual(manager.counters['lighter']['keepalives'],len(ws.pings))

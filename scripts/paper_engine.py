@@ -18,6 +18,7 @@ class EngineConfig:
     max_positions: int = 10
     max_matched_notional: float = 10000.0
     holding_seconds: float = 300.0
+    take_profit_usd: float | None = None
     network_delay_ms: float = 100.0
     hl_processing_ms: float = 50.0
     aster_processing_ms: float = 50.0
@@ -319,9 +320,25 @@ class PaperEngine:
     def tick(self,now):
         self.last_processed=now
         for p in list(self.positions.values()):
-            if p['status']=='OPEN' and now>=p['exit_due']:
-                p['status']='EXITING';p['exit_reason']='holding_period'
-                for leg in p['legs']:self._exit_intent(p,leg,now)
+            if p['status']=='OPEN':
+                reason=None;mark=None
+                if now>=p['exit_due']:
+                    reason='max_hold' if self.config.take_profit_usd is not None else 'holding_period'
+                elif self.config.take_profit_usd is not None:
+                    books=[self.books.get(leg['key']) for leg in p['legs']]
+                    if (all(valid_book(b,now,self.config) for b in books) and
+                            abs(books[0]['received']-books[1]['received'])<=self.config.max_skew):
+                        mark=self.liquidation(p,now)
+                        if mark is not None and mark>=self.config.take_profit_usd:reason='take_profit'
+                if reason:
+                    p['status']='EXITING';p['exit_reason']=reason;p['exit_requested_at']=now
+                    p['exit_trigger_pnl_usd']=mark
+                    for leg in p['legs']:self._exit_intent(p,leg,now)
+                    self.transitions.append(copy.deepcopy(p))
+                    self.evidence.append((p['id']+':exit_request',{
+                        'position_id':p['id'],'reason':reason,'estimated_net_pnl_usd':mark,
+                        'requested_at':now,'books':[self._book_evidence(self.books.get(l['key'],{})) for l in p['legs']]},
+                        'exit_request',now))
             for leg in p['legs']:
                 intent=leg.get('intent')
                 if intent and now>intent['expires']:
@@ -492,7 +509,8 @@ class PaperEngine:
             if self.books[k].get('engine_time') is not None and self.books[k]['engine_time']<p['due']:continue
             if self.books[k].get('generation')!=p['generations'][k]:
                 self._finish_probe(pid,'missing','generation_changed');continue
-            p['after'].setdefault(k,copy.deepcopy(self.books[k]))
+            if k not in p['after']:
+                p['after'][k]=copy.deepcopy(self.books[k])
             if len(p['after'])<2:continue
             a,b=p['after'][s['buy']],p['after'][s['sell']]
             if abs(a['received']-b['received'])>self.config.max_skew or not all(valid_book(x,now,self.config) for x in (a,b)):
@@ -628,6 +646,8 @@ class PaperEngine:
         for p in self.positions.values():
             pos.append({'id':p['id'],'asset':p['asset'],'strategy':p['strategy'],'status':p['status'],
                         'age_seconds':now-p['created_at'],'liquidation_pnl':self.liquidation(p,now),
+                        'exit_in_seconds':max(0,p['exit_due']-now) if p['status']=='OPEN' else None,
+                        'exit_reason':p.get('exit_reason'),
                         'unhedged':abs(p['legs'][0]['remaining']-p['legs'][1]['remaining'])>1e-9,
                         'funding':p.get('funding')})
         spans=[max(0,e['last']-e['first']) for e in self.episode_history]

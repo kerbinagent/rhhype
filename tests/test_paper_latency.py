@@ -36,6 +36,14 @@ class PaperLatencyTests(unittest.TestCase):
         self.assertTrue(old.issubset(new))
         self.assertEqual(e.probe_stats["1000"]["triggered"], 2)
 
+    def test_first_post_delay_book_stays_fixed_when_more_updates_arrive(self):
+        e=engine()
+        e.receive(book('rh_lighter',1,1000.11,100.05,100.06))
+        e.receive(book('rh_lighter',1,1000.12,105,105.01))
+        e.receive(book('hyperliquid','BTC',1000.21,99.99,100))
+        self.assertEqual(e.probe_stats['100']['observed'],1)
+        self.assertEqual(e.probe_stats['100']['survived'],0)
+
     def test_invalid_book_censors_pending_probe(self):
         e = engine()
         invalid = book("rh_lighter", 1, 1000.05, 102, 102.01)

@@ -111,6 +111,8 @@ async def run(args,store,config):
     stream_signature=None
     lag_samples=deque(maxlen=1200)
     rate_sample=(time.monotonic(),0)
+    usage=resource.getrusage(resource.RUSAGE_SELF)
+    cpu_sample=(time.monotonic(),usage.ru_utime+usage.ru_stime)
     timeout=aiohttp.ClientTimeout(total=20)
     async with aiohttp.ClientSession(timeout=timeout,connector=aiohttp.TCPConnector(limit=64),
                                      headers={'User-Agent':'rhhype-paper-monitor/4.0'}) as session:
@@ -263,7 +265,7 @@ async def run(args,store,config):
 
         checkpoint_lock=asyncio.Lock()
         async def checkpoint(status=None):
-            nonlocal rate_sample
+            nonlocal rate_sample,cpu_sample
             async with checkpoint_lock:
                 now=time.time();trades,signals,evidence,finished=engine.drain()
                 for p in finished:
@@ -276,12 +278,17 @@ async def run(args,store,config):
                 mono=time.monotonic();book_rate=(engine.stats['book_events']-rate_sample[1])/max(.001,mono-rate_sample[0])
                 rate_sample=(mono,engine.stats['book_events'])
                 ordered_lag=sorted(lag_samples)
+                usage=resource.getrusage(resource.RUSAGE_SELF);cpu_now=usage.ru_utime+usage.ru_stime
+                cpu_percent=100*max(0,cpu_now-cpu_sample[1])/max(.001,mono-cpu_sample[0])
+                cpu_sample=(mono,cpu_now)
+                lag_p95=ordered_lag[int(.95*(len(ordered_lag)-1))] if ordered_lag else 0
                 snap=engine.snapshot(time.time())|{'updated_at':time.time(),'status':status or runtime['status'],
                     'pair_count':len(engine.pairs),'feeds':copy.deepcopy(feeds),'transport':args.transport,
                     'storage':{**metrics['storage_stats'],'retained':metrics['retained'],'evidence_bytes':metrics['evidence_bytes'],
                                'book_ring_bytes':ring.used,'book_ring_max_bytes':ring.max_bytes},
                     'loop_lag_ms':runtime['loop_lag_ms'],'max_loop_lag_ms':runtime.get('max_loop_lag_ms',0),
-                    'loop_lag_p95_ms':ordered_lag[int(.95*(len(ordered_lag)-1))] if ordered_lag else 0,
+                    'loop_lag_p95_ms':lag_p95,'cpu_percent_one_core':cpu_percent,
+                    'performance_status':'busy' if cpu_percent>=85 or lag_p95>=50 else 'ok',
                     'book_events_per_second':book_rate,'peak_rss_mb':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024,
                     'resident_memory_mb':resident_memory_mb(),
                     'funding_errors':runtime['funding_errors'],
@@ -353,7 +360,9 @@ def arguments(argv=None):
     p.add_argument('--margin-fraction',type=float,default=1,help='Paper initial margin fraction; default fully collateralized')
     p.add_argument('--max-positions',type=int,default=10)
     p.add_argument('--max-matched-notional',type=float,default=10000)
-    p.add_argument('--holding-seconds',type=float,default=300)
+    p.add_argument('--holding-seconds',type=float,default=10,help='Request exit after this many seconds from matched entry fills')
+    p.add_argument('--take-profit-usd',type=float,default=.10,help='Request exit when estimated net liquidation P&L reaches this amount')
+    p.add_argument('--no-take-profit',dest='take_profit_usd',action='store_const',const=None,help='Only timed exits, for fixed-hold benchmark runs')
     p.add_argument('--network-delay-ms',type=float,default=100)
     p.add_argument('--entry-slippage-bps',type=float,default=10)
     p.add_argument('--fill-timeout-seconds',type=float,default=3)
@@ -398,7 +407,7 @@ def arguments(argv=None):
 
 def config_from(args):
     return EngineConfig(notional=args.notional,capital_usd=args.capital,margin_fraction=args.margin_fraction,
-        max_positions=args.max_positions,max_matched_notional=args.max_matched_notional,holding_seconds=args.holding_seconds,
+        max_positions=args.max_positions,max_matched_notional=args.max_matched_notional,holding_seconds=args.holding_seconds,take_profit_usd=args.take_profit_usd,
         network_delay_ms=args.network_delay_ms,entry_slippage_bps=args.entry_slippage_bps,fill_timeout_seconds=args.fill_timeout_seconds,
         extra_cost_bps=args.extra_cost_bps,capital_rate=args.capital_rate,max_book_age=args.max_age,max_skew=args.max_skew,
         max_divergence_bps=args.max_divergence_bps,signal_interval=args.signal_interval,metadata_max_age=args.max_metadata_age)
@@ -418,7 +427,9 @@ def main(argv=None):
         LOG.addHandler(handler);LOG.setLevel(logging.DEBUG if args.verbose else logging.INFO)
         if sys.stderr.isatty() and not args.tui:LOG.addHandler(logging.StreamHandler())
         config=config_from(args)
-        settings={'model':4,'engine':asdict(config),'venues':args.venues,'assets':args.assets,'min_volume':args.min_volume,'max_pairs':args.max_pairs,
+        engine_settings=asdict(config)
+        if config.take_profit_usd is None:engine_settings.pop('take_profit_usd')
+        settings={'model':4,'engine':engine_settings,'venues':args.venues,'assets':args.assets,'min_volume':args.min_volume,'max_pairs':args.max_pairs,
                   'hl_fee_bps':args.hl_fee_bps,'aster_fee_bps':args.aster_fee_bps,'aster_rwa_fee_bps':args.aster_rwa_fee_bps,'aster_group_b_fee_bps':args.aster_group_b_fee_bps}
         store=PaperStore(args.out/'paper.sqlite3',settings,max_db_mb=args.max_db_mb,max_events=args.max_events,
                          max_trades=args.max_trades,window_seconds=args.window_hours*3600,evidence_max_bytes=args.evidence_mb*1024*1024)

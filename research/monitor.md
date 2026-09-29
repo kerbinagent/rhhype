@@ -29,6 +29,20 @@ Restart with the **same command and output path** to resume the portfolios and c
 
 The former monitor remains `scripts/monitor.py --legacy`. Its `data/monitor` entry-edge sums are not imported as new profits. An already-running old process keeps using its loaded code; starting the new version does not upgrade that process in place.
 
+## Current exit policy
+
+The default now requests an exit when estimated net liquidation P&L reaches **$0.10**, or **10 seconds after both entry legs fill**, whichever occurs first. Both exit fees, the other-cost reserve, capital charge and available settled funding are included in the profit trigger. The trigger requires fresh, sufficiently synchronized books. Actual exit fills happen later against fresh depth and can produce a loss even after a positive trigger.
+
+Ten seconds is the **exit-request deadline**, not a promise to be flat by ten seconds: missing depth or a disconnected venue leaves tracked exposure that must be retried. Partial/failed entry hedges still trigger immediate flattening.
+
+```bash
+.venv/bin/python scripts/monitor.py --holding-seconds 10 --take-profit-usd 0.10
+```
+
+For the historical fixed-hold benchmark, use `--holding-seconds 300 --no-take-profit` with its own output directory. The five-minute validation report remains a record of that earlier policy.
+
+On the user's requested switch, the earlier run was saved under `data/paper-monitor-5min-20260929T143302Z`, including its 12 open paper positions. A fresh ledger is running in `data/paper-monitor-10s`. `data/paper-monitor` is a symlink to the new run so an existing viewer follows it automatically; results were not merged. The old positions remain archived, not synthetically closed.
+
 ## What the numbers mean
 
 | Display | Meaning |
@@ -56,7 +70,7 @@ The report briefly opens SQLite read-only and prints JSON. Detailed trades are a
 - An entry is eligible only when the displayed opening edge exceeds opening fees, a closing-fee reserve, the other-cost reserve, and the planned capital charge. This filter does not predict that the basis will converge.
 - Fills use the **first valid new book after the configured delay**, not the triggering book. Where an exchange timestamp exists, it must also be after the due time; a newly received but older source snapshot cannot fill the order. Default 100ms network assumption plus venue processing: HL/Aster 50ms assumptions; Lighter Standard/Plus 300ms; Premium Core 140ms / RH 200ms. These are modeling inputs, not a measured latency promise.
 - Entry IOC price tolerance defaults to 10bp. Partial fills, rejected legs and timeouts produce tracked hedge failures and emergency exits. Disconnect/generation changes invalidate pending entry assumptions. Exit retries continue until actual displayed depth flattens the exposure; the engine never declares an unfilled leg closed.
-- Normal exits begin five minutes after both entries complete. Exits use opposite-side future books, with their own delays and fees. Multiple orders in one scenario share a given book's available liquidity. Venue replenishment between separate public updates is not independently observable.
+- Exits are requested at the net profit target or the ten-second deadline. Exits use opposite-side future books, with their own delays and fees. Multiple orders in one scenario share a given book's available liquidity. Venue replenishment between separate public updates is not independently observable.
 - Fully collateralized defaults avoid using assumed leverage to inflate the tally. `--margin-fraction` can change the reserve experiment, but the engine does not reproduce each exchange's maintenance-margin/liquidation engine. Prefunded balances do not automatically move between venues.
 
 ## Fees and funding
@@ -77,6 +91,8 @@ Fees are charged on each actual fill, including both exit legs and failed hedges
 Open positions refresh funding after settlement boundaries. Closed positions get priority for settlement lookup. Bounded caches reuse hourly history across fee scenarios and partial exits. Public REST requests have separate pacing and retry backoff; an outage can leave a position pending funding for an extended period.
 
 ## Frequency, opportunity duration and latency
+
+The TUI shows CPU usage as a percentage of **one core** and recent p95 event-loop lag. `BUSY` flags a sample at ≥85% CPU or p95 lag ≥50ms; it is a diagnostic threshold, not a proven capacity limit. Snapshot JSON also records these measurements.
 
 Default transport is WebSocket, using one shared `aiohttp` session and concurrent venue subscriptions. HL uses L2 snapshots; Lighter uses checked nonce-linked books; Aster uses diff streams requested at 100ms, bridged to REST depth snapshots. Sequence gaps discard the book and trigger resynchronization. The observed HL WebSocket cadence in validation was about **5.2 seconds** per book. A targeted REST refresher therefore requests fresher HL books for due orders/probes and held positions. It uses the shared 180-request/minute HL gate, at most three workers, a 0.5s minimum per-key interval, and exit priority. It does not poll the whole universe at that rate. Actual delay and missing coverage remain measured. Streams and targeted REST continuously update books; fills process every valid book event. Signal evaluation coalesces updates per comparison at 100ms by default (`--signal-interval`, minimum 20ms). More updates cannot be manufactured for a quiet venue.
 
