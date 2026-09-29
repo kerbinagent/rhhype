@@ -1,0 +1,16 @@
+{
+  "frozen_at": "2026-09-29T20:00:12.279940+00:00",
+  "duration_seconds": 1200,
+  "notional_usd": 1000,
+  "files": {
+    "research/impulse-observer-plan.md": "23db392b6a16a82debc8610f941e75f0ffa45ff3fdb35872c9e7cb343e1135ab",
+    "scripts/paper_impulse.py": "c03d9ed04f24ad119f46c8c02ad09ea751b35ef430f573149758fef7a69ade86",
+    "scripts/impulse_observer.py": "568e130b07da4166b18bd2f0a4307b104ecf5ab9110872cb8cc682cc589afd19",
+    "scripts/analyze_impulse.py": "e7be5cd78acda9968ab33665a8e381c71282ec6e156c3869668a8c3ed86ba0dd",
+    "scripts/paper_fixed_markout.py": "b2aca84b19ea2fecd468f7837f9edf9a55ee8d83bef882a02db0bd1f7a5efae5",
+    "scripts/paper_streams.py": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734",
+    "scripts/horizon_observer.py": "2199f47a5127b10d0d75c83cbda5de264e60d574edb02df9048209fec4b17299",
+    "scripts/monitor.py": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88",
+    "reports/impulse-v1/market-plan.json": "02a76aebcc986c0fe81406e48fcaa8ca3c26b34290052c3345717892bf030fd7"
+  }
+}

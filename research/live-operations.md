@@ -155,3 +155,24 @@ Standard Lighter's 300ms taker processing; it is not account-compatible fills.
 
 Next scheduled audit 19:46:33 UTC; root is staying active through the research
 and scheduled check rather than treating background capture as AI review.
+
+## Active review and research, 19:46–20:00 UTC
+
+Review 11 was read on schedule at 19:46 UTC; see [review journal](review-loop.md).
+Maker capture PID 2028209 stopped normally at 19:46:04 after 420 seconds.
+The prospective primary scenario had 14 complete conditional quote paths,
+all negative after four fees. Nine hedge and nine exit outcomes were censored;
+they are not zero-profit paths. Results and immutable design hashes are in
+[prospective maker analysis](maker-roundtrip-prospective.md), commit 157c701.
+
+The main collector and review scheduler remain running. At 19:56 all four
+feeds were connected, snapshot age was 2.2 seconds, and the main output
+directory occupied 54.6 MB. Two flat XAG records still await uncertain
+funding settlement; neither has remaining position exposure.
+
+A separate impulse-dislocation observer is under code review, not yet launched.
+Root required entry delay to begin at confirmation, both venue source AND
+receipt timestamps to follow the due time, and explicit stale-history gates.
+Eight physical BTC/ETH/NVDA/XAG pairs, two arrival scenarios per candidate,
+original quantity, four fees, and bounded storage are planned. The next
+scheduled strategy review is approximately 20:06:33 UTC / 4:06 p.m. ET.

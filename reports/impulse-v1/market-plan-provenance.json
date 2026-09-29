@@ -1,0 +1,8 @@
+{
+  "frozen_at": "2026-09-29T19:58:30.727004+00:00",
+  "source_path": "data/paper-monitor-10s/markets.json",
+  "source_sha256": "53589fc15608e9be44ae1b99525b797abfc6754b2a314e1c1b93fe87133d3aab",
+  "source_pair_count": 114,
+  "selected_pair_count": 8,
+  "selected_plan_sha256": "02a76aebcc986c0fe81406e48fcaa8ca3c26b34290052c3345717892bf030fd7"
+}
