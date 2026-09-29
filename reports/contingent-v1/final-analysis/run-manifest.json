@@ -1,0 +1,61 @@
+{
+  "analyzer_source_sha256": "857920301e5c03f34eefc51a170dcd4e0f0e483d05985e477acd19c3843a6baa",
+  "artifacts": {
+    "REPORT.md": {
+      "bytes": 4243,
+      "sha256": "402b8b509004bbf9f52de16551567b15a369cea08f2783630323e9ba9216e9d9"
+    },
+    "analysis.json": {
+      "bytes": 5081,
+      "sha256": "b64f36b67a659732d29d6fcffbf4b3e3e4c6c62a285240ebd829b44bd0984c51"
+    },
+    "contingent_snapshot.json": {
+      "bytes": 38149,
+      "sha256": "5f53934dae9ccf5ee3ea8a4ec19dbd68b0c244d31f37ef8c19611c3eaf08f588"
+    },
+    "evidence.json.gz": {
+      "bytes": 17941,
+      "sha256": "67f02c62e788b54477fec04391b9cdefb419f1a35f43bb20fdffc158d4db6392"
+    },
+    "frozen-manifest.json": {
+      "bytes": 1195,
+      "sha256": "7259ad6bf4b2fce264a2e722fae899c8963ec88c14895925998147fc3e174fa6"
+    },
+    "launch.json": {
+      "bytes": 431,
+      "sha256": "e9952f8282f409159bff7663ba5be30d3496c14c66193ae165d3ee64b79e070c"
+    },
+    "markets.json": {
+      "bytes": 15073,
+      "sha256": "8355e6b92625a21565729e4dc6b260a93cd223caced085b2ddd86e26b64b8a56"
+    },
+    "plan.json": {
+      "bytes": 16106,
+      "sha256": "1b342fa53b247d654c0735b7634d2cb651aae5dd9c10c9461867795cba424615"
+    }
+  },
+  "checkpoint_id": "1790715639.367909193",
+  "frozen_source_manifest": {
+    "duration_seconds": 1200,
+    "files": {
+      "reports/contingent-v1/markets.json": "8355e6b92625a21565729e4dc6b260a93cd223caced085b2ddd86e26b64b8a56",
+      "research/contingent-entry-plan.md": "4119a19417c690a72ec7f6f58c70b04dc64c572107d0208a01371a718fb70549",
+      "scripts/contingent_observer.py": "579ab714f6389b80b75bfd948245ba37defb7f687b635e4206f11a21dc6e1536",
+      "scripts/horizon_observer.py": "2199f47a5127b10d0d75c83cbda5de264e60d574edb02df9048209fec4b17299",
+      "scripts/monitor.py": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88",
+      "scripts/paper_contingent.py": "6a5107de0f95df6856c3a91bba2865788c230bd05c4b7179635a2bf356a0d663",
+      "scripts/paper_engine.py": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b",
+      "scripts/paper_store.py": "8ccd0a7b984611490cc04c98c2378ce4766281937607631ebc6dfc36280fccb5",
+      "scripts/paper_strategies.py": "0074c230b89acc498a0bf3f892ba31d021da6b4936775bd3dafe617951c4bf7c",
+      "scripts/paper_streams.py": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    "frozen_at": "2026-09-29T20:40:20.403483+00:00",
+    "max_pairs": 24,
+    "min_volume": 1000000,
+    "rest_book_requests": 0
+  },
+  "source_config_hash": "5f4bfe59e0d3b7bfdc49b65a6b80ab22fa03c44cbc316851fbd4c022d142ad65",
+  "source_input_sha256": "9b5b2e56daf7318009ca7ce4619cd419093d4a2ad09a81640d07ffd7da852b98",
+  "status": "duration_elapsed",
+  "version": 1
+}

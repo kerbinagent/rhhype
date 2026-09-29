@@ -1,0 +1,157 @@
+{
+  "checkpoint_id": "1790715639.367909193",
+  "coverage": {
+    "all_original_candidates_mapped": true,
+    "all_terminal_trades_retained": true,
+    "missing_trade_count": 0,
+    "missing_trade_ids": [],
+    "paired_measures_complete": true,
+    "unmapped_retained_trade_count": 0
+  },
+  "evidence_bundle": {
+    "bytes": 17941,
+    "content_sha256": "11b4e98a1d347ff2df4ae6209ac91f19d10f84e105b9ee228eb3546aed7535e4",
+    "file": "evidence.json.gz",
+    "sha256": "67f02c62e788b54477fec04391b9cdefb419f1a35f43bb20fdffc158d4db6392"
+  },
+  "input_sha256": "9b5b2e56daf7318009ca7ce4619cd419093d4a2ad09a81640d07ffd7da852b98",
+  "limitations": [
+    "Public-book paper fills are not exchange fills.",
+    "The candidate selector is control-driven and routes share market events.",
+    "Policy ledgers are independent counterfactual portfolios; do not add their P&L.",
+    "A zero-fill abort or abstention is zero trading cash, not a profitable execution."
+  ],
+  "pairs": {
+    "both_exact_known": 1,
+    "both_filled_treatment_minus_control_usd": null,
+    "foregone_control_match_net_usd": null,
+    "treatment_minus_control_usd": 0.9311888293004748
+  },
+  "policies": {
+    "control": {
+      "cohort_outcomes": {
+        "closed": 1
+      },
+      "latency_seconds": {
+        "candidate_to_peer_fill": {
+          "count": 1,
+          "mean": 0.5034153461456299,
+          "median": 0.5034153461456299,
+          "p90": 0.5034153461456299
+        }
+      },
+      "ledger": {
+        "aborted_trades": 0,
+        "capital_costs_usd": 8.633004988495482e-07,
+        "closed_pnl_estimated": 0.0,
+        "closed_pnl_exact": -0.9311888293004748,
+        "closed_trades": 1,
+        "entry_attempts": 1,
+        "estimated_trades": 0,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.49768596600000004
+      },
+      "mapped_flat_trade_components": {
+        "capital_usd": 8.633004988495482e-07,
+        "fees_usd": 0.0,
+        "flat_rows": 1,
+        "funding_usd": 0.0,
+        "price_pnl_usd": -0.43350199999997585,
+        "reserve_usd": 0.49768596600000004
+      },
+      "terminal_trade_coverage": {
+        "complete": true,
+        "expected_from_ledger": 1,
+        "retained_terminal_rows": 1
+      },
+      "timing": {
+        "censored_exit_history": 0,
+        "complete_positions": 1,
+        "entry_phase_equivalent_seconds": 0.07064628601074219,
+        "equivalent_seconds": 0.5470325946807861,
+        "exit_phase_equivalent_seconds": 0.47638630867004395,
+        "observed_to_freeze_equivalent_seconds": null,
+        "observed_to_freeze_positions": 0,
+        "observed_to_freeze_wall_seconds": null,
+        "wall_seconds": 0.5470325946807861
+      },
+      "trade_class_outcomes": {
+        "entry_failed:closed": {
+          "count": 1,
+          "known_net_usd": -0.9311888293004748
+        }
+      },
+      "trial_policy": "simultaneous"
+    },
+    "treatment": {
+      "cohort_outcomes": {
+        "aborted": 1
+      },
+      "latency_seconds": {},
+      "ledger": {
+        "aborted_trades": 1,
+        "capital_costs_usd": 0.0,
+        "closed_pnl_estimated": 0.0,
+        "closed_pnl_exact": 0.0,
+        "closed_trades": 0,
+        "entry_attempts": 1,
+        "estimated_trades": 0,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.0
+      },
+      "mapped_flat_trade_components": {},
+      "terminal_trade_coverage": {
+        "complete": true,
+        "expected_from_ledger": 1,
+        "retained_terminal_rows": 1
+      },
+      "timing": {
+        "censored_exit_history": 0,
+        "complete_positions": 1,
+        "entry_phase_equivalent_seconds": 0.0,
+        "equivalent_seconds": 0.0,
+        "exit_phase_equivalent_seconds": 0.0,
+        "observed_to_freeze_equivalent_seconds": null,
+        "observed_to_freeze_positions": 0,
+        "observed_to_freeze_wall_seconds": null,
+        "wall_seconds": 0.0
+      },
+      "trade_class_outcomes": {
+        "zero_abort:aborted": {
+          "count": 1,
+          "known_net_usd": 0.0
+        }
+      },
+      "trial_policy": "hl_first"
+    }
+  },
+  "saved_at": 1790715639.3679092,
+  "selection": {
+    "durable_cohort_counts": {
+      "control_admitted": 1,
+      "control_closed": 1,
+      "selected": 1,
+      "terminal_cohorts": 1,
+      "treatment_aborted": 1,
+      "treatment_admitted": 1
+    },
+    "durable_finalized_sums": {
+      "control_finalized_cohort_net_usd": -0.9311888293004748,
+      "control_one_leg_clock_seconds": 0.5470325946807861,
+      "control_unmatched_equivalent_seconds": 0.5470325946807861,
+      "treatment_finalized_cohort_net_usd": 0.0,
+      "treatment_one_leg_clock_seconds": 0.0,
+      "treatment_unmatched_equivalent_seconds": 0.0
+    },
+    "mapped": 1,
+    "mapping_complete": true,
+    "missing_cohort_rows": 0,
+    "selected": 1
+  },
+  "source_config_hash": "5f4bfe59e0d3b7bfdc49b65a6b80ab22fa03c44cbc316851fbd4c022d142ad65",
+  "source_db": "/home/harry/projects/research/rhhype/data/contingent-research-v1/contingent.sqlite",
+  "study_status": "duration_elapsed",
+  "version": 1
+}

@@ -625,3 +625,33 @@ literature review. Root acknowledged that existing empirical strategy tests
 were not a sufficient SOTA review. Primary-source work now covers maker/hedge
 inventory policies, executable residual/optimal stopping, and carry/capital
 allocation. Next scheduled review **21:06:33 UTC / 5:06 p.m. ET**.
+
+## Review 15: 2026-09-29 21:06:33 UTC, actively reviewed on schedule
+
+| Standard-fee policy | Completed | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 90 | -103.507 | 89 | 1 |
+| Cooldown | 55 | -151.204 | 52 | 3 |
+| Historical median | 4 | -14.818 | 0 | 4 |
+| Conservative | 0 | 0 | 0 | 0 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+Complete retained window coverage, zero wins. Baseline includes one estimated
+outcome (-$0.9933); 89 exact outcomes total -$102.5133. Its paired outcomes
+total -$102.5449, failed hedge -$0.9618. Cooldown paired -$138.1064, failures
+-$13.0975; six SHEIN outcomes contributed -$85.9412. Historical median's
+four failures were HL price-limit rejections. Baseline paired entry median
+1.287s/p95 2.205s; exit request to flat median 1.151s/p95 2.116s.
+CPU 56.07% one core, loop lag p95 14.17ms, RSS 217.37MiB, 705 books/s.
+Confirmation lifecycle: 85 arms, zero entry/pending/residual; 57 skew,
+12 forecast, seven depth/budget, seven economics, two invalid cancellations.
+
+The stopped HL-first trial had one GRAM candidate: simultaneous entry lost
+$0.93119 after the HL hedge rejected; HL-first aborted with no fill or cash.
+That is one avoided failure, with no successful paired comparison. Full-book
+reconstruction improves RH freshness coverage to 78/83 NVDA and 80/83 XAG
+anchors, versus 38/83 and 32/83 ticker anchors, without implying fills.
+User specified $100 as the next experiment's approximate minimum and $1,000
+as already small: next sizes are $100/$250/$500/$1,000, primary $1,000.
+The new RH maker experiment is being prepared; no production policy changed.
+Next scheduled review **21:26:33 UTC / 5:26 p.m. ET**.

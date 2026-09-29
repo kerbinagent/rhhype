@@ -224,3 +224,23 @@ commit **7742531**, with 19 routes and a 1,200-second duration. Process and
 snapshot were verified after one second. Expected stop **21:00:39 UTC**.
 Output `data/contingent-research-v1`; public WebSockets only, no orders.
 Production monitor and 20-minute review loop continue independently.
+
+## Status at 21:08 UTC
+
+- Review 15 read on schedule at 21:06; next due 21:26:33 UTC.
+- Contingent PID 2256789 stopped normally at 21:00:39, 1,200.018 seconds.
+  One GRAM candidate: simultaneous control -$0.9311888293, HL-first zero-fill
+  abort. Complete cohort evidence and hashes are in
+  [final analysis](../reports/contingent-v1/final-analysis/REPORT.md).
+  One avoided failed hedge is not demonstrated profitable execution.
+- The systematic [strategy review](sota-strategy-review.md) now prioritizes
+  RH passive bids priced from HL hedge proceeds and expected closing basis.
+  A separate public-data experiment is being prepared, with $100/$250/$500/
+  $1,000 sizes and $1,000 primary benchmark, following the user's correction.
+- The [book reconstruction](maker-book-archive.md) recovers much better RH
+  coverage than ticker. Earlier frozen results remain intact; the old size
+  replay's completed outcomes were Core-only and do not reject the RH idea.
+- A 60-second isolated HL fast-L2 probe completed at 20:52:47. It observed
+  roughly 0.54s source cadence versus 5.38s default L2, using five levels
+  versus twenty. It supports a better research feed; it proves no fills or
+  strategy profits. Production subscriptions remain unchanged.

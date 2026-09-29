@@ -1,0 +1,17 @@
+{
+  "pid": 2256789,
+  "launched_at": "2026-09-29T20:40:39.109174+00:00",
+  "command": [
+    ".venv/bin/python",
+    "scripts/contingent_observer.py",
+    "--markets",
+    "reports/contingent-v1/markets.json",
+    "--out",
+    "data/contingent-research-v1",
+    "--duration",
+    "1200"
+  ],
+  "code_commit": "77425318edbcfaf61db58805ba9f2af2a637d7e2",
+  "alive_after_one_second": true,
+  "snapshot_exists_after_one_second": true
+}
