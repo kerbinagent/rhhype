@@ -218,3 +218,9 @@ paired quote experiment, not a fill simulator or cash profit tally.
 - The HL-first experiment passed 31 focused/adjacent tests and independent
   storage and accounting review. Root requested normalized exposure metrics
   before freezing and launching the 19-pair, 20-minute isolated trial.
+
+HL-first trial PID **2256789** launched at **20:40:39 UTC**, from frozen
+commit **7742531**, with 19 routes and a 1,200-second duration. Process and
+snapshot were verified after one second. Expected stop **21:00:39 UTC**.
+Output `data/contingent-research-v1`; public WebSockets only, no orders.
+Production monitor and 20-minute review loop continue independently.

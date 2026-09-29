@@ -12,3 +12,8 @@ matched candidate outcomes, not summed policy portfolios.
 
 This selected WebSocket-only study does not reproduce production REST timing.
 RH USDG versus HL USDC assumes parity, without executable conversion costs.
+
+Verified launch: **20:40:39 UTC**, PID **2256789**, commit **7742531**.
+Expected stop **21:00:39 UTC**. `launch.json` records the exact command and
+initial process/snapshot checks. Analysis will preserve still-open exposure
+at the deadline rather than invent a close.
