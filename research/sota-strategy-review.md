@@ -5,6 +5,11 @@ our frozen experiments. This is a public-data research program, not a claim
 that a profitable strategy has been found. The live paper monitor retains
 its $0.10 target and ten-second exit-request policy.
 
+**Follow-up at 23:04 UTC:** [Unwind strategy decision](unwind-strategy-decision.md)
+adds the completed maker pilot, a reproducible original-quantity cost-hurdle
+decomposition, passive inventory-exit rules, and funding break-even arithmetic.
+It narrows the next experiments without promoting an unvalidated policy.
+
 ## What was missing from our approach
 
 The monitor became a detailed execution and accounting simulator before we

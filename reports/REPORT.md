@@ -6,6 +6,15 @@ Generated 2026-09-29T04:32:43.097107+00:00. Research only; public data and read-
 
 ## Subsequent short-horizon paper research
 
+**Unwind strategy follow-up (23:04 UTC):** The [strategy decision](../research/unwind-strategy-decision.md)
+compares passive inventory exits, cost-aware basis convergence and funding carry.
+The new [stopped-data hurdle analysis](../research/strategy-convergence-followup.md)
+finds 875 positive opening spreads among 2,134 anchors, but only one of 1,595
+observed 12–16 s outcomes reaches $0.10 after four fees; none does after the
+separate 5 bp allowance. Another 539 outcomes are unknown. The next research
+priority is a bounded RH passive-exit test with full inventory accounting;
+no profitable replacement policy has been established or deployed.
+
 The original survey below describes opening quotes and historical carry, not
 completed short-horizon trades. Later execution simulation does **not** validate
 a profitable ten-second strategy: the 18:26 UTC review recorded 185 baseline

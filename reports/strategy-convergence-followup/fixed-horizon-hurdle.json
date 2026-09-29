@@ -1,0 +1,295 @@
+{
+  "classification": "stopped quote-only fixed 12-16s horizon; not fills or actual P&L",
+  "target_usd": 0.1,
+  "retained_all_anchor_count": 2134,
+  "all_run_counts": {
+    "paired_observations": 142274,
+    "anchors": 2134,
+    "warmup_anchors": 1128,
+    "matched_anchors": 1595,
+    "censored_anchors": 539,
+    "v2_scored_anchors": 1006,
+    "matched_scored_anchors": 863,
+    "censored_scored_anchors": 143,
+    "four_fee_positive": 1,
+    "scored_four_fee_positive": 1
+  },
+  "censor_reasons": {
+    "future_exit_depth": 493,
+    "outcome_missing": 22,
+    "stopped_pending": 24
+  },
+  "oracle_on_observed_matched_only": {
+    "matched": 1595,
+    "four_fee_positive": 1,
+    "four_fee_ge_target": 1,
+    "after_reserve_positive": 0,
+    "after_reserve_ge_target": 0,
+    "not_a_bound_for_censored_outcomes": true
+  },
+  "opening_spread_positive_anchors": 875,
+  "instantaneous_liquidation_positive_counts": {
+    "gross": 0,
+    "after_four_fees": 0,
+    "after_reserve": 0
+  },
+  "opening_spread_gt_instant_fees_reserve_target_anchors": 90,
+  "opening_screen_cohort": {
+    "anchors": 90,
+    "matched": 83,
+    "censored": 7,
+    "future_four_fee_ge_target": 1,
+    "future_after_reserve_ge_target": 0,
+    "required_gain_after_reserve_usd": {
+      "n": 90,
+      "p10": 0.9387479649501228,
+      "median": 1.0864119407999402,
+      "p90": 1.1740069252900578,
+      "mean": 1.1229018351055535
+    },
+    "realized_gain_after_reserve_usd_matched_only": {
+      "n": 83,
+      "p10": -0.13085972872200569,
+      "median": 0.0012083785469594321,
+      "p90": 0.1314026062195779,
+      "mean": 0.019632557418501506
+    }
+  },
+  "matched_only_instant_after_reserve_usd": {
+    "n": 1595,
+    "p10": -1.687639665000015,
+    "median": -1.478894307500283,
+    "p90": -0.8512571296800431,
+    "mean": -1.3665001899128184
+  },
+  "matched_only_required_gain_after_reserve_usd": {
+    "n": 1595,
+    "p10": 0.9512571296800431,
+    "median": 1.578894307500283,
+    "p90": 1.787639665000015,
+    "mean": 1.4665001899128187
+  },
+  "distributions_usd": {
+    "opening_spread": {
+      "n": 2134,
+      "p10": -0.8867062999999689,
+      "median": -0.15837800000002744,
+      "p90": 0.6509869000000209,
+      "mean": -0.22656360356138652
+    },
+    "anchor_closing_liability": {
+      "n": 2134,
+      "p10": -0.652971500000001,
+      "median": 0.15771000000000868,
+      "p90": 0.8868498999999588,
+      "mean": 0.22630506794751556
+    },
+    "instant_gross": {
+      "n": 2134,
+      "p10": -0.9866843999999784,
+      "median": -0.21877499999988004,
+      "p90": -0.07541100000003098,
+      "mean": -0.4528686715089021
+    },
+    "instant_four_fee_net": {
+      "n": 2134,
+      "p10": -1.8865242110699785,
+      "median": -0.992767608749995,
+      "p90": -0.35872138330006664,
+      "mean": -1.1050391902229602
+    },
+    "instant_after_reserve": {
+      "n": 2134,
+      "p10": -2.3864946190199787,
+      "median": -1.49261151600009,
+      "p90": -0.8586946767000666,
+      "mean": -1.604562325483738
+    },
+    "fee_required_gain": {
+      "n": 2134,
+      "p10": 0.4587213833000666,
+      "median": 1.0927676087499951,
+      "p90": 1.9865242110699801,
+      "mean": 1.2050391902229602
+    },
+    "reserve_required_gain": {
+      "n": 2134,
+      "p10": 0.9586946767000666,
+      "median": 1.59261151600009,
+      "p90": 2.48649461901998,
+      "mean": 1.704562325483738
+    },
+    "realized_gain_fee": {
+      "n": 1595,
+      "p10": -0.17551363190003014,
+      "median": -0.0003306600002273008,
+      "p90": 0.17441418199996495,
+      "mean": -0.00042143947830815314
+    },
+    "realized_gain_after_reserve": {
+      "n": 1595,
+      "p10": -0.17555218403133396,
+      "median": -0.0003690157487410417,
+      "p90": 0.17437568633402525,
+      "mean": -0.00046041435857067145
+    },
+    "future_four_fee_net": {
+      "n": 1595,
+      "p10": -1.2625655299999026,
+      "median": -0.9388041075000866,
+      "p90": -0.3435496847998782,
+      "mean": -0.8674608073475529
+    },
+    "future_after_reserve": {
+      "n": 1595,
+      "p10": -1.761997053375679,
+      "median": -1.4372111072332687,
+      "p90": -0.8432602114638357,
+      "mean": -1.366960604271389
+    },
+    "fees_now": {
+      "n": 2134,
+      "p10": 0.17979619464,
+      "median": 0.89914977675,
+      "p90": 0.899921106225,
+      "mean": 0.6521705187140582
+    },
+    "reserve_now": {
+      "n": 2134,
+      "p10": 0.49938338,
+      "median": 0.49987536600000004,
+      "p90": 0.4999796,
+      "mean": 0.49952313526077785
+    }
+  },
+  "by_route_oracle_counts": {
+    "BTC|hyperliquid:BTC|lighter:1": {
+      "matched": 80,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "BTC|lighter:1|hyperliquid:BTC": {
+      "matched": 74,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "SOL|hyperliquid:SOL|lighter:2": {
+      "matched": 90,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "SOL|lighter:2|hyperliquid:SOL": {
+      "matched": 86,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "ETH|hyperliquid:ETH|lighter:0": {
+      "matched": 78,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "ETH|lighter:0|hyperliquid:ETH": {
+      "matched": 85,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15": {
+      "matched": 88,
+      "four_fee_target": 1,
+      "reserve_target": 0
+    },
+    "NVDA|rh_lighter:15|hyperliquid:xyz:NVDA": {
+      "matched": 91,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "COIN|lighter:109|hyperliquid:xyz:COIN": {
+      "matched": 51,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "XRP|hyperliquid:XRP|lighter:7": {
+      "matched": 90,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "XRP|lighter:7|hyperliquid:XRP": {
+      "matched": 88,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "XAG|hyperliquid:xyz:SILVER|lighter:93": {
+      "matched": 72,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "XAG|lighter:93|hyperliquid:xyz:SILVER": {
+      "matched": 79,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "ZEC|hyperliquid:ZEC|lighter:90": {
+      "matched": 83,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "ZEC|lighter:90|hyperliquid:ZEC": {
+      "matched": 84,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "META|hyperliquid:xyz:META|lighter:117": {
+      "matched": 78,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "META|lighter:117|hyperliquid:xyz:META": {
+      "matched": 85,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "HYPE|hyperliquid:HYPE|lighter:24": {
+      "matched": 69,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "CASHCAT|hyperliquid:CASHCAT|lighter:221": {
+      "matched": 4,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "CASHCAT|lighter:221|hyperliquid:CASHCAT": {
+      "matched": 7,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "HYPE|lighter:24|hyperliquid:HYPE": {
+      "matched": 73,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "COIN|hyperliquid:xyz:COIN|lighter:109": {
+      "matched": 50,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "XPL|hyperliquid:XPL|lighter:71": {
+      "matched": 5,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    },
+    "XPL|lighter:71|hyperliquid:XPL": {
+      "matched": 5,
+      "four_fee_target": 0,
+      "reserve_target": 0
+    }
+  },
+  "limitations": [
+    "Instantaneous liquidation uses the original anchor book and same original quantity; no order latency.",
+    "Future outcome is the first eligible 12-16s paired quote only; no intervening path or stop rule.",
+    "Censored future depth/timing is unknown, never scored as zero or a loss.",
+    "5bp reserve is a risk allowance, not an exchange fee.",
+    "Overlapping horizons and opposite directions share books."
+  ],
+  "input_sha256": "6abd61d0362e274c96e33bd6556b91d826d23fd1b1031e8d3a7d572db1411a60"
+}
