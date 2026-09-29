@@ -25,6 +25,28 @@ The **$0.10 target is fixed in dollars**, so its percentage burden is ten times 
 
 ## Size and target decision
 
+### Direct size comparison from the stopped matched-book rows
+
+The following recomputes medians from `hl_net_after_reserve` in the linked
+`matched-rows.csv`, grouped by exact `asset` and `budget_usd`. Values are
+USD per hypothetical completed path; the $0.10 target is **not** deducted
+from these P&L values.
+
+| Asset | Complete anchors per size | $100 median | $250 median | $500 median | $1,000 median | Best $100 path |
+|---|---:|---:|---:|---:|---:|---:|
+| BTC | 75 | -0.1403 | -0.3529 | -0.7071 | -1.4246 | -0.1167 |
+| ETH | 75 | -0.1455 | -0.3677 | -0.7355 | -1.4714 | -0.0966 |
+| NVDA | 52 | -0.0722 | -0.1808 | -0.3618 | -0.7388 | -0.0591 |
+| XAG | 68 | -0.0695 | -0.1743 | -0.3502 | -0.7039 | -0.0498 |
+
+There were **zero positive paths after the stated fees and reserve at
+every size**, both with HL and with Core Standard hedges. The 1,080 rows
+reuse 270 anchors across four sizes; they are not independent trials. This
+is a best-bid RH maker-entry book calculation with hypothetical fills and
+future taker unwinds. It does not evaluate adaptive deeper quotes, RH
+maker sells, or passive exits. Smaller size reduced the dollar loss in
+this particular calculation; it did not change its sign.
+
 Keep the four already specified branches and **$1,000 primary**. Smaller nominal size can reduce dollars at risk and may make a full public-flow signal more common, but it also makes the fixed $0.10 net target materially harder in basis points. The stopped studies do not show a completed, realizable, all-cost small-size edge. Keep the target as *net of all four leg fees, reserve, and applicable capital/funding items*, rather than relabeling a pre-cost quote edge as profit.
 
 Going below $100 would require new, predeclared evidence that the exact lot-rounded order and **each hedge/exit increment** meet venue constraints, that queue-attributed flow occurs often enough at the **economically required quote price**, and that the first available hedge and both exits produce a positive all-cost conditional distribution with adequate coverage and explicit unresolved inventory. Changing the absolute $0.10 target would require a reason tied to measured fixed operating costs, capital usage, risk per attempt, and a fresh chronological holdout; merely lowering it to make a negative or no-flow cell appear acceptable would not establish an edge. Neither change is warranted by the stopped archives alone.
