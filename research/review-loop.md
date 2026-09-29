@@ -1,8 +1,9 @@
 # Twenty-minute live paper reviews
 
-User requested ongoing reviews every twenty minutes on 2026-09-29. The active
-agent session performs these reviews; `scripts/paper_review.py` is a one-shot
-audit command, not an unattended strategy optimizer or scheduler.
+User requested ongoing reviews every twenty minutes on 2026-09-29.
+`scripts/review_loop.py` now captures audits automatically on the existing
+20-minute schedule; the active agent session interprets them and researches
+changes. This scheduler never changes a strategy or sends orders.
 
 ## Protocol
 
@@ -17,7 +18,9 @@ audit command, not an unattended strategy optimizer or scheduler.
   the sample is too small; record that decision rather than force a parameter edit.
 - The collector remains paper only. No real orders or private credentials.
 
-Run `.venv/bin/python scripts/paper_review.py`. Default output:
+Run `.venv/bin/python scripts/review_loop.py` for scheduled capture, or
+`scripts/paper_review.py` for a one-shot audit when the loop is stopped. Avoid
+concurrent one-shot captures because they advance the same baseline. Default output:
 `data/strategy-reviews/latest.json`, checkpoint state, and at most 72 archived
 reviews (approximately 18 MiB maximum plus current report/state). Each report
 contains the next due time. Existing collector storage limits remain in force.
@@ -229,3 +232,62 @@ in data/horizon-research. It scores future spread forecasts, never cash income,
 and has bounded output. Chronological entry-filter experiments, historical
 funding-carry research, and direct BBO-versus-depth feed measurements proceed
 in parallel. Existing paper ledgers and strategy gates remain unchanged.
+
+### Active experiments between reviews 4 and 5
+
+- Two direct public-feed captures measured BBO source gaps around 0.11–0.21 s
+  versus about 5.4 s for HL L2. Same-size $1,000 top coverage varied sharply:
+  both sides fit in 71–97% of BTC samples, 78–95% of ETH, but only 1/58 COIN
+  updates. See research/hyperliquid-feed-cadence.md and frozen raw captures.
+- Added opt-in `--hl-bbo`; every BBO is only its own displayed bid/ask level.
+  Older L2 cannot overwrite fresher top quotes; contemporaneous depth requires
+  matching top identity. Existing production collector remains unchanged.
+- Started a second 40-minute horizon observer with BBO at about 17:43 UTC,
+  PID 1727752, data/horizon-research-bbo. The first depth observer stays running
+  as a separate coverage/model control. Early outcome coverage differs; neither
+  has enough mature anchors yet for trained forecast-error comparisons.
+- At 17:44:49 started matched 40-minute paper transport experiments, depth PID
+  1730139 and BBO PID 1730140, under data/paper-monitor-feed-depth and -bbo.
+  Both discover the same 21 pairs among 12 selected assets, use identical eight
+  fee/strategy portfolios, $20k capital per portfolio, $1k per leg, 10s/10-cent
+  exits, and disable targeted REST. Each DB is capped at 32 MiB, evidence and
+  book ring at 4 MiB, 2,000 trades and 5,000 signals. These are independent
+  scenario ledgers, not additive income or live orders. Initial CPU usage was
+  about 16% and 21% of one core. No existing balances were reset.
+- All 161 tests passed before these starts; CLI defaults also verified: targeted
+  REST remains enabled and BBO disabled unless explicitly selected.
+
+
+## Review 5: 2026-09-29 17:48:04 UTC
+
+Window 17:33:21–17:48:04 (about 14.7 minutes after the preceding delayed
+capture); next anchored deadline 18:06:33. Retained completion coverage is
+complete for all eight portfolios.
+
+| Standard-fee policy | Closes | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 199 | -240.271 | 197 | 2 |
+| Cooldown | 41 | -55.774 | 41 | 0 |
+| Historical median | 2 | -1.658 | 0 | 2 |
+| Conservative | 0 | 0 | 0 | 0 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+Lifecycle cumulative: 12 arms, ten skew cancellations, one economic and one
+forecast cancellation; no entries and zero residual. CPU 67.5% of one core,
+p95 event-loop lag 12.97 ms, RSS 215 MiB, about 1,015 book updates/s. Strategy
+thresholds remain unchanged while separate prospective studies run.
+
+At about 17:50 UTC started the scheduled audit loop, PID 1749934, with its
+existing state/deadline. It captures every 1,200 seconds, preserves the prior
+baseline on failed/stale reads, retries after 60 seconds, and has an exclusive
+process lock plus interruptible SIGINT/SIGTERM handling. Reports retain the
+72-file/256-KiB limits; loop logs rotate at 1 MB with one backup. Six focused
+loop/audit tests pass. Data capture can continue without an active agent turn;
+strategy research and decisions require the active session.
+
+Between reviews, the frozen chronological filter experiment found zero wins
+among 527 holdout closes and no profitable selected filter family (see
+reports/filter-experiments/REPORT.md). A separate 48-hour funding screen found
+no asset covering four Standard taker fees from 24-hour holdout funding alone
+(see reports/funding-carry/REPORT.md). These negative results do not justify
+lowering execution, fee or freshness assumptions.
