@@ -38,9 +38,16 @@ def get_json(url, payload=None):
     headers = {"User-Agent": "rhhype-research/0.1", "Accept": "application/json"}
     if body:
         headers["Content-Type"] = "application/json"
-    req = urllib.request.Request(url, data=body, headers=headers)
-    with urllib.request.urlopen(req, timeout=20) as response:
-        return json.load(response)
+    for attempt in range(3):
+        req = urllib.request.Request(url, data=body, headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=20) as response:
+                return json.load(response)
+        except urllib.error.HTTPError as exc:
+            if exc.code not in (429, 503) or attempt == 2:
+                raise
+            time.sleep(0.5 * (2 ** attempt))
+    raise RuntimeError("Unreachable HTTP retry")
 
 
 def rpc(method, params):

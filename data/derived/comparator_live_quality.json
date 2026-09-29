@@ -1,0 +1,36 @@
+{
+  "generated_utc": "2026-09-29T04:29:34.742794+00:00",
+  "hl_run": "/home/harry/projects/research/rhhype/data/raw/live/20260929T035450Z",
+  "comparator_run": "/home/harry/projects/research/rhhype/data/raw/comparators/20260929T035236Z_live",
+  "market_inventory": "/home/harry/projects/research/rhhype/data/raw/comparators/20260929T035055Z",
+  "fees_bps": {
+    "aster_usdt_taker": 4,
+    "dydx_base_taker": 5
+  },
+  "snapshot_counts": {
+    "hyperliquid:requests": 5180,
+    "hyperliquid:valid_book": 5180,
+    "aster:requests": 540,
+    "aster:valid_book": 540,
+    "dydx:requests": 420,
+    "dydx:valid_book": 420
+  },
+  "hl_valid_books": 5180,
+  "comparator_valid_books": 960,
+  "dydx_venue_time_note": "dYdX REST orderbook response has no engine timestamp; source age is unknown",
+  "selection": "one nearest comparator receipt per HL receipt; no forward fill; source age <=5s where engine time exists",
+  "window_5000_ms": {
+    "paired_snapshots": 0,
+    "size_direction_rows": 0,
+    "fillable_rows": 0,
+    "positive_net_rows": 0,
+    "max_skew_ms": null
+  },
+  "window_15000_ms": {
+    "paired_snapshots": 448,
+    "size_direction_rows": 2688,
+    "fillable_rows": 2478,
+    "positive_net_rows": 263,
+    "max_skew_ms": 14950
+  }
+}

@@ -5,7 +5,12 @@ from analyze_live import csvwrite
 ROOT=pathlib.Path(__file__).resolve().parents[1];OUT=ROOT/'data/derived'
 
 def main():
-    hp=sorted((ROOT/'data/raw/hyperliquid').glob('*/inventory.csv'))[-1];hl=list(csv.DictReader(hp.open()));csvwrite(OUT/'hyperliquid_inventory.csv',hl)
+    hp=sorted((ROOT/'data/raw/hyperliquid').glob('*/inventory.csv'))[-1];hl=list(csv.DictReader(hp.open()))
+    for r in hl:
+        if r['category']=='stock':r['category']='stocks'
+        if r['coin'] in {'para:2Y','para:30Y'}:r['category']='rates'
+        if r['coin']=='io:EWY':r['category']='etfs'
+    csvwrite(OUT/'hyperliquid_inventory.csv',hl)
     lookup={r['coin']:r for r in hl};rp=sorted((ROOT/'data/raw').glob('robinhood_all_pools_*.json'))[-1];raw=json.loads(rp.read_text());rows=[]
     for a in raw['assets']:
         pairs=[p for p in a.get('pairs',[]) if p['chainId']=='robinhood' and p['baseToken']['address'].lower()==a['contractAddress'].lower()

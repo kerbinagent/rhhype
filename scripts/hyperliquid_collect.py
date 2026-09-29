@@ -140,7 +140,7 @@ def census(client):
 
 def select(rows, per_category=5):
     perps = [r for r in rows if r["venue"] == "perp" and r["active"] and r["day_volume_usd"] > 0]
-    explicit = {"BTC", "ETH", "SOL", "HYPE", "NVDA", "TSLA", "HOOD", "AAPL", "GOOG", "GOOGL", "GOLD", "SILVER", "OIL", "SPX", "SP500", "USA500", "XYZ100", "EURUSD", "USDJPY", "US10Y", "10Y"}
+    explicit = {"BTC", "ETH", "SOL", "HYPE", "NVDA", "TSLA", "HOOD", "AAPL", "GOOG", "GOOGL", "MSFT", "AMZN", "GOLD", "SILVER", "OIL", "SPX", "SP500", "USA500", "XYZ100", "EURUSD", "USDJPY", "US10Y", "10Y"}
     selected = {r["coin"]: r for r in perps if r["coin"].split(":")[-1] in explicit}
     by_cat = {}
     for r in perps:

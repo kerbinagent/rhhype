@@ -1,0 +1,2215 @@
+{
+  "created_utc": "2026-09-29T04:29:41.020623+00:00",
+  "archive": "public-market-evidence.tar.gz",
+  "archive_bytes": 22127964,
+  "archive_sha256": "8256b9acd8d401aa870d56928d4310a6047fc8eb6981827af2d7d503379f7dc1",
+  "file_count": 441,
+  "uncompressed_bytes": 183939433,
+  "files": [
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/AAPL.json",
+      "bytes": 12999,
+      "sha256": "8873eb0a28504d3782f7f5857cfd881910b58d59b3d864fd706bc0472cc05cd3"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/AMZN.json",
+      "bytes": 2931,
+      "sha256": "6ce533c90a2a29801f0006e684b08df7bd49c65a47b7ab49b83e4a7199a975f5"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/BNB.json",
+      "bytes": 43204,
+      "sha256": "6dd27ffe742d6073431440c16e1857e980d1ddd849462b14887cdb0c4e00ecd1"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/BTC.json",
+      "bytes": 44126,
+      "sha256": "ba9d2dcbaf585e14df7a405d6decd863d560da343ee941c244726f6b6cd14c96"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/DOGE.json",
+      "bytes": 34734,
+      "sha256": "7742ad0ba52f0b34160cae660d97670ac75b9cff671d957d1cd26d415f88f99a"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/ETH.json",
+      "bytes": 44329,
+      "sha256": "21a1391445e0b279d7e7eb6da17f6f1e6e59596614b6b011b82e664ce245ed06"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/GOOGL.json",
+      "bytes": 7115,
+      "sha256": "efb2ac5f4b32c6c1c7ce2471e6ec4e42a863aa78b16029038f0b5b5c5f3ce773"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/HYPE.json",
+      "bytes": 44473,
+      "sha256": "8c795618f0b7e0f8a1a9dc71fb4c1598eb36122c32b38bc2540704fcd655c7f3"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/META.json",
+      "bytes": 10837,
+      "sha256": "d84f01debcf0fee7f55077fbfff7d289728d850836bc3cdfd995ae1e13bcdf1c"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/NVDA.json",
+      "bytes": 32908,
+      "sha256": "5043df66687957ebb97f9d05ab727dd8b19ba6f9b45d69e44009540e0960a7dc"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/QQQ.json",
+      "bytes": 38566,
+      "sha256": "1f6a7d69adce3b6fdce952222b5857c94735595c36508f6922fc42fe6340dfe8"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/SOL.json",
+      "bytes": 44627,
+      "sha256": "f4d005580c83a94b50218cdc8c5eb91f34a3fca57598ab96d1286196c1a94f2a"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/SPY.json",
+      "bytes": 17054,
+      "sha256": "8b650188c66834e93ece5424f8058a47b95642cdb112119b5fa43d96968ec86e"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/SUI.json",
+      "bytes": 34351,
+      "sha256": "3e83a8a2bbc42e6ff493ec3ff16de92f678c6a56d1bb25f7976ee1a08b42272b"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/TSLA.json",
+      "bytes": 25798,
+      "sha256": "5e40395d8d99fc9fb613ab54225e4c633c40864944cfa7ca2159b73da842695b"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/XAG.json",
+      "bytes": 41882,
+      "sha256": "95d553ca9cfe78f745fb20552fe38257820200ec832eea320845c069c393d206"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/XAU.json",
+      "bytes": 46137,
+      "sha256": "54bbcf2341ed3bfcbf4464c135a135c7196e45798b3d84f893700bbff0164b52"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/XRP.json",
+      "bytes": 42459,
+      "sha256": "2b5d1ff2d84bb0e65d8d506ecf9a91b56806d8156999deb2f7062f95bae2255c"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/books/ZEC.json",
+      "bytes": 46222,
+      "sha256": "262058a81fa8425a171252cf592df3716c63e902f7bcad4d93c251fc6261fb47"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/candles_30d/BTC.json",
+      "bytes": 140928,
+      "sha256": "194de6bdad8706684c960a01c45e6a8ef415e201b0497facab8eca4f7b66ecac"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/candles_30d/ETH.json",
+      "bytes": 143982,
+      "sha256": "f1d3d0c779fa87a7d7042cdfd2d0864de873559b1ba8aca1e739300c28a4ab13"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/candles_30d/HYPE.json",
+      "bytes": 147004,
+      "sha256": "3637f3ca421d31cc7482d7f52c5c06c0c7e7914719640141cbbdddafb3d1ddfb"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/candles_30d/NVDA.json",
+      "bytes": 143720,
+      "sha256": "2a5ec1438eef02ba392ee8fbb7cfd6f1693718cabc585e324fc61f59eb453653"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/candles_30d/SOL.json",
+      "bytes": 146756,
+      "sha256": "5a3eb2f3718d259a671cf89b156e2dcd70efd26bbad6075051f8c7737b497f2c"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/candles_30d/SPY.json",
+      "bytes": 137835,
+      "sha256": "8751f3dca65641152c490198afb57365aed11082c0e3679c1d51e42160a9acb4"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/candles_30d/XAG.json",
+      "bytes": 139989,
+      "sha256": "aca03a00cb10ef4e03573e285621278775aba2ad1b6be7ab955e852205897915"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/candles_30d/XAU.json",
+      "bytes": 145490,
+      "sha256": "de43a25be2fe9908cf755a7d437af15c659dd1855368fcd8195eeb49a99ddfbc"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/candles_30d/ZEC.json",
+      "bytes": 148846,
+      "sha256": "fe7d9e0d0b19ab9366373e1656ad5f9964c9ccb06533ce7feccd1e1013205636"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/fundings_30d/BTC.json",
+      "bytes": 9012,
+      "sha256": "df2da703a6d52bdf71ff401ada7445c894ddf85a303b9e80b7e99462dfe10b6b"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/fundings_30d/ETH.json",
+      "bytes": 9011,
+      "sha256": "de5ebc91b3ba2bbe83fffe8c61de7a36c537cca2bad86150aa8cc99963e76f10"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/fundings_30d/HYPE.json",
+      "bytes": 18229,
+      "sha256": "7f0dad754972915d78b721e9d33b647211ac978ab50abc282f10f1358983b3be"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/fundings_30d/NVDA.json",
+      "bytes": 9498,
+      "sha256": "c758ee85424197f6f2b8f7e558b1f17237cf254d29dab43124efef5be64d6166"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/fundings_30d/SOL.json",
+      "bytes": 9032,
+      "sha256": "087f8d3de04127f0733093c11fb4ef0be91afac88e2251315ff9f779c2ef089d"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/fundings_30d/SPY.json",
+      "bytes": 9003,
+      "sha256": "6f5e7c39eb88ebec9dd94b6dcb140d4d2e6331974fdcb12f09d50f51da5fe376"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/fundings_30d/XAG.json",
+      "bytes": 18003,
+      "sha256": "f1e59829a41a1ae23623c7fb8f19360c1f9c676b8434bd31be04d496a3cc2c5f"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/fundings_30d/XAU.json",
+      "bytes": 18003,
+      "sha256": "c26c5733f2aac02200fda1640c44ff33cdb10f8eb15f7127090b6de630ab184b"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/fundings_30d/ZEC.json",
+      "bytes": 28025,
+      "sha256": "d364159f03942fe134458cc102719cf295777182f0c5dbafd463326f87ed831d"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/markets.json",
+      "bytes": 1351144,
+      "sha256": "cc3e42975ea2bacae236b142234ab94a57da78b909afbac19a17d5a6612bd2fc"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/ticker_24h.json",
+      "bytes": 280585,
+      "sha256": "0b3dd2e1683f94de4242a08d0816131539c1360ac3a4c662ffb18b9a1f0c1ee2"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/coverage.json",
+      "bytes": 3320,
+      "sha256": "1f81d59ec39803564377d4fca331636b047a3504afa4323dd015875eb35e50ac"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/books/BNB.json",
+      "bytes": 11420,
+      "sha256": "b35103403e578e50bce9a90292c6bc4e2d88cd6f253fbf6bce7bf80c212257f2"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/books/BTC.json",
+      "bytes": 11954,
+      "sha256": "52a4559f87c7081f1f0c7ae8c6cacdc2edeba9dc5772369be74eac9d7c45b31b"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/books/DOGE.json",
+      "bytes": 12322,
+      "sha256": "2fb5ee8d5a6214c84cd862fb6782e58055c7ada2160451a0e15eef32097fe538"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/books/ETH.json",
+      "bytes": 12120,
+      "sha256": "7d71cc7223703fcef054000bb857873c995af597c74f476e24ed060a945cbdf8"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/books/EURUSD.json",
+      "bytes": 156,
+      "sha256": "ff724b79248a6ab8ad0a872ec36cfde59a0e870645ace682c45e9313d51285d1"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/books/HYPE.json",
+      "bytes": 5645,
+      "sha256": "354cd54339a80e8f5c277a1c9226a4e52e34280150033da90da31209c945ab5d"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/books/SOL.json",
+      "bytes": 11943,
+      "sha256": "9acf668d018c012875ec83ef4e8eeeb328474d4359f1bfe5fb9e5f150ebf3372"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/books/SUI.json",
+      "bytes": 9935,
+      "sha256": "c58bfdf6954693e4f10df171d0ca8610a10ab2f2471d8cd159136e53aff6d78c"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/books/XAG.json",
+      "bytes": 3140,
+      "sha256": "cf73f3631b2199ac316ada65404f67d04019b27bbaff402b90b84b134e3e2114"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/books/XRP.json",
+      "bytes": 12043,
+      "sha256": "9ca752dd33751342c9ed7c61f2b0031acf00a377e72cab715f954bf3a7f3e022"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/books/ZEC.json",
+      "bytes": 10447,
+      "sha256": "e8f04b5fc3ed781cd2aecdad99220754d87e3d341120441ebf03391f30a66c9b"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/candles_30d/BTC.json",
+      "bytes": 308024,
+      "sha256": "5813a0c9442fee0960c265ba1a303197972d48ef64bdb1fd692dc4637a53f9b1"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/candles_30d/ETH.json",
+      "bytes": 311113,
+      "sha256": "766cfce6e7db9463e2b26c20b41776b44e65737502e52689e5f35b8563bb6cfd"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/candles_30d/EURUSD.json",
+      "bytes": 320331,
+      "sha256": "784a5d5a8ccd10194520de7f4ce2674141fcf5de3b0793cb730db4557a9dcd6b"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/candles_30d/HYPE.json",
+      "bytes": 302234,
+      "sha256": "7b589f55d73f2b0b54f135b68d399cc5dd3d9c582b317f7bfff53d848d7ba42b"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/candles_30d/SOL.json",
+      "bytes": 307600,
+      "sha256": "ade7ec4620395569b54896dd22ad1a80d94f8f49da14a34ea08bb40778849ec9"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/candles_30d/XAG.json",
+      "bytes": 293671,
+      "sha256": "215dd95258529dec53d64a4e32cfdf94643283a6a7caf7ff941d2a958650a64a"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/candles_30d/ZEC.json",
+      "bytes": 304013,
+      "sha256": "bd156df822112188854a90b601158cf1a598a6dffc0da7b13e72fee2c2af24db"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/fee_tiers.json",
+      "bytes": 2019,
+      "sha256": "1a401d03b3511587f215254c1ed63d1823e49c444f683efa9c531b5e26d3869c"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/fundings_30d/BTC.json",
+      "bytes": 131896,
+      "sha256": "a9d3c4bbc4c1c25d4d0fb1ee14a2201c125a260401de5980204d11692c886cb4"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/fundings_30d/ETH.json",
+      "bytes": 134426,
+      "sha256": "9f085733f35a46783dd7e60ca9f616da0c3783374202e91415f049961508f688"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/fundings_30d/EURUSD.json",
+      "bytes": 135161,
+      "sha256": "5e8f632abc507724c744dfcc2735c24574f941951697d2ae8bfba1fd82e2cbc6"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/fundings_30d/HYPE.json",
+      "bytes": 132258,
+      "sha256": "058ccbfe6d5877edc04a04d3b7b637765b379537c12290a078a6f8ccf5d14f74"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/fundings_30d/SOL.json",
+      "bytes": 134664,
+      "sha256": "34a9b4dabd704929dcaac7f773e08b9926b9c106347dc7ce21f148d0366b89ff"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/fundings_30d/XAG.json",
+      "bytes": 127187,
+      "sha256": "c68769f4bfbe98baa5ea2c39f525136b3a3d0ddc046abf60ad93a8107180da0f"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/fundings_30d/ZEC.json",
+      "bytes": 133511,
+      "sha256": "97bc94e30afe13a6af7f8168d7af1491b17a1a8a9516cdc6940f1f7af016f2b2"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/market_fee_discounts.json",
+      "bytes": 616,
+      "sha256": "d3343d2ed9b4a2e8ac1dc491d1d941d12159a64d7738abc284dc733c9001afaf"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/dydx/markets.json",
+      "bytes": 222755,
+      "sha256": "5cc7b7aba2632707301d173a78b4e67abe2aa1a5da97c8c7b30c99a947147ee4"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/gmx/markets.json",
+      "bytes": 773106,
+      "sha256": "bef91600a9e2af3e6f5edb8596f0756a5a8057f9465165ba51975555fae44c55"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/gmx/rates.json",
+      "bytes": 7910768,
+      "sha256": "1d6ad194577980e9f860d5b345c3fb66912ee704cbd90c02b1beb6cb573cd1bb"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/gmx/tickers.json",
+      "bytes": 267844,
+      "sha256": "a032b0b2cfcdf3f7320d38e600996098fc1c3dee9194f66731b0986909becf78"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/AAPL.json",
+      "bytes": 41568,
+      "sha256": "96a466a02c6a5370f18a87fe992f0a9f9a4c0d155a0ef40f936fed30fe8c10e0"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/AMZN.json",
+      "bytes": 38095,
+      "sha256": "abf587255dd2f494f23f874c48de85399436c91b100b8d7a8edaa1b67e208fe5"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/BNB.json",
+      "bytes": 86697,
+      "sha256": "6e2019c4de250c0bdd6c4322f53a2c1d6648e7584750add4fc00578bebfccab0"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/BRENTOIL.json",
+      "bytes": 139507,
+      "sha256": "559f97642649f2bc255f35f8cd3df52cb8ec8e7d943e109379c702e7b834fc3c"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/BTC.json",
+      "bytes": 149956,
+      "sha256": "c926272ecd8ba470e793fe24783502e08ab7a10a424c8f2c319e1aef0ad711f3"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/DOGE.json",
+      "bytes": 64742,
+      "sha256": "4560092b6e551b9585b253a876da66bc36daf475a16575e4a06b2eff11c71619"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/ETH.json",
+      "bytes": 149663,
+      "sha256": "9ee3b2071e2e3fcbd9f4006a1cd6ff08c4cf6fffabf8aab7dd94d9b0c2df4722"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/EURUSD.json",
+      "bytes": 90934,
+      "sha256": "f8e5ffa11ee58aed26c5e5bbfaff5058ba7eb07407450de58b72f05cf1d76e74"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/GOOGL.json",
+      "bytes": 46936,
+      "sha256": "f918bd04259b6da819ce62ae9789ef3c74591cc097841a59a468a9f07adeac14"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/HYPE.json",
+      "bytes": 149853,
+      "sha256": "5389c5fcd22a3af305c2cea780331451af9673662e3f1e356e5ebb193069a1e6"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/META.json",
+      "bytes": 30738,
+      "sha256": "a7b89fe78de233fba5928d6dbddb8a23a91e0183a6812f3e0c8079f79cea4e51"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/NVDA.json",
+      "bytes": 63579,
+      "sha256": "4fb43c034f02fc2b950ecf69d1a0affcbddc133ab805a39550d815c87e3d8893"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/QQQ.json",
+      "bytes": 93829,
+      "sha256": "3cc9b556446a7b0bbe22934ae3803ba6053a0e9839f036825aabecea898d1378"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/SOL.json",
+      "bytes": 150155,
+      "sha256": "de47314fcba94cefd71eac291b7f39afae09b1583fc01b5347ecaf0bbbfc86f6"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/SPY.json",
+      "bytes": 101442,
+      "sha256": "2bad01d7448b63ca95eafb83beab9ca84def5fdb09c11e89cd1b9eab39a5066e"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/SUI.json",
+      "bytes": 65294,
+      "sha256": "b99a201ba519de2a192f0ef5e7093725c4aa533acfa0880c031bf6f82f11adfd"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/TSLA.json",
+      "bytes": 59470,
+      "sha256": "d21afd6444fb17b2e5afd32b18002176c1d89a52a45d52fe0ebc4409b5c0afd8"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/US100.json",
+      "bytes": 67884,
+      "sha256": "43c14d6ba88ce276d4ac5e2e2c0b855660acb10659f94c354efa9c5387aeeaf9"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/US500.json",
+      "bytes": 35343,
+      "sha256": "183244b0f178d51322c9ebe530c1ce1516b657c1082e26bd7f13058f95fa35a5"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/XAG.json",
+      "bytes": 150841,
+      "sha256": "491bfe0f41227eb20d93ba4d4b53f2d80cb4e33efcc4e965b8accffe06455af0"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/XAU.json",
+      "bytes": 151653,
+      "sha256": "ba8f6ea6c8a25cdd314a74ad7bef89104509ba70ae8defc03caca0145306dd3b"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/XRP.json",
+      "bytes": 75694,
+      "sha256": "ea1c9ef156e0f9b3b32d2715537334e90ba7b89b084b4db7f73fc16d48d56a4f"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/books/ZEC.json",
+      "bytes": 151296,
+      "sha256": "fd93b879ef2a1c4239a95e2a38cb1aacd05554ad22a19c2d881cd895c8a116eb"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d/BRENTOIL.json",
+      "bytes": 131606,
+      "sha256": "ee01943e6452f8ba518831a79ce9ad8d7a0da79236871ca5f987365fc20aa0d9"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d/BTC.json",
+      "bytes": 138367,
+      "sha256": "e0b60e299713ed619ac5e36cce7cacee405ecb4058fd7a4ae7a939f35b68f523"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d/ETH.json",
+      "bytes": 138350,
+      "sha256": "eee0e93c326043822157c50ed05d13ce29be7fd35d717097592cde565b7d8366"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d/EURUSD.json",
+      "bytes": 137696,
+      "sha256": "3de541e5ea9e308c27d88fb6c4828b2517b99a311b0823c3d9da6467fb90742e"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d/HYPE.json",
+      "bytes": 137063,
+      "sha256": "cf60b76a23a7a74a1831f29ec7d825d7951644e149fcd582b8b13980d780d45d"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d/NVDA.json",
+      "bytes": 135539,
+      "sha256": "6d9bc7f7832156b28479b0fbced8aad93993579f69e1eb85f0f3a63fca30faf4"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d/SOL.json",
+      "bytes": 137508,
+      "sha256": "f2dae8e62135c0881dac169bbd4994a0529eedd43dc0a55280c9a85772189389"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d/SPY.json",
+      "bytes": 133267,
+      "sha256": "b6d3fb7d8d111e6bc7e3b41a09d847e62803155541258dd3fb9da3dcfc8b5d13"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d/US100.json",
+      "bytes": 132415,
+      "sha256": "a8221116e01a38f09aaf792b22c4388918d545554b5ffd406535ad59a2b90739"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d/US500.json",
+      "bytes": 133853,
+      "sha256": "4e9d258e864e1e9bce7cd3b0bba43cd107731b5e18fd8397400f0d8291c26db6"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d/XAG.json",
+      "bytes": 135538,
+      "sha256": "678c1667f39958050962b37aee6be15ff46ef0261a239c3f772cc72993a600d8"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d/XAU.json",
+      "bytes": 136700,
+      "sha256": "810a9f8b26692c9bd230172a931f92daec2862cc778e645c4e3ebc76a563b6b0"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d/ZEC.json",
+      "bytes": 139029,
+      "sha256": "24841a8589f312c78fcfb6cee892ab20dc74dc98a08caf8c39cb9bac7fed7539"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d_older/BRENTOIL.json",
+      "bytes": 54323,
+      "sha256": "e6fc037281ea69e2a1ce8ab7a278fe3042e9441bcac75e83aad60ac817ca1209"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d_older/BTC.json",
+      "bytes": 57620,
+      "sha256": "42ea58ce69e5dc9ecbfea60df37006ffc290a990a95ce90ac115a20724e7078a"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d_older/ETH.json",
+      "bytes": 57736,
+      "sha256": "0b25ae0e1b52a62008cb1b2861bc9455e71b6501d4441a6edde84cef92b95513"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d_older/EURUSD.json",
+      "bytes": 58262,
+      "sha256": "859ad9a9cd2a7c4ed145ffbf247fb9040c1506f8be6c80e73fcfa5c8c3d035e3"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d_older/HYPE.json",
+      "bytes": 57058,
+      "sha256": "df9fd74f268edd3c2a1a074bbb8343badd0e5d23712fc1ff7e996d126e29bd34"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d_older/NVDA.json",
+      "bytes": 56174,
+      "sha256": "1e3c22de69a4b933a5c1a7086421d2c38a1f8d8219baa75a5e2fa8a587f9727c"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d_older/SOL.json",
+      "bytes": 57349,
+      "sha256": "b47985d25ee06db861be9917ce7b5f137cff9ea96a53c3a58816a6640c413716"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d_older/SPY.json",
+      "bytes": 55412,
+      "sha256": "b1c5f059caa71d6e502d1ea48bff8ab58178cb53319a90952a8e49b893f4923e"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d_older/US100.json",
+      "bytes": 54842,
+      "sha256": "8f8b99ff2e1a8b489b80d5ebaf458b576bd94c3151b5acb618b15f6532093cd8"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d_older/US500.json",
+      "bytes": 56189,
+      "sha256": "81fba8c05250414e624779af64e8ddbde907761442c37005a205bd1935e4ac55"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d_older/XAG.json",
+      "bytes": 56359,
+      "sha256": "fd53262be76316219ca3f87cbd919b465da482b7fa0845a63b47b64ae87c34e2"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d_older/XAU.json",
+      "bytes": 56955,
+      "sha256": "bd81fb8bc98de50ad03796afec6591dd5bc6df4120ab9be28d0cab7e739cfc35"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d_older/ZEC.json",
+      "bytes": 57384,
+      "sha256": "11ebe0e5bd7180d1f37fc79fc77783c298c4a27543373fd8872ce3e107235d17"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/funding_now.json",
+      "bytes": 83508,
+      "sha256": "890d252b4f06c27fe320ff752833a126d65643595eca396fb9de39027ebf2f8c"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/fundings_30d/BRENTOIL.json",
+      "bytes": 88860,
+      "sha256": "ced239beb7d17945da849bc7785ba6e199580cf4515d62ce5c02ec5e4688ceb0"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/fundings_30d/BTC.json",
+      "bytes": 88639,
+      "sha256": "1ceb999edd64dff9cbbc691b002bac4cb95e8b677276391cc705a3cd80f62a10"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/fundings_30d/ETH.json",
+      "bytes": 88678,
+      "sha256": "69e5c5cb0f6fdae3b22e57ce4339b2082229ca713382043b30557ff3170fb348"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/fundings_30d/EURUSD.json",
+      "bytes": 88620,
+      "sha256": "e0761e3914cc08dbe85b9b4d0e44aa85f041498e9d1d2cc8b76510fd4b02ad3c"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/fundings_30d/HYPE.json",
+      "bytes": 88731,
+      "sha256": "3f49b7321da4e14cc547ee195c80439d94e4c6ccbb070f66f563aec566073011"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/fundings_30d/NVDA.json",
+      "bytes": 88634,
+      "sha256": "2e0f1e48400de41f39241ff4696c3521f4e8d12beb632e8ce689fe7f28505c1f"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/fundings_30d/SOL.json",
+      "bytes": 88733,
+      "sha256": "b23a4601c54286cc5de1cb2715199c4c5332816449efd416f304c250c28f5828"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/fundings_30d/SPY.json",
+      "bytes": 88647,
+      "sha256": "18c2c0c42b0000b767be2b24c8cd3365091f69bb992fc5e801ba50692c83bab6"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/fundings_30d/US100.json",
+      "bytes": 88653,
+      "sha256": "a4d97427f29ac9d71ce200de8699be05f71026ccad7e0572ccb885feb72635cc"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/fundings_30d/US500.json",
+      "bytes": 88725,
+      "sha256": "d9d8753ae4f68a42afe60fe89436446c07f1f7346246d500d2dc82980f0bb96d"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/fundings_30d/XAG.json",
+      "bytes": 88627,
+      "sha256": "dbbb41c27270443e543aecef6631ad0bc334487ca4d9624a58a7c9491882f3dc"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/fundings_30d/XAU.json",
+      "bytes": 88620,
+      "sha256": "c18c818a5c564a0322de6708979508dabcc8fe3d1102363cf96940a880123f27"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/fundings_30d/ZEC.json",
+      "bytes": 88621,
+      "sha256": "630786264abc198f4971e52eb74d8ea21190354726d668ec1ee6c4719cb2ede4"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/markets.json",
+      "bytes": 497085,
+      "sha256": "8e68dcbb5df14210fc29e4002128460db5579bc8de1b0974ceeef683c2b1d232"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/manifest.json",
+      "bytes": 17824,
+      "sha256": "8b723bb407dc67047a6d24063ac811acef2ad8f1f13014a03c2e9f41a86fdb23"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/aster/BTC.jsonl",
+      "bytes": 1216381,
+      "sha256": "9242886f61c6dc5de75e7724f7a95eedbdf6eb94e8546833fa01eaacd52ec7f3"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/aster/ETH.jsonl",
+      "bytes": 1228848,
+      "sha256": "cd0a6cce252e7f0fe453434b3a6e84bef821167e5e197ddd67f9d686583369bf"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/aster/HYPE.jsonl",
+      "bytes": 1236739,
+      "sha256": "0156b350986802b9511cae9f24912f339c4538f991f968b3ea411b198ebc07d5"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/aster/NVDA.jsonl",
+      "bytes": 954114,
+      "sha256": "e9cf5d1b2ade24e2345d5780bfe08205fb30432d69bf49a4d7d9a442403996fb"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/aster/SOL.jsonl",
+      "bytes": 1246555,
+      "sha256": "ec1e88e71e9b61eb56f1c24fa6669191881d16f4535f878aa1dd9c9980783922"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/aster/TSLA.jsonl",
+      "bytes": 733803,
+      "sha256": "904298fc47c7536e425dfd3d9f31a579ab82264e136ed3e2d23b52d213bc2d64"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/aster/XAG.jsonl",
+      "bytes": 1163475,
+      "sha256": "b91a93975ff8c31bf7318efc9804ca11e5b101f1eb483b0b063be4190c5aa70d"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/aster/XAU.jsonl",
+      "bytes": 1332492,
+      "sha256": "6cf1abab7a3703cf353f6438309d1023668e062f0a0043be6f70d1e24e5d8cf8"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/aster/ZEC.jsonl",
+      "bytes": 1342186,
+      "sha256": "c685e5f687e3b7e26af4598660bc19d5dd3ac769f4b05c5de9815c5f0a383fef"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/dydx/BTC.jsonl",
+      "bytes": 415398,
+      "sha256": "f878cb3627c217a8c7e9c8bd548883cc6079c4dc14a6d6b6a0b6b8e5899c0ca2"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/dydx/ETH.jsonl",
+      "bytes": 424380,
+      "sha256": "5979778a54fe65b7bc2abb6681c78c2a9111303e64d31306d0bc54884062831e"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/dydx/EUR.jsonl",
+      "bytes": 15110,
+      "sha256": "e4fb4753031361d85a958daa5268dad1be9cb60d1dcd3ad29747accfa34527f5"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/dydx/HYPE.jsonl",
+      "bytes": 214423,
+      "sha256": "20ee24117fcd83a1cabcdb9575a96cdeb5fc6b6b5bdafad500a43cef8bdcb60a"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/dydx/SOL.jsonl",
+      "bytes": 413307,
+      "sha256": "7759ab2dc60e68947543e6802755a761660d0804b7aa264fb65f991b61e2126e"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/dydx/XAG.jsonl",
+      "bytes": 94472,
+      "sha256": "85dc6d8640f32492c7390523415cd233098d43b49e18200ab0ee5289dcc44546"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/dydx/ZEC.jsonl",
+      "bytes": 352637,
+      "sha256": "310fe14dd06df40e5652cfce706950688bbed54b80384cedb1b91589e86439fc"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035236Z_live/manifest.json",
+      "bytes": 2770,
+      "sha256": "bd47f409b976e3888bc0ecd880dd9ff50431192250aae123c3210c99d275609b"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/assetDetails.json",
+      "bytes": 18369,
+      "sha256": "be0d0e2a9a51b2e98d8a8c7fa932df41997fb501fc70d0111869d34fbc94ce7f"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d/AAPL.json",
+      "bytes": 131592,
+      "sha256": "a22a619baacae2de4780236983a1da4064d05e17aa8f8f67136b34e9fdec15ac"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d/BTC.json",
+      "bytes": 135668,
+      "sha256": "ca00dfcf5f88eecc8cbc85c49b6d0effab135b84bdb852fb971bfe47ec976910"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d/ETH.json",
+      "bytes": 135940,
+      "sha256": "778172aa95dd631a13f6cb395fdfec8c17f6f57e187eaa7840deb29f894fcee1"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d/HYPE.json",
+      "bytes": 132530,
+      "sha256": "600130a61c8dd4f019cbeed8d3243721f74b8b6e29b60d2996c7cfd5db354681"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d/META.json",
+      "bytes": 131703,
+      "sha256": "5070edcd4f26e65afba399b772d84f0a425ff4527dfc868feaf21ab34281a1bb"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d/MSFT.json",
+      "bytes": 131964,
+      "sha256": "3e0567f927761099bdfb6e4381a6c1899855f1273bd69030746e4bacb03dd39b"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d/NVDA.json",
+      "bytes": 132207,
+      "sha256": "764e2fc56c0742f1a08c984df162c5a411646d384bdb721019b054b2fe1b2fff"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d/NVDA_USDG.json",
+      "bytes": 153508,
+      "sha256": "552be1aa4bddecbbc435a3903652773e69749977e672899a0c96895b367c8def"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d/SOL.json",
+      "bytes": 134706,
+      "sha256": "749eab347228fadf9f6b1228c6a15ca3f38b843598ee861b6548261b47b76295"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d/SPY.json",
+      "bytes": 133420,
+      "sha256": "bc13bfb41122c700c74aa0c4f28972917f241e2456b7f690d94a846a4470dfdc"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d/SPY_USDG.json",
+      "bytes": 133202,
+      "sha256": "c3e22b733bbc6160ef8dbdb6c93a1538cdb88d9e625bcdebb797a8d08f90c256"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d/XAG.json",
+      "bytes": 134263,
+      "sha256": "56dff27a3b097be1f4793f2213fb94575572adb18e4a1f4da67c7c67c96a8bb2"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d/XAU.json",
+      "bytes": 135142,
+      "sha256": "90084fadce769c95f846d00368a4e255ee002817e927aecf7c364c6102cc7632"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d_older/AAPL.json",
+      "bytes": 54707,
+      "sha256": "7958ad44a505d848d125eaf329c4e67edc1b0205271b4a847bcb31d0ca7bcba7"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d_older/BTC.json",
+      "bytes": 56463,
+      "sha256": "8f82c96dbbb736898b2b1fcd0ab97d0d1fab28cba0ef8e3b9bdf6a6528b7dce2"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d_older/ETH.json",
+      "bytes": 56460,
+      "sha256": "349e1455cd585465a76faee6f55ec7678f55f04565e8d7a25d9a93fc29e308bc"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d_older/HYPE.json",
+      "bytes": 55157,
+      "sha256": "a5ff4033a10f38ba64da3d305f3d8eb4e1fb516b2279699c0f94ddf4b14e1bd6"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d_older/META.json",
+      "bytes": 54595,
+      "sha256": "4fb4c6768f252b24ba0ebd8391eb9fafd7ecba784dabd5e3e6c94b80c82f32fe"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d_older/MSFT.json",
+      "bytes": 54921,
+      "sha256": "a62bd08e1c49846a35c95aea441f7c9cd7b2066cab0d7a79d9196104d61a81a5"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d_older/NVDA.json",
+      "bytes": 54952,
+      "sha256": "2f1f148b70601facd54185674e06c6c3c9cfb09aa17cb2457c3b33681faabfdf"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d_older/NVDA_USDG.json",
+      "bytes": 66143,
+      "sha256": "2b18548c2350295bfaddb6f13b73a52e80fcc94fc1a34396488c1f58066d2401"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d_older/SOL.json",
+      "bytes": 56027,
+      "sha256": "85f3aa2b8551e7ff16857a1e0064ccc853e38716379c688ead1e8e65d972c88f"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d_older/SPY.json",
+      "bytes": 55481,
+      "sha256": "0f8de47028b9dbd3e815043b272dc22f998924ee368ff04703481e0261ad9031"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d_older/SPY_USDG.json",
+      "bytes": 56380,
+      "sha256": "97354f0b409d9fa08c9a73903bc1a7597340b6fe5c26ef84a47bfcfb8167748f"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d_older/XAG.json",
+      "bytes": 55803,
+      "sha256": "77da9cb7e1b66bad53d389c31e0216360921ec1d3bedf8985913f9f73bfbf3b4"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d_older/XAU.json",
+      "bytes": 56184,
+      "sha256": "761aaab6bfe3cc2d508cb7b7afd372525eecdcef9c687615d7f51c4d03278cde"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/fundings_30d/AAPL.json",
+      "bytes": 88623,
+      "sha256": "576bb822b8461d3c6a34748d18e3a5833a920b16de2e32edeb31e15286830009"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/fundings_30d/BTC.json",
+      "bytes": 88641,
+      "sha256": "032108b9c5f00a113b3a92e3e3c0844c2535319a75e198313a06184a71c11ccd"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/fundings_30d/ETH.json",
+      "bytes": 88625,
+      "sha256": "755159f0bf0213c39f4d3b655a4d8dbd5211ef1aad0b6e20e1514c2f56606e8f"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/fundings_30d/HYPE.json",
+      "bytes": 88706,
+      "sha256": "479a82274a4e1d575444dda0a05d778112d942ccb54452b6db37609126616224"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/fundings_30d/META.json",
+      "bytes": 88625,
+      "sha256": "592a639cb1420d454ab414d03809c54937f594952f6b3349191f4ab9c1df66ca"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/fundings_30d/MSFT.json",
+      "bytes": 88620,
+      "sha256": "8c79d9e705dc6cdc2988aa14014ee4bb67a0556a9e315e27473455b533e01174"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/fundings_30d/NVDA.json",
+      "bytes": 88625,
+      "sha256": "475101e85048f609de3e32806efb2c9eff15021ea29cc0cceadd46a040a058cb"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/fundings_30d/SOL.json",
+      "bytes": 88762,
+      "sha256": "d01b8e620ed7de24b6bf83f66ec72a1f17408535480d8361b6d4cfa31fce7418"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/fundings_30d/SPY.json",
+      "bytes": 88621,
+      "sha256": "1181df0d4639cf180bfe5397ed07f0489dc4ef1f90b4175d8d71a47c1586f3e8"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/fundings_30d/XAG.json",
+      "bytes": 88624,
+      "sha256": "c424f5e4fe038a2f4bfd4de36d3b088475acaca58060bbde03710bd86c60d563"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/fundings_30d/XAU.json",
+      "bytes": 88622,
+      "sha256": "e965215ded923d9f9bb2888dbe95a79bdde93caafa2a4ab340ac84482422ab27"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/manifest.json",
+      "bytes": 6581,
+      "sha256": "497f00a320ab25aa2a84c6bf8e39bc85fbd659586780c089ac66a55a60964664"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/manifest.json",
+      "bytes": 1276,
+      "sha256": "4c81cd409062328ab7d249d14697e23c1bba72ef92b5ba677dc995a7f673ce05"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/markets.json",
+      "bytes": 130738,
+      "sha256": "71fba3cfec43a83ec08a35e3f5408bdbe81c54541b3871e6208b1c823eaa573c"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/paired_books.jsonl",
+      "bytes": 36953280,
+      "sha256": "512a87dda576dedfd88de8331d24d24d14481cc681f957eec85769349359b8e9"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/plan.json",
+      "bytes": 12164,
+      "sha256": "0036b4fa317536b88299391f5b86c51fe53065b09f854bc6749abf725fcf925f"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/sources/account-types.md",
+      "bytes": 5597,
+      "sha256": "8fd715cbe6b008bfa936406a23b9593d9c283dd9f56bb09e7ab2f7225db81795"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/sources/assetdetails.md",
+      "bytes": 5204,
+      "sha256": "34b9144cbcb657cbaede3059e3a854f3dc4fa8ed562df2724148392c9378152a"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/sources/deposits-transfers-and-withdrawals.md",
+      "bytes": 2503,
+      "sha256": "0c0bdf024868f4e562e0a87dbc000355d78d0c53ceedf61dbffee36dae0ec195"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/sources/orderbookorders.md",
+      "bytes": 4432,
+      "sha256": "bb0dec26ea53758d8b6ba59f6c87fc6662eef042dd648fe5649f0c41bd69158d"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/sources/orderbooks.md",
+      "bytes": 6854,
+      "sha256": "c394c3c2e4d76da233541570bcf2016e9c65feb5867f26cb74d2dd659eded705"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/sources/rate-limits.md",
+      "bytes": 8755,
+      "sha256": "3a15195f599def8d1620eceb2f5859beae0a839760be1040cb9ea0fda93daf17"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/spot_registry_enrichment.json",
+      "bytes": 2141,
+      "sha256": "ff7c545e88ab6ebbceb65058475e8286a34ca996f2db703f96fe3a6238142230"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/spot_unit_validation.json",
+      "bytes": 17602,
+      "sha256": "210195d456b38e3c6f95f7ec1dd90ebdaac1b21208b1215a19720e0795e5cea2"
+    },
+    {
+      "path": "data/raw/discovery/aster.json",
+      "bytes": 840942,
+      "sha256": "bac8d1975f7b2a9453c033afafa6afacb4addf9d53e1239001922923e2fae245"
+    },
+    {
+      "path": "data/raw/discovery/hl_native.json",
+      "bytes": 72252,
+      "sha256": "4db50bdbc28490c9edb9021889ca7d62227f783c488e102df17a7947e850918f"
+    },
+    {
+      "path": "data/raw/discovery/hl_perpdexs.json",
+      "bytes": 20979,
+      "sha256": "f8ab1b257a99f36f469a4b8ee31715e8303cbacdb53ca1f4e5c753b16b64a728"
+    },
+    {
+      "path": "data/raw/discovery/hl_xyz.json",
+      "bytes": 56976,
+      "sha256": "e2fb1886bee0d4a0174ebb2ab9e25fcc5b80eda7f552f2d1d20f60ca74fe10c9"
+    },
+    {
+      "path": "data/raw/discovery/lighter.json",
+      "bytes": 371091,
+      "sha256": "02a70b813410e4221e9cfdabb076367a8728ed62d4e71c6b35d4bb8de923505e"
+    },
+    {
+      "path": "data/raw/discovery/lighter_meta.json",
+      "bytes": 167769,
+      "sha256": "58bc441b68506ca6e0f8285ce68dbf70e89ebb3b42c3dd8ef0b68786311316df"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/census_summary.json",
+      "bytes": 312,
+      "sha256": "c6a91ae2d2b0702fed0f169ea98b74e8e476c8776b6304da36a36e22d19272a9"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/errors.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/BTC/candles_00.json",
+      "bytes": 152572,
+      "sha256": "416428660b53cb049eed51b499e29ba77e769b275d838b64ab6251fb69f56195"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/BTC/candles_01.json",
+      "bytes": 207,
+      "sha256": "13e8d306a6a3b736d156a7d745e011011ef2e579038082fe8909b303786da545"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/BTC/funding_00.json",
+      "bytes": 59446,
+      "sha256": "d49b202992f26465cdfed218106449c269a97f5e61e0ce7c06273f54ae7dfcb3"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/BTC/funding_01.json",
+      "bytes": 28870,
+      "sha256": "5bf840a54a214bdf1d089a624d9e07aca9a594bbf67cfdbe00dbd0ad98f0a571"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/ETH/candles_00.json",
+      "bytes": 149488,
+      "sha256": "85009c77d7d5dc34c940cc2f72fd47f01879670e6673b5d8b3fc40b33a04a486"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/ETH/candles_01.json",
+      "bytes": 204,
+      "sha256": "3e6fb2c2660327b63836acc18ccfd3380bef618b456cb399831d55723c11bb14"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/ETH/funding_00.json",
+      "bytes": 59162,
+      "sha256": "985b80988b0ac2e42c0ff2ad6005e4f5b56342a9263abd258db4bff30d100d38"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/ETH/funding_01.json",
+      "bytes": 28703,
+      "sha256": "7bc4f99cb1355068f0efd2d03b07d172f559f0993f18d4366d1f5ca53c1f0fa8"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/HYPE/candles_00.json",
+      "bytes": 149441,
+      "sha256": "8c54b3246fe1059081797baf3f29d7c3f1901a4e34907022e6719442064ffee0"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/HYPE/candles_01.json",
+      "bytes": 203,
+      "sha256": "3fff92a3eec86bd02fc8608ad22710f5f6ca453e0c8a7957591e8d99a23cf8a7"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/HYPE/funding_00.json",
+      "bytes": 59855,
+      "sha256": "2f5d18d88da07a79cdb8034689d15212469ef7ac9a8c82c2743ffc7937990e0b"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/HYPE/funding_01.json",
+      "bytes": 29009,
+      "sha256": "935a9bd01c67ea22f87147605cbd95521cdce6e7f053d3bb86c9c18c4dd44e12"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/NEAR/candles_00.json",
+      "bytes": 150609,
+      "sha256": "977978c69cddc19dc9b31ee629b826cb9a4a921fb8e1e9bf4338967e1ea6324b"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/NEAR/candles_01.json",
+      "bytes": 213,
+      "sha256": "32a586ab9afc8ab5eb05c04abed1ceed770a7b55fd03c16940a28319c0d96792"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/NEAR/funding_00.json",
+      "bytes": 59450,
+      "sha256": "e25a7d51f5ef8d6cee5050170abf8c3296760d034abe3374124ef76dd92e10a8"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/NEAR/funding_01.json",
+      "bytes": 29163,
+      "sha256": "ae3ed1d6803487c20035e362c93250ab2092f1618e7b9e6604b5c6e73ac49865"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/SOL/candles_00.json",
+      "bytes": 148046,
+      "sha256": "6bfbd0f464180813b53c1d492e0a8a47d979f014d6fc3a081c6c57d3d7794cef"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/SOL/candles_01.json",
+      "bytes": 202,
+      "sha256": "ed9ea43f8abf38bd0b94145f91da508a8ebc318d6b0f2bd042b3891202d26290"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/SOL/funding_00.json",
+      "bytes": 59823,
+      "sha256": "42294382121cc0ba03d628745f870ff2818e0bd6a1733463b75c58d75f1ae706"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/SOL/funding_01.json",
+      "bytes": 28724,
+      "sha256": "e6f934e42d0f7b1d39671f8b82d2ac39ba8268dc539300495fdca0e0307c6227"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/SPX/candles_00.json",
+      "bytes": 149995,
+      "sha256": "a9ca6b6770d240a97aff0a7f185e45e8f2426e0802a1e80f022959243159d60f"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/SPX/candles_01.json",
+      "bytes": 205,
+      "sha256": "952f62602e5c4c1fff5acfd217f2eef409114f8eb5c32591399474d35a74e3dd"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/SPX/funding_00.json",
+      "bytes": 58686,
+      "sha256": "8688bc4567013e8b308a5eeba01416e34eeac71bcfb84638e7f55b8da4daa653"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/SPX/funding_01.json",
+      "bytes": 28879,
+      "sha256": "39206876c78d969a218e0a2e6e9f8ff21486de0e66312cc9f23299c712ad2566"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/ZEC/candles_00.json",
+      "bytes": 147962,
+      "sha256": "00c4dbec2d58f728a784361fe165c8ae900509f9357c733d2798b00c522558b4"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/ZEC/candles_01.json",
+      "bytes": 202,
+      "sha256": "c4594b2ae312b861168bb0c03c13d6f907e5b9bf5ca915c17d07843caa14a2e5"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/ZEC/funding_00.json",
+      "bytes": 59014,
+      "sha256": "cc8e2a5e96c5572b0ed19722b5ec3c1793cfbfcf90216489a18008e8f863e2e3"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/ZEC/funding_01.json",
+      "bytes": 28706,
+      "sha256": "607bf2e147a4b68618ac0a8eaede784b8e29b3dff983ae6269047913d4e793eb"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/io_ANTH/candles_00.json",
+      "bytes": 150114,
+      "sha256": "996811db3327f5461732ddb56907897ba8acc5b7dfb2304f35585c0cc16ed617"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/io_ANTH/candles_01.json",
+      "bytes": 205,
+      "sha256": "1e9c1c164368cd6401a25a2b75fe65a02bf477e683363bef270cf0acd3db8e3b"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/io_ANTH/funding_00.json",
+      "bytes": 61996,
+      "sha256": "50fc34167ca82801aee4a4ebe637d3e947c8b3ac7468842fcb364c26685e80b7"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/io_ANTH/funding_01.json",
+      "bytes": 30199,
+      "sha256": "ca95577f88ed3b4d46ecefa6b9447496e0feb95cefa19cdd6276b7214190ab54"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/io_EWY/candles_00.json",
+      "bytes": 49519,
+      "sha256": "d14798afe20352bc0615d2d6749569527bb0caca7870e9b22963e18d715dce77"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/io_EWY/funding_00.json",
+      "bytes": 30963,
+      "sha256": "b51eb6b1f3c500f1b9cfe77dcd2e4d29380970e644331ea246591a908af18bb5"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/io_OAI/candles_00.json",
+      "bytes": 127197,
+      "sha256": "41ea178e2b90c37eda86364e6b682d1fc0885b197fe1d3c6a3934a685e09a0ec"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/io_OAI/candles_01.json",
+      "bytes": 202,
+      "sha256": "c5fcee246011feb33e2b289d471a84e521bfc23be01378b715336de13e9368e2"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/io_OAI/funding_00.json",
+      "bytes": 61391,
+      "sha256": "21aebbd74b3b645a19f796d42cc8612972ae329270d61e9daea61e13af9dbd07"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/io_OAI/funding_01.json",
+      "bytes": 16948,
+      "sha256": "00c049cd4329d2fd1f170ba37e520ff14863418e60fe092de0001794741218cf"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/mkts_US500/candles_00.json",
+      "bytes": 151555,
+      "sha256": "fa1e4ba706f553b9c6a44f3b782932fb40d76c4724d2a88644377313f1d899b4"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/mkts_US500/candles_01.json",
+      "bytes": 207,
+      "sha256": "c3ba1715dd71bddaeb8d2e7ab8c32152e3d9947f1489346f0e05b766f1f1141c"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/mkts_US500/funding_00.json",
+      "bytes": 63845,
+      "sha256": "91b469e18151baf6eb68d73beca4a11d767f5fd8e652c3f95fd0572c204b1bd8"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/mkts_US500/funding_01.json",
+      "bytes": 31046,
+      "sha256": "a0d4c15ed0d6d39beac88001c9112439b63e9b706f2cb2ccc96545291ec9e64e"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/mkts_USTECH/candles_00.json",
+      "bytes": 151925,
+      "sha256": "452d216a91bbd07b17bbba85fa36e75b429d482695aa9282bbd056ffcd2acfea"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/mkts_USTECH/candles_01.json",
+      "bytes": 207,
+      "sha256": "c851eb8dc31c3aea1513c48eea21cbe2a4e70ba6f7d3d39d7274b8f02299d5dd"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/mkts_USTECH/funding_00.json",
+      "bytes": 64254,
+      "sha256": "ab6ba353cc971785daa5c61aec1588a533e951a5cd42de49aeb2c065cd83e782"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/mkts_USTECH/funding_01.json",
+      "bytes": 31431,
+      "sha256": "6f435a19fc8ac1a94a9a2ce0e79aeb6096ee8de161dd6b1f2580457502dc6524"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/para_10Y/candles_00.json",
+      "bytes": 146357,
+      "sha256": "24a2a6f72acf553c21aba5467168d1ed390720aad5b3ae487ecc89123d97ca12"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/para_10Y/candles_01.json",
+      "bytes": 200,
+      "sha256": "feba720d5f72f9e7841e198f82eda4ad9af78c2180760b70b611f780003241d5"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/para_10Y/funding_00.json",
+      "bytes": 62884,
+      "sha256": "acbf2243aab591408df9629f425e75f29a4c7d553b4370837573b1c64fad29e2"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/para_10Y/funding_01.json",
+      "bytes": 30412,
+      "sha256": "4a51b43a836a438395536332a09d40fd63060285381f370567247836b620bcd1"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/para_2Y/candles_00.json",
+      "bytes": 21467,
+      "sha256": "27dd48db3d9b989b0efd94230901c87490bcc78d1a79e2b890d6217d3d4b4c3a"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/para_2Y/funding_00.json",
+      "bytes": 13620,
+      "sha256": "c50ab50f4ee4b36101b79e472be42e03809dbc3455b65df4fb06b04203558abf"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/para_30Y/candles_00.json",
+      "bytes": 21254,
+      "sha256": "5abff27b021e4db3f718129381aee01ea3846bbb05fc7665389219d4b7b48a0c"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/para_30Y/funding_00.json",
+      "bytes": 13537,
+      "sha256": "06a7b9f3e080be0071eaabd863cdf3d4cd2259406fcf8f40abc573c9648f1de1"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/para_AAOI/candles_00.json",
+      "bytes": 147609,
+      "sha256": "5b2fa86b51bf9616938a9b692d8c13ae94b276166b4f0a6b094eea3e5832d7a8"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/para_AAOI/candles_01.json",
+      "bytes": 201,
+      "sha256": "afea0de3be2c29d7774572ee702d1aafa4e24c0826e5b6e0994aefe77818690e"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/para_AAOI/funding_00.json",
+      "bytes": 62827,
+      "sha256": "054c7799d101cf5a44a7fdf9cd3e9a8e4408d0793da984ce398d880ae3b3ef59"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/para_AAOI/funding_01.json",
+      "bytes": 30561,
+      "sha256": "4aa1c2a1ad2f4992487b99a0f2df8421991f29d4662aadc4009e0e486ea3f5d4"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_AAPL/candles_00.json",
+      "bytes": 150412,
+      "sha256": "2e67ee143faa0ad81316ce5e3ca921bfb4ccf8ede740407456fb5210e5f7164c"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_AAPL/candles_01.json",
+      "bytes": 204,
+      "sha256": "dccff743fd1e529b92770f9b66855e308e0bff36fb709f4008817287afcc69d0"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_AAPL/funding_00.json",
+      "bytes": 62682,
+      "sha256": "865648e43821ffcd7cfee660218289c408f193bf203492c0823305ceafbe1531"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_AAPL/funding_01.json",
+      "bytes": 30243,
+      "sha256": "906e516a263e0ae315c1af560b17df862ea7ef897fb0281f0c7bfa9293db8b52"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_AMZN/candles_00.json",
+      "bytes": 150292,
+      "sha256": "8c0baea082f3fcbca97b5181f139b4eb6ab9324e3493db0911caf3283799b393"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_AMZN/candles_01.json",
+      "bytes": 205,
+      "sha256": "a20856750ae0fed9626c300ff46fd5ac3c4c6aea7d05b2cb828f7e2e3c10c7f9"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_AMZN/funding_00.json",
+      "bytes": 61798,
+      "sha256": "22a4d645db7dbc2d8cfb3af1fd114af3baf663bbb9356101e769c39890aa9f98"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_AMZN/funding_01.json",
+      "bytes": 30275,
+      "sha256": "7516a9b9070b9e38afe9880ab36ef1ef3751dfddbeea85144b8f50312dd1d913"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_BRENTOIL/candles_00.json",
+      "bytes": 154293,
+      "sha256": "a2f9b820ab598717c3929c5786674d0212113071d20e01d5026c00355687ed97"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_BRENTOIL/candles_01.json",
+      "bytes": 207,
+      "sha256": "ec8fe45f7696dd089b8db32a82ddaa0aad3c2018692065d6e7adeba85f25d5fb"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_BRENTOIL/funding_00.json",
+      "bytes": 64722,
+      "sha256": "187b06c5961c91cb39dddab76f364cf8f632d49c4e2d673f4d581670a0f66ead"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_BRENTOIL/funding_01.json",
+      "bytes": 31382,
+      "sha256": "bed6f983c879c23aa7524321d2e55ebf799de0be569f6dec4c5ab5e30ac530dd"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_CL/candles_00.json",
+      "bytes": 150773,
+      "sha256": "c91576c7bee42be6b296e4217de6fd5f75318c2bd8a641a32fda5dd3f3e7332e"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_CL/candles_01.json",
+      "bytes": 205,
+      "sha256": "a3154946e27eca64c699b2e271d96adc1797770e3f8e1994aada579f43ad1af9"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_CL/funding_00.json",
+      "bytes": 61890,
+      "sha256": "cf0bfd3a4dca499c053f88f543ef7320ed64e66493c3de06cdb5b57f0c0dc800"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_CL/funding_01.json",
+      "bytes": 30205,
+      "sha256": "b0e8febb87598d119ce7ea2406599c16493cbfeb5ef3536512eafd930b995ef9"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_COPPER/candles_00.json",
+      "bytes": 151696,
+      "sha256": "f0d100834e44ab0e9335b5e6da60fda08a79ff4b90ef74245c6568011d4d6d03"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_COPPER/candles_01.json",
+      "bytes": 207,
+      "sha256": "6110cb96c9745f9f07dc36f62abe2eef13b29fff050a1ed65cb06f206296d8a1"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_COPPER/funding_00.json",
+      "bytes": 63356,
+      "sha256": "bec6c2241fd9f14d37f65b4882526c7a17a73c47d3d12aaad0d34859c0c7d566"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_COPPER/funding_01.json",
+      "bytes": 30847,
+      "sha256": "2bc2a7462475b28682d3f0cee72c62a7a0981c2223f3a6bb306a8175a1807345"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_EUR/candles_00.json",
+      "bytes": 148651,
+      "sha256": "48f43578e3868517db21fafdd7d8d57a15c213dfdfeed4cf446f765b0fcce6fd"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_EUR/candles_01.json",
+      "bytes": 201,
+      "sha256": "d0ce16e86e4cc054ad0f8cd33527f93ba291eecf79b2ee027256d7986827f267"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_EUR/funding_00.json",
+      "bytes": 60282,
+      "sha256": "834bf131dde717a7af6ea77e71e5225f99154e00c2c8d81c3a6d8e763faa6e66"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_EUR/funding_01.json",
+      "bytes": 29456,
+      "sha256": "e980f3a5d0804d03eca63119cee83265bf6671cabdd9f3ff6be4b84a8741eca7"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_GBP/candles_00.json",
+      "bytes": 146216,
+      "sha256": "d6e5b277ab80ac2a72204fe911290c4b939ce85f00de3e96834d0ff12a00bd92"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_GBP/candles_01.json",
+      "bytes": 199,
+      "sha256": "89de12386f018a0c364ae7dda58b61daf7ae4c0b2b2fe0c82572a89fdd463642"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_GBP/funding_00.json",
+      "bytes": 59428,
+      "sha256": "1481a59be1f204ace50e6e80b1710d8ea9559ee03767bc585f511d1668322442"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_GBP/funding_01.json",
+      "bytes": 29052,
+      "sha256": "211a1d5d0b32119e6e643b6edae385fcceac6d220dd85eb1b8493093cafb5872"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_GOLD/candles_00.json",
+      "bytes": 151205,
+      "sha256": "a9ea534e6b0b7eae69cb5b41b6ee12e5b53e259e5b288a8611f0ceddb3e0157b"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_GOLD/candles_01.json",
+      "bytes": 204,
+      "sha256": "dec798238dc60f72700e4b1719f61bce5e879e835f8a3edc6f6be81b54dd6099"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_GOLD/funding_00.json",
+      "bytes": 61982,
+      "sha256": "d27da23d0f306d3afc10be6af72382b0a1a6440ea99ec9c759a2794b46034884"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_GOLD/funding_01.json",
+      "bytes": 30228,
+      "sha256": "346da17fc0dc0ee693ac67b4a8ddc946713e0b670e5a9b7435db3f14b182b948"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_GOOGL/candles_00.json",
+      "bytes": 151335,
+      "sha256": "3700b65b9f556348b20fd7454db4eea15070ae218cfdc3d5397f460d6cf03328"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_GOOGL/candles_01.json",
+      "bytes": 206,
+      "sha256": "8a08e963097dfbf4a572ccf2b37c71228ca9e28d3b3f8729b7722243677e8435"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_GOOGL/funding_00.json",
+      "bytes": 62372,
+      "sha256": "c100d23b11935c5cdd077ff9abcde6f2eaa57562c4e8d567a5790d9912819ac7"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_GOOGL/funding_01.json",
+      "bytes": 30546,
+      "sha256": "d55e4af06a869832ed82f4184dc3448f1bc0d297b188dc71a18362dbd38c7c95"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_HOOD/candles_00.json",
+      "bytes": 150925,
+      "sha256": "5529e13da0963b5363f11ff978645c81b08079b34732002e0abde922c52147e8"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_HOOD/candles_01.json",
+      "bytes": 206,
+      "sha256": "2c248dc9bc32d40717200fe8cd7d05541689c1c890faa49bbc0d03de42adaec9"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_HOOD/funding_00.json",
+      "bytes": 62200,
+      "sha256": "e85ecd0be5e58e256bfc20fba3844c0123dd78b2408abb5e7f495e36eb78784c"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_HOOD/funding_01.json",
+      "bytes": 30329,
+      "sha256": "47e00d08931d48fb089ac281cfe1d2facacbecd84060851e9ac7aaac3584d1b5"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_JP225/candles_00.json",
+      "bytes": 153502,
+      "sha256": "de244820193a5e2c19f6883dc24e8d880fceae514df9d9b76f8b14547a5d0811"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_JP225/candles_01.json",
+      "bytes": 210,
+      "sha256": "53a923289f2697d76c7d9066c2069831079fbe29c100711f1bf28c445e9519f4"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_JP225/funding_00.json",
+      "bytes": 63008,
+      "sha256": "830c4cc574dd5d1e26eebc48ad0d5c98aaf8ce32b61226e73bec4b25f1e4d41e"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_JP225/funding_01.json",
+      "bytes": 30815,
+      "sha256": "c4d45505a7fd0cff116e508a4b845cc431336f2628918be193b0eacc24fd1d20"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_JPY/candles_00.json",
+      "bytes": 148268,
+      "sha256": "f89b55f0c3602f0941a586ba114f62a25bfcf9baa76fd00269c24ac8072abf88"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_JPY/candles_01.json",
+      "bytes": 201,
+      "sha256": "2188b84224363cbbb0c16930fdd5c4f5fcdc2f76dc22a203bb25c7e2df15d5ff"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_JPY/funding_00.json",
+      "bytes": 60114,
+      "sha256": "241fe01b6b64c964f4ae9459b6548c196cfb3ff63ae4ba1191338b9b0ba88acf"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_JPY/funding_01.json",
+      "bytes": 29750,
+      "sha256": "8c27c8712b2f9152a17b00bc753013e6cd2d69fb2f9c6e1d3fd10418ccbf9e7e"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_META/candles_00.json",
+      "bytes": 150443,
+      "sha256": "580559bd781d751e6e3257da17db18dc1b51377b2a0b86f9b9c9feae3dc8ad6a"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_META/candles_01.json",
+      "bytes": 204,
+      "sha256": "ee5c21d89354614664256aa8644777a7489ef4cd216d0d562e8f79c2e0121eb4"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_META/funding_00.json",
+      "bytes": 62011,
+      "sha256": "8ce9952295f2f06663d5a495729e93cc574bdda088ea0a69bc392b527f4fbde2"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_META/funding_01.json",
+      "bytes": 30330,
+      "sha256": "2f33d25bde7bc94bb9e173fe0b1f33499c1cc8ccaeb2e3d4be353845269f4591"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_MSFT/candles_00.json",
+      "bytes": 149956,
+      "sha256": "4bc7074d2fac7183c357e04fe24812fd340c0dd57323c3bc92938c9aedd84287"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_MSFT/candles_01.json",
+      "bytes": 205,
+      "sha256": "80641baa59a8b365ec6d5d77179c07def52c80eb8896ad001eff32a2cfc67afa"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_MSFT/funding_00.json",
+      "bytes": 62442,
+      "sha256": "9dba31efaa314ae2ababcdeefe515a6fe8e980d79db9357687e54b9925e097f8"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_MSFT/funding_01.json",
+      "bytes": 30359,
+      "sha256": "3fc4f7265c16b5fac815d7f344d16e2d665be649f44f5c115af9005b2694dcf6"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_NVDA/candles_00.json",
+      "bytes": 151169,
+      "sha256": "93628f32e5e515270793384b4db50e1bd64b3681255caef45cbbd0d01249b228"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_NVDA/candles_01.json",
+      "bytes": 206,
+      "sha256": "164c691ea12840d1e84cff5370c07d4ce490f9bf58357f0a23501c0c9fc0a3cc"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_NVDA/funding_00.json",
+      "bytes": 61939,
+      "sha256": "30f54b1f78a510faf5f0de6063b2d22628931f60d67bd080fb4ec1ae10738c6a"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_NVDA/funding_01.json",
+      "bytes": 30172,
+      "sha256": "358f211d4550771dc15d2befdcfe57cf3cf421f0fecf6cf2575c1f6f590d9df3"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_OURA/candles_00.json",
+      "bytes": 26109,
+      "sha256": "9153eabf29d28ce00b1cc9ed053d92b914eb7fee8cffcee7ab0aa8d2d87b2ad2"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_OURA/funding_00.json",
+      "bytes": 16518,
+      "sha256": "4b621c4e0916b4c5e68fc9b209e67088b3dd460d7e23b74a8fdca91fb8c55326"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SILVER/candles_00.json",
+      "bytes": 152628,
+      "sha256": "4bcef0af82fec1914984555a7c7d45870d894a49303ad00c664148363530cc9b"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SILVER/candles_01.json",
+      "bytes": 208,
+      "sha256": "9f5ae9c6c33ff1c81c4da91c294568e1ab38ef041d9f6774c4f9ba49aa7bed7c"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SILVER/funding_00.json",
+      "bytes": 62899,
+      "sha256": "cfbcbbf62fb40feb1c81d2972c1d191be6551015b1bff5df8d75908233786404"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SILVER/funding_01.json",
+      "bytes": 30789,
+      "sha256": "96a700e79375898c2f3727609994e9e6e08011b74829204027581fe58380d7a5"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SKHX/candles_00.json",
+      "bytes": 151697,
+      "sha256": "93979a210489ac152344f38577f2f5b21add120651c0621afa6cad2ef0425042"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SKHX/candles_01.json",
+      "bytes": 206,
+      "sha256": "c9fe495f174c28ac9d64c6a4ef49d5b01f7ca977b07e1996938069c8bab70201"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SKHX/funding_00.json",
+      "bytes": 62554,
+      "sha256": "7bc87467d22312a1fc1310c7d705d02109124176a7761a16d3a94fe153d45a11"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SKHX/funding_01.json",
+      "bytes": 30455,
+      "sha256": "33d298c878e25435770ee0c47b42682e0bc9b09c31129c6a30eef5f67831038e"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SMSN/candles_00.json",
+      "bytes": 151241,
+      "sha256": "23bf793019424757f8ce41c5567b7e3f0b0e73d274413dab0953755ca37fd287"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SMSN/candles_01.json",
+      "bytes": 208,
+      "sha256": "d830a0ebf102b7da89994e880acfcfa53370e59df29b1be52da0ff3276820c3d"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SMSN/funding_00.json",
+      "bytes": 62604,
+      "sha256": "a3c0610fe1f6fe23ae4885775d663bdda56981fce848c083e4e9be13531804f7"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SMSN/funding_01.json",
+      "bytes": 30606,
+      "sha256": "8f789266ab84191c6c72cbd91bd7231d4b6a71199ea351a3f83d001ca1078214"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SP500/candles_00.json",
+      "bytes": 151827,
+      "sha256": "938c9a7b4deda26eeed30994f4eba2eb19cb2834c6e14221a509f1af3fd84ea1"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SP500/candles_01.json",
+      "bytes": 207,
+      "sha256": "6b4cf337beaab11057e3c4ba5f1f9cf369916a264d45e857539a1e89e7f12a2c"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SP500/funding_00.json",
+      "bytes": 62689,
+      "sha256": "00acf7b9143ac78718b4961931e91da9e3dcff5755d963c89a2432716ae36d43"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SP500/funding_01.json",
+      "bytes": 30673,
+      "sha256": "b05f3d677ee570a3c2e1a709b23d062410f41a788031f0be4c611b3fb640912c"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SPCX/candles_00.json",
+      "bytes": 150610,
+      "sha256": "ce86ac03456f373376223fb1ce2ed4e811b6588885ddeb0ad49be90ba386b4d0"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SPCX/candles_01.json",
+      "bytes": 204,
+      "sha256": "ba62114c762f29ae1fa0b605c15bf45ad162a567704158c33b15b88b6c98d9f8"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SPCX/funding_00.json",
+      "bytes": 62775,
+      "sha256": "b7bd6fed7295f99a6f69d210004506576276c1df0908452fd09cd6aabd490c24"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_SPCX/funding_01.json",
+      "bytes": 30208,
+      "sha256": "89ea2cf3ccfabf46f521ca60bdd7fd0557fe51005ba4b61bbcbff95a3bf925cf"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_TSLA/candles_00.json",
+      "bytes": 150505,
+      "sha256": "c6461aa36f3b8bd0539ca213914a585e556bea7c541bfd8db638c1e369fd0228"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_TSLA/candles_01.json",
+      "bytes": 205,
+      "sha256": "0b87faea6ae4dd854f338279f6dde909a8b012df11a90651f94b0b50d8230685"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_TSLA/funding_00.json",
+      "bytes": 61936,
+      "sha256": "8a4ee1147c027522ba86c1ad0d40d7404f09493cc0e2706b7eb61f029582bf65"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_TSLA/funding_01.json",
+      "bytes": 30147,
+      "sha256": "b4f4400559b230d14c3baa5f5443246ba641a11c3adeb07b80c14a7b6081059e"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_XYZ100/candles_00.json",
+      "bytes": 155837,
+      "sha256": "0e3c537698b8f449c2ae5735dbc08a1bfe158363b88bac3e621c297a59e6f1fe"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_XYZ100/candles_01.json",
+      "bytes": 213,
+      "sha256": "4167a807ff30b6902226cb7ce3695576dde64da9a586eac0d9ec1ab97e6b8285"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_XYZ100/funding_00.json",
+      "bytes": 62783,
+      "sha256": "16e1a61d1d979f29848340625a47cc751336e8df087f0a49d61e80dc4f3ab4b6"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history/xyz_XYZ100/funding_01.json",
+      "bytes": 30819,
+      "sha256": "19ef5ee94600feed410e61e8b003899c95a7fb59b4798653b504047f33d33883"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history_metrics.csv",
+      "bytes": 5902,
+      "sha256": "59afbb295f64c96669112c77c9394f9fab3659da761da164ff419ffad45d840d"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history_selection.json",
+      "bytes": 27174,
+      "sha256": "9f6ec66a05541ec86d4e19f16924132019d359e57a33e95df2870c6db9c4803c"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/history_summary.json",
+      "bytes": 13311,
+      "sha256": "995a1ebc45a45ada668bb67f3344c3c772be895ac223a827cc371afb281bdb9a"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/inventory.csv",
+      "bytes": 108435,
+      "sha256": "165b5d606ad1df1e3f286de24236c4ffdb54d73e8b4dc612b0e2734f1e71ee0c"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/manifest.json",
+      "bytes": 310,
+      "sha256": "06dbcdb95d9fca8238a9248a1dd9371824f4cdaefc5e32d4718d776593d5bf03"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/meta_and_ctxs/abcd.json",
+      "bytes": 907,
+      "sha256": "8878d9d451fc08496c29227af4251d238ad3e9d4793ea9487b8891f3b65b7480"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/meta_and_ctxs/cash.json",
+      "bytes": 9874,
+      "sha256": "649ef8b3cd49eee52980dd899249a0cded94055f4848907eb09c65c44ce369e2"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/meta_and_ctxs/flx.json",
+      "bytes": 11662,
+      "sha256": "aed5f24bd6b3c3073705ebb28f6f118c751a9d982eb34e62eaec88b77fa886e7"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/meta_and_ctxs/hyna.json",
+      "bytes": 13776,
+      "sha256": "26ec3b2797dbca68fd214a6730b8b6ab5f3e42f97c8a0fe413a9db194f66ed51"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/meta_and_ctxs/io.json",
+      "bytes": 7372,
+      "sha256": "98919f4e2bcd13f0892a6ed080d6ce9af4062fecb4f2e26c408f5cea6b1213c6"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/meta_and_ctxs/km.json",
+      "bytes": 14438,
+      "sha256": "48ae4bac7f0dc462c84487764c52c158c3b9042f460f7dc894e111bbf3f073b2"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/meta_and_ctxs/mkts.json",
+      "bytes": 14728,
+      "sha256": "a73e99bef23e954577161fe6c414dcbbaf706ca4462dcb8880e906ba61f43a25"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/meta_and_ctxs/native.json",
+      "bytes": 112558,
+      "sha256": "8a9ee1a582d29a6a3d62434e971b80c29e1017deb901ac91c233136567e4d442"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/meta_and_ctxs/para.json",
+      "bytes": 23294,
+      "sha256": "91afe3549543195414415a7334a13a9ef74ef5e72a969010b944ff7031dcc7fb"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/meta_and_ctxs/vntl.json",
+      "bytes": 9464,
+      "sha256": "2137f307bfaced7f70ab62ebe4ffb1ba346fda065e10b155709383782e4eb481"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/meta_and_ctxs/xyz.json",
+      "bytes": 84130,
+      "sha256": "e00c737218783a06fa5f354b51af2ff06763aae25d6a319cf0e11d0f3c94e57c"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/perp_annotations.json",
+      "bytes": 27559,
+      "sha256": "91d8e723066aec028703633bcd9569d80333ef878a7a91335fe1bb58610c2b42"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/perp_categories.json",
+      "bytes": 8053,
+      "sha256": "7e9c313e00a6ef74709da696e3e50f0dd1bddb195c15f12af871b04b0905d18b"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/perp_dexs.json",
+      "bytes": 41774,
+      "sha256": "2b77cb4835af5d677ff662081871ba2897cec40c97de5472afb0a45976c5ab3f"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/spot_history/HYPE/candles_00.json",
+      "bytes": 148316,
+      "sha256": "aaf8df86d77b75f1a7d258f447aacdebc61d7f61a6dba682a8bc03629a3022d0"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/spot_history/HYPE/candles_01.json",
+      "bytes": 201,
+      "sha256": "31e80d7c271d84fd77d1fa260ee4049d0600fae06dee453c490db5a97b435215"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/spot_history/UBTC/candles_00.json",
+      "bytes": 151140,
+      "sha256": "9bfc4b05353f41aa89d31e3da54d21c5850ebff79ab64a93b4940af7396148cb"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/spot_history/UBTC/candles_01.json",
+      "bytes": 207,
+      "sha256": "1307dbf9a346ff4f95cb1668976124e43671b7af7dc91d67b7499bb1902015a2"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/spot_history/UETH/candles_00.json",
+      "bytes": 148005,
+      "sha256": "bd75ebb897809832b70528c6b143c1698dc09ddb5dcd2d5f224241187f9cb5bd"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/spot_history/UETH/candles_01.json",
+      "bytes": 202,
+      "sha256": "f774f8510d702510c9e62840f0538fc079b6489eba18b0d111e9dcd0b7deea5e"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/spot_history/USOL/candles_00.json",
+      "bytes": 147722,
+      "sha256": "8120b4c21ae38a51df44b3d90919a799e8032e55d9d9daf195fed574f0e73c08"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/spot_history/USOL/candles_01.json",
+      "bytes": 202,
+      "sha256": "bf55ee0332d7e43e729238aa002cf21812a5033397a1691d591ae9003a741264"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/spot_history/UZEC/candles_00.json",
+      "bytes": 148670,
+      "sha256": "dcdcc74e4685402722ac3c3e8af2c8dfc3e965aa598a48277f747ae73d8d5ff3"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/spot_history/UZEC/candles_01.json",
+      "bytes": 204,
+      "sha256": "e029f10c12fdfd9a2f8eb5196c218f2e5f8b01ab448d4f196a2d938999271ec5"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/spot_history_errors.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/spot_history_summary.json",
+      "bytes": 773,
+      "sha256": "bd034312202d63320e5908b465af27438472c21258d69be3c1923f696fb6be7a"
+    },
+    {
+      "path": "data/raw/hyperliquid/20260929T034903Z/spot_meta_and_ctxs.json",
+      "bytes": 453152,
+      "sha256": "82555467b6f0b713179a775a41dac05958b8944adb334fbe8d5566d0eaef8ff6"
+    },
+    {
+      "path": "data/raw/live/20260929T035122Z/books.jsonl",
+      "bytes": 8396861,
+      "sha256": "e6a6b6b26943786f7ab939c1277f9c4b76b3e0918a776b33c6a7ebb0c8dd13a1"
+    },
+    {
+      "path": "data/raw/live/20260929T035122Z/lighter_initial.json",
+      "bytes": 497075,
+      "sha256": "0169d6b684cd3e270ba14250d010ec1db47a7ee696afd27bfedd56c8e3d578f3"
+    },
+    {
+      "path": "data/raw/live/20260929T035122Z/manifest.json",
+      "bytes": 493,
+      "sha256": "56ba5c76f6e979e6103effa3c7c6efa32066f714665aa6744217507c4f2c5496"
+    },
+    {
+      "path": "data/raw/live/20260929T035122Z/plan.json",
+      "bytes": 94716,
+      "sha256": "18b9b7b2a00631dbdaea4c930e74f0b5b9e9cdae79b70fc56d67c239f3ea2f1e"
+    },
+    {
+      "path": "data/raw/live/20260929T035450Z/books.jsonl",
+      "bytes": 52544068,
+      "sha256": "b6229037f9846959ae25a864d7593eefc9477fd0f2cc4a9beb40e8ff2637d1cb"
+    },
+    {
+      "path": "data/raw/live/20260929T035450Z/lighter_initial.json",
+      "bytes": 497061,
+      "sha256": "b604f9f0f9606b308cdca08a1092e4300c6225e11157cec912ffdd4e3c02c73a"
+    },
+    {
+      "path": "data/raw/live/20260929T035450Z/manifest.json",
+      "bytes": 372,
+      "sha256": "daebe6e1cdbfd0d027838aac4e71db57c6edce645399e94c697809a33cec719e"
+    },
+    {
+      "path": "data/raw/live/20260929T035450Z/plan.json",
+      "bytes": 63735,
+      "sha256": "177f2abbc8e188bbe9a33613d9c40dbdb02aaecd1c66a96c050a3aa78c0053e2"
+    },
+    {
+      "path": "data/raw/robinhood_all_pools_20260929T035521Z.json",
+      "bytes": 2992526,
+      "sha256": "1e1e1940a146eb4b948de05a81996e75b925c15d4ba3424ed8b068f5092ceeaf"
+    },
+    {
+      "path": "data/raw/robinhood_history_20260929T035748Z.json",
+      "bytes": 956597,
+      "sha256": "d3d92f08ca030bb44a93cc809a7f6d4ffc22144d44587032feee8e893a16920b"
+    },
+    {
+      "path": "data/raw/robinhood_history_complete_20260929T040036Z.json",
+      "bytes": 1618495,
+      "sha256": "dd831ba58855cb181c65b17727eac05dd851684ecbc5e021bb50711503232fdd"
+    },
+    {
+      "path": "data/raw/robinhood_live/20260929T035445Z/manifest.json",
+      "bytes": 471,
+      "sha256": "84972d876eb637885be3ed0d1c5263f793fc6f6c66ea749849d52509210a9da4"
+    },
+    {
+      "path": "data/raw/robinhood_live/20260929T035445Z/plan.json",
+      "bytes": 12861,
+      "sha256": "da85a865254c13641638ecc1e53e4263483f4b2895a10dc327beb6771c7ba2df"
+    },
+    {
+      "path": "data/raw/robinhood_live/20260929T035445Z/quotes.jsonl",
+      "bytes": 14639233,
+      "sha256": "cb827c0a57b3aa181e7415f045dd3d04da4f6da0b4a899499f16d097fdf9e476"
+    },
+    {
+      "path": "data/raw/robinhood_multipliers_20260929T040952Z.json",
+      "bytes": 11254,
+      "sha256": "cbff981bc36466a3c059dadca5b7c1ac35d941039a9b4f387f3fa434e65245f8"
+    },
+    {
+      "path": "data/raw/robinhood_snapshot_20260929T035030Z.json",
+      "bytes": 800617,
+      "sha256": "5ebaa15affb7329d6d104357337910a287fe9490b7f54ee67312b933a52822fc"
+    },
+    {
+      "path": "data/raw/robinhood_snapshot_20260929T035118Z.json",
+      "bytes": 804437,
+      "sha256": "387160f350ad66848ea52d065fa500eb1fe4a23573e86fc969771da35434da55"
+    },
+    {
+      "path": "data/raw/robinhood_snapshot_20260929T035229Z.json",
+      "bytes": 814942,
+      "sha256": "f028b4fbb44f0b3d7955e7f1293bc11d72c45cec0a1af1729a8ae74d9939bf2f"
+    },
+    {
+      "path": "data/raw/robinhood_snapshot_20260929T035429Z.json",
+      "bytes": 824464,
+      "sha256": "a3807d5e8aaabf9224c3fb8b5005e297d751b66d09e2bb654d5dfaa64e423f08"
+    },
+    {
+      "path": "data/raw/robinhood_universe_live/20260929T040323Z/manifest.json",
+      "bytes": 521,
+      "sha256": "2554e6d62db536a105903e47b17247d619342d76975b32f2f85becefc1fecdcc"
+    },
+    {
+      "path": "data/raw/robinhood_universe_live/20260929T040323Z/plan.json",
+      "bytes": 62524,
+      "sha256": "a6ee8b7eeec0a6e5ad16589959b9052c19f87ac38e8f1cbf9cf83c60ba72dfc9"
+    },
+    {
+      "path": "data/raw/robinhood_universe_live/20260929T040323Z/quotes.jsonl",
+      "bytes": 4170569,
+      "sha256": "7a4681fd99fe297d8853cc8e1d62416a0137d1b6d1a4a2bf0476f145239ec955"
+    },
+    {
+      "path": "data/raw/robinhood_universe_live/20260929T040448Z/manifest.json",
+      "bytes": 408,
+      "sha256": "399058f380f078266ba9b129373d4f2f88814544be0133a1ddb5ad2a0183d7bd"
+    },
+    {
+      "path": "data/raw/robinhood_universe_live/20260929T040448Z/plan.json",
+      "bytes": 4973,
+      "sha256": "a48cbf511e45af7f7a591f1c074bcb2da665701069517755c423b898cdacf1d9"
+    },
+    {
+      "path": "data/raw/robinhood_universe_live/20260929T040448Z/quotes.jsonl",
+      "bytes": 3512680,
+      "sha256": "f555fc97c6d4a97fed1ac42e45043e22d8fd79874b036e11f3e992b11deab0d4"
+    },
+    {
+      "path": "data/raw/robinhood_usdg_coingecko_20260929T041551Z.json",
+      "bytes": 24473,
+      "sha256": "e5ef5335c3e0297834345ebe4e3cb8811e23a57a35b8e5ace0d7ea98b6e6717c"
+    },
+    {
+      "path": "data/raw/sources/hl_fees.txt",
+      "bytes": 12174,
+      "sha256": "75e55504b1b887a89e1668a9544d09b013242747bcc29f8648a5410142a71258"
+    },
+    {
+      "path": "data/raw/sources/lighter_fees.txt",
+      "bytes": 3419,
+      "sha256": "a21e56bbc66f39a3f30162b2e79e456160b30a17bc6bf69d2d88de9879af396c"
+    },
+    {
+      "path": "data/raw/sources/lighter_rh.txt",
+      "bytes": 6302,
+      "sha256": "912891a952694d2390c6078b525d55f320e83987eb158b246cfcb0c4d687dc01"
+    },
+    {
+      "path": "data/raw/sources/lighter_roll.txt",
+      "bytes": 3277,
+      "sha256": "06861f34f476711b8ce7ae2fc6451bd689fbbd6ae611e8d2fc2f5527b2bc34ea"
+    },
+    {
+      "path": "data/raw/sources/lighter_rwa.txt",
+      "bytes": 998,
+      "sha256": "88addfc1cbd110fe85f9c219c4496270cb983e750db09f5d68f3a17b1107ae7e"
+    },
+    {
+      "path": "data/raw/sources/lighter_rwa_prices.txt",
+      "bytes": 2677,
+      "sha256": "29abf3939a7f6066b8fb278cf2258338b35f4f7e431336d9d4fb33d43336555a"
+    },
+    {
+      "path": "data/raw/sources/lighter_rwa_specs.txt",
+      "bytes": 21514,
+      "sha256": "bb1e1263bdc7ff4dbe3bcd5633fa64807f31ea9b958131e3c2ce206ba18462c9"
+    },
+    {
+      "path": "data/raw/sources/lighter_sitemap.txt",
+      "bytes": 3236,
+      "sha256": "06cc220426288548801766f2504edf39434465dbd48f374dd0aa4d6e0ecd4d87"
+    },
+    {
+      "path": "data/raw/sources/manifest.json",
+      "bytes": 522,
+      "sha256": "1e8ef8bce98ce3e9d16af92b334d895dfeffb7431bd3a6e14f2d681851260751"
+    },
+    {
+      "path": "data/raw/sources/xyz_commodities.txt",
+      "bytes": 4757,
+      "sha256": "53b6f8492606731a3fb740abaa46061c6e1b2a0296833d9c702a632abd87b98a"
+    },
+    {
+      "path": "data/raw/sources/xyz_corporate.txt",
+      "bytes": 3311,
+      "sha256": "d38ea7734aac88d847fa69a1bc9ca2a8689a99b3f954165e9773bacfcee2c7cf"
+    },
+    {
+      "path": "data/raw/sources/xyz_fx.txt",
+      "bytes": 2499,
+      "sha256": "c06913d41c7365e649e9aee38c0d78783040864a3133dab82e678f6f048bbbce"
+    },
+    {
+      "path": "data/raw/sources/xyz_indices.txt",
+      "bytes": 4387,
+      "sha256": "bce4a258f4449b810374dedb6a759cceb7478110c053f65243b6e87ee855c67a"
+    },
+    {
+      "path": "data/raw/sources/xyz_korea.txt",
+      "bytes": 6028,
+      "sha256": "94caf2e1189e45a1cce422add95e055be32e037fbb0cf60c8a23b67b5dd1bcd8"
+    },
+    {
+      "path": "data/raw/sources/xyz_mechanics.txt",
+      "bytes": 2953,
+      "sha256": "e35536cc7e1177aa51b1108c79fd8e814bb8be3ac16b1309cb7106ca855dd7f4"
+    },
+    {
+      "path": "data/raw/sources/xyz_oracle.txt",
+      "bytes": 3967,
+      "sha256": "9ec0ace29abefd05da43245a132892bf43c47ba1bae7602dfe0e8fcf288db288"
+    },
+    {
+      "path": "data/raw/sources/xyz_sitemap.txt",
+      "bytes": 9484,
+      "sha256": "fccbc4d16dde4c88c64555bf85603ea4d05803ae087465975eb62bf380af7e84"
+    },
+    {
+      "path": "data/raw/sources/xyz_specs.txt",
+      "bytes": 63119,
+      "sha256": "b2df7b09e32001e11ae68455ee53e3a3724fbdff8366963a1ff526c68bdf0aea"
+    },
+    {
+      "path": "data/raw/sources/xyz_stocks.txt",
+      "bytes": 1980,
+      "sha256": "a88c0a358b2760f049ac98f79da46aac402e5ad39084f7cb47ed48a74d5af154"
+    },
+    {
+      "path": "data/raw/supplement_live/paired/books.jsonl",
+      "bytes": 3057308,
+      "sha256": "cd3ddf3a371d31bee43f727f209fd2324fbfcf173a6a256776c68510839e317b"
+    },
+    {
+      "path": "data/raw/supplement_live/paired/lighter_initial.json",
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "data/raw/supplement_live/paired/manifest.json",
+      "bytes": 371,
+      "sha256": "69f811bca20d17a4891c3fb728afeb5b7a76a1346997205402eeb468b3a287aa"
+    },
+    {
+      "path": "data/raw/supplement_live/paired/plan.json",
+      "bytes": 4671,
+      "sha256": "bcb8d8ee98cc15cec12f2229a6ec51a3210abba27edcf501acc57e158b063b72"
+    }
+  ]
+}

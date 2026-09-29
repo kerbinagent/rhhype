@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Consecutive public L2 snapshots. No credentials or trading endpoints.
-Usage: python scripts/live_collect.py --rounds 60 --interval 30
+Usage: python scripts/live_collect.py --rounds 35 --interval 60
 The market plan is saved before collection; all raw books retain local request times.
 """
 import argparse, concurrent.futures as cf, csv, datetime as dt, json, pathlib, time
@@ -73,7 +73,7 @@ def fetch(m,round_id):
     return row
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--rounds',type=int,default=60);ap.add_argument('--interval',type=float,default=30)
+    ap=argparse.ArgumentParser();ap.add_argument('--rounds',type=int,default=35);ap.add_argument('--interval',type=float,default=60)
     ap.add_argument('--plan-file',type=pathlib.Path);ap.add_argument('--lighter-max',type=int,default=30);ap.add_argument('--workers',type=int,default=4);ap.add_argument('--inventory',type=pathlib.Path);ap.add_argument('--out',type=pathlib.Path)
     args=ap.parse_args();inv=args.inventory or latest_inventory();out=args.out or ROOT/'data/raw/live'/dt.datetime.now(dt.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
     out.mkdir(parents=True,exist_ok=True)

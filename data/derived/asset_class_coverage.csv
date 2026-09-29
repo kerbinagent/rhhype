@@ -1,0 +1,9 @@
+category,active_listings,over_1m_volume,summed_24h_volume,top_markets,top_volumes_musd
+crypto,183,92,7453056583.195103,"BTC, ETH, ZEC, HYPE, NEAR","2457.00, 1222.45, 671.67, 570.36, 445.37"
+indices,7,5,673302566.5823302,"xyz:SP500, xyz:XYZ100, mkts:US500, xyz:JP225, mkts:USTECH","356.44, 275.35, 21.85, 11.00, 7.47"
+stocks,120,61,1480850124.3185384,"xyz:SKHX, xyz:SMSN, xyz:NVDA, xyz:SPCX, xyz:META","157.29, 156.07, 116.89, 109.72, 105.57"
+commodities,8,7,1012642089.0433369,"xyz:CL, xyz:SILVER, xyz:BRENTOIL, xyz:GOLD, xyz:COPPER","317.36, 300.58, 251.28, 131.01, 5.77"
+fx,3,2,3695918.61475,"xyz:JPY, xyz:EUR, xyz:GBP","2.00, 1.28, 0.42"
+preipo,3,2,6792817.386400004,"io:ANTH, io:OAI, xyz:OURA","5.53, 1.01, 0.25"
+rates,3,0,977127.3777300001,"para:10Y, para:2Y, para:30Y","0.71, 0.26, 0.01"
+etfs,1,0,349950.1174999998,io:EWY,0.35

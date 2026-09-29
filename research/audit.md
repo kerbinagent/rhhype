@@ -1,0 +1,24 @@
+# Calculation audit — 2026-09-29
+
+Scope: `analyze_live.py`, `analyze_rh_lighter.py`, `roundtrip_check.py`, `history_analyze.py`, and `analyze_comparator_live.py`; archived raw books, quotes, candles, and derived rows. This is a check of the measurement code and its stated economics, not an account-specific execution result.
+
+## Material findings
+
+1. **Stock-token lot mismatch.** The Robinhood Lighter raw-token hypothesis converts a book token into `currentMultiplier` shares, so its base order step is `currentMultiplier × 10^-rh_size_decimals` shares. The common size floor in `analyze_run()` uses powers of ten and can select shares that the Robinhood Lighter book cannot order. The derived rows now expose each leg's base lot step, grid flags, a full-lot reserve, and a net-after-reserve sensitivity. The original continuous-size net is retained as a theoretical screen. In the 04:17 UTC regeneration, 160/240 $1,000 raw-token spot rows were off grid; 64 had positive continuous-size entry net, but only 24 remained positive after one full unorderable lot was reserved. The separate shares-unit hypothesis yielded all 240 rows on grid, but the venue's stock-token book unit has not been verified independently. Neither hypothesis is an executable fill claim.
+
+2. **AMM/Hyperliquid hedge precision.** A Robinhood Chain swap outputs an exact token amount, which maps to fractional shares. Hyperliquid perps accept a discrete base size. `robinhood()` previously displayed a rounding residual but calculated the net using an exact fractional hedge. The derived rows now flag whether the size falls on the HL grid and deduct a one-full-HL-lot reserve as a sensitivity. In the same regeneration, all 610 $1,000 AMM rows were off grid; 67 continuous-size rows were positive, versus eight after reserve. These numbers do not include gas, stablecoin conversion, borrow, or a path to realize a stock-token/perp basis. All positive $1,000 AMM rows are in the reverse direction, which requires stock-token inventory or borrow.
+
+3. **Comparator quote timing.** The Aster/dYdX nearest-receipt join found zero pairs within five seconds. Extending the window to 15 seconds generated 160 pairs and 94 positive size/direction rows, including Aster NVDA rows with roughly ten-second median receipt skew. These are asynchronous screens, not near-simultaneous executable arbitrage. The separate synchronized `supplement_live/paired` capture should be used for the main live comparator assessment.
+
+4. **Historical P&L is an estimate from trade candles.** `history_analyze.py` chooses each two-perp funding direction using only the first 20 days, applies it to the final 10, and uses closed-hour trade prices for a fixed-unit basis change. The fee arithmetic applies both legs at entry and exit on their own prices. Price-weighted funding cash uses the preceding candle close as a proxy for the venue's settlement mark/oracle. No historical bid/ask walk, impact, hedge delay, or collateral conversion is available. For example, the positive BTC/dYdX holdout estimate cannot be interpreted as a fill at $1,000 when the saved dYdX BTC book showed only tens of dollars of depth within 10 bp in the one-shot comparator inventory.
+
+## Checked calculations
+
+- A buy walks asks and a sale walks bids for equal quoted base quantity. The opening net deducts each venue's fee once. The hypothetical unwind has four cash flows and deducts four leg fees; the algebraic signs are correct. It skips crosses of a UTC hour funding boundary but remains a selected, overlapping scenario rather than a portfolio result.
+- Historical funding uses positive rate = long pays short. Lighter percent-per-hour is divided by 100; Aster event rates are summed at their actual timestamps; dYdX and Hyperliquid signed fractions are used directly. The fixed training-side and cash-flow signs in `analyze_pair()` and `analyze_cash()` are consistent with that convention.
+- A Robinhood AMM quoter amount already includes the pool's swap fee and price impact. The analysis subtracts only the Hyperliquid fee; subtracting `pool_fee_bps` again would double count. Stock-token quantity is converted to shares by multiplying by the effective `currentMultiplier` in live quotes and by the historical effective multiplier in hourly diagnostics.
+- RH Lighter perps now carry `USDG` collateral in the normalized plan; Standard remains modeled at zero taker fee and Premium at 3.5 bp per side. Other Lighter Standard and Premium rates remain zero and 2.8 bp. These are account assumptions, not account statements.
+
+## Verification
+
+`python -m unittest tests.test_calculations` passed seven tests, including a synthetic stock-token multiplier/lot mismatch. `python scripts/analyze_live.py` and `python scripts/analyze_rh_lighter.py` completed on the archived streams as they stood at approximately 04:17 UTC; their raw collectors were still extending the files, so derived counts are capture-time specific.

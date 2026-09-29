@@ -1,0 +1,42 @@
+{
+  "generated_utc": "2026-09-29T04:29:27.088152+00:00",
+  "live_source": "data/raw/live/20260929T035450Z",
+  "robinhood_source": "data/raw/robinhood_live/20260929T035445Z",
+  "live": {
+    "requests": 6510,
+    "insufficient_depth": 735,
+    "rounds_observed": 35,
+    "markets_planned": 186,
+    "valid_size_observations": 7875,
+    "start_ms": 1790654091869,
+    "end_ms": 1790656141131,
+    "duration_minutes": 34.15436666666667,
+    "age_ms_p50": 573.0,
+    "age_ms_p95": 819.0,
+    "age_ms_max": 1141
+  },
+  "robinhood": {
+    "requests": 630,
+    "without_direct_hl_hedge": 67,
+    "errors": 85,
+    "insufficient_hl_depth": 46,
+    "stale_or_skew_rejections": 1,
+    "start_ms": 1790654087891,
+    "end_ms": 1790656161929
+  },
+  "robinhood_extra": {
+    "data/raw/robinhood_universe_live/20260929T040323Z": {
+      "requests": 220,
+      "insufficient_hl_depth": 3,
+      "errors": 1,
+      "start_ms": 1790654612901,
+      "end_ms": 1790655754586
+    },
+    "data/raw/robinhood_universe_live/20260929T040448Z": {
+      "requests": 20,
+      "errors": 1,
+      "start_ms": 1790654689353,
+      "end_ms": 1790655829374
+    }
+  }
+}

@@ -14,7 +14,7 @@ def snapshot_plan():
     s=json.loads(src.read_text());plan=[]
     for symbol,o in s['selected'].items():
         token=next(d['contractAddress'] for d in o['asset']['deployments'] if d['chainId']==4663)
-        candidates=[p for p in o['dex'].get('pairs',[]) if p['chainId']=='robinhood' and 'v3' in p.get('labels',[])
+        candidates=[p for p in o['dex'].get('pairs',[]) if p['chainId']=='robinhood' and p.get('dexId')=='uniswap' and 'v3' in p.get('labels',[])
                     and p['baseToken']['address'].lower()==token.lower() and p['quoteToken']['address'].lower()==rh.USDG.lower()]
         candidates.sort(key=lambda p:float(p.get('liquidity',{}).get('usd',0)),reverse=True)
         if not candidates:continue

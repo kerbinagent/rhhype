@@ -20,6 +20,7 @@ import requests
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 RH = "https://api.rh.lighter.xyz/api/v1"
 HL = "https://api.hyperliquid.xyz/info"
+ISSUER_ASSETS = "https://api.robinhood.com/rhj/assets"
 PERPS = ("BTC", "ETH", "SOL", "HYPE", "ZEC", "XAU", "XAG", "NVDA", "AAPL", "TSLA",
          "META", "GOOGL", "AMZN", "MSFT", "AMD", "COIN", "PLTR", "MU", "SNDK", "XRP", "SPY", "QQQ")
 SPOTS = ("SPY", "QQQ", "NVDA", "AAPL", "TSLA", "META", "GOOGL", "AMZN")
@@ -47,7 +48,8 @@ def latest_registry():
 
 
 def build_plan(details, registry_path):
-    assets = json.loads(registry_path.read_text())["registry"]["assets"]
+    registry_body = json.loads(registry_path.read_text())
+    assets = registry_body.get("assets") or registry_body["registry"]["assets"]
     registry = {r["tokenSymbol"]: r for r in assets}
     inv = list(csv.DictReader(open(sorted((ROOT / "data/raw/hyperliquid").glob("*/inventory.csv"))[-1])))
     active = {r["coin"] for r in inv if r.get("active") == "True" and r.get("venue") == "perp"}
@@ -120,16 +122,29 @@ def main():
     args = parser.parse_args()
     output = args.out or ROOT / "data/raw/comparators/rh_lighter" / dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     details = get(RH + "/orderBookDetails")
-    registry_path = latest_registry()
+    # Fetch the complete issuer registry for every run. A filtered scan plan can
+    # omit stock symbols, and multipliers can change after corporate actions.
+    try:
+        issuer_assets = get(ISSUER_ASSETS)
+        if not issuer_assets.get("assets"):
+            raise ValueError("issuer registry missing assets")
+        registry_path = output / "issuer_assets.json"
+        write(registry_path, issuer_assets)
+        registry_source = ISSUER_ASSETS
+    except (requests.RequestException, ValueError):
+        registry_path = latest_registry()
+        registry_source = str(registry_path)
     plan = build_plan(details, registry_path)
     write(output / "markets.json", details)
     write(output / "plan.json", plan)
     manifest = {"started_utc": utc(), "rh_api": RH, "hl_api": HL, "rh_chain_id": 4663,
                 "lighter_rh_app_chain_id": 466324, "lighter_core_separate": True,
-                "registry_source": str(registry_path), "rounds_requested": args.rounds,
+                "registry_source": registry_source, "registry_snapshot": str(registry_path),
+                "rounds_requested": args.rounds,
                 "interval_seconds": args.interval, "rh_markets_per_round": len(plan),
                 "rounds_completed": 0, "rh_errors": 0, "hl_errors": 0,
-                "read_only": True, "spot_unit_warning": "raw RH spot price/size unit unverified against stock-token multiplier"}
+                "read_only": True,
+                "spot_unit_note": "base size is canonical token amount per RH assetDetails/orderBooks; price per token inferred, not explicit in API docs"}
     write(output / "manifest.json", manifest)
     print(output, "RH markets", len(plan), flush=True)
     start = time.monotonic()

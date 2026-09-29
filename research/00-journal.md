@@ -30,3 +30,18 @@ User scope: thoroughly investigate arbitrage between Robinhood Chain and Hyperli
 - Material historical indexer error: GeckoTerminal `currency=usd` used an anomalous USDG/USD conversion factor up to1.0561, while independent CoinGecko USDG/USD at the same hour was0.999946. Switched RH pool history to `currency=token` (USDG per token), then normalized exact historical multipliers. Apparent5% historical arbitrage was a data-conversion artifact.
 - A separate synchronized21-market supplemental run covers Aster, Korean common-share contracts and UZEC spot. Korean common-share SKHX/SMSN units verified in XYZ docs; SKHY is an ADS and must remain distinct.
 - Independent audit found lot-size residuals can exceed small modeled profits. Added conservative lot-rounding reserves and explicit on-grid flags; continuous-size estimates remain labeled. No partial-fill or execution success is assumed.
+
+## Finalization checks
+
+- Offline `rebuild.py` initially omitted the historical multiplier input, which left historical RH results stale. Fixed it to pass the frozen multiplier-event file explicitly; required counts are39 perp pairs,5 HL cash pairs,2 RH-domain cash pairs and7 RH/HL stock basis series.
+- Excluded apparent NVDA RH-domain spot cash-carry performance after finding45% zero-volume holdout hours and negligible entry/exit candle turnover. A liquid perp does not validate a thin spot price history.
+- Verified RH-domain spot asset addresses and multiplier values against issuer registry and assetDetails. Token-price convention is supported by API base-token quantity definitions and empirical index prices; retain share-unit sensitivity as a qualification.
+- Fixed future `robinhood_live.py` discovery to select verified Uniswap DEX candidates before factory checks, avoiding the known SPY third-party factory mismatch. Frozen failed observations remain intact. Changed default Core live cadence to60s to leave public API headroom.
+
+## 04:30 UTC — frozen result and delivery
+
+- Completed 35 Core rounds (6,510 requests) and 70 primary AMM rounds; RH Lighter completed 20 paired rounds with 600 RH and 520 HL book responses and zero errors. Supplemental paired Aster/Korean coverage completed 24 rounds. All collectors are stopped.
+- At $10k, RH Lighter NVDA entry median is 10.80bp after Standard opening fees, or 7.30bp under Premium. None of 287 eligible RH-domain 5/10-minute unwind scenarios was positive after all four fees. Core had zero positives among 452 eligible $10k 5/15-minute scenarios. These overlapping samples are not independent trials or portfolio returns.
+- Historical rebuild confirms 39 perp pairs, 5 HL cash pairs, 2 RH cash pairs and 7 multiplier-corrected stock basis series. Final report distinguishes funding-rate sums from price-weighted cash estimates and executable observations from candle scenarios.
+- Offline rebuild completed successfully. Seven economic calculation tests pass; scripts compile; Git whitespace checks pass. Standard PNG/SVG figures and Markdown report are complete.
+- Frozen public evidence contains 441 files (183,939,433 uncompressed bytes) in a 22,127,964-byte archive, with archive and per-file SHA-256 hashes. No credentials or host VPN changes were used.

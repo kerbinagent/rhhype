@@ -1,0 +1,45 @@
+{
+  "source": "data/raw/comparators/rh_lighter/20260929T040726Z",
+  "spot_modes_are_hypotheses_pending_venue_unit_verification": true,
+  "quality": {
+    "exclude": {
+      "requests": 800,
+      "insufficient_depth": 79,
+      "rounds_observed": 20,
+      "markets_planned": 40,
+      "valid_size_observations": 2321,
+      "start_ms": 1790654846842,
+      "end_ms": 1790655988000,
+      "duration_minutes": 19.0193,
+      "age_ms_p50": 583.5,
+      "age_ms_p95": 826.4499999999996,
+      "age_ms_max": 979
+    },
+    "raw_token": {
+      "requests": 920,
+      "insufficient_depth": 124,
+      "rounds_observed": 20,
+      "markets_planned": 46,
+      "valid_size_observations": 3716,
+      "start_ms": 1790654846842,
+      "end_ms": 1790655988372,
+      "duration_minutes": 19.0255,
+      "age_ms_p50": 596.0,
+      "age_ms_p95": 817.05,
+      "age_ms_max": 960
+    },
+    "shares": {
+      "requests": 920,
+      "insufficient_depth": 124,
+      "rounds_observed": 20,
+      "markets_planned": 46,
+      "valid_size_observations": 3716,
+      "start_ms": 1790654846842,
+      "end_ms": 1790655988372,
+      "duration_minutes": 19.0255,
+      "age_ms_p50": 596.0,
+      "age_ms_p95": 817.05,
+      "age_ms_max": 960
+    }
+  }
+}
