@@ -75,6 +75,21 @@ def valid_book(b, now, config):
     return b['bids'][0][0]<b['asks'][0][0]
 
 
+def snapshot_probe_book(book):
+    """Freeze an observed book without recursively copying immutable prices.
+
+    Feed publishers replace whole book objects and level arrays. Copying both
+    arrays also protects probe results if another caller mutates its input.
+    Auxiliary metadata retains deepcopy semantics for nested values.
+    """
+    fixed = {name: (value if type(value) in (str, int, float, bool, type(None))
+                    else copy.deepcopy(value))
+             for name, value in book.items() if name not in ('bids', 'asks')}
+    fixed['bids'] = [tuple(level) for level in book['bids']]
+    fixed['asks'] = [tuple(level) for level in book['asks']]
+    return fixed
+
+
 def available_fill(levels, desired, step, price_limit=None, buy=True):
     """IOC-style partial execution at displayed depth, rounded to venue lot size."""
     eligible=[]
@@ -717,7 +732,7 @@ class PaperEngine:
             if self.books[k].get('generation')!=p['generations'][k]:
                 self._finish_probe(pid,'missing','generation_changed');continue
             if k not in p['after']:
-                p['after'][k]=copy.deepcopy(self.books[k])
+                p['after'][k]=snapshot_probe_book(self.books[k])
             if len(p['after'])<2:continue
             a,b=p['after'][s['buy']],p['after'][s['sell']]
             if abs(a['received']-b['received'])>self.config.max_skew or not all(valid_book(x,now,self.config) for x in (a,b)):

@@ -44,6 +44,33 @@ class PaperLatencyTests(unittest.TestCase):
         self.assertEqual(e.probe_stats['100']['observed'],1)
         self.assertEqual(e.probe_stats['100']['survived'],0)
 
+    def test_probe_snapshot_isolated_from_outer_and_inner_input_mutations(self):
+        baseline, changed = engine(), engine()
+        def first():
+            b = book('rh_lighter', 1, 1000.11, 102, 102.01)
+            b['bids'] = [[102, 100], [101.99, 100]]
+            b['asks'] = [[102.01, 100], [102.02, 100]]
+            b['metadata'] = {'nested': [1]}
+            return b
+        original, mutable = first(), first()
+        baseline.receive(original)
+        changed.receive(mutable)
+        probe = next(p for p in changed.probes.values() if p['delay_ms'] == 100)
+        captured = probe['after']['rh_lighter:1']
+        self.assertEqual(len(captured['bids']), 2)
+        self.assertIsInstance(captured['bids'][0], tuple)
+        mutable['received'] = 9999
+        mutable['bids'][0][0] = 1
+        mutable['asks'].append([1.01, 100])
+        mutable['metadata']['nested'].append(2)
+        self.assertEqual(captured['received'], 1000.11)
+        self.assertEqual(captured['bids'][0], (102, 100))
+        self.assertEqual(len(captured['asks']), 2)
+        self.assertEqual(captured['metadata']['nested'], [1])
+        baseline.receive(book('hyperliquid', 'BTC', 1000.21, 99.99, 100))
+        changed.receive(book('hyperliquid', 'BTC', 1000.21, 99.99, 100))
+        self.assertEqual(changed.probe_stats['100'], baseline.probe_stats['100'])
+
     def test_invalid_book_censors_pending_probe(self):
         e = engine()
         invalid = book("rh_lighter", 1, 1000.05, 102, 102.01)
