@@ -1,0 +1,243 @@
+{
+  "comparison": {
+    "enabled": true,
+    "window": {
+      "started_at": 1790694576.3461893,
+      "checkpoint_at": 1790695679.643161,
+      "seconds": 1103.2969717979431,
+      "checkpoint_age_seconds": 2.2927889823913574,
+      "status": "matched"
+    },
+    "policies": {
+      "shadow_baseline": {
+        "fee_tier": "standard",
+        "initial_capital_usd": 20000,
+        "entry_policy_counts": {
+          "allowed": 12742,
+          "checked": 30608,
+          "entered": 332,
+          "rejected_duplicate": 17866
+        },
+        "status": "observed",
+        "cumulative_closed_trades": 324,
+        "cumulative_wins": 1,
+        "cumulative_net_pnl_usd": -361.1826779116307,
+        "cumulative_net_per_trade_usd": -1.114761351579107,
+        "cumulative_fees_usd": 86.12286924405002,
+        "active_positions": 4,
+        "open_position_mark_usd": null,
+        "open_position_mark_status": "unavailable_without_current_books",
+        "retained_closed_trades": 324,
+        "retained_exit_reasons": {
+          "max_hold": 313,
+          "entry_failure": 11
+        },
+        "retained_failed_hedges": 11,
+        "retained_mean_hold_seconds": 11.052526104597398,
+        "retained_forecast_vs_realized": {
+          "count": 0,
+          "forecast_mean_usd": null,
+          "realized_mean_usd": null,
+          "realized_minus_forecast_mean_usd": null
+        }
+      },
+      "cooldown": {
+        "fee_tier": "standard",
+        "initial_capital_usd": 20000,
+        "entry_policy_counts": {
+          "allowed": 47,
+          "checked": 30608,
+          "entered": 45,
+          "rejected_cooldown": 106,
+          "rejected_duplicate": 2713,
+          "rejected_signal": 257,
+          "rejected_skew": 27485
+        },
+        "status": "observed",
+        "cumulative_closed_trades": 44,
+        "cumulative_wins": 0,
+        "cumulative_net_pnl_usd": -54.376628861098375,
+        "cumulative_net_per_trade_usd": -1.2358324741158722,
+        "cumulative_fees_usd": 12.125727532799996,
+        "active_positions": 1,
+        "open_position_mark_usd": null,
+        "open_position_mark_status": "unavailable_without_current_books",
+        "retained_closed_trades": 44,
+        "retained_exit_reasons": {
+          "max_hold": 43,
+          "entry_failure": 1
+        },
+        "retained_failed_hedges": 1,
+        "retained_mean_hold_seconds": 11.068914554335855,
+        "retained_forecast_vs_realized": {
+          "count": 0,
+          "forecast_mean_usd": null,
+          "realized_mean_usd": null,
+          "realized_minus_forecast_mean_usd": null
+        }
+      },
+      "convergence": {
+        "fee_tier": "standard",
+        "initial_capital_usd": 20000,
+        "entry_policy_counts": {
+          "allowed": 4,
+          "checked": 30608,
+          "entered": 4,
+          "rejected_cooldown": 21,
+          "rejected_duplicate": 25,
+          "rejected_forecast": 1812,
+          "rejected_signal": 3967,
+          "rejected_skew": 23894,
+          "rejected_warmup": 885
+        },
+        "status": "observed",
+        "cumulative_closed_trades": 4,
+        "cumulative_wins": 3,
+        "cumulative_net_pnl_usd": 1.1686345689870292,
+        "cumulative_net_per_trade_usd": 0.2921586422467573,
+        "cumulative_fees_usd": 0.7955814959999999,
+        "active_positions": 0,
+        "open_position_mark_usd": null,
+        "open_position_mark_status": "unavailable_without_current_books",
+        "retained_closed_trades": 4,
+        "retained_exit_reasons": {
+          "entry_failure": 4
+        },
+        "retained_failed_hedges": 4,
+        "retained_mean_hold_seconds": 0.4955143332481384,
+        "retained_forecast_vs_realized": {
+          "count": 4,
+          "forecast_mean_usd": 0.6037672426988224,
+          "realized_mean_usd": 0.29215864224675725,
+          "realized_minus_forecast_mean_usd": -0.3116086004520652
+        }
+      },
+      "conservative": {
+        "fee_tier": "standard",
+        "initial_capital_usd": 20000,
+        "entry_policy_counts": {
+          "checked": 30608,
+          "rejected_forecast": 56,
+          "rejected_signal": 264,
+          "rejected_skew": 30137,
+          "rejected_warmup": 151
+        },
+        "status": "insufficient_trades",
+        "cumulative_closed_trades": 0,
+        "cumulative_wins": 0,
+        "cumulative_net_pnl_usd": 0.0,
+        "cumulative_net_per_trade_usd": null,
+        "cumulative_fees_usd": 0.0,
+        "active_positions": 0,
+        "open_position_mark_usd": null,
+        "open_position_mark_status": "unavailable_without_current_books",
+        "retained_closed_trades": 0,
+        "retained_exit_reasons": {},
+        "retained_failed_hedges": 0,
+        "retained_mean_hold_seconds": null,
+        "retained_forecast_vs_realized": {
+          "count": 0,
+          "forecast_mean_usd": null,
+          "realized_mean_usd": null,
+          "realized_minus_forecast_mean_usd": null
+        }
+      }
+    },
+    "policy_version": 2,
+    "criteria_changed_at": 1790695240.2106338,
+    "decision_counts_include_previous_version": true,
+    "limitations": [
+      "Each policy has independent configured paper capital; policy P&L must not be summed as one portfolio.",
+      "Policies share observed feeds and opportunities; this is a nonrandom observational comparison.",
+      "All shadow policies use Standard fees.",
+      "Cumulative P&L, trades, wins, and fees come from ledgers; retained trade diagnostics cover only stored rows.",
+      "Open position marks are unavailable without current order books."
+    ]
+  },
+  "health": {
+    "updated_at": 1790695679.8862615,
+    "cpu_percent_one_core": 99.5853908268047,
+    "loop_lag_p95_ms": 47.87230282090604,
+    "resident_memory_mb": 165.00390625,
+    "book_events_per_second": 1192.7803718056603,
+    "entry_policies": {
+      "version": 2,
+      "criteria_changed_at": 1790695240.2106338,
+      "migrated_from_version": 1,
+      "sampled_routes": 226,
+      "warm_routes": 226,
+      "training_skew_limit_seconds": 1.0,
+      "convergence_skew_limit_seconds": 1.0,
+      "conservative_skew_limit_seconds": 0.25,
+      "cooldown_skew_limit_seconds": 0.25,
+      "max_route_samples": 285,
+      "max_route_span_seconds": 435.64645743370056,
+      "observation_counts": {
+        "invalid_pair": 349816,
+        "rate_limited": 70316,
+        "sampled": 24682,
+        "generation_reset": 6,
+        "source_not_advanced": 2
+      },
+      "policies": {
+        "shadow_baseline": {
+          "checked": 30652,
+          "allowed": 12761,
+          "entered": 332,
+          "rejected_signal": 0,
+          "rejected_skew": 0,
+          "rejected_cooldown": 0,
+          "rejected_warmup": 0,
+          "rejected_forecast": 0,
+          "rejected_duplicate": 17891,
+          "warm_routes": 0
+        },
+        "cooldown": {
+          "checked": 30652,
+          "allowed": 47,
+          "entered": 45,
+          "rejected_signal": 258,
+          "rejected_skew": 27524,
+          "rejected_cooldown": 106,
+          "rejected_warmup": 0,
+          "rejected_forecast": 0,
+          "rejected_duplicate": 2717,
+          "warm_routes": 0
+        },
+        "convergence": {
+          "checked": 30652,
+          "allowed": 4,
+          "entered": 4,
+          "rejected_signal": 3980,
+          "rejected_skew": 23915,
+          "rejected_cooldown": 21,
+          "rejected_warmup": 885,
+          "rejected_forecast": 1822,
+          "rejected_duplicate": 25,
+          "warm_routes": 226
+        },
+        "conservative": {
+          "checked": 30652,
+          "allowed": 0,
+          "entered": 0,
+          "rejected_signal": 265,
+          "rejected_skew": 30179,
+          "rejected_cooldown": 0,
+          "rejected_warmup": 151,
+          "rejected_forecast": 57,
+          "rejected_duplicate": 0,
+          "warm_routes": 226
+        }
+      }
+    }
+  },
+  "wallet_errors": {
+    "conservative": 0.0,
+    "convergence": -3.637978807091713e-12,
+    "cooldown": -3.637978807091713e-12,
+    "plus": 1.4551915228366852e-11,
+    "premium": -1.0913936421275139e-11,
+    "shadow_baseline": -1.0913936421275139e-11,
+    "standard": 7.275957614183426e-12
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "independent_tiers": {
+    "median_cpu_seconds": 0.590771277,
+    "trials": [
+      0.590771277,
+      0.5856342339999999,
+      0.6045543160000002
+    ]
+  },
+  "shared_depth": {
+    "median_cpu_seconds": 0.25676320200000013,
+    "trials": [
+      0.26518520499999987,
+      0.24570956099999997,
+      0.25676320200000013
+    ]
+  },
+  "paired_evaluations": 10000,
+  "speedup": 2.30084090087021,
+  "limitations": "Synthetic paired quote calculation only; not a full runtime benchmark."
+}

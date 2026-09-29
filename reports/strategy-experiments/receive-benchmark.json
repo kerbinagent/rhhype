@@ -1,0 +1,23 @@
+{
+  "before": {
+    "cpu_seconds_median": 0.7751961839999999,
+    "trials": [
+      0.765383264,
+      0.7858342279999999,
+      0.7751961839999999
+    ],
+    "active_positions": 60
+  },
+  "after": {
+    "cpu_seconds_median": 0.3416659560000004,
+    "trials": [
+      0.3473916100000003,
+      0.33646987400000006,
+      0.3416659560000004
+    ],
+    "active_positions": 60
+  },
+  "events": 10000,
+  "speedup": 2.2688715992529236,
+  "limitations": "Synthetic receive-only benchmark with 60 positions, 100-level books, 80% unrelated markets; not a full runtime or network benchmark."
+}

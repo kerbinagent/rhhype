@@ -1,0 +1,470 @@
+[
+  {
+    "updated_at": 1790695329.548825,
+    "snapshot_age_seconds": 1.868621587753296,
+    "elapsed_v2_seconds": 89.33819127082825,
+    "warm_routes": 0,
+    "max_route_samples": 65,
+    "max_route_span_seconds": 85.23894262313843,
+    "cpu_percent_one_core": 73.62552715193789,
+    "loop_lag_p95_ms": 17.796470783650875,
+    "resident_memory_mb": 141.52734375,
+    "book_events_per_second": 1221.866170955887,
+    "all_feeds_connected": true,
+    "policies": {
+      "conservative": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "convergence": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "cooldown": {
+        "closed": 31,
+        "net_pnl_usd": -40.47880491142933,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "shadow_baseline": {
+        "closed": 223,
+        "net_pnl_usd": -256.3835364473686,
+        "wins": 0,
+        "open_positions": 3
+      }
+    }
+  },
+  {
+    "updated_at": 1790695339.954752,
+    "snapshot_age_seconds": 1.463912010192871,
+    "elapsed_v2_seconds": 99.74411821365356,
+    "warm_routes": 0,
+    "max_route_samples": 72,
+    "max_route_span_seconds": 95.37340426445007,
+    "cpu_percent_one_core": 89.0468059050979,
+    "loop_lag_p95_ms": 18.939660862088203,
+    "resident_memory_mb": 141.52734375,
+    "book_events_per_second": 1472.4523677506722,
+    "all_feeds_connected": true,
+    "policies": {
+      "conservative": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "convergence": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "cooldown": {
+        "closed": 31,
+        "net_pnl_usd": -40.47880491142933,
+        "wins": 0,
+        "open_positions": 1
+      },
+      "shadow_baseline": {
+        "closed": 225,
+        "net_pnl_usd": -258.4502978610519,
+        "wins": 0,
+        "open_positions": 4
+      }
+    }
+  },
+  {
+    "updated_at": 1790695350.3713048,
+    "snapshot_age_seconds": 1.0490756034851074,
+    "elapsed_v2_seconds": 110.16067099571228,
+    "warm_routes": 0,
+    "max_route_samples": 78,
+    "max_route_span_seconds": 106.12966728210449,
+    "cpu_percent_one_core": 74.56167346671545,
+    "loop_lag_p95_ms": 19.21083591878414,
+    "resident_memory_mb": 141.52734375,
+    "book_events_per_second": 1159.1395784625288,
+    "all_feeds_connected": true,
+    "policies": {
+      "conservative": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "convergence": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "cooldown": {
+        "closed": 32,
+        "net_pnl_usd": -41.65453495739158,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "shadow_baseline": {
+        "closed": 228,
+        "net_pnl_usd": -261.45291349917784,
+        "wins": 0,
+        "open_positions": 3
+      }
+    }
+  },
+  {
+    "updated_at": 1790695361.231571,
+    "snapshot_age_seconds": 0.18995070457458496,
+    "elapsed_v2_seconds": 121.02093720436096,
+    "warm_routes": 0,
+    "max_route_samples": 84,
+    "max_route_span_seconds": 116.99355053901672,
+    "cpu_percent_one_core": 89.82878328490563,
+    "loop_lag_p95_ms": 24.49296577833593,
+    "resident_memory_mb": 141.52734375,
+    "book_events_per_second": 1321.1632237783351,
+    "all_feeds_connected": true,
+    "policies": {
+      "conservative": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "convergence": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "cooldown": {
+        "closed": 32,
+        "net_pnl_usd": -41.65453495739158,
+        "wins": 0,
+        "open_positions": 1
+      },
+      "shadow_baseline": {
+        "closed": 232,
+        "net_pnl_usd": -265.4072221110122,
+        "wins": 0,
+        "open_positions": 4
+      }
+    }
+  },
+  {
+    "updated_at": 1790695369.8590028,
+    "snapshot_age_seconds": 1.5640490055084229,
+    "elapsed_v2_seconds": 129.6483690738678,
+    "warm_routes": 20,
+    "max_route_samples": 89,
+    "max_route_span_seconds": 125.7489321231842,
+    "cpu_percent_one_core": 79.6400110227875,
+    "loop_lag_p95_ms": 28.236599871888757,
+    "resident_memory_mb": 141.52734375,
+    "book_events_per_second": 1259.3277438038385,
+    "all_feeds_connected": true,
+    "policies": {
+      "conservative": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "convergence": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "cooldown": {
+        "closed": 32,
+        "net_pnl_usd": -41.65453495739158,
+        "wins": 0,
+        "open_positions": 1
+      },
+      "shadow_baseline": {
+        "closed": 235,
+        "net_pnl_usd": -269.8613166360948,
+        "wins": 0,
+        "open_positions": 4
+      }
+    }
+  },
+  {
+    "updated_at": 1790695381.060197,
+    "snapshot_age_seconds": 0.36450767517089844,
+    "elapsed_v2_seconds": 140.84956336021423,
+    "warm_routes": 20,
+    "max_route_samples": 97,
+    "max_route_span_seconds": 137.21919441223145,
+    "cpu_percent_one_core": 75.78389459722757,
+    "loop_lag_p95_ms": 29.703628970310092,
+    "resident_memory_mb": 141.52734375,
+    "book_events_per_second": 1146.503700411911,
+    "all_feeds_connected": true,
+    "policies": {
+      "conservative": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "convergence": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "cooldown": {
+        "closed": 33,
+        "net_pnl_usd": -42.630983078389185,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "shadow_baseline": {
+        "closed": 239,
+        "net_pnl_usd": -274.0344085788959,
+        "wins": 0,
+        "open_positions": 4
+      }
+    }
+  },
+  {
+    "updated_at": 1790695389.2540805,
+    "snapshot_age_seconds": 2.172912120819092,
+    "elapsed_v2_seconds": 149.0434467792511,
+    "warm_routes": 20,
+    "max_route_samples": 102,
+    "max_route_span_seconds": 144.88247346878052,
+    "cpu_percent_one_core": 78.34938632829882,
+    "loop_lag_p95_ms": 34.25637586042285,
+    "resident_memory_mb": 142.52734375,
+    "book_events_per_second": 1160.8635392097356,
+    "all_feeds_connected": true,
+    "policies": {
+      "conservative": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "convergence": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "cooldown": {
+        "closed": 33,
+        "net_pnl_usd": -42.630983078389185,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "shadow_baseline": {
+        "closed": 240,
+        "net_pnl_usd": -274.7428165778093,
+        "wins": 0,
+        "open_positions": 4
+      }
+    }
+  },
+  {
+    "updated_at": 1790695400.802499,
+    "snapshot_age_seconds": 0.6259579658508301,
+    "elapsed_v2_seconds": 160.5918653011322,
+    "warm_routes": 24,
+    "max_route_samples": 108,
+    "max_route_span_seconds": 156.4401457309723,
+    "cpu_percent_one_core": 87.22520392763327,
+    "loop_lag_p95_ms": 34.25637586042285,
+    "resident_memory_mb": 143.02734375,
+    "book_events_per_second": 1314.2590602536989,
+    "all_feeds_connected": true,
+    "policies": {
+      "conservative": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "convergence": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "cooldown": {
+        "closed": 33,
+        "net_pnl_usd": -42.630983078389185,
+        "wins": 0,
+        "open_positions": 2
+      },
+      "shadow_baseline": {
+        "closed": 244,
+        "net_pnl_usd": -280.34420959054586,
+        "wins": 0,
+        "open_positions": 4
+      }
+    }
+  },
+  {
+    "updated_at": 1790695409.146956,
+    "snapshot_age_seconds": 2.2828750610351562,
+    "elapsed_v2_seconds": 168.93632221221924,
+    "warm_routes": 24,
+    "max_route_samples": 115,
+    "max_route_span_seconds": 164.69048166275024,
+    "cpu_percent_one_core": 80.77159918367042,
+    "loop_lag_p95_ms": 36.65443998761475,
+    "resident_memory_mb": 143.02734375,
+    "book_events_per_second": 1262.5161370130345,
+    "all_feeds_connected": true,
+    "policies": {
+      "conservative": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "convergence": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "cooldown": {
+        "closed": 35,
+        "net_pnl_usd": -44.84782024411715,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "shadow_baseline": {
+        "closed": 246,
+        "net_pnl_usd": -282.39266994361094,
+        "wins": 0,
+        "open_positions": 3
+      }
+    }
+  },
+  {
+    "updated_at": 1790695420.2295685,
+    "snapshot_age_seconds": 1.2019314765930176,
+    "elapsed_v2_seconds": 180.0189347267151,
+    "warm_routes": 24,
+    "max_route_samples": 124,
+    "max_route_span_seconds": 175.9020013809204,
+    "cpu_percent_one_core": 77.4081949872904,
+    "loop_lag_p95_ms": 35.7379789929837,
+    "resident_memory_mb": 143.02734375,
+    "book_events_per_second": 1199.7347692376438,
+    "all_feeds_connected": true,
+    "policies": {
+      "conservative": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "convergence": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "cooldown": {
+        "closed": 35,
+        "net_pnl_usd": -44.84782024411715,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "shadow_baseline": {
+        "closed": 249,
+        "net_pnl_usd": -285.4521345728733,
+        "wins": 0,
+        "open_positions": 4
+      }
+    }
+  },
+  {
+    "updated_at": 1790695428.588135,
+    "snapshot_age_seconds": 2.845125436782837,
+    "elapsed_v2_seconds": 188.37750124931335,
+    "warm_routes": 34,
+    "max_route_samples": 130,
+    "max_route_span_seconds": 184.79505848884583,
+    "cpu_percent_one_core": 83.79780293060408,
+    "loop_lag_p95_ms": 36.65443998761475,
+    "resident_memory_mb": 144.02734375,
+    "book_events_per_second": 1121.5622021200802,
+    "all_feeds_connected": true,
+    "policies": {
+      "conservative": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "convergence": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "cooldown": {
+        "closed": 35,
+        "net_pnl_usd": -44.84782024411715,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "shadow_baseline": {
+        "closed": 253,
+        "net_pnl_usd": -289.5195599349557,
+        "wins": 0,
+        "open_positions": 4
+      }
+    }
+  },
+  {
+    "updated_at": 1790695439.1715958,
+    "snapshot_age_seconds": 2.263394594192505,
+    "elapsed_v2_seconds": 198.96096205711365,
+    "warm_routes": 36,
+    "max_route_samples": 136,
+    "max_route_span_seconds": 195.54035115242004,
+    "cpu_percent_one_core": 97.1185290971954,
+    "loop_lag_p95_ms": 44.78282411582768,
+    "resident_memory_mb": 147.52734375,
+    "book_events_per_second": 1408.3956150132483,
+    "all_feeds_connected": true,
+    "policies": {
+      "conservative": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "convergence": {
+        "closed": 0,
+        "net_pnl_usd": 0.0,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "cooldown": {
+        "closed": 35,
+        "net_pnl_usd": -44.84782024411715,
+        "wins": 0,
+        "open_positions": 0
+      },
+      "shadow_baseline": {
+        "closed": 255,
+        "net_pnl_usd": -291.5127851658744,
+        "wins": 0,
+        "open_positions": 3
+      }
+    }
+  }
+]
