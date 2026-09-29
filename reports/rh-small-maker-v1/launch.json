@@ -1,0 +1,23 @@
+{
+  "pid": 2445190,
+  "command": [
+    ".venv/bin/python",
+    "scripts/rh_maker_capture.py",
+    "--metadata-dir",
+    "reports/rh-small-maker-v1/metadata",
+    "--run",
+    "--seconds",
+    "3000",
+    "--out",
+    "data/raw/rh-small-maker/20260929T212132Z"
+  ],
+  "launched_utc": "2026-09-29T21:21:32.424800+00:00",
+  "output": "data/raw/rh-small-maker/20260929T212132Z",
+  "capture_commit": "9054b25",
+  "duration_seconds": 3000,
+  "expected_holdout_start_utc": "2026-09-29T21:51:32.424800+00:00",
+  "expected_stop_utc": "2026-09-29T22:11:32.424800+00:00",
+  "alive_after_one_second": true,
+  "output_exists": true,
+  "frames_file_exists": true
+}

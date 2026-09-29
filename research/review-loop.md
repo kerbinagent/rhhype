@@ -655,3 +655,30 @@ User specified $100 as the next experiment's approximate minimum and $1,000
 as already small: next sizes are $100/$250/$500/$1,000, primary $1,000.
 The new RH maker experiment is being prepared; no production policy changed.
 Next scheduled review **21:26:33 UTC / 5:26 p.m. ET**.
+
+## Review 16: generated 2026-09-29 21:26:33 UTC, read at 21:28 UTC
+
+| Standard-fee policy | Completed | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 94 | -115.725 | 91 | 3 |
+| Cooldown | 54 | -78.589 | 47 | 7 |
+| Historical median | 3 | -1.260 | 0 | 3 |
+| Conservative | 0 | 0 | 0 | 0 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+All retained outcomes exact under the paper model; complete window coverage.
+Baseline paired -$107.5008, failures -$8.2239; cooldown paired -$57.5675,
+failures -$21.0217. Historical median had one winning **failed hedge**, not
+a successful paired trade. The baseline and cooldown had no wins. Baseline
+paired entry median 1.209s/p95 1.748s; exit request to flat median 1.136s/
+p95 1.723s. CPU 60.36% of one core, loop lag p95 11.91ms, RSS 217.48MiB,
+1,001 books/s. Confirmation: 96 arms, no entry/pending/residual; 62 skew,
+18 forecast, seven depth/budget, seven economics, two invalid cancellations.
+
+The public RH maker capture started at 21:21:32, with frozen method and
+collector commit 9054b25. Primary $1,000, sensitivities $100/$250/$500;
+BTC/ETH/NVDA/XAG, 30-minute calibration then 20-minute holdout, 384 MB raw
+plus 128 MB derived maximum. Holdout begins about 21:51:32; capture stops
+about 22:11:32. Lifecycle/replay code is being tested before the holdout.
+No outcomes from this capture have been used to change its policy.
+Next scheduled review **21:46:33 UTC / 5:46 p.m. ET**.

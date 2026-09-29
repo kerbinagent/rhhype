@@ -244,3 +244,19 @@ Production monitor and 20-minute review loop continue independently.
   roughly 0.54s source cadence versus 5.38s default L2, using five levels
   versus twenty. It supports a better research feed; it proves no fills or
   strategy profits. Production subscriptions remain unchanged.
+
+## Status at 21:28 UTC
+
+- Scheduled review 16 was generated at 21:26:33 and actively read at 21:28.
+  Next due 21:46:33 UTC. Production monitor and review loop remain active.
+- RH maker collector PID **2445190** launched **21:21:32 UTC** from
+  **9054b25**. Output `data/raw/rh-small-maker/20260929T212132Z`, duration
+  3,000 seconds, default raw+metadata cap 384 MB. Output file and process
+  verified after one second; subsequent byte growth confirms collection.
+  Frozen public metadata, plan and launch record are in
+  [rh-small-maker-v1](../reports/rh-small-maker-v1/launch.json).
+- Calibration ends about **21:51:32 UTC**; evaluation then runs to about
+  **22:11:32 UTC**. Replay implementation must be frozen before evaluation
+  begins. The experiment method was fixed before capture. No private orders.
+- Latest production exposure check found actual held positions below ten
+  seconds; old XAG records are flat funding settlements, not stale exposure.
