@@ -8,7 +8,8 @@ import unittest
 from pathlib import Path
 
 from scripts.audit_rh_retired_quote_flow import (
-    FREEZE, ROOT, audit_rows, bounded_json, match_trades, retired_quotes,
+    CACHED_VARIANT, FREEZE, ORIGINAL_SOURCE_KEYS, ROOT, WRAPPER,
+    audit_rows, bounded_json, match_trades, retired_quotes,
     report_markdown, sha256, verify_inputs,
 )
 
@@ -106,7 +107,7 @@ class RetiredQuoteAuditTests(unittest.TestCase):
                         'metadata_normalized_sha256': sha256(capture / 'metadata/normalized.json')}
             (capture / 'manifest.json').write_text(json.dumps(manifest))
             freeze = bounded_json(FREEZE, 1_000_000)
-            source = {'scripts/rh_maker_events.py': freeze['files']['scripts/rh_maker_events.py']}
+            source = {name: freeze['files'][name] for name in ORIGINAL_SOURCE_KEYS}
             analysis = {'schema': 'rh-maker-replay-v1', 'event_source': 'verified_capture',
                         'status': 'complete', 'branches': mock_analysis()['branches'],
                         'capture_manifest_sha256': sha256(capture / 'manifest.json'),
@@ -115,6 +116,39 @@ class RetiredQuoteAuditTests(unittest.TestCase):
             (derived / 'analysis.json').write_text(json.dumps(analysis))
             self.assertEqual(len(list(audit_rows(derived / 'audit.jsonl.gz', 1))), 1)
             self.assertEqual(verify_inputs(capture, derived)[0]['status'], 'complete')
+            self.assertEqual(verify_inputs(capture, derived)[3]['variant'], 'original_frozen')
+            analysis['implementation_variant'] = CACHED_VARIANT
+            analysis['optimization_cache'] = {'parse_calls': 3, 'cache_hits': 2,
+                                              'cache_misses': 1, 'validation_errors': 0}
+            for name in (WRAPPER, 'scripts/analyze_rh_maker.py', 'scripts/rh_maker_engine.py'):
+                analysis['source_sha256'][name] = sha256(ROOT / name)
+            (derived / 'analysis.json').write_text(json.dumps(analysis))
+            provenance = {
+                'schema': 'rh-maker-replay-optimization-v1',
+                'implementation_variant': CACHED_VARIANT,
+                'post_freeze_optimization': True,
+                'optimization': 'one_event_identity_immutable_Book_parse_cache',
+                'original_replay': 'scripts/analyze_rh_maker.py',
+                'original_engine': 'scripts/rh_maker_engine.py',
+                'capture_manifest_sha256': analysis['capture_manifest_sha256'],
+                'raw_sha256': analysis['raw_sha256'],
+                'analysis_sha256': sha256(derived / 'analysis.json'),
+                'audit_sha256': analysis['audit_sha256'],
+                'source_sha256': {name: analysis['source_sha256'][name] for name in
+                                  (WRAPPER, 'scripts/analyze_rh_maker.py',
+                                   'scripts/rh_maker_engine.py')},
+                'cache': analysis['optimization_cache']}
+            (derived / 'optimization_provenance.json').write_text(json.dumps(provenance))
+            info = verify_inputs(capture, derived)[3]
+            self.assertEqual(info['variant'], CACHED_VARIANT)
+            self.assertEqual(info['original_equivalence'],
+                             'not_assessed_requires_full_original_cached_comparison')
+            provenance['audit_sha256'] = '0' * 64
+            (derived / 'optimization_provenance.json').write_text(json.dumps(provenance))
+            with self.assertRaisesRegex(ValueError, 'optimization provenance mismatch: audit_sha256'):
+                verify_inputs(capture, derived)
+            provenance['audit_sha256'] = analysis['audit_sha256']
+            (derived / 'optimization_provenance.json').write_text(json.dumps(provenance))
             (derived / 'audit.jsonl.gz').write_bytes(audit + b'corruption')
             with self.assertRaisesRegex(ValueError, 'audit digest'):
                 verify_inputs(capture, derived)
@@ -125,7 +159,9 @@ class RetiredQuoteAuditTests(unittest.TestCase):
                                 'replay_status': 'complete', 'capture_end_reason': 'duration_limit',
                                 'capture_truncated': False, 'lifecycle_counts': {},
                                 'trade_counts': {}, 'affected_branches': {},
-                                'flag_details_truncated': False})
+                                'flag_details_truncated': False,
+                                'implementation_variant': 'original_frozen',
+                                'original_equivalence': 'original_reference'})
         self.assertIn('passes only this specific delayed-print test', note)
 
 

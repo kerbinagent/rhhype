@@ -22,6 +22,17 @@ sys.path.insert(0, str(ROOT))
 from scripts.rh_maker_events import iter_events
 
 FREEZE = ROOT / 'reports/rh-small-maker-v1/implementation-freeze.json'
+WRAPPER = 'scripts/optimized_rh_maker_replay.py'
+CACHED_VARIANT = 'postfreeze_book_parse_cache'
+ORIGINAL_SOURCE_KEYS = frozenset((
+    'scripts/analyze_rh_maker.py', 'scripts/rh_maker_config.py',
+    'scripts/rh_maker_engine.py', 'scripts/rh_maker_model.py',
+    'scripts/rh_maker_events.py', 'scripts/maker_book_archive.py',
+    'scripts/paper_streams.py', 'scripts/maker_capture.py',
+    'scripts/rh_maker_capture.py', 'reports/rh-small-maker-v1/method.md',
+    'reports/rh-small-maker-v1/capture-freeze.json',
+    'reports/rh-small-maker-v1/launch.json',
+))
 MAX_ANALYSIS = 32_000_000
 MAX_AUDIT = 96_000_000
 MAX_DECODED = 1_000_000_000
@@ -63,7 +74,61 @@ def _positive(value, name: str) -> Decimal:
     return number
 
 
-def verify_inputs(capture: Path, derived: Path, freeze_path: Path = FREEZE) -> tuple[dict, dict, dict]:
+def verify_variant(analysis: dict, derived: Path, frozen_files: dict) -> dict:
+    """Keep the frozen primary and post-freeze cache provenance distinct."""
+    sources = analysis['source_sha256']
+    variant = analysis.get('implementation_variant')
+    provenance_path = derived / 'optimization_provenance.json'
+    if variant is None:
+        if provenance_path.exists() or WRAPPER in sources or analysis.get('optimization_cache') is not None:
+            raise ValueError('original replay contains optimization markers')
+        if set(sources) != ORIGINAL_SOURCE_KEYS:
+            raise ValueError('original replay source inventory incomplete')
+        if any(name not in frozen_files or digest != frozen_files[name]
+               for name, digest in sources.items()):
+            raise ValueError('original replay source differs from implementation freeze')
+        return {'variant': 'original_frozen', 'post_freeze_optimization': False,
+                'original_equivalence': 'original_reference',
+                'optimization_provenance_sha256': None}
+    if variant != CACHED_VARIANT:
+        raise ValueError('unknown post-freeze replay variant')
+    wrapper_hash = sha256(ROOT / WRAPPER)
+    if sources.get(WRAPPER) != wrapper_hash or set(sources) != ORIGINAL_SOURCE_KEYS | {WRAPPER}:
+        raise ValueError('cached replay wrapper/source inventory mismatch')
+    if any(digest != frozen_files[name] for name, digest in sources.items() if name != WRAPPER):
+        raise ValueError('cached replay changed a frozen original source')
+    provenance = bounded_json(provenance_path, 16_384)
+    if (provenance.get('schema') != 'rh-maker-replay-optimization-v1'
+            or provenance.get('implementation_variant') != CACHED_VARIANT
+            or provenance.get('post_freeze_optimization') is not True
+            or provenance.get('optimization') != 'one_event_identity_immutable_Book_parse_cache'
+            or provenance.get('original_replay') != 'scripts/analyze_rh_maker.py'
+            or provenance.get('original_engine') != 'scripts/rh_maker_engine.py'):
+        raise ValueError('cached replay optimization provenance identity mismatch')
+    for name, claimed in (('capture_manifest_sha256', analysis['capture_manifest_sha256']),
+                          ('raw_sha256', analysis['raw_sha256']),
+                          ('analysis_sha256', sha256(derived / 'analysis.json')),
+                          ('audit_sha256', analysis['audit_sha256'])):
+        if provenance.get(name) != claimed:
+            raise ValueError(f'cached replay optimization provenance mismatch: {name}')
+    required = {WRAPPER, 'scripts/analyze_rh_maker.py', 'scripts/rh_maker_engine.py'}
+    claimed_sources = provenance.get('source_sha256')
+    if (not isinstance(claimed_sources, dict) or set(claimed_sources) != required
+            or any(claimed_sources[name] != sources.get(name) for name in required)):
+        raise ValueError('cached replay wrapper/original source hashes mismatch')
+    cache = provenance.get('cache')
+    if not isinstance(cache, dict) or cache != analysis.get('optimization_cache'):
+        raise ValueError('cached replay counters differ from analysis')
+    fields = ('parse_calls', 'cache_hits', 'cache_misses', 'validation_errors')
+    if (any(type(cache.get(name)) is not int or cache[name] < 0 for name in fields)
+            or cache['parse_calls'] != cache['cache_hits'] + cache['cache_misses'] + cache['validation_errors']):
+        raise ValueError('cached replay counters malformed')
+    return {'variant': CACHED_VARIANT, 'post_freeze_optimization': True,
+            'original_equivalence': 'not_assessed_requires_full_original_cached_comparison',
+            'optimization_provenance_sha256': sha256(provenance_path)}
+
+
+def verify_inputs(capture: Path, derived: Path, freeze_path: Path = FREEZE) -> tuple[dict, dict, dict, dict]:
     analysis = bounded_json(derived / 'analysis.json', MAX_ANALYSIS)
     manifest = bounded_json(capture / 'manifest.json', 1_000_000)
     freeze = bounded_json(freeze_path, 1_000_000)
@@ -100,14 +165,12 @@ def verify_inputs(capture: Path, derived: Path, freeze_path: Path = FREEZE) -> t
     if (normalized_claim is None or
             sha256(capture / 'metadata/normalized.json') != normalized_claim):
         raise ValueError('captured normalized metadata differs from frozen original')
-    for name, digest in sources.items():
-        if name not in files or files[name] != digest:
-            raise ValueError(f'replay source differs from implementation freeze: {name}')
+    variant_info = verify_variant(analysis, derived, files)
     if analysis.get('status') not in ('complete', 'capture_incomplete'):
         raise ValueError('replay audit incomplete or failed')
     if len(analysis.get('branches', [])) != MAX_BRANCHES:
         raise ValueError('expected 96 original buy-side branches')
-    return analysis, manifest, freeze
+    return analysis, manifest, freeze, variant_info
 
 
 def audit_rows(path: Path, expected_records: int):
@@ -268,7 +331,7 @@ def match_trades(tombstones: dict[str, list[dict]], events) -> tuple[dict, dict]
 
 def result_document(analysis: dict, manifest: dict, freeze: dict, capture: Path,
                     derived: Path, tombstones: dict, lifecycle_counts: dict,
-                    trade_counts: dict, terminal: dict) -> dict:
+                    trade_counts: dict, terminal: dict, variant_info: dict) -> dict:
     if terminal['raw_gzip_sha256'] != analysis['raw_sha256']:
         raise ValueError('streamed raw digest differs from replay analysis')
     affected = [q for entries in tombstones.values() for q in entries if q['match_count']]
@@ -298,6 +361,10 @@ def result_document(analysis: dict, manifest: dict, freeze: dict, capture: Path,
         'audit_gzip_sha256': sha256(derived / 'audit.jsonl.gz'),
         'implementation_freeze_sha256': sha256(FREEZE),
         'adjudicator_source_sha256': sha256(Path(__file__)),
+        'implementation_variant': variant_info['variant'],
+        'post_freeze_optimization': variant_info['post_freeze_optimization'],
+        'original_equivalence': variant_info['original_equivalence'],
+        'optimization_provenance_sha256': variant_info['optimization_provenance_sha256'],
         'source_sha256': analysis['source_sha256'],
         'replay_status': analysis['status'], 'capture_end_reason': manifest.get('end_reason'),
         'capture_truncated': manifest.get('truncated'),
@@ -326,6 +393,8 @@ def report_markdown(result: dict) -> str:
              'same-price queue could have absorbed the trade. Original results are unchanged.', '',
              f"Replay status: `{result['replay_status']}`; capture end: "
              f"`{result['capture_end_reason']}`; truncated: `{result['capture_truncated']}`.", '',
+             f"Replay implementation: `{result['implementation_variant']}`; "
+             f"original equivalence: `{result['original_equivalence']}`.", '',
              f"Retired activated quotes with remaining quantity: "
              f"{result['lifecycle_counts'].get('retired_with_remaining', 0)}; "
              f"RH sell trades scanned: {result['trade_counts'].get('rh_sell_trades_seen', 0)}; "
@@ -347,12 +416,12 @@ def adjudicate(capture: Path, derived: Path, out: Path) -> dict:
     capture, derived, out = Path(capture), Path(derived), Path(out)
     if out.exists():
         raise ValueError('output directory must not exist')
-    analysis, manifest, freeze = verify_inputs(capture, derived)
+    analysis, manifest, freeze, variant_info = verify_inputs(capture, derived)
     tombstones, lifecycle = retired_quotes(
         analysis, audit_rows(derived / 'audit.jsonl.gz', analysis['audit_records']))
     trades, terminal = match_trades(tombstones, iter_events(capture, max_raw_bytes=384_000_000))
     result = result_document(analysis, manifest, freeze, capture, derived,
-                             tombstones, lifecycle, trades, terminal)
+                             tombstones, lifecycle, trades, terminal, variant_info)
     body = (json.dumps(result, sort_keys=True, separators=(',', ':'), allow_nan=False) + '\n').encode()
     note = report_markdown(result).encode()
     if len(body) + len(note) > MAX_OUTPUT:
