@@ -275,6 +275,108 @@ def _paired_entry_time(trade: dict) -> float | None:
     return max(times) - created
 
 
+def _paired_exit_price_deterioration(trade: dict) -> tuple[float | None, str | None]:
+    """Price-only change from fresh request-time liability to actual full exits.
+
+    A positive value means the short buyback cost minus the long sale proceeds
+    worsened. Funding, fees, reserve, and capital are deliberately excluded.
+    """
+    observed = trade.get("exit_request_observation")
+    if not isinstance(observed, dict):
+        return None, "legacy_no_request_observation"
+    if observed.get("version") != 1:
+        return None, "unsupported_observation_version"
+    if observed.get("capture_type") != "normal_request":
+        return None, "non_normal_request"
+    if observed.get("closing_price_status") != "valid":
+        return None, "request_price_unavailable"
+    if observed.get("receipt_pair_skew_valid") is not True:
+        return None, "request_pair_skew_invalid"
+    request_at = _finite(trade.get("exit_requested_at"), math.nan)
+    marked_at = _finite(observed.get("requested_at"), math.nan)
+    captured_at = _finite(observed.get("captured_at"), math.nan)
+    skew = _finite(observed.get("received_skew_seconds"), math.nan)
+    if (not all(math.isfinite(x) for x in (request_at, marked_at, captured_at, skew))
+            or request_at < 0 or abs(request_at-marked_at) > 1e-6
+            or abs(captured_at-marked_at) > 1e-6 or skew < 0
+            or observed.get("exit_reason") != trade.get("exit_reason")):
+        return None, "request_time_invalid"
+    legs = trade.get("legs")
+    request_legs = observed.get("legs")
+    signal = trade.get("signal")
+    if (not isinstance(legs, list) or len(legs) != 2
+            or not isinstance(request_legs, list) or len(request_legs) != 2
+            or not isinstance(signal, dict)):
+        return None, "leg_identity_invalid"
+    by_key = {leg.get("key"): leg for leg in legs if isinstance(leg, dict)}
+    requested = {leg.get("key"): leg for leg in request_legs if isinstance(leg, dict)}
+    if (len(by_key) != 2 or len(requested) != 2 or set(by_key) != set(requested)
+            or set(by_key) != {signal.get("buy"), signal.get("sell")}
+            or by_key[signal.get("buy")].get("side") != "long"
+            or by_key[signal.get("sell")].get("side") != "short"):
+        return None, "leg_identity_invalid"
+    original_q = _finite(signal.get("quantity"), math.nan)
+    if not math.isfinite(original_q) or original_q <= 0:
+        return None, "original_quantity_invalid"
+    actual_values = {}
+    request_values = {}
+    tolerance = max(1e-9, original_q * 1e-9)
+    for key, leg in by_key.items():
+        request_leg = requested[key]
+        if request_leg.get("side") != leg.get("side"):
+            return None, "leg_identity_invalid"
+        quantity = _finite(leg.get("quantity"), math.nan)
+        remaining = _finite(leg.get("remaining"), math.nan)
+        request_q = _finite(request_leg.get("remaining_quantity"), math.nan)
+        if (not all(math.isfinite(x) for x in (quantity, remaining, request_q))
+                or abs(quantity-original_q) > tolerance
+                or abs(request_q-original_q) > tolerance
+                or abs(remaining) > tolerance):
+            return None, "not_full_original_quantity"
+        receipt = _finite(request_leg.get("book_received_at"), math.nan)
+        source = _finite(request_leg.get("book_engine_time"), math.nan)
+        receipt_age = _finite(request_leg.get("receipt_age_seconds"), math.nan)
+        source_age = _finite(request_leg.get("source_age_seconds"), math.nan)
+        if (request_leg.get("book_valid") is not True
+                or request_leg.get("clock_valid") is not True
+                or request_leg.get("walk_status") != "valid"
+                or not all(math.isfinite(x) for x in (receipt, source, receipt_age, source_age))
+                or source > receipt + 1e-6 or receipt > marked_at + 1e-6
+                or receipt_age < 0 or source_age < 0):
+            return None, "request_book_invalid"
+        request_value = _finite(request_leg.get("exit_walk_value_usd"), math.nan)
+        actual_value = _finite(leg.get("exit_value"), math.nan)
+        fills = leg.get("exit_fills")
+        if (not math.isfinite(request_value) or request_value <= 0
+                or not math.isfinite(actual_value) or actual_value <= 0):
+            return None, "exit_value_invalid"
+        if not isinstance(fills, list) or not fills:
+            return None, "exit_fills_missing"
+        fill_q = fill_value = 0.0
+        for fill in fills:
+            if not isinstance(fill, dict):
+                return None, "exit_fills_invalid"
+            q = _finite(fill.get("quantity"), math.nan)
+            value = _finite(fill.get("value"), math.nan)
+            at = _finite(fill.get("timestamp"), math.nan)
+            if (not all(math.isfinite(x) for x in (q, value, at))
+                    or q <= 0 or value <= 0 or at < marked_at):
+                return None, "exit_fills_invalid"
+            fill_q += q
+            fill_value += value
+        if (abs(fill_q-original_q) > tolerance
+                or abs(fill_value-actual_value) > max(1e-7, actual_value * 1e-9)):
+            return None, "exit_fills_not_full_original"
+        request_values[leg["side"]] = request_value
+        actual_values[leg["side"]] = actual_value
+    liability = request_values["short"]-request_values["long"]
+    recorded = _finite(observed.get("requested_closing_liability_usd"), math.nan)
+    if not math.isfinite(recorded) or abs(recorded-liability) > max(1e-7, abs(liability) * 1e-9):
+        return None, "request_liability_inconsistent"
+    deterioration = actual_values["short"]-actual_values["long"]-recorded
+    return (deterioration, None) if math.isfinite(deterioration) else (None, "exit_value_invalid")
+
+
 def _trade_summary(trades: list[dict]) -> dict:
     classes = {name: {"count": 0, "wins": 0, "net_usd": 0.0} for name in
                ("paired", "failed_hedge", "other")}
@@ -283,6 +385,8 @@ def _trade_summary(trades: list[dict]) -> dict:
     routes = defaultdict(lambda: {"count": 0, "net_usd": 0.0})
     latencies = []
     deterioration_values = []
+    exit_deterioration_values = []
+    exit_missing = defaultdict(int)
     entry_times = []
     for trade in trades:
         pnl = _finite(trade.get("net_pnl_usd"))
@@ -299,6 +403,11 @@ def _trade_summary(trades: list[dict]) -> dict:
             entry_time = _paired_entry_time(trade)
             if entry_time is not None:
                 entry_times.append(entry_time)
+            exit_deterioration, missing_reason = _paired_exit_price_deterioration(trade)
+            if missing_reason is None:
+                exit_deterioration_values.append(exit_deterioration)
+            else:
+                exit_missing[missing_reason] += 1
         kind = "estimated" if trade.get("status") == "CLOSED_ESTIMATED" else "exact"
         quality[kind]["count"] += 1
         quality[kind]["wins"] += win
@@ -332,6 +441,18 @@ def _trade_summary(trades: list[dict]) -> dict:
                 "observed": len(entry_times), "missing": paired_count-len(entry_times),
                 "median": statistics.median(entry_times) if entry_times else None,
                 "p95": _percentile(entry_times, .95)},
+            "paired_exit_request_to_actual_price_deterioration_usd": {
+                "observed": len(exit_deterioration_values),
+                "missing": paired_count-len(exit_deterioration_values),
+                "missing_reasons": dict(sorted(exit_missing.items())),
+                "sum": sum(exit_deterioration_values) if exit_deterioration_values else None,
+                "median": statistics.median(exit_deterioration_values) if exit_deterioration_values else None,
+                "p95": _percentile(exit_deterioration_values, .95),
+                "worsened": sum(value > 1e-9 for value in exit_deterioration_values),
+                "improved": sum(value < -1e-9 for value in exit_deterioration_values),
+                "unchanged": sum(abs(value) <= 1e-9 for value in exit_deterioration_values),
+                "positive_is_worse": True,
+                "price_only_excludes_fees_funding_and_capital": True},
             "worst_routes": groups[:10], "best_routes": list(reversed(groups[-10:]))}
 
 

@@ -21,7 +21,8 @@ import time
 
 import aiohttp
 import monitor as legacy
-from paper_engine import EngineConfig, PaperEngine, key
+from paper_engine import EngineConfig, key
+from paper_exit_observer import ObservedPaperEngine
 from paper_funding import FundingService
 from paper_store import PaperStore
 from paper_streams import StreamManager
@@ -106,7 +107,7 @@ async def run(args,store,config):
     loop=asyncio.get_running_loop()
     for sig in (signal.SIGINT,signal.SIGTERM):loop.add_signal_handler(sig,stop.set)
     saved=store.load_state() or {}
-    engine=PaperEngine([],config,state=saved.get('engine'))
+    engine=ObservedPaperEngine([],config,state=saved.get('engine'))
     if args.shadow_strategies:engine.enable_shadows()
     ring=BookRing(args.book_memory_mb*1024*1024,args.book_window_seconds)
     feeds={};discovery_stats=Counter();runtime={'status':'starting','last_metadata':0.0,'last_checkpoint':0.0,

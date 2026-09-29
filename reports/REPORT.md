@@ -92,6 +92,14 @@ reserve. Smaller orders reduced dollar losses for that particular best-bid
 entry/taker-exit calculation; they did not establish a profitable size.
 The fixed $0.10 target also requires 10 bp at $100 versus 1 bp at $1,000.
 
+The [22:26 UTC baseline decomposition](review19-baseline-spreads/REPORT.md)
+reconciles all 91 paired closes: $100.60 of opening price difference was
+more than offset by $132.36 of closing liability. Gross P&L was -$31.76
+before $32.68 in four-leg fees and $45.45 in reserve. Signal-to-entry price
+deterioration totaled only $1.06. Holding those recorded exits fixed, the
+signal quotes would still lose before fees; this is an accounting diagnostic,
+not a claim that faster execution would retain the same exits.
+
 ## Assessment
 
 **The strongest follow-up candidates are the separate Robinhood Chain Lighter perpetual markets against Hyperliquid. The sampled Robinhood Uniswap stock-token pools generally do not clear their costs.** Small positive opening spreads also exist against Lighter Core and Aster, but an opening spread on two perpetuals is not realized arbitrage profit. Funding, the eventual unwind, and margin capital determine the outcome.

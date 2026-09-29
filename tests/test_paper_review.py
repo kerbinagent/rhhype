@@ -7,7 +7,7 @@ import tempfile
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from paper_review import review, MAX_REPORTS
+from paper_review import review, MAX_REPORTS, _trade_summary
 
 
 def ledger(exact=0, estimated=0, closed=0, estimated_count=0, wins=0,
@@ -206,6 +206,75 @@ class ReviewTests(unittest.TestCase):
         self.assertEqual(entry_time["missing"], 3)
         self.assertEqual(entry_time["median"], 6)
         self.assertEqual(entry_time["p95"], 8)
+
+    def test_paired_exit_request_price_deterioration_and_missing_reasons(self):
+        def completed(ident, settled, long_exit, short_exit):
+            item = trade(ident, "standard", settled, 1)
+            item["signal"] = {"buy": "hyperliquid:BTC", "sell": "aster:BTCUSDT",
+                              "quantity": 2}
+            requested = item["exit_requested_at"]
+            item["legs"] = [
+                {"key": "hyperliquid:BTC", "side": "long", "entry_result": "filled",
+                 "quantity": 2, "remaining": 0, "exit_value": long_exit,
+                 "exit_fills": [{"timestamp": requested+1, "quantity": 2,
+                                 "value": long_exit}]},
+                {"key": "aster:BTCUSDT", "side": "short", "entry_result": "filled",
+                 "quantity": 2, "remaining": 0, "exit_value": short_exit,
+                 "exit_fills": [{"timestamp": requested+2, "quantity": 2,
+                                 "value": short_exit}]},
+            ]
+            item["exit_request_observation"] = {
+                "version": 1, "capture_type": "normal_request",
+                "requested_at": requested, "captured_at": requested,
+                "exit_reason": "max_hold", "closing_price_status": "valid",
+                "mark_status": "funding_unknown", "net_liquidation_pnl_usd": None,
+                "requested_closing_liability_usd": 2,
+                "received_skew_seconds": 0, "receipt_pair_skew_valid": True,
+                "legs": [{"key": key, "side": side, "remaining_quantity": 2,
+                          "book_received_at": requested-.1,
+                          "book_engine_time": requested-.2,
+                          "receipt_age_seconds": .1, "source_age_seconds": .2,
+                          "book_valid": True, "clock_valid": True,
+                          "walk_status": "valid", "exit_walk_value_usd": value}
+                         for key, side, value in (
+                             ("hyperliquid:BTC", "long", 200),
+                             ("aster:BTCUSDT", "short", 202))],
+            }
+            return item
+
+        worse = completed("worse-exit", 9950, 198, 204)  # 6 - 2 = +4.
+        improved = completed("improved-exit", 9960, 202, 200)  # -2 - 2 = -4.
+        not_matched = completed("not-matched", 9970, 198, 204)
+        not_matched["exit_request_observation"]["legs"][1]["remaining_quantity"] = 1
+        partial_actual = completed("partial-actual", 9975, 198, 204)
+        partial_actual["legs"][1]["exit_fills"][0]["quantity"] = 1
+        stale = completed("stale-exit", 9980, 198, 204)
+        stale["exit_request_observation"]["closing_price_status"] = "invalid_or_stale_book"
+        legacy = completed("legacy-exit", 9990, 198, 204)
+        del legacy["exit_request_observation"]
+        self.checkpoint(10000, {"standard": ledger(closed=6)},
+                        [worse, improved, not_matched, partial_actual, stale, legacy])
+        report = review(self.source, self.out, now=10010)
+        cohort = report["strategies"]["standard"]["retained_completion_window"][
+            "paired_exit_request_to_actual_price_deterioration_usd"]
+        self.assertEqual(cohort["observed"], 2)
+        self.assertEqual(cohort["missing"], 4)
+        self.assertEqual(cohort["missing_reasons"], {
+            "exit_fills_not_full_original": 1,
+            "legacy_no_request_observation": 1,
+            "not_full_original_quantity": 1,
+            "request_price_unavailable": 1})
+        self.assertEqual(cohort["sum"], 0)
+        self.assertEqual(cohort["median"], 0)
+        self.assertEqual(cohort["p95"], 4)
+        self.assertEqual(cohort["worsened"], 1)
+        self.assertEqual(cohort["improved"], 1)
+        self.assertTrue(cohort["positive_is_worse"])
+        self.assertTrue(cohort["price_only_excludes_fees_funding_and_capital"])
+
+        # A legacy-only paired cohort has no measured zero-dollar outcome.
+        self.assertIsNone(_trade_summary([legacy])[
+            "paired_exit_request_to_actual_price_deterioration_usd"]["sum"])
 
     def test_retention_only_deletes_matching_archives(self):
         self.out.mkdir()
