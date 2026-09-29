@@ -149,8 +149,8 @@ def verify_inputs(capture: Path, derived: Path, freeze_path: Path = FREEZE) -> t
         raise ValueError('captured metadata digest mismatch')
     files = freeze.get('files')
     sources = analysis.get('source_sha256')
-    if not isinstance(files, dict) or not isinstance(sources, dict) or not sources:
-        raise ValueError('missing frozen source hash inventory')
+    if not isinstance(files, dict) or len(files) != 23 or not isinstance(sources, dict) or not sources:
+        raise ValueError('original 23-file implementation freeze inventory required')
     frozen_normalized = ROOT / 'reports/rh-small-maker-v1/metadata/normalized.json'
     normalized_claim = None
     for name, claimed in files.items():
