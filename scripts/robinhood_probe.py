@@ -11,6 +11,7 @@ import json
 import pathlib
 import time
 import urllib.request
+import urllib.error
 from decimal import Decimal
 from Crypto.Hash import keccak  # Ethereum Keccak-256; provided by pycryptodome
 
@@ -21,12 +22,15 @@ RPC = "https://rpc.mainnet.chain.robinhood.com"
 ASSETS = "https://api.robinhood.com/rhj/assets"
 DEX = "https://api.dexscreener.com/latest/dex/tokens/"
 SYMBOLS = ("AAPL", "NVDA", "GOOGL", "MSFT", "TSLA", "AMZN", "META", "QQQ", "SPY", "P")
+HISTORY_SYMBOLS = ("AAPL", "NVDA", "GOOGL", "MSFT", "TSLA", "AMZN", "META", "QQQ", "SPY")
 USDG = "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168"
 V3_FACTORY = "0x1f7d7550B1b028f7571E69A784071F0205FD2EfA"
 V3_QUOTER = "0x33e885eD0Ec9bF04EcfB19341582aADCb4c8A9E7"
 QUOTE_SELECTOR = "c6a5026a"  # quoteExactInputSingle((address,address,uint256,uint24,uint160))
 V4_QUOTER = "0x8Dc178eFB8111BB0973Dd9d722ebeFF267c98F94"
 V4_QUOTE_SELECTOR = "aa9d21cb"  # quoteExactInputSingle(((address,address,uint24,int24,address),bool,uint128,bytes))
+MULTIPLIER_TOPIC = "0x2205df4534432b2f60654a3fdb48737ffdaf3e9edb1a498bd985bc026b15b055"
+CANCEL_TOPIC = "0x" + keccak.new(digest_bits=256, data=b"UIMultiplierUpdateCancelled(uint256,uint256)").hexdigest()
 
 
 def get_json(url, payload=None):
@@ -93,16 +97,21 @@ def quote_v3_pool(pool, token, amount_usd, block_tag):
 def quote_v4_pool(pool_id, token, amount_usd, block_tag):
     """Quote a standard Uniswap v4 USDG pool after verifying its PoolKey hash.
 
-    Current deep Stock Token/USDG pools use fee 3000, tick spacing 60 and no hook.
+    Try standard no-hook fee/tick-spacing pairs and verify the exact PoolId.
     A different PoolKey is rejected rather than silently misquoted.
     """
     usd, token_mid = amount_usd
     currencies = sorted((USDG.lower(), token.lower()))
-    fee, tick_spacing, hooks = 3000, 60, 0
-    encoded_key = "".join(map(word, (*currencies, fee, tick_spacing, hooks)))
-    computed_id = "0x" + keccak.new(digest_bits=256, data=bytes.fromhex(encoded_key)).hexdigest()
-    if computed_id.lower() != pool_id.lower():
-        raise RuntimeError(f"Unknown v4 PoolKey for {pool_id}; guessed {computed_id}")
+    hooks = 0
+    fee, tick_spacing = 0, 0
+    for candidate_fee, candidate_spacing in ((100, 1), (500, 10), (3000, 60), (10000, 200)):
+        encoded_key = "".join(map(word, (*currencies, candidate_fee, candidate_spacing, hooks)))
+        computed_id = "0x" + keccak.new(digest_bits=256, data=bytes.fromhex(encoded_key)).hexdigest()
+        if computed_id.lower() == pool_id.lower():
+            fee, tick_spacing = candidate_fee, candidate_spacing
+            break
+    if fee == 0:
+        raise RuntimeError(f"Unknown v4 PoolKey for {pool_id}; not a standard no-hook fee tier")
     if rpc("eth_getCode", [V4_QUOTER, block_tag]) == "0x":
         raise RuntimeError("v4 Quoter not deployed")
     result = {"poolId": pool_id, "currencies": currencies, "fee": fee, "tickSpacing": tick_spacing,
@@ -169,6 +178,71 @@ def scan_all_pools():
         print(",".join(map(str, (a["symbol"], a["contractAddress"], p.get("dexId"),
                                 "/".join(p.get("labels", [])), p.get("pairAddress"),
                                 p.get("liquidity", {}).get("usd", 0), p.get("volume", {}).get("h24", 0)))))
+
+
+def multiplier_history(since_block=0):
+    """Reconstruct full ERC-8056 schedules from genesis logs, not archival state."""
+    collected = dt.datetime.now(dt.timezone.utc)
+    registry = get_json(ASSETS)
+    assets = {a["tokenSymbol"]: a for a in registry["assets"]}
+    latest = int(rpc("eth_blockNumber", []), 16)
+    output = {"collectedAtUtc": collected.isoformat(), "rpc": RPC,
+              "sourceRegistry": ASSETS, "fromBlock": since_block, "toBlock": latest,
+              "eventSignature": "UIMultiplierUpdated(uint256,uint256,uint256)",
+              "eventTopic": MULTIPLIER_TOPIC, "cancelTopic": CANCEL_TOPIC,
+              "note": "Each update becomes effective at effectiveAtTimestamp, which can be later than the emitting block timestamp; logs are queried from genesis through the latest block.",
+              "symbols": {}}
+    def logs(query):
+        delay = 2
+        for attempt in range(6):
+            try:
+                answer = rpc("eth_getLogs", [query])
+                time.sleep(0.5)
+                return answer
+            except urllib.error.HTTPError as exc:
+                if exc.code != 429 or attempt == 5:
+                    raise
+                time.sleep(delay)
+                delay = min(delay * 2, 30)
+        raise RuntimeError("Unreachable log retry")
+
+    for symbol in HISTORY_SYMBOLS:
+        asset = assets[symbol]
+        address = next(d["contractAddress"] for d in asset["deployments"] if d["chainId"] == 4663)
+        events = []
+        for topic in (MULTIPLIER_TOPIC, CANCEL_TOPIC):
+            for first in range(since_block, latest + 1, 9_999_999):
+                last = min(first + 9_999_998, latest)
+                query = {"fromBlock": hex(first), "toBlock": hex(last), "address": address,
+                         "topics": [topic]}
+                events.extend(logs(query))
+        parsed = []
+        for event in events:
+            chunks = [int(event["data"][2+i:2+i+64], 16) for i in range(0, len(event["data"]) - 2, 64)]
+            base = {"blockNumber": int(event["blockNumber"], 16), "transactionHash": event["transactionHash"],
+                    "logIndex": int(event["logIndex"], 16), "raw": event}
+            if event["topics"][0].lower() == MULTIPLIER_TOPIC.lower():
+                base.update({"type": "update", "oldMultiplierRaw": str(chunks[0]),
+                             "newMultiplierRaw": str(chunks[1]), "effectiveAtTimestamp": chunks[2]})
+            else:
+                base.update({"type": "cancel", "cancelledMultiplierRaw": str(chunks[0]),
+                             "cancelledEffectiveAtTimestamp": chunks[1]})
+            parsed.append(base)
+        parsed.sort(key=lambda event: (event["blockNumber"], event["logIndex"]))
+        now = int(collected.timestamp())
+        active = [e for e in parsed if e["type"] == "update" and e["effectiveAtTimestamp"] <= now]
+        expected_current = Decimal(active[-1]["newMultiplierRaw"]) / 10**18 if active else None
+        current = Decimal(asset["currentMultiplier"])
+        matches = expected_current is None or expected_current == current
+        output["symbols"][symbol] = {"address": address, "currentMultiplier": str(current),
+                                     "lastEffectiveEventMultiplier": str(expected_current) if expected_current else None,
+                                     "lastEffectiveEventMatchesCurrent": matches,
+                                     "events": parsed}
+        print(symbol, len(parsed), "events", "anchor_match", matches, flush=True)
+    OUT.mkdir(parents=True, exist_ok=True)
+    path = OUT / ("robinhood_multipliers_" + collected.strftime("%Y%m%dT%H%M%SZ") + ".json")
+    path.write_text(json.dumps(output, indent=2) + "\n")
+    print(f"saved {path.relative_to(ROOT)}")
 
 
 def main():
@@ -246,5 +320,12 @@ def main():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--all-pools", action="store_true", help="scan all registry tokens against Dexscreener")
+    parser.add_argument("--multiplier-history", action="store_true", help="collect ERC-8056 multiplier events from genesis")
+    parser.add_argument("--since-block", type=int, default=0, help="first block for multiplier log scan")
     args = parser.parse_args()
-    scan_all_pools() if args.all_pools else main()
+    if args.multiplier_history:
+        multiplier_history(args.since_block)
+    elif args.all_pools:
+        scan_all_pools()
+    else:
+        main()

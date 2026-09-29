@@ -57,24 +57,28 @@ def fetch(m,round_id):
     try:
         if m['venue']=='hyperliquid':
             r=requests.post(HL,json={'type':'l2Book','coin':m['market']},timeout=18)
-        else:r=requests.get(LI+'orderBookOrders',params={'market_id':m['market'],'limit':100},timeout=18)
+        elif m['venue']=='lighter':r=requests.get(LI+'orderBookOrders',params={'market_id':m['market'],'limit':100},timeout=18)
+        elif m['venue']=='aster':r=requests.get('https://fapi.asterdex.com/fapi/v3/depth',params={'symbol':m['market'],'limit':100},timeout=18)
+        else:raise ValueError('Unsupported venue')
         row.update(http_status=r.status_code,received_ms=int(time.time()*1000))
         r.raise_for_status(); body=r.json(); row['body']=body
         if not isinstance(body,dict): raise ValueError('Expected book object')
         if m['venue']=='hyperliquid':
             if body.get('coin')!=m['market']:raise ValueError('Book identity mismatch')
             row['venue_time_ms']=body.get('time')
-        elif body.get('code')!=200:raise ValueError('Lighter code not 200')
+        elif m['venue']=='lighter' and body.get('code')!=200:raise ValueError('Lighter code not 200')
+        elif m['venue']=='aster':row['venue_time_ms']=body.get('T')
     except Exception as e:row['error']=f'{type(e).__name__}: {e}'
     row['received_ms']=row['received_ms'] or int(time.time()*1000)
     return row
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--rounds',type=int,default=60);ap.add_argument('--interval',type=float,default=30)
-    ap.add_argument('--lighter-max',type=int,default=30);ap.add_argument('--workers',type=int,default=4);ap.add_argument('--inventory',type=pathlib.Path);ap.add_argument('--out',type=pathlib.Path)
+    ap.add_argument('--plan-file',type=pathlib.Path);ap.add_argument('--lighter-max',type=int,default=30);ap.add_argument('--workers',type=int,default=4);ap.add_argument('--inventory',type=pathlib.Path);ap.add_argument('--out',type=pathlib.Path)
     args=ap.parse_args();inv=args.inventory or latest_inventory();out=args.out or ROOT/'data/raw/live'/dt.datetime.now(dt.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
     out.mkdir(parents=True,exist_ok=True)
-    plan,lr=build_plan(inv,args.lighter_max);write(out/'plan.json',plan);write(out/'lighter_initial.json',lr)
+    plan,lr=(json.loads(args.plan_file.read_text()),{}) if args.plan_file else build_plan(inv,args.lighter_max)
+    write(out/'plan.json',plan);write(out/'lighter_initial.json',lr)
     manifest={'started_utc':utc(),'inventory':str(inv.relative_to(ROOT)),'rounds_requested':args.rounds,'interval_seconds':args.interval,'market_count':len(plan),'rounds_completed':0,'errors':0,'read_only':True}
     write(out/'manifest.json',manifest);print(f'{out} markets={len(plan)} assets={len(set(m["asset"] for m in plan))}',flush=True)
     start=time.monotonic()

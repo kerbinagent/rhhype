@@ -19,7 +19,7 @@ def levels(row):
     if row['venue']=='hyperliquid':
         ls=b.get('levels') or [[],[]]
         bid=[(float(x['px']),float(x['sz'])) for x in ls[0]];ask=[(float(x['px']),float(x['sz'])) for x in ls[1]]
-    elif row['venue']=='lighter':
+    elif row['venue'] in ('lighter','rh_lighter'):
         bid=[(float(x['price']),float(x['remaining_base_amount'])) for x in b.get('bids',[])];ask=[(float(x['price']),float(x['remaining_base_amount'])) for x in b.get('asks',[])]
     elif row['venue']=='aster':
         bid=[(float(x[0]),float(x[1])) for x in b.get('bids',[])];ask=[(float(x[0]),float(x[1])) for x in b.get('asks',[])]
@@ -41,6 +41,7 @@ def consume(book,q):
 
 def fee_bps(m,premium=False):
     if m['venue']=='lighter':return 2.8 if premium else 0.0
+    if m['venue']=='rh_lighter':return 3.5 if premium else 0.0
     if m['venue']=='aster':return 4.0
     if m['venue']=='dydx':return 5.0
     if m['kind']=='spot':return 7.0 # no staking / referral / quote-token discount assumed
@@ -52,11 +53,19 @@ def age_ms(r):
     t=r.get('venue_time_ms')
     return r['received_ms']-t if t else None
 
-def analyze_run(run,notionals=(1000,10000,100000)):
-    plan=json.loads((run/'plan.json').read_text());meta={(m['venue'],str(m['market'])):m for m in plan}
+def base_lot_step(m):
+    """Base units per order step; normalized stock-token books use shares."""
+    return 10**(-int(m['sz_decimals']))*float(m.get('unit_multiplier',1))
+
+def on_lot_grid(q,step):
+    return abs(q/step-round(q/step))<=1e-6
+
+def analyze_run(run,notionals=(1000,10000,100000),plan_override=None,records_override=None):
+    plan=plan_override if plan_override is not None else json.loads((run/'plan.json').read_text());meta={(m['venue'],str(m['market'])):m for m in plan}
     rounds=collections.defaultdict(dict);quality=collections.Counter();ages=[];requests=[]
-    for line in (run/'books.jsonl').open():
-        r=json.loads(line);quality['requests']+=1;requests.append(r['received_ms'])
+    records=records_override if records_override is not None else (json.loads(line) for line in (run/'books.jsonl').open())
+    for r in records:
+        quality['requests']+=1;requests.append(r['received_ms'])
         if 'error'in r:quality['http_errors']+=1;continue
         try:r['_levels']=levels(r)
         except (ValueError,KeyError,TypeError):quality['invalid_books']+=1;continue
@@ -92,12 +101,20 @@ def analyze_run(run,notionals=(1000,10000,100000)):
                     net=(sp-bc-fees)/bc*10000
                     premfees=bc*fee_bps(buy,True)/10000+sp*fee_bps(sell,True)/10000
                     borrow=sell['kind']=='spot'
+                    buy_step=base_lot_step(buy);sell_step=base_lot_step(sell)
+                    buy_on_grid=on_lot_grid(q,buy_step);sell_on_grid=on_lot_grid(q,sell_step)
+                    # A one-full-lot mark for each unorderable leg is a conservative
+                    # size-mismatch sensitivity, not a simulated executable resize.
+                    lot_reserve=(0 if buy_on_grid else buy_step*max(p for p,_ in ba))+(0 if sell_on_grid else sell_step*max(p for p,_ in sa))
                     obs.append({'round':i,'timestamp_ms':max(br['received_ms'],sr['received_ms']),'asset':asset,
                         'category':sell['category'] if buy['category']=='spot' else buy['category'],
                         'buy_venue':buy['venue'],'buy_market':buy['market'],'sell_venue':sell['venue'],'sell_market':sell['market'],
                         'buy_kind':buy['kind'],'sell_kind':sell['kind'],'target_notional':n,'base_quantity':q,'buy_cost':bc,'sell_proceeds':sp,
                         'gross_entry_bps':(sp/bc-1)*10000,'entry_fee_bps':fees/bc*10000,'net_entry_bps':net,
                         'premium_account_net_bps':(sp-bc-premfees)/bc*10000,'net_with_5bp_other_cost':net-5,'net_with_10bp_other_cost':net-10,
+                        'buy_base_lot_step':buy_step,'sell_base_lot_step':sell_step,'buy_size_on_lot_grid':buy_on_grid,'sell_size_on_lot_grid':sell_on_grid,
+                        'both_sizes_on_lot_grid':buy_on_grid and sell_on_grid,'full_lot_reserve_usd':lot_reserve,
+                        'net_after_rounding_reserve_bps':net-lot_reserve/bc*10000,
                         'quote_skew_ms':skew,'buy_collateral':buy['collateral'],'sell_collateral':sell['collateral'],
                         'requires_spot_borrow_or_inventory':borrow,'economic_mapping':'ticker/price-unit candidate; settlement rules need review',
                         'both_venue_timestamps':bool(br.get('venue_time_ms') and sr.get('venue_time_ms'))})
@@ -121,7 +138,9 @@ def summarize(obs):
             'positive_after_5bp_fraction':sum(v>5 for v in x)/len(x),'positive_after_10bp_fraction':sum(v>10 for v in x)/len(x),
             'premium_net_median_bps':statistics.median(r['premium_account_net_bps'] for r in rs),'longest_positive_consecutive_samples':best,
             'median_buy_cost':statistics.median(r['buy_cost'] for r in rs),'max_quote_skew_ms':max(r['quote_skew_ms'] for r in rs),
-            'requires_spot_borrow_or_inventory':rs[0]['requires_spot_borrow_or_inventory']})
+            'requires_spot_borrow_or_inventory':rs[0]['requires_spot_borrow_or_inventory'],
+            'both_sizes_on_lot_grid_fraction':sum(r['both_sizes_on_lot_grid'] for r in rs)/len(rs),
+            'rounding_reserve_net_median_bps':statistics.median(r['net_after_rounding_reserve_bps'] for r in rs)})
     return sorted(rows,key=lambda r:(r['target_notional'],-r['net_median_bps']))
 
 def robinhood(run):
@@ -147,11 +166,15 @@ def robinhood(run):
                 bc,sp=(usd,hedge) if side=='buy' else (hedge,usd)
                 fee=hedge*fees/10000
                 net=(sp-bc-fee)/bc*10000
-                lot=10**(-int(m['sz_decimals']));residual=shares-math.floor(shares/lot)*lot
+                lot=10**(-int(m['sz_decimals']));orderable=on_lot_grid(shares,lot)
+                residual=0 if orderable else shares-math.floor(shares/lot)*lot
+                full_lot_reserve=0 if orderable else lot*max(p for p,_ in ha)
                 out.append({'round':r['round'],'timestamp_ms':t,'symbol':r['symbol'],'pool':r['pool'],'pool_fee_bps':qs['fee']/100,
                     'direction':'buy_RH_sell_HL' if side=='buy' else 'buy_HL_sell_RH','target_notional':n,'shares':shares,'token_quantity':float(q['tokenQuantity']),
                     'multiplier':mul,'buy_cost':bc,'sell_proceeds':sp,'net_entry_bps':net,'gross_entry_bps':(sp/bc-1)*10000,
-                    'hl_fee_bps':fees,'hl_size_rounding_residual_shares':residual,'rounding_residual_usd_upper':residual*ha[0][0],
+                    'hl_fee_bps':fees,'hl_base_lot_step':lot,'hl_size_on_lot_grid':orderable,
+                    'hl_size_rounding_residual_shares':residual,'rounding_residual_usd_upper':residual*max(p for p,_ in ha),
+                    'full_lot_reserve_usd':full_lot_reserve,'net_after_rounding_reserve_bps':net-full_lot_reserve/bc*10000,
                     'net_after_1usd_gas_bps':net-10000/bc,'net_after_5usd_total_cost_bps':net-50000/bc,
                     'requires_spot_inventory_or_borrow':side=='sell','quote_skew_ms':skew,'block_number':r['block_number'],
                     'USDG_USDC_parity_assumed':True})
@@ -162,7 +185,9 @@ def robinhood(run):
         x=[r['net_entry_bps'] for r in rs]
         summaries.append({'symbol':key[0],'direction':key[1],'target_notional':key[2],'samples':len(x),'median_bps':statistics.median(x),
             'p05_bps':quantile(x,.05),'p95_bps':quantile(x,.95),'min_bps':min(x),'max_bps':max(x),
-            'positive_samples':sum(a>0 for a in x),'positive_fraction':sum(a>0 for a in x)/len(x),'max_skew_ms':max(r['quote_skew_ms'] for r in rs)})
+            'positive_samples':sum(a>0 for a in x),'positive_fraction':sum(a>0 for a in x)/len(x),'max_skew_ms':max(r['quote_skew_ms'] for r in rs),
+            'hl_size_on_lot_grid_fraction':sum(r['hl_size_on_lot_grid'] for r in rs)/len(rs),
+            'rounding_reserve_net_median_bps':statistics.median(r['net_after_rounding_reserve_bps'] for r in rs)})
     return out,summaries,dict(quality)|{'start_ms':min(times) if times else None,'end_ms':max(times) if times else None}
 
 def main():
@@ -170,7 +195,11 @@ def main():
     run=args.live_run or sorted((ROOT/'data/raw/live').glob('*/manifest.json'))[-1].parent
     obs,depth,reject,quality=analyze_run(run);csvwrite(OUT/'live_observations.csv',obs);csvwrite(OUT/'live_summary.csv',summarize(obs));csvwrite(OUT/'live_depth.csv',depth);csvwrite(OUT/'live_quarantined.csv',reject)
     rr=args.rh_run or sorted((ROOT/'data/raw/robinhood_live').glob('*/manifest.json'))[-1].parent
-    rh,summary,rq=robinhood(rr);csvwrite(OUT/'robinhood_observations.csv',rh);csvwrite(OUT/'robinhood_summary.csv',summary)
-    quality={'generated_utc':dt.datetime.now(dt.timezone.utc).isoformat(),'live_source':str(run.relative_to(ROOT)),'robinhood_source':str(rr.relative_to(ROOT)),'live':quality,'robinhood':rq}
+    rh,summary,rq=robinhood(rr)
+    extra_quality={}
+    for extra in sorted((ROOT/'data/raw/robinhood_universe_live').glob('*/quotes.jsonl')):
+        eo,es,eq=robinhood(extra.parent);rh.extend(eo);summary.extend(es);extra_quality[str(extra.parent.relative_to(ROOT))]=eq
+    csvwrite(OUT/'robinhood_observations.csv',rh);csvwrite(OUT/'robinhood_summary.csv',summary)
+    quality={'generated_utc':dt.datetime.now(dt.timezone.utc).isoformat(),'live_source':str(run.relative_to(ROOT)),'robinhood_source':str(rr.relative_to(ROOT)),'live':quality,'robinhood':rq,'robinhood_extra':extra_quality}
     (OUT/'live_quality.json').write_text(json.dumps(quality,indent=2)+'\n');print(json.dumps(quality,indent=2))
 if __name__=='__main__':main()
