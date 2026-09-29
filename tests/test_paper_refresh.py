@@ -24,6 +24,32 @@ def fixture(now=None):
 
 
 class RefreshTests(unittest.IsolatedAsyncioTestCase):
+    async def test_confirmation_has_a_turn_under_continuous_other_work(self):
+        now=time.time();engine,key=fixture(now);stop=asyncio.Event();seen=[]
+        engine.positions={};engine.books={};engine.market_meta={}
+        for priority in range(5):
+            k=f'hyperliquid:M{priority}'
+            engine.books[k]={'valid':True,'generation':'g','received':now,'engine_time':now}
+            engine.market_meta[k]={'venue':'hyperliquid','market':f'M{priority}'}
+            if priority<3:
+                engine.positions[str(priority)]={'legs':[{'venue':'hyperliquid','key':k,
+                    'remaining':1 if priority==2 else 0,'intent':None if priority==2 else
+                    {'kind':'exit' if priority==0 else 'entry','due':now-1,'expires':now+100}}]}
+        engine.probes={'probe':{'due':now-1,'signal':{'buy':'hyperliquid:M3','sell':'lighter:1'},'after':{}}}
+        engine.selector=SimpleNamespace(pending_confirmation_targets=lambda t:[
+            {'buy':'hyperliquid:M4','sell':'lighter:1','due':now-1,'expires':now+100}])
+        class Client:
+            async def book(self,market):
+                seen.append(market['market'])
+                return {'received':time.time(),'engine_time':time.time(),
+                        'levels':([(99,10)],[(100,10)])}
+        def on_book(book):
+            if len(seen)>=12:stop.set()
+        await asyncio.wait_for(run_hl_refresh(engine,Client(),on_book,stop,
+            interval=.001,min_key_interval=.0001,max_concurrent=1),2)
+        self.assertEqual(seen,['M0','M1','M0','M2','M0','M3','M0','M1','M0','M2','M0','M4'])
+        self.assertEqual(engine.stats['target_refresh_priority_4_successes'],1)
+
     async def test_due_intent_refreshes_using_stream_generation(self):
         engine, key = fixture()
         stop = asyncio.Event()

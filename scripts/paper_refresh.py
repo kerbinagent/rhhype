@@ -88,16 +88,18 @@ async def run_hl_refresh(engine, client, on_book, stop: asyncio.Event, *,
         if not task.cancelled():
             error=task.exception()
             if error is not None and not failures:failures.append(error)
-    # Urgent entries/exits get three of six turns; held exposure and probes
-    # retain scheduled opportunities even during a sustained entry burst.
+    # Preserve execution/held shares while splitting the old probe share
+    # between probes and confirmation. A spare-capacity-only confirmation
+    # queue can starve forever during continuous signal probe traffic.
     # When no orders are pending, held marks win fallback slots; abundant
     # signal probes must not starve the marks needed for portfolio risk.
-    slots = (0, 1, 0, 2, 0, 3)
+    slots = (0, 1, 0, 2, 0, 3, 0, 1, 0, 2, 0, 4)
     turn = 0
 
-    async def refresh(market_key, market, generation, started):
+    async def refresh(market_key, market, generation, started, priority):
         try:
             engine.stats['target_refresh_requests'] += 1
+            engine.stats[f'target_refresh_priority_{priority}_requests'] += 1
             result = await client.book(market)
             current = engine.books.get(market_key)
             if not current or not current.get('valid') or current.get('generation') != generation:
@@ -119,12 +121,14 @@ async def run_hl_refresh(engine, client, on_book, stop: asyncio.Event, *,
                      'generation': generation, 'valid': True,
                      'source': 'targeted_rest'})
             engine.stats['target_refresh_successes'] += 1
+            engine.stats[f'target_refresh_priority_{priority}_successes'] += 1
         except asyncio.CancelledError:
             raise
         except (aiohttp.ClientError, OSError, RuntimeError, KeyError, TypeError, ValueError, AttributeError, IndexError,
                 asyncio.TimeoutError) as exc:
             # A failed targeted request must not poison a healthy stream book.
             engine.stats['target_refresh_errors'] += 1
+            engine.stats[f'target_refresh_priority_{priority}_errors'] += 1
             engine.stats[f'target_refresh_error_{type(exc).__name__}'] += 1
         finally:
             inflight.discard(market_key)
@@ -160,7 +164,7 @@ async def run_hl_refresh(engine, client, on_book, stop: asyncio.Event, *,
                 last_request[market_key] = now
                 inflight.add(market_key)
                 task = asyncio.create_task(refresh(market_key, _market_for_key(engine, market_key),
-                                                   current['generation'], now))
+                                                   current['generation'], now, priority))
                 tasks.add(task)
                 task.add_done_callback(completed)
             try:

@@ -41,7 +41,8 @@ SELECTOR_NUMBERS = ("version", "criteria_changed_at", "migrated_from_version",
                     "convergence_skew_limit_seconds", "conservative_skew_limit_seconds",
                     "cooldown_skew_limit_seconds", "max_route_samples",
                     "max_route_span_seconds", "pending_confirmations",
-                    "confirmation_min_seconds", "confirmation_expiry_seconds")
+                    "confirmation_min_seconds", "confirmation_expiry_seconds",
+                    "confirmation_instrumentation_version", "confirmation_instrumentation_begin_at")
 POLICY_NUMBERS = ("checked", "allowed", "entered", "rejected_signal", "rejected_skew",
                   "rejected_cooldown", "rejected_warmup", "rejected_forecast",
                   "rejected_duplicate", "rejected_confirmation", "warm_routes",
@@ -80,9 +81,9 @@ def _numeric_subset(keys: tuple[str, ...], values: dict) -> dict:
     return result
 
 
-def _bounded_counts(values: dict) -> dict:
+def _bounded_counts(values: dict, limit: int = 12) -> dict:
     return {str(key)[:40]: max(0, int(_finite(value)))
-            for key, value in list(values.items())[:12]}
+            for key, value in list(values.items())[:limit]}
 
 
 def _read_checkpoint(db_path: Path, lower: float | None, upper_limit: float,
@@ -160,12 +161,29 @@ def _read_health(source: Path, read_at: float) -> dict:
     portfolios = snapshot.get("strategies", {})
     if not isinstance(portfolios, dict):
         portfolios = {}
+    stats = snapshot.get("stats", {})
+    if not isinstance(stats, dict):
+        stats = {}
+    lifecycle = selector.get("confirmation_lifecycle", {})
+    if not isinstance(lifecycle, dict):
+        lifecycle = {}
+    terminal_reasons = lifecycle.get("terminal_reasons", {})
+    if not isinstance(terminal_reasons, dict):
+        terminal_reasons = {}
+    waiting = selector.get("confirmation_waiting_checks", {})
+    if not isinstance(waiting, dict):
+        waiting = {}
     health = {"read_at": read_at,
             "snapshot_updated_at": updated if math.isfinite(updated) else None,
             "snapshot_age_seconds": max(0, read_at - updated) if math.isfinite(updated) else None,
             "status": str(snapshot.get("status", "unknown"))[:80],
             "pair_count": max(0, int(_finite(snapshot.get("pair_count")))),
             "performance_status": str(snapshot.get("performance_status", "unknown"))[:40],
+            "target_refresh_priorities": {
+                str(priority): _numeric_subset(tuple(
+                    f"target_refresh_priority_{priority}_{kind}" for kind in
+                    ("requests", "successes", "errors")), stats)
+                for priority in range(5)},
             "portfolios": {str(name)[:40]: _numeric_subset(
                 ("open_positions", "pending_entries", "pending_exits", "pending_funding",
                  "reserved_usd", "original_reserved_usd", "wallet_cash_usd"), row)
@@ -174,6 +192,11 @@ def _read_health(source: Path, read_at: float) -> dict:
                                         **_numeric_subset(("messages", "gaps", "errors"), value)}
                       for name, value in list(feeds.items())[:8] if isinstance(value, dict)},
             "entry_policies": {**_numeric_subset(SELECTOR_NUMBERS, selector),
+                               "confirmation_lifecycle": {
+                                   **_numeric_subset(("armed", "eligible_unique", "completed_entered",
+                                                      "terminal_total", "pending", "accounting_residual"), lifecycle),
+                                   "terminal_reasons": _bounded_counts(terminal_reasons, 32)},
+                               "confirmation_waiting_checks": _bounded_counts(waiting),
                                "confirmation_cancel_reasons": _bounded_counts(cancel_reasons),
                                "observation_counts": _bounded_counts(observations),
                                "policies": {str(name)[:40]: _numeric_subset(POLICY_NUMBERS, row)

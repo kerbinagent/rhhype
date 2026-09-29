@@ -143,3 +143,26 @@ match ledger deltas. No strategy threshold changes at this checkpoint.
   A follow-up showed 50.5 ms lag/73.1% CPU. Investigating offline hot paths; live
   py-spy attachment was denied by OS ptrace permissions and passwordless sudo
   was unavailable. No security settings were changed.
+
+### Measurement corrections after review 2
+
+Confirmation priority 4 previously had no scheduled turn and could starve while
+probe traffic remained ready. Split the existing probe scheduling share evenly
+between probes and confirmation: priorities over twelve turns now
+`0,1,0,2,0,3,0,1,0,2,0,4`. Exit, entry and held-risk shares and the shared REST
+request cap are unchanged. Record request/success/error counts by priority.
+
+Add distinct candidate lifecycle counts with terminal reasons and the invariant
+`armed = entered + terminal + pending`. Old repeated checks cannot be converted
+into unique opportunities; new counters explicitly begin at deployment. This
+instrumentation will separate lost economics from missing fresh observations.
+No confirmation timing, source-skew or forecast threshold was relaxed.
+
+Offline replay also identified costly recursive copies of probe books. Preserve
+full level lists and mutation isolation using immutable level tuples and copied
+metadata. Three controlled replays showed 0.349 to 0.231 CPU-seconds per 10,000
+events (1.51x engine component, not a live-system speedup). Profile scope and
+limits: reports/strategy-experiments/probe-profile.md. Lag subsequently recovered
+to about 14 ms before deployment, so the earlier spike was not constant saturation.
+All 141 tests pass, including continuous-load confirmation scheduling, candidate
+accounting/restart, immutable probe observations, accounting and terminal behavior.

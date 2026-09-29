@@ -26,6 +26,7 @@ COOLDOWN_SECONDS = 60.0
 MAX_ROUTES = 2000
 CONFIRM_SECONDS = 1.0
 CONFIRM_EXPIRY_SECONDS = 4.0
+CONFIRM_INSTRUMENTATION_VERSION = 1
 
 
 def _key(m):
@@ -90,6 +91,7 @@ class _Candidate:
     initial_edge_usd: float
     initial_forecast_usd: float
     initial_source_fallbacks: tuple[str, ...]
+    eligible_recorded: bool = False
 
 
 class StrategySelector:
@@ -115,6 +117,9 @@ class StrategySelector:
         self.observation_counts = Counter()
         self.candidates: dict[str, _Candidate] = {}
         self.confirmation_cancel_reasons = Counter()
+        self.confirmation_lifecycle = Counter()
+        self.confirmation_waiting_checks = Counter()
+        self.confirmation_instrumentation_begin_at = None
         self.last_maintenance = -math.inf
         self.criteria_changed_at = None
         self.migrated_from_version = None
@@ -157,8 +162,20 @@ class StrategySelector:
 
     def _expire_candidates(self, now):
         for route, candidate in list(self.candidates.items()):
-            if now > candidate.armed_at + CONFIRM_EXPIRY_SECONDS or route not in self.routes:
-                del self.candidates[route]
+            if now > candidate.armed_at + CONFIRM_EXPIRY_SECONDS:
+                self._terminal_candidate(route, 'expired')
+            elif route not in self.routes:
+                self._terminal_candidate(route, 'model_gap')
+
+    def _instrument_confirmation(self, now):
+        if self.confirmation_instrumentation_begin_at is None:
+            self.confirmation_instrumentation_begin_at = now
+
+    def _terminal_candidate(self, route, reason):
+        candidate = self.candidates.pop(route, None)
+        if candidate is not None:
+            self.confirmation_lifecycle[f'terminal_{reason}'] += 1
+        return candidate
 
     def observe(self, pair, books_by_key, now, signals=()):
         """Sample each executable direction, regardless of signal sign.
@@ -168,6 +185,7 @@ class StrategySelector:
         therefore cannot form a comparable observation.
         """
         signals = tuple(signals)
+        self._instrument_confirmation(now)
         if now - self.last_maintenance >= MIN_SAMPLE_INTERVAL:
             self._expire_idle(now)
         markets = {_key(pair['hl']): pair['hl'], _key(pair['other']): pair['other']}
@@ -178,9 +196,11 @@ class StrategySelector:
         observed = {s.get('route'): s for s in signals if isinstance(s, dict)}
         for route in pair_routes & self.candidates.keys():
             s = observed.get(route)
-            if s is None or not isinstance(s.get('net_edge_usd'), (int, float)) or \
+            if s is None:
+                self._terminal_candidate(route, 'observe_unexecutable')
+            elif not isinstance(s.get('net_edge_usd'), (int, float)) or \
                     not math.isfinite(s['net_edge_usd']) or s['net_edge_usd'] < .25:
-                del self.candidates[route]
+                self._terminal_candidate(route, 'observe_low_edge')
         for signal in signals:
             if not signal or signal.get('buy') not in markets or signal.get('sell') not in markets:
                 self.observation_counts['missing_signal'] += 1
@@ -271,11 +291,12 @@ class StrategySelector:
 
     def cancel_confirmation(self, route, reason='invalid_quote'):
         """Discard a pending route when fixed-quantity requoting is invalid."""
-        if self.candidates.pop(route, None) is None:
-            return False
         known = {'invalid_quote', 'budget', 'budget_or_depth', 'generation', 'economic', 'missing',
                  'pair_removed', 'gap', 'unexecutable'}
-        self.confirmation_cancel_reasons[reason if reason in known else 'other'] += 1
+        reason = reason if reason in known else 'other'
+        if self._terminal_candidate(route, f'cancel_{reason}') is None:
+            return False
+        self.confirmation_cancel_reasons[reason] += 1
         return True
 
     def pending_confirmation_targets(self, now):
@@ -308,6 +329,8 @@ class StrategySelector:
         """Return (allowed, diagnostics). A current-tick sample never votes."""
         if policy not in POLICIES:
             raise ValueError(f'unknown entry policy: {policy}')
+        if policy == 'confirmed':
+            self._instrument_confirmation(now)
         counts = self.counts[policy]
         counts['checked'] += 1
         route = signal.get('route') if isinstance(signal, dict) else None
@@ -326,7 +349,7 @@ class StrategySelector:
 
         def reject(reason):
             if policy == 'confirmed' and reason != 'confirmation' and route:
-                self.candidates.pop(route, None)
+                self._terminal_candidate(route, f'gate_{reason}')
             counts[f'rejected_{reason}'] += 1
             return False, diagnostic | {'reason': reason}
 
@@ -371,19 +394,20 @@ class StrategySelector:
             if stamps is None or not isinstance(signal.get('quantity'), (int, float)) or not (
                     math.isfinite(signal['quantity']) and signal['quantity'] > 0) or not signal.get('buy') or not signal.get('sell'):
                 diagnostic['confirmation_status'] = 'missing_quote_metadata'
-                self.candidates.pop(route, None)
+                self._terminal_candidate(route, 'missing_quote_metadata')
                 return reject('confirmation')
             candidate = self.candidates.get(route)
             if candidate is None:
                 if len(self.candidates) >= MAX_ROUTES:
                     oldest = min(self.candidates, key=lambda key: self.candidates[key].armed_at)
-                    del self.candidates[oldest]
+                    self._terminal_candidate(oldest, 'evicted')
                 self.candidates[route] = _Candidate(
                     now, float(signal['quantity']), signal['buy'], signal['sell'],
                     stamps['buy'][0], stamps['sell'][0],
                     None if 'buy' in fallbacks else stamps['buy'][1],
                     None if 'sell' in fallbacks else stamps['sell'][1],
                     stamps['buy'][2], stamps['sell'][2], edge, forecast, fallbacks)
+                self.confirmation_lifecycle['armed'] += 1
                 diagnostic.update({'confirmation_status': 'armed', 'armed_at': now,
                                    'confirmation_due': now + CONFIRM_SECONDS,
                                    'confirmation_expires': now + CONFIRM_EXPIRY_SECONDS})
@@ -395,32 +419,53 @@ class StrategySelector:
                                'confirmation_due': candidate.armed_at + CONFIRM_SECONDS,
                                'confirmation_expires': candidate.armed_at + CONFIRM_EXPIRY_SECONDS})
             if now > candidate.armed_at + CONFIRM_EXPIRY_SECONDS:
-                self.candidates.pop(route, None)
+                self._terminal_candidate(route, 'expired')
                 diagnostic['confirmation_status'] = 'expired'
                 return reject('confirmation')
             if (signal['buy'] != candidate.buy or signal['sell'] != candidate.sell or
                     abs(signal['quantity'] - candidate.quantity) > max(1e-10, candidate.quantity * 1e-10)):
-                self.candidates.pop(route, None)
+                self._terminal_candidate(route, 'quantity_or_route_changed')
                 diagnostic['confirmation_status'] = 'quantity_or_route_changed'
                 return reject('confirmation')
             if (stamps['buy'][2] != candidate.buy_generation or
                     stamps['sell'][2] != candidate.sell_generation):
-                self.candidates.pop(route, None)
+                self._terminal_candidate(route, 'generation_changed')
                 diagnostic['confirmation_status'] = 'generation_changed'
                 return reject('confirmation')
+            blockers = []
             for side in ('buy', 'sell'):
                 receipt, source, _ = stamps[side]
                 initial_receipt = getattr(candidate, f'{side}_received')
                 initial_source = getattr(candidate, f'{side}_source')
-                if receipt <= initial_receipt or source < candidate.armed_at + CONFIRM_SECONDS or (
-                        initial_source is not None and source <= initial_source):
-                    diagnostic['confirmation_status'] = 'awaiting_fresh_sources'
-                    return reject('confirmation')
+                if receipt <= initial_receipt:
+                    blockers.append(f'{side}_receipt_not_advanced')
+                if source < candidate.armed_at + CONFIRM_SECONDS:
+                    blockers.append(f'{side}_source_before_due')
+                if initial_source is not None and source <= initial_source:
+                    blockers.append(f'{side}_source_not_advanced')
+            if blockers:
+                diagnostic['confirmation_status'] = 'awaiting_fresh_sources'
+                diagnostic['confirmation_waiting_on'] = blockers
+                self.confirmation_waiting_checks['fresh_sources'] += 1
+                for blocker in blockers:
+                    self.confirmation_waiting_checks[blocker] += 1
+                return reject('confirmation')
             if now < candidate.armed_at + CONFIRM_SECONDS:
                 diagnostic['confirmation_status'] = 'awaiting_time'
+                self.confirmation_waiting_checks['time'] += 1
                 return reject('confirmation')
+            if not candidate.eligible_recorded:
+                candidate.eligible_recorded = True
+                self.confirmation_lifecycle['eligible_unique'] += 1
             diagnostic.update({'confirmation_status': 'confirmed', 'confirmed_at': now,
-                               'confirmed_quantity': candidate.quantity})
+                               'confirmed_quantity': candidate.quantity,
+                               'confirmation_age_seconds': now - candidate.armed_at,
+                               'buy_receipt_advance_seconds': stamps['buy'][0] - candidate.buy_received,
+                               'sell_receipt_advance_seconds': stamps['sell'][0] - candidate.sell_received,
+                               'buy_source_advance_seconds': stamps['buy'][1] - (
+                                   candidate.buy_source if candidate.buy_source is not None else candidate.buy_received),
+                               'sell_source_advance_seconds': stamps['sell'][1] - (
+                                   candidate.sell_source if candidate.sell_source is not None else candidate.sell_received)})
         counts['allowed'] += 1
         return True, diagnostic | {'reason': 'allowed'}
 
@@ -429,7 +474,8 @@ class StrategySelector:
             raise ValueError(f'unknown entry policy: {policy}')
         self.counts[policy]['entered'] += 1
         if policy == 'confirmed':
-            self.candidates.pop(signal['route'], None)
+            if self.candidates.pop(signal['route'], None) is not None:
+                self.confirmation_lifecycle['completed_entered'] += 1
         if policy != 'shadow_baseline':
             self.last_entries[policy][signal['route']] = now
             if len(self.last_entries[policy]) > MAX_ROUTES:
@@ -441,7 +487,7 @@ class StrategySelector:
         keep = set(routes)
         for route in list(self.candidates):
             if route not in keep:
-                del self.candidates[route]
+                self._terminal_candidate(route, 'route_removed')
         for route in list(self.routes):
             if route not in keep:
                 del self.routes[route]
@@ -451,12 +497,23 @@ class StrategySelector:
                     del entries[route]
 
     def snapshot(self, now):
+        self._instrument_confirmation(now)
         self._expire_idle(now)
         spans = [window.samples[-1][0] - window.samples[0][0] for window in self.routes.values()]
         warm = sum(len(window.samples) >= MIN_SAMPLES and span >= MIN_SPAN_SECONDS
                    for window, span in zip(self.routes.values(), spans))
         fields = ('checked', 'allowed', 'entered', 'rejected_signal', 'rejected_skew', 'rejected_cooldown',
                   'rejected_warmup', 'rejected_forecast', 'rejected_duplicate', 'rejected_confirmation')
+        terminal_reasons = {name.removeprefix('terminal_'): count
+                            for name, count in self.confirmation_lifecycle.items()
+                            if name.startswith('terminal_')}
+        armed = self.confirmation_lifecycle['armed']
+        completed = self.confirmation_lifecycle['completed_entered']
+        pending = len(self.candidates)
+        lifecycle = {'armed': armed, 'eligible_unique': self.confirmation_lifecycle['eligible_unique'],
+                     'completed_entered': completed, 'terminal_reasons': terminal_reasons,
+                     'terminal_total': sum(terminal_reasons.values()), 'pending': pending,
+                     'accounting_residual': armed - completed - sum(terminal_reasons.values()) - pending}
         return {'version': POLICY_VERSION, 'criteria_changed_at': self.criteria_changed_at,
                 'migrated_from_version': self.migrated_from_version, 'sampled_routes': len(self.routes), 'warm_routes': warm,
                 'training_skew_limit_seconds': self.training_skew_limit,
@@ -466,6 +523,10 @@ class StrategySelector:
                 'max_route_samples': max((len(window.samples) for window in self.routes.values()), default=0),
                 'max_route_span_seconds': max(spans, default=0.0),
                 'pending_confirmations': len(self.candidates),
+                'confirmation_instrumentation_version': CONFIRM_INSTRUMENTATION_VERSION,
+                'confirmation_instrumentation_begin_at': self.confirmation_instrumentation_begin_at,
+                'confirmation_lifecycle': lifecycle,
+                'confirmation_waiting_checks': dict(self.confirmation_waiting_checks),
                 'confirmation_min_seconds': CONFIRM_SECONDS,
                 'confirmation_expiry_seconds': CONFIRM_EXPIRY_SECONDS,
                 'confirmation_cancel_reasons': dict(self.confirmation_cancel_reasons),
@@ -488,6 +549,11 @@ class StrategySelector:
                 'confirmation_expiry_seconds': CONFIRM_EXPIRY_SECONDS,
                 'last_entries': {name: dict(entries) for name, entries in self.last_entries.items()},
                 'counts': {name: dict(counts) for name, counts in self.counts.items()},
+                'confirmation_instrumentation_version': CONFIRM_INSTRUMENTATION_VERSION,
+                'confirmation_instrumentation_begin_at': self.confirmation_instrumentation_begin_at,
+                'confirmation_lifecycle_counts': dict(self.confirmation_lifecycle),
+                'confirmation_waiting_checks': dict(self.confirmation_waiting_checks),
+                'confirmation_pending_at_export': len(self.candidates),
                 'confirmation_cancel_reasons': dict(self.confirmation_cancel_reasons),
                 'observation_counts': dict(self.observation_counts)}
 
@@ -513,3 +579,15 @@ class StrategySelector:
                                                       key=lambda item: item[1], reverse=True)[:MAX_ROUTES])
         self.observation_counts = Counter(state.get('observation_counts', {}))
         self.confirmation_cancel_reasons = Counter(state.get('confirmation_cancel_reasons', {}))
+        if state.get('confirmation_instrumentation_version') == CONFIRM_INSTRUMENTATION_VERSION:
+            self.confirmation_instrumentation_begin_at = state.get('confirmation_instrumentation_begin_at', now)
+            self.confirmation_lifecycle = Counter(state.get('confirmation_lifecycle_counts', {}))
+            self.confirmation_waiting_checks = Counter(state.get('confirmation_waiting_checks', {}))
+            pending = int(state.get('confirmation_pending_at_export', 0))
+            if pending > 0:
+                self.confirmation_lifecycle['terminal_restart_discarded'] += min(pending, MAX_ROUTES)
+        else:
+            # Earlier confirmation checks cannot be reconstructed by inference.
+            self.confirmation_instrumentation_begin_at = now
+            self.confirmation_lifecycle = Counter()
+            self.confirmation_waiting_checks = Counter()

@@ -142,12 +142,15 @@ class SelectorTests(unittest.TestCase):
         allowed, diagnostic = self.selector.allow('confirmed', initial, 124)
         self.assertFalse(allowed)
         self.assertEqual(diagnostic['confirmation_status'], 'armed')
+        lifecycle = self.selector.snapshot(124)['confirmation_lifecycle']
+        self.assertEqual((lifecycle['armed'], lifecycle['pending'], lifecycle['accounting_residual']), (1, 1, 0))
         self.assertEqual(self.selector.confirmation_quantity(ROUTE), 10)
         self.assertEqual(self.selector.pending_confirmation_targets(124)[0]['due'], 125)
         same = confirmed_signal(125.1, buy_source=124, sell_source=124)
         self.assertEqual(self.selector.allow('confirmed', same, 125.1)[1]['confirmation_status'], 'awaiting_fresh_sources')
         one = confirmed_signal(125.2, buy_source=125.2, sell_source=124)
         self.assertEqual(self.selector.allow('confirmed', one, 125.2)[1]['confirmation_status'], 'awaiting_fresh_sources')
+        self.assertEqual(self.selector.snapshot(125.2)['confirmation_waiting_checks']['fresh_sources'], 2)
         changed_size = confirmed_signal(125.3, quantity=11)
         self.assertEqual(self.selector.allow('confirmed', changed_size, 125.3)[1]['confirmation_status'],
                          'quantity_or_route_changed')
@@ -158,8 +161,17 @@ class SelectorTests(unittest.TestCase):
         self.assertEqual(proof['confirmation_status'], 'confirmed')
         self.assertEqual(proof['confirmed_quantity'], 10)
         self.assertEqual(proof['initial_edge_usd'], 25)
+        self.assertAlmostEqual(proof['confirmation_age_seconds'], 1.1)
+        self.assertAlmostEqual(proof['buy_source_advance_seconds'], 1.1)
+        self.selector.entered('confirmed', confirmed_signal(127.1), 127.1)
         self.selector.entered('confirmed', confirmed_signal(127.1), 127.1)
         self.assertIsNone(self.selector.confirmation_quantity(ROUTE))
+        lifecycle = self.selector.snapshot(127.1)['confirmation_lifecycle']
+        self.assertEqual(lifecycle['armed'], 2)
+        self.assertEqual(lifecycle['eligible_unique'], 1)
+        self.assertEqual(lifecycle['completed_entered'], 1)
+        self.assertEqual(lifecycle['terminal_reasons']['quantity_or_route_changed'], 1)
+        self.assertEqual(lifecycle['accounting_residual'], 0)
 
     def test_confirmed_resets_on_generation_economics_expiry_and_cancel(self):
         self.warm()
@@ -178,6 +190,10 @@ class SelectorTests(unittest.TestCase):
         self.selector.allow('confirmed', confirmed_signal(132), 132)
         self.assertTrue(self.selector.cancel_confirmation(ROUTE, 'budget'))
         self.assertEqual(self.selector.snapshot(132)['confirmation_cancel_reasons']['budget'], 1)
+        lifecycle = self.selector.snapshot(132)['confirmation_lifecycle']
+        self.assertEqual(lifecycle['armed'], 4)
+        self.assertEqual(lifecycle['terminal_total'], 4)
+        self.assertEqual(lifecycle['accounting_residual'], 0)
 
     def test_confirmed_unknown_source_uses_receipt_with_explicit_evidence(self):
         self.warm()
@@ -205,6 +221,41 @@ class SelectorTests(unittest.TestCase):
         self.assertEqual(restored.allow('cooldown', signal(150), 150)[1]['reason'], 'cooldown')
         self.assertEqual(restored.snapshot(150)['pending_confirmations'], 0)
         self.assertEqual(restored.snapshot(150)['migrated_from_version'], 2)
+        lifecycle = restored.snapshot(150)['confirmation_lifecycle']
+        self.assertEqual(lifecycle['terminal_reasons']['restart_discarded'], 1)
+        self.assertEqual(lifecycle['accounting_residual'], 0)
+
+    def test_confirmation_route_removal_and_legacy_instrumentation_boundary(self):
+        self.warm()
+        self.selector.allow('confirmed', confirmed_signal(124), 124)
+        self.selector.retain_routes([])
+        lifecycle = self.selector.snapshot(124)['confirmation_lifecycle']
+        self.assertEqual(lifecycle['terminal_reasons']['route_removed'], 1)
+        self.assertEqual(lifecycle['accounting_residual'], 0)
+        old = self.selector.export_state()
+        for key in ('confirmation_instrumentation_version', 'confirmation_instrumentation_begin_at',
+                    'confirmation_lifecycle_counts', 'confirmation_waiting_checks',
+                    'confirmation_pending_at_export'):
+            old.pop(key)
+        restored = StrategySelector(SimpleNamespace(max_book_age=2))
+        restored.restore_state(old, 130)
+        fresh = restored.snapshot(130)
+        self.assertEqual(fresh['confirmation_instrumentation_begin_at'], 130)
+        self.assertEqual(fresh['confirmation_lifecycle']['armed'], 0)
+
+    def test_confirmation_gate_and_unexecutable_terminal_counts_once(self):
+        self.warm()
+        self.selector.allow('confirmed', confirmed_signal(124), 124)
+        self.assertEqual(self.selector.allow('confirmed', confirmed_signal(125, 0), 125)[1]['reason'], 'signal')
+        self.assertFalse(self.selector.cancel_confirmation(ROUTE))
+        self.selector.allow('confirmed', confirmed_signal(126), 126)
+        self.selector.observe(PAIR, books(126.1), 126.1, [])
+        lifecycle = self.selector.snapshot(126.1)['confirmation_lifecycle']
+        self.assertEqual(lifecycle['terminal_reasons']['gate_signal'], 1)
+        self.assertEqual(lifecycle['terminal_reasons']['observe_unexecutable'], 1)
+        self.assertEqual(lifecycle['armed'], 2)
+        self.assertEqual(lifecycle['terminal_total'], 2)
+        self.assertEqual(lifecycle['accounting_residual'], 0)
 
     def test_gate_skew_cooldown_and_state_restore(self):
         s = signal(0, .25)
