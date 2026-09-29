@@ -206,3 +206,15 @@ paired quote experiment, not a fill simulator or cash profit tally.
   Version 1 requires a full original-size HL fill before sending the other
   leg; a partial HL fill is flattened in full. No live process or main-policy
   change has been made for that study.
+
+## Status at 20:40 UTC
+
+- Review 13 was read on time at 20:26; next review is 20:46:33 UTC.
+- Maker capture PID 2173403 stopped normally at 20:29:56, with 10,619 records
+  and 3.76 MB total storage. Frozen input hashes matched. Its single silver
+  flow case had no eligible complete exit, so net P&L remains unknown.
+  [Results and coverage](maker-equity-results.md) distinguish the frozen
+  result from a post hoc inspection of later, ineligible quotes.
+- The HL-first experiment passed 31 focused/adjacent tests and independent
+  storage and accounting review. Root requested normalized exposure metrics
+  before freezing and launching the 19-pair, 20-minute isolated trial.

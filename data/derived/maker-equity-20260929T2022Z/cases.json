@@ -1,0 +1,30 @@
+[
+  {
+    "anchor_utc": "2026-09-29T20:28:20+00:00",
+    "asset": "XAG",
+    "decision_after_four_fee_allowance_bps": 2.1386534640562864,
+    "decision_positive": true,
+    "exit_status": "missing_due_exit_side",
+    "flow_qualifying_qty": 165.0,
+    "flow_receipt_utc": "2026-09-29T20:28:22.313848+00:00",
+    "flow_source_utc": "2026-09-29T20:28:21.991000+00:00",
+    "flow_to_deadline_crosses_funding_hour": false,
+    "hard_deadline_after_capture_end": false,
+    "hard_deadline_utc": "2026-09-29T20:28:32.313848+00:00",
+    "hedge": "lighter",
+    "hedge_due_utc": "2026-09-29T20:28:22.713848+00:00",
+    "hedge_exit_due_utc": "2026-09-29T20:28:28.338844+00:00",
+    "hedge_receipt_utc": "2026-09-29T20:28:22.938844+00:00",
+    "hedge_source_utc": "2026-09-29T20:28:22.870605+00:00",
+    "hedge_status": "hedge_found",
+    "maker": "hyperliquid",
+    "maker_activation_receipt_utc": "2026-09-29T20:28:21.502006+00:00",
+    "maker_activation_source_utc": "2026-09-29T20:28:21.253000+00:00",
+    "maker_delay_s": 1.0,
+    "maker_entry_px": 61.402,
+    "maker_exit_due_utc": "2026-09-29T20:28:28.038844+00:00",
+    "qty": 16.28,
+    "queue_ahead_qty": 6.01,
+    "side": "buy"
+  }
+]

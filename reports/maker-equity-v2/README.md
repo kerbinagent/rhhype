@@ -1,6 +1,8 @@
 # NVDA/silver maker quote study, version 2
 
-Status: code and method audited and frozen before capture.
+Status: completed at **20:29:56 UTC**. The [results](results.md) contain one
+hypothetical full-flow signal, one hedge quote, and no complete exit or P&L
+observation. Code and method were audited and frozen before capture.
 
 Verified capture start: **20:22:56 UTC**, PID 2173403, scheduled duration
 420 seconds with a 25 MB cap. An earlier 20:20 launch failed before data

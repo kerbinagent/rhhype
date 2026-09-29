@@ -1,0 +1,1150 @@
+{
+  "absent_control": "no all-taker control in this v2 study",
+  "analyzer_sha256": "85d4de8cfd523b4a4497e3e2f6411b05f3737f2133d4c167ddce708af363843f",
+  "capture": "data/raw/maker-capture/20260929T2022Z",
+  "capture_integrity": {
+    "combined_bytes": 3758827,
+    "compressed_size_matches": true,
+    "decoded_records": 10619,
+    "gzip_bytes": 3755149,
+    "gzip_sha256": "3a1ffe9e3578899df800bf8fceec7beda8fc82b136a6c00edc64a20a8316f775",
+    "manifest_bytes": 3678,
+    "manifest_payload_records": 10619,
+    "manifest_sha256": "a3f83c319f5e71938ffa9ae6ec170eb48b3024123147e554ee4c20296cade898",
+    "plan_hash_matches_current": true,
+    "record_count_matches": true,
+    "under_total_cap": true
+  },
+  "classification": "conditional public-book quote path, no actual maker fill or execution P&L",
+  "cohorts": [
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 4,
+        "decision_receipt_skew": 1,
+        "decision_skew": 5,
+        "maker_price_moved_or_crossed": 1,
+        "missing_due_arrival_quote": 2,
+        "quote_supported": 3,
+        "stale_decision": 70
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 1,
+        "missing_due_arrival_quote": 2,
+        "quote_supported": 3
+      },
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 1.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 3,
+        "decision_receipt_skew": 1,
+        "decision_skew": 5,
+        "missing_due_arrival_quote": 3,
+        "no_full_flow": 1,
+        "quote_supported": 4,
+        "same_price_arrival": 1,
+        "stale_decision": 70
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {},
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 1.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_receipt_skew": 1,
+        "decision_skew": 5,
+        "maker_price_moved_or_crossed": 3,
+        "missing_due_arrival_quote": 4,
+        "quote_supported": 7,
+        "stale_decision": 70
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "maker_delay_s": 1.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_receipt_skew": 1,
+        "decision_skew": 5,
+        "missing_due_arrival_quote": 4,
+        "no_full_flow": 3,
+        "quote_supported": 7,
+        "same_price_arrival": 3,
+        "stale_decision": 70
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {
+        "missing_due_arrival_quote": 2,
+        "no_full_flow": 2,
+        "quote_supported": 4,
+        "same_price_arrival": 2
+      },
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "maker_delay_s": 1.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 4,
+        "decision_skew": 3,
+        "maker_price_moved_or_crossed": 2,
+        "missing_due_arrival_quote": 4,
+        "no_full_flow": 1,
+        "quote_supported": 7,
+        "same_price_arrival": 1,
+        "stale_decision": 69
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 2,
+        "missing_due_arrival_quote": 4,
+        "no_full_flow": 1,
+        "quote_supported": 7,
+        "same_price_arrival": 1
+      },
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 1.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 7,
+        "decision_skew": 3,
+        "missing_due_arrival_quote": 3,
+        "no_full_flow": 1,
+        "quote_supported": 4,
+        "same_price_arrival": 1,
+        "stale_decision": 69
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {},
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 1.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_skew": 3,
+        "missing_due_arrival_quote": 10,
+        "no_full_flow": 1,
+        "quote_supported": 11,
+        "same_price_arrival": 1,
+        "stale_decision": 69
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "maker_delay_s": 1.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 1,
+        "decision_skew": 3,
+        "maker_price_moved_or_crossed": 1,
+        "missing_due_arrival_quote": 9,
+        "quote_supported": 10,
+        "stale_decision": 69
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 1,
+        "missing_due_arrival_quote": 9,
+        "quote_supported": 10
+      },
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "maker_delay_s": 1.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 4,
+        "decision_receipt_skew": 1,
+        "decision_skew": 12,
+        "full_flow": 1,
+        "hedge_found": 1,
+        "maker_price_moved_or_crossed": 12,
+        "missing_due_arrival_quote": 12,
+        "missing_due_exit_side": 1,
+        "no_full_flow": 10,
+        "quote_supported": 35,
+        "same_price_arrival": 11,
+        "stale_decision": 31
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {
+        "full_flow": 1,
+        "hedge_found": 1,
+        "maker_price_moved_or_crossed": 12,
+        "missing_due_arrival_quote": 12,
+        "missing_due_exit_side": 1,
+        "no_full_flow": 10,
+        "quote_supported": 35,
+        "same_price_arrival": 11
+      },
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 1.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 9,
+        "decision_receipt_skew": 1,
+        "decision_skew": 12,
+        "maker_price_moved_or_crossed": 10,
+        "missing_due_arrival_quote": 11,
+        "no_full_flow": 9,
+        "quote_supported": 30,
+        "same_price_arrival": 9,
+        "stale_decision": 31
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {},
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 1.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 4,
+        "decision_receipt_skew": 1,
+        "decision_skew": 12,
+        "maker_price_moved_or_crossed": 20,
+        "missing_due_arrival_quote": 9,
+        "no_full_flow": 6,
+        "quote_supported": 35,
+        "same_price_arrival": 6,
+        "stale_decision": 31
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "maker_delay_s": 1.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 1,
+        "decision_receipt_skew": 1,
+        "decision_skew": 12,
+        "maker_price_moved_or_crossed": 20,
+        "missing_due_arrival_quote": 9,
+        "no_full_flow": 9,
+        "quote_supported": 38,
+        "same_price_arrival": 9,
+        "stale_decision": 31
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 20,
+        "missing_due_arrival_quote": 9,
+        "no_full_flow": 9,
+        "quote_supported": 38,
+        "same_price_arrival": 9
+      },
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "maker_delay_s": 1.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 7,
+        "decision_receipt_skew": 4,
+        "decision_skew": 6,
+        "maker_price_moved_or_crossed": 5,
+        "missing_due_arrival_quote": 4,
+        "no_full_flow": 1,
+        "quote_supported": 10,
+        "same_price_arrival": 1,
+        "stale_decision": 56
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 5,
+        "missing_due_arrival_quote": 4,
+        "no_full_flow": 1,
+        "quote_supported": 10,
+        "same_price_arrival": 1
+      },
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 1.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 1,
+        "decision_receipt_skew": 4,
+        "decision_skew": 6,
+        "maker_price_moved_or_crossed": 7,
+        "missing_due_arrival_quote": 8,
+        "no_full_flow": 1,
+        "quote_supported": 16,
+        "same_price_arrival": 1,
+        "stale_decision": 56
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {},
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 1.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 3,
+        "decision_receipt_skew": 4,
+        "decision_skew": 6,
+        "maker_price_moved_or_crossed": 3,
+        "missing_due_arrival_quote": 8,
+        "no_full_flow": 3,
+        "quote_supported": 14,
+        "same_price_arrival": 3,
+        "stale_decision": 56
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "maker_delay_s": 1.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_receipt_skew": 4,
+        "decision_skew": 6,
+        "maker_price_moved_or_crossed": 4,
+        "missing_due_arrival_quote": 10,
+        "no_full_flow": 3,
+        "quote_supported": 17,
+        "same_price_arrival": 3,
+        "stale_decision": 56
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 4,
+        "missing_due_arrival_quote": 10,
+        "no_full_flow": 3,
+        "quote_supported": 17,
+        "same_price_arrival": 3
+      },
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "maker_delay_s": 1.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 4,
+        "decision_receipt_skew": 1,
+        "decision_skew": 5,
+        "maker_price_moved_or_crossed": 1,
+        "missing_due_arrival_quote": 2,
+        "quote_supported": 3,
+        "stale_decision": 70
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 1,
+        "missing_due_arrival_quote": 2,
+        "quote_supported": 3
+      },
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 0.5,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 3,
+        "decision_receipt_skew": 1,
+        "decision_skew": 5,
+        "missing_due_arrival_quote": 2,
+        "no_full_flow": 2,
+        "quote_supported": 4,
+        "same_price_arrival": 2,
+        "stale_decision": 70
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {},
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 0.5,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_receipt_skew": 1,
+        "decision_skew": 5,
+        "maker_price_moved_or_crossed": 3,
+        "missing_due_arrival_quote": 3,
+        "no_full_flow": 1,
+        "quote_supported": 7,
+        "same_price_arrival": 1,
+        "stale_decision": 70
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "maker_delay_s": 0.5,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_receipt_skew": 1,
+        "decision_skew": 5,
+        "maker_price_moved_or_crossed": 1,
+        "missing_due_arrival_quote": 3,
+        "no_full_flow": 3,
+        "quote_supported": 7,
+        "same_price_arrival": 3,
+        "stale_decision": 70
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {
+        "missing_due_arrival_quote": 2,
+        "no_full_flow": 2,
+        "quote_supported": 4,
+        "same_price_arrival": 2
+      },
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "maker_delay_s": 0.5,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 4,
+        "decision_skew": 3,
+        "maker_price_moved_or_crossed": 2,
+        "missing_due_arrival_quote": 4,
+        "no_full_flow": 1,
+        "quote_supported": 7,
+        "same_price_arrival": 1,
+        "stale_decision": 69
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 2,
+        "missing_due_arrival_quote": 4,
+        "no_full_flow": 1,
+        "quote_supported": 7,
+        "same_price_arrival": 1
+      },
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 0.5,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 7,
+        "decision_skew": 3,
+        "missing_due_arrival_quote": 3,
+        "no_full_flow": 1,
+        "quote_supported": 4,
+        "same_price_arrival": 1,
+        "stale_decision": 69
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {},
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 0.5,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_skew": 3,
+        "missing_due_arrival_quote": 6,
+        "no_full_flow": 5,
+        "quote_supported": 11,
+        "same_price_arrival": 5,
+        "stale_decision": 69
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "maker_delay_s": 0.5,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 1,
+        "decision_skew": 3,
+        "maker_price_moved_or_crossed": 3,
+        "missing_due_arrival_quote": 5,
+        "no_full_flow": 2,
+        "quote_supported": 10,
+        "same_price_arrival": 2,
+        "stale_decision": 69
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 3,
+        "missing_due_arrival_quote": 5,
+        "no_full_flow": 2,
+        "quote_supported": 10,
+        "same_price_arrival": 2
+      },
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "maker_delay_s": 0.5,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 4,
+        "decision_receipt_skew": 1,
+        "decision_skew": 12,
+        "maker_price_moved_or_crossed": 10,
+        "missing_due_arrival_quote": 15,
+        "no_full_flow": 10,
+        "quote_supported": 35,
+        "same_price_arrival": 10,
+        "stale_decision": 31
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 10,
+        "missing_due_arrival_quote": 15,
+        "no_full_flow": 10,
+        "quote_supported": 35,
+        "same_price_arrival": 10
+      },
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 0.5,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 9,
+        "decision_receipt_skew": 1,
+        "decision_skew": 12,
+        "maker_price_moved_or_crossed": 9,
+        "missing_due_arrival_quote": 14,
+        "no_full_flow": 7,
+        "quote_supported": 30,
+        "same_price_arrival": 7,
+        "stale_decision": 31
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {},
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 0.5,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 4,
+        "decision_receipt_skew": 1,
+        "decision_skew": 12,
+        "maker_price_moved_or_crossed": 18,
+        "missing_due_arrival_quote": 6,
+        "no_full_flow": 11,
+        "quote_supported": 35,
+        "same_price_arrival": 11,
+        "stale_decision": 31
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "maker_delay_s": 0.5,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 1,
+        "decision_receipt_skew": 1,
+        "decision_skew": 12,
+        "maker_price_moved_or_crossed": 19,
+        "missing_due_arrival_quote": 6,
+        "no_full_flow": 13,
+        "quote_supported": 38,
+        "same_price_arrival": 13,
+        "stale_decision": 31
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 19,
+        "missing_due_arrival_quote": 6,
+        "no_full_flow": 13,
+        "quote_supported": 38,
+        "same_price_arrival": 13
+      },
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "maker_delay_s": 0.5,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 7,
+        "decision_receipt_skew": 4,
+        "decision_skew": 6,
+        "maker_price_moved_or_crossed": 5,
+        "missing_due_arrival_quote": 5,
+        "quote_supported": 10,
+        "stale_decision": 56
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 5,
+        "missing_due_arrival_quote": 5,
+        "quote_supported": 10
+      },
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 0.5,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 1,
+        "decision_receipt_skew": 4,
+        "decision_skew": 6,
+        "maker_price_moved_or_crossed": 5,
+        "missing_due_arrival_quote": 7,
+        "no_full_flow": 4,
+        "quote_supported": 16,
+        "same_price_arrival": 4,
+        "stale_decision": 56
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {},
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 0.5,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 3,
+        "decision_receipt_skew": 4,
+        "decision_skew": 6,
+        "maker_price_moved_or_crossed": 1,
+        "missing_due_arrival_quote": 10,
+        "no_full_flow": 3,
+        "quote_supported": 14,
+        "same_price_arrival": 3,
+        "stale_decision": 56
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "maker_delay_s": 0.5,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_receipt_skew": 4,
+        "decision_skew": 6,
+        "maker_price_moved_or_crossed": 3,
+        "missing_due_arrival_quote": 12,
+        "no_full_flow": 2,
+        "quote_supported": 17,
+        "same_price_arrival": 2,
+        "stale_decision": 56
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 3,
+        "missing_due_arrival_quote": 12,
+        "no_full_flow": 2,
+        "quote_supported": 17,
+        "same_price_arrival": 2
+      },
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "maker_delay_s": 0.5,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 4,
+        "decision_receipt_skew": 1,
+        "decision_skew": 5,
+        "missing_due_arrival_quote": 3,
+        "quote_supported": 3,
+        "stale_decision": 70
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {
+        "missing_due_arrival_quote": 3,
+        "quote_supported": 3
+      },
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 3.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 3,
+        "decision_receipt_skew": 1,
+        "decision_skew": 5,
+        "missing_due_arrival_quote": 2,
+        "no_full_flow": 2,
+        "quote_supported": 4,
+        "same_price_arrival": 2,
+        "stale_decision": 70
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {},
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 3.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_receipt_skew": 1,
+        "decision_skew": 5,
+        "maker_price_moved_or_crossed": 3,
+        "missing_due_arrival_quote": 3,
+        "no_full_flow": 1,
+        "quote_supported": 7,
+        "same_price_arrival": 1,
+        "stale_decision": 70
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "maker_delay_s": 3.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_receipt_skew": 1,
+        "decision_skew": 5,
+        "maker_price_moved_or_crossed": 1,
+        "missing_due_arrival_quote": 3,
+        "no_full_flow": 3,
+        "quote_supported": 7,
+        "same_price_arrival": 3,
+        "stale_decision": 70
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {
+        "missing_due_arrival_quote": 1,
+        "no_full_flow": 3,
+        "quote_supported": 4,
+        "same_price_arrival": 3
+      },
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "maker_delay_s": 3.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 4,
+        "decision_skew": 3,
+        "maker_price_moved_or_crossed": 3,
+        "missing_due_arrival_quote": 4,
+        "quote_supported": 7,
+        "stale_decision": 69
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 3,
+        "missing_due_arrival_quote": 4,
+        "quote_supported": 7
+      },
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 3.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 7,
+        "decision_skew": 3,
+        "missing_due_arrival_quote": 3,
+        "no_full_flow": 1,
+        "quote_supported": 4,
+        "same_price_arrival": 1,
+        "stale_decision": 69
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {},
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 3.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_skew": 3,
+        "maker_price_moved_or_crossed": 1,
+        "missing_due_arrival_quote": 8,
+        "no_full_flow": 2,
+        "quote_supported": 11,
+        "same_price_arrival": 2,
+        "stale_decision": 69
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "maker_delay_s": 3.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 1,
+        "decision_skew": 3,
+        "maker_price_moved_or_crossed": 3,
+        "missing_due_arrival_quote": 7,
+        "quote_supported": 10,
+        "stale_decision": 69
+      },
+      "asset": "NVDA",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 3,
+        "missing_due_arrival_quote": 7,
+        "quote_supported": 10
+      },
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "maker_delay_s": 3.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 4,
+        "decision_receipt_skew": 1,
+        "decision_skew": 12,
+        "maker_price_moved_or_crossed": 18,
+        "missing_due_arrival_quote": 10,
+        "no_full_flow": 7,
+        "quote_supported": 35,
+        "same_price_arrival": 7,
+        "stale_decision": 31
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 18,
+        "missing_due_arrival_quote": 10,
+        "no_full_flow": 7,
+        "quote_supported": 35,
+        "same_price_arrival": 7
+      },
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 3.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 9,
+        "decision_receipt_skew": 1,
+        "decision_skew": 12,
+        "maker_price_moved_or_crossed": 16,
+        "missing_due_arrival_quote": 8,
+        "no_full_flow": 6,
+        "quote_supported": 30,
+        "same_price_arrival": 6,
+        "stale_decision": 31
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {},
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 3.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 4,
+        "decision_receipt_skew": 1,
+        "decision_skew": 12,
+        "maker_price_moved_or_crossed": 26,
+        "missing_due_arrival_quote": 5,
+        "no_full_flow": 4,
+        "quote_supported": 35,
+        "same_price_arrival": 4,
+        "stale_decision": 31
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "maker_delay_s": 3.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 1,
+        "decision_receipt_skew": 1,
+        "decision_skew": 12,
+        "maker_price_moved_or_crossed": 30,
+        "missing_due_arrival_quote": 6,
+        "no_full_flow": 2,
+        "quote_supported": 38,
+        "same_price_arrival": 2,
+        "stale_decision": 31
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 30,
+        "missing_due_arrival_quote": 6,
+        "no_full_flow": 2,
+        "quote_supported": 38,
+        "same_price_arrival": 2
+      },
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "maker_delay_s": 3.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 7,
+        "decision_receipt_skew": 4,
+        "decision_skew": 6,
+        "maker_price_moved_or_crossed": 5,
+        "missing_due_arrival_quote": 3,
+        "no_full_flow": 2,
+        "quote_supported": 10,
+        "same_price_arrival": 2,
+        "stale_decision": 56
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 5,
+        "missing_due_arrival_quote": 3,
+        "no_full_flow": 2,
+        "quote_supported": 10,
+        "same_price_arrival": 2
+      },
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 3.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 1,
+        "decision_receipt_skew": 4,
+        "decision_skew": 6,
+        "maker_price_moved_or_crossed": 8,
+        "missing_due_arrival_quote": 5,
+        "no_full_flow": 3,
+        "quote_supported": 16,
+        "same_price_arrival": 3,
+        "stale_decision": 56
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {},
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "maker_delay_s": 3.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_depth_or_minimum": 3,
+        "decision_receipt_skew": 4,
+        "decision_skew": 6,
+        "maker_price_moved_or_crossed": 2,
+        "missing_due_arrival_quote": 12,
+        "quote_supported": 14,
+        "stale_decision": 56
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "maker_delay_s": 3.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 83,
+        "decision_receipt_skew": 4,
+        "decision_skew": 6,
+        "maker_price_moved_or_crossed": 2,
+        "missing_due_arrival_quote": 14,
+        "no_full_flow": 1,
+        "quote_supported": 17,
+        "same_price_arrival": 1,
+        "stale_decision": 56
+      },
+      "asset": "XAG",
+      "decision_positive_subset": {
+        "maker_price_moved_or_crossed": 2,
+        "missing_due_arrival_quote": 14,
+        "no_full_flow": 1,
+        "quote_supported": 17,
+        "same_price_arrival": 1
+      },
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "maker_delay_s": 3.0,
+      "maker_source_ahead_trade_count": 0,
+      "side": "sell"
+    }
+  ],
+  "fee_inputs": "reports/maker-equity-v2/fee-inputs.json",
+  "fee_inputs_sha256": "9c095080b3da1a4de39e0fb2e66a50b6b734480e7f6ce425c8811c9311bdb3db",
+  "fee_rates_bps": {
+    "NVDA": {
+      "hyperliquid": {
+        "maker": 0.3,
+        "taker": 0.9
+      },
+      "lighter": {
+        "maker": 0.0,
+        "taker": 0.0
+      },
+      "rh_lighter": {
+        "maker": 0.0,
+        "taker": 0.0
+      }
+    },
+    "XAG": {
+      "hyperliquid": {
+        "maker": 0.3,
+        "taker": 0.9
+      },
+      "lighter": {
+        "maker": 0.0,
+        "taker": 0.0
+      },
+      "rh_lighter": {
+        "maker": 0.0,
+        "taker": 0.0
+      }
+    }
+  },
+  "financing": "unmodeled; 5 bp reserve is a generic stress allowance, not financing cashflow",
+  "frozen_method": "research/maker-equity-plan.md",
+  "frozen_method_sha256": "626e98811b1de877d8fd2090d97e4f9396ba9023d1193467389d13c0ff8eb339",
+  "full_flow_cases": 1,
+  "market_plan_sha256": "8764b8c656ab1ebf6772eedfb22ab541eef28b81c9fa116056fea67366e5c93f",
+  "rh_quote_comparison": "conditional USDG/USDC parity arithmetic; conversion cost and execution unmodeled",
+  "session": "single post-market capture; no regular-hours or overnight comparison",
+  "shared_archive_loader_before_adapter_sha256": "a224448f09f60d9973bed981b295d56af8a67ae2e50bf033355eab8c76c7c02e",
+  "shared_archive_loader_sha256": "d87ce8f116e039976b7afac20ede5704d14b3d49eb626473d214a7d47811b359"
+}
