@@ -1,0 +1,12 @@
+{
+  "plan.json": {
+    "sha256_uncompressed": "722fa64077a9fd6a4148d7a76a5abec029f9684241f551472ac3e2c75c846248",
+    "bytes": 16199,
+    "gzip_bytes": 1600
+  },
+  "horizon_snapshot.json": {
+    "sha256_uncompressed": "e71aa4e1dfea2ada460c423028b7f5daa669afa770fdd63176d44933a10522a1",
+    "bytes": 4658837,
+    "gzip_bytes": 379670
+  }
+}
