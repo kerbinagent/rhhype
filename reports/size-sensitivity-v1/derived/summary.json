@@ -1,0 +1,768 @@
+{
+  "RH_parity": "conditional USDG/USDC parity quote arithmetic; no conversion execution",
+  "analyzer_sha256": "b963e06ece1055121ea94813b96ec6fdf1373bf39e50ee3effafd14c0ab0654c",
+  "archive_loader_sha256": "d87ce8f116e039976b7afac20ede5704d14b3d49eb626473d214a7d47811b359",
+  "capital": "illustrative 5% annual on 100% of each own entry notional for its quote interval",
+  "capture": "data/raw/maker-capture/20260929T2022Z",
+  "capture_integrity": {
+    "combined_bytes": 3758827,
+    "compressed_size_matches": true,
+    "decoded_records": 10619,
+    "gzip_bytes": 3755149,
+    "gzip_sha256": "3a1ffe9e3578899df800bf8fceec7beda8fc82b136a6c00edc64a20a8316f775",
+    "manifest_bytes": 3678,
+    "manifest_payload_records": 10619,
+    "manifest_sha256": "a3f83c319f5e71938ffa9ae6ec170eb48b3024123147e554ee4c20296cade898",
+    "plan_hash_matches_current": true,
+    "record_count_matches": true,
+    "under_total_cap": true
+  },
+  "cohorts": [
+    {
+      "after_fee_reserve_capital_bps": [
+        -7.767072978228342
+      ],
+      "anchors": 83,
+      "asset": "NVDA",
+      "buy": "hyperliquid",
+      "complete": 1,
+      "sell": "lighter",
+      "status_counts": {
+        "both_entry_legs_unresolved": 1,
+        "buy_entry_status:eligible": 3,
+        "buy_entry_status:missing_first_quote": 4,
+        "buy_exit_status:eligible": 1,
+        "complete_conditional_quote_path": 1,
+        "decision_skew": 6,
+        "one_entry_leg_unresolved": 5,
+        "sell_entry_status:eligible": 4,
+        "sell_entry_status:missing_first_quote": 3,
+        "sell_exit_status:eligible": 1,
+        "stale_decision": 70
+      },
+      "target_usd": 100
+    },
+    {
+      "after_fee_reserve_capital_bps": [],
+      "anchors": 83,
+      "asset": "NVDA",
+      "buy": "hyperliquid",
+      "complete": 0,
+      "sell": "rh_lighter",
+      "status_counts": {
+        "both_entry_legs_unresolved": 3,
+        "buy_entry_status:eligible": 4,
+        "buy_entry_status:missing_first_quote": 7,
+        "buy_exit_status:eligible": 1,
+        "decision_skew": 3,
+        "one_entry_leg_unresolved": 7,
+        "one_exit_leg_unresolved": 1,
+        "sell_entry_status:eligible": 5,
+        "sell_entry_status:missing_first_quote": 6,
+        "sell_exit_status:missing_first_quote": 1,
+        "stale_decision": 69
+      },
+      "target_usd": 100
+    },
+    {
+      "after_fee_reserve_capital_bps": [
+        -7.985562539779816
+      ],
+      "anchors": 83,
+      "asset": "NVDA",
+      "buy": "lighter",
+      "complete": 1,
+      "sell": "hyperliquid",
+      "status_counts": {
+        "both_entry_legs_unresolved": 1,
+        "buy_entry_status:eligible": 4,
+        "buy_entry_status:missing_first_quote": 3,
+        "buy_exit_status:eligible": 1,
+        "complete_conditional_quote_path": 1,
+        "decision_skew": 6,
+        "one_entry_leg_unresolved": 5,
+        "sell_entry_status:eligible": 3,
+        "sell_entry_status:missing_first_quote": 4,
+        "sell_exit_status:eligible": 1,
+        "stale_decision": 70
+      },
+      "target_usd": 100
+    },
+    {
+      "after_fee_reserve_capital_bps": [],
+      "anchors": 83,
+      "asset": "NVDA",
+      "buy": "rh_lighter",
+      "complete": 0,
+      "sell": "hyperliquid",
+      "status_counts": {
+        "both_entry_legs_unresolved": 3,
+        "buy_entry_status:eligible": 5,
+        "buy_entry_status:missing_first_quote": 6,
+        "buy_exit_status:missing_first_quote": 1,
+        "decision_skew": 3,
+        "one_entry_leg_unresolved": 7,
+        "one_exit_leg_unresolved": 1,
+        "sell_entry_status:eligible": 4,
+        "sell_entry_status:missing_first_quote": 7,
+        "sell_exit_status:eligible": 1,
+        "stale_decision": 69
+      },
+      "target_usd": 100
+    },
+    {
+      "after_fee_reserve_capital_bps": [
+        -7.827980674863976,
+        -8.675040630677147,
+        -7.127822553498524,
+        -7.43698368106884,
+        -7.062927731645087,
+        -7.7467871168112135,
+        -8.153384778935857
+      ],
+      "anchors": 83,
+      "asset": "XAG",
+      "buy": "hyperliquid",
+      "complete": 7,
+      "sell": "lighter",
+      "status_counts": {
+        "both_entry_legs_unresolved": 3,
+        "both_exit_legs_unresolved": 1,
+        "buy_entry_status:eligible": 23,
+        "buy_entry_status:missing_first_quote": 16,
+        "buy_exit_status:eligible": 10,
+        "buy_exit_status:missing_first_quote": 7,
+        "complete_conditional_quote_path": 7,
+        "decision_skew": 13,
+        "one_entry_leg_unresolved": 19,
+        "one_exit_leg_unresolved": 9,
+        "sell_entry_status:eligible": 30,
+        "sell_entry_status:missing_first_quote": 6,
+        "sell_entry_status:shallow_first_quote": 3,
+        "sell_exit_status:eligible": 13,
+        "sell_exit_status:missing_first_quote": 3,
+        "sell_exit_status:terminal_capture": 1,
+        "stale_decision": 31
+      },
+      "target_usd": 100
+    },
+    {
+      "after_fee_reserve_capital_bps": [],
+      "anchors": 83,
+      "asset": "XAG",
+      "buy": "hyperliquid",
+      "complete": 0,
+      "sell": "rh_lighter",
+      "status_counts": {
+        "both_entry_legs_unresolved": 4,
+        "both_exit_legs_unresolved": 1,
+        "buy_entry_status:eligible": 9,
+        "buy_entry_status:missing_first_quote": 8,
+        "buy_exit_status:missing_first_quote": 1,
+        "decision_skew": 10,
+        "one_entry_leg_unresolved": 12,
+        "sell_entry_status:eligible": 5,
+        "sell_entry_status:missing_first_quote": 12,
+        "sell_exit_status:missing_first_quote": 1,
+        "stale_decision": 56
+      },
+      "target_usd": 100
+    },
+    {
+      "after_fee_reserve_capital_bps": [
+        -7.336832186816054,
+        -7.548671675105629,
+        -8.851107533216224,
+        -7.222820676987914,
+        -7.385498322045154,
+        -8.134602753006453,
+        -7.613394337765962
+      ],
+      "anchors": 83,
+      "asset": "XAG",
+      "buy": "lighter",
+      "complete": 7,
+      "sell": "hyperliquid",
+      "status_counts": {
+        "both_entry_legs_unresolved": 2,
+        "both_exit_legs_unresolved": 1,
+        "buy_entry_status:eligible": 33,
+        "buy_entry_status:missing_first_quote": 6,
+        "buy_exit_status:eligible": 14,
+        "buy_exit_status:missing_first_quote": 2,
+        "buy_exit_status:terminal_capture": 1,
+        "complete_conditional_quote_path": 7,
+        "decision_skew": 13,
+        "one_entry_leg_unresolved": 20,
+        "one_exit_leg_unresolved": 9,
+        "sell_entry_status:eligible": 21,
+        "sell_entry_status:missing_first_quote": 16,
+        "sell_entry_status:shallow_first_quote": 2,
+        "sell_exit_status:eligible": 9,
+        "sell_exit_status:missing_first_quote": 8,
+        "stale_decision": 31
+      },
+      "target_usd": 100
+    },
+    {
+      "after_fee_reserve_capital_bps": [],
+      "anchors": 83,
+      "asset": "XAG",
+      "buy": "rh_lighter",
+      "complete": 0,
+      "sell": "hyperliquid",
+      "status_counts": {
+        "both_entry_legs_unresolved": 5,
+        "both_exit_legs_unresolved": 1,
+        "buy_entry_status:eligible": 5,
+        "buy_entry_status:missing_first_quote": 12,
+        "buy_exit_status:missing_first_quote": 1,
+        "decision_skew": 10,
+        "one_entry_leg_unresolved": 11,
+        "sell_entry_status:eligible": 8,
+        "sell_entry_status:missing_first_quote": 8,
+        "sell_entry_status:shallow_first_quote": 1,
+        "sell_exit_status:missing_first_quote": 1,
+        "stale_decision": 56
+      },
+      "target_usd": 100
+    },
+    {
+      "after_fee_reserve_capital_bps": [
+        -7.767072978228344
+      ],
+      "anchors": 83,
+      "asset": "NVDA",
+      "buy": "hyperliquid",
+      "complete": 1,
+      "sell": "lighter",
+      "status_counts": {
+        "both_entry_legs_unresolved": 1,
+        "buy_entry_status:eligible": 3,
+        "buy_entry_status:missing_first_quote": 4,
+        "buy_exit_status:eligible": 1,
+        "complete_conditional_quote_path": 1,
+        "decision_skew": 6,
+        "one_entry_leg_unresolved": 5,
+        "sell_entry_status:eligible": 4,
+        "sell_entry_status:missing_first_quote": 3,
+        "sell_exit_status:eligible": 1,
+        "stale_decision": 70
+      },
+      "target_usd": 250
+    },
+    {
+      "after_fee_reserve_capital_bps": [],
+      "anchors": 83,
+      "asset": "NVDA",
+      "buy": "hyperliquid",
+      "complete": 0,
+      "sell": "rh_lighter",
+      "status_counts": {
+        "both_entry_legs_unresolved": 3,
+        "buy_entry_status:eligible": 4,
+        "buy_entry_status:missing_first_quote": 7,
+        "buy_exit_status:eligible": 1,
+        "decision_skew": 3,
+        "one_entry_leg_unresolved": 7,
+        "one_exit_leg_unresolved": 1,
+        "sell_entry_status:eligible": 5,
+        "sell_entry_status:missing_first_quote": 6,
+        "sell_exit_status:missing_first_quote": 1,
+        "stale_decision": 69
+      },
+      "target_usd": 250
+    },
+    {
+      "after_fee_reserve_capital_bps": [
+        -7.985562539779816
+      ],
+      "anchors": 83,
+      "asset": "NVDA",
+      "buy": "lighter",
+      "complete": 1,
+      "sell": "hyperliquid",
+      "status_counts": {
+        "both_entry_legs_unresolved": 1,
+        "buy_entry_status:eligible": 4,
+        "buy_entry_status:missing_first_quote": 3,
+        "buy_exit_status:eligible": 1,
+        "complete_conditional_quote_path": 1,
+        "decision_skew": 6,
+        "one_entry_leg_unresolved": 5,
+        "sell_entry_status:eligible": 3,
+        "sell_entry_status:missing_first_quote": 4,
+        "sell_exit_status:eligible": 1,
+        "stale_decision": 70
+      },
+      "target_usd": 250
+    },
+    {
+      "after_fee_reserve_capital_bps": [],
+      "anchors": 83,
+      "asset": "NVDA",
+      "buy": "rh_lighter",
+      "complete": 0,
+      "sell": "hyperliquid",
+      "status_counts": {
+        "both_entry_legs_unresolved": 3,
+        "buy_entry_status:eligible": 5,
+        "buy_entry_status:missing_first_quote": 6,
+        "buy_exit_status:missing_first_quote": 1,
+        "decision_skew": 3,
+        "one_entry_leg_unresolved": 7,
+        "one_exit_leg_unresolved": 1,
+        "sell_entry_status:eligible": 4,
+        "sell_entry_status:missing_first_quote": 7,
+        "sell_exit_status:eligible": 1,
+        "stale_decision": 69
+      },
+      "target_usd": 250
+    },
+    {
+      "after_fee_reserve_capital_bps": [
+        -7.8279806748639755,
+        -8.675040630677145,
+        -7.127822553498525,
+        -7.7467871168112135,
+        -8.153384778935857
+      ],
+      "anchors": 83,
+      "asset": "XAG",
+      "buy": "hyperliquid",
+      "complete": 5,
+      "sell": "lighter",
+      "status_counts": {
+        "both_entry_legs_unresolved": 3,
+        "both_exit_legs_unresolved": 2,
+        "buy_entry_status:eligible": 23,
+        "buy_entry_status:missing_first_quote": 16,
+        "buy_exit_status:eligible": 10,
+        "buy_exit_status:missing_first_quote": 7,
+        "complete_conditional_quote_path": 5,
+        "decision_skew": 13,
+        "one_entry_leg_unresolved": 19,
+        "one_exit_leg_unresolved": 10,
+        "sell_entry_status:eligible": 30,
+        "sell_entry_status:missing_first_quote": 6,
+        "sell_entry_status:shallow_first_quote": 3,
+        "sell_exit_status:eligible": 10,
+        "sell_exit_status:missing_first_quote": 3,
+        "sell_exit_status:shallow_first_quote": 3,
+        "sell_exit_status:terminal_capture": 1,
+        "stale_decision": 31
+      },
+      "target_usd": 250
+    },
+    {
+      "after_fee_reserve_capital_bps": [],
+      "anchors": 83,
+      "asset": "XAG",
+      "buy": "hyperliquid",
+      "complete": 0,
+      "sell": "rh_lighter",
+      "status_counts": {
+        "both_entry_legs_unresolved": 4,
+        "both_exit_legs_unresolved": 1,
+        "buy_entry_status:eligible": 9,
+        "buy_entry_status:missing_first_quote": 8,
+        "buy_exit_status:missing_first_quote": 1,
+        "decision_skew": 10,
+        "one_entry_leg_unresolved": 12,
+        "sell_entry_status:eligible": 5,
+        "sell_entry_status:missing_first_quote": 12,
+        "sell_exit_status:missing_first_quote": 1,
+        "stale_decision": 56
+      },
+      "target_usd": 250
+    },
+    {
+      "after_fee_reserve_capital_bps": [
+        -7.3368321868160535,
+        -7.548671675105629,
+        -8.851107533216224,
+        -7.222820676987914,
+        -7.613394337765961
+      ],
+      "anchors": 83,
+      "asset": "XAG",
+      "buy": "lighter",
+      "complete": 5,
+      "sell": "hyperliquid",
+      "status_counts": {
+        "both_entry_legs_unresolved": 4,
+        "both_exit_legs_unresolved": 1,
+        "buy_entry_status:eligible": 27,
+        "buy_entry_status:missing_first_quote": 6,
+        "buy_entry_status:shallow_first_quote": 6,
+        "buy_exit_status:eligible": 9,
+        "buy_exit_status:missing_first_quote": 2,
+        "buy_exit_status:terminal_capture": 1,
+        "complete_conditional_quote_path": 5,
+        "decision_skew": 13,
+        "one_entry_leg_unresolved": 23,
+        "one_exit_leg_unresolved": 6,
+        "sell_entry_status:eligible": 20,
+        "sell_entry_status:missing_first_quote": 16,
+        "sell_entry_status:shallow_first_quote": 3,
+        "sell_exit_status:eligible": 7,
+        "sell_exit_status:missing_first_quote": 5,
+        "stale_decision": 31
+      },
+      "target_usd": 250
+    },
+    {
+      "after_fee_reserve_capital_bps": [],
+      "anchors": 83,
+      "asset": "XAG",
+      "buy": "rh_lighter",
+      "complete": 0,
+      "sell": "hyperliquid",
+      "status_counts": {
+        "both_entry_legs_unresolved": 5,
+        "both_exit_legs_unresolved": 1,
+        "buy_entry_status:eligible": 5,
+        "buy_entry_status:missing_first_quote": 12,
+        "buy_exit_status:missing_first_quote": 1,
+        "decision_skew": 10,
+        "one_entry_leg_unresolved": 11,
+        "sell_entry_status:eligible": 8,
+        "sell_entry_status:missing_first_quote": 8,
+        "sell_entry_status:shallow_first_quote": 1,
+        "sell_exit_status:missing_first_quote": 1,
+        "stale_decision": 56
+      },
+      "target_usd": 250
+    },
+    {
+      "after_fee_reserve_capital_bps": [],
+      "anchors": 83,
+      "asset": "NVDA",
+      "buy": "hyperliquid",
+      "complete": 0,
+      "sell": "lighter",
+      "status_counts": {
+        "both_entry_legs_unresolved": 2,
+        "buy_entry_status:eligible": 3,
+        "buy_entry_status:missing_first_quote": 4,
+        "decision_skew": 6,
+        "one_entry_leg_unresolved": 5,
+        "sell_entry_status:eligible": 2,
+        "sell_entry_status:missing_first_quote": 3,
+        "sell_entry_status:shallow_first_quote": 2,
+        "stale_decision": 70
+      },
+      "target_usd": 1000
+    },
+    {
+      "after_fee_reserve_capital_bps": [],
+      "anchors": 83,
+      "asset": "NVDA",
+      "buy": "hyperliquid",
+      "complete": 0,
+      "sell": "rh_lighter",
+      "status_counts": {
+        "both_entry_legs_unresolved": 5,
+        "buy_entry_status:eligible": 4,
+        "buy_entry_status:missing_first_quote": 7,
+        "buy_exit_status:eligible": 1,
+        "decision_skew": 3,
+        "one_entry_leg_unresolved": 5,
+        "one_exit_leg_unresolved": 1,
+        "sell_entry_status:eligible": 3,
+        "sell_entry_status:missing_first_quote": 6,
+        "sell_entry_status:shallow_first_quote": 2,
+        "sell_exit_status:missing_first_quote": 1,
+        "stale_decision": 69
+      },
+      "target_usd": 1000
+    },
+    {
+      "after_fee_reserve_capital_bps": [
+        -7.985562539779816
+      ],
+      "anchors": 83,
+      "asset": "NVDA",
+      "buy": "lighter",
+      "complete": 1,
+      "sell": "hyperliquid",
+      "status_counts": {
+        "both_entry_legs_unresolved": 2,
+        "buy_entry_status:eligible": 3,
+        "buy_entry_status:missing_first_quote": 3,
+        "buy_entry_status:shallow_first_quote": 1,
+        "buy_exit_status:eligible": 1,
+        "complete_conditional_quote_path": 1,
+        "decision_skew": 6,
+        "one_entry_leg_unresolved": 4,
+        "sell_entry_status:eligible": 3,
+        "sell_entry_status:missing_first_quote": 4,
+        "sell_exit_status:eligible": 1,
+        "stale_decision": 70
+      },
+      "target_usd": 1000
+    },
+    {
+      "after_fee_reserve_capital_bps": [],
+      "anchors": 83,
+      "asset": "NVDA",
+      "buy": "rh_lighter",
+      "complete": 0,
+      "sell": "hyperliquid",
+      "status_counts": {
+        "both_entry_legs_unresolved": 4,
+        "buy_entry_status:eligible": 3,
+        "buy_entry_status:missing_first_quote": 6,
+        "buy_entry_status:shallow_first_quote": 2,
+        "decision_skew": 3,
+        "one_entry_leg_unresolved": 7,
+        "sell_entry_status:eligible": 4,
+        "sell_entry_status:missing_first_quote": 7,
+        "stale_decision": 69
+      },
+      "target_usd": 1000
+    },
+    {
+      "after_fee_reserve_capital_bps": [
+        -7.827980674863976,
+        -8.675040630677145,
+        -7.127822553498525,
+        -7.7467871168112135,
+        -8.153384778935857
+      ],
+      "anchors": 83,
+      "asset": "XAG",
+      "buy": "hyperliquid",
+      "complete": 5,
+      "sell": "lighter",
+      "status_counts": {
+        "both_entry_legs_unresolved": 3,
+        "both_exit_legs_unresolved": 3,
+        "buy_entry_status:eligible": 23,
+        "buy_entry_status:missing_first_quote": 16,
+        "buy_exit_status:eligible": 9,
+        "buy_exit_status:missing_first_quote": 7,
+        "buy_exit_status:shallow_first_quote": 1,
+        "complete_conditional_quote_path": 5,
+        "decision_skew": 13,
+        "one_entry_leg_unresolved": 19,
+        "one_exit_leg_unresolved": 9,
+        "sell_entry_status:eligible": 30,
+        "sell_entry_status:missing_first_quote": 6,
+        "sell_entry_status:shallow_first_quote": 3,
+        "sell_exit_status:eligible": 10,
+        "sell_exit_status:missing_first_quote": 3,
+        "sell_exit_status:shallow_first_quote": 3,
+        "sell_exit_status:terminal_capture": 1,
+        "stale_decision": 31
+      },
+      "target_usd": 1000
+    },
+    {
+      "after_fee_reserve_capital_bps": [],
+      "anchors": 83,
+      "asset": "XAG",
+      "buy": "hyperliquid",
+      "complete": 0,
+      "sell": "rh_lighter",
+      "status_counts": {
+        "both_entry_legs_unresolved": 4,
+        "buy_entry_status:eligible": 9,
+        "buy_entry_status:missing_first_quote": 8,
+        "decision_skew": 10,
+        "one_entry_leg_unresolved": 13,
+        "sell_entry_status:eligible": 4,
+        "sell_entry_status:missing_first_quote": 12,
+        "sell_entry_status:shallow_first_quote": 1,
+        "stale_decision": 56
+      },
+      "target_usd": 1000
+    },
+    {
+      "after_fee_reserve_capital_bps": [
+        -7.3368321868160535,
+        -8.851107533216224,
+        -7.222820676987914
+      ],
+      "anchors": 83,
+      "asset": "XAG",
+      "buy": "lighter",
+      "complete": 3,
+      "sell": "hyperliquid",
+      "status_counts": {
+        "both_entry_legs_unresolved": 4,
+        "both_exit_legs_unresolved": 1,
+        "buy_entry_status:eligible": 26,
+        "buy_entry_status:missing_first_quote": 6,
+        "buy_entry_status:shallow_first_quote": 7,
+        "buy_exit_status:eligible": 7,
+        "buy_exit_status:missing_first_quote": 2,
+        "buy_exit_status:terminal_capture": 1,
+        "complete_conditional_quote_path": 3,
+        "decision_skew": 13,
+        "one_entry_leg_unresolved": 25,
+        "one_exit_leg_unresolved": 6,
+        "sell_entry_status:eligible": 19,
+        "sell_entry_status:missing_first_quote": 16,
+        "sell_entry_status:shallow_first_quote": 4,
+        "sell_exit_status:eligible": 5,
+        "sell_exit_status:missing_first_quote": 5,
+        "stale_decision": 31
+      },
+      "target_usd": 1000
+    },
+    {
+      "after_fee_reserve_capital_bps": [],
+      "anchors": 83,
+      "asset": "XAG",
+      "buy": "rh_lighter",
+      "complete": 0,
+      "sell": "hyperliquid",
+      "status_counts": {
+        "both_entry_legs_unresolved": 6,
+        "both_exit_legs_unresolved": 1,
+        "buy_entry_status:eligible": 4,
+        "buy_entry_status:missing_first_quote": 12,
+        "buy_entry_status:shallow_first_quote": 1,
+        "buy_exit_status:missing_first_quote": 1,
+        "decision_skew": 10,
+        "one_entry_leg_unresolved": 10,
+        "sell_entry_status:eligible": 8,
+        "sell_entry_status:missing_first_quote": 8,
+        "sell_entry_status:shallow_first_quote": 1,
+        "sell_exit_status:missing_first_quote": 1,
+        "stale_decision": 56
+      },
+      "target_usd": 1000
+    }
+  ],
+  "design": "post hoc exploratory all-taker size/depth sensitivity on prior NVDA/XAG archive",
+  "fee_inputs_sha256": "9c095080b3da1a4de39e0fb2e66a50b6b734480e7f6ce425c8811c9311bdb3db",
+  "funding": "hour-crossing paths unresolved; no funding payment imputed",
+  "market_plan_sha256": "8764b8c656ab1ebf6772eedfb22ab541eef28b81c9fa116056fea67366e5c93f",
+  "matched_complete_anchor_count": 9,
+  "matched_complete_bps_by_size": {
+    "100": [
+      -7.985562539779816,
+      -7.827980674863976,
+      -8.675040630677147,
+      -7.127822553498524,
+      -7.7467871168112135,
+      -8.153384778935857,
+      -7.336832186816054,
+      -8.851107533216224,
+      -7.222820676987914
+    ],
+    "1000": [
+      -7.985562539779816,
+      -7.827980674863976,
+      -8.675040630677145,
+      -7.127822553498525,
+      -7.7467871168112135,
+      -8.153384778935857,
+      -7.3368321868160535,
+      -8.851107533216224,
+      -7.222820676987914
+    ],
+    "250": [
+      -7.985562539779816,
+      -7.8279806748639755,
+      -8.675040630677145,
+      -7.127822553498525,
+      -7.7467871168112135,
+      -8.153384778935857,
+      -7.3368321868160535,
+      -8.851107533216224,
+      -7.222820676987914
+    ]
+  },
+  "matched_complete_keys": [
+    {
+      "anchor_utc": "2026-09-29T20:23:40+00:00",
+      "asset": "NVDA",
+      "buy": "lighter",
+      "sell": "hyperliquid"
+    },
+    {
+      "anchor_utc": "2026-09-29T20:23:25+00:00",
+      "asset": "XAG",
+      "buy": "hyperliquid",
+      "sell": "lighter"
+    },
+    {
+      "anchor_utc": "2026-09-29T20:24:50+00:00",
+      "asset": "XAG",
+      "buy": "hyperliquid",
+      "sell": "lighter"
+    },
+    {
+      "anchor_utc": "2026-09-29T20:25:40+00:00",
+      "asset": "XAG",
+      "buy": "hyperliquid",
+      "sell": "lighter"
+    },
+    {
+      "anchor_utc": "2026-09-29T20:28:35+00:00",
+      "asset": "XAG",
+      "buy": "hyperliquid",
+      "sell": "lighter"
+    },
+    {
+      "anchor_utc": "2026-09-29T20:28:40+00:00",
+      "asset": "XAG",
+      "buy": "hyperliquid",
+      "sell": "lighter"
+    },
+    {
+      "anchor_utc": "2026-09-29T20:23:25+00:00",
+      "asset": "XAG",
+      "buy": "lighter",
+      "sell": "hyperliquid"
+    },
+    {
+      "anchor_utc": "2026-09-29T20:25:40+00:00",
+      "asset": "XAG",
+      "buy": "lighter",
+      "sell": "hyperliquid"
+    },
+    {
+      "anchor_utc": "2026-09-29T20:26:20+00:00",
+      "asset": "XAG",
+      "buy": "lighter",
+      "sell": "hyperliquid"
+    }
+  ],
+  "method": "/home/harry/projects/research/rhhype/reports/size-sensitivity-v1/frozen-method.md",
+  "method_sha256": "378498c8187cfd806eb46c056d6165925fc35543797e1e82bc1c9021ca92e643",
+  "no_fill_or_profit_claim": true,
+  "status_counts_by_size": {
+    "100": {
+      "both_entry_legs_unresolved": 22,
+      "both_exit_legs_unresolved": 4,
+      "complete_conditional_quote_path": 16,
+      "decision_skew": 64,
+      "one_entry_leg_unresolved": 86,
+      "one_exit_leg_unresolved": 20,
+      "stale_decision": 452
+    },
+    "1000": {
+      "both_entry_legs_unresolved": 30,
+      "both_exit_legs_unresolved": 5,
+      "complete_conditional_quote_path": 9,
+      "decision_skew": 64,
+      "one_entry_leg_unresolved": 88,
+      "one_exit_leg_unresolved": 16,
+      "stale_decision": 452
+    },
+    "250": {
+      "both_entry_legs_unresolved": 24,
+      "both_exit_legs_unresolved": 5,
+      "complete_conditional_quote_path": 12,
+      "decision_skew": 64,
+      "one_entry_leg_unresolved": 89,
+      "one_exit_leg_unresolved": 18,
+      "stale_decision": 452
+    }
+  },
+  "total_candidates": 1992
+}

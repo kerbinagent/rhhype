@@ -1,0 +1,232 @@
+{
+  "generated_at_utc": "2026-09-29T20:45:27.265552Z",
+  "scope": "Read-only local snapshot synthesis; no collector restart or stress test",
+  "review_sample_count": 14,
+  "review_summary": {
+    "cpu_percent_one_core_min": 51.56,
+    "cpu_percent_one_core_median": 61.38,
+    "cpu_percent_one_core_max": 81.87,
+    "loop_lag_p95_ms_min": 6.79,
+    "loop_lag_p95_ms_median": 13.45,
+    "loop_lag_p95_ms_max": 65.5,
+    "book_events_per_second_min": 819.3,
+    "book_events_per_second_median": 910.2,
+    "book_events_per_second_max": 1108.6
+  },
+  "review_samples": [
+    {
+      "path": "data/strategy-reviews/review-20260929T160633.126338Z.json",
+      "reviewed_at_utc": "2026-09-29T16:06:33.239257Z",
+      "cpu_percent_one_core": 62.72,
+      "loop_lag_p95_ms": 18.63,
+      "book_events_per_second": 975.0,
+      "connected_feeds": 4,
+      "snapshot_age_seconds": 0
+    },
+    {
+      "path": "data/strategy-reviews/review-20260929T162645.091488Z.json",
+      "reviewed_at_utc": "2026-09-29T16:26:46.212853Z",
+      "cpu_percent_one_core": 67.32,
+      "loop_lag_p95_ms": 11.81,
+      "book_events_per_second": 913.3,
+      "connected_feeds": 4,
+      "snapshot_age_seconds": 0.99
+    },
+    {
+      "path": "data/strategy-reviews/review-20260929T164651.003883Z.json",
+      "reviewed_at_utc": "2026-09-29T16:46:53.260321Z",
+      "cpu_percent_one_core": 59.83,
+      "loop_lag_p95_ms": 65.5,
+      "book_events_per_second": 954.7,
+      "connected_feeds": 4,
+      "snapshot_age_seconds": 2.13
+    },
+    {
+      "path": "data/strategy-reviews/review-20260929T170650.656822Z.json",
+      "reviewed_at_utc": "2026-09-29T17:06:53.391982Z",
+      "cpu_percent_one_core": 70.3,
+      "loop_lag_p95_ms": 18.05,
+      "book_events_per_second": 836.5,
+      "connected_feeds": 4,
+      "snapshot_age_seconds": 2.53
+    },
+    {
+      "path": "data/strategy-reviews/review-20260929T173321.018406Z.json",
+      "reviewed_at_utc": "2026-09-29T17:33:21.869249Z",
+      "cpu_percent_one_core": 65.78,
+      "loop_lag_p95_ms": 13.43,
+      "book_events_per_second": 907.2,
+      "connected_feeds": 4,
+      "snapshot_age_seconds": 0.7
+    },
+    {
+      "path": "data/strategy-reviews/review-20260929T174804.122641Z.json",
+      "reviewed_at_utc": "2026-09-29T17:48:04.808030Z",
+      "cpu_percent_one_core": 67.49,
+      "loop_lag_p95_ms": 12.97,
+      "book_events_per_second": 1014.8,
+      "connected_feeds": 4,
+      "snapshot_age_seconds": 0.55
+    },
+    {
+      "path": "data/strategy-reviews/review-20260929T180630.711778Z.json",
+      "reviewed_at_utc": "2026-09-29T18:06:33.239460Z",
+      "cpu_percent_one_core": 81.87,
+      "loop_lag_p95_ms": 47.49,
+      "book_events_per_second": 1108.6,
+      "connected_feeds": 4,
+      "snapshot_age_seconds": 2.38
+    },
+    {
+      "path": "data/strategy-reviews/review-20260929T182631.323636Z.json",
+      "reviewed_at_utc": "2026-09-29T18:26:33.239410Z",
+      "cpu_percent_one_core": 58.45,
+      "loop_lag_p95_ms": 10.56,
+      "book_events_per_second": 819.3,
+      "connected_feeds": 4,
+      "snapshot_age_seconds": 1.81
+    },
+    {
+      "path": "data/strategy-reviews/review-20260929T184631.987662Z.json",
+      "reviewed_at_utc": "2026-09-29T18:46:33.239460Z",
+      "cpu_percent_one_core": 67.58,
+      "loop_lag_p95_ms": 18.5,
+      "book_events_per_second": 936.3,
+      "connected_feeds": 4,
+      "snapshot_age_seconds": 1.08
+    },
+    {
+      "path": "data/strategy-reviews/review-20260929T190631.738848Z.json",
+      "reviewed_at_utc": "2026-09-29T19:06:33.239416Z",
+      "cpu_percent_one_core": 54.19,
+      "loop_lag_p95_ms": 9.33,
+      "book_events_per_second": 918.4,
+      "connected_feeds": 4,
+      "snapshot_age_seconds": 1.38
+    },
+    {
+      "path": "data/strategy-reviews/review-20260929T192632.920421Z.json",
+      "reviewed_at_utc": "2026-09-29T19:26:33.239394Z",
+      "cpu_percent_one_core": 51.56,
+      "loop_lag_p95_ms": 6.79,
+      "book_events_per_second": 827.8,
+      "connected_feeds": 4,
+      "snapshot_age_seconds": 0.2
+    },
+    {
+      "path": "data/strategy-reviews/review-20260929T194631.470342Z.json",
+      "reviewed_at_utc": "2026-09-29T19:46:33.239405Z",
+      "cpu_percent_one_core": 55.27,
+      "loop_lag_p95_ms": 13.46,
+      "book_events_per_second": 899.4,
+      "connected_feeds": 4,
+      "snapshot_age_seconds": 1.6
+    },
+    {
+      "path": "data/strategy-reviews/review-20260929T200631.180330Z.json",
+      "reviewed_at_utc": "2026-09-29T20:06:33.239421Z",
+      "cpu_percent_one_core": 60.05,
+      "loop_lag_p95_ms": 12.38,
+      "book_events_per_second": 895.1,
+      "connected_feeds": 4,
+      "snapshot_age_seconds": 1.89
+    },
+    {
+      "path": "data/strategy-reviews/review-20260929T202630.918654Z.json",
+      "reviewed_at_utc": "2026-09-29T20:26:33.239439Z",
+      "cpu_percent_one_core": 57.52,
+      "loop_lag_p95_ms": 15.82,
+      "book_events_per_second": 827.2,
+      "connected_feeds": 4,
+      "snapshot_age_seconds": 2.16
+    }
+  ],
+  "latest_review_standard_retained_paired_entry": {
+    "reviewed_at_utc": "2026-09-29T20:26:33.239439Z",
+    "observed": 91,
+    "missing": 0,
+    "median_seconds": 1.2611277103424072,
+    "p95_seconds": 1.884817361831665,
+    "source": "data/strategy-reviews/review-20260929T202630.918654Z.json"
+  },
+  "production_two_snapshots": {
+    "source": "data/paper-monitor/paper_snapshot.json",
+    "samples": [
+      {
+        "observed_at_utc": "2026-09-29T20:43:47.190182Z",
+        "snapshot_updated_at_utc": "2026-09-29T20:43:45.996849Z",
+        "cpu_percent_one_core": 45.04,
+        "loop_lag_p95_ms": 6.57,
+        "book_events_per_second": 555.9,
+        "db_bytes": 53223424,
+        "wal_bytes": 0
+      },
+      {
+        "observed_at_utc": "2026-09-29T20:44:02.191517Z",
+        "snapshot_updated_at_utc": "2026-09-29T20:44:01.819455Z",
+        "cpu_percent_one_core": 50.99,
+        "loop_lag_p95_ms": 7.39,
+        "book_events_per_second": 709.2,
+        "db_bytes": 53207040,
+        "wal_bytes": 0
+      }
+    ],
+    "storage_cap_bytes": 134217728,
+    "retained_caps": {
+      "events": 20000,
+      "trades": 5000,
+      "evidence": 2000
+    }
+  },
+  "contingent_two_snapshots": {
+    "source": "data/contingent-research-v1/contingent_snapshot.json",
+    "samples": [
+      {
+        "observed_at_utc": "2026-09-29T20:43:47.190182Z",
+        "snapshot_updated_at_utc": "2026-09-29T20:43:45.461643Z",
+        "loop_lag_p95_ms": 1.87,
+        "book_events_total": 25824,
+        "duration_seconds": 186.11,
+        "db_bytes": 475136,
+        "wal_bytes": 0,
+        "last_completed_checkpoint_pause_ms": 42.78
+      },
+      {
+        "observed_at_utc": "2026-09-29T20:44:02.191517Z",
+        "snapshot_updated_at_utc": "2026-09-29T20:44:00.551082Z",
+        "loop_lag_p95_ms": 1.87,
+        "book_events_total": 27542,
+        "duration_seconds": 201.2,
+        "db_bytes": 512000,
+        "wal_bytes": 0,
+        "last_completed_checkpoint_pause_ms": 25.72
+      }
+    ],
+    "storage_cap_bytes": 134217728,
+    "cpu_percent_one_core": "not instrumented in contingent runner",
+    "elapsed_seconds_between_snapshot_updates": 15.09,
+    "book_events_difference": 1718
+  },
+  "feed_cadence": {
+    "source": "research/hyperliquid-feed-cadence.md, 19:39\u201319:46 UTC BTC/ETH capture",
+    "hl_bbo_median_receipt_interval_ms": {
+      "BTC": 120,
+      "ETH": 119
+    },
+    "hl_l2_median_receipt_interval_ms": 5400,
+    "core_book_median_receipt_interval_ms": "50\u201351",
+    "rh_book_median_receipt_interval_ms": 51,
+    "hl_bbo_median_receipt_minus_source_ms": {
+      "BTC": 296,
+      "ETH": 298
+    },
+    "note": "Receipt minus source is not measured network RTT and depends on clock relation."
+  },
+  "measurement_notes": [
+    "Review CPU, p95 lag, and book rate come from snapshot_health at each review, not one continuous trace.",
+    "Collector lag p95 uses up to 1200 heartbeat samples at nominal 20 Hz, roughly a recent 60-second window; high stalls lengthen the wall-time span.",
+    "Production CPU is percent of one core over the report interval; contingent CPU is absent.",
+    "Paired-entry delay is retained paper-fill timing for Standard, not live-order latency; correlated fee portfolios are not summed.",
+    "Production and contingent observations use different market sets and execution/transport paths; their rates are not a controlled throughput comparison."
+  ]
+}

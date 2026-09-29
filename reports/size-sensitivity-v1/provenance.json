@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-09-29T20:48:45.207880+00:00",
+  "design": "post hoc exploratory size sensitivity on stopped NVDA/XAG archive",
+  "files": {
+    "data/raw/maker-capture/20260929T2022Z/frames.jsonl.gz": "3a1ffe9e3578899df800bf8fceec7beda8fc82b136a6c00edc64a20a8316f775",
+    "data/raw/maker-capture/20260929T2022Z/manifest.json": "a3f83c319f5e71938ffa9ae6ec170eb48b3024123147e554ee4c20296cade898",
+    "reports/maker-equity-v2/fee-inputs.json": "9c095080b3da1a4de39e0fb2e66a50b6b734480e7f6ce425c8811c9311bdb3db",
+    "reports/maker-equity-v2/market-plan.json": "8764b8c656ab1ebf6772eedfb22ab541eef28b81c9fa116056fea67366e5c93f",
+    "reports/size-sensitivity-v1/derived/cases.csv": "630f3b95090437e29c98a9e9490dff7bbba3740039e0408647bc8a13d8576eb1",
+    "reports/size-sensitivity-v1/derived/cases.json": "851d3ed645e7e3c2ca6e47b164643ced96acc1b7ca18341adeaf5909989b4275",
+    "reports/size-sensitivity-v1/derived/summary.json": "1cef72e55dff1f634d9e4e0c1b7ad2c6b77afce3795fe87050a3e96b0cbafb3e",
+    "reports/size-sensitivity-v1/frozen-method.md": "378498c8187cfd806eb46c056d6165925fc35543797e1e82bc1c9021ca92e643",
+    "scripts/analyze_maker_capture.py": "d87ce8f116e039976b7afac20ede5704d14b3d49eb626473d214a7d47811b359",
+    "scripts/analyze_maker_equity.py": "85d4de8cfd523b4a4497e3e2f6411b05f3737f2133d4c167ddce708af363843f",
+    "scripts/analyze_size_sensitivity.py": "b963e06ece1055121ea94813b96ec6fdf1373bf39e50ee3effafd14c0ab0654c",
+    "tests/test_analyze_size_sensitivity.py": "272cb0a4b0e4e959bab172407e0f8c9b98d0f08fdd6773ff3082e6dda48cb83f"
+  },
+  "no_actual_orders_or_fills": true,
+  "verification": "5 synthetic tests; 1,992 case count, size conservation, 9-key intersection, missing-net and all-complete-negative-sign checks"
+}
