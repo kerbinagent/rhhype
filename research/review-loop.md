@@ -291,3 +291,73 @@ reports/filter-experiments/REPORT.md). A separate 48-hour funding screen found
 no asset covering four Standard taker fees from 24-hour holdout funding alone
 (see reports/funding-carry/REPORT.md). These negative results do not justify
 lowering execution, fee or freshness assumptions.
+
+
+### Execution and forecast audit before review 6
+
+The initial BBO paper pilot stopped completing baseline trades because partial
+exits left floats just below one lot. Both matched pilots were stopped together
+at 18:01:20 UTC and preserved; see research/partial-exit-lot-audit.md and
+reports/feed-experiment/flawed-pilot-final.md. Lower cumulative BBO losses were
+confounded by these blocked positions. Depth baseline had only 2 paired closes
+among 562; BBO had 54 among 80, plus four trapped baseline exits. These source
+experiments disable REST and are distinct from the production configuration.
+
+Committed decimal lot conservation and legacy checkpoint normalization as
+16be742. Fills still require sufficient displayed quantity and a later eligible
+book; no residual is written off as an invented exit. The full suite passed
+188 tests, followed by 20 focused horizon tests after a final bounds regression.
+
+Committed horizon model v2 as 3c293da. Independent review fixed valid future
+quotes being dropped by the 1 Hz history sampling cap; future outcome detection
+now examines every valid advancing paired quote. Predictions remain frozen
+before same-tick outcomes can train them. Added route censor/coverage accounting,
+separate generation-segment metrics, a bounded 5,000-row export, and offline
+route/five-minute-block analysis. The predeclared fourth model shrinks a linear
+forecast toward persistence. Anchors 12 seconds apart can overlap in outcome
+time by up to four seconds; no independent-trial inference is made.
+
+- 18:05:21 UTC: started separate forty-minute BBO forecast v2, PID 1806918,
+  data/horizon-research-v2-bbo, 12 pairs. Old observers keep their loaded v1
+  behavior and will be labeled accordingly; no results are merged across versions.
+- 18:05:51 UTC: started corrected matched forty-minute paper source pilots,
+  depth PID 1807958 and BBO PID 1807959, data/paper-monitor-feed-v2-depth and
+  -bbo. Same commands/limits as their predecessors; fresh portfolios and no
+  targeted REST. Their results are independent scenarios, never additive income.
+- Production remains the REST-enabled control. Accounting fix deployment follows
+  the 18:06 scheduled review so the preceding review has a clean code boundary.
+
+
+## Review 6: 2026-09-29 18:06:33 UTC scheduled capture
+
+SQLite checkpoint 18:06:30.712; window starts 17:48:04.123. The automatic loop
+captured on the original schedule. Retained coverage is complete throughout.
+
+| Standard-fee policy | Closes | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 191 | -247.783 | 184 | 7 |
+| Cooldown | 47 | -70.306 | 44 | 3 |
+| Historical median | 5 | -4.528 | 1 | 4 |
+| Conservative | 0 | 0 | 0 | 0 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+No positive close in these portfolios. Lifecycle cumulative: 17 arms, 13 skew
+cancellations, three economic and one forecast cancellation, no entries,
+residual zero. CPU 81.9% of one core, p95 loop lag 47.5 ms, RSS 220.8 MiB,
+about 1,109 book updates/s. This higher lag deserves another health check after
+deployment; it is still much shorter than observed venue/source delays.
+Next scheduled capture: 18:26:33 UTC.
+
+Fee sensitivity on the fixed holdout remains negative even after removing both
+explicit trading fees and the modeled 5 bp reserve: -$228.90 versus -$624.27
+recorded. Neither cheaper tiers nor that cost reserve alone explains away the
+negative sample. See reports/fee-sensitivity when finalized. No strategy gate
+has been relaxed in response to these losses.
+
+
+Production accounting deployment: gracefully restarted at 18:07:17 UTC as PID
+1812668, original command/ledger retained, BBO still disabled and targeted REST
+still enabled. First check: all four feeds connected; 114 discovered pairs,
+64.8% of one core, 26.4 ms p95 lag. Market count changed from 115 through normal
+fresh discovery, not a strategy asset filter. Baseline cumulative balances and
+close counts continued; no experiment balances were merged into production.
