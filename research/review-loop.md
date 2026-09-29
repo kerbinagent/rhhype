@@ -814,3 +814,41 @@ full original/cached equivalence remains pending. The canonical AMM size
 screen also stopped; four correlated fee-only positive entry gaps remain
 below $0.10, off the HL lot grid, and negative after the modeled reserve.
 Next scheduled review **23:06:33 UTC / 7:06 p.m. ET**.
+
+
+## Review 21: 2026-09-29 23:06:33 UTC
+
+Actively read at 23:06 UTC. Window 22:46:31.760–23:06:31.776;
+next due **23:26:33 UTC / 7:26 p.m. Eastern**. All completion coverage complete.
+
+| Policy | Completions | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Baseline | 91 | −102.0626 | 89 / −95.6696 | 2 / −6.3929 |
+| Cooldown | 14 | −27.9128 | 11 / −13.1512 | 3 / −14.7616 |
+| Historical median | 5 | −8.4011 | 0 | 5 / −8.4011 |
+| Conservative / confirmed | 0 | 0 | 0 | 0 |
+
+Baseline includes 90 exact-funding completions and one estimated-funding
+completion (−$0.9398); ledger closed_trades delta alone is 90 while completed
+count is 91. No baseline/cooldown winners. Median has one winning failed
+hedge, which is not a successful paired arbitrage, and four aborts.
+
+New durable exit observations: baseline 86 usable of 89 paired, three missing
+request prices. Price-only request-to-actual deterioration sum **+$0.057486**,
+median zero, p95 $0.1664: 19 worsened, 24 improved, 43 unchanged. Cooldown
+11/11 observed, sum **−$0.254297** (net improvement): two worse, five better,
+four unchanged. Missing prices are unknown. Offsetting changes conceal tails;
+these measurements do not identify a causal latency counterfactual or entry
+latency effect. They support strategy economics as the main follow-up.
+
+Baseline paired entry median 1.2531 s, p95 1.8852; exit-request-to-flat
+median 1.1505 s, p95 1.7482. All four feeds connected, 114 pairs, CPU 55.68%
+of one core, p95 event-loop lag 7.56 ms, resident memory 158.12 MiB,
+679.7 book events/s. Health is a separate snapshot from the ledger checkpoint.
+Confirmed lifecycle: 121 arms, zero entries/pending/accounting residual;
+75 skew, 20 forecast, 15 depth, nine economic, two invalid terminations.
+
+No replacement policy promoted. Strategy research and size-specific passive
+exit hypotheses are recorded in `research/unwind-strategy-decision.md` and
+`research/strategy-inventory-followup.md`. Preserved full review:
+`reports/unwind-instrumentation/review21.json`.

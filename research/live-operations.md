@@ -331,3 +331,21 @@ late-flow adjudication. Next scheduled production review remains 22:26:33.
   rounds, 320 quoter results, 20 HL books, 542,478 bytes. Its separate
   readout is `reports/rh-small-canonical-amm/REPORT.md`. No capture is still
   running. Future symmetric maker method has not been frozen or launched.
+
+
+## Status at 23:08 UTC
+
+Review 21 actively read on schedule: baseline 91 completions −$102.0626,
+cooldown 14 −$27.9128, median five failed hedges −$8.4011. No policy promoted.
+86 valid baseline exit observations show only +$0.057486 aggregate price
+deterioration after the request; missing/tail caveats are in the review journal.
+Collector 2765644 and scheduler 2765645 remain running, four feeds connected.
+Next report due **23:26:33 UTC / 7:26 p.m. ET**. Original maker reference replay
+2656054 remains pending; cached results are separately labeled. No new raw
+capture. Data 601 MiB and reports 25 MiB at 23:05 UTC, bounded as documented.
+
+Committed full-cycle strategy research and stopped quote-hurdle analyzer in
+181e43e (four focused analyzer tests; ten combined with AMM tests). Findings
+and proposed tests: `research/unwind-strategy-decision.md`. The live ten-second
+policy remains the control; passive inventory exits and longer horizons are
+specified future experiments, not deployed replacements.

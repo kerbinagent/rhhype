@@ -1,0 +1,1611 @@
+{
+  "checkpoint_at": 1790723191.775552,
+  "cumulative_deltas_available": true,
+  "entry_rejections_by_venue": {
+    "aster": {
+      "notional_cap": 1
+    },
+    "hyperliquid": {
+      "price_limit": 24
+    },
+    "lighter": {
+      "notional_cap": 3
+    },
+    "rh_lighter": {
+      "notional_cap": 2,
+      "price_limit": 1
+    }
+  },
+  "first_review": false,
+  "next_due_at": 1790724393.2392573,
+  "retained_aborted_window_total": 7,
+  "retained_window_query_capped": false,
+  "retained_window_total": 347,
+  "reviewed_at": 1790723193.2394373,
+  "snapshot_health": {
+    "book_events_per_second": 679.7359310303688,
+    "cpu_percent_one_core": 55.68254776838029,
+    "entry_policies": {
+      "confirmation_cancel_reasons": {
+        "budget_or_depth": 16,
+        "economic": 12,
+        "invalid_quote": 4
+      },
+      "confirmation_expiry_seconds": 4.0,
+      "confirmation_instrumentation_begin_at": 1790701076.890745,
+      "confirmation_instrumentation_version": 1.0,
+      "confirmation_lifecycle": {
+        "accounting_residual": 0.0,
+        "armed": 121.0,
+        "completed_entered": 0.0,
+        "eligible_unique": 0.0,
+        "pending": 0.0,
+        "terminal_reasons": {
+          "cancel_budget_or_depth": 15,
+          "cancel_economic": 9,
+          "cancel_invalid_quote": 2,
+          "gate_forecast": 20,
+          "gate_skew": 75
+        },
+        "terminal_total": 121.0
+      },
+      "confirmation_min_seconds": 1.0,
+      "confirmation_waiting_checks": {
+        "buy_receipt_not_advanced": 88,
+        "buy_source_before_due": 206,
+        "buy_source_not_advanced": 88,
+        "fresh_sources": 206,
+        "sell_receipt_not_advanced": 113,
+        "sell_source_before_due": 206,
+        "sell_source_not_advanced": 118
+      },
+      "conservative_skew_limit_seconds": 0.25,
+      "convergence_skew_limit_seconds": 1.0,
+      "cooldown_skew_limit_seconds": 0.25,
+      "criteria_changed_at": 1790698122.4645865,
+      "max_route_samples": 434.0,
+      "max_route_span_seconds": 898.3578808307648,
+      "migrated_from_version": 2.0,
+      "observation_counts": {
+        "generation_reset": 1032,
+        "insufficient_close_depth": 1474,
+        "invalid_pair": 3833153,
+        "rate_limited": 4140276,
+        "sampled": 1352112,
+        "source_not_advanced": 70
+      },
+      "pending_confirmations": 0.0,
+      "policies": {
+        "confirmed": {
+          "allowed": 0.0,
+          "checked": 494540.0,
+          "entered": 0.0,
+          "pending_confirmations": 0.0,
+          "rejected_confirmation": 434.0,
+          "rejected_cooldown": 0.0,
+          "rejected_duplicate": 0.0,
+          "rejected_forecast": 106085.0,
+          "rejected_signal": 191354.0,
+          "rejected_skew": 187058.0,
+          "rejected_warmup": 9609.0,
+          "warm_routes": 224.0
+        },
+        "conservative": {
+          "allowed": 2.0,
+          "checked": 587209.0,
+          "entered": 2.0,
+          "pending_confirmations": 0.0,
+          "rejected_confirmation": 0.0,
+          "rejected_cooldown": 0.0,
+          "rejected_duplicate": 75.0,
+          "rejected_forecast": 5017.0,
+          "rejected_signal": 8659.0,
+          "rejected_skew": 572885.0,
+          "rejected_warmup": 571.0,
+          "warm_routes": 224.0
+        },
+        "convergence": {
+          "allowed": 130.0,
+          "checked": 587209.0,
+          "entered": 118.0,
+          "pending_confirmations": 0.0,
+          "rejected_confirmation": 0.0,
+          "rejected_cooldown": 702.0,
+          "rejected_duplicate": 1149.0,
+          "rejected_forecast": 119806.0,
+          "rejected_signal": 216865.0,
+          "rejected_skew": 237494.0,
+          "rejected_warmup": 11063.0,
+          "warm_routes": 224.0
+        },
+        "cooldown": {
+          "allowed": 1115.0,
+          "checked": 587209.0,
+          "entered": 1081.0,
+          "pending_confirmations": 0.0,
+          "rejected_confirmation": 0.0,
+          "rejected_cooldown": 3151.0,
+          "rejected_duplicate": 58588.0,
+          "rejected_forecast": 0.0,
+          "rejected_signal": 8361.0,
+          "rejected_skew": 515994.0,
+          "rejected_warmup": 0.0,
+          "warm_routes": 0.0
+        },
+        "shadow_baseline": {
+          "allowed": 347267.0,
+          "checked": 587209.0,
+          "entered": 4570.0,
+          "pending_confirmations": 0.0,
+          "rejected_confirmation": 0.0,
+          "rejected_cooldown": 0.0,
+          "rejected_duplicate": 239942.0,
+          "rejected_forecast": 0.0,
+          "rejected_signal": 0.0,
+          "rejected_skew": 0.0,
+          "rejected_warmup": 0.0,
+          "warm_routes": 0.0
+        }
+      },
+      "sampled_routes": 226.0,
+      "training_skew_limit_seconds": 1.0,
+      "version": 3.0,
+      "warm_routes": 224.0
+    },
+    "feeds": {
+      "aster": {
+        "connected": true,
+        "messages": 313969.0
+      },
+      "hyperliquid": {
+        "connected": true,
+        "messages": 98827.0
+      },
+      "lighter": {
+        "connected": true,
+        "messages": 383751.0
+      },
+      "rh_lighter": {
+        "connected": true,
+        "gaps": 108.0,
+        "messages": 153976.0
+      }
+    },
+    "loop_lag_ms": 15.847191913053393,
+    "loop_lag_p95_ms": 7.564214989542961,
+    "max_loop_lag_ms": 117.72713507525623,
+    "metadata_age_seconds": 1261.0701529979706,
+    "not_atomic_with_db": true,
+    "pair_count": 114,
+    "peak_rss_mb": 161.546875,
+    "performance_status": "ok",
+    "portfolios": {
+      "confirmed": {
+        "open_positions": 0.0,
+        "original_reserved_usd": 0.0,
+        "pending_entries": 0.0,
+        "pending_exits": 0.0,
+        "pending_funding": 0.0,
+        "reserved_usd": 0.0,
+        "wallet_cash_usd": 20000.0
+      },
+      "conservative": {
+        "open_positions": 0.0,
+        "original_reserved_usd": 0.0,
+        "pending_entries": 0.0,
+        "pending_exits": 0.0,
+        "pending_funding": 0.0,
+        "reserved_usd": 0.0,
+        "wallet_cash_usd": 19995.96532405749
+      },
+      "convergence": {
+        "open_positions": 0.0,
+        "original_reserved_usd": 0.0,
+        "pending_entries": 0.0,
+        "pending_exits": 0.0,
+        "pending_funding": 0.0,
+        "reserved_usd": 0.0,
+        "wallet_cash_usd": 19839.628699248693
+      },
+      "cooldown": {
+        "open_positions": 1.0,
+        "original_reserved_usd": 2001.9,
+        "pending_entries": 0.0,
+        "pending_exits": 0.0,
+        "pending_funding": 0.0,
+        "reserved_usd": 2001.9,
+        "wallet_cash_usd": 18395.334769220794
+      },
+      "plus": {
+        "open_positions": 1.0,
+        "original_reserved_usd": 2001.28,
+        "pending_entries": 0.0,
+        "pending_exits": 0.0,
+        "pending_funding": 0.0,
+        "reserved_usd": 2001.28,
+        "wallet_cash_usd": 13831.590158248651
+      },
+      "premium": {
+        "open_positions": 0.0,
+        "original_reserved_usd": 2001.4299999999998,
+        "pending_entries": 0.0,
+        "pending_exits": 0.0,
+        "pending_funding": 1.0,
+        "reserved_usd": 1000.75,
+        "wallet_cash_usd": 14680.394980077814
+      },
+      "shadow_baseline": {
+        "open_positions": 1.0,
+        "original_reserved_usd": 2001.1799999999998,
+        "pending_entries": 0.0,
+        "pending_exits": 0.0,
+        "pending_funding": 0.0,
+        "reserved_usd": 2001.1799999999998,
+        "wallet_cash_usd": 14626.720431409914
+      },
+      "standard": {
+        "open_positions": 1.0,
+        "original_reserved_usd": 4002.6099999999997,
+        "pending_entries": 0.0,
+        "pending_exits": 0.0,
+        "pending_funding": 1.0,
+        "reserved_usd": 3001.93,
+        "wallet_cash_usd": 14627.582588029594
+      }
+    },
+    "read_at": 1790723193.2394373,
+    "resident_memory_mb": 158.1171875,
+    "snapshot_age_seconds": 1.2885384559631348,
+    "snapshot_updated_at": 1790723191.950899,
+    "status": "running",
+    "target_refresh_priorities": {
+      "0": {
+        "target_refresh_priority_0_requests": 4990.0,
+        "target_refresh_priority_0_successes": 4988.0
+      },
+      "1": {
+        "target_refresh_priority_1_errors": 1.0,
+        "target_refresh_priority_1_requests": 5610.0,
+        "target_refresh_priority_1_successes": 5603.0
+      },
+      "2": {
+        "target_refresh_priority_2_errors": 4.0,
+        "target_refresh_priority_2_requests": 39604.0,
+        "target_refresh_priority_2_successes": 39559.0
+      },
+      "3": {
+        "target_refresh_priority_3_requests": 15067.0,
+        "target_refresh_priority_3_successes": 15057.0
+      },
+      "4": {
+        "target_refresh_priority_4_requests": 2.0,
+        "target_refresh_priority_4_successes": 2.0
+      }
+    }
+  },
+  "strategies": {
+    "confirmed": {
+      "aborted_coverage": "complete",
+      "coverage": "complete",
+      "expected_completed_count": 0,
+      "ledger_delta": {
+        "aborted_trades": 0,
+        "capital_costs_usd": 0.0,
+        "closed_net_usd": 0.0,
+        "closed_pnl_estimated": 0.0,
+        "closed_pnl_exact": 0.0,
+        "closed_trades": 0,
+        "closed_wins_estimated": 0,
+        "closed_wins_exact": 0,
+        "completed_trades": 0,
+        "estimated_trades": 0,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.0,
+        "wins": 0
+      },
+      "new_since_previous": false,
+      "retained_completed_count": 0,
+      "retained_completion_window": {
+        "aborted_count": 0,
+        "best_routes": [],
+        "classes": {
+          "failed_hedge": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          },
+          "other": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          },
+          "paired": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          }
+        },
+        "count": 0,
+        "entry_rejections_by_venue": {},
+        "exit_request_to_flat_seconds": {
+          "median": null,
+          "missing": 0,
+          "observed": 0,
+          "p95": null
+        },
+        "net_usd": 0.0,
+        "paired_entry_time_seconds": {
+          "median": null,
+          "missing": 0,
+          "observed": 0,
+          "p95": null
+        },
+        "paired_exit_request_to_actual_price_deterioration_usd": {
+          "improved": 0,
+          "median": null,
+          "missing": 0,
+          "missing_reasons": {},
+          "observed": 0,
+          "p95": null,
+          "positive_is_worse": true,
+          "price_only_excludes_fees_funding_and_capital": true,
+          "sum": null,
+          "unchanged": 0,
+          "worsened": 0
+        },
+        "paired_signal_to_entry_deterioration_usd": {
+          "median": null,
+          "missing": 0,
+          "observed": 0,
+          "p95": null,
+          "positive_is_worse": true,
+          "sum": 0
+        },
+        "quality": {
+          "estimated": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          },
+          "exact": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          }
+        },
+        "retained_aborted_count": 0,
+        "wins": 0,
+        "worst_routes": []
+      },
+      "started_at": 1790698122.4645865
+    },
+    "conservative": {
+      "aborted_coverage": "complete",
+      "coverage": "complete",
+      "expected_completed_count": 0,
+      "ledger_delta": {
+        "aborted_trades": 0,
+        "capital_costs_usd": 0.0,
+        "closed_net_usd": 0.0,
+        "closed_pnl_estimated": 0.0,
+        "closed_pnl_exact": 0.0,
+        "closed_trades": 0,
+        "closed_wins_estimated": 0,
+        "closed_wins_exact": 0,
+        "completed_trades": 0,
+        "estimated_trades": 0,
+        "fees_usd": 0.0,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.0,
+        "wins": 0
+      },
+      "new_since_previous": false,
+      "retained_completed_count": 0,
+      "retained_completion_window": {
+        "aborted_count": 0,
+        "best_routes": [],
+        "classes": {
+          "failed_hedge": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          },
+          "other": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          },
+          "paired": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          }
+        },
+        "count": 0,
+        "entry_rejections_by_venue": {},
+        "exit_request_to_flat_seconds": {
+          "median": null,
+          "missing": 0,
+          "observed": 0,
+          "p95": null
+        },
+        "net_usd": 0.0,
+        "paired_entry_time_seconds": {
+          "median": null,
+          "missing": 0,
+          "observed": 0,
+          "p95": null
+        },
+        "paired_exit_request_to_actual_price_deterioration_usd": {
+          "improved": 0,
+          "median": null,
+          "missing": 0,
+          "missing_reasons": {},
+          "observed": 0,
+          "p95": null,
+          "positive_is_worse": true,
+          "price_only_excludes_fees_funding_and_capital": true,
+          "sum": null,
+          "unchanged": 0,
+          "worsened": 0
+        },
+        "paired_signal_to_entry_deterioration_usd": {
+          "median": null,
+          "missing": 0,
+          "observed": 0,
+          "p95": null,
+          "positive_is_worse": true,
+          "sum": 0
+        },
+        "quality": {
+          "estimated": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          },
+          "exact": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          }
+        },
+        "retained_aborted_count": 0,
+        "wins": 0,
+        "worst_routes": []
+      },
+      "started_at": 1790694576.3461893
+    },
+    "convergence": {
+      "aborted_coverage": "complete",
+      "coverage": "complete",
+      "expected_completed_count": 5,
+      "ledger_delta": {
+        "aborted_trades": 4,
+        "capital_costs_usd": 1.0100107883168627e-05,
+        "closed_net_usd": -8.401105458107878,
+        "closed_pnl_estimated": 0.0,
+        "closed_pnl_exact": -8.401105458107878,
+        "closed_trades": 5,
+        "closed_wins_estimated": 0,
+        "closed_wins_exact": 1,
+        "completed_trades": 5,
+        "estimated_trades": 0,
+        "fees_usd": 1.599755327999997,
+        "funding_usd": 0.0,
+        "other_costs_usd": 2.496079030000004,
+        "wins": 1
+      },
+      "new_since_previous": false,
+      "retained_completed_count": 5,
+      "retained_completion_window": {
+        "aborted_count": 4,
+        "best_routes": [
+          {
+            "count": 1,
+            "net_usd": -0.46649440819512594,
+            "route": "ZEC|hyperliquid:ZEC|lighter:90"
+          },
+          {
+            "count": 2,
+            "net_usd": -2.6036874036248765,
+            "route": "PONS|hyperliquid:PONS|rh_lighter:44"
+          },
+          {
+            "count": 2,
+            "net_usd": -5.330923646287854,
+            "route": "PONS|hyperliquid:PONS|aster:PONSUSDT"
+          }
+        ],
+        "classes": {
+          "failed_hedge": {
+            "count": 5,
+            "net_usd": -8.401105458107855,
+            "wins": 1
+          },
+          "other": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          },
+          "paired": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          }
+        },
+        "count": 5,
+        "entry_rejections_by_venue": {
+          "aster": {
+            "notional_cap": 1
+          },
+          "hyperliquid": {
+            "price_limit": 9
+          },
+          "lighter": {
+            "notional_cap": 2
+          },
+          "rh_lighter": {
+            "notional_cap": 1
+          }
+        },
+        "exit_request_to_flat_seconds": {
+          "median": null,
+          "missing": 5,
+          "observed": 0,
+          "p95": null
+        },
+        "net_usd": -8.401105458107855,
+        "paired_entry_time_seconds": {
+          "median": null,
+          "missing": 0,
+          "observed": 0,
+          "p95": null
+        },
+        "paired_exit_request_to_actual_price_deterioration_usd": {
+          "improved": 0,
+          "median": null,
+          "missing": 0,
+          "missing_reasons": {},
+          "observed": 0,
+          "p95": null,
+          "positive_is_worse": true,
+          "price_only_excludes_fees_funding_and_capital": true,
+          "sum": null,
+          "unchanged": 0,
+          "worsened": 0
+        },
+        "paired_signal_to_entry_deterioration_usd": {
+          "median": null,
+          "missing": 0,
+          "observed": 0,
+          "p95": null,
+          "positive_is_worse": true,
+          "sum": 0
+        },
+        "quality": {
+          "estimated": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          },
+          "exact": {
+            "count": 5,
+            "net_usd": -8.401105458107855,
+            "wins": 1
+          }
+        },
+        "retained_aborted_count": 4,
+        "wins": 1,
+        "worst_routes": [
+          {
+            "count": 2,
+            "net_usd": -5.330923646287854,
+            "route": "PONS|hyperliquid:PONS|aster:PONSUSDT"
+          },
+          {
+            "count": 2,
+            "net_usd": -2.6036874036248765,
+            "route": "PONS|hyperliquid:PONS|rh_lighter:44"
+          },
+          {
+            "count": 1,
+            "net_usd": -0.46649440819512594,
+            "route": "ZEC|hyperliquid:ZEC|lighter:90"
+          }
+        ]
+      },
+      "started_at": 1790694576.3461893
+    },
+    "cooldown": {
+      "aborted_coverage": "complete",
+      "coverage": "complete",
+      "expected_completed_count": 14,
+      "ledger_delta": {
+        "aborted_trades": 0,
+        "capital_costs_usd": 0.0004041256568573584,
+        "closed_net_usd": -27.912820626576604,
+        "closed_pnl_estimated": 0.0,
+        "closed_pnl_exact": -27.912820626576604,
+        "closed_trades": 14,
+        "closed_wins_estimated": 0,
+        "closed_wins_exact": 0,
+        "completed_trades": 14,
+        "estimated_trades": 0,
+        "fees_usd": 4.116499816320015,
+        "funding_usd": 0.0,
+        "other_costs_usd": 6.9918804085000374,
+        "wins": 0
+      },
+      "new_since_previous": false,
+      "retained_completed_count": 14,
+      "retained_completion_window": {
+        "aborted_count": 0,
+        "best_routes": [
+          {
+            "count": 1,
+            "net_usd": -0.766475228013505,
+            "route": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15"
+          },
+          {
+            "count": 1,
+            "net_usd": -0.8425825574898052,
+            "route": "GOOGL|hyperliquid:xyz:GOOGL|rh_lighter:12"
+          },
+          {
+            "count": 2,
+            "net_usd": -1.6890608144461363,
+            "route": "MSFT|hyperliquid:xyz:MSFT|rh_lighter:14"
+          },
+          {
+            "count": 2,
+            "net_usd": -1.9336696475851787,
+            "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41"
+          },
+          {
+            "count": 3,
+            "net_usd": -2.564473774707513,
+            "route": "CRCL|hyperliquid:xyz:CRCL|lighter:121"
+          },
+          {
+            "count": 2,
+            "net_usd": -5.3549509736380925,
+            "route": "ZRO|hyperliquid:ZRO|lighter:60"
+          },
+          {
+            "count": 3,
+            "net_usd": -14.761607630696481,
+            "route": "SHEIN|hyperliquid:xyz:SHEIN|lighter:230"
+          }
+        ],
+        "classes": {
+          "failed_hedge": {
+            "count": 3,
+            "net_usd": -14.761607630696481,
+            "wins": 0
+          },
+          "other": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          },
+          "paired": {
+            "count": 11,
+            "net_usd": -13.15121299588023,
+            "wins": 0
+          }
+        },
+        "count": 14,
+        "entry_rejections_by_venue": {},
+        "exit_request_to_flat_seconds": {
+          "median": 1.4092092514038086,
+          "missing": 3,
+          "observed": 11,
+          "p95": 1.7979257106781006
+        },
+        "net_usd": -27.912820626576714,
+        "paired_entry_time_seconds": {
+          "median": 1.3299455642700195,
+          "missing": 0,
+          "observed": 11,
+          "p95": 1.8067712783813477
+        },
+        "paired_exit_request_to_actual_price_deterioration_usd": {
+          "improved": 5,
+          "median": 0.0,
+          "missing": 0,
+          "missing_reasons": {},
+          "observed": 11,
+          "p95": 0.11015199999997094,
+          "positive_is_worse": true,
+          "price_only_excludes_fees_funding_and_capital": true,
+          "sum": -0.25429700000006505,
+          "unchanged": 4,
+          "worsened": 2
+        },
+        "paired_signal_to_entry_deterioration_usd": {
+          "median": 0.0,
+          "missing": 0,
+          "observed": 11,
+          "p95": 0.27480000000014115,
+          "positive_is_worse": true,
+          "sum": 0.3173820000002934
+        },
+        "quality": {
+          "estimated": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          },
+          "exact": {
+            "count": 14,
+            "net_usd": -27.912820626576714,
+            "wins": 0
+          }
+        },
+        "retained_aborted_count": 0,
+        "wins": 0,
+        "worst_routes": [
+          {
+            "count": 3,
+            "net_usd": -14.761607630696481,
+            "route": "SHEIN|hyperliquid:xyz:SHEIN|lighter:230"
+          },
+          {
+            "count": 2,
+            "net_usd": -5.3549509736380925,
+            "route": "ZRO|hyperliquid:ZRO|lighter:60"
+          },
+          {
+            "count": 3,
+            "net_usd": -2.564473774707513,
+            "route": "CRCL|hyperliquid:xyz:CRCL|lighter:121"
+          },
+          {
+            "count": 2,
+            "net_usd": -1.9336696475851787,
+            "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41"
+          },
+          {
+            "count": 2,
+            "net_usd": -1.6890608144461363,
+            "route": "MSFT|hyperliquid:xyz:MSFT|rh_lighter:14"
+          },
+          {
+            "count": 1,
+            "net_usd": -0.8425825574898052,
+            "route": "GOOGL|hyperliquid:xyz:GOOGL|rh_lighter:12"
+          },
+          {
+            "count": 1,
+            "net_usd": -0.766475228013505,
+            "route": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15"
+          }
+        ]
+      },
+      "started_at": 1790694576.3461893
+    },
+    "plus": {
+      "aborted_coverage": "complete",
+      "coverage": "complete",
+      "expected_completed_count": 95,
+      "ledger_delta": {
+        "aborted_trades": 1,
+        "capital_costs_usd": 0.0031182209880608047,
+        "closed_net_usd": -146.2287109801417,
+        "closed_pnl_estimated": -0.7745255458411044,
+        "closed_pnl_exact": -145.4541854343006,
+        "closed_trades": 94,
+        "closed_wins_estimated": 0,
+        "closed_wins_exact": 0,
+        "completed_trades": 95,
+        "estimated_trades": 1,
+        "fees_usd": 28.7031285266778,
+        "funding_usd": 0.0045332554575,
+        "other_costs_usd": 47.43993173449826,
+        "wins": 0
+      },
+      "new_since_previous": false,
+      "retained_completed_count": 95,
+      "retained_completion_window": {
+        "aborted_count": 1,
+        "best_routes": [
+          {
+            "count": 1,
+            "net_usd": -1.2642332116704709,
+            "route": "INTC|hyperliquid:xyz:INTC|rh_lighter:30"
+          },
+          {
+            "count": 2,
+            "net_usd": -1.728434068943751,
+            "route": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15"
+          },
+          {
+            "count": 3,
+            "net_usd": -2.7727499740140837,
+            "route": "AAPL|hyperliquid:xyz:AAPL|rh_lighter:10"
+          },
+          {
+            "count": 1,
+            "net_usd": -2.925782709091451,
+            "route": "ZRO|hyperliquid:ZRO|lighter:60"
+          },
+          {
+            "count": 2,
+            "net_usd": -2.9788192900275403,
+            "route": "NEAR|hyperliquid:NEAR|lighter:10"
+          },
+          {
+            "count": 4,
+            "net_usd": -4.4784497498580365,
+            "route": "XAG|hyperliquid:xyz:SILVER|aster:XAGUSDT"
+          },
+          {
+            "count": 5,
+            "net_usd": -4.7100589461767335,
+            "route": "SAMSUNGUSD|hyperliquid:xyz:SMSN|lighter:162"
+          },
+          {
+            "count": 4,
+            "net_usd": -4.89552517359734,
+            "route": "SOXL|hyperliquid:xyz:SOXL|rh_lighter:35"
+          },
+          {
+            "count": 5,
+            "net_usd": -4.9742925367155975,
+            "route": "MSFT|hyperliquid:xyz:MSFT|rh_lighter:14"
+          },
+          {
+            "count": 5,
+            "net_usd": -5.6630620893971475,
+            "route": "AMZN|hyperliquid:xyz:AMZN|rh_lighter:11"
+          }
+        ],
+        "classes": {
+          "failed_hedge": {
+            "count": 8,
+            "net_usd": -47.34547958250196,
+            "wins": 0
+          },
+          "other": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          },
+          "paired": {
+            "count": 87,
+            "net_usd": -98.88323139763563,
+            "wins": 0
+          }
+        },
+        "count": 95,
+        "entry_rejections_by_venue": {
+          "hyperliquid": {
+            "price_limit": 2
+          },
+          "rh_lighter": {
+            "price_limit": 1
+          }
+        },
+        "exit_request_to_flat_seconds": {
+          "median": 1.1555252075195312,
+          "missing": 8,
+          "observed": 87,
+          "p95": 1.811939001083374
+        },
+        "net_usd": -146.2287109801377,
+        "paired_entry_time_seconds": {
+          "median": 1.2444336414337158,
+          "missing": 0,
+          "observed": 87,
+          "p95": 1.7282910346984863
+        },
+        "paired_exit_request_to_actual_price_deterioration_usd": {
+          "improved": 18,
+          "median": 0.0,
+          "missing": 6,
+          "missing_reasons": {
+            "request_price_unavailable": 6
+          },
+          "observed": 81,
+          "p95": 0.005389999999920292,
+          "positive_is_worse": true,
+          "price_only_excludes_fees_funding_and_capital": true,
+          "sum": -1.0821310000011408,
+          "unchanged": 58,
+          "worsened": 5
+        },
+        "paired_signal_to_entry_deterioration_usd": {
+          "median": 0.0,
+          "missing": 0,
+          "observed": 87,
+          "p95": 0.1514039999998431,
+          "positive_is_worse": true,
+          "sum": 1.2325409999979229
+        },
+        "quality": {
+          "estimated": {
+            "count": 1,
+            "net_usd": -0.7745255458411033,
+            "wins": 0
+          },
+          "exact": {
+            "count": 94,
+            "net_usd": -145.4541854342966,
+            "wins": 0
+          }
+        },
+        "retained_aborted_count": 1,
+        "wins": 0,
+        "worst_routes": [
+          {
+            "count": 8,
+            "net_usd": -40.22933567797748,
+            "route": "SHEIN|hyperliquid:xyz:SHEIN|lighter:230"
+          },
+          {
+            "count": 16,
+            "net_usd": -18.069949646647498,
+            "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41"
+          },
+          {
+            "count": 14,
+            "net_usd": -14.856245826937167,
+            "route": "GOOGL|hyperliquid:xyz:GOOGL|rh_lighter:12"
+          },
+          {
+            "count": 14,
+            "net_usd": -14.069976459828828,
+            "route": "CRCL|hyperliquid:xyz:CRCL|lighter:121"
+          },
+          {
+            "count": 1,
+            "net_usd": -12.026302449890858,
+            "route": "PONS|hyperliquid:PONS|rh_lighter:44"
+          },
+          {
+            "count": 10,
+            "net_usd": -10.585493169363627,
+            "route": "META|hyperliquid:xyz:META|rh_lighter:13"
+          },
+          {
+            "count": 5,
+            "net_usd": -5.6630620893971475,
+            "route": "AMZN|hyperliquid:xyz:AMZN|rh_lighter:11"
+          },
+          {
+            "count": 5,
+            "net_usd": -4.9742925367155975,
+            "route": "MSFT|hyperliquid:xyz:MSFT|rh_lighter:14"
+          },
+          {
+            "count": 4,
+            "net_usd": -4.89552517359734,
+            "route": "SOXL|hyperliquid:xyz:SOXL|rh_lighter:35"
+          },
+          {
+            "count": 5,
+            "net_usd": -4.7100589461767335,
+            "route": "SAMSUNGUSD|hyperliquid:xyz:SMSN|lighter:162"
+          }
+        ]
+      },
+      "started_at": null
+    },
+    "premium": {
+      "aborted_coverage": "complete",
+      "coverage": "complete",
+      "expected_completed_count": 52,
+      "ledger_delta": {
+        "aborted_trades": 2,
+        "capital_costs_usd": 0.0004580697398917227,
+        "closed_net_usd": -223.07975488018837,
+        "closed_pnl_estimated": 0.0,
+        "closed_pnl_exact": -223.07975488018837,
+        "closed_trades": 52,
+        "closed_wins_estimated": 0,
+        "closed_wins_exact": 1,
+        "completed_trades": 52,
+        "estimated_trades": 0,
+        "fees_usd": 39.0960778882702,
+        "funding_usd": 0.0,
+        "other_costs_usd": 25.956214181000178,
+        "wins": 1
+      },
+      "new_since_previous": false,
+      "retained_completed_count": 52,
+      "retained_completion_window": {
+        "aborted_count": 2,
+        "best_routes": [
+          {
+            "count": 1,
+            "net_usd": -1.453727918461233,
+            "route": "MSFT|hyperliquid:xyz:MSFT|lighter:115"
+          },
+          {
+            "count": 1,
+            "net_usd": -1.6488309326452908,
+            "route": "MSFT|hyperliquid:xyz:MSFT|rh_lighter:14"
+          },
+          {
+            "count": 1,
+            "net_usd": -1.6862142831247169,
+            "route": "NEAR|hyperliquid:NEAR|lighter:10"
+          },
+          {
+            "count": 1,
+            "net_usd": -1.6873448387128374,
+            "route": "ZEC|hyperliquid:ZEC|rh_lighter:4"
+          },
+          {
+            "count": 2,
+            "net_usd": -2.4378533551813373,
+            "route": "ZEC|hyperliquid:ZEC|lighter:90"
+          },
+          {
+            "count": 1,
+            "net_usd": -2.7583143220479487,
+            "route": "LIT|hyperliquid:LIT|rh_lighter:5"
+          },
+          {
+            "count": 3,
+            "net_usd": -3.504512892835379,
+            "route": "LIT|hyperliquid:LIT|lighter:120"
+          },
+          {
+            "count": 3,
+            "net_usd": -7.463085993505381,
+            "route": "PONS|hyperliquid:PONS|rh_lighter:44"
+          },
+          {
+            "count": 6,
+            "net_usd": -22.238637189955742,
+            "route": "ZRO|hyperliquid:ZRO|lighter:60"
+          },
+          {
+            "count": 33,
+            "net_usd": -178.20123315371958,
+            "route": "SHEIN|hyperliquid:xyz:SHEIN|lighter:230"
+          }
+        ],
+        "classes": {
+          "failed_hedge": {
+            "count": 42,
+            "net_usd": -183.75012670376142,
+            "wins": 1
+          },
+          "other": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          },
+          "paired": {
+            "count": 10,
+            "net_usd": -39.329628176428024,
+            "wins": 0
+          }
+        },
+        "count": 52,
+        "entry_rejections_by_venue": {
+          "hyperliquid": {
+            "price_limit": 12
+          },
+          "lighter": {
+            "notional_cap": 1
+          },
+          "rh_lighter": {
+            "notional_cap": 1
+          }
+        },
+        "exit_request_to_flat_seconds": {
+          "median": 1.1001627445220947,
+          "missing": 42,
+          "observed": 10,
+          "p95": 1.8019297122955322
+        },
+        "net_usd": -223.07975488018943,
+        "paired_entry_time_seconds": {
+          "median": 1.259630560874939,
+          "missing": 0,
+          "observed": 10,
+          "p95": 1.6214911937713623
+        },
+        "paired_exit_request_to_actual_price_deterioration_usd": {
+          "improved": 5,
+          "median": -0.015066999999930886,
+          "missing": 0,
+          "missing_reasons": {},
+          "observed": 10,
+          "p95": 2.2525589999999056,
+          "positive_is_worse": true,
+          "price_only_excludes_fees_funding_and_capital": true,
+          "sum": 1.6201230000003761,
+          "unchanged": 4,
+          "worsened": 1
+        },
+        "paired_signal_to_entry_deterioration_usd": {
+          "median": -0.09761500000001888,
+          "missing": 0,
+          "observed": 10,
+          "p95": 0.803190000000086,
+          "positive_is_worse": true,
+          "sum": 0.6904189999997925
+        },
+        "quality": {
+          "estimated": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          },
+          "exact": {
+            "count": 52,
+            "net_usd": -223.07975488018943,
+            "wins": 1
+          }
+        },
+        "retained_aborted_count": 2,
+        "wins": 1,
+        "worst_routes": [
+          {
+            "count": 33,
+            "net_usd": -178.20123315371958,
+            "route": "SHEIN|hyperliquid:xyz:SHEIN|lighter:230"
+          },
+          {
+            "count": 6,
+            "net_usd": -22.238637189955742,
+            "route": "ZRO|hyperliquid:ZRO|lighter:60"
+          },
+          {
+            "count": 3,
+            "net_usd": -7.463085993505381,
+            "route": "PONS|hyperliquid:PONS|rh_lighter:44"
+          },
+          {
+            "count": 3,
+            "net_usd": -3.504512892835379,
+            "route": "LIT|hyperliquid:LIT|lighter:120"
+          },
+          {
+            "count": 1,
+            "net_usd": -2.7583143220479487,
+            "route": "LIT|hyperliquid:LIT|rh_lighter:5"
+          },
+          {
+            "count": 2,
+            "net_usd": -2.4378533551813373,
+            "route": "ZEC|hyperliquid:ZEC|lighter:90"
+          },
+          {
+            "count": 1,
+            "net_usd": -1.6873448387128374,
+            "route": "ZEC|hyperliquid:ZEC|rh_lighter:4"
+          },
+          {
+            "count": 1,
+            "net_usd": -1.6862142831247169,
+            "route": "NEAR|hyperliquid:NEAR|lighter:10"
+          },
+          {
+            "count": 1,
+            "net_usd": -1.6488309326452908,
+            "route": "MSFT|hyperliquid:xyz:MSFT|rh_lighter:14"
+          },
+          {
+            "count": 1,
+            "net_usd": -1.453727918461233,
+            "route": "MSFT|hyperliquid:xyz:MSFT|lighter:115"
+          }
+        ]
+      },
+      "started_at": null
+    },
+    "shadow_baseline": {
+      "aborted_coverage": "complete",
+      "coverage": "complete",
+      "expected_completed_count": 91,
+      "ledger_delta": {
+        "aborted_trades": 0,
+        "capital_costs_usd": 0.00318589529540117,
+        "closed_net_usd": -102.06257076193513,
+        "closed_pnl_estimated": -0.9398054993994069,
+        "closed_pnl_exact": -101.12276526253572,
+        "closed_trades": 90,
+        "closed_wins_estimated": 0,
+        "closed_wins_exact": 0,
+        "completed_trades": 91,
+        "estimated_trades": 1,
+        "fees_usd": 20.261751725519616,
+        "funding_usd": -0.0022453880400000008,
+        "other_costs_usd": 45.439087166500485,
+        "wins": 0
+      },
+      "new_since_previous": false,
+      "retained_completed_count": 91,
+      "retained_completion_window": {
+        "aborted_count": 0,
+        "best_routes": [
+          {
+            "count": 1,
+            "net_usd": -0.84363117928253,
+            "route": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15"
+          },
+          {
+            "count": 1,
+            "net_usd": -1.161129687336858,
+            "route": "GRASS|hyperliquid:GRASS|aster:GRASSUSDT"
+          },
+          {
+            "count": 1,
+            "net_usd": -1.2651914077460453,
+            "route": "NBIS|hyperliquid:xyz:NBIS|lighter:189"
+          },
+          {
+            "count": 1,
+            "net_usd": -1.9950002844337278,
+            "route": "AVAX|hyperliquid:AVAX|lighter:9"
+          },
+          {
+            "count": 1,
+            "net_usd": -2.2291772549396804,
+            "route": "LIT|hyperliquid:LIT|lighter:120"
+          },
+          {
+            "count": 2,
+            "net_usd": -2.2635642655341863,
+            "route": "XAG|hyperliquid:xyz:SILVER|aster:XAGUSDT"
+          },
+          {
+            "count": 3,
+            "net_usd": -2.8665238140073885,
+            "route": "MSFT|hyperliquid:xyz:MSFT|rh_lighter:14"
+          },
+          {
+            "count": 3,
+            "net_usd": -3.2891872641115127,
+            "route": "SOXL|hyperliquid:xyz:SOXL|rh_lighter:35"
+          },
+          {
+            "count": 5,
+            "net_usd": -4.303652876579411,
+            "route": "AAPL|hyperliquid:xyz:AAPL|rh_lighter:10"
+          },
+          {
+            "count": 4,
+            "net_usd": -4.709872608410787,
+            "route": "INTC|hyperliquid:xyz:INTC|rh_lighter:30"
+          }
+        ],
+        "classes": {
+          "failed_hedge": {
+            "count": 2,
+            "net_usd": -6.392933006844235,
+            "wins": 0
+          },
+          "other": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          },
+          "paired": {
+            "count": 89,
+            "net_usd": -95.66963775509086,
+            "wins": 0
+          }
+        },
+        "count": 91,
+        "entry_rejections_by_venue": {
+          "hyperliquid": {
+            "price_limit": 1
+          }
+        },
+        "exit_request_to_flat_seconds": {
+          "median": 1.1504600048065186,
+          "missing": 2,
+          "observed": 89,
+          "p95": 1.748178482055664
+        },
+        "net_usd": -102.0625707619351,
+        "paired_entry_time_seconds": {
+          "median": 1.253077507019043,
+          "missing": 0,
+          "observed": 89,
+          "p95": 1.8852441310882568
+        },
+        "paired_exit_request_to_actual_price_deterioration_usd": {
+          "improved": 24,
+          "median": 0.0,
+          "missing": 3,
+          "missing_reasons": {
+            "request_price_unavailable": 3
+          },
+          "observed": 86,
+          "p95": 0.16640000000006694,
+          "positive_is_worse": true,
+          "price_only_excludes_fees_funding_and_capital": true,
+          "sum": 0.0574859999991304,
+          "unchanged": 43,
+          "worsened": 19
+        },
+        "paired_signal_to_entry_deterioration_usd": {
+          "median": 0.0,
+          "missing": 0,
+          "observed": 89,
+          "p95": 0.06749999999965439,
+          "positive_is_worse": true,
+          "sum": 1.2340569999998934
+        },
+        "quality": {
+          "estimated": {
+            "count": 1,
+            "net_usd": -0.9398054993994064,
+            "wins": 0
+          },
+          "exact": {
+            "count": 90,
+            "net_usd": -101.1227652625357,
+            "wins": 0
+          }
+        },
+        "retained_aborted_count": 0,
+        "wins": 0,
+        "worst_routes": [
+          {
+            "count": 17,
+            "net_usd": -17.232557110506477,
+            "route": "CRCL|hyperliquid:xyz:CRCL|lighter:121"
+          },
+          {
+            "count": 12,
+            "net_usd": -12.701785807783116,
+            "route": "AMZN|hyperliquid:xyz:AMZN|rh_lighter:11"
+          },
+          {
+            "count": 10,
+            "net_usd": -10.462652646629994,
+            "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41"
+          },
+          {
+            "count": 10,
+            "net_usd": -9.429761273578832,
+            "route": "GOOGL|hyperliquid:xyz:GOOGL|rh_lighter:12"
+          },
+          {
+            "count": 10,
+            "net_usd": -9.223945802366304,
+            "route": "SAMSUNGUSD|hyperliquid:xyz:SMSN|lighter:162"
+          },
+          {
+            "count": 7,
+            "net_usd": -6.719426479825404,
+            "route": "META|hyperliquid:xyz:META|rh_lighter:13"
+          },
+          {
+            "count": 2,
+            "net_usd": -6.133707679355477,
+            "route": "ZRO|hyperliquid:ZRO|lighter:60"
+          },
+          {
+            "count": 1,
+            "net_usd": -5.231803319507377,
+            "route": "SHEIN|hyperliquid:xyz:SHEIN|lighter:230"
+          },
+          {
+            "count": 4,
+            "net_usd": -4.709872608410787,
+            "route": "INTC|hyperliquid:xyz:INTC|rh_lighter:30"
+          },
+          {
+            "count": 5,
+            "net_usd": -4.303652876579411,
+            "route": "AAPL|hyperliquid:xyz:AAPL|rh_lighter:10"
+          }
+        ]
+      },
+      "started_at": 1790694576.3461893
+    },
+    "standard": {
+      "aborted_coverage": "complete",
+      "coverage": "complete",
+      "expected_completed_count": 90,
+      "ledger_delta": {
+        "aborted_trades": 0,
+        "capital_costs_usd": 0.003166922287972773,
+        "closed_net_usd": -103.27840928450938,
+        "closed_pnl_estimated": -0.7621164231367068,
+        "closed_pnl_exact": -102.51629286137268,
+        "closed_trades": 89,
+        "closed_wins_estimated": 0,
+        "closed_wins_exact": 0,
+        "completed_trades": 90,
+        "estimated_trades": 1,
+        "fees_usd": 18.901747979099355,
+        "funding_usd": 0.004533255457499996,
+        "other_costs_usd": 44.940938052001,
+        "wins": 0
+      },
+      "new_since_previous": false,
+      "retained_completed_count": 90,
+      "retained_completion_window": {
+        "aborted_count": 0,
+        "best_routes": [
+          {
+            "count": 1,
+            "net_usd": -1.2651914077460453,
+            "route": "NBIS|hyperliquid:xyz:NBIS|lighter:189"
+          },
+          {
+            "count": 2,
+            "net_usd": -1.6057476024192354,
+            "route": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15"
+          },
+          {
+            "count": 1,
+            "net_usd": -1.9950002844337278,
+            "route": "AVAX|hyperliquid:AVAX|lighter:9"
+          },
+          {
+            "count": 1,
+            "net_usd": -2.229177558529541,
+            "route": "LIT|hyperliquid:LIT|lighter:120"
+          },
+          {
+            "count": 3,
+            "net_usd": -2.8665238140073885,
+            "route": "MSFT|hyperliquid:xyz:MSFT|rh_lighter:14"
+          },
+          {
+            "count": 4,
+            "net_usd": -4.294654175029169,
+            "route": "SOXL|hyperliquid:xyz:SOXL|rh_lighter:35"
+          },
+          {
+            "count": 4,
+            "net_usd": -4.709872608410787,
+            "route": "INTC|hyperliquid:xyz:INTC|rh_lighter:30"
+          },
+          {
+            "count": 6,
+            "net_usd": -5.088648124368476,
+            "route": "AAPL|hyperliquid:xyz:AAPL|rh_lighter:10"
+          },
+          {
+            "count": 2,
+            "net_usd": -6.133707679355477,
+            "route": "ZRO|hyperliquid:ZRO|lighter:60"
+          },
+          {
+            "count": 7,
+            "net_usd": -6.819786585880441,
+            "route": "META|hyperliquid:xyz:META|rh_lighter:13"
+          }
+        ],
+        "classes": {
+          "failed_hedge": {
+            "count": 2,
+            "net_usd": -9.331479614519765,
+            "wins": 0
+          },
+          "other": {
+            "count": 0,
+            "net_usd": 0.0,
+            "wins": 0
+          },
+          "paired": {
+            "count": 88,
+            "net_usd": -93.94692966998969,
+            "wins": 0
+          }
+        },
+        "count": 90,
+        "entry_rejections_by_venue": {},
+        "exit_request_to_flat_seconds": {
+          "median": 1.1617628335952759,
+          "missing": 2,
+          "observed": 88,
+          "p95": 1.8681886196136475
+        },
+        "net_usd": -103.27840928450944,
+        "paired_entry_time_seconds": {
+          "median": 1.26895272731781,
+          "missing": 0,
+          "observed": 88,
+          "p95": 2.0087637901306152
+        },
+        "paired_exit_request_to_actual_price_deterioration_usd": {
+          "improved": 26,
+          "median": -5.684341886080802e-14,
+          "missing": 4,
+          "missing_reasons": {
+            "request_price_unavailable": 4
+          },
+          "observed": 84,
+          "p95": 0.16640000000006694,
+          "positive_is_worse": true,
+          "price_only_excludes_fees_funding_and_capital": true,
+          "sum": -0.1623670000014954,
+          "unchanged": 42,
+          "worsened": 16
+        },
+        "paired_signal_to_entry_deterioration_usd": {
+          "median": 0.0,
+          "missing": 0,
+          "observed": 88,
+          "p95": 0.10718999999983225,
+          "positive_is_worse": true,
+          "sum": 1.0090809999999237
+        },
+        "quality": {
+          "estimated": {
+            "count": 1,
+            "net_usd": -0.7621164231367056,
+            "wins": 0
+          },
+          "exact": {
+            "count": 89,
+            "net_usd": -102.51629286137273,
+            "wins": 0
+          }
+        },
+        "retained_aborted_count": 0,
+        "wins": 0,
+        "worst_routes": [
+          {
+            "count": 17,
+            "net_usd": -17.215635584004975,
+            "route": "CRCL|hyperliquid:xyz:CRCL|lighter:121"
+          },
+          {
+            "count": 10,
+            "net_usd": -10.579326963748054,
+            "route": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41"
+          },
+          {
+            "count": 10,
+            "net_usd": -10.46124449304084,
+            "route": "AMZN|hyperliquid:xyz:AMZN|rh_lighter:11"
+          },
+          {
+            "count": 11,
+            "net_usd": -10.337484245094076,
+            "route": "GOOGL|hyperliquid:xyz:GOOGL|rh_lighter:12"
+          },
+          {
+            "count": 2,
+            "net_usd": -9.331479614519765,
+            "route": "SHEIN|hyperliquid:xyz:SHEIN|lighter:230"
+          },
+          {
+            "count": 9,
+            "net_usd": -8.344928543921478,
+            "route": "SAMSUNGUSD|hyperliquid:xyz:SMSN|lighter:162"
+          },
+          {
+            "count": 7,
+            "net_usd": -6.819786585880441,
+            "route": "META|hyperliquid:xyz:META|rh_lighter:13"
+          },
+          {
+            "count": 2,
+            "net_usd": -6.133707679355477,
+            "route": "ZRO|hyperliquid:ZRO|lighter:60"
+          },
+          {
+            "count": 6,
+            "net_usd": -5.088648124368476,
+            "route": "AAPL|hyperliquid:xyz:AAPL|rh_lighter:10"
+          },
+          {
+            "count": 4,
+            "net_usd": -4.709872608410787,
+            "route": "INTC|hyperliquid:xyz:INTC|rh_lighter:30"
+          }
+        ]
+      },
+      "started_at": null
+    }
+  },
+  "version": 1,
+  "window_end_at": 1790723191.775552,
+  "window_start_at": 1790721991.759956
+}

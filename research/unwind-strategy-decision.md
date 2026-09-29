@@ -40,6 +40,16 @@ concentrated sample is not a causal estimate of latency cost. The historical
 91-close cohort lost $31.76 gross before fees/reserve and lacked request-book
 evidence. [Attribution and limitations](unwind-attribution.md).
 
+The subsequent **23:06 UTC scheduled review** provides 86 valid baseline
+exit-price comparisons: 19 worsened, 24 improved, 43 were unchanged; aggregate
+price deterioration was only **+$0.057486**, median zero, p95 $0.1664. Three
+other paired closes lacked valid request prices. The full 89-paired cohort
+lost $95.6696 after modeled costs. The cohorts differ, and offsetting moves
+hide individual adverse outcomes; this is descriptive evidence against exit
+delay alone explaining that interval's loss. It does not estimate the effect
+of faster entry, cancellation or execution on a different strategy.
+[Preserved review](../reports/unwind-instrumentation/review21.json).
+
 ## Research conclusions and ranked next tests
 
 | Priority | Mechanism | What changes economically | Evidence and decision |
@@ -145,6 +155,13 @@ Keep exchange fees, paid conversion/transfer costs, funding, capital charges,
 and the 5 bp stress allowance in separate columns. Fee tiers change whether
 an edge is feasible; use documented base-account assumptions plus explicitly
 labeled higher-tier sensitivity, never assume unavailable volume discounts.
+
+Estimate any future execution-risk buffer from earlier observed delay and
+failure outcomes, then freeze it before evaluation. Do not charge observed
+depth impact or delayed fill movement twice by also labeling the same loss
+as a separate slippage fee. Preserve the current 5 bp scenario as a stress
+comparison; reducing an arbitrary allowance can reveal a fee-only hypothesis,
+but cannot improve its cash result or demonstrate robustness.
 
 For passive cycles collect the entire entry-to-exit path and subsequent late
 flow, with bounded storage. Track no-entry, no-flow, partial, failed hedge,

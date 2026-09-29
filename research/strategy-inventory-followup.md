@@ -8,6 +8,21 @@ The 21:21–22:11 UTC capture was **17:21–18:11 Eastern**, after the [NYSE cor
 
 The earlier, separate [pre-pilot NVDA/XAG static-book sample](../reports/rh-maker-inventory-exits/stopped-spread-hurdle.json) helps isolate the **second passive exit** hypothesis. It has only 15 NVDA and 16 XAG paired $1,000 anchors. Recomputing each retained row's hypothetical RH maker-buy/maker-sell cycle by adding back the declared 5 bp reserve, ten-second capital charge and $0.10 target gives median **fee-only displayed cycles of −$0.048 NVDA (2/15 positive)** and **+$0.110 XAG (16/16 positive)**. With the 5 bp reserve and $0.10 target retained, their medians are **−$0.648 NVDA** and **−$0.490 XAG**. This calculation assumes both RH maker fills, unchanged future books and no conversion cost. The reserve is a **stress allowance, not a fee paid per trade**; removing it reveals how thin the XAG fee-only screen is, not observed profit. The old sample's RH spreads, HL walk spreads and rows are in the linked JSON. A real exit maker fill may fail to occur or select adverse HL prices.
 
+The same stopped archive gives the following size comparison. Each cell is the **median of per-anchor dollar outcomes**, using the original common-lot quantity floored from that budget at the RH best ask. “Target margin” subtracts the fixed $0.10 target from fee-only cash; “stressed” also subtracts the 5 bp reserve and 5%-annual capital for ten seconds. All figures assume an RH maker buy at the displayed best bid, an RH maker sell at the displayed best ask, both maker fills, and unchanged HL books. The quote-price screen used a continuous grid, so it did not prove an exchange-valid quote or queue fill.
+
+| Asset | Budget | Paired anchors | Fee-only before target | Fee-only minus $0.10 target | After reserve, capital, target |
+|---|---:|---:|---:|---:|---:|
+| NVDA | $100 | 15 | −$0.0048 | −$0.1048 | −$0.1547 |
+| NVDA | $250 | 15 | −$0.0120 | −$0.1120 | −$0.2369 |
+| NVDA | $500 | 15 | −$0.0241 | −$0.1241 | −$0.3740 |
+| NVDA | $1,000 | 15 | −$0.0482 | −$0.1482 | −$0.6481 |
+| XAG | $100 | 16 | +$0.0109 | −$0.0891 | −$0.1388 |
+| XAG | $250 | 16 | +$0.0274 | −$0.0726 | −$0.1974 |
+| XAG | $500 | 16 | +$0.0549 | −$0.0451 | −$0.2950 |
+| XAG | $1,000 | 16 | +$0.1097 | +$0.0097 | −$0.4899 |
+
+The exact original per-row calculations are `reserve = max(q × RH_entry_bid, HL_entry_bid_walk(q)) × 5/10,000` and `capital = (q × RH_entry_bid + HL_entry_bid_walk(q)) × 0.05 × 10/(365 × 24 × 3,600)`. Fee-only equals the retained stressed-after-target row plus that row's reserve, capital and $0.10; the table then takes medians. At $1,000, 11/16 XAG anchors clear the $0.10 fee-only target, but **none** of the 16 clears the reserve/capital stress; NVDA clears neither median test. These are static conditional screens, not a fill sample or forecast return.
+
 The [HL public tier-0 native perp schedule](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees) is 4.5 bp per taker leg, about **9 bp across entry and exit** before RH fees, spread and risk. The pre-pilot frozen plan used **0.9 bp per HL xyz taker leg** on NVDA/XAG, about **1.8 bp** across both. These are route-specific public assumptions, not authenticated account rates; HIP-3 deployer scale, growth mode, collateral and account tier can change the all-in rate. The [frozen Standard policy metadata](../reports/rh-small-maker-v1/policy-metadata-standard.json) assigns RH zero explicit maker and taker fees. Avoid transferring the thin XAG displayed screen to native BTC/ETH by subtracting a generic fee.
 
 ## Carry the whole position, not just an opening spread
