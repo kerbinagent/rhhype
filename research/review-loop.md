@@ -361,3 +361,38 @@ still enabled. First check: all four feeds connected; 114 discovered pairs,
 64.8% of one core, 26.4 ms p95 lag. Market count changed from 115 through normal
 fresh discovery, not a strategy asset filter. Baseline cumulative balances and
 close counts continued; no experiment balances were merged into production.
+
+
+## Review 7: 2026-09-29 18:26:33 UTC scheduled capture
+
+SQLite checkpoint 18:26:31.324; window starts 18:06:30.712. All eight
+portfolios have complete retained completion coverage.
+
+| Standard-fee policy | Closes | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 185 | -201.305 | 182 | 3 |
+| Cooldown | 56 | -66.019 | 55 | 1 |
+| Historical median | 4 | -5.731 | 1 | 3 |
+| Conservative | 0 | 0 | 0 | 0 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+The median policy's single positive close was a failed hedge, not a successful
+paired arbitrage. Baseline and cooldown had no wins. Lifecycle cumulative:
+23 arms, 16 skew cancellations, four economic, two forecast, one budget/depth;
+zero entries and zero accounting residual. CPU 58.45% of one core, p95 loop lag
+10.56 ms, RSS 185.16 MiB, about 819 book updates/s. Next capture 18:46:33 UTC.
+
+Corrected matched source pilots at common cutoff 18:26:41 UTC are still losing:
+depth baseline 865 closes / -$695.54; BBO 466 / -$465.47. Different numbers of
+attempts and incomplete retained depth rows prevent ranking by aggregate loss.
+BBO's retained 466 closes contain 367 paired and 99 failed hedges. Its 100ms
+probe has 97.5% observation coverage but actual mean observation delay 566.8ms;
+this is neither 100ms execution nor completed round-trip profit. Both pilots
+have no old one-lot residuals. See corrected-pilot-review7 report.
+
+Between reviews, committed and deployed snapshot detachment (18:27) and a
+position display fix (18:33). The user's 8,000-second XAG records are flat trades
+waiting for uncertain funding accounting, with actual holds about 12 seconds;
+new snapshots distinguish active exposure from pending settlement. No funding
+was invented and neither strategy thresholds nor ledger balances were reset.
+Fixed-quantity quote and maker feasibility studies continue separately.
