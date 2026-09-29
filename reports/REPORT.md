@@ -34,6 +34,18 @@ These studies share market periods and are not independent estimates to combine
 into a portfolio return. All economic experiments use public quotes; maker flow
 conditions do not establish queue position or actual fills.
 
+## Strategy research priority, 20:58 UTC follow-up
+
+The user clarified the hypothesis: small orders may find an edge on the newer
+Robinhood venue. The [primary-source strategy review](../research/sota-strategy-review.md)
+now prioritizes RH maker quotes priced against a Hyperliquid hedge and an
+explicit final unwind, with inventory, adverse selection, and account-tier
+controls. It distinguishes these mechanisms from the fixed-best maker and
+ten-second taker tests already completed. The exploratory size replay's
+complete paths were all Core routes; RH had no complete outcome, so that
+negative replay does not reject the RH small-order hypothesis. No strategy
+has been promoted as profitable.
+
 ## Assessment
 
 **The strongest follow-up candidates are the separate Robinhood Chain Lighter perpetual markets against Hyperliquid. The sampled Robinhood Uniswap stock-token pools generally do not clear their costs.** Small positive opening spreads also exist against Lighter Core and Aster, but an opening spread on two perpetuals is not realized arbitrage profit. Funding, the eventual unwind, and margin capital determine the outcome.
