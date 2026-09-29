@@ -376,6 +376,11 @@ class Capture:
                             if venue != "hyperliquid" and isinstance(payload, dict) and payload.get("type") == "ping":
                                 await ws.send_json({"type": "pong"})
                             annotation = self.quality.inspect(venue, payload, generation)
+                            if (venue == "hyperliquid" and annotation.get("quality") == "invalid"
+                                    and annotation.get("channel") == "trades" and annotation.get("market") is None):
+                                for affected in markets.values():
+                                    self.quality.trade_valid[(venue, affected, generation)] = False
+                                annotation["all_venue_trade_markets_invalidated"] = True
                             self.note_source_order(venue, generation, annotation)
                             if (venue == "hyperliquid" and isinstance(payload, dict)
                                     and payload.get("channel") == "subscriptionResponse") or (
