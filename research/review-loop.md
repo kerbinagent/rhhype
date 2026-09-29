@@ -492,3 +492,39 @@ Next capture is 19:46:33 UTC. Active work resumed at 19:34 with a maker
 post-flow hedge/unwind diagnostic and an independent strategy alternatives
 review. New maker rules are to be written before a prospective second capture;
 the existing 18:23 capture is exploratory only.
+
+
+## Review 11: 2026-09-29 19:46:33 UTC, actively reviewed on schedule
+
+| Standard-fee policy | Closes | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 187 | -249.296 | 182 | 5 |
+| Cooldown | 44 | -89.542 | 42 | 2 |
+| Historical median | 7 | -16.386 | 1 | 6 |
+| Conservative | 0 | 0 | 0 | 0 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+Retained coverage complete, no wins. Confirmation lifecycle 50 arms, zero
+entries/residual; 29 skew, nine forecast, six budget/depth, five economic,
+one invalid-quote cancellation. CPU 55.27% of one core, p95 lag 13.46ms,
+RSS 197.18MiB, about 899 books/s. No thresholds relaxed. Next 20:06:33 UTC.
+
+Prospective maker study ran 19:39:04–19:46:04 after rules were frozen before
+launch. Independent code audit and synthetic tests preceded outcome inspection.
+64,081 frames, 23.65MB raw capture, one generation per venue, zero recorded gaps
+or errors, immutable market-plan hash matches. Primary 1s policy: 828 supported
+opening quotes →32 hypothetical full-flow cases →23 full hedge quotes →14
+full paired exits; all 14 negative after four fees. Nine missing hedge and nine
+missing exit outcomes remain unresolved, not zeros. The sole entry-positive
+full-flow case lost $0.99348 conditionally after fees. No source-ahead trades
+or terminal-capture censors. Controls0.5s/3s had25/4 complete paths, all negative.
+Fixed-path zero-fee primary sensitivity has two positive gross quotes, max
+$0.052712; none reaches ten cents or clears the reserve. No maker fill or
+fee-tier-compatible latency claim is made; Standard300ms processing is omitted.
+
+Next research: a separately bounded, strictly hedged impulse-dislocation
+observer for BTC/ETH/NVDA/XAG on HL versus Core/RH, with prior-only basis
+features, four-fee economic gate, confirmed source updates, original quantity,
+post-delay entry, and complete exit within10s. One-leg directional speculation
+was proposed but not adopted for the arbitrage mandate. Code and tests are
+being prepared, no production policy replaced and no pilot launched yet.

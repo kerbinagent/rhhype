@@ -1,0 +1,1129 @@
+{
+  "analyzer": "/home/harry/projects/research/rhhype/scripts/analyze_maker_roundtrip.py",
+  "analyzer_sha256": "d7d23b255fcffc294069a77486cc944a9a64a32d6755cc515a960d1ae03a9c93",
+  "classification": "conditional hypothetical displayed-book round trip, never observed maker fill or actual P&L",
+  "design": "prospective",
+  "full_flow_cases": 95,
+  "integrity": {
+    "combined_bytes": 23648341,
+    "compressed_size_matches": true,
+    "decoded_records": 64081,
+    "gzip_bytes": 23644715,
+    "gzip_sha256": "5f6ade0523703efe0ecd40c17ead0782eccc3bf7f780ae17364d8c26fc56567d",
+    "manifest_bytes": 3626,
+    "manifest_payload_records": 64081,
+    "manifest_sha256": "163f2ea666025b5661becb51fbe27a5050df3e8564d37aa2159143db87e5e351",
+    "plan_hash_matches_current": true,
+    "record_count_matches": true,
+    "under_total_cap": true
+  },
+  "method": "/home/harry/projects/research/rhhype/reports/maker-roundtrip-v1/frozen-method.md",
+  "method_sha256": "8a4338c82f4ffcbdfa52392c2ae2c6ded8c077bebc4e3a89991655cb156a369d",
+  "model_caveats": {
+    "actual_maker_fill_observed": false,
+    "complete_case_selection_may_be_biased_by_depth_and_feed_activity": true,
+    "conditional_net_reported_only_for_complete_hedge_and_exit_books": true,
+    "exit_order_matching_modeled": false,
+    "hedge_quote_search_starts_after_flow_receipt_s": 0.1,
+    "lighter_standard_taker_processing_delay_s_reference": 0.3,
+    "lighter_taker_processing_delay_modeled": false,
+    "missing_hedge_is_unresolved_hypothetical_unhedged_exposure": true,
+    "network_latency_calibrated": false,
+    "overlapping_anchor_holds_not_summed_as_portfolio": true,
+    "timing_unassessable_if_trade_source_ahead_of_receipt": false
+  },
+  "source_archive": "data/raw/maker-capture/20260929T1939Z",
+  "summaries": [
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 15,
+        "exit_found": 2,
+        "full_flow_signal": 6,
+        "hedge_found": 3,
+        "insufficient_decision_hedge_depth": 17,
+        "insufficient_exit_top_depth": 1,
+        "insufficient_hedge_top_depth": 3,
+        "maker_price_moved_or_crossed": 4,
+        "no_full_flow_signal": 40,
+        "quote_supported": 50,
+        "same_price_at_arrival": 46
+      },
+      "arrival_delay_s": 1.0,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 15,
+        "exit_found": 1,
+        "full_flow_signal": 1,
+        "hedge_found": 1,
+        "insufficient_decision_hedge_depth": 21,
+        "maker_price_moved_or_crossed": 5,
+        "no_full_flow_signal": 40,
+        "quote_supported": 46,
+        "same_price_at_arrival": 41
+      },
+      "arrival_delay_s": 1.0,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 17,
+        "full_flow_signal": 2,
+        "insufficient_decision_hedge_depth": 12,
+        "insufficient_hedge_top_depth": 2,
+        "maker_price_moved_or_crossed": 7,
+        "no_full_flow_signal": 43,
+        "quote_supported": 52,
+        "same_price_at_arrival": 45,
+        "stale_at_decision": 1
+      },
+      "arrival_delay_s": 1.0,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {},
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 17,
+        "insufficient_decision_hedge_depth": 16,
+        "maker_price_moved_or_crossed": 7,
+        "no_full_flow_signal": 41,
+        "quote_supported": 48,
+        "same_price_at_arrival": 41,
+        "stale_at_decision": 1
+      },
+      "arrival_delay_s": 1.0,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {
+        "maker_price_moved_or_crossed": 7,
+        "no_full_flow_signal": 40,
+        "quote_supported": 47,
+        "same_price_at_arrival": 40
+      },
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 1,
+        "decision_source_skew": 15,
+        "full_flow_signal": 2,
+        "hedge_found": 1,
+        "insufficient_decision_hedge_depth": 6,
+        "insufficient_exit_top_depth": 1,
+        "insufficient_hedge_top_depth": 1,
+        "maker_price_moved_or_crossed": 50,
+        "no_full_flow_signal": 8,
+        "quote_supported": 61,
+        "same_price_at_arrival": 10
+      },
+      "arrival_delay_s": 1.0,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 1,
+        "decision_source_skew": 15,
+        "exit_found": 3,
+        "full_flow_signal": 4,
+        "hedge_found": 4,
+        "insufficient_decision_hedge_depth": 4,
+        "insufficient_exit_top_depth": 1,
+        "maker_price_moved_or_crossed": 55,
+        "no_full_flow_signal": 3,
+        "quote_supported": 63,
+        "same_price_at_arrival": 7
+      },
+      "arrival_delay_s": 1.0,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 17,
+        "exit_found": 2,
+        "full_flow_signal": 2,
+        "hedge_found": 2,
+        "insufficient_decision_hedge_depth": 3,
+        "maker_price_moved_or_crossed": 50,
+        "no_full_flow_signal": 9,
+        "quote_supported": 61,
+        "same_price_at_arrival": 11,
+        "stale_at_decision": 1
+      },
+      "arrival_delay_s": 1.0,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {
+        "maker_price_moved_or_crossed": 2,
+        "no_full_flow_signal": 1,
+        "quote_supported": 3,
+        "same_price_at_arrival": 1
+      },
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 17,
+        "exit_found": 1,
+        "full_flow_signal": 2,
+        "hedge_found": 2,
+        "insufficient_decision_hedge_depth": 1,
+        "insufficient_exit_top_depth": 1,
+        "maker_price_moved_or_crossed": 55,
+        "no_full_flow_signal": 6,
+        "quote_supported": 63,
+        "same_price_at_arrival": 8,
+        "stale_at_decision": 1
+      },
+      "arrival_delay_s": 1.0,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 5,
+        "exit_found": 1,
+        "full_flow_signal": 3,
+        "hedge_found": 2,
+        "insufficient_decision_hedge_depth": 43,
+        "maker_price_moved_or_crossed": 2,
+        "missing_fresh_hedge_quote": 1,
+        "missing_future_exit_side": 1,
+        "no_full_flow_signal": 19,
+        "quote_supported": 24,
+        "same_price_at_arrival": 22,
+        "stale_at_decision": 10
+      },
+      "arrival_delay_s": 1.0,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 5,
+        "full_flow_signal": 1,
+        "insufficient_decision_hedge_depth": 47,
+        "maker_price_moved_or_crossed": 1,
+        "missing_fresh_hedge_quote": 1,
+        "no_full_flow_signal": 18,
+        "quote_supported": 20,
+        "same_price_at_arrival": 19,
+        "stale_at_decision": 10
+      },
+      "arrival_delay_s": 1.0,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 9,
+        "full_flow_signal": 1,
+        "hedge_found": 1,
+        "insufficient_decision_hedge_depth": 16,
+        "insufficient_exit_top_depth": 1,
+        "maker_price_moved_or_crossed": 3,
+        "no_full_flow_signal": 42,
+        "quote_supported": 46,
+        "same_price_at_arrival": 43,
+        "stale_at_decision": 11
+      },
+      "arrival_delay_s": 1.0,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {},
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 9,
+        "insufficient_decision_hedge_depth": 11,
+        "maker_price_moved_or_crossed": 8,
+        "no_full_flow_signal": 43,
+        "quote_supported": 51,
+        "same_price_at_arrival": 43,
+        "stale_at_decision": 11
+      },
+      "arrival_delay_s": 1.0,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {
+        "maker_price_moved_or_crossed": 8,
+        "no_full_flow_signal": 42,
+        "quote_supported": 50,
+        "same_price_at_arrival": 42
+      },
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 7,
+        "decision_source_skew": 5,
+        "exit_found": 2,
+        "full_flow_signal": 5,
+        "hedge_found": 4,
+        "insufficient_decision_hedge_depth": 6,
+        "insufficient_exit_top_depth": 2,
+        "insufficient_hedge_top_depth": 1,
+        "maker_price_moved_or_crossed": 35,
+        "no_full_flow_signal": 14,
+        "quote_supported": 61,
+        "same_price_at_arrival": 19,
+        "stale_at_decision": 10
+      },
+      "arrival_delay_s": 1.0,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 6,
+        "decision_source_skew": 5,
+        "full_flow_signal": 1,
+        "hedge_found": 1,
+        "insufficient_decision_hedge_depth": 5,
+        "insufficient_exit_top_depth": 1,
+        "maker_price_moved_or_crossed": 40,
+        "no_full_flow_signal": 15,
+        "quote_supported": 62,
+        "same_price_at_arrival": 16,
+        "stale_at_decision": 10
+      },
+      "arrival_delay_s": 1.0,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 5,
+        "decision_source_skew": 9,
+        "exit_found": 1,
+        "full_flow_signal": 1,
+        "hedge_found": 1,
+        "insufficient_decision_hedge_depth": 3,
+        "maker_price_moved_or_crossed": 37,
+        "no_full_flow_signal": 16,
+        "quote_supported": 59,
+        "same_price_at_arrival": 17,
+        "stale_at_decision": 11
+      },
+      "arrival_delay_s": 1.0,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {
+        "arrival_book_stale": 1,
+        "exit_found": 1,
+        "full_flow_signal": 1,
+        "hedge_found": 1,
+        "maker_price_moved_or_crossed": 14,
+        "no_full_flow_signal": 11,
+        "quote_supported": 27,
+        "same_price_at_arrival": 12
+      },
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 6,
+        "decision_source_skew": 9,
+        "exit_found": 1,
+        "full_flow_signal": 1,
+        "hedge_found": 1,
+        "insufficient_decision_hedge_depth": 1,
+        "maker_price_moved_or_crossed": 41,
+        "no_full_flow_signal": 13,
+        "quote_supported": 61,
+        "same_price_at_arrival": 14,
+        "stale_at_decision": 11
+      },
+      "arrival_delay_s": 1.0,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 15,
+        "exit_found": 2,
+        "full_flow_signal": 6,
+        "hedge_found": 2,
+        "insufficient_decision_hedge_depth": 17,
+        "insufficient_hedge_top_depth": 4,
+        "maker_price_moved_or_crossed": 3,
+        "no_full_flow_signal": 41,
+        "quote_supported": 50,
+        "same_price_at_arrival": 47
+      },
+      "arrival_delay_s": 0.5,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 15,
+        "exit_found": 1,
+        "full_flow_signal": 1,
+        "hedge_found": 1,
+        "insufficient_decision_hedge_depth": 21,
+        "maker_price_moved_or_crossed": 3,
+        "no_full_flow_signal": 42,
+        "quote_supported": 46,
+        "same_price_at_arrival": 43
+      },
+      "arrival_delay_s": 0.5,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 17,
+        "full_flow_signal": 2,
+        "insufficient_decision_hedge_depth": 12,
+        "insufficient_hedge_top_depth": 2,
+        "maker_price_moved_or_crossed": 4,
+        "no_full_flow_signal": 46,
+        "quote_supported": 52,
+        "same_price_at_arrival": 48,
+        "stale_at_decision": 1
+      },
+      "arrival_delay_s": 0.5,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {},
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 17,
+        "insufficient_decision_hedge_depth": 16,
+        "maker_price_moved_or_crossed": 3,
+        "no_full_flow_signal": 45,
+        "quote_supported": 48,
+        "same_price_at_arrival": 45,
+        "stale_at_decision": 1
+      },
+      "arrival_delay_s": 0.5,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {
+        "maker_price_moved_or_crossed": 3,
+        "no_full_flow_signal": 44,
+        "quote_supported": 47,
+        "same_price_at_arrival": 44
+      },
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 15,
+        "exit_found": 4,
+        "full_flow_signal": 7,
+        "hedge_found": 6,
+        "insufficient_decision_hedge_depth": 6,
+        "insufficient_exit_top_depth": 2,
+        "insufficient_hedge_top_depth": 1,
+        "maker_price_moved_or_crossed": 38,
+        "no_full_flow_signal": 16,
+        "quote_supported": 61,
+        "same_price_at_arrival": 23
+      },
+      "arrival_delay_s": 0.5,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 15,
+        "exit_found": 4,
+        "full_flow_signal": 6,
+        "hedge_found": 5,
+        "insufficient_decision_hedge_depth": 4,
+        "insufficient_exit_top_depth": 1,
+        "insufficient_hedge_top_depth": 1,
+        "maker_price_moved_or_crossed": 47,
+        "no_full_flow_signal": 10,
+        "quote_supported": 63,
+        "same_price_at_arrival": 16
+      },
+      "arrival_delay_s": 0.5,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 17,
+        "exit_found": 5,
+        "full_flow_signal": 7,
+        "hedge_found": 6,
+        "insufficient_decision_hedge_depth": 3,
+        "insufficient_exit_top_depth": 1,
+        "maker_price_moved_or_crossed": 39,
+        "missing_fresh_hedge_quote": 1,
+        "no_full_flow_signal": 15,
+        "quote_supported": 61,
+        "same_price_at_arrival": 22,
+        "stale_at_decision": 1
+      },
+      "arrival_delay_s": 0.5,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {
+        "maker_price_moved_or_crossed": 2,
+        "no_full_flow_signal": 1,
+        "quote_supported": 3,
+        "same_price_at_arrival": 1
+      },
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 17,
+        "exit_found": 3,
+        "full_flow_signal": 5,
+        "hedge_found": 5,
+        "insufficient_decision_hedge_depth": 1,
+        "insufficient_exit_top_depth": 2,
+        "maker_price_moved_or_crossed": 45,
+        "no_full_flow_signal": 13,
+        "quote_supported": 63,
+        "same_price_at_arrival": 18,
+        "stale_at_decision": 1
+      },
+      "arrival_delay_s": 0.5,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 5,
+        "exit_found": 1,
+        "full_flow_signal": 3,
+        "hedge_found": 2,
+        "insufficient_decision_hedge_depth": 43,
+        "maker_price_moved_or_crossed": 2,
+        "missing_fresh_hedge_quote": 1,
+        "missing_future_exit_side": 1,
+        "no_full_flow_signal": 19,
+        "quote_supported": 24,
+        "same_price_at_arrival": 22,
+        "stale_at_decision": 10
+      },
+      "arrival_delay_s": 0.5,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 5,
+        "full_flow_signal": 1,
+        "insufficient_decision_hedge_depth": 47,
+        "missing_fresh_hedge_quote": 1,
+        "no_full_flow_signal": 19,
+        "quote_supported": 20,
+        "same_price_at_arrival": 20,
+        "stale_at_decision": 10
+      },
+      "arrival_delay_s": 0.5,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 9,
+        "full_flow_signal": 2,
+        "hedge_found": 1,
+        "insufficient_decision_hedge_depth": 16,
+        "insufficient_exit_top_depth": 1,
+        "insufficient_hedge_top_depth": 1,
+        "no_full_flow_signal": 44,
+        "quote_supported": 46,
+        "same_price_at_arrival": 46,
+        "stale_at_decision": 11
+      },
+      "arrival_delay_s": 0.5,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {},
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 9,
+        "insufficient_decision_hedge_depth": 11,
+        "maker_price_moved_or_crossed": 3,
+        "no_full_flow_signal": 48,
+        "quote_supported": 51,
+        "same_price_at_arrival": 48,
+        "stale_at_decision": 11
+      },
+      "arrival_delay_s": 0.5,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {
+        "maker_price_moved_or_crossed": 3,
+        "no_full_flow_signal": 47,
+        "quote_supported": 50,
+        "same_price_at_arrival": 47
+      },
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 6,
+        "decision_source_skew": 5,
+        "exit_found": 2,
+        "full_flow_signal": 6,
+        "hedge_found": 4,
+        "insufficient_decision_hedge_depth": 6,
+        "insufficient_exit_top_depth": 2,
+        "insufficient_hedge_top_depth": 2,
+        "maker_price_moved_or_crossed": 26,
+        "no_full_flow_signal": 23,
+        "quote_supported": 61,
+        "same_price_at_arrival": 29,
+        "stale_at_decision": 10
+      },
+      "arrival_delay_s": 0.5,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 5,
+        "decision_source_skew": 5,
+        "full_flow_signal": 2,
+        "hedge_found": 2,
+        "insufficient_decision_hedge_depth": 5,
+        "insufficient_exit_top_depth": 2,
+        "maker_price_moved_or_crossed": 30,
+        "no_full_flow_signal": 25,
+        "quote_supported": 62,
+        "same_price_at_arrival": 27,
+        "stale_at_decision": 10
+      },
+      "arrival_delay_s": 0.5,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 6,
+        "decision_source_skew": 9,
+        "exit_found": 1,
+        "full_flow_signal": 1,
+        "hedge_found": 1,
+        "insufficient_decision_hedge_depth": 3,
+        "maker_price_moved_or_crossed": 29,
+        "no_full_flow_signal": 23,
+        "quote_supported": 59,
+        "same_price_at_arrival": 24,
+        "stale_at_decision": 11
+      },
+      "arrival_delay_s": 0.5,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {
+        "arrival_book_stale": 2,
+        "exit_found": 1,
+        "full_flow_signal": 1,
+        "hedge_found": 1,
+        "maker_price_moved_or_crossed": 12,
+        "no_full_flow_signal": 12,
+        "quote_supported": 27,
+        "same_price_at_arrival": 13
+      },
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 6,
+        "decision_source_skew": 9,
+        "exit_found": 2,
+        "full_flow_signal": 3,
+        "hedge_found": 3,
+        "insufficient_decision_hedge_depth": 1,
+        "maker_price_moved_or_crossed": 34,
+        "missing_future_exit_side": 1,
+        "no_full_flow_signal": 18,
+        "quote_supported": 61,
+        "same_price_at_arrival": 21,
+        "stale_at_decision": 11
+      },
+      "arrival_delay_s": 0.5,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 1,
+        "decision_source_skew": 15,
+        "full_flow_signal": 1,
+        "insufficient_decision_hedge_depth": 17,
+        "insufficient_hedge_top_depth": 1,
+        "maker_price_moved_or_crossed": 15,
+        "no_full_flow_signal": 33,
+        "quote_supported": 50,
+        "same_price_at_arrival": 34
+      },
+      "arrival_delay_s": 3.0,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 1,
+        "decision_source_skew": 15,
+        "exit_found": 1,
+        "full_flow_signal": 1,
+        "hedge_found": 1,
+        "insufficient_decision_hedge_depth": 21,
+        "maker_price_moved_or_crossed": 14,
+        "no_full_flow_signal": 30,
+        "quote_supported": 46,
+        "same_price_at_arrival": 31
+      },
+      "arrival_delay_s": 3.0,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 1,
+        "decision_source_skew": 17,
+        "insufficient_decision_hedge_depth": 12,
+        "maker_price_moved_or_crossed": 15,
+        "no_full_flow_signal": 36,
+        "quote_supported": 52,
+        "same_price_at_arrival": 36,
+        "stale_at_decision": 1
+      },
+      "arrival_delay_s": 3.0,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {},
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 17,
+        "insufficient_decision_hedge_depth": 16,
+        "maker_price_moved_or_crossed": 14,
+        "no_full_flow_signal": 34,
+        "quote_supported": 48,
+        "same_price_at_arrival": 34,
+        "stale_at_decision": 1
+      },
+      "arrival_delay_s": 3.0,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {
+        "maker_price_moved_or_crossed": 14,
+        "no_full_flow_signal": 33,
+        "quote_supported": 47,
+        "same_price_at_arrival": 33
+      },
+      "hedge": "lighter",
+      "maker": "hyperliquid",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 1,
+        "decision_source_skew": 15,
+        "insufficient_decision_hedge_depth": 6,
+        "maker_price_moved_or_crossed": 59,
+        "no_full_flow_signal": 1,
+        "quote_supported": 61,
+        "same_price_at_arrival": 1
+      },
+      "arrival_delay_s": 3.0,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 1,
+        "decision_source_skew": 15,
+        "full_flow_signal": 1,
+        "hedge_found": 1,
+        "insufficient_decision_hedge_depth": 4,
+        "insufficient_exit_top_depth": 1,
+        "maker_price_moved_or_crossed": 60,
+        "no_full_flow_signal": 1,
+        "quote_supported": 63,
+        "same_price_at_arrival": 2
+      },
+      "arrival_delay_s": 3.0,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 17,
+        "insufficient_decision_hedge_depth": 3,
+        "maker_price_moved_or_crossed": 50,
+        "no_full_flow_signal": 11,
+        "quote_supported": 61,
+        "same_price_at_arrival": 11,
+        "stale_at_decision": 1
+      },
+      "arrival_delay_s": 3.0,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {
+        "maker_price_moved_or_crossed": 3,
+        "quote_supported": 3
+      },
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 17,
+        "exit_found": 1,
+        "full_flow_signal": 2,
+        "hedge_found": 2,
+        "insufficient_decision_hedge_depth": 1,
+        "insufficient_exit_top_depth": 1,
+        "maker_price_moved_or_crossed": 54,
+        "no_full_flow_signal": 7,
+        "quote_supported": 63,
+        "same_price_at_arrival": 9,
+        "stale_at_decision": 1
+      },
+      "arrival_delay_s": 3.0,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "lighter",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 5,
+        "exit_found": 1,
+        "full_flow_signal": 1,
+        "hedge_found": 1,
+        "insufficient_decision_hedge_depth": 43,
+        "maker_price_moved_or_crossed": 6,
+        "no_full_flow_signal": 17,
+        "quote_supported": 24,
+        "same_price_at_arrival": 18,
+        "stale_at_decision": 10
+      },
+      "arrival_delay_s": 3.0,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 5,
+        "full_flow_signal": 1,
+        "insufficient_decision_hedge_depth": 47,
+        "maker_price_moved_or_crossed": 8,
+        "missing_fresh_hedge_quote": 1,
+        "no_full_flow_signal": 11,
+        "quote_supported": 20,
+        "same_price_at_arrival": 12,
+        "stale_at_decision": 10
+      },
+      "arrival_delay_s": 3.0,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 9,
+        "insufficient_decision_hedge_depth": 16,
+        "maker_price_moved_or_crossed": 12,
+        "no_full_flow_signal": 34,
+        "quote_supported": 46,
+        "same_price_at_arrival": 34,
+        "stale_at_decision": 11
+      },
+      "arrival_delay_s": 3.0,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {},
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "decision_source_skew": 9,
+        "insufficient_decision_hedge_depth": 11,
+        "maker_price_moved_or_crossed": 16,
+        "no_full_flow_signal": 35,
+        "quote_supported": 51,
+        "same_price_at_arrival": 35,
+        "stale_at_decision": 11
+      },
+      "arrival_delay_s": 3.0,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {
+        "maker_price_moved_or_crossed": 16,
+        "no_full_flow_signal": 34,
+        "quote_supported": 50,
+        "same_price_at_arrival": 34
+      },
+      "hedge": "rh_lighter",
+      "maker": "hyperliquid",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 9,
+        "decision_source_skew": 5,
+        "exit_found": 1,
+        "full_flow_signal": 4,
+        "hedge_found": 2,
+        "insufficient_decision_hedge_depth": 6,
+        "insufficient_exit_top_depth": 1,
+        "insufficient_hedge_top_depth": 2,
+        "maker_price_moved_or_crossed": 41,
+        "no_full_flow_signal": 7,
+        "quote_supported": 61,
+        "same_price_at_arrival": 11,
+        "stale_at_decision": 10
+      },
+      "arrival_delay_s": 3.0,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 8,
+        "decision_source_skew": 5,
+        "insufficient_decision_hedge_depth": 5,
+        "maker_price_moved_or_crossed": 54,
+        "quote_supported": 62,
+        "stale_at_decision": 10
+      },
+      "arrival_delay_s": 3.0,
+      "asset": "BTC",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "side": "sell"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 6,
+        "decision_source_skew": 9,
+        "insufficient_decision_hedge_depth": 3,
+        "maker_price_moved_or_crossed": 46,
+        "no_full_flow_signal": 7,
+        "quote_supported": 59,
+        "same_price_at_arrival": 7,
+        "stale_at_decision": 11
+      },
+      "arrival_delay_s": 3.0,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {
+        "arrival_book_stale": 4,
+        "maker_price_moved_or_crossed": 21,
+        "no_full_flow_signal": 2,
+        "quote_supported": 27,
+        "same_price_at_arrival": 2
+      },
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "side": "buy"
+    },
+    {
+      "all": {
+        "anchors": 82,
+        "arrival_book_stale": 6,
+        "decision_source_skew": 9,
+        "insufficient_decision_hedge_depth": 1,
+        "maker_price_moved_or_crossed": 51,
+        "no_full_flow_signal": 4,
+        "quote_supported": 61,
+        "same_price_at_arrival": 4,
+        "stale_at_decision": 11
+      },
+      "arrival_delay_s": 3.0,
+      "asset": "ETH",
+      "decision_entry_positive_subset": {},
+      "hedge": "hyperliquid",
+      "maker": "rh_lighter",
+      "side": "sell"
+    }
+  ],
+  "trade_clock_leads": {
+    "hyperliquid|BTC": {
+      "max_source_lead_s": 0.0,
+      "retained_trades": 1494,
+      "source_ahead_of_receipt_count": 0
+    },
+    "hyperliquid|ETH": {
+      "max_source_lead_s": 0.0,
+      "retained_trades": 829,
+      "source_ahead_of_receipt_count": 0
+    },
+    "lighter|BTC": {
+      "max_source_lead_s": 0.0,
+      "retained_trades": 2075,
+      "source_ahead_of_receipt_count": 0
+    },
+    "lighter|ETH": {
+      "max_source_lead_s": 0.0,
+      "retained_trades": 1241,
+      "source_ahead_of_receipt_count": 0
+    },
+    "rh_lighter|BTC": {
+      "max_source_lead_s": 0.0,
+      "retained_trades": 364,
+      "source_ahead_of_receipt_count": 0
+    },
+    "rh_lighter|ETH": {
+      "max_source_lead_s": 0.0,
+      "retained_trades": 238,
+      "source_ahead_of_receipt_count": 0
+    }
+  }
+}

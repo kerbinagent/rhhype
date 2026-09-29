@@ -1,0 +1,91 @@
+{
+  "source_cases": "data/derived/maker-roundtrip-20260929T1939Z/cases.json",
+  "source_sha256": "1a4d5d01651f518af353e64dec7c37fd1691843a24e2a44e447afd064d67b845",
+  "interpretation": "Fixed displayed paths, fees removed mechanically; not rerun orders, timing, queue or maker rebates. Missing paths remain unknown.",
+  "scenarios": [
+    {
+      "arrival_delay_s": 1,
+      "role": "primary",
+      "fee_scenario": "recorded_four_fees",
+      "hypothetical_full_flow": 32,
+      "complete_paths": 14,
+      "unresolved_paths": 18,
+      "net_mean_usd": -0.9227038347142751,
+      "net_median_usd": -0.9693222544998952,
+      "net_max_usd": -0.5472182469998955,
+      "positive": 0,
+      "at_least_ten_cents": 0,
+      "positive_after_5bp_reserve": 0
+    },
+    {
+      "arrival_delay_s": 1,
+      "role": "primary",
+      "fee_scenario": "zero_trading_fees",
+      "hypothetical_full_flow": 32,
+      "complete_paths": 14,
+      "unresolved_paths": 18,
+      "net_mean_usd": -0.10835114285713222,
+      "net_median_usd": -0.10722099999996515,
+      "net_max_usd": 0.052712000000104606,
+      "positive": 2,
+      "at_least_ten_cents": 0,
+      "positive_after_5bp_reserve": 0
+    },
+    {
+      "arrival_delay_s": 0.5,
+      "role": "stress/control",
+      "fee_scenario": "recorded_four_fees",
+      "hypothetical_full_flow": 52,
+      "complete_paths": 25,
+      "unresolved_paths": 27,
+      "net_mean_usd": -0.9460858380399821,
+      "net_median_usd": -0.9749834325000349,
+      "net_max_usd": -0.5472182469998955,
+      "positive": 0,
+      "at_least_ten_cents": 0,
+      "positive_after_5bp_reserve": 0
+    },
+    {
+      "arrival_delay_s": 0.5,
+      "role": "stress/control",
+      "fee_scenario": "zero_trading_fees",
+      "hypothetical_full_flow": 52,
+      "complete_paths": 25,
+      "unresolved_paths": 27,
+      "net_mean_usd": -0.09397287999998209,
+      "net_median_usd": -0.10183,
+      "net_max_usd": 0.13019999999996618,
+      "positive": 4,
+      "at_least_ten_cents": 1,
+      "positive_after_5bp_reserve": 0
+    },
+    {
+      "arrival_delay_s": 3,
+      "role": "stress/control",
+      "fee_scenario": "recorded_four_fees",
+      "hypothetical_full_flow": 11,
+      "complete_paths": 4,
+      "unresolved_paths": 7,
+      "net_mean_usd": -0.8479731695000335,
+      "net_median_usd": -0.8615462275000321,
+      "net_max_usd": -0.6562793750001396,
+      "positive": 0,
+      "at_least_ten_cents": 0,
+      "positive_after_5bp_reserve": 0
+    },
+    {
+      "arrival_delay_s": 3,
+      "role": "stress/control",
+      "fee_scenario": "zero_trading_fees",
+      "hypothetical_full_flow": 11,
+      "complete_paths": 4,
+      "unresolved_paths": 7,
+      "net_mean_usd": -0.09798500000003346,
+      "net_median_usd": -0.08445900000003488,
+      "net_max_usd": -0.04451999999995951,
+      "positive": 0,
+      "at_least_ten_cents": 0,
+      "positive_after_5bp_reserve": 0
+    }
+  ]
+}

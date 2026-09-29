@@ -188,6 +188,7 @@ def analyze(data, max_cases=10_000):
                         bump("full_flow_signal")
                         case = {"maker": maker_venue, "hedge": hedge_venue, "asset": asset,
                                 "side": side, "arrival_delay_s": delay_s, "anchor_utc": iso(anchor),
+                                "capture_end_utc": manifest["ended_utc"],
                                 "maker_arrival_utc": iso(arrival), "maker_price": price,
                                 "qty": decision["qty"], "queue_ahead_qty": ahead,
                                 "cumulative_qualifying_trade_qty": full["cumulative_qualifying_qty"],
@@ -200,6 +201,7 @@ def analyze(data, max_cases=10_000):
                             raise RuntimeError(f"full-flow case cap {max_cases} reached; no output silently truncated")
                         cases.append(case)
                         hedge_target = full["receipt_ns"] + int(0.1 * SECOND)
+                        case["hedge_window_extends_past_capture_end"] = hedge_target + SECOND > end
                         hedge_quote, hedge_status = first_hedge_quote(
                             hedge_quotes, hedge_times, hedge_target, full["source_ns"], side, decision["qty"])
                         case["hedge_status"] = hedge_status
@@ -215,6 +217,7 @@ def analyze(data, max_cases=10_000):
                             entry_gross - FEES_BPS[maker_venue]["maker"]
                             - FEES_BPS[hedge_venue]["taker"] * hedge_px / price)
                         exit_target = hedge_quote["receipt_ns"] + 10 * SECOND
+                        case["exit_window_extends_past_capture_end"] = exit_target + SECOND > end
                         pair, exit_status = first_exit_pair(maker_quotes, hedge_quotes, exit_target,
                                                             side, decision["qty"])
                         case["exit_status"] = exit_status
