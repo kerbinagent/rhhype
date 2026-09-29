@@ -112,3 +112,34 @@ check: Standard resumed 21 entries; Premium HL spendable cash $4,438.40, Aster
 unavailable. Both original XAG records remain AWAITING_FUNDING with aggregate
 cashflow null. Accounting reconciliation remains within $5e-11. All four feeds
 connected, 63.4% of one core, 11.5 ms p95 loop lag. No fee/exit changes.
+
+## Review 2: 2026-09-29 16:46:51 UTC
+
+Window 16:26:45–16:46:51; next due 17:06:33 UTC. Retained completion counts
+match ledger deltas. No strategy threshold changes at this checkpoint.
+
+| Standard-fee policy | Closes | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 270 | -291.74 | 268 | 2 |
+| Cooldown | 59 | -62.51 | 59 | 0 |
+| Historical median | 1 | -1.43 | 1 | 0 |
+| Conservative | 1 | -2.70 | 1 | 0 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+- Median and conservative both traded CASHCAT about five seconds apart. These
+  correlated trades improved on quoted entry prices by $0.751 and $0.182;
+  nevertheless the forecast closing-spread costs (-$0.070 and $0.225) were far
+  below the observed exit spread costs ($3.992 and $3.715). A rolling historical
+  level is not a forecast of convergence within ten seconds. Investigating a
+  causal forecast matched to the holding horizon before adding another policy.
+- Confirmation had 80 cumulative gate checks but zero entries. Current counts
+  mix repeated observations and distinct candidates; better lifecycle diagnostics
+  are needed before interpreting its rejection rate or tuning the wait.
+- Original Standard resumed 133 closes/-$145.56 and three aborts after funding
+  isolation; Premium resumed nine closes/-$19.74. The two original XAG funding
+  records remain incomplete, with only Aster reservation retained.
+- Accounting reconciliation passes within $6e-11. All feeds connected. Snapshot
+  showed 59.8% of one core, 65.5 ms p95 loop lag, 955 books/s and 163 MiB RSS.
+  A follow-up showed 50.5 ms lag/73.1% CPU. Investigating offline hot paths; live
+  py-spy attachment was denied by OS ptrace permissions and passwordless sudo
+  was unavailable. No security settings were changed.
