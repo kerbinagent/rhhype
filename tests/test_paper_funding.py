@@ -126,6 +126,7 @@ class FundingTests(unittest.IsolatedAsyncioTestCase):
         self.assertTrue(result["complete"])
         self.assertEqual(result["cashflow_usd"], 0)
         self.assertEqual(session.calls[0][2]["startTime"], 0)
+        self.assertEqual(session.calls[0][1], "https://fapi.asterdex.com/fapi/v3/fundingRate")
         service = FundingService(Session([{"symbol": "BTCUSDT", "fundingTime": 3650000, "fundingRate": "-0.002"}]))
         service.observe_reference("aster", "BTCUSDT", 3650, 100, "mark")
         result = await service.cashflows({"legs": [leg("aster", "BTCUSDT", "long", start=3620, end=3700, quantity=2)]})
@@ -211,6 +212,7 @@ class FundingTests(unittest.IsolatedAsyncioTestCase):
                          {"rh_lighter": 1})
         self.assertEqual((await service.sample_references([{"venue": "aster", "market": "BTCUSDT"}]))["sampled"],
                          {"aster": 1})
+        self.assertEqual(session.calls[-1][1], "https://fapi.asterdex.com/fapi/v3/premiumIndex")
         self.assertIsNotNone(service._reference("aster", "BTCUSDT", 3600))
         self.assertTrue(service._aster_hour_proven("BTCUSDT", 3600, 3590, 3610))
 

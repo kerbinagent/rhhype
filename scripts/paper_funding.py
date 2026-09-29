@@ -20,7 +20,10 @@ LIGHTER_URLS = {
     "lighter": "https://mainnet.zklighter.elliot.ai/api/v1",
     "rh_lighter": "https://api.rh.lighter.xyz/api/v1",
 }
-ASTER_URL = "https://fapi3.asterdex.com/fapi/v3"
+# The V3 paths are also served from Aster's established futures host. The
+# documented fapi3 host returned HTTP 403 in the monitor's runtime environment;
+# these public endpoints were verified HTTP 200 here on 2026-09-29.
+ASTER_URL = "https://fapi.asterdex.com/fapi/v3"
 HOUR = 3600
 ASTER_SETTLEMENT_UNCERTAINTY_SECONDS = 15
 
