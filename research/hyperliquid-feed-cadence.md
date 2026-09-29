@@ -48,3 +48,32 @@ The existing [stream manager](../scripts/paper_streams.py) consumes only Hyperli
 4. Use `allMids` for broad price discovery or a rough alert only. It cannot establish executable bid, ask, or size. Test a small set of routes first because BBO traffic was 2–6 messages per second per active coin in these samples.
 
 This is a quote-observation improvement and an executable-*display* screen. It does not predict fills, adverse selection, or achievable arbitrage profit.
+
+## Follow-up: 19:39–19:46 UTC capture and Python headroom
+
+The independently frozen seven-minute BTC/ETH maker capture reproduces the
+cadence pattern. [Per-channel measurements](../data/derived/maker-roundtrip-20260929T1939Z/feed-cadence.json)
+include the archive hash and existing analysis function used to regenerate them.
+
+| Channel | Median receipt interval | Median receipt minus source timestamp |
+|---|---:|---:|
+| HL BTC BBO | 120 ms | 296 ms |
+| HL ETH BBO | 119 ms | 298 ms |
+| HL BTC/ETH L2 | 5,400 ms | 352 ms |
+| Core BTC/ETH order book | 50–51 ms | 85 ms |
+| RH BTC/ETH order book | 51 ms | 85–89 ms |
+
+These are observed capture intervals, not universal venue service guarantees.
+Receipt minus exchange time includes unknown clock offset and exchange-side
+publication delay; it is not a measured network RTT. A BBO is only one level
+and cannot supply missing deeper size. Faster ticker messages do not replace
+an executable order book.
+
+For comparison, the main collector's 19:46 review measured 55% of one CPU core
+and 13.46 ms p95 event-loop lag while processing about 899 books/s. Those
+figures do not indicate that adding Python threads would solve the observed
+hundreds of milliseconds of source-age or multi-second L2 cadence. The BBO
+option is implemented and used by isolated research pilots; production retains
+its depth plus targeted REST control configuration. CPU-heavy analysis already
+runs in separate processes. Further optimization should be driven by measured
+collector lag and queue buildup, while preserving quote freshness/depth rules.
