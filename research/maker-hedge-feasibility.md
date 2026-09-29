@@ -40,3 +40,24 @@ Collect one prospective **10-minute** read-only session for BTC/ETH on Hyperliqu
 - Reject routes with non-equivalent contracts, unverified token/share units, inaccessible collateral, a required borrow/transfer path, or an account-tier fee that invalidates the edge. The RH-domain venue requires its own conversion and account checks.
 
 The next decision after this capture is whether adverse selection and hedge delay leave any robust *conditional* edge worth calibrating. Real maker fill probability remains unidentified from public passive observation alone.
+
+
+## Fee and matching mechanics recheck, September 29 18:39 UTC
+
+The official [fee table](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees)
+still lists native-perp base tier 0 at 4.5 bp taker and 1.5 bp maker. Replacing
+one $1,000 taker leg with an actual maker fill saves $0.30 in this model;
+that saving is separate from spread capture and adverse selection. HIP-3
+market multipliers and collateral-specific rules must be applied separately.
+The [aligned asset specification](https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/aligned-quote-assets)
+distinguishes AQAv1's fee benefit from AQAv2, which has no trading-fee benefit;
+a blanket aligned-token discount would be incorrect.
+
+[HyperCore matching](https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/order-book)
+uses price-time priority and groups cancel actions before GTC/IOC actions
+inside each consensus batch. [ALO](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types)
+executes only as a resting order. Public receipt times and trade-through events
+do not reconstruct a hypothetical order's acknowledgement, queue position,
+or cancellation ordering. The first archive study therefore remains a
+conditional public quote/trade diagnostic, with no maker fill probability or
+realized return attributed to unplaced orders.

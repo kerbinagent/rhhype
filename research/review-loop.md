@@ -396,3 +396,26 @@ waiting for uncertain funding accounting, with actual holds about 12 seconds;
 new snapshots distinguish active exposure from pending settlement. No funding
 was invented and neither strategy thresholds nor ledger balances were reset.
 Fixed-quantity quote and maker feasibility studies continue separately.
+
+
+### Independent checks and research before review 8
+
+At 18:36:09–10 UTC an independent read-only reconciliation passed both production
+and corrected BBO. Largest arithmetic/wallet discrepancies were $5.64e-11 and
+$2.55e-11. Retained closes were 4,973/10,673 lifetime (production) and
+1,986/2,042 (BBO); retained P&L is not a lifetime total. No checkpoint position
+with any positive remaining leg quantity was older than 45s. Maximum exposure
+ages were 11.76s and 12.95s. Only the two zero-quantity XAG settlement waits
+were hours old. The full suite passed 223 tests after the funding display fix.
+
+The stopped maker capture's initial subscription packets include historical
+trades. Its offline replay will exclude these startup snapshots and pre-capture
+source times, so old trades cannot manufacture current trade-flow evidence.
+Predeclared additional taker controls: 1/2/5/10-second fixed-quantity markouts,
+at most one anchor per second per directed HL/Core or HL/RH route, all four
+fees, missing outcomes explicit. No horizon chosen retrospectively as a winner.
+
+At 18:38, the fixed-quantity pilot had scored crypto and equity/metal routes,
+including BTC/ETH/SOL/ZEC/XRP/HYPE, NVDA/META/XAG and a small COIN sample.
+All four frozen model screens had selected zero positive-after-four-fee
+anchors so far. This interim diagnostic does not replace the stopped report.
