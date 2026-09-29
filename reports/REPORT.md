@@ -55,6 +55,33 @@ diagnostic, including account-tier timing, actual partial quantities, all
 four execution fees, reserve, capital and unresolved funding. No result is
 available yet. Current production policy remains unchanged.
 
+### Independent strategy diagnostics, 21:58 UTC
+
+The [matched hedge-venue comparison](../research/rh-hedge-venue-choice.md)
+uses stopped data and the same RH quote, quantity and future exit on each
+route. At $1,000, Core Standard reduced the median modeled path cost versus
+HL by about $0.87–$0.93 for BTC/ETH and $0.12–$0.17 for NVDA/silver. All
+four median paths remained negative after the separate reserve. This is a
+displayed-quote comparison, without a maker fill or venue-delay simulation.
+
+The [quote-distance flow study](rh-quote-distance-flow/REPORT.md) uses the
+same older captures. Across complete ten-second windows, neither side of
+any of the four assets had qualifying public flow at 5/10/20 bp behind
+the initial best quote. Flow at 2 bp was sparse. Thus a larger theoretical
+margin at a distant price needs evidence of both possible flow and its
+conditional hedge cost; the best-bid hedge model cannot establish either
+for deep quotes. These short historical diagnostics do not inspect or
+change the running prospective holdout.
+
+The [nontrading cost note](../research/rh-nontrading-cost-budget.md)
+distinguishes the 5 bp stress allowance from exchange fees and explicitly
+unquoted USDG/USDC rebalancing. The new lifecycle postprocessor reports
+cash after modeled fees, reserve, capital, observed durations and censored
+endpoints separately. [Readout rules](../research/rh-maker-readout-rules.md)
+were recorded before the current holdout. A separate
+[maker-sell follow-up](../research/rh-maker-sell-followup.md) is being
+implemented for a future window; it is not a change to the current pilot.
+
 ## Assessment
 
 **The strongest follow-up candidates are the separate Robinhood Chain Lighter perpetual markets against Hyperliquid. The sampled Robinhood Uniswap stock-token pools generally do not clear their costs.** Small positive opening spreads also exist against Lighter Core and Aster, but an opening spread on two perpetuals is not realized arbitrage profit. Funding, the eventual unwind, and margin capital determine the outcome.
