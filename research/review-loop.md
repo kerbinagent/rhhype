@@ -771,3 +771,46 @@ original/cached comparison is pending. Neither replay's financial results
 were available at this review. See [performance record](rh-maker-replay-performance.md).
 Sizes remain $100/$250/$500/$1,000, primary $1,000. Next review
 **22:46:33 UTC / 6:46 p.m. ET**.
+
+## Review 20: 2026-09-29 22:46:33 UTC, actively reviewed on schedule
+
+| Standard-fee policy | Completed | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 92 | -117.466 | 90 | 2 |
+| Cooldown | 32 | -76.173 | 30 | 2 |
+| Historical median | 1 | +0.433 | 0 | 1 |
+| Conservative | 0 | 0 | 0 | 0 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+The lone winning historical-median close was a failed hedge, not a paired
+arbitrage success; that policy also had two aborts. Baseline paired closes
+lost $110.2821 and failed hedges $7.1838. Cooldown paired lost $65.1552 and
+failed hedges $11.0176. Full retained coverage, all exact paper outcomes.
+No replacement strategy promoted.
+
+At 22:45:28 the collector and review loop were checkpointed and restarted
+to retain compact exit-request observations. Existing ledgers, positions,
+targets and fees were preserved; forecast histories restart cold. The review
+deadline stayed 22:46:33. New PIDs: collector 2765644, review loop 2765645.
+The health snapshot therefore measures the recently restarted process:
+47.64% of one core, 6.66ms p95 loop lag, 95.34MiB RSS, 518 books/s,
+114 pairs, four connected feeds. It is not a before/after speed benchmark.
+Baseline paired entry median 1.302s/p95 1.878s; exit-request-to-flat median
+1.375s/p95 3.040s across this interval, which spans the restart.
+
+The new exit-price metric has four valid baseline observations: three
+unchanged and one worse by $0.260744. Their request-time net marks already
+totaled -$3.540519; final net was -$3.801247. Of the remaining 86 paired
+closes, 85 predate instrumentation and one has unavailable request prices.
+Three of the four usable observations are CRCL and one MSFT; this is tiny
+and concentrated. See [frozen evidence](../reports/unwind-instrumentation/first-review.json)
+and [interpretation](unwind-attribution.md). Cooldown has one unchanged
+observed close and 29 legacy missing; other policies have no paired sample.
+
+RH maker cached replay finished: primary adaptive branches have no attributed
+fills, Premium fixed-best crypto controls have losing completed contributions,
+all branch totals remain unknown. Independent late-flow test found no flags;
+full original/cached equivalence remains pending. The canonical AMM size
+screen also stopped; four correlated fee-only positive entry gaps remain
+below $0.10, off the HL lot grid, and negative after the modeled reserve.
+Next scheduled review **23:06:33 UTC / 7:06 p.m. ET**.

@@ -20,5 +20,11 @@
     "original_path": "data/derived/rh-small-maker-v1-cached/optimization_provenance.json",
     "sha256": "bf76091fc7705b15c8d1e4853ae784927da5d4e411c4d614fb970a07dbcdb9fa",
     "bytes": 1168
+  },
+  "analysis_tools_sha256": {
+    "scripts/optimized_rh_maker_replay.py": "9653d428dab30b61170990c879275fee11d85bf4d767bfc1fb320f73f707e3c8",
+    "scripts/summarize_rh_maker_lifecycle.py": "995d4b49536ab2f53f35f0fe75f1f630901a788d550be211f1294cea775a1502",
+    "scripts/audit_rh_retired_quote_flow.py": "80892964a2dd7f938fcf8430d87ddb52de6a508afdac2c8d6b3c689f74af5c38",
+    "scripts/compare_rh_maker_replays.py": "a44e581668947b125bff1a690d03a363938f28ae1e2f8209da611c9b0368986f"
   }
 }

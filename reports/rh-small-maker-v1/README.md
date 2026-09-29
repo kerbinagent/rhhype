@@ -1,7 +1,8 @@
 # RH passive bids with Hyperliquid hedges
 
-**Status:** capture complete; frozen replay and independent validation running.
-No profit result is available yet.
+**Status:** capture and cached replay complete; [cached results](CACHED-RESULTS.md)
+and its specific late-flow validation are available. The frozen original replay
+is still running, so full original/cached equivalence remains pending.
 Started 29 September 2026 at 21:21:32 UTC. Thirty minutes of calibration
 preceded the 20-minute evaluation window. Collection stopped normally at
 22:11:32.790024 UTC: 104,790 public frames, 41,368,405 compressed bytes,
@@ -51,5 +52,7 @@ Any combined dollar result is conditional on collateral parity. One short
 holdout cannot establish durable profitability or justify production promotion.
 
 A separately discovered [late-print audit](../../research/rh-maker-late-flow-audit.md)
-will check retired quotes against the raw events before interpreting results.
-The frozen implementation remains unchanged.
+checked the completed cached replay and found no affected quotes for that
+specific defect. See the [cached-variant readout](CACHED-RESULTS.md) and its
+compact evidence. The original replay is still running for full-capture
+equivalence; the frozen implementation remains unchanged.

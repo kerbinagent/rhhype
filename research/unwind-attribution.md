@@ -44,3 +44,19 @@ produce an unknown aggregate, not a zero-dollar effect. It measures changes
 in public-book paper prices, not the causal effect of real network latency
 or guaranteed executions at the earlier quote. The source/receipt ages are
 needed to interpret stale observations and asynchronous books.
+
+## First prospective check, 22:46 UTC
+
+The [first review after deployment](../reports/unwind-instrumentation/first-review.json)
+contains four valid baseline paired closes: three CRCL and one MSFT. All
+four net liquidation estimates were already negative at the exit request,
+totaling **-$3.540519**; final net was **-$3.801247**. Three closing prices
+were unchanged within floating-point precision, and one worsened by
+**$0.260744**. This price-only change differs slightly from the net change
+because fees/capital can also change.
+
+One other newly instrumented paired close lacked valid request prices; 85
+older paired closes lacked the new record. They are not assigned zero
+deterioration. These four concentrated observations support a preexisting
+closing deficit in this tiny cohort; they cannot establish its prevalence
+across all routes or the effect of a faster real execution system.

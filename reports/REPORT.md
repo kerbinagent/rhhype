@@ -53,9 +53,11 @@ with 30 minutes of calibration and 20 minutes of evaluation. It compares
 hedge-aware passive bid pricing with a fixed-best control and a persistence
 diagnostic, including account-tier timing, actual partial quantities, all
 four execution fees, reserve, capital and unresolved funding. Capture
-stopped normally at 22:11 UTC; historical replay is still running as of
-22:32 UTC, with [explicit implementation/provenance checks](../research/rh-maker-replay-performance.md).
-No result is available yet. Current production policy remains unchanged.
+stopped normally at 22:11 UTC. The [cached replay readout](rh-small-maker-v1/CACHED-RESULTS.md)
+is complete: no adaptive attributed fills, losing filled Premium fixed-best
+crypto controls, and unresolved full returns in every branch. The unchanged
+original replay remains running for exact equivalence verification. Current
+production policy remains unchanged; new exit-request diagnostics were added.
 
 ### Independent strategy diagnostics, 21:58 UTC
 
@@ -99,6 +101,20 @@ before $32.68 in four-leg fees and $45.45 in reserve. Signal-to-entry price
 deterioration totaled only $1.06. Holding those recorded exits fixed, the
 signal quotes would still lose before fees; this is an accounting diagnostic,
 not a claim that faster execution would retain the same exits.
+
+The [new exit-request measurements](../research/unwind-attribution.md) first
+covered four usable baseline closes at the 22:46 review. They were already
+down $3.54 combined when their exits were requested and finished down $3.80;
+three prices were unchanged and one deteriorated by $0.26. This tiny,
+concentrated cohort directly separates pre-request loss from later movement.
+
+A separate [canonical Robinhood Chain AMM screen](rh-small-canonical-amm/REPORT.md)
+collected five rounds across NVDA/AAPL/MSFT/TSLA, two pools per token and
+all four sizes. Of 136 timing-accepted best-direct observations, four were
+positive after the embedded AMM fee and one HL entry fee, all from one NVDA
+round: at most $0.0355 at $1,000. All became negative after the separate
+5 bp reserve, and every hedge quantity was off the HL lot grid. These are
+entry-only continuous-size bounds, not executable completed trades.
 
 ## Assessment
 

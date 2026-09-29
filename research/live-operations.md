@@ -307,3 +307,27 @@ late-flow adjudication. Next scheduled production review remains 22:26:33.
   Both outputs remain bounded; no new capture is running. Current wrapper
   and independent variant provenance checks committed as 4f97d38/00641bd.
 - Next scheduled production review **22:46:33 UTC / 6:46 p.m. ET**.
+
+## Status at 22:54 UTC
+
+- Review 20 actively read on schedule at 22:46:33. Baseline 92 closes
+  -$117.466 (90 paired, two failed hedges), cooldown 32 -$76.173, median
+  one failed hedge +$0.433 and two aborts. No winning paired closes or
+  policy promotion. Next due **23:06:33 UTC / 7:06 p.m. ET**.
+- Exit-request instrumentation deployed with checkpointed restart at
+  **22:45:28 UTC**, collector PID **2765644**, review loop **2765645**.
+  All four feeds reconnected. All three exposed positions present at the
+  stopped checkpoint subsequently closed with zero residual; two old flat
+  funding-pending records remain preserved. Balances/counters were retained.
+  Four baseline exits already provide valid request-price measurements;
+  see `reports/unwind-instrumentation/first-review.json`.
+- Cached RH maker replay completed with no errors, 96 branches. Its
+  independent late-flow check passed without flags; lifecycle summary
+  completed after correcting Decimal aggregation order by exactly 1E-28
+  in one branch. Readout: `reports/rh-small-maker-v1/CACHED-RESULTS.md`.
+  Original reference PID **2656054** remains running; do not mistake the
+  completed cached variant for a completed full-original comparison.
+- Canonical AMM capture PID 2749337 stopped normally at 22:46:07. Five
+  rounds, 320 quoter results, 20 HL books, 542,478 bytes. Its separate
+  readout is `reports/rh-small-canonical-amm/REPORT.md`. No capture is still
+  running. Future symmetric maker method has not been frozen or launched.
