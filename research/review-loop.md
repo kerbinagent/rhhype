@@ -568,3 +568,29 @@ negative; median request-to-flat 1.432s. The other four represented independent
 portfolios also had no winning profit-triggered exit in their small retained
 subsets. These overlapping scenarios are not independent events, and elapsed
 execution time does not identify the continuous lifetime of a profitable quote.
+
+## Review 13: 2026-09-29 20:26:33 UTC, actively reviewed on schedule
+
+| Standard-fee policy | Closes | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 102 | -150.450 | 98 | 4 |
+| Cooldown | 53 | -85.914 | 51 | 2 |
+| Historical median | 3 | -7.483 | 0 | 3 |
+| Conservative | 0 | 0 | 0 | 0 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+Complete retained coverage, zero wins. Baseline paired -$139.742, failed
+-$10.708; cooldown paired -$79.622, failed -$6.293. Baseline paired entry
+median 1.269s / p95 1.961s; exit-request-to-flat median 1.117s / p95 1.920s.
+CPU 57.52% of one core, p95 event-loop lag 15.82ms, RSS 209.29MiB, 827 books/s.
+Confirmation lifecycle 77 arms, zero entry/pending/residual: 50 skew, 11
+forecast, seven budget/depth, seven economic, two invalid-quote cancellations.
+
+The impulse study is complete: one NVDA/Core arm failed its confirmation
+hurdle, zero selected entries. Its 20-minute window is uninformative about
+conditional P&L or delay differences; no threshold was changed afterward.
+The audited NVDA/XAG maker capture is running from verified 20:22:56 start,
+scheduled to stop 20:29:57. Its first launcher attempt failed before collection
+and is explicitly recorded. An isolated HL-first versus simultaneous paper
+trial is under entry/accounting/storage review; no production policy changed.
+Next scheduled review **20:46:33 UTC / 4:46 p.m. ET**.
