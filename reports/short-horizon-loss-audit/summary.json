@@ -1,0 +1,406 @@
+{
+  "checkpoint_utc": "2026-09-29T14:54:38.881642+00:00",
+  "first_retained_entry_utc": "2026-09-29T14:33:06.357547+00:00",
+  "closed_retained": 978,
+  "independent_max_absolute_errors": {
+    "closed_quantity": 0.0,
+    "exit_value_usd": 0.0,
+    "leg_price_pnl_usd": 1.1368683772161603e-13,
+    "entry_fee_usd": 0.0,
+    "exit_fee_usd": 0.0,
+    "leg_fees_usd": 0.0,
+    "price_pnl_usd": 2.2737367544323206e-13,
+    "fees_usd": 0.0,
+    "reserve_usd": 5.551115123125783e-17,
+    "capital_usd": 0.0,
+    "net_pnl_usd": 2.2737367544323206e-13,
+    "wallet_usd": 7.275957614183426e-12
+  },
+  "accounting_checks_pass": true,
+  "portfolios": {
+    "plus": {
+      "closed_retained": 376,
+      "wins": 0,
+      "gross_price_wins": 8,
+      "wins_after_fees_before_reserve": 1,
+      "price_pnl": -219.16506499999934,
+      "fees_usd": 180.95020926425,
+      "other_costs_usd": 187.747045035,
+      "capital_costs_usd": 0.012695822744395365,
+      "funding_usd": 0.0,
+      "net_pnl_usd": -587.8750151219938,
+      "exit_reasons": {
+        "max_hold": 347,
+        "entry_failure": 29
+      },
+      "hold_median_seconds": 11.323242664337158,
+      "entry_signal_below_profit_target": 125,
+      "wallet_reconciliation_error_usd": -3.637978807091713e-12,
+      "lifetime_closed_count": 376,
+      "routes": {
+        "XPL|lighter:71|hyperliquid:XPL": {
+          "closed": 64,
+          "net_usd": -175.47993315527302
+        },
+        "ARB|lighter:50|hyperliquid:ARB": {
+          "closed": 43,
+          "net_usd": -98.2588545795893
+        },
+        "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15": {
+          "closed": 75,
+          "net_usd": -83.29228132198969
+        },
+        "XAG|hyperliquid:xyz:SILVER|rh_lighter:41": {
+          "closed": 63,
+          "net_usd": -71.80489559520892
+        },
+        "NBIS|hyperliquid:xyz:NBIS|lighter:189": {
+          "closed": 21,
+          "net_usd": -27.799530489439448
+        },
+        "XAG|hyperliquid:xyz:SILVER|aster:XAGUSDT": {
+          "closed": 20,
+          "net_usd": -23.141192498466232
+        },
+        "META|hyperliquid:xyz:META|rh_lighter:13": {
+          "closed": 19,
+          "net_usd": -22.462016263706502
+        },
+        "XAG|hyperliquid:xyz:SILVER|lighter:93": {
+          "closed": 18,
+          "net_usd": -16.162249868494982
+        },
+        "AAPL|hyperliquid:xyz:AAPL|rh_lighter:10": {
+          "closed": 14,
+          "net_usd": -15.278024000511056
+        },
+        "SAMSUNGUSD|hyperliquid:xyz:SMSN|lighter:162": {
+          "closed": 12,
+          "net_usd": -14.223640968568317
+        },
+        "LIT|lighter:120|hyperliquid:LIT": {
+          "closed": 5,
+          "net_usd": -11.657774437776736
+        },
+        "MSFT|hyperliquid:xyz:MSFT|rh_lighter:14": {
+          "closed": 6,
+          "net_usd": -7.099850016464358
+        },
+        "WLD|hyperliquid:WLD|lighter:6": {
+          "closed": 3,
+          "net_usd": -4.673871329672104
+        },
+        "INTC|hyperliquid:xyz:INTC|rh_lighter:30": {
+          "closed": 3,
+          "net_usd": -4.203583846619681
+        },
+        "GOOGL|hyperliquid:xyz:GOOGL|rh_lighter:12": {
+          "closed": 3,
+          "net_usd": -3.514664327740462
+        },
+        "SOXL|aster:SOXLUSDT|hyperliquid:xyz:SOXL": {
+          "closed": 1,
+          "net_usd": -1.799891737030205
+        },
+        "PUMP|lighter:45|hyperliquid:PUMP": {
+          "closed": 1,
+          "net_usd": -1.7812674466839014
+        },
+        "AVAX|lighter:9|hyperliquid:AVAX": {
+          "closed": 1,
+          "net_usd": -1.7608289368417662
+        },
+        "TAO|lighter:13|hyperliquid:TAO": {
+          "closed": 1,
+          "net_usd": -1.4253030855047373
+        },
+        "SOXL|hyperliquid:xyz:SOXL|lighter:197": {
+          "closed": 1,
+          "net_usd": -0.9296030822157217
+        },
+        "SNDK|lighter:139|hyperliquid:xyz:SNDK": {
+          "closed": 1,
+          "net_usd": -0.7407646674316091
+        },
+        "BRENTOIL|lighter:159|hyperliquid:xyz:BRENTOIL": {
+          "closed": 1,
+          "net_usd": -0.3849934667649368
+        }
+      }
+    },
+    "premium": {
+      "closed_retained": 225,
+      "wins": 0,
+      "gross_price_wins": 5,
+      "wins_after_fees_before_reserve": 0,
+      "price_pnl": -194.16356199999902,
+      "fees_usd": 214.71639606566998,
+      "other_costs_usd": 112.2436072025,
+      "capital_costs_usd": 0.00618445696209419,
+      "funding_usd": 0.0,
+      "net_pnl_usd": -521.1297497251311,
+      "exit_reasons": {
+        "max_hold": 165,
+        "entry_failure": 59,
+        "take_profit": 1
+      },
+      "hold_median_seconds": 11.21455979347229,
+      "entry_signal_below_profit_target": 76,
+      "wallet_reconciliation_error_usd": 7.275957614183426e-12,
+      "lifetime_closed_count": 225,
+      "routes": {
+        "XPL|lighter:71|hyperliquid:XPL": {
+          "closed": 76,
+          "net_usd": -244.00173434104843
+        },
+        "ARB|lighter:50|hyperliquid:ARB": {
+          "closed": 31,
+          "net_usd": -71.70411682462971
+        },
+        "XAG|hyperliquid:xyz:SILVER|aster:XAGUSDT": {
+          "closed": 35,
+          "net_usd": -41.74261344312335
+        },
+        "NBIS|hyperliquid:xyz:NBIS|lighter:189": {
+          "closed": 17,
+          "net_usd": -31.092435696220523
+        },
+        "WLD|hyperliquid:WLD|lighter:6": {
+          "closed": 7,
+          "net_usd": -17.52162541957886
+        },
+        "SOXL|aster:SOXLUSDT|hyperliquid:xyz:SOXL": {
+          "closed": 10,
+          "net_usd": -15.255758127836891
+        },
+        "ZRO|hyperliquid:ZRO|lighter:60": {
+          "closed": 2,
+          "net_usd": -12.94465412684822
+        },
+        "WLD|aster:WLDUSDT|hyperliquid:WLD": {
+          "closed": 5,
+          "net_usd": -12.030403550440862
+        },
+        "LIT|lighter:120|hyperliquid:LIT": {
+          "closed": 6,
+          "net_usd": -11.555479149519414
+        },
+        "SPCX|hyperliquid:xyz:SPCX|aster:SPCXUSDT": {
+          "closed": 8,
+          "net_usd": -10.306785068997085
+        },
+        "XAG|hyperliquid:xyz:SILVER|rh_lighter:41": {
+          "closed": 5,
+          "net_usd": -7.942869412039852
+        },
+        "PUMP|lighter:45|hyperliquid:PUMP": {
+          "closed": 3,
+          "net_usd": -6.811055027343297
+        },
+        "ETHFI|hyperliquid:ETHFI|lighter:64": {
+          "closed": 2,
+          "net_usd": -5.869335074406407
+        },
+        "NEAR|hyperliquid:NEAR|lighter:10": {
+          "closed": 3,
+          "net_usd": -4.97137861521293
+        },
+        "ARB|aster:ARBUSDT|hyperliquid:ARB": {
+          "closed": 2,
+          "net_usd": -4.418749598125869
+        },
+        "PUMP|hyperliquid:PUMP|aster:PUMPUSDT": {
+          "closed": 1,
+          "net_usd": -2.997458815399566
+        },
+        "GRAM|hyperliquid:GRAM|lighter:12": {
+          "closed": 1,
+          "net_usd": -2.1632424712255958
+        },
+        "AVAX|lighter:9|hyperliquid:AVAX": {
+          "closed": 1,
+          "net_usd": -2.1581935767288467
+        },
+        "PUMP|aster:PUMPUSDT|hyperliquid:PUMP": {
+          "closed": 1,
+          "net_usd": -2.153681433010351
+        },
+        "PUMP|hyperliquid:PUMP|lighter:45": {
+          "closed": 1,
+          "net_usd": -2.1372987918557924
+        },
+        "ETHFI|lighter:64|hyperliquid:ETHFI": {
+          "closed": 1,
+          "net_usd": -1.998271474639646
+        },
+        "SPCX|hyperliquid:xyz:SPCX|rh_lighter:18": {
+          "closed": 1,
+          "net_usd": -1.8577087071391025
+        },
+        "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15": {
+          "closed": 1,
+          "net_usd": -1.570804956176126
+        },
+        "WTI|lighter:145|hyperliquid:xyz:CL": {
+          "closed": 1,
+          "net_usd": -1.5379577378500784
+        },
+        "SPCX|hyperliquid:xyz:SPCX|lighter:194": {
+          "closed": 1,
+          "net_usd": -1.4027375324315479
+        },
+        "SNDK|hyperliquid:xyz:SNDK|aster:SNDKUSDT": {
+          "closed": 1,
+          "net_usd": -1.0963972922232648
+        },
+        "BRENTOIL|lighter:159|hyperliquid:xyz:BRENTOIL": {
+          "closed": 1,
+          "net_usd": -0.9636291399201489
+        },
+        "SNDK|aster:SNDKUSDT|hyperliquid:xyz:SNDK": {
+          "closed": 1,
+          "net_usd": -0.9233743211592715
+        }
+      }
+    },
+    "standard": {
+      "closed_retained": 377,
+      "wins": 0,
+      "gross_price_wins": 5,
+      "wins_after_fees_before_reserve": 1,
+      "price_pnl": -198.5033529999987,
+      "fees_usd": 132.46659093845,
+      "other_costs_usd": 188.1576628365,
+      "capital_costs_usd": 0.01303673473050858,
+      "funding_usd": 0.0,
+      "net_pnl_usd": -519.1406435096792,
+      "exit_reasons": {
+        "max_hold": 356,
+        "entry_failure": 21
+      },
+      "hold_median_seconds": 11.371922969818115,
+      "entry_signal_below_profit_target": 130,
+      "wallet_reconciliation_error_usd": 7.275957614183426e-12,
+      "lifetime_closed_count": 377,
+      "routes": {
+        "XPL|lighter:71|hyperliquid:XPL": {
+          "closed": 50,
+          "net_usd": -133.01668483838105
+        },
+        "ARB|lighter:50|hyperliquid:ARB": {
+          "closed": 34,
+          "net_usd": -72.72356261569965
+        },
+        "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15": {
+          "closed": 62,
+          "net_usd": -63.59682643417609
+        },
+        "XAG|hyperliquid:xyz:SILVER|rh_lighter:41": {
+          "closed": 59,
+          "net_usd": -61.80458023747887
+        },
+        "GOOGL|hyperliquid:xyz:GOOGL|rh_lighter:12": {
+          "closed": 26,
+          "net_usd": -26.79667175860716
+        },
+        "XAG|hyperliquid:xyz:SILVER|aster:XAGUSDT": {
+          "closed": 20,
+          "net_usd": -23.02105502748831
+        },
+        "META|hyperliquid:xyz:META|rh_lighter:13": {
+          "closed": 18,
+          "net_usd": -19.840537410143014
+        },
+        "SAMSUNGUSD|hyperliquid:xyz:SMSN|lighter:162": {
+          "closed": 15,
+          "net_usd": -17.563480807067393
+        },
+        "MSFT|hyperliquid:xyz:MSFT|rh_lighter:14": {
+          "closed": 16,
+          "net_usd": -17.12547126039873
+        },
+        "AAPL|hyperliquid:xyz:AAPL|rh_lighter:10": {
+          "closed": 18,
+          "net_usd": -16.8298761784391
+        },
+        "NBIS|hyperliquid:xyz:NBIS|lighter:189": {
+          "closed": 15,
+          "net_usd": -16.384726266965956
+        },
+        "INTC|hyperliquid:xyz:INTC|rh_lighter:30": {
+          "closed": 13,
+          "net_usd": -16.1185773513447
+        },
+        "XAG|hyperliquid:xyz:SILVER|lighter:93": {
+          "closed": 16,
+          "net_usd": -12.926389016739083
+        },
+        "LIT|lighter:120|hyperliquid:LIT": {
+          "closed": 4,
+          "net_usd": -8.116053176882765
+        },
+        "ZRO|hyperliquid:ZRO|lighter:60": {
+          "closed": 1,
+          "net_usd": -2.8553477859187057
+        },
+        "AVAX|lighter:9|hyperliquid:AVAX": {
+          "closed": 1,
+          "net_usd": -2.094485281394729
+        },
+        "TAO|lighter:13|hyperliquid:TAO": {
+          "closed": 1,
+          "net_usd": -1.284650530695671
+        },
+        "PUMP|lighter:45|hyperliquid:PUMP": {
+          "closed": 1,
+          "net_usd": -1.1272655125400117
+        },
+        "TSLA|hyperliquid:xyz:TSLA|rh_lighter:16": {
+          "closed": 1,
+          "net_usd": -1.0466366990991607
+        },
+        "DRAM|hyperliquid:xyz:DRAM|lighter:195": {
+          "closed": 1,
+          "net_usd": -1.0147290379715614
+        },
+        "SNDK|aster:SNDKUSDT|hyperliquid:xyz:SNDK": {
+          "closed": 1,
+          "net_usd": -0.923373615756702
+        },
+        "SNDK|hyperliquid:xyz:SNDK|rh_lighter:32": {
+          "closed": 1,
+          "net_usd": -0.9112999839223437
+        },
+        "GOOGL|hyperliquid:xyz:GOOGL|lighter:116": {
+          "closed": 1,
+          "net_usd": -0.9026242124170143
+        },
+        "SNDK|rh_lighter:32|hyperliquid:xyz:SNDK": {
+          "closed": 1,
+          "net_usd": -0.6510331389440234
+        },
+        "SPCX|lighter:194|hyperliquid:xyz:SPCX": {
+          "closed": 1,
+          "net_usd": -0.4647053312074236
+        }
+      }
+    }
+  },
+  "profit_triggered_exits": [
+    {
+      "id": "1790693368545728-749-premium",
+      "asset": "SPCX",
+      "strategy": "premium",
+      "exit_trigger_pnl_usd": 0.20232303011357106,
+      "exit_requested_at": 1790693372.488235,
+      "closed_at": 1790693373.289544,
+      "net_pnl_usd": -1.153947134531812
+    }
+  ],
+  "limitations": [
+    "Portfolios are alternative fee scenarios; do not add their returns.",
+    "Checks validate stored fill arithmetic, not execution realism or external fee schedules.",
+    "Per-trade totals describe the retained window; lifetime counters can cover more trades.",
+    "Removing the reserve is an accounting sensitivity, not a strategy rerun."
+  ]
+}
