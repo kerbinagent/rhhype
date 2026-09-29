@@ -47,6 +47,58 @@ def metric(values):
             "mean": statistics.fmean(ordered)}
 
 
+def probe_row(raw):
+    """Summarize one cumulative latency counter without inventing a distribution."""
+    names = ("triggered", "observed", "survived", "missing")
+    counts = {}
+    errors = []
+    for name in names:
+        value = raw.get(name, 0)
+        if isinstance(value, bool) or not isinstance(value, int) or value < 0:
+            errors.append(f"invalid_{name}")
+            counts[name] = None
+        else:
+            counts[name] = value
+    triggered, observed = counts["triggered"], counts["observed"]
+    survived, missing = counts["survived"], counts["missing"]
+    if None not in counts.values():
+        if observed + missing > triggered: errors.append("resolved_exceeds_triggered")
+        if survived > observed: errors.append("survived_exceeds_observed")
+    valid = not errors
+    total = finite(raw.get("actual_delay_ms_sum"))
+    if total is not None and total < 0:
+        errors.append("negative_actual_delay_sum")
+        total = None
+    minimum = finite(raw.get("actual_delay_ms_min"))
+    maximum = finite(raw.get("actual_delay_ms_max"))
+    if minimum is not None and maximum is not None and minimum > maximum:
+        errors.append("actual_delay_min_exceeds_max")
+        minimum = maximum = None
+    return {**counts,
+            "pending": triggered - observed - missing if valid else None,
+            "observed_coverage_fraction": observed / triggered if valid and triggered else None,
+            "actual_delay_ms_sum": total,
+            "average_actual_delay_ms": total / observed if valid and observed and total is not None else None,
+            "minimum_actual_delay_ms": minimum if valid and observed else None,
+            "maximum_actual_delay_ms": maximum if valid and observed else None,
+            "validation_errors": errors}
+
+
+def probe_snapshot(snapshot):
+    """Keep aggregate fee-scenario counts separate from instrumented strategies."""
+    aggregate = {str(target): probe_row(row) for target, row in
+                 (snapshot.get("latency") or {}).items() if isinstance(row, dict)}
+    by_strategy = {}
+    for strategy, targets in (snapshot.get("latency_by_strategy") or {}).items():
+        if not isinstance(targets, dict): continue
+        rows = {str(target): probe_row(row) for target, row in targets.items()
+                if isinstance(row, dict) and any(row.get(key, 0) for key in
+                                                 ("triggered", "observed", "survived", "missing"))}
+        if rows: by_strategy[strategy] = rows
+    return {"aggregate_fee_scenario_observations_correlated": aggregate,
+            "by_instrumented_strategy": by_strategy}
+
+
 def market_id(market):
     return f"{market['venue']}:{market['market']}"
 
@@ -341,13 +393,19 @@ def compare(depth: dict, bbo: dict, *, max_routes=50, skew_limit=5.0,
                            "status": snap.get("status"), "hl_quote_mode": snap.get("hl_quote_mode"),
                            "cpu_percent_one_core": finite(snap.get("cpu_percent_one_core")),
                            "loop_lag_p95_ms": finite(snap.get("loop_lag_p95_ms")),
-                           "book_events_per_second": finite(snap.get("book_events_per_second"))}
+                           "book_events_per_second": finite(snap.get("book_events_per_second")),
+                           "latency_probes": probe_snapshot(snap)}
     if snapshot["depth"]["hl_quote_mode"] not in ("depth", "l2book") or snapshot["bbo"]["hl_quote_mode"] != "bbo_plus_depth":
         flags.append("feed_modes_not_verified")
     if any(v["snapshot_age_seconds"] is None or
            (v["status"] not in ("stopped", "failed") and v["snapshot_age_seconds"] > 15)
            for v in snapshot.values()):
         flags.append("stale_performance_snapshot")
+    if any(row["validation_errors"] for snap in snapshot.values() for rows in
+           (snap["latency_probes"]["aggregate_fee_scenario_observations_correlated"],
+            *snap["latency_probes"]["by_instrumented_strategy"].values())
+           for row in rows.values()):
+        flags.append("latency_probe_counters_invalid")
     duration = common - min(v for v in starts.values() if v is not None) if any(v is not None for v in starts.values()) else None
     both_stopped = all(v["status"] == "stopped" for v in snapshot.values())
     early_quantity_bug = (both_stopped and duration is not None and duration < pilot_minutes * 60 and
@@ -386,6 +444,8 @@ def compare(depth: dict, bbo: dict, *, max_routes=50, skew_limit=5.0,
                 "The feed cohorts may have different numbers and mixes of attempted trades; net P&L alone cannot rank feeds.",
                 "Public displayed quotes and paper fills do not prove executable orders.",
                 "CPU and p95 lag are separate snapshot observations, not one synchronized measurement.",
+                "Latency probes are cumulative at each JSON snapshot time, separate from ledger checkpoint times. Fee-scenario observations share market signals and are correlated.",
+                "Probe survival means the delayed opening edge remained positive; it is not completed-trade profitability. Only count, sum, minimum, and maximum delay are recorded, so no delay p95 is available.",
                 "Entry-edge deterioration is measured only for paired, full planned size; exit delay requires exit_requested_at.",
                 "Only trades settled by the common earlier checkpoint enter retained comparisons; open and unsettled positions stay separate.",
             ]}
@@ -467,6 +527,24 @@ def markdown(result):
     for feed, row in result["snapshot_performance_separate_times"].items():
         lines.append(f"| {feed} | {row['snapshot_utc']} | {_measure(row['cpu_percent_one_core'])} | "
                      f"{_measure(row['loop_lag_p95_ms'])} | {_measure(row['book_events_per_second'],0)} |")
+    lines += ["", "## 100 ms latency probe", "",
+              "Cumulative counts at each JSON snapshot time. The aggregate repeats correlated market "
+              "observations across fee scenarios; it is not a count of independent opportunities. "
+              "Survived means the delayed opening edge stayed positive, not that a completed trade profited.", "",
+              "| Feed | Snapshot UTC | Triggered | Observed | Survived | Missing | Pending | Observed coverage | Actual delay mean ms | Min / max ms |",
+              "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|"]
+    for feed, snap in result["snapshot_performance_separate_times"].items():
+        row = snap["latency_probes"]["aggregate_fee_scenario_observations_correlated"].get("100")
+        if row is None:
+            lines.append(f"| {feed} | {snap['snapshot_utc']} | ? | ? | ? | ? | ? | ? | ? | ? |")
+            continue
+        count = lambda name: "?" if row[name] is None else str(row[name])
+        coverage = row["observed_coverage_fraction"]
+        coverage_text = "?" if coverage is None else f"{coverage:.1%}"
+        min_max = f"{_measure(row['minimum_actual_delay_ms'])} / {_measure(row['maximum_actual_delay_ms'])}"
+        lines.append(f"| {feed} | {snap['snapshot_utc']} | {count('triggered')} | {count('observed')} | "
+                     f"{count('survived')} | {count('missing')} | {count('pending')} | {coverage_text} | "
+                     f"{_measure(row['average_actual_delay_ms'])} | {min_max} |")
     lines += ["", "## Hyperliquid entry provenance", "",
               "Counts are retained closed-trade legs at the common cutoff. Missing observations limit source comparisons.", "",
               "| Portfolio | Feed | Observed / filled legs | HL filled | HL BBO | HL l2book | HL missing |",

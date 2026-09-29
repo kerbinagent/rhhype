@@ -7,7 +7,7 @@ import tempfile
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from compare_feed_experiments import compare, markdown, read_run, write_report
+from compare_feed_experiments import compare, markdown, probe_row, read_run, write_report
 
 
 PAIR = {"asset": "BTC", "category": "crypto",
@@ -53,6 +53,53 @@ def run(label, checkpoint, trades, closed_total):
 
 
 class FeedComparisonTests(unittest.TestCase):
+    def test_probe_targets_and_instrumented_strategies_use_snapshot_time(self):
+        depth, bbo = run("depth", 100, [], 0), run("bbo", 101, [], 0)
+        depth["snapshot"].update({
+            "updated_at": 105,
+            "latency": {"100": {"triggered": 10, "observed": 7, "survived": 5,
+                                "missing": 2, "actual_delay_ms_sum": 3500,
+                                "actual_delay_ms_min": 200, "actual_delay_ms_max": 900},
+                        "300": {"triggered": 1, "observed": 0, "missing": 0}},
+            "latency_by_strategy": {
+                "standard": {"100": {"triggered": 4, "observed": 3, "survived": 2,
+                                      "missing": 1, "actual_delay_ms_sum": 1200}},
+                "confirmed": {"100": {"triggered": 0}}}})
+        bbo["snapshot"]["latency"] = {"100": {"triggered": 2, "observed": 2,
+                                                 "survived": 1, "missing": 0,
+                                                 "actual_delay_ms_sum": 800}}
+        result = compare(depth, bbo, now=106)
+        snap = result["snapshot_performance_separate_times"]["depth"]
+        self.assertEqual(snap["snapshot_at"], 105)
+        self.assertEqual(result["checkpoint_at"]["depth"], 100)
+        probes = snap["latency_probes"]
+        aggregate = probes["aggregate_fee_scenario_observations_correlated"]
+        self.assertEqual(set(aggregate), {"100", "300"})
+        self.assertEqual(aggregate["100"]["pending"], 1)
+        self.assertEqual(aggregate["100"]["observed_coverage_fraction"], .7)
+        self.assertEqual(aggregate["100"]["average_actual_delay_ms"], 500)
+        self.assertEqual(aggregate["100"]["minimum_actual_delay_ms"], 200)
+        self.assertEqual(aggregate["100"]["maximum_actual_delay_ms"], 900)
+        self.assertEqual(set(probes["by_instrumented_strategy"]), {"standard"})
+        self.assertNotIn("p95", json.dumps(probes))
+        report = markdown(result)
+        self.assertIn("## 100 ms latency probe", report)
+        self.assertIn("| depth | 1970-01-01T00:01:45+00:00 | 10 | 7 | 5 | 2 | 1 | 70.0% | 500.0 | 200.0 / 900.0 |", report)
+        self.assertIn("not that a completed trade profited", report)
+
+    def test_probe_zero_denominator_and_invalid_counts(self):
+        empty = probe_row({"triggered": 0, "observed": 0, "missing": 0})
+        self.assertEqual(empty["pending"], 0)
+        self.assertIsNone(empty["observed_coverage_fraction"])
+        self.assertIsNone(empty["average_actual_delay_ms"])
+        invalid = probe_row({"triggered": 2, "observed": 3, "missing": 0,
+                             "survived": 1, "actual_delay_ms_sum": 900})
+        self.assertIsNone(invalid["pending"])
+        self.assertIsNone(invalid["observed_coverage_fraction"])
+        self.assertIsNone(invalid["average_actual_delay_ms"])
+        self.assertIn("resolved_exceeds_triggered", invalid["validation_errors"])
+        self.assertIsNone(probe_row({"triggered": -1})["pending"])
+
     def test_common_cutoff_and_ledger_separation(self):
         depth = run("depth", 105, [trade("d1", 90), trade("d2", 103)], 2)
         bbo = run("bbo", 100, [trade("b1", 91, source="bbo")], 1)
