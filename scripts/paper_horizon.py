@@ -95,7 +95,7 @@ class HorizonMarkoutObserver:
                  max_route_gap_seconds=MAX_ROUTE_GAP_SECONDS,
                  max_book_age_seconds=MAX_BOOK_AGE_SECONDS,
                  max_paired_skew_seconds=MAX_PAIRED_SKEW_SECONDS,
-                 max_export_rows=MAX_EXPORT_ROWS):
+                 max_export_rows=MAX_EXPORT_ROWS, on_anchor=None):
         if not (0 < horizon_seconds < outcome_deadline_seconds <= window_seconds and
                 outcome_deadline_seconds < 2 * horizon_seconds and
                 max_observations >= 2 and max_routes >= 1 and min_anchors >= 1 and
@@ -115,6 +115,7 @@ class HorizonMarkoutObserver:
         self.max_book_age_seconds = float(max_book_age_seconds)
         self.max_paired_skew_seconds = float(max_paired_skew_seconds)
         self.max_export_rows = max_export_rows
+        self.on_anchor = on_anchor
         self.routes: dict[str, _Route] = {}
         self.counts = Counter()
         self.censored = Counter()
@@ -349,6 +350,10 @@ class HorizonMarkoutObserver:
         # anchors, so its own quote cannot enter its training set.
         anchor_due = now - state.last_anchor_at >= self.horizon_seconds
         prediction = self._prediction(state, obs) if anchor_due else None
+        if anchor_due and self.on_anchor is not None:
+            # The caller receives exactly the prediction frozen from prior
+            # mature anchors; this quote has not resolved prior anchors yet.
+            self.on_anchor(route, obs, dict(prediction) if prediction else None)
         self._resolve(route, state, obs)
         state.observations.append(obs)
         state.last_seen = obs
