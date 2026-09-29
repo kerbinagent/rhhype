@@ -467,3 +467,28 @@ The next maker investigation requires post-flow hedge and unwind evidence and
 explicit queue/acknowledgement assumptions, rather than reclassifying opening
 quotes as profits. Automatic 20-minute evidence capture continues; active AI
 research decisions do not execute outside an active session.
+
+
+## Reviews 9 and 10: captures at 19:06 and 19:26 UTC, reviewed late at 19:34
+
+The active agent ended its prior turn, so these two captures were not analyzed
+at their scheduled deadlines. The background scheduler did capture both on
+time. The user pointed out the missed active follow-up. This was a workflow
+failure: automatic evidence capture does not perform strategy research.
+
+| Window ending UTC | Baseline closes / net USD | Cooldown closes / net USD | Median closes / net USD |
+|---|---:|---:|---:|
+| 19:06:31.739 | 181 / -212.200 | 37 / -46.025 | 1 / -0.337 |
+| 19:26:32.920 | 184 / -220.291 | 37 / -55.291 | 2 / -4.647 |
+
+All retained coverage complete, zero winning closes in these three policies.
+Conservative and confirmed had no entries. At the second checkpoint the
+confirmation lifecycle had 41 arms, no completed entry, residual zero; 23 skew,
+seven forecast, six budget/depth, four economic, one invalid-quote termination.
+CPU 51.56% of one core, p95 loop lag 6.79ms, RSS 181.16MiB. At 19:34 live feeds
+were all connected and the snapshot was two seconds old. No strategy promoted.
+
+Next capture is 19:46:33 UTC. Active work resumed at 19:34 with a maker
+post-flow hedge/unwind diagnostic and an independent strategy alternatives
+review. New maker rules are to be written before a prospective second capture;
+the existing 18:23 capture is exploratory only.

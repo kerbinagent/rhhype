@@ -1,0 +1,126 @@
+{
+  "updated_at": 1790710420.3663213,
+  "pairs": [
+    {
+      "asset": "BTC",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "BTC",
+        "asset": "BTC",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.00001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 2281790822.1759415
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 1,
+        "asset": "BTC",
+        "fee_bps": 0,
+        "step": "0.00001",
+        "min_qty": 7e-05,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 735700857.393649,
+        "published_fee_floor_bps": 0
+      },
+      "metadata_utc": "2026-09-29T19:33:36.409714+00:00",
+      "metadata_timestamp": 1790710420.3600023
+    },
+    {
+      "asset": "ETH",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ETH",
+        "asset": "ETH",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.0001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1351226576.9143898
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 0,
+        "asset": "ETH",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.002,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 377930827.377049,
+        "published_fee_floor_bps": 0
+      },
+      "metadata_utc": "2026-09-29T19:33:36.409714+00:00",
+      "metadata_timestamp": 1790710420.3600273
+    },
+    {
+      "asset": "BTC",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "BTC",
+        "asset": "BTC",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.00001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 2281790822.1759415
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 1,
+        "asset": "BTC",
+        "fee_bps": 0,
+        "step": "0.00001",
+        "min_qty": 0.0002,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 89844449.005768,
+        "published_fee_floor_bps": 0
+      },
+      "metadata_utc": "2026-09-29T19:33:36.409714+00:00",
+      "metadata_timestamp": 1790710420.3600206
+    },
+    {
+      "asset": "ETH",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ETH",
+        "asset": "ETH",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.0001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1351226576.9143898
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 0,
+        "asset": "ETH",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.005,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 55517201.844706,
+        "published_fee_floor_bps": 0
+      },
+      "metadata_utc": "2026-09-29T19:33:36.409714+00:00",
+      "metadata_timestamp": 1790710420.3600283
+    }
+  ],
+  "failed_venues": []
+}

@@ -1,0 +1,7 @@
+{
+  "frozen_at": "2026-09-29T19:38:48.812719+00:00",
+  "method_sha256": "8a4338c82f4ffcbdfa52392c2ae2c6ded8c077bebc4e3a89991655cb156a369d",
+  "market_plan_sha256": "e4f059ae0fc9b3957779b42c5b35a04aa42fc220f2a74fb76a68d3669f06e2fe",
+  "capture_max_seconds": 420,
+  "capture_max_bytes": 25000000
+}
