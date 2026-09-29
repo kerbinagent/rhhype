@@ -1,0 +1,34 @@
+# Review 12 failed hedges: causal audit
+
+**Window:** 2026-09-29 19:46:31.470–20:06:31.180 UTC, using `settled_at` in the durable review checkpoint. The [review 12 checkpoint](../data/strategy-reviews/review-20260929T200631.180330Z.json) reports 666 retained completed trades. I queried that fixed window in the production SQLite database read-only, checked that all 666 were still retained, and froze every one of its 78 `entry_failure` trades plus compact comparator entries in [evidence.json.gz](../reports/review12-hedge-failures/evidence.json.gz) (119 KB). The evidence records the review file SHA-256, selection boundary, trade IDs, legs, entry observations, exits, and P&L. Portfolios are correlated alternatives; their dollar totals must not be added.
+
+## What failed
+
+| Portfolio | Failed hedges / completed | Failed-hedge net | Entry failure mechanism |
+| --- | ---: | ---: | --- |
+| Convergence | 15 / 15 | −$22.819 | All 15 Hyperliquid legs rejected at the frozen 10 bp entry price limit; opposite legs filled. |
+| Conservative | 1 / 1 | −$1.331 | The same VVV Hyperliquid rejection also represented in convergence. |
+| Shadow baseline | 9 / 188 | −$51.456 | Four Hyperliquid price-limit rejections; five partial Hyperliquid SHEIN buys against full Lighter shorts. |
+| Standard | 2 / 174 | −$8.740 | One Hyperliquid price-limit rejection and one partial Hyperliquid SHEIN buy. |
+| Premium | 45 / 155 | −$272.531 | 17 Hyperliquid price-limit rejections, 27 partial entries, one Hyperliquid min-notional rejection. |
+| Cooldown | 6 / 43 | −$22.920 | Five partial entries and one Hyperliquid price-limit rejection. |
+
+The 15 convergence rows represent **10 distinct rejected Hyperliquid book events**. The SNDK event was copied across three opposite venues, SOXL across three, and NEAR across two. Some events also appear in other fee/policy portfolios. The count rise from 6/7 in review 11 to 15/15 in review 12 is a rise in repeated exposures to a longstanding failure mode, not evidence of 15 independent market shocks. Earlier windows also had high convergence failure fractions (7/8 at 18:46 UTC and 6/7 at 19:46 UTC).
+
+## Why the first leg became exposure
+
+For every convergence failure, the Hyperliquid entry observation has `entry_rejection_reason=price_limit`, `book_source=targeted_rest`, `eligible_quantity=0`, and **positive displayed side quantity** (682–96,219 base units across differently sized assets). The selected book was received 1.173–2.238 seconds after the signal (median 1.272 s), with source age 0.375–0.920 s (median 0.559 s). Its source timestamp was after the signal and the intent's due time. These are not empty or over-two-second-stale books. The code applies a directional 10 bp limit to a price fixed at signal time; by the observed Hyperliquid book, no displayed level met that limit. The retained observation does not save the first outside-limit price, so it cannot quantify how many further bps the market moved.
+
+The opposite venue filled first: median 0.507 s after signal, versus the rejected Hyperliquid observation at 1.272 s. It remained one-legged for a median 0.965 s between that fill and the rejection, then took a median 0.521 s from rejection to flatten. Across the 15 convergence failures, the one-leg price result was **−$13.023 before** $2.333 of fees and $7.463 of the fixed reserve, yielding −$22.819 net. Only two had positive price P&L before charges. Thus removing the reserve would not make this a sound paired entry.
+
+The Hyperliquid receipt delay alone does not distinguish failed from successful baseline pairs: among 179 paired shadow-baseline trades in the same window, Hyperliquid entry receipt was also a median 1.277 s after signal, with source age 0.567 s. The distinguishing observed condition is *quantity available within the frozen price limit* at that later book: zero for the convergence failures, versus a median 1,188 base units among baseline paired trades (not comparable across assets as a liquidity scale). This is a selection/execution interaction, not proof of a transport outage. The review snapshot reports connected feeds and a healthy loop; it is not atomic with the trade checkpoint and cannot rule out a short localized feed delay.
+
+The baseline's large loss has a second mechanism. Five SHEIN rows after 20:02 UTC contributed **−$47.637 of its −$51.456 failed-hedge net**. Hyperliquid bought only 19.3%–93.3% of the intended quantity while Lighter shorted the full quantity. Their Hyperliquid books had more total displayed depth than the desired size, but only 47.3–227.9 units were within the frozen limit; the fill matched that eligible slice. Three used targeted REST and two L2. This is capped-price partial depth, not a zero-depth book. At 20:00 UTC it was 4:00 p.m. Eastern, the [NYSE's normal core close](https://www.nyse.com/trade/hours-calendars). The SHEIN concentration follows that clock time, but the retained synthetic-market data do not establish a session-close cause or a venue shutdown. Thirteen of the 15 convergence failures occurred before 20:00, and the remaining two were VVV/XPL, so a session-close explanation does not fit the full spike.
+
+The fill code's buy/sell price-limit directions and lot-rounded partial walk match these retained outcomes. I found no sign or fee arithmetic error in these rows. The paper engine's public-book fill model remains a quote simulation; it does not establish exchange execution or real order rejection.
+
+## Next separate shadow experiment
+
+Test a **Hyperliquid-first contingent hedge** in a new independent Standard-fee shadow ledger, leaving the current portfolios and their first failures intact. At the same candidate signal, send the Hyperliquid simulated entry first with the existing 10 bp cap and actual source/receipt/delay checks. Record every first-leg rejection, partial fill, and missed opportunity. Only after an observed Hyperliquid fill, size the opposite order to the *filled*, lot-compatible quantity, require its venue minimum and a fresh decision-time net quote after four fees plus reserve, then apply that venue's normal delay and price limit. If the second leg rejects or only partially fills, use the existing flattening path and record its full one-leg loss. Do not grant an atomic fill, more generous cap, or assumed same-time hedge.
+
+Predeclare outcomes by original candidate: entered matched pairs, first-leg rejections, first-leg partials, second-leg failures, unhedged seconds, net after all costs, and foregone candidates. Compare the new policy with current convergence and baseline **on the same original candidate events**, including all original first-failure rows; do not compare only surviving paired trades or treat an abstention as a gain. This directly tests whether making the empirically unreliable Hyperliquid leg first reduces one-leg exposure while showing any loss of coverage or later hedge deterioration.
