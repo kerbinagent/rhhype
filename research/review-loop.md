@@ -106,3 +106,9 @@ are booked. Original Standard/Premium activity before this correction is not a
 valid fee-tier comparison against active portfolios. Entry policy thresholds
 remain unchanged. All 137 tests pass before deployment; restart again clears
 rolling model history, requiring another two-minute warmup.
+
+Deployed funding isolation at 16:36:45 UTC, collector PID 1568172. First live
+check: Standard resumed 21 entries; Premium HL spendable cash $4,438.40, Aster
+unavailable. Both original XAG records remain AWAITING_FUNDING with aggregate
+cashflow null. Accounting reconciliation remains within $5e-11. All four feeds
+connected, 63.4% of one core, 11.5 ms p95 loop lag. No fee/exit changes.
