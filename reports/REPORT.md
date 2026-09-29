@@ -19,20 +19,20 @@ See the [review journal](../research/review-loop.md),
 experiments and their limits. Opening-edge rankings below must not be read as
 realized profit rankings.
 
-Further completed studies through **19:46 UTC** agree on that limitation:
+Further completed studies through **20:29 UTC** agree on that limitation:
 
 | Experiment | Observation | Interpretation |
 |---|---|---|
 | [Original-size prospective quotes](fixed-markout-v1/final.md) | 1,595 complete outcomes across 12 assets; one positive after four fees, none after reserve | Even optimistic entry timing did not establish a profitable selected rule; 539 other outcomes were censored |
 | [Forward closing-basis forecast](horizon-v2/report.md) | Conditional model MAE 0.927 bp versus persistence 1.094 bp on 2,797 shared observations | Better prediction accuracy did not yield positive economic selections |
 | [Prospective maker paths](../research/maker-roundtrip-prospective.md) | Primary scenario: 32 full public-trade-flow cases, 23 hedge quotes, 14 complete exits; all 14 negative after fees | Queue flow is not a fill; nine missing hedge and nine missing exit outcomes remain unresolved |
-| [Latest scheduled review](../research/review-loop.md) | Baseline 187 closes, −$249.30; cooldown 44, −$89.54; median gate seven, −$16.39 | Stricter confirmation policies entered zero trades; no replacement policy promoted |
+| [Scheduled review at 20:26 UTC](../research/review-loop.md) | Baseline 102 closes, −$150.45; cooldown 53, −$85.91; median gate three, −$7.48 | No winning closes; no replacement policy promoted |
+| [Impulse confirmation](impulse-v1/README.md) | 117,863 valid pair evaluations; one arm failed confirmation; zero entries | No economic or latency outcome to estimate |
+| [NVDA/silver maker quotes](maker-equity-v2/results.md) | One hypothetical full-flow case and hedge; no eligible complete exit | Missing exit is unresolved, not zero P&L |
 
-A separate [impulse-dislocation study](impulse-v1/README.md) began at
-20:00:36 UTC with its method frozen beforehand. It tests eight BTC/ETH/NVDA/XAG
-pairs using fresh confirmation, delayed entries, original-size exits, and all
-four fees. Results are pending. These studies share market periods and are
-not independent estimates to combine into a portfolio return.
+These studies share market periods and are not independent estimates to combine
+into a portfolio return. All economic experiments use public quotes; maker flow
+conditions do not establish queue position or actual fills.
 
 ## Assessment
 
