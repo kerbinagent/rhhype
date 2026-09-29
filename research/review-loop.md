@@ -594,3 +594,34 @@ scheduled to stop 20:29:57. Its first launcher attempt failed before collection
 and is explicitly recorded. An isolated HL-first versus simultaneous paper
 trial is under entry/accounting/storage review; no production policy changed.
 Next scheduled review **20:46:33 UTC / 4:46 p.m. ET**.
+
+## Review 14: 2026-09-29 20:46:33 UTC, actively reviewed on schedule
+
+| Standard-fee policy | Closes | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 93 | -94.970 | 91 | 2 |
+| Cooldown | 44 | -43.457 | 43 | 1 |
+| Historical median | 1 | -4.392 | 0 | 1 |
+| Conservative | 0 | 0 | 0 | 0 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+Complete retained coverage, zero wins. Historical median also had one zero-fill
+abort. Baseline paired -$92.235 and failed -$2.736; cooldown paired -$42.455,
+failed -$1.002. Baseline paired-entry median 1.266s/p95 1.893s;
+exit-request-to-flat median 1.143s/p95 1.668s. CPU 51.76% one core, p95 loop
+lag 7.87ms, RSS 212.28MiB, 692 books/s. Confirmation lifecycle 81 arms, zero
+entries/pending/residual: 53 skew, 12 forecast, seven budget/depth, seven
+economic, two invalid-quote cancellations. No replacement policy promoted.
+
+The frozen HL-first sequencing trial remains active until 21:00:39. Its
+WebSocket-only convergence selector had no admitted candidates at the last
+interim read; that is not a profitability comparison. An exploratory smaller-
+size replay of the stopped NVDA/XAG capture is under final review. A newly
+noticed documented HL fast-L2 option is being checked separately, without
+changing the running production or experiment subscriptions.
+
+The user explicitly redirected emphasis to a systematic current strategy
+literature review. Root acknowledged that existing empirical strategy tests
+were not a sufficient SOTA review. Primary-source work now covers maker/hedge
+inventory policies, executable residual/optimal stopping, and carry/capital
+allocation. Next scheduled review **21:06:33 UTC / 5:06 p.m. ET**.
