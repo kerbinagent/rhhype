@@ -14,7 +14,7 @@ import time
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from paper_ui import tui_lines
+from paper_ui import tui_lines, read_watch_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -76,6 +76,19 @@ class LayoutTests(unittest.TestCase):
             self.assertNotIn("\033", "\n".join(lines))
             self.assertTrue(all(ord(c) < 127 for line in lines for c in line))
         self.assertIn("Showing", "\n".join(tui_lines(data, 30, 12)))
+
+    def test_missing_snapshot_explains_writer_lock_state(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/'paper_snapshot.json'
+            missing=read_watch_snapshot(path)
+            self.assertIn('Collector is not running', '\n'.join(tui_lines(missing,80,24)))
+            self.assertFalse((path.parent/'paper.lock').exists())
+            with (path.parent/'paper.lock').open('w') as lock:
+                fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+                waiting=read_watch_snapshot(path)
+                self.assertIn('Collector is running', '\n'.join(tui_lines(waiting,80,24)))
+            path.write_text(json.dumps(snapshot()))
+            self.assertEqual(read_watch_snapshot(path)['status'],'running')
 
     def test_missing_and_bad_snapshot_fields(self):
         for data in (None, {}, {"strategies": [], "top_signals": "bad",

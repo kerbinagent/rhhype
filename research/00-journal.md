@@ -82,3 +82,8 @@ User scope: thoroughly investigate arbitrage between Robinhood Chain and Hyperli
 
 - Final validation: 85 tests pass; 116 comparisons / 67 symbols; 554,556 book events across 420s plus 240s restart. All 11 prior positions recovered and closed, two Aster funding lookups resolved, all wallet reconciliations within 1e-7, SQLite integrity `ok`. Closed net results: Standard −$9.18 (8), Plus −$11.38 (8), Premium −$13.56 (5), with 12 positions still durably open. Evidence archive and explicit missing/censored latency diagnostics are committed with the validation report. All validation processes exited cleanly.
 - Final failure-path regression: a failed checkpoint restores drained trade/signal/evidence queues before retry, keeping financial state and its audit records together. The fault test avoids host-specific idle thread-executor teardown; actual threaded checkpoint shutdown remains covered by the collector PTY tests.
+
+## Viewer waiting at launch — 2026-09-29
+
+- Diagnosed a viewer-only launch: host process list contained `scripts/monitor.py --watch`, with no collector or default output directory. Started the authorized paper collector in the background and verified fresh snapshots, 115 comparisons and advancing book counters. Left that collector running for the user.
+- The waiting screen now checks the writer lock and distinguishes an absent collector from startup in progress, showing the collector command and watched path. The check creates no files and ignores stale PID contents.

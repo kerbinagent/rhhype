@@ -3,6 +3,8 @@ from __future__ import annotations
 
 from contextlib import contextmanager
 import json
+import fcntl
+import shlex
 import math
 from pathlib import Path
 import shutil
@@ -218,6 +220,8 @@ def tui_lines(snapshot: dict | None, columns: int, rows: int) -> list[str]:
     width, height = max(1, columns - 1), max(1, rows - 1)
     if not isinstance(snapshot, dict):
         lines = ["RHHYPE paper monitor | Ctrl-C exits", "Waiting for monitor snapshot ..."]
+    elif isinstance(snapshot.get("viewer_notice"), list):
+        lines = ["RHHYPE viewer | Ctrl-C exits", *snapshot["viewer_notice"]]
     else:
         updated = _number(snapshot.get("updated_at", snapshot.get("updated_timestamp")))
         age = f"{max(0, int(time.time() - updated))}s" if updated is not None else "?"
@@ -274,6 +278,49 @@ def terminal() -> Iterator[None]:
         sys.stdout.flush()
 
 
+def collector_running(directory: Path) -> bool | None:
+    """Probe the writer lock without creating files or relying on stale PIDs."""
+    try:
+        with (directory / "paper.lock").open("r") as lock:
+            try:
+                fcntl.flock(lock, fcntl.LOCK_SH | fcntl.LOCK_NB)
+            except BlockingIOError:
+                return True
+        return False
+    except FileNotFoundError:
+        return False
+    except OSError:
+        return None
+
+
+def read_watch_snapshot(path: Path) -> dict:
+    try:
+        candidate = json.loads(path.read_text())
+        if isinstance(candidate, dict):
+            return candidate
+        reason = "Snapshot has an invalid format."
+    except FileNotFoundError:
+        reason = "No snapshot has been written yet."
+    except (json.JSONDecodeError, OSError, UnicodeError):
+        reason = "Snapshot could not be read."
+    running = collector_running(path.parent)
+    lines = [reason]
+    if running is False:
+        lines += ["Collector is not running; --watch only opens the viewer.",
+                  "Start the collector in another terminal:",
+                  ".venv/bin/python scripts/monitor.py --no-tui"]
+        default = Path(__file__).resolve().parents[1] / "data/paper-monitor"
+        if path.parent.resolve() != default:
+            lines[-1] += " \\"
+            lines.append("  --out " + shlex.quote(str(path.parent)))
+    elif running:
+        lines.append("Collector is running; waiting for its first checkpoint.")
+    else:
+        lines.append("Collector status could not be checked.")
+    lines += ["Watching: " + str(path), "Collector log: " + str(path.parent / "paper.log")]
+    return {"viewer_notice": lines}
+
+
 def watch(path: Path) -> None:
     """Display an atomic JSON snapshot until Ctrl-C or SIGTERM."""
     path = Path(path)
@@ -289,12 +336,7 @@ def watch(path: Path) -> None:
     try:
         with terminal():
             while not stopped:
-                try:
-                    candidate = json.loads(path.read_text())
-                    snapshot = candidate if isinstance(candidate, dict) else None
-                except (FileNotFoundError, json.JSONDecodeError, OSError, UnicodeError):
-                    snapshot = None
-                draw(snapshot)
+                draw(read_watch_snapshot(path))
                 # Signals interrupt sleep; the next loop condition exits cleanly.
                 time.sleep(0.5)
     finally:
