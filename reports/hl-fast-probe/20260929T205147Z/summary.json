@@ -1,0 +1,357 @@
+{
+  "started": 1790715107.6894104,
+  "ended": 1790715167.6911795,
+  "duration_seconds": 60.001769065856934,
+  "url": "wss://api.hyperliquid.xyz/ws",
+  "subscriptions_sent": {
+    "fast": [
+      {
+        "method": "subscribe",
+        "subscription": {
+          "type": "l2Book",
+          "coin": "BTC",
+          "fast": true
+        }
+      },
+      {
+        "method": "subscribe",
+        "subscription": {
+          "type": "l2Book",
+          "coin": "xyz:NVDA",
+          "fast": true
+        }
+      },
+      {
+        "method": "subscribe",
+        "subscription": {
+          "type": "l2Book",
+          "coin": "xyz:SILVER",
+          "fast": true
+        }
+      }
+    ],
+    "slow": [
+      {
+        "method": "subscribe",
+        "subscription": {
+          "type": "l2Book",
+          "coin": "BTC",
+          "fast": false
+        }
+      },
+      {
+        "method": "subscribe",
+        "subscription": {
+          "type": "l2Book",
+          "coin": "xyz:NVDA",
+          "fast": false
+        }
+      },
+      {
+        "method": "subscribe",
+        "subscription": {
+          "type": "l2Book",
+          "coin": "xyz:SILVER",
+          "fast": false
+        }
+      }
+    ]
+  },
+  "acks": {
+    "fast": {
+      "BTC": {
+        "received": 1790715108.1897707,
+        "payload": {
+          "channel": "subscriptionResponse",
+          "data": {
+            "method": "subscribe",
+            "subscription": {
+              "type": "l2Book",
+              "coin": "BTC",
+              "nSigFigs": null,
+              "mantissa": null,
+              "fast": true
+            }
+          }
+        }
+      },
+      "xyz:NVDA": {
+        "received": 1790715108.2100503,
+        "payload": {
+          "channel": "subscriptionResponse",
+          "data": {
+            "method": "subscribe",
+            "subscription": {
+              "type": "l2Book",
+              "coin": "xyz:NVDA",
+              "nSigFigs": null,
+              "mantissa": null,
+              "fast": true
+            }
+          }
+        }
+      },
+      "xyz:SILVER": {
+        "received": 1790715108.2402685,
+        "payload": {
+          "channel": "subscriptionResponse",
+          "data": {
+            "method": "subscribe",
+            "subscription": {
+              "type": "l2Book",
+              "coin": "xyz:SILVER",
+              "nSigFigs": null,
+              "mantissa": null,
+              "fast": true
+            }
+          }
+        }
+      }
+    },
+    "slow": {
+      "BTC": {
+        "received": 1790715108.1899142,
+        "payload": {
+          "channel": "subscriptionResponse",
+          "data": {
+            "method": "subscribe",
+            "subscription": {
+              "type": "l2Book",
+              "coin": "BTC",
+              "nSigFigs": null,
+              "mantissa": null,
+              "fast": false
+            }
+          }
+        }
+      },
+      "xyz:NVDA": {
+        "received": 1790715108.2012286,
+        "payload": {
+          "channel": "subscriptionResponse",
+          "data": {
+            "method": "subscribe",
+            "subscription": {
+              "type": "l2Book",
+              "coin": "xyz:NVDA",
+              "nSigFigs": null,
+              "mantissa": null,
+              "fast": false
+            }
+          }
+        }
+      },
+      "xyz:SILVER": {
+        "received": 1790715108.2118108,
+        "payload": {
+          "channel": "subscriptionResponse",
+          "data": {
+            "method": "subscribe",
+            "subscription": {
+              "type": "l2Book",
+              "coin": "xyz:SILVER",
+              "nSigFigs": null,
+              "mantissa": null,
+              "fast": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "connections": {
+    "fast": {
+      "connect_started": 1790715107.6897688,
+      "closed": true,
+      "connected_at": 1790715108.0310218,
+      "close_code": 1006,
+      "ended_at": 1790715167.6908793
+    },
+    "slow": {
+      "connect_started": 1790715107.6922977,
+      "closed": true,
+      "connected_at": 1790715108.0294352,
+      "close_code": 1006,
+      "ended_at": 1790715167.6910217
+    }
+  },
+  "messages": {
+    "fast": 336,
+    "slow": 39
+  },
+  "errors": [],
+  "raw_bytes": 232580,
+  "raw_records_dropped": 0,
+  "events_retained": 369,
+  "events_dropped": 0,
+  "feeds": {
+    "fast": {
+      "BTC": {
+        "books": 111,
+        "source_gap_median_s": 0.539,
+        "source_gap_p95_s": 0.606,
+        "receipt_gap_median_s": 0.541117,
+        "receipt_gap_p95_s": 0.666495,
+        "source_age_median_s": 0.321891,
+        "source_age_p95_s": 0.498621,
+        "levels_bid_median": 5,
+        "levels_ask_median": 5,
+        "depth_1000_bid_fit": 111,
+        "depth_1000_ask_fit": 111,
+        "depth_1000_both_fit": 111,
+        "acknowledged": true,
+        "nominal_100ms_eligible_book": {
+          "anchors": 111,
+          "eligible_within_3s": 110,
+          "timed_out_3s": 0,
+          "end_censored": 1,
+          "actual_delay_median_s": 0.548056,
+          "actual_delay_p95_s": 0.847542
+        }
+      },
+      "xyz:NVDA": {
+        "books": 111,
+        "source_gap_median_s": 0.539,
+        "source_gap_p95_s": 0.606,
+        "receipt_gap_median_s": 0.541128,
+        "receipt_gap_p95_s": 0.666505,
+        "source_age_median_s": 0.322083,
+        "source_age_p95_s": 0.4988,
+        "levels_bid_median": 5,
+        "levels_ask_median": 5,
+        "depth_1000_bid_fit": 111,
+        "depth_1000_ask_fit": 111,
+        "depth_1000_both_fit": 111,
+        "acknowledged": true,
+        "nominal_100ms_eligible_book": {
+          "anchors": 111,
+          "eligible_within_3s": 110,
+          "timed_out_3s": 0,
+          "end_censored": 1,
+          "actual_delay_median_s": 0.548152,
+          "actual_delay_p95_s": 0.847586
+        }
+      },
+      "xyz:SILVER": {
+        "books": 111,
+        "source_gap_median_s": 0.539,
+        "source_gap_p95_s": 0.606,
+        "receipt_gap_median_s": 0.541204,
+        "receipt_gap_p95_s": 0.666458,
+        "source_age_median_s": 0.32215,
+        "source_age_p95_s": 0.498937,
+        "levels_bid_median": 5,
+        "levels_ask_median": 5,
+        "depth_1000_bid_fit": 111,
+        "depth_1000_ask_fit": 111,
+        "depth_1000_both_fit": 111,
+        "acknowledged": true,
+        "nominal_100ms_eligible_book": {
+          "anchors": 111,
+          "eligible_within_3s": 110,
+          "timed_out_3s": 0,
+          "end_censored": 1,
+          "actual_delay_median_s": 0.548091,
+          "actual_delay_p95_s": 0.847571
+        }
+      }
+    },
+    "slow": {
+      "BTC": {
+        "books": 12,
+        "source_gap_median_s": 5.383,
+        "source_gap_p95_s": 5.529,
+        "receipt_gap_median_s": 5.380499,
+        "receipt_gap_p95_s": 5.529053,
+        "source_age_median_s": 0.402252,
+        "source_age_p95_s": 0.511108,
+        "levels_bid_median": 20,
+        "levels_ask_median": 20,
+        "depth_1000_bid_fit": 12,
+        "depth_1000_ask_fit": 12,
+        "depth_1000_both_fit": 12,
+        "acknowledged": true,
+        "nominal_100ms_eligible_book": {
+          "anchors": 12,
+          "eligible_within_3s": 0,
+          "timed_out_3s": 11,
+          "end_censored": 1,
+          "actual_delay_median_s": null,
+          "actual_delay_p95_s": null
+        }
+      },
+      "xyz:NVDA": {
+        "books": 12,
+        "source_gap_median_s": 5.383,
+        "source_gap_p95_s": 5.529,
+        "receipt_gap_median_s": 5.380365,
+        "receipt_gap_p95_s": 5.528911,
+        "source_age_median_s": 0.402548,
+        "source_age_p95_s": 0.511561,
+        "levels_bid_median": 20,
+        "levels_ask_median": 20,
+        "depth_1000_bid_fit": 12,
+        "depth_1000_ask_fit": 12,
+        "depth_1000_both_fit": 12,
+        "acknowledged": true,
+        "nominal_100ms_eligible_book": {
+          "anchors": 12,
+          "eligible_within_3s": 0,
+          "timed_out_3s": 11,
+          "end_censored": 1,
+          "actual_delay_median_s": null,
+          "actual_delay_p95_s": null
+        }
+      },
+      "xyz:SILVER": {
+        "books": 12,
+        "source_gap_median_s": 5.383,
+        "source_gap_p95_s": 5.529,
+        "receipt_gap_median_s": 5.380358,
+        "receipt_gap_p95_s": 5.528755,
+        "source_age_median_s": 0.402748,
+        "source_age_p95_s": 0.511711,
+        "levels_bid_median": 20,
+        "levels_ask_median": 20,
+        "depth_1000_bid_fit": 12,
+        "depth_1000_ask_fit": 12,
+        "depth_1000_both_fit": 12,
+        "acknowledged": true,
+        "nominal_100ms_eligible_book": {
+          "anchors": 12,
+          "eligible_within_3s": 0,
+          "timed_out_3s": 11,
+          "end_censored": 1,
+          "actual_delay_median_s": null,
+          "actual_delay_p95_s": null
+        }
+      }
+    }
+  },
+  "paired": {
+    "BTC": {
+      "fast_books": 111,
+      "with_prior_slow": 111,
+      "both_source_fresh_2s_receipt_skew_1s": 19,
+      "fast_fresh_slow_source_old_over_2s": 76,
+      "fast_top_differs_from_slow": 0,
+      "fast_minus_slow_source_median_s": 2.701
+    },
+    "xyz:NVDA": {
+      "fast_books": 111,
+      "with_prior_slow": 111,
+      "both_source_fresh_2s_receipt_skew_1s": 19,
+      "fast_fresh_slow_source_old_over_2s": 76,
+      "fast_top_differs_from_slow": 30,
+      "fast_minus_slow_source_median_s": 2.701
+    },
+    "xyz:SILVER": {
+      "fast_books": 111,
+      "with_prior_slow": 111,
+      "both_source_fresh_2s_receipt_skew_1s": 19,
+      "fast_fresh_slow_source_old_over_2s": 76,
+      "fast_top_differs_from_slow": 19,
+      "fast_minus_slow_source_median_s": 2.701
+    }
+  }
+}

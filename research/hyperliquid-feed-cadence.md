@@ -77,3 +77,15 @@ option is implemented and used by isolated research pilots; production retains
 its depth plus targeted REST control configuration. CPU-heavy analysis already
 runs in separate processes. Further optimization should be driven by measured
 collector lag and queue buildup, while preserving quote freshness/depth rules.
+
+## Follow-up at 20:53 UTC: explicit fast L2 option
+
+The earlier observations used subscriptions without the optional `fast` flag.
+A subsequently noticed documented `fast:true` option was tested against
+explicit `fast:false` in a frozen, simultaneous two-socket 60-second probe.
+[Results](../reports/hl-fast-probe/20260929T205147Z/analysis.md): 0.539s versus
+5.383s median source interval, five versus twenty levels. All six options
+were echoed in acknowledgements. All sampled single-venue books fit the
+$1,000 depth check; this is not a cross-venue trade or P&L result. No production
+subscriptions changed. The earlier ~5.4s measurement remains correct for
+its observed subscription and must not be generalized to every HL book mode.

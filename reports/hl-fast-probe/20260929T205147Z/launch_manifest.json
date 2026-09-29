@@ -1,0 +1,19 @@
+{
+  "pid": 2322712,
+  "command": [
+    "scripts/hyperliquid_fast_probe.py",
+    "--run",
+    "--duration",
+    "60"
+  ],
+  "started_utc": "2026-09-29T20:51:47.688844+00:00",
+  "git_commit": "c625218ec909c43a2f8904189f3187e89255e1f4",
+  "sha256": {
+    "scripts/hyperliquid_fast_probe.py": "fddab50f65c4a55516e95a882885f185713fb7f84578207b5b4aa4f602431f58",
+    "tests/test_hyperliquid_fast_probe.py": "b3214e93b805a90b3f0dbc70887c2f22e0d1408d8e237a093d0ec3e4b4f12ec1",
+    "research/hyperliquid-fast-feed.md": "345f108d15216e85cca20d8c441ffe103de1713e831e2d6343612f795d75f0c3"
+  },
+  "planned_connections": 2,
+  "max_raw_bytes": 5000000,
+  "max_events": 20000
+}
