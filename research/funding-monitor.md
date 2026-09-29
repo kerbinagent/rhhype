@@ -15,3 +15,25 @@ Aster's V3 public paths are requested on `https://fapi.asterdex.com/fapi/v3`. On
 `sample_references(markets)` batches native and `xyz` Hyperliquid context requests, a single Lighter `orderBookDetails` request per instance, and one Aster `premiumIndex` request. All requests are public and read-only. Lighter extra requests are paced to at most ten per minute **per FundingService instance** to leave headroom under the Standard shared IP limit. The caller should schedule references near funding boundaries and persist `dump_state()` in its checkpoint. Reference retention keeps the closest sample to each UTC hour per market, so frequent sampling cannot evict the useful near-boundary value immediately. Funding history requests align to settlement windows for Hyperliquid/Lighter and UTC hour windows for Aster, allowing multiple position segments on the same market to reuse one response. Aster's cached response is never reused for a later as-of time than its fetch, because new events may have settled meanwhile. Recent responses expire after 30 seconds to allow late event posting; response, reference, and Aster schedule caches have bounded row counts. These limits do not replace a shared process-wide Lighter limiter if several processes run under the same IP.
 
 All USD totals assume USDC, USDG, and USDT at par. `cashflow_usd` is therefore a paper comparison unit; conversion costs or depegs require separate treatment. A sampled clearing reference is always labelled estimated, including one sampled very close to the event. Past Aster or Hyperliquid settlements without a near-event reference remain incomplete.
+
+
+## Closed positions waiting for accounting
+
+A trade with no remaining quantity may stay in the engine as
+`AWAITING_FUNDING` when its funding cannot be assigned reliably. This status
+is not market exposure. It is also not necessarily a data-fetch delay: public
+history cannot resolve an ambiguous fill/funding ordering inside Aster's
+settlement window merely by waiting longer.
+
+At 18:33 UTC on September 29, two XAG records that the display had shown as
+8,000+ seconds old had actually held exposure for 12.1267s and 11.7846s.
+Both legs of both records were zero. Their Aster funding ownership around
+16:00 remained uncertain. The 10-second policy requests an exit; subsequent
+eligible book updates and fills explain actual holding times beyond ten seconds.
+
+Commit 1297815 separates flat records into snapshot `pending_settlements`.
+`positions` holds entries/exposure; each row also provides `has_exposure`,
+`holding_seconds`, and (where relevant) `funding_wait_seconds`. The UI reports
+"Closed, funding unresolved" separately. Unknown funding remains null and the
+existing venue-specific accounting reservation stays in place. This change
+neither manufactures a funding value nor finalizes these two trades' net P&L.

@@ -4,6 +4,21 @@ Generated 2026-09-29T04:32:43.097107+00:00. Research only; public data and read-
 
 **Fee correction (September 29 follow-up):** Aster has separate RWA and Group B schedules. The Aster results below retain the original flat 4 bp scenario; see the [overnight audit](monitor-audit/REPORT.md) for corrected fees and signal/exit analysis.
 
+## Subsequent short-horizon paper research
+
+The original survey below describes opening quotes and historical carry, not
+completed short-horizon trades. Later execution simulation does **not** validate
+a profitable ten-second strategy: the 18:26 UTC review recorded 185 baseline
+closes totaling -$201.31, with zero winning paired closes. A separate fixed
+chronological holdout lost $624.27; removing both explicit trading fees and the
+modeled extra-cost reserve still left a $228.90 loss on the same fills.
+
+See the [review journal](../research/review-loop.md),
+[fee sensitivity](fee-sensitivity/REPORT.md), and
+[active research operations](../research/live-operations.md) for subsequent
+experiments and their limits. Opening-edge rankings below must not be read as
+realized profit rankings.
+
 ## Assessment
 
 **The strongest follow-up candidates are the separate Robinhood Chain Lighter perpetual markets against Hyperliquid. The sampled Robinhood Uniswap stock-token pools generally do not clear their costs.** Small positive opening spreads also exist against Lighter Core and Aster, but an opening spread on two perpetuals is not realized arbitrage profit. Funding, the eventual unwind, and margin capital determine the outcome.

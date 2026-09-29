@@ -1,6 +1,6 @@
 # Bounded public maker research capture
 
-**Status:** implementation and offline tests are complete; **the capture has not been launched**. [`scripts/maker_capture.py`](../scripts/maker_capture.py) records public BTC/ETH quote and trade streams for later queue-ahead and adverse-price research. It does not submit orders, authenticate, request private data, or calculate maker P&L.
+**Status:** the first bounded capture ran September 29, 18:23:22–18:29:56 UTC, and stopped at its 25 MB cap. It retained 68,229 records with no manifest errors; stopped-archive analysis is in progress. [`scripts/maker_capture.py`](../scripts/maker_capture.py) records public BTC/ETH quote and trade streams for later queue-ahead and adverse-price research. It does not submit orders, authenticate, request private data, or calculate maker P&L.
 
 ## Sources and frozen markets
 
@@ -34,6 +34,6 @@ python scripts/maker_capture.py --dry-run
 python -m unittest tests.test_maker_capture -v
 ```
 
-The dry run reported all 18 expected public subscriptions and correct BTC/ETH market IDs without opening a socket or creating a file. Ten focused offline tests passed: exact gzip cap and readable output, concatenated gzip member decoding, cap termination reason, malformed timestamp rejection, null-side invalidation, nonce-gap persistence until a new snapshot, bad-trade generation gap, channel-local source regression, public-only market selection, and bounded final manifest. The separate live BTC handshake described in [maker-hedge feasibility](maker-hedge-feasibility.md) established feed availability, but this new multi-venue capture has **not** been started.
+The dry run reported all 18 expected public subscriptions and correct BTC/ETH market IDs without opening a socket or creating a file. Ten focused offline tests passed: exact gzip cap and readable output, concatenated gzip member decoding, cap termination reason, malformed timestamp rejection, null-side invalidation, nonce-gap persistence until a new snapshot, bad-trade generation gap, channel-local source regression, public-only market selection, and bounded final manifest. The separate live BTC handshake described in [maker-hedge feasibility](maker-hedge-feasibility.md) established feed availability, and the first multi-venue capture has now completed.
 
-For a later reviewed run, the exact command is `python scripts/maker_capture.py` (or add `--seconds 60` for a shorter first check). The resulting data can support prospective trade-flow and post-event markout screens. It cannot identify a hypothetical order's actual queue position or fill probability. A trade-through case remains an **optimistic hypothetical execution scenario**, never observed maker P&L or a mathematical upper bound on it.
+For another bounded run, the command is `python scripts/maker_capture.py` (or add `--seconds 60` for a shorter first check). The resulting data can support prospective trade-flow and post-event markout screens. It cannot identify a hypothetical order's actual queue position or fill probability. A trade-through case remains an **optimistic hypothetical execution scenario**, never observed maker P&L or a mathematical upper bound on it.
