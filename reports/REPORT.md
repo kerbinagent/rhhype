@@ -52,8 +52,10 @@ clarification. Public capture began at 21:21 UTC for BTC/ETH/NVDA/silver,
 with 30 minutes of calibration and 20 minutes of evaluation. It compares
 hedge-aware passive bid pricing with a fixed-best control and a persistence
 diagnostic, including account-tier timing, actual partial quantities, all
-four execution fees, reserve, capital and unresolved funding. No result is
-available yet. Current production policy remains unchanged.
+four execution fees, reserve, capital and unresolved funding. Capture
+stopped normally at 22:11 UTC; historical replay is still running as of
+22:32 UTC, with [explicit implementation/provenance checks](../research/rh-maker-replay-performance.md).
+No result is available yet. Current production policy remains unchanged.
 
 ### Independent strategy diagnostics, 21:58 UTC
 
@@ -79,8 +81,16 @@ unquoted USDG/USDC rebalancing. The new lifecycle postprocessor reports
 cash after modeled fees, reserve, capital, observed durations and censored
 endpoints separately. [Readout rules](../research/rh-maker-readout-rules.md)
 were recorded before the current holdout. A separate
-[maker-sell follow-up](../research/rh-maker-sell-followup.md) is being
-implemented for a future window; it is not a change to the current pilot.
+[maker-sell follow-up](../research/rh-maker-sell-followup.md) now has a
+[tested symmetric replay implementation](../research/rh-maker-symmetric-replay.md)
+prepared for a future window; it is not a change to the current pilot.
+
+The [size economics memo](../research/rh-small-size-economics.md) retains
+**$100 as the experiment floor**. In the older matched-book study, all
+$100/$250/$500/$1,000 paths remained negative after the stated fees and
+reserve. Smaller orders reduced dollar losses for that particular best-bid
+entry/taker-exit calculation; they did not establish a profitable size.
+The fixed $0.10 target also requires 10 bp at $100 versus 1 bp at $1,000.
 
 ## Assessment
 

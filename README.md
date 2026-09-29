@@ -65,3 +65,9 @@ The supplemental market plan and historical defaults describe this frozen experi
 | [Figures](reports/figures/) | PNG and SVG research charts |
 
 Raw API observations and hypothetical book walks are not actual fills. Source timestamps, errors, rejected books and missing coverage remain part of the evidence.
+
+Current RH maker research uses **$100/$250/$500/$1,000**, with $1,000 as
+the primary comparison and $100 as the minimum. See
+[size economics](research/rh-small-size-economics.md), the
+[frozen maker study](reports/rh-small-maker-v1/README.md), and the
+[twenty-minute review journal](research/review-loop.md) for ongoing findings.
