@@ -1,0 +1,24 @@
+{
+  "cached-analysis.json.gz": {
+    "original_path": "data/derived/rh-small-maker-v1-cached/analysis.json",
+    "uncompressed_sha256": "4303d96c051842b3cce9ab3b1cb5eeca5d89dc0318441b1e29294d57f455cbe7",
+    "gzip_sha256": "9f51ef032a455e28bfafa2117011f3f3fd9220af23de253316608ed9374b7c91",
+    "gzip_bytes": 303984
+  },
+  "cached-lifecycle.json.gz": {
+    "original_path": "data/derived/rh-small-maker-v1-cached-lifecycle/lifecycle.json",
+    "uncompressed_sha256": "e8e14f917c8afc99d0087aa65aa62baed7030754936a04da417e378908f02137",
+    "gzip_sha256": "a851ede4d0f0f7329b6ef5273e9a58ad924d4d194d019d15a04eecec1c3ad759",
+    "gzip_bytes": 27749
+  },
+  "cached-late-flow-validation.json": {
+    "original_path": "data/derived/rh-small-maker-v1-cached-late-flow/validation.json",
+    "sha256": "ae727150c2f435ee7d72a2a150b44ea5e35ad3ef4ca2b23a951d094d9e3017b9",
+    "bytes": 3300
+  },
+  "cached-optimization-provenance.json": {
+    "original_path": "data/derived/rh-small-maker-v1-cached/optimization_provenance.json",
+    "sha256": "bf76091fc7705b15c8d1e4853ae784927da5d4e411c4d614fb970a07dbcdb9fa",
+    "bytes": 1168
+  }
+}

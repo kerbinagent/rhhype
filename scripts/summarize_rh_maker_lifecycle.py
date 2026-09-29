@@ -283,7 +283,12 @@ def economics(row):
         return sum((Decimal(e[field]) for e in known), Decimal(0))
     cash, reserve, capital = (total(field) for field in
                               ('cash_known', 'reserve_cost', 'capital_cost'))
-    contribution = cash - reserve - capital
+    # The frozen analyzer rounds each episode under Decimal's context before
+    # summing. Summing components first can differ in the last decimal place;
+    # preserve the original operation order for an exact reconciliation.
+    contribution = sum((Decimal(e['cash_known']) - Decimal(e['reserve_cost'])
+                        - Decimal(e['capital_cost']) for e in known), Decimal(0))
+    component_rounding_residual = contribution - (cash - reserve - capital)
     if contribution != Decimal(row['metrics']['closed_net_parity_usd']):
         raise ValueError('closed episode economics disagree with frozen analysis')
     return {'known_closed_episodes': len(known),
@@ -293,6 +298,7 @@ def economics(row):
             'closed_reserve_cost_usd': str(reserve),
             'closed_capital_cost_usd': str(capital),
             'closed_contribution_after_all_three_parity_usd': str(contribution),
+            'episodewise_decimal_rounding_residual_usd': str(component_rounding_residual),
             'complete_branch_net_parity_usd': row['complete_net'],
             'complete_branch_result_known': row['complete_net'] is not None,
             'open_rh_base': row['rh_position'], 'open_hl_base': row['hl_position'],

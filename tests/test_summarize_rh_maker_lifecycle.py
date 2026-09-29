@@ -86,6 +86,33 @@ class LifecycleSummaryTests(unittest.TestCase):
         self.assertEqual(b['timing']['intervals']['public_flow_to_hedge_result']['count'], 0)
         self.assertEqual(b['hazard_counts']['quote_requested'], 1)
 
+    def test_episodewise_decimal_rounding_matches_frozen_aggregation_exactly(self):
+        # Two synthetic episodes reproduce the one-last-place disagreement
+        # between sum(cash)-sum(reserve)-sum(capital) and sum(episode net).
+        episodes = [
+            {'cash_known': '-0.1465663589', 'reserve_cost': '0.04996708',
+             'capital_cost': '0.000003473830452830420218163368848',
+             'funding_unknown': False},
+            {'cash_known': '-0.13201684115', 'reserve_cost': '0.049961485',
+             'capital_cost': '0.000003487187372116444412734652457',
+             'funding_unknown': False},
+        ]
+        frozen = sum((Decimal(e['cash_known']) - Decimal(e['reserve_cost'])
+                      - Decimal(e['capital_cost']) for e in episodes), Decimal(0))
+        row = {'episodes': episodes,
+               'metrics': {'closed_net_parity_usd': str(frozen),
+                           'known_closed_filled_episodes': 2,
+                           'funding_unknown_episodes': 0},
+               'complete_net': str(frozen), 'rh_position': '0',
+               'hl_position': '0', 'unknown_reason': None}
+        result = lifecycle.economics(row)
+        self.assertEqual(Decimal(result['closed_contribution_after_all_three_parity_usd']), frozen)
+        self.assertEqual(Decimal(result['episodewise_decimal_rounding_residual_usd']),
+                         Decimal('-1E-28'))
+        row['metrics']['closed_net_parity_usd'] = str(frozen + Decimal('1E-28'))
+        with self.assertRaisesRegex(ValueError, 'economics disagree'):
+            lifecycle.economics(row)
+
     def test_capped_audit_keeps_open_inventory_and_right_censored_intervals(self):
         class CapAfterMakerFill(BoundedGzip):
             def write(self, row):
