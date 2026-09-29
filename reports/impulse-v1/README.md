@@ -1,6 +1,26 @@
 # Prospective impulse-dislocation quote pilot
 
-Status: method frozen before collection; no outcomes collected yet.
+Status: completed 20:00:36–20:20:37 UTC on September 29, 2026.
+
+## Result
+
+The [stopped analysis](final.md) has **one arm and zero confirmed candidates**.
+The arm was NVDA on HL versus Core and failed the confirmed basis hurdle.
+There were 117,863 valid pair evaluations and 7,007 prior-history samples;
+these are repeated feed observations, not independent opportunities. No paired
+entry or exit quote was selected, so profit and delay comparisons are undefined.
+All conservation checks passed, export drops were zero, and the source/method
+hashes matched their prelaunch values. The eight final state invalidations are
+normal shutdown cleanup, not eight observed feed outages.
+
+This 20-minute post-market window provides no candidate to advance. It cannot
+establish that the hypothesis never works, estimate a profitable opportunity's
+duration, or compare 0.5-second versus 1-second results. No thresholds were
+relaxed after inspection. The frozen snapshot, launch, plan, and hashes are
+archived here; reproduce with `scripts/analyze_impulse.py --snapshot
+reports/impulse-v1/stopped-impulse_snapshot.json --out /tmp/impulse-replay`.
+
+## Frozen design
 
 This study tests whether a fresh relative-price shock identifies a profitable
 **paired** entry and unwind. It does not place orders or replace a paper policy.

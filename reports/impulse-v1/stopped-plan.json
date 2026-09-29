@@ -1,0 +1,411 @@
+{
+  "created_at": 1790712036.6645,
+  "source_markets": "/home/harry/projects/research/rhhype/reports/impulse-v1/market-plan.json",
+  "source_metadata_age_seconds": 1616.3035759925842,
+  "pairs": [
+    {
+      "asset": "BTC",
+      "category": "crypto",
+      "hl": {
+        "asset": "BTC",
+        "category": "crypto",
+        "collateral": "USDC",
+        "fee_bps": 4.5,
+        "market": "BTC",
+        "min_notional": 10.0,
+        "min_qty": 0.0,
+        "step": "0.00001",
+        "venue": "hyperliquid",
+        "volume": 2281790822.1759415
+      },
+      "metadata_timestamp": 1790710420.3600023,
+      "metadata_utc": "2026-09-29T19:33:36.409714+00:00",
+      "other": {
+        "asset": "BTC",
+        "collateral": "USDC",
+        "fee_bps": 0,
+        "market": 1,
+        "min_notional": 10.0,
+        "min_qty": 7e-05,
+        "published_fee_floor_bps": 0,
+        "step": "0.00001",
+        "venue": "lighter",
+        "volume": 735700857.393649
+      }
+    },
+    {
+      "asset": "BTC",
+      "category": "crypto",
+      "hl": {
+        "asset": "BTC",
+        "category": "crypto",
+        "collateral": "USDC",
+        "fee_bps": 4.5,
+        "market": "BTC",
+        "min_notional": 10.0,
+        "min_qty": 0.0,
+        "step": "0.00001",
+        "venue": "hyperliquid",
+        "volume": 2281790822.1759415
+      },
+      "metadata_timestamp": 1790710420.3600206,
+      "metadata_utc": "2026-09-29T19:33:36.409714+00:00",
+      "other": {
+        "asset": "BTC",
+        "collateral": "USDG",
+        "fee_bps": 0,
+        "market": 1,
+        "min_notional": 10.0,
+        "min_qty": 0.0002,
+        "published_fee_floor_bps": 0,
+        "step": "0.00001",
+        "venue": "rh_lighter",
+        "volume": 89844449.005768
+      }
+    },
+    {
+      "asset": "ETH",
+      "category": "crypto",
+      "hl": {
+        "asset": "ETH",
+        "category": "crypto",
+        "collateral": "USDC",
+        "fee_bps": 4.5,
+        "market": "ETH",
+        "min_notional": 10.0,
+        "min_qty": 0.0,
+        "step": "0.0001",
+        "venue": "hyperliquid",
+        "volume": 1351226576.9143898
+      },
+      "metadata_timestamp": 1790710420.3600273,
+      "metadata_utc": "2026-09-29T19:33:36.409714+00:00",
+      "other": {
+        "asset": "ETH",
+        "collateral": "USDC",
+        "fee_bps": 0,
+        "market": 0,
+        "min_notional": 10.0,
+        "min_qty": 0.002,
+        "published_fee_floor_bps": 0,
+        "step": "0.0001",
+        "venue": "lighter",
+        "volume": 377930827.377049
+      }
+    },
+    {
+      "asset": "ETH",
+      "category": "crypto",
+      "hl": {
+        "asset": "ETH",
+        "category": "crypto",
+        "collateral": "USDC",
+        "fee_bps": 4.5,
+        "market": "ETH",
+        "min_notional": 10.0,
+        "min_qty": 0.0,
+        "step": "0.0001",
+        "venue": "hyperliquid",
+        "volume": 1351226576.9143898
+      },
+      "metadata_timestamp": 1790710420.3600283,
+      "metadata_utc": "2026-09-29T19:33:36.409714+00:00",
+      "other": {
+        "asset": "ETH",
+        "collateral": "USDG",
+        "fee_bps": 0,
+        "market": 0,
+        "min_notional": 10.0,
+        "min_qty": 0.005,
+        "published_fee_floor_bps": 0,
+        "step": "0.0001",
+        "venue": "rh_lighter",
+        "volume": 55517201.844706
+      }
+    },
+    {
+      "asset": "NVDA",
+      "category": "RWA/xyz",
+      "hl": {
+        "asset": "NVDA",
+        "category": "RWA/xyz",
+        "collateral": "USDC",
+        "fee_bps": 0.9,
+        "market": "xyz:NVDA",
+        "min_notional": 10.0,
+        "min_qty": 0.0,
+        "step": "0.001",
+        "venue": "hyperliquid",
+        "volume": 116208660.43594003
+      },
+      "metadata_timestamp": 1790710420.3605745,
+      "metadata_utc": "2026-09-29T19:33:36.409714+00:00",
+      "other": {
+        "asset": "NVDA",
+        "collateral": "USDC",
+        "fee_bps": 0,
+        "market": 110,
+        "min_notional": 10.0,
+        "min_qty": 0.025,
+        "published_fee_floor_bps": 0,
+        "step": "0.001",
+        "venue": "lighter",
+        "volume": 5992828.896792
+      }
+    },
+    {
+      "asset": "NVDA",
+      "category": "RWA/xyz",
+      "hl": {
+        "asset": "NVDA",
+        "category": "RWA/xyz",
+        "collateral": "USDC",
+        "fee_bps": 0.9,
+        "market": "xyz:NVDA",
+        "min_notional": 10.0,
+        "min_qty": 0.0,
+        "step": "0.001",
+        "venue": "hyperliquid",
+        "volume": 116208660.43594003
+      },
+      "metadata_timestamp": 1790710420.3605754,
+      "metadata_utc": "2026-09-29T19:33:36.409714+00:00",
+      "other": {
+        "asset": "NVDA",
+        "collateral": "USDG",
+        "fee_bps": 0,
+        "market": 15,
+        "min_notional": 10.0,
+        "min_qty": 0.04,
+        "published_fee_floor_bps": 0,
+        "step": "0.0001",
+        "venue": "rh_lighter",
+        "volume": 14668415.87571
+      }
+    },
+    {
+      "asset": "XAG",
+      "category": "RWA/xyz",
+      "hl": {
+        "asset": "XAG",
+        "category": "RWA/xyz",
+        "collateral": "USDC",
+        "fee_bps": 0.9,
+        "market": "xyz:SILVER",
+        "min_notional": 10.0,
+        "min_qty": 0.0,
+        "step": "0.01",
+        "venue": "hyperliquid",
+        "volume": 123744108.95010015
+      },
+      "metadata_timestamp": 1790710420.3607104,
+      "metadata_utc": "2026-09-29T19:33:36.409714+00:00",
+      "other": {
+        "asset": "XAG",
+        "collateral": "USDC",
+        "fee_bps": 0,
+        "market": 93,
+        "min_notional": 10.0,
+        "min_qty": 0.08,
+        "published_fee_floor_bps": 0,
+        "step": "0.01",
+        "venue": "lighter",
+        "volume": 12427148.346885
+      }
+    },
+    {
+      "asset": "XAG",
+      "category": "RWA/xyz",
+      "hl": {
+        "asset": "XAG",
+        "category": "RWA/xyz",
+        "collateral": "USDC",
+        "fee_bps": 0.9,
+        "market": "xyz:SILVER",
+        "min_notional": 10.0,
+        "min_qty": 0.0,
+        "step": "0.01",
+        "venue": "hyperliquid",
+        "volume": 123744108.95010015
+      },
+      "metadata_timestamp": 1790710420.3607123,
+      "metadata_utc": "2026-09-29T19:33:36.409714+00:00",
+      "other": {
+        "asset": "XAG",
+        "collateral": "USDG",
+        "fee_bps": 0,
+        "market": 41,
+        "min_notional": 10.0,
+        "min_qty": 0.15,
+        "published_fee_floor_bps": 0,
+        "step": "0.01",
+        "venue": "rh_lighter",
+        "volume": 8960218.944111
+      }
+    }
+  ],
+  "markets": [
+    {
+      "asset": "BTC",
+      "category": "crypto",
+      "collateral": "USDC",
+      "fee_bps": 4.5,
+      "market": "BTC",
+      "min_notional": 10.0,
+      "min_qty": 0.0,
+      "step": "0.00001",
+      "venue": "hyperliquid",
+      "volume": 2281790822.1759415
+    },
+    {
+      "asset": "BTC",
+      "collateral": "USDC",
+      "fee_bps": 0,
+      "market": 1,
+      "min_notional": 10.0,
+      "min_qty": 7e-05,
+      "published_fee_floor_bps": 0,
+      "step": "0.00001",
+      "venue": "lighter",
+      "volume": 735700857.393649
+    },
+    {
+      "asset": "BTC",
+      "collateral": "USDG",
+      "fee_bps": 0,
+      "market": 1,
+      "min_notional": 10.0,
+      "min_qty": 0.0002,
+      "published_fee_floor_bps": 0,
+      "step": "0.00001",
+      "venue": "rh_lighter",
+      "volume": 89844449.005768
+    },
+    {
+      "asset": "ETH",
+      "category": "crypto",
+      "collateral": "USDC",
+      "fee_bps": 4.5,
+      "market": "ETH",
+      "min_notional": 10.0,
+      "min_qty": 0.0,
+      "step": "0.0001",
+      "venue": "hyperliquid",
+      "volume": 1351226576.9143898
+    },
+    {
+      "asset": "ETH",
+      "collateral": "USDC",
+      "fee_bps": 0,
+      "market": 0,
+      "min_notional": 10.0,
+      "min_qty": 0.002,
+      "published_fee_floor_bps": 0,
+      "step": "0.0001",
+      "venue": "lighter",
+      "volume": 377930827.377049
+    },
+    {
+      "asset": "ETH",
+      "collateral": "USDG",
+      "fee_bps": 0,
+      "market": 0,
+      "min_notional": 10.0,
+      "min_qty": 0.005,
+      "published_fee_floor_bps": 0,
+      "step": "0.0001",
+      "venue": "rh_lighter",
+      "volume": 55517201.844706
+    },
+    {
+      "asset": "NVDA",
+      "category": "RWA/xyz",
+      "collateral": "USDC",
+      "fee_bps": 0.9,
+      "market": "xyz:NVDA",
+      "min_notional": 10.0,
+      "min_qty": 0.0,
+      "step": "0.001",
+      "venue": "hyperliquid",
+      "volume": 116208660.43594003
+    },
+    {
+      "asset": "NVDA",
+      "collateral": "USDC",
+      "fee_bps": 0,
+      "market": 110,
+      "min_notional": 10.0,
+      "min_qty": 0.025,
+      "published_fee_floor_bps": 0,
+      "step": "0.001",
+      "venue": "lighter",
+      "volume": 5992828.896792
+    },
+    {
+      "asset": "NVDA",
+      "collateral": "USDG",
+      "fee_bps": 0,
+      "market": 15,
+      "min_notional": 10.0,
+      "min_qty": 0.04,
+      "published_fee_floor_bps": 0,
+      "step": "0.0001",
+      "venue": "rh_lighter",
+      "volume": 14668415.87571
+    },
+    {
+      "asset": "XAG",
+      "category": "RWA/xyz",
+      "collateral": "USDC",
+      "fee_bps": 0.9,
+      "market": "xyz:SILVER",
+      "min_notional": 10.0,
+      "min_qty": 0.0,
+      "step": "0.01",
+      "venue": "hyperliquid",
+      "volume": 123744108.95010015
+    },
+    {
+      "asset": "XAG",
+      "collateral": "USDC",
+      "fee_bps": 0,
+      "market": 93,
+      "min_notional": 10.0,
+      "min_qty": 0.08,
+      "published_fee_floor_bps": 0,
+      "step": "0.01",
+      "venue": "lighter",
+      "volume": 12427148.346885
+    },
+    {
+      "asset": "XAG",
+      "collateral": "USDG",
+      "fee_bps": 0,
+      "market": 41,
+      "min_notional": 10.0,
+      "min_qty": 0.15,
+      "published_fee_floor_bps": 0,
+      "step": "0.01",
+      "venue": "rh_lighter",
+      "volume": 8960218.944111
+    }
+  ],
+  "frozen_standard_fee_bps_by_market": {
+    "hyperliquid:BTC": 4.5,
+    "lighter:1": 0.0,
+    "rh_lighter:1": 0.0,
+    "hyperliquid:ETH": 4.5,
+    "lighter:0": 0.0,
+    "rh_lighter:0": 0.0,
+    "hyperliquid:xyz:NVDA": 0.9,
+    "lighter:110": 0.0,
+    "rh_lighter:15": 0.0,
+    "hyperliquid:xyz:SILVER": 0.9,
+    "lighter:93": 0.0,
+    "rh_lighter:41": 0.0
+  },
+  "model_version": 1,
+  "public_websocket_only": true,
+  "orders_enabled": false,
+  "rh_usdg_usdc_assumption": "parity quote screen only; no conversion claim"
+}

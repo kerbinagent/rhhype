@@ -1,0 +1,28 @@
+{
+  "archived_at": "2026-09-29T20:21:17.247193+00:00",
+  "frozen_code_and_method_match": {
+    "research/impulse-observer-plan.md": true,
+    "scripts/paper_impulse.py": true,
+    "scripts/impulse_observer.py": true,
+    "scripts/analyze_impulse.py": true,
+    "scripts/paper_fixed_markout.py": true,
+    "scripts/paper_streams.py": true,
+    "scripts/horizon_observer.py": true,
+    "scripts/monitor.py": true,
+    "reports/impulse-v1/market-plan.json": true
+  },
+  "files": {
+    "stopped-impulse_snapshot.json": {
+      "sha256": "6d6d7265c8aba3eaad5e60dca176eb109530bf55ee5855c797273bfaf10b2590",
+      "bytes": 3719
+    },
+    "stopped-plan.json": {
+      "sha256": "0dbc0f87aaa1e617d8844fc7bfef29c2b1359e9d2d006fa7ab369599d032915e",
+      "bytes": 10314
+    },
+    "stopped-launch.json": {
+      "sha256": "679fcdb396749a93e27e3c04d477b9f4b58ba064c2dd89c9a147d4a59cbb0bf3",
+      "bytes": 485
+    }
+  }
+}

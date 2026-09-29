@@ -184,3 +184,21 @@ audit and 14 focused observer/analyzer tests passed, including a real-model
 stopped-snapshot integration test. All three subscribed venue feeds connected
 at startup. Production entry policies are unchanged. This is an optimistic
 paired quote experiment, not a fill simulator or cash profit tally.
+
+## Status at 20:21 UTC
+
+- Production PID 1922387 and review scheduler PID 1749934 remain active.
+  Review 12 was read on time at 20:06; next scheduled review 20:26:33 UTC.
+- Impulse PID 2090065 stopped normally at 20:20:37 after 1,200 seconds.
+  [Final evidence](../reports/impulse-v1/README.md): one NVDA/Core arm rejected
+  at confirmation, zero selected entries, zero accounting residuals. Frozen
+  method/code hashes matched; no policy promoted and no timing/profit inference.
+- NVDA/XAG maker capture PID **2167455** began **20:20:30 UTC** from **e6d5706**.
+  Output `data/raw/maker-capture/20260929T2020Z`, 420 seconds / 25 MB maximum;
+  expected stop **20:27:30 UTC** or earlier at the byte cap. It has fresh public
+  unit/fee evidence and audited delayed hedge/exit rules. No orders are sent.
+- A separate HL-first paper experiment is being implemented. Both its control
+  and treatment will use the same WebSocket stream, without extra REST calls.
+  Version 1 requires a full original-size HL fill before sending the other
+  leg; a partial HL fill is flattened in full. No live process or main-policy
+  change has been made for that study.

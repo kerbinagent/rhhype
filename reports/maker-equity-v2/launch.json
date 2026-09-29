@@ -1,0 +1,22 @@
+{
+  "pid": 2167455,
+  "launched_at": "2026-09-29T20:20:29.872548+00:00",
+  "duration_seconds": 420,
+  "commit": "e6d5706",
+  "output": "/home/harry/projects/research/rhhype/data/raw/maker-capture/20260929T2020Z",
+  "command": [
+    "/home/harry/projects/research/rhhype/.venv/bin/python",
+    "/home/harry/projects/research/rhhype/scripts/maker_capture.py",
+    "--markets",
+    "/home/harry/projects/research/rhhype/reports/maker-equity-v2/market-plan.json",
+    "--out",
+    "/home/harry/projects/research/rhhype/data/raw/maker-capture/20260929T2020Z",
+    "--assets",
+    "NVDA",
+    "XAG",
+    "--seconds",
+    "420",
+    "--max-bytes",
+    "25000000"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "pid": 2090065,
+  "started_at": "2026-09-29T20:00:36.485397+00:00",
+  "duration_seconds": 1200,
+  "commit": "473e0c3",
+  "command": [
+    "/home/harry/projects/research/rhhype/.venv/bin/python",
+    "/home/harry/projects/research/rhhype/scripts/impulse_observer.py",
+    "--markets",
+    "/home/harry/projects/research/rhhype/reports/impulse-v1/market-plan.json",
+    "--out",
+    "/home/harry/projects/research/rhhype/data/impulse-research-v1",
+    "--duration",
+    "1200"
+  ]
+}

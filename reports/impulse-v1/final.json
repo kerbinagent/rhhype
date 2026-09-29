@@ -1,0 +1,639 @@
+{
+  "source_status": "stopped",
+  "source_updated_at": 1790713236.6674793,
+  "model_version": 1,
+  "study_assumptions": {
+    "metric": "same-asset paired impulse-dislocation quote, no fills",
+    "fee_assumption": "Standard taker rates frozen from discovery metadata; four fees per complete quote",
+    "rh_usdg_usdc_assumption": "parity quote screen only; no conversion or collateral claim",
+    "comparison_control": "same frozen candidates at 0.5s and 1s only; no no-impulse control in v1",
+    "target_usd": 0.25,
+    "extra_cost_bps": 5.0,
+    "entry_delays_seconds": [
+      0.5,
+      1.0
+    ],
+    "entry_deadline_seconds": 2,
+    "exit_request_after_entry_seconds": 5,
+    "exit_observation_delay_seconds": 0.5,
+    "hard_trigger_to_exit_seconds": 10
+  },
+  "all_run": {
+    "counts": {
+      "valid_events": 117863,
+      "history_samples": 7007,
+      "armed": 1,
+      "arm_terminal": 1,
+      "invalidations": 8
+    },
+    "gates": {
+      "missing_leg": 29,
+      "history_warmup": 9176,
+      "source_not_advanced": 461,
+      "source_skew": 6200,
+      "source_age": 2493,
+      "impulse_small": 68484,
+      "impulse_history_short": 27017,
+      "trigger_depth": 13181,
+      "receipt_skew": 65,
+      "other_moved": 3,
+      "confirm_basis": 1
+    },
+    "censor_reasons": {},
+    "by_pair_counters": {
+      "NVDA|hyperliquid:xyz:NVDA|lighter:110": {
+        "armed": 1
+      }
+    },
+    "by_delay_counters": {
+      "0.5": {
+        "counts": {},
+        "candidate_to_entry_fraction": null,
+        "entry_to_complete_fraction": null,
+        "scenario_accounting_residual": 0
+      },
+      "1.0": {
+        "counts": {},
+        "candidate_to_entry_fraction": null,
+        "entry_to_complete_fraction": null,
+        "scenario_accounting_residual": 0
+      }
+    },
+    "by_pair_direction_delay_counters": {},
+    "arm_terminal": {
+      "confirm_basis": 1
+    },
+    "arm_accounting_residual": 0,
+    "candidate_scenario_accounting_residual": 0,
+    "candidate_to_paired_entry_fraction": null,
+    "paired_entry_to_complete_fraction": null,
+    "mean_complete_net_after_reserve_usd": null
+  },
+  "retained_export": {
+    "retained_terminal_rows": 0,
+    "complete": 0,
+    "censored": 0,
+    "with_paired_entry_quote": 0,
+    "censor_reasons": {},
+    "quote_economics": {
+      "complete_quote_rows": 0,
+      "distributions_usd": {
+        "gross_capture_usd": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "four_fees_usd": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "reserve_usd": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "capital_usd": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "net_after_four_fees_usd": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "net_after_reserve_usd": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "buy_entry_fee": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "sell_entry_fee": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "buy_exit_fee": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "sell_exit_fee": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        }
+      },
+      "four_fee_positive_fraction": null,
+      "after_reserve_capital_positive_fraction": null
+    },
+    "timing_seconds": {
+      "entry_collector_after_trigger": {
+        "count": 0,
+        "mean": null,
+        "p10": null,
+        "median": null,
+        "p90": null
+      },
+      "entry_collector_after_confirmation": {
+        "count": 0,
+        "mean": null,
+        "p10": null,
+        "median": null,
+        "p90": null
+      },
+      "entry_collector_after_due": {
+        "count": 0,
+        "mean": null,
+        "p10": null,
+        "median": null,
+        "p90": null
+      },
+      "entry_hl_source_after_due": {
+        "count": 0,
+        "mean": null,
+        "p10": null,
+        "median": null,
+        "p90": null
+      },
+      "entry_other_source_after_due": {
+        "count": 0,
+        "mean": null,
+        "p10": null,
+        "median": null,
+        "p90": null
+      },
+      "entry_hl_receipt_after_due": {
+        "count": 0,
+        "mean": null,
+        "p10": null,
+        "median": null,
+        "p90": null
+      },
+      "entry_other_receipt_after_due": {
+        "count": 0,
+        "mean": null,
+        "p10": null,
+        "median": null,
+        "p90": null
+      },
+      "exit_collector_after_due": {
+        "count": 0,
+        "mean": null,
+        "p10": null,
+        "median": null,
+        "p90": null
+      },
+      "exit_collector_after_entry": {
+        "count": 0,
+        "mean": null,
+        "p10": null,
+        "median": null,
+        "p90": null
+      },
+      "exit_hl_source_after_due": {
+        "count": 0,
+        "mean": null,
+        "p10": null,
+        "median": null,
+        "p90": null
+      },
+      "exit_other_source_after_due": {
+        "count": 0,
+        "mean": null,
+        "p10": null,
+        "median": null,
+        "p90": null
+      },
+      "exit_hl_receipt_after_due": {
+        "count": 0,
+        "mean": null,
+        "p10": null,
+        "median": null,
+        "p90": null
+      },
+      "exit_other_receipt_after_due": {
+        "count": 0,
+        "mean": null,
+        "p10": null,
+        "median": null,
+        "p90": null
+      }
+    },
+    "all_run_terminal_export_dropped": 0,
+    "export_truncated": false,
+    "all_run_complete_not_retained": 0,
+    "all_run_censored_not_retained": 0
+  },
+  "retained_by_delay": {
+    "0.5": {
+      "retained_terminal_rows": 0,
+      "complete": 0,
+      "censored": 0,
+      "with_paired_entry_quote": 0,
+      "censor_reasons": {},
+      "quote_economics": {
+        "complete_quote_rows": 0,
+        "distributions_usd": {
+          "gross_capture_usd": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "four_fees_usd": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "reserve_usd": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "capital_usd": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "net_after_four_fees_usd": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "net_after_reserve_usd": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "buy_entry_fee": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "sell_entry_fee": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "buy_exit_fee": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "sell_exit_fee": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          }
+        },
+        "four_fee_positive_fraction": null,
+        "after_reserve_capital_positive_fraction": null
+      },
+      "timing_seconds": {
+        "entry_collector_after_trigger": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "entry_collector_after_confirmation": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "entry_collector_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "entry_hl_source_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "entry_other_source_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "entry_hl_receipt_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "entry_other_receipt_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "exit_collector_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "exit_collector_after_entry": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "exit_hl_source_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "exit_other_source_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "exit_hl_receipt_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "exit_other_receipt_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        }
+      }
+    },
+    "1.0": {
+      "retained_terminal_rows": 0,
+      "complete": 0,
+      "censored": 0,
+      "with_paired_entry_quote": 0,
+      "censor_reasons": {},
+      "quote_economics": {
+        "complete_quote_rows": 0,
+        "distributions_usd": {
+          "gross_capture_usd": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "four_fees_usd": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "reserve_usd": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "capital_usd": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "net_after_four_fees_usd": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "net_after_reserve_usd": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "buy_entry_fee": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "sell_entry_fee": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "buy_exit_fee": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          },
+          "sell_exit_fee": {
+            "count": 0,
+            "mean": null,
+            "p10": null,
+            "median": null,
+            "p90": null
+          }
+        },
+        "four_fee_positive_fraction": null,
+        "after_reserve_capital_positive_fraction": null
+      },
+      "timing_seconds": {
+        "entry_collector_after_trigger": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "entry_collector_after_confirmation": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "entry_collector_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "entry_hl_source_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "entry_other_source_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "entry_hl_receipt_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "entry_other_receipt_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "exit_collector_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "exit_collector_after_entry": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "exit_hl_source_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "exit_other_source_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "exit_hl_receipt_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        },
+        "exit_other_receipt_after_due": {
+          "count": 0,
+          "mean": null,
+          "p10": null,
+          "median": null,
+          "p90": null
+        }
+      }
+    }
+  },
+  "paired_same_candidate": {
+    "retained_candidate_ids": 0,
+    "both_scenarios_retained": 0,
+    "unpaired_in_retained_export": 0,
+    "both_scenarios_complete": 0,
+    "stress_minus_primary_net_after_reserve_usd": {
+      "count": 0,
+      "mean": null,
+      "p10": null,
+      "median": null,
+      "p90": null
+    },
+    "both_four_fee_positive": 0,
+    "both_after_reserve_capital_positive": 0,
+    "one_or_both_censored": 0,
+    "comparison_basis": "same candidate_id, same frozen quantity and direction; only pairs with both complete quotes have dollar deltas"
+  },
+  "retained_by_pair_direction": {},
+  "retained_by_five_minute_trigger_block_utc": {},
+  "retained_by_pair_direction_and_five_minute_block_utc": {},
+  "validation_warnings": [],
+  "interpretation": [
+    "Prospective quotes at a frozen quantity, not orders, paired fills, cash P&L, or realized profit.",
+    "The 0.5 s and 1 s arrival scenarios share each confirmed candidate; their counts are correlated.",
+    "First eligible future quote with insufficient entry or exit depth is censored, not treated as zero.",
+    "Funding-unknown and stopped-pending outcomes stay censored, not breakeven observations.",
+    "Source clocks across venues are not calibrated; receipt order is collector order only.",
+    "USDG and USDC are treated at parity for this quote screen, with no conversion or collateral claim.",
+    "There is no no-impulse control in v1; retained rows can omit older terminal scenarios."
+  ]
+}

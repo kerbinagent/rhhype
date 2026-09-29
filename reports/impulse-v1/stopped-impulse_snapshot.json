@@ -1,0 +1,125 @@
+{
+  "status": "stopped",
+  "updated_at": 1790713236.6674793,
+  "started_at": 1790712036.6644495,
+  "pair_count": 8,
+  "pairs": [
+    "BTC|hyperliquid:BTC|lighter:1",
+    "BTC|hyperliquid:BTC|rh_lighter:1",
+    "ETH|hyperliquid:ETH|lighter:0",
+    "ETH|hyperliquid:ETH|rh_lighter:0",
+    "NVDA|hyperliquid:xyz:NVDA|lighter:110",
+    "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15",
+    "XAG|hyperliquid:xyz:SILVER|lighter:93",
+    "XAG|hyperliquid:xyz:SILVER|rh_lighter:41"
+  ],
+  "hl_quote_mode": "bbo_only_for_new_top_or_l2_snapshot",
+  "frozen_standard_fee_bps_by_market": {
+    "hyperliquid:BTC": 4.5,
+    "lighter:1": 0.0,
+    "rh_lighter:1": 0.0,
+    "hyperliquid:ETH": 4.5,
+    "lighter:0": 0.0,
+    "rh_lighter:0": 0.0,
+    "hyperliquid:xyz:NVDA": 0.9,
+    "lighter:110": 0.0,
+    "rh_lighter:15": 0.0,
+    "hyperliquid:xyz:SILVER": 0.9,
+    "lighter:93": 0.0,
+    "rh_lighter:41": 0.0
+  },
+  "rh_usdg_usdc_assumption": "parity quote screen only; no conversion claim",
+  "stats": {
+    "book_events": 108694,
+    "invalid_books": 12,
+    "model_rejected_events": 9248,
+    "model_valid_events": 117863
+  },
+  "feeds": {
+    "hyperliquid": {
+      "connected": false,
+      "connections": 0,
+      "subscriptions": 12,
+      "messages": 23125
+    },
+    "lighter": {
+      "connected": false,
+      "connections": 0,
+      "subscriptions": 8,
+      "messages": 56747,
+      "keepalives": 39,
+      "last_keepalive_at": 1790713207.9759548
+    },
+    "rh_lighter": {
+      "connected": false,
+      "connections": 0,
+      "subscriptions": 8,
+      "messages": 41562,
+      "keepalives": 39,
+      "last_keepalive_at": 1790713207.9613817
+    }
+  },
+  "model": {
+    "model_version": 1,
+    "metric": "same-asset paired impulse-dislocation quote, no fills",
+    "max_pairs": 8,
+    "max_terminal_rows": 5000,
+    "history_window_seconds": 60.0,
+    "history_embargo_seconds": 2.0,
+    "entry_delays_seconds": [
+      0.5,
+      1.0
+    ],
+    "entry_deadline_seconds": 2,
+    "entry_delay_origin": "opposing-venue confirmation time",
+    "paired_quote_clock_rule": "both source and receipt timestamps at or after each due time; source future tolerance 0.25s and receipt future tolerance 0.1s against local UTC now",
+    "exit_request_after_entry_seconds": 5,
+    "exit_observation_delay_seconds": 0.5,
+    "hard_trigger_to_exit_seconds": 10,
+    "target_usd": 0.25,
+    "extra_cost_bps": 5.0,
+    "rh_usdg_usdc_assumption": "parity quote screen only; no conversion or collateral claim",
+    "fee_assumption": "Standard taker rates frozen from discovery metadata; four fees per complete quote",
+    "comparison_control": "same frozen candidates at 0.5s and 1s only; no no-impulse control in v1",
+    "counts": {
+      "valid_events": 117863,
+      "history_samples": 7007,
+      "armed": 1,
+      "arm_terminal": 1,
+      "invalidations": 8
+    },
+    "gates": {
+      "missing_leg": 29,
+      "history_warmup": 9176,
+      "source_not_advanced": 461,
+      "source_skew": 6200,
+      "source_age": 2493,
+      "impulse_small": 68484,
+      "impulse_history_short": 27017,
+      "trigger_depth": 13181,
+      "receipt_skew": 65,
+      "other_moved": 3,
+      "confirm_basis": 1
+    },
+    "censored": {},
+    "by_pair": {
+      "NVDA|hyperliquid:xyz:NVDA|lighter:110": {
+        "armed": 1
+      }
+    },
+    "by_delay": {
+      "0.5": {},
+      "1.0": {}
+    },
+    "by_pair_direction_delay": {},
+    "arm_outcomes": {
+      "confirm_basis": 1
+    },
+    "pending_arms": 0,
+    "pending_scenarios": 0,
+    "mean_complete_net_after_reserve_usd": null,
+    "terminal_rows": [],
+    "finished": true,
+    "interpretation": "Prospective paired quotes only; no execution, paired-fill, funding-cash, or profit inference."
+  }
+}
