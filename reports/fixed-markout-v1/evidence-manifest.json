@@ -1,0 +1,12 @@
+{
+  "plan.json": {
+    "sha256_uncompressed": "e9a209e1feff3c36a40b43ed33f8b6b3ea712ef79cd5a6c59f5c9276bebd2621",
+    "bytes": 16965,
+    "gzip_bytes": 1779
+  },
+  "fixed_markout_snapshot.json": {
+    "sha256_uncompressed": "4b62b5c69cd13fabb98ce074a7f996ba20437634be735cc228ecf35b9bfe04a1",
+    "bytes": 6875269,
+    "gzip_bytes": 655733
+  }
+}
