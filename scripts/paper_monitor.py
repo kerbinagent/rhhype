@@ -96,6 +96,8 @@ def all_markets(engine):
     for position in engine.positions.values():
         for leg in position['legs']:
             markets.setdefault(leg['key'],leg|{'asset':position['asset']})
+            if leg.get('remaining',0)>0:
+                markets[leg['key']]=markets[leg['key']]|{'risk_priority':True}
     return list(markets.values())
 
 

@@ -66,3 +66,34 @@ class ShadowEngineTests(unittest.TestCase):
             e.settle_funding(ident,{'complete':True,'cashflow_usd':0,'events':[]},1011.2)
         self.assertFalse(e.positions)
         self.assertFalse(e.position_markets)
+
+    def test_forecast_entry_records_prior_model_and_still_waits_for_fills(self):
+        e=PaperEngine([pair()],EngineConfig(strategies=('standard',),holding_seconds=10,take_profit_usd=.10),now=1000)
+        e.enable_shadows(1000)
+        for index in range(41):
+            now=1000+index*3
+            long=book('hyperliquid','BTC',now,99.99,100)
+            short=book('rh_lighter',1,now,100.2,100.21)
+            signal=e._signal(pair(),pair()['hl'],pair()['other'],long,short,'standard',now)
+            e.selector.observe(pair(),{'hyperliquid:BTC':long,'rh_lighter:1':short},now,signals=[signal])
+        e.receive(book('hyperliquid','BTC',1121,99.99,100))
+        e.receive(book('rh_lighter',1,1121,102,102.01))
+        e.tick(1121)
+        filtered=[p for p in e.positions.values() if p['strategy'] in ('convergence','conservative')]
+        self.assertEqual(len(filtered),2)
+        self.assertTrue(all(p['status']=='ENTRY_PENDING' for p in filtered))
+        records=[item[1] for item in e.evidence if item[2]=='entry_model']
+        self.assertEqual(len(records),2)
+        for record in records:
+            self.assertEqual(len(record['historical_closing_spreads']),41)
+            self.assertTrue(all(row[0]<1121 for row in record['historical_closing_spreads']))
+            self.assertGreater(record['signal']['entry_policy']['forecast_net_usd'],.5)
+
+    def test_held_markets_bootstrap_before_unheld_without_mutating_metadata(self):
+        from paper_monitor import all_markets
+        e=self.make()
+        e.receive(book('hyperliquid','BTC',1000.3,99.99,100))
+        markets={f"{m['venue']}:{m['market']}":m for m in all_markets(e)}
+        self.assertTrue(markets['hyperliquid:BTC']['risk_priority'])
+        self.assertNotIn('risk_priority',markets['rh_lighter:1'])
+        self.assertNotIn('risk_priority',e.market_meta['hyperliquid:BTC'])

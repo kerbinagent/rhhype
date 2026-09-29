@@ -131,12 +131,12 @@ Enable with `--shadow-strategies`. This adds four independent Standard-fee paper
 |---|---|
 | S.Base | Original positive opening-edge rule, fresh capital and start time |
 | Cooldown | At least $0.25 opening edge after estimated round-trip costs, receipt/source skew no more than 250 ms, 60-second cooldown per directed route |
-| Converge | Same controls, plus opening edge minus historical median executable closing spread must be at least $0.25 |
-| Conserv. | Same controls, using the 75th percentile closing spread and a $0.50 minimum forecast |
+| Converge | $0.25 minimum opening edge and 60-second cooldown; at most one-second receipt/source skew; opening edge minus historical median executable closing spread must be at least $0.25 |
+| Conserv. | $0.25 minimum opening edge, 60-second cooldown and 250 ms entry skew; 75th percentile closing spread and a $0.50 minimum forecast |
 
 All use the original $1,000 target per leg, $20,000 initial portfolio, actual simulated fill fees, 5 bp additional cost allowance, delayed fills, $0.10 net profit exit trigger and ten-second maximum hold. Each portfolio has independent capital and displayed-depth allocation; their P&Ls must not be added.
 
-Forecasts use only preceding observations from a rolling 15-minute window. At least 40 distinct paired samples spanning 120 seconds are required. Both books must advance, source timestamps must advance where available, and paired receipt/source skew must be at most 250 ms. Sampling is capped at once per second per direction and 900 observations per route, with an absolute 2,000-route cap. Thirty-second observation gaps and stream generation changes reset the affected model. Models warm up again after restart; entry cooldowns and accounting persist. Nothing grows with runtime without a bound.
+Forecasts use only preceding observations from a rolling 15-minute window. At least 40 distinct paired samples spanning 120 seconds are required. Both books must advance, source timestamps must advance where available, and paired receipt/source skew for training must be at most one second (or the configured baseline limit if smaller). The conservative entry still requires 250 ms alignment. Sampling is capped at once per second per direction and 900 observations per route, with an absolute 2,000-route cap. Thirty-second observation gaps and stream generation changes reset the affected model. Models warm up again after restart; entry cooldowns and accounting persist. Nothing grows with runtime without a bound.
 
 These are exploratory historical closing-spread forecasts, not validated ten-second convergence probabilities. Zero trades indicate no qualifying observations; they are not evidence of profitable execution. Results are evaluated on subsequent live fills without retroactively selecting winning parameters. The same feed and Hyperliquid REST quota serve all portfolios; extra simulated orders can affect observation scheduling.
 
@@ -146,4 +146,9 @@ Restart a currently open viewer to load the new table:
 .venv/bin/python scripts/monitor.py --watch
 ```
 
-The compact table shows net closed P&L, open liquidation P&L, wins/trades, and entry/warmup/rejection diagnostics. On small terminals, enlarge the window to see all ten opening signals. An open mark of `?` means a fresh complete liquidation estimate is unavailable.
+The compact table shows net closed P&L, open liquidation P&L, wins/trades, and entry/rejection diagnostics; `Ready` counts routes with sufficient model history. On small terminals, enlarge the window to see all ten opening signals. An open mark of `?` means a fresh complete liquidation estimate is unavailable.
+
+
+Policy version 1 initially required both receipt and source skew within 250 ms for training. About 99% of paired evaluation attempts failed that training check, and no forecast portfolio entered any trades. Observed HL source-to-receipt delay near 0.7 s versus roughly 0.1 s on other venues made the joint condition impractical. Version 2 uses the baseline's one-second bound for training and the median variant, while retaining 250 ms entry alignment for the conservative and cooldown variants. This change was made before either forecast portfolio's first entry; versioned diagnostics preserve the distinction. It does not demonstrate profitable convergence.
+
+Every accepted forecast entry saves its preceding bounded closing-spread history as capped `entry_model` evidence. `paper_report.py data/paper-monitor` includes a `shadow_comparison` section with cumulative results, retained exit reasons, and forecast-versus-realized errors. Existing SQLite/evidence/log caps also cover these records. Models remain in bounded RAM and warm up after restart.

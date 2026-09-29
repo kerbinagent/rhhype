@@ -156,6 +156,9 @@ def _shadow_lines(snapshot: dict, width: int) -> list[str]:
                        ("signal", "skew", "cooldown", "forecast", "duplicate"))
         entry = (f"Entry{entered} Warm{warmup} Rej{rejected}" if policy else
                  f"Entry {_label(row.get('entry_status', '?'))}")
+        if policy and key in ('convergence','conservative'):
+            ready=_int(policy.get('warm_routes',entry_policies.get('warm_routes')))
+            entry=f"Entry{entered} Ready{ready} Rej{rejected}"
         if width >= 79:
             name = f"S.Base Std fee@{since}" if key == "shadow_baseline" else f"{label} Std fee"
             lines.append(f"{name:<23.23} Closed {_cash(closed, 7)} Open {_cash(open_mark, 7)} "

@@ -4,7 +4,7 @@ from types import SimpleNamespace
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from paper_strategies import StrategySelector, MAX_SAMPLES, POLICIES
+from paper_strategies import StrategySelector, MAX_SAMPLES, POLICIES, POLICY_VERSION
 
 
 PAIR = {'asset': 'BTC',
@@ -81,9 +81,48 @@ class SelectorTests(unittest.TestCase):
         self.assertEqual(self.selector.observation_counts['source_not_advanced'], 1)
         self.observe(1.2)
         self.assertEqual(len(self.selector.routes[ROUTE].samples), 2)
-        self.observe(2.3, skew=.3)
+        stale_pair = books(2.3)
+        stale_pair['rh_lighter:1']['received'] = 1.1
+        stale_pair['rh_lighter:1']['engine_time'] = 1.1
+        self.selector.observe(PAIR, stale_pair, 2.3, [signal(2.3)])
         self.assertEqual(len(self.selector.routes[ROUTE].samples), 2)
         self.assertEqual(self.selector.observation_counts['invalid_pair'], 1)
+
+    def test_v2_training_and_policy_skew_limits(self):
+        self.assertEqual(POLICY_VERSION, 2)
+        self.warm()
+        paired = books(126)
+        paired['rh_lighter:1']['received'] = 125.3
+        paired['rh_lighter:1']['engine_time'] = 125.3
+        self.selector.observe(PAIR, paired, 126, [signal(126, -1)])
+        self.assertEqual(len(self.selector.route_history(ROUTE, 127)), 43)
+        wide = signal(127, 25)
+        wide['skew_ms'] = 700
+        wide['source_skew_ms'] = 700
+        self.assertTrue(self.selector.allow('convergence', wide, 127)[0])
+        self.assertEqual(self.selector.allow('conservative', wide, 127)[1]['reason'], 'skew')
+        self.assertEqual(self.selector.allow('cooldown', wide, 127)[1]['reason'], 'skew')
+        self.assertEqual(self.selector.snapshot(127)['training_skew_limit_seconds'], 1.0)
+        self.assertEqual(self.selector.snapshot(127)['conservative_skew_limit_seconds'], .25)
+        too_wide = books(129)
+        too_wide['rh_lighter:1']['received'] = 127.9
+        too_wide['rh_lighter:1']['engine_time'] = 127.9
+        self.selector.observe(PAIR, too_wide, 129, [signal(129, -1)])
+        self.assertEqual(len(self.selector.route_history(ROUTE, 130)), 43)
+
+    def test_v1_state_migrates_cooldown_and_counts(self):
+        self.selector.entered('cooldown', signal(0, 1), 0)
+        old = self.selector.export_state()
+        old['version'] = 1
+        restored = StrategySelector(SimpleNamespace(max_book_age=2))
+        restored.restore_state(old, 30)
+        self.assertEqual(restored.counts['cooldown']['entered'], 1)
+        self.assertEqual(restored.allow('cooldown', signal(30, 1), 30)[1]['reason'], 'cooldown')
+        self.assertEqual(restored.snapshot(30)['version'], 2)
+        self.assertEqual(restored.snapshot(30)['sampled_routes'], 0)
+        old['counts']['convergence'] = {'entered': 1}
+        with self.assertRaisesRegex(ValueError, 'separate experiment'):
+            StrategySelector(SimpleNamespace(max_book_age=2)).restore_state(old, 30)
 
     def test_gate_skew_cooldown_and_state_restore(self):
         s = signal(0, .25)
@@ -104,9 +143,21 @@ class SelectorTests(unittest.TestCase):
 
     def test_gap_removal_and_bounded_history(self):
         self.warm()
-        self.assertEqual(self.selector.snapshot(123)['warm_routes'], 1)
+        status = self.selector.snapshot(123)
+        self.assertEqual(status['warm_routes'], 1)
+        self.assertEqual(status['max_route_samples'], 42)
+        self.assertEqual(status['max_route_span_seconds'], 123)
+        prior = self.selector.route_history(ROUTE, 120)
+        self.assertEqual(len(prior), 40)
+        self.assertEqual(prior[-1][0], 117)
+        prior.clear()
+        self.assertEqual(len(self.selector.route_history(ROUTE, 123)), 41)
         self.assertEqual(self.selector.allow('convergence', signal(200), 200)[1]['reason'], 'warmup')
-        self.assertEqual(self.selector.snapshot(200)['sampled_routes'], 0)
+        expired = self.selector.snapshot(200)
+        self.assertEqual(expired['sampled_routes'], 0)
+        self.assertEqual(expired['max_route_samples'], 0)
+        self.assertEqual(expired['max_route_span_seconds'], 0)
+        self.assertEqual(self.selector.route_history(ROUTE, 200), [])
         self.observe(201)
         self.selector.retain_routes([])
         self.assertEqual(self.selector.snapshot(201)['sampled_routes'], 0)
@@ -115,6 +166,7 @@ class SelectorTests(unittest.TestCase):
             self.observe(now)
         self.assertLessEqual(len(self.selector.routes[ROUTE].samples), MAX_SAMPLES)
         self.assertGreaterEqual(self.selector.routes[ROUTE].samples[0][0], 1300 - 900)
+        self.assertEqual(len(self.selector.route_history(ROUTE, 1301)), MAX_SAMPLES)
 
 
 if __name__ == '__main__':

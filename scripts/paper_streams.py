@@ -334,6 +334,19 @@ class StreamManager:
         self.snapshot_tasks.add(task)
         task.add_done_callback(self.snapshot_tasks.discard)
 
+    def _start_priority_aster_bootstraps(self, group, generation):
+        # Aster REST snapshot starts are spaced two seconds apart. Give held
+        # positions a place ahead of new-market scans after a restart.
+        for market in group:
+            if not market.get("risk_priority"):
+                continue
+            key = ("aster", str(market["market"]))
+            if key in self.states:
+                continue
+            self.states[key] = {"generation": generation,
+                                "buffer": deque(maxlen=BUFFER_LIMIT)}
+            self._aster_task(key, generation)
+
     async def _connection(self, venue, group, stop, index):
         count = 0
         while not stop.is_set():
@@ -379,6 +392,11 @@ class StreamManager:
                                                 f"market_stats/{m['market']}"})
                             await asyncio.sleep(0.02)
                     self._status(venue, subscriptions=2 * len(group))
+                    if venue == "aster":
+                        self._start_priority_aster_bootstraps(group, generation)
+                        # Let those tasks enter the spaced snapshot queue before
+                        # a buffered ordinary-market delta can schedule its own.
+                        await asyncio.sleep(0)
                     next_keepalive = time.monotonic() + LIGHTER_KEEPALIVE_SECONDS
                     while not stop.is_set():
                         # aiohttp's heartbeat resets on incoming traffic. Lighter

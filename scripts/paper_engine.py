@@ -623,7 +623,12 @@ class PaperEngine:
                 'price_limit':expected*(1+(1 if direction=='long' else -1)*self.config.entry_slippage_bps/10000)}
             p['legs'].append(leg)
         self.positions[p['id']]=p;self._index_position(p);self.ledgers[strategy]['entry_attempts']+=1
-        if self.selector and strategy in SHADOW_POLICIES:self.selector.entered(strategy,s,now)
+        if self.selector and strategy in SHADOW_POLICIES:
+            self.selector.entered(strategy,s,now)
+            if strategy in ('convergence','conservative'):
+                self.evidence.append((p['id']+':entry_model',{
+                    'position_id':p['id'],'signal':s,
+                    'historical_closing_spreads':self.selector.route_history(s['route'],now)},'entry_model',now))
         self.transitions.append(copy.deepcopy(p))
 
     def funding_due(self):

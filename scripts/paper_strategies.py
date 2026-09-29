@@ -12,7 +12,7 @@ import math
 from statistics import median
 
 
-POLICY_VERSION = 1
+POLICY_VERSION = 2
 POLICIES = ('shadow_baseline', 'cooldown', 'convergence', 'conservative')
 WINDOW_SECONDS = 900.0
 MAX_SAMPLES = 900
@@ -20,7 +20,8 @@ MIN_SAMPLES = 40
 MIN_SPAN_SECONDS = 120.0
 MIN_SAMPLE_INTERVAL = 1.0
 MAX_OBSERVATION_GAP = 30.0
-MAX_PAIRED_SKEW = 0.25
+TRAINING_MAX_SKEW = 1.0
+STRICT_ENTRY_MAX_SKEW = 0.25
 COOLDOWN_SECONDS = 60.0
 MAX_ROUTES = 2000
 
@@ -84,11 +85,18 @@ class StrategySelector:
 
     def __init__(self, config):
         self.max_book_age = float(config.max_book_age)
+        self.training_skew_limit = min(TRAINING_MAX_SKEW, float(getattr(config, 'max_skew', 1.0)))
+        self.convergence_skew_limit = self.training_skew_limit
+        self.conservative_skew_limit = min(STRICT_ENTRY_MAX_SKEW, self.training_skew_limit)
+        self.cooldown_skew_limit = self.conservative_skew_limit
+        self.profit_target = float(getattr(config, "take_profit_usd", .10) or 0.0)
         self.routes: dict[str, _RouteWindow] = {}
         self.last_entries: dict[str, dict[str, float]] = {name: {} for name in POLICIES}
         self.counts: dict[str, Counter] = {name: Counter() for name in POLICIES}
         self.observation_counts = Counter()
         self.last_maintenance = -math.inf
+        self.criteria_changed_at = None
+        self.migrated_from_version = None
 
     @staticmethod
     def _route(pair, long_market, short_market):
@@ -103,10 +111,10 @@ class StrategySelector:
         if not (_book_ok(long_book, now, self.max_book_age) and
                 _book_ok(short_book, now, self.max_book_age)):
             return False
-        if abs(long_book['received'] - short_book['received']) > MAX_PAIRED_SKEW:
+        if abs(long_book['received'] - short_book['received']) > self.training_skew_limit:
             return False
         long_source, short_source = long_book.get('engine_time'), short_book.get('engine_time')
-        if long_source is not None and short_source is not None and abs(long_source - short_source) > MAX_PAIRED_SKEW:
+        if long_source is not None and short_source is not None and abs(long_source - short_source) > self.training_skew_limit:
             return False
         return True
 
@@ -209,6 +217,15 @@ class StrategySelector:
             return []
         return [(ts, bps) for ts, bps in window.samples if ts < now]
 
+    def route_history(self, route, now):
+        """Return prior (timestamp, closing-spread bps) samples for evidence.
+
+        The returned list is detached from the model, bounded to its rolling
+        900-second/900-sample window, and excludes a sample stamped ``now``.
+        Stale routes with no synchronized observation in 30 seconds are empty.
+        """
+        return self._past(route, now)
+
     def allow(self, policy, signal, now, *, existing_position=False):
         """Return (allowed, diagnostics). A current-tick sample never votes."""
         if policy not in POLICIES:
@@ -217,7 +234,13 @@ class StrategySelector:
         counts['checked'] += 1
         route = signal.get('route') if isinstance(signal, dict) else None
         edge = signal.get('net_edge_usd') if isinstance(signal, dict) else None
+        entry_skew_limit = (self.convergence_skew_limit if policy == 'convergence' else
+                            self.conservative_skew_limit if policy == 'conservative' else
+                            self.cooldown_skew_limit if policy == 'cooldown' else
+                            self.training_skew_limit)
         diagnostic = {'policy': policy, 'route': route, 'version': POLICY_VERSION,
+                      'entry_skew_limit_seconds': entry_skew_limit,
+                      'training_skew_limit_seconds': self.training_skew_limit,
                       'forecast_is_historical_spread': policy in ('convergence', 'conservative')}
 
         def reject(reason):
@@ -232,7 +255,7 @@ class StrategySelector:
             skew_ms = signal.get('skew_ms', 0)
             source_skew_ms = signal.get('source_skew_ms', 0)
             if any(not isinstance(value, (int, float)) or not math.isfinite(value) or
-                   value > MAX_PAIRED_SKEW * 1000 or value < 0
+                   value > entry_skew_limit * 1000 or value < 0
                    for value in (skew_ms, source_skew_ms)):
                 return reject('skew')
         threshold = .25 if policy != 'shadow_baseline' else 0.0
@@ -252,7 +275,7 @@ class StrategySelector:
                 return reject('signal')
             forecast = edge - bps * opening_base / 10000
             margin = .25 if policy == 'convergence' else .50
-            target = .10
+            target = self.profit_target
             diagnostic.update({'historical_closing_spread_bps': bps,
                                'forecast_net_usd': forecast,
                                'target_usd': target, 'margin_usd': margin,
@@ -285,12 +308,19 @@ class StrategySelector:
 
     def snapshot(self, now):
         self._expire_idle(now)
-        warm = sum(len(self._past(route, now + 1e-9)) >= MIN_SAMPLES and
-                   self.routes[route].samples[-1][0] - self.routes[route].samples[0][0] >= MIN_SPAN_SECONDS
-                   for route in list(self.routes))
+        spans = [window.samples[-1][0] - window.samples[0][0] for window in self.routes.values()]
+        warm = sum(len(window.samples) >= MIN_SAMPLES and span >= MIN_SPAN_SECONDS
+                   for window, span in zip(self.routes.values(), spans))
         fields = ('checked', 'allowed', 'entered', 'rejected_signal', 'rejected_skew', 'rejected_cooldown',
                   'rejected_warmup', 'rejected_forecast', 'rejected_duplicate')
-        return {'version': POLICY_VERSION, 'sampled_routes': len(self.routes), 'warm_routes': warm,
+        return {'version': POLICY_VERSION, 'criteria_changed_at': self.criteria_changed_at,
+                'migrated_from_version': self.migrated_from_version, 'sampled_routes': len(self.routes), 'warm_routes': warm,
+                'training_skew_limit_seconds': self.training_skew_limit,
+                'convergence_skew_limit_seconds': self.convergence_skew_limit,
+                'conservative_skew_limit_seconds': self.conservative_skew_limit,
+                'cooldown_skew_limit_seconds': self.cooldown_skew_limit,
+                'max_route_samples': max((len(window.samples) for window in self.routes.values()), default=0),
+                'max_route_span_seconds': max(spans, default=0.0),
                 'observation_counts': dict(self.observation_counts),
                 'policies': {name: {field: self.counts[name][field] for field in fields} |
                              {'warm_routes': warm if name in ('convergence', 'conservative') else 0}
@@ -299,13 +329,25 @@ class StrategySelector:
     def export_state(self):
         """Persist bounded debouncing and counters; forecasts always restart cold."""
         return {'version': POLICY_VERSION,
+                'criteria_changed_at': self.criteria_changed_at,
+                'migrated_from_version': self.migrated_from_version,
+                'training_skew_limit_seconds': self.training_skew_limit,
+                'convergence_skew_limit_seconds': self.convergence_skew_limit,
+                'conservative_skew_limit_seconds': self.conservative_skew_limit,
+                'cooldown_skew_limit_seconds': self.cooldown_skew_limit,
                 'last_entries': {name: dict(entries) for name, entries in self.last_entries.items()},
                 'counts': {name: dict(counts) for name, counts in self.counts.items()},
                 'observation_counts': dict(self.observation_counts)}
 
     def restore_state(self, state, now):
-        if not state or state.get('version') != POLICY_VERSION:
+        if not state or state.get('version') not in (1, POLICY_VERSION):
             return
+        if state['version'] == 1 and any(
+                state.get('counts', {}).get(name, {}).get('entered', 0) > 0
+                for name in ('convergence', 'conservative')):
+            raise ValueError('v1 forecast entries require a separate experiment for v2')
+        self.criteria_changed_at = now if state.get('version') == 1 else state.get('criteria_changed_at')
+        self.migrated_from_version = 1 if state.get('version') == 1 else state.get('migrated_from_version')
         self.routes.clear()
         for name in POLICIES:
             self.counts[name] = Counter(state.get('counts', {}).get(name, {}))

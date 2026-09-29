@@ -94,6 +94,7 @@ class LayoutTests(unittest.TestCase):
         self.assertIn("Closed  +11.25", joined)
         self.assertIn("Open   -2.50", joined)
         self.assertIn("T/W 4/2 Entry3 Warm4 Rej7", joined)
+        self.assertIn("Entry3 Ready0 Rej7", joined)
         self.assertIn("ASSET9", joined)
         self.assertIn("Feeds: HL streaming", joined)
 

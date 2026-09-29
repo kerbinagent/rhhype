@@ -8,6 +8,8 @@ from pathlib import Path
 import sqlite3
 import time
 
+SHADOW_POLICIES=('shadow_baseline','cooldown','convergence','conservative')
+
 def latency_summary(stats):
     observed=stats.get("observed",0);triggered=stats.get("triggered",0);missing=stats.get("missing",0)
     return dict(stats,actual_delay_mean_ms=stats.get("actual_delay_ms_sum",0)/observed if observed else None,
@@ -15,6 +17,69 @@ def latency_summary(stats):
         survival_fraction_of_observed=stats.get("survived",0)/observed if observed else None,
         missing_fraction=missing/triggered if triggered else None,
         pending=max(0,triggered-observed-missing))
+
+
+def shadow_comparison(engine,trades,updated,checkpoint_age_seconds):
+    """Compare fresh shadow ledgers; use retained rows only for diagnostics."""
+    started=engine.get('shadow_started_at')
+    if started is None:
+        return {'enabled':False,'status':'not_started'}
+    window={'started_at':started,'checkpoint_at':updated,
+            'seconds':max(0,updated-started),
+            'checkpoint_age_seconds':checkpoint_age_seconds,
+            'status':'matched' if started<=updated else 'start_after_checkpoint'}
+    policies={}
+    for name in SHADOW_POLICIES:
+        ledger=engine.get('ledgers',{}).get(name)
+        if ledger is None:continue
+        closed=ledger.get('closed_trades',0)+ledger.get('estimated_trades',0)
+        pnl=ledger.get('closed_pnl_exact',0)+ledger.get('closed_pnl_estimated',0)
+        wins=ledger.get('closed_wins_exact',0)+ledger.get('closed_wins_estimated',0)
+        current=[p for p in engine.get('positions',{}).values() if p['strategy']==name]
+        retained=[p for p in trades if p.get('strategy')==name and
+                  p.get('created_at',0)>=started and p.get('status') in ('CLOSED','CLOSED_ESTIMATED')]
+        exit_reasons={}
+        holds=[];forecast_pairs=[]
+        for p in retained:
+            reason=p.get('exit_reason','unknown')
+            exit_reasons[reason]=exit_reasons.get(reason,0)+1
+            opened,closed_at=p.get('opened_at'),p.get('closed_at')
+            if isinstance(opened,(int,float)) and isinstance(closed_at,(int,float)) and closed_at>=opened:
+                holds.append(closed_at-opened)
+            forecast=p.get('signal',{}).get('entry_policy',{}).get('forecast_net_usd')
+            actual=p.get('net_pnl_usd')
+            if isinstance(forecast,(int,float)) and isinstance(actual,(int,float)) and \
+                    math.isfinite(forecast) and math.isfinite(actual):
+                forecast_pairs.append((forecast,actual))
+        policies[name]={
+            'fee_tier':'standard','initial_capital_usd':ledger.get('initial_capital'),
+            'entry_policy_counts':(engine.get('entry_policy_state') or {}).get('counts',{}).get(name,{}),
+            'status':'observed' if closed else 'insufficient_trades',
+            'cumulative_closed_trades':closed,'cumulative_wins':wins,
+            'cumulative_net_pnl_usd':pnl,
+            'cumulative_net_per_trade_usd':pnl/closed if closed else None,
+            'cumulative_fees_usd':ledger.get('fees_usd',0),
+            'active_positions':len(current),
+            'open_position_mark_usd':None,
+            'open_position_mark_status':'unavailable_without_current_books',
+            'retained_closed_trades':len(retained),
+            'retained_exit_reasons':exit_reasons,
+            'retained_failed_hedges':exit_reasons.get('entry_failure',0),
+            'retained_mean_hold_seconds':sum(holds)/len(holds) if holds else None,
+            'retained_forecast_vs_realized':{
+                'count':len(forecast_pairs),
+                'forecast_mean_usd':sum(f for f,_ in forecast_pairs)/len(forecast_pairs) if forecast_pairs else None,
+                'realized_mean_usd':sum(a for _,a in forecast_pairs)/len(forecast_pairs) if forecast_pairs else None,
+                'realized_minus_forecast_mean_usd':sum(a-f for f,a in forecast_pairs)/len(forecast_pairs) if forecast_pairs else None}}
+    return {'enabled':True,'window':window,'policies':policies,
+            'policy_version':(engine.get('entry_policy_state') or {}).get('version'),
+            'criteria_changed_at':(engine.get('entry_policy_state') or {}).get('criteria_changed_at'),
+            'decision_counts_include_previous_version':(engine.get('entry_policy_state') or {}).get('migrated_from_version') is not None,
+            'limitations':['Each policy has independent configured paper capital; policy P&L must not be summed as one portfolio.',
+                           'Policies share observed feeds and opportunities; this is a nonrandom observational comparison.',
+                           'All shadow policies use Standard fees.',
+                           'Cumulative P&L, trades, wins, and fees come from ledgers; retained trade diagnostics cover only stored rows.',
+                           'Open position marks are unavailable without current order books.']}
 
 
 def report(path):
@@ -51,8 +116,10 @@ def report(path):
             wallet_reconciliation_error_usd=sum(ledger['wallets'].values())-expected)
     episodes=engine.get('episode_history',[])
     spans=sorted(e['observed_span_seconds'] for e in episodes)
-    return {'checkpoint_at':updated,'checkpoint_age_seconds':max(0,time.time()-updated),
+    checkpoint_age=max(0,time.time()-updated)
+    return {'checkpoint_at':updated,'checkpoint_age_seconds':checkpoint_age,
         'portfolios':portfolios,'top_signals_not_trade_pnl':top,
+        'shadow_comparison':shadow_comparison(engine,trades,updated,checkpoint_age),
         'retained_trade_groups_not_lifetime_totals':dict(grouped),
         'retained_trade_count':len(trades),'latency':{k:latency_summary(v) for k,v in engine.get('probe_stats',{}).items()},
         'retained_entry_fill_delay_ms_by_venue':{k:{'count':len(v),'median':sorted(v)[len(v)//2],

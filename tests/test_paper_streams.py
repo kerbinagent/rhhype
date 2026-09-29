@@ -161,3 +161,41 @@ class KeepaliveTests(unittest.IsolatedAsyncioTestCase):
         self.assertGreaterEqual(len(ws.pings),4)
         self.assertGreater(manager.counters['lighter']['messages'],20)
         self.assertEqual(manager.counters['lighter']['keepalives'],len(ws.pings))
+
+
+class AsterPriorityTests(unittest.IsolatedAsyncioTestCase):
+    async def test_held_market_bootstrap_starts_before_new_market_delta(self):
+        import aiohttp
+        from types import SimpleNamespace
+
+        stop = asyncio.Event()
+        normal = market('aster', 'NORMALUSDT')
+        held = market('aster', 'HELDUSDT') | {'risk_priority': True}
+        started = []
+
+        class Socket:
+            close_code = 1000
+            count = 0
+
+            async def __aenter__(self):
+                return self
+
+            async def __aexit__(self, *args):
+                pass
+
+            async def receive(self, timeout):
+                self.count += 1
+                if self.count == 1:
+                    return SimpleNamespace(type=aiohttp.WSMsgType.TEXT,
+                                           data='{"data":{"e":"depthUpdate","s":"NORMALUSDT"}}')
+                stop.set()
+                return SimpleNamespace(type=aiohttp.WSMsgType.CLOSE, data=1000, extra='')
+
+        class Session:
+            def ws_connect(self, *args, **kwargs):
+                return Socket()
+
+        manager = StreamManager(Session(), [normal, held], lambda _: None, lambda *_: None)
+        manager._aster_task = lambda key, generation: started.append(key)
+        await manager._connection('aster', [normal, held], stop, 0)
+        self.assertEqual(started, [('aster', 'HELDUSDT'), ('aster', 'NORMALUSDT')])
