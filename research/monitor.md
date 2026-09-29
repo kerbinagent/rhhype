@@ -122,3 +122,28 @@ Example smaller study:
 ```
 
 Use `--duration 120 --no-tui --out data/paper-monitor-test` for a finite check. See `--help` for all limits and assumptions.
+
+## Experimental entry policies
+
+Enable with `--shadow-strategies`. This adds four independent Standard-fee paper portfolios to the current collector; existing ledgers and positions are retained. Saved experiments resume automatically on subsequent launches. The new `shadow_baseline` starts alongside the experiments, so its P&L is the relevant comparison rather than the original Standard portfolio's older cumulative losses.
+
+| Label | Entry rule |
+|---|---|
+| S.Base | Original positive opening-edge rule, fresh capital and start time |
+| Cooldown | At least $0.25 opening edge after estimated round-trip costs, receipt/source skew no more than 250 ms, 60-second cooldown per directed route |
+| Converge | Same controls, plus opening edge minus historical median executable closing spread must be at least $0.25 |
+| Conserv. | Same controls, using the 75th percentile closing spread and a $0.50 minimum forecast |
+
+All use the original $1,000 target per leg, $20,000 initial portfolio, actual simulated fill fees, 5 bp additional cost allowance, delayed fills, $0.10 net profit exit trigger and ten-second maximum hold. Each portfolio has independent capital and displayed-depth allocation; their P&Ls must not be added.
+
+Forecasts use only preceding observations from a rolling 15-minute window. At least 40 distinct paired samples spanning 120 seconds are required. Both books must advance, source timestamps must advance where available, and paired receipt/source skew must be at most 250 ms. Sampling is capped at once per second per direction and 900 observations per route, with an absolute 2,000-route cap. Thirty-second observation gaps and stream generation changes reset the affected model. Models warm up again after restart; entry cooldowns and accounting persist. Nothing grows with runtime without a bound.
+
+These are exploratory historical closing-spread forecasts, not validated ten-second convergence probabilities. Zero trades indicate no qualifying observations; they are not evidence of profitable execution. Results are evaluated on subsequent live fills without retroactively selecting winning parameters. The same feed and Hyperliquid REST quota serve all portfolios; extra simulated orders can affect observation scheduling.
+
+Restart a currently open viewer to load the new table:
+
+```bash
+.venv/bin/python scripts/monitor.py --watch
+```
+
+The compact table shows net closed P&L, open liquidation P&L, wins/trades, and entry/warmup/rejection diagnostics. On small terminals, enlarge the window to see all ten opening signals. An open mark of `?` means a fresh complete liquidation estimate is unavailable.

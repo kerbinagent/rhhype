@@ -41,7 +41,15 @@ def key(m):
     return f"{m['venue']}:{m['market']}"
 
 
+SHADOW_POLICIES = ('shadow_baseline', 'cooldown', 'convergence', 'conservative')
+
+
+def fee_tier(strategy):
+    return 'standard' if strategy in SHADOW_POLICIES else strategy
+
+
 def scenario_fee(m, strategy):
+    strategy = fee_tier(strategy)
     if m['venue'] in ('lighter', 'rh_lighter'):
         fee = {'standard': 0, 'plus': .5,
                'premium': 3.5 if m['venue']=='rh_lighter' else 2.8}[strategy]
@@ -51,6 +59,7 @@ def scenario_fee(m, strategy):
 
 
 def taker_delay(m, strategy, config):
+    strategy = fee_tier(strategy)
     if m['venue'] in ('lighter','rh_lighter'):
         venue_ms = (200 if m['venue']=='rh_lighter' else 140) if strategy=='premium' else 300
     elif m['venue']=='hyperliquid': venue_ms=config.hl_processing_ms
@@ -87,13 +96,14 @@ def available_fill(levels, desired, step, price_limit=None, buy=True):
 
 
 class PaperEngine:
-    """Three independent portfolios; one position per undirected pair/strategy."""
+    """Independent portfolios; one position per undirected pair/strategy."""
     def __init__(self, pairs, config=None, state=None, now=None):
         self.config=config or EngineConfig()
+        self.selector=None;self.shadow_started_at=None
         self.pairs={self.pair_id(p):p for p in pairs}
         self.books={};self.dirty=set();self.last_evaluation={}
         self.stats=Counter();self.transitions=[];self.signals=[];self.evidence=[]
-        self.positions={};self.finished=[];self.sequence=0
+        self.positions={};self.position_markets=defaultdict(dict);self.finished=[];self.sequence=0
         self.episodes={};self.episode_history=deque(maxlen=2000)
         self.probes={};self.probe_stats=defaultdict(lambda:Counter())
         self.probe_stats_by_strategy=defaultdict(lambda:Counter())
@@ -115,6 +125,35 @@ class PaperEngine:
         self.market_pairs=defaultdict(set)
         self._index_pairs()
         if state:self.restore(state)
+
+    def _index_position(self,p):
+        for leg in p['legs']:self.position_markets[leg['key']][p['id']]=None
+
+    def _remove_position(self,ident):
+        p=self.positions.pop(ident,None)
+        if p:
+            for leg in p['legs']:
+                ids=self.position_markets.get(leg['key'])
+                if ids is not None:
+                    ids.pop(ident,None)
+                    if not ids:self.position_markets.pop(leg['key'],None)
+
+    def _positions_for_market(self,k):
+        return [self.positions[ident] for ident in self.position_markets.get(k,()) if ident in self.positions]
+
+    def enable_shadows(self, now=None):
+        """Add fresh Standard-fee experiments without resetting existing ledgers."""
+        from paper_strategies import StrategySelector
+        if self.selector is not None:return
+        self.shadow_started_at=now if now is not None else time.time()
+        self.selector=StrategySelector(self.config)
+        venues=sorted({v for ledger in self.ledgers.values() for v in ledger['wallets']})
+        template=PaperEngine([],self.config).ledgers[next(iter(self.config.strategies))]
+        for policy in SHADOW_POLICIES:
+            if policy not in self.ledgers:
+                ledger=copy.deepcopy(template)
+                ledger['wallets']={v:self.config.capital_usd/len(venues) for v in venues}
+                self.ledgers[policy]=ledger
 
     @staticmethod
     def pair_id(pair):
@@ -141,6 +180,9 @@ class PaperEngine:
         self.books={k:v for k,v in self.books.items() if k in keep}
         self.last_evaluation={k:v for k,v in self.last_evaluation.items() if k in self.pairs}
         self.dirty.intersection_update(self.pairs);self.dirty.update(self.pairs)
+        if self.selector:
+            self.selector.retain_routes({f"{p['asset']}|{key(a)}|{key(b)}" for p in pairs
+                                         for a,b in ((p['hl'],p['other']),(p['other'],p['hl']))})
 
     def _reserved(self,strategy,venue):
         return sum(p['reserved'].get(venue,0) for p in self.positions.values() if p['strategy']==strategy)
@@ -200,7 +242,7 @@ class PaperEngine:
         if not valid_book(book,now,self.config):
             self.stats['invalid_books']+=1
             self._probe_invalidate(k,'invalid_book')
-            for p in list(self.positions.values()):
+            for p in self._positions_for_market(k):
                 for leg in p['legs']:
                     if leg['key']!=k:continue
                     intent=leg.get('intent')
@@ -211,8 +253,10 @@ class PaperEngine:
             return
         # Each fee scenario is an independent counterfactual; within one scenario
         # reserve displayed liquidity across simultaneous hypothetical orders.
-        remaining={s:{'bids':list(book['bids']),'asks':list(book['asks'])} for s in self.config.strategies}
-        for p in list(self.positions.values()):
+        # No book copies for portfolios without an eligible order. available_fill
+        # returns new level arrays; it never mutates the feed's input arrays.
+        remaining={}
+        for p in self._positions_for_market(k):
             if p['status']=='AWAITING_FUNDING':continue
             for leg in p['legs']:
                 intent=leg.get('intent')
@@ -231,7 +275,8 @@ class PaperEngine:
                 if now<intent['due'] or now>intent['expires']:continue
                 if book.get('engine_time') is not None and book['engine_time']<intent['due']:
                     self.stats['pre_delay_source_books']+=1;continue
-                self._fill(p,leg,intent,book,remaining[p['strategy']],now)
+                liquidity=remaining.setdefault(p['strategy'],{'bids':book['bids'],'asks':book['asks']})
+                self._fill(p,leg,intent,book,liquidity,now)
             self._transition(p,now)
         self._probe_update(k,now)
 
@@ -300,7 +345,7 @@ class PaperEngine:
             else:
                 p['status']='ABORTED';p['closed_at']=now
                 self.ledgers[p['strategy']]['aborted_trades']+=1
-                self.transitions.append(copy.deepcopy(p));self.positions.pop(p['id'],None)
+                self.transitions.append(copy.deepcopy(p));self._remove_position(p['id'])
                 return
         if p['status']=='EXITING' and all(leg['remaining']<=1e-9 for leg in p['legs']):
             p['status']='AWAITING_FUNDING';p['closed_at']=now
@@ -362,17 +407,36 @@ class PaperEngine:
             am=(a['bids'][0][0]+a['asks'][0][0])/2;bm=(b['bids'][0][0]+b['asks'][0][0])/2
             if abs(bm/am-1)>self.config.max_divergence_bps/10000:
                 self.stats['unit_or_price_divergence']+=1;self._censor_pair(ident,now);continue
-            for strategy in self.config.strategies:
-                candidates=[]
-                for buy,sell,bb,sb in ((p['hl'],p['other'],a,b),(p['other'],p['hl'],b,a)):
-                    signal=self._signal(p,buy,sell,bb,sb,strategy,now)
-                    route=f"{strategy}|{p['asset']}|{key(buy)}|{key(sell)}"
-                    self._track_signal(signal,ident,now,route)
-                    if signal is not None:candidates.append(signal)
+            standard_signals=[]
+            cached={}
+            for strategy in self.ledgers:
+                tier=fee_tier(strategy)
+                if tier not in cached:
+                    cached[tier]=[s for buy,sell,bb,sb in ((p['hl'],p['other'],a,b),(p['other'],p['hl'],b,a))
+                                  if (s:=self._signal(p,buy,sell,bb,sb,tier,now)) is not None]
+                candidates=[dict(s,strategy=strategy) for s in cached[tier]]
+                if strategy=='standard':standard_signals=candidates
+                if strategy in self.config.strategies:
+                    for signal in candidates:
+                        route=f"{strategy}|{signal['route']}"
+                        self._track_signal(signal,ident,now,route)
+                    # Missing depth still ends previously observed episodes.
+                    present={s['route'] for s in candidates}
+                    for buy,sell in ((p['hl'],p['other']),(p['other'],p['hl'])):
+                        route=f"{p['asset']}|{key(buy)}|{key(sell)}"
+                        if route not in present:self._track_signal(None,ident,now,f"{strategy}|{route}")
                 for signal in sorted(candidates,key=lambda s:s['net_edge_usd'],reverse=True):
-                    if signal['net_edge_usd']>0:
-                        self._maybe_enter(p,ident,signal,strategy,now)
-                        break
+                    if signal['net_edge_usd']<=0:continue
+                    if self.selector and strategy in SHADOW_POLICIES:
+                        allowed,diagnostic=self.selector.allow(strategy,signal,now,existing_position=any(
+                            pos['strategy']==strategy and pos['pair_id']==ident for pos in self.positions.values()))
+                        if not allowed:continue
+                        signal['entry_policy']=diagnostic
+                    self._maybe_enter(p,ident,signal,strategy,now)
+                    break
+            if self.selector:
+                # Forecasts see only prior samples, never the current observation.
+                self.selector.observe(p,self.books,now,signals=standard_signals or cached.get('standard',[]))
         # No events must not let an episode appear continuously executable.
         for route,e in list(self.episodes.items()):
             if now-e['last']>self.config.episode_gap_seconds:self._finish_episode(route,now,'data_gap')
@@ -403,7 +467,8 @@ class PaperEngine:
                 'buy':key(buy),'sell':key(sell),'quantity':quantity,'buy_value':cost,'sell_value':proceeds,
                 'buy_fee_bps':bf,'sell_fee_bps':sf,'net_edge_usd':net,'net_edge_bps':net/cost*10000,
                 'opening_edge_usd':proceeds-cost-fees,'timestamp':now,'skew_ms':abs(bb['received']-sb['received'])*1000,
-                'notional':self.config.notional,'lifetime_is_sampled':True}
+                'notional':self.config.notional,'lifetime_is_sampled':True,
+                'source_skew_ms':abs(bb['engine_time']-sb['engine_time'])*1000 if bb.get('engine_time') is not None and sb.get('engine_time') is not None else 0.0}
 
     def _track_signal(self,s,ident,now,route=None):
         # A missing walk (depth, lot, or minimum failure) is observed loss of
@@ -557,7 +622,8 @@ class PaperEngine:
                 'expires':now+delay+self.config.fill_timeout_seconds,'generation':b.get('generation'),
                 'price_limit':expected*(1+(1 if direction=='long' else -1)*self.config.entry_slippage_bps/10000)}
             p['legs'].append(leg)
-        self.positions[p['id']]=p;self.ledgers[strategy]['entry_attempts']+=1
+        self.positions[p['id']]=p;self._index_position(p);self.ledgers[strategy]['entry_attempts']+=1
+        if self.selector and strategy in SHADOW_POLICIES:self.selector.entered(strategy,s,now)
         self.transitions.append(copy.deepcopy(p))
 
     def funding_due(self):
@@ -598,7 +664,7 @@ class PaperEngine:
             ledger[f'closed_loss_sum_{quality}']+=p['net_pnl_usd']
             ledger[f'closed_losses_{quality}']+=1
         self.transitions.append(copy.deepcopy(p));self.finished.append(copy.deepcopy(p))
-        self.positions.pop(position_id)
+        self._remove_position(position_id)
 
     def liquidation(self,p,now):
         if p['status']=='AWAITING_FUNDING':return None
@@ -664,6 +730,9 @@ class PaperEngine:
                 per_delay[delay][metric]=value
             by_strategy[strategy]=dict(per_delay)
         return {'strategies':strategies,'positions':pos,'stats':dict(self.stats),
+                'shadow_started_at':self.shadow_started_at,
+                'shadow_strategies':{k:v for k,v in strategies.items() if k in SHADOW_POLICIES},
+                'entry_policies':self.selector.snapshot(now) if self.selector else {},
                 'top_signals':sorted(self.top_signals.values(),key=lambda s:s['net_edge_usd'],reverse=True)[:10],
                 'latency':{delay:dict(v) for delay,v in self.probe_stats.items()},
                 'latency_by_strategy':by_strategy,
@@ -680,6 +749,8 @@ class PaperEngine:
 
     def export_state(self):
         return {'version':1,'config':asdict(self.config),'sequence':self.sequence,'ledgers':self.ledgers,
+                'shadow_started_at':self.shadow_started_at,
+                'entry_policy_state':self.selector.export_state() if self.selector else None,
                 'positions':self.positions,'stats':dict(self.stats),'top_signals':self.top_signals,
                 'probe_stats':{k:dict(v) for k,v in self.probe_stats.items()},
                 'probe_stats_by_strategy':{k:dict(v) for k,v in self.probe_stats_by_strategy.items()},
@@ -690,6 +761,11 @@ class PaperEngine:
 
     def restore(self,state):
         self.sequence=state['sequence'];self.ledgers=state['ledgers'];self.positions=state['positions']
+        self.position_markets.clear()
+        for p in self.positions.values():self._index_position(p)
+        if state.get('shadow_started_at') is not None:
+            self.enable_shadows(state['shadow_started_at'])
+            if state.get('entry_policy_state'):self.selector.restore_state(state['entry_policy_state'],self.last_processed)
         for ledger in self.ledgers.values():
             for quality in ('exact','estimated'):
                 for name,default in (('profit_sum',0.0),('loss_sum',0.0),('wins',0),('losses',0)):

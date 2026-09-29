@@ -15,6 +15,10 @@ from typing import Iterator
 
 
 TIERS = ("standard", "plus", "premium")
+SHADOWS = (("shadow_baseline", "Shadow base", "Base"),
+           ("cooldown", "Cooldown", "Cool"),
+           ("convergence", "Convergence", "Conv"),
+           ("conservative", "Conservative", "Cons"))
 
 
 def _number(value: object) -> float | None:
@@ -109,6 +113,59 @@ def _strategy_lines(snapshot: dict, width: int) -> list[str]:
                 row = {}
             lines.append(f"{tier.title():<8} {_cash(row.get('closed_pnl_exact'), 12)} "
                          f"{_cash(row.get('open_liquidation_pnl'), 10)}")
+    return lines
+
+
+def _shadow_lines(snapshot: dict, width: int) -> list[str]:
+    summaries = snapshot.get("shadow_strategies")
+    strategies = snapshot.get("strategies")
+    if not isinstance(summaries, dict):
+        summaries = {}
+    if not isinstance(strategies, dict):
+        strategies = {}
+    entry_policies = snapshot.get("entry_policies")
+    if not isinstance(entry_policies, dict):
+        entry_policies = {}
+    policies = entry_policies.get("policies", entry_policies)
+    if not isinstance(policies, dict):
+        policies = {}
+    started = _number(snapshot.get("shadow_started_at"))
+    try:
+        since = time.strftime("%H:%MZ", time.gmtime(started)) if started is not None else "new"
+    except (OverflowError, ValueError, OSError):
+        since = "new"
+    lines = []
+    for key, label, short in SHADOWS:
+        row = summaries.get(key, strategies.get(key))
+        if not isinstance(row, dict):
+            continue
+        exact = _number(row.get("closed_pnl_exact"))
+        estimated = _number(row.get("closed_pnl_estimated"))
+        closed = _number(row.get("closed_net_usd"))
+        if closed is None and (exact is not None or estimated is not None):
+            closed = (exact or 0) + (estimated or 0)
+        open_mark = row.get("open_liquidation_pnl", row.get("open_mark_usd"))
+        trades = _int(row.get("closed_trades")) + _int(row.get("estimated_trades"))
+        wins = _int(row.get("closed_wins"))
+        policy = policies.get(key)
+        if not isinstance(policy, dict):
+            policy = {}
+        entered = _int(policy.get("entered", row.get("entry_attempts")))
+        warmup = _int(policy.get("rejected_warmup"))
+        rejected = sum(_int(policy.get(f"rejected_{reason}")) for reason in
+                       ("signal", "skew", "cooldown", "forecast", "duplicate"))
+        entry = (f"Entry{entered} Warm{warmup} Rej{rejected}" if policy else
+                 f"Entry {_label(row.get('entry_status', '?'))}")
+        if width >= 79:
+            name = f"S.Base Std fee@{since}" if key == "shadow_baseline" else f"{label} Std fee"
+            lines.append(f"{name:<23.23} Closed {_cash(closed, 7)} Open {_cash(open_mark, 7)} "
+                         f"T/W {trades}/{wins} {entry}")
+        elif width >= 49:
+            lines.append(f"{short:<4} Std fee Cl {_brief_cash(closed)} Op {_brief_cash(open_mark)} "
+                         f"T/W {trades}/{wins} {entry}")
+        else:
+            lines.append(f"{short} C{_brief_cash(closed)} O{_brief_cash(open_mark)} "
+                         f"T{trades} W{wins}")
     return lines
 
 
@@ -232,18 +289,23 @@ def tui_lines(snapshot: dict | None, columns: int, rows: int) -> list[str]:
         updated = _number(snapshot.get("updated_at", snapshot.get("updated_timestamp")))
         age = f"{max(0, int(time.time() - updated))}s" if updated is not None else "?"
         pairs = snapshot.get("pair_count", snapshot.get("pairs", 0))
+        shadow_lines = _shadow_lines(snapshot, width)
         lines = [f"RHHYPE PAPER | {_label(snapshot.get('status', 'starting')).upper()} | "
                  f"{_int(pairs)} pairs | update {age} | Ctrl-C exits",
                  "Simulated USD P&L: Closed exact / estimated / open liquidation; costs below",
-                 *_strategy_lines(snapshot, width)]
+                 *_strategy_lines(snapshot, width),
+                 *shadow_lines]
+        if shadow_lines:
+            lines.append(_diagnostic_line(snapshot))
         signals = snapshot.get("top_signals") or []
         if not isinstance(signals, list):
             signals = []
         signals = signals[:10]
         heading, signal_rows = _signal_lines(signals, width)
         lines += ["Top opening signals (edge is NOT trade P&L)", heading]
-        # Keep one row for a truncation or status footer at short heights.
-        available = max(0, height - len(lines) - 1)
+        # Reserve a truncation footer only when some signals cannot fit.
+        remaining = max(0, height - len(lines))
+        available = max(0, remaining - (len(signal_rows) > remaining))
         shown = min(len(signal_rows), available)
         lines += signal_rows[:shown]
         if not signals and available:
@@ -254,7 +316,7 @@ def tui_lines(snapshot: dict | None, columns: int, rows: int) -> list[str]:
             supplements = [
                 "Exact final; Est estimated; Ent entry; Pen funding; Inc incomplete; ? unknown",
                 _position_line(snapshot),
-                _diagnostic_line(snapshot),
+                *([] if shadow_lines else [_diagnostic_line(snapshot)]),
                 _storage_line(snapshot),
                 _closed_sums_line(snapshot) or "Signals are historical opening observations; Ctrl-C exits.",
             ]

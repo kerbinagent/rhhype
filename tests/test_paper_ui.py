@@ -46,6 +46,24 @@ def snapshot():
     }
 
 
+def snapshot_with_shadows():
+    data = snapshot()
+    data["shadow_started_at"] = 1_700_000_000
+    data["strategies"].update({
+        name: {"closed_pnl_exact": 12.5, "closed_pnl_estimated": -1.25,
+               "open_liquidation_pnl": -2.5, "closed_trades": 3,
+               "estimated_trades": 1, "closed_wins": 2}
+        for name in ("shadow_baseline", "cooldown", "convergence", "conservative")
+    })
+    data["entry_policies"] = {"policies": {
+        name: {"entered": 3, "rejected_warmup": 4,
+               "rejected_signal": 2, "rejected_cooldown": 1,
+               "rejected_forecast": 3, "rejected_duplicate": 1}
+        for name in ("shadow_baseline", "cooldown", "convergence", "conservative")
+    }}
+    return data
+
+
 class LayoutTests(unittest.TestCase):
     def test_full_screen_shows_ledger_and_all_ten_signals(self):
         lines = tui_lines(snapshot(), 80, 24)
@@ -63,6 +81,33 @@ class LayoutTests(unittest.TestCase):
         self.assertIn("100ms target: 3/4 positive, 1 missing", joined)
         self.assertIn("Closed win/loss sums USD", joined)
         self.assertIn("Std +15.1/-2.8", joined)
+
+    def test_shadow_rows_show_comparable_window_and_keep_ten_signals(self):
+        data = snapshot_with_shadows()
+        lines = tui_lines(data, 80, 24)
+        joined = "\n".join(lines)
+        self.assertEqual(len(lines), 23)
+        self.assertTrue(all(len(line) <= 79 for line in lines))
+        for label in ("S.Base Std fee@", "Cooldown Std fee", "Convergence Std fee",
+                      "Conservative Std fee"):
+            self.assertIn(label, joined)
+        self.assertIn("Closed  +11.25", joined)
+        self.assertIn("Open   -2.50", joined)
+        self.assertIn("T/W 4/2 Entry3 Warm4 Rej7", joined)
+        self.assertIn("ASSET9", joined)
+        self.assertIn("Feeds: HL streaming", joined)
+
+    def test_shadow_rows_resize_and_bad_metadata(self):
+        data = snapshot_with_shadows()
+        data["shadow_started_at"] = 1e300
+        data["entry_policies"]["policies"]["cooldown"]["entered"] = "bad"
+        for columns, rows in ((120, 30), (80, 24), (50, 20),
+                              (30, 12), (10, 4), (1, 1)):
+            lines = tui_lines(data, columns, rows)
+            self.assertLessEqual(len(lines), max(1, rows - 1))
+            self.assertTrue(all(len(line) <= max(1, columns - 1) for line in lines))
+            self.assertNotIn("\033", "\n".join(lines))
+        self.assertIn("Showing", "\n".join(tui_lines(data, 30, 16)))
 
     def test_tiny_terminal_and_untrusted_metadata(self):
         data = snapshot()
@@ -103,7 +148,7 @@ class PtyTests(unittest.TestCase):
         for stop in (signal.SIGINT, signal.SIGTERM):
             with self.subTest(stop=stop), tempfile.TemporaryDirectory() as directory:
                 path = Path(directory) / "paper_snapshot.json"
-                path.write_text(json.dumps(snapshot()))
+                path.write_text(json.dumps(snapshot_with_shadows()))
                 master, slave = os.openpty()
 
                 def terminal_session():

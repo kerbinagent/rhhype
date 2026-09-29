@@ -105,6 +105,7 @@ async def run(args,store,config):
     for sig in (signal.SIGINT,signal.SIGTERM):loop.add_signal_handler(sig,stop.set)
     saved=store.load_state() or {}
     engine=PaperEngine([],config,state=saved.get('engine'))
+    if args.shadow_strategies:engine.enable_shadows()
     ring=BookRing(args.book_memory_mb*1024*1024,args.book_window_seconds)
     feeds={};discovery_stats=Counter();runtime={'status':'starting','last_metadata':0.0,'last_checkpoint':0.0,
         'funding_errors':{},'last_snapshot':None,'loop_lag_ms':0.0,'last_pair_plan':[]}
@@ -349,6 +350,7 @@ def arguments(argv=None):
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--out',type=Path,default=ROOT/'data/paper-monitor')
     p.add_argument('--watch',action='store_true')
+    p.add_argument('--shadow-strategies',action='store_true',help='Add four independent Standard-fee strategy experiments; saved experiments resume automatically')
     p.add_argument('--tui',action=argparse.BooleanOptionalAction,default=sys.stdout.isatty())
     p.add_argument('--transport',choices=['stream','poll'],default='stream')
     p.add_argument('--venues',nargs='+',choices=list(legacy.BASE),default=list(legacy.BASE))
