@@ -176,3 +176,11 @@ receipt timestamps to follow the due time, and explicit stale-history gates.
 Eight physical BTC/ETH/NVDA/XAG pairs, two arrival scenarios per candidate,
 original quantity, four fees, and bounded storage are planned. The next
 scheduled strategy review is approximately 20:06:33 UTC / 4:06 p.m. ET.
+
+Impulse pilot PID **2090065** started **20:00:36 UTC**, duration 1,200 seconds,
+expected stop **20:20:37 UTC**. Output `data/impulse-research-v1`; frozen code,
+method and eight-pair metadata are committed in **473e0c3**. Independent core
+audit and 14 focused observer/analyzer tests passed, including a real-model
+stopped-snapshot integration test. All three subscribed venue feeds connected
+at startup. Production entry policies are unchanged. This is an optimistic
+paired quote experiment, not a fill simulator or cash profit tally.

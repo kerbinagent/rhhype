@@ -20,6 +20,14 @@ reserve on the larger entry leg and an elapsed capital estimate. RH USDG and
 HL USDC are assumed at parity for the quote comparison; conversion is unmodeled.
 Equity and silver contract/oracle differences remain a hedge-basis risk.
 
+At roughly $1,000 per leg and unchanged prices, the monetary gate needs about
+**16.5 bp for BTC/ETH** (9 bp round-trip trading fees, 5 bp reserve, 2.5 bp
+target) and **9.3 bp for NVDA/XAG** (1.8 + 5 + 2.5 bp). Actual tests use each
+walked notional and the prior executable closing basis; these approximations
+exclude further bid/ask friction. A small mid-price movement is therefore
+insufficient even when the opening spread looks positive. The $0.25 research
+selection target does not alter the main monitor's $0.10 exit target.
+
 Primary observation delay is 0.5 seconds **after confirmation**; the 1 second
 stress scenario uses the same frozen candidate and quantity. Entry observation
 must still occur by impulse+2 seconds. Late confirmation therefore leaves less
