@@ -161,6 +161,52 @@ class ReviewTests(unittest.TestCase):
         self.assertEqual(json.loads((self.out / "review_state.json").read_text())
                          ["strategy_started_at"]["convergence"], 10500)
 
+    def test_paired_entry_deterioration_sign_and_missing_inputs(self):
+        def filled(ident, settled_at, long_value, short_value, second_entry):
+            item = trade(ident, "standard", settled_at, 1)
+            item["created_at"] = 9900
+            item["signal"] = {"buy": "hyperliquid:BTC", "sell": "aster:BTCUSDT",
+                              "quantity": 2, "buy_value": 200, "sell_value": 204}
+            item["legs"] = [
+                {"key": "hyperliquid:BTC", "side": "long", "entry_result": "filled",
+                 "quantity": 2, "entry_value": long_value, "entry_time": 9904},
+                {"key": "aster:BTCUSDT", "side": "short", "entry_result": "filled",
+                 "quantity": 2, "entry_value": short_value, "entry_time": second_entry},
+            ]
+            return item
+
+        worse = filled("worse", 9950, 202, 202, 9904)  # +2 long, +2 short
+        better = filled("better", 9960, 198, 206, 9908)  # -2 long, -2 short
+        absent = filled("absent", 9970, 202, 202, None)
+        absent.pop("signal")
+        wrong_key = filled("wrong-key", 9980, 202, 202, None)
+        wrong_key["signal"]["buy"] = "hyperliquid:OTHER"
+        wrong_quantity = filled("wrong-quantity", 9985, 202, 202, None)
+        wrong_quantity["signal"]["quantity"] = 3
+        unequal = filled("unequal", 9990, 202, 202, 9904)
+        unequal["legs"][1]["quantity"] = 1
+        partial = filled("partial", 9995, 202, 202, 9904)
+        partial["legs"][1]["entry_result"] = "partial"
+        self.checkpoint(10000, {"standard": ledger(closed=7)},
+                        [worse, better, absent, wrong_key, wrong_quantity,
+                         unequal, partial])
+        report = review(self.source, self.out, now=10010)
+        summary = report["strategies"]["standard"]["retained_completion_window"]
+        self.assertEqual(summary["classes"]["paired"]["count"], 5)
+        self.assertEqual(summary["classes"]["other"]["count"], 2)
+        deterioration = summary["paired_signal_to_entry_deterioration_usd"]
+        self.assertEqual(deterioration["observed"], 2)
+        self.assertEqual(deterioration["missing"], 3)
+        self.assertEqual(deterioration["sum"], 0)
+        self.assertEqual(deterioration["median"], 0)
+        self.assertEqual(deterioration["p95"], 4)
+        self.assertTrue(deterioration["positive_is_worse"])
+        entry_time = summary["paired_entry_time_seconds"]
+        self.assertEqual(entry_time["observed"], 2)
+        self.assertEqual(entry_time["missing"], 3)
+        self.assertEqual(entry_time["median"], 6)
+        self.assertEqual(entry_time["p95"], 8)
+
     def test_retention_only_deletes_matching_archives(self):
         self.out.mkdir()
         for n in range(MAX_REPORTS + 2):

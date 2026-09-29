@@ -197,6 +197,54 @@ def _percentile(values: list[float], fraction: float) -> float | None:
     return ordered[max(0, math.ceil(fraction * len(ordered)) - 1)]
 
 
+def _paired_entry_deterioration(trade: dict) -> float | None:
+    signal = trade.get("signal")
+    legs = trade.get("legs")
+    if not isinstance(signal, dict) or not isinstance(legs, list) or len(legs) != 2:
+        return None
+    buy, sell = signal.get("buy"), signal.get("sell")
+    if not isinstance(buy, str) or not isinstance(sell, str) or buy == sell:
+        return None
+    by_key = {leg.get("key"): leg for leg in legs if isinstance(leg, dict)}
+    if len(by_key) != 2 or set(by_key) != {buy, sell}:
+        return None
+    long, short = by_key[buy], by_key[sell]
+    if long.get("side") != "long" or short.get("side") != "short":
+        return None
+    quantity = _finite(signal.get("quantity"), math.nan)
+    buy_value = _finite(signal.get("buy_value"), math.nan)
+    sell_value = _finite(signal.get("sell_value"), math.nan)
+    long_quantity = _finite(long.get("quantity"), math.nan)
+    short_quantity = _finite(short.get("quantity"), math.nan)
+    long_value = _finite(long.get("entry_value"), math.nan)
+    short_value = _finite(short.get("entry_value"), math.nan)
+    if not all(math.isfinite(value) and value > 0 for value in
+               (quantity, buy_value, sell_value, long_quantity, short_quantity,
+                long_value, short_value)):
+        return None
+    # A fully filled paper intent uses the signal quantity on both legs. Treat
+    # discrepant records as incomplete evidence rather than scaling a partial.
+    tolerance = max(1e-9, quantity * 1e-9)
+    if (abs(long_quantity-quantity) > tolerance or
+            abs(short_quantity-quantity) > tolerance):
+        return None
+    deterioration = (long_value - buy_value / quantity * long_quantity
+                     + sell_value / quantity * short_quantity - short_value)
+    return deterioration if math.isfinite(deterioration) else None
+
+
+def _paired_entry_time(trade: dict) -> float | None:
+    created = _finite(trade.get("created_at"), math.nan)
+    legs = trade.get("legs")
+    if not math.isfinite(created) or not isinstance(legs, list) or len(legs) != 2:
+        return None
+    times = [_finite(leg.get("entry_time"), math.nan) if isinstance(leg, dict)
+             else math.nan for leg in legs]
+    if not all(math.isfinite(value) and value >= created for value in times):
+        return None
+    return max(times) - created
+
+
 def _trade_summary(trades: list[dict]) -> dict:
     classes = {name: {"count": 0, "wins": 0, "net_usd": 0.0} for name in
                ("paired", "failed_hedge", "other")}
@@ -204,13 +252,23 @@ def _trade_summary(trades: list[dict]) -> dict:
                ("exact", "estimated")}
     routes = defaultdict(lambda: {"count": 0, "net_usd": 0.0})
     latencies = []
+    deterioration_values = []
+    entry_times = []
     for trade in trades:
         pnl = _finite(trade.get("net_pnl_usd"))
         win = int(pnl > 0)
-        category = classes[_category(trade)]
+        category_name = _category(trade)
+        category = classes[category_name]
         category["count"] += 1
         category["wins"] += win
         category["net_usd"] += pnl
+        if category_name == "paired":
+            deterioration = _paired_entry_deterioration(trade)
+            if deterioration is not None:
+                deterioration_values.append(deterioration)
+            entry_time = _paired_entry_time(trade)
+            if entry_time is not None:
+                entry_times.append(entry_time)
         kind = "estimated" if trade.get("status") == "CLOSED_ESTIMATED" else "exact"
         quality[kind]["count"] += 1
         quality[kind]["wins"] += win
@@ -224,6 +282,7 @@ def _trade_summary(trades: list[dict]) -> dict:
             latencies.append(flat - requested)
     groups = [{"route": route, **values} for route, values in routes.items()]
     groups.sort(key=lambda item: (item["net_usd"], item["route"]))
+    paired_count = classes["paired"]["count"]
     return {"count": len(trades), "wins": sum(x["wins"] for x in quality.values()),
             "net_usd": sum(x["net_usd"] for x in quality.values()),
             "quality": quality, "classes": classes,
@@ -232,6 +291,17 @@ def _trade_summary(trades: list[dict]) -> dict:
                 "observed": len(latencies), "missing": len(trades)-len(latencies),
                 "median": statistics.median(latencies) if latencies else None,
                 "p95": _percentile(latencies, .95)},
+            "paired_signal_to_entry_deterioration_usd": {
+                "observed": len(deterioration_values),
+                "missing": paired_count-len(deterioration_values),
+                "sum": sum(deterioration_values),
+                "median": statistics.median(deterioration_values) if deterioration_values else None,
+                "p95": _percentile(deterioration_values, .95),
+                "positive_is_worse": True},
+            "paired_entry_time_seconds": {
+                "observed": len(entry_times), "missing": paired_count-len(entry_times),
+                "median": statistics.median(entry_times) if entry_times else None,
+                "p95": _percentile(entry_times, .95)},
             "worst_routes": groups[:10], "best_routes": list(reversed(groups[-10:]))}
 
 

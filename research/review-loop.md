@@ -56,3 +56,42 @@ exit/entry/held/probe priorities under the same request budget. This can reject
 many candidates and does not guarantee a hedge. New compact leg diagnostics
 preserve price-limit/depth/minimum/quantity rejection reasons in trade records.
 Models start cold after deployment, while old balances and cooldowns persist.
+
+## Review 1: 2026-09-29 16:26:45 UTC
+
+Window 16:06:33–16:26:45; next due 16:46:33 UTC. All completion counts
+match cumulative ledger deltas. Existing controls and confirmation thresholds
+remain unchanged; the confirmation sample is not sufficient for tuning.
+
+| Standard-fee policy | Closes | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 336 | -423.96 | 333 | 3 |
+| Cooldown | 61 | -96.29 | 60 | 1 |
+| Historical median | 3 | -2.77 | 1 | 2 |
+| Conservative | 0 | 0 | 0 | 0 |
+| Confirmed (started 16:08) | 0 | 0 | 0 | 0 |
+
+- Both median failed hedges were ZEC across the two Lighter domains, using the
+  same HL observation. Both HL legs hit their price limit after 1.23–1.40 s.
+  These correlated attempts are not independent evidence.
+- The paired median COIN trade forecast +$0.334, but the quoted opening gross
+  advantage deteriorated by $1.285 before both entries completed (1.205 s).
+  It closed at max hold for -$0.950. This supports measuring entry deterioration
+  before relaxing confirmation or price limits.
+- Confirmed recorded 12 confirmation-gate checks with no entries; these are
+  repeated checks, not twelve independent candidate opportunities. Model had
+  224 warm routes, so its inactivity was not a model warmup failure.
+- All feeds connected; 67.3% of one core, 11.8 ms p95 loop lag, 913 books/s,
+  186.6 MiB RSS. Reconciliation passed with maximum error < $5e-11.
+- Original Standard and Premium portfolios made no new entries: flat XAG
+  positions have unresolved Aster funding settlement timing near 16:00, which
+  currently blocks spendable capital on both legs. Investigating venue-scoped
+  funding completeness rather than inventing an exact settlement result.
+
+Entry deterioration audit for the same completed window: baseline paired
+median $0.000, p95 $0.180 (333 observations); cooldown median $0.000, p95
+$0.222 (60); median strategy $1.285 (one). Median paired entry completion
+times were 1.351 s, 1.348 s, and 1.205 s respectively. These entry costs alone
+do not explain baseline losses: persistent closing spreads and full round-trip
+costs remain central. Reports now include these metrics and explicitly exclude
+partial or unmatchable signal quantities.
