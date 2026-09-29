@@ -1,6 +1,6 @@
 # Active paper research operations
 
-Last updated: 2026-09-29 18:47 UTC. All processes below are paper simulation or
+Last updated: 2026-09-29 19:43 UTC. All processes below are paper simulation or
 public quote observation. No private keys or real orders are involved.
 
 | Process | PID | Output | Expected end |
@@ -22,7 +22,7 @@ report is [flawed-pilot-final.md](../reports/feed-experiment/flawed-pilot-final.
 
 ## Next review and interpretation
 
-The automatic loop captured the 18:46:33 scheduled review. **Next: 19:06:33 UTC**.
+The automatic loop captured the 19:06:33 and 19:26:33 scheduled reviews; the active agent reviewed them late at 19:34 UTC. **Next: 19:46:33 UTC**.
 Read `data/strategy-reviews/latest.json`; do not also run a one-shot capture
 against that output, because it advances the same baseline. The scheduler
 collects evidence; the active agent researches and evaluates changes.
@@ -134,3 +134,24 @@ Scheduled captures are automatic; AI research/strategy decisions need an active
 session. Next useful research is a predeclared maker post-flow hedge and unwind
 study with explicit queue/acknowledgement assumptions, not relaxing taker gates.
 No further background experiment directories are being created.
+
+
+## Active continuation, 19:34 UTC onward
+
+The user identified that strategy reviews had stopped after the prior final
+response. The evidence scheduler had stayed live. Root reviewed both missed
+windows at 19:34 and resumed active work; baseline losses were -$212.20 and
+-$220.29, no policy promoted. The 19:36 accounting reconciliation passed.
+
+Fresh maker public capture PID 2028209 started 19:39:03.940 UTC into
+`data/raw/maker-capture/20260929T1939Z`, maximum 420 seconds / 25,000,000 bytes.
+Frozen metadata and rule hashes were committed before launch in
+`reports/maker-roundtrip-v1/`. Expected stop by 19:46:04 UTC (or earlier cap).
+No prospective outcomes are inspected until code and independent audit finish.
+Old 18:23 data are exploratory: 12 complete primary conditional maker paths,
+all negative after fees, with 15 other full-flow paths censored for shallow
+hedge or exit books. The model is an optimistic quote diagnostic, omitting
+Standard Lighter's 300ms taker processing; it is not account-compatible fills.
+
+Next scheduled audit 19:46:33 UTC; root is staying active through the research
+and scheduled check rather than treating background capture as AI review.
