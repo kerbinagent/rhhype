@@ -45,3 +45,5 @@ User scope: thoroughly investigate arbitrage between Robinhood Chain and Hyperli
 - Historical rebuild confirms 39 perp pairs, 5 HL cash pairs, 2 RH cash pairs and 7 multiplier-corrected stock basis series. Final report distinguishes funding-rate sums from price-weighted cash estimates and executable observations from candle scenarios.
 - Offline rebuild completed successfully. Seven economic calculation tests pass; scripts compile; Git whitespace checks pass. Standard PNG/SVG figures and Markdown report are complete.
 - Frozen public evidence contains 441 files (183,939,433 uncompressed bytes) in a 22,127,964-byte archive, with archive and per-file SHA-256 hashes. No credentials or host VPN changes were used.
+
+- Added Git whitespace attributes for standard CSV CRLF and Matplotlib-generated SVG path formatting after the staged artifact check flagged their machine-generated whitespace. Source-code whitespace checks remain enabled.

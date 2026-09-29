@@ -1,0 +1,4 @@
+# Python's standard CSV dialect uses CRLF; accept its carriage returns.
+*.csv whitespace=cr-at-eol
+# Matplotlib emits harmless trailing spaces in SVG path data.
+reports/figures/*.svg -whitespace
