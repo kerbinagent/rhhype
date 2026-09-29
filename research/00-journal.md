@@ -47,3 +47,12 @@ User scope: thoroughly investigate arbitrage between Robinhood Chain and Hyperli
 - Frozen public evidence contains 441 files (183,939,433 uncompressed bytes) in a 22,127,964-byte archive, with archive and per-file SHA-256 hashes. No credentials or host VPN changes were used.
 
 - Added Git whitespace attributes for standard CSV CRLF and Matplotlib-generated SVG path formatting after the staged artifact check flagged their machine-generated whitespace. Source-code whitespace checks remain enabled.
+
+## Continuous monitor and TUI — 2026-09-29
+
+- Added `scripts/monitor.py`: asyncio/aiohttp public book sampling across native/xyz Hyperliquid versus Robinhood Lighter, Lighter Core and Aster. Live discovery refreshes metadata and quantity constraints. Per-host pacing and cooldowns allow long unattended sessions.
+- Added bounded SQLite rolling history (24 hours / 100,000 observations by default), persistent top ten distinct directed pairs, and a persistent $1,000-per-positive-episode paper tally. Both legs use exactly equal quantities on intersected order grids; buy notional never exceeds its target. Fees and explicit closing/conversion reserves remain distinct.
+- User requested an extremely simple TUI and explicit resize/Ctrl-C checks. Display redraws within 0.5 seconds, adapts to narrow/short windows, and restores the original screen and cursor. Separate `--watch` mode detaches UI from a background collector.
+- Seventeen tests pass, including real pseudo-terminal resize sequences (120×30 → 35×10 → 80×24), actual terminal Ctrl-C for viewer and collector, and collector SIGTERM. All exit code 0; collector flushes state and releases its lock.
+- Final finite live validation: 123 matched comparisons across 66 assets, 112 paired samples / 224 directional $1,000 observations, one quarantined price mismatch, zero transport/API errors, and zero observations above the allocation ceiling. SQLite integrity check passes. Example paper total was $8.22 after opening fees / $2.32 after configured reserves across ten episodes; these are not realized trading profits. See `reports/monitor-validation.json`.
+- All validation collectors are stopped. The user can launch the default monitor with a fresh `data/monitor` state directory.
