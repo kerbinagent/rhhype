@@ -7,3 +7,5 @@ __pycache__/
 .ipynb_checkpoints/
 data/raw/
 *.log
+data/monitor/
+data/monitor-*/

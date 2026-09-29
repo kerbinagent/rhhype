@@ -4,6 +4,15 @@
 
 The main distinction is between Robinhood Uniswap stock tokens, Robinhood's separate Lighter spot/perp markets, and Lighter Core. Fees and liquidity differ. Positive opening spreads on perpetuals are basis exposures; the report tests subsequent unwinds and historical funding before drawing conclusions. No trades, wallet access or credentials were used.
 
+## Continuous monitor with simple TUI
+
+```bash
+.venv/bin/pip install -r requirements-lock.txt
+.venv/bin/python scripts/monitor.py
+```
+
+Shows the best-ever top 10 and a persistent $1,000-per-positive-episode paper tally after fees. Concurrent public collection covers Hyperliquid versus Robinhood Lighter, Lighter Core and Aster. Old observations expire; records and totals survive restarts. See [monitor instructions](research/monitor.md) for background launch, the detachable `--watch` TUI, costs and retention settings. These are hypothetical entry edges, not completed-trade profits.
+
 ## Reproduce the frozen analysis
 
 Python 3.13 was used. All analysis is ordinary Python/CSV/JSON; research memory is Markdown.
