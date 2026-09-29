@@ -558,3 +558,13 @@ approximately 20:20:37. Main portfolio policies are unchanged. Next scheduled
 review **20:26:33 UTC / 4:26 p.m. ET**; root remains active for experiments and
 the next review. A lower-fee NVDA/XAG maker quote model is being implemented
 for review, with explicit Lighter Standard processing delays and no launch yet.
+
+Follow-up at 20:07:39: independent reconciliation of 4,988 retained settled
+trades passed; maximum wallet residual $3.46e-11. Five exposed positions had
+maximum holding age 7.78s, and the same two flat XAG records awaited funding.
+[Frozen exit-trigger analysis](../reports/exit-trigger-survival/README.md)
+at 20:09:07 found three retained baseline profit-triggered exits, all finally
+negative; median request-to-flat 1.432s. The other four represented independent
+portfolios also had no winning profit-triggered exit in their small retained
+subsets. These overlapping scenarios are not independent events, and elapsed
+execution time does not identify the continuous lifetime of a profitable quote.

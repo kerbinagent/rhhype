@@ -1,0 +1,81 @@
+{
+  "by_strategy": {
+    "cooldown": {
+      "estimated_final_count": 0,
+      "final_net_usd_sum_within_strategy": -2.8713125730681113,
+      "max_request_to_flat_seconds": 1.8249177932739258,
+      "median_final_minus_trigger_usd": -1.90683933768234,
+      "median_final_net_usd": -1.4356562865340556,
+      "median_request_to_flat_seconds": 1.5751771926879883,
+      "median_trigger_net_usd": 0.47118305114828446,
+      "negative_final_net": 2,
+      "positive_final_net": 0,
+      "retained_take_profit_exits": 2,
+      "zero_final_net": 0
+    },
+    "plus": {
+      "estimated_final_count": 0,
+      "final_net_usd_sum_within_strategy": -3.864789695874144,
+      "max_request_to_flat_seconds": 1.3254365921020508,
+      "median_final_minus_trigger_usd": -2.249668214751292,
+      "median_final_net_usd": -1.932394847937072,
+      "median_request_to_flat_seconds": 1.2431992292404175,
+      "median_trigger_net_usd": 0.3172733668142199,
+      "negative_final_net": 2,
+      "positive_final_net": 0,
+      "retained_take_profit_exits": 2,
+      "zero_final_net": 0
+    },
+    "premium": {
+      "estimated_final_count": 0,
+      "final_net_usd_sum_within_strategy": -6.025249132811565,
+      "max_request_to_flat_seconds": 1.513970136642456,
+      "median_final_minus_trigger_usd": -4.062685961799606,
+      "median_final_net_usd": -3.0126245664057825,
+      "median_request_to_flat_seconds": 1.4197033643722534,
+      "median_trigger_net_usd": 1.0500613953938234,
+      "negative_final_net": 2,
+      "positive_final_net": 0,
+      "retained_take_profit_exits": 2,
+      "zero_final_net": 0
+    },
+    "shadow_baseline": {
+      "estimated_final_count": 0,
+      "final_net_usd_sum_within_strategy": -2.2390463631707407,
+      "max_request_to_flat_seconds": 1.4428541660308838,
+      "median_final_minus_trigger_usd": -1.0188727503665487,
+      "median_final_net_usd": -0.8092914502971887,
+      "median_request_to_flat_seconds": 1.4316649436950684,
+      "median_trigger_net_usd": 0.22961036312817515,
+      "negative_final_net": 3,
+      "positive_final_net": 0,
+      "retained_take_profit_exits": 3,
+      "zero_final_net": 0
+    },
+    "standard": {
+      "estimated_final_count": 0,
+      "final_net_usd_sum_within_strategy": -1.8651918908055407,
+      "max_request_to_flat_seconds": 1.4316649436950684,
+      "median_final_minus_trigger_usd": -1.1015323134120285,
+      "median_final_net_usd": -0.9325959454027704,
+      "median_request_to_flat_seconds": 1.2963134050369263,
+      "median_trigger_net_usd": 0.16893636800925815,
+      "negative_final_net": 2,
+      "positive_final_net": 0,
+      "retained_take_profit_exits": 2,
+      "zero_final_net": 0
+    }
+  },
+  "checkpoint_at": 1790712547.6333768,
+  "evidence_sha256": "04ccbadb6ebb2ac494fa251ba0dfedeca8d689dcd79cf43db97c3704896cedeb",
+  "first_retained_created_at": 1790703643.0707986,
+  "limitations": [
+    "Triggered liquidation estimates are quotes; completed outcomes are paper fills.",
+    "Strategy portfolios share signals and prices; never add their returns.",
+    "Retained settled sample omits pending exits and evicted older records.",
+    "Request-to-flat time is not continuous opportunity duration or a latency threshold.",
+    "Final minus trigger includes all model changes, not solely price slippage."
+  ],
+  "retained_closed_count": 4989,
+  "selection": "Settled retained trades with exit_reason=take_profit; no missing outcomes imputed."
+}
