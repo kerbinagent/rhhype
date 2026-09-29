@@ -1,0 +1,187 @@
+{
+  "analyzer_sha256": "8e04c49ae409b319c001d6c1ac5d86ecaf17ccf3caf019745a879d2600d4cc34",
+  "by_asset": [
+    {
+      "count": 22,
+      "gross": "-13.827006",
+      "name": "AVAX",
+      "net": "-44.59804683824936609973078386"
+    },
+    {
+      "count": 32,
+      "gross": "-7.461209",
+      "name": "CRCL",
+      "net": "-29.19319903542231763900669076"
+    },
+    {
+      "count": 14,
+      "gross": "-3.742619",
+      "name": "XAG",
+      "net": "-13.74781574378121650513857178"
+    },
+    {
+      "count": 8,
+      "gross": "-2.169381",
+      "name": "GOOGL",
+      "net": "-7.601679302104495496487506342"
+    },
+    {
+      "count": 4,
+      "gross": "-1.217434",
+      "name": "MSFT",
+      "net": "-3.933850174449656626496226536"
+    },
+    {
+      "count": 3,
+      "gross": "-0.92034",
+      "name": "NVDA",
+      "net": "-2.957882472479873247307838661"
+    },
+    {
+      "count": 3,
+      "gross": "-0.642981",
+      "name": "SAMSUNGUSD",
+      "net": "-2.680278726527187274396562659"
+    },
+    {
+      "count": 2,
+      "gross": "-0.572705",
+      "name": "AAPL",
+      "net": "-1.930876616161878372503012430"
+    },
+    {
+      "count": 1,
+      "gross": "-0.54342",
+      "name": "INTC",
+      "net": "-1.222173146589378786466260781"
+    },
+    {
+      "count": 1,
+      "gross": "-0.39187",
+      "name": "META",
+      "net": "-1.070861455820395594035388128"
+    },
+    {
+      "count": 1,
+      "gross": "-0.2692",
+      "name": "SOXL",
+      "net": "-0.9484258219252003917744799594"
+    }
+  ],
+  "by_route": [
+    {
+      "count": 22,
+      "gross": "-13.827006",
+      "name": "AVAX|lighter:9|hyperliquid:AVAX",
+      "net": "-44.59804683824936609973078386"
+    },
+    {
+      "count": 32,
+      "gross": "-7.461209",
+      "name": "CRCL|hyperliquid:xyz:CRCL|lighter:121",
+      "net": "-29.19319903542231763900669076"
+    },
+    {
+      "count": 12,
+      "gross": "-3.407109",
+      "name": "XAG|hyperliquid:xyz:SILVER|rh_lighter:41",
+      "net": "-11.55473237816643562241882293"
+    },
+    {
+      "count": 8,
+      "gross": "-2.169381",
+      "name": "GOOGL|hyperliquid:xyz:GOOGL|rh_lighter:12",
+      "net": "-7.601679302104495496487506342"
+    },
+    {
+      "count": 4,
+      "gross": "-1.217434",
+      "name": "MSFT|hyperliquid:xyz:MSFT|rh_lighter:14",
+      "net": "-3.933850174449656626496226536"
+    },
+    {
+      "count": 3,
+      "gross": "-0.92034",
+      "name": "NVDA|hyperliquid:xyz:NVDA|rh_lighter:15",
+      "net": "-2.957882472479873247307838661"
+    },
+    {
+      "count": 3,
+      "gross": "-0.642981",
+      "name": "SAMSUNGUSD|hyperliquid:xyz:SMSN|lighter:162",
+      "net": "-2.680278726527187274396562659"
+    },
+    {
+      "count": 2,
+      "gross": "-0.33551",
+      "name": "XAG|hyperliquid:xyz:SILVER|aster:XAGUSDT",
+      "net": "-2.193083365614780882719748859"
+    },
+    {
+      "count": 2,
+      "gross": "-0.572705",
+      "name": "AAPL|hyperliquid:xyz:AAPL|rh_lighter:10",
+      "net": "-1.930876616161878372503012430"
+    },
+    {
+      "count": 1,
+      "gross": "-0.54342",
+      "name": "INTC|hyperliquid:xyz:INTC|rh_lighter:30",
+      "net": "-1.222173146589378786466260781"
+    },
+    {
+      "count": 1,
+      "gross": "-0.39187",
+      "name": "META|hyperliquid:xyz:META|rh_lighter:13",
+      "net": "-1.070861455820395594035388128"
+    },
+    {
+      "count": 1,
+      "gross": "-0.2692",
+      "name": "SOXL|rh_lighter:35|hyperliquid:xyz:SOXL",
+      "net": "-0.9484258219252003917744799594"
+    }
+  ],
+  "counts": {
+    "entry_deteriorated": 35,
+    "entry_spread_positive": 91,
+    "gross_positive": 1,
+    "net_positive": 0
+  },
+  "coverage_complete": true,
+  "db_count": 91,
+  "evidence_bytes": 50668,
+  "evidence_sha256": "ddebefcde231e9ddfa127e7d025e10c5dbfedae94dccd168036d96b3ecb4cdb7",
+  "expected": 91,
+  "per_trade_usd": {
+    "capital": "0.00003560628781281355322331777811",
+    "entry_spread": "1.105527747252747252747252747",
+    "exit_liability": "1.454518571428571428571428571",
+    "fees": "0.3590689351463736263736263736",
+    "gross": "-0.3489908241758241758241758242",
+    "net": "-1.207528454214406220146629910",
+    "reserve": "0.4994330886043956043956043956"
+  },
+  "review_sha256": "88ff9a19658e6f767cea92e723037a078897a2227d3e7cdf3dd00ab37206b3b6",
+  "strategy": "shadow_baseline",
+  "totals_usd": {
+    "capital": "0.003240172190966033343321917808",
+    "entry_deterioration": "1.0566490000007",
+    "entry_spread": "100.603025",
+    "exit_liability": "132.361190",
+    "fees": "32.67527309832",
+    "funding": "0.0",
+    "gross": "-31.758165",
+    "long_entry_fee": "6.10726433832",
+    "long_exit_fee": "6.10673121000",
+    "net": "-109.8850893335109660333433218",
+    "reserve": "45.4484110630",
+    "short_entry_fee": "10.2289919820",
+    "short_exit_fee": "10.2322855680",
+    "signal_entry_spread": "101.6596740000007"
+  },
+  "validated": 91,
+  "validation_errors": [],
+  "window_end_at": 1790720791.021678,
+  "window_start_at": 1790719593.1168292
+}
