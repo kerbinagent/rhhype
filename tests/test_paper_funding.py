@@ -142,6 +142,25 @@ class FundingTests(unittest.IsolatedAsyncioTestCase):
         self.assertIsNone(result["cashflow_usd"])
         self.assertIn("settlement_sequence_uncertain_15s", [x["reason"] for x in result["missing"]])
 
+    async def test_venue_completeness_survives_other_venues_ambiguous_charge(self):
+        session = Session([{"time": 3600000, "fundingRate": "0.001"}],
+                          [{"symbol": "XAGUSDT", "fundingTime": 3600000,
+                            "fundingRate": "0.0001"}])
+        service = FundingService(session)
+        service.observe_reference("hyperliquid", "xyz:SILVER", 3600, 100)
+        service.observe_reference("aster", "XAGUSDT", 3600, 100)
+        result = await service.cashflows({"legs": [
+            leg("hyperliquid", "xyz:SILVER", "long", 3590, 3610, 2),
+            leg("aster", "XAGUSDT", "short", 3590, 3605, 2)]})
+        self.assertFalse(result["complete"])
+        self.assertIsNone(result["cashflow_usd"])
+        self.assertTrue(result["venue_results"]["hyperliquid"]["complete"])
+        self.assertAlmostEqual(result["venue_results"]["hyperliquid"]["cashflow_usd"], -0.2)
+        self.assertEqual(result["venue_results"]["hyperliquid"]["covered_until"], 3610)
+        self.assertFalse(result["venue_results"]["aster"]["complete"])
+        self.assertIsNone(result["venue_results"]["aster"]["cashflow_usd"])
+        self.assertEqual(result["venue_results"]["aster"]["covered_until"], None)
+
     async def test_aster_empty_crossed_hour_needs_prior_schedule_proof(self):
         first = await FundingService(Session([])).cashflows(
             {"legs": [leg("aster", "BTCUSDT", start=3590, end=3610)]})

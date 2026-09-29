@@ -157,12 +157,19 @@ def _read_health(source: Path, read_at: float) -> dict:
     observations = selector.get("observation_counts", {})
     if not isinstance(observations, dict):
         observations = {}
+    portfolios = snapshot.get("strategies", {})
+    if not isinstance(portfolios, dict):
+        portfolios = {}
     health = {"read_at": read_at,
             "snapshot_updated_at": updated if math.isfinite(updated) else None,
             "snapshot_age_seconds": max(0, read_at - updated) if math.isfinite(updated) else None,
             "status": str(snapshot.get("status", "unknown"))[:80],
             "pair_count": max(0, int(_finite(snapshot.get("pair_count")))),
             "performance_status": str(snapshot.get("performance_status", "unknown"))[:40],
+            "portfolios": {str(name)[:40]: _numeric_subset(
+                ("open_positions", "pending_entries", "pending_exits", "pending_funding",
+                 "reserved_usd", "original_reserved_usd", "wallet_cash_usd"), row)
+                for name, row in list(portfolios.items())[:8] if isinstance(row, dict)},
             "feeds": {str(name)[:40]: {"connected": value.get("connected") is True,
                                         **_numeric_subset(("messages", "gaps", "errors"), value)}
                       for name, value in list(feeds.items())[:8] if isinstance(value, dict)},

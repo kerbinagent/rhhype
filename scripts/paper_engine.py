@@ -186,7 +186,69 @@ class PaperEngine:
                                          for a,b in ((p['hl'],p['other']),(p['other'],p['hl']))})
 
     def _reserved(self,strategy,venue):
-        return sum(p['reserved'].get(venue,0) for p in self.positions.values() if p['strategy']==strategy)
+        total=0.0
+        for p in self.positions.values():
+            if p['strategy']!=strategy:continue
+            amount=p['reserved'].get(venue,0)
+            if not amount:continue
+            if (p['status']=='AWAITING_FUNDING'
+                    and any(leg['venue']==venue for leg in p['legs'])
+                    and all(leg['remaining']<=1e-9 for leg in p['legs'] if leg['venue']==venue)
+                    and self._venue_funding(p,venue) is not None):
+                # This venue's leg is flat and its funding is proven. Its
+                # margin may be reused while another venue remains unresolved.
+                continue
+            total+=amount
+        return total
+
+    def _venue_funding(self,p,venue):
+        """Validated funding for one venue, including safe legacy checkpoints.
+
+        An incomplete aggregate can only release a venue if the service gave an
+        explicit complete venue result. Old aggregate-only checkpoints may be
+        used only when the *entire* funding result is complete and event totals
+        reconcile; incomplete legacy results remain fully blocked.
+        """
+        funding=p.get('funding') if p['status']=='AWAITING_FUNDING' else p.get('open_funding')
+        if not isinstance(funding,dict):return None
+        venues=funding.get('venue_results')
+        if isinstance(venues,dict):
+            result=venues.get(venue)
+            if not isinstance(result,dict) or not result.get('complete'):return None
+            try:
+                cash=float(result['cashflow_usd']);coverage=float(result['covered_until'])
+                events=result['events']
+                if (not math.isfinite(cash) or not math.isfinite(coverage)
+                        or not isinstance(events,list) or result.get('missing')):return None
+                if any(not isinstance(e,dict) or e.get('venue')!=venue
+                       or not math.isfinite(float(e['cashflow_usd'])) for e in events):return None
+                if abs(sum(float(e['cashflow_usd']) for e in events)-cash)>1e-7:return None
+                venue_legs=[leg for leg in p['legs'] if leg['venue']==venue and leg['entry_time'] is not None]
+                if not venue_legs:return None
+                if any(leg.get('exit_time') is not None and coverage+1e-6<leg['exit_time']
+                       for leg in venue_legs):return None
+                if p['status']=='AWAITING_FUNDING' and any(
+                        leg.get('exit_time') is None for leg in venue_legs):return None
+                return {'cashflow_usd':cash,'covered_until':coverage,'events':events}
+            except (KeyError,TypeError,ValueError,OverflowError):return None
+        if not funding.get('complete'):return None
+        try:
+            cash=float(funding['cashflow_usd']);events=funding['events']
+            if not math.isfinite(cash) or not isinstance(events,list):return None
+            if any(not isinstance(e,dict) or not math.isfinite(float(e['cashflow_usd']))
+                   or e.get('venue') not in {leg['venue'] for leg in p['legs']} for e in events):return None
+            if abs(sum(float(e['cashflow_usd']) for e in events)-cash)>1e-7:return None
+            coverage=funding.get('covered_until')
+            if coverage is None:
+                venue_exits=[leg.get('exit_time') for leg in p['legs'] if leg['venue']==venue]
+                if not venue_exits or any(t is None for t in venue_exits):return None
+                coverage=max(venue_exits)
+            coverage=float(coverage)
+            if not math.isfinite(coverage):return None
+            return {'cashflow_usd':sum(float(e['cashflow_usd']) for e in events if e['venue']==venue),
+                    'covered_until':coverage,
+                    'events':[e for e in events if e['venue']==venue]}
+        except (KeyError,TypeError,ValueError,OverflowError):return None
 
     def _unrealized_for_venue(self,strategy,venue,now):
         total=0
@@ -209,15 +271,17 @@ class PaperEngine:
         boundary=int(now//3600)*3600
         for p in self.positions.values():
             if p['strategy']!=strategy or not any(l['venue']==venue for l in p['legs']):continue
-            crossed=any(l['entry_time'] is not None and l['entry_time']<boundary for l in p['legs'])
-            if not crossed:continue
-            funding=p.get('funding') if p['status']=='AWAITING_FUNDING' else p.get('open_funding')
-            if (not funding or not funding.get('complete') or
-                    (p['status']!='AWAITING_FUNDING' and funding.get('covered_until',0)<boundary)):
-                return None
-            events=funding.get('events',[])
-            if abs(sum(e.get('cashflow_usd',0) for e in events)-funding['cashflow_usd'])>1e-7:return None
-            funding_reserve+=sum(min(0,float(e['cashflow_usd'])) for e in events if e.get('venue')==venue)
+            venue_legs=[l for l in p['legs'] if l['venue']==venue and l['entry_time'] is not None]
+            if not venue_legs:continue
+            crossed=any(l['entry_time']<boundary for l in venue_legs)
+            if p['status']!='AWAITING_FUNDING' and not crossed:continue
+            scoped=self._venue_funding(p,venue)
+            if scoped is None:return None
+            if (p['status']!='AWAITING_FUNDING' and any(l['remaining']>0 for l in venue_legs)
+                    and scoped['covered_until']<boundary):return None
+            # Until the aggregate closes, known credits are deliberately not
+            # spendable. All known debits remain reserved against this wallet.
+            funding_reserve+=sum(min(0,float(e['cashflow_usd'])) for e in scoped['events'])
         return ledger['wallets'].get(venue,0)-self._reserved(strategy,venue)+min(0,unrealized)+funding_reserve
 
     def _cancel_entry(self,p,now,reason):
@@ -674,7 +738,8 @@ class PaperEngine:
 
     def _maybe_enter(self,pair,ident,s,strategy,now):
         if any(p['strategy']==strategy and p['pair_id']==ident for p in self.positions.values()):return
-        active=[p for p in self.positions.values() if p['strategy']==strategy]
+        active=[p for p in self.positions.values() if p['strategy']==strategy and not (
+                p['status']=='AWAITING_FUNDING' and all(l['remaining']<=1e-9 for l in p['legs']))]
         if len(active)>=self.config.max_positions or (len(active)+1)*self.config.notional>self.config.max_matched_notional:
             self.stats['portfolio_limit_rejections']+=1;return
         ms={key(pair['hl']):pair['hl'],key(pair['other']):pair['other']}
@@ -785,7 +850,9 @@ class PaperEngine:
                 'pending_exits':sum(p['status']=='EXITING' for p in current),
                 'pending_funding':sum(p['status']=='AWAITING_FUNDING' for p in current),
                 'incomplete_trades':sum(p['status']=='AWAITING_FUNDING' for p in current),
-                'reserved_usd':sum(sum(p['reserved'].values()) for p in current),
+                'reserved_usd':sum(self._reserved(strategy,venue) for venue in
+                                   set(ledger['wallets'])|{venue for p in current for venue in p['reserved']}),
+                'original_reserved_usd':sum(sum(p['reserved'].values()) for p in current),
                 'open_liquidation_pnl':sum(marks) if all(x is not None for x in marks) else None,
                 'open_mark_excludes_unsettled_funding':False,'wallet_cash_usd':sum(ledger['wallets'].values()),
                 'closed_winning_sum_usd':ledger['closed_profit_sum_exact']+ledger['closed_profit_sum_estimated'],

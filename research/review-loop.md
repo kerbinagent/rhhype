@@ -95,3 +95,14 @@ times were 1.351 s, 1.348 s, and 1.205 s respectively. These entry costs alone
 do not explain baseline losses: persistent closing spreads and full round-trip
 costs remain central. Reports now include these metrics and explicitly exclude
 partial or unmatchable signal quantities.
+
+### Infrastructure correction after review 1
+
+Verified funding independently by venue. The two historical XAG positions remain
+flat and incomplete because Aster charge timing cannot be reconstructed exactly.
+Their known Hyperliquid side can release margin while reserving any negative
+funding; Aster remains reserved/unavailable. No uncertain receipts or trade P&L
+are booked. Original Standard/Premium activity before this correction is not a
+valid fee-tier comparison against active portfolios. Entry policy thresholds
+remain unchanged. All 137 tests pass before deployment; restart again clears
+rolling model history, requiring another two-minute warmup.

@@ -284,8 +284,9 @@ class FundingService:
     async def cashflows(self, position: dict) -> dict:
         """Return funding for closed legs, never substituting zero for unknown.
 
-        `cashflow_usd` is None if any event or reference is missing. When
-        `estimated` is true when the dollar conversion uses a bounded public
+        `cashflow_usd` is None if any event or reference is missing. The
+        `venue_results` remain usable independently when another venue is
+        incomplete. `estimated` is true when the dollar conversion uses a bounded public
         price sample or the empirically inferred per-unit Lighter value. The
         settled rate history is always required.
         Stablecoin collateral is assumed at USD par for this paper calculation.
@@ -293,10 +294,20 @@ class FundingService:
         events: list[dict] = []
         missing: list[dict] = []
         estimated = False
+        planned: dict[str, int] = {}
+        processed: dict[str, int] = {}
+        covered: dict[str, float] = {}
+        unscoped_missing = False
         for leg in position.get("legs", []):
             if not isinstance(leg, dict):
                 missing.append({"venue": None, "market": None, "reason": "leg is not an object"})
+                unscoped_missing = True
                 continue
+            venue_hint = str(leg["venue"]) if leg.get("venue") is not None else None
+            if venue_hint is None:
+                unscoped_missing = True
+            else:
+                planned[venue_hint] = planned.get(venue_hint, 0) + 1
             try:
                 venue, market, side = str(leg["venue"]), str(leg["market"]), str(leg["side"]).lower()
                 qty = _finite(leg["quantity"], positive=True)
@@ -314,6 +325,8 @@ class FundingService:
             hourly_crossings = _settlements(start, end)
             expected = hourly_crossings if venue != "aster" else []
             if venue != "aster" and not expected:
+                processed[venue] = processed.get(venue, 0) + 1
+                covered[venue] = max(covered.get(venue, end), end)
                 continue
             try:
                 rows = await self._history(venue, market, start, end)
@@ -418,10 +431,27 @@ class FundingService:
                 except (KeyError, TypeError, ValueError) as exc:
                     missing.append({"venue": venue, "market": market, "time": timestamp,
                                     "reason": f"invalid_settlement: {exc}"})
+            processed[venue] = processed.get(venue, 0) + 1
+            covered[venue] = max(covered.get(venue, end), end)
         complete = not missing
+        venue_results = {}
+        for venue, count in planned.items():
+            venue_events = [event for event in events if event["venue"] == venue]
+            venue_missing = [item for item in missing if isinstance(item, dict) and str(item.get("venue")) == venue]
+            venue_complete = (not unscoped_missing and processed.get(venue, 0) == count
+                              and not venue_missing)
+            venue_results[venue] = {
+                "complete": venue_complete,
+                "cashflow_usd": sum(event["cashflow_usd"] for event in venue_events) if venue_complete else None,
+                "estimated": any(event["quality"] != "exact" for event in venue_events),
+                "covered_until": covered.get(venue) if venue_complete else None,
+                "events": venue_events,
+                "missing": venue_missing,
+            }
         return {"complete": complete,
                 "cashflow_usd": sum(event["cashflow_usd"] for event in events) if complete else None,
-                "estimated": estimated, "events": events, "missing": missing}
+                "estimated": estimated, "events": events, "missing": missing,
+                "venue_results": venue_results}
 
     def dump_state(self) -> dict:
         """JSON-safe bounded cache for monitor checkpoints."""
