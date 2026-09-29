@@ -136,7 +136,10 @@ class PaperEngine:
             for ident in removed:self._censor_pair(ident,now)
             for pid,p in list(self.probes.items()):
                 if p['pair_id'] in removed:self._finish_probe(pid,'missing','pair_removed')
-        self.dirty.update(self.pairs)
+        keep=set(self.market_pairs)|{leg['key'] for p in self.positions.values() for leg in p['legs']}
+        self.books={k:v for k,v in self.books.items() if k in keep}
+        self.last_evaluation={k:v for k,v in self.last_evaluation.items() if k in self.pairs}
+        self.dirty.intersection_update(self.pairs);self.dirty.update(self.pairs)
 
     def _reserved(self,strategy,venue):
         return sum(p['reserved'].get(venue,0) for p in self.positions.values() if p['strategy']==strategy)
@@ -174,6 +177,10 @@ class PaperEngine:
         old=self.books.get(k)
         if old and book.get('valid') and old.get('valid') and now<old['received']:
             self.stats['out_of_order_receipts']+=1;return
+        if (old and book.get('valid') and old.get('valid')
+                and book.get('engine_time') is not None and old.get('engine_time') is not None
+                and book['engine_time']<old['engine_time']):
+            self.stats['out_of_order_engine_times']+=1;return
         self.books[k]=book;self.dirty.update(self.market_pairs.get(k,()))
         self.stats['book_events']+=1
         if not valid_book(book,now,self.config):

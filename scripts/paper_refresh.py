@@ -15,7 +15,7 @@ import aiohttp
 
 
 def _targets(engine, now):
-    """Return priority by market key: exit 0, entry 1, probe 2, held 3."""
+    """Return priority by market key: exit 0, entry 1, held 2, probe 3."""
     targets = {}
     for position in engine.positions.values():
         for leg in position['legs']:
@@ -27,7 +27,7 @@ def _targets(engine, now):
                 priority = 0 if intent['kind'] == 'exit' else 1
                 targets[market_key] = min(priority, targets.get(market_key, 4))
             elif leg.get('remaining', 0) > 0:
-                targets[market_key] = min(3, targets.get(market_key, 4))
+                targets[market_key] = min(2, targets.get(market_key, 4))
     for probe in engine.probes.values():
         if probe['due'] > now:
             continue
@@ -35,7 +35,7 @@ def _targets(engine, now):
         for market_key in (signal['buy'], signal['sell']):
             if (market_key.startswith('hyperliquid:') and
                     market_key not in probe.get('after', {})):
-                targets[market_key] = min(2, targets.get(market_key, 4))
+                targets[market_key] = min(3, targets.get(market_key, 4))
     return targets
 
 
@@ -74,8 +74,10 @@ async def run_hl_refresh(engine, client, on_book, stop: asyncio.Event, *,
     last_request = defaultdict(float)
     inflight = set()
     tasks = set()
-    # Urgent entries/exits get three of six turns; probes and held exposure
+    # Urgent entries/exits get three of six turns; held exposure and probes
     # retain scheduled opportunities even during a sustained entry burst.
+    # When no orders are pending, held marks win fallback slots; abundant
+    # signal probes must not starve the marks needed for portfolio risk.
     slots = (0, 1, 0, 2, 0, 3)
     turn = 0
 

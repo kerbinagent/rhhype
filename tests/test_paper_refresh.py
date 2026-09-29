@@ -91,7 +91,7 @@ class RefreshTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(_targets(engine, now)[key], 0)
         engine.positions['1']['legs'][0]['intent'] = None
         engine.positions['1']['legs'][0]['remaining'] = 1
-        self.assertEqual(_targets(engine, now)[key], 3)
+        self.assertEqual(_targets(engine, now)[key], 2)
         engine.probes['p'] = {'due': now-.1,
                               'signal': {'buy': key, 'sell': 'lighter:1'}, 'after': {}}
         self.assertEqual(_targets(engine, now)[key], 2)

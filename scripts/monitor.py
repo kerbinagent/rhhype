@@ -728,4 +728,11 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    # Keep the frozen polling model explicitly available for old-run audits.
+    # Imported helpers and main() remain stable for reproducibility.
+    if "--legacy" in sys.argv:
+        sys.argv.remove("--legacy")
+        main()
+    else:
+        from paper_monitor import main as paper_main
+        paper_main()

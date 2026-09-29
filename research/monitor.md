@@ -1,117 +1,108 @@
-# Long-running asyncio monitor
+# Streaming paper monitor — model 4
 
 ## Run it
-
-From the repository root, install the updated dependencies once:
-
-```bash
-.venv/bin/pip install -r requirements-lock.txt
-```
-
-Run with the simple TUI (automatic when launched in a terminal):
 
 ```bash
 .venv/bin/python scripts/monitor.py
 ```
 
-The display adapts to terminal resizes within half a second, independently of data/report intervals. Narrow terminals use fewer columns; very short terminals show the rows that fit and prompt you to enlarge the window. Both the collecting TUI and viewer restore the cursor and original screen on exit.
+Default output: `data/paper-monitor`. No API keys, wallet, or trading permissions are used. All order fills are simulations against public depth.
 
-It starts collecting immediately; discovery usually takes a few seconds. The default is **$1,000 per leg**, both directions, across every qualifying matched perpetual on Hyperliquid native/xyz versus Robinhood Lighter, Lighter Core, and Aster. Each market must have at least $1 million trailing 24-hour quote volume. Real book depth must also support the requested quantity. Live discovery, rather than the September research snapshot, determines coverage.
-
-For background collection and a detachable viewer:
+For a background collector with a detachable TUI:
 
 ```bash
-nohup .venv/bin/python scripts/monitor.py --no-tui > /tmp/rhhype-monitor-launch.log 2>&1 &
-.venv/bin/python scripts/monitor.py --watch
+nohup .venv/bin/python -u scripts/monitor.py --no-tui \
+  --out data/paper-monitor </dev/null >/dev/null 2>&1 &
+
+.venv/bin/python scripts/monitor.py --watch --out data/paper-monitor
 ```
 
-Ctrl-C in `--watch` closes only the viewer. Ctrl-C in the collecting TUI stops collection and saves state. Stop a background collector gracefully with:
+The collector writes its PID in `data/paper-monitor/paper.lock`. Stop the collector gracefully with:
 
 ```bash
-kill -TERM "$(cat data/monitor/monitor.lock)"
+kill -TERM "$(cat data/paper-monitor/paper.lock)"
 ```
 
-The lock file contains the owning PID. Check that the process is still this monitor before using an old PID file after a crash. The OS releases the actual advisory lock on process exit; there is no stale-lock deletion step. Only one collector can own an output directory; any number of viewers can read it.
+Ctrl-C stops a foreground collector and checkpoints its state. Ctrl-C in `--watch` exits only the viewer. Resizing is supported; 80×24 shows ten ranked signals, while smaller windows show what fits and indicate omitted rows. Logs rotate inside the output directory; the background command does not create an unbounded `nohup.out`.
 
-To keep it alive across host restarts, use your existing service manager to run the same command. `nohup` survives terminal disconnects, but not a machine reboot.
+Restart with the **same command and output path** to resume the portfolios and cumulative counters. The lock prevents two writers. Changes to capital, fees, universe filters, delay or holding assumptions require a fresh `--out`; unrelated experiments must not share a P&L history. Shutdown preserves outstanding exposure. On restart it resumes exits using fresh feeds; it does not invent fills during downtime. SIGKILL/power loss can lose work since the last successful checkpoint, normally about two seconds.
 
-## TUI and the $1,000 tally
+The former monitor remains `scripts/monitor.py --legacy`. Its `data/monitor` entry-edge sums are not imported as new profits. An already-running old process keeps using its loaded code; starting the new version does not upgrade that process in place.
 
-The terminal always shows the **ten best recorded directed pairs**, selecting the best size/moment for each pair. Rankings default to dollars **after opening fees and configured cost reserves**. Best-ever records survive both rolling-window eviction and restarts. These are historical peaks, not current quotes.
+## What the numbers mean
 
-The paper tally models a fresh $1,000 notional allocation at the **first positive observation of each episode**:
+| Display | Meaning |
+|---|---|
+| Closed exact | Net P&L of flat paper positions with complete modeled funding/costs |
+| Closed est | Separate net P&L using estimated funding cashflows |
+| Open exit | Current depth-based liquidation P&L after entry fees, projected exit fees, other reserve, capital cost and covered funding; `?` when incomplete |
+| Winning/loss sums | Cumulative positive and negative closed results, retained separately per fee scenario in the snapshot/report |
+| Pending funding | Flat positions whose funding cannot yet be established; excluded from closed totals and keep capital reserved |
+| Top 10 | Best recorded after-reserve entry signals, distinct by directed route and fee scenario; these are not profits |
 
-1. Walk both books at exactly the same base quantity, rounded down to the intersection of both lot grids. The buy leg spends at most $1,000 before fees; minimum order constraints must pass.
-2. Subtract each leg's taker fee on that leg's own quote notional.
-3. By default also reserve an equal amount for two future closing fees, plus 5 bp of buy notional for other costs.
-4. If the remaining edge is positive, count one episode and add its after-opening-fee and after-reserve values to separate persistent sums.
-5. Further positive polls of that same directed pair do not increase the episode tally. An observed nonpositive value re-arms it. A gap of over 600 seconds without a valid $1,000 observation also starts a new episode; change with `--episode-gap`.
-
-No quote is treated as a completed trade. The tally is a hypothetical **entry-edge sum**, not realized or portfolio profit. It does not enforce a finite total capital pool, model subsequent exits, assign funding, or prove fills. Simultaneous routes may compete for the same liquidity. A signal can turn negative and positive between polls without being observed. The underlying post-fee value can be positive while the configured reserve makes it ineligible for the tally.
-
-For completeness, JSON also contains `paper_1000_positive_samples` and `paper_1000_positive_sample_sum_usd`: the naive sum over every positive $1,000 poll, including repeated observations of a continuing spread. The TUI uses the episode sum to avoid counting repeated polls as separate trades.
-
-The top-10 peak can occur later than an episode's first observation, so summing the leaderboard is **not** how the paper tally is calculated. There is no hindsight allocation at the episode peak.
-
-## Retention and restart behavior
-
-- Default rolling window: 24 hours, with a **hard cap of 100,000 observations**. The row cap can shorten the effective window; JSON reports the actual oldest retained timestamp and cumulative cap evictions.
-- Each observation is one direction at one size. Negative observations are retained within the window so positive-frequency tallies have a denominator.
-- Persistent all-time storage: ten best records, aggregate counters, and bounded recent episode state. No unbounded raw orderbook history is written.
-- SQLite deletes old rows and reuses pages. Its file can remain at its high-water size rather than shrink after deletion. WAL is checkpointed every report and on shutdown. Disk use depends on the row cap, not elapsed runtime.
-- Logs rotate at 2 MB with three backups. JSON/Markdown outputs and market metadata are replaced atomically, not appended.
-- Default output directory: `data/monitor/`, ignored by Git. It contains `window.sqlite3`, `leaderboard.json`, `leaderboard.md`, `markets.json`, `config.json`, and rotated logs.
-- Restart with the same command to resume. Rankings, tally sums and active episode state persist. At most the last report interval's uncommitted samples can be lost in an abrupt crash. Normal SIGINT/SIGTERM flushes state.
-- Changing fee/ranking/asset-selection/model settings requires a new `--out` directory to avoid mixing incomparable records. Window length, row cap, reporting interval and polling cadence can change in place.
-
-## Useful options
+The **net closed result includes losses**. Do not add Standard, Plus and Premium totals: they are mutually exclusive counterfactual accounts, each starting with $20,000. `exact` describes complete paper accounting, not certainty of real execution. The `paper_report.py` audit prints the cumulative ledger, winning/loss sums, per-route retained results and wallet reconciliation error:
 
 ```bash
-# Larger sizes too; $1k is always included for the paper tally.
-.venv/bin/python scripts/monitor.py --notionals 1000 10000 100000 --out data/monitor-sizes
-
-# Premium fee schedule, $1k allocations, 12-hour window.
-.venv/bin/python scripts/monitor.py --lighter-tier premium --window-hours 12 --out data/monitor-premium
-
-# Crypto subset on Robinhood Lighter and Core.
-.venv/bin/python scripts/monitor.py --assets BTC ETH SOL HYPE XRP ZEC --venues rh_lighter lighter --out data/monitor-crypto
-
-# Pure after-opening-fee screen, explicitly excluding other reserves.
-.venv/bin/python scripts/monitor.py --no-reserve-exit-fees --extra-cost-bps 0 --out data/monitor-entry-only
-
-# Rank by basis points, rather than absolute dollars.
-.venv/bin/python scripts/monitor.py --rank-by bps --out data/monitor-bps
+.venv/bin/python scripts/paper_report.py data/paper-monitor
 ```
 
-Use `--out` on `--watch` too when viewing a nondefault directory. `--duration 120` provides a finite two-minute check. All options are listed by `--help`.
+The report briefly opens SQLite read-only and prints JSON. Detailed trades are a bounded window; their sum need not equal lifetime ledger totals after pruning.
 
-## Fees, mappings, freshness and concurrency
+## Execution and capital
 
-- The collector uses asyncio/aiohttp with persistent connections and three pair workers per comparator venue. A comparator book is followed immediately by its Hyperliquid hedge book.
-- Host pacing: Robinhood Lighter 45 requests/minute, Core 45, Aster 60, Hyperliquid 180. These include discovery requests and leave headroom under the documented endpoint budgets. Higher worker counts do not bypass the gates. Avoid running another public collector at full quota against the same host/IP.
-- Each venue cycles independently. The minimum cycle is 60 seconds, but broad coverage or cooldowns can extend it. No backlog of missed polling cycles is accumulated.
-- HTTP errors, timeouts and rate-limit responses trigger shared host cooldowns. No IP rotation or host VPN configuration is performed.
-- Every hour, refresh market status, volume, quantity constraints, and Hyperliquid per-market deployer/growth fee modifiers. Discovery retries failed comparator venues. If essential metadata is older than two hours, stop sampling until refreshed. A delisting within a cycle can still produce a rejected request before the next refresh.
-- Base account fees remain explicit configured assumptions: HL native 4.5 bp, Aster general crypto 4 bp, RWA 1.25 bp, listed Group B crypto 10 bp; Lighter Standard 0, Plus 0.5 bp, Premium RH 3.5 bp/Core 2.8 bp. Positive per-market Lighter published fee metadata is a fee floor. Public base schedules can change; monitor and update the configuration when they do. No private account fee query is made.
-- The default closing-fee reserve uses current opening notionals and rates. Actual closing fees, prices and spreads can differ. The 5 bp buffer is an assumption, not a measured conversion/financing cost.
-- Reject empty/crossed/nonfinite books, insufficient depth, invalid minimum sizes, more than five seconds receipt skew or quote age, and large midpoint mismatches (>5%). Lighter's REST book lacks an engine timestamp; nearby receipt times cannot prove engine freshness.
-- USDG, USDC and USDT are assumed at parity in the price comparison. Stablecoin conversion and oracle/settlement differences remain economic risks even when prices line up.
-- Only perpetuals with one-for-one base-unit mappings are monitored here. Native crypto tickers and xyz exact tickers are matched; explicit aliases cover gold/silver, selected indices/FX and verified Korean common-share USD contracts. New same-ticker listings still warrant contract review. Scaled Lighter contracts are skipped. Other HIP-3 domains, AMM stock tokens, wrapped spot and spot borrowing routes are not silently substituted; their unit, custody and redemption models differ.
+- Discover all eligible same-unit perpetual comparisons across native/XYZ Hyperliquid and Robinhood Lighter, Lighter Core and Aster. Default minimum reported 24h turnover is $1m **on both legs**; a trade also requires sufficient current executable depth. This covers crypto and eligible equity/index/commodity/FX contracts that overlap, without an NVDA-only selection. Robinhood AMMs and spot-token hedges remain separate research workflows because inventory, token multipliers, gas and transfers need different execution models.
+- A position buys one venue and shorts the other in equal base quantity, rounded onto their common lot grid. Each leg is capped at $1,000, with entry slippage headroom. Both venue minimums and maximums apply.
+- Each scenario has $20,000 prefunded across four venue wallets, $5,000 per venue. Default margin reserves are 100% of each leg's notional plus fees and buffer. Max ten positions / $10,000 matched notional, further constrained by wallet cash. At most one position per undirected asset/venue comparison and fee scenario. Existing unmarkable exposure blocks additional entries using that venue.
+- An entry is eligible only when the displayed opening edge exceeds opening fees, a closing-fee reserve, the other-cost reserve, and the planned capital charge. This filter does not predict that the basis will converge.
+- Fills use the **first valid new book after the configured delay**, not the triggering book. Default 100ms network assumption plus venue processing: HL/Aster 50ms assumptions; Lighter Standard/Plus 300ms; Premium Core 140ms / RH 200ms. These are modeling inputs, not a measured latency promise.
+- Entry IOC price tolerance defaults to 10bp. Partial fills, rejected legs and timeouts produce tracked hedge failures and emergency exits. Disconnect/generation changes invalidate pending entry assumptions. Exit retries continue until actual displayed depth flattens the exposure; the engine never declares an unfilled leg closed.
+- Normal exits begin five minutes after both entries complete. Exits use opposite-side future books, with their own delays and fees. Multiple orders in one scenario share a given book's available liquidity. Venue replenishment between separate public updates is not independently observable.
+- Fully collateralized defaults avoid using assumed leverage to inflate the tally. `--margin-fraction` can change the reserve experiment, but the engine does not reproduce each exchange's maintenance-margin/liquidation engine. Prefunded balances do not automatically move between venues.
 
-Primary references: [Hyperliquid info API](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint), [aiohttp client documentation](https://docs.aiohttp.org/en/stable/client_quickstart.html), [fee sources](fees.md), and [verified comparator mappings](comparators.md).
+## Fees and funding
 
-## Verification
+Three scenarios run simultaneously:
 
-The tests cover both-leg fees and reserves, the $1,000 spending ceiling, exact intersection of different quantity grids, insufficient depth, nonfinite/crossed/stale rejection, rolling expiry, hard row cap, distinct top-10 records, restart/config consistency, episode deduplication, concurrent request pacing, and real pseudo-terminal resize/Ctrl-C/SIGTERM behavior.
+| Venue | Standard | Plus | Premium |
+|---|---:|---:|---:|
+| Lighter Core taker | 0bp | 0.5bp | 2.8bp |
+| Robinhood Lighter taker | 0bp | 0.5bp | 3.5bp |
+| Hyperliquid | Tier 0 baseline 4.5bp; metadata-derived XYZ deployer/growth adjustment in all scenarios |
+| Aster | Crypto 4bp / RWA 1.25bp / specified Group B 10bp in all scenarios |
+
+Published Lighter market fee floors override a lower assumed fee. There are no assumed staking/referral/maker discounts. HL and Aster rates can be overridden via CLI for an explicitly documented account; this does not infer your private VIP status. Fee inputs and metadata are saved in `paper_config.json` and `markets.json`. See [fee sources](fees.md), [overnight fee audit](../reports/monitor-audit/REPORT.md), and [funding mechanics](funding-monitor.md).
+
+Fees are charged on each actual fill, including both exit legs and failed hedges. Additional cost reserve: 5bp of maximum entry leg notional per position. Capital charge: 5% annualized on reserved notional for actual elapsed holding time. The extra reserve represents conversion/rebalancing/friction; it is not a measured transfer quote. USDG, USDC and USDT are assumed at USD parity. Funding signs and settlement crossings are calculated per filled leg and partial exit quantity. Missing history/reference prices remain unknown, never silently zero. Public near-settlement reference prices and inferred Lighter per-unit cash values are explicitly marked estimated.
+
+Open positions refresh funding after settlement boundaries. Closed positions get priority for settlement lookup. Bounded caches reuse hourly history across fee scenarios and partial exits. Public REST requests have separate pacing and retry backoff; an outage can leave a position pending funding for an extended period.
+
+## Frequency, opportunity duration and latency
+
+Default transport is WebSocket, using one shared `aiohttp` session and concurrent venue subscriptions. HL uses L2 snapshots; Lighter uses checked nonce-linked books; Aster uses diff streams requested at 100ms, bridged to REST depth snapshots. Sequence gaps discard the book and trigger resynchronization. The observed HL WebSocket cadence in validation was about **5.2 seconds** per book. A targeted REST refresher therefore requests fresher HL books for due orders/probes and held positions. It uses the shared 180-request/minute HL gate, at most three workers, a 0.5s minimum per-key interval, and exit priority. It does not poll the whole universe at that rate. Actual delay and missing coverage remain measured. Streams and targeted REST continuously update books; fills process every valid book event. Signal evaluation coalesces updates per comparison at 100ms by default (`--signal-interval`, minimum 20ms). More updates cannot be manufactured for a quiet venue.
+
+Episode spans report **observed positive time**, not proof of continuous executability. Invalid/stale data, insufficient depth and shutdown/restart censor intervals. One-sample spans are zero observed duration, not zero real lifetime. Signals shorter than the evaluation interval can be missed.
+
+At episode onset, 100/300/500/1,000ms probes retain the original quantity and independently observe each leg's first fresh update after the delay. Survival means the recalculated edge still clears the same reserves. Actual observation delay and missing results are recorded; do not interpret `100ms` as precisely sampled at 100ms or as an exchange fill guarantee. Per-strategy statistics and bounded episode detail are in the state/report. These diagnostics measure feed-observable persistence; public feeds cannot establish queue priority, adverse selection or real acceptance latency.
+
+Freshness defaults: max book age 2s; max receipt skew 1s; engine timestamps are checked when available. Missing exchange timestamps are not fabricated. Price divergence above 500bp is quarantined. Metadata refreshes hourly; new entries stop once metadata is older than two hours. Existing exits continue.
+
+`--transport poll --poll-interval 1` is an explicit REST fallback. Per-host quota gates still apply, so large universes do not receive one request per pair per second. Streaming is the high-frequency path. Do not run many independent collectors at full REST quotas on the same IP.
+
+## Long-run storage bounds
+
+- Rolling details: 24h, at most 20,000 signal improvements, 5,000 trade rows, 2,000 evidence records.
+- Compressed evidence: 16MiB total, with an individual-record cap. Full books are not appended to disk on every update. Best-signal books and fill/trade evidence are retained within the ring limits.
+- In-memory sampled book ring: 30 seconds and a 16MiB estimated-object budget; whichever binds first. Other feed/position/counter caches have their own limits; 16MiB is not a whole-process RAM cap.
+- SQLite budget: 128MiB by default, with main-file page cap and WAL reserve. Each write batch is capped, old detail is pruned, and a pinned-reader WAL causes writes to stop rather than grow indefinitely. SQLite can transiently exceed the WAL reserve during a single bounded transaction; this setting is not a strict cap on every byte in the directory.
+- Logs: 2,000,000 bytes × four files. Atomic JSON files are replaced rather than appended. Small fixed state, top records and cumulative counters survive detail expiry. An interrupted atomic write can leave one bounded temporary file.
+- Disk errors stop the monitor with the last durable checkpoint. Inspect `paper.log` and the snapshot age after a stopped collector; a viewer continues showing the most recent saved snapshot.
+
+Example smaller study:
 
 ```bash
-.venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python scripts/monitor.py --assets BTC ETH SOL NVDA XAU \
+  --max-db-mb 64 --evidence-mb 8 --book-memory-mb 8 \
+  --out data/paper-monitor-small
 ```
 
-A finite live check on September 29 found 123 venue comparisons across 66 assets; the observed universe varies with live volume and listings. Detailed final check results are recorded in the journal.
-
-## Overnight audit and fee-model correction
-
-See [the September 29 overnight audit](../reports/monitor-audit/REPORT.md) for exact tally reconciliation, fee-tier sensitivity, sampled signal durations, and subsequent-exit diagnostics. The approximately $330 display was an opening-edge sum, not simulated closed-trade profit. Model version 3 corrects Aster fee classes and makes that distinction explicit in the TUI. Use a fresh `--out data/monitor-v3` when restarting; stop the previous collector first. Existing running processes keep their original code and fees.
-
-Aster overrides are `--aster-fee-bps` for general crypto, `--aster-rwa-fee-bps`, and `--aster-group-b-fee-bps`. The Group B list is verified as of September 29; revisit it as fee schedules change.
+Use `--duration 120 --no-tui --out data/paper-monitor-test` for a finite check. See `--help` for all limits and assumptions.

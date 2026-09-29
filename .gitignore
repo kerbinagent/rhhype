@@ -9,3 +9,4 @@ data/raw/
 *.log
 data/monitor/
 data/monitor-*/
+data/paper-monitor*/

@@ -48,7 +48,7 @@ class TerminalTests(unittest.TestCase):
                 os.setsid()
                 fcntl.ioctl(0, termios.TIOCSCTTY, 0)
             if mode == 'viewer':
-                command = [sys.executable, str(ROOT / 'scripts/monitor.py'), '--watch', '--out', d]
+                command = [sys.executable, str(ROOT / 'scripts/monitor.py'), '--legacy', '--watch', '--out', d]
             else:
                 # Hold discovery pending, exercising cancellation of an in-flight async task.
                 code = "import asyncio,sys;sys.path.insert(0,sys.argv.pop(1));import monitor\nasync def pending(*args):\n await asyncio.sleep(3600)\nmonitor.discover=pending\nmonitor.main()"
