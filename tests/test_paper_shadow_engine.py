@@ -98,6 +98,46 @@ class ShadowEngineTests(unittest.TestCase):
         self.assertNotIn('risk_priority',markets['rh_lighter:1'])
         self.assertNotIn('risk_priority',e.market_meta['hyperliquid:BTC'])
 
+    def test_confirmed_waits_for_both_sources_then_still_requires_delayed_fills(self):
+        e=PaperEngine([pair()],EngineConfig(strategies=('standard',)),now=1000)
+        e.enable_shadows(1000)
+        for index in range(41):
+            now=1000+index*3
+            a=book('hyperliquid','BTC',now,99.99,100)
+            b=book('rh_lighter',1,now,100.2,100.21)
+            s=e._signal(pair(),pair()['hl'],pair()['other'],a,b,'standard',now)
+            e.selector.observe(pair(),{'hyperliquid:BTC':a,'rh_lighter:1':b},now,signals=[s])
+        e.receive(book('hyperliquid','BTC',1121,99.99,100))
+        e.receive(book('rh_lighter',1,1121,102,102.01))
+        e.tick(1121)
+        route='BTC|hyperliquid:BTC|rh_lighter:1'
+        quantity=e.selector.confirmation_quantity(route)
+        self.assertIsNotNone(quantity)
+        e.receive(book('hyperliquid','BTC',1121.8,99.99,100))
+        e.tick(1121.8)
+        self.assertFalse(any(p['strategy']=='confirmed' for p in e.positions.values()))
+        e.receive(book('hyperliquid','BTC',1122.01,99.99,100))
+        e.receive(book('rh_lighter',1,1122.02,102,102.01))
+        e.tick(1122.02)
+        p=next(p for p in e.positions.values() if p['strategy']=='confirmed')
+        self.assertEqual(p['status'],'ENTRY_PENDING')
+        self.assertTrue(all(leg['quantity']==0 for leg in p['legs']))
+        self.assertIsNone(e.selector.confirmation_quantity(route))
+        e.receive(book('hyperliquid','BTC',1122.3,99.99,100))
+        e.receive(book('rh_lighter',1,1122.6,102,102.01))
+        self.assertEqual(p['status'],'OPEN')
+        self.assertTrue(all(leg['quantity']==quantity for leg in p['legs']))
+
+    def test_upgrade_appends_confirmed_with_its_actual_start_time(self):
+        e=self.make()
+        state=copy.deepcopy(e.export_state())
+        del state['ledgers']['confirmed']
+        state['entry_policy_state']['version']=2
+        restored=PaperEngine([pair()],e.config,state=state,now=1500)
+        self.assertEqual(restored.ledgers['confirmed']['started_at'],1500)
+        for name,ledger in state['ledgers'].items():
+            self.assertEqual(restored.ledgers[name],ledger)
+
     def test_shared_depth_repricing_matches_independent_tier_calculation(self):
         for venue in ('lighter','rh_lighter','aster'):
             p=pair();p['other']['venue']=venue;p['other']['published_fee_floor_bps']=.7

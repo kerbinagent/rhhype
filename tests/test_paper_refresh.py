@@ -113,3 +113,17 @@ class RefreshTests(unittest.IsolatedAsyncioTestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class ConfirmationRefreshTests(unittest.TestCase):
+    def test_confirmations_use_spare_capacity_without_displacing_exits(self):
+        engine,key=fixture();now=time.time()
+        engine.selector=SimpleNamespace(pending_confirmation_targets=lambda t:[
+            {'buy':key,'sell':'lighter:1','due':now-.1,'expires':now+3},
+            {'buy':'hyperliquid:ETH','sell':'lighter:2','due':now-.1,'expires':now+3},
+            {'buy':'hyperliquid:SOL','sell':'lighter:3','due':now+1,'expires':now+4}])
+        engine.positions['1']['legs'][0]['intent']['kind']='exit'
+        targets=_targets(engine,now)
+        self.assertEqual(targets[key],0)
+        self.assertEqual(targets['hyperliquid:ETH'],4)
+        self.assertNotIn('hyperliquid:SOL',targets)

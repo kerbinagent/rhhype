@@ -29,6 +29,18 @@ def signal(now, edge=25, **kwargs):
             'timestamp': now, 'skew_ms': 0, **kwargs}
 
 
+def confirmed_signal(now, edge=25, *, buy_source=None, sell_source=None,
+                     buy_received=None, sell_received=None, generation=1, quantity=10):
+    s = signal(now, edge)
+    s.update(quantity=quantity,
+             buy_source_time=now if buy_source is None else buy_source,
+             sell_source_time=now if sell_source is None else sell_source,
+             buy_received=now if buy_received is None else buy_received,
+             sell_received=now if sell_received is None else sell_received,
+             buy_generation=generation, sell_generation=generation)
+    return s
+
+
 class SelectorTests(unittest.TestCase):
     def setUp(self):
         self.selector = StrategySelector(SimpleNamespace(max_book_age=2))
@@ -89,7 +101,7 @@ class SelectorTests(unittest.TestCase):
         self.assertEqual(self.selector.observation_counts['invalid_pair'], 1)
 
     def test_v2_training_and_policy_skew_limits(self):
-        self.assertEqual(POLICY_VERSION, 2)
+        self.assertEqual(POLICY_VERSION, 3)
         self.warm()
         paired = books(126)
         paired['rh_lighter:1']['received'] = 125.3
@@ -118,11 +130,81 @@ class SelectorTests(unittest.TestCase):
         restored.restore_state(old, 30)
         self.assertEqual(restored.counts['cooldown']['entered'], 1)
         self.assertEqual(restored.allow('cooldown', signal(30, 1), 30)[1]['reason'], 'cooldown')
-        self.assertEqual(restored.snapshot(30)['version'], 2)
+        self.assertEqual(restored.snapshot(30)['version'], 3)
         self.assertEqual(restored.snapshot(30)['sampled_routes'], 0)
         old['counts']['convergence'] = {'entered': 1}
         with self.assertRaisesRegex(ValueError, 'separate experiment'):
             StrategySelector(SimpleNamespace(max_book_age=2)).restore_state(old, 30)
+
+    def test_confirmed_requires_later_independent_sources_and_original_quantity(self):
+        self.warm()
+        initial = confirmed_signal(124)
+        allowed, diagnostic = self.selector.allow('confirmed', initial, 124)
+        self.assertFalse(allowed)
+        self.assertEqual(diagnostic['confirmation_status'], 'armed')
+        self.assertEqual(self.selector.confirmation_quantity(ROUTE), 10)
+        self.assertEqual(self.selector.pending_confirmation_targets(124)[0]['due'], 125)
+        same = confirmed_signal(125.1, buy_source=124, sell_source=124)
+        self.assertEqual(self.selector.allow('confirmed', same, 125.1)[1]['confirmation_status'], 'awaiting_fresh_sources')
+        one = confirmed_signal(125.2, buy_source=125.2, sell_source=124)
+        self.assertEqual(self.selector.allow('confirmed', one, 125.2)[1]['confirmation_status'], 'awaiting_fresh_sources')
+        changed_size = confirmed_signal(125.3, quantity=11)
+        self.assertEqual(self.selector.allow('confirmed', changed_size, 125.3)[1]['confirmation_status'],
+                         'quantity_or_route_changed')
+        self.assertIsNone(self.selector.confirmation_quantity(ROUTE))
+        self.selector.allow('confirmed', confirmed_signal(126), 126)
+        permitted, proof = self.selector.allow('confirmed', confirmed_signal(127.1), 127.1)
+        self.assertTrue(permitted)
+        self.assertEqual(proof['confirmation_status'], 'confirmed')
+        self.assertEqual(proof['confirmed_quantity'], 10)
+        self.assertEqual(proof['initial_edge_usd'], 25)
+        self.selector.entered('confirmed', confirmed_signal(127.1), 127.1)
+        self.assertIsNone(self.selector.confirmation_quantity(ROUTE))
+
+    def test_confirmed_resets_on_generation_economics_expiry_and_cancel(self):
+        self.warm()
+        self.selector.allow('confirmed', confirmed_signal(124), 124)
+        changed = confirmed_signal(125.2, generation=2)
+        self.assertEqual(self.selector.allow('confirmed', changed, 125.2)[1]['confirmation_status'],
+                         'generation_changed')
+        self.assertIsNone(self.selector.confirmation_quantity(ROUTE))
+        self.selector.allow('confirmed', confirmed_signal(126), 126)
+        self.selector.observe(PAIR, books(126.1), 126.1, [signal(126.1, -.1)])
+        self.assertIsNone(self.selector.confirmation_quantity(ROUTE))
+        self.selector.allow('confirmed', confirmed_signal(127), 127)
+        self.assertEqual(self.selector.allow('confirmed', confirmed_signal(131.1), 131.1)[1]['confirmation_status'],
+                         'expired')
+        self.assertIsNone(self.selector.confirmation_quantity(ROUTE))
+        self.selector.allow('confirmed', confirmed_signal(132), 132)
+        self.assertTrue(self.selector.cancel_confirmation(ROUTE, 'budget'))
+        self.assertEqual(self.selector.snapshot(132)['confirmation_cancel_reasons']['budget'], 1)
+
+    def test_confirmed_unknown_source_uses_receipt_with_explicit_evidence(self):
+        self.warm()
+        initial = confirmed_signal(124)
+        initial['buy_source_time'] = None
+        armed, first = self.selector.allow('confirmed', initial, 124)
+        self.assertFalse(armed)
+        self.assertEqual(first['source_time_fallbacks'], ['buy'])
+        later = confirmed_signal(125.2)
+        later['buy_source_time'] = None
+        accepted, proof = self.selector.allow('confirmed', later, 125.2)
+        self.assertTrue(accepted)
+        self.assertEqual(proof['source_time_fallbacks'], ['buy'])
+        self.assertEqual(proof['initial_source_time_fallbacks'], ['buy'])
+
+    def test_v2_state_keeps_counters_and_cooldown_but_no_candidates(self):
+        self.warm()
+        self.selector.entered('cooldown', signal(124), 124)
+        self.selector.allow('confirmed', confirmed_signal(124), 124)
+        state = self.selector.export_state()
+        state['version'] = 2
+        restored = StrategySelector(SimpleNamespace(max_book_age=2))
+        restored.restore_state(state, 150)
+        self.assertEqual(restored.counts['cooldown']['entered'], 1)
+        self.assertEqual(restored.allow('cooldown', signal(150), 150)[1]['reason'], 'cooldown')
+        self.assertEqual(restored.snapshot(150)['pending_confirmations'], 0)
+        self.assertEqual(restored.snapshot(150)['migrated_from_version'], 2)
 
     def test_gate_skew_cooldown_and_state_restore(self):
         s = signal(0, .25)

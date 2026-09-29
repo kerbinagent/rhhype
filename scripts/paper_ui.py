@@ -18,7 +18,8 @@ TIERS = ("standard", "plus", "premium")
 SHADOWS = (("shadow_baseline", "Shadow base", "Base"),
            ("cooldown", "Cooldown", "Cool"),
            ("convergence", "Convergence", "Conv"),
-           ("conservative", "Conservative", "Cons"))
+           ("conservative", "Conservative", "Cons"),
+           ("confirmed", "Confirmed", "Conf"))
 
 
 def _number(value: object) -> float | None:
@@ -156,7 +157,7 @@ def _shadow_lines(snapshot: dict, width: int) -> list[str]:
                        ("signal", "skew", "cooldown", "forecast", "duplicate"))
         entry = (f"Entry{entered} Warm{warmup} Rej{rejected}" if policy else
                  f"Entry {_label(row.get('entry_status', '?'))}")
-        if policy and key in ('convergence','conservative'):
+        if policy and key in ('convergence','conservative','confirmed'):
             ready=_int(policy.get('warm_routes',entry_policies.get('warm_routes')))
             entry=f"Entry{entered} Ready{ready} Rej{rejected}"
         if width >= 79:
@@ -298,6 +299,9 @@ def tui_lines(snapshot: dict | None, columns: int, rows: int) -> list[str]:
                  "Simulated USD P&L: Closed exact / estimated / open liquidation; costs below",
                  *_strategy_lines(snapshot, width),
                  *shadow_lines]
+        if len(shadow_lines)>4:
+            # Reclaim the redundant prose line for a fifth experimental row.
+            lines.pop(1)
         if shadow_lines:
             lines.append(_diagnostic_line(snapshot))
         signals = snapshot.get("top_signals") or []

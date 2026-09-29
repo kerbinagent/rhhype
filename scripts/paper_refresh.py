@@ -15,7 +15,7 @@ import aiohttp
 
 
 def _targets(engine, now):
-    """Return priority by market key: exit 0, entry 1, held 2, probe 3."""
+    """Return priority by market key: exit 0, entry 1, held 2, probe 3, confirmation 4."""
     targets = {}
     for position in engine.positions.values():
         for leg in position['legs']:
@@ -36,6 +36,13 @@ def _targets(engine, now):
             if (market_key.startswith('hyperliquid:') and
                     market_key not in probe.get('after', {})):
                 targets[market_key] = min(3, targets.get(market_key, 4))
+    selector=getattr(engine,'selector',None)
+    if selector:
+        for candidate in selector.pending_confirmation_targets(now):
+            if not candidate['due']<=now<=candidate['expires']:continue
+            for market_key in (candidate['buy'],candidate['sell']):
+                if market_key.startswith('hyperliquid:'):
+                    targets[market_key]=min(4,targets.get(market_key,4))
     return targets
 
 

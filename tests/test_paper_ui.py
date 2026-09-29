@@ -98,6 +98,17 @@ class LayoutTests(unittest.TestCase):
         self.assertIn("ASSET9", joined)
         self.assertIn("Feeds: HL streaming", joined)
 
+    def test_fifth_experiment_keeps_ten_signals_at_80_columns(self):
+        data=snapshot_with_shadows()
+        data['strategies']['confirmed']=dict(data['strategies']['convergence'])
+        data['entry_policies']['policies']['confirmed']={'entered':0,'warm_routes':4}
+        lines=tui_lines(data,80,24);joined='\n'.join(lines)
+        self.assertIn('Confirmed',joined)
+        self.assertIn('ASSET9',joined)
+        self.assertIn('Feeds:',joined)
+        self.assertLessEqual(len(lines),23)
+        self.assertTrue(all(len(line)<=79 for line in lines))
+
     def test_shadow_rows_resize_and_bad_metadata(self):
         data = snapshot_with_shadows()
         data["shadow_started_at"] = 1e300

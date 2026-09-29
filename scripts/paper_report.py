@@ -8,7 +8,7 @@ from pathlib import Path
 import sqlite3
 import time
 
-SHADOW_POLICIES=('shadow_baseline','cooldown','convergence','conservative')
+SHADOW_POLICIES=('shadow_baseline','cooldown','convergence','conservative','confirmed')
 
 def latency_summary(stats):
     observed=stats.get("observed",0);triggered=stats.get("triggered",0);missing=stats.get("missing",0)
@@ -29,15 +29,18 @@ def shadow_comparison(engine,trades,updated,checkpoint_age_seconds):
             'checkpoint_age_seconds':checkpoint_age_seconds,
             'status':'matched' if started<=updated else 'start_after_checkpoint'}
     policies={}
+    if any(ledger.get('started_at',started)!=started for name,ledger in engine.get('ledgers',{}).items() if name in SHADOW_POLICIES):
+        window['status']='mixed_policy_starts'
     for name in SHADOW_POLICIES:
         ledger=engine.get('ledgers',{}).get(name)
         if ledger is None:continue
+        policy_started=ledger.get('started_at',started)
         closed=ledger.get('closed_trades',0)+ledger.get('estimated_trades',0)
         pnl=ledger.get('closed_pnl_exact',0)+ledger.get('closed_pnl_estimated',0)
         wins=ledger.get('closed_wins_exact',0)+ledger.get('closed_wins_estimated',0)
         current=[p for p in engine.get('positions',{}).values() if p['strategy']==name]
         retained=[p for p in trades if p.get('strategy')==name and
-                  p.get('created_at',0)>=started and p.get('status') in ('CLOSED','CLOSED_ESTIMATED')]
+                  p.get('created_at',0)>=policy_started and p.get('status') in ('CLOSED','CLOSED_ESTIMATED')]
         exit_reasons={}
         holds=[];forecast_pairs=[]
         for p in retained:
@@ -53,6 +56,7 @@ def shadow_comparison(engine,trades,updated,checkpoint_age_seconds):
                 forecast_pairs.append((forecast,actual))
         policies[name]={
             'fee_tier':'standard','initial_capital_usd':ledger.get('initial_capital'),
+            'started_at':policy_started,'same_start_as_original_shadows':policy_started==started,
             'entry_policy_counts':(engine.get('entry_policy_state') or {}).get('counts',{}).get(name,{}),
             'status':'observed' if closed else 'insufficient_trades',
             'cumulative_closed_trades':closed,'cumulative_wins':wins,
@@ -77,7 +81,7 @@ def shadow_comparison(engine,trades,updated,checkpoint_age_seconds):
             'decision_counts_include_previous_version':(engine.get('entry_policy_state') or {}).get('migrated_from_version') is not None,
             'limitations':['Each policy has independent configured paper capital; policy P&L must not be summed as one portfolio.',
                            'Policies share observed feeds and opportunities; this is a nonrandom observational comparison.',
-                           'All shadow policies use Standard fees.',
+                           'All shadow policies use Standard fees; appended policies may start later, so compare matching review windows.',
                            'Cumulative P&L, trades, wins, and fees come from ledgers; retained trade diagnostics cover only stored rows.',
                            'Open position marks are unavailable without current order books.']}
 

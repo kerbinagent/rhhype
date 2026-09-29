@@ -41,7 +41,7 @@ def key(m):
     return f"{m['venue']}:{m['market']}"
 
 
-SHADOW_POLICIES = ('shadow_baseline', 'cooldown', 'convergence', 'conservative')
+SHADOW_POLICIES = ('shadow_baseline', 'cooldown', 'convergence', 'conservative', 'confirmed')
 
 
 def fee_tier(strategy):
@@ -153,6 +153,7 @@ class PaperEngine:
             if policy not in self.ledgers:
                 ledger=copy.deepcopy(template)
                 ledger['wallets']={v:self.config.capital_usd/len(venues) for v in venues}
+                ledger['started_at']=max(self.last_processed,self.shadow_started_at)
                 self.ledgers[policy]=ledger
 
     @staticmethod
@@ -242,6 +243,11 @@ class PaperEngine:
         if not valid_book(book,now,self.config):
             self.stats['invalid_books']+=1
             self._probe_invalidate(k,'invalid_book')
+            if self.selector:
+                for ident in self.market_pairs.get(k,()):
+                    pair=self.pairs[ident]
+                    for buy,sell in ((pair['hl'],pair['other']),(pair['other'],pair['hl'])):
+                        self.selector.cancel_confirmation(f"{pair['asset']}|{key(buy)}|{key(sell)}",'invalid_quote')
             for p in self._positions_for_market(k):
                 for leg in p['legs']:
                     if leg['key']!=k:continue
@@ -286,6 +292,36 @@ class PaperEngine:
         available_before=liquidity[side][:self.config.evidence_levels]
         limit=intent.get('price_limit') if entry else None
         q,value,remaining=available_fill(liquidity[side],intent['quantity'],leg['step'],limit,buy)
+        if entry:
+            # Keep the attempted walk and source timing on the eventual trade row.
+            # Evidence is a small ring and often expires before an audit begins.
+            eligible_quantity=0.0
+            for price,size in liquidity[side]:
+                if limit is not None and ((buy and price>limit) or (not buy and price<limit)):
+                    break
+                eligible_quantity+=size
+            side_quantity=sum(size for _,size in liquidity[side])
+            reason=None
+            if q<=0:
+                if side_quantity<=0:reason='no_depth'
+                elif eligible_quantity<=0:reason='price_limit'
+                elif eligible_quantity<float(leg['step']):reason='lot_rounding'
+                else:reason='no_depth'
+            elif value<leg['min_notional']:reason='min_notional'
+            elif q<leg['min_qty']:reason='min_qty'
+            elif value>self.config.notional+1e-8:reason='notional_cap'
+            source_time=book.get('engine_time')
+            receipt_time=book.get('received')
+            leg['entry_observation']={
+                'observed_at':now,'book_source':book.get('source'),
+                'book_received_at':receipt_time,'book_engine_time':source_time,
+                'receipt_age_seconds':now-receipt_time if receipt_time is not None else None,
+                'source_age_seconds':now-source_time if source_time is not None else None,
+                'signal_to_receipt_seconds':receipt_time-intent['created'] if receipt_time is not None else None,
+                'attempted_quantity':q,'attempted_value':value,
+                'eligible_quantity':eligible_quantity,'side_quantity':side_quantity,
+                'price_limit':limit}
+            if reason:leg['entry_rejection_reason']=reason
         if entry and (value<leg['min_notional'] or q<leg['min_qty']):q=value=0
         if entry and value>self.config.notional+1e-8:q=value=0
         current_meta=self.market_meta.get(leg['key'])
@@ -417,6 +453,27 @@ class PaperEngine:
                 if tier not in cached:
                     cached[tier]=[self._reprice_signal(s,tier) for s in cached['standard']]
                 candidates=[dict(s,strategy=strategy) for s in cached[tier]]
+                if self.selector and strategy=='confirmed':
+                    fixed=[]
+                    for signal in candidates:
+                        quantity=self.selector.confirmation_quantity(signal['route'])
+                        if quantity is not None:
+                            buy,sell=self.market_meta[signal['buy']],self.market_meta[signal['sell']]
+                            later=self._signal(p,buy,sell,self.books[signal['buy']],self.books[signal['sell']],strategy,now,quantity)
+                            budget=self.config.notional/(1+self.config.entry_slippage_bps/10000)
+                            if later is None or max(later['buy_value'],later['sell_value'])>budget+1e-8:
+                                self.selector.cancel_confirmation(signal['route'],'budget_or_depth')
+                                continue
+                            if later['net_edge_usd']<.25:
+                                self.selector.cancel_confirmation(signal['route'],'economic')
+                                continue
+                            signal=later
+                        fixed.append(signal)
+                    candidates=fixed
+                    present={s['route'] for s in candidates}
+                    for buy,sell in ((p['hl'],p['other']),(p['other'],p['hl'])):
+                        route=f"{p['asset']}|{key(buy)}|{key(sell)}"
+                        if route not in present:self.selector.cancel_confirmation(route,'invalid_quote')
                 if strategy=='standard':standard_signals=candidates
                 if strategy in self.config.strategies:
                     for signal in candidates:
@@ -482,7 +539,10 @@ class PaperEngine:
                 'buy_fee_bps':bf,'sell_fee_bps':sf,'net_edge_usd':net,'net_edge_bps':net/cost*10000,
                 'opening_edge_usd':proceeds-cost-fees,'timestamp':now,'skew_ms':abs(bb['received']-sb['received'])*1000,
                 'notional':self.config.notional,'lifetime_is_sampled':True,
-                'source_skew_ms':abs(bb['engine_time']-sb['engine_time'])*1000 if bb.get('engine_time') is not None and sb.get('engine_time') is not None else 0.0}
+                'source_skew_ms':abs(bb['engine_time']-sb['engine_time'])*1000 if bb.get('engine_time') is not None and sb.get('engine_time') is not None else 0.0,
+                'buy_received':bb['received'],'sell_received':sb['received'],
+                'buy_source_time':bb.get('engine_time'),'sell_source_time':sb.get('engine_time'),
+                'buy_generation':bb.get('generation'),'sell_generation':sb.get('generation')}
 
     def _track_signal(self,s,ident,now,route=None):
         # A missing walk (depth, lot, or minimum failure) is observed loss of
@@ -551,6 +611,10 @@ class PaperEngine:
         for pid in list(self.probes):self._finish_probe(pid,'missing',reason)
 
     def _censor_pair(self,ident,now):
+        if self.selector and ident in self.pairs:
+            p=self.pairs[ident]
+            for buy,sell in ((p['hl'],p['other']),(p['other'],p['hl'])):
+                self.selector.cancel_confirmation(f"{p['asset']}|{key(buy)}|{key(sell)}",'invalid_quote')
         for route,e in list(self.episodes.items()):
             if e['pair_id']==ident:self._finish_episode(route,now,'invalid_or_stale_book')
 
@@ -639,7 +703,7 @@ class PaperEngine:
         self.positions[p['id']]=p;self._index_position(p);self.ledgers[strategy]['entry_attempts']+=1
         if self.selector and strategy in SHADOW_POLICIES:
             self.selector.entered(strategy,s,now)
-            if strategy in ('convergence','conservative'):
+            if strategy in ('convergence','conservative','confirmed'):
                 self.evidence.append((p['id']+':entry_model',{
                     'position_id':p['id'],'signal':s,
                     'historical_closing_spreads':self.selector.route_history(s['route'],now)},'entry_model',now))
