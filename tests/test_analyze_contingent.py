@@ -80,6 +80,30 @@ class ExposureTests(unittest.TestCase):
 
 
 class AnalyzerTests(unittest.TestCase):
+    def test_no_observation_is_na_but_two_zero_aborts_are_measured_zero(self):
+        empty=state([])
+        for engine in empty['trial'].values():
+            engine['ledgers']['convergence'].update(
+                entry_attempts=0,closed_trades=0,aborted_trades=0,
+                closed_pnl_exact=0,fees_usd=0,other_costs_usd=0)
+        none=analyze(empty,{}, {})
+        self.assertIsNone(none['pairs']['treatment_minus_control_usd'])
+        self.assertIsNone(none['policies']['control']['timing']['equivalent_seconds'])
+        self.assertIn('treatment minus control: N/A USD',render_markdown(none))
+        self.assertIn('| control | No observed candidates | 0 | N/A |',render_markdown(none))
+
+        row={'cohort_id':'c1','selected_at':0,'original_quantity':10,
+             'control_position_id':'a','treatment_position_id':'b'}
+        checkpoint=state([row])
+        checkpoint['trial']['control']['ledgers']['convergence'].update(
+            closed_trades=0,aborted_trades=1,closed_pnl_exact=0,
+            fees_usd=0,other_costs_usd=0)
+        measured=analyze(checkpoint,{'c1':row},
+            {'a':aborted('a','c1','simultaneous'),'b':aborted('b','c1','hl_first')})
+        self.assertEqual(measured['pairs']['both_exact_known'],1)
+        self.assertEqual(measured['pairs']['treatment_minus_control_usd'],0)
+        self.assertIn('treatment minus control: 0.0000 USD',render_markdown(measured))
+
     def test_aborted_treatment_is_known_zero_but_not_a_profitable_fill(self):
         row={'cohort_id':'c1','selected_at':0,'original_quantity':10,
              'control_position_id':'a','treatment_position_id':'b',
