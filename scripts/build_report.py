@@ -27,6 +27,8 @@ def main():
 
 Generated {now}. Research only; public data and read-only swap simulations. **No trades were placed.**
 
+**Fee correction (September 29 follow-up):** Aster has separate RWA and Group B schedules. The Aster results below retain the original flat 4 bp scenario; see the [overnight audit](monitor-audit/REPORT.md) for corrected fees and signal/exit analysis.
+
 ## Assessment
 
 **The strongest follow-up candidates are the separate Robinhood Chain Lighter perpetual markets against Hyperliquid. The sampled Robinhood Uniswap stock-token pools generally do not clear their costs.** Small positive opening spreads also exist against Lighter Core and Aster, but an opening spread on two perpetuals is not realized arbitrage profit. Funding, the eventual unwind, and margin capital determine the outcome.

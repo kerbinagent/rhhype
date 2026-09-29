@@ -92,7 +92,7 @@ Use `--out` on `--watch` too when viewing a nondefault directory. `--duration 12
 - Each venue cycles independently. The minimum cycle is 60 seconds, but broad coverage or cooldowns can extend it. No backlog of missed polling cycles is accumulated.
 - HTTP errors, timeouts and rate-limit responses trigger shared host cooldowns. No IP rotation or host VPN configuration is performed.
 - Every hour, refresh market status, volume, quantity constraints, and Hyperliquid per-market deployer/growth fee modifiers. Discovery retries failed comparator venues. If essential metadata is older than two hours, stop sampling until refreshed. A delisting within a cycle can still produce a rejected request before the next refresh.
-- Base account fees remain explicit configured assumptions: HL native 4.5 bp, Aster 4 bp; Lighter Standard 0, Plus 0.5 bp, Premium RH 3.5 bp/Core 2.8 bp. Positive per-market Lighter published fee metadata is a fee floor. Public base schedules can change; monitor and update the configuration when they do. No private account fee query is made.
+- Base account fees remain explicit configured assumptions: HL native 4.5 bp, Aster general crypto 4 bp, RWA 1.25 bp, listed Group B crypto 10 bp; Lighter Standard 0, Plus 0.5 bp, Premium RH 3.5 bp/Core 2.8 bp. Positive per-market Lighter published fee metadata is a fee floor. Public base schedules can change; monitor and update the configuration when they do. No private account fee query is made.
 - The default closing-fee reserve uses current opening notionals and rates. Actual closing fees, prices and spreads can differ. The 5 bp buffer is an assumption, not a measured conversion/financing cost.
 - Reject empty/crossed/nonfinite books, insufficient depth, invalid minimum sizes, more than five seconds receipt skew or quote age, and large midpoint mismatches (>5%). Lighter's REST book lacks an engine timestamp; nearby receipt times cannot prove engine freshness.
 - USDG, USDC and USDT are assumed at parity in the price comparison. Stablecoin conversion and oracle/settlement differences remain economic risks even when prices line up.
@@ -109,3 +109,9 @@ The tests cover both-leg fees and reserves, the $1,000 spending ceiling, exact i
 ```
 
 A finite live check on September 29 found 123 venue comparisons across 66 assets; the observed universe varies with live volume and listings. Detailed final check results are recorded in the journal.
+
+## Overnight audit and fee-model correction
+
+See [the September 29 overnight audit](../reports/monitor-audit/REPORT.md) for exact tally reconciliation, fee-tier sensitivity, sampled signal durations, and subsequent-exit diagnostics. The approximately $330 display was an opening-edge sum, not simulated closed-trade profit. Model version 3 corrects Aster fee classes and makes that distinction explicit in the TUI. Use a fresh `--out data/monitor-v3` when restarting; stop the previous collector first. Existing running processes keep their original code and fees.
+
+Aster overrides are `--aster-fee-bps` for general crypto, `--aster-rwa-fee-bps`, and `--aster-group-b-fee-bps`. The Group B list is verified as of September 29; revisit it as fee schedules change.

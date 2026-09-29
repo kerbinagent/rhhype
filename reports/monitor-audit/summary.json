@@ -1,0 +1,48 @@
+{
+  "snapshot_utc": "2026-09-29T12:00:03.489782+00:00",
+  "evidence_sha256": "bc654b032f3b25cc1d3e2e968e69f6377ec3f226bb016a0dd6c5b9c0249c39e4",
+  "start_utc": "2026-09-29T05:13:16.776899+00:00",
+  "end_utc": "2026-09-29T11:59:49.656867+00:00",
+  "hours": 6.775799991024865,
+  "observations": 84240,
+  "routes": 254,
+  "assets": 68,
+  "episodes_reconstructed": 432,
+  "stored_totals": {
+    "observations": 84240,
+    "positive_observations": 2749,
+    "cap_evictions": 0,
+    "paper_1000_episodes": 432,
+    "paper_1000_net_entry_sum_usd": 330.8501761737007,
+    "paper_1000_budgeted_sum_usd": 44.69879693190069,
+    "paper_1000_positive_samples": 2749,
+    "paper_1000_positive_sample_sum_usd": 579.9971843686185
+  },
+  "persistence": {
+    "episodes": 432,
+    "single_sample_episodes": 189,
+    "median_observed_span_seconds": 60.004374504089355,
+    "max_observed_span_seconds": 20580.008380413055,
+    "latency_limit": "Polling brackets and repeated positive observations do not establish continuous lifetime or a subsecond execution deadline."
+  },
+  "matches_stored_totals": true,
+  "opening_edge_sum_usd": 330.85017617370073,
+  "closing_fee_reserve_sum_usd": 70.2346948263,
+  "other_reserve_sum_usd": 215.9166844155,
+  "budgeted_edge_sum_usd": 44.6987969319007,
+  "median_episode_budget_usd": 0.05932700999992402,
+  "episode_reasons": {
+    "first_seen": 11,
+    "crossed_back_above_zero": 421
+  },
+  "episodes_budget_below_10c": 291,
+  "max_fee_algebra_error_usd": 0.0,
+  "max_budget_algebra_error_usd": 0.0,
+  "p95_hl_engine_age_ms": 819.2958831787109,
+  "p95_receipt_skew_ms": 545.1338291168213,
+  "episode_counts_by_comparator": {
+    "rh_lighter": 244,
+    "lighter": 188
+  },
+  "note": "Exit diagnostics scale opposite-direction saved VWAPs to original quantity, require <=1% quantity mismatch; no full-book exact historical fills or funding ledger. Sums overlap and are not portfolio P&L."
+}

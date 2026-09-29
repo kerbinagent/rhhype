@@ -1,0 +1,26 @@
+{
+  "venues": [
+    "aster",
+    "lighter",
+    "rh_lighter"
+  ],
+  "assets": null,
+  "notionals": [
+    1000
+  ],
+  "min_volume": 1000000,
+  "rank_by": "usd",
+  "lighter_tier": "standard",
+  "hl_fee_bps": 4.5,
+  "aster_fee_bps": 4,
+  "reserve_exit_fees": true,
+  "extra_cost_bps": 5,
+  "fixed_cost_usd": 0,
+  "max_skew": 5,
+  "max_age": 5,
+  "max_divergence_bps": 500,
+  "episode_gap": 600,
+  "model_version": 2,
+  "window_hours": 24,
+  "max_rows": 100000
+}

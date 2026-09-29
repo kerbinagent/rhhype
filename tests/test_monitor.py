@@ -9,7 +9,7 @@ import time
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from monitor import Gate, Store, arguments, common_step, evaluate, parse_book
+from monitor import Gate, Store, arguments, common_step, evaluate, parse_book, aster_fee
 
 
 def sample_row(route='BTC|hl|rh', score=1.0, timestamp=None, notional=1000):
@@ -94,6 +94,12 @@ class MonitorTests(unittest.TestCase):
             s.add([sample_row(score=6)])
             self.assertEqual(s.totals['paper_1000_episodes'], 3)
             s.close()
+
+    def test_aster_asset_fee_classes(self):
+        self.assertEqual(aster_fee('BTCUSDT', False)[0], 4)
+        self.assertEqual(aster_fee('NVDAUSDT', True)[0], 1.25)
+        self.assertEqual(aster_fee('B3USDT', False)[0], 10)
+        self.assertEqual(aster_fee('SKHYNIXUSDT', True)[0], 10)
 
     def test_invalid_args_and_always_1000_tally(self):
         args = arguments(['--no-tui', '--notionals', '10000'])

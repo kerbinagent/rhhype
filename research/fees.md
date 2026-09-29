@@ -32,3 +32,7 @@ Additional explicit sensitivities:
 - Reverse spot/perp trades require pre-owned spot inventory or a verified borrow facility and borrow fee. No free stock-token shorting is assumed. Eligible redemption after the promotional period can add an issuer fee and delay; no instant open primary-market conversion is modeled.
 
 Future funding, withdrawal/redemption charges, bridging costs, and close-out liquidity cannot be locked from this dataset. Profits must be reported after those terms are established for an implementable strategy.
+
+## September 29 overnight audit correction
+
+The original survey and monitor modeled Aster with a flat 4 bp USDT taker fee. Current official schedules instead distinguish general crypto (4 bp base), RWA (1.25 bp effective September 7), and listed Group B crypto (10 bp base). Historical report outputs retain their explicitly stated old fee scenario; they should not be read as the correct current fee for every Aster instrument. Monitor model 3 applies separate fee classes. The overnight $330 opening-edge tally contained only Lighter routes, so it was unaffected by this Aster error. See the [audit](../reports/monitor-audit/REPORT.md) and [official schedule](https://docs.asterdex.com/trading/perpetuals/fees-and-specs/fees).

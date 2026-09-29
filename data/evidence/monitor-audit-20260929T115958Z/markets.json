@@ -1,0 +1,3490 @@
+{
+  "updated_utc": "2026-09-29T11:14:16.697589+00:00",
+  "pairs": [
+    {
+      "asset": "BTC",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "BTC",
+        "asset": "BTC",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.00001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 2277406196.3172565
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 1,
+        "asset": "BTC",
+        "fee_bps": 0,
+        "step": "0.00001",
+        "min_qty": 7e-05,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 689426971.806756
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694098
+    },
+    {
+      "asset": "BTC",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "BTC",
+        "asset": "BTC",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.00001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 2277406196.3172565
+      },
+      "other": {
+        "venue": "aster",
+        "market": "BTCUSDT",
+        "asset": "BTC",
+        "fee_bps": 4,
+        "step": "0.001",
+        "min_qty": 0.001,
+        "max_qty": 1000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 417568224.42
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6940746
+    },
+    {
+      "asset": "ETH",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ETH",
+        "asset": "ETH",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.0001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1295707337.8404999
+      },
+      "other": {
+        "venue": "aster",
+        "market": "ETHUSDT",
+        "asset": "ETH",
+        "fee_bps": 4,
+        "step": "0.001",
+        "min_qty": 0.001,
+        "max_qty": 10000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 392357226.01
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941023
+    },
+    {
+      "asset": "ETH",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ETH",
+        "asset": "ETH",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.0001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1295707337.8404999
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 0,
+        "asset": "ETH",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.002,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 385510688.402635
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941063
+    },
+    {
+      "asset": "BTC",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "BTC",
+        "asset": "BTC",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.00001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 2277406196.3172565
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 1,
+        "asset": "BTC",
+        "fee_bps": 0,
+        "step": "0.00001",
+        "min_qty": 0.0002,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 98520111.868546
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941004
+    },
+    {
+      "asset": "SOL",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "SOL",
+        "asset": "SOL",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 263631505.7340001
+      },
+      "other": {
+        "venue": "aster",
+        "market": "SOLUSDT",
+        "asset": "SOL",
+        "fee_bps": 4,
+        "step": "0.01",
+        "min_qty": 0.01,
+        "max_qty": 1000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 85017089.6
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941228
+    },
+    {
+      "asset": "ZEC",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ZEC",
+        "asset": "ZEC",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 733480014.5150019
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 90,
+        "asset": "ZEC",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.004,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 67820763.47005
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6945617
+    },
+    {
+      "asset": "ETH",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ETH",
+        "asset": "ETH",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.0001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1295707337.8404999
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 0,
+        "asset": "ETH",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.005,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 62726085.57629
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694108
+    },
+    {
+      "asset": "SOL",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "SOL",
+        "asset": "SOL",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 263631505.7340001
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 2,
+        "asset": "SOL",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.055,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 61748395.632497
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941268
+    },
+    {
+      "asset": "HYPE",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "HYPE",
+        "asset": "HYPE",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 560406327.2191403
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 24,
+        "asset": "HYPE",
+        "fee_bps": 0,
+        "step": "0.01",
+        "min_qty": 0.07,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 53636313.36266
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6944587
+    },
+    {
+      "asset": "XAU",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:GOLD",
+        "asset": "XAU",
+        "category": "RWA/xyz",
+        "fee_bps": 9.0,
+        "step": "0.0001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 95327346.69691996
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 92,
+        "asset": "XAU",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.0015,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 52695004.176086
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947236
+    },
+    {
+      "asset": "ZEC",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ZEC",
+        "asset": "ZEC",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 733480014.5150019
+      },
+      "other": {
+        "venue": "aster",
+        "market": "ZECUSDT",
+        "asset": "ZEC",
+        "fee_bps": 4,
+        "step": "0.001",
+        "min_qty": 0.001,
+        "max_qty": 6000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 52550132.15
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6945603
+    },
+    {
+      "asset": "XAU",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:GOLD",
+        "asset": "XAU",
+        "category": "RWA/xyz",
+        "fee_bps": 9.0,
+        "step": "0.0001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 95327346.69691996
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 40,
+        "asset": "XAU",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.002,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 47988425.228052
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947262
+    },
+    {
+      "asset": "US100",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:XYZ100",
+        "asset": "US100",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.0001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 297651863.52169937
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 181,
+        "asset": "US100",
+        "fee_bps": 0,
+        "step": "0.000001",
+        "min_qty": 0.0002,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 47154649.881376
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6946607
+    },
+    {
+      "asset": "XRP",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "XRP",
+        "asset": "XRP",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 120265560.29250006
+      },
+      "other": {
+        "venue": "aster",
+        "market": "XRPUSDT",
+        "asset": "XRP",
+        "fee_bps": 4,
+        "step": "0.1",
+        "min_qty": 0.1,
+        "max_qty": 10000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 44285541.44
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694205
+    },
+    {
+      "asset": "NEAR",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "NEAR",
+        "asset": "NEAR",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 390948455.9556104
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 10,
+        "asset": "NEAR",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 2.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 30294761.735568
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6943054
+    },
+    {
+      "asset": "HYPE",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "HYPE",
+        "asset": "HYPE",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 560406327.2191403
+      },
+      "other": {
+        "venue": "aster",
+        "market": "HYPEUSDT",
+        "asset": "HYPE",
+        "fee_bps": 4,
+        "step": "0.01",
+        "min_qty": 0.01,
+        "max_qty": 200000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 30007918.64
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6944551
+    },
+    {
+      "asset": "LIT",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "LIT",
+        "asset": "LIT",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 46730705.16059995
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 120,
+        "asset": "LIT",
+        "fee_bps": 0,
+        "step": "0.01",
+        "min_qty": 1.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 21116234.130834
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6946013
+    },
+    {
+      "asset": "PUMP",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "PUMP",
+        "asset": "PUMP",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 247032145.5046448
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 45,
+        "asset": "PUMP",
+        "fee_bps": 0,
+        "step": "1",
+        "min_qty": 1500.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 17940524.726152
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6945212
+    },
+    {
+      "asset": "DOGE",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "DOGE",
+        "asset": "DOGE",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 24103340.233213983
+      },
+      "other": {
+        "venue": "aster",
+        "market": "DOGEUSDT",
+        "asset": "DOGE",
+        "fee_bps": 4,
+        "step": "1",
+        "min_qty": 1.0,
+        "max_qty": 50000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 15785755.42
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941617
+    },
+    {
+      "asset": "SAMSUNGUSD",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:SMSN",
+        "asset": "SAMSUNGUSD",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 126871470.64236814
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 162,
+        "asset": "SAMSUNGUSD",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.03,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 15363239.265242
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6948967
+    },
+    {
+      "asset": "NVDA",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:NVDA",
+        "asset": "NVDA",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 108298868.93665005
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 15,
+        "asset": "NVDA",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.04,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 14968802.05052
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947162
+    },
+    {
+      "asset": "WTI",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:CL",
+        "asset": "WTI",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 330156424.60993
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 145,
+        "asset": "WTI",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.06,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 14454319.090609
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6948805
+    },
+    {
+      "asset": "XAG",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:SILVER",
+        "asset": "XAG",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 200582341.4702
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 93,
+        "asset": "XAG",
+        "fee_bps": 0,
+        "step": "0.01",
+        "min_qty": 0.08,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 14174761.952972
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6948676
+    },
+    {
+      "asset": "SNDK",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:SNDK",
+        "asset": "SNDK",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 79708870.34319986
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 139,
+        "asset": "SNDK",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.0035,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 13789993.746827
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6948104
+    },
+    {
+      "asset": "SOL",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "SOL",
+        "asset": "SOL",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 263631505.7340001
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 3,
+        "asset": "SOL",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.1,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 13683449.956116
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941278
+    },
+    {
+      "asset": "XAG",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:SILVER",
+        "asset": "XAG",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 200582341.4702
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 41,
+        "asset": "XAG",
+        "fee_bps": 0,
+        "step": "0.01",
+        "min_qty": 0.15,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 13546768.390592
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694871
+    },
+    {
+      "asset": "US500",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:SP500",
+        "asset": "US500",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 323016615.9552004
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 180,
+        "asset": "US500",
+        "fee_bps": 0,
+        "step": "0.00001",
+        "min_qty": 0.0007,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 12086782.631796
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694957
+    },
+    {
+      "asset": "HYPE",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "HYPE",
+        "asset": "HYPE",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 560406327.2191403
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 2,
+        "asset": "HYPE",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.1,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 11836918.72015
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.69446
+    },
+    {
+      "asset": "SNDK",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:SNDK",
+        "asset": "SNDK",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 79708870.34319986
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 32,
+        "asset": "SNDK",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.01,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 9085050.778613
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6948118
+    },
+    {
+      "asset": "NVDA",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:NVDA",
+        "asset": "NVDA",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 108298868.93665005
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 110,
+        "asset": "NVDA",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.025,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 8886658.82508
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6946743
+    },
+    {
+      "asset": "BRENTOIL",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:BRENTOIL",
+        "asset": "BRENTOIL",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 283641896.40351987
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 159,
+        "asset": "BRENTOIL",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.055,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 8518730.45087
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694948
+    },
+    {
+      "asset": "ENA",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ENA",
+        "asset": "ENA",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 82358395.6952399
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 29,
+        "asset": "ENA",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 35.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 8447688.7569
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6943984
+    },
+    {
+      "asset": "ZEC",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ZEC",
+        "asset": "ZEC",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 733480014.5150019
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 4,
+        "asset": "ZEC",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.015,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 8297690.193233
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694565
+    },
+    {
+      "asset": "AAPL",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:AAPL",
+        "asset": "AAPL",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 21585022.990439996
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 10,
+        "asset": "AAPL",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.02,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 8211192.771997
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947665
+    },
+    {
+      "asset": "GOOGL",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:GOOGL",
+        "asset": "GOOGL",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 18352844.84785998
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 12,
+        "asset": "GOOGL",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.02,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 7618869.081567
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947854
+    },
+    {
+      "asset": "LIT",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "LIT",
+        "asset": "LIT",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 46730705.16059995
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 5,
+        "asset": "LIT",
+        "fee_bps": 0,
+        "step": "0.01",
+        "min_qty": 5.0,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 7302019.173642
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694602
+    },
+    {
+      "asset": "SPCX",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:SPCX",
+        "asset": "SPCX",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 106905016.4885
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 194,
+        "asset": "SPCX",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.035,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 7118560.307348
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.695008
+    },
+    {
+      "asset": "XAU",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:GOLD",
+        "asset": "XAU",
+        "category": "RWA/xyz",
+        "fee_bps": 9.0,
+        "step": "0.0001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 95327346.69691996
+      },
+      "other": {
+        "venue": "aster",
+        "market": "XAUUSDT",
+        "asset": "XAU",
+        "fee_bps": 4,
+        "step": "0.001",
+        "min_qty": 0.001,
+        "max_qty": 10000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 6913428.19
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947203
+    },
+    {
+      "asset": "MU",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:MU",
+        "asset": "MU",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 57620795.97140003
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 31,
+        "asset": "MU",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.01,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 6396908.2368
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694805
+    },
+    {
+      "asset": "WLD",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "WLD",
+        "asset": "WLD",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 40562845.07967598
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 6,
+        "asset": "WLD",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 15.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 6390523.098325
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6942346
+    },
+    {
+      "asset": "SPCX",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:SPCX",
+        "asset": "SPCX",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 106905016.4885
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 18,
+        "asset": "SPCX",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.04,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 6332137.064102
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6950097
+    },
+    {
+      "asset": "BNB",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "BNB",
+        "asset": "BNB",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 6206711.814140008
+      },
+      "other": {
+        "venue": "aster",
+        "market": "BNBUSDT",
+        "asset": "BNB",
+        "fee_bps": 4,
+        "step": "0.01",
+        "min_qty": 0.01,
+        "max_qty": 100000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 7270443.47
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941366
+    },
+    {
+      "asset": "XRP",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "XRP",
+        "asset": "XRP",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 120265560.29250006
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 7,
+        "asset": "XRP",
+        "fee_bps": 0,
+        "step": "1",
+        "min_qty": 4.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 6197320.162098
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6942081
+    },
+    {
+      "asset": "LINK",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "LINK",
+        "asset": "LINK",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 95026867.23449995
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 8,
+        "asset": "LINK",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 0.5,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 6052919.795101
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694201
+    },
+    {
+      "asset": "NEAR",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "NEAR",
+        "asset": "NEAR",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 390948455.9556104
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 7,
+        "asset": "NEAR",
+        "fee_bps": 0,
+        "step": "0.01",
+        "min_qty": 4.0,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 5819641.35797
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6943095
+    },
+    {
+      "asset": "PUMP",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "PUMP",
+        "asset": "PUMP",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 247032145.5046448
+      },
+      "other": {
+        "venue": "aster",
+        "market": "PUMPUSDT",
+        "asset": "PUMP",
+        "fee_bps": 4,
+        "step": "1",
+        "min_qty": 1.0,
+        "max_qty": 700000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 5505368.0
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6945183
+    },
+    {
+      "asset": "LINK",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "LINK",
+        "asset": "LINK",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 95026867.23449995
+      },
+      "other": {
+        "venue": "aster",
+        "market": "LINKUSDT",
+        "asset": "LINK",
+        "fee_bps": 4,
+        "step": "0.01",
+        "min_qty": 0.01,
+        "max_qty": 200000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 5251362.51
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941984
+    },
+    {
+      "asset": "MU",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:MU",
+        "asset": "MU",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 57620795.97140003
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 164,
+        "asset": "MU",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.006,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 4460057.487953
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6948013
+    },
+    {
+      "asset": "UNI",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "UNI",
+        "asset": "UNI",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 42086617.11439998
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 30,
+        "asset": "UNI",
+        "fee_bps": 0,
+        "step": "0.01",
+        "min_qty": 0.8,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 4438017.437158
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6942527
+    },
+    {
+      "asset": "NEAR",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "NEAR",
+        "asset": "NEAR",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 390948455.9556104
+      },
+      "other": {
+        "venue": "aster",
+        "market": "NEARUSDT",
+        "asset": "NEAR",
+        "fee_bps": 4,
+        "step": "1",
+        "min_qty": 1.0,
+        "max_qty": 10000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 4219675.77
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6943038
+    },
+    {
+      "asset": "GRAM",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "GRAM",
+        "asset": "GRAM",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 18209495.387200028
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 12,
+        "asset": "GRAM",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 4.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 3822948.5296589998
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6946373
+    },
+    {
+      "asset": "MSFT",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:MSFT",
+        "asset": "MSFT",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 12628148.059199993
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 14,
+        "asset": "MSFT",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.02,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 3817541.797701
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947732
+    },
+    {
+      "asset": "SUI",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "SUI",
+        "asset": "SUI",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 62507273.55464
+      },
+      "other": {
+        "venue": "aster",
+        "market": "SUIUSDT",
+        "asset": "SUI",
+        "fee_bps": 4,
+        "step": "0.1",
+        "min_qty": 0.1,
+        "max_qty": 10000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 3802654.35
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941748
+    },
+    {
+      "asset": "XAG",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:SILVER",
+        "asset": "XAG",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 200582341.4702
+      },
+      "other": {
+        "venue": "aster",
+        "market": "XAGUSDT",
+        "asset": "XAG",
+        "fee_bps": 4,
+        "step": "0.001",
+        "min_qty": 0.001,
+        "max_qty": 1000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 3776479.27
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6948664
+    },
+    {
+      "asset": "TSLA",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:TSLA",
+        "asset": "TSLA",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 26330062.538129997
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 16,
+        "asset": "TSLA",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.02,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 3767540.121526
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694669
+    },
+    {
+      "asset": "HOOD",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:HOOD",
+        "asset": "HOOD",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 11163796.644000003
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 108,
+        "asset": "HOOD",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.05,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 3622431.269345
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947317
+    },
+    {
+      "asset": "AMD",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:AMD",
+        "asset": "AMD",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 24112631.584930006
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 29,
+        "asset": "AMD",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.03,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 3607215.823279
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947987
+    },
+    {
+      "asset": "SKHYNIXUSD",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:SKHX",
+        "asset": "SKHYNIXUSD",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 137512241.76080227
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 161,
+        "asset": "SKHYNIXUSD",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.004,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 3476607.82243
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6948442
+    },
+    {
+      "asset": "LTC",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "LTC",
+        "asset": "LTC",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 29248422.566590015
+      },
+      "other": {
+        "venue": "aster",
+        "market": "LTCUSDT",
+        "asset": "LTC",
+        "fee_bps": 4,
+        "step": "0.001",
+        "min_qty": 0.001,
+        "max_qty": 20000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 3458292.62
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941485
+    },
+    {
+      "asset": "AAPL",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:AAPL",
+        "asset": "AAPL",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 21585022.990439996
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 113,
+        "asset": "AAPL",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.015,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 3445413.649528
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947649
+    },
+    {
+      "asset": "ASTER",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ASTER",
+        "asset": "ASTER",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 3346694.7157100006
+      },
+      "other": {
+        "venue": "aster",
+        "market": "ASTERUSDT",
+        "asset": "ASTER",
+        "fee_bps": 4,
+        "step": "0.01",
+        "min_qty": 0.01,
+        "max_qty": 10000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 37210061.72
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6945372
+    },
+    {
+      "asset": "META",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:META",
+        "asset": "META",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 94697749.00072002
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 117,
+        "asset": "META",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.008,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 3228978.735025
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947577
+    },
+    {
+      "asset": "XRP",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "XRP",
+        "asset": "XRP",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 120265560.29250006
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 6,
+        "asset": "XRP",
+        "fee_bps": 0,
+        "step": "0.01",
+        "min_qty": 5.0,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 3076885.680498
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6942108
+    },
+    {
+      "asset": "AMZN",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:AMZN",
+        "asset": "AMZN",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 9951375.386769995
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 11,
+        "asset": "AMZN",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.025,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 2859031.213667
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694791
+    },
+    {
+      "asset": "META",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:META",
+        "asset": "META",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 94697749.00072002
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 13,
+        "asset": "META",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.02,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 2752463.965848
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947606
+    },
+    {
+      "asset": "SOXL",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:SOXL",
+        "asset": "SOXL",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 71821925.89440008
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 197,
+        "asset": "SOXL",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.05,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 2666930.250839
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6951082
+    },
+    {
+      "asset": "INTC",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:INTC",
+        "asset": "INTC",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 75182811.68019997
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 137,
+        "asset": "INTC",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.055,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 2647177.866843
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947389
+    },
+    {
+      "asset": "GOOGL",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:GOOGL",
+        "asset": "GOOGL",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 18352844.84785998
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 116,
+        "asset": "GOOGL",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.015,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 2643217.126065
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947825
+    },
+    {
+      "asset": "PONS",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "PONS",
+        "asset": "PONS",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 23184062.12017998
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 231,
+        "asset": "PONS",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 8.5,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 2624006.574094
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694649
+    },
+    {
+      "asset": "TSLA",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:TSLA",
+        "asset": "TSLA",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 26330062.538129997
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 112,
+        "asset": "TSLA",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.015,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 2598552.085525
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6946678
+    },
+    {
+      "asset": "MON",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "MON",
+        "asset": "MON",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 20132963.881115004
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 91,
+        "asset": "MON",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 250.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 2528268.941466
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6945686
+    },
+    {
+      "asset": "CRCL",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:CRCL",
+        "asset": "CRCL",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 26309762.895250008
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 24,
+        "asset": "CRCL",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.1,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 2442777.643769
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6948256
+    },
+    {
+      "asset": "UNI",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "UNI",
+        "asset": "UNI",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 42086617.11439998
+      },
+      "other": {
+        "venue": "aster",
+        "market": "UNIUSDT",
+        "asset": "UNI",
+        "fee_bps": 4,
+        "step": "1",
+        "min_qty": 1.0,
+        "max_qty": 10000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 2412750.84
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6942487
+    },
+    {
+      "asset": "ONDO",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ONDO",
+        "asset": "ONDO",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 71785487.60098004
+      },
+      "other": {
+        "venue": "aster",
+        "market": "ONDOUSDT",
+        "asset": "ONDO",
+        "fee_bps": 4,
+        "step": "0.1",
+        "min_qty": 0.1,
+        "max_qty": 9000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 2315742.28
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.69436
+    },
+    {
+      "asset": "INTC",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:INTC",
+        "asset": "INTC",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 75182811.68019997
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 30,
+        "asset": "INTC",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.05,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 2271942.921773
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947415
+    },
+    {
+      "asset": "ONDO",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ONDO",
+        "asset": "ONDO",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 71785487.60098004
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 38,
+        "asset": "ONDO",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 15.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 2252232.627083
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6943626
+    },
+    {
+      "asset": "TAO",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "TAO",
+        "asset": "TAO",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 39228723.79392998
+      },
+      "other": {
+        "venue": "aster",
+        "market": "TAOUSDT",
+        "asset": "TAO",
+        "fee_bps": 4,
+        "step": "0.0010",
+        "min_qty": 0.001,
+        "max_qty": 20000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 2138217.29
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6943781
+    },
+    {
+      "asset": "COIN",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:COIN",
+        "asset": "COIN",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 9551053.233390009
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 109,
+        "asset": "COIN",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.03,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 2070149.736594
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947508
+    },
+    {
+      "asset": "ARB",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ARB",
+        "asset": "ARB",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 25831214.817251988
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 50,
+        "asset": "ARB",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 35.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 2043267.435438
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941578
+    },
+    {
+      "asset": "VVV",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "VVV",
+        "asset": "VVV",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 19232738.769229982
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 69,
+        "asset": "VVV",
+        "fee_bps": 0,
+        "step": "0.01",
+        "min_qty": 0.2,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1994881.058121
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6944973
+    },
+    {
+      "asset": "AMD",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:AMD",
+        "asset": "AMD",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 24112631.584930006
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 138,
+        "asset": "AMD",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.01,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1987295.340385
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947968
+    },
+    {
+      "asset": "HBAR",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "HBAR",
+        "asset": "HBAR",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 35564108.08929001
+      },
+      "other": {
+        "venue": "aster",
+        "market": "HBARUSDT",
+        "asset": "HBAR",
+        "fee_bps": 4,
+        "step": "1",
+        "min_qty": 1.0,
+        "max_qty": 10000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 1932065.85
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6944022
+    },
+    {
+      "asset": "XPL",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "XPL",
+        "asset": "XPL",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 43479996.58987002
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 71,
+        "asset": "XPL",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 65.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1907456.735354
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694527
+    },
+    {
+      "asset": "PONS",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "PONS",
+        "asset": "PONS",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 23184062.12017998
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 44,
+        "asset": "PONS",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 20.0,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 1900151.304123
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6946514
+    },
+    {
+      "asset": "SUI",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "SUI",
+        "asset": "SUI",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 62507273.55464
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 16,
+        "asset": "SUI",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 7.5,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1805474.837872
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941779
+    },
+    {
+      "asset": "AVAX",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "AVAX",
+        "asset": "AVAX",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 23348972.18389004
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 9,
+        "asset": "AVAX",
+        "fee_bps": 0,
+        "step": "0.01",
+        "min_qty": 0.7,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1759392.6194520001
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941345
+    },
+    {
+      "asset": "SNDK",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:SNDK",
+        "asset": "SNDK",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 79708870.34319986
+      },
+      "other": {
+        "venue": "aster",
+        "market": "SNDKUSDT",
+        "asset": "SNDK",
+        "fee_bps": 4,
+        "step": "0.01",
+        "min_qty": 0.01,
+        "max_qty": 6000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 1748036.82
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6948068
+    },
+    {
+      "asset": "SPCX",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:SPCX",
+        "asset": "SPCX",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 106905016.4885
+      },
+      "other": {
+        "venue": "aster",
+        "market": "SPCXUSDT",
+        "asset": "SPCX",
+        "fee_bps": 4,
+        "step": "0.0100",
+        "min_qty": 0.01,
+        "max_qty": 300000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 1742667.34
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6950052
+    },
+    {
+      "asset": "CRCL",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:CRCL",
+        "asset": "CRCL",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 26309762.895250008
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 121,
+        "asset": "CRCL",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.065,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1737046.434501
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694822
+    },
+    {
+      "asset": "ZRO",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ZRO",
+        "asset": "ZRO",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 12029046.712849997
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 60,
+        "asset": "ZRO",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 5.5,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1690456.574791
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6942706
+    },
+    {
+      "asset": "NBIS",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:NBIS",
+        "asset": "NBIS",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 13427008.933599997
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 189,
+        "asset": "NBIS",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.025,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1658134.968718
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6950424
+    },
+    {
+      "asset": "AAVE",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "AAVE",
+        "asset": "AAVE",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 25415945.354199987
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 27,
+        "asset": "AAVE",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.045,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1653469.952779
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6942263
+    },
+    {
+      "asset": "SOXL",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:SOXL",
+        "asset": "SOXL",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 71821925.89440008
+      },
+      "other": {
+        "venue": "aster",
+        "market": "SOXLUSDT",
+        "asset": "SOXL",
+        "fee_bps": 4,
+        "step": "0.0100",
+        "min_qty": 0.01,
+        "max_qty": 20000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 1643107.38
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6951056
+    },
+    {
+      "asset": "CASHCAT",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "CASHCAT",
+        "asset": "CASHCAT",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 14263067.90874999
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 221,
+        "asset": "CASHCAT",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 25.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1633929.83903
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6946433
+    },
+    {
+      "asset": "CC",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "CC",
+        "asset": "CC",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 2628011.35939
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 101,
+        "asset": "CC",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 55.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1611294.466145
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6945817
+    },
+    {
+      "asset": "DRAM",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:DRAM",
+        "asset": "DRAM",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 49832237.00379994
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 195,
+        "asset": "DRAM",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.1,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1610159.303055
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6949887
+    },
+    {
+      "asset": "MSTR",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:MSTR",
+        "asset": "MSTR",
+        "category": "RWA/xyz",
+        "fee_bps": 9.0,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 13942785.7594
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 122,
+        "asset": "MSTR",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.04,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1582367.90814
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6948164
+    },
+    {
+      "asset": "SOXL",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:SOXL",
+        "asset": "SOXL",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 71821925.89440008
+      },
+      "other": {
+        "venue": "rh_lighter",
+        "market": 35,
+        "asset": "SOXL",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.03,
+        "min_notional": 10.0,
+        "collateral": "USDG",
+        "volume": 1468647.53805
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6951091
+    },
+    {
+      "asset": "XLM",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "XLM",
+        "asset": "XLM",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 16263496.881400004
+      },
+      "other": {
+        "venue": "aster",
+        "market": "XLMUSDT",
+        "asset": "XLM",
+        "fee_bps": 4,
+        "step": "1",
+        "min_qty": 1.0,
+        "max_qty": 10000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 1456265.36
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6944363
+    },
+    {
+      "asset": "WLD",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "WLD",
+        "asset": "WLD",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 40562845.07967598
+      },
+      "other": {
+        "venue": "aster",
+        "market": "WLDUSDT",
+        "asset": "WLD",
+        "fee_bps": 4,
+        "step": "1",
+        "min_qty": 1.0,
+        "max_qty": 6000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 1438084.24
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694231
+    },
+    {
+      "asset": "BNB",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "BNB",
+        "asset": "BNB",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 6206711.814140008
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 25,
+        "asset": "BNB",
+        "fee_bps": 0,
+        "step": "0.01",
+        "min_qty": 0.01,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1405658.3088480001
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941395
+    },
+    {
+      "asset": "AVAX",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "AVAX",
+        "asset": "AVAX",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 23348972.18389004
+      },
+      "other": {
+        "venue": "aster",
+        "market": "AVAXUSDT",
+        "asset": "AVAX",
+        "fee_bps": 4,
+        "step": "1",
+        "min_qty": 1.0,
+        "max_qty": 100000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 1368909.73
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.69413
+    },
+    {
+      "asset": "XMR",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "XMR",
+        "asset": "XMR",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 13735260.129780006
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 77,
+        "asset": "XMR",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.01,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1291634.973358
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6946065
+    },
+    {
+      "asset": "ENA",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ENA",
+        "asset": "ENA",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 82358395.6952399
+      },
+      "other": {
+        "venue": "aster",
+        "market": "ENAUSDT",
+        "asset": "ENA",
+        "fee_bps": 4,
+        "step": "1",
+        "min_qty": 1.0,
+        "max_qty": 20000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 1285493.08
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6943953
+    },
+    {
+      "asset": "MSTR",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:MSTR",
+        "asset": "MSTR",
+        "category": "RWA/xyz",
+        "fee_bps": 9.0,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 13942785.7594
+      },
+      "other": {
+        "venue": "aster",
+        "market": "MSTRUSDT",
+        "asset": "MSTR",
+        "fee_bps": 4,
+        "step": "0.01",
+        "min_qty": 0.01,
+        "max_qty": 30000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 1270017.24
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6948147
+    },
+    {
+      "asset": "PAXG",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "PAXG",
+        "asset": "PAXG",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 4629347.0339
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 48,
+        "asset": "PAXG",
+        "fee_bps": 0,
+        "step": "0.0001",
+        "min_qty": 0.0015,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1268031.9239359999
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6945097
+    },
+    {
+      "asset": "FARTCOIN",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "FARTCOIN",
+        "asset": "FARTCOIN",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 15538567.188286997
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 21,
+        "asset": "FARTCOIN",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 35.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1245905.985635
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6944735
+    },
+    {
+      "asset": "LTC",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "LTC",
+        "asset": "LTC",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 29248422.566590015
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 35,
+        "asset": "LTC",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.1,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1220174.601733
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941526
+    },
+    {
+      "asset": "ETHFI",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ETHFI",
+        "asset": "ETHFI",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 4101642.2667899984
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 64,
+        "asset": "ETHFI",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 9.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1192573.561973
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694392
+    },
+    {
+      "asset": "TAO",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "TAO",
+        "asset": "TAO",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 39228723.79392998
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 13,
+        "asset": "TAO",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.025,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1175069.218218
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6943793
+    },
+    {
+      "asset": "AMZN",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:AMZN",
+        "asset": "AMZN",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.001",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 9951375.386769995
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 114,
+        "asset": "AMZN",
+        "fee_bps": 0,
+        "step": "0.001",
+        "min_qty": 0.02,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1123838.382466
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6947892
+    },
+    {
+      "asset": "ARB",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "ARB",
+        "asset": "ARB",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 25831214.817251988
+      },
+      "other": {
+        "venue": "aster",
+        "market": "ARBUSDT",
+        "asset": "ARB",
+        "fee_bps": 4,
+        "step": "0.1",
+        "min_qty": 0.1,
+        "max_qty": 1000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 1078514.77
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6941555
+    },
+    {
+      "asset": "SHEIN",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:SHEIN",
+        "asset": "SHEIN",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1076141.7138999999
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 230,
+        "asset": "SHEIN",
+        "fee_bps": 0,
+        "step": "0.01",
+        "min_qty": 1.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1334449.558304
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6951303
+    },
+    {
+      "asset": "AERO",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "AERO",
+        "asset": "AERO",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 11571256.301090006
+      },
+      "other": {
+        "venue": "lighter",
+        "market": 65,
+        "asset": "AERO",
+        "fee_bps": 0,
+        "step": "0.1",
+        "min_qty": 9.5,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1059207.631783
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6945944
+    },
+    {
+      "asset": "USELESS",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "USELESS",
+        "asset": "USELESS",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 7019262.240629998
+      },
+      "other": {
+        "venue": "aster",
+        "market": "USELESSUSDT",
+        "asset": "USELESS",
+        "fee_bps": 4,
+        "step": "1",
+        "min_qty": 1.0,
+        "max_qty": 20000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 1055776.65
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6946533
+    },
+    {
+      "asset": "PONS",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "PONS",
+        "asset": "PONS",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "1",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 23184062.12017998
+      },
+      "other": {
+        "venue": "aster",
+        "market": "PONSUSDT",
+        "asset": "PONS",
+        "fee_bps": 4,
+        "step": "1",
+        "min_qty": 1.0,
+        "max_qty": 150000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 1039860.32
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694647
+    },
+    {
+      "asset": "AAVE",
+      "category": "crypto",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "AAVE",
+        "asset": "AAVE",
+        "category": "crypto",
+        "fee_bps": 4.5,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 25415945.354199987
+      },
+      "other": {
+        "venue": "aster",
+        "market": "AAVEUSDT",
+        "asset": "AAVE",
+        "fee_bps": 4,
+        "step": "0.1",
+        "min_qty": 0.1,
+        "max_qty": 1000000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 1016834.72
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.694224
+    },
+    {
+      "asset": "QNT",
+      "category": "RWA/xyz",
+      "hl": {
+        "venue": "hyperliquid",
+        "market": "xyz:QNT",
+        "asset": "QNT",
+        "category": "RWA/xyz",
+        "fee_bps": 0.9,
+        "step": "0.01",
+        "min_qty": 0.0,
+        "min_notional": 10.0,
+        "collateral": "USDC",
+        "volume": 1008289.3328399995
+      },
+      "other": {
+        "venue": "aster",
+        "market": "QNTUSDT",
+        "asset": "QNT",
+        "fee_bps": 4,
+        "step": "0.1",
+        "min_qty": 0.1,
+        "max_qty": 10000.0,
+        "min_notional": 5.0,
+        "collateral": "USDT",
+        "volume": 8825125.8
+      },
+      "metadata_utc": "2026-09-29T11:14:10.194885+00:00",
+      "metadata_timestamp": 1790680456.6950223
+    }
+  ],
+  "failed_venues": []
+}

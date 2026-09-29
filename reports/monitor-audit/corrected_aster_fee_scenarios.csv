@@ -1,0 +1,4 @@
+lighter_tier,positive_episodes,positive_samples,single_sample_episodes,median_observed_span_seconds,opening_edge_sum_usd,budgeted_edge_sum_usd,rh_positive_episodes,core_positive_episodes,aster_positive_episodes
+standard,506,2952,233,59.97577714920044,388.0134989234024,48.96795084630236,244,188,74
+plus,428,2084,229,0.0,348.9319450925939,41.05699263418388,214,140,74
+premium,109,285,63,0.0,107.63553441222145,14.542542420941448,0,35,74

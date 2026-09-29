@@ -32,6 +32,19 @@ ALIASES = {"GOLD": "XAU", "SILVER": "XAG", "PLATINUM": "XPT",
            "PALLADIUM": "XPD", "CL": "WTI", "SP500": "US500",
            "XYZ100": "US100", "JPY": "USDJPY", "EUR": "EURUSD",
            "GBP": "GBPUSD", "SKHX": "SKHYNIXUSD", "SMSN": "SAMSUNGUSD"}
+# Published September 29, 2026. Group B overrides RWA classification where
+# documentation lists a symbol in both; retain the higher fee conservatively.
+ASTER_GROUP_B = set("1000NEXUSDT AEONUSDT ASTEROIDUSDT AVLUSDT BAYUSDT BASECATUSDT BLENDUSDT B3USDT CARDSUSDT CATEUSDT DELTAUSDT FONEUSDT MEMEUSDT MARSCOINUSDT NESUSDT OUSDT OKBUSDT PENGUINUSDT PUNDIAIUSDT RTXUSDT SKHYNIXUSDT".split())
+
+
+def aster_fee(symbol, is_rwa, general=4.0, rwa=1.25, group_b=10.0):
+    if symbol in ASTER_GROUP_B:
+        return group_b, "crypto_group_b_or_conflicting_classification"
+    if is_rwa:
+        return rwa, "rwa"
+    return general, "crypto_general"
+
+
 LOG = logging.getLogger("monitor")
 
 
@@ -385,8 +398,9 @@ async def discover(client, args):
                         continue
                     filters = {f["filterType"]: f for f in a["filters"]}
                     lot = filters["LOT_SIZE"]  # Price-taking limit/IOC quantities.
+                    fee, fee_class = aster_fee(a["symbol"], a.get("symbolType")==1, args.aster_fee_bps, args.aster_rwa_fee_bps, args.aster_group_b_fee_bps)
                     others.append({"venue": venue, "market": a["symbol"], "asset": a["baseAsset"],
-                                   "fee_bps": args.aster_fee_bps, "step": lot["stepSize"],
+                                   "fee_bps": fee, "fee_class": fee_class, "step": lot["stepSize"],
                                    "min_qty": number(lot["minQty"]), "max_qty": number(lot["maxQty"]),
                                    "min_notional": number(filters.get("MIN_NOTIONAL", {}).get("notional", 0)),
                                    "collateral": "USDT", "volume": volume})
@@ -428,7 +442,7 @@ def render(snapshot):
             lines += ["", "No positive observations after the configured cost budget."]
         lines += [""]
     lines += ["One best size/moment per directed pair. Peaks are historical observations, not current quotes.",
-              f"$1,000 paper episodes: {snapshot['totals']['paper_1000_episodes']} · after opening fees: ${snapshot['totals']['paper_1000_net_entry_sum_usd']:.2f} · after all configured reserves: ${snapshot['totals']['paper_1000_budgeted_sum_usd']:.2f}",
+              f"$1,000 signal episodes: {snapshot['totals']['paper_1000_episodes']} · entry-edge sum after opening fees: ${snapshot['totals']['paper_1000_net_entry_sum_usd']:.2f} · entry-edge sum after configured reserves: ${snapshot['totals']['paper_1000_budgeted_sum_usd']:.2f}",
               "Window tallies, all-time counters, request errors and freshness diagnostics are in leaderboard.json.", ""]
     return "\n".join(lines)
 
@@ -443,8 +457,8 @@ def tui_lines(snapshot, output_dir, columns, rows):
         age = max(0, time.time() - snapshot.get("updated_timestamp", time.time()))
         records = snapshot["all_time_top10"]
         lines = [f"RHHYPE | {snapshot['status'].upper()} | {snapshot['pairs']} pairs | update {age:.0f}s | Ctrl-C exits",
-                 f"$1k paper episodes {totals['paper_1000_episodes']:,} | after fees ${totals['paper_1000_net_entry_sum_usd']:,.2f} | budget ${totals['paper_1000_budgeted_sum_usd']:,.2f}",
-                 "Historical entry-edge estimates, NOT realized profit. One count per episode."]
+                 f"$1k signals {totals['paper_1000_episodes']:,} | entry-edge sum ${totals['paper_1000_net_entry_sum_usd']:,.2f} | reserved ${totals['paper_1000_budgeted_sum_usd']:,.2f}",
+                 "Closed-trade profit: NOT SIMULATED. Entry-edge sums are not trading P&L."]
         if width >= 75:
             lines.append(f"{'#':>2} {'Asset':<8} {'Buy -> short':<24} {'Size':>7} {'Net $*':>8} {'bp*':>7} {'Peak UTC':>12}")
         elif width >= 48:
@@ -525,7 +539,7 @@ async def run(args, store):
             "rank_by": args.rank_by, "pairs": len(state["pairs"]), "cycles": state["cycles"],
             "metadata_age_seconds": time.time() - state["last_metadata"] if state["last_metadata"] else None,
             "failed_discovery_venues": state["failed_discovery_venues"], "process_stats": dict(stats),
-            "cost_settings": {k: getattr(args, k) for k in ("lighter_tier", "hl_fee_bps", "aster_fee_bps", "reserve_exit_fees", "extra_cost_bps", "fixed_cost_usd")}}
+            "cost_settings": {k: getattr(args, k) for k in ("lighter_tier", "hl_fee_bps", "aster_fee_bps", "aster_rwa_fee_bps", "aster_group_b_fee_bps", "reserve_exit_fees", "extra_cost_bps", "fixed_cost_usd")}}
         atomic_json(args.out / "leaderboard.json", snap)
         tmp = args.out / "leaderboard.md.tmp"
         tmp.write_text(render(snap))
@@ -633,7 +647,9 @@ def arguments(argv=None):
     p.add_argument("--rank-by", choices=("usd", "bps"), default="usd")
     p.add_argument("--lighter-tier", choices=("standard", "plus", "premium"), default="standard")
     p.add_argument("--hl-fee-bps", type=float, default=4.5, help="Native taker fee; live HIP-3 multiplier applied")
-    p.add_argument("--aster-fee-bps", type=float, default=4)
+    p.add_argument("--aster-fee-bps", type=float, default=4, help="Aster general crypto taker fee")
+    p.add_argument("--aster-rwa-fee-bps", type=float, default=1.25)
+    p.add_argument("--aster-group-b-fee-bps", type=float, default=10)
     p.add_argument("--reserve-exit-fees", action=argparse.BooleanOptionalAction, default=True)
     p.add_argument("--extra-cost-bps", type=float, default=5, help="Additional conversion/impact/financing buffer, charged once")
     p.add_argument("--fixed-cost-usd", type=float, default=0)
@@ -654,7 +670,7 @@ def arguments(argv=None):
     for name in ("window_hours", "interval", "report_seconds", "refresh_seconds", "max_metadata_age", "max_skew", "max_age", "max_divergence_bps", "episode_gap"):
         if not math.isfinite(getattr(args, name)) or getattr(args, name) <= 0:
             p.error(f"--{name.replace('_', '-')} must be finite and positive")
-    for name in ("min_volume", "hl_fee_bps", "aster_fee_bps", "extra_cost_bps", "fixed_cost_usd", "duration"):
+    for name in ("min_volume", "hl_fee_bps", "aster_fee_bps", "aster_rwa_fee_bps", "aster_group_b_fee_bps", "extra_cost_bps", "fixed_cost_usd", "duration"):
         if not math.isfinite(getattr(args, name)) or getattr(args, name) < 0:
             p.error(f"--{name.replace('_', '-')} must be finite and nonnegative")
     if args.max_rows < 10 or not 1 <= args.workers <= 8 or any(not math.isfinite(n) or n < 10 for n in args.notionals):
@@ -691,8 +707,8 @@ def main():
         if os.isatty(2) and not args.tui:
             LOG.addHandler(logging.StreamHandler())
         LOG.setLevel(logging.DEBUG if args.verbose else logging.INFO)
-        config = {k: getattr(args, k) for k in ("venues", "assets", "notionals", "min_volume", "rank_by", "lighter_tier", "hl_fee_bps", "aster_fee_bps", "reserve_exit_fees", "extra_cost_bps", "fixed_cost_usd", "max_skew", "max_age", "max_divergence_bps", "episode_gap")}
-        config["model_version"] = 2
+        config = {k: getattr(args, k) for k in ("venues", "assets", "notionals", "min_volume", "rank_by", "lighter_tier", "hl_fee_bps", "aster_fee_bps", "aster_rwa_fee_bps", "aster_group_b_fee_bps", "reserve_exit_fees", "extra_cost_bps", "fixed_cost_usd", "max_skew", "max_age", "max_divergence_bps", "episode_gap")}
+        config["model_version"] = 3
         store = Store(args.out / "window.sqlite3", config, args.window_hours * 3600, args.max_rows, args.rank_by, args.episode_gap)
         atomic_json(args.out / "config.json", config | {"window_hours": args.window_hours, "max_rows": args.max_rows})
         try:

@@ -56,3 +56,14 @@ User scope: thoroughly investigate arbitrage between Robinhood Chain and Hyperli
 - Seventeen tests pass, including real pseudo-terminal resize sequences (120×30 → 35×10 → 80×24), actual terminal Ctrl-C for viewer and collector, and collector SIGTERM. All exit code 0; collector flushes state and releases its lock.
 - Final finite live validation: 123 matched comparisons across 66 assets, 112 paired samples / 224 directional $1,000 observations, one quarantined price mismatch, zero transport/API errors, and zero observations above the allocation ceiling. SQLite integrity check passes. Example paper total was $8.22 after opening fees / $2.32 after configured reserves across ten episodes; these are not realized trading profits. See `reports/monitor-validation.json`.
 - All validation collectors are stopped. The user can launch the default monitor with a fresh `data/monitor` state directory.
+
+## 12:00 UTC — overnight audit
+
+- User reported roughly $300 paper profit and asked for signal duration/latency and fee-tier interpretation. Froze a consistent read-only snapshot without stopping the active monitor: 84,240 observations over 6.78 hours. The 432 episode counters reconcile exactly: $330.85 opening-edge sum, less $70.23 closing-fee reserve and $215.92 other reserve = $44.70. The code counts signals, not position/exit P&L.
+- 421 episode triggers were repeated crossings back above zero. Median after-reserve episode value is $0.0593; 291 values are below $0.10. Renamed the TUI display to entry-edge sum and explicitly state closed-trade profit is not simulated.
+- 189 episodes were single samples. RH cadence ~60s, Core ~83s. NVDA RH had long observed spans up to 343min, but samples cannot establish continuous executable lifetime. Added per-route persistence, censored endpoint brackets, and fee-tier-specific counts.
+- Subsequent opposite-direction VWAP diagnostic: 395 five-minute same-hour scenarios, 8 positive after four fees, median −$0.521/$1k; only 1 survives the additional 5bp buffer. Nearby-size VWAP scaling is explicitly approximate, and scenario sums overlap rather than form a portfolio.
+- Baseline used Lighter Standard 0bp versus HL Tier0 and Aster flat4bp. Premium Lighter repricing leaves 35 eligible episodes, all Core; none RH. Found Aster RWA fee is1.25bp, GroupB10bp, not universal4bp. Corrected monitor fee model3 with new-output-directory guard. Existing live process remains untouched.
+- Added reproducible audit, charts, compact public compressed evidence, economic and persistence tests. Full findings: `reports/monitor-audit/REPORT.md`.
+
+- Validation completed: 21 tests pass, including fee classes, persistence censoring, fee-scenario algebra, and prior terminal tests. The frozen public evidence hash verifies; the audit report links and figure were checked.

@@ -4,6 +4,8 @@
 
 The main distinction is between Robinhood Uniswap stock tokens, Robinhood's separate Lighter spot/perp markets, and Lighter Core. Fees and liquidity differ. Positive opening spreads on perpetuals are basis exposures; the report tests subsequent unwinds and historical funding before drawing conclusions. No trades, wallet access or credentials were used.
 
+**Follow-up:** [Overnight monitor audit](reports/monitor-audit/REPORT.md)—the dollar tally, signal duration, fee tiers, and exit-cost findings.
+
 ## Continuous monitor with simple TUI
 
 ```bash
