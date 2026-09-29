@@ -94,15 +94,21 @@ class BoundedGzip:
             self.file.close()
 
 
-def select_markets(path, include_rh=True):
-    """Freeze BTC/ETH market IDs from the monitor's public discovery plan."""
+def select_markets(path, include_rh=True, assets=None):
+    """Freeze selected asset IDs from the monitor's public discovery plan.
+
+    The default BTC/ETH choice preserves the original capture contract.
+    """
+    required = tuple(assets) if assets is not None else ("BTC", "ETH")
+    if not required or len(set(required)) != len(required) or any(not isinstance(x, str) or not x for x in required):
+        raise ValueError("assets must be a nonempty list of unique names")
     source = Path(path).read_bytes()
     plan = json.loads(source)
     pairs = plan["pairs"]
     chosen = {venue: {} for venue in URLS if include_rh or venue != "rh_lighter"}
     for row in pairs:
         asset = row.get("asset")
-        if asset not in ("BTC", "ETH"):
+        if asset not in required:
             continue
         hl, other = row.get("hl", {}), row.get("other", {})
         if hl.get("venue") != "hyperliquid" or hl.get("asset") != asset:
@@ -112,8 +118,8 @@ def select_markets(path, include_rh=True):
             continue
         chosen["hyperliquid"][asset] = str(hl["market"])
         chosen[venue][asset] = str(other["market"])
-    if any(set(markets) != {"BTC", "ETH"} for markets in chosen.values()):
-        raise ValueError("BTC and ETH are required for each selected venue in markets.json")
+    if any(set(markets) != set(required) for markets in chosen.values()):
+        raise ValueError(f"assets {required} are required for each selected venue in markets.json")
     return chosen, hashlib.sha256(source).hexdigest()
 
 
@@ -485,13 +491,15 @@ def cli(argv=None):
     ap.add_argument("--seconds", type=int, default=HARD_SECONDS, help="Duration, 1–600 seconds")
     ap.add_argument("--max-bytes", type=int, default=HARD_BYTES, help="Total compressed file cap, at most 25,000,000")
     ap.add_argument("--exclude-rh", action="store_true")
+    ap.add_argument("--assets", nargs="+", metavar="ASSET",
+                    help="Public asset symbols to capture; default BTC ETH")
     ap.add_argument("--dry-run", action="store_true", help="Validate configuration without opening sockets or writing files")
     args = ap.parse_args(argv)
     if not 1 <= args.seconds <= HARD_SECONDS:
         ap.error("--seconds must be 1..600")
     if not MANIFEST_RESERVE + 1024 <= args.max_bytes <= HARD_BYTES:
         ap.error("--max-bytes must be 66,560..25,000,000")
-    selected, plan_hash = select_markets(args.markets, not args.exclude_rh)
+    selected, plan_hash = select_markets(args.markets, not args.exclude_rh, args.assets)
     if args.dry_run:
         print(json.dumps({"read_only": True, "selected_markets": selected,
                           "market_plan_sha256": plan_hash, "seconds": args.seconds,

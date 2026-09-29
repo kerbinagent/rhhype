@@ -1,0 +1,60 @@
+{
+  "fee_formula_source": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees",
+  "lighter_standard_sources": [
+    "https://apidocs.lighter.xyz/docs/account-types",
+    "https://apidocs.rh.lighter.xyz/docs/account-types"
+  ],
+  "markets": {
+    "NVDA": {
+      "baseMakerBps": 1.5,
+      "baseTakerBps": 4.5,
+      "coin": "xyz:NVDA",
+      "collateralToken": 0,
+      "deployerFeeScale": "1.0",
+      "growthMode": "enabled",
+      "isAlignedQuoteToken": false,
+      "lighterStandardMakerBps": 0,
+      "lighterStandardTakerBps": 0,
+      "sourceAsset": {
+        "deployerFeeScale": "1.0",
+        "growthMode": "enabled",
+        "lastFeeScaleChangeTime": "2025-11-23T17:37:10.033211662",
+        "marginTableId": 20,
+        "maxLeverage": 20,
+        "name": "xyz:NVDA",
+        "szDecimals": 3
+      },
+      "szDecimals": 3
+    },
+    "XAG": {
+      "baseMakerBps": 1.5,
+      "baseTakerBps": 4.5,
+      "coin": "xyz:SILVER",
+      "collateralToken": 0,
+      "deployerFeeScale": "1.0",
+      "growthMode": "enabled",
+      "isAlignedQuoteToken": false,
+      "lighterStandardMakerBps": 0,
+      "lighterStandardTakerBps": 0,
+      "sourceAsset": {
+        "deployerFeeScale": "1.0",
+        "growthMode": "enabled",
+        "lastFeeScaleChangeTime": "2025-12-27T14:46:13.933247634",
+        "marginTableId": 25,
+        "maxLeverage": 25,
+        "name": "xyz:SILVER",
+        "szDecimals": 2
+      },
+      "szDecimals": 2
+    }
+  },
+  "notes": "Public tier-0 formula only; no authenticated user fee rate. HIP-3 unaligned USDC collateral token 0; aligned discounts excluded.",
+  "request": {
+    "dex": "xyz",
+    "type": "metaAndAssetCtxs"
+  },
+  "response_file": "reports/maker-equity-v2/xyz-meta-response.json",
+  "response_sha256": "0b70571513dd2a14695423fddb5a3f95c59e9dcc78d7f07924f4c3b41153e9f1",
+  "retrieved_utc": "2026-09-29T20:19:31.209811+00:00",
+  "source_url": "https://api.hyperliquid.xyz/info"
+}

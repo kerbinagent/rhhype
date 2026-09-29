@@ -1,0 +1,20 @@
+{
+  "frozen_at": "2026-09-29T20:20:09.804616+00:00",
+  "seconds": 420,
+  "max_bytes": 25000000,
+  "assets": [
+    "NVDA",
+    "XAG"
+  ],
+  "files": {
+    "research/maker-equity-plan.md": "626e98811b1de877d8fd2090d97e4f9396ba9023d1193467389d13c0ff8eb339",
+    "scripts/analyze_maker_equity.py": "85d4de8cfd523b4a4497e3e2f6411b05f3737f2133d4c167ddce708af363843f",
+    "scripts/maker_capture.py": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9",
+    "scripts/analyze_maker_capture.py": "d87ce8f116e039976b7afac20ede5704d14b3d49eb626473d214a7d47811b359",
+    "scripts/analyze_maker_roundtrip.py": "d7d23b255fcffc294069a77486cc944a9a64a32d6755cc515a960d1ae03a9c93",
+    "reports/maker-equity-v2/fee-inputs.json": "9c095080b3da1a4de39e0fb2e66a50b6b734480e7f6ce425c8811c9311bdb3db",
+    "reports/maker-equity-v2/market-plan.json": "8764b8c656ab1ebf6772eedfb22ab541eef28b81c9fa116056fea67366e5c93f",
+    "reports/maker-equity-v2/unit-provenance.json": "dd2fd61f18e7ae6558ec6dd4f7fa0e618e71da3eaa8610635a69971879470094",
+    "reports/maker-equity-v2/xyz-meta-response.json": "0b70571513dd2a14695423fddb5a3f95c59e9dcc78d7f07924f4c3b41153e9f1"
+  }
+}

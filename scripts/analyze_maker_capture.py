@@ -86,11 +86,11 @@ def quote_from_record(row, symbol_by_market):
             "bid": bp, "bid_size": bs, "ask": ap, "ask_size": ass}
 
 
-def trade_from_payload(venue, symbol, trade, receipt_ns):
+def trade_from_payload(venue, symbol, trade, receipt_ns, expected_coin=None):
     if not isinstance(trade, dict) or trade.get("type", "trade") != "trade":
         return None
     if venue == "hyperliquid":
-        if trade.get("side") not in ("B", "A") or trade.get("coin") != symbol:
+        if trade.get("side") not in ("B", "A") or trade.get("coin") != (expected_coin or symbol):
             return None
         buy_aggressor = trade["side"] == "B"
         if not isinstance(trade.get("tid"), int) or not isinstance(trade.get("hash"), str) or not trade["hash"]:
@@ -185,7 +185,8 @@ def archive_load(directory):
                 continue
             first_trade_update.setdefault((venue, symbol), receipt)
             for raw in raw_trades:
-                t = trade_from_payload(venue, symbol, raw, receipt)
+                t = trade_from_payload(venue, symbol, raw, receipt,
+                                       expected_coin=market if venue == "hyperliquid" else None)
                 if t is None:
                     bad_trade_fields[(venue, symbol)] += 1
                     continue
