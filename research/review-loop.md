@@ -528,3 +528,33 @@ features, four-fee economic gate, confirmed source updates, original quantity,
 post-delay entry, and complete exit within10s. One-leg directional speculation
 was proposed but not adopted for the arbitrage mandate. Code and tests are
 being prepared, no production policy replaced and no pilot launched yet.
+
+## Review 12: 2026-09-29 20:06:33 UTC, actively reviewed on schedule
+
+| Standard-fee policy | Closes | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 188 | -299.260 | 179 | 9 |
+| Cooldown | 43 | -117.376 | 37 | 6 |
+| Historical median | 15 | -22.819 | 0 | 15 |
+| Conservative | 1 | -1.331 | 0 | 1 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+Complete retained coverage, zero wins. Baseline paired loss -$247.805 and
+failed-hedge loss -$51.456; cooldown paired -$94.456 and failed -$22.920.
+Median-rule attempts all failed to form a paired entry in this window; an
+independent read-only fill/venue/timing audit was assigned rather than attributing
+this to Python speed or relaxing a gate without evidence. Baseline entry delay
+median 1.285s / p95 2.002s; exit-request-to-flat median 1.256s / p95 1.859s,
+among the 179 completed paired paths. Missing failed-hedge timing is explicit.
+
+CPU 60.05% of one core, event-loop p95 lag 12.38ms, RSS 209.29MiB, 895 books/s.
+Confirmation lifecycle 70 arms, no entry/pending/residual: 46 skew, 10 forecast,
+six budget/depth, six economic, two invalid-quote cancellations. This review
+crosses 20:00 UTC / 4pm ET; session timing is a possible explanatory feature,
+not a demonstrated cause of the increased failed hedges.
+
+The frozen impulse pilot began 20:00:36 UTC from commit 473e0c3 and runs until
+approximately 20:20:37. Main portfolio policies are unchanged. Next scheduled
+review **20:26:33 UTC / 4:26 p.m. ET**; root remains active for experiments and
+the next review. A lower-fee NVDA/XAG maker quote model is being implemented
+for review, with explicit Lighter Standard processing delays and no launch yet.
