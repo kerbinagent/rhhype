@@ -883,7 +883,8 @@ class PaperEngine:
         for strategy,ledger in self.ledgers.items():
             current=[p for p in self.positions.values() if p['strategy']==strategy]
             marks=[self.liquidation(p,now) for p in current if p['status']!='AWAITING_FUNDING']
-            strategies[strategy]={**ledger,'capital_usd':ledger['initial_capital'],
+            strategies[strategy]={**ledger,'wallets':dict(ledger['wallets']),
+                'capital_usd':ledger['initial_capital'],
                 'open_positions':sum(any(leg['remaining']>0 for leg in p['legs']) for p in current),
                 'pending_entries':sum(p['status']=='ENTRY_PENDING' for p in current),
                 'pending_exits':sum(p['status']=='EXITING' for p in current),
@@ -904,7 +905,7 @@ class PaperEngine:
                         'exit_in_seconds':max(0,p['exit_due']-now) if p['status']=='OPEN' else None,
                         'exit_reason':p.get('exit_reason'),
                         'unhedged':abs(p['legs'][0]['remaining']-p['legs'][1]['remaining'])>1e-9,
-                        'funding':p.get('funding')})
+                        'funding':copy.deepcopy(p.get('funding'))})
         spans=[max(0,e['last']-e['first']) for e in self.episode_history]
         brackets={'<0.1s':0,'0.1-0.5s':0,'0.5-1s':0,'1-5s':0,'>=5s':0}
         for span in spans:
@@ -922,7 +923,7 @@ class PaperEngine:
                 'shadow_started_at':self.shadow_started_at,
                 'shadow_strategies':{k:v for k,v in strategies.items() if k in SHADOW_POLICIES},
                 'entry_policies':self.selector.snapshot(now) if self.selector else {},
-                'top_signals':sorted(self.top_signals.values(),key=lambda s:s['net_edge_usd'],reverse=True)[:10],
+                'top_signals':copy.deepcopy(sorted(self.top_signals.values(),key=lambda s:s['net_edge_usd'],reverse=True)[:10]),
                 'latency':{delay:dict(v) for delay,v in self.probe_stats.items()},
                 'latency_by_strategy':by_strategy,
                 'episode_summary':{'finished':len(self.episode_history),
@@ -933,8 +934,8 @@ class PaperEngine:
                                    'observed_positive_span_max_seconds':max(spans) if spans else None,
                                    'observed_positive_span_brackets':brackets,
                                    'span_interpretation':'sampled lower bound; censored upper bound unknown'},
-                'active_episodes':list(self.episodes.values())[:300],
-                'recent_episodes':list(self.episode_history)[-20:]}
+                'active_episodes':copy.deepcopy(list(self.episodes.values())[:300]),
+                'recent_episodes':copy.deepcopy(list(self.episode_history)[-20:])}
 
     def export_state(self):
         return {'version':1,'config':asdict(self.config),'sequence':self.sequence,'ledgers':self.ledgers,
