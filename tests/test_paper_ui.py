@@ -109,6 +109,40 @@ class LayoutTests(unittest.TestCase):
         self.assertLessEqual(len(lines),23)
         self.assertTrue(all(len(line)<=79 for line in lines))
 
+    def test_flat_funding_wait_is_counted_separately_from_active_exposure(self):
+        data = snapshot_with_shadows()
+        flat = [{"id": f"flat-{i}", "asset": "XAG", "strategy": "premium",
+                 "status": "AWAITING_FUNDING", "has_exposure": False,
+                 "age_seconds": 8900+i, "unhedged": False} for i in range(2)]
+        exiting = {"id": "active-exit", "asset": "META", "strategy": "standard",
+                   "status": "EXITING", "has_exposure": True, "unhedged": True,
+                   "age_seconds": 14, "liquidation_pnl": -1.2}
+        opened = {"id": "active-open", "asset": "BTC", "strategy": "plus",
+                  "status": "OPEN", "has_exposure": True, "unhedged": False,
+                  "age_seconds": 9, "exit_in_seconds": 4}
+        data["positions"] = flat + [opened, exiting]
+        data["pending_settlements"] = flat
+        lines = tui_lines(data, 80, 24)
+        joined = "\n".join(lines)
+        self.assertIn("Positions: 2 active | Closed, funding unresolved: 2", joined)
+        self.assertIn("META/Std EXITING 14s", joined)
+        self.assertNotIn("8900s", joined)
+        self.assertIn("ASSET9", joined)
+        self.assertLessEqual(len(lines), 23)
+        self.assertTrue(all(len(line) <= 79 for line in lines))
+
+        # Older snapshots have no separate settlement list or exposure flag.
+        legacy = snapshot()
+        legacy["positions"] = [{"asset": "XAG", "strategy": "premium",
+                                "status": "AWAITING_FUNDING", "age_seconds": 8900},
+                               {"asset": "META", "strategy": "standard",
+                                "status": "AWAITING_FUNDING", "unhedged": True,
+                                "age_seconds": 12}]
+        legacy_lines = "\n".join(tui_lines(legacy, 80, 24))
+        self.assertIn("Positions: 1 active | Closed, funding unresolved: 1", legacy_lines)
+        self.assertIn("META/Std FUNDING 12s", legacy_lines)
+        self.assertNotIn("8900s", legacy_lines)
+
     def test_shadow_rows_resize_and_bad_metadata(self):
         data = snapshot_with_shadows()
         data["shadow_started_at"] = 1e300

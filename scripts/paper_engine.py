@@ -900,8 +900,15 @@ class PaperEngine:
                 'closed_wins':ledger['closed_wins_exact']+ledger['closed_wins_estimated'],
                 'closed_losses':ledger['closed_losses_exact']+ledger['closed_losses_estimated']}
         for p in self.positions.values():
+            opened=p.get('opened_at');closed=p.get('closed_at')
             pos.append({'id':p['id'],'asset':p['asset'],'strategy':p['strategy'],'status':p['status'],
                         'age_seconds':now-p['created_at'],'liquidation_pnl':self.liquidation(p,now),
+                        'has_exposure':any(leg['remaining']>0 for leg in p['legs']),
+                        'closed_at':closed,
+                        'holding_seconds':max(0,(closed if closed is not None else now)-opened)
+                            if opened is not None else None,
+                        'funding_wait_seconds':max(0,now-closed)
+                            if p['status']=='AWAITING_FUNDING' and closed is not None else None,
                         'exit_in_seconds':max(0,p['exit_due']-now) if p['status']=='OPEN' else None,
                         'exit_reason':p.get('exit_reason'),
                         'unhedged':abs(p['legs'][0]['remaining']-p['legs'][1]['remaining'])>1e-9,
@@ -919,7 +926,13 @@ class PaperEngine:
                 delay,metric=name.split(':',1)
                 per_delay[delay][metric]=value
             by_strategy[strategy]=dict(per_delay)
-        return {'strategies':strategies,'positions':pos,'stats':dict(self.stats),
+        # Flat trades with unresolved accounting must not occupy the live
+        # position display. Retain them explicitly, without settling unknown
+        # cash flows or changing venue capital reservations.
+        unsettled=[p for p in pos if p['status']=='AWAITING_FUNDING' and not p['has_exposure']]
+        active=[p for p in pos if p['status']!='AWAITING_FUNDING' or p['has_exposure']]
+        return {'strategies':strategies,'positions':active,
+                'pending_settlements':unsettled,'stats':dict(self.stats),
                 'shadow_started_at':self.shadow_started_at,
                 'shadow_strategies':{k:v for k,v in strategies.items() if k in SHADOW_POLICIES},
                 'entry_policies':self.selector.snapshot(now) if self.selector else {},

@@ -202,25 +202,63 @@ def _signal_lines(signals: list, width: int) -> tuple[str, list[str]]:
     return heading, rows
 
 
-def _position_line(snapshot: dict) -> str:
+def _position_line(snapshot: dict, width: int = 79) -> str:
     positions = snapshot.get("positions") or []
     if not isinstance(positions, list):
         positions = []
-    if not positions:
-        return "Positions: none open"
-    summaries = []
-    for pos in positions[:2]:
+    pending = snapshot.get("pending_settlements")
+    pending_list = pending if isinstance(pending, list) else None
+    active = []
+    legacy_pending = 0
+    for pos in positions:
         if not isinstance(pos, dict):
             continue
+        flat_funding = (pos.get("status") == "AWAITING_FUNDING" and
+                        pos.get("has_exposure") is not True and
+                        pos.get("unhedged") is not True)
+        if flat_funding:
+            legacy_pending += 1
+        else:
+            active.append(pos)
+    if pending_list is not None:
+        pending_count = 0
+        for pos in pending_list:
+            if not isinstance(pos, dict):
+                continue
+            if pos.get("has_exposure") is True or pos.get("unhedged") is True:
+                if pos not in active:
+                    active.append(pos)
+            else:
+                pending_count += 1
+    else:
+        pending_count = legacy_pending
+    active.sort(key=lambda pos: (pos.get("unhedged") is not True,
+                                 pos.get("status") != "EXITING"))
+    line = f"Positions: {len(active)} active | Closed, funding unresolved: {pending_count}"
+    if not active:
+        return line
+    summaries = []
+    for pos in active[:2 if width >= 110 else 1]:
         age = _number(pos.get("age_seconds"))
         age_text = f"{int(age)}s" if age is not None else "?"
-        pnl = _cash(pos.get("liquidation_pnl"), 7).strip()
-        status = _label(pos.get("status", "?"))
+        raw_status = _label(pos.get("status", "?"))
+        status = {"AWAITING_FUNDING": "FUNDING",
+                  "ENTRY_PENDING": "ENTERING"}.get(raw_status, raw_status)
         remaining=_number(pos.get('exit_in_seconds'))
         timing=f"exit in {max(0,math.ceil(remaining))}s" if remaining is not None else age_text
-        summaries.append(f"{_label(pos.get('asset', '?'))}/{_label(pos.get('strategy', '?'))} "
-                         f"{status} {timing} {pnl}")
-    return "Positions: " + " | ".join(summaries) + (f" | +{len(positions)-2} more" if len(positions) > 2 else "")
+        raw_strategy = _label(pos.get("strategy", "?"))
+        strategy = {"standard": "Std", "premium": "Prem", "shadow_baseline": "SBase",
+                    "convergence": "Conv", "conservative": "Cons", "confirmed": "Conf",
+                    "cooldown": "Cool"}.get(raw_strategy, raw_strategy)
+        summary = f"{_label(pos.get('asset', '?'))}/{strategy} {status} {timing}"
+        if width >= 110:
+            summary += " " + _cash(pos.get("liquidation_pnl"), 7).strip()
+        summaries.append(summary)
+    line += " | " + " | ".join(summaries)
+    extra = len(active) - len(summaries)
+    if extra and width >= 100:
+        line += f" | +{extra} more"
+    return line
 
 
 def _diagnostic_line(snapshot: dict) -> str:
@@ -304,12 +342,21 @@ def tui_lines(snapshot: dict | None, columns: int, rows: int) -> list[str]:
             lines.pop(1)
         if shadow_lines:
             lines.append(_diagnostic_line(snapshot))
+            lines.append(_position_line(snapshot, width))
         signals = snapshot.get("top_signals") or []
         if not isinstance(signals, list):
             signals = []
         signals = signals[:10]
         heading, signal_rows = _signal_lines(signals, width)
-        lines += ["Top opening signals (edge is NOT trade P&L)", heading]
+        if shadow_lines:
+            if width >= 76:
+                lines.append("Top signals (edge is NOT trade P&L) | # Asset Route Tier Edge $ bp Age")
+            elif width >= 52:
+                lines.append("Top signals (edge NOT P&L) | # Asset Route Edge $ bp")
+            else:
+                lines.append("Top signals (edge NOT P&L) | # Asset Edge $")
+        else:
+            lines += ["Top opening signals (edge is NOT trade P&L)", heading]
         # Reserve a truncation footer only when some signals cannot fit.
         remaining = max(0, height - len(lines))
         available = max(0, remaining - (len(signal_rows) > remaining))
@@ -322,7 +369,7 @@ def tui_lines(snapshot: dict | None, columns: int, rows: int) -> list[str]:
         else:
             supplements = [
                 "Exact final; Est estimated; Ent entry; Pen funding; Inc incomplete; ? unknown",
-                _position_line(snapshot),
+                *([] if shadow_lines else [_position_line(snapshot, width)]),
                 *([] if shadow_lines else [_diagnostic_line(snapshot)]),
                 _storage_line(snapshot),
                 _closed_sums_line(snapshot) or "Signals are historical opening observations; Ctrl-C exits.",

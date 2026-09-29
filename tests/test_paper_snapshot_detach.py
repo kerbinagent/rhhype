@@ -7,10 +7,39 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from tests.test_paper_engine import book, engine
+from tests.test_paper_engine import book, engine, pending_xag
 
 
 class SnapshotDetachmentTests(unittest.TestCase):
+    def test_flat_funding_record_does_not_hide_active_position_or_extend_hold(self):
+        e = engine()
+        pending = pending_xag()
+        pending['opened_at'] = 3593
+        e.positions[pending['id']] = pending
+        captured = e.snapshot(12000)
+        self.assertEqual(len(captured['positions']), 1)
+        self.assertEqual(captured['positions'][0]['status'], 'ENTRY_PENDING')
+        flat = captured['pending_settlements'][0]
+        self.assertFalse(flat['has_exposure'])
+        self.assertEqual(flat['holding_seconds'], 12)
+        self.assertEqual(flat['funding_wait_seconds'], 8395)
+        self.assertIsNone(flat['funding']['cashflow_usd'])
+        self.assertEqual(captured['strategies']['standard']['pending_funding'], 1)
+        self.assertIn(pending['id'], e.positions)
+        self.assertEqual(e._reserved('standard', 'aster'), 1000.75)
+        pending['funding']['missing'][0]['reason'] = 'changed'
+        self.assertNotEqual(flat['funding']['missing'][0]['reason'], 'changed')
+
+    def test_exposure_never_hidden_by_unexpected_funding_status(self):
+        e = engine()
+        pending = pending_xag()
+        pending['legs'][0]['remaining'] = .01
+        e.positions[pending['id']] = pending
+        captured = e.snapshot(12000)
+        self.assertEqual(captured['pending_settlements'], [])
+        self.assertTrue(next(p for p in captured['positions']
+                             if p['id'] == pending['id'])['has_exposure'])
+
     def test_snapshot_stays_fixed_as_live_episode_and_wallet_advance(self):
         e = engine()
         captured = e.snapshot(1000)
