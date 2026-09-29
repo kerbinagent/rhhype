@@ -97,3 +97,19 @@ class ShadowEngineTests(unittest.TestCase):
         self.assertTrue(markets['hyperliquid:BTC']['risk_priority'])
         self.assertNotIn('risk_priority',markets['rh_lighter:1'])
         self.assertNotIn('risk_priority',e.market_meta['hyperliquid:BTC'])
+
+    def test_shared_depth_repricing_matches_independent_tier_calculation(self):
+        for venue in ('lighter','rh_lighter','aster'):
+            p=pair();p['other']['venue']=venue;p['other']['published_fee_floor_bps']=.7
+            e=PaperEngine([p],now=1000)
+            a=book('hyperliquid','BTC',1000,99.99,100,size=3)
+            a['asks']=[(100,3),(100.01,100)];a['bids']=[(99.99,100)]
+            b=book(venue,1,1000,102,102.01,size=4)
+            b['bids']=[(102,4),(101.99,100)];b['asks']=[(102.01,100)]
+            for buy,sell,bb,sb in ((p['hl'],p['other'],a,b),(p['other'],p['hl'],b,a)):
+                base=e._signal(p,buy,sell,bb,sb,'standard',1000)
+                for tier in ('plus','premium'):
+                    actual=e._reprice_signal(base,tier)
+                    expected=e._signal(p,buy,sell,bb,sb,tier,1000)
+                    for field in ('quantity','buy_value','sell_value','buy_fee_bps','sell_fee_bps','opening_edge_usd','net_edge_usd','net_edge_bps'):
+                        self.assertAlmostEqual(actual[field],expected[field],places=10)

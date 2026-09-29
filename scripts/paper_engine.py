@@ -408,12 +408,14 @@ class PaperEngine:
             if abs(bm/am-1)>self.config.max_divergence_bps/10000:
                 self.stats['unit_or_price_divergence']+=1;self._censor_pair(ident,now);continue
             standard_signals=[]
-            cached={}
+            # Quantity grids and executable depth are identical across fee tiers.
+            # Walk them once per direction, then reprice the fee assumptions.
+            cached={'standard':[s for buy,sell,bb,sb in ((p['hl'],p['other'],a,b),(p['other'],p['hl'],b,a))
+                                if (s:=self._signal(p,buy,sell,bb,sb,'standard',now)) is not None]}
             for strategy in self.ledgers:
                 tier=fee_tier(strategy)
                 if tier not in cached:
-                    cached[tier]=[s for buy,sell,bb,sb in ((p['hl'],p['other'],a,b),(p['other'],p['hl'],b,a))
-                                  if (s:=self._signal(p,buy,sell,bb,sb,tier,now)) is not None]
+                    cached[tier]=[self._reprice_signal(s,tier) for s in cached['standard']]
                 candidates=[dict(s,strategy=strategy) for s in cached[tier]]
                 if strategy=='standard':standard_signals=candidates
                 if strategy in self.config.strategies:
@@ -443,6 +445,18 @@ class PaperEngine:
         for pid,probe in list(self.probes.items()):
             if now>probe['due']+self.config.max_book_age:
                 self._finish_probe(pid,'missing','timeout')
+
+    def _reprice_signal(self,signal,strategy):
+        """Reuse depth/lot calculations while retaining venue-specific fee floors."""
+        buy,sell=self.market_meta[signal['buy']],self.market_meta[signal['sell']]
+        bf,sf=scenario_fee(buy,strategy),scenario_fee(sell,strategy)
+        old_fees=(signal['buy_value']*signal['buy_fee_bps']+signal['sell_value']*signal['sell_fee_bps'])/10000
+        new_fees=(signal['buy_value']*bf+signal['sell_value']*sf)/10000
+        change=old_fees-new_fees
+        net=signal['net_edge_usd']+2*change
+        return dict(signal,strategy=strategy,buy_fee_bps=bf,sell_fee_bps=sf,
+                    opening_edge_usd=signal['opening_edge_usd']+change,
+                    net_edge_usd=net,net_edge_bps=net/signal['buy_value']*10000)
 
     def _signal(self,p,buy,sell,bb,sb,strategy,now,quantity=None):
         if quantity is None:
