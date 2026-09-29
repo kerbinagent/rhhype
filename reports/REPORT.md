@@ -46,6 +46,15 @@ complete paths were all Core routes; RH had no complete outcome, so that
 negative replay does not reject the RH small-order hypothesis. No strategy
 has been promoted as profitable.
 
+The next [frozen RH maker study](rh-small-maker-v1/README.md) uses
+**$100/$250/$500/$1,000**, with **$1,000 primary**, following the user's size
+clarification. Public capture began at 21:21 UTC for BTC/ETH/NVDA/silver,
+with 30 minutes of calibration and 20 minutes of evaluation. It compares
+hedge-aware passive bid pricing with a fixed-best control and a persistence
+diagnostic, including account-tier timing, actual partial quantities, all
+four execution fees, reserve, capital and unresolved funding. No result is
+available yet. Current production policy remains unchanged.
+
 ## Assessment
 
 **The strongest follow-up candidates are the separate Robinhood Chain Lighter perpetual markets against Hyperliquid. The sampled Robinhood Uniswap stock-token pools generally do not clear their costs.** Small positive opening spreads also exist against Lighter Core and Aster, but an opening spread on two perpetuals is not realized arbitrage profit. Funding, the eventual unwind, and margin capital determine the outcome.
