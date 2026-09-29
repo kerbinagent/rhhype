@@ -194,10 +194,38 @@ passes within $7e-11. All feeds connected, 70.3% of one core, 18.1 ms p95 lag,
 
 New lifecycle counters (since 16:57:57) identify six distinct armed candidates:
 five ended at the skew gate, one lost its economic edge, zero remained pending.
-The accounting residual is zero. Priority-4 made no requests because candidates
-ended before the prior `arm+1s` refresh eligibility. Change refresh eligibility
+The accounting residual is zero. No requests were labelled priority 4. This alone cannot prove starvation: a
+refresh promoted to an entry/held/probe priority also updates confirmation books.
+The skew cancellations motivate testing earlier refresh eligibility. Change it
 to arm time; keep the one-second confirmation delay, both post-due source times,
 all forecast/depth/budget checks and the four-second expiry. This improves the
 observation attempt without fabricating a surviving opportunity. Existing
 execution/risk scheduling shares and request cap remain unchanged. Thirty-one
 focused refresh/selector/shadow tests pass before deployment.
+
+## Review 4: 2026-09-29 17:33:21 UTC (delayed)
+
+The review due 17:26:33 ran after the user resumed the active session. Window
+17:06:50–17:33:21 is therefore about 26.5 minutes; the next anchored deadline
+remains 17:46:33. Counts match durable deltas.
+
+| Standard-fee policy | Closes | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 356 | -413.77 | 348 | 8 |
+| Cooldown | 61 | -85.71 | 60 | 1 |
+| Historical median | 4 | -4.82 | 1 | 3 |
+| Conservative | 0 | 0 | 0 | 0 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+Lifecycle cumulative: ten arms, eight skew cancellations, one economic
+cancellation and one forecast cancellation, no entries; residual zero. No
+priority-4-labelled requests, but higher-priority shared refreshes can still
+serve these candidates. Entry thresholds unchanged; investigate faster source
+observations rather than interpret this as ten observed short-lived profits.
+
+User requested active parallel research between polls. Started a separate
+40-minute, 12-pair public-WS horizon experiment at about 17:34 UTC, PID 1691034,
+in data/horizon-research. It scores future spread forecasts, never cash income,
+and has bounded output. Chronological entry-filter experiments, historical
+funding-carry research, and direct BBO-versus-depth feed measurements proceed
+in parallel. Existing paper ledgers and strategy gates remain unchanged.

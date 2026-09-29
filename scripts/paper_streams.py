@@ -59,9 +59,23 @@ def _timestamp(value, divisor=1000):
     return value / divisor
 
 
+def _hl_top_signature(raw_bids, raw_asks):
+    """Exact HL top identity, including number of resting orders when exposed."""
+    try:
+        bids = [x for x in raw_bids if float(x['sz']) > 0]
+        asks = [x for x in raw_asks if float(x['sz']) > 0]
+        bid = max(bids, key=lambda x: float(x['px']))
+        ask = min(asks, key=lambda x: float(x['px']))
+        return (float(bid['px']), float(bid['sz']), int(bid['n']),
+                float(ask['px']), float(ask['sz']), int(ask['n']))
+    except (KeyError, TypeError, ValueError, OverflowError, IndexError):
+        return None
+
+
 class StreamManager:
     def __init__(self, session: aiohttp.ClientSession, markets: list[dict],
-                 on_book, on_status, max_levels: int = 100):
+                 on_book, on_status, max_levels: int = 100,
+                 prefer_bbo: bool = False):
         if max_levels < 1 or max_levels > STATE_LIMIT:
             raise ValueError("max_levels must be 1..5000")
         self.session, self.on_book, self.on_status = session, on_book, on_status
@@ -69,6 +83,7 @@ class StreamManager:
         # a generation from an earlier manager or process lifetime.
         self.instance_id = uuid4().hex
         self.max_levels = max_levels
+        self.prefer_bbo = bool(prefer_bbo)
         self.markets = {(m["venue"], str(m["market"])): m for m in markets}
         self.states: dict[tuple[str, str], dict] = {}
         self.generations: dict[tuple[str, str], str] = {}
@@ -80,10 +95,14 @@ class StreamManager:
         self.active_connections = defaultdict(int)
         self._last_message_status = defaultdict(float)
         self.resubscribe = set()
+        # Per-generation Hyperliquid source-time high water. BBO never carries
+        # cached L2 depth; contemporaneous L2 depth is checked independently.
+        self.hl_last = {}
+        self.hl_block_l2 = {}
 
     def _status(self, venue, **changes):
         counts = self.counters[venue]
-        for key in ("connected", "subscriptions", "messages", "reconnects", "gaps", "errors", "keepalives"):
+        for key in ("connected", "subscriptions", "messages", "reconnects", "gaps", "errors", "keepalives", "older_book_drops"):
             if key in changes and isinstance(changes[key], int) and key != "connected":
                 counts[key] += changes[key]
         if set(changes) == {"messages"}:
@@ -103,7 +122,7 @@ class StreamManager:
                       "valid": False, "reason": reason})
 
     def _publish(self, key, bids, asks, *, engine_time=None, sequence=None,
-                 generation=None):
+                 generation=None, source=None):
         if not bids or not asks or max(bids) >= min(asks):
             self._invalidate(key, "empty_or_crossed", generation)
             self._status(key[0], gaps=1, reason="empty_or_crossed")
@@ -116,13 +135,39 @@ class StreamManager:
             if key[0] in ("lighter", "rh_lighter"):
                 self.resubscribe.add(key)
             return False
-        self.on_book({"venue": key[0], "market": self.markets[key]["market"],
+        event = {"venue": key[0], "market": self.markets[key]["market"],
                       "bids": sorted(bids.items(), reverse=True)[:self.max_levels],
                       "asks": sorted(asks.items())[:self.max_levels],
                       "received": time.time(), "engine_time": engine_time,
                       "sequence": sequence, "generation": generation,
-                      "valid": True})
+                      "valid": True}
+        if source is not None:
+            event["source"] = source
+        self.on_book(event)
         return True
+
+    def _hl_accept(self, key, generation, source_ms, source, top=None):
+        last = self.hl_last.get(key)
+        if last is None or last['generation'] != generation:
+            return True
+        if source_ms < last['source_ms']:
+            self._status('hyperliquid', older_book_drops=1)
+            return False
+        if source_ms > last['source_ms']:
+            return True
+        # BBO has priority at equal source time. An equal-time L2 snapshot can
+        # add depth only if its top prices and displayed sizes exactly match.
+        if source == 'bbo' and last['source'] == 'l2book':
+            return True
+        if (source == 'l2book' and last['source'] == 'bbo' and
+                top is not None and top == last.get('top')):
+            return True
+        self._status('hyperliquid', older_book_drops=1)
+        return False
+
+    def _hl_record(self, key, generation, source_ms, source, top=None):
+        self.hl_last[key] = {'generation': generation, 'source_ms': source_ms,
+                             'source': source, 'top': top}
 
     def process_message(self, venue: str, message: dict, generation: str):
         """Process HL/Lighter websocket frames; useful for deterministic replay."""
@@ -145,17 +190,56 @@ class StreamManager:
                     except (TypeError, ValueError):
                         pass
                 return
-            if kind != "l2Book":
+            if kind not in ("l2Book", "bbo") or (kind == "bbo" and not self.prefer_bbo):
                 return
-            data = message["data"]
+            data = message.get("data")
+            if not isinstance(data, dict) or data.get("coin") is None:
+                self._status(venue, errors=1, reason="missing_hl_identity")
+                return
             key = (venue, str(data["coin"]))
             if key not in self.markets:
                 return
             try:
-                bids, asks = (_levels(x) for x in data["levels"])
-                self._publish(key, bids, asks, engine_time=_timestamp(data.get("time")),
-                              sequence=data.get("time"), generation=generation)
-            except (KeyError, TypeError, ValueError, IndexError) as exc:
+                raw_time = data["time"]
+                source_ms = int(raw_time)
+                if (isinstance(raw_time, bool) or not math.isfinite(float(raw_time)) or
+                        float(raw_time) != source_ms or source_ms <= 0):
+                    raise ValueError("invalid source time")
+                if kind == "bbo":
+                    sides = data["bbo"]
+                    if not isinstance(sides, list) or len(sides) != 2 or any(x is None for x in sides):
+                        last = self.hl_last.get(key)
+                        if last and last['generation'] == generation and source_ms < last['source_ms']:
+                            self._status(venue, older_book_drops=1)
+                            return
+                        self._hl_record(key, generation, source_ms, 'bbo')
+                        self._invalidate(key, "bbo_missing_side", generation)
+                        return
+                    bids, asks = _levels([sides[0]]), _levels([sides[1]])
+                    if len(bids) != 1 or len(asks) != 1:
+                        raise ValueError("empty BBO side")
+                    top = _hl_top_signature([sides[0]], [sides[1]])
+                    source = 'bbo'
+                else:
+                    raw_bids, raw_asks = data["levels"]
+                    bids, asks = _levels(raw_bids), _levels(raw_asks)
+                    top = _hl_top_signature(raw_bids, raw_asks)
+                    source = 'l2book'
+                if kind == 'l2Book' and self.hl_block_l2.get(key) == generation:
+                    return
+                if not self._hl_accept(key, generation, source_ms, source, top):
+                    return
+                if self._publish(key, bids, asks, engine_time=source_ms/1000,
+                                 sequence=source_ms, generation=generation,
+                                 source=source):
+                    self._hl_record(key, generation, source_ms, source, top)
+                    if kind == 'bbo':
+                        self.hl_block_l2.pop(key, None)
+                else:
+                    self._hl_record(key, generation, source_ms, source)
+            except (KeyError, TypeError, ValueError, OverflowError, IndexError) as exc:
+                if kind == 'bbo':
+                    self.hl_block_l2[key] = generation
                 self._invalidate(key, f"malformed_book:{exc}", generation)
                 self._status(venue, errors=1, reason="malformed_book")
             return
@@ -381,6 +465,9 @@ class StreamManager:
                         for m in group:
                             await ws.send_json({"method": "subscribe", "subscription":
                                                 {"type": "l2Book", "coin": m["market"]}})
+                            if self.prefer_bbo:
+                                await ws.send_json({"method": "subscribe", "subscription":
+                                                    {"type": "bbo", "coin": m["market"]}})
                             await ws.send_json({"method": "subscribe", "subscription":
                                                 {"type": "activeAssetCtx", "coin": m["market"]}})
                             await asyncio.sleep(0.02)
@@ -391,7 +478,7 @@ class StreamManager:
                             await ws.send_json({"type": "subscribe", "channel":
                                                 f"market_stats/{m['market']}"})
                             await asyncio.sleep(0.02)
-                    self._status(venue, subscriptions=2 * len(group))
+                    self._status(venue, subscriptions=(3 if venue == 'hyperliquid' and self.prefer_bbo else 2) * len(group))
                     if venue == "aster":
                         self._start_priority_aster_bootstraps(group, generation)
                         # Let those tasks enter the spaced snapshot queue before

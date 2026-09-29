@@ -115,6 +115,92 @@ class StreamTests(unittest.TestCase):
         new = f"{rebuilt.instance_id}:lighter:0:1"
         self.assertNotEqual(old, new)
 
+    def _hl_bbo_manager(self):
+        return StreamManager(None, [market('hyperliquid', 'BTC')],
+                             self.books.append,
+                             lambda v, s: self.status.append((v, s)),
+                             max_levels=100, prefer_bbo=True)
+
+    def test_bbo_is_opt_in_and_never_borrows_l2_depth(self):
+        frame = {'channel': 'bbo', 'data': {'coin': 'BTC', 'time': 1001,
+                 'bbo': [{'px': '100', 'sz': '2'}, {'px': '101', 'sz': '3'}]}}
+        self.manager.process_message('hyperliquid', frame, 'g1')
+        self.assertEqual(self.books, [])
+        m = self._hl_bbo_manager()
+        l2 = {'channel': 'l2Book', 'data': {'coin': 'BTC', 'time': 1000,
+              'levels': [[{'px': '100', 'sz': '2'}, {'px': '99', 'sz': '4'}],
+                         [{'px': '101', 'sz': '3'}, {'px': '102', 'sz': '5'}]]}}
+        m.process_message('hyperliquid', l2, 'g1')
+        self.assertEqual(len(self.books[-1]['bids']), 2)
+        m.process_message('hyperliquid', frame, 'g1')
+        self.assertEqual(self.books[-1]['source'], 'bbo')
+        self.assertEqual(self.books[-1]['bids'], [(100.0, 2.0)])
+        self.assertEqual(self.books[-1]['asks'], [(101.0, 3.0)])
+        self.assertEqual(self.books[-1]['sequence'], 1001)
+        before = len(self.books)
+        m.process_message('hyperliquid', l2, 'g1')
+        self.assertEqual(len(self.books), before)
+        self.assertEqual(m.counters['hyperliquid']['older_book_drops'], 1)
+
+    def test_equal_time_l2_adds_depth_only_when_top_matches_bbo(self):
+        m = self._hl_bbo_manager()
+        bbo = {'channel': 'bbo', 'data': {'coin': 'BTC', 'time': 2000,
+               'bbo': [{'px': '100', 'sz': '2', 'n': 4},
+                       {'px': '101', 'sz': '3', 'n': 5}]}}
+        m.process_message('hyperliquid', bbo, 'g1')
+        mismatch = {'channel': 'l2Book', 'data': {'coin': 'BTC', 'time': 2000,
+                    'levels': [[{'px': '100', 'sz': '9', 'n': 4},
+                                {'px': '99', 'sz': '4', 'n': 1}],
+                               [{'px': '101', 'sz': '3', 'n': 5}]]}}
+        m.process_message('hyperliquid', mismatch, 'g1')
+        self.assertEqual(self.books[-1]['source'], 'bbo')
+        same_size_wrong_count = {'channel': 'l2Book', 'data': {'coin': 'BTC', 'time': 2000,
+            'levels': [[{'px': '100', 'sz': '2', 'n': 999}],
+                       [{'px': '101', 'sz': '3', 'n': 5}]]}}
+        before = len(self.books)
+        m.process_message('hyperliquid', same_size_wrong_count, 'g1')
+        self.assertEqual(len(self.books), before)
+        match = {'channel': 'l2Book', 'data': {'coin': 'BTC', 'time': 2000,
+                 'levels': [[{'px': '100', 'sz': '2', 'n': 4},
+                             {'px': '99', 'sz': '4', 'n': 1}],
+                            [{'px': '101', 'sz': '3', 'n': 5},
+                             {'px': '102', 'sz': '5', 'n': 1}]]}}
+        m.process_message('hyperliquid', match, 'g1')
+        self.assertEqual(self.books[-1]['source'], 'l2book')
+        self.assertEqual(self.books[-1]['bids'], [(100.0, 2.0), (99.0, 4.0)])
+
+    def test_null_and_malformed_bbo_invalidate_then_recover(self):
+        m = self._hl_bbo_manager()
+        valid = {'channel': 'bbo', 'data': {'coin': 'BTC', 'time': 3000,
+                 'bbo': [{'px': '100', 'sz': '2'}, {'px': '101', 'sz': '3'}]}}
+        m.process_message('hyperliquid', valid, 'g1')
+        null = {'channel': 'bbo', 'data': {'coin': 'BTC', 'time': 3000,
+                'bbo': [None, {'px': '101', 'sz': '3'}]}}
+        m.process_message('hyperliquid', null, 'g1')
+        self.assertFalse(self.books[-1]['valid'])
+        self.assertEqual(self.books[-1]['reason'], 'bbo_missing_side')
+        old_l2 = {'channel': 'l2Book', 'data': {'coin': 'BTC', 'time': 3000,
+                  'levels': [[{'px': '100', 'sz': '2'}], [{'px': '101', 'sz': '3'}]]}}
+        count = len(self.books)
+        m.process_message('hyperliquid', old_l2, 'g1')
+        self.assertEqual(len(self.books), count)
+        malformed = {'channel': 'bbo', 'data': {'coin': 'BTC', 'time': 3002,
+                     'bbo': [{'px': '100', 'sz': 'NaN'}, {'px': '101', 'sz': '3'}]}}
+        m.process_message('hyperliquid', malformed, 'g1')
+        self.assertFalse(self.books[-1]['valid'])
+        m.process_message('hyperliquid', valid | {'data': valid['data'] | {'time': float('inf')}}, 'g1')
+        self.assertFalse(self.books[-1]['valid'])
+        new_l2 = old_l2 | {'data': old_l2['data'] | {'time': 3003}}
+        count = len(self.books)
+        m.process_message('hyperliquid', new_l2, 'g1')
+        self.assertEqual(len(self.books), count)
+        m.process_message('hyperliquid', valid | {'data': valid['data'] | {'time': 3004}}, 'g1')
+        self.assertTrue(self.books[-1]['valid'])
+        self.assertEqual(self.books[-1]['source'], 'bbo')
+        m.process_message('hyperliquid', new_l2 | {'data': new_l2['data'] | {'time': 3005}}, 'g2')
+        self.assertTrue(self.books[-1]['valid'])
+        self.assertEqual(self.books[-1]['generation'], 'g2')
+
     def test_aster_buffer_overflow_fails_closed(self):
         key = ("aster", "BTCUSDT")
         from scripts.paper_streams import BUFFER_LIMIT
@@ -199,3 +285,38 @@ class AsterPriorityTests(unittest.IsolatedAsyncioTestCase):
         manager._aster_task = lambda key, generation: started.append(key)
         await manager._connection('aster', [normal, held], stop, 0)
         self.assertEqual(started, [('aster', 'HELDUSDT'), ('aster', 'NORMALUSDT')])
+
+
+class BboSubscriptionTests(unittest.IsolatedAsyncioTestCase):
+    async def test_opt_in_subscribes_bbo_with_l2_and_context(self):
+        import aiohttp
+        from types import SimpleNamespace
+        stop = asyncio.Event()
+        sent = []
+
+        class Socket:
+            close_code = 1000
+
+            async def __aenter__(self):
+                return self
+
+            async def __aexit__(self, *args):
+                pass
+
+            async def send_json(self, message):
+                sent.append(message)
+
+            async def receive(self, timeout):
+                stop.set()
+                return SimpleNamespace(type=aiohttp.WSMsgType.CLOSE, data=1000, extra='')
+
+        class Session:
+            def ws_connect(self, *args, **kwargs):
+                return Socket()
+
+        manager = StreamManager(Session(), [market('hyperliquid', 'BTC')],
+                                lambda _: None, lambda *_: None, prefer_bbo=True)
+        await manager._connection('hyperliquid', [market('hyperliquid', 'BTC')], stop, 0)
+        self.assertEqual([x['subscription']['type'] for x in sent],
+                         ['l2Book', 'bbo', 'activeAssetCtx'])
+        self.assertEqual(manager.counters['hyperliquid']['subscriptions'], 3)

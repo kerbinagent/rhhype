@@ -175,7 +175,8 @@ async def run(args,store,config):
                         stream_signature=signature
                         if markets:
                             manager_stop=asyncio.Event()
-                            manager=StreamManager(session,markets,on_book,on_status,max_levels=100)
+                            manager=StreamManager(session,markets,on_book,on_status,max_levels=100,
+                                                  prefer_bbo=args.hl_bbo)
                             manager_task=asyncio.create_task(manager.run(manager_stop))
                     stream_changed.clear()
                     try:await asyncio.wait_for(stream_changed.wait(),timeout=5)
@@ -287,6 +288,8 @@ async def run(args,store,config):
                 lag_p95=ordered_lag[int(.95*(len(ordered_lag)-1))] if ordered_lag else 0
                 snap=engine.snapshot(time.time())|{'updated_at':time.time(),'status':status or runtime['status'],
                     'pair_count':len(engine.pairs),'feeds':copy.deepcopy(feeds),'transport':args.transport,
+                    'hl_quote_mode':'bbo_plus_depth' if args.hl_bbo else 'depth',
+                    'hl_targeted_refresh':args.hl_refresh,
                     'storage':{**metrics['storage_stats'],'retained':metrics['retained'],'evidence_bytes':metrics['evidence_bytes'],
                                'book_ring_bytes':ring.used,'book_ring_max_bytes':ring.max_bytes},
                     'loop_lag_ms':runtime['loop_lag_ms'],'max_loop_lag_ms':runtime.get('max_loop_lag_ms',0),
@@ -317,7 +320,7 @@ async def run(args,store,config):
         tasks=[asyncio.create_task(discovery()),asyncio.create_task(streams() if args.transport=='stream' else poll()),
                asyncio.create_task(engine_loop()),asyncio.create_task(heartbeat()),asyncio.create_task(funding_loop()),asyncio.create_task(references_loop()),
                asyncio.create_task(reports())]
-        if args.transport=='stream':tasks.append(asyncio.create_task(run_hl_refresh(engine,client,on_book,stop)))
+        if args.transport=='stream' and args.hl_refresh:tasks.append(asyncio.create_task(run_hl_refresh(engine,client,on_book,stop)))
         if args.tui:tasks.append(asyncio.create_task(tui()))
         stopper=asyncio.create_task(stop.wait());timer=asyncio.create_task(asyncio.sleep(args.duration)) if args.duration else None
         reason='stopped'
@@ -352,9 +355,12 @@ def arguments(argv=None):
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--out',type=Path,default=ROOT/'data/paper-monitor')
     p.add_argument('--watch',action='store_true')
-    p.add_argument('--shadow-strategies',action='store_true',help='Add four independent Standard-fee strategy experiments; saved experiments resume automatically')
+    p.add_argument('--shadow-strategies',action='store_true',help='Add five independent Standard-fee strategy experiments; saved experiments resume automatically')
     p.add_argument('--tui',action=argparse.BooleanOptionalAction,default=sys.stdout.isatty())
     p.add_argument('--transport',choices=['stream','poll'],default='stream')
+    p.add_argument('--hl-bbo',action='store_true',help='Subscribe to faster HL best quotes; top-only books must cover executable size')
+    p.add_argument('--hl-refresh',action=argparse.BooleanOptionalAction,default=True,
+                   help='Use targeted HL REST books; disable for an isolated public-stream experiment')
     p.add_argument('--venues',nargs='+',choices=list(legacy.BASE),default=list(legacy.BASE))
     p.add_argument('--assets',nargs='+')
     p.add_argument('--max-pairs',type=int,default=0,help='0 = all matched pairs')

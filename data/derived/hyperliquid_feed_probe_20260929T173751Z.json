@@ -1,0 +1,6801 @@
+{
+  "started_utc": "2026-09-29T17:37:20.882000+00:00",
+  "ended_utc": "2026-09-29T17:37:51.267000+00:00",
+  "seconds_requested": 30,
+  "endpoint": "wss://api.hyperliquid.xyz/ws",
+  "subscriptions": [
+    {
+      "type": "bbo",
+      "coin": "BTC"
+    },
+    {
+      "type": "l2Book",
+      "coin": "BTC"
+    },
+    {
+      "type": "bbo",
+      "coin": "ETH"
+    },
+    {
+      "type": "l2Book",
+      "coin": "ETH"
+    },
+    {
+      "type": "bbo",
+      "coin": "xyz:COIN"
+    },
+    {
+      "type": "l2Book",
+      "coin": "xyz:COIN"
+    },
+    {
+      "type": "allMids"
+    },
+    {
+      "type": "allMids",
+      "dex": "xyz"
+    }
+  ],
+  "summary": [
+    {
+      "channel": "allMids",
+      "key": "unspecified",
+      "events": 6,
+      "receipt_median_gap_s": 5.053,
+      "source_median_gap_s": null,
+      "unique_source_timestamps": 0,
+      "median_receipt_minus_source_s": null,
+      "max_receipt_minus_source_s": null,
+      "first_received_utc": "2026-09-29T17:37:22.940000+00:00",
+      "last_received_utc": "2026-09-29T17:37:48.186000+00:00"
+    },
+    {
+      "channel": "allMids",
+      "key": "xyz",
+      "events": 6,
+      "receipt_median_gap_s": 5.054,
+      "source_median_gap_s": null,
+      "unique_source_timestamps": 0,
+      "median_receipt_minus_source_s": null,
+      "max_receipt_minus_source_s": null,
+      "first_received_utc": "2026-09-29T17:37:22.941000+00:00",
+      "last_received_utc": "2026-09-29T17:37:48.186000+00:00"
+    },
+    {
+      "channel": "bbo",
+      "key": "BTC",
+      "events": 141,
+      "receipt_median_gap_s": 0.152,
+      "source_median_gap_s": 0.133,
+      "unique_source_timestamps": 141,
+      "median_receipt_minus_source_s": 0.294,
+      "max_receipt_minus_source_s": 0.711,
+      "first_received_utc": "2026-09-29T17:37:21.839000+00:00",
+      "last_received_utc": "2026-09-29T17:37:51.166000+00:00"
+    },
+    {
+      "channel": "bbo",
+      "key": "ETH",
+      "events": 177,
+      "receipt_median_gap_s": 0.127,
+      "source_median_gap_s": 0.111,
+      "unique_source_timestamps": 177,
+      "median_receipt_minus_source_s": 0.294,
+      "max_receipt_minus_source_s": 0.711,
+      "first_received_utc": "2026-09-29T17:37:21.472000+00:00",
+      "last_received_utc": "2026-09-29T17:37:51.166000+00:00"
+    },
+    {
+      "channel": "bbo",
+      "key": "xyz:COIN",
+      "events": 58,
+      "receipt_median_gap_s": 0.192,
+      "source_median_gap_s": 0.21,
+      "unique_source_timestamps": 58,
+      "median_receipt_minus_source_s": 0.29,
+      "max_receipt_minus_source_s": 0.662,
+      "first_received_utc": "2026-09-29T17:37:23.542000+00:00",
+      "last_received_utc": "2026-09-29T17:37:50.839000+00:00"
+    },
+    {
+      "channel": "l2Book",
+      "key": "BTC",
+      "events": 6,
+      "receipt_median_gap_s": 5.358,
+      "source_median_gap_s": 5.397,
+      "unique_source_timestamps": 6,
+      "median_receipt_minus_source_s": 0.363,
+      "max_receipt_minus_source_s": 0.413,
+      "first_received_utc": "2026-09-29T17:37:21.400000+00:00",
+      "last_received_utc": "2026-09-29T17:37:47.541000+00:00"
+    },
+    {
+      "channel": "l2Book",
+      "key": "ETH",
+      "events": 6,
+      "receipt_median_gap_s": 5.358,
+      "source_median_gap_s": 5.397,
+      "unique_source_timestamps": 6,
+      "median_receipt_minus_source_s": 0.364,
+      "max_receipt_minus_source_s": 0.441,
+      "first_received_utc": "2026-09-29T17:37:21.428000+00:00",
+      "last_received_utc": "2026-09-29T17:37:47.541000+00:00"
+    },
+    {
+      "channel": "l2Book",
+      "key": "xyz:COIN",
+      "events": 6,
+      "receipt_median_gap_s": 5.358,
+      "source_median_gap_s": 5.397,
+      "unique_source_timestamps": 6,
+      "median_receipt_minus_source_s": 0.364,
+      "max_receipt_minus_source_s": 0.446,
+      "first_received_utc": "2026-09-29T17:37:21.433000+00:00",
+      "last_received_utc": "2026-09-29T17:37:47.541000+00:00"
+    }
+  ],
+  "events": [
+    {
+      "received_ms": 1790703441400,
+      "channel": "l2Book",
+      "coin": "BTC",
+      "source_ms": 1790703440987,
+      "bid": {
+        "px": "83118.0",
+        "sz": "4.49815",
+        "n": 20
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "7.22801",
+        "n": 29
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 3767368.93031,
+        "ask": 4289067.39537
+      }
+    },
+    {
+      "received_ms": 1790703441428,
+      "channel": "l2Book",
+      "coin": "ETH",
+      "source_ms": 1790703440987,
+      "bid": {
+        "px": "2675.3",
+        "sz": "181.263",
+        "n": 29
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "43.8056",
+        "n": 5
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 10517513.50522,
+        "ask": 7397618.96389
+      }
+    },
+    {
+      "received_ms": 1790703441433,
+      "channel": "l2Book",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703440987,
+      "bid": {
+        "px": "189.4",
+        "sz": "2.294",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.42",
+        "sz": "5.279",
+        "n": 1
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 185306.99449999997,
+        "ask": 273663.2789
+      }
+    },
+    {
+      "received_ms": 1790703441472,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703441215,
+      "bid": {
+        "px": "2675.3",
+        "sz": "166.3115",
+        "n": 28
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "43.8092",
+        "n": 6
+      }
+    },
+    {
+      "received_ms": 1790703441839,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703441490,
+      "bid": {
+        "px": "83118.0",
+        "sz": "2.45941",
+        "n": 17
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.34485",
+        "n": 33
+      }
+    },
+    {
+      "received_ms": 1790703441839,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703441490,
+      "bid": {
+        "px": "2675.3",
+        "sz": "158.1019",
+        "n": 26
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "45.63",
+        "n": 7
+      }
+    },
+    {
+      "received_ms": 1790703441883,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703441622,
+      "bid": {
+        "px": "83118.0",
+        "sz": "2.44666",
+        "n": 15
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.47538",
+        "n": 36
+      }
+    },
+    {
+      "received_ms": 1790703442407,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703442025,
+      "bid": {
+        "px": "83118.0",
+        "sz": "2.44666",
+        "n": 15
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.47486",
+        "n": 36
+      }
+    },
+    {
+      "received_ms": 1790703442407,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703442025,
+      "bid": {
+        "px": "2675.3",
+        "sz": "158.1019",
+        "n": 26
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "47.1251",
+        "n": 8
+      }
+    },
+    {
+      "received_ms": 1790703442470,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703442098,
+      "bid": {
+        "px": "2675.3",
+        "sz": "169.55",
+        "n": 27
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "47.1251",
+        "n": 8
+      }
+    },
+    {
+      "received_ms": 1790703442940,
+      "channel": "allMids",
+      "dex": "unspecified",
+      "coins": 1119,
+      "selected_mids": {
+        "BTC": "83118.5",
+        "ETH": "2675.35"
+      }
+    },
+    {
+      "received_ms": 1790703442941,
+      "channel": "allMids",
+      "dex": "xyz",
+      "coins": 127,
+      "selected_mids": {
+        "xyz:COIN": "189.41"
+      }
+    },
+    {
+      "received_ms": 1790703442974,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703442295,
+      "bid": {
+        "px": "2675.3",
+        "sz": "169.55",
+        "n": 27
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.2497",
+        "n": 9
+      }
+    },
+    {
+      "received_ms": 1790703442974,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703442434,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.68601",
+        "n": 16
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.4509",
+        "n": 35
+      }
+    },
+    {
+      "received_ms": 1790703442974,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703442499,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.83642",
+        "n": 17
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.4509",
+        "n": 35
+      }
+    },
+    {
+      "received_ms": 1790703442974,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703442632,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.83642",
+        "n": 17
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.3519",
+        "n": 34
+      }
+    },
+    {
+      "received_ms": 1790703442974,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703442632,
+      "bid": {
+        "px": "2675.3",
+        "sz": "184.5015",
+        "n": 28
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.2497",
+        "n": 9
+      }
+    },
+    {
+      "received_ms": 1790703443082,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703442696,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.83642",
+        "n": 17
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.34469",
+        "n": 33
+      }
+    },
+    {
+      "received_ms": 1790703443082,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703442696,
+      "bid": {
+        "px": "2675.3",
+        "sz": "169.55",
+        "n": 27
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.2497",
+        "n": 9
+      }
+    },
+    {
+      "received_ms": 1790703443125,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703442829,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.83714",
+        "n": 18
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.34469",
+        "n": 33
+      }
+    },
+    {
+      "received_ms": 1790703443125,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703442829,
+      "bid": {
+        "px": "2675.3",
+        "sz": "184.5015",
+        "n": 28
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.2497",
+        "n": 9
+      }
+    },
+    {
+      "received_ms": 1790703443382,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703443032,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.68673",
+        "n": 17
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.34454",
+        "n": 33
+      }
+    },
+    {
+      "received_ms": 1790703443542,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703443236,
+      "bid": {
+        "px": "189.41",
+        "sz": "12.052",
+        "n": 3
+      },
+      "ask": {
+        "px": "189.46",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703443624,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703443365,
+      "bid": {
+        "px": "189.44",
+        "sz": "39.6",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.46",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703443685,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703443431,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.83714",
+        "n": 18
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.34454",
+        "n": 33
+      }
+    },
+    {
+      "received_ms": 1790703443685,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703443431,
+      "bid": {
+        "px": "2675.3",
+        "sz": "185.2493",
+        "n": 29
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.2388",
+        "n": 8
+      }
+    },
+    {
+      "received_ms": 1790703443816,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703443567,
+      "bid": {
+        "px": "189.45",
+        "sz": "2.332",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.46",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703443895,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703443634,
+      "bid": {
+        "px": "2675.3",
+        "sz": "185.2493",
+        "n": 29
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.2494",
+        "n": 9
+      }
+    },
+    {
+      "received_ms": 1790703443895,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703443634,
+      "bid": {
+        "px": "189.45",
+        "sz": "6.92",
+        "n": 2
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "0.083",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703444025,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703443702,
+      "bid": {
+        "px": "2675.3",
+        "sz": "167.671",
+        "n": 26
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.2494",
+        "n": 9
+      }
+    },
+    {
+      "received_ms": 1790703444025,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703443702,
+      "bid": {
+        "px": "189.45",
+        "sz": "12.198",
+        "n": 3
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "0.083",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703444088,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703443771,
+      "bid": {
+        "px": "83118.0",
+        "sz": "2.44738",
+        "n": 16
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.35175",
+        "n": 34
+      }
+    },
+    {
+      "received_ms": 1790703444171,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703443901,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.29178",
+        "n": 9
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.37571",
+        "n": 35
+      }
+    },
+    {
+      "received_ms": 1790703444171,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703443901,
+      "bid": {
+        "px": "189.45",
+        "sz": "6.92",
+        "n": 2
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "0.083",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703444255,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703443969,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.29178",
+        "n": 9
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "9.82554",
+        "n": 36
+      }
+    },
+    {
+      "received_ms": 1790703444255,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703443969,
+      "bid": {
+        "px": "189.47",
+        "sz": "2.335",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "2.374",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703444347,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703444037,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.29178",
+        "n": 9
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "9.92454",
+        "n": 37
+      }
+    },
+    {
+      "received_ms": 1790703444347,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703444037,
+      "bid": {
+        "px": "2675.3",
+        "sz": "167.671",
+        "n": 26
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.2196",
+        "n": 9
+      }
+    },
+    {
+      "received_ms": 1790703444348,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703444037,
+      "bid": {
+        "px": "189.47",
+        "sz": "2.335",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "8.178",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703444380,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703444101,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.26301",
+        "n": 8
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "9.92454",
+        "n": 37
+      }
+    },
+    {
+      "received_ms": 1790703444381,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703444101,
+      "bid": {
+        "px": "2675.3",
+        "sz": "182.6225",
+        "n": 27
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.209",
+        "n": 8
+      }
+    },
+    {
+      "received_ms": 1790703444442,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703444166,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.26301",
+        "n": 8
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.47671",
+        "n": 37
+      }
+    },
+    {
+      "received_ms": 1790703444585,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703444236,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.26301",
+        "n": 8
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.4753",
+        "n": 37
+      }
+    },
+    {
+      "received_ms": 1790703444667,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703444373,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.48318",
+        "n": 10
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.4753",
+        "n": 37
+      }
+    },
+    {
+      "received_ms": 1790703444667,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703444373,
+      "bid": {
+        "px": "2675.3",
+        "sz": "182.6225",
+        "n": 27
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.2382",
+        "n": 10
+      }
+    },
+    {
+      "received_ms": 1790703444692,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703444435,
+      "bid": {
+        "px": "2675.3",
+        "sz": "182.6225",
+        "n": 27
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.4624",
+        "n": 11
+      }
+    },
+    {
+      "received_ms": 1790703444897,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703444635,
+      "bid": {
+        "px": "83118.0",
+        "sz": "1.71354",
+        "n": 11
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.4753",
+        "n": 37
+      }
+    },
+    {
+      "received_ms": 1790703444897,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703444635,
+      "bid": {
+        "px": "2675.3",
+        "sz": "167.671",
+        "n": 26
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.4624",
+        "n": 11
+      }
+    },
+    {
+      "received_ms": 1790703444897,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703444635,
+      "bid": {
+        "px": "189.47",
+        "sz": "5.766",
+        "n": 2
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "5.887",
+        "n": 3
+      }
+    },
+    {
+      "received_ms": 1790703444955,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703444700,
+      "bid": {
+        "px": "2675.3",
+        "sz": "175.1468",
+        "n": 27
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.4624",
+        "n": 11
+      }
+    },
+    {
+      "received_ms": 1790703445192,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703444835,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.25116",
+        "n": 7
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.4753",
+        "n": 37
+      }
+    },
+    {
+      "received_ms": 1790703445192,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703444835,
+      "bid": {
+        "px": "2675.3",
+        "sz": "167.671",
+        "n": 26
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.4624",
+        "n": 11
+      }
+    },
+    {
+      "received_ms": 1790703445397,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703445160,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.25116",
+        "n": 7
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "9.62997",
+        "n": 40
+      }
+    },
+    {
+      "received_ms": 1790703445494,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703445238,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.47116",
+        "n": 8
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "9.61862",
+        "n": 39
+      }
+    },
+    {
+      "received_ms": 1790703445747,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703445461,
+      "bid": {
+        "px": "2675.3",
+        "sz": "175.1468",
+        "n": 27
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.4624",
+        "n": 11
+      }
+    },
+    {
+      "received_ms": 1790703445784,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703445534,
+      "bid": {
+        "px": "2675.3",
+        "sz": "190.0983",
+        "n": 28
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.4624",
+        "n": 11
+      }
+    },
+    {
+      "received_ms": 1790703445913,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703445663,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.47116",
+        "n": 8
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "9.31775",
+        "n": 38
+      }
+    },
+    {
+      "received_ms": 1790703446003,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703445736,
+      "bid": {
+        "px": "83118.0",
+        "sz": "1.89306",
+        "n": 11
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.4753",
+        "n": 37
+      }
+    },
+    {
+      "received_ms": 1790703446221,
+      "channel": "l2Book",
+      "coin": "BTC",
+      "source_ms": 1790703445863,
+      "bid": {
+        "px": "83118.0",
+        "sz": "1.89306",
+        "n": 11
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.4753",
+        "n": 37
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 3062959.67752,
+        "ask": 5739060.77915
+      }
+    },
+    {
+      "received_ms": 1790703446221,
+      "channel": "l2Book",
+      "coin": "ETH",
+      "source_ms": 1790703445863,
+      "bid": {
+        "px": "2675.3",
+        "sz": "190.0983",
+        "n": 28
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "52.4624",
+        "n": 11
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 10593250.82432,
+        "ask": 7852660.63315
+      }
+    },
+    {
+      "received_ms": 1790703446221,
+      "channel": "l2Book",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703445863,
+      "bid": {
+        "px": "189.47",
+        "sz": "5.766",
+        "n": 2
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "5.887",
+        "n": 3
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 170837.27067000003,
+        "ask": 246360.87055
+      }
+    },
+    {
+      "received_ms": 1790703446371,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703445916,
+      "bid": {
+        "px": "83118.0",
+        "sz": "2.88412",
+        "n": 15
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "6.46134",
+        "n": 33
+      }
+    },
+    {
+      "received_ms": 1790703446372,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703445916,
+      "bid": {
+        "px": "2675.3",
+        "sz": "205.3181",
+        "n": 32
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "19.4227",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703446372,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703445969,
+      "bid": {
+        "px": "83118.0",
+        "sz": "2.88412",
+        "n": 15
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "6.45413",
+        "n": 32
+      }
+    },
+    {
+      "received_ms": 1790703446372,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703445969,
+      "bid": {
+        "px": "2675.3",
+        "sz": "207.6918",
+        "n": 34
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "19.4227",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703446448,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703446066,
+      "bid": {
+        "px": "2675.3",
+        "sz": "196.7027",
+        "n": 34
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "19.4227",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703446448,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703446139,
+      "bid": {
+        "px": "83118.0",
+        "sz": "4.16242",
+        "n": 16
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "6.45413",
+        "n": 32
+      }
+    },
+    {
+      "received_ms": 1790703446448,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703446139,
+      "bid": {
+        "px": "2675.3",
+        "sz": "196.7027",
+        "n": 34
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "14.2981",
+        "n": 3
+      }
+    },
+    {
+      "received_ms": 1790703446534,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703446266,
+      "bid": {
+        "px": "83118.0",
+        "sz": "4.16242",
+        "n": 16
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "6.44656",
+        "n": 31
+      }
+    },
+    {
+      "received_ms": 1790703446849,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703446467,
+      "bid": {
+        "px": "83118.0",
+        "sz": "4.46433",
+        "n": 16
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "6.44656",
+        "n": 31
+      }
+    },
+    {
+      "received_ms": 1790703446849,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703446467,
+      "bid": {
+        "px": "2675.3",
+        "sz": "196.4785",
+        "n": 33
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "27.9393",
+        "n": 5
+      }
+    },
+    {
+      "received_ms": 1790703446849,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703446467,
+      "bid": {
+        "px": "189.46",
+        "sz": "2.335",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703446849,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703446550,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.99261",
+        "n": 15
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "6.44656",
+        "n": 31
+      }
+    },
+    {
+      "received_ms": 1790703446849,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703446550,
+      "bid": {
+        "px": "189.46",
+        "sz": "2.335",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "53.295",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703447002,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703446745,
+      "bid": {
+        "px": "83118.0",
+        "sz": "4.14302",
+        "n": 16
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "6.44656",
+        "n": 31
+      }
+    },
+    {
+      "received_ms": 1790703447003,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703446745,
+      "bid": {
+        "px": "2675.3",
+        "sz": "194.4785",
+        "n": 32
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "27.9393",
+        "n": 5
+      }
+    },
+    {
+      "received_ms": 1790703447003,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703446745,
+      "bid": {
+        "px": "189.46",
+        "sz": "2.335",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703447210,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703446869,
+      "bid": {
+        "px": "2675.3",
+        "sz": "194.4785",
+        "n": 32
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "42.8946",
+        "n": 6
+      }
+    },
+    {
+      "received_ms": 1790703447252,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703446955,
+      "bid": {
+        "px": "83118.0",
+        "sz": "4.14302",
+        "n": 16
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "7.76697",
+        "n": 32
+      }
+    },
+    {
+      "received_ms": 1790703447252,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703446955,
+      "bid": {
+        "px": "189.46",
+        "sz": "2.335",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.48",
+        "sz": "5.278",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703447481,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703447070,
+      "bid": {
+        "px": "83118.0",
+        "sz": "4.14302",
+        "n": 16
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "7.76648",
+        "n": 32
+      }
+    },
+    {
+      "received_ms": 1790703448016,
+      "channel": "allMids",
+      "dex": "unspecified",
+      "coins": 1119,
+      "selected_mids": {
+        "BTC": "83118.5",
+        "ETH": "2675.35"
+      }
+    },
+    {
+      "received_ms": 1790703448016,
+      "channel": "allMids",
+      "dex": "xyz",
+      "coins": 127,
+      "selected_mids": {
+        "xyz:COIN": "189.47"
+      }
+    },
+    {
+      "received_ms": 1790703448016,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703447354,
+      "bid": {
+        "px": "2675.3",
+        "sz": "196.4785",
+        "n": 33
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "42.8946",
+        "n": 6
+      }
+    },
+    {
+      "received_ms": 1790703448016,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703447354,
+      "bid": {
+        "px": "189.46",
+        "sz": "2.335",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "53.295",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703448016,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703447565,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.99261",
+        "n": 15
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "7.76648",
+        "n": 32
+      }
+    },
+    {
+      "received_ms": 1790703448133,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703447769,
+      "bid": {
+        "px": "189.46",
+        "sz": "2.335",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.48",
+        "sz": "5.278",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703448253,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703447969,
+      "bid": {
+        "px": "2675.3",
+        "sz": "194.4785",
+        "n": 32
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "42.8946",
+        "n": 6
+      }
+    },
+    {
+      "received_ms": 1790703448402,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703448126,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.99261",
+        "n": 15
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.30065",
+        "n": 33
+      }
+    },
+    {
+      "received_ms": 1790703448579,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703448191,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.99261",
+        "n": 15
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.30786",
+        "n": 34
+      }
+    },
+    {
+      "received_ms": 1790703448579,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703448277,
+      "bid": {
+        "px": "83118.0",
+        "sz": "1.80049",
+        "n": 13
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "9.14771",
+        "n": 36
+      }
+    },
+    {
+      "received_ms": 1790703448579,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703448277,
+      "bid": {
+        "px": "2675.3",
+        "sz": "192.3785",
+        "n": 31
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "46.2005",
+        "n": 7
+      }
+    },
+    {
+      "received_ms": 1790703448629,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703448373,
+      "bid": {
+        "px": "83118.0",
+        "sz": "1.80049",
+        "n": 13
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "9.15529",
+        "n": 37
+      }
+    },
+    {
+      "received_ms": 1790703448629,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703448373,
+      "bid": {
+        "px": "2675.3",
+        "sz": "194.3785",
+        "n": 32
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "44.7054",
+        "n": 6
+      }
+    },
+    {
+      "received_ms": 1790703448741,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703448479,
+      "bid": {
+        "px": "83118.0",
+        "sz": "1.79025",
+        "n": 12
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "9.1613",
+        "n": 38
+      }
+    },
+    {
+      "received_ms": 1790703448941,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703448679,
+      "bid": {
+        "px": "2675.3",
+        "sz": "192.3785",
+        "n": 31
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "44.7054",
+        "n": 6
+      }
+    },
+    {
+      "received_ms": 1790703449126,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703448797,
+      "bid": {
+        "px": "2675.3",
+        "sz": "192.3785",
+        "n": 31
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "46.2005",
+        "n": 7
+      }
+    },
+    {
+      "received_ms": 1790703449241,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703448932,
+      "bid": {
+        "px": "2675.3",
+        "sz": "202.3785",
+        "n": 32
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "46.2005",
+        "n": 7
+      }
+    },
+    {
+      "received_ms": 1790703449294,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703448999,
+      "bid": {
+        "px": "2675.3",
+        "sz": "202.3785",
+        "n": 32
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "42.8946",
+        "n": 6
+      }
+    },
+    {
+      "received_ms": 1790703449631,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703449282,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.86893",
+        "n": 15
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "6.45966",
+        "n": 33
+      }
+    },
+    {
+      "received_ms": 1790703449631,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703449282,
+      "bid": {
+        "px": "2675.3",
+        "sz": "276.3239",
+        "n": 38
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "1.8439",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703449631,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703449337,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.92351",
+        "n": 17
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "6.32783",
+        "n": 32
+      }
+    },
+    {
+      "received_ms": 1790703449631,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703449337,
+      "bid": {
+        "px": "2675.3",
+        "sz": "265.9726",
+        "n": 39
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "1.8439",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703449707,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703449403,
+      "bid": {
+        "px": "83118.0",
+        "sz": "7.47507",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "3.22547",
+        "n": 12
+      }
+    },
+    {
+      "received_ms": 1790703449707,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703449403,
+      "bid": {
+        "px": "2675.3",
+        "sz": "406.6888",
+        "n": 47
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "0.0186",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703449707,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703449403,
+      "bid": {
+        "px": "189.46",
+        "sz": "2.335",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703449743,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703449485,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.07395",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.28747",
+        "n": 10
+      }
+    },
+    {
+      "received_ms": 1790703449743,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703449485,
+      "bid": {
+        "px": "2675.3",
+        "sz": "429.7221",
+        "n": 49
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "0.0186",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703449743,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703449485,
+      "bid": {
+        "px": "189.47",
+        "sz": "2.381",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703449822,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703449542,
+      "bid": {
+        "px": "2675.3",
+        "sz": "384.4156",
+        "n": 50
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "0.2352",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703449822,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703449542,
+      "bid": {
+        "px": "189.47",
+        "sz": "6.292",
+        "n": 2
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703449870,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703449605,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.07395",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.2734",
+        "n": 9
+      }
+    },
+    {
+      "received_ms": 1790703449870,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703449605,
+      "bid": {
+        "px": "2675.8",
+        "sz": "61.5822",
+        "n": 14
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "0.2352",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703449920,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703449685,
+      "bid": {
+        "px": "2675.8",
+        "sz": "105.3492",
+        "n": 20
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "50.0184",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703450013,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703449744,
+      "bid": {
+        "px": "2676.0",
+        "sz": "27.7987",
+        "n": 4
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "49.7832",
+        "n": 3
+      }
+    },
+    {
+      "received_ms": 1790703450172,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703449807,
+      "bid": {
+        "px": "2676.0",
+        "sz": "59.3352",
+        "n": 9
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "65.6674",
+        "n": 5
+      }
+    },
+    {
+      "received_ms": 1790703450258,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703449886,
+      "bid": {
+        "px": "2676.0",
+        "sz": "85.1745",
+        "n": 13
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "65.6674",
+        "n": 5
+      }
+    },
+    {
+      "received_ms": 1790703450258,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703449948,
+      "bid": {
+        "px": "2676.0",
+        "sz": "89.355",
+        "n": 11
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "88.6535",
+        "n": 8
+      }
+    },
+    {
+      "received_ms": 1790703450345,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703450009,
+      "bid": {
+        "px": "2676.0",
+        "sz": "113.7345",
+        "n": 15
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "121.7839",
+        "n": 12
+      }
+    },
+    {
+      "received_ms": 1790703450374,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703450087,
+      "bid": {
+        "px": "2676.0",
+        "sz": "57.7309",
+        "n": 11
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "145.1252",
+        "n": 15
+      }
+    },
+    {
+      "received_ms": 1790703450405,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703450153,
+      "bid": {
+        "px": "2676.0",
+        "sz": "70.6264",
+        "n": 14
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "153.9388",
+        "n": 17
+      }
+    },
+    {
+      "received_ms": 1790703450547,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703450289,
+      "bid": {
+        "px": "2676.0",
+        "sz": "87.7474",
+        "n": 17
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "157.4801",
+        "n": 19
+      }
+    },
+    {
+      "received_ms": 1790703450687,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703450355,
+      "bid": {
+        "px": "2676.0",
+        "sz": "84.3264",
+        "n": 17
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "159.8708",
+        "n": 21
+      }
+    },
+    {
+      "received_ms": 1790703450687,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703450414,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.07395",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.27224",
+        "n": 9
+      }
+    },
+    {
+      "received_ms": 1790703450687,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703450414,
+      "bid": {
+        "px": "2676.0",
+        "sz": "84.3264",
+        "n": 17
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "157.8708",
+        "n": 20
+      }
+    },
+    {
+      "received_ms": 1790703450766,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703450489,
+      "bid": {
+        "px": "2676.0",
+        "sz": "84.3264",
+        "n": 17
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "158.8035",
+        "n": 21
+      }
+    },
+    {
+      "received_ms": 1790703450766,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703450489,
+      "bid": {
+        "px": "189.47",
+        "sz": "2.381",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703450806,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703450556,
+      "bid": {
+        "px": "2676.0",
+        "sz": "96.2445",
+        "n": 19
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "171.1017",
+        "n": 22
+      }
+    },
+    {
+      "received_ms": 1790703450953,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703450691,
+      "bid": {
+        "px": "2676.0",
+        "sz": "66.0641",
+        "n": 13
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "171.1017",
+        "n": 22
+      }
+    },
+    {
+      "received_ms": 1790703451062,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703450759,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.07415",
+        "n": 30
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.25066",
+        "n": 8
+      }
+    },
+    {
+      "received_ms": 1790703451062,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703450759,
+      "bid": {
+        "px": "2676.0",
+        "sz": "89.2331",
+        "n": 16
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "118.2644",
+        "n": 18
+      }
+    },
+    {
+      "received_ms": 1790703451095,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703450818,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.07576",
+        "n": 31
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.25066",
+        "n": 8
+      }
+    },
+    {
+      "received_ms": 1790703451095,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703450818,
+      "bid": {
+        "px": "2676.0",
+        "sz": "90.165",
+        "n": 17
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "98.2644",
+        "n": 17
+      }
+    },
+    {
+      "received_ms": 1790703451253,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703450893,
+      "bid": {
+        "px": "2676.0",
+        "sz": "94.078",
+        "n": 19
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "99.9257",
+        "n": 18
+      }
+    },
+    {
+      "received_ms": 1790703451253,
+      "channel": "l2Book",
+      "coin": "BTC",
+      "source_ms": 1790703450893,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.07576",
+        "n": 31
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.25066",
+        "n": 8
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 5366460.04003,
+        "ask": 5153794.67973
+      }
+    },
+    {
+      "received_ms": 1790703451254,
+      "channel": "l2Book",
+      "coin": "ETH",
+      "source_ms": 1790703450893,
+      "bid": {
+        "px": "2676.0",
+        "sz": "94.078",
+        "n": 19
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "99.9257",
+        "n": 18
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 8786285.80702,
+        "ask": 7430375.98462
+      }
+    },
+    {
+      "received_ms": 1790703451254,
+      "channel": "l2Book",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703450893,
+      "bid": {
+        "px": "189.47",
+        "sz": "2.381",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "0.527",
+        "n": 1
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 199299.34942,
+        "ask": 241361.74246
+      }
+    },
+    {
+      "received_ms": 1790703451359,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703450962,
+      "bid": {
+        "px": "2676.0",
+        "sz": "120.1877",
+        "n": 22
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "98.993",
+        "n": 17
+      }
+    },
+    {
+      "received_ms": 1790703451359,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703451022,
+      "bid": {
+        "px": "2676.0",
+        "sz": "112.6411",
+        "n": 21
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "98.9128",
+        "n": 17
+      }
+    },
+    {
+      "received_ms": 1790703451359,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703451095,
+      "bid": {
+        "px": "2676.0",
+        "sz": "112.6411",
+        "n": 21
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "98.6774",
+        "n": 16
+      }
+    },
+    {
+      "received_ms": 1790703451441,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703451147,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.07576",
+        "n": 31
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.24974",
+        "n": 7
+      }
+    },
+    {
+      "received_ms": 1790703451548,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703451265,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.12576",
+        "n": 33
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.24974",
+        "n": 7
+      }
+    },
+    {
+      "received_ms": 1790703451548,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703451265,
+      "bid": {
+        "px": "2676.0",
+        "sz": "112.6411",
+        "n": 21
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "100.1721",
+        "n": 17
+      }
+    },
+    {
+      "received_ms": 1790703451653,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703451383,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.10076",
+        "n": 32
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.24974",
+        "n": 7
+      }
+    },
+    {
+      "received_ms": 1790703451654,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703451383,
+      "bid": {
+        "px": "2676.0",
+        "sz": "120.1149",
+        "n": 22
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "100.1721",
+        "n": 17
+      }
+    },
+    {
+      "received_ms": 1790703451815,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703451468,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.13529",
+        "n": 33
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.24974",
+        "n": 7
+      }
+    },
+    {
+      "received_ms": 1790703451885,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703451528,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.07576",
+        "n": 31
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.23345",
+        "n": 7
+      }
+    },
+    {
+      "received_ms": 1790703451885,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703451528,
+      "bid": {
+        "px": "2676.0",
+        "sz": "117.6575",
+        "n": 20
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "100.1721",
+        "n": 17
+      }
+    },
+    {
+      "received_ms": 1790703451885,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703451608,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.07576",
+        "n": 31
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.23365",
+        "n": 8
+      }
+    },
+    {
+      "received_ms": 1790703451885,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703451608,
+      "bid": {
+        "px": "2676.0",
+        "sz": "95.2361",
+        "n": 18
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "101.329",
+        "n": 19
+      }
+    },
+    {
+      "received_ms": 1790703451885,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703451608,
+      "bid": {
+        "px": "189.46",
+        "sz": "4.755",
+        "n": 2
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703451993,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703451730,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.07576",
+        "n": 31
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.23437",
+        "n": 9
+      }
+    },
+    {
+      "received_ms": 1790703451993,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703451730,
+      "bid": {
+        "px": "2676.0",
+        "sz": "93.3703",
+        "n": 16
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "101.329",
+        "n": 19
+      }
+    },
+    {
+      "received_ms": 1790703451993,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703451730,
+      "bid": {
+        "px": "189.46",
+        "sz": "4.755",
+        "n": 2
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "5.804",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703452430,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703452020,
+      "bid": {
+        "px": "2676.0",
+        "sz": "93.3703",
+        "n": 16
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "128.8026",
+        "n": 21
+      }
+    },
+    {
+      "received_ms": 1790703452430,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703452135,
+      "bid": {
+        "px": "2676.0",
+        "sz": "93.3703",
+        "n": 16
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "121.329",
+        "n": 20
+      }
+    },
+    {
+      "received_ms": 1790703452928,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703452337,
+      "bid": {
+        "px": "2676.0",
+        "sz": "104.6449",
+        "n": 17
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "121.329",
+        "n": 20
+      }
+    },
+    {
+      "received_ms": 1790703453069,
+      "channel": "allMids",
+      "dex": "unspecified",
+      "coins": 1119,
+      "selected_mids": {
+        "BTC": "83118.5",
+        "ETH": "2676.05"
+      }
+    },
+    {
+      "received_ms": 1790703453070,
+      "channel": "allMids",
+      "dex": "xyz",
+      "coins": 127,
+      "selected_mids": {
+        "xyz:COIN": "189.475"
+      }
+    },
+    {
+      "received_ms": 1790703453231,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703452641,
+      "bid": {
+        "px": "189.46",
+        "sz": "4.755",
+        "n": 2
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703453232,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703452703,
+      "bid": {
+        "px": "2676.0",
+        "sz": "104.6449",
+        "n": 17
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "128.8026",
+        "n": 21
+      }
+    },
+    {
+      "received_ms": 1790703453232,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703452753,
+      "bid": {
+        "px": "189.47",
+        "sz": "2.374",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703453232,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703452828,
+      "bid": {
+        "px": "2676.0",
+        "sz": "104.6449",
+        "n": 17
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "121.329",
+        "n": 20
+      }
+    },
+    {
+      "received_ms": 1790703453355,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703452966,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.10076",
+        "n": 32
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.23365",
+        "n": 8
+      }
+    },
+    {
+      "received_ms": 1790703453355,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703452966,
+      "bid": {
+        "px": "189.47",
+        "sz": "2.374",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "5.804",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703453355,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703453031,
+      "bid": {
+        "px": "2676.0",
+        "sz": "104.6449",
+        "n": 17
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "120.3612",
+        "n": 20
+      }
+    },
+    {
+      "received_ms": 1790703453521,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703453165,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.10076",
+        "n": 32
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.23437",
+        "n": 9
+      }
+    },
+    {
+      "received_ms": 1790703453521,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703453232,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.10076",
+        "n": 32
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.21121",
+        "n": 9
+      }
+    },
+    {
+      "received_ms": 1790703453771,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703453507,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.07576",
+        "n": 31
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.21121",
+        "n": 9
+      }
+    },
+    {
+      "received_ms": 1790703454071,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703453787,
+      "bid": {
+        "px": "189.47",
+        "sz": "2.374",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703454313,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703453988,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.10076",
+        "n": 32
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.21121",
+        "n": 9
+      }
+    },
+    {
+      "received_ms": 1790703454379,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703454056,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.10076",
+        "n": 32
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.21027",
+        "n": 9
+      }
+    },
+    {
+      "received_ms": 1790703454929,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703454661,
+      "bid": {
+        "px": "189.47",
+        "sz": "2.374",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "5.804",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703455139,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703454794,
+      "bid": {
+        "px": "189.47",
+        "sz": "2.374",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703455139,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703454859,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.07576",
+        "n": 31
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.23527",
+        "n": 10
+      }
+    },
+    {
+      "received_ms": 1790703455139,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703454859,
+      "bid": {
+        "px": "189.48",
+        "sz": "2.373",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "0.083",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703455293,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703454997,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.06373",
+        "n": 30
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.23527",
+        "n": 10
+      }
+    },
+    {
+      "received_ms": 1790703455355,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703455062,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.06373",
+        "n": 30
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.57185",
+        "n": 13
+      }
+    },
+    {
+      "received_ms": 1790703455355,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703455062,
+      "bid": {
+        "px": "2676.0",
+        "sz": "104.6449",
+        "n": 17
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "122.3612",
+        "n": 21
+      }
+    },
+    {
+      "received_ms": 1790703455451,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703455194,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.06373",
+        "n": 30
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.57144",
+        "n": 13
+      }
+    },
+    {
+      "received_ms": 1790703455452,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703455194,
+      "bid": {
+        "px": "2676.0",
+        "sz": "104.6449",
+        "n": 17
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "120.3612",
+        "n": 20
+      }
+    },
+    {
+      "received_ms": 1790703455712,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703455465,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.58249",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.57144",
+        "n": 13
+      }
+    },
+    {
+      "received_ms": 1790703455841,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703455601,
+      "bid": {
+        "px": "2676.0",
+        "sz": "104.6449",
+        "n": 17
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "122.3612",
+        "n": 21
+      }
+    },
+    {
+      "received_ms": 1790703456048,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703455803,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.58249",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.46119",
+        "n": 13
+      }
+    },
+    {
+      "received_ms": 1790703456048,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703455803,
+      "bid": {
+        "px": "189.49",
+        "sz": "2.372",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "0.083",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703456401,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703456068,
+      "bid": {
+        "px": "2676.0",
+        "sz": "104.6449",
+        "n": 17
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "120.6999",
+        "n": 20
+      }
+    },
+    {
+      "received_ms": 1790703456750,
+      "channel": "l2Book",
+      "coin": "BTC",
+      "source_ms": 1790703456383,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.58249",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.46119",
+        "n": 13
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 5966326.19442,
+        "ask": 5565532.66586
+      }
+    },
+    {
+      "received_ms": 1790703456750,
+      "channel": "l2Book",
+      "coin": "ETH",
+      "source_ms": 1790703456383,
+      "bid": {
+        "px": "2676.0",
+        "sz": "104.6449",
+        "n": 17
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "120.6999",
+        "n": 20
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 9123886.83787,
+        "ask": 8516645.414069999
+      }
+    },
+    {
+      "received_ms": 1790703456750,
+      "channel": "l2Book",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703456383,
+      "bid": {
+        "px": "189.49",
+        "sz": "2.372",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "0.083",
+        "n": 1
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 150973.84488,
+        "ask": 240246.1201
+      }
+    },
+    {
+      "received_ms": 1790703456875,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703456585,
+      "bid": {
+        "px": "2676.0",
+        "sz": "104.6449",
+        "n": 17
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "125.74",
+        "n": 21
+      }
+    },
+    {
+      "received_ms": 1790703456943,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703456671,
+      "bid": {
+        "px": "83118.0",
+        "sz": "4.68653",
+        "n": 28
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.59302",
+        "n": 14
+      }
+    },
+    {
+      "received_ms": 1790703457140,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703456875,
+      "bid": {
+        "px": "83118.0",
+        "sz": "4.59653",
+        "n": 27
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.88672",
+        "n": 15
+      }
+    },
+    {
+      "received_ms": 1790703457140,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703456875,
+      "bid": {
+        "px": "2676.0",
+        "sz": "81.5207",
+        "n": 15
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "127.8814",
+        "n": 24
+      }
+    },
+    {
+      "received_ms": 1790703457140,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703456875,
+      "bid": {
+        "px": "189.47",
+        "sz": "5.804",
+        "n": 2
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "0.61",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703457268,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703456990,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.86473",
+        "n": 22
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "4.20079",
+        "n": 19
+      }
+    },
+    {
+      "received_ms": 1790703457268,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703456990,
+      "bid": {
+        "px": "2676.0",
+        "sz": "42.8948",
+        "n": 8
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "156.7091",
+        "n": 28
+      }
+    },
+    {
+      "received_ms": 1790703457268,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703456990,
+      "bid": {
+        "px": "189.46",
+        "sz": "4.792",
+        "n": 2
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "3.078",
+        "n": 3
+      }
+    },
+    {
+      "received_ms": 1790703457411,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703457076,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.6829",
+        "n": 20
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "5.46944",
+        "n": 20
+      }
+    },
+    {
+      "received_ms": 1790703457411,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703457076,
+      "bid": {
+        "px": "2675.8",
+        "sz": "3.2376",
+        "n": 1
+      },
+      "ask": {
+        "px": "2676.1",
+        "sz": "218.6838",
+        "n": 39
+      }
+    },
+    {
+      "received_ms": 1790703457478,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703457192,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.6829",
+        "n": 20
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "5.49444",
+        "n": 21
+      }
+    },
+    {
+      "received_ms": 1790703457478,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703457192,
+      "bid": {
+        "px": "2675.8",
+        "sz": "3.2376",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "68.475",
+        "n": 16
+      }
+    },
+    {
+      "received_ms": 1790703457516,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703457242,
+      "bid": {
+        "px": "2675.8",
+        "sz": "3.2376",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "79.0924",
+        "n": 21
+      }
+    },
+    {
+      "received_ms": 1790703457584,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703457330,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.68129",
+        "n": 19
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "5.49444",
+        "n": 21
+      }
+    },
+    {
+      "received_ms": 1790703457584,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703457330,
+      "bid": {
+        "px": "2675.8",
+        "sz": "4.5393",
+        "n": 2
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "98.3692",
+        "n": 25
+      }
+    },
+    {
+      "received_ms": 1790703457584,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703457330,
+      "bid": {
+        "px": "189.47",
+        "sz": "2.372",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "55.843",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703457981,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703457388,
+      "bid": {
+        "px": "83118.0",
+        "sz": "2.0319",
+        "n": 16
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "5.49444",
+        "n": 21
+      }
+    },
+    {
+      "received_ms": 1790703457981,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703457388,
+      "bid": {
+        "px": "2675.8",
+        "sz": "4.5393",
+        "n": 2
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "100.4568",
+        "n": 26
+      }
+    },
+    {
+      "received_ms": 1790703457981,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703457388,
+      "bid": {
+        "px": "189.47",
+        "sz": "2.372",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "5.277",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703458122,
+      "channel": "allMids",
+      "dex": "unspecified",
+      "coins": 1119,
+      "selected_mids": {
+        "BTC": "83118.5",
+        "ETH": "2675.85"
+      }
+    },
+    {
+      "received_ms": 1790703458123,
+      "channel": "allMids",
+      "dex": "xyz",
+      "coins": 127,
+      "selected_mids": {
+        "xyz:COIN": "189.48"
+      }
+    },
+    {
+      "received_ms": 1790703458156,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703457445,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.74475",
+        "n": 14
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "5.49444",
+        "n": 21
+      }
+    },
+    {
+      "received_ms": 1790703458156,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703457445,
+      "bid": {
+        "px": "2675.8",
+        "sz": "4.5393",
+        "n": 2
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "117.6867",
+        "n": 34
+      }
+    },
+    {
+      "received_ms": 1790703458156,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703457590,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.74403",
+        "n": 13
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "5.70053",
+        "n": 24
+      }
+    },
+    {
+      "received_ms": 1790703458156,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703457590,
+      "bid": {
+        "px": "2675.8",
+        "sz": "6.1038",
+        "n": 2
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "184.7397",
+        "n": 42
+      }
+    },
+    {
+      "received_ms": 1790703458156,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703457679,
+      "bid": {
+        "px": "2675.7",
+        "sz": "3.2016",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.8",
+        "sz": "25.141",
+        "n": 10
+      }
+    },
+    {
+      "received_ms": 1790703458156,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703457794,
+      "bid": {
+        "px": "2675.7",
+        "sz": "3.2016",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.8",
+        "sz": "39.3085",
+        "n": 16
+      }
+    },
+    {
+      "received_ms": 1790703458156,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703457885,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.52403",
+        "n": 12
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "5.70053",
+        "n": 24
+      }
+    },
+    {
+      "received_ms": 1790703458156,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703457885,
+      "bid": {
+        "px": "2675.7",
+        "sz": "4.5033",
+        "n": 2
+      },
+      "ask": {
+        "px": "2675.8",
+        "sz": "43.053",
+        "n": 19
+      }
+    },
+    {
+      "received_ms": 1790703458350,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703457998,
+      "bid": {
+        "px": "2675.7",
+        "sz": "13.9969",
+        "n": 3
+      },
+      "ask": {
+        "px": "2675.8",
+        "sz": "52.5613",
+        "n": 27
+      }
+    },
+    {
+      "received_ms": 1790703458458,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703458091,
+      "bid": {
+        "px": "83118.0",
+        "sz": "1.96771",
+        "n": 14
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "5.70053",
+        "n": 24
+      }
+    },
+    {
+      "received_ms": 1790703458458,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703458091,
+      "bid": {
+        "px": "2675.7",
+        "sz": "25.0912",
+        "n": 4
+      },
+      "ask": {
+        "px": "2675.8",
+        "sz": "104.7073",
+        "n": 30
+      }
+    },
+    {
+      "received_ms": 1790703458542,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703458200,
+      "bid": {
+        "px": "2675.7",
+        "sz": "28.2759",
+        "n": 5
+      },
+      "ask": {
+        "px": "2675.8",
+        "sz": "120.9811",
+        "n": 30
+      }
+    },
+    {
+      "received_ms": 1790703458542,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703458287,
+      "bid": {
+        "px": "83118.0",
+        "sz": "2.18771",
+        "n": 15
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "5.70053",
+        "n": 24
+      }
+    },
+    {
+      "received_ms": 1790703458542,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703458287,
+      "bid": {
+        "px": "2675.7",
+        "sz": "25.0743",
+        "n": 4
+      },
+      "ask": {
+        "px": "2675.8",
+        "sz": "125.6126",
+        "n": 36
+      }
+    },
+    {
+      "received_ms": 1790703458687,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703458401,
+      "bid": {
+        "px": "2675.7",
+        "sz": "32.549",
+        "n": 5
+      },
+      "ask": {
+        "px": "2675.8",
+        "sz": "123.2657",
+        "n": 36
+      }
+    },
+    {
+      "received_ms": 1790703458925,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703458502,
+      "bid": {
+        "px": "83118.0",
+        "sz": "2.03802",
+        "n": 15
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "5.70053",
+        "n": 24
+      }
+    },
+    {
+      "received_ms": 1790703458925,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703458502,
+      "bid": {
+        "px": "2675.7",
+        "sz": "47.4983",
+        "n": 6
+      },
+      "ask": {
+        "px": "2675.8",
+        "sz": "96.299",
+        "n": 35
+      }
+    },
+    {
+      "received_ms": 1790703458925,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703458570,
+      "bid": {
+        "px": "2675.7",
+        "sz": "49.3641",
+        "n": 8
+      },
+      "ask": {
+        "px": "2675.8",
+        "sz": "96.1121",
+        "n": 34
+      }
+    },
+    {
+      "received_ms": 1790703458925,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703458636,
+      "bid": {
+        "px": "2675.7",
+        "sz": "49.3641",
+        "n": 8
+      },
+      "ask": {
+        "px": "2675.8",
+        "sz": "88.299",
+        "n": 32
+      }
+    },
+    {
+      "received_ms": 1790703458992,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703458701,
+      "bid": {
+        "px": "2675.7",
+        "sz": "49.5883",
+        "n": 9
+      },
+      "ask": {
+        "px": "2675.8",
+        "sz": "88.299",
+        "n": 32
+      }
+    },
+    {
+      "received_ms": 1790703459119,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703458788,
+      "bid": {
+        "px": "83118.0",
+        "sz": "4.03891",
+        "n": 22
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.84099",
+        "n": 18
+      }
+    },
+    {
+      "received_ms": 1790703459119,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703458788,
+      "bid": {
+        "px": "2675.7",
+        "sz": "168.4593",
+        "n": 27
+      },
+      "ask": {
+        "px": "2675.8",
+        "sz": "3.1625",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703459119,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703458788,
+      "bid": {
+        "px": "189.47",
+        "sz": "2.372",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "55.843",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703459155,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703458861,
+      "bid": {
+        "px": "83118.0",
+        "sz": "4.70155",
+        "n": 25
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.63439",
+        "n": 15
+      }
+    },
+    {
+      "received_ms": 1790703459155,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703458861,
+      "bid": {
+        "px": "2675.7",
+        "sz": "174.2261",
+        "n": 30
+      },
+      "ask": {
+        "px": "2675.8",
+        "sz": "0.033",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703459311,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703458977,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.64903",
+        "n": 28
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.34069",
+        "n": 14
+      }
+    },
+    {
+      "received_ms": 1790703459311,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703458977,
+      "bid": {
+        "px": "2675.7",
+        "sz": "200.401",
+        "n": 33
+      },
+      "ask": {
+        "px": "2675.8",
+        "sz": "0.033",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703459553,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703459107,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.64903",
+        "n": 28
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.47252",
+        "n": 15
+      }
+    },
+    {
+      "received_ms": 1790703459553,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703459177,
+      "bid": {
+        "px": "2675.7",
+        "sz": "184.5198",
+        "n": 31
+      },
+      "ask": {
+        "px": "2675.8",
+        "sz": "0.033",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703459667,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703459249,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.79507",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.28059",
+        "n": 12
+      }
+    },
+    {
+      "received_ms": 1790703459667,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703459249,
+      "bid": {
+        "px": "2675.8",
+        "sz": "209.4147",
+        "n": 47
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "1.5",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703459667,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703459373,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.79507",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.73683",
+        "n": 12
+      }
+    },
+    {
+      "received_ms": 1790703459667,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703459373,
+      "bid": {
+        "px": "2675.8",
+        "sz": "282.7399",
+        "n": 70
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "1.5",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703459733,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703459438,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.79507",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.25559",
+        "n": 11
+      }
+    },
+    {
+      "received_ms": 1790703459733,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703459438,
+      "bid": {
+        "px": "2675.8",
+        "sz": "320.65",
+        "n": 80
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "1.5",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703459782,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703459505,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.79507",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.25544",
+        "n": 11
+      }
+    },
+    {
+      "received_ms": 1790703459782,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703459505,
+      "bid": {
+        "px": "2675.8",
+        "sz": "341.6483",
+        "n": 83
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "1.5",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703459835,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703459574,
+      "bid": {
+        "px": "2675.8",
+        "sz": "466.7604",
+        "n": 89
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "1.5",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703459992,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703459640,
+      "bid": {
+        "px": "2675.8",
+        "sz": "407.1609",
+        "n": 72
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "1.5",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703459992,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703459709,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.79507",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.22956",
+        "n": 11
+      }
+    },
+    {
+      "received_ms": 1790703459992,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703459709,
+      "bid": {
+        "px": "2675.8",
+        "sz": "447.207",
+        "n": 79
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "1.5",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703460136,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703459843,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.79507",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.25456",
+        "n": 12
+      }
+    },
+    {
+      "received_ms": 1790703460136,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703459843,
+      "bid": {
+        "px": "2675.8",
+        "sz": "406.4973",
+        "n": 75
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "1.5",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703460178,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703459911,
+      "bid": {
+        "px": "2675.8",
+        "sz": "408.3655",
+        "n": 77
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "1.5",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703460223,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703459974,
+      "bid": {
+        "px": "2675.8",
+        "sz": "388.2431",
+        "n": 73
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "1.5",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703460349,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703460042,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.79507",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.2316",
+        "n": 12
+      }
+    },
+    {
+      "received_ms": 1790703460350,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703460042,
+      "bid": {
+        "px": "2675.8",
+        "sz": "388.2431",
+        "n": 73
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "1.4894",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703460707,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703460457,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.79487",
+        "n": 28
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.2316",
+        "n": 12
+      }
+    },
+    {
+      "received_ms": 1790703461359,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703461059,
+      "bid": {
+        "px": "2675.8",
+        "sz": "388.2431",
+        "n": 73
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "1.4811",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703461485,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703461193,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.79487",
+        "n": 28
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.2314",
+        "n": 11
+      }
+    },
+    {
+      "received_ms": 1790703461640,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703461329,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.27611",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.2314",
+        "n": 11
+      }
+    },
+    {
+      "received_ms": 1790703462183,
+      "channel": "l2Book",
+      "coin": "BTC",
+      "source_ms": 1790703461807,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.27611",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.2314",
+        "n": 11
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 6498495.84349,
+        "ask": 4985931.92775
+      }
+    },
+    {
+      "received_ms": 1790703462183,
+      "channel": "l2Book",
+      "coin": "ETH",
+      "source_ms": 1790703461807,
+      "bid": {
+        "px": "2675.8",
+        "sz": "388.2431",
+        "n": 73
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "1.4811",
+        "n": 1
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 11416646.55397,
+        "ask": 8041512.93802
+      }
+    },
+    {
+      "received_ms": 1790703462183,
+      "channel": "l2Book",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703461807,
+      "bid": {
+        "px": "189.47",
+        "sz": "2.372",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "55.843",
+        "n": 4
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 229913.23554,
+        "ask": 248750.61174
+      }
+    },
+    {
+      "received_ms": 1790703462183,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703461875,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.27611",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.36303",
+        "n": 11
+      }
+    },
+    {
+      "received_ms": 1790703462326,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703462007,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.27611",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.36288",
+        "n": 11
+      }
+    },
+    {
+      "received_ms": 1790703462326,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703462007,
+      "bid": {
+        "px": "2675.8",
+        "sz": "388.2431",
+        "n": 73
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "1.4235",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703463081,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703462424,
+      "bid": {
+        "px": "2675.8",
+        "sz": "346.5133",
+        "n": 72
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "1.4235",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703463222,
+      "channel": "allMids",
+      "dex": "unspecified",
+      "coins": 1119,
+      "selected_mids": {
+        "BTC": "83118.5",
+        "ETH": "2675.85"
+      }
+    },
+    {
+      "received_ms": 1790703463222,
+      "channel": "allMids",
+      "dex": "xyz",
+      "coins": 127,
+      "selected_mids": {
+        "xyz:COIN": "189.485"
+      }
+    },
+    {
+      "received_ms": 1790703463222,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703462690,
+      "bid": {
+        "px": "83118.0",
+        "sz": "6.27611",
+        "n": 29
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.23105",
+        "n": 10
+      }
+    },
+    {
+      "received_ms": 1790703463222,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703462824,
+      "bid": {
+        "px": "2675.8",
+        "sz": "346.5133",
+        "n": 72
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "16.3762",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703463380,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703462896,
+      "bid": {
+        "px": "2675.8",
+        "sz": "276.2695",
+        "n": 68
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "16.3965",
+        "n": 3
+      }
+    },
+    {
+      "received_ms": 1790703463380,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703462969,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.79487",
+        "n": 28
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.36288",
+        "n": 11
+      }
+    },
+    {
+      "received_ms": 1790703463381,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703462969,
+      "bid": {
+        "px": "2675.8",
+        "sz": "267.1445",
+        "n": 60
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "19.6504",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703463381,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703462969,
+      "bid": {
+        "px": "189.47",
+        "sz": "2.372",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "5.277",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703463381,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703463094,
+      "bid": {
+        "px": "2675.8",
+        "sz": "266.2947",
+        "n": 59
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "19.6504",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703463554,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703463232,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.79487",
+        "n": 28
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.65491",
+        "n": 12
+      }
+    },
+    {
+      "received_ms": 1790703463554,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703463232,
+      "bid": {
+        "px": "2675.8",
+        "sz": "267.0423",
+        "n": 60
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "19.6504",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703463554,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703463232,
+      "bid": {
+        "px": "189.47",
+        "sz": "2.372",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "55.843",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703463554,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703463298,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.14739",
+        "n": 26
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.65491",
+        "n": 12
+      }
+    },
+    {
+      "received_ms": 1790703463554,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703463298,
+      "bid": {
+        "px": "2675.8",
+        "sz": "266.9842",
+        "n": 59
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "19.6504",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703464326,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703463969,
+      "bid": {
+        "px": "83118.0",
+        "sz": "5.2978",
+        "n": 27
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "2.65491",
+        "n": 12
+      }
+    },
+    {
+      "received_ms": 1790703464326,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703464037,
+      "bid": {
+        "px": "2675.8",
+        "sz": "266.2366",
+        "n": 58
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "19.6356",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703464326,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703464037,
+      "bid": {
+        "px": "189.46",
+        "sz": "2.372",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "5.804",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703464644,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703464369,
+      "bid": {
+        "px": "83118.0",
+        "sz": "4.29546",
+        "n": 19
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "3.6303",
+        "n": 15
+      }
+    },
+    {
+      "received_ms": 1790703464644,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703464369,
+      "bid": {
+        "px": "2675.8",
+        "sz": "250.3535",
+        "n": 56
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "21.472",
+        "n": 7
+      }
+    },
+    {
+      "received_ms": 1790703464708,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703464448,
+      "bid": {
+        "px": "83118.0",
+        "sz": "4.24581",
+        "n": 18
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "5.35128",
+        "n": 17
+      }
+    },
+    {
+      "received_ms": 1790703464708,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703464448,
+      "bid": {
+        "px": "2675.8",
+        "sz": "236.7945",
+        "n": 52
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "21.472",
+        "n": 7
+      }
+    },
+    {
+      "received_ms": 1790703464965,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703464717,
+      "bid": {
+        "px": "83118.0",
+        "sz": "4.25182",
+        "n": 19
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "5.35128",
+        "n": 17
+      }
+    },
+    {
+      "received_ms": 1790703464965,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703464717,
+      "bid": {
+        "px": "2675.8",
+        "sz": "244.2689",
+        "n": 53
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "21.472",
+        "n": 7
+      }
+    },
+    {
+      "received_ms": 1790703465119,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703464850,
+      "bid": {
+        "px": "83118.0",
+        "sz": "4.45969",
+        "n": 22
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "5.35128",
+        "n": 17
+      }
+    },
+    {
+      "received_ms": 1790703465161,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703464914,
+      "bid": {
+        "px": "83118.0",
+        "sz": "4.44766",
+        "n": 21
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "4.88269",
+        "n": 17
+      }
+    },
+    {
+      "received_ms": 1790703465455,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703465049,
+      "bid": {
+        "px": "83118.0",
+        "sz": "3.96642",
+        "n": 20
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "5.35128",
+        "n": 17
+      }
+    },
+    {
+      "received_ms": 1790703465455,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703465049,
+      "bid": {
+        "px": "2675.8",
+        "sz": "236.7945",
+        "n": 52
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "22.4047",
+        "n": 8
+      }
+    },
+    {
+      "received_ms": 1790703465455,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703465115,
+      "bid": {
+        "px": "2675.8",
+        "sz": "236.7945",
+        "n": 52
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "21.472",
+        "n": 7
+      }
+    },
+    {
+      "received_ms": 1790703465607,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703465257,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.55341",
+        "n": 8
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "7.1956",
+        "n": 22
+      }
+    },
+    {
+      "received_ms": 1790703465607,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703465257,
+      "bid": {
+        "px": "2675.8",
+        "sz": "0.2383",
+        "n": 2
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "179.1737",
+        "n": 31
+      }
+    },
+    {
+      "received_ms": 1790703465607,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703465257,
+      "bid": {
+        "px": "189.45",
+        "sz": "2.372",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.48",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703465607,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703465318,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.55341",
+        "n": 8
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "7.20961",
+        "n": 24
+      }
+    },
+    {
+      "received_ms": 1790703465607,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703465318,
+      "bid": {
+        "px": "2675.8",
+        "sz": "0.0141",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.9",
+        "sz": "179.3979",
+        "n": 32
+      }
+    },
+    {
+      "received_ms": 1790703465718,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703465455,
+      "bid": {
+        "px": "2675.6",
+        "sz": "3.2016",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.7",
+        "sz": "67.8107",
+        "n": 18
+      }
+    },
+    {
+      "received_ms": 1790703465718,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703465455,
+      "bid": {
+        "px": "189.46",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.48",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703465770,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703465517,
+      "bid": {
+        "px": "2675.6",
+        "sz": "3.2016",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.7",
+        "sz": "74.0292",
+        "n": 23
+      }
+    },
+    {
+      "received_ms": 1790703465954,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703465659,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.55341",
+        "n": 8
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "7.99185",
+        "n": 25
+      }
+    },
+    {
+      "received_ms": 1790703465954,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703465659,
+      "bid": {
+        "px": "2675.6",
+        "sz": "3.2016",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.7",
+        "sz": "87.6278",
+        "n": 34
+      }
+    },
+    {
+      "received_ms": 1790703465993,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703465724,
+      "bid": {
+        "px": "2675.6",
+        "sz": "3.2016",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.7",
+        "sz": "96.4906",
+        "n": 43
+      }
+    },
+    {
+      "received_ms": 1790703466133,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703465856,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.55341",
+        "n": 8
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.13808",
+        "n": 26
+      }
+    },
+    {
+      "received_ms": 1790703466133,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703465856,
+      "bid": {
+        "px": "2675.6",
+        "sz": "4.8067",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.7",
+        "sz": "156.3657",
+        "n": 48
+      }
+    },
+    {
+      "received_ms": 1790703466166,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703465916,
+      "bid": {
+        "px": "2675.6",
+        "sz": "4.8067",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.7",
+        "sz": "166.3657",
+        "n": 49
+      }
+    },
+    {
+      "received_ms": 1790703466351,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703466055,
+      "bid": {
+        "px": "2675.5",
+        "sz": "14.0095",
+        "n": 2
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "10.4707",
+        "n": 8
+      }
+    },
+    {
+      "received_ms": 1790703466458,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703466120,
+      "bid": {
+        "px": "2675.5",
+        "sz": "14.0095",
+        "n": 2
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "17.1772",
+        "n": 13
+      }
+    },
+    {
+      "received_ms": 1790703466553,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703466261,
+      "bid": {
+        "px": "2675.5",
+        "sz": "14.0095",
+        "n": 2
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "67.7236",
+        "n": 27
+      }
+    },
+    {
+      "received_ms": 1790703466553,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703466261,
+      "bid": {
+        "px": "189.46",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.5",
+        "sz": "55.843",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703466583,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703466324,
+      "bid": {
+        "px": "2675.5",
+        "sz": "14.9103",
+        "n": 3
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "75.0574",
+        "n": 32
+      }
+    },
+    {
+      "received_ms": 1790703466742,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703466478,
+      "bid": {
+        "px": "2675.5",
+        "sz": "22.9017",
+        "n": 5
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "107.6347",
+        "n": 38
+      }
+    },
+    {
+      "received_ms": 1790703466775,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703466542,
+      "bid": {
+        "px": "2675.5",
+        "sz": "20.1122",
+        "n": 4
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "150.6394",
+        "n": 39
+      }
+    },
+    {
+      "received_ms": 1790703466987,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703466667,
+      "bid": {
+        "px": "2675.5",
+        "sz": "31.7653",
+        "n": 5
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "148.6394",
+        "n": 38
+      }
+    },
+    {
+      "received_ms": 1790703466987,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703466667,
+      "bid": {
+        "px": "189.46",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.49",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703467025,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703466744,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.55341",
+        "n": 8
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.23708",
+        "n": 27
+      }
+    },
+    {
+      "received_ms": 1790703467025,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703466744,
+      "bid": {
+        "px": "2675.5",
+        "sz": "9.2968",
+        "n": 3
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "156.1144",
+        "n": 39
+      }
+    },
+    {
+      "received_ms": 1790703467025,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703466744,
+      "bid": {
+        "px": "189.42",
+        "sz": "28.071",
+        "n": 2
+      },
+      "ask": {
+        "px": "189.47",
+        "sz": "4.876",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703467183,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703466877,
+      "bid": {
+        "px": "2675.5",
+        "sz": "9.2968",
+        "n": 3
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "168.6584",
+        "n": 37
+      }
+    },
+    {
+      "received_ms": 1790703467183,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703466877,
+      "bid": {
+        "px": "189.42",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.47",
+        "sz": "4.876",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703467276,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703467007,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.55341",
+        "n": 8
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.23693",
+        "n": 27
+      }
+    },
+    {
+      "received_ms": 1790703467328,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703467079,
+      "bid": {
+        "px": "2675.5",
+        "sz": "9.2968",
+        "n": 3
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "170.6584",
+        "n": 38
+      }
+    },
+    {
+      "received_ms": 1790703467328,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703467079,
+      "bid": {
+        "px": "189.42",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.45",
+        "sz": "42.962",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703467395,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703467146,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.77341",
+        "n": 9
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.23693",
+        "n": 27
+      }
+    },
+    {
+      "received_ms": 1790703467395,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703467146,
+      "bid": {
+        "px": "2675.5",
+        "sz": "9.521",
+        "n": 4
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "170.6584",
+        "n": 38
+      }
+    },
+    {
+      "received_ms": 1790703467395,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703467146,
+      "bid": {
+        "px": "189.42",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.44",
+        "sz": "52.784",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703467541,
+      "channel": "l2Book",
+      "coin": "BTC",
+      "source_ms": 1790703467204,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.77341",
+        "n": 9
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.23693",
+        "n": 27
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 2950558.07288,
+        "ask": 5883285.88384
+      }
+    },
+    {
+      "received_ms": 1790703467541,
+      "channel": "l2Book",
+      "coin": "ETH",
+      "source_ms": 1790703467204,
+      "bid": {
+        "px": "2675.5",
+        "sz": "9.521",
+        "n": 4
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "170.6584",
+        "n": 38
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 9317807.17014,
+        "ask": 8249144.65051
+      }
+    },
+    {
+      "received_ms": 1790703467541,
+      "channel": "l2Book",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703467204,
+      "bid": {
+        "px": "189.42",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.44",
+        "sz": "52.784",
+        "n": 1
+      },
+      "level_counts": [
+        20,
+        20
+      ],
+      "depth_for_1000_usd": {
+        "bid": 321598.84642,
+        "ask": 177143.54721
+      }
+    },
+    {
+      "received_ms": 1790703467541,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703467282,
+      "bid": {
+        "px": "2675.5",
+        "sz": "9.521",
+        "n": 4
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "186.5454",
+        "n": 40
+      }
+    },
+    {
+      "received_ms": 1790703468046,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703467475,
+      "bid": {
+        "px": "189.42",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.44",
+        "sz": "58.063",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703468186,
+      "channel": "allMids",
+      "dex": "unspecified",
+      "coins": 1119,
+      "selected_mids": {
+        "BTC": "83118.5",
+        "ETH": "2675.55"
+      }
+    },
+    {
+      "received_ms": 1790703468186,
+      "channel": "allMids",
+      "dex": "xyz",
+      "coins": 127,
+      "selected_mids": {
+        "xyz:COIN": "189.43"
+      }
+    },
+    {
+      "received_ms": 1790703468186,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703467607,
+      "bid": {
+        "px": "189.42",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.43",
+        "sz": "5.279",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703468186,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703467680,
+      "bid": {
+        "px": "2675.5",
+        "sz": "9.521",
+        "n": 4
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "194.0204",
+        "n": 41
+      }
+    },
+    {
+      "received_ms": 1790703468241,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703467816,
+      "bid": {
+        "px": "2675.5",
+        "sz": "9.521",
+        "n": 4
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "186.3579",
+        "n": 40
+      }
+    },
+    {
+      "received_ms": 1790703468241,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703467884,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.55341",
+        "n": 8
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "8.23693",
+        "n": 27
+      }
+    },
+    {
+      "received_ms": 1790703468241,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703467884,
+      "bid": {
+        "px": "189.42",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.43",
+        "sz": "8.996",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703468241,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703467948,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.55341",
+        "n": 8
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "13.04933",
+        "n": 28
+      }
+    },
+    {
+      "received_ms": 1790703468349,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703468019,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.55341",
+        "n": 8
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "13.04904",
+        "n": 28
+      }
+    },
+    {
+      "received_ms": 1790703468349,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703468019,
+      "bid": {
+        "px": "2675.5",
+        "sz": "9.521",
+        "n": 4
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "186.3523",
+        "n": 40
+      }
+    },
+    {
+      "received_ms": 1790703468432,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703468151,
+      "bid": {
+        "px": "2675.5",
+        "sz": "9.521",
+        "n": 4
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "190.0898",
+        "n": 41
+      }
+    },
+    {
+      "received_ms": 1790703468432,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703468151,
+      "bid": {
+        "px": "189.42",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.43",
+        "sz": "9.523",
+        "n": 3
+      }
+    },
+    {
+      "received_ms": 1790703468526,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703468218,
+      "bid": {
+        "px": "2675.5",
+        "sz": "9.521",
+        "n": 4
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "188.0898",
+        "n": 40
+      }
+    },
+    {
+      "received_ms": 1790703468633,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703468285,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.54788",
+        "n": 5
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "13.04904",
+        "n": 28
+      }
+    },
+    {
+      "received_ms": 1790703468633,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703468352,
+      "bid": {
+        "px": "2675.5",
+        "sz": "9.521",
+        "n": 4
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "188.6676",
+        "n": 41
+      }
+    },
+    {
+      "received_ms": 1790703468761,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703468485,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.54788",
+        "n": 5
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "13.05625",
+        "n": 29
+      }
+    },
+    {
+      "received_ms": 1790703468761,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703468485,
+      "bid": {
+        "px": "2675.5",
+        "sz": "9.521",
+        "n": 4
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "190.7354",
+        "n": 43
+      }
+    },
+    {
+      "received_ms": 1790703468828,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703468553,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.54768",
+        "n": 5
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "13.05625",
+        "n": 29
+      }
+    },
+    {
+      "received_ms": 1790703468828,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703468553,
+      "bid": {
+        "px": "2675.5",
+        "sz": "9.521",
+        "n": 4
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "192.7354",
+        "n": 44
+      }
+    },
+    {
+      "received_ms": 1790703468878,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703468619,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.54768",
+        "n": 5
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "13.06111",
+        "n": 30
+      }
+    },
+    {
+      "received_ms": 1790703468928,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703468687,
+      "bid": {
+        "px": "2675.5",
+        "sz": "9.521",
+        "n": 4
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "185.2604",
+        "n": 43
+      }
+    },
+    {
+      "received_ms": 1790703469044,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703468763,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.00274",
+        "n": 3
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "17.48281",
+        "n": 43
+      }
+    },
+    {
+      "received_ms": 1790703469044,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703468763,
+      "bid": {
+        "px": "2675.5",
+        "sz": "4.8067",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "204.5634",
+        "n": 48
+      }
+    },
+    {
+      "received_ms": 1790703469167,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703468903,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.00274",
+        "n": 3
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "22.95185",
+        "n": 53
+      }
+    },
+    {
+      "received_ms": 1790703469167,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703468903,
+      "bid": {
+        "px": "2675.5",
+        "sz": "4.8067",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.6",
+        "sz": "220.9918",
+        "n": 49
+      }
+    },
+    {
+      "received_ms": 1790703469167,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703468903,
+      "bid": {
+        "px": "189.4",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.43",
+        "sz": "9.523",
+        "n": 3
+      }
+    },
+    {
+      "received_ms": 1790703469319,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703468960,
+      "bid": {
+        "px": "83118.0",
+        "sz": "0.00274",
+        "n": 3
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "28.54887",
+        "n": 60
+      }
+    },
+    {
+      "received_ms": 1790703469319,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703468960,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "71.7921",
+        "n": 22
+      }
+    },
+    {
+      "received_ms": 1790703469319,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703468960,
+      "bid": {
+        "px": "189.4",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.41",
+        "sz": "39.596",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703469383,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703469091,
+      "bid": {
+        "px": "83110.0",
+        "sz": "0.0022",
+        "n": 1
+      },
+      "ask": {
+        "px": "83119.0",
+        "sz": "29.51331",
+        "n": 62
+      }
+    },
+    {
+      "received_ms": 1790703469383,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703469091,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "93.4301",
+        "n": 37
+      }
+    },
+    {
+      "received_ms": 1790703469383,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703469091,
+      "bid": {
+        "px": "189.4",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.41",
+        "sz": "79.197",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703469448,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703469163,
+      "bid": {
+        "px": "83101.0",
+        "sz": "2.7933",
+        "n": 1
+      },
+      "ask": {
+        "px": "83111.0",
+        "sz": "8.58362",
+        "n": 36
+      }
+    },
+    {
+      "received_ms": 1790703469449,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703469163,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "112.4187",
+        "n": 42
+      }
+    },
+    {
+      "received_ms": 1790703469591,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703469294,
+      "bid": {
+        "px": "83101.0",
+        "sz": "2.7933",
+        "n": 1
+      },
+      "ask": {
+        "px": "83103.0",
+        "sz": "0.13186",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703469591,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703469294,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "143.2673",
+        "n": 53
+      }
+    },
+    {
+      "received_ms": 1790703469591,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703469294,
+      "bid": {
+        "px": "189.4",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.42",
+        "sz": "52.793",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703469734,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703469397,
+      "bid": {
+        "px": "83101.0",
+        "sz": "2.7933",
+        "n": 1
+      },
+      "ask": {
+        "px": "83102.0",
+        "sz": "0.28957",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703469734,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703469397,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "190.9402",
+        "n": 58
+      }
+    },
+    {
+      "received_ms": 1790703469827,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703469502,
+      "bid": {
+        "px": "83101.0",
+        "sz": "3.19428",
+        "n": 2
+      },
+      "ask": {
+        "px": "83102.0",
+        "sz": "3.79332",
+        "n": 20
+      }
+    },
+    {
+      "received_ms": 1790703469827,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703469502,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "267.1693",
+        "n": 59
+      }
+    },
+    {
+      "received_ms": 1790703469872,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703469570,
+      "bid": {
+        "px": "83101.0",
+        "sz": "3.19428",
+        "n": 2
+      },
+      "ask": {
+        "px": "83102.0",
+        "sz": "4.15214",
+        "n": 24
+      }
+    },
+    {
+      "received_ms": 1790703469872,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703469570,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "249.0083",
+        "n": 56
+      }
+    },
+    {
+      "received_ms": 1790703469872,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703469570,
+      "bid": {
+        "px": "189.4",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.41",
+        "sz": "0.527",
+        "n": 1
+      }
+    },
+    {
+      "received_ms": 1790703469933,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703469685,
+      "bid": {
+        "px": "83101.0",
+        "sz": "2.7933",
+        "n": 1
+      },
+      "ask": {
+        "px": "83102.0",
+        "sz": "14.30164",
+        "n": 39
+      }
+    },
+    {
+      "received_ms": 1790703469933,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703469685,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "246.6606",
+        "n": 56
+      }
+    },
+    {
+      "received_ms": 1790703469933,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703469685,
+      "bid": {
+        "px": "189.4",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.41",
+        "sz": "5.807",
+        "n": 2
+      }
+    },
+    {
+      "received_ms": 1790703470012,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703469736,
+      "bid": {
+        "px": "83101.0",
+        "sz": "2.7933",
+        "n": 1
+      },
+      "ask": {
+        "px": "83102.0",
+        "sz": "17.46835",
+        "n": 50
+      }
+    },
+    {
+      "received_ms": 1790703470012,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703469736,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "232.676",
+        "n": 55
+      }
+    },
+    {
+      "received_ms": 1790703470115,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703469800,
+      "bid": {
+        "px": "83101.0",
+        "sz": "2.7933",
+        "n": 1
+      },
+      "ask": {
+        "px": "83102.0",
+        "sz": "20.40831",
+        "n": 62
+      }
+    },
+    {
+      "received_ms": 1790703470115,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703469800,
+      "bid": {
+        "px": "189.4",
+        "sz": "2.371",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.41",
+        "sz": "10.683",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703470219,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703469897,
+      "bid": {
+        "px": "83101.0",
+        "sz": "2.7933",
+        "n": 1
+      },
+      "ask": {
+        "px": "83102.0",
+        "sz": "20.52484",
+        "n": 64
+      }
+    },
+    {
+      "received_ms": 1790703470219,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703469897,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "236.8233",
+        "n": 54
+      }
+    },
+    {
+      "received_ms": 1790703470255,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703469966,
+      "bid": {
+        "px": "83101.0",
+        "sz": "3.01347",
+        "n": 3
+      },
+      "ask": {
+        "px": "83102.0",
+        "sz": "19.61874",
+        "n": 63
+      }
+    },
+    {
+      "received_ms": 1790703470255,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703469966,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "266.9873",
+        "n": 59
+      }
+    },
+    {
+      "received_ms": 1790703470339,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703470031,
+      "bid": {
+        "px": "83101.0",
+        "sz": "3.01347",
+        "n": 3
+      },
+      "ask": {
+        "px": "83102.0",
+        "sz": "19.98122",
+        "n": 61
+      }
+    },
+    {
+      "received_ms": 1790703470357,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703470095,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "286.9873",
+        "n": 60
+      }
+    },
+    {
+      "received_ms": 1790703470483,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703470227,
+      "bid": {
+        "px": "83101.0",
+        "sz": "3.01366",
+        "n": 4
+      },
+      "ask": {
+        "px": "83102.0",
+        "sz": "20.76362",
+        "n": 62
+      }
+    },
+    {
+      "received_ms": 1790703470483,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703470227,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "278.6345",
+        "n": 56
+      }
+    },
+    {
+      "received_ms": 1790703470483,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703470227,
+      "bid": {
+        "px": "189.37",
+        "sz": "2.433",
+        "n": 1
+      },
+      "ask": {
+        "px": "189.41",
+        "sz": "10.683",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703470624,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703470301,
+      "bid": {
+        "px": "83101.0",
+        "sz": "3.01366",
+        "n": 4
+      },
+      "ask": {
+        "px": "83102.0",
+        "sz": "20.29238",
+        "n": 58
+      }
+    },
+    {
+      "received_ms": 1790703470624,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703470301,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "279.3057",
+        "n": 57
+      }
+    },
+    {
+      "received_ms": 1790703470789,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703470428,
+      "bid": {
+        "px": "83101.0",
+        "sz": "3.01366",
+        "n": 4
+      },
+      "ask": {
+        "px": "83102.0",
+        "sz": "20.29438",
+        "n": 59
+      }
+    },
+    {
+      "received_ms": 1790703470839,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703470504,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "294.4966",
+        "n": 59
+      }
+    },
+    {
+      "received_ms": 1790703470839,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703470574,
+      "bid": {
+        "px": "83101.0",
+        "sz": "3.01366",
+        "n": 4
+      },
+      "ask": {
+        "px": "83102.0",
+        "sz": "20.59531",
+        "n": 60
+      }
+    },
+    {
+      "received_ms": 1790703470839,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703470574,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "314.4966",
+        "n": 60
+      }
+    },
+    {
+      "received_ms": 1790703470839,
+      "channel": "bbo",
+      "coin": "xyz:COIN",
+      "source_ms": 1790703470574,
+      "bid": {
+        "px": "189.37",
+        "sz": "4.806",
+        "n": 2
+      },
+      "ask": {
+        "px": "189.41",
+        "sz": "10.683",
+        "n": 4
+      }
+    },
+    {
+      "received_ms": 1790703470939,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703470710,
+      "bid": {
+        "px": "83101.0",
+        "sz": "3.01366",
+        "n": 4
+      },
+      "ask": {
+        "px": "83102.0",
+        "sz": "20.29438",
+        "n": 59
+      }
+    },
+    {
+      "received_ms": 1790703471074,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703470831,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "314.2347",
+        "n": 59
+      }
+    },
+    {
+      "received_ms": 1790703471166,
+      "channel": "bbo",
+      "coin": "BTC",
+      "source_ms": 1790703470913,
+      "bid": {
+        "px": "83101.0",
+        "sz": "3.01366",
+        "n": 4
+      },
+      "ask": {
+        "px": "83102.0",
+        "sz": "19.45175",
+        "n": 58
+      }
+    },
+    {
+      "received_ms": 1790703471166,
+      "channel": "bbo",
+      "coin": "ETH",
+      "source_ms": 1790703470913,
+      "bid": {
+        "px": "2675.3",
+        "sz": "10.0",
+        "n": 1
+      },
+      "ask": {
+        "px": "2675.4",
+        "sz": "314.2305",
+        "n": 59
+      }
+    }
+  ],
+  "control_messages": [
+    {
+      "received_ms": 1790703441374,
+      "channel": "subscriptionResponse",
+      "data": {
+        "method": "subscribe",
+        "subscription": {
+          "type": "bbo",
+          "coin": "BTC"
+        }
+      }
+    },
+    {
+      "received_ms": 1790703441400,
+      "channel": "subscriptionResponse",
+      "data": {
+        "method": "subscribe",
+        "subscription": {
+          "type": "l2Book",
+          "coin": "BTC",
+          "nSigFigs": null,
+          "mantissa": null,
+          "fast": false
+        }
+      }
+    },
+    {
+      "received_ms": 1790703441421,
+      "channel": "subscriptionResponse",
+      "data": {
+        "method": "subscribe",
+        "subscription": {
+          "type": "bbo",
+          "coin": "ETH"
+        }
+      }
+    },
+    {
+      "received_ms": 1790703441428,
+      "channel": "subscriptionResponse",
+      "data": {
+        "method": "subscribe",
+        "subscription": {
+          "type": "l2Book",
+          "coin": "ETH",
+          "nSigFigs": null,
+          "mantissa": null,
+          "fast": false
+        }
+      }
+    },
+    {
+      "received_ms": 1790703441428,
+      "channel": "subscriptionResponse",
+      "data": {
+        "method": "subscribe",
+        "subscription": {
+          "type": "bbo",
+          "coin": "xyz:COIN"
+        }
+      }
+    },
+    {
+      "received_ms": 1790703441433,
+      "channel": "subscriptionResponse",
+      "data": {
+        "method": "subscribe",
+        "subscription": {
+          "type": "l2Book",
+          "coin": "xyz:COIN",
+          "nSigFigs": null,
+          "mantissa": null,
+          "fast": false
+        }
+      }
+    },
+    {
+      "received_ms": 1790703441433,
+      "channel": "subscriptionResponse",
+      "data": {
+        "method": "subscribe",
+        "subscription": {
+          "type": "allMids"
+        }
+      }
+    },
+    {
+      "received_ms": 1790703441433,
+      "channel": "subscriptionResponse",
+      "data": {
+        "method": "subscribe",
+        "subscription": {
+          "type": "allMids",
+          "dex": "xyz"
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "note": "allMids lacks source timestamp and depth; bbo contains only one level per side; l2Book has up to 20 levels per side."
+}

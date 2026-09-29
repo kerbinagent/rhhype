@@ -196,6 +196,8 @@ class ResearchObserver:
                        'buy_received': a['received'], 'sell_received': b['received'],
                        'buy_generation': a['generation'],
                        'sell_generation': b['generation'],
+                       'buy_book_source': a.get('source'),
+                       'sell_book_source': b.get('source'),
                        'buy_sequence': a['sequence'], 'sell_sequence': b['sequence'],
                        'source_skew_ms': source_skew*1000,
                        'receipt_skew_ms': receipt_skew*1000,
@@ -262,6 +264,8 @@ def arguments(argv=None):
     parser.add_argument('--max-metadata-age-hours', type=float, default=24)
     parser.add_argument('--dry-run', action='store_true',
                         help='Print route plan without opening sockets or writing files')
+    parser.add_argument('--hl-bbo', action='store_true',
+                        help='Use faster HL best quotes alongside depth; never infer deeper liquidity')
     args = parser.parse_args(argv)
     if (args.duration <= 0 or args.report_seconds <= 0 or args.max_pairs < 1 or
             args.max_pairs > 12 or args.notional <= 0 or args.min_volume < 0 or
@@ -286,6 +290,7 @@ async def run(args, pairs, age):
                 'source_markets': str(args.markets.resolve()),
                 'source_metadata_age_seconds': age,
                 'pairs': pairs, 'markets': markets,
+                'hl_quote_mode': 'bbo_plus_depth' if args.hl_bbo else 'depth',
                 'public_websocket_only': True})
 
     async def reports():
@@ -298,7 +303,8 @@ async def run(args, pairs, age):
                 pass
 
     async with aiohttp.ClientSession(headers={'User-Agent': 'rhhype-horizon-research/1.0'}) as session:
-        streams = StreamManager(session, markets, observer.on_book, observer.on_status, max_levels=100)
+        streams = StreamManager(session, markets, observer.on_book, observer.on_status, max_levels=100,
+                                prefer_bbo=args.hl_bbo)
         tasks = [asyncio.create_task(streams.run(stop)),
                  asyncio.create_task(reports())]
         stopper = asyncio.create_task(stop.wait())
