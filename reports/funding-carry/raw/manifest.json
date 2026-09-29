@@ -1,0 +1,114 @@
+{
+  "started_utc": "2026-09-29T17:37:05.810917+00:00",
+  "window_first_event_utc": "2026-09-27T17:00:00+00:00",
+  "window_last_event_utc": "2026-09-29T16:00:00+00:00",
+  "event_hours_requested": 48,
+  "assets": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "HYPE",
+    "ZEC",
+    "COIN",
+    "XAG",
+    "NVDA"
+  ],
+  "endpoints": {
+    "lighter_core/markets": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails",
+    "rh_lighter/markets": "https://api.rh.lighter.xyz/api/v1/orderBookDetails",
+    "hl/BTC": {
+      "url": "https://api.hyperliquid.xyz/info",
+      "body": {
+        "type": "fundingHistory",
+        "coin": "BTC",
+        "startTime": 1790528400000,
+        "endTime": 1790701199999
+      }
+    },
+    "lighter_core/BTC": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=1&resolution=1h&start_timestamp=1790528400&end_timestamp=1790701199&count_back=49",
+    "rh_lighter/BTC": "https://api.rh.lighter.xyz/api/v1/fundings?market_id=1&resolution=1h&start_timestamp=1790528400&end_timestamp=1790701199&count_back=49",
+    "hl/ETH": {
+      "url": "https://api.hyperliquid.xyz/info",
+      "body": {
+        "type": "fundingHistory",
+        "coin": "ETH",
+        "startTime": 1790528400000,
+        "endTime": 1790701199999
+      }
+    },
+    "lighter_core/ETH": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=0&resolution=1h&start_timestamp=1790528400&end_timestamp=1790701199&count_back=49",
+    "rh_lighter/ETH": "https://api.rh.lighter.xyz/api/v1/fundings?market_id=0&resolution=1h&start_timestamp=1790528400&end_timestamp=1790701199&count_back=49",
+    "hl/SOL": {
+      "url": "https://api.hyperliquid.xyz/info",
+      "body": {
+        "type": "fundingHistory",
+        "coin": "SOL",
+        "startTime": 1790528400000,
+        "endTime": 1790701199999
+      }
+    },
+    "lighter_core/SOL": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=2&resolution=1h&start_timestamp=1790528400&end_timestamp=1790701199&count_back=49",
+    "rh_lighter/SOL": "https://api.rh.lighter.xyz/api/v1/fundings?market_id=3&resolution=1h&start_timestamp=1790528400&end_timestamp=1790701199&count_back=49",
+    "hl/HYPE": {
+      "url": "https://api.hyperliquid.xyz/info",
+      "body": {
+        "type": "fundingHistory",
+        "coin": "HYPE",
+        "startTime": 1790528400000,
+        "endTime": 1790701199999
+      }
+    },
+    "lighter_core/HYPE": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=24&resolution=1h&start_timestamp=1790528400&end_timestamp=1790701199&count_back=49",
+    "rh_lighter/HYPE": "https://api.rh.lighter.xyz/api/v1/fundings?market_id=2&resolution=1h&start_timestamp=1790528400&end_timestamp=1790701199&count_back=49",
+    "hl/ZEC": {
+      "url": "https://api.hyperliquid.xyz/info",
+      "body": {
+        "type": "fundingHistory",
+        "coin": "ZEC",
+        "startTime": 1790528400000,
+        "endTime": 1790701199999
+      }
+    },
+    "lighter_core/ZEC": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=90&resolution=1h&start_timestamp=1790528400&end_timestamp=1790701199&count_back=49",
+    "rh_lighter/ZEC": "https://api.rh.lighter.xyz/api/v1/fundings?market_id=4&resolution=1h&start_timestamp=1790528400&end_timestamp=1790701199&count_back=49",
+    "hl/COIN": {
+      "url": "https://api.hyperliquid.xyz/info",
+      "body": {
+        "type": "fundingHistory",
+        "coin": "xyz:COIN",
+        "startTime": 1790528400000,
+        "endTime": 1790701199999
+      }
+    },
+    "lighter_core/COIN": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=109&resolution=1h&start_timestamp=1790528400&end_timestamp=1790701199&count_back=49",
+    "rh_lighter/COIN": "https://api.rh.lighter.xyz/api/v1/fundings?market_id=23&resolution=1h&start_timestamp=1790528400&end_timestamp=1790701199&count_back=49",
+    "hl/XAG": {
+      "url": "https://api.hyperliquid.xyz/info",
+      "body": {
+        "type": "fundingHistory",
+        "coin": "xyz:SILVER",
+        "startTime": 1790528400000,
+        "endTime": 1790701199999
+      }
+    },
+    "lighter_core/XAG": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=93&resolution=1h&start_timestamp=1790528400&end_timestamp=1790701199&count_back=49",
+    "rh_lighter/XAG": "https://api.rh.lighter.xyz/api/v1/fundings?market_id=41&resolution=1h&start_timestamp=1790528400&end_timestamp=1790701199&count_back=49",
+    "hl/NVDA": {
+      "url": "https://api.hyperliquid.xyz/info",
+      "body": {
+        "type": "fundingHistory",
+        "coin": "xyz:NVDA",
+        "startTime": 1790528400000,
+        "endTime": 1790701199999
+      }
+    },
+    "lighter_core/NVDA": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=110&resolution=1h&start_timestamp=1790528400&end_timestamp=1790701199&count_back=49",
+    "rh_lighter/NVDA": "https://api.rh.lighter.xyz/api/v1/fundings?market_id=15&resolution=1h&start_timestamp=1790528400&end_timestamp=1790701199&count_back=49"
+  },
+  "errors": {},
+  "read_only": true,
+  "finished_utc": "2026-09-29T17:37:30.827734+00:00",
+  "boundary_correction": "Lighter count_back=48 returned 47 rows; re-fetched each with count_back=49, yielding exact 48 event hours.",
+  "fee_calibration_date_utc": "2026-09-29",
+  "fee_note": "fixed scenario based on 2026-09-29 public schedule and archived HL market metadata; not refreshed or historically account-verified"
+}

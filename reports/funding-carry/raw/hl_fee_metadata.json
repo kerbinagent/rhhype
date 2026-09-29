@@ -1,0 +1,77 @@
+{
+  "source": "data/raw/live/20260929T035450Z/plan.json",
+  "markets": [
+    {
+      "asset": "BTC",
+      "market": "BTC",
+      "kind": "perp",
+      "dex": "",
+      "fee_scale": "",
+      "growth_mode": "",
+      "collateral": "USDC"
+    },
+    {
+      "asset": "ETH",
+      "market": "ETH",
+      "kind": "perp",
+      "dex": "",
+      "fee_scale": "",
+      "growth_mode": "",
+      "collateral": "USDC"
+    },
+    {
+      "asset": "SOL",
+      "market": "SOL",
+      "kind": "perp",
+      "dex": "",
+      "fee_scale": "",
+      "growth_mode": "",
+      "collateral": "USDC"
+    },
+    {
+      "asset": "HYPE",
+      "market": "HYPE",
+      "kind": "perp",
+      "dex": "",
+      "fee_scale": "",
+      "growth_mode": "",
+      "collateral": "USDC"
+    },
+    {
+      "asset": "ZEC",
+      "market": "ZEC",
+      "kind": "perp",
+      "dex": "",
+      "fee_scale": "",
+      "growth_mode": "",
+      "collateral": "USDC"
+    },
+    {
+      "asset": "NVDA",
+      "market": "xyz:NVDA",
+      "kind": "perp",
+      "dex": "xyz",
+      "fee_scale": "1.0",
+      "growth_mode": "enabled",
+      "collateral": "USDC"
+    },
+    {
+      "asset": "COIN",
+      "market": "xyz:COIN",
+      "kind": "perp",
+      "dex": "xyz",
+      "fee_scale": "1.0",
+      "growth_mode": "enabled",
+      "collateral": "USDC"
+    },
+    {
+      "asset": "XAG",
+      "market": "xyz:SILVER",
+      "kind": "perp",
+      "dex": "xyz",
+      "fee_scale": "1.0",
+      "growth_mode": "enabled",
+      "collateral": "USDC"
+    }
+  ]
+}

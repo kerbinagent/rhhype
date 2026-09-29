@@ -1,0 +1,290 @@
+[
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "-0.00013391",
+    "time": 1790528400015
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0001086239",
+    "time": 1790532000004
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.0000108076",
+    "premium": "0.0004729214",
+    "time": 1790535600037
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0000161462",
+    "time": 1790539200040
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "-0.0000125205",
+    "premium": "-0.0005003279",
+    "time": 1790542800090
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "-0.0000442196",
+    "time": 1790546400030
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "-0.0001064207",
+    "premium": "-0.0020027318",
+    "time": 1790550000045
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "-0.0001926157",
+    "time": 1790553600025
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.0000251596",
+    "premium": "0.0007025536",
+    "time": 1790557200001
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.0000084493",
+    "premium": "0.0004351882",
+    "time": 1790560800063
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.0000087574",
+    "premium": "0.000440118",
+    "time": 1790564400036
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.0000100317",
+    "premium": "0.0004605076",
+    "time": 1790568000046
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0003921802",
+    "time": 1790571600037
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.0000116255",
+    "premium": "0.0004860082",
+    "time": 1790575200119
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.0000090767",
+    "premium": "0.0004452271",
+    "time": 1790578800055
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.0000073768",
+    "premium": "0.0004180286",
+    "time": 1790582400052
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002373422",
+    "time": 1790586000028
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.0000073794",
+    "premium": "0.0004180704",
+    "time": 1790589600018
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.000015613",
+    "premium": "0.000549808",
+    "time": 1790593200027
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.0000073441",
+    "premium": "0.000417505",
+    "time": 1790596800054
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.0000138466",
+    "premium": "0.0005215456",
+    "time": 1790600400050
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0003510313",
+    "time": 1790604000070
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0003361682",
+    "time": 1790607600054
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.0000126808",
+    "premium": "0.000502892",
+    "time": 1790611200046
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.000011184",
+    "premium": "0.0004789445",
+    "time": 1790614800018
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002795888",
+    "time": 1790618400067
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002665032",
+    "time": 1790622000008
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0001815759",
+    "time": 1790625600041
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002370747",
+    "time": 1790629200023
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "-0.0000135996",
+    "time": 1790632800008
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0003227224",
+    "time": 1790636400005
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.000292843",
+    "time": 1790640000079
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002859182",
+    "time": 1790643600020
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002336244",
+    "time": 1790647200023
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002934275",
+    "time": 1790650800055
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0001575208",
+    "time": 1790654400047
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.00017807",
+    "time": 1790658000031
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0003928834",
+    "time": 1790661600024
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0003945952",
+    "time": 1790665200045
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0003595359",
+    "time": 1790668800049
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0000770629",
+    "time": 1790672400050
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "-0.0000647057",
+    "time": 1790676000041
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002818702",
+    "time": 1790679600030
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.0000068975",
+    "premium": "0.0004103601",
+    "time": 1790683200051
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.0000082979",
+    "premium": "0.0004327671",
+    "time": 1790686800058
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.0000144868",
+    "premium": "0.0005317883",
+    "time": 1790690400028
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.0000100357",
+    "premium": "0.0004605715",
+    "time": 1790694000109
+  },
+  {
+    "coin": "xyz:COIN",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002813778",
+    "time": 1790697600055
+  }
+]

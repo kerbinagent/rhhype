@@ -1,0 +1,290 @@
+[
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000069652",
+    "premium": "0.0004114431",
+    "time": 1790528400015
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002668169",
+    "time": 1790532000004
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0001009285",
+    "time": 1790535600037
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0000465067",
+    "time": 1790539200040
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000058559",
+    "premium": "-0.0002063052",
+    "time": 1790542800090
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0000422931",
+    "time": 1790546400030
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0003114954",
+    "time": 1790550000045
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000065175",
+    "premium": "0.0004042795",
+    "time": 1790553600025
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000073176",
+    "premium": "0.0004170823",
+    "time": 1790557200001
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000241222",
+    "premium": "0.0006859555",
+    "time": 1790560800063
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000350643",
+    "premium": "0.0008610291",
+    "time": 1790564400036
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000484525",
+    "premium": "0.0010752405",
+    "time": 1790568000046
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000369235",
+    "premium": "0.0008907755",
+    "time": 1790571600037
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000235974",
+    "premium": "0.0006775579",
+    "time": 1790575200119
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.000030824",
+    "premium": "0.0007931844",
+    "time": 1790578800055
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0003083916",
+    "time": 1790582400052
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000068059",
+    "premium": "0.0004088943",
+    "time": 1790586000028
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000117707",
+    "premium": "0.0004883306",
+    "time": 1790589600018
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000142862",
+    "premium": "0.0005285789",
+    "time": 1790593200027
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000173804",
+    "premium": "0.0005780869",
+    "time": 1790596800054
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000085189",
+    "premium": "0.0004363027",
+    "time": 1790600400050
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.000009378",
+    "premium": "0.0004500474",
+    "time": 1790604000070
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0003807278",
+    "time": 1790607600054
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0000369934",
+    "time": 1790611200046
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "-0.0000695615",
+    "time": 1790614800018
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0000385243",
+    "time": 1790618400067
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0001085133",
+    "time": 1790622000008
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0000976199",
+    "time": 1790625600041
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0001418209",
+    "time": 1790629200023
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000224579",
+    "premium": "0.0006593261",
+    "time": 1790632800008
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0001062083",
+    "time": 1790636400005
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0001188507",
+    "time": 1790640000079
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002277419",
+    "time": 1790643600020
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002964386",
+    "time": 1790647200023
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002487851",
+    "time": 1790650800055
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002258305",
+    "time": 1790654400047
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002436896",
+    "time": 1790658000031
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002366485",
+    "time": 1790661600024
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0001739042",
+    "time": 1790665200045
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0003142191",
+    "time": 1790668800049
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0001378502",
+    "time": 1790672400050
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0002501998",
+    "time": 1790676000041
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0003573754",
+    "time": 1790679600030
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000114358",
+    "premium": "0.000482972",
+    "time": 1790683200051
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.0000068599",
+    "premium": "0.0004097591",
+    "time": 1790686800058
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0003310077",
+    "time": 1790690400028
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "0.0001388367",
+    "time": 1790694000109
+  },
+  {
+    "coin": "xyz:SILVER",
+    "fundingRate": "0.00000625",
+    "premium": "-0.0000662942",
+    "time": 1790697600055
+  }
+]

@@ -1,0 +1,294 @@
+{
+  "code": 200,
+  "resolution": "1h",
+  "fundings": [
+    {
+      "timestamp": 1790528400,
+      "value": "0.00025674",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790532000,
+      "value": "0.00025690",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790535600,
+      "value": "0.00025693",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790539200,
+      "value": "0.00025696",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790542800,
+      "value": "0.00025685",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790546400,
+      "value": "0.00025688",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790550000,
+      "value": "0.00025496",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790553600,
+      "value": "0.00025494",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790557200,
+      "value": "0.00025176",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790560800,
+      "value": "0.00037533",
+      "rate": "0.0006",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790564400,
+      "value": "0.00130024",
+      "rate": "0.0021",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790568000,
+      "value": "0.00167522",
+      "rate": "0.0027",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790571600,
+      "value": "0.00099133",
+      "rate": "0.0016",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790575200,
+      "value": "0.00055469",
+      "rate": "0.0009",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790578800,
+      "value": "0.00116777",
+      "rate": "0.0019",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790582400,
+      "value": "0.00036690",
+      "rate": "0.0006",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790586000,
+      "value": "0.00054924",
+      "rate": "0.0009",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790589600,
+      "value": "0.00079677",
+      "rate": "0.0013",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790593200,
+      "value": "0.00049042",
+      "rate": "0.0008",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790596800,
+      "value": "0.00061231",
+      "rate": "0.0010",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790600400,
+      "value": "0.00024552",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790604000,
+      "value": "0.00055609",
+      "rate": "0.0009",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790607600,
+      "value": "0.00036549",
+      "rate": "0.0006",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790611200,
+      "value": "0.00067201",
+      "rate": "0.0011",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790614800,
+      "value": "0.00024466",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790618400,
+      "value": "0.00024516",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790622000,
+      "value": "0.00085693",
+      "rate": "0.0014",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790625600,
+      "value": "0.00048685",
+      "rate": "0.0008",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790629200,
+      "value": "0.00078841",
+      "rate": "0.0013",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790632800,
+      "value": "0.00042562",
+      "rate": "0.0007",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790636400,
+      "value": "0.00085060",
+      "rate": "0.0014",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790640000,
+      "value": "0.00060812",
+      "rate": "0.0010",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790643600,
+      "value": "0.00024271",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790647200,
+      "value": "0.00024312",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790650800,
+      "value": "0.00030336",
+      "rate": "0.0005",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790654400,
+      "value": "0.00060586",
+      "rate": "0.0010",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790658000,
+      "value": "0.00036332",
+      "rate": "0.0006",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790661600,
+      "value": "0.00024284",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790665200,
+      "value": "0.00024332",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790668800,
+      "value": "0.00054707",
+      "rate": "0.0009",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790672400,
+      "value": "0.00036406",
+      "rate": "0.0006",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790676000,
+      "value": "0.00048494",
+      "rate": "0.0008",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790679600,
+      "value": "0.00024349",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790683200,
+      "value": "0.00067057",
+      "rate": "0.0011",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790686800,
+      "value": "0.00072875",
+      "rate": "0.0012",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790690400,
+      "value": "0.00073092",
+      "rate": "0.0012",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790694000,
+      "value": "0.00024509",
+      "rate": "0.0004",
+      "direction": "long"
+    },
+    {
+      "timestamp": 1790697600,
+      "value": "0.00024349",
+      "rate": "0.0004",
+      "direction": "long"
+    }
+  ]
+}

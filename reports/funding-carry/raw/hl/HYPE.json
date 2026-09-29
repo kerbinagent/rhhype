@@ -1,0 +1,290 @@
+[
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0003685164",
+    "time": 1790528400015
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0002903647",
+    "time": 1790532000004
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0002043258",
+    "time": 1790535600037
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0001235301",
+    "time": 1790539200040
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0002741487",
+    "time": 1790542800090
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0002342364",
+    "time": 1790546400030
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0003890766",
+    "time": 1790550000045
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0001901455",
+    "time": 1790553600025
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0002235873",
+    "time": 1790557200001
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "-0.0000112089",
+    "premium": "-0.0005896715",
+    "time": 1790560800063
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000012726",
+    "premium": "-0.0004898194",
+    "time": 1790564400036
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0003133274",
+    "time": 1790568000046
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0002254934",
+    "time": 1790571600037
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "-0.0000025529",
+    "premium": "-0.0005204229",
+    "time": 1790575200119
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000061292",
+    "premium": "-0.0004509667",
+    "time": 1790578800055
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0002460357",
+    "time": 1790582400052
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0001480974",
+    "time": 1790586000028
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0002083841",
+    "time": 1790589600018
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0002616397",
+    "time": 1790593200027
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000100071",
+    "premium": "-0.000419943",
+    "time": 1790596800054
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000120972",
+    "premium": "-0.0004032224",
+    "time": 1790600400050
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0003578076",
+    "time": 1790604000070
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0003227536",
+    "time": 1790607600054
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "0.0000331396",
+    "time": 1790611200046
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0000363462",
+    "time": 1790614800018
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0003494055",
+    "time": 1790618400067
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0003220947",
+    "time": 1790622000008
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0003067603",
+    "time": 1790625600041
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0002178455",
+    "time": 1790629200023
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0003551136",
+    "time": 1790632800008
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0000622551",
+    "time": 1790636400005
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "0.000048845",
+    "time": 1790640000079
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "0.0000085044",
+    "time": 1790643600020
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "0.0001515305",
+    "time": 1790647200023
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "0.0000155247",
+    "time": 1790650800055
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.000169478",
+    "time": 1790654400047
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0002858964",
+    "time": 1790658000031
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "-0.0000074125",
+    "premium": "-0.0005592997",
+    "time": 1790661600024
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000036178",
+    "premium": "-0.0004710573",
+    "time": 1790665200045
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.000348911",
+    "time": 1790668800049
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0002327708",
+    "time": 1790672400050
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0003143907",
+    "time": 1790676000041
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0001597416",
+    "time": 1790679600030
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.000232896",
+    "time": 1790683200051
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0003083416",
+    "time": 1790686800058
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0001734987",
+    "time": 1790690400028
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "-0.0003418946",
+    "time": 1790694000109
+  },
+  {
+    "coin": "HYPE",
+    "fundingRate": "0.0000125",
+    "premium": "0.0000311052",
+    "time": 1790697600055
+  }
+]
