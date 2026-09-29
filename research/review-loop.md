@@ -740,3 +740,34 @@ uncertainty explicitly. Historical quote-distance tests found no qualifying
 flow at 5/10/20 bp behind best in their complete ten-second windows, and
 separate nontrading-cost research distinguishes the 5 bp stress allowance
 from published trading fees. Next review **22:26:33 UTC / 6:26 p.m. ET**.
+
+## Review 19: 2026-09-29 22:26:33 UTC, actively reviewed on schedule
+
+| Standard-fee policy | Completed | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 91 | -109.885 | 91 | 0 |
+| Cooldown | 32 | -45.076 | 32 | 0 |
+| Historical median | 1 | -4.772 | 0 | 1 |
+| Conservative | 0 | 0 | 0 | 0 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+Full retained completion coverage, all exact paper outcomes, zero wins.
+Baseline also had one zero-fill abort. Its fees were $32.6752, reserve
+$45.4484, capital $0.00324 and funding zero: approximately **-$31.7582
+before these costs**. AVAX/Core contributed -$44.5980 across 22 closes;
+CRCL/Core -$29.1932 across 32. The one historical-median failure was ZRO,
+with the HL hedge rejected at its price limit. No policy promoted.
+
+Baseline paired entry median 1.210s/p95 1.787s; exit request to flat
+median 1.236s/p95 1.900s. CPU 67.48% of one core, p95 loop lag 18.29ms,
+RSS 237.75MiB, 562 books/s, all four feeds connected, 113 eligible pairs.
+Confirmation 106 arms, no entry/pending/residual: 68 skew, 20 forecast,
+eight depth/budget, eight economic, two invalid terminal reasons.
+
+The RH maker capture stopped normally at 22:11:32. Original replay remains
+running; a separately labeled immutable-book cache variant avoids repeated
+full-depth parsing. Synthetic financial/audit equivalence passes; the full
+original/cached comparison is pending. Neither replay's financial results
+were available at this review. See [performance record](rh-maker-replay-performance.md).
+Sizes remain $100/$250/$500/$1,000, primary $1,000. Next review
+**22:46:33 UTC / 6:46 p.m. ET**.

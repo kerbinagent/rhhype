@@ -295,3 +295,15 @@ Frozen replay PID **2656054** / root exec session **31859** started about
 CPU core and 126 MiB RSS. All 23 frozen file hashes matched before replay.
 After it finishes, run lifecycle summary and independent retired-quote
 late-flow adjudication. Next scheduled production review remains 22:26:33.
+
+## Status at 22:27 UTC
+
+- Review 19 actively read on schedule at 22:26:33. Baseline 91 paired
+  closes -$109.8851, cooldown 32 paired -$45.0755, historical-median one
+  failed hedge -$4.7722; zero wins. Conservative/confirmed no completions.
+  All four feeds connected, CPU 67.48% of one core, p95 loop lag 18.29ms.
+- Original replay PID 2656054 remains running. Cached variant PID 2670694,
+  root exec session 33191, writes `data/derived/rh-small-maker-v1-cached`.
+  Both outputs remain bounded; no new capture is running. Current wrapper
+  and independent variant provenance checks committed as 4f97d38/00641bd.
+- Next scheduled production review **22:46:33 UTC / 6:46 p.m. ET**.
