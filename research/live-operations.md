@@ -271,3 +271,16 @@ Production monitor and 20-minute review loop continue independently.
   have been inspected. Production directory was 52 MiB and reviews 500 KiB.
 - Separate historical hedge-venue comparison and symmetric maker-sell
   follow-up preserve the current frozen pilot.
+
+## Status at 22:07 UTC
+
+- Review 18 actively read on schedule; next due 22:26:33 UTC. All four
+  production feeds connected; 55.39% of one core, 10.19ms p95 loop lag.
+- Original RH maker capture remains frozen and unread, planned stop
+  22:11:32. Run original replay after its terminal manifest exists, then
+  the lifecycle report and separate retired-quote late-flow adjudicator.
+  The latter defect was independently reproduced before any outcome read
+  and recorded in f313525; original source files remain unchanged.
+- A separate symmetric bid/ask model and guarded execution driver are being
+  tested for a future capture. No symmetric capture or protocol is frozen
+  or running yet. It must not use the current pilot as a new holdout.

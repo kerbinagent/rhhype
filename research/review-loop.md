@@ -710,3 +710,33 @@ Separate stopped-archive research compares Core versus HL hedge costs and
 preregisters a mirrored RH maker-sell follow-up on new data. Current study
 stays $100/$250/$500/$1,000, primary $1,000, buy-side only.
 Next scheduled review **22:06:33 UTC / 6:06 p.m. ET**.
+
+## Review 18: 2026-09-29 22:06:33 UTC, actively reviewed on schedule
+
+| Standard-fee policy | Completed | Net USD | Paired | Failed hedges |
+|---|---:|---:|---:|---:|
+| Fresh baseline | 93 | -106.073 | 91 | 2 |
+| Cooldown | 46 | -57.244 | 46 | 0 |
+| Historical median | 3 | -4.512 | 0 | 3 |
+| Conservative | 0 | 0 | 0 | 0 |
+| Confirmed | 0 | 0 | 0 | 0 |
+
+Full retained window coverage, zero wins. Baseline comprises 92 exact
+paper outcomes (-$104.5495) and one estimated outcome (-$1.5232); paired
+-$104.1829, failed hedges -$1.8898. Cooldown outcomes all exact and paired.
+Historical median also had one zero-fill abort. Baseline paired entry
+median 1.205s/p95 1.771s; exit request to flat median 1.155s/p95 1.773s.
+CPU 55.39% of one core, p95 loop lag 10.19ms, RSS 226.68MiB, 571 books/s;
+all four feeds connected. Confirmation 105 arms, no entry/pending/residual:
+67 skew, 20 forecast, eight depth/budget, eight economic, two invalid.
+No replacement policy promoted.
+
+Original RH maker holdout continues to 22:11:32 with frozen source hashes
+and unread outcomes. Independent synthetic review discovered a retired-
+quote late-print accounting defect, recorded before readout in **f313525**.
+A separate raw/audit adjudicator will flag affected original results;
+future bid/ask code now retains retired-quote evidence and marks execution
+uncertainty explicitly. Historical quote-distance tests found no qualifying
+flow at 5/10/20 bp behind best in their complete ten-second windows, and
+separate nontrading-cost research distinguishes the 5 bp stress allowance
+from published trading fees. Next review **22:26:33 UTC / 6:26 p.m. ET**.
