@@ -1,8 +1,12 @@
 # RH passive bids with Hyperliquid hedges
 
-**Status:** collecting public data. No profit result is available yet.
+**Status:** capture complete; frozen replay and independent validation running.
+No profit result is available yet.
 Started 29 September 2026 at 21:21:32 UTC. Thirty minutes of calibration
-precede the 20-minute evaluation window, ending about 22:11:32 UTC.
+preceded the 20-minute evaluation window. Collection stopped normally at
+22:11:32.790024 UTC: 104,790 public frames, 41,368,405 compressed bytes,
+no truncation. The [terminal manifest](capture-terminal-manifest.json)
+records one RH reconnect during calibration and none during holdout.
 
 The user's size range is **$100/$250/$500/$1,000**, with **$1,000 primary**.
 BTC, ETH, NVDA and silver have separate Standard and Premium scenarios.
@@ -45,3 +49,7 @@ USDG–USDC conversion. The ten-second rule is an **exit request deadline**;
 later partial executions and unresolved obligations remain visible.
 Any combined dollar result is conditional on collateral parity. One short
 holdout cannot establish durable profitability or justify production promotion.
+
+A separately discovered [late-print audit](../../research/rh-maker-late-flow-audit.md)
+will check retired quotes against the raw events before interpreting results.
+The frozen implementation remains unchanged.

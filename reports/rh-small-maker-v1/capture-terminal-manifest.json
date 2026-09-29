@@ -1,0 +1,218 @@
+{
+  "calibration_seconds": 1800,
+  "clock_sync_check": "not performed; source UTC is not calibrated one-way latency",
+  "compressed_payload_bytes": 41368405,
+  "configured_seconds": 3000,
+  "configured_total_bytes": 384000000,
+  "connection_attempts": {
+    "hyperliquid": 1,
+    "rh_lighter": 2
+  },
+  "dropped_complete_frame_on_cap": 0,
+  "end_reason": "duration_limit",
+  "ended_utc": "2026-09-29T22:11:32.790024+00:00",
+  "endpoints": {
+    "hyperliquid": "wss://api.hyperliquid.xyz/ws",
+    "rh_lighter": "wss://api.rh.lighter.xyz/stream?readonly=true"
+  },
+  "errors": [
+    {
+      "at_utc": "2026-09-29T21:38:19.532005+00:00",
+      "detail": "socket closed: CLOSED, None",
+      "venue": "rh_lighter"
+    }
+  ],
+  "frames_sha256": "07cf628056fda14b2d93553fdd1591ae842e260455d9bb47b249967f113c90fa",
+  "generations": [
+    {
+      "closed_utc": "2026-09-29T22:11:32.746899+00:00",
+      "generation": "hyperliquid:1:7fb913d30883",
+      "opened_utc": "2026-09-29T21:21:32.597543+00:00",
+      "venue": "hyperliquid"
+    },
+    {
+      "closed_utc": "2026-09-29T21:38:19.532183+00:00",
+      "generation": "rh_lighter:1:539e9d21c15a",
+      "opened_utc": "2026-09-29T21:21:32.599975+00:00",
+      "venue": "rh_lighter"
+    },
+    {
+      "closed_utc": "2026-09-29T22:11:32.746935+00:00",
+      "generation": "rh_lighter:2:677948b4ac8f",
+      "opened_utc": "2026-09-29T21:38:21.533108+00:00",
+      "venue": "rh_lighter"
+    }
+  ],
+  "holdout_seconds": 1200,
+  "invalidations": {
+    "hyperliquid|BTC|disconnect": 1,
+    "hyperliquid|ETH|disconnect": 1,
+    "hyperliquid|xyz:NVDA|disconnect": 1,
+    "hyperliquid|xyz:SILVER|disconnect": 1,
+    "rh_lighter|0|disconnect": 2,
+    "rh_lighter|15|disconnect": 2,
+    "rh_lighter|1|disconnect": 2,
+    "rh_lighter|41|disconnect": 2
+  },
+  "market_plan": "reports/rh-small-maker-v1/metadata/market_plan.json",
+  "market_plan_sha256": "6f16e506bb0bde92b77eae0213cb7972d8fb5a313ad728fb02f58313172bd749",
+  "metadata_bytes": 246436,
+  "metadata_normalized_sha256": "7a64a5c93e9fa21ff822d83013a90d178ed277bd7c18413a97e83154e0b3baa8",
+  "metadata_source": "reports/rh-small-maker-v1/metadata",
+  "notes": [
+    "Raw public frames preserve receipt/source/generation and nonce annotations.",
+    "No private fills, orders, or P&L are observed or inferred.",
+    "RH order-book deltas require same-generation nonce continuity.",
+    "HL fast L2 is a 5-level snapshot feed; no BBO merge."
+  ],
+  "omitted_invalidation_keys": 0,
+  "omitted_record_count_keys": 0,
+  "payload_records": 104790,
+  "read_only": true,
+  "record_counts": {
+    "hyperliquid|BTC|l2Book": 5509,
+    "hyperliquid|BTC|trades": 2521,
+    "hyperliquid|ETH|l2Book": 5509,
+    "hyperliquid|ETH|trades": 2144,
+    "hyperliquid|None|None": 1,
+    "hyperliquid|None|pong": 66,
+    "hyperliquid|None|subscriptionResponse": 8,
+    "hyperliquid|connections_ended": 1,
+    "hyperliquid|outbound_keepalive": 66,
+    "hyperliquid|subscription_acks": 8,
+    "hyperliquid|xyz:NVDA|l2Book": 5509,
+    "hyperliquid|xyz:NVDA|trades": 416,
+    "hyperliquid|xyz:SILVER|l2Book": 5509,
+    "hyperliquid|xyz:SILVER|trades": 558,
+    "rh_lighter|0|order_book": 28649,
+    "rh_lighter|0|trade": 1103,
+    "rh_lighter|15|order_book": 6689,
+    "rh_lighter|15|trade": 704,
+    "rh_lighter|1|order_book": 28998,
+    "rh_lighter|1|trade": 1450,
+    "rh_lighter|41|order_book": 9212,
+    "rh_lighter|41|trade": 163,
+    "rh_lighter|None|None": 4,
+    "rh_lighter|None|connected": 2,
+    "rh_lighter|None|pong": 66,
+    "rh_lighter|connections_ended": 2,
+    "rh_lighter|errors": 1,
+    "rh_lighter|outbound_keepalive": 66,
+    "rh_lighter|subscription_acks": 16
+  },
+  "schema": "rh-maker-public-capture-v1",
+  "selected_markets": {
+    "hyperliquid": {
+      "BTC": "BTC",
+      "ETH": "ETH",
+      "NVDA": "xyz:NVDA",
+      "XAG": "xyz:SILVER"
+    },
+    "rh_lighter": {
+      "BTC": "1",
+      "ETH": "0",
+      "NVDA": "15",
+      "XAG": "41"
+    }
+  },
+  "started_utc": "2026-09-29T21:21:32.597194+00:00",
+  "subscriptions": {
+    "hyperliquid": [
+      {
+        "method": "subscribe",
+        "subscription": {
+          "coin": "BTC",
+          "fast": true,
+          "type": "l2Book"
+        }
+      },
+      {
+        "method": "subscribe",
+        "subscription": {
+          "coin": "ETH",
+          "fast": true,
+          "type": "l2Book"
+        }
+      },
+      {
+        "method": "subscribe",
+        "subscription": {
+          "coin": "xyz:NVDA",
+          "fast": true,
+          "type": "l2Book"
+        }
+      },
+      {
+        "method": "subscribe",
+        "subscription": {
+          "coin": "xyz:SILVER",
+          "fast": true,
+          "type": "l2Book"
+        }
+      },
+      {
+        "method": "subscribe",
+        "subscription": {
+          "coin": "BTC",
+          "type": "trades"
+        }
+      },
+      {
+        "method": "subscribe",
+        "subscription": {
+          "coin": "ETH",
+          "type": "trades"
+        }
+      },
+      {
+        "method": "subscribe",
+        "subscription": {
+          "coin": "xyz:NVDA",
+          "type": "trades"
+        }
+      },
+      {
+        "method": "subscribe",
+        "subscription": {
+          "coin": "xyz:SILVER",
+          "type": "trades"
+        }
+      }
+    ],
+    "rh_lighter": [
+      {
+        "channel": "order_book/1",
+        "type": "subscribe"
+      },
+      {
+        "channel": "trade/1",
+        "type": "subscribe"
+      },
+      {
+        "channel": "order_book/0",
+        "type": "subscribe"
+      },
+      {
+        "channel": "trade/0",
+        "type": "subscribe"
+      },
+      {
+        "channel": "order_book/15",
+        "type": "subscribe"
+      },
+      {
+        "channel": "trade/15",
+        "type": "subscribe"
+      },
+      {
+        "channel": "order_book/41",
+        "type": "subscribe"
+      },
+      {
+        "channel": "trade/41",
+        "type": "subscribe"
+      }
+    ]
+  },
+  "truncated": false
+}

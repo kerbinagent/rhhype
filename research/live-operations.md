@@ -284,3 +284,14 @@ Production monitor and 20-minute review loop continue independently.
 - A separate symmetric bid/ask model and guarded execution driver are being
   tested for a future capture. No symmetric capture or protocol is frozen
   or running yet. It must not use the current pilot as a new holdout.
+
+Original RH maker capture stopped normally at **22:11:32.790024 UTC**,
+3,000.193 seconds after actual start 21:21:32.597194. Raw frames: 104,790,
+41,368,405 compressed bytes, SHA-256
+`07cf628056fda14b2d93553fdd1591ae842e260455d9bb47b249967f113c90fa`.
+One RH reconnect was during calibration; no holdout reconnect in manifest.
+Frozen replay PID **2656054** / root exec session **31859** started about
+22:11:44, output `data/derived/rh-small-maker-v1`; at 22:13 it used one
+CPU core and 126 MiB RSS. All 23 frozen file hashes matched before replay.
+After it finishes, run lifecycle summary and independent retired-quote
+late-flow adjudication. Next scheduled production review remains 22:26:33.
