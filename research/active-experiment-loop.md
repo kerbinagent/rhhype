@@ -320,3 +320,33 @@ before traversal. Deadline approximately 06:32:02 UTC. Results remain pending;
 no automatic retry or partial-result conclusion follows.
 This is post-capture exploratory analysis with no automatic policy selection,
 capture or promotion.
+
+
+### Second attempt failure and separate resource amendment, 06:33 UTC
+
+V2 ended with external timeout exit 124 at its original 900-second limit.
+Its full canonical terminal was not verified and no economic results were
+published. All 33 frozen inputs were rehashed unchanged; 117,265 bytes of
+source/freeze/failure evidence are preserved in `0252Z-v2.building`.
+An attempted early termination had been rejected by automatic approval
+review and was not executed; the original timeout ended the process.
+
+The author reproduced default-cache thrashing on synthetic 40,000-level
+working sets: four cycles took about 0.8122 s cached versus 0.1866 s with
+the original validator and 0.1981 s with the existing cache disabled. The
+cache recorded zero hits, 160,000 misses and 152,007 evictions. This is a
+synthetic diagnosis, not a measured hit ratio for the stopped archive.
+
+Root explicitly supersedes the v2 second/final limit for one additional
+resource-only revision, subject to independent review and a new commit/
+freeze before launch. Inject the existing disabled-cache path; preserve
+the full 7,200/28,800 grid and all economic/timing/validity criteria. Set
+a fixed 1,200-second internal/external deadline, based on the first
+attempt completing its canonical traversal within 900 seconds and the
+limited synthetic comparison; completion is not guaranteed. Retain the
+4 MB aggregate and 3.25 MB outcome limits. No automatic retry.
+
+The v3 allocation reserves both failed attempts plus the new run and
+20 KB additional documentation: 32,480,772 of 33,000,000 bytes, leaving
+519,228 bytes. The 820 MB total reservation and raw archive count stay
+fixed. Implementation is authorized; the traversal has not yet launched.

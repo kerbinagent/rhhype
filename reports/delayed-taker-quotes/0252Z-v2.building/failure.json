@@ -1,0 +1,42 @@
+{
+  "status": "incomplete_unpublished",
+  "recorded_at": "2026-09-30T06:32:26.124971+00:00",
+  "source_commit": "337097a",
+  "process_exit_code": 124,
+  "reason": "external_900_second_deadline",
+  "published_manifest_exists": false,
+  "canonical_terminal_checks_verified": false,
+  "canonical_terminal_completion": "unverified",
+  "economic_summary_saved": false,
+  "economic_conclusion": null,
+  "raw_traversals_attempted_this_revision": 1,
+  "total_traversals_attempted_this_question": 2,
+  "automatic_retry": false,
+  "input_hashes_unchanged_at_failure_audit": true,
+  "input_hashes_checked": 33,
+  "partial_files": {
+    "method.md": {
+      "bytes": 23399,
+      "sha256": "18f0b179154a0d19642570a6196bc4eca9f4e617e0e3558da3d546e8088a432e"
+    },
+    "freeze.json": {
+      "bytes": 6480,
+      "sha256": "505b4529dd34affc1be1d0280ac0537a6d7672886da74677dc62845d3c8839e4"
+    },
+    "tests.py": {
+      "bytes": 29350,
+      "sha256": "32c32151f815848f1b1bada28c73a7c9d64732fce57c669c225eaeaa3f810353"
+    },
+    "source.py": {
+      "bytes": 44113,
+      "sha256": "0bdb1cb80c26a9fa710eaa32243fbeddb80d947701c7e8e48663ae55ee24a828"
+    },
+    "metadata.json": {
+      "bytes": 12406,
+      "sha256": "34249d999bf176b73a2f9e30aa1602f3ab135a7cadc9238a080bfe060f048aba"
+    }
+  },
+  "partial_bytes_before_failure_record": 115748,
+  "source_snapshot_utc": "2026-09-30T06:17:02.106107+00:00",
+  "early_termination_attempt": "automatic_approval_review_rejected; not executed; original authorized timeout ended run"
+}
