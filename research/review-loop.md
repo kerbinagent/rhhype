@@ -3068,3 +3068,38 @@ or capital change. Next checkpoint **22:26:33 UTC**.
 
 Carry has all 113 due arrivals through 22:05, 138,780 sample bytes, zero overdue
 missing files, no terminal error and no interim economic evaluation.
+
+
+### Review 91 — 30 September 2026 22:26 UTC
+
+Exact report and separate epoch snapshot preserved; guarded manual archive
+2,106,265/16,777,216 bytes. Report SHA-256
+`48ca50d16ff8e10dd3d34946681cdd12298db4ce5fa5913c9c421696de06aa2c`.
+All 47 exact closes negative: 44 paired and three failed hedges. Zero aborts,
+complete coverage and three Hyperliquid price-limit entry rejections.
+No new winning or estimated records.
+
+- Cooldown: 44/−$44.1328; 43 paired/−$42.3979 and one failed hedge/−$1.7349.
+- Premium: one paired GOOGL close/−$1.4926.
+- Convergence: two failed hedges/−$2.5219.
+
+Cooldown fees $8.5279, stress $21.9697, capital $0.0015353, funding zero;
+without stress −$22.1631. Exit comparisons: 42 observed, one missing request
+price; twelve better, ten worse, twenty unchanged, aggregate deterioration
+$0.360118, median zero, p95 adverse $0.040582. All 43 paired request-to-flat
+times present: median 1.204 s, p95 1.905 s. Premium's one comparison was
+unchanged within numerical precision; request-to-flat 1.118 s. Convergence
+had no paired completions.
+
+Four feeds connected, 107 pairs, CPU 49.82%, p95 lag 8.77 ms, RSS 320.02 MiB,
+588.0 books/s, metadata age 2,938.1 s. Review and separately timed epoch
+snapshot each had one cooldown position. Epoch: cooldown 2,325 exact plus
+eight estimated/−$3,065.9470; Premium 640/−$1,173.9537; convergence 364/
+−$429.4132; conservative four/−$3.0627; confirmed two/−$4.0150. Separate
+epoch snapshots are not atomic with the review boundary. Twenty-two earlier
+win records and three legacy funding obligations remain. Reviews 66–91 have
+1,484 closes: 1,474 losses, two paired gains and eight rescue gains. No policy
+or capital change. Next checkpoint **22:46:33 UTC**.
+
+Carry has all 117 due arrivals through 22:25, 143,709 sample bytes, zero overdue
+missing files, no terminal error and no interim economic evaluation.
