@@ -3182,3 +3182,39 @@ Next checkpoint **23:26:33 UTC**.
 
 Carry has all 125 due arrivals through 23:05, 153,571 sample bytes, zero overdue
 missing files, no terminal error and no interim economic evaluation.
+
+
+## Review 94 — 30 September 2026 23:26:33 UTC
+
+Exact report, separate epoch snapshot and capital-limit health evidence preserved;
+guarded manual archive 2,206,419/16,777,216 bytes. Report SHA-256
+`b3b0861d27852f1d8b9011e37b23c75370d0d82434bf65dbab53aaac2f687c33`.
+Two exact Premium closes, both negative: paired GOOGL −$1.53451 and failed
+XRP hedge −$1.72016, total −$3.25468. Zero aborts, complete coverage and one
+Hyperliquid price-limit rejection. Other strategies had no completions.
+Premium fees $1.57625, stress $0.99760 and capital $0.00003877; without
+stress −$2.25707. The one paired exit improved $0.057101 against its request
+price and flattened in 1.0085 s; failed hedge has no comparable exit timing.
+
+**Cooldown is now capital constrained.** Its Hyperliquid paper wallet is
+$1,000.35611, below even the fee-free reserve floor of $1,000.50 for the
+configured $1,000 notional, full margin and 5 bp stress. The entry check in
+`scripts/paper_engine.py` additionally reserves round-trip venue fees. With
+no open cooldown position or pending funding, new cooldown pairs cannot
+pass this current wallet constraint. The 23:27:50 snapshot preserves costs,
+wallets and policy counters (5,334 allowed, 4,244 entered). Global capital
+rejections are not attributable exclusively to cooldown. This is a capital
+outcome after accumulated paper losses, not a feed failure. No wallet top-up,
+reset, size or policy change was performed.
+
+Four feeds connected, 108 pairs, CPU 55.38%, p95 lag 13.28 ms, RSS 319.66 MiB,
+576.5 books/s, metadata age 2,933.4 s; performance normal. Review and separate
+epoch snapshot flat. Epoch: cooldown unchanged at 2,404 exact plus nine
+estimated/−$3,158.0177; Premium 644/−$1,179.9555; convergence 366/−$432.1029;
+conservative four/−$3.0627; confirmed two/−$4.0150. Twenty-two earlier win
+records and three legacy funding obligations remain. Reviews 66–94 total
+1,571 closes: 1,561 losses, two paired gains and eight rescue gains.
+Next checkpoint **23:46:33 UTC**.
+
+Carry has all 129 due arrivals through 23:25, 158,499 sample bytes, zero overdue
+missing files, no terminal error and no interim economic evaluation.

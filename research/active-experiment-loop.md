@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 23:08 UTC
+## Current status, 30 September 2026 23:28 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative; no production strategy is promoted. The user authorized
@@ -20,17 +20,19 @@ BTC_USDC spot and BTC_USDC-9OCT26. See the [method](dated-carry-method-v1.md)
 and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 93 are preserved. Review85 adds two paired MU gains
+Reviews through 94 are preserved. Review85 adds two paired MU gains
 (+$0.0473 and +$0.1896) sharing the same signal time and Hyperliquid fill
 observation; its complete three-trade convergence paired group lost $1.2929.
 Earlier paired gains were WLD +$0.3590 and CRCL +$0.3250 in review65.
-Reviews 66–93 have 1,569 closes: 1,559 losses, two paired gains and eight
-failed-hedge rescue gains.
-One loss each in reviews75,78,81,87,90 and93 has estimated funding and remains
-estimated. All 39 closes in review93 lost money; its full estimated CRCL record
-is preserved and reconciled. Twenty-two epoch win records comprise four paired
-and eighteen rescues. There is still no qualifying positive strategy window.
-Next review: **23:26:33 UTC**.
+Reviews 66–94 have 1,571 closes: 1,561 losses, two paired gains and eight
+failed-hedge rescue gains. One loss each in reviews75,78,81,87,90 and93 has
+estimated funding and remains estimated. Both review94 closes lost money.
+Twenty-two epoch win records comprise four paired and eighteen rescues.
+Cooldown is now unable to admit new pairs: its Hyperliquid paper balance
+$1,000.35611 is below the $1,000.50 entry reserve floor before venue fees.
+Capital-limit evidence is preserved; no top-up, reset or rule change was made.
+There is still no qualifying positive strategy window.
+Next review: **23:46:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -1327,3 +1329,17 @@ earlier win records and three legacy funding obligations remain. Four feeds
 connected, 108 pairs and normal performance; review and later epoch snapshot
 flat. Next review 23:26:33 UTC. Carry has all 125 due arrivals through 23:05,
 no terminal error or overdue missing files, and no economic evaluation.
+
+
+### Review 94, 23:26 UTC
+
+Two exact Premium losses: paired GOOGL −$1.53451 and failed XRP hedge
+−$1.72016, total −$3.25468. Zero aborts, complete coverage and one Hyperliquid
+price-limit rejection. Cooldown had no closes and is now capital constrained:
+HL wallet $1,000.35611 is below the $1,000.50 minimum reserve before fees.
+Source check and full selected health evidence preserved; no wallet reset or
+top-up. Four feeds connected, 108 pairs, normal performance and no open
+positions at either snapshot. Twenty-two earlier win records and three legacy
+funding obligations remain. Next review 23:46:33 UTC. Carry has all 129 due
+arrivals through 23:25, no terminal error or overdue files, and no economic
+evaluation.
