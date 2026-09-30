@@ -85,3 +85,24 @@ winning fills while abandoning its losing or ambiguous inventory has failed.
 No fresh v1 outcome has been used to select this hypothesis. If the completed
 screen has no candidate even under unchanged-book arithmetic, prioritize the
 fee/venue feasibility question before building the more complex refresher.
+
+## Completed screen follow-up, 03:31 UTC
+
+The [five-round universe screen](../reports/passive-universe-screen/20260930T0310Z/readout.md)
+produced no positive stressed observation among 320 valid size observations.
+The subsequent [optimistic hedge-cost budget](../reports/passive-universe-hedge-budget/0310Z-input-v1/readout.md)
+removes every fee and all hedge spread/impact, and charges stress on only RH
+opening notional. Even then, all 17 eligible asset medians are negative at
+each of the four sizes. LIT has the best $1,000 optimistic median, −$0.124235.
+One LIT round is positive at $500 and $1,000; those are two sizes of the
+same quote, not independent evidence. Other prices, future basis movement,
+or a prospectively declared rare-opportunity filter are not ruled out by
+this static screen.
+
+Under the screen's declared median selection rule, these results do not
+nominate a broader Core study solely to save fees. Building a refresher
+without a feasible entry condition would address stale quote economics
+while leaving the initial hurdle unmet. Continue the frozen v1 lifecycle
+test and separate timing diagnostics. A future strategy change must state
+the new economic hypothesis—such as wider quotes with measured opposing
+flow—and freeze its admission rule before its next evaluation window.

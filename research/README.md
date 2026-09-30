@@ -27,6 +27,10 @@ production readouts are in the [review journal](review-loop.md).
   none cleared fees, the $0.10 target and the 5 bp stress. The 100 stale
   observations and failed first attempt remain visible. These are static
   quote margins, with no maker-fill or realized-profit claim.
+- [Optimistic hedge-cost bound](../reports/passive-universe-hedge-budget/0310Z-input-v1/readout.md):
+  deleting all fees and hedge spread still leaves every eligible asset
+  median negative. One favorable LIT round is retained and disclosed;
+  the bound concerns unchanged-book arithmetic, not future price paths.
 - [Entry queue diagnostic](rh-entry-queue-followup.md): earlier Standard
   branches became unresolved quickly. Their shorter observation periods
   cannot be compared directly with Premium's later fills.
