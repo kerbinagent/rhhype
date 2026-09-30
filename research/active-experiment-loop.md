@@ -640,3 +640,24 @@ maximum 32,710,904 of 33,000,000 bytes leaves 289,096; total 820 MB reservation 
 all earlier study/failure reservations remain. No archive traversal or
 implementation is authorized until the method and resource bounds pass
 root and peer review.
+
+
+### Review 51 and Core/RH implementation approval, 09:07 UTC
+
+The new 20-minute window remains negative with no winners: Cooldown
+64 paired closes/−$68.8576, Premium 19/−$35.9288 (14 paired, five failed
+hedges), convergence nine/−$15.6411 (one paired, eight failed hedges).
+Coverage is complete. Four feeds remain connected and the original strategy
+epoch/capital history is retained. Next production review 09:26:33 UTC.
+
+Root and independent peer accepted the final Core/RH method, frozen in
+`2a5bffd`. Implementation and synthetic tests only are authorized in new
+files. Review must exercise actual admission, bounded gzip/decoder handling,
+all 1,008 candidate identities and publication using fake archives before a
+separately authorized real run. Key amendments: both entry-direction anchor
+legs require depth; known-grid flags cannot cause illegal first quotes to
+be skipped; raw price collisions are detected before float conversion;
+explicit invalidation controls censor current lifecycles; all failure rows
+including the unread second archive retain null economics. No raw stream
+has been hashed or decoded for this study, and no network/capture occurs.
+All original modules/methods/evidence and storage reservations remain frozen.

@@ -1553,3 +1553,46 @@ another RH/HL flow/ECM model on the existing negative quote grid. A distinct
 RH/Core delayed-taker quote feasibility method is being reviewed against
 retained seven-minute archives and historical metadata gaps; no scan,
 implementation, capture or production policy change has been authorized.
+
+
+## Review 51 — 2026-09-30 09:06:33 UTC
+
+Exact daemon output is retained in
+`reports/live-review-catchup/review-20260930T090633Z.json`. Complete completion
+and abort coverage across strategies; no new winning close or abort.
+
+- Cooldown: 64 exact paired closes, −$68.8576; no failed hedge.
+- Premium: 19 exact closes, −$35.9288: 14 paired/−$23.3122 and five failed
+  hedges/−$12.6166. Five Hyperliquid price-limit rejections.
+- Convergence: nine exact closes, −$15.6411: one paired/−$1.4731 and eight
+  failed hedges/−$14.1680. Eight Hyperliquid price-limit rejections.
+- Other strategy ledgers: no new completions. Strategies are separate
+  hypothetical portfolios; their results are not summed.
+
+Cooldown fees $17.7855, stress $32.4586, capital $0.0023255, funding zero;
+without stress the window remains −$36.3990. Its 63 observed exit-price
+comparisons improved $1.671582 (12 worse, 18 better, 33 unchanged), one
+request-price observation missing, median zero and p95 adverse $0.080060.
+Its 64 paired request-to-flat times have median 1.208 s and p95 1.967 s.
+Premium's 13 observed exit comparisons worsened $0.512630, one missing;
+convergence's one paired comparison improved $0.334000.
+
+The separately timed current-version snapshot in
+`reports/live-review-catchup/current-epoch-at-review51.json` records cooldown
+816 exact plus two estimated completions, −$1,063.5894 (one win); Premium
+160/−$268.6174 (one win); convergence 61/−$58.3045 (three wins); conservative
+1/+$2.3198. The six historical winning records still belong to the two
+previously documented failed-hedge rescue episodes, not paired wins.
+Version `e3e83cda71a6` and epoch remain unchanged. The review health snapshot
+has one cooldown position open; the later epoch snapshot is flat. Three
+legacy funding obligations remain outside epoch totals. Read times differ;
+no records are discarded to force agreement.
+
+Health: four connected feeds, 108 pairs, CPU 57.53% of one core, p95 loop lag
+10.53 ms, RSS 257.59 MiB, 859.3 books/s, metadata age 1,796 s. Next review
+**09:26:33 UTC**. No production restart, capital reset or policy change.
+
+The Core/RH method passed root and independent review and was committed as
+`2a5bffd`. Implementation and synthetic tests only are now authorized; raw
+hashing/decoding, network, capture and policy deployment remain unstarted.
+The 600,000-byte allocation and all prior failed-study allocations remain.
