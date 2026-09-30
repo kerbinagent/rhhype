@@ -1207,3 +1207,34 @@ Health: four connected feeds, 111 pairs, CPU 51.34% of one core, p95 loop lag
 Both completed static-route diagnostics remain nonpositive; the separately
 reviewed delayed quote helper is being implemented. No strategy promotion,
 new raw capture or capital reset.
+
+
+## Review 41: 2026-09-30 05:46:33 UTC
+
+Read and archived at 05:46 UTC in
+`reports/live-review-catchup/review-20260930T054633Z.json`. All coverage is
+complete. Cooldown completed **39 exact paired trades, −$42.9572**, zero
+wins. Premium completed **two exact, −$5.4492** (one paired −$1.7903 and
+one failed hedge −$3.6589), zero wins. Convergence completed **two exact
+failed hedges, −$3.5168**, zero wins, both HL price-limit rejection. Other
+strategies had no new completion. Separate ledgers are not summed.
+
+Cooldown fees were $7.9709, stress $19.4745, capital $0.0014, funding zero;
+removing stress leaves −$23.4827. Its 39 exit-price observations worsened
+$0.405347 in aggregate (12 worse, 14 better, 13 unchanged), median zero,
+p95 adverse $0.172976. Request-to-flat median 1.172 s, p95 2.279 s.
+Premium's one paired exit-price comparison improved $0.013510.
+
+The separate current-version snapshot in
+`reports/live-review-catchup/current-epoch-at-review41.json` records cooldown
+347 exact plus two estimated completions, −$487.3308 (one win); Premium
+35/−$60.1446 (one win); convergence 20/−$16.2309 (two wins); conservative
+1/+$2.3198. Existing wins remain the correlated LIT failed-hedge episode.
+Version `e3e83cda71a6` and three legacy funding obligations are unchanged.
+The later snapshot has one cooldown and one Premium position; their marks
+are separate from closed net. The scheduled snapshot was flat.
+
+Health: four connected feeds, 111 pairs, CPU 52.95% of one core, p95 loop
+lag 11.86 ms, RSS 229.61 MiB, 814.5 books/s. Next review **06:06:33 UTC**.
+The delayed quote helper has 31 passing synthetic tests and awaits final
+independent signoff/source freeze. No new raw capture, promotion or reset.

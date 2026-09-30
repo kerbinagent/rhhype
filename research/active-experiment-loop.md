@@ -225,7 +225,7 @@ The [fixed storage amendment](experiment-storage.md) now preserves all seven
 current raw archives and permits at most one additional 128 MB complete
 archive, subject to separate design/freeze/preflight, under a fixed eight
 archive/512 MB selected-raw limit. No new capture has launched. Next
-production review after review 40 is 05:46:33 UTC.
+production review after review 41 is 06:06:33 UTC.
 
 ## Completed ACK sensitivity, 04:30 UTC
 
