@@ -102,3 +102,5 @@ and mechanisms considered. All work uses public data and paper execution.
 - [Rare-spread admission design](passive-rare-spread-admission-design.md): evidence prerequisite for a different entry gate; no capture launched.
 - [Fixed-anchor RH/HL feasibility](../reports/passive-rare-spread/0252Z-fixed-1s-v1/readout.md): zero positives among 47,624 valid observations on the full 48,000-row grid; tested gate stopped.
 - [ACK halt review](passive-ack-halt-review.md): source-freshness expiry and late anchor revisions retain unknown execution; first-evidence retention issue documented.
+- [Single-settlement rate review](../reports/funding-carry/core-rh-single-settlement-review.md): favorable direction and payment-subset arithmetic on 192 existing Core/RH observations yields at most 0.41 bp; actual funding cashflow and combined trading P&L remain unverified.
+- [Liquidation flow review](rh-liquidation-flow-review.md): all 65 old liquidation rows were subscription history predating capture; zero live liquidation updates add flow to the tested windows. Public order eligibility remains unresolved.
