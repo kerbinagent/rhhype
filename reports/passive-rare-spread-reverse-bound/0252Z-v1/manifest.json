@@ -1,0 +1,33 @@
+{
+  "completed_at": "2026-09-30T05:13:04.427935+00:00",
+  "input_and_source_hashes_unchanged": true,
+  "parent_input_sha256": {
+    "verification.json": "92f4c331f14cd94f1c96a139ae0de7853a6bf107f5b21c5477b807f94af2b39e",
+    "observations.csv": "116262d013230c6f0e9a7973b3450e8789896774885b75e57f11ff1e173ed4ba",
+    "timing.csv": "56f34dd6a462dfa527b6c46264c0fc729f2bf409f6a95db59caa97f824241b19",
+    "readout.md": "fcb2de761b73a4ba52b46382e48980357125b52689b763f934a060ee48a5999d",
+    "method.md": "796f0a7317c8c0be630b6b40788d49b1d85ecf80f139e61367e2474fcd9b7f80",
+    "freeze.json": "559c6afac6693d1325fdc15d304fb52bf3c87551129f2949362cc26084c8e908",
+    "summary.json": "93c3a959a109309854b56468d1c3b709a601cf75b8a08541063b76d5cd43c7d2",
+    "manifest.json": "506021b62405929a572e9cc69e21759fe04270eff9806b8e6d9712d53b5a2b0b",
+    "tests.py": "98369536ea4740f440d10c761f88afc767e84a4ae187c00bbd9e4aca77b835d2",
+    "source.py": "2e33e4edb453e776fd5cc6cab0dd54bf179689bfc5d521cb42c6f4f6c820ee45",
+    "metadata.json": "34249d999bf176b73a2f9e30aa1602f3ab135a7cadc9238a080bfe060f048aba"
+  },
+  "source_sha256": {
+    "/home/harry/projects/research/rhhype/scripts/analyze_reverse_static_upper_bound.py": "64d67e88ec9d812cea71f43a268688e7505b22ca7b84ecb5e939f6c56ea14d72",
+    "/home/harry/projects/research/rhhype/research/reverse-static-upper-bound-method.md": "8a98bcc23bc1c2a8cf4f881b950ed3918dda286ccb4b986d765d330810414759",
+    "/home/harry/projects/research/rhhype/tests/test_reverse_static_upper_bound.py": "ecdbdb9f8d5b3dbd17f3eaf8083cab9d087962366cccfc4fc66556b1a340a147"
+  },
+  "output_sha256": {
+    "analysis.json": "144a86677c4423fb5e928bb7bede48d4a123acb922d531aca61208a8fa5691c3",
+    "freeze.json": "a76c1a502bec22b1604b587a918a5dc31a6b573a1ebeda4a82e0818880bc22a6",
+    "REPORT.md": "12c7c4f0f12e12fcef7857f4fed5fbce110f11ef2e3283a9e812ea4cab1946fa",
+    "source.py": "64d67e88ec9d812cea71f43a268688e7505b22ca7b84ecb5e939f6c56ea14d72",
+    "method.md": "8a98bcc23bc1c2a8cf4f881b950ed3918dda286ccb4b986d765d330810414759",
+    "tests.py": "ecdbdb9f8d5b3dbd17f3eaf8083cab9d087962366cccfc4fc66556b1a340a147"
+  },
+  "aggregate_output_cap_bytes": 2000000,
+  "raw_scans": 0,
+  "network_calls": 0
+}

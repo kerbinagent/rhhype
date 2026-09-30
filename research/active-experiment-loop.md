@@ -262,12 +262,16 @@ price-changing cycles or future regimes. Capital/funding and actual execution
 remain outside this static margin, and correlated observations are not treated
 as independent trials. No new capture or strategy promotion follows.
 
-A separately bounded derived-data diagnostic is being prepared for the reverse
-HL-maker/RH-taker route at inherited q. Its optimistic static upper bound uses
-full recorded HL walk notionals and actual frozen maker fees; nonpositive
-bounds rule out only that fixed-quote margin on covered rows. Parent-invalid
-rows remain reverse-unadjudicated, and positive bounds are inconclusive.
-It requires no further raw traversal or new archive.
+The [reverse HL-maker/RH-taker bound](../reports/passive-rare-spread-reverse-bound/0252Z-v1/REPORT.md)
+completed at 05:13:04 UTC after method/source commit `de2fdef` and nine
+passing synthetic tests. All 47,624 evaluated upper bounds are nonpositive;
+376 parent-invalid rows remain reverse-unadjudicated. All 48,000 identities
+and 80 asset/size/stratum groups are retained. Published output is 852,744
+bytes under the 2 MB allocation, with unchanged parent/source hashes and
+no raw traversal or network request. This excludes only the unchanged
+best-quote reverse margin at inherited q, with target and stress but excluding
+funding. Other quantities, wider quotes and price-changing cycles remain
+outside the bound. It supplies no reason for a new capture or promotion.
 
 
 A supplemental [derived-row verification](../reports/passive-rare-spread/0252Z-fixed-1s-v1/verification.json)

@@ -15,6 +15,10 @@ production readouts are in the [review journal](review-loop.md).
 
 ## What the evidence currently supports
 
+- [Reverse static route bound](../reports/passive-rare-spread-reverse-bound/0252Z-v1/REPORT.md):
+  all 47,624 evaluated HL-maker/RH-taker upper bounds are nonpositive after
+  target and stress; 376 rows remain unadjudicated. This covers fixed prices
+  and inherited quantities, excluding funding and dynamic cycles.
 - [Unwind strategy decision](unwind-strategy-decision.md): the opening price
   difference is not locked profit for two perpetual positions. Four-fill
   costs and the closing basis must be included. Most observed losses were
