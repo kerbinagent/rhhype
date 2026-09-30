@@ -1679,3 +1679,39 @@ limits. Separate zero-raw source/runtime preparation, timeout failure
 rosters and completion-marker cleanup are implemented. The independent
 auditor's seven synthetic tests pass; the full decoder fixture and final
 combined source review remain prerequisites to any run.
+
+## Review 54 — 2026-09-30 10:06:33 UTC
+
+Exact daemon output is preserved in
+`reports/live-review-catchup/review-20260930T100633Z.json`; completion and
+abort coverage is complete. There are no new winners or aborts.
+
+- Cooldown: 42 exact paired closes, −$51.0983.
+- Premium: two exact closes, −$3.0930: one paired/−$1.5717 and one failed
+  hedge/−$1.5213.
+- Convergence: three exact failed hedges, −$3.5799.
+- Other strategies: no completed trades. Four Hyperliquid price-limit
+  rejections account for the failed hedges. Portfolios remain separate.
+
+Cooldown fees $14.7156, stress $20.9736, capital $0.0015018, funding zero;
+removing stress alone leaves −$30.1247. Its 41 observed exit comparisons
+worsened $0.271375 (11 worse, nine better, 21 unchanged); one request price
+is missing. Median zero, p95 adverse $0.221220. All 42 paired request-to-flat
+times are present: median 1.142 s, p95 1.862 s. Premium's one paired exit
+comparison was unchanged within numerical precision.
+
+The separately timed snapshot at 10:06:59 UTC is preserved in
+`reports/live-review-catchup/current-epoch-at-review54.json`: cooldown 960
+exact plus two estimated completions/−$1,224.2595 (one old win), Premium
+175/−$294.5834 (one old win), convergence 71/−$71.2988 (three old wins),
+conservative 1/+$2.3198. Version `e3e83cda71a6`, epoch and the six old
+failed-rescue win records remain unchanged. The review had one open cooldown
+position; the later snapshot is flat. Three legacy funding obligations remain.
+
+All four feeds are connected, 110 pairs, CPU 53.63% of one core, p95 lag
+8.19 ms, RSS 262.03 MiB, 739.5 books/s, metadata age 1,791.0 s. Next checkpoint
+**10:26:33 UTC**. No capital reset or production policy change.
+
+The one canonical Core/RH replay launched at 10:01:18 UTC remains running
+without reported errors. Its sources and prepared inputs are frozen; the
+900-second deadline and no-retry rule remain. No partial economics inspected.
