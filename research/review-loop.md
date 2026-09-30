@@ -934,3 +934,31 @@ still does not explain the aggregate net loss. Health: 113 pairs, 1,038.4
 book events/s, CPU 77.83% of one core, p95 loop lag 12.84 ms, RSS 261.51 MiB.
 Next report due **02:46:33 UTC / 10:46 p.m. ET**. Preserved full review:
 `reports/live-review-catchup/review-20260930T022633Z.json`.
+
+## Review 32: 2026-09-30 02:46:33 UTC
+
+Actively read on schedule; preserved as
+`reports/live-review-catchup/review-20260930T024633Z.json`. Completion coverage
+is complete. Baseline/Standard/Plus have no new closes, retaining their
+capital constraints. Cooldown has 59 paired closes, zero wins, net
+**−$84.9446**; Premium has two paired closes, zero wins, **−$3.3860**.
+The cooldown accounting separates $21.2394 actual modeled fees,
+$29.4624 other costs (the configured reserve), and $0.0021 capital. Adding
+these back implies approximately **−$34.2407 gross price P&L**; removing the
+reserve alone would still leave **−$55.4821**. The reserve is not the sole
+reason this taker strategy loses.
+
+Cooldown exit-price movement improved $0.531448 in aggregate across 57
+valid comparisons (19 worse, 22 better, 16 unchanged); two are missing.
+Median price movement zero, p95 adverse $0.220616. Median request-to-flat
+1.179 s, p95 1.811 s across all 59 paired closes. This does not imply faster
+execution never helps, but the aggregate loss was already largely present
+before the final execution delay. RH XAG accounts for 16 closes/−$16.4697;
+RH GOOGL 15/−$14.8102. Those routes motivate the separate passive-spread test,
+not promotion of the current entries.
+
+Health: all four feeds connected, 112 pairs, 647.5 books/s, CPU52.98% of one
+core, p95 loop lag21.92 ms, RSS262.79 MiB. One cooldown paired position is
+open at the snapshot; old Standard/Premium funding-pending records remain
+preserved. Next review **03:06:33 UTC**. Passive v1 continues collecting;
+its frozen source and production rules are unchanged.
