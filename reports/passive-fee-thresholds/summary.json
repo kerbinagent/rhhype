@@ -1,0 +1,78 @@
+{
+  "classification": "stopped-book conditional fee threshold; no observed RH maker fills",
+  "source_rows": 4336,
+  "groups": 64,
+  "target_usd": "0.10",
+  "overall": {
+    "observations": 4336,
+    "fee_only_negative_count": 3413,
+    "fee_only_zero_fee_clear_count": 923,
+    "fee_only_zero_fee_clear_fraction": "923/4336",
+    "fee_only_base_clear_count": 193,
+    "fee_only_base_clear_fraction": "193/4336",
+    "fee_only_tier6_volume_only_clear_count": 402,
+    "fee_only_tier6_volume_only_clear_fraction": "402/4336",
+    "fee_only_tier6_diamond_clear_count": 574,
+    "fee_only_tier6_diamond_clear_fraction": "574/4336",
+    "stress_negative_count": 4335,
+    "stress_zero_fee_clear_count": 1,
+    "stress_zero_fee_clear_fraction": "1/4336",
+    "stress_base_clear_count": 0,
+    "stress_base_clear_fraction": "0/4336",
+    "stress_tier6_volume_only_clear_count": 0,
+    "stress_tier6_volume_only_clear_fraction": "0/4336",
+    "stress_tier6_diamond_clear_count": 0,
+    "stress_tier6_diamond_clear_fraction": "0/4336"
+  },
+  "denominator": "sum of actual two HL hedge leg notionals in each matched row",
+  "fee_only_definition": "gross minus modeled 5% annual capital; excludes separate 5bp reserve",
+  "stress_definition": "fee-only minus separate 5bp maximum-entry-notional reserve",
+  "rates_bps": {
+    "BTC": {
+      "base": "4.5",
+      "tier6_volume_only": "2.4",
+      "tier6_diamond": "1.44",
+      "multiplier": "1"
+    },
+    "ETH": {
+      "base": "4.5",
+      "tier6_volume_only": "2.4",
+      "tier6_diamond": "1.44",
+      "multiplier": "1"
+    },
+    "NVDA": {
+      "base": "0.900",
+      "tier6_volume_only": "0.480",
+      "tier6_diamond": "0.2880",
+      "multiplier": "0.20"
+    },
+    "XAG": {
+      "base": "0.900",
+      "tier6_volume_only": "0.480",
+      "tier6_diamond": "0.2880",
+      "multiplier": "0.20"
+    }
+  },
+  "discount_eligibility": "base assumes no user discount; tier6 requires >$7B 14d weighted volume; Diamond requires >500,000 HYPE staked; no referral/aligned discount assumed",
+  "source_sha256": {
+    "matched_rows": "4257d8444401ec79f5ac32a26197e288d4c83c865f352fd2903db8cc4bcfe7b3",
+    "source_summary": "631916e5df665924a2c3b35e7bc8569d855928475f90f9963a6ea3c0a60ac65b",
+    "fee_inputs": "9c095080b3da1a4de39e0fb2e66a50b6b734480e7f6ce425c8811c9311bdb3db",
+    "fee_raw_response": "0b70571513dd2a14695423fddb5a3f95c59e9dcc78d7f07924f4c3b41153e9f1",
+    "script": "d9090f6dfb36d3328ce589550d4bbe5dee44fe0276729d6a3f99cf9b863a611b"
+  },
+  "official_sources": [
+    "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees",
+    "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/hip-3-deployer-actions"
+  ],
+  "official_docs_checked_utc": "2026-09-30",
+  "market_configuration": "frozen September 29 xyz metadata, not re-queried; current docs applied conditionally to that configuration",
+  "limits": [
+    "RH maker entry/exit fills and queue priority unobserved",
+    "static opposite RH maker fills cannot be simultaneous",
+    "delayed books are quotes, not fill-time executions",
+    "overlapping anchors are not independent returns",
+    "USDG/USDC conversion and funding excluded",
+    "staking capital/opportunity cost and volume-tier acquisition costs excluded"
+  ]
+}

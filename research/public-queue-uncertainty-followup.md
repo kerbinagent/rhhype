@@ -36,3 +36,21 @@ First, replay the **stopped** capture as a diagnostic with both strict v1 and th
 
 The useful criterion is **coverage plus robustness**, not a lower censor count alone: a policy with more possible fills but wide unresolved loss exposure has not demonstrated a profitable edge. Keep the all-admission denominator and show whether any conditional lower net bound remains positive after complete costs. Never add no-fill zeroes to unknown economic states, compare a short strict-v1 branch with another branch's later fills, or promote historical prints to private fill claims.
 
+## Independent implementation reference, 30 September 03:00 UTC
+
+[HftBacktest's own fill and queue documentation](https://hftbacktest.readthedocs.io/en/latest/order_fill.html)
+provides a useful implementation comparison. Its market-by-price queue models
+estimate queue position; its risk-averse model advances the queue from trades
+without granting cancellation credit. That resembles our chosen queue rule,
+but does not validate our assumed insertion or cancel time. Its documentation
+also warns that replayed orders cannot alter subsequent market data. Our
+within-event depth depletion prevents duplicate consumption in one callback;
+it does not model how an actual order would change future books. Small size
+reduces that concern only when supported by the observed market depth and flow.
+
+The new review also identified a separate implementation boundary to test:
+an entry quote can retire during processing of the very trade that should
+invalidate its completed episode. This is an event-ordering correctness issue,
+not a reason to grant additional fills. A separate correction must mark such
+an episode unknown and retain its economic evidence. The frozen v1 source
+remains preserved so any corrected replay is explicitly distinguishable.
