@@ -1715,3 +1715,44 @@ All four feeds are connected, 110 pairs, CPU 53.63% of one core, p95 lag
 The one canonical Core/RH replay launched at 10:01:18 UTC remains running
 without reported errors. Its sources and prepared inputs are frozen; the
 900-second deadline and no-retry rule remain. No partial economics inspected.
+
+## Review 55 — 2026-09-30 10:26:33 UTC
+
+Exact daemon output is saved in
+`reports/live-review-catchup/review-20260930T102633Z.json`; completion and
+abort coverage is complete. No new winners or aborts occurred.
+
+- Cooldown: 50 exact paired closes, −$57.6998.
+- Premium: three exact failed hedges, −$5.0790.
+- Convergence: three exact failed hedges, −$1.7965.
+- Other strategies: no completed trades. Six Hyperliquid price-limit
+  rejections account for failed hedges. Portfolios remain separate.
+
+Cooldown fees $15.5031, stress $24.9678, capital $0.0017870, funding zero;
+removing stress alone leaves −$32.7320. Its 49 observed exit comparisons
+improved $0.843300 (11 worse, 20 better, 18 unchanged), with one request
+price missing; median effectively zero and p95 adverse $0.087000. All 50
+paired request-to-flat times are present: median 1.134 s, p95 1.698 s.
+There were no paired Premium or convergence exit comparisons in this window.
+
+The separately timed snapshot at 10:27:01 UTC is preserved in
+`reports/live-review-catchup/current-epoch-at-review55.json`: cooldown 1,010
+exact plus two estimated completions/−$1,281.9407 (one old win), Premium
+178/−$299.6624 (one old win), convergence 74/−$73.0953 (three old wins),
+conservative 1/+$2.3198. Version `e3e83cda71a6`, epoch and the six old
+failed-rescue win records remain unchanged. One cooldown position was open
+at review; the later snapshot is flat. Three legacy funding obligations
+remain unknown and retained, with no outstanding market quantity.
+
+All four feeds connected, 110 pairs, CPU 49.34% of one core, p95 lag 6.86 ms,
+RSS 261.12 MiB, 618.3 books/s, metadata age 2,990.5 s. At 10:19 the database
+was 61,517,824 bytes, WAL zero, with 607,357,042,688 free filesystem bytes.
+Next checkpoint **10:46:33 UTC**. No capital reset or policy change.
+
+Core/RH's completed diagnostic and independent audit found all 842 complete
+quotes gross-negative, retaining 166 censors. A separate existing-table
+funding check found a maximum 0.41 bp single-settlement rate credit under
+hindsight direction and favorable payment ownership, versus a 6 bp
+stress-plus-target hurdle at $1,000. This is an equal-reference-notional
+scenario, not verified funding cashflow or a bound on combined trading P&L.
+Neither result supports a new capture or strategy promotion.

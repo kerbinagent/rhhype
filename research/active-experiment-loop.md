@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 10:13 UTC
+## Current status, 30 September 2026 10:28 UTC
 
 No qualifying positive result. The completed passive-exit, RH/HL delayed
 taker and 21-asset spread studies remain negative. Core/RH delayed taker
@@ -15,7 +15,7 @@ replay also completed and passed root and peer audit: all 842 complete
 quotes have negative gross returns; 166 candidates remain censored. No
 predictor or successor is promoted. All evidence and capital history remain.
 See the latest entry below and [research map](README.md).
-Production reviews continue; next **10:26:33 UTC**.
+Production reviews continue; next **10:46:33 UTC**.
 
 ## Original experiment: RH passive exit v1
 
@@ -752,3 +752,14 @@ actual payment ownership or joined trading prices; no executable bound.
 [Readout](../reports/funding-carry/core-rh-single-settlement-review.md).
 No successor capture. Shared reservation 32,722,904/33,000,000 bytes; all
 previous allocations retained. Next production review 10:26:33 UTC.
+
+### Production review 55, 10:27 UTC
+
+Cooldown 50 paired closes/−$57.6998; Premium three failed hedges/−$5.0790;
+convergence three failed hedges/−$1.7965. No new winners or aborts; complete
+coverage. Six Hyperliquid price-limit failures. Cooldown exit execution
+improved $0.8433 across 49 observed comparisons, so removing adverse exit
+slippage cannot explain this interval's loss. Four feeds connected, same
+version and capital history; later snapshot flat, three legacy funding
+obligations retained. Next review 10:46:33 UTC. Completed route and funding
+checks provide no supported successor experiment; no capture or policy change.
