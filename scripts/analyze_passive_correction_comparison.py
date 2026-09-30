@@ -34,6 +34,7 @@ LIMITATIONS = [
     'Side-by-side cash, fills, and net from unequal admission histories do not establish causal profit improvement.',
     'Common cohort IDs identify shared decisions; economic comparison also requires identical fully hedged entries.',
     'Public queue attribution is conditional; private fills, funding and executable conversion remain unobserved.',
+    'A halted branch with retained passive quote guards needs historical adjudication because frozen passive late-flow checks can be bypassed after an earlier unknown.',
 ]
 
 
@@ -226,6 +227,19 @@ def _branch_snapshot(branch, cohort_group):
     halt = branch.get('first_unknown_ns')
     if halt is not None and type(halt) is not int:
         raise ValueError('first halt time malformed')
+    retired_passive_count = branch.get('retired_passive_quote_guard_count')
+    if type(retired_passive_count) is not int or retired_passive_count < 0:
+        raise ValueError('retired passive quote guard count required')
+    for field in ('audit_truncated', 'truncated'):
+        if field in branch and type(branch[field]) is not bool:
+            raise ValueError('branch retention/truncation flag must be boolean')
+    retention_incomplete = bool(branch.get('audit_truncated') or branch.get('truncated'))
+    historical_adjudication = retention_incomplete or (
+        retired_passive_count > 0 and (halt is not None or bool(branch.get('unknown_reason'))))
+    guard_status = ('retention_incomplete' if retention_incomplete else
+                    'historical_adjudication_required' if historical_adjudication else
+                    'nonapplicable_no_retired_passive_guards' if retired_passive_count == 0 else
+                    'no_recorded_halt')
     engine_counts = branch.get('counts')
     if (not isinstance(engine_counts, dict) or len(engine_counts) > 256
             or any(not isinstance(k, str) or len(k) > 160 or type(v) is not int or v < 0
@@ -241,6 +255,14 @@ def _branch_snapshot(branch, cohort_group):
             'admitted_without_closed_episode': outstanding,
             'known_closed_fee_only_contribution_usd': str(fee_contribution),
             'known_closed_after_reserve_capital_contribution_usd': str(stressed_contribution),
+            'known_closed_contributions_are_raw_reported': True,
+            'known_closed_contributions_provisional': historical_adjudication,
+            'validated_known_closed_fee_only_contribution_usd': None if historical_adjudication else str(fee_contribution),
+            'validated_known_closed_after_reserve_capital_contribution_usd': None if historical_adjudication else str(stressed_contribution),
+            'retired_passive_quote_guard_count': retired_passive_count,
+            'retention_incomplete': retention_incomplete,
+            'retirement_guard_status': guard_status,
+            'historical_adjudication_required': historical_adjudication,
             'complete_portfolio_net_usd': complete, 'complete_portfolio_net_known': complete is not None,
             'portfolio_unresolved': unresolved or complete is None,
             'first_halt_ns': halt, 'unknown_reason': branch.get('unknown_reason'),
@@ -315,6 +337,9 @@ def compare_results(strict, corrected):
                             'corrected_only_admitted_cohort_ids': sorted(new_admitted - old_admitted),
                             'common_closed_episode_count': common_closed,
                             'common_known_full_same_entry_episode_count': common_known_same_entry,
+                            'validated_common_known_full_same_entry_episode_count': (
+                                None if old_state['historical_adjudication_required'] or new_state['historical_adjudication_required']
+                                else common_known_same_entry),
                             'admission_histories_identical': old_admitted == new_admitted,
                             'effective_observation_time_identical': (
                                 old_state['first_halt_ns'] == new_state['first_halt_ns'] and
@@ -323,11 +348,19 @@ def compare_results(strict, corrected):
     primary = [row for row in comparisons if (row['tier'], row['asset'], row['budget_usd'], row['exit_policy'])
                in (('standard', 'XAG', 1000, 'control10s'), ('standard', 'XAG', 1000, 'passive_target10s'))]
     label = 'primary_standard_xag_1000_target10_vs_control10'
+    primary_old_provisional = any(b['strict']['historical_adjudication_required'] for b in primary)
+    primary_new_provisional = any(b['corrected']['historical_adjudication_required'] for b in primary)
     return {'schema': SCHEMA, 'branch_count': len(comparisons), 'branches': comparisons,
             'execution_unknown_changes': execution_changes, 'cohort_groups': group_comparisons,
             'primary_standard_xag_1000': {'branches': primary,
-                                        'strict_within_replay_same_entry_contrast': strict['cohort_score'][label],
-                                        'corrected_within_replay_same_entry_contrast': corrected['cohort_score'][label],
+                                        'strict_raw_reported_within_replay_same_entry_contrast': strict['cohort_score'][label],
+                                        'corrected_raw_reported_within_replay_same_entry_contrast': corrected['cohort_score'][label],
+                                        'strict_historical_adjudication_required': primary_old_provisional,
+                                        'corrected_historical_adjudication_required': primary_new_provisional,
+                                        'strict_validated_within_replay_same_entry_contrast': (
+                                            None if primary_old_provisional else strict['cohort_score'][label]),
+                                        'corrected_validated_within_replay_same_entry_contrast': (
+                                            None if primary_new_provisional else corrected['cohort_score'][label]),
                                         'cross_variant_profit_improvement': None},
             'limitations': LIMITATIONS, 'summed_branch_portfolio_net': None}
 
@@ -335,9 +368,10 @@ def compare_results(strict, corrected):
 def _report(result):
     lines = ['# Strict and retirement-corrected passive-exit comparison', '',
              'Both artifacts passed stopped-capture provenance checks. Each row is an independent ledger.', '',
-             'Known closed contribution excludes unknown/unsettled episodes. Unknown portfolio net remains undefined.', '',
-             '| Tier | Asset | Budget | Policy | Admissions strict/corrected | Closed strict/corrected | Execution unknown strict/corrected | Known contribution strict/corrected | Complete portfolio net strict/corrected | First halt ns strict/corrected |',
-             '|---|---|---:|---|---:|---:|---:|---:|---|---|']
+             'Raw reported closed contribution excludes episodes already marked unknown. '
+             'Retained passive guards after a halt require historical adjudication; their validated contribution remains undefined.', '',
+             '| Tier | Asset | Budget | Policy | Admissions strict/corrected | Closed strict/corrected | Execution unknown strict/corrected | Raw reported contribution strict/corrected | Validated contribution strict/corrected | Complete portfolio net strict/corrected | First halt ns strict/corrected | Retirement guard strict/corrected |',
+             '|---|---|---:|---|---:|---:|---:|---:|---|---|---|---|']
     def value(v):
         return 'unknown' if v is None else str(v)
     for branch in result['branches']:
@@ -345,7 +379,9 @@ def _report(result):
         pair = lambda field: f'{value(old[field])} / {value(new[field])}'
         lines.append(f"| {branch['tier']} | {branch['asset']} | {branch['budget_usd']} | {branch['exit_policy']} | "
                      f"{pair('admitted_cohorts')} | {pair('closed_episodes')} | {pair('execution_unknown_episodes')} | "
-                     f"{pair('known_closed_after_reserve_capital_contribution_usd')} | {pair('complete_portfolio_net_usd')} | {pair('first_halt_ns')} |")
+                     f"{pair('known_closed_after_reserve_capital_contribution_usd')} | "
+                     f"{pair('validated_known_closed_after_reserve_capital_contribution_usd')} | "
+                     f"{pair('complete_portfolio_net_usd')} | {pair('first_halt_ns')} | {pair('retirement_guard_status')} |")
     lines += ['', f"Actual execution-unknown classification changes on common admitted cohorts: {len(result['execution_unknown_changes'])}.", '',
               'The JSON identifies shared cohort IDs, changed admission maps, and later cohorts present in only one replay. '
               'It also provides separate Standard XAG $1,000 control10s and passive_target10s diagnostics. '

@@ -27,7 +27,8 @@ def branch(tier, asset, budget, policy, *, corrected=False):
               'passive_quote_open': False, 'passive_buy_intents_open': 0, 'fallback_pending': False,
               'cohort_id_active': None, 'first_unknown_ns': None, 'first_quote_requested_ns': None,
               'effective_quote_opportunity_seconds_before_unknown': 0, 'group_book_quote_checks': 0,
-              'delta_exposure_base_seconds': '0', 'gross_inventory_base_seconds': '0'}
+              'delta_exposure_base_seconds': '0', 'gross_inventory_base_seconds': '0',
+              'retired_passive_quote_guard_count': 0, 'audit_truncated': False}
     if corrected:
         result.update(retirement_guard_revision='entry-same-receipt-v1', frozen_v1_result=False)
     return result
@@ -210,6 +211,43 @@ class CorrectionComparisonTests(unittest.TestCase):
         ledger['complete_net'] = '0'
         score(self.corrected)
         with self.assertRaisesRegex(ValueError, 'unresolved portfolio'):
+            comparison.compare_results(self.strict, self.corrected)
+
+    def test_retained_passive_guard_after_unrelated_halt_makes_old_known_contribution_provisional(self):
+        for result in (self.strict, self.corrected):
+            target = next(b for b in result['branches'] if comparison._key(b) == (*GROUP, 'passive_target10s'))
+            target.update(retired_passive_quote_guard_count=1,
+                          unknown_reason='unrelated_later_coverage_gap',
+                          first_unknown_ns=DECISION + 30 * NS, complete_net=None)
+            # The frozen artifact still reports this historical episode known.
+            target['episodes'][0].update(execution_unknown=False, cash_known='2', fee_only_net='2', stressed_net='2')
+            target['episodes'][0].pop('execution_unknown_reason', None)
+            score(result)
+        result = comparison.compare_results(self.strict, self.corrected)
+        target = next(b for b in result['branches'] if comparison._key(b) == (*GROUP, 'passive_target10s'))
+        self.assertEqual(target['strict']['retirement_guard_status'], 'historical_adjudication_required')
+        self.assertEqual(target['strict']['known_closed_after_reserve_capital_contribution_usd'], '7')
+        self.assertTrue(target['strict']['known_closed_contributions_provisional'])
+        self.assertIsNone(target['strict']['validated_known_closed_after_reserve_capital_contribution_usd'])
+        self.assertIsNone(target['validated_common_known_full_same_entry_episode_count'])
+        self.assertIsNone(result['primary_standard_xag_1000']['strict_validated_within_replay_same_entry_contrast'])
+        self.assertTrue(result['primary_standard_xag_1000']['strict_historical_adjudication_required'])
+        control = self.selected(result)
+        self.assertEqual(control['strict']['retirement_guard_status'], 'nonapplicable_no_retired_passive_guards')
+        self.assertEqual(control['strict']['validated_known_closed_after_reserve_capital_contribution_usd'], '5')
+
+    def test_zero_guard_count_with_incomplete_retention_cannot_clear_historical_inference(self):
+        self.selected(self.strict)['audit_truncated'] = True
+        result = comparison.compare_results(self.strict, self.corrected)
+        ledger = self.selected(result)
+        self.assertEqual(ledger['strict']['retired_passive_quote_guard_count'], 0)
+        self.assertEqual(ledger['strict']['retirement_guard_status'], 'retention_incomplete')
+        self.assertTrue(ledger['strict']['known_closed_contributions_provisional'])
+        self.assertIsNone(ledger['strict']['validated_known_closed_after_reserve_capital_contribution_usd'])
+        self.assertIsNone(ledger['validated_common_known_full_same_entry_episode_count'])
+        self.assertIsNone(result['primary_standard_xag_1000']['strict_validated_within_replay_same_entry_contrast'])
+        self.selected(self.strict)['audit_truncated'] = 'false'
+        with self.assertRaisesRegex(ValueError, 'flag must be boolean'):
             comparison.compare_results(self.strict, self.corrected)
 
     def test_cohort_score_cannot_hide_episode_unknown_or_changed_denominator(self):
