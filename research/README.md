@@ -23,13 +23,15 @@ quotes were negative after fees alone. The [audited readout](../reports/delayed-
 retains 2,405 incomplete outcomes and all funding uncertainty. Even forgiving
 all trading fees does not clear the declared stress allowance at these quotes.
 
-The next [spread-regime prerequisite watch](rh-spread-regime-sentinel-plan.md)
-is in implementation review. It will use one fixed twenty-minute window across
-the original 21 assets to ask whether fresh RH spreads persistently clear the
-$0.10 target and 5 bp stress even with a frictionless hedge. The 500 KB limit
-includes fresh metadata and sampled raw messages. Collection has not started.
-Passing this prerequisite would only justify considering a separately reviewed
-hedge-cost screen; it would not establish maker fills or profitable cycles.
+The [spread-regime prerequisite watch](rh-spread-regime-sentinel-plan.md)
+failed its storage admission check after fresh metadata preparation, before
+opening any quote connection. Its [failure readout](../reports/rh-spread-regime-sentinel/20260930T0755Z/readout.md)
+preserves all 1,680 uncollected rows; no economics were computed. The original
+stage will not be retried. A separate compression proposal is under review,
+with no further network request authorized. The intended question remains
+whether fresh RH spreads persistently clear the $0.10 target and 5 bp stress
+even with a frictionless hedge. That prerequisite would not establish maker
+fills or profitable cycles.
 
 ## What the evidence currently supports
 

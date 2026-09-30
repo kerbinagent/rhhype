@@ -7,14 +7,17 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 07:22 UTC
+## Current status, 30 September 2026 07:59 UTC
 
 The passive-exit replays and delayed taker diagnostic have completed without
 a qualifying positive result. The next prospective spread-regime prerequisite
-watch is in implementation review; its method and 500 KB allocation are frozen,
-and no metadata or ticker request has started. See the latest entry below and
-the [research map](README.md) for completed readouts. Production reviews continue
-every twenty minutes, with the next due at 07:26:33 UTC.
+watch failed its pre-connection storage check after three successful metadata
+requests. No ticker connection or economic measurement occurred; all 1,680 rows
+are retained as uncollected. The original stage will not be retried. A separate
+resource-only compression proposal is under review, without new network
+authorization. See the latest entry below and the [research map](README.md).
+Production reviews continue every twenty minutes, with the next due at
+08:06:33 UTC.
 
 ## Original experiment: RH passive exit v1
 
@@ -458,3 +461,26 @@ metadata preparation. Root will inspect that preparation, freeze its hashes,
 and launch the one fixed twenty-minute window only while each metadata
 response remains within 120 seconds on both clocks. No retry, replacement
 request, alternate endpoint or automatic reconnect is permitted.
+
+
+### Sentinel failed before quote collection, 07:56 UTC
+
+Implementation/source freeze `c16be2f` and fresh metadata freeze `53a2a66`
+preceded the one launch. All three public metadata requests succeeded and all
+21 original assets were eligible. The run then stopped before creating its
+websocket task: control usage was **80,274 bytes**, above the unchanged
+80,000-byte admission guard. No quote connection opened and no economics were
+computed. All 1,680 uncollected rows and all metadata are retained. The audited
+stage occupies **315,927 bytes**, including its failure readout and root audit.
+The full original 500,000-byte allocation remains reserved; no budget is released.
+
+The full-artifact fixture proved the 90,000-byte final category ceiling but
+failed to exercise the actual stricter run-admission path. Root and independent
+review missed that mismatch. This is an implementation/preflight failure, not
+evidence about market spreads. Sources, tests, method and failed stage remain
+frozen, with no retry or refetch. A new compression-wrapper proposal may reduce
+redundant source archive bytes while preserving exact decompressed identities,
+all dependencies, economics and aggregate cap. Only a read-only proposal is
+requested now; implementation and another network study require separate review.
+The next admission fixture must exercise actual prepare/freeze/run scheduling
+through a fake websocket, using the retained metadata without any requests.
