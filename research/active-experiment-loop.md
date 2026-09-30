@@ -484,3 +484,26 @@ all dependencies, economics and aggregate cap. Only a read-only proposal is
 requested now; implementation and another network study require separate review.
 The next admission fixture must exercise actual prepare/freeze/run scheduling
 through a fake websocket, using the retained metadata without any requests.
+
+
+### Separate compact-source revision: implementation only, 08:03 UTC
+
+Root and independent review accepted a new thin-wrapper proposal, preserving
+all frozen sources and the failed stage. Compressing the three archived source
+copies alone saves 37,181 bytes (56,344 to19,163). The wrapper must record
+compressed and decompressed identities, hash all five original and three new
+inputs, reject unmarked/old stages, and restore scoped runtime bindings.
+Original economics, clock checks, request limits and 80/90/500 KB caps stay fixed.
+
+A new offline fixture must exercise delegated prepare/freeze/run/receive through
+a fake websocket using the retained failed metadata; it must reach actual
+admission, subscribe21assets, wait the virtual endpoint, and publish420references/
+1,680rows under the final cap. It must also reproduce the old guard rejection.
+The former final-size-only fixture is insufficient. No network is authorized yet.
+
+The compact allocation reserves an additional500,000bytes while retaining the
+first full500,000bytes: shared projected maximum32,110,904of33,000,000bytes,
+headroom889,096. Overall820MBreservation is unchanged. This permits considering
+exactly one separately reviewed successor preparation/window; it does not retry
+the old stage or authorize further automatic attempts. Total maximum across
+both stages is six metadata requests and one actual ticker connection.
