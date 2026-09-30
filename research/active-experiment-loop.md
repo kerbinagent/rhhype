@@ -517,3 +517,19 @@ CASHCAT Core partial-short rescue after HL rejected its long hedge. The raw
 paper record is preserved; it is not a paired-cycle profit. Complete coverage,
 four connected feeds and unchanged strategy version continue. The compact
 sentinel wrapper remains offline under review. Next review: **08:26:33 UTC**.
+
+
+### Compact wrapper approved for one fresh preparation, 08:12 UTC
+
+Independent review passed six compact-wrapper fixtures; root passed those plus
+all13originalfixtures together (19total), verified matching source hashes and
+confirmed default dry mode reports zero requests. The new fixture reaches the
+real delegated run/receive admission and complete virtual endpoint; its control
+reproduces the old zero-connection rejection. Eight dependencies are verified
+against the same before/after snapshot, and scoped bindings restore on success
+or failure. Original frozen source/test/method and failed metadata are unchanged.
+
+Root authorizes the separately allocated, single new three-request preparation
+after committing the wrapper/test/resource note. Fresh eligibility and actual
+control headroom must be checked before separate freeze/run. No retry or further
+successor is automatic; the first failed study remains fully visible.
