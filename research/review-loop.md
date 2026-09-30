@@ -3140,3 +3140,45 @@ or capital change. Next checkpoint **23:06:33 UTC**.
 
 Carry has all 121 due arrivals through 22:45, 148,650 sample bytes, zero overdue
 missing files, no terminal error and no interim economic evaluation.
+
+
+### Review 93 — 30 September 2026 23:06 UTC
+
+Exact report, separate epoch snapshot and full estimated record preserved;
+guarded manual archive 2,175,611/16,777,216 bytes. Report SHA-256
+`cb6885c92c02c5190d2fb3b0671ccc344b5f75e6d382d2ed393508c1153b4e43`.
+All 39 closes negative: 38 exact and one estimated. Thirty-eight paired
+closes and one failed hedge; zero aborts, complete coverage and one
+Hyperliquid price-limit entry rejection. No new wins.
+
+- Cooldown: 38 paired closes/−$44.9411.
+- Convergence: one SKHYNIXUSD failed hedge/−$0.5337.
+- Premium and the selective policies had no completions.
+
+The bounded read-only estimated-record query counted one across all strategies
+before fetching (cap 128), matching the ledger. CRCL cooldown
+`1790809188097947-23562-cooldown`: equal 12.175-unit long HL/short Lighter
+legs held through 23:00 UTC funding. Sampled HL oracle estimate −$0.0155781485
+plus Lighter inferred-per-unit settlement +$0.096698233 totals +$0.0811200845.
+Price P&L −$0.182625 minus fees $0.17956822275, stress $0.4994611125 and
+capital $0.00003508961 plus funding gives −$0.78056934036 net. Both legs
+remaining zero; funding complete with no missing events. Net, event sum and
+5 bp stress reconcile. The funding result remains estimated.
+
+Cooldown fees $13.2761, stress $18.9742, capital $0.0013720, funding +$0.0811201;
+without stress −$25.9669. Exit comparisons: 33 observed, five missing request
+prices; four better, ten worse, nineteen unchanged, aggregate deterioration
+$0.552416, median zero, p95 adverse $0.11436. All 38 paired request-to-flat
+times present: median 1.178 s, p95 2.680 s.
+
+Four feeds connected, 108 pairs, CPU 55.78%, p95 lag 7.64 ms, RSS 318.38 MiB,
+643.3 books/s, metadata age 1,733.9 s. Review and separate epoch snapshot
+flat. Epoch: cooldown 2,404 exact plus nine estimated/−$3,158.0177; Premium
+642/−$1,176.7009; convergence 366/−$432.1029; conservative four/−$3.0627;
+confirmed two/−$4.0150. Twenty-two earlier win records and three legacy
+funding obligations remain. Reviews 66–93 have 1,569 closes: 1,559 losses,
+two paired gains and eight rescue gains. No policy or capital change.
+Next checkpoint **23:26:33 UTC**.
+
+Carry has all 125 due arrivals through 23:05, 153,571 sample bytes, zero overdue
+missing files, no terminal error and no interim economic evaluation.

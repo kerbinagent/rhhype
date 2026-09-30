@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 22:47 UTC
+## Current status, 30 September 2026 23:08 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative; no production strategy is promoted. The user authorized
@@ -20,16 +20,17 @@ BTC_USDC spot and BTC_USDC-9OCT26. See the [method](dated-carry-method-v1.md)
 and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 92 are preserved. Review85 adds two paired MU gains
+Reviews through 93 are preserved. Review85 adds two paired MU gains
 (+$0.0473 and +$0.1896) sharing the same signal time and Hyperliquid fill
 observation; its complete three-trade convergence paired group lost $1.2929.
 Earlier paired gains were WLD +$0.3590 and CRCL +$0.3250 in review65.
-Reviews 66–92 have 1,530 closes: 1,520 losses, two paired gains and eight
+Reviews 66–93 have 1,569 closes: 1,559 losses, two paired gains and eight
 failed-hedge rescue gains.
-One loss each in reviews75,78,81,87 and90 has estimated funding and remains
-estimated. All 46 exact closes in review92 lost money. Twenty-two epoch win
-records comprise four paired and eighteen rescues. There is still no qualifying
-positive strategy window. Next review: **23:06:33 UTC**.
+One loss each in reviews75,78,81,87,90 and93 has estimated funding and remains
+estimated. All 39 closes in review93 lost money; its full estimated CRCL record
+is preserved and reconciled. Twenty-two epoch win records comprise four paired
+and eighteen rescues. There is still no qualifying positive strategy window.
+Next review: **23:26:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -1313,3 +1314,16 @@ connected, 108 pairs after metadata refresh and normal performance; review
 flat, later epoch snapshot had one cooldown position. Next review 23:06:33 UTC.
 Carry has all 121 due arrivals through 22:45, no terminal error or overdue
 missing files, and no economic evaluation.
+
+
+### Review 93, 23:06 UTC
+
+All 39 closes negative: 38 exact and one estimated. Cooldown 38 paired/
+−$44.9411, convergence one failed hedge/−$0.5337; no Premium completions.
+Zero aborts and complete coverage; one Hyperliquid price-limit rejection.
+Full estimated CRCL record preserved: +$0.08112 funding leaves −$0.78057
+net; both legs flat, arithmetic and funding events reconcile. Twenty-two
+earlier win records and three legacy funding obligations remain. Four feeds
+connected, 108 pairs and normal performance; review and later epoch snapshot
+flat. Next review 23:26:33 UTC. Carry has all 125 due arrivals through 23:05,
+no terminal error or overdue missing files, and no economic evaluation.

@@ -1,0 +1,309 @@
+{
+  "count": 1,
+  "query_cap": 128,
+  "read_at_utc": "2026-09-30T23:07:36.825202+00:00",
+  "records": [
+    {
+      "payload_sha256": "bcc1a0e87005e736dbef75c570466541922b87f7880d28c3eaba6b61bc113697",
+      "record": {
+        "asset": "CRCL",
+        "capital_costs_usd": 3.508960910512661e-05,
+        "closed_at": 1790809200.1452897,
+        "created_at": 1790809188.0979476,
+        "exit_due": 1790809199.364472,
+        "exit_reason": "max_hold",
+        "exit_request_observation": {
+          "capture_type": "normal_request",
+          "captured_at": 1790809199.368786,
+          "closing_price_status": "valid",
+          "exit_reason": "max_hold",
+          "legs": [
+            {
+              "book_engine_time": 1790809198.475,
+              "book_generation": "228b36a9d7e74dbab18b204f24550813:hyperliquid:0:1",
+              "book_received_at": 1790809199.033215,
+              "book_source": "targeted_rest",
+              "book_valid": true,
+              "clock_valid": true,
+              "exit_fee_bps": 0.9,
+              "exit_side": "sell",
+              "exit_walk_value_usd": 997.54645,
+              "key": "hyperliquid:xyz:CRCL",
+              "receipt_age_seconds": 0.3355710506439209,
+              "remaining_quantity": 12.175,
+              "side": "long",
+              "source_age_seconds": 0.8937861919403076,
+              "walk_status": "valid"
+            },
+            {
+              "book_engine_time": 1790809199.016935,
+              "book_generation": "228b36a9d7e74dbab18b204f24550813:lighter:0:1",
+              "book_received_at": 1790809199.1444342,
+              "book_source": null,
+              "book_valid": true,
+              "clock_valid": true,
+              "exit_fee_bps": 0,
+              "exit_side": "buy",
+              "exit_walk_value_usd": 999.0318,
+              "key": "lighter:121",
+              "receipt_age_seconds": 0.2243518829345703,
+              "remaining_quantity": 12.175,
+              "side": "short",
+              "source_age_seconds": 0.3518509864807129,
+              "walk_status": "valid"
+            }
+          ],
+          "mark_status": "valid",
+          "net_liquidation_pnl_usd": -0.8982121333975114,
+          "receipt_pair_skew_valid": true,
+          "received_skew_seconds": 0.11121916770935059,
+          "requested_at": 1790809199.368786,
+          "requested_closing_liability_usd": 1.4853499999999258,
+          "version": 1
+        },
+        "exit_requested_at": 1790809199.368786,
+        "exit_trigger_pnl_usd": null,
+        "fees_usd": 0.17956822275,
+        "funding": {
+          "cashflow_usd": 0.08112008449980002,
+          "complete": true,
+          "estimated": true,
+          "events": [
+            {
+              "cashflow_usd": -0.0155781485002,
+              "market": "xyz:CRCL",
+              "quality": "estimated",
+              "quantity": 12.175,
+              "rate_fraction": 1.5626e-05,
+              "reference_price": 81.884,
+              "reference_skew_seconds": 0.17453646659851074,
+              "reference_time": 1790809199.8254635,
+              "side": "long",
+              "source": "sampled_oracle_price",
+              "time": 1790809200,
+              "venue": "hyperliquid"
+            },
+            {
+              "cashflow_usd": 0.09669823300000001,
+              "market": "121",
+              "quality": "estimated",
+              "quantity": 12.175,
+              "rate_fraction": 9.7e-05,
+              "reference_price": null,
+              "reference_skew_seconds": null,
+              "reference_time": null,
+              "side": "short",
+              "source": "settled_lighter_value_inferred_per_unit",
+              "time": 1790809200,
+              "venue": "lighter"
+            }
+          ],
+          "missing": [],
+          "venue_results": {
+            "hyperliquid": {
+              "cashflow_usd": -0.0155781485002,
+              "complete": true,
+              "covered_until": 1790809200.0399632,
+              "estimated": true,
+              "events": [
+                {
+                  "cashflow_usd": -0.0155781485002,
+                  "market": "xyz:CRCL",
+                  "quality": "estimated",
+                  "quantity": 12.175,
+                  "rate_fraction": 1.5626e-05,
+                  "reference_price": 81.884,
+                  "reference_skew_seconds": 0.17453646659851074,
+                  "reference_time": 1790809199.8254635,
+                  "side": "long",
+                  "source": "sampled_oracle_price",
+                  "time": 1790809200,
+                  "venue": "hyperliquid"
+                }
+              ],
+              "missing": []
+            },
+            "lighter": {
+              "cashflow_usd": 0.09669823300000001,
+              "complete": true,
+              "covered_until": 1790809200.1452897,
+              "estimated": true,
+              "events": [
+                {
+                  "cashflow_usd": 0.09669823300000001,
+                  "market": "121",
+                  "quality": "estimated",
+                  "quantity": 12.175,
+                  "rate_fraction": 9.7e-05,
+                  "reference_price": null,
+                  "reference_skew_seconds": null,
+                  "reference_time": null,
+                  "side": "short",
+                  "source": "settled_lighter_value_inferred_per_unit",
+                  "time": 1790809200,
+                  "venue": "lighter"
+                }
+              ],
+              "missing": []
+            }
+          }
+        },
+        "funding_usd": 0.08112008449980002,
+        "id": "1790809188097947-23562-cooldown",
+        "legs": [
+          {
+            "entry_fee": 0.08978904225,
+            "entry_fee_bps": 0.9,
+            "entry_observation": {
+              "attempted_quantity": 12.175,
+              "attempted_value": 997.656025,
+              "book_engine_time": 1790809188.79,
+              "book_received_at": 1790809189.364472,
+              "book_source": "targeted_rest",
+              "eligible_quantity": 1382.9019999999996,
+              "observed_at": 1790809189.364472,
+              "price_limit": 82.02794599999999,
+              "receipt_age_seconds": 0.0,
+              "side_quantity": 1382.902,
+              "signal_to_receipt_seconds": 1.266524314880371,
+              "source_age_seconds": 0.5744719505310059
+            },
+            "entry_result": "filled",
+            "entry_time": 1790809189.364472,
+            "entry_value": 997.656025,
+            "entry_vwap": 81.943,
+            "exit_fee": 0.0897791805,
+            "exit_fills": [
+              {
+                "fee": 0.0897791805,
+                "fee_bps": 0.9,
+                "quantity": 12.175,
+                "timestamp": 1790809200.0399632,
+                "value": 997.54645
+              }
+            ],
+            "exit_time": 1790809200.0399632,
+            "exit_value": 997.54645,
+            "fee_bps": 0.9,
+            "fees_usd": 0.17956822275,
+            "intent": null,
+            "key": "hyperliquid:xyz:CRCL",
+            "market": "xyz:CRCL",
+            "min_notional": 10.0,
+            "min_qty": 0.0,
+            "price_pnl": -0.1095749999999498,
+            "quantity": 12.175,
+            "remaining": 0.0,
+            "side": "long",
+            "step": "0.001",
+            "venue": "hyperliquid"
+          },
+          {
+            "entry_fee": 0.0,
+            "entry_fee_bps": 0,
+            "entry_observation": {
+              "attempted_quantity": 12.175,
+              "attempted_value": 998.922225,
+              "book_engine_time": 1790809188.561933,
+              "book_received_at": 1790809188.651652,
+              "book_source": null,
+              "eligible_quantity": 3066.2409999999995,
+              "observed_at": 1790809188.651652,
+              "price_limit": 81.964953,
+              "receipt_age_seconds": 0.0,
+              "side_quantity": 25871.728,
+              "signal_to_receipt_seconds": 0.5537045001983643,
+              "source_age_seconds": 0.08971905708312988
+            },
+            "entry_result": "filled",
+            "entry_time": 1790809188.651652,
+            "entry_value": 998.922225,
+            "entry_vwap": 82.047,
+            "exit_fee": 0.0,
+            "exit_fills": [
+              {
+                "fee": 0.0,
+                "fee_bps": 0,
+                "quantity": 12.175,
+                "timestamp": 1790809200.1452897,
+                "value": 998.995275
+              }
+            ],
+            "exit_time": 1790809200.1452897,
+            "exit_value": 998.995275,
+            "fee_bps": 0,
+            "fees_usd": 0.0,
+            "intent": null,
+            "key": "lighter:121",
+            "market": 121,
+            "min_notional": 10.0,
+            "min_qty": 0.065,
+            "price_pnl": -0.07304999999996653,
+            "quantity": 12.175,
+            "remaining": 0.0,
+            "side": "short",
+            "step": "0.001",
+            "venue": "lighter"
+          }
+        ],
+        "net_pnl_usd": -0.7805693403592214,
+        "opened_at": 1790809189.364472,
+        "other_costs_usd": 0.4994611125,
+        "pair_id": "CRCL|hyperliquid:xyz:CRCL|lighter:121",
+        "paper_epoch_id": "b8204da0453a4e8a940d3d1b3c33714e",
+        "paper_strategy_version": "e3e83cda71a6",
+        "price_net_before_funding": -0.8616894248590214,
+        "price_pnl": -0.18262499999991633,
+        "reserved": {
+          "hyperliquid": 1000.68,
+          "lighter": 1000.5
+        },
+        "settled_at": 1790809206.0249982,
+        "signal": {
+          "asset": "CRCL",
+          "buy": "hyperliquid:xyz:CRCL",
+          "buy_fee_bps": 0.9,
+          "buy_generation": "228b36a9d7e74dbab18b204f24550813:hyperliquid:0:1",
+          "buy_received": 1790809188.0221457,
+          "buy_source_time": 1790809187.71,
+          "buy_value": 997.69255,
+          "entry_policy": {
+            "confirmation_expiry_seconds": null,
+            "confirmation_min_seconds": null,
+            "entry_skew_limit_seconds": 0.25,
+            "forecast_is_historical_spread": false,
+            "policy": "cooldown",
+            "reason": "allowed",
+            "route": "CRCL|hyperliquid:xyz:CRCL|lighter:121",
+            "training_skew_limit_seconds": 1.0,
+            "version": 3
+          },
+          "lifetime_is_sampled": true,
+          "net_edge_bps": 5.518709870896092,
+          "net_edge_usd": 0.5505975723804494,
+          "notional": 1000,
+          "opening_edge_usd": 1.1398826705000429,
+          "pair_id": "CRCL|hyperliquid:xyz:CRCL|lighter:121",
+          "quantity": 12.175,
+          "route": "CRCL|hyperliquid:xyz:CRCL|lighter:121",
+          "sell": "lighter:121",
+          "sell_fee_bps": 0,
+          "sell_generation": "228b36a9d7e74dbab18b204f24550813:lighter:0:1",
+          "sell_received": 1790809187.997116,
+          "sell_source_time": 1790809187.911912,
+          "sell_value": 998.922225,
+          "skew_ms": 25.029659271240234,
+          "source_skew_ms": 201.91192626953125,
+          "strategy": "cooldown",
+          "timestamp": 1790809188.0979476
+        },
+        "status": "CLOSED_ESTIMATED",
+        "strategy": "cooldown"
+      }
+    }
+  ],
+  "review_file": "review-20260930T230633Z.json",
+  "selection": "all CLOSED_ESTIMATED records with settled_at in (window_start_at, window_end_at] across all strategies",
+  "window_end_at": 1790809592.4265246,
+  "window_start_at": 1790808392.820953
+}
