@@ -2773,3 +2773,71 @@ policy or capital change. Next checkpoint **20:26:33 UTC**.
 
 Carry has all 89 due arrivals through 20:05, 109,417 sample bytes, zero overdue
 missing files, no terminal error and no interim economic evaluation.
+
+
+### Review 85 — 30 September 2026 20:26 UTC
+
+Exact report, separate epoch snapshot, all three winning records and the
+complete convergence paired group preserved; guarded manual archive
+1,871,707/16,777,216 bytes. Report SHA-256
+`a5fc2fe549e172da358d3b94817bad66bbd95fcfa12bb87983ee9112a1912785`.
+87 exact closes: 84 losses, two paired gains and one failed-hedge rescue gain.
+Seven additional aborts, complete coverage, no capped query. Entry rejections:
+Hyperliquid 54 price-limit; Lighter one notional-cap/one price-limit; RH four
+notional-cap/one price-limit.
+
+- Cooldown: 27/−$35.9522; 26 paired/−$33.2502 and one failed hedge/−$2.7020.
+- Premium: 38/−$71.4179; nine paired/−$15.9935 and 29 failed hedges/−$55.4243;
+  three additional aborts.
+- Convergence: 22/−$21.5008; three paired/−$1.2929 and nineteen failed hedges/
+  −$20.2079; four additional aborts.
+
+The bounded read-only winner query counted three before fetching (cap 128),
+matching the ledger. A second bounded query counted/fetched all 22 convergence
+closes, then selected all three paired records with the review's classifier;
+their sum matches the report. This preserves the losing paired outcome too.
+
+| MU outcome | Record suffix | Price P&L | Fees | 5 bp stress | Capital | Net |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| RH short / HL long, paired | 23051-convergence | $0.726180 | $0.179470 | $0.499384 | $0.00000598 | +$0.047320 |
+| Lighter short / HL long, paired | 23050-convergence | $0.868082 | $0.179461 | $0.499031 | $0.00001018 | +$0.189580 |
+| Lighter long, HL short rejected | 23037-convergence | $0.599360 | $0 | $0.497971 | $0.00000214 | +$0.101387 |
+| Later Lighter short / HL long, paired | 23066-convergence | −$0.850872 | $0.179742 | $0.499143 | $0.00003583 | −$1.529793 |
+
+All winners have complete exact zero funding, no missing events and zero
+remaining quantity; net arithmetic and stress reconcile. The paired winners
+both originated at 1790799485.7630713, with equal 0.931-unit legs and the same
+HL receipt/entry at 1790799487.058627, $997.101 long notional. They are two
+routes sharing an observation, not independent confirmation. Entry execution
+skews were 0.78124/0.78189 s. RH route request net $0.11249 fell to $0.04732
+with $0.06517 adverse price movement over 1.5586 s; Lighter route request net
+$0.23011 fell to $0.18958 with $0.040539 adverse movement over 1.0047 s.
+Forecasts $0.57018/$0.60514 exceeded the $0.25 gate; both historical windows
+had 241 samples over approximately 893 s.
+
+The later paired MU trade, created at 1790799652.6271367, forecast $0.28622
+with 242 historical samples. It exited at max hold for −$1.52979, despite a
+$0.445824 price improvement after requesting exit. Thus the complete paired
+convergence group remains negative. The rescue record held a 0.928-unit
+Lighter long ($995.94272), sold for $996.54208 after HL short price rejection;
+its gain does not demonstrate paired execution. Nineteen epoch win records
+now comprise four paired and fifteen failed-hedge rescues.
+
+Cooldown fees $9.7276, stress $13.4832, capital $0.0009318, funding zero;
+without stress −$22.4690. All 26 paired exit comparisons present: fourteen
+better, six worse, six unchanged, net improvement $0.64112, median −$0.001096,
+p95 adverse $0.170343. Request-to-flat median 1.188 s, p95 1.669 s. Premium's
+nine comparisons deteriorated $2.551928 in aggregate; convergence's three
+improved $0.340115. No missing paired exit comparisons in this window.
+
+Four feeds connected, 110 pairs, CPU 50.43%, p95 lag 12.80 ms, RSS 320.04 MiB,
+796.6 books/s, metadata age 2,946.5 s. Review one cooldown position; later
+epoch snapshot flat. Epoch: cooldown 2,027 exact plus six estimated/
+−$2,718.5838; Premium 580/−$1,070.9740; convergence 330/−$392.4545;
+conservative two/−$1.7145; confirmed one/−$3.3006. Three legacy funding
+obligations remain. Reviews 66–85 contain 1,087 closes: 1,080 losses, two
+paired gains and five rescue gains. No strategy window qualifies; no policy
+or capital change. Next checkpoint **20:46:33 UTC**.
+
+Carry has all 93 due arrivals through 20:25, 114,350 sample bytes, zero overdue
+missing files, no terminal error and no interim economic evaluation.
