@@ -3218,3 +3218,30 @@ Next checkpoint **23:46:33 UTC**.
 
 Carry has all 129 due arrivals through 23:25, 158,499 sample bytes, zero overdue
 missing files, no terminal error and no interim economic evaluation.
+
+
+## Review 95 — 30 September 2026 23:46:33 UTC
+
+Exact report and separate epoch snapshot preserved; guarded manual archive
+2,233,883/16,777,216 bytes. Report SHA-256
+`99a141dc8d31eabd22579e86e9a346328f47341a4432c96125a0362c5229e2f3`.
+One exact convergence paired SAMSUNGUSD close/−$1.07269; no other completions,
+no aborts, no entry rejections and complete coverage. Fees $0.26937, stress
+$0.49949 and capital $0.00003620; without stress −$0.57319. Entry deteriorated
+$0.55572 against the signal, exit improved $0.26098 against its request price,
+and exit request to flat took 1.4177 s. No new wins.
+
+Four feeds connected, 106 pairs after metadata refresh, CPU 58.38%, p95 lag
+15.11 ms, RSS 300.58 MiB, 668.1 books/s, metadata age 528.8 s; performance
+normal. One convergence position at the review boundary; later epoch snapshot
+flat with one additional close, so that separate snapshot is not the review
+window ledger. Epoch convergence 368/−$435.2461, cooldown unchanged at
+2,404 exact plus nine estimated/−$3,158.0177, Premium 644/−$1,179.9555,
+conservative four/−$3.0627 and confirmed two/−$4.0150. Cooldown remains
+capital constrained with HL wallet $1,000.35611. Twenty-two earlier win
+records and three legacy funding obligations remain. Reviews 66–95 have
+1,572 closes: 1,562 losses, two paired gains and eight rescue gains.
+No policy, size or capital change. Next checkpoint **1 October 00:06:33 UTC**.
+
+Carry has all 133 due arrivals through 23:45, 163,448 sample bytes, zero overdue
+missing files, no terminal error and no interim economic evaluation.
