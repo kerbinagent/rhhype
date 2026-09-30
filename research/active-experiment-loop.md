@@ -268,3 +268,15 @@ full recorded HL walk notionals and actual frozen maker fees; nonpositive
 bounds rule out only that fixed-quote margin on covered rows. Parent-invalid
 rows remain reverse-unadjudicated, and positive bounds are inconclusive.
 It requires no further raw traversal or new archive.
+
+
+A supplemental [derived-row verification](../reports/passive-rare-spread/0252Z-fixed-1s-v1/verification.json)
+was added after original publication; all manifest-covered files stayed
+unchanged. Total with this 1,338-byte attestation is 7,555,803 bytes. Its
+48,000 CSV rows, 12,000 timing references and all five strata reconcile.
+At $1,000, 942 XAG and 69 NVDA observations clear trading fees plus $0.10,
+but zero clear the additional 5 bp allowance. The greatest fee-only quoted
+margins are XAG $0.226464 and NVDA $0.170798; BTC and ETH remain negative
+even before target and stress. These assumed-fill quoted margins do not
+establish execution or realized profit. The declared stress allowance is
+separate from charged fees and has not been lowered after seeing results.

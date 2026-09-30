@@ -1,0 +1,49 @@
+{
+  "derived_rows_verified": 48000,
+  "timing_references_verified": 12000,
+  "exact_denominator_and_five_strata_verified": true,
+  "valid_row_clock_and_arithmetic_reconciled": true,
+  "manifest_output_hashes_verified": true,
+  "canonical_terminal_verified": true,
+  "new_raw_traversals_for_verification": 0,
+  "network_calls": 0,
+  "exclusions": {
+    "missing_rh": 20,
+    "stale_source_or_receipt": 304,
+    "insufficient_hl_depth": 52
+  },
+  "by_size_fee_threshold_counts": {
+    "100": {
+      "valid": 11919,
+      "fee_only_positive": 3613,
+      "after_target_positive": 0,
+      "positive": 0
+    },
+    "250": {
+      "valid": 11918,
+      "fee_only_positive": 3589,
+      "after_target_positive": 0,
+      "positive": 0
+    },
+    "500": {
+      "valid": 11906,
+      "fee_only_positive": 3550,
+      "after_target_positive": 18,
+      "positive": 0
+    },
+    "1000": {
+      "valid": 11881,
+      "fee_only_positive": 3521,
+      "after_target_positive": 1011,
+      "positive": 0
+    }
+  },
+  "implementation_frozen_at": "2026-09-30T04:51:27.266755+00:00",
+  "canonical_completed_at": "2026-09-30T04:57:02.691214+00:00",
+  "synthetic_tests_passed": 9,
+  "isolated_before_write_cap_test": {
+    "allowance": 200,
+    "remaining_total_after_overflow_refusals": 187
+  },
+  "generated_files_before_verification_bytes": 7554465
+}
