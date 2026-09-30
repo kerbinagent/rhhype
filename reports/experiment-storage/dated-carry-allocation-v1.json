@@ -1,0 +1,58 @@
+{
+  "all_old_allocations_retained": true,
+  "authorization": "User 2026-09-30: Why do not you continue research? please proceed to recommendation. Authorizes recommended bounded public-data dated carry feasibility stage and proposed 16 MiB ceiling.",
+  "automatic_successor": false,
+  "categories_bytes": {
+    "derived": 2097152,
+    "metadata": 2097152,
+    "samples": 8388608,
+    "source_control": 1048576,
+    "terminal_audit_logs": 3145728
+  },
+  "existing_shared_allowance_bytes": 33000000,
+  "existing_shared_headroom_bytes": 257096,
+  "existing_shared_reserved_bytes": 32742904,
+  "existing_total_reservation_bytes": 820000000,
+  "new_study_maximum_bytes": 16777216,
+  "new_total_reservation_bytes": 836777216,
+  "orders": false,
+  "preflight_requests": {
+    "automatic_retry": false,
+    "fresh_launch_metadata_max_requests": 2,
+    "inventory_max_requests": 2,
+    "per_response_decoded_bytes": 1048576,
+    "redirects": false,
+    "timeout_seconds": 20
+  },
+  "previous_allocation": "reports/experiment-storage/rh-liquidation-schema-review-allocation-v1.json",
+  "previous_sha256": "d7f97b1defbe6fe84dfe3d27346b0376e079855df8fe46c5047f1ac1073d304e",
+  "private_api": false,
+  "proposal": "research/broader-carry-research-proposal.md",
+  "proposal_sha256": "4b04c825bb601d10f9a2190598b5aa9403aff1a3b511eedb5aa8bc08e0937873",
+  "recorded_utc": "2026-09-30T12:15:14.910209+00:00",
+  "schema": "dated-carry-allocation-v1",
+  "scope": {
+    "base": "BTC",
+    "budgets_usd": [
+      100,
+      250,
+      500,
+      1000
+    ],
+    "decision_slots": [
+      0,
+      144,
+      288,
+      432,
+      576,
+      720
+    ],
+    "duration_seconds": 259200,
+    "future": "nearest active linear USDC dated BTC future 7-30 days remaining at frozen activation",
+    "interval_seconds": 300,
+    "primary_budget_usd": 1000,
+    "slots": 864,
+    "spot": "BTC_USDC",
+    "venue": "Deribit public market data only"
+  }
+}
