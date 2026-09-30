@@ -2148,3 +2148,34 @@ closes in reviews 66–68 were negative. Next checkpoint **15:06:33 UTC**.
 
 Carry has 25 scheduled arrivals through 14:45, 30,492 sample bytes and no
 reported collection errors. Economic readout remains at the fixed endpoint.
+
+## Review 69 — 2026-09-30 15:06:33 UTC
+
+Exact review and separate epoch read preserved; manual directory cap checked,
+now 1,245,208/16,777,216 bytes. All 38 closes exact and negative; one convergence
+abort, complete completion/abort coverage. Portfolios remain separate.
+
+- Cooldown: twenty paired closes/−$27.6966; no failed-hedge closes.
+- Premium: nine/−$17.9565; four paired/−$6.8516, five failed/−$11.1049.
+- Convergence: nine/−$9.2764; four paired/−$4.0749, five failed/−$5.2015.
+- Hyperliquid ten price-limit rejections; Core one price-limit and one
+  notional-cap rejection. No new winners.
+
+Cooldown fees $7.2707, stress $9.9882, capital $0.0007247, funding zero;
+removing stress leaves −$17.7084. Its nineteen available exit comparisons
+improved $1.475624 overall (twelve better, seven worse, one missing), median
+−$0.04798, p95 adverse $0.263472. All twenty request-to-flat observations
+present: median 1.377 s, p95 1.688 s. Premium's four comparisons improved
+$0.031318 overall; convergence's three available improved $0.07889, one missing.
+
+Four feeds connected, 115 pairs, CPU 76.64%, p95 lag 20.48 ms, RSS 312.54 MiB,
+1,369.2 books/s, metadata age 1,769.4 s. RH displayed gap count remains 115
+within the current stream-manager interval. Review and later snapshot each
+had one cooldown position. Epoch: cooldown 1,412 exact plus three estimated/
+−$1,926.2301; Premium 399/−$726.7104; convergence 212/−$238.1378;
+conservative one/+$2.3198. Twelve earlier win records and three legacy funding
+obligations remain. All 170 closes in reviews 66–69 were negative. No policy
+or capital change. Next checkpoint **15:26:33 UTC**.
+
+Carry status: 29 arrivals through 15:05, 35,412 sample bytes, no reported
+collection errors. No interim price/economic evaluation.
