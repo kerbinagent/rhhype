@@ -1,0 +1,63 @@
+{
+  "all_in_headroom": null,
+  "closed_pnl": null,
+  "formula": "g=ceil_step((q*(1+exit_rate)+entry_additive+exit_additive)/(1-entry_rate))",
+  "inputs": {
+    "entry_additive": "0.00000001",
+    "entry_rate": "0.0005",
+    "exit_additive": "0.00000001",
+    "exit_rate": "0.0005",
+    "q": "0.01",
+    "step": "0.00000001"
+  },
+  "limitations": [
+    "Rate and additive caps are assumptions over each whole order, not venue guarantees.",
+    "Additive allowances must cover all fill rounding; the example is not a fee-precision claim.",
+    "Successful gross acquisition is assumed; depth, budget, future grid and order limits remain external gates.",
+    "Quote fees require separately funded cash and their own caps.",
+    "Residual BTC can remain exposed or untradeable dust; this does not prove an exact hedge or closed P&L.",
+    "Represent BTC fees in inventory quantities; do not subtract their USD value again from the same cashflows.",
+    "No quote data, account data or frozen carry-study inputs are read."
+  ],
+  "result": {
+    "cases": [
+      {
+        "entry_fee_currency": "BTC",
+        "exit_fee_currency": "BTC",
+        "residual_btc_lower_bound": "997/200000000000",
+        "residual_btc_upper_bound": "1003/100000000"
+      },
+      {
+        "entry_fee_currency": "BTC",
+        "exit_fee_currency": "quote",
+        "residual_btc_lower_bound": "1002997/200000000000",
+        "residual_btc_upper_bound": "1003/100000000"
+      },
+      {
+        "entry_fee_currency": "quote",
+        "exit_fee_currency": "BTC",
+        "residual_btc_lower_bound": "251/50000000",
+        "residual_btc_upper_bound": "1003/100000000"
+      },
+      {
+        "entry_fee_currency": "quote",
+        "exit_fee_currency": "quote",
+        "residual_btc_lower_bound": "1003/100000000",
+        "residual_btc_upper_bound": "1003/100000000"
+      }
+    ],
+    "entry_btc_fee_cap": "1003003/200000000000",
+    "exit_btc_fee_cap": "501/100000000",
+    "gross_spot_buy_btc": "1001003/100000000",
+    "gross_spot_sell_btc": "1/100"
+  },
+  "schema": "spot-fee-inventory-envelope-synthetic-v1",
+  "source_sha256": "4ad01721432810066f734971d4cf578c5bf4baaa82e550ffa11275135725c52a",
+  "synthetic": true,
+  "verification": {
+    "four_currency_cases_nonnegative": true,
+    "invalid_fee_grid_inputs_rejected": true,
+    "preceding_grid_fails_continuous_worst_cap": true,
+    "zero_fee_identity": true
+  }
+}

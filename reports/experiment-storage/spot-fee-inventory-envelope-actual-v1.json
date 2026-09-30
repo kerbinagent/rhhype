@@ -1,0 +1,26 @@
+{
+  "category_actual_bytes": {
+    "incremental_docs": 2093,
+    "output": 2404,
+    "provenance": 2223,
+    "source": 3348
+  },
+  "category_limits_bytes": {
+    "incremental_docs": 4096,
+    "output": 4096,
+    "provenance": 4096,
+    "source": 4096
+  },
+  "file_sha256": {
+    "reports/experiment-storage/spot-fee-inventory-envelope-allocation-v1.json": "bad7233b37c70645b3b1f11420d1ac7345acef4acfcd1894d2c501f569559bae",
+    "reports/spot-fee-inventory-envelope/synthetic-v1.json": "863ebb1ab3ed3e38b75256fd650a72227833505ad6849117d98a63e058527234",
+    "scripts/spot_fee_inventory_envelope.py": "4ad01721432810066f734971d4cf578c5bf4baaa82e550ffa11275135725c52a"
+  },
+  "frozen_study_changed": false,
+  "independent_review": "PASS: exact ceiling, all currency-case bounds, source hash, stated conditional limits. No live inputs or file edits by reviewer.",
+  "overall_reservation_bytes": 836777216,
+  "raw_or_network_bytes": 0,
+  "schema": "spot-fee-inventory-envelope-actual-v1",
+  "shared_headroom_bytes": 120712,
+  "shared_reserved_bytes": 32879288
+}

@@ -969,3 +969,39 @@ No new winners. Four feeds connected and performance normal; review and later
 snapshot one cooldown position. Twelve prior win records and three legacy
 funding obligations remain. Next review 15:26:33 UTC. Carry has 29 arrivals,
 no reported errors and no interim economic readout.
+
+### Future-model fee inventory envelope, 15:24 UTC
+
+A source-only algebra check addresses a different sizing rule for a possible
+future paper model. It is not applied to the frozen carry study or its data.
+Let q be the intended gross spot sale/future quantity and s the spot amount
+grid. Assume nonnegative aggregate BTC entry fees at most f_e*g+d_e and exit
+fees at most f_x*q+d_x, with 0<=f_e<1. Each additive cap must cover every fill's
+rounding across the whole order. Then choose
+
+`g = ceil_to_s((q*(1+f_x)+d_e+d_x)/(1-f_e))`.
+
+This ensures `g-(f_e*g+d_e) >= q+(f_x*q+d_x)`: acquired BTC covers gross sale q
+and the assumed exit BTC fee. The four entry/exit fee-currency combinations
+are checked by the [exact helper](../scripts/spot_fee_inventory_envelope.py).
+A [synthetic example](../reports/spot-fee-inventory-envelope/synthetic-v1.json)
+uses q=0.01 BTC, s=1e-8 BTC, f_e=f_x=0.0005, d_e=d_x=1e-8 BTC. It requires
+**g=0.01001003 BTC**. All four residual lower bounds are nonnegative; the
+BTC/BTC case has lower bound 0.000000004985 BTC. These are mathematical
+bounds, not actual fractional-satoshi balances or a venue fee-rounding rule.
+
+This does not authenticate fee caps, fill quantities or fee currencies.
+Quote fees still need separate cash; both orders need valid depth, minima,
+limits and funded budget, and q must satisfy both relevant quantity grids.
+Surplus BTC/dust remains exposed; do not call this an exact neutral hedge or
+closed P&L. Use gross purchase cost, sale proceeds and residual inventory
+consistently: charging the USD value of BTC fee debits again would double
+count their cost. Terminal index/FX mismatch, delivery and margin unknowns
+remain. All-in headroom and closed P&L stay null.
+
+The 16,384-byte reservation fits inside the existing shared allowance,
+leaving 120,712 bytes at allocated maxima. No raw data or network was read,
+no capture/replay was launched, and existing reservations remain intact.
+
+Independent source/output review passed the formula, all four cases, source
+hash, exact ceiling and conditional claims. No frozen-study input was read.

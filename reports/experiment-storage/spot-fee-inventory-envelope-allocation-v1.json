@@ -1,0 +1,23 @@
+{
+  "all_old_allocations_retained": true,
+  "authorization": "Continued public paper research within existing shared reservation. Algebra and synthetic quantities only.",
+  "categories_bytes": {
+    "incremental_docs": 4096,
+    "output": 4096,
+    "provenance": 4096,
+    "source": 4096
+  },
+  "existing_total_reservation_bytes": 836777216,
+  "new_maximum_bytes": 16384,
+  "not_incorporated_into_frozen_carry_study": true,
+  "overall_reservation_increase_bytes": 0,
+  "previous_allocation": "reports/experiment-storage/review65-nvda-annotation-allocation-v1.json",
+  "previous_sha256": "a99968ce39e3861addc94be641d46b2be7b228c375e1e8403cc98785436c43c8",
+  "previous_shared_reserved_bytes": 32862904,
+  "projected_shared_reserved_bytes": 32879288,
+  "recorded_utc": "2026-09-30T15:22:47.337904+00:00",
+  "schema": "spot-fee-inventory-envelope-allocation-v1",
+  "scope": "Future-only algebraic inventory buffer under explicit aggregate base-fee/rounding caps; four fee-currency combinations; one synthetic example; no quotes, P&L, private data, live DB, carry sample read or policy changes.",
+  "shared_allowance_bytes": 33000000,
+  "shared_headroom_bytes": 120712
+}
