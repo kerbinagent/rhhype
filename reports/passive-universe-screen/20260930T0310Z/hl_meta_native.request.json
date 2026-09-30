@@ -1,0 +1,1 @@
+{"method":"POST","url":"https://api.hyperliquid.xyz/info","json_body":{"type":"metaAndAssetCtxs","dex":""},"status":200,"started_ns":1790737826151723030,"completed_ns":1790737826666470309,"sha256":"e60af15b7e56771b148ce97cb2373cf2f5bd9d86c6e3f1d34e8c40e0b4d88874","bytes":72059}

@@ -1,0 +1,24 @@
+{
+  "frozen_input_hashes_unchanged": true,
+  "hl_raw_response_hashes_match": true,
+  "every_score_reproduces_from_frozen_source": true,
+  "summary_reproduces": true,
+  "all_planned_asset_rounds_present": true,
+  "five_rounds_complete": true,
+  "hl_request_limit_respected": true,
+  "minimum_spacing_seconds": 60.0004103,
+  "trade_ids_unique": true,
+  "terminal_socket_status": {
+    "connected_ns": 1790737860648060125,
+    "last_received_ns": 1790738107065625278,
+    "closed_ns": 1790738107069454227,
+    "close_code": null,
+    "requested_close": true,
+    "exception": null
+  },
+  "offline_tests_passed": 8,
+  "directory_bytes_including_readout_before_verification": 1242039,
+  "raw_trade_flow_reconciles": true,
+  "offline_test_command": ".venv/bin/python -m unittest discover -s tests -p test_passive_universe_screen.py -v",
+  "directory_file_cap_bytes": 16000000
+}

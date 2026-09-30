@@ -1,0 +1,5 @@
+{
+  "status": "aborted_before_metadata_response",
+  "description": "Restricted-network first metadata attempt stalled and inspected process was terminated. No response, universe, quote or trade files exist. Source-only preflight is not a screen.",
+  "terminated_process_pid": 3113376
+}
