@@ -1006,3 +1006,30 @@ of one core, p95 loop lag9.66 ms, RSS263.59 MiB. The snapshot has no filled
 open exposure and three flat funding-pending records. Next review
 **03:46:33 UTC**. The passive capture remains in holdout; no holdout outcome
 has been read or used to alter its frozen sources.
+
+## Review 35: 2026-09-30 03:46:33 UTC
+
+Actively read on schedule and preserved in
+`reports/live-review-catchup/review-20260930T034633Z.json`. Complete coverage.
+The twenty-minute interval spans the 03:36 display-accounting rollout:
+cooldown had **62 paired closes, −$89.5273**, zero wins. Convergence had
+eight closes for **−$8.8218** (seven failed hedges −$8.1785 and one paired
+−$0.6433). Premium had three failed hedges for **−$5.8074**. No other new
+completions or wins. Ledger and review baselines continued through restart.
+
+Cooldown's modeled fees were $24.2655, stress allowance $30.9589, capital
+$0.0022. Its 59 observed exit-price comparisons improved $0.716057 in aggregate
+(20 worse, 23 better, 16 unchanged; three missing), with median zero and
+p95 adverse $0.224272. Request-to-flat median 1.202 s, p95 1.777 s. The one
+paired convergence close had $0.05157 adverse exit-price movement.
+
+The separate current-version snapshot at **03:46:58 UTC**, saved in
+`reports/live-review-catchup/current-epoch-at-review35.json`, starts at the
+03:36:13 rollout: cooldown34 closes/−$51.0719 and convergence1/−$0.6433;
+all other current closed totals zero. Three legacy funding obligations remain
+carryover and their later settlements cannot enter these totals. This is a
+different interval from the full scheduled review, not a replacement for it.
+
+Health: all four feeds connected,112 pairs,CPU62.01% of one core,p95 loop lag
+9.78 ms,RSS153.04 MiB,911.4 books/s. Both frozen passive replays remain active.
+Next review **04:06:33 UTC**. No strategy was promoted and no capital reset.

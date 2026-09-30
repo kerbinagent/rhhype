@@ -25,7 +25,7 @@ report is [flawed-pilot-final.md](../reports/feed-experiment/flawed-pilot-final.
 
 ## Next review and interpretation
 
-Review 34 was actively read at 03:26:33 UTC. **Next: 03:46:33 UTC**.
+Review 35 was actively read at 03:46:33 UTC. **Next: 04:06:33 UTC**.
 Read `data/strategy-reviews/latest.json`; do not also run a one-shot capture
 against that output, because it advances the same baseline. The scheduler
 collects evidence; the active agent researches and evaluates changes.
@@ -43,7 +43,7 @@ are historical.
 Commit `6fa0f4e` passed 42 targeted tests and independent accounting review.
 The old collector exited gracefully after its final checkpoint; new collector
 3280600 resumed the same database, ten-second exit request, $0.10 target and
-shadow strategies. Reviewer2765645 and the separate capture/supervisor stayed
+shadow strategies. Reviewer 2765645 and the separate capture/supervisor stayed
 running. No wallet was replenished. The cutover's legacy ledger matches the
 stopped checkpoint exactly. Three old funding-pending positions retained their
 legacy origin; the fourth old position closed after restart and was excluded
@@ -68,10 +68,10 @@ contains **124,019 records**, 48,680,716 compressed payload bytes and
 The copied final manifest is
 `reports/rh-passive-exit-v1-restart/capture-complete-manifest.json`.
 
-Strict replay started automatically at03:42:59 after stable-manifest and
-source/raw hash checks. Corrected supervisor3296006 launched at03:43:34
+Strict replay started automatically at 03:42:59 after stable-manifest and
+source/raw hash checks. Corrected supervisor 3296006 launched at 03:43:34
 using the committed `run-corrected-once.py`, with the same stopped archive
-and20 frozen sources. Both runs have a3,600-second deadline and1MB log cap,
+and 20 frozen sources. Both runs have a 3,600-second deadline and 1 MB log cap,
 plus the existing audit/result bounds. Their output directories remain
 separate. A completed capture is not a claim of valid queue/fill coverage
 or profitable paper outcomes; those await the replay readouts and comparison.

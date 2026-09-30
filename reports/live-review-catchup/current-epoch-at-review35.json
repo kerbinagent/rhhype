@@ -1,0 +1,103 @@
+{
+  "snapshot_updated_at": 1790740018.341832,
+  "version": "e3e83cda71a6",
+  "epoch_id": "b8204da0453a4e8a940d3d1b3c33714e",
+  "started_utc": "2026-09-30T03:36:13.545437+00:00",
+  "strategies": {
+    "confirmed": {
+      "closed_trades": 0,
+      "estimated_trades": 0,
+      "closed_wins": 0,
+      "closed_net_usd": 0,
+      "fees_usd": 0,
+      "other_costs_usd": 0,
+      "capital_costs_usd": 0,
+      "open_positions": 0,
+      "pending_funding": 0
+    },
+    "conservative": {
+      "closed_trades": 0,
+      "estimated_trades": 0,
+      "closed_wins": 0,
+      "closed_net_usd": 0,
+      "fees_usd": 0,
+      "other_costs_usd": 0,
+      "capital_costs_usd": 0,
+      "open_positions": 0,
+      "pending_funding": 0
+    },
+    "convergence": {
+      "closed_trades": 1,
+      "estimated_trades": 0,
+      "closed_wins": 0,
+      "closed_net_usd": -0.6433153731751504,
+      "fees_usd": 0.893302641,
+      "other_costs_usd": 0.4994695,
+      "capital_costs_usd": 3.523217506865469e-05,
+      "open_positions": 0,
+      "pending_funding": 0
+    },
+    "cooldown": {
+      "closed_trades": 34,
+      "estimated_trades": 0,
+      "closed_wins": 0,
+      "closed_net_usd": -51.071852676875736,
+      "fees_usd": 13.5185829576,
+      "other_costs_usd": 16.977578401499997,
+      "capital_costs_usd": 0.0012143177758479476,
+      "open_positions": 0,
+      "pending_funding": 0
+    },
+    "plus": {
+      "closed_trades": 0,
+      "estimated_trades": 0,
+      "closed_wins": 0,
+      "closed_net_usd": 0,
+      "fees_usd": 0,
+      "other_costs_usd": 0,
+      "capital_costs_usd": 0,
+      "open_positions": 0,
+      "pending_funding": 0
+    },
+    "premium": {
+      "closed_trades": 0,
+      "estimated_trades": 0,
+      "closed_wins": 0,
+      "closed_net_usd": 0,
+      "fees_usd": 0,
+      "other_costs_usd": 0,
+      "capital_costs_usd": 0,
+      "open_positions": 0,
+      "pending_funding": 0
+    },
+    "shadow_baseline": {
+      "closed_trades": 0,
+      "estimated_trades": 0,
+      "closed_wins": 0,
+      "closed_net_usd": 0,
+      "fees_usd": 0,
+      "other_costs_usd": 0,
+      "capital_costs_usd": 0,
+      "open_positions": 0,
+      "pending_funding": 0
+    },
+    "standard": {
+      "closed_trades": 0,
+      "estimated_trades": 0,
+      "closed_wins": 0,
+      "closed_net_usd": 0,
+      "fees_usd": 0,
+      "other_costs_usd": 0,
+      "capital_costs_usd": 0,
+      "open_positions": 0,
+      "pending_funding": 0
+    }
+  },
+  "carryover": {
+    "active_positions": 0,
+    "pending_entries": 0,
+    "pending_funding": 3,
+    "reserved_usd": 6005.5599999999995,
+    "remaining_quantity_by_market": {}
+  }
+}

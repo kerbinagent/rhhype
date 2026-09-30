@@ -1,7 +1,8 @@
 # Paper results for the current strategy version
 
 The collector rollout at **2026-09-30 03:36:13 UTC** started version attribution
-in the existing paper database (commit `6fa0f4e`, collector3280600). This first epoch begins at rollout, even when strategy sources
+in the existing paper database (commit `6fa0f4e`, collector 3280600). This first
+epoch begins at rollout, even when strategy sources
 are unchanged. It does not reconstruct a historical strategy inception date.
 All existing positions become legacy carryover, including pending entries,
 partial exits, and unresolved funding. Their later settlements are excluded
