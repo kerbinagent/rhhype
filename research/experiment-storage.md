@@ -39,3 +39,22 @@ small-maker roots found two raw archives totaling about 61.6 MB. The passive
 v1 capture had no final manifest while running, so it was ineligible. The RH
 small-maker original was complete but pinned. The plan proposed no removal.
 No raw capture was modified.
+
+## Expanded inventory, 30 September 03:26 UTC
+
+The [expanded read-only inventory](../reports/experiment-storage/inventory-20260930T0326Z.json)
+includes all six managed roots. It found seven raw archives and 150,261,582
+apparent bytes, below the 512 MB byte budget but above the four-study count
+target. One 0.604 MB preflight raw file is eligible in the dry plan; even its
+removal would leave six studies. No deletion was performed. Two originals
+are pinned, one capture is active, and its interrupted predecessor lacks a
+final manifest. Older `maker-public-capture-v1` manifests record completed
+duration-limited captures but do not contain the raw hash required by this
+planner; its `incomplete_or_invalid` status for them is a planning-gate
+failure, not a claim that their captures failed.
+
+Do not launch another raw study without reconciling this count target and
+reviewing which evidence must remain reproducible. The current experiment
+and both scheduled replays retain their inputs. Total workspace usage at
+this check was about 661 MiB under data and 31 MiB under reports, including
+the separate production database and older derived archives.

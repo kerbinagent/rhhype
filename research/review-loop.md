@@ -982,3 +982,27 @@ Health: 112 pairs, CPU55.75% of one core, p95 loop lag13.47 ms, RSS264.11 MiB,
 one-shot supervisor3161224 waits for its final manifest and will perform one
 bounded frozen replay. The same-callback retirement correction is a separate
 implementation variant under preparation, never an unlabeled replacement.
+
+## Review 34: 2026-09-30 03:26:33 UTC
+
+Actively read on schedule; preserved in
+`reports/live-review-catchup/review-20260930T032633Z.json`. Completion coverage
+is complete. Cooldown closed **58 trades, −$72.7472**, zero wins: 56 paired
+closes contributed −$67.8478 and two failed hedges −$4.8994. Convergence
+recorded four failed hedges for **−$5.3098**, zero paired closes or wins.
+Premium had one zero-fill abort and no completion. Other strategies had no
+new completion; baseline/Standard/Plus retain their capital constraints.
+
+Cooldown's modeled fees were $17.2399, stress allowance $28.9624, and capital
+$0.0020. Removing the allowance alone leaves approximately −$43.7848.
+Exit-price movement improved the 54 observed paired comparisons by
+**$3.933369** in aggregate (18 worse, 16 better, 20 unchanged; two missing).
+Median movement zero, p95 adverse $0.099502. Median request-to-flat was
+1.171 s, p95 2.095 s across the 56 paired closes. These are price diagnostics,
+not a causal estimate of what a different execution policy would earn.
+
+Health: all four feeds connected, 112 pairs, 821.7 book events/s, CPU51.52%
+of one core, p95 loop lag9.66 ms, RSS263.59 MiB. The snapshot has no filled
+open exposure and three flat funding-pending records. Next review
+**03:46:33 UTC**. The passive capture remains in holdout; no holdout outcome
+has been read or used to alter its frozen sources.
