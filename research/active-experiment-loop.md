@@ -161,3 +161,37 @@ comparison utility are being prepared with synthetic tests only. None reads
 the active holdout or changes its frozen strategy. A less restrictive assumed
 ACK clock can improve measurable coverage; it cannot establish a real queue
 position, eliminate economic costs or demonstrate executable profitability.
+
+## Completed capture and current preparation, 03:53 UTC
+
+The replacement capture completed normally at 03:42:58 UTC with 124,019
+records and 48,931,302 total archive bytes. Strict v1 and the separately frozen
+entry-retirement correction are replaying the same stopped archive, each with
+a one-hour limit. Their completed readouts remain pending. The 20 original
+and correction source files remain unchanged.
+
+The current-version TUI was deployed at 03:36:13 UTC. Version
+`e3e83cda71a6` has its own persistent epoch; older positions keep their
+original attribution and wallet balances were preserved. See the
+[rollout verification](../reports/paper-strategy-epoch-review/rollout-verification.json)
+and [version display method](paper-strategy-version-display.md).
+
+The future ACK scenario adapter is implemented in commit `8fc0365` and has
+passed independent synthetic review. A possible replay on this completed
+archive will be explicitly exploratory and post-capture, with its own source
+hashes and outputs. It includes historical-evidence guards, duplicate-ID
+handling and coverage checks as well as clock assumptions; any difference
+cannot be attributed solely to latency.
+
+Synthetic review also confirmed a separate frozen-parent limitation: after
+an unrelated branch halt, a newly received old-source buy can bypass the
+retired passive-ask guard. The portfolio remains unknown, but an earlier
+closed episode can incorrectly retain known status. Before using episode
+contributions from either frozen replay, inspect retired passive-ask counts.
+Zero retained asks rules out this particular defect; retained asks with a
+halt require separate historical-evidence adjudication. Keep the frozen
+results intact and label any affected reported contributions provisional.
+
+No further raw capture starts until the cumulative raw-study count is
+reconciled with retention policy. Offline quote-distance arithmetic and the
+storage review can proceed without collecting another archive.
