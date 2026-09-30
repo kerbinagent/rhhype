@@ -1,0 +1,15 @@
+{
+  "launched_utc": "2026-09-30T04:10:53.924033+00:00",
+  "pid": 3400364,
+  "command": [
+    "/home/harry/projects/research/rhhype/.venv/bin/python",
+    "/home/harry/projects/research/rhhype/reports/rh-passive-ack-exploratory/run-once.py",
+    "--scenario",
+    "base",
+    "--run"
+  ],
+  "classification": "EXPLORATORY POST-CAPTURE MODEL",
+  "raw_capture_new": false,
+  "deadline_seconds": 3600,
+  "launcher_sha256": "4f93224480168340bd25b2e63a52f4ad7a4195fac6fa1855270f934ca487f5a5"
+}

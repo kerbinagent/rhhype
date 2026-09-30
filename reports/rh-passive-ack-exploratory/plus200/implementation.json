@@ -1,0 +1,87 @@
+{
+  "recorded_utc": "2026-09-30T04:10:54.450231+00:00",
+  "classification": "EXPLORATORY POST-CAPTURE MODEL",
+  "prospective_freeze": false,
+  "source_sha256": {
+    "scripts/analyze_rh_passive_exit.py": "d449743816f031467d8dab34c83bbb35df87a53e397c90b42dc220d4e21d9f5f",
+    "scripts/rh_passive_exit_engine.py": "486a7fc2d3d1dd8eec0cdf1607a0562bcb26d57cb047e17a9b27ce74c75f448b",
+    "scripts/rh_passive_exit_cache.py": "c676253a7cacb24cc3e5175ddaecfcf79c6b037f68a264a6de636b802fd73654",
+    "scripts/rh_maker_engine.py": "a25768d7e853f13cc81658ed9978e6c131f83713b43e276a95f94399ccc30763",
+    "scripts/rh_maker_sell_engine.py": "a92cc118acec27b91fee9ea7279946ab051ff8d6ec337f626c64958039bce635",
+    "scripts/rh_maker_late_flow_guard.py": "fc1c7b48c1c936a97409867a846db33b850e467338d671f29316926041fd1de6",
+    "scripts/rh_maker_model.py": "e368084c5f2b8a5129b6fcd941916324ca52a77575353e0010627174cd061ae9",
+    "scripts/rh_maker_sell_model.py": "12e804ec02291bf2a0780b54c840e37cb4b7c3abc4e61a723dca21618559a7c1",
+    "scripts/rh_maker_config.py": "9d6a411a60a1b85179bec12ac29eda452df4c1e62e707042db3767781c7d11bb",
+    "scripts/rh_maker_events.py": "5984caf23215035603fdc259910a1d1e7309fedfc961d176de3dfa2a9f31f29b",
+    "scripts/rh_maker_capture.py": "8a075d1b454752e0852f1a8ab6d40189c60bfba7bf62c7ff781b7349571b45b4",
+    "scripts/maker_book_archive.py": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2",
+    "scripts/maker_capture.py": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9",
+    "scripts/paper_streams.py": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734",
+    "scripts/analyze_maker_equity.py": "85d4de8cfd523b4a4497e3e2f6411b05f3737f2133d4c167ddce708af363843f",
+    "scripts/analyze_maker_capture.py": "d87ce8f116e039976b7afac20ede5704d14b3d49eb626473d214a7d47811b359",
+    "scripts/analyze_maker_roundtrip.py": "d7d23b255fcffc294069a77486cc944a9a64a32d6755cc515a960d1ae03a9c93",
+    "research/rh-passive-exit-method.md": "58abb8dcc71d783a5c51e7e7084009a25810b6f6e35507cfbd7d53d064d3f51e",
+    "scripts/rh_passive_retirement_guard.py": "6f4a92fc7ce84c52bd7fe9f0d6e7a6d66082c78037ef9a4f6d737ef1765af9fe",
+    "scripts/rh_passive_ack_scenarios.py": "5937e19db20eaf81a6bf0f72a8c2adc9191f557a5ec19fd81605fcaa7d0f8281",
+    "scripts/replay_passive_ack_exploratory.py": "1d34b717b955008644680e29fe910df62b30ad6865875d54b28381277419e70b"
+  },
+  "scenario": {
+    "selection": "plus200",
+    "scenario_id": "assumed_ack_plus_200ms",
+    "additional_maker_latency_ns": 200000000,
+    "additional_cancel_latency_ns": 200000000,
+    "max_trade_ids": 65536,
+    "max_timer_steps": 1024,
+    "effective_delays_by_tier": {
+      "standard": {
+        "maker_latency_ns": 500000000,
+        "cancel_latency_ns": 500000000,
+        "inherited_rh_taker_latency_ns": 400000000,
+        "inherited_hl_ioc_latency_ns": 150000000
+      },
+      "premium": {
+        "maker_latency_ns": 300000000,
+        "cancel_latency_ns": 300000000,
+        "inherited_rh_taker_latency_ns": 300000000,
+        "inherited_hl_ioc_latency_ns": 150000000
+      }
+    },
+    "execution_assumed": true,
+    "private_ack_observed": false,
+    "actual_fills_observed": false,
+    "native_trade_ids_stable_across_generations_assumed": true,
+    "activation_clock": "request receipt + assumed maker latency; preceding raw RH anchor only",
+    "cancel_clock": "cancel request + assumed cancel latency; cancel source-time ties unknown",
+    "processing_clock": "timer effective time and processed public receipt remain separate",
+    "notification_clock": "public trade receipt starts inherited hedge/contingent-buy latency",
+    "assumptions": [
+      "Counterfactual deterministic acceptance/cancellation; no private ACK or actual fill observed.",
+      "Last previously received raw RH same-price depth is carried forward as queue ahead at due.",
+      "No cancellation credit; additions between anchor and due remain unobserved queue uncertainty.",
+      "Historical public flow is unaffected by the hypothetical order and its source clock orders flow.",
+      "Activation wins an exact source tie; cancel ties are unknown; public receipt starts hedge latency.",
+      "Feed freshness is checked; completeness and real private notification timing are not established.",
+      "Native trade IDs are assumed unique/stable across transport generations; identical retransmits are duplicates.",
+      "Completed net is conditional scenario economics, never an executable or guaranteed profit bound."
+    ]
+  },
+  "provenance": {
+    "protocol_sha256": "759d993195470beec0e6db5e2c94a7bb717c9203818b13d862a0639a99a7e0f3",
+    "capture_manifest_sha256": "5a9e61438df592d895d3cfc5d550241b01f0696fdbd5c83f46666d9ff1274250",
+    "raw_sha256": "c92c269e3bc3bb345beeaf834ad55d0a97601339b4506e36a9397287f8407bb6",
+    "metadata_normalized_sha256": "34249d999bf176b73a2f9e30aa1602f3ab135a7cadc9238a080bfe060f048aba",
+    "archive_bytes": 48931302,
+    "readout_references": {
+      "strict_analysis": "/home/harry/projects/research/rhhype/data/derived/rh-passive-exit-v1-restart/analysis.json",
+      "strict_analysis_sha256": "402d188f84063b811891ca63c216b31ea19c9c9b7eff830776bd2ea09ca11fd4",
+      "corrected_analysis": "/home/harry/projects/research/rhhype/data/derived/rh-passive-exit-v1-restart-corrected/analysis.json",
+      "corrected_analysis_sha256": "ad857ca25010f86072b26d720705d157ac03e82dda24cc549f16857345d655d9",
+      "readouts_are_references_not_ack_authorization": true
+    },
+    "started_ns": 1790736777958514000,
+    "cutoff_ns": 1790738577958514000,
+    "ended_ns": 1790739777958514000,
+    "entry_admission_end_ns": 1790739697958514000,
+    "intended_end_ns": 1790739777958514000
+  }
+}
