@@ -1993,3 +1993,57 @@ policy change, threshold change or economic replay. One bounded read-only
 query, at most 256 retained attempts and 64 KiB output; report incompleteness
 rather than truncate or retry if a cap is exceeded. The dated-carry study
 remains frozen and is not an input to this annotation.
+
+## Review 65 — 2026-09-30 13:46:33 UTC
+
+Exact review and separate epoch snapshot are archived. All 165 closes exact,
+one convergence abort, complete completion/abort coverage. Portfolios separate.
+
+| Strategy | Closes | Net | Paired / failed |
+| --- | ---: | ---: | --- |
+| Cooldown | 20 | −$38.2285 | 19/−$35.1220; one/−$3.1065 |
+| Premium | 75 | −$149.6087 | 11/−$22.6274; 64/−$126.9813 |
+| Convergence | 70 | −$80.8370 | five/−$2.2831; 65/−$78.5539 |
+
+Five convergence wins: paired WLD +$0.358970 and CRCL +$0.325047; failed-hedge
+rescues HOOD +$0.864641, SOXL +$0.105679, LIT +$0.112751. Exact records are in
+`review65-convergence-wins.json`. All arithmetic reconciles (maximum floating
+residual 1.4e-17), remaining quantities zero, funding complete. WLD and CRCL
+both bought Hyperliquid and sold Core Lighter; matched quantities 1,768.1 and
+11.853. WLD gross $1.753442, fees $0.894952, stress $0.499488, capital
+$0.000032; CRCL gross $1.003791, fees $0.179275, stress $0.499462, capital
+$0.000008. Funding zero. These are the first two positive paired records in
+this epoch; ten rescue wins remain distinct. Convergence's full-window profit
+factor is 0.0214, paired-only 0.2305. No promotion or stopping threshold met.
+Independent review of the preserved records confirmed classification, full exit
+quantities, arithmetic and review-window settlement. Entry legs were separated
+by 0.739 s (WLD) and 0.891 s (CRCL). These remain paper fills; preserved funding
+flags are not independently verified venue evidence.
+
+Price-limit rejections: Hyperliquid 124, Core four, RH one. Removing stress
+still leaves cooldown −$28.2439, Premium −$112.1972, convergence −$46.7438.
+Cooldown's 19 paired exit comparisons worsened $2.68465 overall (11 worse,
+seven better, one unchanged); median $0.091362, p95 $1.63294. Its request-to-flat
+median 1.408 s, p95 1.838 s. Premium's ten available exit comparisons worsened
+$1.148441 (one missing); all five convergence comparisons worsened, $4.195283.
+
+Four feeds connected, 113 pairs, CPU 71.30%, p95 lag 17.38 ms, RSS 306.35 MiB,
+1,361.7 books/s, metadata age 573.6 s. Review and later snapshot flat. Separate
+later epoch read: cooldown 1,332 exact plus three estimated/−$1,789.6608;
+Premium 343/−$624.3283 (one extra completion after review); convergence
+177/−$201.2940; conservative one/+$2.3198. Twelve total win records, including
+ten rescue records. Three legacy funding obligations remain. Same policy,
+version and capital history. Next checkpoint **14:06:33 UTC**.
+
+### Review 65 NVDA annotation result
+
+The frozen one-shot reader completed: one retained attempt, all after 13:30,
+Premium failed hedge −$1.644186; zero positive, aborted or unsettled attempts.
+No attempts before 13:30 in the retained denominator. Pre/post exposures were
+209.04/992.31 seconds; rejected signals are excluded. This single observation
+supports no session-effect or profitability claim. Output is 1,930 bytes;
+source, provenance and incremental documentation fit the 120,000-byte
+reservation. No retry, capture, threshold change or extension follows.
+
+The dated-carry collector has 13 paired arrivals through 13:45, 15,885 sample
+bytes, no collection errors; economics remain sealed until 3 October 12:45.

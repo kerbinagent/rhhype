@@ -1,0 +1,28 @@
+{
+  "category_actual_bytes": {
+    "incremental_docs": 3493,
+    "output": 1930,
+    "provenance": 3982,
+    "source": 41123
+  },
+  "category_limits_bytes": {
+    "incremental_docs": 4000,
+    "output": 65536,
+    "provenance": 5464,
+    "source": 45000
+  },
+  "completed": true,
+  "docs_accounting": "Four complete planned/result journal sections, including the whole final active-loop review65 section; 1229+567+827+870 bytes. Routine production-review artifacts remain in their prior allocation.",
+  "file_sha256": {
+    "reports/experiment-storage/review65-nvda-annotation-allocation-v1.json": "a99968ce39e3861addc94be641d46b2be7b228c375e1e8403cc98785436c43c8",
+    "reports/live-review-catchup/review65-nvda-session-breakdown.json": "dc45f1325902309d7c6a4313d3961746ab2df7f55c8eb56e39c514fea26c6e6e",
+    "reports/live-review-catchup/review65-nvda-session-claim.json": "1d5d570f2248830c401e45aee0cd5bef5be47cf02d37fc0aa881b3ed1598eaa7",
+    "scripts/paper_review.py": "a60589166b481dd2e3e73a33561fabf891fd61caa4aca16fcd499f6791d786dd",
+    "scripts/review65_nvda_annotation.py": "df98a5e72ca9a44079d61af12f42d9bb6bd9c2395c774539286348d86c8ac1c4"
+  },
+  "new_raw_capture_bytes": 0,
+  "overall_reservation_bytes": 836777216,
+  "schema": "review65-nvda-annotation-actual-v1",
+  "shared_headroom_bytes": 137096,
+  "shared_reserved_bytes": 32862904
+}

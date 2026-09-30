@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 13:28 UTC
+## Current status, 30 September 2026 13:49 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative; no production strategy is promoted. The user authorized
@@ -19,9 +19,10 @@ analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
 [method](dated-carry-method-v1.md) and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 64 are preserved. One new +$0.1911 single-leg rescue did not
-produce a positive paired cycle; all three active strategy windows lost money.
-Next review: **13:46:33 UTC**.
+Reviews through 65 are preserved. Two paired convergence closes were positive
+(WLD +$0.3590; CRCL +$0.3250), but its full window lost $80.8370 and its paired
+subset lost $2.2831. All three active strategy windows lost money.
+Next review: **14:06:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -914,3 +915,18 @@ The conservative 120,000-byte annotation reservation fits within the existing
 All earlier reservations and the separate dated-carry allowance are retained;
 overall reservation remains 836,777,216 bytes. No new quote capture or policy
 change. The existing dated-carry source and economic endpoint stay frozen.
+
+### Review 65 and bounded NVDA annotation, 13:49 UTC
+
+165 exact closes: cooldown 20/−$38.2285, Premium 75/−$149.6087, convergence
+70/−$80.8370; one abort, complete coverage. Two positive paired closes and
+three rescue wins were preserved and reconciled; full-window convergence
+profit factor 0.0214. No promotion. Twelve epoch win records now include two
+paired and ten rescue outcomes. Four feeds connected; all portfolios flat at
+review and later snapshot; three legacy funding obligations remain.
+
+The one-shot NVDA annotation found one post-13:30 Premium failed hedge,
+−$1.6442, and no pre-13:30 attempts in the retained denominator. No session
+claim is supported. The annotation completed within its reservation; no
+extension or retry. Dated carry remains frozen, with 13 paired arrivals and
+no economic evaluation. Next production checkpoint 14:06:33 UTC.
