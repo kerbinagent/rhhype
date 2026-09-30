@@ -43,10 +43,10 @@ DELAY = NS // 2
 DURATION = 3000 * NS
 CAP = 4_000_000
 LOG_RESERVE = 50_000
-WALL_SECONDS = 900
+WALL_SECONDS = 1200
 LEVEL_CACHE_ENTRIES = 16_384
 LEVEL_CACHE_BYTES = 8 * 1024 * 1024
-RESOURCE_REVISION = 'v2_resource_amendment'
+RESOURCE_REVISION = 'v3_cache_disabled_recovery'
 EXPECTED_RAW = 'c92c269e3bc3bb345beeaf834ad55d0a97601339b4506e36a9397287f8407bb6'
 # Exact captured manifest digest; no network discovery is performed.
 EXPECTED_MANIFEST = '5a9e61438df592d895d3cfc5d550241b01f0696fdbd5c83f46666d9ff1274250'
@@ -558,7 +558,7 @@ class QuoteEngine:
         batch = []
         for event in events:
             if wall_start is not None and time.monotonic()-wall_start > WALL_SECONDS:
-                raise TimeoutError('900_second_wall_cap')
+                raise TimeoutError('1200_second_wall_cap')
             self.counts['canonical_events'] += 1
             if event.get('type') == 'end':
                 if batch:
@@ -760,9 +760,10 @@ class BoundedOutput:
 
 def plan():
     return {'schema':SCHEMA,'mode':'dry_plan','candidate_count':7200,'horizon_count':28800,
-        'resource_revision':RESOURCE_REVISION,'prior_attempt':'reports/delayed-taker-quotes/0252Z-v1.building',
-        'maximum_authorized_total_traversals':2,'outcome_subcap_bytes':3_250_000,
-        'level_validation_cache':{'entries':LEVEL_CACHE_ENTRIES,'conservative_bytes':LEVEL_CACHE_BYTES},
+        'resource_revision':RESOURCE_REVISION,'prior_attempts':[
+            'reports/delayed-taker-quotes/0252Z-v1.building','reports/delayed-taker-quotes/0252Z-v2.building'],
+        'maximum_authorized_total_traversals':3,'outcome_subcap_bytes':3_250_000,
+        'level_validation_cache':{'enabled':False,'entries':LEVEL_CACHE_ENTRIES,'conservative_bytes':LEVEL_CACHE_BYTES},
         'horizons':HORIZONS,'input':str(INPUT),'maximum_total_bytes_including_logs':CAP,
         'reserved_external_log_bytes':LOG_RESERVE,'wall_seconds':WALL_SECONDS,'raw_traversals':0,
         'instruction':'Explicit --run only after reviewed source freeze and root authorization.'}
@@ -779,6 +780,7 @@ def run(out):
     manifest,markets,hashes=verify_inputs()
     freeze={'schema':SCHEMA,'classification':'exploratory_post_capture_quote_feasibility',
         'resource_revision':RESOURCE_REVISION,
+        'level_validation_cache':plan()['level_validation_cache'],
         'source_snapshot_utc':dt.datetime.now(dt.timezone.utc).isoformat(),'prospective_freeze_claimed':False,
         'inputs_and_actual_dependencies_sha256':hashes,'grid':plan(),'network_calls':0,
         'observation_cutoff_ns':START+DURATION,'source_inventory_count':21}
@@ -792,7 +794,8 @@ def run(out):
         raise ValueError('source_changed_before_traversal')
     planned_close_venues={generation['venue'] for generation in manifest['generations']
         if generation.get('closed_utc') and epoch_ns(generation['closed_utc'])==START+DURATION}
-    engine=QuoteEngine(markets,planned_close_venues=planned_close_venues)
+    engine=QuoteEngine(markets,planned_close_venues=planned_close_venues,
+        level_validation_cache=LevelValidationCache(enabled=False))
     engine.traverse(iter_events(INPUT,expected_raw_sha256=EXPECTED_RAW,max_raw_bytes=50_000_000,
         max_decoded_bytes=128_000_000,max_records=124019),wall_start=started)
     verify_terminal(engine.terminal,manifest,hashes)
@@ -821,10 +824,11 @@ def run(out):
     if any(sha(path)!=digest for path,digest in hashes.items()):
         raise ValueError('source_changed_after_traversal')
     if time.monotonic()-started>WALL_SECONDS:
-        raise TimeoutError('900_second_wall_cap')
+        raise TimeoutError('1200_second_wall_cap')
     outputs={path.name:sha(path) for path in stage.iterdir()}
     publication={'schema':SCHEMA,'status':'complete','input_hashes_unchanged':True,
         'resource_revision':RESOURCE_REVISION,
+        'level_validation_cache_enabled':engine.level_validation_cache.enabled,
         'completed_at':dt.datetime.now(dt.timezone.utc).isoformat(),
         'input_hashes':hashes,'output_hashes':outputs,'total_bound_including_logs':CAP,
         'reserved_external_log_bytes':LOG_RESERVE,'raw_traversals':1,'network_calls':0,

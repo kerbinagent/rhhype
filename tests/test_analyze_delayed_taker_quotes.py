@@ -526,8 +526,22 @@ class LevelValidationMemoTests(unittest.TestCase):
         self.assertEqual(plan['horizons'],(10,30,60,300))
         self.assertEqual(plan['maximum_total_bytes_including_logs'],4_000_000)
         self.assertEqual(model.BoundedOutput.LIMITS['outcomes'],3_250_000)
-        self.assertEqual(plan['maximum_authorized_total_traversals'],2)
-        self.assertEqual(plan['wall_seconds'],900)
+        self.assertEqual(plan['maximum_authorized_total_traversals'],3)
+        self.assertEqual(plan['wall_seconds'],1200)
+        self.assertFalse(plan['level_validation_cache']['enabled'])
+        self.assertEqual(len(plan['prior_attempts']),2)
+        self.assertEqual(plan['resource_revision'],'v3_cache_disabled_recovery')
+        disabled=engine(cache=model.LevelValidationCache(enabled=False),end=T+NS)
+        disabled.batch(T,pair(T));disabled.finish()
+        summary=model.summarize(disabled)
+        self.assertFalse(summary['level_validation_cache']['enabled'])
+        self.assertEqual(summary['resource_revision'],plan['resource_revision'])
+
+    def test_revised_internal_wall_limit_is_fixed_1200_seconds(self):
+        result=engine()
+        with patch.object(model.time,'monotonic',return_value=1201):
+            with self.assertRaisesRegex(TimeoutError,'1200_second_wall_cap'):
+                result.traverse(pair(T),wall_start=0)
 
     def test_cache_disabled_eviction_clock_generation_and_eof_equivalence(self):
         for event in (book('rh_lighter',T+NS,source=T+NS+1),
