@@ -1,10 +1,10 @@
 {
   "schema": "core-rh-delayed-taker-final-resource-v1",
   "category_bytes": {
-    "source": 198093,
+    "source": 198029,
     "rows": 144553,
     "summary": 20558,
-    "provenance": 37844,
+    "provenance": 38249,
     "logs": 150,
     "failure": 0
   },
@@ -16,8 +16,8 @@
     "logs": 10000,
     "failure": 30000
   },
-  "source_documentation_bytes": 9888,
-  "documentation_accounting": "Pre-run review plus all active-experiment journal growth since allocation, conservatively including production reviews. This reconciliation counts itself in provenance.",
+  "source_documentation_bytes": 9824,
+  "documentation_accounting": "Pre-run review plus net journal and research map growth since allocation, pinned below at study close; later review entries are outside this study. Reconciliation counts itself in provenance.",
   "reserved_study_bytes": 600000,
   "reserved_shared_bytes": 32710904,
   "shared_allowance_bytes": 33000000,
@@ -27,5 +27,16 @@
   "canonical_traversals": 1,
   "source_commit": "279ccd7",
   "prepared_freeze_commit": "dec83c6",
-  "actual_new_bytes": 401198
+  "actual_new_bytes": 401539,
+  "documentation_at_close": {
+    "research/active-experiment-loop.md": {
+      "bytes": 43869,
+      "sha256": "27680b0e8f44eed8663899fd5df88c157687b21ac61f1ea2ac7d7e79c78aff0e"
+    },
+    "research/README.md": {
+      "bytes": 7446,
+      "sha256": "941d86f8632aa3a7a3a644f5a2973f988c9665ce2474b30c724b15a5b9c101df"
+    }
+  },
+  "recorded_at": "2026-09-30T10:13:39.392179+00:00"
 }

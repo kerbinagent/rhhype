@@ -37,6 +37,11 @@ study follows automatically; the sampled quotes establish no fills or P&L.
 
 ## What the evidence currently supports
 
+The [Core/RH delayed taker diagnostic](../reports/core-rh-delayed-taker/20260930T1000Z-analysis.md)
+completed at 10:07 UTC and passed independent audit: all 842 complete quotes
+were gross-negative with zero public taker fees; 166 candidates remain
+censored. No predictor or strategy promotion follows.
+
 - [Reverse static route bound](../reports/passive-rare-spread-reverse-bound/0252Z-v1/REPORT.md):
   all 47,624 evaluated HL-maker/RH-taker upper bounds are nonpositive after
   target and stress; 376 rows remain unadjudicated. This covers fixed prices

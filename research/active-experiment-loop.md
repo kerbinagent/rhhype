@@ -7,21 +7,15 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 08:36 UTC
+## Current status, 30 September 2026 10:13 UTC
 
-The passive-exit replays and delayed taker diagnostic have completed without
-a qualifying positive result. The next prospective spread-regime prerequisite
-watch failed its pre-connection storage check after three successful metadata
-requests. No ticker connection or economic measurement occurred; all 1,680 rows
-are retained as uncollected. The original stage will not be retried. A separate
-resource-only compact wrapper completed its single 08:12:57–08:32:57 UTC
-window and passed independent output audit. All 21 assets failed its
-predeclared prerequisite: 1,340 valid and 340 stale rows, with every asset/size
-median negative. No full hedge-cost or execution study follows automatically.
-See the latest entry below and the
-[research map](README.md).
-Production reviews continue every twenty minutes, with the next due at
-08:46:33 UTC.
+No qualifying positive result. The completed passive-exit, RH/HL delayed
+taker and 21-asset spread studies remain negative. Core/RH delayed taker
+replay also completed and passed root and peer audit: all 842 complete
+quotes have negative gross returns; 166 candidates remain censored. No
+predictor or successor is promoted. All evidence and capital history remain.
+See the latest entry below and [research map](README.md).
+Production reviews continue; next **10:26:33 UTC**.
 
 ## Original experiment: RH passive exit v1
 
