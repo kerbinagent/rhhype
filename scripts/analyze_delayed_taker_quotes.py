@@ -41,9 +41,12 @@ AGE = 2 * NS
 SKEW = NS
 DELAY = NS // 2
 DURATION = 3000 * NS
-CAP = 3_000_000
+CAP = 4_000_000
 LOG_RESERVE = 50_000
 WALL_SECONDS = 900
+LEVEL_CACHE_ENTRIES = 16_384
+LEVEL_CACHE_BYTES = 8 * 1024 * 1024
+RESOURCE_REVISION = 'v2_resource_amendment'
 EXPECTED_RAW = 'c92c269e3bc3bb345beeaf834ad55d0a97601339b4506e36a9397287f8407bb6'
 # Exact captured manifest digest; no network discovery is performed.
 EXPECTED_MANIFEST = '5a9e61438df592d895d3cfc5d550241b01f0696fdbd5c83f46666d9ff1274250'
@@ -94,7 +97,64 @@ def common_step(left, right):
     return Fraction(math.lcm(int(left * denominator), int(right * denominator)), denominator)
 
 
-def validate_raw_levels(book, side, meta):
+class LevelValidationCache:
+    """Pure successful level validation only; never book/timer/fill state."""
+    BASE_BYTES = 4096
+
+    def __init__(self, *, enabled=True, max_entries=LEVEL_CACHE_ENTRIES, max_bytes=LEVEL_CACHE_BYTES):
+        if not 0 < max_entries <= LEVEL_CACHE_ENTRIES or not self.BASE_BYTES <= max_bytes <= LEVEL_CACHE_BYTES:
+            raise ValueError('level_cache_bound')
+        self.enabled=enabled
+        self.max_entries=max_entries
+        self.max_bytes=max_bytes
+        self.entries=OrderedDict()
+        self.bytes_used=self.BASE_BYTES
+        self.counts=Counter()
+
+    @staticmethod
+    def _entry_bytes(key,value):
+        # Count all immutable nested objects even when shared, plus 256 bytes
+        # for dictionary/LRU nodes and stored accounting. This overcounts
+        # shared metadata strings/rules rather than omitting their cost.
+        rule,price,size=key
+        return (256+sys.getsizeof(key)+sys.getsizeof(rule)+sum(sys.getsizeof(v) for v in rule)
+            +sys.getsizeof(price)+sys.getsizeof(size)+sys.getsizeof(value)
+            +sum(sys.getsizeof(v) for v in value)+sys.getsizeof(0))
+
+    def check(self,price_text,size_text,rule,tick,step):
+        key=(rule,price_text,size_text)
+        if self.enabled and key in self.entries:
+            self.counts['hits']+=1
+            self.entries.move_to_end(key)
+            return self.entries[key][0]
+        self.counts['misses']+=1
+        price,size=Decimal(price_text),Decimal(size_text)
+        if (not price.is_finite() or not size.is_finite() or price<=0 or size<=0 or
+            price%tick or size%step or
+            (rule[0]=='hl_perp' and price!=price.to_integral_value()
+             and len(price.normalize().as_tuple().digits)>5)):
+            raise ValueError('quote_off_grid')
+        value=(price,size)
+        if self.enabled:
+            cost=self._entry_bytes(key,value)
+            if self.BASE_BYTES+cost>self.max_bytes:
+                self.counts['oversized_skips']+=1
+                return value
+            while self.entries and (len(self.entries)>=self.max_entries or self.bytes_used+cost>self.max_bytes):
+                _,(_,old_cost)=self.entries.popitem(last=False)
+                self.bytes_used-=old_cost
+                self.counts['evictions']+=1
+            self.entries[key]=(value,cost)
+            self.bytes_used+=cost
+        return value
+
+    def summary(self):
+        return {'enabled':self.enabled,'entry_limit':self.max_entries,'byte_limit':self.max_bytes,
+            'entries':len(self.entries),'conservatively_accounted_bytes':self.bytes_used,
+            'counts':dict(self.counts),'semantics':'pure successful Decimal level validation only'}
+
+
+def validate_raw_levels(book, side, meta, cache):
     """Eager exact decimal grid/shape checks; Fraction materialization is lazy."""
     values = book[side]
     if not isinstance(values, (list, tuple)) or not 0 < len(values) <= 5000:
@@ -104,16 +164,12 @@ def validate_raw_levels(book, side, meta):
         step = Decimal(str(meta['size_step']))
         tick = (Decimal(10) ** -(6-int(meta['sz_decimals'])) if
                 meta['price_tick_semantics']=='hl_perp' else Decimal(str(meta['price_tick'])))
+        rule=(meta['price_tick_semantics'],str(tick),str(step),str(meta.get('sz_decimals')),str(context.prec))
         previous = None
         for pair in values:
             if not isinstance(pair,(list,tuple)) or len(pair)!=2:
                 raise ValueError('malformed_level')
-            price,size=map(lambda value:Decimal(str(value)),pair)
-            if (not price.is_finite() or not size.is_finite() or price<=0 or size<=0 or
-                price%tick or size%step or
-                (meta['price_tick_semantics']=='hl_perp' and price!=price.to_integral_value()
-                 and len(price.normalize().as_tuple().digits)>5)):
-                raise ValueError('quote_off_grid')
+            price,size=cache.check(str(pair[0]),str(pair[1]),rule,tick,step)
             if previous is not None and (previous<=price if side=='bids' else previous>=price):
                 raise ValueError('unsorted_or_duplicate_depth')
             previous=price
@@ -162,7 +218,7 @@ def grid(start=START):
 
 class QuoteEngine:
     """Receipt-batched timeline with active-window evaluation and fixed q."""
-    def __init__(self, markets, *, candidates=None, end_ns=START+DURATION, planned_close_venues=()):
+    def __init__(self, markets, *, candidates=None, end_ns=START+DURATION, planned_close_venues=(), level_validation_cache=None):
         self.markets = markets
         self.end_ns = end_ns
         self.planned_close_venues = frozenset(planned_close_venues)
@@ -175,6 +231,7 @@ class QuoteEngine:
         self.books = {}
         self.serial = 0
         self.walk_cache = OrderedDict()
+        self.level_validation_cache=(LevelValidationCache() if level_validation_cache is None else level_validation_cache)
         self.pending = set()
         self.active_entry = defaultdict(set)
         self.active_exit = defaultdict(set)
@@ -415,7 +472,7 @@ class QuoteEngine:
                         self._invalidate(asset, 'generation_change')
                     elif key in self.last_source and source < self.last_source[key]:
                         raise ValueError('source_regression')
-                    raw = {side: validate_raw_levels(event, side, self.markets[venue][asset]) for side in ('bids','asks')}
+                    raw = {side: validate_raw_levels(event, side, self.markets[venue][asset],self.level_validation_cache) for side in ('bids','asks')}
                     if Decimal(str(raw['bids'][0][0])) >= Decimal(str(raw['asks'][0][0])):
                         raise ValueError('crossed_book')
                     self.serial += 1
@@ -560,6 +617,7 @@ def summarize(engine):
             'diagnostic_only_complete':sum(a['status']!='quote_complete' and b['status']=='quote_complete' for a,b in rows),
             'median_quote_difference_ex_funding':number(statistics.median(deltas)) if deltas else None})
     return {'schema':SCHEMA,'status':'complete_quote_diagnostic','classification':'exploratory_post_capture_quote_feasibility',
+        'resource_revision':RESOURCE_REVISION,'level_validation_cache':engine.level_validation_cache.summary(),
         'actual_fills_observed':False,'private_ack_observed':False,'executable_profit_claim':False,
         'funding_inclusive_net':None,'summed_portfolio_net':None,'funding_observed':False,
         'candidates':len(engine.rows),'horizon_rows':len(engine.outcomes),
@@ -650,15 +708,33 @@ def verify_terminal(terminal, manifest, hashes):
         raise ValueError('verified_terminal_required')
 
 
+class OutputCapError(ValueError):
+    def __init__(self,details):
+        self.details=details
+        super().__init__('output_cap_before_write:'+json.dumps(details,sort_keys=True))
+
+
 class BoundedOutput:
-    LIMITS={'candidates':450_000,'outcomes':1_850_000,'summary':300_000,'freeze':300_000,'manifest':50_000}
+    LIMITS={'candidates':450_000,'outcomes':3_250_000,'summary':300_000,'freeze':300_000,'manifest':50_000}
     def __init__(self, directory, *, cap=CAP-LOG_RESERVE):
         self.directory=Path(directory);self.cap=cap;self.used=0;self.categories=Counter()
 
+    def _check(self,category,requested_bytes,buffered_bytes=0):
+        category_projected=self.categories[category]+buffered_bytes+requested_bytes
+        aggregate_projected=self.used+buffered_bytes+requested_bytes
+        violations=[]
+        if category_projected>self.LIMITS[category]:violations.append('category')
+        if aggregate_projected>self.cap:violations.append('aggregate')
+        if violations:
+            raise OutputCapError({'category':category,'requested_bytes':requested_bytes,
+                'buffered_bytes':buffered_bytes,'used_category_bytes':self.categories[category],
+                'used_total_bytes':self.used,'projected_category_bytes':category_projected,
+                'projected_total_bytes':aggregate_projected,'category_limit_bytes':self.LIMITS[category],
+                'total_limit_bytes':self.cap,'violated_bounds':violations})
+
     def write(self,name,body,category):
         raw=body.encode() if isinstance(body,str) else body
-        if (self.used+len(raw)>self.cap or self.categories[category]+len(raw)>self.LIMITS[category]):
-            raise ValueError('output_cap_before_write')
+        self._check(category,len(raw))
         path=self.directory/name
         if path.exists() or path.is_symlink():
             raise ValueError('staged_file_already_exists')
@@ -674,15 +750,19 @@ class BoundedOutput:
             if row is None:writer.writeheader()
             else:writer.writerow(row)
             chunk=compressor.compress(buffer.getvalue().encode());buffer.seek(0);buffer.truncate(0)
+            self._check(category,len(chunk),size)
             pieces.append(chunk);size+=len(chunk)
-            if size>self.LIMITS[category] or self.used+size>self.cap:
-                raise ValueError('output_cap_before_write')
-        pieces.append(compressor.flush())
+        final=compressor.flush()
+        self._check(category,len(final),size)
+        pieces.append(final)
         self.write(name,b''.join(pieces),category)
 
 
 def plan():
     return {'schema':SCHEMA,'mode':'dry_plan','candidate_count':7200,'horizon_count':28800,
+        'resource_revision':RESOURCE_REVISION,'prior_attempt':'reports/delayed-taker-quotes/0252Z-v1.building',
+        'maximum_authorized_total_traversals':2,'outcome_subcap_bytes':3_250_000,
+        'level_validation_cache':{'entries':LEVEL_CACHE_ENTRIES,'conservative_bytes':LEVEL_CACHE_BYTES},
         'horizons':HORIZONS,'input':str(INPUT),'maximum_total_bytes_including_logs':CAP,
         'reserved_external_log_bytes':LOG_RESERVE,'wall_seconds':WALL_SECONDS,'raw_traversals':0,
         'instruction':'Explicit --run only after reviewed source freeze and root authorization.'}
@@ -698,6 +778,7 @@ def run(out):
         raise ValueError('staging_already_exists')
     manifest,markets,hashes=verify_inputs()
     freeze={'schema':SCHEMA,'classification':'exploratory_post_capture_quote_feasibility',
+        'resource_revision':RESOURCE_REVISION,
         'source_snapshot_utc':dt.datetime.now(dt.timezone.utc).isoformat(),'prospective_freeze_claimed':False,
         'inputs_and_actual_dependencies_sha256':hashes,'grid':plan(),'network_calls':0,
         'observation_cutoff_ns':START+DURATION,'source_inventory_count':21}
@@ -743,6 +824,7 @@ def run(out):
         raise TimeoutError('900_second_wall_cap')
     outputs={path.name:sha(path) for path in stage.iterdir()}
     publication={'schema':SCHEMA,'status':'complete','input_hashes_unchanged':True,
+        'resource_revision':RESOURCE_REVISION,
         'completed_at':dt.datetime.now(dt.timezone.utc).isoformat(),
         'input_hashes':hashes,'output_hashes':outputs,'total_bound_including_logs':CAP,
         'reserved_external_log_bytes':LOG_RESERVE,'raw_traversals':1,'network_calls':0,

@@ -38,8 +38,9 @@ def pair(now, **kwargs):
     return [book(venue, now, **kwargs) for venue in model.MARKET_IDS]
 
 
-def engine(*rows, end=T+400*NS, planned=()):
-    return model.QuoteEngine(metadata(), candidates=rows or [candidate()], end_ns=end,planned_close_venues=planned)
+def engine(*rows, end=T+400*NS, planned=(), cache=None):
+    return model.QuoteEngine(metadata(), candidates=rows or [candidate()], end_ns=end,
+        planned_close_venues=planned,level_validation_cache=cache)
 
 
 def started_entry(*rows, now=T+NS//2, end=T+400*NS, planned=()):
@@ -322,6 +323,31 @@ class EconomicsAndPublicationTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'already_exists'):
                 output.write('rows.gz',b'x','candidates')
 
+    def test_rich_category_and_aggregate_cap_errors_before_write(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output=model.BoundedOutput(directory,cap=10)
+            with self.assertRaises(model.OutputCapError) as caught:
+                output.write('too_large',b'x'*11,'summary')
+            details=caught.exception.details
+            self.assertEqual(details['category'],'summary')
+            self.assertEqual(details['requested_bytes'],11)
+            self.assertEqual(details['projected_total_bytes'],11)
+            self.assertEqual(details['total_limit_bytes'],10)
+            self.assertEqual(details['violated_bounds'],['aggregate'])
+            self.assertFalse((Path(directory)/'too_large').exists())
+            output=model.BoundedOutput(directory)
+            output.LIMITS=dict(output.LIMITS, outcomes=3)
+            with self.assertRaises(model.OutputCapError) as caught:
+                output.write('outcomes',b'abcd','outcomes')
+            self.assertEqual(caught.exception.details['projected_category_bytes'],4)
+            self.assertEqual(caught.exception.details['violated_bounds'],['category'])
+            self.assertFalse((Path(directory)/'outcomes').exists())
+            with self.assertRaises(model.OutputCapError) as caught:
+                output.csv_gzip('compressed',['id'],[{'id':123}],'outcomes')
+            self.assertEqual(caught.exception.details['category'],'outcomes')
+            self.assertGreater(caught.exception.details['requested_bytes'],0)
+            self.assertFalse((Path(directory)/'compressed').exists())
+
     def test_dry_default_never_verifies_or_opens_archive(self):
         with patch.object(model,'verify_inputs',side_effect=AssertionError('archive opened')):
             with patch('builtins.print') as printed:
@@ -376,6 +402,146 @@ class EconomicsAndPublicationTests(unittest.TestCase):
         result.traverse(pair(T)+pair(T+NS//2)+[dict(type='end')])
         self.assertEqual(result.rows[0]['entry_ns'],T+NS//2)
         self.assertEqual(result.outcomes[0,10]['status'],'exit_eof')
+
+
+class LevelValidationMemoTests(unittest.TestCase):
+    def validate(self,cache,*,bids=None,asks=None,meta=None):
+        data=book('rh_lighter',T,bids=bids,asks=asks)
+        rule=metadata()['rh_lighter']['BTC'] if meta is None else meta
+        return model.validate_raw_levels(data,'bids',rule,cache)
+
+    def test_repeated_pure_levels_hit_and_changed_size_is_revalidated(self):
+        cache=model.LevelValidationCache()
+        self.validate(cache)
+        misses=cache.counts['misses']
+        self.validate(cache)
+        self.assertEqual(cache.counts['misses'],misses)
+        self.assertGreater(cache.counts['hits'],0)
+        self.validate(cache,bids=[[99,101]])
+        self.assertEqual(cache.counts['misses'],misses+1)
+        with self.assertRaisesRegex(ValueError,'quote_off_grid'):
+            self.validate(cache,bids=[[99,101.0001]])
+
+    def test_rule_fingerprint_change_and_invalid_finite_grid_values(self):
+        cache=model.LevelValidationCache()
+        self.validate(cache)
+        changed=metadata()['rh_lighter']['BTC'];changed['price_tick']='0.02'
+        old_misses=cache.counts['misses']
+        self.validate(cache,meta=changed)
+        self.assertEqual(cache.counts['misses'],old_misses+1)
+        changed['price_tick']='0.08'
+        with self.assertRaisesRegex(ValueError,'quote_off_grid'):
+            self.validate(cache,meta=changed)
+        for price,size in (('NaN',1),('Infinity',1),(99,'NaN'),(99,'Infinity'),(99,0),(99,-1),(99.001,1)):
+            with self.subTest(price=price,size=size):
+                with self.assertRaisesRegex(ValueError,'quote_off_grid'):
+                    self.validate(cache,bids=[[price,size]])
+
+    def test_cached_levels_still_check_duplicate_order_and_crossing(self):
+        cache=model.LevelValidationCache()
+        self.validate(cache,bids=[[99,100],[98,100]])
+        for levels in ([[99,100],[99,100]],[[98,100],[99,100]]):
+            with self.assertRaisesRegex(ValueError,'unsorted_or_duplicate'):
+                self.validate(cache,bids=levels)
+        result=engine(cache=cache)
+        result.batch(T,pair(T))
+        result.batch(T+NS//2,pair(T+NS//2))
+        result.batch(T+NS,[book('rh_lighter',T+NS,bids=[[100,100]],asks=[[99,100]])])
+        self.assertTrue(all(row['status']=='exit_gap:crossed_book' for row in result.outcomes.values()))
+
+    def test_entry_and_conservative_byte_bounds_with_eviction_or_skip(self):
+        with self.assertRaisesRegex(ValueError,'level_cache_bound'):
+            model.LevelValidationCache(max_bytes=model.LevelValidationCache.BASE_BYTES-1)
+        for entries,bytes_ in ((model.LEVEL_CACHE_ENTRIES+1,model.LEVEL_CACHE_BYTES),
+                               (1,model.LEVEL_CACHE_BYTES+1),(0,model.LEVEL_CACHE_BYTES)):
+            with self.assertRaisesRegex(ValueError,'level_cache_bound'):
+                model.LevelValidationCache(max_entries=entries,max_bytes=bytes_)
+        cache=model.LevelValidationCache(max_entries=1)
+        self.validate(cache,bids=[[99,100],[98,100]])
+        self.assertEqual(len(cache.entries),1)
+        self.assertGreater(cache.counts['evictions'],0)
+        self.assertLessEqual(cache.bytes_used,cache.max_bytes)
+        tiny=model.LevelValidationCache(max_bytes=model.LevelValidationCache.BASE_BYTES)
+        self.validate(tiny)
+        self.assertEqual(len(tiny.entries),0)
+        self.assertEqual(tiny.bytes_used,tiny.max_bytes)
+        self.assertGreater(tiny.counts['oversized_skips'],0)
+        one_cost=next(iter(cache.entries.values()))[1]
+        byte_limited=model.LevelValidationCache(max_bytes=model.LevelValidationCache.BASE_BYTES+one_cost+32)
+        self.validate(byte_limited,bids=[[99,100],[98,100]])
+        self.assertEqual(len(byte_limited.entries),1)
+        self.assertGreater(byte_limited.counts['evictions'],0)
+        self.assertLessEqual(byte_limited.bytes_used,byte_limited.max_bytes)
+        # Actual retained objects are accounted with all nested key/value sizes,
+        # even when shared; declared bytes include additional node overhead.
+        actual=model.sys.getsizeof(cache.entries)
+        seen=set()
+        def retained_size(value):
+            if id(value) in seen:return 0
+            seen.add(id(value));total=model.sys.getsizeof(value)
+            if isinstance(value,tuple):total+=sum(retained_size(item) for item in value)
+            return total
+        actual+=sum(retained_size(key)+retained_size(value) for key,value in cache.entries.items())
+        self.assertLessEqual(actual,cache.bytes_used)
+
+    def test_cached_disabled_forced_eviction_timelines_are_identical(self):
+        caches=(model.LevelValidationCache(),model.LevelValidationCache(enabled=False),
+                model.LevelValidationCache(max_entries=1))
+        results=[]
+        for cache in caches:
+            result=engine(cache=cache,end=T+302*NS)
+            for offset,changes in ((0,{}),(.5,{}),(.6,{}),(11,{'bids':[[99,1]]}),
+                                   (31,{'bids':[[100,100]],'asks':[[101,100]]}),
+                                   (61,{}),(301,{})):
+                now=T+int(offset*NS);result.batch(now,pair(now,**changes))
+            result.finish();results.append(result)
+        for other in results[1:]:
+            self.assertEqual(results[0].rows,other.rows)
+            self.assertEqual(results[0].outcomes,other.outcomes)
+        self.assertEqual(results[0].outcomes[0,10]['status'],'exit_depth')
+        self.assertEqual(results[0].outcomes[0,300]['status'],'quote_complete')
+        self.assertGreater(caches[0].counts['hits'],0)
+        self.assertEqual(len(caches[1].entries),0)
+        self.assertGreater(caches[2].counts['evictions'],0)
+
+    def test_cached_disabled_eviction_genuine_gap_cutoff_and_eof_equivalence(self):
+        results=[]
+        for cache in (model.LevelValidationCache(),model.LevelValidationCache(enabled=False),
+                      model.LevelValidationCache(max_entries=1)):
+            cutoff=T+11*NS
+            result=engine(cache=cache,end=cutoff,planned=('rh_lighter',))
+            result.batch(T,pair(T));result.batch(T+NS//2,pair(T+NS//2))
+            result.batch(cutoff,pair(cutoff)+[dict(type='invalidate',venue='rh_lighter',
+                asset='BTC',received_ns=cutoff,scope='book',reason='nonce_gap')])
+            results.append(result)
+        for other in results[1:]:
+            self.assertEqual(results[0].rows,other.rows)
+            self.assertEqual(results[0].outcomes,other.outcomes)
+        self.assertTrue(all(row['status']=='exit_gap:nonce_gap' for row in results[0].outcomes.values()))
+
+    def test_resource_plan_caps_change_without_grid_or_timing_change(self):
+        plan=model.plan()
+        self.assertEqual(plan['candidate_count'],7200)
+        self.assertEqual(plan['horizon_count'],28800)
+        self.assertEqual(plan['horizons'],(10,30,60,300))
+        self.assertEqual(plan['maximum_total_bytes_including_logs'],4_000_000)
+        self.assertEqual(model.BoundedOutput.LIMITS['outcomes'],3_250_000)
+        self.assertEqual(plan['maximum_authorized_total_traversals'],2)
+        self.assertEqual(plan['wall_seconds'],900)
+
+    def test_cache_disabled_eviction_clock_generation_and_eof_equivalence(self):
+        for event in (book('rh_lighter',T+NS,source=T+NS+1),
+                      book('rh_lighter',T+NS,generation='new'),None):
+            results=[]
+            for cache in (model.LevelValidationCache(),model.LevelValidationCache(enabled=False),
+                          model.LevelValidationCache(max_entries=1)):
+                result=engine(cache=cache,end=T+2*NS)
+                result.batch(T,pair(T));result.batch(T+NS//2,pair(T+NS//2))
+                if event is not None:result.batch(T+NS,[event])
+                result.finish();results.append(result)
+            for other in results[1:]:
+                self.assertEqual(results[0].rows,other.rows)
+                self.assertEqual(results[0].outcomes,other.outcomes)
 
 
 if __name__=='__main__':
