@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 14:27 UTC
+## Current status, 30 September 2026 14:49 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative; no production strategy is promoted. The user authorized
@@ -19,10 +19,10 @@ analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
 [method](dated-carry-method-v1.md) and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 67 are preserved. The two paired convergence gains in review65
-(WLD +$0.3590; CRCL +$0.3250) have not repeated: all 91 closes across reviews 66
-and 67 were negative. All three active strategy windows lost money.
-Next review: **14:46:33 UTC**.
+Reviews through 68 are preserved. The two paired convergence gains in review65
+(WLD +$0.3590; CRCL +$0.3250) have not repeated: all 132 closes in reviews 66–68
+were negative. All three active strategy windows lost money.
+Next review: **15:06:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -949,3 +949,14 @@ subsided without intervention. Review flat, later snapshot one cooldown
 position; three legacy funding obligations retained. Next checkpoint
 14:46:33 UTC. Carry has 21 arrivals, no reported errors and no interim
 economic readout.
+
+### Review 68, 14:46 UTC
+
+All 41 closes exact and negative: cooldown 21/−$44.5702, Premium twelve/
+−$20.4497, convergence eight/−$9.7006. No aborts, complete coverage. Twelve
+prior win records remain. Four feeds connected; scheduled metadata refresh
+expanded to 115 pairs and rebuilt stream counters, so cross-refresh gap-count
+differences are not event deltas. Busy timing is monitored without a policy
+change. Review had one Premium entry, later snapshot flat; three legacy
+funding obligations retained. Next review 15:06:33 UTC. Carry has 25 arrivals,
+no reported errors and no interim economic evaluation.

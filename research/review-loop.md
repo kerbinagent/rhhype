@@ -2108,3 +2108,43 @@ obligations remain. No policy/capital change. Next checkpoint **14:46:33 UTC**.
 
 Carry arrival status: 21 samples through 14:25, 25,607 bytes, no reported
 errors; fixed source and endpoint unchanged, no interim economic analysis.
+
+## Review 68 — 2026-09-30 14:46:33 UTC
+
+Exact review `review-20260930T144633Z.json` and separate epoch read preserved;
+manual archive 1,213,905/16,777,216 bytes after guarded writes. All 41 closes
+exact and negative, no aborts, complete coverage. No new winners.
+
+- Cooldown: 21 paired/−$44.5702; no failed-hedge closes.
+- Premium: twelve/−$20.4497; seven paired/−$12.3626, five failed/−$8.0870.
+- Convergence: eight/−$9.7006; one paired/−$0.9231, seven failed/−$8.7775.
+- Twelve Hyperliquid price-limit rejections. Portfolios remain separate.
+
+Cooldown fees $8.7975, stress $10.4877, capital $0.0007328, funding zero;
+without stress −$34.0825. Twenty exit-price comparisons worsened $7.534403
+overall (eleven worse, nine better, one missing), median $0.077088, p95
+$1.062571. All 21 request-to-flat observations present: median 1.287 s, p95
+1.754 s. Premium's five available exit comparisons improved $1.326415
+(two missing); convergence's single paired exit worsened $1.05731.
+
+Four feeds connected, 115 pairs, CPU 89.28%, p95 lag 47.78 ms, RSS 315.05 MiB,
+1,440.9 books/s, metadata age 567.9 s. Log evidence places scheduled discovery
+at 14:37:03 UTC: 115 pairs, 61 assets, unavailable venues empty. The changed
+market set rebuilt the stream manager. Its counters are per manager, while
+snapshot status fields can retain old values until overwritten: the RH display
+change 107 to 115 is **not an eight-gap increment** across this boundary.
+Source inspection confirms invalidation/resubscription on gaps, with affected
+entry intents cancelled. No new disconnect timestamp or funding error was
+observed in the checked snapshots, which were fresh and showed connected feeds.
+Around 14:49 CPU was
+76.81%, p95 lag 57.91 ms, current lag 7.22 ms; busy reflects the rolling lag
+threshold then. No process or code change; continue watching health.
+
+Review had one Premium position/pending entry; later epoch snapshot flat.
+Epoch: cooldown 1,391 exact plus three estimated/−$1,897.7145; Premium
+391/−$710.9771; convergence 203/−$228.8614; conservative one/+$2.3198.
+Twelve old win records and three legacy funding obligations remain. All 132
+closes in reviews 66–68 were negative. Next checkpoint **15:06:33 UTC**.
+
+Carry has 25 scheduled arrivals through 14:45, 30,492 sample bytes and no
+reported collection errors. Economic readout remains at the fixed endpoint.
