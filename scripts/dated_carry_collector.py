@@ -285,6 +285,23 @@ class Store:
         return rows
 
     def index(self, config: dict, status: str, *, error=None):
+        previous = self.path / "terminal" / "index.json"
+        if previous.exists() or previous.is_symlink():
+            prior = json.loads(read(previous, INDEX_RESERVE))
+            entries = prior.get("slots")
+            if (prior.get("schema") != "dated-carry-collector-index-v1"
+                    or not isinstance(entries, list) or len(entries) != SLOTS
+                    or [entry.get("slot") for entry in entries] != list(range(SLOTS))):
+                raise ValueError("previous index identity mismatch")
+            for entry in entries:
+                if "file" not in entry:
+                    continue
+                if entry["file"] != f"samples/slot-{entry['slot']:03d}.json.gz":
+                    raise ValueError("previous index file identity mismatch")
+                compressed = read(self.path / entry["file"], 262144)
+                if len(compressed) != entry["bytes"] or digest(compressed) != entry["sha256"]:
+                    # Do not re-attest changed evidence or replace the last index.
+                    raise ValueError("previously attested sample hash/bytes mismatch")
         rows = self.roster(config, "missing" if status == "complete" else "collector_interrupted")
         payload = {"schema": "dated-carry-collector-index-v1", "status": status,
                    "updated_utc": utc(time.time_ns()), "slots": rows, "error": error,

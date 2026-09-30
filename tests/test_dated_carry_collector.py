@@ -245,6 +245,22 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual((store.path / "terminal/claim-000.json").read_bytes(), b"competing claim")
         self.assertEqual(list((store.path / "terminal").glob("*.tmp")), [])
 
+    def test_live_index_cannot_reattest_changed_prior_sample(self):
+        store = c.Store(self.path / "study")
+        config = {"t0_utc": "2026-10-01T00:00:00+00:00"}
+        record = {"slot": 0, "planned_utc_ns": c.timestamp(config["t0_utc"]), "status": "arrival_invalid"}
+        store.sample(0, record)
+        index = store.index(config, "running")
+        index_path = store.path / "terminal/index.json"
+        previous = index_path.read_bytes()
+        sample = store.path / index["slots"][0]["file"]
+        record["changed_evidence"] = True
+        sample.write_bytes(gzip.compress(c.body(record), mtime=0))
+        with self.assertRaisesRegex(ValueError, "previously attested sample hash/bytes"):
+            store.index(config, "failed", error="changed")
+        self.assertEqual(index_path.read_bytes(), previous)
+        self.assertEqual(json.loads(previous)["status"], "running")
+
     def test_separate_preparation_and_source_mutation_refusal_zero_http(self):
         root = self.path / "repo"
         root.mkdir()
