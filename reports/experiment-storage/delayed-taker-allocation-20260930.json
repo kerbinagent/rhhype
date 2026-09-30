@@ -1,0 +1,16 @@
+{
+  "schema": "delayed-taker-quote-diagnostic-allocation-v1",
+  "recorded_utc": "2026-09-30T05:19:40.939316+00:00",
+  "previous_allocation_sha256": "e77a32df9e4d90a6c41372052f8c5c298c3da375674d5e1fd26b881f169e216f",
+  "previous_projected_maximum_bytes": 27882911,
+  "new_diagnostic_maximum_total_bytes": 3000000,
+  "shared_allowance_bytes": 33000000,
+  "projected_maximum_bytes": 30882911,
+  "headroom_bytes": 2117089,
+  "new_raw_archives": 0,
+  "new_raw_bytes": 0,
+  "maximum_raw_traversals": 1,
+  "existing_total_reservation_bytes": 820000000,
+  "available_filesystem_bytes_at_check": 608336080896,
+  "run_requires_source_freeze_and_review": true
+}

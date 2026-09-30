@@ -228,3 +228,14 @@ zero raw traversals. Including the 72,636-byte completed ACK halt review,
 shared comparison/diagnostic use at all allocated maxima is 27,882,911 bytes,
 below the existing 33,000,000-byte allowance. The raw-study count, future
 capture slot, total derived maximum and 820 MB reservation remain unchanged.
+
+### Delayed taker quote allocation, 05:20 UTC
+
+The [delayed quote allocation](../reports/experiment-storage/delayed-taker-allocation-20260930.json)
+reserves 3,000,000 bytes for one fixed-quantity, four-horizon diagnostic on
+the stopped 02:52 archive, including all reports, source copies and logs.
+Projected use at all maxima is 30,882,911 bytes, leaving 2,117,089 bytes in
+the existing 33 MB shared allowance. One canonical traversal is allowed
+only after implementation review and source freeze; no new raw archive,
+reservation increase or automatic retry is authorized. The helper must
+enforce the aggregate cap before writes and retain every scheduled outcome.
