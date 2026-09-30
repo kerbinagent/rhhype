@@ -1483,3 +1483,35 @@ The original sentinel failed its 80 KB admission guard before any quote
 connection. All 1,680 uncollected rows remain, and a separate compact-source
 wrapper is in offline implementation review. No new network request, policy
 change, capital reset or claim of paired profitability.
+
+## Review 49: 2026-09-30 08:26:33 UTC
+
+Archived exact daemon output in `reports/live-review-catchup/review-20260930T082633Z.json`;
+all completion and aborted coverage is complete. Cooldown: **50 exact paired
+completions, −$59.9870**, zero wins. Premium: **15 exact, −$23.6685**,
+comprising 14 paired −$22.3101 and one failed hedge −$1.3585. Convergence:
+**one exact failed hedge, −$1.6130**. All have zero wins; others have no new
+completions. Premium and convergence each recorded one HL price-limit
+rejection. Independent portfolios are not added together.
+
+Cooldown fees $15.1227, stress $24.9678, capital $0.001777, funding zero;
+without stress it remains −$35.0192. Its 48 observed exit-price comparisons
+improved $0.579356 (15 worse, 19 better, 14 unchanged; two missing request
+prices), median zero and p95 adverse $0.080500. Request-to-flat median for
+50 paired closes was 1.150 s, p95 1.623 s. Premium's 13 observed comparisons
+worsened $0.337485, with one request price missing.
+
+The separate later current-version snapshot in
+`reports/live-review-catchup/current-epoch-at-review49.json` records cooldown
+680 exact plus two estimated completions, −$912.5335 (one win); Premium
+120/−$197.8553 (one win); convergence 49/−$39.3104 (three wins); conservative
+1/+$2.3198. Version `e3e83cda71a6` and win counts are unchanged. The review
+snapshot has one cooldown position open; the later epoch snapshot is flat.
+Three legacy funding obligations remain outside current-version totals.
+
+Health: four connected feeds, 108 pairs, CPU 57.65% of one core, p95 loop lag
+9.70 ms, RSS 253.35 MiB, 689.7 books/s. Next review **08:46:33 UTC**.
+The compact sentinel is still collecting until its fixed 08:32:57 UTC endpoint;
+no economic results have been inspected. The independent auditor passed five
+synthetic tests, including deliberate arithmetic, timestamp and block-gate
+corruption. No production policy change or capital reset.
