@@ -1033,3 +1033,33 @@ different interval from the full scheduled review, not a replacement for it.
 Health: all four feeds connected,112 pairs,CPU62.01% of one core,p95 loop lag
 9.78 ms,RSS153.04 MiB,911.4 books/s. Both frozen passive replays remain active.
 Next review **04:06:33 UTC**. No strategy was promoted and no capital reset.
+
+## Review 36: 2026-09-30 04:06:33 UTC
+
+Actively read and archived in
+`reports/live-review-catchup/review-20260930T040633Z.json`; all completion
+coverage is complete. Cooldown completed **69 trades for −$121.7652**,
+zero wins: 66 paired contributed −$112.7713 and three failed hedges
+−$8.9939. Of those outcomes, 68 are exact (−$118.2410) and one remains an
+estimated settlement (−$3.5242). Convergence had three failed hedges for
+**−$5.4494**, zero wins. All other strategies had no new completion.
+
+Cooldown's modeled fees were $26.7715, stress $34.4551, capital $0.0024,
+and recorded funding +$0.0812. Removing the stress alone still leaves
+−$87.3102. Observed exit-price movement improved $0.855523 in aggregate:
+24 worse, 20 better, 18 unchanged, four missing; median zero and p95 adverse
+$0.116537. Request-to-flat median 1.130 s, p95 1.775 s for 66 paired closes.
+Price movement after the exit request does not explain the overall loss.
+
+The separately saved current-version snapshot begins at 03:36:13 UTC and
+shows cooldown101 exact plus one estimated completion for −$169.0843,
+and convergence4 exact completions for −$6.0927; zero wins. Three legacy
+funding-pending records remain outside this version's result. This snapshot
+and the scheduled twenty-minute interval have different start/end times.
+
+Health: four connected feeds,112 pairs,CPU51.22% of one core,p95 loop lag
+8.30 ms,RSS178.85 MiB,758.4 books/s. The scheduled snapshot has one active
+cooldown position and three flat funding-pending records. Both passive
+replays finished; their [readout](../reports/rh-passive-exit-v1-restart/readout.md)
+has 29 known negative portfolios and99 unknown. Next review **04:26:33 UTC**.
+No strategy was promoted or capital replenished.

@@ -25,7 +25,7 @@ report is [flawed-pilot-final.md](../reports/feed-experiment/flawed-pilot-final.
 
 ## Next review and interpretation
 
-Review 35 was actively read at 03:46:33 UTC. **Next: 04:06:33 UTC**.
+Review 36 was actively read at 04:06:33 UTC. **Next: 04:26:33 UTC**.
 Read `data/strategy-reviews/latest.json`; do not also run a one-shot capture
 against that output, because it advances the same baseline. The scheduler
 collects evidence; the active agent researches and evaluates changes.
