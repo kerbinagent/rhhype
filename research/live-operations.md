@@ -28,8 +28,10 @@ report is [flawed-pilot-final.md](../reports/feed-experiment/flawed-pilot-final.
 
 ## Next review and interpretation
 
-Review 64 was archived with a separately timed current-epoch snapshot.
-**Next: 13:46:33 UTC**.
+The latest completed review and next deadline are maintained in the
+[active research status](active-experiment-loop.md)
+and the chronological [review journal](review-loop.md). Use those current
+entries; deadlines in the historical operations entries below have passed.
 Read `data/strategy-reviews/latest.json`; do not also run a one-shot capture
 against that output, because it advances the same baseline. The scheduler
 collects evidence; the active agent researches and evaluates changes.
