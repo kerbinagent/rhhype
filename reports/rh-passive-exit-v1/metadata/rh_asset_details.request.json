@@ -1,0 +1,9 @@
+{
+  "url": "https://api.rh.lighter.xyz/api/v1/assetDetails",
+  "method": "GET",
+  "status": 200,
+  "request_started_utc_ns": 1790734355841299363,
+  "response_completed_utc_ns": 1790734356080383813,
+  "raw_bytes": 14044,
+  "sha256": "3d48d8fef5a04d96641946d6e8e84e0b8eef87dbd21f69b0922137e440d32c24"
+}

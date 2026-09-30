@@ -1,0 +1,26 @@
+{
+  "source_url": "https://apidocs.rh.lighter.xyz/docs/account-types.md",
+  "fetched_request_started_utc_ns": 1790734511739986842,
+  "fetched_response_completed_utc_ns": 1790734511983100260,
+  "raw_sha256": "8fd715cbe6b008bfa936406a23b9593d9c283dd9f56bb09e7ab2f7225db81795",
+  "document_updated_at": "2026-09-26T09:49:12.000Z",
+  "scope": "public RH-domain base account schedule, not authenticated user fees or observed end-to-end latency",
+  "standard": {
+    "maker_fee_bps": "0",
+    "taker_fee_bps": "0",
+    "maker_processing_ms": 200,
+    "cancel_processing_ms": 200,
+    "taker_processing_ms": 300
+  },
+  "premium_under_1m_14d": {
+    "maker_fee_bps": "1.2",
+    "taker_fee_bps": "3.5",
+    "maker_processing_ms": 0,
+    "cancel_processing_ms": 0,
+    "taker_processing_ms": 200
+  },
+  "notes": [
+    "Premium fee/latency table varies with trailing 14-day volume; this is the base row only.",
+    "Network, client receipt and order acknowledgement delays are additional model assumptions, not published processing delays."
+  ]
+}

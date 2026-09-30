@@ -1,0 +1,15 @@
+{
+  "attempts": [
+    {
+      "url": "https://apidocs.rh.lighter.xyz/docs/account-types.md",
+      "resolved_url": "https://apidocs.rh.lighter.xyz/docs/account-types.md",
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "request_started_utc_ns": 1790734511739986842,
+      "response_completed_utc_ns": 1790734511983100260,
+      "raw_bytes": 5597,
+      "sha256": "8fd715cbe6b008bfa936406a23b9593d9c283dd9f56bb09e7ab2f7225db81795",
+      "file": "rh_account_types_current.md"
+    }
+  ]
+}
