@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 15:07 UTC
+## Current status, 30 September 2026 15:27 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative; no production strategy is promoted. The user authorized
@@ -19,10 +19,10 @@ analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
 [method](dated-carry-method-v1.md) and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 69 are preserved. The two paired convergence gains in review65
-(WLD +$0.3590; CRCL +$0.3250) have not repeated: all 170 closes in reviews 66–69
+Reviews through 70 are preserved. The two paired convergence gains in review65
+(WLD +$0.3590; CRCL +$0.3250) have not repeated: all 231 closes in reviews 66–70
 were negative. All three active strategy windows lost money.
-Next review: **15:26:33 UTC**.
+Next review: **15:46:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -1005,3 +1005,13 @@ no capture/replay was launched, and existing reservations remain intact.
 
 Independent source/output review passed the formula, all four cases, source
 hash, exact ceiling and conditional claims. No frozen-study input was read.
+
+### Review 70, 15:26 UTC
+
+All 61 closes exact and negative: cooldown 41/−$43.0369, Premium thirteen/
+−$22.2830, convergence seven/−$4.9933. Zero aborts, complete coverage, no new
+winners. Four feeds connected and performance normal; review and later
+snapshot one cooldown position. Twelve earlier win records and three legacy
+funding obligations remain. Next review 15:46:33 UTC. Carry has 33 arrivals,
+no reported errors and no interim economic readout. The fee-inventory algebra
+remains a separate future-model calculation.

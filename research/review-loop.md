@@ -2179,3 +2179,34 @@ or capital change. Next checkpoint **15:26:33 UTC**.
 
 Carry status: 29 arrivals through 15:05, 35,412 sample bytes, no reported
 collection errors. No interim price/economic evaluation.
+
+## Review 70 — 2026-09-30 15:26:33 UTC
+
+Exact review and separate epoch read preserved; guarded manual archive total
+1,276,881/16,777,216 bytes. All 61 closes exact and negative, zero aborts,
+complete coverage. No new winners; portfolios remain separate.
+
+- Cooldown: 41/−$43.0369; forty paired/−$42.1543, one failed/−$0.8826.
+- Premium: thirteen/−$22.2830; seven paired/−$10.8982, six failed/−$11.3849.
+- Convergence: seven failed hedges/−$4.9933; no paired closes.
+- Price-limit rejections: Hyperliquid eleven, Core one.
+
+Cooldown fees $8.8014, stress $20.4739, capital $0.0014368, funding zero;
+removing stress leaves −$22.5630. Its 39 available exit comparisons worsened
+$0.544425 overall (twenty better, fifteen worse, four unchanged, one missing),
+median −$0.00033, p95 adverse $0.331333. All forty paired request-to-flat
+observations present: median 1.273 s, p95 1.711 s. Premium's seven exit
+comparisons improved $0.149006 overall (three better, two worse, two unchanged).
+
+Four feeds connected, 115 pairs, CPU 77.73%, p95 lag 15.16 ms, RSS 313.86 MiB,
+1,333.4 books/s, metadata age 2,969.7 s. Review and later snapshot each had one
+cooldown position. Epoch: cooldown 1,453 exact plus three estimated/
+−$1,970.3436; Premium 412/−$748.9934; convergence 219/−$243.1311;
+conservative one/+$2.3198. Twelve prior win records and three legacy funding
+obligations remain. All 231 closes in reviews 66–70 were negative. Next
+checkpoint **15:46:33 UTC**. No policy or capital change.
+
+Carry has 33 arrivals through 15:25, 40,331 sample bytes, no reported errors.
+The separately reviewed synthetic fee-inventory envelope (`e4fdbf6`) is a
+future-model algebra note only; it does not alter this frozen study or provide
+verified fee caps, matched inventory, or P&L.
