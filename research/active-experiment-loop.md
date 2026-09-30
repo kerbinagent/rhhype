@@ -31,8 +31,11 @@ twenty-minute production reviews while experiments remain separate.
   final 80 seconds admit no new entries to permit bounded liquidation.
 
 Engine, coordinator, metadata and independent accounting/performance reviews
-are being implemented in parallel. No v1 capture has started yet. Original
-frozen replay files and the production strategy remain separate.
+completed before the source freeze at 02:27:26 UTC (commit `6886d59`). The
+50-minute capture started at approximately 02:27:32 UTC, with calibration until
+02:57:32 and holdout through 03:17:32. Original frozen replay files and the
+production strategy remain separate. See the preserved launch manifest in
+`reports/rh-passive-exit-v1/launch.json`.
 
 ## Operational success threshold
 
@@ -80,4 +83,26 @@ and RH trades for all four. XAG had one trade and a maximum RH book receipt gap
 of 2.148 s; this short check cannot establish sustained fill opportunity or
 rule out the experiment's two-second validity/confirmation failures. Exact
 counts and source-age diagnostics are in
-`reports/rh-passive-exit-v1/preflight.json`. No long capture has launched yet.
+`reports/rh-passive-exit-v1/preflight.json`. This preflight preceded the long
+capture described above.
+
+## Research during collection, 02:41 UTC
+
+The old stopped quote comparison has no complete-cycle fill evidence. Its
+[cost headroom chart](../reports/passive-hedge-venues/cost-headroom.svg) shows
+median $1,000 static headroom above the $0.10 target of only +0.09 bp for
+RH/HL silver and +1.46 bp for RH/Core silver. Every group misses the additional
+5 bp stress allowance. Smaller sizes face a larger relative $0.10 target.
+The [cost sensitivity](passive-cost-buffer-followup.md) separates actual modeled
+fill fees from hypothetical amortized rebalancing and the unpaid stress.
+Prepared future-only modules permit a separate quote-selection allowance and
+bounded three-venue capture; neither changes current v1. A broader, bounded
+public universe screen is being prepared to find assets whose quoted spread
+can clear the hedge costs before investing another full capture in them.
+
+Public queue evidence remains a separate barrier. The prior Standard BTC/ETH
+branches became unresolved within about two minutes; Premium's later fills
+were not comparable observations. See the [common-window diagnostic](rh-entry-queue-followup.md)
+and [queue uncertainty research](public-queue-uncertainty-followup.md).
+Future latency/queue scenarios must be explicitly assumed, preserve every
+resulting hedge and exit loss, and stay separate from the strict v1 control.

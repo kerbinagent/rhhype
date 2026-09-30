@@ -1,0 +1,24 @@
+{
+  "protocol": "reports/rh-passive-exit-v1/protocol.json",
+  "protocol_sha256": "d3d050b43b933e5491714c634199e4092a3a84ea8acef28e6a3e86c487434836",
+  "protocol_commit": "6886d59",
+  "implementation_commit": "a0f8e50",
+  "capture": "data/raw/rh-passive-exit-v1/20260930T0227Z",
+  "exec_session": 70643,
+  "configured_seconds": 3000,
+  "raw_cap_bytes": 384000000,
+  "first_record": {
+    "kind": "connection_open",
+    "venue": "hyperliquid",
+    "generation": "hyperliquid:1:23eeb4e45e86",
+    "receipt_utc_ns": 1790735254126587989,
+    "markets": {
+      "BTC": "BTC",
+      "ETH": "ETH",
+      "NVDA": "xyz:NVDA",
+      "XAG": "xyz:SILVER"
+    }
+  },
+  "observed_at": "2026-09-30T02:28:28.016494+00:00",
+  "observation_scope": "launch and feed health only; no holdout economics read"
+}

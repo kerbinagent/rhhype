@@ -1,0 +1,23 @@
+{
+  "source": "reports/passive-hedge-venues/matched-rows.csv",
+  "source_sha256": "4257d8444401ec79f5ac32a26197e288d4c83c865f352fd2903db8cc4bcfe7b3",
+  "source_rows": 4336,
+  "scenario_groups": 1152,
+  "route_costs_usd_hypothetical": [
+    "1",
+    "2",
+    "5"
+  ],
+  "completed_turns_hypothetical": [
+    10,
+    50,
+    100
+  ],
+  "allocation": "C_route/M, equal per completed turn; no actual transfer or maker fill observed",
+  "score": "prior fee_only quoted cycle including explicit fill fees and capital cost, minus C_route/M; not realized P&L",
+  "limits": [
+    "No real RH maker fill, account, swap, bridge, withdrawal, or conversion quote",
+    "USDG/USDC parity remains a scenario assumption",
+    "Hypothetical batches assume homogeneous completed turns and available collateral"
+  ]
+}

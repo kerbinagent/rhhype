@@ -349,3 +349,32 @@ Committed full-cycle strategy research and stopped quote-hurdle analyzer in
 and proposed tests: `research/unwind-strategy-decision.md`. The live ten-second
 policy remains the control; passive inventory exits and longer horizons are
 specified future experiments, not deployed replacements.
+
+
+## Status at 02:30 UTC, 30 September
+
+User explicitly requested the passive-exit experiment and an ongoing
+experiment/data/research loop until stopped or convincingly positive paper
+P&L. The mandate and operational success threshold are in
+`research/active-experiment-loop.md`.
+
+- Audited v1 implementation **a0f8e50**, protocol **6886d59**, frozen
+  **02:27:26.148934 UTC** before capture. Root's combined 31 focused tests
+  pass; independent reviewer also ran related legacy tests (43 total).
+- Active collector **PID 2953071**, root exec session **70643**:
+  `data/raw/rh-passive-exit-v1/20260930T0227Z`. Fifty minutes total;
+  calibration ends about **02:57:32**, capture about **03:17:32 UTC**.
+  Exact start/end comes from the terminal manifest. First connection record
+  02:27:34.126588; 983 KB compressed at the first running check.
+- Raw cap384 MB, audit96 MB, summary32 MB, total512 MB study maximum.
+  Source closure in `reports/rh-passive-exit-v1/protocol.json` is immutable
+  through replay. No current holdout result has been inspected or used.
+- Replay after collector completion:
+  `.venv/bin/python scripts/analyze_rh_passive_exit.py replay --capture data/raw/rh-passive-exit-v1/20260930T0227Z --protocol reports/rh-passive-exit-v1/protocol.json --out data/derived/rh-passive-exit-v1`
+- Production monitor **2765644**, review loop **2765645** remain running.
+  Review31 read; next **02:46:33 UTC**. Baseline flat/capital-limited;
+  cooldown continues losing. Original frozen reference **2656054** remains
+  running (~4h17 elapsed at02:28); cached prior results separately labeled.
+- Parallel stopped-data research covers RH entry queues and HL/Core hedge
+  economics. Any resulting strategy change will use a new method and fresh
+  data; current v1 is unchanged. No other economic capture is running.

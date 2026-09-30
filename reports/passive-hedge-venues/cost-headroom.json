@@ -1,0 +1,233 @@
+{
+  "classification": "conditional static quote screen, not fills or expected profit",
+  "source": "/home/harry/projects/research/rhhype/reports/passive-hedge-venues/matched-rows.csv",
+  "source_sha256": "4257d8444401ec79f5ac32a26197e288d4c83c865f352fd2903db8cc4bcfe7b3",
+  "target_usd": 0.1,
+  "headroom_unit": "bps of max original entry leg notional",
+  "groups": [
+    {
+      "hedge_venue": "core",
+      "asset": "BTC",
+      "budget_usd": 100,
+      "observations": 75,
+      "median_headroom_bps": -9.692799222667915
+    },
+    {
+      "hedge_venue": "core",
+      "asset": "BTC",
+      "budget_usd": 250,
+      "observations": 75,
+      "median_headroom_bps": -3.682851912831867
+    },
+    {
+      "hedge_venue": "core",
+      "asset": "BTC",
+      "budget_usd": 500,
+      "observations": 75,
+      "median_headroom_bps": -1.6797125126383075
+    },
+    {
+      "hedge_venue": "core",
+      "asset": "BTC",
+      "budget_usd": 1000,
+      "observations": 75,
+      "median_headroom_bps": -0.7003544256462816
+    },
+    {
+      "hedge_venue": "core",
+      "asset": "ETH",
+      "budget_usd": 100,
+      "observations": 75,
+      "median_headroom_bps": -9.009121937453708
+    },
+    {
+      "hedge_venue": "core",
+      "asset": "ETH",
+      "budget_usd": 250,
+      "observations": 75,
+      "median_headroom_bps": -2.999837327352446
+    },
+    {
+      "hedge_venue": "core",
+      "asset": "ETH",
+      "budget_usd": 500,
+      "observations": 75,
+      "median_headroom_bps": -1.0345808664616958
+    },
+    {
+      "hedge_venue": "core",
+      "asset": "ETH",
+      "budget_usd": 1000,
+      "observations": 75,
+      "median_headroom_bps": -0.0503418690017709
+    },
+    {
+      "hedge_venue": "core",
+      "asset": "NVDA",
+      "budget_usd": 100,
+      "observations": 56,
+      "median_headroom_bps": -8.745524520319474
+    },
+    {
+      "hedge_venue": "core",
+      "asset": "NVDA",
+      "budget_usd": 250,
+      "observations": 56,
+      "median_headroom_bps": -2.7310608333370987
+    },
+    {
+      "hedge_venue": "core",
+      "asset": "NVDA",
+      "budget_usd": 500,
+      "observations": 56,
+      "median_headroom_bps": -0.8900796314378524
+    },
+    {
+      "hedge_venue": "core",
+      "asset": "NVDA",
+      "budget_usd": 1000,
+      "observations": 56,
+      "median_headroom_bps": -0.05680478711346408
+    },
+    {
+      "hedge_venue": "core",
+      "asset": "XAG",
+      "budget_usd": 100,
+      "observations": 68,
+      "median_headroom_bps": -7.587575689495626
+    },
+    {
+      "hedge_venue": "core",
+      "asset": "XAG",
+      "budget_usd": 250,
+      "observations": 68,
+      "median_headroom_bps": -1.5508498828116069
+    },
+    {
+      "hedge_venue": "core",
+      "asset": "XAG",
+      "budget_usd": 500,
+      "observations": 68,
+      "median_headroom_bps": 0.45561009812271913
+    },
+    {
+      "hedge_venue": "core",
+      "asset": "XAG",
+      "budget_usd": 1000,
+      "observations": 68,
+      "median_headroom_bps": 1.4563751500383657
+    },
+    {
+      "hedge_venue": "hl",
+      "asset": "BTC",
+      "budget_usd": 100,
+      "observations": 75,
+      "median_headroom_bps": -18.349315694647835
+    },
+    {
+      "hedge_venue": "hl",
+      "asset": "BTC",
+      "budget_usd": 250,
+      "observations": 75,
+      "median_headroom_bps": -12.312992516449361
+    },
+    {
+      "hedge_venue": "hl",
+      "asset": "BTC",
+      "budget_usd": 500,
+      "observations": 75,
+      "median_headroom_bps": -10.30564333609324
+    },
+    {
+      "hedge_venue": "hl",
+      "asset": "BTC",
+      "budget_usd": 1000,
+      "observations": 75,
+      "median_headroom_bps": -9.30531432788244
+    },
+    {
+      "hedge_venue": "hl",
+      "asset": "ETH",
+      "budget_usd": 100,
+      "observations": 75,
+      "median_headroom_bps": -18.00052987144654
+    },
+    {
+      "hedge_venue": "hl",
+      "asset": "ETH",
+      "budget_usd": 250,
+      "observations": 75,
+      "median_headroom_bps": -12.033517610257705
+    },
+    {
+      "hedge_venue": "hl",
+      "asset": "ETH",
+      "budget_usd": 500,
+      "observations": 75,
+      "median_headroom_bps": -10.03276468455022
+    },
+    {
+      "hedge_venue": "hl",
+      "asset": "ETH",
+      "budget_usd": 1000,
+      "observations": 75,
+      "median_headroom_bps": -9.03320136165396
+    },
+    {
+      "hedge_venue": "hl",
+      "asset": "NVDA",
+      "budget_usd": 100,
+      "observations": 56,
+      "median_headroom_bps": -10.500065918521502
+    },
+    {
+      "hedge_venue": "hl",
+      "asset": "NVDA",
+      "budget_usd": 250,
+      "observations": 56,
+      "median_headroom_bps": -4.485602277859094
+    },
+    {
+      "hedge_venue": "hl",
+      "asset": "NVDA",
+      "budget_usd": 500,
+      "observations": 56,
+      "median_headroom_bps": -2.4829396112595106
+    },
+    {
+      "hedge_venue": "hl",
+      "asset": "NVDA",
+      "budget_usd": 1000,
+      "observations": 56,
+      "median_headroom_bps": -1.4825655923200913
+    },
+    {
+      "hedge_venue": "hl",
+      "asset": "XAG",
+      "budget_usd": 100,
+      "observations": 68,
+      "median_headroom_bps": -8.9466805734654
+    },
+    {
+      "hedge_venue": "hl",
+      "asset": "XAG",
+      "budget_usd": 250,
+      "observations": 68,
+      "median_headroom_bps": -2.918036902121097
+    },
+    {
+      "hedge_venue": "hl",
+      "asset": "XAG",
+      "budget_usd": 500,
+      "observations": 68,
+      "median_headroom_bps": -0.9116242668917531
+    },
+    {
+      "hedge_venue": "hl",
+      "asset": "XAG",
+      "budget_usd": 1000,
+      "observations": 68,
+      "median_headroom_bps": 0.08911717033565889
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "scope": "stopped cached RH-maker pilot, fixed-best BTC/ETH $1000 only",
+  "raw_capture_sha256": "07cf628056fda14b2d93553fdd1591ae842e260455d9bb47b249967f113c90fa",
+  "cached_audit_sha256": "4d292f05325d8214ea08adc39b56a660c4574408ba8a194b4220a2b59779f4a8",
+  "one_tick_bps_at_reference_price": {
+    "BTC_at_83400": "0.01199040767386091127098321343",
+    "ETH_at_2676": "0.03736920777279521674140508221"
+  },
+  "groups": {
+    "standard:BTC": {
+      "activated_intervals": 25,
+      "active_seconds_receipt_to_cancel_or_unknown": 37.925021603,
+      "median_active_seconds": 0.849875035,
+      "same_price_queue_median_base": "0.11187",
+      "same_price_queue_zero": 2,
+      "source_valid_trade_distance_median_bps": "0.005992308273100648008216653105",
+      "source_valid_trade_distance_min_bps": "0",
+      "source_valid_sell_print_count": 2,
+      "one_tick_passive_at_decision_and_activation_cases": 25,
+      "one_tick_extra_price_band_prints": 1,
+      "one_tick_extra_price_band_prints_closed_intervals": 0,
+      "one_tick_extra_price_band_qty": "0.0002",
+      "one_tick_extra_price_band_examples": [
+        {
+          "trade_id": 1158985683,
+          "price": "83440.4",
+          "qty": "0.0002",
+          "source_ns": 1790718789004000000,
+          "receipt_ns": 1790718789117912745,
+          "quote_price": "83440.3",
+          "quote_qty": "0.01198",
+          "activation_ns": 1790718783848322682,
+          "interval_end_reason": "trade_cancel_order_ambiguous"
+        }
+      ],
+      "audit_events": {
+        "invalidation": 6,
+        "quote_requested": 25,
+        "activated": 25,
+        "cancel_requested": 25,
+        "cancel_effective": 24,
+        "episode_flat": 24,
+        "activation_stale_source": 21,
+        "cancel_stale_source": 17,
+        "abstain": 1,
+        "unknown": 1
+      },
+      "unknown_reason": "trade_cancel_order_ambiguous",
+      "diagnostics": {
+        "improved_same_price_queue_zero": 24,
+        "old_bid_at_or_through_prints": 1,
+        "old_bid_at_or_through_qty_milli": 0,
+        "old_bid_at_or_through_print_case": 1,
+        "extra_one_tick_print_case": 1,
+        "improved_queue_exhaust_possible_case": 1
+      }
+    },
+    "premium:BTC": {
+      "activated_intervals": 147,
+      "active_seconds_receipt_to_cancel_or_unknown": 255.736705239,
+      "median_active_seconds": 1.051179886,
+      "same_price_queue_median_base": "0.05993",
+      "same_price_queue_zero": 19,
+      "source_valid_trade_distance_median_bps": "-0.01198241222123842302220218513",
+      "source_valid_trade_distance_min_bps": "-1.869425427301520346179241948",
+      "source_valid_sell_print_count": 40,
+      "one_tick_passive_at_decision_and_activation_cases": 147,
+      "one_tick_extra_price_band_prints": 1,
+      "one_tick_extra_price_band_prints_closed_intervals": 1,
+      "one_tick_extra_price_band_qty": "0.0002",
+      "one_tick_extra_price_band_examples": [
+        {
+          "trade_id": 1159054161,
+          "price": "83503.4",
+          "qty": "0.0002",
+          "source_ns": 1790719265776000000,
+          "receipt_ns": 1790719265847944298,
+          "quote_price": "83503.3",
+          "quote_qty": "0.01197",
+          "activation_ns": 1790719265800311236,
+          "interval_end_reason": "best_bid_changed"
+        }
+      ],
+      "audit_events": {
+        "invalidation": 6,
+        "quote_requested": 148,
+        "activation_stale_source": 95,
+        "activated": 147,
+        "cancel_requested": 146,
+        "cancel_stale_source": 122,
+        "cancel_effective": 146,
+        "episode_flat": 147,
+        "post_only_reject": 1,
+        "fill": 48,
+        "maker_increment": 16,
+        "hedge_scheduled": 16,
+        "hedge_result": 16,
+        "first_full_hedge": 8,
+        "exit_requested": 8,
+        "exit_result": 16,
+        "abstain": 2,
+        "unknown": 1
+      },
+      "unknown_reason": "eligible_flow_before_queue_snapshot",
+      "diagnostics": {
+        "improved_same_price_queue_zero": 137,
+        "old_bid_at_or_through_prints": 38,
+        "old_bid_at_or_through_qty_milli": 557,
+        "old_bid_at_or_through_print_case": 13,
+        "improved_queue_exhaust_possible_case": 14,
+        "improved_full_flow_possible_case": 5,
+        "extra_one_tick_print_case": 1
+      }
+    },
+    "standard:ETH": {
+      "activated_intervals": 33,
+      "active_seconds_receipt_to_cancel_or_unknown": 46.459987245,
+      "median_active_seconds": 0.900604472,
+      "same_price_queue_median_base": "1.3027",
+      "same_price_queue_zero": 6,
+      "source_valid_trade_distance_median_bps": "0",
+      "source_valid_trade_distance_min_bps": "-0.5229832458581594725340406059",
+      "source_valid_sell_print_count": 7,
+      "one_tick_passive_at_decision_and_activation_cases": 33,
+      "one_tick_extra_price_band_prints": 0,
+      "one_tick_extra_price_band_prints_closed_intervals": 0,
+      "one_tick_extra_price_band_qty": "0",
+      "one_tick_extra_price_band_examples": [],
+      "audit_events": {
+        "invalidation": 6,
+        "quote_requested": 33,
+        "activation_stale_source": 23,
+        "activated": 33,
+        "cancel_requested": 32,
+        "cancel_effective": 32,
+        "episode_flat": 32,
+        "cancel_stale_source": 21,
+        "unknown": 1
+      },
+      "unknown_reason": "eligible_flow_before_queue_snapshot",
+      "diagnostics": {
+        "old_bid_at_or_through_prints": 7,
+        "old_bid_at_or_through_qty_milli": 3484,
+        "improved_same_price_queue_zero": 29,
+        "old_bid_at_or_through_print_case": 3,
+        "improved_queue_exhaust_possible_case": 3,
+        "improved_full_flow_possible_case": 2
+      }
+    },
+    "premium:ETH": {
+      "activated_intervals": 68,
+      "active_seconds_receipt_to_cancel_or_unknown": 93.686181782,
+      "median_active_seconds": 0.5259135285000001,
+      "same_price_queue_median_base": "1.3027",
+      "same_price_queue_zero": 12,
+      "source_valid_trade_distance_median_bps": "-0.5602868668758404303003137606",
+      "source_valid_trade_distance_min_bps": "-0.8217540714178992977737935156",
+      "source_valid_sell_print_count": 9,
+      "one_tick_passive_at_decision_and_activation_cases": 68,
+      "one_tick_extra_price_band_prints": 0,
+      "one_tick_extra_price_band_prints_closed_intervals": 0,
+      "one_tick_extra_price_band_qty": "0",
+      "one_tick_extra_price_band_examples": [],
+      "audit_events": {
+        "invalidation": 6,
+        "quote_requested": 68,
+        "activation_stale_source": 43,
+        "activated": 68,
+        "cancel_requested": 67,
+        "cancel_effective": 67,
+        "episode_flat": 67,
+        "cancel_stale_source": 49,
+        "fill": 8,
+        "maker_increment": 2,
+        "hedge_scheduled": 2,
+        "hedge_result": 2,
+        "first_full_hedge": 2,
+        "exit_requested": 2,
+        "exit_result": 4,
+        "abstain": 1,
+        "unknown": 1
+      },
+      "unknown_reason": "eligible_flow_before_queue_snapshot",
+      "diagnostics": {
+        "improved_same_price_queue_zero": 61,
+        "old_bid_at_or_through_prints": 9,
+        "old_bid_at_or_through_qty_milli": 21126,
+        "old_bid_at_or_through_print_case": 4,
+        "improved_queue_exhaust_possible_case": 4,
+        "improved_full_flow_possible_case": 2
+      }
+    }
+  },
+  "warning": "Retrospective public price-band observations only; adding an order changes queue and flow; no hypothetical fill or P&L is inferred."
+}

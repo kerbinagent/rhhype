@@ -917,3 +917,20 @@ uncertain for a completion deadline. The completed cached variant remains
 separately labeled; full
 original-versus-cached equivalence waits for the original to finish. No process
 was stopped or restarted.
+
+
+## Review 31: 2026-09-30 02:26:33 UTC
+
+Actively read at 02:28 UTC. Completion coverage complete. Baseline remains
+flat and capital-limited, with zero new completions. Cooldown completed 84
+trades for **−$173.2020** (83 paired −$170.2735, one failed hedge −$2.9286),
+zero wins. Historical-median policy completed two failed hedges for −$1.8367;
+no paired trade. No strategy was promoted or existing ledger replenished.
+
+Cooldown's 81 observed exit-price comparisons improved **$2.650557** in
+aggregate (29 worse, 32 better, 20 unchanged); two paired comparisons are
+missing. Median change zero, p95 adverse $0.3846. This price-only diagnostic
+still does not explain the aggregate net loss. Health: 113 pairs, 1,038.4
+book events/s, CPU 77.83% of one core, p95 loop lag 12.84 ms, RSS 261.51 MiB.
+Next report due **02:46:33 UTC / 10:46 p.m. ET**. Preserved full review:
+`reports/live-review-catchup/review-20260930T022633Z.json`.
