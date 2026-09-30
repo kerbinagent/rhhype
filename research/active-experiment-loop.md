@@ -309,11 +309,14 @@ economic result was published. Preserve the 460,596-byte `.building`
 directory and its [failure record](../reports/delayed-taker-quotes/0252Z-v1.building/failure.json);
 all 33 input hashes were rechecked unchanged after failure.
 
-A separate resource amendment is under implementation review: 4 MB maximum
-output, a larger outcome sublimit, and bounded memoization of pure repeated
-level validation. Every book's structural/grid validity and all timing rules
-remain enforced. Candidate grid, economics, 900-second limit and stopped
-input remain fixed. One second traversal requires a new commit/freeze and
-output directory; no automatic retry or partial-result conclusion follows.
+A separate resource amendment passed root and independent review with 40
+focused tests. Commit `337097a` freezes 4 MB maximum output, a larger outcome
+sublimit, and bounded memoization of pure repeated level validation. Every
+book's structural/grid validity and all timing rules remain enforced.
+Candidate grid, economics, 900-second limit and stopped input remain fixed.
+The second and final authorized traversal launched at 06:17:02 UTC into
+`reports/delayed-taker-quotes/0252Z-v2`, with 33 dependency/input hashes saved
+before traversal. Deadline approximately 06:32:02 UTC. Results remain pending;
+no automatic retry or partial-result conclusion follows.
 This is post-capture exploratory analysis with no automatic policy selection,
 capture or promotion.
