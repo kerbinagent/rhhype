@@ -2210,3 +2210,36 @@ Carry has 33 arrivals through 15:25, 40,331 sample bytes, no reported errors.
 The separately reviewed synthetic fee-inventory envelope (`e4fdbf6`) is a
 future-model algebra note only; it does not alter this frozen study or provide
 verified fee caps, matched inventory, or P&L.
+
+## Review 71 — 2026-09-30 15:46:33 UTC
+
+Exact review and separate epoch snapshot preserved; guarded manual archive
+1,307,535/16,777,216 bytes. All 58 closes exact and negative. Three aborts
+(two convergence, one Premium); complete completion and abort coverage.
+
+- Cooldown: 45 paired closes/−$48.4952; no failed-hedge closes.
+- Premium: eight/−$11.3790; seven paired/−$10.8799, one failed/−$0.4991.
+- Convergence: five/−$6.8001; one paired/−$1.0737, four failed/−$5.7264.
+- Price-limit rejections: Hyperliquid five, Core two, RH three. No new wins.
+
+Cooldown fees $10.1464, stress $22.4739, capital $0.0016195, funding zero;
+without stress −$26.0212. All 45 paired exit comparisons present: 23 better,
+17 worse, five unchanged; net deterioration $0.235539, median −$0.002333,
+p95 adverse $0.307036. Request-to-flat median 1.325 s, p95 1.976 s. Premium's
+seven exit comparisons worsened $0.076732 overall; convergence's one worsened
+$0.86736. Portfolios remain separate.
+
+Four feeds connected, 115 pairs, CPU 69.01%, p95 lag 15.03 ms, RSS 312.69 MiB,
+1,124.1 books/s, metadata age 564.7 s. Metadata/stream refresh again changed
+message counters; RH's displayed 116 is not interpreted as a cross-generation
+event delta. Review flat, later epoch snapshot one cooldown position. Epoch:
+cooldown 1,497 exact plus three estimated/−$2,016.7691; Premium
+420/−$760.3724; convergence 224/−$249.9312; conservative one/+$2.3198.
+Twelve old win records and three legacy funding obligations remain. All 289
+closes in reviews 66–71 were negative. No policy/capital change. Next
+checkpoint **16:06:33 UTC**.
+
+Carry arrival check: all 37 due slots have files and `sampled` status, through
+15:45; 45,242 sample bytes, zero overdue missing slots, no terminal error.
+This status checks HTTP arrival/deadline/clock gates, not native quote/RPC
+semantics or economics, which remain deferred to the frozen endpoint.

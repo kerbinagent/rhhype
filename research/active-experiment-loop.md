@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 15:27 UTC
+## Current status, 30 September 2026 15:47 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative; no production strategy is promoted. The user authorized
@@ -19,10 +19,10 @@ analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
 [method](dated-carry-method-v1.md) and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 70 are preserved. The two paired convergence gains in review65
-(WLD +$0.3590; CRCL +$0.3250) have not repeated: all 231 closes in reviews 66–70
+Reviews through 71 are preserved. The two paired convergence gains in review65
+(WLD +$0.3590; CRCL +$0.3250) have not repeated: all 289 closes in reviews 66–71
 were negative. All three active strategy windows lost money.
-Next review: **15:46:33 UTC**.
+Next review: **16:06:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -1015,3 +1015,13 @@ snapshot one cooldown position. Twelve earlier win records and three legacy
 funding obligations remain. Next review 15:46:33 UTC. Carry has 33 arrivals,
 no reported errors and no interim economic readout. The fee-inventory algebra
 remains a separate future-model calculation.
+
+### Review 71, 15:46 UTC
+
+All 58 closes exact and negative: cooldown 45/−$48.4952, Premium eight/
+−$11.3790, convergence five/−$6.8001. Three aborts, complete coverage; no new
+winners. Four feeds connected and performance normal. Review flat, later
+snapshot one cooldown position; three legacy funding obligations retained.
+Next review 16:06:33 UTC. All 37 due carry slots have passed arrival checks;
+no overdue missing files or terminal error. Native quote validation and
+economics remain deferred.
