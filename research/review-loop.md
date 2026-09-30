@@ -1272,3 +1272,37 @@ The first delayed quote scan reached its terminal checks but failed the
 outcome-file sublimit before publication; no economic conclusion is drawn.
 Its preserved failure and separately reviewed resource amendment are in
 `16be20f`. No new raw capture, promotion or capital reset.
+
+
+## Review 43: 2026-09-30 06:26:33 UTC
+
+Read at 06:28 UTC; archived in
+`reports/live-review-catchup/review-20260930T062633Z.json`. All completion
+coverage is complete. Cooldown: **26 exact paired completions, −$44.7048**,
+zero wins. Premium: **nine exact, −$13.5966**, four paired −$6.5269 and
+five failed hedges −$7.0697, zero wins, plus one aborted attempt. Convergence:
+**seven exact failed hedges, −$6.2239**, zero wins. Others have no new
+completions. Separate strategy ledgers are not summed.
+
+Cooldown fees $10.4195, stress $12.9846, capital $0.000933, funding zero;
+without stress the interval remains −$31.7202. Its 23 observed exit-price
+comparisons improved $0.403790 in aggregate (10 worse, eight better, five
+unchanged; three missing request prices), median approximately zero and p95
+adverse $0.204680. Request-to-flat median 1.199 s, p95 1.819 s over 26
+paired closes. Premium's four comparisons worsened $0.094979.
+
+The separate 06:28 current-version snapshot in
+`reports/live-review-catchup/current-epoch-at-review43.json` records cooldown
+414 exact plus two estimated completions, −$581.7609 (one win); Premium
+54/−$90.1297 (one win); convergence 38/−$31.4477 (two wins); conservative
+1/+$2.3198. Version remains `e3e83cda71a6`; win counts have not increased.
+The scheduled snapshot was flat; the later snapshot has one Premium open
+position excluded from its closed net. Three legacy funding obligations
+remain outside current-version totals.
+
+Health: four connected feeds, 111 pairs, CPU 52.72% of one core, p95 loop
+lag 9.93 ms, RSS 235.45 MiB, 731.7 books/s. Next review **06:46:33 UTC**.
+The second delayed quote scan is still running under its preexisting
+900-second deadline; no completed economic result is available. A separate
+synthetic check reproduced cache thrashing, without reading raw data or
+changing the running source. No new capture, promotion or capital reset.
