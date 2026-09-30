@@ -2047,3 +2047,32 @@ reservation. No retry, capture, threshold change or extension follows.
 
 The dated-carry collector has 13 paired arrivals through 13:45, 15,885 sample
 bytes, no collection errors; economics remain sealed until 3 October 12:45.
+
+## Review 66 — 2026-09-30 14:06:33 UTC
+
+Exact archive `review-20260930T140633Z.json` and separate epoch read preserved,
+with the manual-directory cap checked before writing (1,152,072/16,777,216
+bytes). All 46 closes exact and negative, zero aborts, complete coverage.
+
+- Cooldown: 12 paired closes, −$13.7992; no failed-hedge closes.
+- Premium: 24/−$43.4084; seven paired/−$14.5107, 17 failed/−$28.8977.
+- Convergence: ten/−$8.8190; two paired/−$1.6740, eight failed/−$7.1451.
+- Twenty-four Hyperliquid price-limit rejections; other strategies no closes.
+
+Cooldown fees $2.9628, stress $5.9933, capital $0.0004290, funding zero;
+without stress still −$7.8058. Its eleven available exit-price comparisons
+improved $1.22391 overall (six better, four worse, one unchanged, one missing);
+median −$0.048971, p95 adverse $0.383577. All twelve request-to-flat observations
+are present: median 1.206 s, p95 1.930 s. Premium's seven exit comparisons
+worsened $1.597969; both convergence comparisons worsened, $0.948022 combined.
+
+Four feeds connected, 113 pairs, CPU 74.25%, p95 lag 26.22 ms, RSS 310.96 MiB,
+1,227.6 books/s, metadata age 1,773.5 s. The review had one cooldown position;
+the separate later snapshot was flat. Epoch snapshot: cooldown 1,345 exact
+plus three estimated/−$1,804.8741; Premium 368/−$670.8697; convergence
+187/−$210.1130; conservative one/+$2.3198. Twelve win records remain, with
+only the two earlier paired wins. Three legacy funding obligations retained.
+No policy or capital change. Next checkpoint **14:26:33 UTC**.
+
+The carry collector has 17 arrivals through 14:05, 20,740 sample bytes and no
+reported collection errors. No interim prices or economics were evaluated.

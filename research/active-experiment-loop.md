@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 13:49 UTC
+## Current status, 30 September 2026 14:07 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative; no production strategy is promoted. The user authorized
@@ -19,10 +19,10 @@ analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
 [method](dated-carry-method-v1.md) and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 65 are preserved. Two paired convergence closes were positive
-(WLD +$0.3590; CRCL +$0.3250), but its full window lost $80.8370 and its paired
-subset lost $2.2831. All three active strategy windows lost money.
-Next review: **14:06:33 UTC**.
+Reviews through 66 are preserved. The two paired convergence gains in review65
+(WLD +$0.3590; CRCL +$0.3250) have not repeated: all 46 review66 closes were
+negative, and all three active strategy windows lost money.
+Next review: **14:26:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -930,3 +930,12 @@ The one-shot NVDA annotation found one post-13:30 Premium failed hedge,
 claim is supported. The annotation completed within its reservation; no
 extension or retry. Dated carry remains frozen, with 13 paired arrivals and
 no economic evaluation. Next production checkpoint 14:06:33 UTC.
+
+### Review 66, 14:06 UTC
+
+All 46 closes exact and negative: cooldown twelve/−$13.7992, Premium
+24/−$43.4084, convergence ten/−$8.8190. No aborts, complete coverage, no new
+winners. Four feeds connected; one cooldown position at review and later
+snapshot flat. Twelve prior win records and three legacy funding obligations
+remain. Next checkpoint 14:26:33 UTC. The carry study has 17 arrivals and no
+reported errors; its economic endpoint remains unchanged.
