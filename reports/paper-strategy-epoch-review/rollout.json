@@ -1,0 +1,321 @@
+{
+  "schema": "paper-strategy-epoch-rollout-v1",
+  "source_commit": "6fa0f4e",
+  "requested_at": 1790739372.8947582,
+  "old_pid": 2765644,
+  "stopped_saved_at": 1790739372.9085796,
+  "stopped_ledgers": {
+    "confirmed": {
+      "aborted_trades": 0,
+      "capital_costs_usd": 0.0,
+      "closed_loss_sum_estimated": 0.0,
+      "closed_loss_sum_exact": 0.0,
+      "closed_losses_estimated": 0,
+      "closed_losses_exact": 0,
+      "closed_pnl_estimated": 0.0,
+      "closed_pnl_exact": 0.0,
+      "closed_profit_sum_estimated": 0.0,
+      "closed_profit_sum_exact": 0.0,
+      "closed_trades": 0,
+      "closed_wins_estimated": 0,
+      "closed_wins_exact": 0,
+      "entry_attempts": 0,
+      "estimated_trades": 0,
+      "fees_usd": 0.0,
+      "funding_usd": 0.0,
+      "initial_capital": 20000,
+      "other_costs_usd": 0.0,
+      "started_at": 1790698122.4645865,
+      "wallets": {
+        "aster": 5000.0,
+        "hyperliquid": 5000.0,
+        "lighter": 5000.0,
+        "rh_lighter": 5000.0
+      }
+    },
+    "conservative": {
+      "aborted_trades": 0,
+      "capital_costs_usd": 4.045560162604504e-05,
+      "closed_loss_sum_estimated": 0.0,
+      "closed_loss_sum_exact": -7.750193884601773,
+      "closed_losses_estimated": 0,
+      "closed_losses_exact": 4,
+      "closed_pnl_estimated": 0.0,
+      "closed_pnl_exact": -7.750193884601773,
+      "closed_profit_sum_estimated": 0.0,
+      "closed_profit_sum_exact": 0.0,
+      "closed_trades": 4,
+      "closed_wins_estimated": 0,
+      "closed_wins_exact": 0,
+      "entry_attempts": 4,
+      "estimated_trades": 0,
+      "fees_usd": 0.896151519,
+      "funding_usd": 0.0,
+      "initial_capital": 20000,
+      "other_costs_usd": 1.98838091,
+      "wallets": {
+        "aster": 5000.0,
+        "hyperliquid": 4997.582191541534,
+        "lighter": 4996.417473109203,
+        "rh_lighter": 4998.25014146466
+      }
+    },
+    "convergence": {
+      "aborted_trades": 40,
+      "capital_costs_usd": 0.000983884942091706,
+      "closed_loss_sum_estimated": 0.0,
+      "closed_loss_sum_exact": -461.60075768120566,
+      "closed_losses_estimated": 0,
+      "closed_losses_exact": 246,
+      "closed_pnl_estimated": 0.0,
+      "closed_pnl_exact": -428.0505287199157,
+      "closed_profit_sum_estimated": 0.0,
+      "closed_profit_sum_exact": 33.550228961290046,
+      "closed_trades": 273,
+      "closed_wins_estimated": 0,
+      "closed_wins_exact": 27,
+      "entry_attempts": 314,
+      "estimated_trades": 0,
+      "fees_usd": 43.2421768687,
+      "funding_usd": 0.0,
+      "initial_capital": 20000,
+      "other_costs_usd": 134.90827798599992,
+      "wallets": {
+        "aster": 4909.760860767345,
+        "hyperliquid": 4894.51567819368,
+        "lighter": 4858.046735478478,
+        "rh_lighter": 4905.101797820859
+      }
+    },
+    "cooldown": {
+      "aborted_trades": 0,
+      "capital_costs_usd": 0.06322681466204765,
+      "closed_loss_sum_estimated": -4.042352627206011,
+      "closed_loss_sum_exact": -2888.5063088588868,
+      "closed_losses_estimated": 3,
+      "closed_losses_exact": 1825,
+      "closed_pnl_estimated": -4.042352627206011,
+      "closed_pnl_exact": -2882.6489306669428,
+      "closed_profit_sum_estimated": 0.0,
+      "closed_profit_sum_exact": 5.85737819194312,
+      "closed_trades": 1827,
+      "closed_wins_estimated": 0,
+      "closed_wins_exact": 2,
+      "entry_attempts": 1831,
+      "estimated_trades": 3,
+      "fees_usd": 618.7499218367695,
+      "funding_usd": -0.0018160742162570001,
+      "initial_capital": 20000,
+      "other_costs_usd": 913.7411443440006,
+      "wallets": {
+        "aster": 4933.63236873827,
+        "hyperliquid": 3178.5214422758527,
+        "lighter": 4288.540659403875,
+        "rh_lighter": 4712.1658805123625
+      }
+    },
+    "plus": {
+      "aborted_trades": 17,
+      "capital_costs_usd": 0.17199478573804494,
+      "closed_loss_sum_estimated": -18.748661952531652,
+      "closed_loss_sum_exact": -6541.236639720556,
+      "closed_losses_estimated": 16,
+      "closed_losses_exact": 4910,
+      "closed_pnl_estimated": -18.748661952531652,
+      "closed_pnl_exact": -6514.03141347392,
+      "closed_profit_sum_estimated": 0.0,
+      "closed_profit_sum_exact": 27.20522624663482,
+      "closed_trades": 4925,
+      "closed_wins_estimated": 0,
+      "closed_wins_exact": 15,
+      "entry_attempts": 4958,
+      "estimated_trades": 16,
+      "fees_usd": 1832.7884677626332,
+      "funding_usd": -0.0047776070507420075,
+      "initial_capital": 20000,
+      "other_costs_usd": 2465.1454222709904,
+      "wallets": {
+        "aster": 4653.176577770099,
+        "hyperliquid": 1000.195403166524,
+        "lighter": 3963.1500158480044,
+        "rh_lighter": 3850.697927788964
+      }
+    },
+    "premium": {
+      "aborted_trades": 57,
+      "capital_costs_usd": 0.07225976147047028,
+      "closed_loss_sum_estimated": -20.299278722386763,
+      "closed_loss_sum_exact": -8364.405741472006,
+      "closed_losses_estimated": 8,
+      "closed_losses_exact": 3084,
+      "closed_pnl_estimated": -20.299278722386763,
+      "closed_pnl_exact": -8274.755463885363,
+      "closed_profit_sum_estimated": 0.0,
+      "closed_profit_sum_exact": 89.65027758664824,
+      "closed_trades": 3151,
+      "closed_wins_estimated": 0,
+      "closed_wins_exact": 67,
+      "entry_attempts": 3217,
+      "estimated_trades": 8,
+      "fees_usd": 2783.02834106421,
+      "funding_usd": 0.38483215250013747,
+      "initial_capital": 20000,
+      "other_costs_usd": 1570.0898752739988,
+      "wallets": {
+        "aster": 4733.756448001572,
+        "hyperliquid": 1850.7627779180184,
+        "lighter": 1000.0788993080857,
+        "rh_lighter": 4119.150437825131
+      }
+    },
+    "shadow_baseline": {
+      "aborted_trades": 18,
+      "capital_costs_usd": 0.17073108040340862,
+      "closed_loss_sum_estimated": -15.574051382972488,
+      "closed_loss_sum_exact": -5942.824905352783,
+      "closed_losses_estimated": 13,
+      "closed_losses_exact": 4890,
+      "closed_pnl_estimated": -15.574051382972488,
+      "closed_pnl_exact": -5915.607973813168,
+      "closed_profit_sum_estimated": 0.0,
+      "closed_profit_sum_exact": 27.216931539615516,
+      "closed_trades": 4903,
+      "closed_wins_estimated": 0,
+      "closed_wins_exact": 13,
+      "entry_attempts": 4934,
+      "estimated_trades": 13,
+      "fees_usd": 1301.0180310754522,
+      "funding_usd": 0.093224436719255,
+      "initial_capital": 20000,
+      "other_costs_usd": 2453.262469476997,
+      "wallets": {
+        "aster": 4692.7085447140025,
+        "hyperliquid": 1000.3344950295663,
+        "lighter": 4232.8314370601865,
+        "rh_lighter": 4142.9434980001
+      }
+    },
+    "standard": {
+      "aborted_trades": 14,
+      "capital_costs_usd": 0.16800192313277573,
+      "closed_loss_sum_estimated": -22.245261070094195,
+      "closed_loss_sum_exact": -5874.546522779238,
+      "closed_losses_estimated": 18,
+      "closed_losses_exact": 4805,
+      "closed_pnl_estimated": -22.245261070094195,
+      "closed_pnl_exact": -5845.4888094197795,
+      "closed_profit_sum_estimated": 0.0,
+      "closed_profit_sum_exact": 29.057713359458997,
+      "closed_trades": 4821,
+      "closed_wins_estimated": 0,
+      "closed_wins_exact": 16,
+      "entry_attempts": 4854,
+      "estimated_trades": 18,
+      "fees_usd": 1250.9455095090989,
+      "funding_usd": 0.1638204609290175,
+      "initial_capital": 20000,
+      "other_costs_usd": 2415.6888834659926,
+      "wallets": {
+        "aster": 4918.241516140147,
+        "hyperliquid": 1000.061420803494,
+        "lighter": 4138.942616135218,
+        "rh_lighter": 4073.977528483877
+      }
+    }
+  },
+  "stopped_positions": {
+    "1790697580055382-4707-premium": {
+      "status": "AWAITING_FUNDING",
+      "strategy": "premium",
+      "legs": [
+        {
+          "key": "hyperliquid:xyz:SILVER",
+          "side": "long",
+          "remaining": 0,
+          "entry_value": 997.694,
+          "fees_usd": 0.17963461349999998
+        },
+        {
+          "key": "aster:XAGUSDT",
+          "side": "short",
+          "remaining": 0,
+          "entry_value": 998.7599999999999,
+          "fees_usd": 0.24979249999999997
+        }
+      ]
+    },
+    "1790697591500585-4714-standard": {
+      "status": "AWAITING_FUNDING",
+      "strategy": "standard",
+      "legs": [
+        {
+          "key": "hyperliquid:xyz:SILVER",
+          "side": "long",
+          "remaining": 0,
+          "entry_value": 997.72486,
+          "fees_usd": 0.1795949577
+        },
+        {
+          "key": "aster:XAGUSDT",
+          "side": "short",
+          "remaining": 0,
+          "entry_value": 998.8066,
+          "fees_usd": 0.24972213750000005
+        }
+      ]
+    },
+    "1790737213289030-19989-convergence": {
+      "status": "AWAITING_FUNDING",
+      "strategy": "convergence",
+      "legs": [
+        {
+          "key": "aster:GRASSUSDT",
+          "side": "long",
+          "remaining": 0.0,
+          "entry_value": 994.5312,
+          "fees_usd": 0.79433184
+        },
+        {
+          "key": "hyperliquid:GRASS",
+          "side": "short",
+          "remaining": 0.0,
+          "entry_value": 0.0,
+          "fees_usd": 0.0
+        }
+      ]
+    },
+    "1790739361014119-20112-cooldown": {
+      "status": "EXITING",
+      "strategy": "cooldown",
+      "legs": [
+        {
+          "key": "hyperliquid:PONS",
+          "side": "long",
+          "remaining": 1861.0,
+          "entry_value": 996.36839,
+          "fees_usd": 0.4483657755
+        },
+        {
+          "key": "lighter:231",
+          "side": "short",
+          "remaining": 1861.0,
+          "entry_value": 998.25901,
+          "fees_usd": 0.0
+        }
+      ]
+    }
+  },
+  "capital_replenished": false,
+  "command": [
+    ".venv/bin/python",
+    "scripts/monitor.py",
+    "--no-tui",
+    "--holding-seconds",
+    "10",
+    "--take-profit-usd",
+    "0.10",
+    "--shadow-strategies"
+  ],
+  "new_pid": 3280600,
+  "launched_utc": "2026-09-30T03:36:13.329711+00:00"
+}

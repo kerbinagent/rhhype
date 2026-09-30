@@ -1,12 +1,14 @@
 # Active paper research operations
 
-Last updated: 2026-09-29 19:43 UTC. All processes below are paper simulation or
+Current process summary: 2026-09-30 03:37 UTC. All processes below are paper simulation or
 public quote observation. No private keys or real orders are involved.
 
 | Process | PID | Output | Expected end |
 |---|---:|---|---|
-| Production collector, original ledgers, 10s/10-cent exit | 1922387 | data/paper-monitor → paper-monitor-10s | Continuous |
-| Scheduled audit capture, 1,200s cadence | 1749934 | data/strategy-reviews | Continuous |
+| Production collector, original ledgers, 10s/10-cent exit | 3280600 | data/paper-monitor → paper-monitor-10s | Continuous |
+| Scheduled audit capture, 1,200s cadence | 2765645 | data/strategy-reviews | Continuous |
+| Passive-exit v1 public capture, restarted | 3045038 | data/raw/rh-passive-exit-v1/20260930T0252Z | Approximately 03:42:58 UTC |
+| One-shot strict replay supervisor | 3161224 | reports/rh-passive-exit-v1-restart/supervisor | One bounded replay after final manifest |
 | Legacy horizon v1, depth | stopped | data/horizon-research | Ended 18:14 UTC |
 | Legacy horizon v1, BBO | stopped | data/horizon-research-bbo | Ended 18:23:39 UTC |
 | Horizon v2, BBO, four frozen models | stopped | data/horizon-research-v2-bbo | Ended 18:45:22 UTC |
@@ -22,10 +24,38 @@ report is [flawed-pilot-final.md](../reports/feed-experiment/flawed-pilot-final.
 
 ## Next review and interpretation
 
-The automatic loop captured the 19:06:33 and 19:26:33 scheduled reviews; the active agent reviewed them late at 19:34 UTC. **Next: 19:46:33 UTC**.
+Review 34 was actively read at 03:26:33 UTC. **Next: 03:46:33 UTC**.
 Read `data/strategy-reviews/latest.json`; do not also run a one-shot capture
 against that output, because it advances the same baseline. The scheduler
 collects evidence; the active agent researches and evaluates changes.
+
+The corrected passive replay is separately frozen at 03:18:43 UTC and must
+be launched only after capture stops, with the wrapper's separate corrected
+output directory. The supervisor launches strict v1 only. Versioned TUI
+accounting was deployed at 03:36:13 UTC; existing viewers need a fresh
+`scripts/monitor.py --watch` invocation to load the layout. Later sections
+below are a chronological operations journal; their older PIDs and deadlines
+are historical.
+
+### Versioned P&L rollout, 03:36 UTC
+
+Commit `6fa0f4e` passed 42 targeted tests and independent accounting review.
+The old collector exited gracefully after its final checkpoint; new collector
+3280600 resumed the same database, ten-second exit request, $0.10 target and
+shadow strategies. Reviewer2765645 and the separate capture/supervisor stayed
+running. No wallet was replenished. The cutover's legacy ledger matches the
+stopped checkpoint exactly. Three old funding-pending positions retained their
+legacy origin; the fourth old position closed after restart and was excluded
+from current-version results. All four feeds reconnected.
+
+Current version **e3e83cda71a6**, epoch **b8204da0453a4e8a940d3d1b3c33714e**,
+began **03:36:13.545437 UTC**. At the first verification, cooldown had two new
+settled losses totaling −$1.986147; all other current totals were zero. This
+starts measurement at rollout and does not erase or reclassify earlier losses.
+All 20 frozen passive-replay source hashes still match. See
+`reports/paper-strategy-epoch-review/rollout.json`, `rollout-verification.json`
+and `LIVE-80x24.txt`. The already running viewer retains its loaded old layout;
+Ctrl-C and `.venv/bin/python scripts/monitor.py --watch` loads the new one.
 
 Production keeps targeted REST and depth feeds. The two source pilots disable
 REST identically to isolate transport behavior; neither represents the full

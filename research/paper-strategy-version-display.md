@@ -1,15 +1,16 @@
 # Paper results for the current strategy version
 
-The next planned collector rollout starts version attribution in the existing
-paper database. This first epoch begins at rollout, even when strategy sources
+The collector rollout at **2026-09-30 03:36:13 UTC** started version attribution
+in the existing paper database (commit `6fa0f4e`, collector3280600). This first epoch begins at rollout, even when strategy sources
 are unchanged. It does not reconstruct a historical strategy inception date.
 All existing positions become legacy carryover, including pending entries,
 partial exits, and unresolved funding. Their later settlements are excluded
 from the new epoch's P&L, counts, wins, and closed-trade fees.
 
-The current collector and viewer must be restarted at that planned rollout to
-load this code. A viewer already running retains its imported old layout.
-Preparing or previewing this change does not itself restart either process.
+The collector was checkpointed and restarted; the reviewer and experiment
+capture stayed running. A viewer already running retains its imported old
+layout and needs a new `.venv/bin/python scripts/monitor.py --watch` invocation.
+The offline previews and rehearsals did not write to the live database.
 
 Version identity hashes execution config, explicit market/fee/transport
 selection, and `paper_engine.py`, `paper_strategies.py`, and `paper_funding.py`.

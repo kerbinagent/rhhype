@@ -1,0 +1,200 @@
+{
+  "checked_at": 1790739410.5282247,
+  "collector_status": "running",
+  "snapshot_age_seconds": 0.48334455490112305,
+  "version": "e3e83cda71a6",
+  "epoch_id": "b8204da0453a4e8a940d3d1b3c33714e",
+  "started_utc": "2026-09-30T03:36:13.545437+00:00",
+  "legacy_ledger_cutover_matches_stopped_state": true,
+  "prior_position_origins": {
+    "1790697580055382-4707-premium": {
+      "status": "AWAITING_FUNDING",
+      "epoch": "legacy"
+    },
+    "1790697591500585-4714-standard": {
+      "status": "AWAITING_FUNDING",
+      "epoch": "legacy"
+    },
+    "1790737213289030-19989-convergence": {
+      "status": "AWAITING_FUNDING",
+      "epoch": "legacy"
+    },
+    "1790739361014119-20112-cooldown": {
+      "status": "CLOSED",
+      "epoch": "legacy"
+    }
+  },
+  "current_strategies": {
+    "confirmed": {
+      "closed_trades": 0,
+      "estimated_trades": 0,
+      "closed_wins": 0,
+      "closed_losses": 0,
+      "closed_pnl_exact": 0,
+      "closed_pnl_estimated": 0,
+      "closed_net_usd": 0,
+      "fees_usd": 0,
+      "funding_usd": 0,
+      "other_costs_usd": 0,
+      "capital_costs_usd": 0,
+      "closed_winning_sum_usd": 0,
+      "closed_losing_sum_usd": 0,
+      "open_liquidation_pnl": 0,
+      "open_positions": 0,
+      "pending_funding": 0
+    },
+    "conservative": {
+      "closed_trades": 0,
+      "estimated_trades": 0,
+      "closed_wins": 0,
+      "closed_losses": 0,
+      "closed_pnl_exact": 0,
+      "closed_pnl_estimated": 0,
+      "closed_net_usd": 0,
+      "fees_usd": 0,
+      "funding_usd": 0,
+      "other_costs_usd": 0,
+      "capital_costs_usd": 0,
+      "closed_winning_sum_usd": 0,
+      "closed_losing_sum_usd": 0,
+      "open_liquidation_pnl": 0,
+      "open_positions": 0,
+      "pending_funding": 0
+    },
+    "convergence": {
+      "closed_trades": 0,
+      "estimated_trades": 0,
+      "closed_wins": 0,
+      "closed_losses": 0,
+      "closed_pnl_exact": 0,
+      "closed_pnl_estimated": 0,
+      "closed_net_usd": 0,
+      "fees_usd": 0,
+      "funding_usd": 0,
+      "other_costs_usd": 0,
+      "capital_costs_usd": 0,
+      "closed_winning_sum_usd": 0,
+      "closed_losing_sum_usd": 0,
+      "open_liquidation_pnl": 0,
+      "open_positions": 0,
+      "pending_funding": 0
+    },
+    "cooldown": {
+      "closed_trades": 2,
+      "estimated_trades": 0,
+      "closed_wins": 0,
+      "closed_losses": 2,
+      "closed_pnl_exact": -1.9861470048247098,
+      "closed_pnl_estimated": 0,
+      "closed_net_usd": -1.9861470048247098,
+      "fees_usd": 0.35916716159999995,
+      "funding_usd": 0.0,
+      "other_costs_usd": 0.9987359265,
+      "capital_costs_usd": 7.391672464153662e-05,
+      "closed_winning_sum_usd": 0,
+      "closed_losing_sum_usd": -1.9861470048247098,
+      "open_liquidation_pnl": 0,
+      "open_positions": 0,
+      "pending_funding": 0
+    },
+    "plus": {
+      "closed_trades": 0,
+      "estimated_trades": 0,
+      "closed_wins": 0,
+      "closed_losses": 0,
+      "closed_pnl_exact": 0,
+      "closed_pnl_estimated": 0,
+      "closed_net_usd": 0,
+      "fees_usd": 0,
+      "funding_usd": 0,
+      "other_costs_usd": 0,
+      "capital_costs_usd": 0,
+      "closed_winning_sum_usd": 0,
+      "closed_losing_sum_usd": 0,
+      "open_liquidation_pnl": 0,
+      "open_positions": 0,
+      "pending_funding": 0
+    },
+    "premium": {
+      "closed_trades": 0,
+      "estimated_trades": 0,
+      "closed_wins": 0,
+      "closed_losses": 0,
+      "closed_pnl_exact": 0,
+      "closed_pnl_estimated": 0,
+      "closed_net_usd": 0,
+      "fees_usd": 0,
+      "funding_usd": 0,
+      "other_costs_usd": 0,
+      "capital_costs_usd": 0,
+      "closed_winning_sum_usd": 0,
+      "closed_losing_sum_usd": 0,
+      "open_liquidation_pnl": 0,
+      "open_positions": 0,
+      "pending_funding": 0
+    },
+    "shadow_baseline": {
+      "closed_trades": 0,
+      "estimated_trades": 0,
+      "closed_wins": 0,
+      "closed_losses": 0,
+      "closed_pnl_exact": 0,
+      "closed_pnl_estimated": 0,
+      "closed_net_usd": 0,
+      "fees_usd": 0,
+      "funding_usd": 0,
+      "other_costs_usd": 0,
+      "capital_costs_usd": 0,
+      "closed_winning_sum_usd": 0,
+      "closed_losing_sum_usd": 0,
+      "open_liquidation_pnl": 0,
+      "open_positions": 0,
+      "pending_funding": 0
+    },
+    "standard": {
+      "closed_trades": 0,
+      "estimated_trades": 0,
+      "closed_wins": 0,
+      "closed_losses": 0,
+      "closed_pnl_exact": 0,
+      "closed_pnl_estimated": 0,
+      "closed_net_usd": 0,
+      "fees_usd": 0,
+      "funding_usd": 0,
+      "other_costs_usd": 0,
+      "capital_costs_usd": 0,
+      "closed_winning_sum_usd": 0,
+      "closed_losing_sum_usd": 0,
+      "open_liquidation_pnl": 0,
+      "open_positions": 0,
+      "pending_funding": 0
+    }
+  },
+  "carryover": {
+    "active_positions": 0,
+    "pending_entries": 0,
+    "pending_funding": 3,
+    "reserved_usd": 6005.5599999999995,
+    "remaining_quantity_by_market": {}
+  },
+  "feeds": {
+    "hyperliquid": {
+      "connected": true,
+      "status": null
+    },
+    "aster": {
+      "connected": true,
+      "status": null
+    },
+    "lighter": {
+      "connected": true,
+      "status": null
+    },
+    "rh_lighter": {
+      "connected": true,
+      "status": null
+    }
+  },
+  "frozen_20_source_hashes_unchanged": true,
+  "state_bytes": 1374979
+}

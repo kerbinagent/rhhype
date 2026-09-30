@@ -1,0 +1,23 @@
+RHHYPE PAPER | RUNNING | update 2s | Ctrl-C exits
+Version e3e83cda71a6 | Epoch b8204da0 | since 2026-09-30 03:36Z
+Current version only: T/W/E   Net incl.stress Fees Stress Open Pos Pen
+Standard       0/0/0           +0.00   +0.00   +0.00     +0.00   0   0
+Plus           0/0/0           +0.00   +0.00   +0.00     +0.00   0   0
+Premium        0/0/0           +0.00   +0.00   +0.00     +0.00   0   0
+Shadow base    0/0/0           +0.00   +0.00   +0.00     +0.00   0   0
+Cooldown       3/0/0           -2.92   +0.54   +1.50     -3.56   2   0
+Convergence    0/0/0           +0.00   +0.00   +0.00     +0.00   0   0
+Conservative   0/0/0           +0.00   +0.00   +0.00     +0.00   0   0
+Confirmed      0/0/0           +0.00   +0.00   +0.00     +0.00   0   0
+Stress allowance 5 bp; Fees exchange model; T/W/E=closed/wins/estimated
+Carryover, older versions: 0 active, 0 entry, 3 funding pending; P&L excluded.
+Sum cash/free (all): Std +14.1k/? Plu +13.5k/+13.5k Prm +11.7k/?
+Sum cash/free (all): Base +14.1k/+14.1k Cool +17.1k/+13.1k Conv +19.6k/?
+Sum cash/free (all): Cons +20.0k/+20.0k Conf +20.0k/+20.0k
+Feeds: HL up Aster up Lighter up RH up | CPU 56% lag 7ms
+Signals: edge NOT trade P&L | all-version cash/free sums not pooled
+ 1 LIT       standard Edge    +41.45   |  6 GRASS     plus     Edge    +11.54
+ 2 LIT       plus     Edge    +41.35   |  7 LIT       standard Edge    +11.32
+ 3 LIT       premium  Edge    +40.92   |  8 LIT       plus     Edge    +11.23
+ 4 GRASS     standard Edge    +11.54   |  9 CASHCAT   standard Edge    +10.76
+ 5 GRASS     premium  Edge    +11.54   | 10 CASHCAT   plus     Edge    +10.66
