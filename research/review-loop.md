@@ -1158,3 +1158,17 @@ three flat funding-pending records at the scheduled snapshot. Next review
 **05:26:33 UTC**. The completed fixed-anchor RH-maker diagnostic found no
 positive stressed static margin; reverse-route derived bounds are under
 review. No new raw capture, promotion or capital reset.
+
+### Interim inspection: correlated LIT rescue gains, 05:23 UTC
+
+A read-only, bounded query found five current-version positive records, all
+settled around 05:22:05 UTC and all `entry_failure` exits. The
+[preserved records](../reports/live-review-catchup/current-version-positive-trades-20260930T0523Z.json)
+show HL rejecting every long leg at its price limit; the Core or RH short
+then gained before emergency buyback. Cooldown and conservative each show
++$2.319771 on identical Core fills; convergence shows +$3.317596 on Core
+and +$2.709510 on RH; Premium shows +$2.297271 on RH after its fees.
+These are correlated views of one market episode, not five independent
+successes or paired arbitrage cycles. Their gains remain in each original
+strategy ledger alongside all failed-hedge losses. They do not satisfy the
+research success threshold or justify intentionally taking unhedged risk.
