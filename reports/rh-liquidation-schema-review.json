@@ -1,0 +1,75 @@
+{
+  "status": "complete_classification_only",
+  "script_sha256": "ca0040178c778bd142f50acd7ced86f8be4666af8d9379672e2a84a18bce947e",
+  "economic_calculations": false,
+  "maker_eligibility_inferred": false,
+  "archives": [
+    {
+      "archive": "1939Z",
+      "records": 64081,
+      "decoded_bytes": 53444993,
+      "gzip_eof": true,
+      "counts": {
+        "subscribed/trade:frames": 2,
+        "subscribed/trade:ordinary_rows": 100,
+        "subscribed/trade:liquidation_rows": 62,
+        "update/trade:frames": 432,
+        "update/trade:ordinary_rows": 602,
+        "update/trade:liquidation_rows": 0
+      },
+      "unique_liquidation_ids": 62,
+      "groups": [
+        {
+          "asset": "BTC",
+          "message_stage": "subscribed/trade",
+          "trade_type": "liquidation",
+          "rows": 32,
+          "duplicate_global_identity": 0,
+          "source_before_capture_start": 32,
+          "source_after_receipt": 0,
+          "ask_id_nonzero": 32,
+          "bid_id_nonzero": 32
+        },
+        {
+          "asset": "ETH",
+          "message_stage": "subscribed/trade",
+          "trade_type": "liquidation",
+          "rows": 30,
+          "duplicate_global_identity": 0,
+          "source_before_capture_start": 30,
+          "source_after_receipt": 0,
+          "ask_id_nonzero": 30,
+          "bid_id_nonzero": 30
+        }
+      ]
+    },
+    {
+      "archive": "2022Z",
+      "records": 10619,
+      "decoded_bytes": 8060709,
+      "gzip_eof": true,
+      "counts": {
+        "subscribed/trade:frames": 2,
+        "subscribed/trade:ordinary_rows": 100,
+        "subscribed/trade:liquidation_rows": 3,
+        "update/trade:frames": 85,
+        "update/trade:ordinary_rows": 105,
+        "update/trade:liquidation_rows": 0
+      },
+      "unique_liquidation_ids": 3,
+      "groups": [
+        {
+          "asset": "XAG",
+          "message_stage": "subscribed/trade",
+          "trade_type": "liquidation",
+          "rows": 3,
+          "duplicate_global_identity": 0,
+          "source_before_capture_start": 3,
+          "source_after_receipt": 0,
+          "ask_id_nonzero": 3,
+          "bid_id_nonzero": 3
+        }
+      ]
+    }
+  ]
+}

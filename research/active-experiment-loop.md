@@ -763,3 +763,14 @@ slippage cannot explain this interval's loss. Four feeds connected, same
 version and capital history; later snapshot flat, three legacy funding
 obligations retained. Next review 10:46:33 UTC. Completed route and funding
 checks provide no supported successor experiment; no capture or policy change.
+
+### Liquidation counter scope resolved, 10:38 UTC
+
+Primary-source review left public RH liquidation eligibility unresolved.
+The old counter also included subscription history. A separate classifier
+frozen in `b6e5d30` completed one non-economic pass over each old archive:
+all 65 liquidation rows were subscription history predating capture; zero
+live liquidation updates. No new flow enters the old ten-second windows.
+[Scope review](rh-liquidation-flow-review.md). Old fill exclusions remain;
+no successor replay/capture. Shared reservation 32,742,904/33,000,000 bytes,
+all prior allocations retained. Next production review 10:46:33 UTC.
