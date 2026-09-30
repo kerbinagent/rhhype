@@ -1,0 +1,28 @@
+{
+  "schema": "core-rh-delayed-taker-allocation-v1",
+  "recorded_utc": "2026-09-30T08:49:21.701937+00:00",
+  "previous_allocation": "reports/experiment-storage/rh-spread-regime-sentinel-compact-allocation-v1.json",
+  "previous_allocation_sha256": "1150f012c7fc21c693765a7152faa5cd1d234fb4b0e30703038d9bc7bc0677c6",
+  "previous_projected_maximum_bytes": 32110904,
+  "new_study_maximum_bytes": 600000,
+  "projected_maximum_bytes": 32710904,
+  "shared_allowance_bytes": 33000000,
+  "headroom_bytes": 289096,
+  "existing_total_reservation_bytes": 820000000,
+  "previous_sentinel_allocations_retained_in_full_bytes": 1000000,
+  "new_network_requests": 0,
+  "new_raw_archives": 0,
+  "canonical_traversals_per_existing_archive_max": 1,
+  "existing_archives": [
+    "data/raw/maker-capture/20260929T1939Z",
+    "data/raw/maker-capture/20260929T2022Z"
+  ],
+  "planned_candidate_rows": 1008,
+  "holding_seconds": 10,
+  "entry_and_exit_quote_due_seconds": "0.5",
+  "entry_and_exit_hard_deadline_seconds": "2",
+  "hard_wall_seconds": 900,
+  "automatic_retry": false,
+  "authorization": "method_only; implementation requires root and peer method acceptance; archive traversal requires reviewed frozen implementation and separate root launch",
+  "notes": "Includes all new source, tests, method, provenance, compressed output, audit, reports and logs within 600000 bytes. No historical failure or allocation is released. Historical unknown order limits/funding remain unknown. This allocation does not authorize any raw data traversal."
+}

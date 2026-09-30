@@ -1515,3 +1515,41 @@ The compact sentinel is still collecting until its fixed 08:32:57 UTC endpoint;
 no economic results have been inspected. The independent auditor passed five
 synthetic tests, including deliberate arithmetic, timestamp and block-gate
 corruption. No production policy change or capital reset.
+
+## Review 50: 2026-09-30 08:46:33 UTC
+
+Archived exact daemon output in `reports/live-review-catchup/review-20260930T084633Z.json`;
+all completion and aborted coverage is complete. Cooldown: **70 exact closes,
+−$80.1627**, comprising 69 paired −$76.9705 and one failed hedge −$3.1922.
+Premium: **21 exact, −$34.8332**, comprising 19 paired −$31.8230 and two
+failed hedges −$3.0102, plus one zero-fill abort. Convergence: **three exact
+failed hedges, −$3.3530**, plus two zero-fill aborts. No new wins; others have
+no new completions. Rejections: convergence five HL, one Core and one RH
+price-limit; Premium three HL price-limit and one RH notional-cap. These
+include aborted attempts and are not a count of completed trades.
+
+Cooldown fees $21.5643, stress $34.9516, capital $0.002465, funding zero;
+without stress it remains −$45.2111. Its 69 exit-price comparisons worsened
+$0.688700 (19 worse, 15 better, 35 unchanged), median zero and p95 adverse
+$0.160555. Request-to-flat median for 69 paired closes was 1.160 s, p95
+1.642 s. Premium's 19 comparisons improved $0.039807.
+
+The separate later current-version snapshot in
+`reports/live-review-catchup/current-epoch-at-review50.json` records cooldown
+749 exact plus two estimated completions, −$991.6763 (one win); Premium
+142/−$235.9299 (one win); convergence 54/−$46.0574 (three wins); conservative
+1/+$2.3198. Version `e3e83cda71a6`, epoch and win counts are unchanged.
+The review snapshot is flat; the later epoch snapshot has one cooldown
+position open. Three legacy funding obligations remain outside epoch totals.
+The different read times are retained, not reconciled by discarding closes.
+
+Health: four connected feeds, 108 pairs, CPU 60.73% of one core, p95 loop lag
+9.06 ms, RSS 253.82 MiB, 880.5 books/s. Metadata age 595.6 s, following its
+normal refresh. Host process checks confirm the same collector 3280600 and
+reviewer 2765645; no restart or capital reset. Next review **09:06:33 UTC**.
+
+The sentinel ended with no passing asset. Offline review rejects fitting
+another RH/HL flow/ECM model on the existing negative quote grid. A distinct
+RH/Core delayed-taker quote feasibility method is being reviewed against
+retained seven-minute archives and historical metadata gaps; no scan,
+implementation, capture or production policy change has been authorized.

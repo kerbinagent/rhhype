@@ -611,3 +611,32 @@ and confirmation policies. Existing agents may inspect small code/method/
 readout files only; no new capture, raw-archive scan, policy implementation,
 threshold change or source modification is authorized by that review.
 Next production checkpoint remains 08:46:33 UTC.
+
+### Production review 50 and bounded method proposal, 08:48 UTC
+
+Cooldown 70 closes/−$80.1627 (69 paired, one failed hedge); Premium 21/−$34.8332
+(19 paired, two failed hedges, plus one abort); convergence three failed
+hedges/−$3.3530 plus two aborts. No new wins, complete retained coverage,
+same collector/reviewer processes and strategy epoch. Next review 09:06:33 UTC.
+
+The proposed new question is delayed **Core↔RH all-taker quote feasibility**,
+using two existing 420-second archives only. Prior Core comparisons assume
+RH maker entry at the anchor and maker exit at a later quote; replacing
+those fills with takers at unchanged timestamps only worsens their negative
+stressed results. A first eligible delayed entry followed by a ten-second
+hold is not covered by that bound. The difference establishes a missing
+test, not evidence of return or permission for fresh capture.
+
+Method drafting and independent review only are authorized. Proposed scope:
+1,008 fixed candidates, four original assets/sizes and both directions;
+500 ms entry/exit quote delay with 2 s deadlines, unchanged quantity, costs and
+stale/gap/tail denominators. Historical crypto rule gaps and funding remain
+unknown; paired quote timing is not private execution. No renamed ECM or
+flow fitting proceeds on the existing uniformly negative RH/HL outcomes.
+
+The separately recorded 600,000-byte allocation includes all new method,
+source/tests, provenance, outputs, audit and failures. Shared projected
+maximum 32,710,904 of 33,000,000 bytes leaves 289,096; total 820 MB reservation and
+all earlier study/failure reservations remain. No archive traversal or
+implementation is authorized until the method and resource bounds pass
+root and peer review.
