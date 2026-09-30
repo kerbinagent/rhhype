@@ -1,0 +1,10 @@
+{
+  "observed_at": "2026-09-30T02:52:37.911077+00:00",
+  "status": "interrupted_no_final_manifest",
+  "original_pid": 2953071,
+  "raw_bytes": 22966216,
+  "raw_sha256": "4372474a45847f6c3fafea2133cabcb8b45aad3b1b85a51341131fb3166d1fcc",
+  "valid_completed_holdout": false,
+  "cause": "collector disappeared following user interruption; no terminal manifest; exact final event time not yet recovered",
+  "action": "preserve raw and restart complete frozen study; do not splice captures"
+}

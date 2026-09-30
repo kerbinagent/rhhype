@@ -1,0 +1,12 @@
+{
+  "name": "rh_order_book_details",
+  "method": "GET",
+  "url": "https://api.rh.lighter.xyz/api/v1/orderBookDetails",
+  "json_body": null,
+  "request_started_utc_ns": 1790736724594865246,
+  "response_completed_utc_ns": 1790736724674191200,
+  "status": 200,
+  "raw_file": "rh_order_book_details.json",
+  "raw_bytes": 98482,
+  "sha256": "ca09273d1299eb3e7b409d2bb9573f9985ac7f4d79bb35a099b60e34406aaad5"
+}
