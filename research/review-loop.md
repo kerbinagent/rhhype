@@ -1440,3 +1440,46 @@ The spread-regime prerequisite watch is still in final implementation review;
 no metadata or quote connection has started. Twelve focused fixtures passed
 independent review; final source/cap checks precede commit and collection.
 No capital reset or production strategy change.
+
+
+## Review 48: 2026-09-30 08:06:33 UTC
+
+Archived in `reports/live-review-catchup/review-20260930T080633Z.json`;
+all completion and aborted coverage is complete. Cooldown: **44 exact paired
+completions, −$46.8586**, zero wins. Premium: **six exact, −$9.2912**,
+comprising three paired −$5.4013 and three failed hedges −$3.8899, zero wins.
+Convergence: **four exact failed hedges, −$2.8037**, one win. Recorded
+HL price-limit rejections: four convergence, three Premium. Others have no
+new completions. Portfolios remain separate.
+
+The new convergence win is preserved in
+`reports/live-review-catchup/review48-positive-failed-hedge.json`: CASHCAT,
+ID `1790755022065217-20874-convergence`, Core partial short 1,119.2 units,
+entry $195.177288 and rescue buyback $195.032405. Gross $0.144883 minus
+$0.097588644 stress and $0.0000003583 capital yields **+$0.047294**; fees
+and funding are zero. HL rejected its long hedge and filled zero. This is
+unhedged rescue profit, not a paired cycle, and does not establish a
+profitable arbitrage policy. Unlike the earlier five winning records from
+one LIT episode, this is a new, separately identified CASHCAT episode.
+
+Cooldown fees $10.0281, stress $21.9717, capital $0.001576, funding zero;
+without stress it remains −$24.8869. Its 43 observed exit-price comparisons
+worsened $0.396818 (14 worse, ten better, 19 unchanged; one missing request
+price), median zero and p95 adverse $0.096200. For 44 paired closes,
+request-to-flat median was 1.165 s, p95 1.765 s. Premium's two observed
+comparisons improved $0.152796, with one request price missing.
+
+The separate later current-version snapshot in
+`reports/live-review-catchup/current-epoch-at-review48.json` records cooldown
+630 exact plus two estimated completions, −$852.6047 (one win); Premium
+105/−$174.1868 (one win); convergence 48/−$37.6975 (three wins); conservative
+1/+$2.3198. Version `e3e83cda71a6` is unchanged. The review snapshot is flat;
+the later epoch snapshot has one cooldown position open. Three legacy funding
+obligations remain outside current-version totals.
+
+Health: four connected feeds, 108 pairs, CPU 57.20% of one core, p95 loop lag
+9.79 ms, RSS 249.39 MiB, 764.2 books/s. Next review **08:26:33 UTC**.
+The original sentinel failed its 80 KB admission guard before any quote
+connection. All 1,680 uncollected rows remain, and a separate compact-source
+wrapper is in offline implementation review. No new network request, policy
+change, capital reset or claim of paired profitability.
