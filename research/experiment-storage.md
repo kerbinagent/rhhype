@@ -58,3 +58,22 @@ reviewing which evidence must remain reproducible. The current experiment
 and both scheduled replays retain their inputs. Total workspace usage at
 this check was about 661 MiB under data and 31 MiB under reports, including
 the separate production database and older derived archives.
+
+## Fixed amendment adopted after the 03:58 replay readouts
+
+The [retention reconciliation](experiment-storage-reconciliation-20260930.md)
+established that preserving the required raw evidence cannot meet the old
+four-archive planning target. The [adopted amendment](../reports/experiment-storage/adoption-20260930T0409Z.json)
+sets a fixed limit of **eight archives across the same six roots**, retaining
+the **512,000,000-byte** aggregate raw limit. All seven current archives stay.
+Exactly one future archive may be added, capped at **128,000,000 total bytes**
+including metadata and manifest, after its separate design, freeze and launch
+checks. Use `--max-retained-studies 8` for that preflight; the earlier
+four-target reports remain preserved as evidence of the overage.
+
+The base and plus200 exploratory ACK replays reuse existing raw data. Each
+has a 128 MB derived and 1 MB log cap, with no automatic extra scenarios. Full
+current, ACK and future maximum allocations require an 820 MB conservative
+disk reservation. This amendment changes no file's classification, deletes
+nothing, and does not launch a capture. A ninth raw archive requires another
+explicit reconciliation.

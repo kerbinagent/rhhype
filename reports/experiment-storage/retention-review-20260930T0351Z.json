@@ -1,0 +1,256 @@
+{
+  "archive_count_deficit": 3,
+  "budget": {
+    "max_retained_raw_studies": 4,
+    "max_total_apparent_bytes": 512000000,
+    "minimum_completed_age_seconds": 3600
+  },
+  "byte_headroom": 345026029,
+  "correction_freeze_sha256": "60223aa7c76fff1b993e3b132bd3eefffab1ee7cece3394d0ae9c0f7c00657eb",
+  "count_definition": "study directories containing regular nonempty frames.jsonl.gz",
+  "current": {
+    "raw_studies": 7,
+    "total_apparent_bytes": 166973971
+  },
+  "four_archive_target_met_without_required_evidence_loss": false,
+  "inventory_file": "reports/experiment-storage/inventory-20260930T0351Z.json",
+  "inventory_sha256": "b321a1c8ab04beada5a002b87120df86cb3722487f0e2457a2dd688d18432571",
+  "managed_roots": [
+    "rh-passive-exit-v1",
+    "rh-passive-exit-preflight",
+    "rh-small-maker",
+    "maker-capture",
+    "rh-maker-symmetric-v1",
+    "passive-three-venue"
+  ],
+  "mode": "read_only_proposal_no_deletions",
+  "notes": [
+    "Older maker manifests omit frames_sha256; planner gate failure does not mean capture failure.",
+    "Both older input hashes match the published quote-flow summary.",
+    "Production, reports, and derived outputs are outside this managed-raw byte total.",
+    "No paths were moved, renamed, excluded, or redefined to make the count appear compliant."
+  ],
+  "observed_at_utc": "2026-09-30T03:54:50.416040+00:00",
+  "observed_replay_status_files": {
+    "reports/rh-passive-exit-v1-restart/corrected-supervisor/status.json": {
+      "sha256": "f2be63749b9b8eb8442298401db9353c5119750c73ccf3ad9d4c70d8db5cd952",
+      "state": "replay_running"
+    },
+    "reports/rh-passive-exit-v1-restart/supervisor/status.json": {
+      "sha256": "a2889467ae660ae548f262c13490dfd7d9e2bb3dd88866fdd92c0edc6a54eea0",
+      "state": "replaying"
+    }
+  },
+  "operational_hold_studies": [
+    "rh-passive-exit-v1/20260930T0252Z",
+    "rh-passive-exit-v1/20260930T0227Z"
+  ],
+  "policy_candidate": {
+    "authorization_to_delete": false,
+    "classification": "30-second connectivity preflight; not calibration, holdout or economic evidence",
+    "condition": "Separate owner review must decide connectivity raw is no longer required; retain manifest, metadata, protocol/source records and preflight report.",
+    "preflight_report": "reports/rh-passive-exit-v1/preflight.json",
+    "preflight_report_sha256": "ae766ed4ad48bb2dcfb46f58d064cf29238658bcac6d901e19b70a028dd961bc",
+    "raw_and_manifest_hashes_match_diagnostic_report": true,
+    "raw_file": "data/raw/rh-passive-exit-preflight/20260930T0222Z/frames.jsonl.gz",
+    "reclaimable_bytes": 603977
+  },
+  "projected_after_only_policy_candidate": {
+    "raw_studies": 6,
+    "total_apparent_bytes": 166369994
+  },
+  "protocol_sha256": "759d993195470beec0e6db5e2c94a7bb717c9203818b13d862a0639a99a7e0f3",
+  "recommendation": "Preserve all current raw evidence; do not launch another raw study until the count target is explicitly reconciled. Existing read-only research may continue.",
+  "required_historical_inputs": [
+    {
+      "evidence": [
+        "research/maker-roundtrip-prospective.md",
+        "reports/maker-roundtrip-v1/README.md",
+        "data/derived/maker-roundtrip-20260929T1939Z/summary.json",
+        "reports/rh-quote-distance-flow/REPORT.md",
+        "reports/rh-quote-distance-flow/summary.json",
+        "research/rh-hedge-venue-choice.md"
+      ],
+      "raw_bytes": 23644715,
+      "study": "maker-capture/20260929T1939Z"
+    },
+    {
+      "evidence": [
+        "research/maker-equity-results.md",
+        "reports/maker-equity-v2/results.md",
+        "data/derived/maker-equity-20260929T2022Z/summary.json",
+        "research/maker-book-archive.md",
+        "reports/maker-book-archive-v1/derived/manifest.json",
+        "reports/rh-quote-distance-flow/REPORT.md",
+        "reports/rh-quote-distance-flow/summary.json"
+      ],
+      "raw_bytes": 3755149,
+      "study": "maker-capture/20260929T2022Z"
+    }
+  ],
+  "rows": [
+    {
+      "end_reason": null,
+      "ended_utc": null,
+      "hard_links": 1,
+      "manifest_claimed_raw_sha256": null,
+      "manifest_raw_hash_match": null,
+      "manifest_schema": null,
+      "manifest_sha256": null,
+      "mtime_utc": "2026-09-30T02:48:00.458140+00:00",
+      "planner_candidate": false,
+      "planner_exclusion_reasons": [
+        "active_or_incomplete_manifest"
+      ],
+      "quoted_flow_summary_raw_hash_match": null,
+      "quoted_flow_summary_raw_sha256": null,
+      "raw_bytes": 22966216,
+      "raw_file": "data/raw/rh-passive-exit-v1/20260930T0227Z/frames.jsonl.gz",
+      "raw_sha256": "4372474a45847f6c3fafea2133cabcb8b45aad3b1b85a51341131fb3166d1fcc",
+      "read_only": null,
+      "size_and_mtime_unchanged_during_hash": true,
+      "study": "rh-passive-exit-v1/20260930T0227Z",
+      "truncated": null
+    },
+    {
+      "end_reason": "duration_limit",
+      "ended_utc": "2026-09-30T03:42:58.061557+00:00",
+      "hard_links": 1,
+      "manifest_claimed_raw_sha256": "c92c269e3bc3bb345beeaf834ad55d0a97601339b4506e36a9397287f8407bb6",
+      "manifest_raw_hash_match": true,
+      "manifest_schema": "rh-maker-public-capture-v1",
+      "manifest_sha256": "5a9e61438df592d895d3cfc5d550241b01f0696fdbd5c83f46666d9ff1274250",
+      "mtime_utc": "2026-09-30T03:42:58.011378+00:00",
+      "planner_candidate": false,
+      "planner_exclusion_reasons": [
+        "recent_completion"
+      ],
+      "quoted_flow_summary_raw_hash_match": null,
+      "quoted_flow_summary_raw_sha256": null,
+      "raw_bytes": 48680716,
+      "raw_file": "data/raw/rh-passive-exit-v1/20260930T0252Z/frames.jsonl.gz",
+      "raw_sha256": "c92c269e3bc3bb345beeaf834ad55d0a97601339b4506e36a9397287f8407bb6",
+      "read_only": true,
+      "size_and_mtime_unchanged_during_hash": true,
+      "study": "rh-passive-exit-v1/20260930T0252Z",
+      "truncated": false
+    },
+    {
+      "end_reason": "duration_limit",
+      "ended_utc": "2026-09-30T02:21:47.376444+00:00",
+      "hard_links": 1,
+      "manifest_claimed_raw_sha256": "44f84f78a71211ae22f7173b03e1a89acc65740bf04c203ac696b1d9f4874bda",
+      "manifest_raw_hash_match": true,
+      "manifest_schema": "rh-maker-public-capture-v1",
+      "manifest_sha256": "1f40c42d6c1f5f061875311b2b32bb13fff1dc66eb1180fa30551832e298899f",
+      "mtime_utc": "2026-09-30T02:21:47.363385+00:00",
+      "planner_candidate": true,
+      "planner_exclusion_reasons": [],
+      "quoted_flow_summary_raw_hash_match": null,
+      "quoted_flow_summary_raw_sha256": null,
+      "raw_bytes": 603977,
+      "raw_file": "data/raw/rh-passive-exit-preflight/20260930T0222Z/frames.jsonl.gz",
+      "raw_sha256": "44f84f78a71211ae22f7173b03e1a89acc65740bf04c203ac696b1d9f4874bda",
+      "read_only": true,
+      "size_and_mtime_unchanged_during_hash": true,
+      "study": "rh-passive-exit-preflight/20260930T0222Z",
+      "truncated": false
+    },
+    {
+      "end_reason": "duration_limit",
+      "ended_utc": "2026-09-29T22:11:32.790024+00:00",
+      "hard_links": 1,
+      "manifest_claimed_raw_sha256": "07cf628056fda14b2d93553fdd1591ae842e260455d9bb47b249967f113c90fa",
+      "manifest_raw_hash_match": true,
+      "manifest_schema": "rh-maker-public-capture-v1",
+      "manifest_sha256": "a2e43c402d8fbe3c726360322615c2d02ccfb1dd4ffabdb777e1823a02211579",
+      "mtime_utc": "2026-09-29T22:11:32.745431+00:00",
+      "planner_candidate": false,
+      "planner_exclusion_reasons": [
+        "pinned_original_capture"
+      ],
+      "quoted_flow_summary_raw_hash_match": null,
+      "quoted_flow_summary_raw_sha256": null,
+      "raw_bytes": 41368405,
+      "raw_file": "data/raw/rh-small-maker/20260929T212132Z/frames.jsonl.gz",
+      "raw_sha256": "07cf628056fda14b2d93553fdd1591ae842e260455d9bb47b249967f113c90fa",
+      "read_only": true,
+      "size_and_mtime_unchanged_during_hash": true,
+      "study": "rh-small-maker/20260929T212132Z",
+      "truncated": false
+    },
+    {
+      "end_reason": "compressed_size_cap",
+      "ended_utc": "2026-09-29T18:29:56.440414+00:00",
+      "hard_links": 1,
+      "manifest_claimed_raw_sha256": null,
+      "manifest_raw_hash_match": null,
+      "manifest_schema": "maker-public-capture-v1",
+      "manifest_sha256": "3ad9707c06dc5923e7731ac747f139ee6d1a9277ab05ca9b0be413b0f83458d1",
+      "mtime_utc": "2026-09-29T18:29:56.427583+00:00",
+      "planner_candidate": false,
+      "planner_exclusion_reasons": [
+        "active_or_incomplete_manifest",
+        "pinned_original_capture"
+      ],
+      "quoted_flow_summary_raw_hash_match": null,
+      "quoted_flow_summary_raw_sha256": null,
+      "raw_bytes": 24934135,
+      "raw_file": "data/raw/maker-capture/20260929T1823Z/frames.jsonl.gz",
+      "raw_sha256": "dd1693a4b248f14f7c2bbb111590df24d67acb6ea28f3a677ce4cc05e54a2bf7",
+      "read_only": true,
+      "size_and_mtime_unchanged_during_hash": true,
+      "study": "maker-capture/20260929T1823Z",
+      "truncated": true
+    },
+    {
+      "end_reason": "duration_limit",
+      "ended_utc": "2026-09-29T19:46:04.237401+00:00",
+      "hard_links": 1,
+      "manifest_claimed_raw_sha256": null,
+      "manifest_raw_hash_match": null,
+      "manifest_schema": "maker-public-capture-v1",
+      "manifest_sha256": "163f2ea666025b5661becb51fbe27a5050df3e8564d37aa2159143db87e5e351",
+      "mtime_utc": "2026-09-29T19:46:04.226164+00:00",
+      "planner_candidate": false,
+      "planner_exclusion_reasons": [
+        "active_or_incomplete_manifest"
+      ],
+      "quoted_flow_summary_raw_hash_match": true,
+      "quoted_flow_summary_raw_sha256": "5f6ade0523703efe0ecd40c17ead0782eccc3bf7f780ae17364d8c26fc56567d",
+      "raw_bytes": 23644715,
+      "raw_file": "data/raw/maker-capture/20260929T1939Z/frames.jsonl.gz",
+      "raw_sha256": "5f6ade0523703efe0ecd40c17ead0782eccc3bf7f780ae17364d8c26fc56567d",
+      "read_only": true,
+      "size_and_mtime_unchanged_during_hash": true,
+      "study": "maker-capture/20260929T1939Z",
+      "truncated": false
+    },
+    {
+      "end_reason": "duration_limit",
+      "ended_utc": "2026-09-29T20:29:56.818193+00:00",
+      "hard_links": 1,
+      "manifest_claimed_raw_sha256": null,
+      "manifest_raw_hash_match": null,
+      "manifest_schema": "maker-public-capture-v1",
+      "manifest_sha256": "a3f83c319f5e71938ffa9ae6ec170eb48b3024123147e554ee4c20296cade898",
+      "mtime_utc": "2026-09-29T20:29:56.808349+00:00",
+      "planner_candidate": false,
+      "planner_exclusion_reasons": [
+        "active_or_incomplete_manifest"
+      ],
+      "quoted_flow_summary_raw_hash_match": true,
+      "quoted_flow_summary_raw_sha256": "3a1ffe9e3578899df800bf8fceec7beda8fc82b136a6c00edc64a20a8316f775",
+      "raw_bytes": 3755149,
+      "raw_file": "data/raw/maker-capture/20260929T2022Z/frames.jsonl.gz",
+      "raw_sha256": "3a1ffe9e3578899df800bf8fceec7beda8fc82b136a6c00edc64a20a8316f775",
+      "read_only": true,
+      "size_and_mtime_unchanged_during_hash": true,
+      "study": "maker-capture/20260929T2022Z",
+      "truncated": false
+    }
+  ],
+  "schema": "experiment-storage-retention-review-v1",
+  "scope_changed": false,
+  "total_raw_frame_bytes": 165953313
+}

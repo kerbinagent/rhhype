@@ -1,0 +1,23 @@
+{
+  "schema": "experiment-storage-fixed-amendment-adoption-v1",
+  "adopted_utc": "2026-09-30T04:08:02.204769+00:00",
+  "proposal_sha256": "8df63800ab79f51b1f5cfaf493fec669c3da9ca2c184cae89ff909a97cf065a3",
+  "proposal": "reports/experiment-storage/fixed-eight-amendment-20260930T0351Z.json",
+  "raw_count_limit": 8,
+  "raw_byte_limit": 512000000,
+  "preserve_current_raw_archives": 7,
+  "maximum_additional_raw_archives": 1,
+  "next_archive_total_byte_limit": 128000000,
+  "maximum_exploratory_ACK_replays": 2,
+  "ACK_scenarios": [
+    "base",
+    "plus200"
+  ],
+  "replay_derived_limit_each": 128000000,
+  "log_limit_each": 1000000,
+  "automatic_count_or_scenario_increase": false,
+  "adoption_basis": "Expanded inventory demonstrated four-archive planning target conflicts with preserving required evidence; same roots and physical count retained. Both current replay readouts examined; 11 provisional closed contributions withheld. Separate future capture design/freeze/launch checks remain required.",
+  "completed_readout_commit": "7c7df4f",
+  "deleted_files": [],
+  "capture_launched_by_adoption": false
+}

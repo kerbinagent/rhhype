@@ -1,0 +1,96 @@
+{
+  "ack_budget_amended_at_utc": "2026-09-30T04:05:46.731862+00:00",
+  "adoption_status": "pending_root_review_of_fixed_ACK_budget_amendment",
+  "aggregate_raw_max_apparent_bytes": 512000000,
+  "capture_cap_semantics": {
+    "frame_only_alternative": "At most127000000 frame bytes and at most1000000 combined metadata+manifest bytes; reject preflight if overhead cannot fit.",
+    "implementation": "Subtract copied metadata from writer capacity, reserve manifest space, assert summed archive bytes <= configured max_bytes.",
+    "requirement": "128MB means complete archive: frames + copied metadata + manifest, not frames alone.",
+    "verified_total_archive_wrappers": [
+      "scripts/rh_maker_capture.py",
+      "scripts/passive_three_venue_capture.py"
+    ]
+  },
+  "capture_launched": false,
+  "current": {
+    "raw_studies": 7,
+    "total_apparent_bytes": 166973971
+  },
+  "deletion_authorized": false,
+  "derived_budgets_separate_from_raw": {
+    "ACK_additional_raw_studies": 0,
+    "ACK_raw_input": "data/raw/rh-passive-exit-v1/20260930T0252Z",
+    "all_current_ACK_and_future_log_caps_sum": 5000000,
+    "conservative_additional_disk_reservation_bytes": 820000000,
+    "conservative_unrounded_additional_disk_demand_bytes": 806000000,
+    "corrected_current_replay_max_bytes": 128000000,
+    "current_comparison_max_bytes": 33000000,
+    "current_replay_supervisor_log_caps_sum": 2000000,
+    "exploratory_ack_derived_caps_sum": 256000000,
+    "exploratory_ack_replays": [
+      {
+        "derived_max_bytes": 128000000,
+        "log_max_bytes": 1000000,
+        "scenario": "base"
+      },
+      {
+        "derived_max_bytes": 128000000,
+        "log_max_bytes": 1000000,
+        "scenario": "+200"
+      }
+    ],
+    "exploratory_ack_supervisor_log_caps_sum": 2000000,
+    "extra_ACK_scenarios_automatically_allowed": false,
+    "future_study_derived_proposed_max_bytes": 128000000,
+    "future_supervisor_log_proposed_cap": 1000000,
+    "maximum_exploratory_ack_replays": 2,
+    "reservation_note": "Counts full current+two ACK+future derived caps even though completed/partial outputs already exist;128MB new raw+673MB derived+5MB logs=806MB, rounded to820MB for metadata/control records. ACK allowance covers only base and+200; no additional scenarios or raw captures automatically follow.",
+    "strict_current_replay_max_bytes": 128000000,
+    "sum_full_current_and_future_derived_caps": 673000000
+  },
+  "eight_target_inventory": "reports/experiment-storage/inventory-eight-20260930T0351Z.json",
+  "eight_target_inventory_budgets_met_without_cleanup": true,
+  "eight_target_inventory_sha256": "847e29ade7ad1332d9078eefcc1896dfda4a0cefbb4222030a861ad320fc2d77",
+  "filesystem_available_bytes_at_ACK_amendment_check": 608484700160,
+  "filesystem_available_bytes_at_check": 608513835008,
+  "future_archive_max_total_bytes": 128000000,
+  "future_launch_gates": [
+    "Read and adjudicate both completed current replay outputs; root reports both completed negative. Separate future-study design remains required.",
+    "Freeze a separate future-only strategy/data protocol and exact markets/duration/output paths.",
+    "Recheck all six managed roots: exactly7 existing raw archives and no unaccounted active raw job.",
+    "Enforce complete future archive <=128MB, bounded derived/log/control artifacts, and adequate filesystem headroom.",
+    "One additional study only; after it, eight raw archives permit no further capture without a fresh explicit reconciliation."
+  ],
+  "managed_roots": [
+    "rh-passive-exit-v1",
+    "rh-passive-exit-preflight",
+    "rh-small-maker",
+    "maker-capture",
+    "rh-maker-symmetric-v1",
+    "passive-three-venue"
+  ],
+  "maximum_additional_raw_studies": 1,
+  "mode": "prospective_fixed_proposal_no_capture_no_deletion",
+  "notes": [
+    "The old four-target inventory remains evidence of the original overage.",
+    "Do not narrow roots, relabel directories, or exclude preflights/interruptions to make the count appear compliant.",
+    "Temporary corrected output replaces final output by rename, not an additional full duplicate result.",
+    "Two exploratory ACK replays reuse the completed raw archive; only the separate derived/log allowance changes, and no extra ACK scenarios are automatic."
+  ],
+  "observed_at_utc": "2026-09-30T04:00:47.114334+00:00",
+  "planned_disk_reservation_fits_current_available_space": true,
+  "preserve": "All seven existing raw archives, manifests, metadata, protocols, hashes, interrupted provenance, and derived evidence.",
+  "previous_four_target_is_workspace_planning_target_not_user_requirement": true,
+  "previous_four_target_met": false,
+  "projected_after_one_maximum_archive": {
+    "raw_studies": 8,
+    "total_apparent_bytes": 294973971
+  },
+  "projected_raw_byte_headroom": 217026029,
+  "proposed_count_increase_is_fixed_not_automatic": true,
+  "proposed_count_target": 8,
+  "retained_existing_archives": 7,
+  "schema": "experiment-storage-fixed-amendment-proposal-v1",
+  "scope_changed": false,
+  "supersedes_proposal_section_in": "research/experiment-storage-reconciliation-20260930.md (initial four-target retention-only draft)"
+}
