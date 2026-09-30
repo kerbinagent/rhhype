@@ -2672,3 +2672,48 @@ capital change. Next checkpoint **19:46:33 UTC**.
 
 Carry has all 81 due arrivals through 19:25, 99,636 sample bytes, zero overdue
 missing files, no terminal error and no interim economic evaluation.
+
+
+### Review 83 — 30 September 2026 19:46 UTC
+
+Exact report and separate epoch snapshot preserved; guarded manual archive
+1,743,962/16,777,216 bytes. Report SHA-256
+`bd62e8e0046153b2e58635591625288de170aad70581324b5c94711939bba20f`.
+All 46 closes exact and negative, zero aborts, complete coverage and no new
+winners. Four Hyperliquid price-limit entry rejections.
+
+- Cooldown: 41 closes/−$69.8016, comprising 40 paired/−$68.4666 and one
+  failed hedge/−$1.3350.
+- Premium: three closes/−$5.9674, comprising one paired/−$1.7245 and two
+  failed hedges/−$4.2429.
+- Convergence: two failed hedges/−$3.7105.
+
+Cooldown fees $18.8688, stress $20.4729, capital $0.0014295, funding zero;
+without stress −$49.3287. All forty paired exit comparisons present: 21
+better, fourteen worse, five unchanged, net improvement $1.249255; median
+−$0.006478, p95 adverse $0.155349. Paired request-to-flat median 1.192 s,
+p95 1.718 s; failed hedge has no paired metric. Premium's one paired exit
+comparison unchanged within floating-point precision. Improved aggregate
+exit prices did not make paired outcomes positive.
+
+Four feeds connected, 110 pairs following metadata refresh, CPU 57.59%, p95
+lag 10.12 ms, RSS 316.05 MiB, 882.0 books/s, metadata age 545.7 s. Review and
+later epoch snapshot have no open quantities. Three legacy funding obligations
+remain. Epoch: cooldown 1,965 exact plus six estimated/−$2,634.6359; Premium
+473/−$869.0018; convergence 265/−$312.2684; conservative two/−$1.7145;
+confirmed one/−$3.3006. Fifteen earlier winning records remain. Reviews 66–83
+have 853 closes: 850 losses and three failed-hedge rescue gains.
+
+The epoch snapshots are separate from the daemon's durable review boundaries.
+A bounded read-only transaction counted and fetched one close in each interval
+between the respective review boundary and snapshot timestamp (cap 128):
+review82 additionally includes GRAM `1790796395565213-22798-cooldown`, settled
+at 1790796409.0388002, −$1.557061205535128; review83 additionally includes
+CASHCAT `1790797605625508-22844-cooldown`, settled at 1790797619.3794296,
+−$3.110921761654128. Thus cooldown's epoch-snapshot change −$71.3554827804
+reconciles to review83 −$69.8016222242 plus the latter close minus the former.
+The completed review denominator remains 46.
+
+No policy or capital change. Next checkpoint **20:06:33 UTC**. Carry has all
+85 due arrivals through 19:45, 104,556 sample bytes, zero overdue missing files,
+no terminal error and no interim economic evaluation.
