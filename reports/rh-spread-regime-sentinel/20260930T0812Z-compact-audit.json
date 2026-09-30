@@ -1,0 +1,22 @@
+{
+  "archives": 6,
+  "auditor_sha256": "765491aa7437f0c4a5a0065a7caf7b64c8aaddd49f24338ba2ec618da65ae131",
+  "blocks": 336,
+  "economics_evaluated": true,
+  "groups": 84,
+  "input_dependencies": 8,
+  "limitations": [
+    "Sampled endpoint clocks/quotes are checked; intervening collector invalidations and source high-water updates cannot all be reconstructed because no intervening stream is retained.",
+    "U is an optimistic static budget excluding funding/credits; paired hedges, queue, fills, capital and conversion remain unknown."
+  ],
+  "missing_rows": 340,
+  "primary_candidates": [],
+  "publication_status": "completed",
+  "published_hashes_unchanged": true,
+  "rows": 1680,
+  "sample_references": 420,
+  "stage": "/home/harry/projects/research/rhhype/reports/rh-spread-regime-sentinel/20260930T0812Z-compact",
+  "stage_bytes": 337548,
+  "status": "passed",
+  "valid_rh_size_rows": 1340
+}

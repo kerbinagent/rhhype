@@ -7,20 +7,21 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 08:21 UTC
+## Current status, 30 September 2026 08:36 UTC
 
 The passive-exit replays and delayed taker diagnostic have completed without
 a qualifying positive result. The next prospective spread-regime prerequisite
 watch failed its pre-connection storage check after three successful metadata
 requests. No ticker connection or economic measurement occurred; all 1,680 rows
 are retained as uncollected. The original stage will not be retried. A separate
-resource-only compact wrapper passed offline and independent review; its one
-authorized fresh window runs from 08:12:57 to 08:32:57 UTC. Economic results
-remain unread until that endpoint. An independent derived-output auditor is
-being prepared on synthetic inputs. See the latest entry below and the
+resource-only compact wrapper completed its single 08:12:57–08:32:57 UTC
+window and passed independent output audit. All 21 assets failed its
+predeclared prerequisite: 1,340 valid and 340 stale rows, with every asset/size
+median negative. No full hedge-cost or execution study follows automatically.
+See the latest entry below and the
 [research map](README.md).
 Production reviews continue every twenty minutes, with the next due at
-08:26:33 UTC.
+08:46:33 UTC.
 
 ## Original experiment: RH passive exit v1
 
@@ -584,3 +585,29 @@ than re-running the selector; root independently reviewed those full responses
 before launch. It cannot reconstruct every intervening invalidation or source
 watermark from sampled tickers alone. No live economic data was read during
 implementation or test review.
+
+### Sentinel completed and rejected, 08:33 UTC
+
+The fixed endpoint was reached and all 420 references/1,680 rows published.
+The precommitted independent auditor ran once and passed; its author also
+reviewed the completed readout without rerunning it. There are 1,340 valid and
+340 stale size rows (335 valid/85 stale asset references). Every one of 84 observed
+asset/size medians and 336 block medians is negative. Thirteen of 21 assets meet
+primary coverage, but none meets the economic gate. Only NEAR slots 4/5 and
+LIT slot 10 at $1,000 have positive U; these are optimistic budget surpluses,
+not fills or profits, and cannot motivate selecting a different threshold.
+
+The [separate analysis](../reports/rh-spread-regime-sentinel/20260930T0812Z-compact-analysis.md)
+retains the original failure, all exclusions, quote/queue/funding uncertainty,
+source/resource identities and close code 1006. No recorded pre-endpoint stop
+is not proof of uninterrupted coverage or a graceful websocket close.
+The stage is 337,548 bytes; auditor/test/report add 29,365 bytes and the analysis
+keeps the complete package under 500,000. Neither 500,000-byte allocation is
+released. No automatic repeat, Core/HL book screen or full capture follows.
+
+Continuing work is a bounded, offline design review of a distinct causal
+basis-prediction hypothesis, checked against the already-losing convergence
+and confirmation policies. Existing agents may inspect small code/method/
+readout files only; no new capture, raw-archive scan, policy implementation,
+threshold change or source modification is authorized by that review.
+Next production checkpoint remains 08:46:33 UTC.

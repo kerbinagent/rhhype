@@ -27,13 +27,13 @@ The [spread-regime prerequisite watch](rh-spread-regime-sentinel-plan.md)
 failed its storage admission check after fresh metadata preparation, before
 opening any quote connection. Its [failure readout](../reports/rh-spread-regime-sentinel/20260930T0755Z/readout.md)
 preserves all 1,680 uncollected rows; no economics were computed. The original
-stage will not be retried. A separately allocated compact wrapper passed
-19 combined offline checks and independent review, then began its single
-20-minute ticker window at 08:12:57 UTC. Its fixed endpoint is 08:32:57 UTC;
-economic results remain unread until then. The intended question remains
-whether fresh RH spreads persistently clear the $0.10 target and 5 bp stress
-even with a frictionless hedge. That prerequisite would not establish maker
-fills or profitable cycles.
+stage will not be retried. The separately allocated compact study completed
+its fixed 08:12:57–08:32:57 UTC window and passed an independent output audit.
+Its [result](../reports/rh-spread-regime-sentinel/20260930T0812Z-compact-analysis.md)
+has 1,340 valid and 340 stale size rows; all 84 asset/size medians are negative,
+and none of 21 assets passes the $1,000 prerequisite. Three isolated positive
+optimistic budgets do not rescue the failed gate. No hedge-cost or execution
+study follows automatically; the sampled quotes establish no fills or P&L.
 
 ## What the evidence currently supports
 
