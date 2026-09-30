@@ -2497,3 +2497,62 @@ two failed-hedge rescue gains. No policy or capital change. Next checkpoint
 
 Carry has all 65 due arrivals through 18:05, 79,882 sample bytes, zero overdue
 missing files, no terminal error and no interim economic evaluation.
+
+## Review 79 — 2026-09-30 18:26:33 UTC
+
+Exact report, separate epoch snapshot and both selective-policy completions
+preserved; guarded manual archive 1,606,265/16,777,216 bytes. All 57 closes
+exact and negative, zero aborts, complete coverage and no new winners.
+
+- Cooldown: 45 paired closes/−$68.8777; no failed hedges.
+- Premium: two failed hedges/−$4.2526; no paired closes.
+- Convergence: eight closes/−$21.9070, comprising three paired/−$10.4421 and
+  five failed hedges/−$11.4648.
+- Confirmed: one paired close/−$3.3006, its first completion in this epoch.
+- Conservative: one paired close/−$4.0343, its second completion this epoch.
+- Six Hyperliquid price-limit rejections.
+
+The [selective-policy records](../reports/live-review-catchup/review79-selective-policy-records.json)
+are both CASHCAT, Core long and Hyperliquid short. All completed trades for
+these two policies in the fixed window were selected, count two matching the
+ledger. Both have zero remaining quantity, complete exact zero funding, and
+reconciled net arithmetic. Stored forecast, source-skew and confirmation gates
+were checked; no source timestamp fallback was used by the confirmed trade.
+
+Conservative `1790792105740912-22628-conservative` traded 6,018 units,
+forecast +$0.53286 above its $0.50 threshold, source skew 236.62 ms within
+250 ms. Actual entry spread $2.399581 became a $5.03482 closing liability:
+price P&L −$2.635239, fees $0.899588516, stress $0.499427055, capital
+$0.0000348270, net −$4.034289398. Entry leg separation 0.341 s;
+signal-to-fully-paired time 1.185 s. Exit execution improved $0.00974 versus
+the request-price comparison, so that final exit delay did not cause its loss.
+
+Confirmed `1790792229166982-22637-confirmed` traded 6,033 units. Confirmation
+age 1.682 s was between the one-second due time and four-second expiry;
+both receipt and source timestamps advanced, both sources passed the due
+time, source skew was 144.56 ms, and forecast +$1.37914 exceeded $0.25.
+Actual entry spread $3.311245 became a $5.21332 closing liability: price P&L
+−$1.902075, fees $0.899204715, stress $0.49931366, capital $0.0000360476,
+net −$3.300629423. Entry leg separation 0.533 s; signal-to-fully-paired time
+1.343 s. Exit execution worsened $0.82792 from an already negative request
+mark. Two observations do not establish the policies' general performance;
+neither supports promotion.
+
+Cooldown fees $15.9025, stress $22.4725, capital $0.0016074, funding zero;
+without stress −$46.4052. Its 43 observed exit comparisons improved $0.813793
+overall (twenty better, twelve worse, eleven unchanged), with two request
+prices unavailable; median approximately zero, p95 adverse $0.278364.
+All 45 request-to-flat observations present: median 1.238 s, p95 1.673 s.
+Convergence's three comparisons all worsened, $0.76465 total; Premium had none.
+
+Four feeds connected, 110 pairs, CPU 60.82%, p95 lag 13.37 ms, RSS 317.46 MiB,
+937.6 books/s, metadata age 2,955.4 s. Review and later epoch snapshot flat.
+Epoch: cooldown 1,810 exact plus five estimated/−$2,403.2833; Premium
+457/−$836.9862; convergence 258/−$304.9837; conservative two/−$1.7145;
+confirmed one/−$3.3006. Fourteen earlier win records and three legacy funding
+obligations retained. Reviews 66–79 have 673 closes: 671 losses and two
+failed-hedge rescue gains. No policy or capital change. Next checkpoint
+**18:46:33 UTC**.
+
+Carry has all 69 due arrivals through 18:25, 84,830 sample bytes, zero overdue
+missing files, no terminal error and no interim economic evaluation.
