@@ -1596,3 +1596,44 @@ The Core/RH method passed root and independent review and was committed as
 `2a5bffd`. Implementation and synthetic tests only are now authorized; raw
 hashing/decoding, network, capture and policy deployment remain unstarted.
 The 600,000-byte allocation and all prior failed-study allocations remain.
+
+
+## Review 52 — 2026-09-30 09:26:33 UTC
+
+Exact daemon output is preserved in
+`reports/live-review-catchup/review-20260930T092633Z.json`. Completion and abort
+coverage remain complete; there are no new winners.
+
+- Cooldown: 68 exact paired closes, −$72.3501; no failed hedge or abort.
+- Premium: six exact paired closes, −$9.8235; no failed hedge or abort.
+- Convergence: two exact failed-hedge closes, −$2.2329, plus two aborts.
+  Rejections include four Hyperliquid price-limit failures and Core one
+  price-limit and one notional-cap failure, including aborted attempts.
+- Other strategies: no new completed trades. Separate portfolios are not summed.
+
+Cooldown fees $17.9639, stress $33.4573, capital $0.0023940, funding zero;
+removing stress alone leaves −$38.8928. Its 66 observed exit-price comparisons
+improved $0.634621 (19 worse, 24 better, 23 unchanged), with two request-price
+observations missing. Median zero, p95 adverse $0.101380. All 68 paired
+request-to-flat times are present: median 1.159 s, p95 1.644 s. Premium's six
+exit comparisons improved $0.227009 (four better, two unchanged).
+
+The separately timed current-version snapshot in
+`reports/live-review-catchup/current-epoch-at-review52.json` records cooldown
+882 exact plus two estimated completions/−$1,133.8242 (one win), Premium
+166/−$278.4409 (one win), convergence 63/−$60.5375 (three wins), and conservative
+1/+$2.3198. Version `e3e83cda71a6`, epoch and all six old failed-rescue win
+records are unchanged. Both review and later epoch snapshot are flat; three
+legacy funding obligations remain outside current-epoch totals.
+
+Health: four connected feeds, 108 pairs, CPU 53.63% of one core, p95 loop lag
+10.97 ms, RSS 257.61 MiB, 698.6 books/s, metadata age 2,994.6 s. Next review
+**09:46:33 UTC**. No capital reset or production policy change.
+
+Core/RH code remains under implementation and independent review. Initial
+engine review found reference retention and Decimal-bound checks to fix;
+adapter review found excess tied-event book retention, out-of-scope HL
+reconstruction, pre-validation float parsing and source-regression recovery
+issues. These are pre-run findings. No real archive hash/decode or network
+has occurred. Independent auditor arithmetic tests pass, but its publication
+checks and the main fake-archive run tests are not yet complete.

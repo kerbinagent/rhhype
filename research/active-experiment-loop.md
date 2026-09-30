@@ -661,3 +661,24 @@ explicit invalidation controls censor current lifecycles; all failure rows
 including the unread second archive retain null economics. No raw stream
 has been hashed or decoded for this study, and no network/capture occurs.
 All original modules/methods/evidence and storage reservations remain frozen.
+
+
+### Production review 52 and pre-run code findings, 09:27 UTC
+
+Cooldown 68 paired closes/−$72.3501, Premium six paired/−$9.8235,
+convergence two failed hedges/−$2.2329 plus two aborts. No new winners,
+complete retained coverage, four connected feeds, same epoch and capital
+history. Review and later current-version snapshot are flat; three legacy
+funding obligations remain. Next checkpoint 09:46:33 UTC.
+
+The Core/RH helper and independent derived auditor are being implemented
+within the existing 600,000-byte allocation. Root and peer review are fixing
+pre-run integrity issues: preserve failed-pair references; avoid numeric
+rounding before raw collision checks; keep only bounded current books across
+tied receipts; propagate invalidation scope and source regressions into the
+actual decoder state. Producer review confirms normal duration-limit EOF
+can omit a raw close control; manifest closure and complete gzip/counts are
+the correct terminal evidence. Five auditor arithmetic fixtures pass; full
+admission/decoder/publication fixtures and final code review remain required.
+No raw traversal, fresh capture, network request, or production change has
+been made for this diagnostic.
