@@ -440,3 +440,21 @@ later current-version closed totals are −$806.6607 cooldown and −$164.8956
 Premium, with all current positions flat. Four feeds are connected. Final
 sentinel implementation review continues; no collection has started. Next
 production review: **08:06:33 UTC**.
+
+
+### Sentinel implementation approved, 07:55 UTC
+
+Root and independent review pass the final implementation with 13 focused
+fixtures. The dry invocation made no network calls. Reviewed boundaries include
+receipt clock checks before source watermarks, dual-clock metadata age,
+malformed/error/generation invalidation, exact fixed-denominator gates, no
+pre-endpoint economics, and reserved space for all missing rows and manifests.
+Normal source/control writes reserve 8 KB for terminal reporting; the
+pre-connection check leaves a further 2 KB for index growth. Total allocation
+remains 500,000 bytes. All economic rules are unchanged.
+
+Source/method/tests are committed before the single three-request fresh
+metadata preparation. Root will inspect that preparation, freeze its hashes,
+and launch the one fixed twenty-minute window only while each metadata
+response remains within 120 seconds on both clocks. No retry, replacement
+request, alternate endpoint or automatic reconnect is permitted.
