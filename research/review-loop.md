@@ -2353,3 +2353,42 @@ Carry has all 49 due arrivals through 16:45, 60,110 sample bytes, zero overdue
 missing files, no terminal error and no interim economic evaluation. At 16:30,
 the production database was 61,980,672 bytes with zero WAL bytes, below its
 128 MiB cap; no storage change was needed.
+
+## Review 75 — 2026-09-30 17:06:33 UTC
+
+Exact report, separate epoch snapshot and the new estimated close preserved;
+guarded manual archive 1,456,556/16,777,216 bytes. All sixty closes negative:
+59 exact and one estimated. One convergence abort; complete completion and
+abort coverage. No new winners.
+
+- Cooldown: 39 paired closes/−$45.5813 (38 exact/−$44.7121, one estimated/
+  −$0.8691); no failed-hedge closes.
+- Premium: eleven exact/−$23.5179; one paired/−$1.6555, ten failed/−$21.8624.
+- Convergence: ten exact/−$15.2065; one paired/−$2.3330, nine failed/−$12.8735.
+- Eighteen Hyperliquid price-limit and one Core notional-cap rejection.
+
+The [estimated record](../reports/live-review-catchup/review75-estimated-records.json)
+is XAG cooldown `1790787589676432-22444-cooldown`: matched quantity 16.55,
+Hyperliquid long/RH short, crossing 17:00 funding. Both legs fully closed.
+Hyperliquid's sampled oracle reference yields −$0.0143891388; RH's inferred
+per-unit settled value yields +$0.0219459620. Funding is complete with no
+missing events but estimated, net +$0.0075568232. Price P&L −$0.197619,
+fees $0.1796320008, stress $0.4994194205 and capital $0.0000358115 leave
+−$0.8691494096 net. The record retains `CLOSED_ESTIMATED` status.
+
+Cooldown fees $10.5931, stress $19.4731, capital $0.0013924 and estimated
+funding +$0.0075568; without stress −$26.1082. Its 38 available exit comparisons
+improved $1.265828 overall (seventeen better, fourteen worse, seven unchanged,
+one missing request price); median zero, p95 adverse $0.176772. All 39 paired
+request-to-flat observations present: median 1.286 s, p95 1.705 s. Premium's
+one comparison improved $0.0865; convergence's one improved $0.05046.
+
+Four feeds connected, 112 pairs, CPU 61.62%, p95 lag 23.49 ms, RSS 313.66 MiB,
+995.3 books/s, metadata age 1,760.4 s. Review and later epoch snapshot flat.
+Epoch: cooldown 1,641 exact plus four estimated/−$2,186.2446; Premium
+446/−$811.6021; convergence 241/−$270.3783; conservative one/+$2.3198.
+Fourteen earlier win records and three legacy funding obligations remain.
+No policy/capital change. Next checkpoint **17:26:33 UTC**.
+
+Carry has all 53 due arrivals through 17:05, 65,068 sample bytes, zero overdue
+missing files, no terminal error and no interim economic evaluation.

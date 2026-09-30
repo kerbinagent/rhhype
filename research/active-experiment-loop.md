@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 16:48 UTC
+## Current status, 30 September 2026 17:08 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative; no production strategy is promoted. The user authorized
@@ -19,11 +19,12 @@ analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
 [method](dated-carry-method-v1.md) and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 74 are preserved. The two paired convergence gains in review65
-(WLD +$0.3590; CRCL +$0.3250) have not repeated. Reviews 66–74 have 414 closes:
-412 losses and two failed-hedge rescue gains (ENA +$0.1134; LIT +$0.0338).
-All three active strategy windows still lost money in review74.
-Next review: **17:06:33 UTC**.
+Reviews through 75 are preserved. The two paired convergence gains in review65
+(WLD +$0.3590; CRCL +$0.3250) have not repeated. Reviews 66–75 have 474 closes:
+472 losses and two failed-hedge rescue gains (ENA +$0.1134; LIT +$0.0338).
+One loss in review75 has estimated funding and is retained as estimated.
+All three active strategy windows still lost money in review75.
+Next review: **17:26:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -1065,3 +1066,16 @@ connected, 112 pairs after metadata refresh, performance normal; review and
 later epoch snapshot flat. Three legacy funding obligations remain. Next
 review 17:06:33 UTC. Carry has all 49 due arrivals through 16:45, no terminal
 error or overdue missing files, and no economic evaluation.
+
+### Review 75, 17:06 UTC
+
+All sixty closes negative (59 exact, one estimated): cooldown 39/−$45.5813,
+Premium eleven/−$23.5179, convergence ten/−$15.2065. One convergence abort;
+complete coverage and no new winners. The estimated XAG paired close is
+preserved: it crossed 17:00 funding, with sampled/inferred reference values,
+fully closed quantities and no missing funding events. Its +$0.00756 estimated
+funding leaves −$0.86915 net; it remains estimated. Four feeds connected,
+112 pairs, performance normal; review and later snapshot flat. Fourteen prior
+epoch win records and three legacy funding obligations remain. Next review
+17:26:33 UTC. Carry has all 53 due arrivals through 17:05, no terminal error or
+overdue missing files, and no economic evaluation.
