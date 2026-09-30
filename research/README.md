@@ -22,6 +22,11 @@ production readouts are in the [review journal](review-loop.md).
 - [Cost sensitivity](passive-cost-buffer-followup.md): separate actual
   modeled exchange fees from hypothetical rebalancing and the extra 5 bp
   stress. [Cost headroom chart](../reports/passive-hedge-venues/cost-headroom.svg).
+- [Completed broad screen](../reports/passive-universe-screen/20260930T0310Z/readout.md):
+  five rounds over 21 eligible markets produced 320 valid size observations;
+  none cleared fees, the $0.10 target and the 5 bp stress. The 100 stale
+  observations and failed first attempt remain visible. These are static
+  quote margins, with no maker-fill or realized-profit claim.
 - [Entry queue diagnostic](rh-entry-queue-followup.md): earlier Standard
   branches became unresolved quickly. Their shorter observation periods
   cannot be compared directly with Premium's later fills.
@@ -45,6 +50,8 @@ one profit tally.
 | [Quote allowance variant](passive-exit-cost-policy.md) | Future selection-only 0/5 bp allowance; reported stress remains separate |
 | [Three-venue capture](passive-three-venue-capture.md) | Prepared bounded RH/HL/Core data collection; not yet launched |
 | [Universe screen](passive-universe-screen-method.md) | Prospective exploratory asset screen before a new full execution study |
+| [Retirement correction](passive-retirement-correction.md) | Separate correction frozen during calibration; original v1 remains reproducible |
+| [ACK scenario design](passive-ack-scenarios-design.md) | Explicit hypothetical timing model for future diagnostics; no private ACK evidence |
 
 The [SOTA strategy review](sota-strategy-review.md) and
 [carry follow-up](strategy-carry-followup.md) contain the broader literature

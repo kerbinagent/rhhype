@@ -131,3 +131,33 @@ exposure and must not enter the new version's realized result when they close.
 Available wallet balances and capital constraints remain real paper state;
 versioning is not permission to replenish or reset them. Prepare this for the
 next planned rollout, with focused migration/restart/carryover/resize tests.
+
+## Screen and correction freeze, 03:23 UTC
+
+The completed independent universe replication ran 03:11:00–03:15:07 UTC:
+21 eligible markets, five rounds, 105 HL books, 320/420 valid size observations.
+All 100 rejected size observations failed source/receipt freshness. None of
+the valid static cycles cleared fees, $0.10 and the separate 5 bp stress;
+the best eligible $1,000 median was XAG at −$0.508121. No positive-profit
+candidate was nominated. The two-round connection failure remains separate,
+and cumulative request use is disclosed in the [readout](../reports/passive-universe-screen/20260930T0310Z/readout.md).
+An offline optimistic zero-hedge-cost budget will check whether fee savings
+alone could justify another venue screen. It cannot predict future fills
+or bound a price-changing cycle's eventual return.
+
+The [retirement correction](passive-retirement-correction.md) was independently
+reviewed and frozen at **03:18:43.851172 UTC**, before both the conservative
+03:22:37 source-freeze-based deadline and actual holdout boundary. It fixes
+late qualifying flow received on the callback that retires an entry quote:
+the affected old episode becomes execution-unknown. No fill or cash is
+invented. The correction is explicitly a calibration-time amendment to a
+capture already in progress. Its separate wrapper pins the original 18
+files plus two correction files and will publish separately from strict v1.
+The one-shot supervisor is waiting to run strict v1 after capture completion;
+the corrected replay will run separately against the same stopped raw file.
+
+During holdout collection, future ACK timing scenarios and a strict/corrected
+comparison utility are being prepared with synthetic tests only. None reads
+the active holdout or changes its frozen strategy. A less restrictive assumed
+ACK clock can improve measurable coverage; it cannot establish a real queue
+position, eliminate economic costs or demonstrate executable profitability.
