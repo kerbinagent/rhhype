@@ -1794,3 +1794,38 @@ RSS 266.65 MiB, 754.5 books/s, metadata age 586.2 s. Next checkpoint
 The completed liquidation schema review found all 65 previously ignored
 liquidation rows were subscription history predating capture, with zero
 live updates. It supplies no additional flow or supported successor study.
+
+## Review 57 — 2026-09-30 11:06:33 UTC
+
+Exact daemon output is saved in
+`reports/live-review-catchup/review-20260930T110633Z.json`; completion and
+abort coverage is complete. No new winners occurred.
+
+- Cooldown: 47 paired closes, −$58.8049: 46 exact/−$57.8550 and one
+  estimated/−$0.9499. The quality labels remain separate.
+- Premium: 16 exact closes, −$30.0337: ten paired/−$19.8240 and six failed
+  hedges/−$10.2097.
+- Convergence: one exact failed hedge/−$1.6524 and one aborted attempt.
+- Other strategies: no completions. Across the interval there were eight
+  Hyperliquid price-limit and one Core Lighter notional-cap rejection.
+  Portfolios remain separate.
+
+Cooldown fees $19.7465, stress $23.4704, capital $0.0016587, funding
+−$0.0022453; removing stress alone leaves −$35.3346. Its 46 observed exit
+comparisons worsened $2.580004 (20 worse, 16 better, ten unchanged), with
+one request price missing; median effectively zero, p95 adverse $0.196870.
+All 47 paired request-to-flat times are present: median 1.166 s, p95 1.847 s.
+Premium's ten paired comparisons improved $0.950210 (one worse, six better,
+three unchanged).
+
+The separately timed snapshot at 11:06:59 UTC is preserved in
+`reports/live-review-catchup/current-epoch-at-review57.json`: cooldown 1,101
+exact plus three estimated completions/−$1,390.8197 (one old win), Premium
+197/−$335.4146 (one old win), convergence 75/−$74.7477 (three old wins),
+conservative 1/+$2.3198. Version `e3e83cda71a6`, epoch and six old
+failed-rescue win records remain unchanged. Both review and later snapshot
+are flat. Three legacy funding obligations remain unknown and retained.
+
+All four feeds connected, 110 pairs, CPU 54.09% of one core, p95 lag 9.61 ms,
+RSS 267.45 MiB, 786.4 books/s, metadata age 1,787.0 s. Next checkpoint
+**11:26:33 UTC**. No capital reset or policy change.

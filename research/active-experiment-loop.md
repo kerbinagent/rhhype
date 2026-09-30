@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 10:48 UTC
+## Current status, 30 September 2026 11:08 UTC
 
 No qualifying positive result. The completed passive-exit, RH/HL delayed
 taker and 21-asset spread studies remain negative. Core/RH delayed taker
@@ -15,7 +15,9 @@ replay also completed and passed root and peer audit: all 842 complete
 quotes have negative gross returns; 166 candidates remain censored. No
 predictor or successor is promoted. All evidence and capital history remain.
 See the latest entry below and [research map](README.md).
-Production reviews continue; next **11:06:33 UTC**.
+Production reviews continue; next **11:26:33 UTC**. The user requested a
+separate broader research proposal with longer holds and a different return
+source at 11:07 UTC; this does not change the live policy or launch a study.
 
 ## Original experiment: RH passive exit v1
 
@@ -802,3 +804,18 @@ its prior metadata and control used 287,740 bytes, above the remaining
 subscriptions do not shrink full metadata responses automatically. A
 descriptive session study would need a separate priority and resource
 design. No implementation, metadata request, capture or cap expansion.
+
+### Production review 57 and research direction, 11:08 UTC
+
+Cooldown 47 paired closes/−$58.8049 (46 exact, one estimated); Premium
+16 closes/−$30.0337 (ten paired, six failed hedges); convergence one failed
+hedge/−$1.6524 and one aborted attempt. No new winners; complete coverage.
+Eight Hyperliquid price-limit and one Core Lighter notional-cap rejection.
+All four feeds connected; review and later snapshot flat. Same version,
+capital history and three legacy funding obligations retained. Next review
+11:26:33 UTC.
+
+The user selected “Prepare a broader research proposal.” Prepare a separate
+plan for longer holding periods and a different return source while the
+current paper reviews continue. No revised production policy, live orders,
+new capture or research budget increase is implied by proposal preparation.
