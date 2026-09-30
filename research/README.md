@@ -69,3 +69,5 @@ and mechanisms considered. All work uses public data and paper execution.
 - [Exploratory ACK readout](../reports/rh-passive-ack-exploratory/readout.md): base 12 conditional negative complete portfolios, plus200 none complete; other totals unknown.
 - [Rejected-target public reach](../reports/rejected-target-public-reach/REPORT.md): no eligible observed print reached any of 150 reconstructed strict targets within its fixed window; public completeness unproven.
 - [Rare-spread admission design](passive-rare-spread-admission-design.md): evidence prerequisite for a different entry gate; no capture launched.
+- [Fixed-anchor RH/HL feasibility](../reports/passive-rare-spread/0252Z-fixed-1s-v1/readout.md): zero positives among 47,624 valid observations on the full 48,000-row grid; tested gate stopped.
+- [ACK halt review](passive-ack-halt-review.md): source-freshness expiry and late anchor revisions retain unknown execution; first-evidence retention issue documented.

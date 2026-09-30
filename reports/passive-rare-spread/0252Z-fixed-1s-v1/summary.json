@@ -1,0 +1,1027 @@
+{
+  "interpretation": "retrospective_static_quote_feasibility_not_fill_or_profit",
+  "possible": 48000,
+  "valid": 47624,
+  "positive": 0,
+  "asset_budgets": [
+    {
+      "asset": "BTC",
+      "budget": 100,
+      "possible": 3000,
+      "valid": 2998,
+      "positive": 0,
+      "exclusions": {
+        "missing_rh": 2
+      },
+      "median_valid_net": "-0.23121766",
+      "max_valid_net": "-0.2197123",
+      "excursions": [],
+      "uncensored_excursions": 0,
+      "uncensored_start_strata": [],
+      "primary_static_recurrence": false,
+      "strata": [
+        {
+          "stratum": 0,
+          "possible": 600,
+          "valid": 598,
+          "positive": 0,
+          "exclusions": {
+            "missing_rh": 2
+          }
+        },
+        {
+          "stratum": 1,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 2,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 3,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 4,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        }
+      ]
+    },
+    {
+      "asset": "BTC",
+      "budget": 250,
+      "possible": 3000,
+      "valid": 2998,
+      "positive": 0,
+      "exclusions": {
+        "missing_rh": 2
+      },
+      "median_valid_net": "-0.42884455",
+      "max_valid_net": "-0.39928075",
+      "excursions": [],
+      "uncensored_excursions": 0,
+      "uncensored_start_strata": [],
+      "primary_static_recurrence": false,
+      "strata": [
+        {
+          "stratum": 0,
+          "possible": 600,
+          "valid": 598,
+          "positive": 0,
+          "exclusions": {
+            "missing_rh": 2
+          }
+        },
+        {
+          "stratum": 1,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 2,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 3,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 4,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        }
+      ]
+    },
+    {
+      "asset": "BTC",
+      "budget": 500,
+      "possible": 3000,
+      "valid": 2987,
+      "positive": 0,
+      "exclusions": {
+        "missing_rh": 2,
+        "insufficient_hl_depth": 11
+      },
+      "median_valid_net": "-0.7590019",
+      "max_valid_net": "-0.6985615",
+      "excursions": [],
+      "uncensored_excursions": 0,
+      "uncensored_start_strata": [],
+      "primary_static_recurrence": false,
+      "strata": [
+        {
+          "stratum": 0,
+          "possible": 600,
+          "valid": 594,
+          "positive": 0,
+          "exclusions": {
+            "missing_rh": 2,
+            "insufficient_hl_depth": 4
+          }
+        },
+        {
+          "stratum": 1,
+          "possible": 600,
+          "valid": 598,
+          "positive": 0,
+          "exclusions": {
+            "insufficient_hl_depth": 2
+          }
+        },
+        {
+          "stratum": 2,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "insufficient_hl_depth": 1
+          }
+        },
+        {
+          "stratum": 3,
+          "possible": 600,
+          "valid": 596,
+          "positive": 0,
+          "exclusions": {
+            "insufficient_hl_depth": 4
+          }
+        },
+        {
+          "stratum": 4,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        }
+      ]
+    },
+    {
+      "asset": "BTC",
+      "budget": 1000,
+      "possible": 3000,
+      "valid": 2966,
+      "positive": 0,
+      "exclusions": {
+        "missing_rh": 2,
+        "insufficient_hl_depth": 32
+      },
+      "median_valid_net": "-1.4195736690",
+      "max_valid_net": "-1.2981206025",
+      "excursions": [],
+      "uncensored_excursions": 0,
+      "uncensored_start_strata": [],
+      "primary_static_recurrence": false,
+      "strata": [
+        {
+          "stratum": 0,
+          "possible": 600,
+          "valid": 586,
+          "positive": 0,
+          "exclusions": {
+            "missing_rh": 2,
+            "insufficient_hl_depth": 12
+          }
+        },
+        {
+          "stratum": 1,
+          "possible": 600,
+          "valid": 595,
+          "positive": 0,
+          "exclusions": {
+            "insufficient_hl_depth": 5
+          }
+        },
+        {
+          "stratum": 2,
+          "possible": 600,
+          "valid": 598,
+          "positive": 0,
+          "exclusions": {
+            "insufficient_hl_depth": 2
+          }
+        },
+        {
+          "stratum": 3,
+          "possible": 600,
+          "valid": 590,
+          "positive": 0,
+          "exclusions": {
+            "insufficient_hl_depth": 10
+          }
+        },
+        {
+          "stratum": 4,
+          "possible": 600,
+          "valid": 597,
+          "positive": 0,
+          "exclusions": {
+            "insufficient_hl_depth": 3
+          }
+        }
+      ]
+    },
+    {
+      "asset": "ETH",
+      "budget": 100,
+      "possible": 3000,
+      "valid": 2999,
+      "positive": 0,
+      "exclusions": {
+        "missing_rh": 1
+      },
+      "median_valid_net": "-0.229004007",
+      "max_valid_net": "-0.219473739",
+      "excursions": [],
+      "uncensored_excursions": 0,
+      "uncensored_start_strata": [],
+      "primary_static_recurrence": false,
+      "strata": [
+        {
+          "stratum": 0,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "missing_rh": 1
+          }
+        },
+        {
+          "stratum": 1,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 2,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 3,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 4,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        }
+      ]
+    },
+    {
+      "asset": "ETH",
+      "budget": 250,
+      "possible": 3000,
+      "valid": 2999,
+      "positive": 0,
+      "exclusions": {
+        "missing_rh": 1
+      },
+      "median_valid_net": "-0.4229027175",
+      "max_valid_net": "-0.3986843475",
+      "excursions": [],
+      "uncensored_excursions": 0,
+      "uncensored_start_strata": [],
+      "primary_static_recurrence": false,
+      "strata": [
+        {
+          "stratum": 0,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "missing_rh": 1
+          }
+        },
+        {
+          "stratum": 1,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 2,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 3,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 4,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        }
+      ]
+    },
+    {
+      "asset": "ETH",
+      "budget": 500,
+      "possible": 3000,
+      "valid": 2998,
+      "positive": 0,
+      "exclusions": {
+        "missing_rh": 1,
+        "insufficient_hl_depth": 1
+      },
+      "median_valid_net": "-0.74605905425",
+      "max_valid_net": "-0.697368695",
+      "excursions": [],
+      "uncensored_excursions": 0,
+      "uncensored_start_strata": [],
+      "primary_static_recurrence": false,
+      "strata": [
+        {
+          "stratum": 0,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "missing_rh": 1
+          }
+        },
+        {
+          "stratum": 1,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "insufficient_hl_depth": 1
+          }
+        },
+        {
+          "stratum": 2,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 3,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 4,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        }
+      ]
+    },
+    {
+      "asset": "ETH",
+      "budget": 1000,
+      "possible": 3000,
+      "valid": 2998,
+      "positive": 0,
+      "exclusions": {
+        "missing_rh": 1,
+        "insufficient_hl_depth": 1
+      },
+      "median_valid_net": "-1.3923013125",
+      "max_valid_net": "-1.29473739",
+      "excursions": [],
+      "uncensored_excursions": 0,
+      "uncensored_start_strata": [],
+      "primary_static_recurrence": false,
+      "strata": [
+        {
+          "stratum": 0,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "missing_rh": 1
+          }
+        },
+        {
+          "stratum": 1,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "insufficient_hl_depth": 1
+          }
+        },
+        {
+          "stratum": 2,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 3,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 4,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        }
+      ]
+    },
+    {
+      "asset": "NVDA",
+      "budget": 100,
+      "possible": 3000,
+      "valid": 2925,
+      "positive": 0,
+      "exclusions": {
+        "missing_rh": 1,
+        "stale_source_or_receipt": 74
+      },
+      "median_valid_net": "-0.1504317142",
+      "max_valid_net": "-0.1328753602",
+      "excursions": [],
+      "uncensored_excursions": 0,
+      "uncensored_start_strata": [],
+      "primary_static_recurrence": false,
+      "strata": [
+        {
+          "stratum": 0,
+          "possible": 600,
+          "valid": 589,
+          "positive": 0,
+          "exclusions": {
+            "missing_rh": 1,
+            "stale_source_or_receipt": 10
+          }
+        },
+        {
+          "stratum": 1,
+          "possible": 600,
+          "valid": 590,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 10
+          }
+        },
+        {
+          "stratum": 2,
+          "possible": 600,
+          "valid": 586,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 14
+          }
+        },
+        {
+          "stratum": 3,
+          "possible": 600,
+          "valid": 569,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 31
+          }
+        },
+        {
+          "stratum": 4,
+          "possible": 600,
+          "valid": 591,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 9
+          }
+        }
+      ]
+    },
+    {
+      "asset": "NVDA",
+      "budget": 250,
+      "possible": 3000,
+      "valid": 2925,
+      "positive": 0,
+      "exclusions": {
+        "missing_rh": 1,
+        "stale_source_or_receipt": 74
+      },
+      "median_valid_net": "-0.2261243995",
+      "max_valid_net": "-0.1821884005",
+      "excursions": [],
+      "uncensored_excursions": 0,
+      "uncensored_start_strata": [],
+      "primary_static_recurrence": false,
+      "strata": [
+        {
+          "stratum": 0,
+          "possible": 600,
+          "valid": 589,
+          "positive": 0,
+          "exclusions": {
+            "missing_rh": 1,
+            "stale_source_or_receipt": 10
+          }
+        },
+        {
+          "stratum": 1,
+          "possible": 600,
+          "valid": 590,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 10
+          }
+        },
+        {
+          "stratum": 2,
+          "possible": 600,
+          "valid": 586,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 14
+          }
+        },
+        {
+          "stratum": 3,
+          "possible": 600,
+          "valid": 569,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 31
+          }
+        },
+        {
+          "stratum": 4,
+          "possible": 600,
+          "valid": 591,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 9
+          }
+        }
+      ]
+    },
+    {
+      "asset": "NVDA",
+      "budget": 500,
+      "possible": 3000,
+      "valid": 2925,
+      "positive": 0,
+      "exclusions": {
+        "missing_rh": 1,
+        "stale_source_or_receipt": 74
+      },
+      "median_valid_net": "-0.3527713983",
+      "max_valid_net": "-0.2644518589",
+      "excursions": [],
+      "uncensored_excursions": 0,
+      "uncensored_start_strata": [],
+      "primary_static_recurrence": false,
+      "strata": [
+        {
+          "stratum": 0,
+          "possible": 600,
+          "valid": 589,
+          "positive": 0,
+          "exclusions": {
+            "missing_rh": 1,
+            "stale_source_or_receipt": 10
+          }
+        },
+        {
+          "stratum": 1,
+          "possible": 600,
+          "valid": 590,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 10
+          }
+        },
+        {
+          "stratum": 2,
+          "possible": 600,
+          "valid": 586,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 14
+          }
+        },
+        {
+          "stratum": 3,
+          "possible": 600,
+          "valid": 569,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 31
+          }
+        },
+        {
+          "stratum": 4,
+          "possible": 600,
+          "valid": 591,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 9
+          }
+        }
+      ]
+    },
+    {
+      "asset": "NVDA",
+      "budget": 1000,
+      "possible": 3000,
+      "valid": 2925,
+      "positive": 0,
+      "exclusions": {
+        "missing_rh": 1,
+        "stale_source_or_receipt": 74
+      },
+      "median_valid_net": "-0.6268308805",
+      "max_valid_net": "-0.4289037178",
+      "excursions": [],
+      "uncensored_excursions": 0,
+      "uncensored_start_strata": [],
+      "primary_static_recurrence": false,
+      "strata": [
+        {
+          "stratum": 0,
+          "possible": 600,
+          "valid": 589,
+          "positive": 0,
+          "exclusions": {
+            "missing_rh": 1,
+            "stale_source_or_receipt": 10
+          }
+        },
+        {
+          "stratum": 1,
+          "possible": 600,
+          "valid": 590,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 10
+          }
+        },
+        {
+          "stratum": 2,
+          "possible": 600,
+          "valid": 586,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 14
+          }
+        },
+        {
+          "stratum": 3,
+          "possible": 600,
+          "valid": 569,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 31
+          }
+        },
+        {
+          "stratum": 4,
+          "possible": 600,
+          "valid": 591,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 9
+          }
+        }
+      ]
+    },
+    {
+      "asset": "XAG",
+      "budget": 100,
+      "possible": 3000,
+      "valid": 2997,
+      "positive": 0,
+      "exclusions": {
+        "missing_rh": 1,
+        "stale_source_or_receipt": 2
+      },
+      "median_valid_net": "-0.1414817233",
+      "max_valid_net": "-0.1268555377",
+      "excursions": [],
+      "uncensored_excursions": 0,
+      "uncensored_start_strata": [],
+      "primary_static_recurrence": false,
+      "strata": [
+        {
+          "stratum": 0,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "missing_rh": 1
+          }
+        },
+        {
+          "stratum": 1,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 2,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 3,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 1
+          }
+        },
+        {
+          "stratum": 4,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 1
+          }
+        }
+      ]
+    },
+    {
+      "asset": "XAG",
+      "budget": 250,
+      "possible": 3000,
+      "valid": 2996,
+      "positive": 0,
+      "exclusions": {
+        "missing_rh": 1,
+        "insufficient_hl_depth": 1,
+        "stale_source_or_receipt": 2
+      },
+      "median_valid_net": "-0.2051930896",
+      "max_valid_net": "-0.1681481207",
+      "excursions": [],
+      "uncensored_excursions": 0,
+      "uncensored_start_strata": [],
+      "primary_static_recurrence": false,
+      "strata": [
+        {
+          "stratum": 0,
+          "possible": 600,
+          "valid": 598,
+          "positive": 0,
+          "exclusions": {
+            "missing_rh": 1,
+            "insufficient_hl_depth": 1
+          }
+        },
+        {
+          "stratum": 1,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 2,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 3,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 1
+          }
+        },
+        {
+          "stratum": 4,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 1
+          }
+        }
+      ]
+    },
+    {
+      "asset": "XAG",
+      "budget": 500,
+      "possible": 3000,
+      "valid": 2996,
+      "positive": 0,
+      "exclusions": {
+        "missing_rh": 1,
+        "insufficient_hl_depth": 1,
+        "stale_source_or_receipt": 2
+      },
+      "median_valid_net": "-0.31213949155",
+      "max_valid_net": "-0.2364636815",
+      "excursions": [],
+      "uncensored_excursions": 0,
+      "uncensored_start_strata": [],
+      "primary_static_recurrence": false,
+      "strata": [
+        {
+          "stratum": 0,
+          "possible": 600,
+          "valid": 598,
+          "positive": 0,
+          "exclusions": {
+            "missing_rh": 1,
+            "insufficient_hl_depth": 1
+          }
+        },
+        {
+          "stratum": 1,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 2,
+          "possible": 600,
+          "valid": 600,
+          "positive": 0,
+          "exclusions": {}
+        },
+        {
+          "stratum": 3,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 1
+          }
+        },
+        {
+          "stratum": 4,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 1
+          }
+        }
+      ]
+    },
+    {
+      "asset": "XAG",
+      "budget": 1000,
+      "possible": 3000,
+      "valid": 2992,
+      "positive": 0,
+      "exclusions": {
+        "missing_rh": 1,
+        "insufficient_hl_depth": 5,
+        "stale_source_or_receipt": 2
+      },
+      "median_valid_net": "-0.5276837822",
+      "max_valid_net": "-0.3730948031",
+      "excursions": [],
+      "uncensored_excursions": 0,
+      "uncensored_start_strata": [],
+      "primary_static_recurrence": false,
+      "strata": [
+        {
+          "stratum": 0,
+          "possible": 600,
+          "valid": 597,
+          "positive": 0,
+          "exclusions": {
+            "missing_rh": 1,
+            "insufficient_hl_depth": 2
+          }
+        },
+        {
+          "stratum": 1,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "insufficient_hl_depth": 1
+          }
+        },
+        {
+          "stratum": 2,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "insufficient_hl_depth": 1
+          }
+        },
+        {
+          "stratum": 3,
+          "possible": 600,
+          "valid": 598,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 1,
+            "insufficient_hl_depth": 1
+          }
+        },
+        {
+          "stratum": 4,
+          "possible": 600,
+          "valid": 599,
+          "positive": 0,
+          "exclusions": {
+            "stale_source_or_receipt": 1
+          }
+        }
+      ]
+    }
+  ],
+  "canonical_terminal": {
+    "type": "end",
+    "kind": "end",
+    "received_ns": 1790739778061557000,
+    "receipt_ns": 1790739778061557000,
+    "source_ns": null,
+    "started_ns": 1790736777958514000,
+    "stopped_ns": 1790739778061557000,
+    "reason": "duration_limit",
+    "truncated": false,
+    "counts": {
+      "decoded_records": 124019,
+      "control_connection_open": 2,
+      "yield_book_hyperliquid": 22052,
+      "ignored_hl_trade_frames": 4824,
+      "yield_book_rh_lighter": 93965,
+      "ignored_subscribed_trade_frames": 4,
+      "ignored_subscribed_trade_rows": 200,
+      "ignored_liquidations": 8,
+      "yield_trade": 3904
+    },
+    "decoded_bytes": 110401811,
+    "archive_bytes": 48931302,
+    "max_receipt_gap_ns": 418712409,
+    "max_trade_source_lag_ns": 740827910,
+    "book_decoder_counts": {
+      "hyperliquid|BTC|valid": 5513,
+      "hyperliquid|ETH|valid": 5513,
+      "hyperliquid|NVDA|valid": 5513,
+      "hyperliquid|XAG|valid": 5513,
+      "rh_lighter|NVDA|valid": 8655,
+      "rh_lighter|ETH|valid": 36453,
+      "rh_lighter|XAG|valid": 13596,
+      "rh_lighter|BTC|valid": 35261
+    },
+    "book_status_counts": {},
+    "raw_gzip_sha256": "c92c269e3bc3bb345beeaf834ad55d0a97601339b4506e36a9397287f8407bb6",
+    "raw_sha_verified": true,
+    "manifest_sha256": "5a9e61438df592d895d3cfc5d550241b01f0696fdbd5c83f46666d9ff1274250",
+    "adapter_sha256": "5984caf23215035603fdc259910a1d1e7309fedfc961d176de3dfa2a9f31f29b",
+    "book_decoder_sha256": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2"
+  },
+  "decision": "stop_if_zero_valid_positives; recurrence_alone_does_not_justify_capture_or_promotion",
+  "candidate_nominations": []
+}

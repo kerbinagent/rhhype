@@ -242,3 +242,29 @@ Next work checks the dominant coverage and late-anchor halt causes and
 inventories existing evidence for a contemporaneous spread admission gate.
 No further raw capture is justified by the results so far. Production review
 37 remains negative; no strategy promotion or wallet reset.
+
+
+## Fixed-anchor feasibility result, 04:59 UTC
+
+The predeclared one-second scan of the completed 50-minute RH/HL archive
+finished at 04:57:02 UTC, with one canonical traversal, unchanged hashes and
+7,554,465 output bytes below its 16 MB cap. The
+[readout](../reports/passive-rare-spread/0252Z-fixed-1s-v1/readout.md) preserves
+all 48,000 scheduled asset/size/time rows: 47,624 valid, 20 initially missing,
+304 stale and 52 lacking sufficient recorded HL depth. **Zero valid positives**
+after four public fees, $0.10 and 5 bp stress, across every size/asset/stratum.
+The best $1,000 margins are XAG−$0.373095, NVDA−$0.428904,
+BTC−$1.298121 and ETH−$1.294737; all recurrence thresholds fail.
+
+This stops the contemporaneous RH-maker/HL-taker gate on the covered fixed
+anchors and quantities. It does not test Core, every market time, other assets,
+price-changing cycles or future regimes. Capital/funding and actual execution
+remain outside this static margin, and correlated observations are not treated
+as independent trials. No new capture or strategy promotion follows.
+
+A separately bounded derived-data diagnostic is being prepared for the reverse
+HL-maker/RH-taker route at inherited q. Its optimistic static upper bound uses
+full recorded HL walk notionals and actual frozen maker fees; nonpositive
+bounds rule out only that fixed-quote margin on covered rows. Parent-invalid
+rows remain reverse-unadjudicated, and positive bounds are inconclusive.
+It requires no further raw traversal or new archive.
