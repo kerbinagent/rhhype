@@ -1911,3 +1911,33 @@ and capital history; three retained legacy funding obligations. Next review
 The new dated-carry collector passed its first arrival check: both HTTP 200,
 predeadline, callback late only 1.188 ms, mapping drift roughly one microsecond.
 Only status/timing fields were inspected; no interim economic evaluation.
+
+## Review 63 — 2026-09-30 13:06:33 UTC
+
+Exact archive `review-20260930T130633Z.json` and separate current-epoch read
+`current-epoch-at-review63.json`. All 37 closes are exact; zero wins or aborts,
+with complete completion/abort coverage. Portfolios remain separate.
+
+- Cooldown: 23/−$45.4605; 20 paired/−$39.4488, three failed/−$6.0117.
+- Premium: eight/−$16.7380; two paired/−$3.7285, six failed/−$13.0095.
+- Convergence: six failed hedges/−$9.2110; no paired closes.
+- Thirteen Hyperliquid price-limit rejections. Other strategies had no closes.
+
+Cooldown fees $11.2672, stress $11.4825, capital $0.0007205, funding zero;
+removing stress leaves −$33.9781. All 20 paired exit-price comparisons are
+available: eight worsened, eleven improved, one unchanged, net deterioration
+$2.143718; median −$0.029805, p95 adverse $0.83433. Their request-to-flat median
+is 1.228 s, p95 1.788 s. Premium's two paired comparisons improved $0.055183
+in total, one better and one worse.
+
+Four feeds connected, 110 pairs, CPU 66.51%, p95 lag 11.77 ms, RSS 287.96 MiB,
+1,085.1 books/s, metadata age 1,777.3 s. Review and later snapshot each had
+one cooldown position. Snapshot epoch: cooldown 1,286 exact plus three estimated
+closes/−$1,692.0248 (one old win); Premium 259/−$456.8658 (one old win);
+convergence 100/−$109.3415 (four rescue wins); conservative one/+$2.3198.
+The seven total rescue win records and three legacy funding uncertainties
+remain. No policy/capital change. Next checkpoint **13:26:33 UTC**.
+
+The fixed dated-carry study has five paired samples through 13:05, all with
+successful arrival status, 6,139 sample bytes, no collection errors. No interim
+price/economic evaluation; fixed endpoint remains 3 October 12:45 UTC.

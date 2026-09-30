@@ -19,9 +19,9 @@ analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
 [method](dated-carry-method-v1.md) and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 62 are preserved. One new +$0.1911 single-leg rescue did not
+Reviews through 63 are preserved. One new +$0.1911 single-leg rescue did not
 produce a positive paired cycle; all three active strategy windows lost money.
-Next review: **13:06:33 UTC**.
+Next review: **13:26:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -883,3 +883,12 @@ or economics were evaluated. A bounded additional public-document review could
 not resolve routed spot fee currency or the selected weekly linear delivery
 exemption. The supplemental note retains those uncertainties; the frozen method
 and capture schedule are unchanged.
+
+### Review 63, 13:06 UTC
+
+All 37 new paper closes were exact and negative: cooldown 23/−$45.4605,
+Premium 8/−$16.7380, convergence 6 failed/−$9.2110. No aborts, complete coverage.
+Seven earlier rescue wins remain distinct from paired-cycle evidence. Four feeds
+connected, 110 pairs, one current cooldown position; three retained legacy
+funding obligations. Next checkpoint 13:26:33 UTC. The dated-carry study has
+five successful paired arrivals and remains frozen; no economic readout yet.
