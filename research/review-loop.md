@@ -1127,3 +1127,34 @@ Health: four feeds connected, 111 pairs, CPU 48.92% of one core, p95 loop lag
 snapshot; three flat funding-pending records. Next review **05:06:33 UTC**.
 The single-scan offline spread-feasibility diagnostic is under review; no new
 raw capture, strategy promotion or capital replenishment.
+
+
+## Review 39: 2026-09-30 05:06:33 UTC
+
+Read at 05:07 UTC and archived in
+`reports/live-review-catchup/review-20260930T050633Z.json`; all completion
+coverage is complete. Cooldown completed **40 trades for −$54.1946**,
+zero wins: 38 paired −$51.3155 and two failed hedges −$2.8791. Of these,
+39 settlements are exact (−$52.0611), one estimated (−$2.1335).
+Convergence had two failed hedges for **−$2.6386**, and Premium two failed
+hedges for **−$3.4927**, all exact and zero wins. Other strategies had
+no new completions. Independent ledgers are not summed.
+
+Cooldown fees were $12.6799, stress $19.9733, capital $0.0014, recorded
+funding +$0.3101. Removing stress still leaves −$34.2214. Its 35 observed
+paired exit-price comparisons worsened $0.230600 in aggregate (eight worse,
+13 better, 14 unchanged, three missing), median zero and p95 adverse $0.587166.
+Request-to-flat median 1.222 s, p95 2.587 s over 38 paired closes.
+
+The separate current-version snapshot at 05:07:06 UTC is preserved in
+`reports/live-review-catchup/current-epoch-at-review39.json`: cooldown 264 exact
+plus two estimated completions for −$396.3592; Premium 28/−$46.9469;
+convergence 12/−$14.8029; zero wins. Version remains `e3e83cda71a6`, begun
+03:36:13 UTC. Three legacy funding obligations remain outside these totals.
+
+Health: four connected feeds, 111 pairs, CPU 46.59% of one core, p95 loop lag
+11.89 ms, RSS 215.87 MiB, 634.3 books/s. One active cooldown position and
+three flat funding-pending records at the scheduled snapshot. Next review
+**05:26:33 UTC**. The completed fixed-anchor RH-maker diagnostic found no
+positive stressed static margin; reverse-route derived bounds are under
+review. No new raw capture, promotion or capital reset.
