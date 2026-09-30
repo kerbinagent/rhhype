@@ -17,9 +17,11 @@ The current offline diagnostic tests delayed taker entry and fixed
 10/30/60/300-second exits on that same stopped archive, across all 7,200
 candidates and 28,800 outcomes. The [method](delayed-taker-fixed-quantity-plan.md)
 keeps funding-inclusive returns unknown and distinguishes quote feasibility
-from fills. Two failed resource attempts are preserved; the separately
-reviewed cache-disabled revision started at 06:37 UTC with a fixed
-06:57 UTC deadline. No completed result is available yet.
+from fills. Two failed resource attempts are preserved. The separately
+reviewed cache-disabled revision completed at 06:52 UTC: all 26,395 complete
+quotes were negative after fees alone. The [audited readout](../reports/delayed-taker-quotes/0252Z-v3-analysis.md)
+retains 2,405 incomplete outcomes and all funding uncertainty. Even forgiving
+all trading fees does not clear the declared stress allowance at these quotes.
 
 ## What the evidence currently supports
 

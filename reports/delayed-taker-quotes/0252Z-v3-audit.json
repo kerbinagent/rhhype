@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-09-30T06:54:43.957986+00:00",
+  "status": "passed",
+  "study_source_commit": "92f74a7",
+  "independent_verifier_commit": "c5645f5",
+  "independent_verifier_sha256": "22f8a505a77f960529f69a074c82cd1bdae203becd60b7459e5b2c43fd25c879",
+  "independent_report_sha256": "bf814af22475dca2d87cfcd60b1fca8ab0346f6fdbd3cbcb5870006b23b0064a",
+  "publication_manifest_sha256": "8fa150aea80a562b5bb7173a63bebb27b2eb6c3d72eb1f4b581c3af5944f0c76",
+  "actual_input_hashes_recomputed_and_unchanged": 33,
+  "original_output_hashes_recomputed_and_unchanged": 9,
+  "publication_bytes": 2530132,
+  "full_raw_replay_added_by_audit": false,
+  "input_hash_audit": "SHA256 bytes only; no economic rereplay",
+  "funding_inclusive_profit_known": false
+}

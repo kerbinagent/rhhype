@@ -1,0 +1,18 @@
+{
+  "schema": "delayed-taker-completion-reconciliation-v3",
+  "recorded_utc": "2026-09-30T06:58:11.519571+00:00",
+  "previous_projected_maximum_bytes": 32480772,
+  "released_v3_reservation_bytes": 4000000,
+  "preserved_completed_v3_bytes": 2530132,
+  "additional_bounded_derived_analysis_and_audit_allowance_bytes": 100000,
+  "preserved_failed_v1_bytes": 460596,
+  "preserved_failed_v2_bytes": 117265,
+  "previous_documentation_reserve_still_retained_bytes": 20000,
+  "projected_maximum_bytes": 31110904,
+  "shared_allowance_bytes": 33000000,
+  "headroom_bytes": 1889096,
+  "existing_total_reservation_bytes": 820000000,
+  "new_raw_archives": 0,
+  "additional_canonical_traversals": 0,
+  "explanation": "Completed v3 releases unused planned output reservation. New 100KB maximum covers independent audit, narrative and zero-fee unchanged-quote bound from published rows only."
+}

@@ -358,3 +358,24 @@ canonical traversal into `reports/delayed-taker-quotes/0252Z-v3.building`.
 The fixed external deadline is approximately 2026-09-30T06:57:00.151635+00:00.
 No other replay or raw capture is launched. Results remain pending;
 no fourth attempt is authorized by this amendment.
+
+
+### Delayed taker diagnostic completed, 06:52 UTC
+
+The separately frozen v3 run completed at 06:52:04 UTC in 904.45 seconds.
+All 7,200 candidates/28,800 outcomes remain, with 26,395 complete quotes
+and 2,405 incomplete. **Every complete quote is negative after fees alone**
+at each of 10/30/60/300 seconds, including all sizes and both directions.
+All 33 actual input hashes and nine published output hashes match; the
+independent derived-row verifier passed. Completed output is 2,530,132 bytes.
+See the [audited readout](../reports/delayed-taker-quotes/0252Z-v3-analysis.md).
+
+A separately labeled unchanged-quote fee-reduction bound also has zero
+positives even after forgiving all trading fees while retaining original
+stress/capital. It does not price another venue, maker execution or funding.
+The completion reconciliation releases unused v3 output allowance and
+reserves 100 KB for derived analysis/audit, giving 31,110,904 of 33,000,000
+bytes. Both failed attempts remain; no new raw archive or replay follows.
+These findings do not justify a selector fit, threshold relaxation,
+strategy promotion or additional capture. The ongoing production review
+schedule continues; the next review is 07:06:33 UTC.
