@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 14:07 UTC
+## Current status, 30 September 2026 14:27 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative; no production strategy is promoted. The user authorized
@@ -19,10 +19,10 @@ analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
 [method](dated-carry-method-v1.md) and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 66 are preserved. The two paired convergence gains in review65
-(WLD +$0.3590; CRCL +$0.3250) have not repeated: all 46 review66 closes were
-negative, and all three active strategy windows lost money.
-Next review: **14:26:33 UTC**.
+Reviews through 67 are preserved. The two paired convergence gains in review65
+(WLD +$0.3590; CRCL +$0.3250) have not repeated: all 91 closes across reviews 66
+and 67 were negative. All three active strategy windows lost money.
+Next review: **14:46:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -939,3 +939,13 @@ winners. Four feeds connected; one cooldown position at review and later
 snapshot flat. Twelve prior win records and three legacy funding obligations
 remain. Next checkpoint 14:26:33 UTC. The carry study has 17 arrivals and no
 reported errors; its economic endpoint remains unchanged.
+
+### Review 67, 14:26 UTC
+
+All 45 closes exact and negative: cooldown 25/−$48.5700, Premium twelve/
+−$22.1022, convergence eight/−$9.0479; zero aborts, complete coverage. Twelve
+prior win records remain. Four feeds connected; a brief busy CPU period
+subsided without intervention. Review flat, later snapshot one cooldown
+position; three legacy funding obligations retained. Next checkpoint
+14:46:33 UTC. Carry has 21 arrivals, no reported errors and no interim
+economic readout.

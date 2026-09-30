@@ -2076,3 +2076,35 @@ No policy or capital change. Next checkpoint **14:26:33 UTC**.
 
 The carry collector has 17 arrivals through 14:05, 20,740 sample bytes and no
 reported collection errors. No interim prices or economics were evaluated.
+
+## Review 67 — 2026-09-30 14:26:33 UTC
+
+Exact review and separate current-epoch read preserved; manual archive
+1,183,116/16,777,216 bytes after the guarded writes. All 45 closes exact and
+negative, zero aborts, complete coverage. Portfolios remain separate.
+
+- Cooldown: 25/−$48.5700; 23 paired/−$47.0561, two failed/−$1.5139.
+- Premium: twelve/−$22.1022; four paired/−$7.7897, eight failed/−$14.3124.
+- Convergence: eight failed hedges/−$9.0479; no paired closes.
+- Price-limit rejections: Hyperliquid sixteen, Core one. No new winners.
+
+Cooldown fees $10.0448, stress $12.4848, capital $0.0008292, funding zero;
+removing stress leaves −$36.0852. All 23 paired exit comparisons are present:
+fifteen worsened and eight improved, net deterioration $2.769111, median
+$0.11471, p95 $0.61894. Request-to-flat median 1.288 s, p95 1.710 s. Premium's
+four paired exit comparisons all worsened, $0.800906 combined.
+
+Four feeds connected, 113 pairs, CPU 83.42%, p95 lag 21.14 ms, RSS 312.81 MiB,
+1,347.3 books/s, metadata age 2,972.8 s. A temporary CPU rise to 91–97% around
+14:15–14:17 triggered the existing busy indicator; snapshots stayed fresh,
+RH gap count stayed 107, and funding errors were empty. CPU returned below
+the busy threshold by 14:20. No process or code intervention was needed.
+
+Review snapshot flat; separate later epoch read had one cooldown position.
+Epoch: cooldown 1,369 exact plus three estimated/−$1,852.0300; Premium
+378/−$688.3042; convergence 195/−$219.1609; conservative one/+$2.3198.
+Twelve prior win records (two paired, ten rescues) and three legacy funding
+obligations remain. No policy/capital change. Next checkpoint **14:46:33 UTC**.
+
+Carry arrival status: 21 samples through 14:25, 25,607 bytes, no reported
+errors; fixed source and endpoint unchanged, no interim economic analysis.
