@@ -1,0 +1,14 @@
+{
+  "pid": 3161224,
+  "launched_at": "2026-09-30T03:07:32.408339+00:00",
+  "command": [
+    "/home/harry/projects/research/rhhype/.venv/bin/python",
+    "scripts/watch_passive_replay.py",
+    "--run"
+  ],
+  "source_commit": "b578dd7",
+  "capture_pid": 3045038,
+  "purpose": "one frozen strict replay after complete manifest; corrected result requires separate review",
+  "max_wait_seconds": 3600,
+  "max_replay_seconds": 3600
+}

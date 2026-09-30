@@ -962,3 +962,23 @@ core, p95 loop lag21.92 ms, RSS262.79 MiB. One cooldown paired position is
 open at the snapshot; old Standard/Premium funding-pending records remain
 preserved. Next review **03:06:33 UTC**. Passive v1 continues collecting;
 its frozen source and production rules are unchanged.
+
+## Review 33: 2026-09-30 03:06:33 UTC
+
+Actively read at 03:07 UTC; full review preserved in
+`reports/live-review-catchup/review-20260930T030633Z.json`. Completion coverage
+complete. Cooldown closed 50 paired trades for **−$54.6757**, zero wins.
+Premium recorded two failed hedges for **−$5.9806**, no paired completion.
+Baseline/Standard/Plus remain without new completions; no ledger was topped up.
+
+Cooldown's exit-price comparison is available for 48 of the 50 paired closes:
+11 worse, 18 better, 19 unchanged, aggregate deterioration **+$0.134608**,
+p95 adverse $0.087189. Two request-price observations are missing. The median
+is numerically zero (floating-point residual about −1e−13). This remains a
+small component of the interval's net loss, with offsetting observations.
+
+Health: 112 pairs, CPU55.75% of one core, p95 loop lag13.47 ms, RSS264.11 MiB,
+716.2 books/s. Next review **03:26:33 UTC**. New capture3045038 continues;
+one-shot supervisor3161224 waits for its final manifest and will perform one
+bounded frozen replay. The same-callback retirement correction is a separate
+implementation variant under preparation, never an unlabeled replacement.

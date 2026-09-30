@@ -118,3 +118,16 @@ and restarted at 02:52:57 UTC in a new directory. Current calibration ends about
 and `reports/rh-passive-exit-v1-restart/launch.json`. No outcomes from the
 interrupted raw file informed the strategy. New subagents use gpt-6.1-sol high
 as explicitly requested; no in-place model change was used.
+
+## Next TUI rollout requirement, 03:07 UTC
+
+The user requested that headline paper results show **only the latest strategy
+version**, so the current policy's performance is apparent. Preserve historical
+ledgers and archives; exclude their accumulated P&L from the new headline.
+Display an explicit strategy version and start time. Keep current-version
+counts, wins, fees and realized net durable across process restarts and rolling
+trade retention. Positions admitted under an earlier version remain carryover
+exposure and must not enter the new version's realized result when they close.
+Available wallet balances and capital constraints remain real paper state;
+versioning is not permission to replenish or reset them. Prepare this for the
+next planned rollout, with focused migration/restart/carryover/resize tests.
