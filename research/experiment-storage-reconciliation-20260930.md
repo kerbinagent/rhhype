@@ -217,3 +217,14 @@ comparison-and-offline-diagnostic allowance: the projected total is
 comparison rerun or scenario is automatically authorized. The full 673 MB
 derived maximum and 820 MB reservation remain unchanged. No raw archive is
 added and the one future capture slot remains unused.
+
+
+### Reverse-route static bound allocation, 04:57 UTC
+
+A [second explicit offline allocation](../reports/experiment-storage/reverse-bound-allocation-20260930.json)
+allows at most 2,000,000 bytes for one reverse-route static upper-bound
+calculation from the completed fixed-anchor CSV and metadata. It performs
+zero raw traversals. Including the 72,636-byte completed ACK halt review,
+shared comparison/diagnostic use at all allocated maxima is 27,882,911 bytes,
+below the existing 33,000,000-byte allowance. The raw-study count, future
+capture slot, total derived maximum and 820 MB reservation remain unchanged.

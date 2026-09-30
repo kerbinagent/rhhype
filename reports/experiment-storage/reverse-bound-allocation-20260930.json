@@ -1,0 +1,15 @@
+{
+  "schema": "reverse-static-upper-bound-allocation-v1",
+  "recorded_utc": "2026-09-30T04:57:43.100756+00:00",
+  "previous_allocation_sha256": "4bcd6b481147ebe92a65ddeb149268afcdebaf119a12497ef780caeb4b64cdee",
+  "previous_projected_maximum_bytes": 25810275,
+  "completed_ack_halt_review_bytes": 72636,
+  "new_reverse_diagnostic_maximum_total_bytes": 2000000,
+  "shared_allowance_bytes": 33000000,
+  "projected_maximum_bytes": 27882911,
+  "headroom_bytes": 5117089,
+  "new_raw_archives": 0,
+  "new_raw_bytes": 0,
+  "raw_traversals": 0,
+  "existing_total_reservation_bytes": 820000000
+}
