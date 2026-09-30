@@ -45,3 +45,19 @@ maximum base limits, funding and conversion remain unverified.
 After completed publication, root may run the frozen derived-only auditor
 once, then inspect the full retained denominator. No partial economics are
 used to alter this run. Source files, method and tests stay fixed throughout.
+
+## Prepared inputs accepted, 10:00 UTC
+
+Sources are committed in `279ccd7`. Root independently checked all 19 small
+input/source hashes and eight historical rule specifications. Preparation
+made zero raw stream reads. The 17,857-byte external freeze is
+`20260930T1000Z-freeze.json`, SHA256
+`24388b10975afcf6c4d3c3a4de7f09cd82f374b3c34eb8b689f0bd5bb2969b52`.
+Owned archive sizes are 23,658,122 and 3,758,827 bytes, both below 25 MB.
+Runtime is Python 3.13.9, aiohttp 3.14.3, bytecode writes disabled.
+
+Root authorizes the one canonical run after this freeze is committed,
+output `20260930T1000Z`. Launch uses GNU timeout at 900 seconds, SIGTERM and
+a five-second SIGKILL grace, Python `-B`, the exact freeze digest above,
+and an external log limited to 9,000 bytes. All aggregate/category reserves
+remain unchanged. No process retry or source amendment is authorized.
