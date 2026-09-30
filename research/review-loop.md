@@ -1406,3 +1406,37 @@ Health: four connected feeds, 111 pairs, CPU 52.48% of one core, p95 loop lag
 The single spread-regime prerequisite watch remains in implementation review;
 no new metadata or ticker request has started. No production strategy change,
 capital reset or interpretation of conditional quote budgets as realized P&L.
+
+
+## Review 47: 2026-09-30 07:46:33 UTC
+
+Archived in `reports/live-review-catchup/review-20260930T074633Z.json`;
+all completion and aborted coverage is complete. Cooldown: **45 exact
+completions, −$45.9149**, comprising 44 paired −$44.7648 and one failed
+hedge −$1.1501, zero wins. Premium: **six exact completions, −$9.5264**,
+comprising five paired −$8.9346 and one failed hedge −$0.5919, zero wins.
+Each recorded one HL price-limit rejection. Others have no new completions;
+portfolios are separate.
+
+Cooldown fees $9.7383, stress $22.4707, capital $0.001576, funding zero;
+without stress it remains −$23.4442. Its 43 observed exit-price comparisons
+improved $0.457314 (nine worse, 18 better, 16 unchanged; one missing request
+price), median zero and p95 adverse $0.070047. For 44 paired closes,
+request-to-flat median was 1.174 s, p95 1.684 s. Premium's five comparisons
+improved $0.085322. Exit price deterioration is not the main loss explanation
+in this window.
+
+The separate later current-version snapshot in
+`reports/live-review-catchup/current-epoch-at-review47.json` records cooldown
+587 exact plus two estimated completions, −$806.6607 (one win); Premium
+99/−$164.8956 (one win); convergence 44/−$34.8938 (two wins); conservative
+1/+$2.3198. Version `e3e83cda71a6` and win counts are unchanged. The review
+snapshot has one cooldown position open; the later epoch snapshot is flat.
+Three legacy funding obligations remain outside current-version totals.
+
+Health: four connected feeds, 108 pairs, CPU 59.38% of one core, p95 loop lag
+7.95 ms, RSS 246.68 MiB, 793.9 books/s. Next review **08:06:33 UTC**.
+The spread-regime prerequisite watch is still in final implementation review;
+no metadata or quote connection has started. Twelve focused fixtures passed
+independent review; final source/cap checks precede commit and collection.
+No capital reset or production strategy change.

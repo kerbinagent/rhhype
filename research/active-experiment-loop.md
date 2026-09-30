@@ -429,3 +429,14 @@ cooldown and −$155.3691 Premium; two cooldown positions are open in the
 separate later snapshot. Four feeds remain connected. The sentinel is still
 in implementation review with no collection started. Next production review:
 **07:46:33 UTC**. Full accounting is in the [review journal](review-loop.md).
+
+
+### Production review 47, 07:46 UTC
+
+Cooldown adds45 exact closes/−$45.9149 and Premium six/−$9.5264, both zero
+wins and complete coverage. Cooldown remains −$23.4442 before stress;
+observed exit-price changes improved the result by $0.457314. The separate
+later current-version closed totals are −$806.6607 cooldown and −$164.8956
+Premium, with all current positions flat. Four feeds are connected. Final
+sentinel implementation review continues; no collection has started. Next
+production review: **08:06:33 UTC**.
