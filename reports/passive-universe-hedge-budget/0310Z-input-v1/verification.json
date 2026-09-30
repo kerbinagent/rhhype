@@ -1,0 +1,13 @@
+{
+  "input_hashes_unchanged_after_readout": true,
+  "declared_output_hashes_match": true,
+  "validity_unchanged": {
+    "valid": 320,
+    "missing": 100,
+    "total": 420
+  },
+  "five_tests_passed": true,
+  "network_calls": 0,
+  "bytes_before_verification": 330790,
+  "cap_bytes": 2000000
+}

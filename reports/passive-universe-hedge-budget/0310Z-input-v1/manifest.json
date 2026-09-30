@@ -1,0 +1,25 @@
+{
+  "generated_utc": "2026-09-30T03:26:25.202361+00:00",
+  "input_hashes": {
+    "/home/harry/projects/research/rhhype/reports/passive-universe-screen/20260930T0310Z/quotes.jsonl": "13d909ef8d4f16f2c796420b8b01e3fce52b00a9ac26fa3ec55a975045b66d0b",
+    "/home/harry/projects/research/rhhype/reports/passive-universe-screen/20260930T0310Z/universe.json": "37fc90d4b66d8fc0aefea3c806b49ff598ab06c986a9db3cec76188da7b1fa83",
+    "/home/harry/projects/research/rhhype/reports/passive-universe-screen/20260930T0310Z/summary.json": "d91af6755aa662ec0341ba30b0e96d270ecbfa9d7a76be9657906f441290a5c6",
+    "/home/harry/projects/research/rhhype/reports/passive-universe-screen/20260930T0310Z/manifest.json": "495b9c20eee3cf16bf70a77cffd0cf87794b87b494dfbf8e604f843021338398",
+    "/home/harry/projects/research/rhhype/reports/passive-universe-screen/20260930T0310Z/freeze.json": "1230c10fde9d26a3a94cbf137e01c3f6969685abac35cf5361009fd0794a28d0",
+    "/home/harry/projects/research/rhhype/research/passive-universe-hedge-budget-method.md": "4c15d37826d43b964adc11c2f01a046629770527c4e9ed832a72d859d2bc021f",
+    "/home/harry/projects/research/rhhype/scripts/analyze_passive_universe_hedge_budget.py": "2834284bc13a17be20ab66871f42be01157d237e62c704278ae8bde1e3691d3a",
+    "/home/harry/projects/research/rhhype/tests/test_passive_universe_hedge_budget.py": "32c35581ffb679581970257319c6d939a4cffdbf977ab6433569fc528f7870bd"
+  },
+  "frozen_screen_hashes_verified": true,
+  "read_inputs_unchanged": true,
+  "original_validity_and_coverage_preserved": true,
+  "output_hashes": {
+    "observations.jsonl": "2ffcfe9b3fc462cd92fd7457912c311712a5b051639480ee50d9a67e44f1bd66",
+    "summary.json": "94a2dd8deae900bfc564fa3910b2c51bdbf8cdb389fbbbe968b2010f411e42c2",
+    "method.md": "4c15d37826d43b964adc11c2f01a046629770527c4e9ed832a72d859d2bc021f",
+    "source.py": "2834284bc13a17be20ab66871f42be01157d237e62c704278ae8bde1e3691d3a",
+    "tests.py": "32c35581ffb679581970257319c6d939a4cffdbf977ab6433569fc528f7870bd"
+  },
+  "network_calls": 0,
+  "derived_file_cap_bytes": 2000000
+}
