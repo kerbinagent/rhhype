@@ -2717,3 +2717,59 @@ The completed review denominator remains 46.
 No policy or capital change. Next checkpoint **20:06:33 UTC**. Carry has all
 85 due arrivals through 19:45, 104,556 sample bytes, zero overdue missing files,
 no terminal error and no interim economic evaluation.
+
+
+### Review 84 — 30 September 2026 20:06 UTC
+
+Exact report, separate epoch snapshot and the full positive record preserved;
+guarded manual archive 1,785,267/16,777,216 bytes. Report SHA-256
+`563556491e64c1f2dad499fbb57185f355c55f7cf2c4f94d0aaf021932981a98`.
+147 exact closes: 146 losses, one failed-hedge rescue gain. Three additional
+aborts, complete close/abort coverage and no capped query. Entry rejections:
+Hyperliquid 69 price-limit, Lighter one notional-cap/one price-limit, RH two
+notional-cap/two price-limit.
+
+- Cooldown: 35/−$49.9997; 34 paired/−$47.5994 and one failed hedge/−$2.4003.
+- Premium: 69/−$130.5542; 36 paired/−$62.1469 and 33 failed hedges/−$68.4073;
+  two additional aborts. GOOGL accounts for 45 closes/−$86.6459.
+- Convergence: 43/−$58.6853; five paired/−$5.9765 and 38 failed hedges/
+  −$52.7088; one additional abort. MU routes total thirteen closes/−$25.0181.
+
+The bounded read-only winner query counted one record before fetching (cap
+128), matching all strategies' ledger wins. MU convergence record
+`1790798484014223-22931-convergence` has RH short 0.948 units/$999.22992;
+Hyperliquid long rejected at its price limit. RH bought back for $997.78896,
+1.6561 s after entry, 0.4890 s after rescue request. Price P&L $1.44096 minus
+5 bp stress $0.49961496 and capital $0.000002623718 gives $0.941342416282 net.
+Fees and exact funding zero; no missing funding events, both legs remaining
+zero. Arithmetic and funding-event sum reconcile. It is an unhedged rescue
+gain. All 75 paired closes in the window lost money. Sixteen epoch winning
+records now comprise two paired and fourteen rescue gains across separate
+portfolios; they are not independent strategy confirmations.
+
+A separate bounded read-only query counted/fetched all three ABORTED records:
+MU convergence `1790798567885056-22941-convergence`, MU Premium
+`1790798567885056-22943-premium`, and GOOGL Premium
+`1790798762911332-22989-premium`. Both legs in each were rejected with zero
+quantity/remaining; recorded P&L fields are null. They remain separate from
+the 147 completed closes.
+
+Cooldown fees $11.3148, stress $17.4772, capital $0.0012307, funding zero;
+without stress −$32.5225. Paired exit comparisons: 32 observed, two missing
+request prices; ten better, eighteen worse, four unchanged, net deterioration
+$0.876146, median $0.010077, p95 $0.302373. Paired request-to-flat median
+1.241 s, p95 1.835 s. Premium: 35 observed, one missing request price, net
+exit deterioration $13.482736; convergence: five observed, all worse,
+deterioration $4.941229. Missing comparisons stay missing.
+
+Four feeds connected, 110 pairs, CPU 66.39%, p95 lag 15.90 ms, RSS 315.84 MiB,
+1,040.2 books/s, metadata age 1,746.8 s. Review and later epoch snapshot have
+no open quantities; three legacy funding obligations remain. Later epoch:
+cooldown 1,999 exact plus six estimated/−$2,681.5246; Premium 544/−$1,002.7811;
+convergence 308/−$370.9537; conservative two/−$1.7145; confirmed one/−$3.3006.
+These snapshots remain separate from the review's durable boundaries.
+Reviews 66–84 contain 1,000 closes: 996 losses and four rescue gains. No
+policy or capital change. Next checkpoint **20:26:33 UTC**.
+
+Carry has all 89 due arrivals through 20:05, 109,417 sample bytes, zero overdue
+missing files, no terminal error and no interim economic evaluation.
