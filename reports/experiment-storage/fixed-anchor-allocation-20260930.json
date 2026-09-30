@@ -1,0 +1,119 @@
+{
+  "schema": "offline-diagnostic-allocation-v1",
+  "recorded_utc": "2026-09-30T04:40:23.188212+00:00",
+  "shared_comparison_and_diagnostic_allowance_bytes": 33000000,
+  "completed_pinned_files": [
+    {
+      "root": "data/derived/rh-passive-exit-v1-restart-comparison",
+      "file_bytes": 807165,
+      "files": [
+        {
+          "path": "data/derived/rh-passive-exit-v1-restart-comparison/REPORT.md",
+          "bytes": 39289,
+          "sha256": "31e280f8fa9a1f98eb167c06c23c5716fc4d4cd13c9e5f5ce5469f9d9897ee55"
+        },
+        {
+          "path": "data/derived/rh-passive-exit-v1-restart-comparison/comparison.json",
+          "bytes": 767876,
+          "sha256": "5834d82c9bee082f0090d1c53259986e234767816d7ead3a4c2eb8eff23e12cb"
+        }
+      ]
+    },
+    {
+      "root": "data/derived/rh-passive-exit-v1-restart-ack-readout",
+      "file_bytes": 7921721,
+      "files": [
+        {
+          "path": "data/derived/rh-passive-exit-v1-restart-ack-readout/REPORT.md",
+          "bytes": 62573,
+          "sha256": "1972873251c8c6edad59a7e35ccc741bb701208fa16d79d44e0464ddd2f43845"
+        },
+        {
+          "path": "data/derived/rh-passive-exit-v1-restart-ack-readout/readout.json",
+          "bytes": 7859148,
+          "sha256": "fa7476f2d0b9271602a2e74538299859ae0b34f7d8c8bda1d171d3148040ad2f"
+        }
+      ]
+    },
+    {
+      "root": "reports/rejected-target-public-reach",
+      "file_bytes": 754278,
+      "files": [
+        {
+          "path": "reports/rejected-target-public-reach/REPORT.md",
+          "bytes": 3306,
+          "sha256": "929dc20f49429f81c6cd6b0802827eac5156810357299b700310610139abfaa8"
+        },
+        {
+          "path": "reports/rejected-target-public-reach/analysis.json",
+          "bytes": 250324,
+          "sha256": "cfd8a2428b8122869c55786eaf90a625881be75ed2f64f56e5265279e7e44501"
+        },
+        {
+          "path": "reports/rejected-target-public-reach/final-analysis.json",
+          "bytes": 250324,
+          "sha256": "13fce6fe1873239a82d9ae61390b6d519ad89fb85e9c7847583c81f5f8f0b566"
+        },
+        {
+          "path": "reports/rejected-target-public-reach/verified-analysis.json",
+          "bytes": 250324,
+          "sha256": "5a631696110f6f2225af5e9c07c4524ab7674a27e02f3f44a4ae91e399b485b9"
+        }
+      ]
+    },
+    {
+      "root": "reports/passive-universe-exit-markup",
+      "file_bytes": 327111,
+      "files": [
+        {
+          "path": "reports/passive-universe-exit-markup/0310Z-input-v1/manifest.json",
+          "bytes": 2015,
+          "sha256": "e2aee8eeaaa96872f3fea1ce015291b3e4342349c21e06cf098e629c63a73a01"
+        },
+        {
+          "path": "reports/passive-universe-exit-markup/0310Z-input-v1/method.md",
+          "bytes": 2839,
+          "sha256": "84eb5902203823591eda1e625efda7f0922f915c2dba54f0b5dbb324ab8c6240"
+        },
+        {
+          "path": "reports/passive-universe-exit-markup/0310Z-input-v1/observations.jsonl",
+          "bytes": 262313,
+          "sha256": "3bbc950adc62f34192f22e96e0c5ca398359414e2c13a3f2abdcf63d6966b26a"
+        },
+        {
+          "path": "reports/passive-universe-exit-markup/0310Z-input-v1/readout.md",
+          "bytes": 7034,
+          "sha256": "ab4ca14196b6e00cfbf5226befed1ce27a5994e3bc1569ed46239757cbb15fb9"
+        },
+        {
+          "path": "reports/passive-universe-exit-markup/0310Z-input-v1/source.py",
+          "bytes": 10192,
+          "sha256": "03f8c5389fc46a0766622aad2fec8d6500dbea479cb782755b66d3f5b64a7b4f"
+        },
+        {
+          "path": "reports/passive-universe-exit-markup/0310Z-input-v1/summary.json",
+          "bytes": 37865,
+          "sha256": "0430a0f121905daaa75cbe1f4c9f0119428f14c52f4953976f66863237dc4ff6"
+        },
+        {
+          "path": "reports/passive-universe-exit-markup/0310Z-input-v1/tests.py",
+          "bytes": 4412,
+          "sha256": "a27cfd5270df2c92d90f79dc20a49f8eec2e3b171810586dc1c3f38689404a8c"
+        },
+        {
+          "path": "reports/passive-universe-exit-markup/0310Z-input-v1/verification.json",
+          "bytes": 441,
+          "sha256": "bd0d03468ab45a1d82ee581525f8f3ab024a05d7c3546dbda390d2c0728add00"
+        }
+      ]
+    }
+  ],
+  "completed_file_bytes": 9810275,
+  "new_fixed_anchor_diagnostic_maximum_total_bytes": 16000000,
+  "projected_maximum_file_bytes": 25810275,
+  "unused_allowance_bytes": 7189725,
+  "new_raw_archives": 0,
+  "new_raw_bytes": 0,
+  "automatic_extra_replay_or_capture": false,
+  "existing_820MB_total_reservation_unchanged": true
+}

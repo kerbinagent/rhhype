@@ -201,3 +201,19 @@ After that single additional archive, the count reaches eight. A ninth capture
 requires a fresh explicit reconciliation; the amendment does not expand itself
 or create an ongoing capture loop. Continue bounded analysis of stopped data
 while current results and the separate future design are reviewed.
+
+
+### Completed-output allocation for the fixed-anchor diagnostic, 04:40 UTC
+
+The completed strict/corrected comparison, ACK readout, rejected-target reach
+and static exit-distance reports are pinned in the
+[offline allocation record](../reports/experiment-storage/fixed-anchor-allocation-20260930.json).
+Their exact regular-file lengths total 9,810,275 bytes. Allocate at most
+16,000,000 further bytes, including all observations, summaries, manifests
+and reports, to one RH/HL fixed-anchor diagnostic on the stopped 02:52 archive.
+This reuses the existing 33,000,000-byte comparison allowance as a shared
+comparison-and-offline-diagnostic allowance: the projected total is
+25,810,275 bytes. Completed files are pinned, and no additional
+comparison rerun or scenario is automatically authorized. The full 673 MB
+derived maximum and 820 MB reservation remain unchanged. No raw archive is
+added and the one future capture slot remains unused.
