@@ -1,0 +1,36 @@
+{
+  "all_old_allocations_retained": true,
+  "authorization": "Existing user mandate to continue paper research and twenty-minute production reviews. Fits prior shared allowance; no overall budget increase.",
+  "bounds": {
+    "automatic_retry": false,
+    "database_transaction_seconds": 10,
+    "new_raw_capture_bytes": 0,
+    "query_mode": "read_only",
+    "response_output_bytes": 65536,
+    "retained_attempts": 256
+  },
+  "categories_bytes": {
+    "incremental_docs": 4000,
+    "output": 65536,
+    "provenance": 5464,
+    "source": 45000
+  },
+  "existing_total_reservation_bytes": 836777216,
+  "new_annotation_maximum_bytes": 120000,
+  "overall_reservation_increase_bytes": 0,
+  "previous_sha256": "d7f97b1defbe6fe84dfe3d27346b0376e079855df8fe46c5047f1ac1073d304e",
+  "previous_shared_allocation": "reports/experiment-storage/rh-liquidation-schema-review-allocation-v1.json",
+  "previous_shared_reserved_bytes": 32742904,
+  "projected_shared_reserved_bytes": 32862904,
+  "recorded_utc": "2026-09-30T13:35:36.133856+00:00",
+  "schema": "review65-nvda-annotation-allocation-v1",
+  "scope": "Descriptive retained NVDA paper-attempt annotation within the existing review64-to-review65 interval, split at13:30UTC bycreated_at; no new quote capture, policy/economic replay or causal session claim. Keep strategy/version/epoch/class/quality and uncompleted denominators separate.",
+  "separate_dated_carry_allocation_unchanged": true,
+  "shared_allowance_bytes": 33000000,
+  "shared_headroom_bytes": 137096,
+  "source_sha256": {
+    "scripts/paper_review.py": "a60589166b481dd2e3e73a33561fabf891fd61caa4aca16fcd499f6791d786dd",
+    "scripts/review65_nvda_annotation.py": "df98a5e72ca9a44079d61af12f42d9bb6bd9c2395c774539286348d86c8ac1c4"
+  },
+  "verification": "Default dry mode did not read database; synthetic settled_at upper-boundary check excludes future completion P&L. Independent source-only review passed: cutoff excludes later settlement P&L; phases and denominators preserve all selected retained attempts."
+}

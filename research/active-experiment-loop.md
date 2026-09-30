@@ -900,3 +900,17 @@ convergence 8/−$12.0159. Zero aborts, complete coverage; review and later
 snapshot flat. Seven earlier rescue win records remain, with no new winner.
 All four feeds connected; next review 13:46:33 UTC. The dated-carry collector
 has nine successful paired arrivals, no errors and no interim economic readout.
+
+### Routine review 65 NVDA annotation prepared, 13:40 UTC
+
+A bounded descriptive breakdown will accompany the next existing paper review,
+splitting retained NVDA attempts by creation before/after 13:30 UTC. It preserves
+strategy, version, epoch, completion quality and unsettled denominators; no
+causal session or independent holdout claim. Source-only review and a synthetic
+settlement-cutoff check passed. No new outcomes have been read.
+
+The conservative 120,000-byte annotation reservation fits within the existing
+33,000,000-byte shared allowance: reserved now 32,862,904, headroom 137,096.
+All earlier reservations and the separate dated-carry allowance are retained;
+overall reservation remains 836,777,216 bytes. No new quote capture or policy
+change. The existing dated-carry source and economic endpoint stay frozen.
