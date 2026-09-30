@@ -564,3 +564,23 @@ failed hedge); convergence one failed hedge/−$1.6130. No new wins, complete
 coverage, four connected feeds. Later current-epoch totals are retained
 separately; no balances reset. The compact sentinel remains unread until
 08:32:57UTC. Next production review: **08:46:33 UTC**.
+
+### Independent auditor frozen before endpoint, 08:27 UTC
+
+Commit `3022b04` freezes the separate auditor and five synthetic tests.
+Root and author both passed all five, including complete synthetic publication,
+pre-endpoint refusal, and deliberately corrupted quantities, U, block medians,
+block gates, source/receipt clocks, hashes and missing-row promotion. The
+source is18,433bytes and tests10,032bytes; both plus a report below8,000bytes
+and the entire stage must stay within the compact study's500,000-byte cap.
+Auditor SHA256: `765491aa7437f0c4a5a0065a7caf7b64c8aaddd49f24338ba2ec618da65ae131`.
+
+After the fixed UTC and monotonic endpoint and terminal manifest, root will
+run it once. It checks eight dependencies, six compressed/decoded source
+archives, all publication hashes and storage categories,420sample references,
+1,680exact rows,84groups and336fixed blocks. Quantities/U/medians/gates use
+independent exact arithmetic. It pins fresh metadata and eligibility rather
+than re-running the selector; root independently reviewed those full responses
+before launch. It cannot reconstruct every intervening invalidation or source
+watermark from sampled tickers alone. No live economic data was read during
+implementation or test review.
