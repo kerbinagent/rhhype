@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 16:09 UTC
+## Current status, 30 September 2026 16:27 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative; no production strategy is promoted. The user authorized
@@ -19,11 +19,12 @@ analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
 [method](dated-carry-method-v1.md) and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 72 are preserved. The two paired convergence gains in review65
+Reviews through 73 are preserved. The two paired convergence gains in review65
 (WLD +$0.3590; CRCL +$0.3250) have not repeated. After 289 negative closes in
 reviews 66–71, review72 had 48 losses and one failed-hedge rescue gain (ENA
-+$0.1134). All three active strategy windows still lost money.
-Next review: **16:26:33 UTC**.
++$0.1134). All forty closes in review73 were negative, and all three active
+strategy windows still lost money.
+Next review: **16:46:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -1041,3 +1042,13 @@ Four feeds connected and performance normal; review and later snapshot each
 had one cooldown position. Three legacy funding obligations remain. Next
 review 16:26:33 UTC. Carry has 41 arrivals with no overdue files or terminal
 error; economics remain deferred.
+
+### Review 73, 16:26 UTC
+
+All forty closes exact and negative: cooldown 34/−$41.3033, Premium five/
+−$10.9282, convergence one/−$0.7558. Zero aborts, complete coverage, no new
+winners. Four feeds connected and performance normal. Review and later epoch
+snapshot flat; three legacy funding obligations remain. Thirteen prior epoch
+win records retained. Next review 16:46:33 UTC. Carry has all 45 due arrivals
+through 16:25, no overdue missing files or terminal error, and no economic
+evaluation.
