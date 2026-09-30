@@ -379,3 +379,33 @@ bytes. Both failed attempts remain; no new raw archive or replay follows.
 These findings do not justify a selector fit, threshold relaxation,
 strategy promotion or additional capture. The ongoing production review
 schedule continues; the next review is 07:06:33 UTC.
+
+
+### One prospective spread-regime prerequisite watch, 07:18 UTC
+
+The old LIT optimistic peak does not justify a Core-specific static rerun:
+only one of five valid rounds was positive and its median was negative.
+Nonnegative hedge spread/fees can only tighten that unchanged-price bound.
+No Core quote screen or full execution capture is launched.
+
+A distinct [prospective method](rh-spread-regime-sentinel-plan.md), committed
+as `f87191b` after root and independent review, asks whether NEW RH spreads
+persistently pass the necessary ex-funding static cost budget across all
+21 original assets. One fixed 20-minute window has 20 minute slots and
+1,680 original size observations. The primary gate requires 16/20 valid,
+a positive full-window median and positive medians in at least three of
+four fixed five-minute blocks, each with at least four valid samples.
+There is no economic readout before the endpoint or automatic repeat.
+
+The 500 KB allocation `65fe3a0` explicitly counts new sampled public-network
+evidence, including full fresh metadata, selected raw ticker messages,
+source, derived rows, logs and failures. It is not a canonical flow archive
+or evidence reuse. Projected shared maximum is 31,610,904 of 33,000,000 bytes.
+At most three metadata requests and one RH ticker connection are permitted;
+no Core/HL book calls or trade subscriptions. Receipt/sample clock guards
+precede timestamp acceptance, with no clock rebaselining or stale fallback.
+
+Implementation is authorized after method review; no new metadata or ticker
+request has been made. Root will review code/tests, then separately review
+fresh metadata and freeze sources before launching. Even a positive
+prerequisite supplies no paired hedge, maker-fill or profitability evidence.
