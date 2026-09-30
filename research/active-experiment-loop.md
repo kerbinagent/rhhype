@@ -284,3 +284,20 @@ margins are XAG $0.226464 and NVDA $0.170798; BTC and ETH remain negative
 even before target and stress. These assumed-fill quoted margins do not
 establish execution or realized profit. The declared stress allowance is
 separate from charged fees and has not been lowered after seeing results.
+
+## Delayed taker quote diagnostic, 05:21 UTC
+
+The [reviewed method](delayed-taker-fixed-quantity-plan.md), committed as
+`71e4127` before implementation, tests a distinct question on the same stopped
+archive: whether later basis movement can cover delayed four-taker quote
+costs. It fixes 7,200 original candidates across both directions, four assets
+and four sizes, each with a shared delayed entry and separate 10/30/60/300 s
+outcomes. All 28,800 rows, initial failures and EOF outcomes remain visible.
+Fees, stress, capital and unknown funding are separate. Paired quotes do not
+model private fills, price-limit rejection, partials or hedge rescue.
+
+Implementation and synthetic review are underway. No archive evaluation has
+launched. One later canonical traversal requires frozen reviewed sources,
+has a 900-second limit and a 3 MB aggregate output allocation recorded in
+`d9e8124`; it adds no raw archive. This is post-capture exploratory analysis,
+with no automatic policy selection, capture or promotion.
