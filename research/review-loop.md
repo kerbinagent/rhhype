@@ -1341,3 +1341,36 @@ its 1,200-second limit; approximately two-thirds of compressed input had
 been read at 06:46:45. This is progress only, not a completed result.
 Independent derived-output verifier was committed as `c5645f5` before
 publication. No new capture, strategy promotion or capital reset.
+
+
+## Review 45: 2026-09-30 07:06:33 UTC
+
+Archived in `reports/live-review-catchup/review-20260930T070633Z.json`;
+all completion and aborted coverage is complete. Cooldown: **43 exact
+completions, −$65.8059**, comprising 42 paired −$65.0853 and one failed hedge
+−$0.7206, zero wins. Premium: **six exact paired, −$9.5293**, zero wins.
+Convergence: **two exact failed hedges, −$0.9385**, zero wins, both with HL
+price-limit rejections. Others have no new completions. Portfolios are separate.
+
+Cooldown fees $15.0548, stress $21.4726, capital $0.001509, funding zero;
+without stress it remains −$44.3332. Its 38 observed exit-price comparisons
+worsened $0.667253 (11 worse, 16 better, 11 unchanged; four missing request
+prices), median approximately zero and p95 adverse $0.415030. For 42 paired
+closes request-to-flat median was 1.327 s, p95 1.790 s. Premium's six
+comparisons improved $0.009343.
+
+The separate later current-version snapshot in
+`reports/live-review-catchup/current-epoch-at-review45.json` records cooldown
+492 exact plus two estimated completions, −$702.0528 (one win); Premium
+90/−$150.1786 (one win); convergence 44/−$34.8938 (two wins); conservative
+1/+$2.3198. Version `e3e83cda71a6` and win counts are unchanged. Both snapshots
+are flat, with three legacy funding obligations outside current-version totals.
+
+Health: four connected feeds, 111 pairs, CPU 57.69% of one core, p95 loop lag
+10.25 ms, RSS 244.12 MiB, 950.2 books/s. Next review **07:26:33 UTC**.
+The delayed quote study completed and was independently audited in `5ae08e9`: 
+zero fee-only positives among 26,395 complete outcomes, with all 28,800
+outcomes preserved. No additional canonical replay or execution capture is
+justified by that result. A separate single 20-minute RH spread-regime
+prerequisite watch is at method-review stage; no network collection launched.
+The isolated old LIT peak does not justify overriding its failed median gate.
