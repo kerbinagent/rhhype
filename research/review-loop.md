@@ -1306,3 +1306,38 @@ The second delayed quote scan is still running under its preexisting
 900-second deadline; no completed economic result is available. A separate
 synthetic check reproduced cache thrashing, without reading raw data or
 changing the running source. No new capture, promotion or capital reset.
+
+
+## Review 44: 2026-09-30 06:46:33 UTC
+
+Read at 06:47 UTC and archived in
+`reports/live-review-catchup/review-20260930T064633Z.json`. All completion
+and aborted coverage is complete. Cooldown: **34 exact paired completions,
+−$51.4051**, zero wins. Premium: **30 exact, −$50.5196**, 25 paired
+−$40.5379 and five failed hedges −$9.9817, zero wins. Convergence: **five
+exact failed hedges, −$3.6132**, zero wins, each with HL price-limit rejection.
+Others have no new completions; separate strategy ledgers are not summed.
+
+Cooldown fees $12.6536, stress $16.9788, capital $0.001221, funding zero;
+without stress the interval remains −$34.4263. Its 33 observed exit-price
+comparisons worsened $2.805735 in aggregate (10 worse, 10 better, 13 unchanged;
+one missing request price), median zero and p95 adverse $0.876138. Its
+request-to-flat median was 1.213 s and p95 1.789 s over all 34 paired closes.
+Premium's 24 exit comparisons improved $0.040594 (one missing).
+
+The separate later current-version snapshot in
+`reports/live-review-catchup/current-epoch-at-review44.json` records cooldown
+449 exact plus two estimated completions, −$634.0214 (one win); Premium
+84/−$140.6493 (one win); convergence 42/−$33.9553 (two wins); conservative
+1/+$2.3198. Version remains `e3e83cda71a6`; win counts have not increased.
+The scheduled snapshot had one Cooldown position open, while the later
+snapshot had one Convergence position open; these are excluded from the
+respective closed nets. Three legacy funding obligations remain separate.
+
+Health: four connected feeds, 111 pairs, CPU 55.74% of one core, p95 loop
+lag 12.88 ms, RSS 236.09 MiB, 802.0 books/s. Next review **07:06:33 UTC**.
+The separately reviewed cache-disabled quote diagnostic is active under
+its 1,200-second limit; approximately two-thirds of compressed input had
+been read at 06:46:45. This is progress only, not a completed result.
+Independent derived-output verifier was committed as `c5645f5` before
+publication. No new capture, strategy promotion or capital reset.
