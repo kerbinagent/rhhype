@@ -500,3 +500,20 @@ the same host/boot clock and both elapsed endpoint clocks. A durable analysis
 claim prevents repetition after a partial finalizer failure. Existing indexed
 hashes must never be regenerated to accept changed samples. Check the method
 before any recovery. Source and tests are immutable during this run.
+
+## Review archive bound during the dated-carry window — 30 September 13:58 UTC
+
+The review daemon already retains at most 72 reports, each at most 256 KiB,
+plus bounded latest/state files and rotating logs. Production storage remains
+separate from the experimental 836,777,216-byte reservation.
+
+Manual evidence copies in `reports/live-review-catchup` currently occupy
+1,120,164 bytes across 71 files. Bound this directory to **16 MiB total**,
+including existing files, exact review copies, separate epoch snapshots and
+selected trade evidence. Check the projected total before every new write;
+preserve existing evidence and report a cap failure rather than delete files
+or silently enlarge the limit. Continue reading the daemon's bounded reviews
+and writing concise journal decisions if an extra copy does not fit. This
+adds a limit to previously uncapped manual copies; it does not alter daemon
+retention, trading policy, study capture or either experimental allocation.
+The fixed carry endpoint is 3 October 12:45 UTC; reassess archive needs then.
