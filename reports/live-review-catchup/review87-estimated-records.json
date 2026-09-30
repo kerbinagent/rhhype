@@ -1,0 +1,308 @@
+{
+  "selection": "all CLOSED_ESTIMATED records across strategies in (window_start_at, window_end_at]",
+  "review_file": "reports/live-review-catchup/review-20260930T210633Z.json",
+  "read_at_utc": "2026-09-30T21:07:33.120595+00:00",
+  "window_start_at": 1790801193.0042672,
+  "window_end_at": 1790802391.3044698,
+  "count": 1,
+  "records": [
+    {
+      "payload_sha256": "e5ed7ddb922a7c00db61820acd94868dbaa4eb224c3d9487d9259f85315903a9",
+      "record": {
+        "asset": "GRAM",
+        "capital_costs_usd": 3.706614975195793e-05,
+        "closed_at": 1790802002.3597069,
+        "created_at": 1790801988.9092438,
+        "exit_due": 1790802000.2428422,
+        "exit_reason": "max_hold",
+        "exit_request_observation": {
+          "capture_type": "normal_request",
+          "captured_at": 1790802000.244639,
+          "closing_price_status": "valid",
+          "exit_reason": "max_hold",
+          "legs": [
+            {
+              "book_engine_time": 1790801999.007,
+              "book_generation": "78413f2321de43fc95e9be9789b46525:hyperliquid:0:1",
+              "book_received_at": 1790801999.3577964,
+              "book_source": "l2book",
+              "book_valid": true,
+              "clock_valid": true,
+              "exit_fee_bps": 4.5,
+              "exit_side": "sell",
+              "exit_walk_value_usd": 996.7347,
+              "key": "hyperliquid:GRAM",
+              "receipt_age_seconds": 0.8868424892425537,
+              "remaining_quantity": 657.0,
+              "side": "long",
+              "source_age_seconds": 1.2376389503479004,
+              "walk_status": "valid"
+            },
+            {
+              "book_engine_time": 1790802000.095204,
+              "book_generation": "78413f2321de43fc95e9be9789b46525:lighter:0:1",
+              "book_received_at": 1790802000.1825514,
+              "book_source": null,
+              "book_valid": true,
+              "clock_valid": true,
+              "exit_fee_bps": 0,
+              "exit_side": "buy",
+              "exit_walk_value_usd": 999.18642,
+              "key": "lighter:12",
+              "receipt_age_seconds": 0.0620875358581543,
+              "remaining_quantity": 657.0,
+              "side": "short",
+              "source_age_seconds": 0.14943480491638184,
+              "walk_status": "valid"
+            }
+          ],
+          "mark_status": "funding_unknown",
+          "net_liquidation_pnl_usd": null,
+          "receipt_pair_skew_valid": true,
+          "received_skew_seconds": 0.8247549533843994,
+          "requested_at": 1790802000.244639,
+          "requested_closing_liability_usd": 2.451720000000023,
+          "version": 1
+        },
+        "exit_requested_at": 1790802000.244639,
+        "exit_trigger_pnl_usd": null,
+        "fees_usd": 0.89718759,
+        "funding": {
+          "cashflow_usd": 0.0158662896966,
+          "complete": true,
+          "estimated": true,
+          "events": [
+            {
+              "cashflow_usd": -0.0050723003034,
+              "market": "GRAM",
+              "quality": "estimated",
+              "quantity": 657.0,
+              "rate_fraction": 5.0859e-06,
+              "reference_price": 1.518,
+              "reference_skew_seconds": 0.342806339263916,
+              "reference_time": 1790801999.6571937,
+              "side": "long",
+              "source": "sampled_oracle_price",
+              "time": 1790802000,
+              "venue": "hyperliquid"
+            },
+            {
+              "cashflow_usd": 0.02093859,
+              "market": "12",
+              "quality": "estimated",
+              "quantity": 657.0,
+              "rate_fraction": 2.1e-05,
+              "reference_price": null,
+              "reference_skew_seconds": null,
+              "reference_time": null,
+              "side": "short",
+              "source": "settled_lighter_value_inferred_per_unit",
+              "time": 1790802000,
+              "venue": "lighter"
+            }
+          ],
+          "missing": [],
+          "venue_results": {
+            "hyperliquid": {
+              "cashflow_usd": -0.0050723003034,
+              "complete": true,
+              "covered_until": 1790802002.3597069,
+              "estimated": true,
+              "events": [
+                {
+                  "cashflow_usd": -0.0050723003034,
+                  "market": "GRAM",
+                  "quality": "estimated",
+                  "quantity": 657.0,
+                  "rate_fraction": 5.0859e-06,
+                  "reference_price": 1.518,
+                  "reference_skew_seconds": 0.342806339263916,
+                  "reference_time": 1790801999.6571937,
+                  "side": "long",
+                  "source": "sampled_oracle_price",
+                  "time": 1790802000,
+                  "venue": "hyperliquid"
+                }
+              ],
+              "missing": []
+            },
+            "lighter": {
+              "cashflow_usd": 0.02093859,
+              "complete": true,
+              "covered_until": 1790802000.7914627,
+              "estimated": true,
+              "events": [
+                {
+                  "cashflow_usd": 0.02093859,
+                  "market": "12",
+                  "quality": "estimated",
+                  "quantity": 657.0,
+                  "rate_fraction": 2.1e-05,
+                  "reference_price": null,
+                  "reference_skew_seconds": null,
+                  "reference_time": null,
+                  "side": "short",
+                  "source": "settled_lighter_value_inferred_per_unit",
+                  "time": 1790802000,
+                  "venue": "lighter"
+                }
+              ],
+              "missing": []
+            }
+          }
+        },
+        "funding_usd": 0.0158662896966,
+        "id": "1790801988909243-23189-cooldown",
+        "legs": [
+          {
+            "entry_fee": 0.448607025,
+            "entry_fee_bps": 4.5,
+            "entry_observation": {
+              "attempted_quantity": 657.0,
+              "attempted_value": 996.9045,
+              "book_engine_time": 1790801989.659,
+              "book_received_at": 1790801990.2428422,
+              "book_source": "targeted_rest",
+              "eligible_quantity": 13414.0,
+              "observed_at": 1790801990.2428422,
+              "price_limit": 1.5183885611872145,
+              "receipt_age_seconds": 0.0,
+              "side_quantity": 30233.0,
+              "signal_to_receipt_seconds": 1.3335983753204346,
+              "source_age_seconds": 0.5838422775268555
+            },
+            "entry_result": "filled",
+            "entry_time": 1790801990.2428422,
+            "entry_value": 996.9045,
+            "entry_vwap": 1.5173584474885844,
+            "exit_fee": 0.44858056500000004,
+            "exit_fills": [
+              {
+                "fee": 0.44858056500000004,
+                "fee_bps": 4.5,
+                "quantity": 657.0,
+                "timestamp": 1790802002.3597069,
+                "value": 996.8457
+              }
+            ],
+            "exit_time": 1790802002.3597069,
+            "exit_value": 996.8457,
+            "fee_bps": 4.5,
+            "fees_usd": 0.89718759,
+            "intent": null,
+            "key": "hyperliquid:GRAM",
+            "market": "GRAM",
+            "min_notional": 10.0,
+            "min_qty": 0.0,
+            "price_pnl": -0.05880000000001928,
+            "quantity": 657.0,
+            "remaining": 0.0,
+            "side": "long",
+            "step": "1",
+            "venue": "hyperliquid"
+          },
+          {
+            "entry_fee": 0.0,
+            "entry_fee_bps": 0,
+            "entry_observation": {
+              "attempted_quantity": 657.0,
+              "attempted_value": 998.707201,
+              "book_engine_time": 1790801989.406741,
+              "book_received_at": 1790801989.4778314,
+              "book_source": null,
+              "eligible_quantity": 2846.7000000000003,
+              "observed_at": 1790801989.4778314,
+              "price_limit": 1.5185821823424657,
+              "receipt_age_seconds": 0.0,
+              "side_quantity": 599144.2,
+              "signal_to_receipt_seconds": 0.5685875415802002,
+              "source_age_seconds": 0.0710904598236084
+            },
+            "entry_result": "filled",
+            "entry_time": 1790801989.4778314,
+            "entry_value": 998.707201,
+            "entry_vwap": 1.5201022846270928,
+            "exit_fee": 0.0,
+            "exit_fills": [
+              {
+                "fee": 0.0,
+                "fee_bps": 0,
+                "quantity": 657.0,
+                "timestamp": 1790802000.7914627,
+                "value": 999.31014
+              }
+            ],
+            "exit_time": 1790802000.7914627,
+            "exit_value": 999.31014,
+            "fee_bps": 0,
+            "fees_usd": 0.0,
+            "intent": null,
+            "key": "lighter:12",
+            "market": 12,
+            "min_notional": 10.0,
+            "min_qty": 4.0,
+            "price_pnl": -0.6029389999999921,
+            "quantity": 657.0,
+            "remaining": 0.0,
+            "side": "short",
+            "step": "0.1",
+            "venue": "lighter"
+          }
+        ],
+        "net_pnl_usd": -2.0424509669531634,
+        "opened_at": 1790801990.2428422,
+        "other_costs_usd": 0.49935360050000005,
+        "pair_id": "GRAM|hyperliquid:GRAM|lighter:12",
+        "paper_epoch_id": "b8204da0453a4e8a940d3d1b3c33714e",
+        "paper_strategy_version": "e3e83cda71a6",
+        "price_net_before_funding": -2.0583172566497634,
+        "price_pnl": -0.6617390000000114,
+        "reserved": {
+          "hyperliquid": 1001.4,
+          "lighter": 1000.5
+        },
+        "settled_at": 1790802031.9499092,
+        "signal": {
+          "asset": "GRAM",
+          "buy": "hyperliquid:GRAM",
+          "buy_fee_bps": 4.5,
+          "buy_generation": "78413f2321de43fc95e9be9789b46525:hyperliquid:0:1",
+          "buy_received": 1790801988.9078994,
+          "buy_source_time": 1790801988.566,
+          "buy_value": 996.5847,
+          "entry_policy": {
+            "confirmation_expiry_seconds": null,
+            "confirmation_min_seconds": null,
+            "entry_skew_limit_seconds": 0.25,
+            "forecast_is_historical_spread": false,
+            "policy": "cooldown",
+            "reason": "allowed",
+            "route": "GRAM|hyperliquid:GRAM|lighter:12",
+            "training_skew_limit_seconds": 1.0,
+            "version": 3
+          },
+          "lifetime_is_sampled": true,
+          "net_edge_bps": 7.286781889731792,
+          "net_edge_usd": 0.726189534354379,
+          "notional": 1000,
+          "opening_edge_usd": 1.6740378849999429,
+          "pair_id": "GRAM|hyperliquid:GRAM|lighter:12",
+          "quantity": 657.0,
+          "route": "GRAM|hyperliquid:GRAM|lighter:12",
+          "sell": "lighter:12",
+          "sell_fee_bps": 0,
+          "sell_generation": "78413f2321de43fc95e9be9789b46525:lighter:0:1",
+          "sell_received": 1790801988.7885048,
+          "sell_source_time": 1790801988.693941,
+          "sell_value": 998.7072009999999,
+          "skew_ms": 119.39454078674316,
+          "source_skew_ms": 127.94113159179688,
+          "strategy": "cooldown",
+          "timestamp": 1790801988.9092438
+        },
+        "status": "CLOSED_ESTIMATED",
+        "strategy": "cooldown"
+      }
+    }
+  ]
+}
