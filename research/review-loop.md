@@ -1172,3 +1172,38 @@ These are correlated views of one market episode, not five independent
 successes or paired arbitrage cycles. Their gains remain in each original
 strategy ledger alongside all failed-hedge losses. They do not satisfy the
 research success threshold or justify intentionally taking unhedged risk.
+
+
+## Review 40: 2026-09-30 05:26:33 UTC
+
+Read at 05:26 UTC and archived in
+`reports/live-review-catchup/review-20260930T052633Z.json`. Completion coverage
+is complete throughout. Cooldown has **44 exact completions, −$48.0900**:
+42 paired −$48.3769 with zero wins and two failed hedges +$0.2869 with one
+win. Premium has **five exact, −$7.7485**: one paired −$1.5744, four failed
+hedges −$6.1741 including one win. Convergence has **six failed hedges,
++$2.0888**, including two wins; conservative has **one failed hedge,
++$2.3198**. All wins belong to the correlated LIT rescue episode documented
+above. Other strategies have no new completion. These ledgers are not summed.
+
+Cooldown fees were $11.5461, stress $21.9683, capital $0.0015 and funding
+zero; removing stress still leaves −$26.1217. Its 42 paired exit-price
+observations worsened $0.226043 in aggregate (10 worse, 18 better, 14
+unchanged), median approximately zero and p95 adverse $0.112340.
+Request-to-flat median 1.276 s, p95 1.864 s. Premium's only paired exit-price
+comparison was effectively unchanged. Convergence's six failed hedges all
+recorded HL price-limit rejection.
+
+The separate current-version snapshot is saved in
+`reports/live-review-catchup/current-epoch-at-review40.json`: cooldown 308 exact
+plus two estimated completions for −$444.3544 (one win); Premium 33/−$54.6954
+(one win); convergence 18/−$12.7141 (two wins); conservative 1/+$2.3198.
+Version remains `e3e83cda71a6`, begun 03:36:13 UTC. Three legacy funding
+obligations remain outside those totals. Its one active cooldown position
+is additional to closed net; the earlier scheduled snapshot was flat.
+
+Health: four connected feeds, 111 pairs, CPU 51.34% of one core, p95 loop lag
+9.13 ms, RSS 221.22 MiB, 699.4 books/s. Next review **05:46:33 UTC**.
+Both completed static-route diagnostics remain nonpositive; the separately
+reviewed delayed quote helper is being implemented. No strategy promotion,
+new raw capture or capital reset.
