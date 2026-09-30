@@ -1,0 +1,26 @@
+{
+  "schema": "core-rh-single-settlement-review-allocation-v1",
+  "recorded_utc": "2026-09-30T10:16:40.102794+00:00",
+  "previous_allocation": "reports/experiment-storage/core-rh-delayed-taker-allocation-v1.json",
+  "previous_allocation_sha256": "54b8c239be7da8334e732bc4b5ca80303c4c8bfde5d3897171258c020f89618f",
+  "previous_projected_maximum_bytes": 32710904,
+  "new_review_maximum_bytes": 12000,
+  "projected_maximum_bytes": 32722904,
+  "shared_allowance_bytes": 33000000,
+  "headroom_bytes": 277096,
+  "existing_total_reservation_bytes": 820000000,
+  "all_old_allocations_retained": true,
+  "source_path": "reports/funding-carry/holdout_hourly.csv",
+  "source_bytes": 24186,
+  "source_sha256": "5ddcc880253a639471d1f6292dab6f44bb2f8c8e7dec26814c1bb07d8076edbc",
+  "scope": "One source-only rate arithmetic check on existing derived 24-hour table; 8 assets x24 events. Compare absolute Core/RH differential and favorable subset of payment ownership at equal settlement reference notionals. No exact-dollar or executable bound. Fixed stress5bp and target0.10USD at100/250/500/1000USD imply15/9/7/6bp hurdles before capital and trading cashflows. No fit, selection, new rates, raw read, network, production edit or successor automatic.",
+  "expected_input_rows": 384,
+  "expected_joined_events": 192,
+  "run_seconds_max": 10,
+  "categories_caps": {
+    "source_and_docs": 7000,
+    "output": 3000,
+    "provenance": 2000
+  },
+  "review_script_sha256": "4971a31f422e472f0e26f0ac3ebfc17432c27e3a98a91ab33cf076b79334b982"
+}
