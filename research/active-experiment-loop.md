@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 17:48 UTC
+## Current status, 30 September 2026 18:09 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative; no production strategy is promoted. The user authorized
@@ -19,12 +19,12 @@ analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
 [method](dated-carry-method-v1.md) and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 77 are preserved. The two paired convergence gains in review65
-(WLD +$0.3590; CRCL +$0.3250) have not repeated. Reviews 66–77 have 559 closes:
-557 losses and two failed-hedge rescue gains (ENA +$0.1134; LIT +$0.0338).
-One loss in review75 has estimated funding and is retained as estimated.
-All three active strategy windows still lost money in review77.
-Next review: **18:06:33 UTC**.
+Reviews through 78 are preserved. The two paired convergence gains in review65
+(WLD +$0.3590; CRCL +$0.3250) have not repeated. Reviews 66–78 have 616 closes:
+614 losses and two failed-hedge rescue gains (ENA +$0.1134; LIT +$0.0338).
+One loss each in reviews75 and78 has estimated funding and remains estimated.
+All three active strategy windows still lost money in review78.
+Next review: **18:26:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -1100,3 +1100,16 @@ later epoch snapshot flat. Fourteen earlier win records and three legacy
 funding obligations remain. Next review 18:06:33 UTC. Carry has all 61 due
 arrivals through 17:45, no terminal error or overdue missing files, and no
 economic evaluation.
+
+### Review 78, 18:06 UTC
+
+All 57 closes negative (56 exact, one estimated): cooldown fifty/−$53.5220,
+Premium four/−$8.1908, convergence three/−$2.8169. One convergence abort,
+complete coverage and no new winners. The estimated NVDA close is preserved:
+its RH short preceded 18:00 funding, while the HL long entered after the
+boundary. Estimated RH funding +$0.00798 leaves −$0.96554 net; both legs
+closed with no missing funding events. Four feeds connected, 110 pairs and
+performance normal. Review had one cooldown position; later epoch snapshot
+flat. Fourteen earlier win records and three legacy funding obligations remain.
+Next review 18:26:33 UTC. Carry has all 65 due arrivals through 18:05, no
+terminal error or overdue missing files, and no economic evaluation.

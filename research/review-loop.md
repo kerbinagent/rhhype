@@ -2454,3 +2454,46 @@ capital change. Next checkpoint **18:06:33 UTC**.
 
 Carry has all 61 due arrivals through 17:45, 74,938 sample bytes, zero overdue
 missing files, no terminal error and no interim economic evaluation.
+
+## Review 78 — 2026-09-30 18:06:33 UTC
+
+Exact report, separate epoch snapshot and complete estimated record preserved;
+guarded manual archive 1,557,249/16,777,216 bytes. All 57 closes negative
+(56 exact, one estimated), one convergence abort and complete coverage.
+
+- Cooldown: fifty paired closes/−$53.5220, comprising 49 exact/−$52.5565 and
+  one estimated/−$0.9655; no failed hedges.
+- Premium: four exact closes/−$8.1908, comprising two paired/−$3.6923 and two
+  failed hedges/−$4.4985.
+- Convergence: three exact closes/−$2.8169, comprising one paired/−$0.9563 and
+  two failed hedges/−$1.8606.
+- Five Hyperliquid and one Core price-limit rejection.
+
+The [estimated record](../reports/live-review-catchup/review78-estimated-records.json)
+is NVDA cooldown `1790791198791661-22592-cooldown`, matched quantity 4.33.
+RH short entered at 17:59:59.327, before the 18:00 funding boundary; HL long
+entered at 18:00:00.252, after it. RH's inferred per-unit settled value gives
++$0.0079824416, while HL has no eligible event. Funding is complete, estimated
+and has no missing events. Both legs have zero remaining quantity. Price
+P&L −$0.294432, fees $0.179608833, stress $0.499446017 and capital
+$0.0000379794 yield −$0.9655423878 net. Event sums, leg-specific boundary
+eligibility and net arithmetic reconcile; status remains `CLOSED_ESTIMATED`.
+
+Cooldown fees $11.8491, stress $24.9704, capital $0.0017875, estimated funding
++$0.0079824; without stress −$28.5517. All fifty paired exit comparisons
+present: twenty better, twenty-two worse, eight unchanged; net improvement
+$0.027613, median zero, p95 adverse $0.108774. Request-to-flat median 1.251 s,
+p95 1.718 s. Premium's two comparisons worsened $0.027238 overall (one better,
+one worse); convergence's one improved $0.064565.
+
+Four feeds connected, 110 pairs, CPU 62.81%, p95 lag 10.58 ms, RSS 314.81 MiB,
+873.1 books/s, metadata age 1,753.5 s. Review had one cooldown position;
+later epoch snapshot flat. Epoch: cooldown 1,765 exact plus five estimated/
+−$2,332.4906; Premium 456/−$835.0197; convergence 252/−$286.2990;
+conservative one/+$2.3198. Fourteen earlier win records and three legacy
+funding obligations retained. Reviews 66–78 have 616 closes: 614 losses and
+two failed-hedge rescue gains. No policy or capital change. Next checkpoint
+**18:26:33 UTC**.
+
+Carry has all 65 due arrivals through 18:05, 79,882 sample bytes, zero overdue
+missing files, no terminal error and no interim economic evaluation.
