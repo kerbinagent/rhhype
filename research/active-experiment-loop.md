@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 16:27 UTC
+## Current status, 30 September 2026 16:48 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative; no production strategy is promoted. The user authorized
@@ -19,12 +19,11 @@ analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
 [method](dated-carry-method-v1.md) and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 73 are preserved. The two paired convergence gains in review65
-(WLD +$0.3590; CRCL +$0.3250) have not repeated. After 289 negative closes in
-reviews 66–71, review72 had 48 losses and one failed-hedge rescue gain (ENA
-+$0.1134). All forty closes in review73 were negative, and all three active
-strategy windows still lost money.
-Next review: **16:46:33 UTC**.
+Reviews through 74 are preserved. The two paired convergence gains in review65
+(WLD +$0.3590; CRCL +$0.3250) have not repeated. Reviews 66–74 have 414 closes:
+412 losses and two failed-hedge rescue gains (ENA +$0.1134; LIT +$0.0338).
+All three active strategy windows still lost money in review74.
+Next review: **17:06:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -1052,3 +1051,17 @@ snapshot flat; three legacy funding obligations remain. Thirteen prior epoch
 win records retained. Next review 16:46:33 UTC. Carry has all 45 due arrivals
 through 16:25, no overdue missing files or terminal error, and no economic
 evaluation.
+
+### Review 74, 16:46 UTC
+
+All 36 closes exact: cooldown thirty/−$42.8157, Premium three/−$5.7333,
+convergence three/−$2.8741. Zero aborts, complete coverage. One LIT convergence
+failed-hedge rescue gained $0.03375; the other 35 closes lost money. Its
+complete record is preserved and arithmetic reconciles: Core short only,
+Hyperliquid long rejected, 1.315-second exposure, zero remaining quantity and
+complete funding. Fourteen epoch win records now comprise two paired gains
+and twelve failed-hedge rescues across separate portfolios. Four feeds
+connected, 112 pairs after metadata refresh, performance normal; review and
+later epoch snapshot flat. Three legacy funding obligations remain. Next
+review 17:06:33 UTC. Carry has all 49 due arrivals through 16:45, no terminal
+error or overdue missing files, and no economic evaluation.
