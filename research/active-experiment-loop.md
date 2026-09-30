@@ -533,3 +533,23 @@ Root authorizes the separately allocated, single new three-request preparation
 after committing the wrapper/test/resource note. Fresh eligibility and actual
 control headroom must be checked before separate freeze/run. No retry or further
 successor is automatic; the first failed study remains fully visible.
+
+
+### Compact successor running, 08:12:47 UTC
+
+Source/wrapper/tests freeze `c927e2a` and fresh marked metadata freeze `a531060`
+preceded the separate launch. The three new metadata requests succeeded;
+all21assets retained original identities/lots/ticks and zero public RH maker
+fees. Root recomputed eligibility from full responses, checked all eight
+input hashes and decoded archive identities, and measured52,884controlbytes
+before root-freeze, leaving21,116bytes even after a6,000-byte freeze/schedule
+allowance under the actual80,000-byte launch gate.
+
+The one ticker window activated at08:12:47.655706UTC; T0is08:12:57.655706,
+and the immutable endpoint is**08:32:57.655706UTC**. Firstslot dispatch lag
+was0.66247ms;16source-timing-valid references and five stale references.
+This is technical coverage only. No U or economic readout has been computed
+or inspected. No reconnect/extension/automatic successor is permitted.
+An independent derived-output auditor is being prepared on synthetic inputs;
+it must refuse pre-endpoint/missing-manifest inspection and will run only
+once the published window is complete. Nextproductionreview08:26:33UTC.
