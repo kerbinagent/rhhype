@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 15:47 UTC
+## Current status, 30 September 2026 16:09 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative; no production strategy is promoted. The user authorized
@@ -19,10 +19,11 @@ analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
 [method](dated-carry-method-v1.md) and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 71 are preserved. The two paired convergence gains in review65
-(WLD +$0.3590; CRCL +$0.3250) have not repeated: all 289 closes in reviews 66–71
-were negative. All three active strategy windows lost money.
-Next review: **16:06:33 UTC**.
+Reviews through 72 are preserved. The two paired convergence gains in review65
+(WLD +$0.3590; CRCL +$0.3250) have not repeated. After 289 negative closes in
+reviews 66–71, review72 had 48 losses and one failed-hedge rescue gain (ENA
++$0.1134). All three active strategy windows still lost money.
+Next review: **16:26:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -1025,3 +1026,18 @@ snapshot one cooldown position; three legacy funding obligations retained.
 Next review 16:06:33 UTC. All 37 due carry slots have passed arrival checks;
 no overdue missing files or terminal error. Native quote validation and
 economics remain deferred.
+
+### Review 72, 16:06 UTC
+
+All 49 closes exact: cooldown 39/−$39.8568, Premium seven/−$11.0503,
+convergence three/−$1.6108. Zero aborts and complete coverage. One convergence
+failed-hedge rescue on ENA gained $0.1134; the other 48 closes lost money.
+The complete winning record is preserved and its accounting reconciles:
+Core short only, Hyperliquid long rejected, fully closed after 1.648 seconds,
+zero fees/funding, $0.49997 stress and $0.000002612 capital cost. No new paired
+winner or positive strategy window. Thirteen epoch win records now comprise
+two paired gains and eleven failed-hedge rescues across separate portfolios.
+Four feeds connected and performance normal; review and later snapshot each
+had one cooldown position. Three legacy funding obligations remain. Next
+review 16:26:33 UTC. Carry has 41 arrivals with no overdue files or terminal
+error; economics remain deferred.
