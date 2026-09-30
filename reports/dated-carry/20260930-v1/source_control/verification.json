@@ -1,0 +1,11 @@
+{
+  "synthetic_tests_passed": 37,
+  "test_modules": [
+    "tests.test_dated_carry_analysis",
+    "tests.test_dated_carry_collector",
+    "tests.test_dated_carry_endpoint"
+  ],
+  "network_in_tests": false,
+  "integrity_revision": "prior hashes checked before each live index update; valid gzip mutation regression passes",
+  "source_pins_sha256": "cfa76f82fd76c4bdc7ea4227f3a0634e8e8672fb6201f656740270e4020534e1"
+}

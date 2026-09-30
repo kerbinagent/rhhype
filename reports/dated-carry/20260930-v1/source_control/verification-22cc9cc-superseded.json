@@ -1,0 +1,12 @@
+{
+  "source_commit": "22cc9cc",
+  "synthetic_tests_passed": 36,
+  "test_modules": [
+    "tests.test_dated_carry_analysis",
+    "tests.test_dated_carry_collector",
+    "tests.test_dated_carry_endpoint"
+  ],
+  "peer_review": "collector and endpoint final reviews passed; schema integration and recovery hash regressions included",
+  "network_in_tests": false,
+  "source_pins_sha256": "9e0fa6ca96d30acab2bfb4f264fc169fa23dab356c7b6bead0c9578959bdf1f6"
+}
