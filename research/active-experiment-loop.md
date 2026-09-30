@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 17:27 UTC
+## Current status, 30 September 2026 17:48 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative; no production strategy is promoted. The user authorized
@@ -19,12 +19,12 @@ analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
 [method](dated-carry-method-v1.md) and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 76 are preserved. The two paired convergence gains in review65
-(WLD +$0.3590; CRCL +$0.3250) have not repeated. Reviews 66–76 have 515 closes:
-513 losses and two failed-hedge rescue gains (ENA +$0.1134; LIT +$0.0338).
+Reviews through 77 are preserved. The two paired convergence gains in review65
+(WLD +$0.3590; CRCL +$0.3250) have not repeated. Reviews 66–77 have 559 closes:
+557 losses and two failed-hedge rescue gains (ENA +$0.1134; LIT +$0.0338).
 One loss in review75 has estimated funding and is retained as estimated.
-All three active strategy windows still lost money in review76.
-Next review: **17:46:33 UTC**.
+All three active strategy windows still lost money in review77.
+Next review: **18:06:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -1089,3 +1089,14 @@ epoch snapshot had one cooldown position. Fourteen earlier epoch win records
 and three legacy funding obligations remain. Next review 17:46:33 UTC. Carry
 has all 57 due arrivals through 17:25, no terminal error or overdue missing
 files, and no economic evaluation.
+
+### Review 77, 17:46 UTC
+
+All 44 closes exact and negative: cooldown 37/−$42.0146, Premium four/
+−$11.1031, convergence three/−$6.8466. Zero aborts, complete coverage and no
+new winners. Four feeds connected, 110 pairs after metadata refresh,
+performance normal. Review had one cooldown and one convergence position;
+later epoch snapshot flat. Fourteen earlier win records and three legacy
+funding obligations remain. Next review 18:06:33 UTC. Carry has all 61 due
+arrivals through 17:45, no terminal error or overdue missing files, and no
+economic evaluation.
