@@ -741,3 +741,14 @@ records all groups, failures and limitations. The 600,000-byte allocation
 and all old reservations remain. Close this study without predictor or
 successor. Next paper review 10:26:33 UTC; a new experiment needs a distinct
 supported mechanism and separate bounded proposal.
+
+### Single-settlement rate check, 10:18 UTC
+
+A separate 12,000-byte source-only review (`db99951`) joins the existing
+hourly Core/RH table: 192 matched asset/events. Even hindsight direction
+and favorable payment subsets give at most 0.41 bp, versus 6 bp stress plus
+target at $1,000. This is equal-reference-notional rate arithmetic, without
+actual payment ownership or joined trading prices; no executable bound.
+[Readout](../reports/funding-carry/core-rh-single-settlement-review.md).
+No successor capture. Shared reservation 32,722,904/33,000,000 bytes; all
+previous allocations retained. Next production review 10:26:33 UTC.
