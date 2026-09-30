@@ -1,0 +1,31 @@
+{
+  "schema": "core-rh-delayed-taker-final-resource-v1",
+  "category_bytes": {
+    "source": 198093,
+    "rows": 144553,
+    "summary": 20558,
+    "provenance": 37844,
+    "logs": 150,
+    "failure": 0
+  },
+  "category_caps": {
+    "source": 200000,
+    "rows": 250000,
+    "summary": 50000,
+    "provenance": 60000,
+    "logs": 10000,
+    "failure": 30000
+  },
+  "source_documentation_bytes": 9888,
+  "documentation_accounting": "Pre-run review plus all active-experiment journal growth since allocation, conservatively including production reviews. This reconciliation counts itself in provenance.",
+  "reserved_study_bytes": 600000,
+  "reserved_shared_bytes": 32710904,
+  "shared_allowance_bytes": 33000000,
+  "old_reservations_retained": true,
+  "independent_derived_audit": "PASS",
+  "independent_peer_readout": "PASS",
+  "canonical_traversals": 1,
+  "source_commit": "279ccd7",
+  "prepared_freeze_commit": "dec83c6",
+  "actual_new_bytes": 401198
+}

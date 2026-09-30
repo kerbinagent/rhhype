@@ -730,3 +730,20 @@ retained. Next checkpoint 10:26:33 UTC.
 
 The frozen canonical Core/RH replay continues within its 900-second limit.
 No partial economics inspected, source edits, retries or additional capture.
+
+### Core/RH delayed taker diagnostic completed, 10:12 UTC
+
+The one canonical process completed in 349.271 seconds at 10:07:08 UTC.
+Root's frozen derived auditor passed once; peer review agreed on all 32
+groups and 128 strata. No raw rerun.
+
+There are 842 conditional complete quotes and 166 retained null-economic
+censors. All gross/fee-only results are negative with zero public fees:
+best −$0.001974. Primary coverage 572/672; each smaller size 90/112.
+Historical legality, funding and private execution remain unverified.
+
+The full [readout](../reports/core-rh-delayed-taker/20260930T1000Z-analysis.md)
+records all groups, failures and limitations. The 600,000-byte allocation
+and all old reservations remain. Close this study without predictor or
+successor. Next paper review 10:26:33 UTC; a new experiment needs a distinct
+supported mechanism and separate bounded proposal.

@@ -1,0 +1,40 @@
+{
+  "auditor_sha256": "ad7d9b9896cd0dd938a9ac2df9c282fbeba9af708b27f34b06bf729b6bfee452",
+  "conditional_quote_complete": 842,
+  "external_freeze_bytes": 17857,
+  "fully_verified_executable_count": 0,
+  "limitations": [
+    "No raw opened: raw terminal/hashes rely on reviewed run attestations.",
+    "Endpoint references cannot prove first eligible pair, intermediate validity, raw collision handling or depth walks.",
+    "Historical metadata values are checked against frozen method, not independently reselected."
+  ],
+  "original_candidates": 1008,
+  "primary_candidates": 672,
+  "publication": "reports/core-rh-delayed-taker/20260930T1000Z",
+  "published_bytes": 217614,
+  "repository_source_bytes": 144874,
+  "smaller_candidates": 336,
+  "status": "PASS",
+  "statuses": {
+    "anchor_cross_venue_skew": 44,
+    "anchor_missing_book": 32,
+    "anchor_stale_source_or_receipt": 28,
+    "conditional_quote_complete": 842,
+    "entry_missing": 30,
+    "exit_eof": 14,
+    "exit_missing": 18
+  },
+  "stratum_denominators": [
+    264,
+    240,
+    264,
+    240
+  ],
+  "verified": [
+    "output/source hashes",
+    "1008 identities and summary conservation",
+    "endpoint clocks and fixed q",
+    "four own fees/stress/elapsed capital",
+    "unknown rule/cost labels"
+  ]
+}
