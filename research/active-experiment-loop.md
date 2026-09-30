@@ -68,3 +68,16 @@ the cumulative research footprint and retain a bounded number of raw studies;
 do not create an unbounded automatic capture loop. The user may stop the active
 work at any time; stop study collection gracefully and preserve terminal
 inventory and manifests rather than fabricate a close.
+
+
+## Connectivity preflight, 02:21 UTC
+
+A separate 30-second public-feed check completed normally: 1,287 raw records,
+855,162 bytes including frozen metadata and manifest. It is neither calibration
+nor holdout and has no modeled economic outcomes. The normalized feed supplied
+56 HL books per asset (median gap about 0.535 s), RH books for all four assets,
+and RH trades for all four. XAG had one trade and a maximum RH book receipt gap
+of 2.148 s; this short check cannot establish sustained fill opportunity or
+rule out the experiment's two-second validity/confirmation failures. Exact
+counts and source-age diagnostics are in
+`reports/rh-passive-exit-v1/preflight.json`. No long capture has launched yet.

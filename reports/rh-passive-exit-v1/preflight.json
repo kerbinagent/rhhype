@@ -1,0 +1,122 @@
+{
+  "classification": "30-second connectivity preflight; not calibration, holdout or economic evidence",
+  "manifest_sha256": "1f40c42d6c1f5f061875311b2b32bb13fff1dc66eb1180fa30551832e298899f",
+  "capture": "data/raw/rh-passive-exit-preflight/20260930T0222Z",
+  "counts": {
+    "control|hyperliquid|None": 1,
+    "control|rh_lighter|None": 1,
+    "book|hyperliquid|BTC": 56,
+    "book|hyperliquid|ETH": 56,
+    "book|hyperliquid|NVDA": 56,
+    "book|hyperliquid|XAG": 56,
+    "book|rh_lighter|NVDA": 121,
+    "book|rh_lighter|XAG": 101,
+    "book|rh_lighter|ETH": 339,
+    "book|rh_lighter|BTC": 397,
+    "trade|rh_lighter|BTC": 28,
+    "trade|rh_lighter|NVDA": 10,
+    "trade|rh_lighter|ETH": 7,
+    "trade|rh_lighter|XAG": 1,
+    "end|None|None": 1
+  },
+  "books": {
+    "hyperliquid|BTC": {
+      "count": 56,
+      "median_gap_seconds": 0.534522533416748,
+      "max_gap_seconds": 0.777073860168457,
+      "median_source_age_seconds": 0.30499997700000003,
+      "max_source_age_seconds": 0.72928078
+    },
+    "hyperliquid|ETH": {
+      "count": 56,
+      "median_gap_seconds": 0.534492015838623,
+      "max_gap_seconds": 0.777132511138916,
+      "median_source_age_seconds": 0.305287496,
+      "max_source_age_seconds": 0.740259104
+    },
+    "hyperliquid|NVDA": {
+      "count": 56,
+      "median_gap_seconds": 0.5344851016998291,
+      "max_gap_seconds": 0.777134895324707,
+      "median_source_age_seconds": 0.305366001,
+      "max_source_age_seconds": 0.751228588
+    },
+    "hyperliquid|XAG": {
+      "count": 56,
+      "median_gap_seconds": 0.5344202518463135,
+      "max_gap_seconds": 0.7771284580230713,
+      "median_source_age_seconds": 0.305434686,
+      "max_source_age_seconds": 0.763811289
+    },
+    "rh_lighter|NVDA": {
+      "count": 121,
+      "median_gap_seconds": 0.14969050884246826,
+      "max_gap_seconds": 1.5501110553741455,
+      "median_source_age_seconds": 0.073893392,
+      "max_source_age_seconds": 1.003910069
+    },
+    "rh_lighter|XAG": {
+      "count": 101,
+      "median_gap_seconds": 0.17829585075378418,
+      "max_gap_seconds": 2.147867441177368,
+      "median_source_age_seconds": 0.07466084,
+      "max_source_age_seconds": 0.635167414
+    },
+    "rh_lighter|ETH": {
+      "count": 339,
+      "median_gap_seconds": 0.05160820484161377,
+      "max_gap_seconds": 0.5040555000305176,
+      "median_source_age_seconds": 0.063354973,
+      "max_source_age_seconds": 0.745395672
+    },
+    "rh_lighter|BTC": {
+      "count": 397,
+      "median_gap_seconds": 0.05092775821685791,
+      "max_gap_seconds": 0.5015537738800049,
+      "median_source_age_seconds": 0.064838041,
+      "max_source_age_seconds": 0.84985248
+    }
+  },
+  "terminal": {
+    "type": "end",
+    "kind": "end",
+    "received_ns": 1790734907376444000,
+    "receipt_ns": 1790734907376444000,
+    "source_ns": null,
+    "started_ns": 1790734877228933000,
+    "stopped_ns": 1790734907376444000,
+    "reason": "duration_limit",
+    "truncated": false,
+    "counts": {
+      "decoded_records": 1287,
+      "control_connection_open": 2,
+      "yield_book_hyperliquid": 224,
+      "ignored_hl_trade_frames": 52,
+      "ignored_subscribed_trade_frames": 4,
+      "ignored_subscribed_trade_rows": 200,
+      "ignored_liquidations": 5,
+      "yield_book_rh_lighter": 958,
+      "yield_trade": 46
+    },
+    "decoded_bytes": 1768677,
+    "archive_bytes": 855162,
+    "max_receipt_gap_ns": 241201233,
+    "max_trade_source_lag_ns": 543398205,
+    "book_decoder_counts": {
+      "hyperliquid|BTC|valid": 56,
+      "hyperliquid|ETH|valid": 56,
+      "hyperliquid|NVDA|valid": 56,
+      "hyperliquid|XAG|valid": 56,
+      "rh_lighter|NVDA|valid": 121,
+      "rh_lighter|XAG|valid": 101,
+      "rh_lighter|ETH|valid": 339,
+      "rh_lighter|BTC|valid": 397
+    },
+    "book_status_counts": {},
+    "raw_gzip_sha256": "44f84f78a71211ae22f7173b03e1a89acc65740bf04c203ac696b1d9f4874bda",
+    "raw_sha_verified": true,
+    "manifest_sha256": "1f40c42d6c1f5f061875311b2b32bb13fff1dc66eb1180fa30551832e298899f",
+    "adapter_sha256": "5984caf23215035603fdc259910a1d1e7309fedfc961d176de3dfa2a9f31f29b",
+    "book_decoder_sha256": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2"
+  }
+}

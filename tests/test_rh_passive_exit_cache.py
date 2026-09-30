@@ -107,6 +107,12 @@ class CachedEventParseTests(unittest.TestCase):
             self.assertIs(cached['standard'].books[('rh_lighter', 'BTC')],
                           cached['premium'].books[('rh_lighter', 'BTC')])
             self.assertIsNot(cached['standard'].books, cached['premium'].books)
+            for model in cached.values():
+                model.freeze()
+            # Fee tier affects the later quote economics, not the public-flow
+            # adverse calibration used by this passive-exit study.
+            self.assertEqual(cached['standard'].snapshot(),
+                             cached['premium'].snapshot())
 
     def test_passive_branch_processing_matches_uncached(self):
         events = [book(), book('hyperliquid', received=START + NS),
