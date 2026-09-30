@@ -3024,3 +3024,47 @@ Next checkpoint **22:06:33 UTC**.
 
 Carry has all 109 due arrivals through 21:45, 133,817 sample bytes, zero overdue
 missing files, no terminal error and no interim economic evaluation.
+
+
+### Review 90 — 30 September 2026 22:06 UTC
+
+Exact report, separate epoch snapshot and full estimated record preserved;
+guarded manual archive 2,076,472/16,777,216 bytes. Report SHA-256
+`3bea0088ed3de5462ff5b8b977104790e34565f021689c4005ddc93762dfd399`.
+All 51 closes negative: fifty exact and one estimated. Forty-seven paired
+closes and four failed hedges; zero aborts, complete coverage and four
+Hyperliquid price-limit entry rejections. No new wins.
+
+- Cooldown: 47 paired closes/−$48.6282.
+- Premium: two failed hedges/−$3.0598.
+- Convergence: two failed hedges/−$2.8633.
+
+The bounded read-only estimated-record query counted one across all strategies
+before fetching (cap 128), matching the ledger. CRCL cooldown
+`1790805592456720-23423-cooldown`: equal 12.163-unit long HL/short Lighter
+legs held through 22:00 UTC funding. Sampled HL oracle estimate −$0.01431214606
+plus Lighter inferred-per-unit settlement +$0.12558224522 totals
++$0.11127009916. Price P&L −$0.35521 minus fees $0.17957295081, stress
+$0.4994480275 and capital $0.0000363835 plus funding gives −$0.92299726265
+net. Both legs remaining zero; final funding complete with no missing events.
+Net, event sum and 5 bp stress reconcile. The earlier open-funding observation
+retains its then-missing settlement rates; the final result remains estimated.
+
+Cooldown fees $10.3744, stress $23.4732, capital $0.0016723, funding +$0.1112701;
+without stress −$25.1550. Exit comparisons: 45 observed, two missing request
+prices; eleven better, eleven worse, 23 unchanged, aggregate improvement
+$0.032175, median zero, p95 adverse $0.105992. All 47 paired request-to-flat
+times present: median 1.127 s, p95 1.444 s. Premium and convergence had no
+paired completions.
+
+Four feeds connected, 107 pairs, CPU 49.15%, p95 lag 6.56 ms, RSS 321.57 MiB,
+649.3 books/s, metadata age 1,738.7 s. Review had one Premium position;
+separate later epoch snapshot flat. Epoch: cooldown 2,280 exact plus eight
+estimated/−$3,020.9527; Premium 640/−$1,173.9537; convergence 362/−$426.8914;
+conservative four/−$3.0627; confirmed two/−$4.0150. Twenty-two earlier win
+records and three legacy funding obligations remain. Reviews 66–90 have
+1,437 closes: 1,427 losses, two paired gains and eight rescue gains. No policy
+or capital change. Next checkpoint **22:26:33 UTC**.
+
+Carry has all 113 due arrivals through 22:05, 138,780 sample bytes, zero overdue
+missing files, no terminal error and no interim economic evaluation.
