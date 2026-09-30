@@ -1,0 +1,2461 @@
+{
+  "method": "matched tri-venue stopped books; static same-book two-maker ceiling plus first matched +10-16s quote sensitivity",
+  "freshness": "receipt <=1s, source <=2s, tri-venue receipt/source skew <=1s",
+  "sizes_usd": [
+    100,
+    250,
+    500,
+    1000
+  ],
+  "target_usd": "0.10",
+  "reserve_bps": "5",
+  "capital_annual": "0.05",
+  "rows": 4336,
+  "groups": {
+    "static:BTC:100:buy_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0860054795",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 61,
+          "target": 0,
+          "median_usd": "0.00368900"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.0459927265"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.0822354855"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1318882355"
+        }
+      }
+    },
+    "static:BTC:100:sell_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0860054795",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 61,
+          "target": 0,
+          "median_usd": "0.00368900"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.045996118"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.0822354855"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1318888305"
+        }
+      }
+    },
+    "static:BTC:250:buy_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.2156220425",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 59,
+          "target": 0,
+          "median_usd": "0.00807300"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1165856315"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2072098405"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.3319601155"
+        }
+      }
+    },
+    "static:BTC:250:sell_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.2156220425",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 59,
+          "target": 0,
+          "median_usd": "0.00807300"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.116597741"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2072098405"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.3319616105"
+        }
+      }
+    },
+    "static:BTC:500:buy_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.4304387045",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 59,
+          "target": 0,
+          "median_usd": "0.01614600"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2335611815"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.4151126905"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.6650304655"
+        }
+      }
+    },
+    "static:BTC:500:sell_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.4304387045",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 59,
+          "target": 0,
+          "median_usd": "0.01614600"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.233585441"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.4151126905"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.6650334605"
+        }
+      }
+    },
+    "static:BTC:1000:buy_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.8586082595",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 58,
+          "target": 5,
+          "median_usd": "0.02997500"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.469950448"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.830225381"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-1.330060931"
+        }
+      }
+    },
+    "static:BTC:1000:sell_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.8586082595",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 58,
+          "target": 5,
+          "median_usd": "0.02997500"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.469975627"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.830225381"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-1.330066921"
+        }
+      }
+    },
+    "static:ETH:100:buy_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0903987875",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 72,
+          "target": 0,
+          "median_usd": "0.01001700"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.039922939"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.0800274825"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1300512675"
+        }
+      }
+    },
+    "static:ETH:100:sell_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0903987875",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 72,
+          "target": 0,
+          "median_usd": "0.01001700"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.0399238665"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.0800274825"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1300531225"
+        }
+      }
+    },
+    "static:ETH:250:buy_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.2259669105",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 72,
+          "target": 0,
+          "median_usd": "0.02505600"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.09988296"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2008446905"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.3258416405"
+        }
+      }
+    },
+    "static:ETH:250:sell_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.2259669105",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 72,
+          "target": 0,
+          "median_usd": "0.02505600"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.099891312"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2008446905"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.3258462855"
+        }
+      }
+    },
+    "static:ETH:500:buy_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.4519605475",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 72,
+          "target": 0,
+          "median_usd": "0.04828200"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.201664629"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.4019055755"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.6520340255"
+        }
+      }
+    },
+    "static:ETH:500:sell_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.4519605475",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 72,
+          "target": 0,
+          "median_usd": "0.04828200"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2016692715"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.4019055755"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.6520433205"
+        }
+      }
+    },
+    "static:ETH:1000:buy_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.9012327395",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 72,
+          "target": 36,
+          "median_usd": "0.09496700"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.404915116"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.803978461"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-1.304274615"
+        }
+      }
+    },
+    "static:ETH:1000:sell_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.9012327395",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 72,
+          "target": 36,
+          "median_usd": "0.09496700"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.404935543"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.803978461"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-1.304293165"
+        }
+      }
+    },
+    "static:NVDA:100:buy_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_unmatched": 18,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 56
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0188270796",
+      "core_better_fee_only": 55,
+      "hl_better_fee_only": 1,
+      "core": {
+        "fee_only": {
+          "positive": 51,
+          "target": 0,
+          "median_usd": "0.01270200"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.03721248"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 4,
+          "target": 0,
+          "median_usd": "-0.0048146274"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.0547312974"
+        }
+      }
+    },
+    "static:NVDA:100:sell_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_unmatched": 18,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 56
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0188270796",
+      "core_better_fee_only": 55,
+      "hl_better_fee_only": 1,
+      "core": {
+        "fee_only": {
+          "positive": 51,
+          "target": 0,
+          "median_usd": "0.01270200"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.03721905"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 4,
+          "target": 0,
+          "median_usd": "-0.0048146274"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.0547400574"
+        }
+      }
+    },
+    "static:NVDA:250:buy_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_unmatched": 18,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 56
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0471106832",
+      "core_better_fee_only": 55,
+      "hl_better_fee_only": 1,
+      "core": {
+        "fee_only": {
+          "positive": 51,
+          "target": 0,
+          "median_usd": "0.03178400"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.09311616"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 4,
+          "target": 0,
+          "median_usd": "-0.0120475608"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1369532008"
+        }
+      }
+    },
+    "static:NVDA:250:sell_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_unmatched": 18,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 56
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0471106832",
+      "core_better_fee_only": 55,
+      "hl_better_fee_only": 1,
+      "core": {
+        "fee_only": {
+          "positive": 51,
+          "target": 0,
+          "median_usd": "0.03178400"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.09313260"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 4,
+          "target": 0,
+          "median_usd": "-0.0120475608"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1369751208"
+        }
+      }
+    },
+    "static:NVDA:500:buy_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_unmatched": 18,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 56
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0913266402",
+      "core_better_fee_only": 55,
+      "hl_better_fee_only": 1,
+      "core": {
+        "fee_only": {
+          "positive": 51,
+          "target": 3,
+          "median_usd": "0.05551550"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.19437685"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 4,
+          "target": 0,
+          "median_usd": "-0.0241061139"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2740313589"
+        }
+      }
+    },
+    "static:NVDA:500:sell_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_unmatched": 18,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 56
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0913266402",
+      "core_better_fee_only": 55,
+      "hl_better_fee_only": 1,
+      "core": {
+        "fee_only": {
+          "positive": 51,
+          "target": 3,
+          "median_usd": "0.05551550"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.194409745"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 4,
+          "target": 0,
+          "median_usd": "-0.0241061139"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2740752189"
+        }
+      }
+    },
+    "static:NVDA:1000:buy_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_unmatched": 18,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 56
+      },
+      "median_core_minus_hl_fee_only_usd": "0.1652130637",
+      "core_better_fee_only": 55,
+      "hl_better_fee_only": 1,
+      "core": {
+        "fee_only": {
+          "positive": 50,
+          "target": 25,
+          "median_usd": "0.09432050"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.40557815"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 4,
+          "target": 0,
+          "median_usd": "-0.04821377385"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.54811027385"
+        }
+      }
+    },
+    "static:NVDA:1000:sell_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_unmatched": 18,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 56
+      },
+      "median_core_minus_hl_fee_only_usd": "0.1652130637",
+      "core_better_fee_only": 55,
+      "hl_better_fee_only": 1,
+      "core": {
+        "fee_only": {
+          "positive": 50,
+          "target": 25,
+          "median_usd": "0.09432050"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.4056549225"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 4,
+          "target": 0,
+          "median_usd": "-0.04821377385"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.54819800385"
+        }
+      }
+    },
+    "static:XAG:100:buy_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_unmatched": 6,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0129635316",
+      "core_better_fee_only": 68,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 68,
+          "target": 0,
+          "median_usd": "0.02446200"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.025315416"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 68,
+          "target": 0,
+          "median_usd": "0.0109320516"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.0388450404"
+        }
+      }
+    },
+    "static:XAG:100:sell_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_unmatched": 6,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0129635316",
+      "core_better_fee_only": 68,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 68,
+          "target": 0,
+          "median_usd": "0.02446200"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.0253311705"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 68,
+          "target": 0,
+          "median_usd": "0.0109320516"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.0388602684"
+        }
+      }
+    },
+    "static:XAG:250:buy_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_unmatched": 6,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0322818314",
+      "core_better_fee_only": 68,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 68,
+          "target": 1,
+          "median_usd": "0.06130600"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.063444808"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 68,
+          "target": 0,
+          "median_usd": "0.0271927838"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.0975609677"
+        }
+      }
+    },
+    "static:XAG:250:sell_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_unmatched": 6,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0322818314",
+      "core_better_fee_only": 68,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 68,
+          "target": 1,
+          "median_usd": "0.06130600"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.0634842915"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 68,
+          "target": 0,
+          "median_usd": "0.0271927838"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.0975990302"
+        }
+      }
+    },
+    "static:XAG:500:buy_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_unmatched": 6,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0646431747",
+      "core_better_fee_only": 68,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 68,
+          "target": 53,
+          "median_usd": "0.12276300"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.127045884"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 68,
+          "target": 11,
+          "median_usd": "0.0544525449"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.19536223335"
+        }
+      }
+    },
+    "static:XAG:500:sell_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_unmatched": 6,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0646431747",
+      "core_better_fee_only": 68,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 68,
+          "target": 53,
+          "median_usd": "0.12276300"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.12712494825"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 68,
+          "target": 11,
+          "median_usd": "0.0544525449"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1954384521"
+        }
+      }
+    },
+    "static:XAG:1000:buy_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_unmatched": 6,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_fee_only_usd": "0.13013617405",
+      "core_better_fee_only": 68,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 68,
+          "target": 68,
+          "median_usd": "0.24552600"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.254091768"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 68,
+          "target": 38,
+          "median_usd": "0.1089050898"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.3907244667"
+        }
+      }
+    },
+    "static:XAG:1000:sell_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_unmatched": 6,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_fee_only_usd": "0.13013617405",
+      "core_better_fee_only": 68,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 68,
+          "target": 68,
+          "median_usd": "0.24552600"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2542498965"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 68,
+          "target": 38,
+          "median_usd": "0.1089050898"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.3908769042"
+        }
+      }
+    },
+    "delayed:BTC:100:buy_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.08679229330001122055587265348",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 52,
+          "target": 0,
+          "median_usd": "0.003922161409763732089101344495"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.04576474159023626791089865550"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.08345243794741598917429604262"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1331182779474159891742960426"
+        }
+      }
+    },
+    "delayed:BTC:100:sell_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.08610204778354598281679826230",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 54,
+          "target": 0,
+          "median_usd": "0.003328595466981453795486111111"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.04634170703301854620451388889"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.08241677576658298800891679351"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1321093907665829880089167935"
+        }
+      }
+    },
+    "delayed:BTC:250:buy_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.2172574367867404121899495814",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 50,
+          "target": 0,
+          "median_usd": "0.008961484054666933170100837139"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1157784754453330668298991629"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2099753969574441345556459285"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.3347660369574441345556459285"
+        }
+      }
+    },
+    "delayed:BTC:250:sell_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.2156180548757341011546296296",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 52,
+          "target": 0,
+          "median_usd": "0.007765680691553334635289827499"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1169896773084466653647101725"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2073909482117712452517250127"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.3320772372117712452517250127"
+        }
+      }
+    },
+    "delayed:BTC:500:buy_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.4352414870744398224139792618",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 50,
+          "target": 0,
+          "median_usd": "0.01795293962791134772204147641"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2319441698720886522779585236"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.4206530527675887511666619102"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.6706516927675887511666619102"
+        }
+      }
+    },
+    "delayed:BTC:500:sell_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.4309919221315387888744292238",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 52,
+          "target": 0,
+          "median_usd": "0.01432963169355067888899036022"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2356294743064493211110096398"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.4154755116349530966748604769"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.6652651006349530966748604769"
+        }
+      }
+    },
+    "delayed:BTC:1000:buy_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.8675628496103041313013698630",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 50,
+          "target": 8,
+          "median_usd": "0.02969390241471815666159944191"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.4701836905852818433384005581"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.8413061055351775023333238204"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-1.341303385535177502333323820"
+        }
+      }
+    },
+    "delayed:BTC:1000:sell_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.8614540060067063119879629629",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 52,
+          "target": 5,
+          "median_usd": "0.02420443478025125991357971842"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.4757393947197487400864202816"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.8316135055281259192148401826"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-1.331556875528125919214840183"
+        }
+      }
+    },
+    "delayed:ETH:100:buy_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.09140552990280878577891933029",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 72,
+          "target": 0,
+          "median_usd": "0.01075560160827256114003678336"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.03918403783182386840563165906"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.08076968639236972395273972603"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1307981063923697239527397260"
+        }
+      }
+    },
+    "delayed:ETH:100:sell_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.09145001730650339589122748604",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 74,
+          "target": 0,
+          "median_usd": "0.009271706807635435650470890411"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.04067639419236456434952910959"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.08219334732673945496020421106"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1321837423267394549602042111"
+        }
+      }
+    },
+    "delayed:ETH:250:buy_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.2295664543730292397755993151",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 72,
+          "target": 0,
+          "median_usd": "0.02690339071497951332115677321"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.09800289465245728362350171233"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2019242159809243098818493151"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.3269952659809243098818493151"
+        }
+      }
+    },
+    "delayed:ETH:250:sell_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.2287482912680192759759005581",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 74,
+          "target": 0,
+          "median_usd": "0.02321650727190528077949327752"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1017157551801455937209046804"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2055941410221407390918315576"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.3306375010221407390918315576"
+        }
+      }
+    },
+    "delayed:ETH:500:buy_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.4593805532491577559695110350",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 72,
+          "target": 2,
+          "median_usd": "0.05383563213558780692922374429"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1961115097953702924720557458"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.4055735434772224951283231862"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.6557019934772224951283231862"
+        }
+      }
+    },
+    "delayed:ETH:500:sell_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.4574955825360213735493832445",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 74,
+          "target": 0,
+          "median_usd": "0.04645800540201498059104198376"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2034911368073082589026826484"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.4111882820442814781836631152"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.6612750020442814781836631152"
+        }
+      }
+    },
+    "delayed:ETH:1000:buy_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.9190087510014147883573344749",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 72,
+          "target": 42,
+          "median_usd": "0.1074316364213732734201658422"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.3924826630786267265798341578"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.8113652545410384396892059868"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-1.311756704541038439689205987"
+        }
+      }
+    },
+    "delayed:ETH:1000:sell_rh": {
+      "coverage": {
+        "anchors": 76,
+        "entry_matched": 75,
+        "entry_unmatched": 1,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 75
+      },
+      "median_core_minus_hl_fee_only_usd": "0.9156039795752714711638666920",
+      "core_better_fee_only": 75,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 74,
+          "target": 36,
+          "median_usd": "0.09271687425603105128063165906"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.4071852207439689487193683409"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.8230599779130370909497272958"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-1.323414237913037090949727296"
+        }
+      }
+    },
+    "delayed:NVDA:100:buy_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_unmatched": 18,
+        "exit_unmatched": 6,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 50
+      },
+      "median_core_minus_hl_fee_only_usd": "0.01926310830226126937083333333",
+      "core_better_fee_only": 50,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 47,
+          "target": 0,
+          "median_usd": "0.01313657916475575005277777778"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.03677680583524424994722222222"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 6,
+          "target": 0,
+          "median_usd": "-0.004821383714972670458333333334"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.05474501172419476811458333335"
+        }
+      }
+    },
+    "delayed:NVDA:100:sell_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_unmatched": 18,
+        "exit_unmatched": 6,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 50
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0184542327097433179750",
+      "core_better_fee_only": 49,
+      "hl_better_fee_only": 1,
+      "core": {
+        "fee_only": {
+          "positive": 47,
+          "target": 0,
+          "median_usd": "0.00853757411041825439409722222"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.04138242770421219177777777778"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 8,
+          "target": 0,
+          "median_usd": "-0.009193344837142149375"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.059104539837142149375"
+        }
+      }
+    },
+    "delayed:NVDA:250:buy_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_unmatched": 18,
+        "exit_unmatched": 6,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 50
+      },
+      "median_core_minus_hl_fee_only_usd": "0.04820175045497340463569254186",
+      "core_better_fee_only": 50,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 47,
+          "target": 0,
+          "median_usd": "0.03287144010176324670740740741"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.0920259798982367532925925926"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 6,
+          "target": 0,
+          "median_usd": "-0.01206446701280832607838660578"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1369875179217293740949391172"
+        }
+      }
+    },
+    "delayed:NVDA:250:sell_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_unmatched": 18,
+        "exit_unmatched": 6,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 50
+      },
+      "median_core_minus_hl_fee_only_usd": "0.04575212101694679834778031456",
+      "core_better_fee_only": 49,
+      "hl_better_fee_only": 1,
+      "core": {
+        "fee_only": {
+          "positive": 47,
+          "target": 0,
+          "median_usd": "0.02136342745437992423728437342"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1035505496890789091060375444"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 8,
+          "target": 0,
+          "median_usd": "-0.02300435146462967058219178082"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1478962914646296705821917808"
+        }
+      }
+    },
+    "delayed:NVDA:500:buy_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_unmatched": 18,
+        "exit_unmatched": 6,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 50
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0942849145537403892467085236",
+      "core_better_fee_only": 50,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 47,
+          "target": 6,
+          "median_usd": "0.0621142592106828744096366058"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1877506782893171255903633942"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 6,
+          "target": 0,
+          "median_usd": "-0.02413118159686653254922945206"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2740783565968665325492294520"
+        }
+      }
+    },
+    "delayed:NVDA:500:sell_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_unmatched": 18,
+        "exit_unmatched": 6,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 50
+      },
+      "median_core_minus_hl_fee_only_usd": "0.0899419821102846407200009513",
+      "core_better_fee_only": 49,
+      "hl_better_fee_only": 1,
+      "core": {
+        "fee_only": {
+          "positive": 47,
+          "target": 4,
+          "median_usd": "0.04274628078072987398810407154"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2072118592192701260118959285"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 8,
+          "target": 0,
+          "median_usd": "-0.04602969230103363830907534247"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2959275248010336383090753424"
+        }
+      }
+    },
+    "delayed:NVDA:1000:buy_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_unmatched": 18,
+        "exit_unmatched": 6,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 50
+      },
+      "median_core_minus_hl_fee_only_usd": "0.1698668482552997267494078196",
+      "core_better_fee_only": 50,
+      "hl_better_fee_only": 0,
+      "core": {
+        "fee_only": {
+          "positive": 47,
+          "target": 26,
+          "median_usd": "0.1028195338130537058163329211"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.3970199786869462941836670789"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 6,
+          "target": 1,
+          "median_usd": "-0.04826887577660995424609969559"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.548156713193733065098458904"
+        }
+      }
+    },
+    "delayed:NVDA:1000:sell_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 56,
+        "entry_unmatched": 18,
+        "exit_unmatched": 6,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 50
+      },
+      "median_core_minus_hl_fee_only_usd": "0.1701767249547963582835648148",
+      "core_better_fee_only": 49,
+      "hl_better_fee_only": 1,
+      "core": {
+        "fee_only": {
+          "positive": 46,
+          "target": 22,
+          "median_usd": "0.0832993734688205306003805175"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.4166717315311794693996194825"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 8,
+          "target": 1,
+          "median_usd": "-0.09208922038099863959275114155"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.591989991473841573762842466"
+        }
+      }
+    },
+    "delayed:XAG:100:buy_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_unmatched": 6,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_fee_only_usd": "0.01320492722005468002354452054",
+      "core_better_fee_only": 65,
+      "hl_better_fee_only": 3,
+      "core": {
+        "fee_only": {
+          "positive": 68,
+          "target": 0,
+          "median_usd": "0.02486360457957252829957191781"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.02491510742042747170042808219"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 67,
+          "target": 0,
+          "median_usd": "0.01004051183464516727427226028"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.03972803466535483272572773972"
+        }
+      }
+    },
+    "delayed:XAG:100:sell_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_unmatched": 6,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_fee_only_usd": "0.01326299728315007340077054794",
+      "core_better_fee_only": 66,
+      "hl_better_fee_only": 2,
+      "core": {
+        "fee_only": {
+          "positive": 68,
+          "target": 0,
+          "median_usd": "0.02437763944810033286827910959"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.02540465071473216787615582192"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 65,
+          "target": 0,
+          "median_usd": "0.01100890341909982495582191781"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.03878244458090017504417808219"
+        }
+      }
+    },
+    "delayed:XAG:250:buy_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_unmatched": 6,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_fee_only_usd": "0.03214832994655679067629058854",
+      "core_better_fee_only": 65,
+      "hl_better_fee_only": 3,
+      "core": {
+        "fee_only": {
+          "positive": 68,
+          "target": 1,
+          "median_usd": "0.0623124904895459659853469051"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.0624415655104540340146530949"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 67,
+          "target": 0,
+          "median_usd": "0.02516325805472801181083047945"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.09956532144527198818916952055"
+        }
+      }
+    },
+    "delayed:XAG:250:sell_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_unmatched": 6,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_fee_only_usd": "0.03284066572623884811189592846",
+      "core_better_fee_only": 66,
+      "hl_better_fee_only": 2,
+      "core": {
+        "fee_only": {
+          "positive": 68,
+          "target": 1,
+          "median_usd": "0.06109433938159715952025145865"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.06366844561840284047974854135"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 65,
+          "target": 0,
+          "median_usd": "0.02759021474169462303743023846"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.09719550925830537696256976155"
+        }
+      }
+    },
+    "delayed:XAG:500:buy_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_unmatched": 6,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_fee_only_usd": "0.06339798898186765766758942165",
+      "core_better_fee_only": 65,
+      "hl_better_fee_only": 3,
+      "core": {
+        "fee_only": {
+          "positive": 68,
+          "target": 54,
+          "median_usd": "0.1247784600197065772071109208"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1250369279802934227928890792"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 67,
+          "target": 10,
+          "median_usd": "0.05023632276633323331701864535"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1995705287336667666829813546"
+        }
+      }
+    },
+    "delayed:XAG:500:sell_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_unmatched": 6,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_fee_only_usd": "0.06504272015015131646909484395",
+      "core_better_fee_only": 67,
+      "hl_better_fee_only": 1,
+      "core": {
+        "fee_only": {
+          "positive": 68,
+          "target": 54,
+          "median_usd": "0.1223391574316218982511439308"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1274937100683781017488560692"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 65,
+          "target": 9,
+          "median_usd": "0.05524838567733430672273592085"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.1946304163226656932772640792"
+        }
+      }
+    },
+    "delayed:XAG:1000:buy_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_unmatched": 6,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_fee_only_usd": "0.1241187299058086507150082445",
+      "core_better_fee_only": 66,
+      "hl_better_fee_only": 2,
+      "core": {
+        "fee_only": {
+          "positive": 68,
+          "target": 68,
+          "median_usd": "0.2480062137852201344312452435"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2517114877147798655687547565"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 67,
+          "target": 34,
+          "median_usd": "0.0998284587081495146481283295"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.3999388145418504853518716704"
+        }
+      }
+    },
+    "delayed:XAG:1000:sell_rh": {
+      "coverage": {
+        "anchors": 74,
+        "entry_matched": 68,
+        "entry_unmatched": 6,
+        "exit_unmatched": 0,
+        "size_invalid": 0,
+        "hedge_depth_missing": 0,
+        "complete_common": 68
+      },
+      "median_core_minus_hl_fee_only_usd": "0.1301256773481490352778134514",
+      "core_better_fee_only": 67,
+      "hl_better_fee_only": 1,
+      "core": {
+        "fee_only": {
+          "positive": 68,
+          "target": 68,
+          "median_usd": "0.2424732209835239574694793252"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.2574099910164760425305206748"
+        }
+      },
+      "hl": {
+        "fee_only": {
+          "positive": 65,
+          "target": 40,
+          "median_usd": "0.1105310043210723871684043632"
+        },
+        "stress": {
+          "positive": 0,
+          "target": 0,
+          "median_usd": "-0.3893802561789276128315956368"
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "crypto_frames": "5f6ade0523703efe0ecd40c17ead0782eccc3bf7f780ae17364d8c26fc56567d",
+    "rwa_books": "a1996d671d380a1880564165fabb0482df75ae9aaa71f25cb5e325aa2fa02786",
+    "crypto_market_plan": "e4f059ae0fc9b3957779b42c5b35a04aa42fc220f2a74fb76a68d3669f06e2fe",
+    "rwa_market_plan": "8764b8c656ab1ebf6772eedfb22ab541eef28b81c9fa116056fea67366e5c93f",
+    "script": "aa2eb76cb1bf317508b12f0b5a3f18e52d3751899639a805c365e0544a9bc591"
+  },
+  "limits": [
+    "RH maker fills, queue priority, and cancellations are unobserved",
+    "Static same-book fills cannot be executed simultaneously",
+    "Delayed books are quotes, not fill-time execution",
+    "USDG/USDC conversion and funding excluded"
+  ]
+}
