@@ -303,5 +303,17 @@ hashes persisted before traversal. Output target:
 `reports/delayed-taker-quotes/0252Z-v1`. An external 900-second deadline
 and internal cap enforce the bound (deadline approximately 06:03:25 UTC).
 The 3 MB aggregate output allocation is recorded in `d9e8124`; no raw
-archive is added. Results are pending. This is post-capture exploratory
-analysis, with no automatic policy selection, capture or promotion.
+archive is added. The process exited with code 1 before the deadline:
+the compressed outcome table exceeded its 1.85 MB sublimit. No completed
+economic result was published. Preserve the 460,596-byte `.building`
+directory and its [failure record](../reports/delayed-taker-quotes/0252Z-v1.building/failure.json);
+all 33 input hashes were rechecked unchanged after failure.
+
+A separate resource amendment is under implementation review: 4 MB maximum
+output, a larger outcome sublimit, and bounded memoization of pure repeated
+level validation. Every book's structural/grid validity and all timing rules
+remain enforced. Candidate grid, economics, 900-second limit and stopped
+input remain fixed. One second traversal requires a new commit/freeze and
+output directory; no automatic retry or partial-result conclusion follows.
+This is post-capture exploratory analysis with no automatic policy selection,
+capture or promotion.

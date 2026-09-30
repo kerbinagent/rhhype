@@ -1,0 +1,44 @@
+{
+  "status": "incomplete_unpublished",
+  "recorded_at": "2026-09-30T06:04:54.973795+00:00",
+  "source_commit": "1b79060",
+  "process_exit_code": 1,
+  "reason": "output_cap_before_write",
+  "failed_category": "outcomes",
+  "outcome_sublimit_bytes": 1850000,
+  "aggregate_output_cap_including_reserved_logs": 3000000,
+  "published_manifest_exists": false,
+  "canonical_terminal_checks_reached_before_failure": true,
+  "economic_summary_saved": false,
+  "economic_conclusion": null,
+  "raw_traversals_attempted": 1,
+  "automatic_retry": false,
+  "input_hashes_unchanged_at_failure_audit": true,
+  "partial_files": {
+    "method.md": {
+      "bytes": 19009,
+      "sha256": "3e1fc345d59dd3e6428a0b88974c9307a6727206f0ea833911b59c59875bf95a"
+    },
+    "candidates.csv.gz": {
+      "bytes": 361909,
+      "sha256": "b0de188c5ba2c4d9dc194e5b91a01bf070b45153e4cc15a16da2be3c2e3f0cda"
+    },
+    "freeze.json": {
+      "bytes": 6129,
+      "sha256": "0d32d36395cca2c5ceb7c8c51d0750865a008b97e63e1871c997e143d0ffb845"
+    },
+    "tests.py": {
+      "bytes": 19774,
+      "sha256": "ad1362baa8f9c37474ecfa42bbaef7d1e71663dcc4ac90462c0def857b1d0be8"
+    },
+    "source.py": {
+      "bytes": 39902,
+      "sha256": "095bcc064058381af35be428853f1d01a9ff045a813edcd5d0839e64179834c3"
+    },
+    "metadata.json": {
+      "bytes": 12406,
+      "sha256": "34249d999bf176b73a2f9e30aa1602f3ab135a7cadc9238a080bfe060f048aba"
+    }
+  },
+  "partial_bytes_before_failure_record": 459129
+}

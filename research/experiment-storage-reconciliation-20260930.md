@@ -239,3 +239,17 @@ the existing 33 MB shared allowance. One canonical traversal is allowed
 only after implementation review and source freeze; no new raw archive,
 reservation increase or automatic retry is authorized. The helper must
 enforce the aggregate cap before writes and retain every scheduled outcome.
+
+### Delayed quote resource correction, 06:06 UTC
+
+The first delayed quote run exited before its deadline when the outcome
+gzip exceeded its 1,850,000-byte sublimit. It published no completed result.
+Preserve its 460,596-byte `.building` directory, including failure record,
+under a separate fixed allocation. Replace the unused 3 MB completed-output
+reservation with a 4 MB v2 maximum in the
+[resource amendment](../reports/experiment-storage/delayed-taker-resource-amendment-v2.json).
+Projected shared use is 32,343,507 bytes, leaving 656,493 bytes under 33 MB.
+No raw archive or total reservation is added. One additional traversal
+requires explicit implementation review and source freeze; this is a
+documented resource correction, not an automatic retry or changed economic
+selection rule. The candidate grid, horizons and 900-second limit stay fixed.
