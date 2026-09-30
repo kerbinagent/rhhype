@@ -350,3 +350,11 @@ The v3 allocation reserves both failed attempts plus the new run and
 20 KB additional documentation: 32,480,772 of 33,000,000 bytes, leaving
 519,228 bytes. The 820 MB total reservation and raw archive count stay
 fixed. Implementation is authorized; the traversal has not yet launched.
+
+V3 passed root and independent review with 41 focused tests. Commit
+`92f74a7` freezes the minimal uncached recovery before its one authorized
+launch at 2026-09-30T06:37:00.151635+00:00. The helper saved all 33 hashes before
+canonical traversal into `reports/delayed-taker-quotes/0252Z-v3.building`.
+The fixed external deadline is approximately 2026-09-30T06:57:00.151635+00:00.
+No other replay or raw capture is launched. Results remain pending;
+no fourth attempt is authorized by this amendment.
