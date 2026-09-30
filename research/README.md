@@ -13,6 +13,14 @@ XAG branch had no completed trading cycle. Current process IDs and
 commands are in [live operations](live-operations.md); the twenty-minute
 production readouts are in the [review journal](review-loop.md).
 
+The current offline diagnostic tests delayed taker entry and fixed
+10/30/60/300-second exits on that same stopped archive, across all 7,200
+candidates and 28,800 outcomes. The [method](delayed-taker-fixed-quantity-plan.md)
+keeps funding-inclusive returns unknown and distinguishes quote feasibility
+from fills. Two failed resource attempts are preserved; the separately
+reviewed cache-disabled revision started at 06:37 UTC with a fixed
+06:57 UTC deadline. No completed result is available yet.
+
 ## What the evidence currently supports
 
 - [Reverse static route bound](../reports/passive-rare-spread-reverse-bound/0252Z-v1/REPORT.md):
