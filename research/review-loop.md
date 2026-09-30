@@ -3103,3 +3103,40 @@ or capital change. Next checkpoint **22:46:33 UTC**.
 
 Carry has all 117 due arrivals through 22:25, 143,709 sample bytes, zero overdue
 missing files, no terminal error and no interim economic evaluation.
+
+
+### Review 92 — 30 September 2026 22:46 UTC
+
+Exact report and separate epoch snapshot preserved; guarded manual archive
+2,135,533/16,777,216 bytes. Report SHA-256
+`f7e3c40cc6d9e2f611e575c851feaaddb1c674a6334d7c4027eaa605d4e0b443`.
+All 46 exact closes negative: 44 paired and two failed hedges. Zero aborts,
+complete coverage and two Hyperliquid price-limit entry rejections.
+No new winning or estimated records.
+
+- Cooldown: 43 paired closes/−$47.9912.
+- Premium: two/−$2.7471; one paired GOOGL/−$1.1771 and one LIT failed hedge/
+  −$1.5700.
+- Convergence: one ZRO failed hedge/−$2.1559.
+
+Cooldown fees $8.8801, stress $21.4753, capital $0.0015393, funding zero;
+without stress −$26.5159. Exit comparisons: 42 observed, one missing request
+price; fifteen better, four worse, 23 unchanged, aggregate deterioration
+$0.700082, median approximately zero, p95 adverse $0.05534. All 43 paired
+request-to-flat times present: median 1.194 s, p95 1.905 s. Premium's one
+paired comparison improved $0.000892; request-to-flat 1.149 s. Convergence
+had no paired completions.
+
+Four feeds connected, 108 pairs following metadata refresh, CPU 44.94%,
+p95 lag 6.08 ms, RSS 319.82 MiB, 525.8 books/s, metadata age 534.3 s.
+RH cumulative gap counter 119, up four, with feed connected and normal
+performance. Review flat; separately timed later epoch snapshot had one
+cooldown position. Epoch: cooldown 2,368 exact plus eight estimated/
+−$3,114.1454; Premium 642/−$1,176.7009; convergence 365/−$431.5692;
+conservative four/−$3.0627; confirmed two/−$4.0150. Twenty-two earlier win
+records and three legacy funding obligations remain. Reviews 66–92 have
+1,530 closes: 1,520 losses, two paired gains and eight rescue gains. No policy
+or capital change. Next checkpoint **23:06:33 UTC**.
+
+Carry has all 121 due arrivals through 22:45, 148,650 sample bytes, zero overdue
+missing files, no terminal error and no interim economic evaluation.
