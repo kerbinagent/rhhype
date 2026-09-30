@@ -1030,7 +1030,7 @@ all other current closed totals zero. Three legacy funding obligations remain
 carryover and their later settlements cannot enter these totals. This is a
 different interval from the full scheduled review, not a replacement for it.
 
-Health: all four feeds connected,112 pairs,CPU62.01% of one core,p95 loop lag
+Health: all four feeds connected,112 pairs,CPU62.01% of one core, p95 loop lag
 9.78 ms,RSS153.04 MiB,911.4 books/s. Both frozen passive replays remain active.
 Next review **04:06:33 UTC**. No strategy was promoted and no capital reset.
 
@@ -1052,14 +1052,14 @@ $0.116537. Request-to-flat median 1.130 s, p95 1.775 s for 66 paired closes.
 Price movement after the exit request does not explain the overall loss.
 
 The separately saved current-version snapshot begins at 03:36:13 UTC and
-shows cooldown101 exact plus one estimated completion for −$169.0843,
-and convergence4 exact completions for −$6.0927; zero wins. Three legacy
+shows cooldown 101 exact plus one estimated completion for −$169.0843,
+and convergence 4 exact completions for −$6.0927; zero wins. Three legacy
 funding-pending records remain outside this version's result. This snapshot
 and the scheduled twenty-minute interval have different start/end times.
 
-Health: four connected feeds,112 pairs,CPU51.22% of one core,p95 loop lag
-8.30 ms,RSS178.85 MiB,758.4 books/s. The scheduled snapshot has one active
+Health: four connected feeds, 112 pairs, CPU 51.22% of one core, p95 loop lag
+8.30 ms, RSS 178.85 MiB, 758.4 books/s. The scheduled snapshot has one active
 cooldown position and three flat funding-pending records. Both passive
 replays finished; their [readout](../reports/rh-passive-exit-v1-restart/readout.md)
-has 29 known negative portfolios and99 unknown. Next review **04:26:33 UTC**.
+has 29 known negative portfolios and 99 unknown. Next review **04:26:33 UTC**.
 No strategy was promoted or capital replenished.

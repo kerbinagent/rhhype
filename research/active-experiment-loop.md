@@ -201,26 +201,26 @@ storage review can proceed without collecting another archive.
 Both frozen replays completed at 03:58 UTC. The
 [readout](../reports/rh-passive-exit-v1-restart/readout.md) has 29 known
 complete independent portfolios, all negative, and 99 unknown. Primary
-Standard XAG/$1,000 admitted57 attempts and closed56 without flow before
+Standard XAG/$1,000 admitted 57 attempts and closed 56 without flow before
 cancellation ambiguity; no completed primary trading cycle or paired
 comparison. The entry-retirement correction changed no admissions or episode
 classifications on this input. Eleven halted branches with retained passive
 asks have provisional closed contributions withheld from validated inference.
 
-Crypto targeted asks repeatedly exceeded the fixed5 bp ceiling and were
+Crypto targeted asks repeatedly exceeded the fixed 5 bp ceiling and were
 not posted. The [static exit-distance diagnostic](../reports/passive-universe-exit-markup/0310Z-input-v1/readout.md)
 confirms that cost-covering quote distances can exceed that ceiling, without
 establishing any maker fill. A separate stopped-data flow-reach diagnostic is
 being prepared before choosing a wider ceiling or fresh capture.
 
-The base and plus200 exploratory ACK scenarios launched at04:10:54 UTC,
+The base and plus200 exploratory ACK scenarios launched at 04:10:54 UTC,
 each in its own process with a one-hour deadline and bounded outputs.
-Their21 dependencies are immutable through both runs. These scenarios keep
+Their 21 dependencies are immutable through both runs. These scenarios keep
 the frozen price/fee policies and expose execution-model sensitivity; a
 favorable result would still need a separate prospective confirmation.
 
 The [fixed storage amendment](experiment-storage.md) now preserves all seven
-current raw archives and permits at most one additional128 MB complete
+current raw archives and permits at most one additional 128 MB complete
 archive, subject to separate design/freeze/preflight, under a fixed eight
 archive/512 MB selected-raw limit. No new capture has launched. Next
-production review is04:26:33 UTC.
+production review is 04:26:33 UTC.
