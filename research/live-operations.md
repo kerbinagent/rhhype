@@ -378,3 +378,29 @@ P&L. The mandate and operational success threshold are in
 - Parallel stopped-data research covers RH entry queues and HL/Core hedge
   economics. Any resulting strategy change will use a new method and fresh
   data; current v1 is unchanged. No other economic capture is running.
+
+
+## Restart after interruption, 02:53 UTC
+
+The user requested continuing with gpt-6.1-sol subagents at high effort. All
+previous subagents were absent from the live task list; new agents resumed
+their saved files. The production monitor/reviewer (2765644/2765645) survived.
+The temporary passive capture 2953071 and original reference replay 2656054
+were no longer running. The first passive raw file was 22,966,216 bytes with
+no final manifest; it is preserved as an interrupted, unscored study, never
+spliced into the replacement. The original reference replay has only its
+empty audit output; full original/cached equivalence remains unestablished.
+
+Fresh three-response metadata was fetched at 02:51 UTC. All normalized market
+rule fields match the prior study. Unchanged strategy sources and fresh
+metadata were frozen at 02:52:37.908796 UTC in commit 014a761. Replacement
+collector PID 3045038 launched detached at 02:52:57.775724 UTC:
+`data/raw/rh-passive-exit-v1/20260930T0252Z`. Calibration ends approximately
+03:22:58, capture ends 03:42:58. Exact time comes from its final manifest.
+Protocol: `reports/rh-passive-exit-v1-restart/protocol.json`; launch record
+and capture log are alongside it. Cap 384 MB; unchanged 30+20 minute method.
+Replay output must be a new `data/derived/rh-passive-exit-v1-restart` directory.
+A bounded one-shot completion/replay watcher is being prepared.
+
+Production review 32 was actively read at 02:46; next 03:06:33 UTC. No production
+ledger has been replenished or strategy promoted.

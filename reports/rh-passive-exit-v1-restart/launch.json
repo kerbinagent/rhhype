@@ -1,0 +1,22 @@
+{
+  "pid": 3045038,
+  "launched_at": "2026-09-30T02:52:57.775724+00:00",
+  "command": [
+    "/home/harry/projects/research/rhhype/.venv/bin/python",
+    "scripts/rh_maker_capture.py",
+    "--metadata-dir",
+    "reports/rh-passive-exit-v1-restart/metadata",
+    "--out",
+    "data/raw/rh-passive-exit-v1/20260930T0252Z",
+    "--seconds",
+    "3000",
+    "--max-bytes",
+    "384000000",
+    "--run"
+  ],
+  "protocol_commit": "014a761",
+  "duration_seconds": 3000,
+  "raw_cap_bytes": 384000000,
+  "detached_process_group": true,
+  "log": "reports/rh-passive-exit-v1-restart/capture.log"
+}

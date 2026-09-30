@@ -106,3 +106,15 @@ were not comparable observations. See the [common-window diagnostic](rh-entry-qu
 and [queue uncertainty research](public-queue-uncertainty-followup.md).
 Future latency/queue scenarios must be explicitly assumed, preserve every
 resulting hedge and exit loss, and stay separate from the strict v1 control.
+
+
+## Interruption and prospective restart, 02:53 UTC
+
+The first capture ended without a final manifest before calibration completed;
+its raw bytes and interruption evidence remain preserved. It has no scored
+holdout. The unchanged method was re-frozen with fresh metadata at 02:52:37 UTC
+and restarted at 02:52:57 UTC in a new directory. Current calibration ends about
+03:22:58 and holdout about 03:42:58 UTC. See the live-operations restart entry
+and `reports/rh-passive-exit-v1-restart/launch.json`. No outcomes from the
+interrupted raw file informed the strategy. New subagents use gpt-6.1-sol high
+as explicitly requested; no in-place model change was used.

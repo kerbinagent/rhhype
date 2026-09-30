@@ -4,8 +4,9 @@
 
 [Active experiment loop](active-experiment-loop.md) records the mandate,
 prospective primary policy, success threshold, and next decision. The current
-RH maker-entry/passive-exit study was frozen before its 02:27–03:17 UTC capture
-on 30 September. Its holdout has not yet been scored. Current process IDs and
+RH maker-entry/passive-exit study restarted at 02:52 UTC on 30 September
+after an interrupted capture. Its fresh 50-minute window ends about 03:42 UTC;
+no holdout has yet been scored. Current process IDs and
 commands are in [live operations](live-operations.md); the twenty-minute
 production readouts are in the [review journal](review-loop.md).
 
