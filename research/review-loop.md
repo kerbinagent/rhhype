@@ -1973,3 +1973,23 @@ Next checkpoint **13:46:33 UTC**.
 The dated-carry collector has nine scheduled pairs through 13:25, all with
 successful arrival status, 11,027 sample bytes and no collection errors.
 Its fixed source, endpoint and economic-readout restrictions are unchanged.
+
+### Planned annotation for review 65: NVDA attempt timing
+
+For the next existing production review only, add a descriptive NVDA breakdown
+using retained paper attempts created between review64's checkpoint and
+review65's checkpoint. Split by attempt `created_at` before/after 13:30 UTC
+(9:30 Eastern); keep strategy, paired/failed classification, exact/estimated,
+abort and unsettled-at-checkpoint counts separate. A completion after the upper
+checkpoint remains unsettled in this annotation, even if the later database
+read contains its final P&L. Do not treat the unequal pre/post durations as a
+causal comparison or as an independent holdout; rejected signals without a
+paper attempt are outside this denominator.
+
+The [published core cash session](https://www.nyse.com/trade/hours-calendars)
+starts at 9:30 Eastern, and 30 September is not a listed 2026 holiday. This is
+an annotation of the already running monitor, with no new quote capture,
+policy change, threshold change or economic replay. One bounded read-only
+query, at most 256 retained attempts and 64 KiB output; report incompleteness
+rather than truncate or retry if a cap is exceeded. The dated-carry study
+remains frozen and is not an input to this annotation.
