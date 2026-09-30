@@ -1,0 +1,14 @@
+{
+  "input_hashes_unchanged": true,
+  "declared_output_hashes_verified": true,
+  "all_original_valid_rows_pricing_supported": true,
+  "all_rounded_exits_clear_hurdle": true,
+  "all_preceding_ticks_fail_where_markup_needed": true,
+  "original_total_rows": 420,
+  "original_valid_rows": 320,
+  "original_stale_exclusions": 100,
+  "five_tests_passed": true,
+  "network_calls": 0,
+  "bytes_before_verification": 326670,
+  "cap_bytes": 2000000
+}

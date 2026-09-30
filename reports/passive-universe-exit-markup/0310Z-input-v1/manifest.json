@@ -1,0 +1,24 @@
+{
+  "generated_utc": "2026-09-30T03:58:08.735670+00:00",
+  "input_hashes": {
+    "/home/harry/projects/research/rhhype/reports/passive-universe-screen/20260930T0310Z/quotes.jsonl": "13d909ef8d4f16f2c796420b8b01e3fce52b00a9ac26fa3ec55a975045b66d0b",
+    "/home/harry/projects/research/rhhype/reports/passive-universe-screen/20260930T0310Z/universe.json": "37fc90d4b66d8fc0aefea3c806b49ff598ab06c986a9db3cec76188da7b1fa83",
+    "/home/harry/projects/research/rhhype/reports/passive-universe-screen/20260930T0310Z/summary.json": "d91af6755aa662ec0341ba30b0e96d270ecbfa9d7a76be9657906f441290a5c6",
+    "/home/harry/projects/research/rhhype/reports/passive-universe-screen/20260930T0310Z/manifest.json": "495b9c20eee3cf16bf70a77cffd0cf87794b87b494dfbf8e604f843021338398",
+    "/home/harry/projects/research/rhhype/reports/passive-universe-screen/20260930T0310Z/freeze.json": "1230c10fde9d26a3a94cbf137e01c3f6969685abac35cf5361009fd0794a28d0",
+    "/home/harry/projects/research/rhhype/research/passive-universe-exit-markup-method.md": "84eb5902203823591eda1e625efda7f0922f915c2dba54f0b5dbb324ab8c6240",
+    "/home/harry/projects/research/rhhype/scripts/analyze_passive_universe_exit_markup.py": "03f8c5389fc46a0766622aad2fec8d6500dbea479cb782755b66d3f5b64a7b4f",
+    "/home/harry/projects/research/rhhype/tests/test_passive_universe_exit_markup.py": "a27cfd5270df2c92d90f79dc20a49f8eec2e3b171810586dc1c3f38689404a8c"
+  },
+  "input_hashes_unchanged": true,
+  "original_frozen_inputs_verified": true,
+  "output_hashes": {
+    "observations.jsonl": "3bbc950adc62f34192f22e96e0c5ca398359414e2c13a3f2abdcf63d6966b26a",
+    "summary.json": "0430a0f121905daaa75cbe1f4c9f0119428f14c52f4953976f66863237dc4ff6",
+    "source.py": "03f8c5389fc46a0766622aad2fec8d6500dbea479cb782755b66d3f5b64a7b4f",
+    "method.md": "84eb5902203823591eda1e625efda7f0922f915c2dba54f0b5dbb324ab8c6240",
+    "tests.py": "a27cfd5270df2c92d90f79dc20a49f8eec2e3b171810586dc1c3f38689404a8c"
+  },
+  "network_calls": 0,
+  "derived_file_cap_bytes": 2000000
+}
