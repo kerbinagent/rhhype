@@ -2556,3 +2556,48 @@ failed-hedge rescue gains. No policy or capital change. Next checkpoint
 
 Carry has all 69 due arrivals through 18:25, 84,830 sample bytes, zero overdue
 missing files, no terminal error and no interim economic evaluation.
+
+## Review 80 — 2026-09-30 18:46:33 UTC
+
+Exact report, separate epoch snapshot and complete winning record preserved;
+guarded manual archive 1,644,315/16,777,216 bytes. All fifty closes exact:
+49 losses and one gain, zero aborts, complete completion/abort coverage.
+
+- Cooldown: 38 paired closes/−$60.2452; no failed hedges.
+- Premium: seven closes/−$14.6098, comprising five paired/−$10.6169 and two
+  failed hedges/−$3.9929.
+- Convergence: five failed hedges/−$3.5742, one gain; no paired closes.
+- Seven Hyperliquid price-limit rejections.
+
+The [winning record](../reports/live-review-catchup/review80-positive-records.json)
+is CASHCAT `1790793327749554-22692-convergence`, +$0.8275689316 net. Core
+partially filled 2,488.8 units long for $405.838535, while Hyperliquid's short
+was price-limit rejected with quantity zero. The exposed long sold for
+$406.869024 after 1.244688 s: price P&L +$1.030489, zero fees/funding,
+5 bp stress $0.2029192675 and capital $0.0000008009. Both legs have zero
+remaining quantity, funding is complete and exact, and net arithmetic and
+stress reconcile. Selection covered all positive completions in the fixed
+review window, with count one matching the ledger. This was a partial,
+unhedged rescue outcome. Fifteen epoch win records comprise two paired gains
+and thirteen failed-hedge rescues across separate portfolios.
+
+Cooldown fees $13.3889, stress $18.9769, capital $0.0013573, funding zero;
+without stress −$41.2683. Its 37 available exit comparisons improved $0.042
+in total (twelve better, seventeen worse, eight unchanged), with one request
+price unavailable; median approximately zero, p95 adverse $0.36522. All
+38 request-to-flat observations present: median 1.211 s, p95 1.675 s.
+Premium's five comparisons worsened $0.742282 overall (two better, three
+worse); convergence had no paired exit comparisons.
+
+Four feeds connected, 111 pairs after metadata refresh, CPU 66.10%, p95 lag
+11.21 ms, RSS 315.80 MiB, 951.5 books/s, metadata age 549.0 s. Review had
+no open quantities but one cooldown funding settlement pending; later epoch
+snapshot flat with no new pending funding. Epoch: cooldown 1,849 exact plus
+five estimated/−$2,464.1480; Premium 464/−$851.5960; convergence
+263/−$308.5579; conservative two/−$1.7145; confirmed one/−$3.3006.
+Three legacy funding obligations remain. Reviews 66–80 have 723 closes:
+720 losses and three failed-hedge rescue gains. No policy or capital change.
+Next checkpoint **19:06:33 UTC**.
+
+Carry has all 73 due arrivals through 18:45, 89,763 sample bytes, zero overdue
+missing files, no terminal error and no interim economic evaluation.
