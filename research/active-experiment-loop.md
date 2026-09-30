@@ -296,8 +296,12 @@ outcomes. All 28,800 rows, initial failures and EOF outcomes remain visible.
 Fees, stress, capital and unknown funding are separate. Paired quotes do not
 model private fills, price-limit rejection, partials or hedge rescue.
 
-Implementation and synthetic review are underway. No archive evaluation has
-launched. One later canonical traversal requires frozen reviewed sources,
-has a 900-second limit and a 3 MB aggregate output allocation recorded in
-`d9e8124`; it adds no raw archive. This is post-capture exploratory analysis,
-with no automatic policy selection, capture or promotion.
+Implementation and independent review completed with 31 passing synthetic
+checks; source/tests were committed as `1b79060` before evaluation. One
+canonical traversal launched at 05:48:25 UTC with its 33 input/dependency
+hashes persisted before traversal. Output target:
+`reports/delayed-taker-quotes/0252Z-v1`. An external 900-second deadline
+and internal cap enforce the bound (deadline approximately 06:03:25 UTC).
+The 3 MB aggregate output allocation is recorded in `d9e8124`; no raw
+archive is added. Results are pending. This is post-capture exploratory
+analysis, with no automatic policy selection, capture or promotion.
