@@ -7,17 +7,20 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 07:59 UTC
+## Current status, 30 September 2026 08:21 UTC
 
 The passive-exit replays and delayed taker diagnostic have completed without
 a qualifying positive result. The next prospective spread-regime prerequisite
 watch failed its pre-connection storage check after three successful metadata
 requests. No ticker connection or economic measurement occurred; all 1,680 rows
 are retained as uncollected. The original stage will not be retried. A separate
-resource-only compression proposal is under review, without new network
-authorization. See the latest entry below and the [research map](README.md).
+resource-only compact wrapper passed offline and independent review; its one
+authorized fresh window runs from 08:12:57 to 08:32:57 UTC. Economic results
+remain unread until that endpoint. An independent derived-output auditor is
+being prepared on synthetic inputs. See the latest entry below and the
+[research map](README.md).
 Production reviews continue every twenty minutes, with the next due at
-08:06:33 UTC.
+08:26:33 UTC.
 
 ## Original experiment: RH passive exit v1
 
