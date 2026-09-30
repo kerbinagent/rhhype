@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 12:43 UTC
+## Current status, 30 September 2026 13:28 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative; no production strategy is promoted. The user authorized
@@ -19,9 +19,9 @@ analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
 [method](dated-carry-method-v1.md) and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 63 are preserved. One new +$0.1911 single-leg rescue did not
+Reviews through 64 are preserved. One new +$0.1911 single-leg rescue did not
 produce a positive paired cycle; all three active strategy windows lost money.
-Next review: **13:26:33 UTC**.
+Next review: **13:46:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -892,3 +892,11 @@ Seven earlier rescue wins remain distinct from paired-cycle evidence. Four feeds
 connected, 110 pairs, one current cooldown position; three retained legacy
 funding obligations. Next checkpoint 13:26:33 UTC. The dated-carry study has
 five successful paired arrivals and remains frozen; no economic readout yet.
+
+### Review 64, 13:26 UTC
+
+All 44 closes exact and negative: cooldown 27/−$61.1594, Premium 9/−$18.1743,
+convergence 8/−$12.0159. Zero aborts, complete coverage; review and later
+snapshot flat. Seven earlier rescue win records remain, with no new winner.
+All four feeds connected; next review 13:46:33 UTC. The dated-carry collector
+has nine successful paired arrivals, no errors and no interim economic readout.

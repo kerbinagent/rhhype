@@ -1,6 +1,6 @@
 # Active paper research operations
 
-Current process summary: 2026-09-30 12:43 UTC. All processes below are paper simulation or
+Current process summary: 2026-09-30 13:28 UTC. All processes below are paper simulation or
 public quote observation. No private keys or real orders are involved.
 
 | Process | PID | Output | Expected end |
@@ -28,8 +28,8 @@ report is [flawed-pilot-final.md](../reports/feed-experiment/flawed-pilot-final.
 
 ## Next review and interpretation
 
-Review 63 was archived with a separately timed current-epoch snapshot.
-**Next: 13:26:33 UTC**.
+Review 64 was archived with a separately timed current-epoch snapshot.
+**Next: 13:46:33 UTC**.
 Read `data/strategy-reviews/latest.json`; do not also run a one-shot capture
 against that output, because it advances the same baseline. The scheduler
 collects evidence; the active agent researches and evaluates changes.

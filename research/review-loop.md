@@ -1941,3 +1941,35 @@ remain. No policy/capital change. Next checkpoint **13:26:33 UTC**.
 The fixed dated-carry study has five paired samples through 13:05, all with
 successful arrival status, 6,139 sample bytes, no collection errors. No interim
 price/economic evaluation; fixed endpoint remains 3 October 12:45 UTC.
+
+## Review 64 — 2026-09-30 13:26:33 UTC
+
+Exact review `review-20260930T132633Z.json` and separate epoch read
+`current-epoch-at-review64.json` are preserved. All 44 closes are exact and
+negative, with zero aborts and complete coverage. Portfolios remain separate.
+
+| Strategy | Closes | Net | Paired / failed |
+| --- | ---: | ---: | --- |
+| Cooldown | 27 | −$61.1594 | 24/−$54.5144; three/−$6.6450 |
+| Premium | 9 | −$18.1743 | three/−$4.9958; six/−$13.1785 |
+| Convergence | 8 | −$12.0159 | two/−$2.1457; six/−$9.8701 |
+
+Twelve Hyperliquid price-limit rejections. Cooldown fees $18.5390, stress
+$13.4796, capital $0.0008668, funding zero; removing stress leaves −$47.6798.
+Its 23 observed exit-price comparisons improved $1.179362 overall (eleven
+better, ten worse, two unchanged, one request price missing); median effectively
+zero, p95 adverse $0.353067. All 24 paired request-to-flat observations are
+present: median 1.361 s, p95 1.699 s. Premium's three exit comparisons worsened
+$0.145783; both convergence paired exits worsened, $1.069896 combined.
+
+Four feeds connected, 110 pairs, CPU 70.07%, p95 lag 12.53 ms, RSS 294.22 MiB,
+1,037.5 books/s, metadata age 2,976.6 s. Both review and later snapshot are flat.
+Snapshot epoch: cooldown 1,312 exact plus three estimated closes/−$1,751.4323
+(one old win); Premium 267/−$473.1850 (one old win); convergence 107/−$120.4569
+(four rescue wins); conservative one/+$2.3198. Seven rescue win records remain,
+with the same three legacy funding obligations. No policy/capital change.
+Next checkpoint **13:46:33 UTC**.
+
+The dated-carry collector has nine scheduled pairs through 13:25, all with
+successful arrival status, 11,027 sample bytes and no collection errors.
+Its fixed source, endpoint and economic-readout restrictions are unchanged.
