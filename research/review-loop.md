@@ -852,3 +852,68 @@ No replacement policy promoted. Strategy research and size-specific passive
 exit hypotheses are recorded in `research/unwind-strategy-decision.md` and
 `research/strategy-inventory-followup.md`. Preserved full review:
 `reports/unwind-instrumentation/review21.json`.
+
+## Historical catchup: 23:06–02:06 UTC, reviewed 2026-09-30 02:16 UTC
+
+Ten scheduled checkpoints from 23:06 through 02:06 have complete retained
+completion coverage. [Bounded evidence](../reports/live-review-catchup/evidence.json)
+records each source report hash, policy count, ledger delta, exit diagnostic, and
+health snapshot. Rows below are separate, correlated paper portfolios; their
+dollar values should not be added together.
+
+| Window ending UTC | Baseline closes / net | Cooldown closes / net | Baseline cumulative entries | Cooldown cumulative entries |
+|---|---:|---:|---:|---:|
+| 23:06 | 91 / −$102.06 | 14 / −$27.91 | 4,570 | 1,081 |
+| 23:26 | 104 / −$179.44 | 47 / −$86.75 | 4,674 | 1,127 |
+| 23:46 | 124 / −$170.40 | 41 / −$40.04 | 4,805 | 1,169 |
+| 00:06 | 108 / −$177.60 | 43 / −$77.92 | 4,913 | 1,211 |
+| 00:26 | 22 / −$30.55 | 58 / −$112.79 | 4,934 | 1,270 |
+| 00:46 | 0 / $0 | 58 / −$112.04 | 4,934 | 1,327 |
+| 01:06 | 0 / $0 | 58 / −$109.45 | 4,934 | 1,385 |
+| 01:26 | 0 / $0 | 49 / −$96.16 | 4,934 | 1,435 |
+| 01:46 | 0 / $0 | 53 / −$103.13 | 4,934 | 1,487 |
+| 02:06 | 0 / $0 | 63 / −$118.46 | 4,934 | 1,552 |
+
+The baseline's inactivity is **capital exhaustion on Hyperliquid**, not a
+missing feed or an open-position queue. Its last retained entry began at
+00:10:50 UTC; its entry counter stays at 4,934 thereafter while the policy's
+allowed counter rises from 422,786 at 00:26 to 546,795 at 02:06. These are
+repeated policy checks, not distinct trade opportunities. At the
+02:16 snapshot it has no open, pending-entry, pending-exit, or funding position,
+but only **$1,000.3345 in its HL wallet**. Every $1,000 new position requires
+at least $1,000.50 on each venue under the frozen 100% margin and 5 bp reserve
+rule, before fee reserves. Original Standard ($1,000.0614 HL) and Plus
+($1,000.1954 HL) are also below this necessary floor. Premium's Lighter wallet
+is $1,000.0789, preventing Lighter routes, while other routes still produced
+ten losing completions in the final window. Cooldown retains $3,414.35 on HL
+and continues entering. The live snapshot's global capital-rejection counter
+exceeds 1.5 million; it is **not** a per-strategy count. All four feeds stayed
+connected through the ten reviews, and 02:06 p95 event-loop lag was 14.9 ms
+at 891 books/s. Keep the exhausted ledgers intact; a new notional or funding
+allocation would be a separately named experiment.
+
+Exit-request price evidence does not turn the late cooldown losses into an
+unwind-latency-only explanation. In the five windows ending 00:46–02:06,
+cooldown had 267 valid paired request-to-actual comparisons and six missing.
+Actual short buyback minus long sale **improved by $6.3436 in aggregate**
+relative to request-time executable liability, while its completed net was
+−$539.23; 84 observations worsened and 108 improved. The final 02:06 window
+had 59 valid of 60 paired closes, price-only movement −$0.6380, median
+request-to-flat 1.212 s and p95 1.741 s, yet 63 completions lost $118.46.
+Earlier tails were real: the 23:46 baseline window had +$29.1733 adverse
+price-only movement across 82 valid paired closes (six missing), and Premium
+had +$150.6728 across 60 valid closes (one missing). These are request-to-fill
+comparisons, not causal latency estimates; fees, initial entry movement and
+holding-period spread changes remain distinct. Windows with no paired closes
+have **no exit-price observation**, rather than zero deterioration.
+
+The unchanged frozen original RH maker replay was still running at about one
+full CPU core after 3 h 58 m. A read-only process check found its input gzip
+offset at 12,288,000 of 41,368,405 compressed bytes (29.7%) and its audit
+output at zero bytes; it had not produced a finished analysis. Compressed byte
+offset is not event-time or remaining compute work. A naive byte-linear
+projection from 3 h 58 m elapsed is about **9.4 more hours**, but is too
+uncertain for a completion deadline. The completed cached variant remains
+separately labeled; full
+original-versus-cached equivalence waits for the original to finish. No process
+was stopped or restarted.
