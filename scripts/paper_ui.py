@@ -320,6 +320,102 @@ def _closed_sums_line(snapshot: dict) -> str | None:
     return "Closed win/loss sums USD: " + " | ".join(parts)
 
 
+def _epoch_tui_lines(snapshot: dict, width: int, height: int) -> list[str]:
+    epoch = snapshot['paper_strategy_epoch']
+    summaries = epoch.get('strategies') or {}
+    if not isinstance(summaries, dict):
+        summaries = {}
+    started = _number(epoch.get('started_at'))
+    try:
+        since = time.strftime('%Y-%m-%d %H:%MZ', time.gmtime(started)) if started is not None else '?'
+    except (ValueError, OverflowError, OSError):
+        since = '?'
+    updated = _number(snapshot.get('updated_at', snapshot.get('updated_timestamp')))
+    age = f"{max(0, int(time.time() - updated))}s" if updated is not None else '?'
+    lines = [f"RHHYPE PAPER | {_label(snapshot.get('status', 'starting')).upper()} | update {age} | Ctrl-C exits",
+             f"Version {_label(epoch.get('version', '?'))} | Epoch {_label(epoch.get('epoch_id', '?'))[:8]} | since {since}",
+             'Current version only: T/W/E   Net incl.stress Fees Stress Open Pos Pen']
+    if width < 70:
+        lines[1] = f"Version {_label(epoch.get('version', '?'))} | Epoch {_label(epoch.get('epoch_id', '?'))[:8]}"
+        lines.insert(2, f'Since {since} | current version only')
+    names = [(tier, tier.title()) for tier in TIERS] + [(key, label) for key, label, _ in SHADOWS]
+    for key, label in names:
+        row = summaries.get(key)
+        if not isinstance(row, dict):
+            continue
+        trades = _int(row.get('closed_trades')) + _int(row.get('estimated_trades'))
+        counts = f"{trades}/{_int(row.get('closed_wins'))}/{_int(row.get('estimated_trades'))}"
+        if width >= 70:
+            lines.append(f"{label:<12.12} {counts:>7} {_cash(row.get('closed_net_usd'), 15)} "
+                         f"{_cash(row.get('fees_usd'), 7)} {_cash(row.get('other_costs_usd'), 7)} "
+                         f"{_cash(row.get('open_liquidation_pnl'), 9)} "
+                         f"{_int(row.get('open_positions')):>3} {_int(row.get('pending_funding')):>3}")
+        else:
+            lines.append(f"{label:<12.12} T/W/E {counts} Net {_brief_cash(row.get('closed_net_usd'))} "
+                         f"Fee {_brief_cash(row.get('fees_usd'))}")
+    assumptions = snapshot.get('cost_assumptions') or {}
+    stress = _number(assumptions.get('extra_cost_bps')) if isinstance(assumptions, dict) else None
+    lines.append(f"Stress allowance {stress:g} bp; Fees exchange model; T/W/E=closed/wins/estimated"
+                 if stress is not None else 'Stress unknown; Fees exchange model; T/W/E=closed/wins/estimated')
+    carryover = epoch.get('carryover') or {}
+    if not isinstance(carryover, dict):
+        carryover = {}
+    lines.append(f"Carryover, older versions: {_int(carryover.get('active_positions'))} active, "
+                 f"{_int(carryover.get('pending_entries'))} entry, "
+                 f"{_int(carryover.get('pending_funding'))} funding pending; P&L excluded.")
+    wallets = epoch.get('wallets_all_versions') or {}
+    if not isinstance(wallets, dict):
+        wallets = {}
+    for group in (names[:3], names[3:]):
+        values = []
+        for key, label in group:
+            row = wallets.get(key)
+            if not isinstance(row, dict):
+                continue
+            available = row.get('available_collateral_by_venue') or {}
+            amounts = [_number(value) for value in available.values()] if isinstance(available, dict) else []
+            free = sum(amounts) if amounts and all(value is not None for value in amounts) else None
+            short = {'standard': 'Std', 'plus': 'Plu', 'premium': 'Prm',
+                     **{key: short for key, _, short in SHADOWS}}[key]
+            values.append(f"{short} {_brief_cash(row.get('wallet_cash_usd'))}/{_brief_cash(free)}")
+        if values:
+            prefix = 'Sum cash/free (all):'
+            line = prefix
+            for value in values:
+                if len(line) + len(value) + 1 > width and line != prefix:
+                    lines.append(line.rstrip())
+                    line = prefix
+                line += ' ' + value
+            lines.append(line.rstrip())
+    lines.append(_diagnostic_line(snapshot))
+    signals = snapshot.get('top_signals') or []
+    if not isinstance(signals, list):
+        signals = []
+    if width >= 76:
+        cells = []
+        for index, item in enumerate(signals[:10], 1):
+            if isinstance(item, dict):
+                cells.append(f"{index:>2} {_label(item.get('asset', '?')):<9.9} "
+                             f"{_label(item.get('strategy', '?')):<8.8} "
+                             f"Edge {_cash(item.get('net_edge_usd'), 9)}")
+        # Two columns preserve all ten signals in an 80x24 versioned frame.
+        cell_width = (width - 3) // 2
+        signal_rows = [cells[index][:cell_width].ljust(cell_width) + ' | ' +
+                       (cells[index + 5][:cell_width] if index + 5 < len(cells) else '')
+                       for index in range(min(5, len(cells)))]
+    else:
+        _, signal_rows = _signal_lines(signals[:10], width)
+    lines.append('Signals: edge NOT trade P&L | all-version cash/free sums not pooled')
+    remaining = max(0, height - len(lines))
+    shown = min(len(signal_rows), max(0, remaining - (len(signal_rows) > remaining)))
+    lines += signal_rows[:shown]
+    if shown < len(signal_rows):
+        actual_shown = shown + min(shown, max(0, len(cells) - 5)) if width >= 76 else shown
+        total_signals = len(cells) if width >= 76 else len(signal_rows)
+        lines.append(f'Showing {actual_shown}/{total_signals} signals; enlarge terminal for more.')
+    return lines
+
+
 def tui_lines(snapshot: dict | None, columns: int, rows: int) -> list[str]:
     """Return a full frame that never wraps or scrolls, even on a tiny PTY."""
     width, height = max(1, columns - 1), max(1, rows - 1)
@@ -327,6 +423,8 @@ def tui_lines(snapshot: dict | None, columns: int, rows: int) -> list[str]:
         lines = ["RHHYPE paper monitor | Ctrl-C exits", "Waiting for monitor snapshot ..."]
     elif isinstance(snapshot.get("viewer_notice"), list):
         lines = ["RHHYPE viewer | Ctrl-C exits", *snapshot["viewer_notice"]]
+    elif isinstance(snapshot.get('paper_strategy_epoch'), dict):
+        lines = _epoch_tui_lines(snapshot, width, height)
     else:
         updated = _number(snapshot.get("updated_at", snapshot.get("updated_timestamp")))
         age = f"{max(0, int(time.time() - updated))}s" if updated is not None else "?"

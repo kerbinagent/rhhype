@@ -1,0 +1,23 @@
+RHHYPE PAPER | OFFLINE PREVIEW | update 0s | Ctrl-C exits
+Version e3e83cda71a6 | Epoch 723a0c12 | since 2026-09-30 03:30Z
+Current version only: T/W/E   Net incl.stress Fees Stress Open Pos Pen
+Standard       0/0/0           +0.00   +0.00   +0.00     +0.00   0   0
+Plus           0/0/0           +0.00   +0.00   +0.00     +0.00   0   0
+Premium        0/0/0           +0.00   +0.00   +0.00     +0.00   0   0
+Shadow base    0/0/0           +0.00   +0.00   +0.00     +0.00   0   0
+Cooldown       0/0/0           +0.00   +0.00   +0.00     +0.00   0   0
+Convergence    0/0/0           +0.00   +0.00   +0.00     +0.00   0   0
+Conservative   0/0/0           +0.00   +0.00   +0.00     +0.00   0   0
+Confirmed      0/0/0           +0.00   +0.00   +0.00     +0.00   0   0
+Stress allowance 5 bp; Fees exchange model; T/W/E=closed/wins/estimated
+Carryover, older versions: 1 active, 1 entry, 3 funding pending; P&L excluded.
+Sum cash/free (all): Std +14.1k/? Plu +13.5k/+13.5k Prm +11.7k/?
+Sum cash/free (all): Base +14.1k/+14.1k Cool +17.1k/? Conv +19.6k/?
+Sum cash/free (all): Cons +20.0k/+20.0k Conf +20.0k/+20.0k
+Feeds: HL offline preview RH offline preview
+Signals: edge NOT trade P&L | all-version cash/free sums not pooled
+ 1 ASSET0    standard Edge     +0.00   |  6 ASSET5    standard Edge     +5.00
+ 2 ASSET1    standard Edge     +1.00   |  7 ASSET6    standard Edge     +6.00
+ 3 ASSET2    standard Edge     +2.00   |  8 ASSET7    standard Edge     +7.00
+ 4 ASSET3    standard Edge     +3.00   |  9 ASSET8    standard Edge     +8.00
+ 5 ASSET4    standard Edge     +4.00   | 10 ASSET9    standard Edge     +9.00

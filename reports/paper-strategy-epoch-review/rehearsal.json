@@ -1,0 +1,102 @@
+{
+  "capital_reset": false,
+  "carryover": {
+    "active_positions": 1,
+    "pending_entries": 1,
+    "pending_funding": 3,
+    "remaining_quantity_by_market": {
+      "hyperliquid:xyz:GOOGL:long": 2.925,
+      "rh_lighter:12:short": 2.925
+    },
+    "reserved_usd": 10008.64
+  },
+  "collector_restarted": false,
+  "current_closed_count": 0,
+  "current_closed_fees_usd": 0,
+  "current_closed_net_usd": 0,
+  "current_wins": 0,
+  "fixed_now": 1790739000,
+  "hypothetical_80_full_epochs_state_bytes": 1666662,
+  "ledgers_preserved": true,
+  "legacy_position_count": 5,
+  "live_database_written": false,
+  "mode": "read_only_migration_rehearsal",
+  "notes": [
+    "First epoch starts at rollout; earlier strategy history is excluded.",
+    "80-epoch estimate uses 8 populated strategy summaries per epoch; no state was saved.",
+    "All versioned paper wallets remain subject to venue-specific collateral constraints."
+  ],
+  "position_count": 5,
+  "same_epoch_on_reconstruct": true,
+  "saved_state_bytes_after": 1278258,
+  "saved_state_bytes_before": 1279700,
+  "source_database": "/home/harry/projects/research/rhhype/data/paper-monitor/paper.sqlite3",
+  "state_limit_bytes": 2097152,
+  "strategy_identity": {
+    "execution_config": {
+      "aster_processing_ms": 50.0,
+      "capital_rate": 0.05,
+      "capital_usd": 20000,
+      "entry_slippage_bps": 10,
+      "episode_gap_seconds": 5.0,
+      "evidence_levels": 100,
+      "extra_cost_bps": 5,
+      "fill_timeout_seconds": 3,
+      "hl_processing_ms": 50.0,
+      "holding_seconds": 10.0,
+      "latency_probes_ms": [
+        100,
+        300,
+        500,
+        1000
+      ],
+      "margin_fraction": 1,
+      "max_book_age": 2,
+      "max_divergence_bps": 500,
+      "max_matched_notional": 10000,
+      "max_positions": 10,
+      "max_skew": 1,
+      "metadata_max_age": 7200,
+      "network_delay_ms": 100,
+      "notional": 1000,
+      "signal_interval": 0.1,
+      "strategies": [
+        "standard",
+        "plus",
+        "premium"
+      ],
+      "take_profit_usd": 0.1
+    },
+    "execution_helper_sha256": {
+      "affordable_quantity": "dc4b35dd4ebbf9cf423a080b31c314136e60847f992ec1820667e8a5ceca9423",
+      "common_step": "892160d607eb2b3453e84fa319e42cc3b6780af3e234dd84efac187a897a4966",
+      "walk": "38a800cc052fbe65d28a34296fc0ff06cc7894bdeaffeb716312b6e90179b371"
+    },
+    "fingerprint": "e3e83cda71a6cde75a263a13541d616f161d492ccfb061e1a16ba9f0d18a2e29",
+    "selection": {
+      "assets": null,
+      "aster_fee_bps": 4,
+      "aster_group_b_fee_bps": 10,
+      "aster_rwa_fee_bps": 1.25,
+      "hl_bbo": false,
+      "hl_fee_bps": 4.5,
+      "hl_refresh": true,
+      "max_pairs": 0,
+      "min_volume": 1000000,
+      "poll_interval": 1,
+      "shadow_strategies": true,
+      "transport": "stream",
+      "venues": [
+        "aster",
+        "lighter",
+        "rh_lighter"
+      ]
+    },
+    "source_sha256": {
+      "scripts/paper_engine.py": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b",
+      "scripts/paper_funding.py": "12d3355202cd1786cb260a4775791b0f7ac242b141010471738ec60fc0abd2b0",
+      "scripts/paper_strategies.py": "0074c230b89acc498a0bf3f892ba31d021da6b4936775bd3dafe617951c4bf7c"
+    }
+  },
+  "wallets_preserved": true
+}

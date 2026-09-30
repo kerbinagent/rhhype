@@ -11,9 +11,65 @@ import math
 
 from monitor import walk
 from paper_engine import PaperEngine, scenario_fee, valid_book
+from paper_strategy_epoch import StrategyEpoch
 
 
 class ObservedPaperEngine(PaperEngine):
+    def __init__(self, pairs, config=None, state=None, now=None, *, strategy_identity=None):
+        self.paper_epoch = None
+        self._paper_strategy_identity = strategy_identity
+        self._initializing_epoch = True
+        super().__init__(pairs, config, state, now)
+        self._initializing_epoch = False
+        if strategy_identity is not None:
+            self._bind_epoch(state)
+
+    def _bind_epoch(self, state):
+        self.paper_epoch = StrategyEpoch((state or {}).get('paper_strategy_epochs'),
+            self._paper_strategy_identity, self.last_processed, self.positions.values(), self.ledgers)
+        for position in self.positions.values():
+            self.paper_epoch.tag_restored(position)
+
+    def restore(self, state):
+        self.paper_epoch = None
+        super().restore(state)
+        if self._paper_strategy_identity is not None and not self._initializing_epoch:
+            self._bind_epoch(state)
+
+    def _index_position(self, position):
+        if self.paper_epoch is not None:
+            if 'paper_epoch_id' in position:
+                self.paper_epoch.require(position['paper_epoch_id'])
+            else:
+                self.paper_epoch.tag_new(position)
+        return super()._index_position(position)
+
+    def settle_funding(self, position_id, result, now):
+        position = self.positions.get(position_id)
+        if self.paper_epoch is not None and position is not None:
+            self.paper_epoch.require(position['paper_epoch_id'])
+        super().settle_funding(position_id, result, now)
+        if (self.paper_epoch is not None and position is not None and
+                position['status'] in ('CLOSED', 'CLOSED_ESTIMATED')):
+            self.paper_epoch.closed(position)
+
+    def export_state(self):
+        state = super().export_state()
+        if self.paper_epoch is not None:
+            state['paper_strategy_epochs'] = self.paper_epoch.export(self.positions.values())
+        return state
+
+    def snapshot(self, now):
+        snapshot = super().snapshot(now)
+        if self.paper_epoch is not None:
+            snapshot['paper_strategy_epoch'] = self.paper_epoch.snapshot(
+                self, snapshot['strategies'], now)
+            for position in snapshot['positions'] + snapshot['pending_settlements']:
+                original = self.positions[position['id']]
+                position['paper_epoch_id'] = original['paper_epoch_id']
+                position['paper_strategy_version'] = original['paper_strategy_version']
+        return snapshot
+
     def _exit_intent(self, p, leg, now):
         if "exit_request_observation" not in p:
             try:

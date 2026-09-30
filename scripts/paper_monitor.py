@@ -23,6 +23,7 @@ import aiohttp
 import monitor as legacy
 from paper_engine import EngineConfig, key
 from paper_exit_observer import ObservedPaperEngine
+from paper_strategy_epoch import strategy_identity
 from paper_funding import FundingService
 from paper_store import PaperStore
 from paper_streams import StreamManager
@@ -107,7 +108,13 @@ async def run(args,store,config):
     loop=asyncio.get_running_loop()
     for sig in (signal.SIGINT,signal.SIGTERM):loop.add_signal_handler(sig,stop.set)
     saved=store.load_state() or {}
-    engine=ObservedPaperEngine([],config,state=saved.get('engine'))
+    selection={name:getattr(args,name) for name in ('venues','assets','min_volume','max_pairs',
+        'transport','hl_bbo','hl_refresh','poll_interval',
+        'hl_fee_bps','aster_fee_bps','aster_rwa_fee_bps','aster_group_b_fee_bps')}
+    selection['shadow_strategies']=bool(args.shadow_strategies or
+        (saved.get('engine') or {}).get('shadow_started_at') is not None)
+    engine=ObservedPaperEngine([],config,state=saved.get('engine'),
+        strategy_identity=strategy_identity(config,selection))
     if args.shadow_strategies:engine.enable_shadows()
     ring=BookRing(args.book_memory_mb*1024*1024,args.book_window_seconds)
     feeds={};discovery_stats=Counter();runtime={'status':'starting','last_metadata':0.0,'last_checkpoint':0.0,
