@@ -1,14 +1,15 @@
 # Active paper research operations
 
-Current process summary: 2026-09-30 03:37 UTC. All processes below are paper simulation or
+Current process summary: 2026-09-30 03:44 UTC. All processes below are paper simulation or
 public quote observation. No private keys or real orders are involved.
 
 | Process | PID | Output | Expected end |
 |---|---:|---|---|
 | Production collector, original ledgers, 10s/10-cent exit | 3280600 | data/paper-monitor → paper-monitor-10s | Continuous |
 | Scheduled audit capture, 1,200s cadence | 2765645 | data/strategy-reviews | Continuous |
-| Passive-exit v1 public capture, restarted | 3045038 | data/raw/rh-passive-exit-v1/20260930T0252Z | Approximately 03:42:58 UTC |
-| One-shot strict replay supervisor | 3161224 | reports/rh-passive-exit-v1-restart/supervisor | One bounded replay after final manifest |
+| Passive-exit v1 public capture, restarted | stopped | data/raw/rh-passive-exit-v1/20260930T0252Z | Completed 03:42:58 UTC |
+| One-shot strict replay supervisor | 3161224 | reports/rh-passive-exit-v1-restart/supervisor | Replay started 03:42:59; maximum one hour |
+| One-shot corrected replay supervisor | 3296006 | reports/rh-passive-exit-v1-restart/corrected-supervisor | Replay started 03:43:34; maximum one hour |
 | Legacy horizon v1, depth | stopped | data/horizon-research | Ended 18:14 UTC |
 | Legacy horizon v1, BBO | stopped | data/horizon-research-bbo | Ended 18:23:39 UTC |
 | Horizon v2, BBO, four frozen models | stopped | data/horizon-research-v2-bbo | Ended 18:45:22 UTC |
@@ -29,9 +30,9 @@ Read `data/strategy-reviews/latest.json`; do not also run a one-shot capture
 against that output, because it advances the same baseline. The scheduler
 collects evidence; the active agent researches and evaluates changes.
 
-The corrected passive replay is separately frozen at 03:18:43 UTC and must
-be launched only after capture stops, with the wrapper's separate corrected
-output directory. The supervisor launches strict v1 only. Versioned TUI
+The corrected passive replay was separately frozen at 03:18:43 UTC and
+launched after capture stopped, with the wrapper's separate corrected
+output directory. The original supervisor launches strict v1 only. Versioned TUI
 accounting was deployed at 03:36:13 UTC; existing viewers need a fresh
 `scripts/monitor.py --watch` invocation to load the layout. Later sections
 below are a chronological operations journal; their older PIDs and deadlines
@@ -56,6 +57,24 @@ All 20 frozen passive-replay source hashes still match. See
 `reports/paper-strategy-epoch-review/rollout.json`, `rollout-verification.json`
 and `LIVE-80x24.txt`. The already running viewer retains its loaded old layout;
 Ctrl-C and `.venv/bin/python scripts/monitor.py --watch` loads the new one.
+
+### Passive capture completed and both replays launched, 03:43 UTC
+
+The restarted capture ran **02:52:57.958514–03:42:58.061557 UTC**, ending
+at its duration limit without truncation or recorded capture errors. It
+contains **124,019 records**, 48,680,716 compressed payload bytes and
+48,931,302 total archive bytes. Gzip SHA-256:
+`c92c269e3bc3bb345beeaf834ad55d0a97601339b4506e36a9397287f8407bb6`.
+The copied final manifest is
+`reports/rh-passive-exit-v1-restart/capture-complete-manifest.json`.
+
+Strict replay started automatically at03:42:59 after stable-manifest and
+source/raw hash checks. Corrected supervisor3296006 launched at03:43:34
+using the committed `run-corrected-once.py`, with the same stopped archive
+and20 frozen sources. Both runs have a3,600-second deadline and1MB log cap,
+plus the existing audit/result bounds. Their output directories remain
+separate. A completed capture is not a claim of valid queue/fill coverage
+or profitable paper outcomes; those await the replay readouts and comparison.
 
 Production keeps targeted REST and depth feeds. The two source pilots disable
 REST identically to isolate transport behavior; neither represents the full

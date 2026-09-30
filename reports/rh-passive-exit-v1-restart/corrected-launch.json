@@ -1,0 +1,13 @@
+{
+  "supervisor_pid": 3296006,
+  "launched_utc": "2026-09-30T03:43:34.319632+00:00",
+  "command": [
+    "/home/harry/projects/research/rhhype/.venv/bin/python",
+    "/home/harry/projects/research/rhhype/reports/rh-passive-exit-v1-restart/run-corrected-once.py"
+  ],
+  "source_commit": "cb9c634",
+  "launch_source_sha256": "e4d9cecdf5bcbb8c98c0a1382116293838f715c13e2b5960e3d707e4c695a331",
+  "maximum_replay_seconds": 3600,
+  "maximum_replay_log_bytes": 1000000,
+  "implementation_variant": "entry-same-receipt-retirement-corrected-v1"
+}
