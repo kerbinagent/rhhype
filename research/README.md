@@ -9,8 +9,9 @@ cross-perpetual funding carry remain alternatives. The proposed 72-hour
 collection was authorized at 12:12 UTC; its separate 16 MiB allocation is now
 frozen. The [implementation method](dated-carry-method-v1.md),
 [contract preflight](dated-carry-contract-preflight.md) and
-[independent method review](dated-carry-method-review.md) define the pending
-launch. The observation produces conditional quote diagnostics; actual
+[independent method review](dated-carry-method-review.md) define the
+study launched as PID 279840. Its frozen window is 30 September 12:45 UTC
+to 3 October 12:45 UTC. The observation produces conditional quote diagnostics; actual
 all-cost feasibility remains unresolved.
 
 [Active experiment loop](active-experiment-loop.md) records the mandate,

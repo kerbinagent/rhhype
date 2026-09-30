@@ -1,12 +1,13 @@
 # Active paper research operations
 
-Current process summary: 2026-09-30 06:07 UTC. All processes below are paper simulation or
+Current process summary: 2026-09-30 12:43 UTC. All processes below are paper simulation or
 public quote observation. No private keys or real orders are involved.
 
 | Process | PID | Output | Expected end |
 |---|---:|---|---|
 | Production collector, original ledgers, 10s/10-cent exit | 3280600 | data/paper-monitor → paper-monitor-10s | Continuous |
 | Scheduled audit capture, 1,200s cadence | 2765645 | data/strategy-reviews | Continuous |
+| Dated BTC carry public collector and endpoint analysis | 279840 | reports/dated-carry/20260930-v1 | 2026-10-03 12:45 UTC |
 | Passive-exit v1 public capture, restarted | stopped | data/raw/rh-passive-exit-v1/20260930T0252Z | Completed 03:42:58 UTC |
 | One-shot strict replay supervisor | stopped | reports/rh-passive-exit-v1-restart/supervisor | Completed 03:58:17 UTC, exit 0 |
 | One-shot corrected replay supervisor | stopped | reports/rh-passive-exit-v1-restart/corrected-supervisor | Completed 03:58:14 UTC, exit 0 |
@@ -27,7 +28,8 @@ report is [flawed-pilot-final.md](../reports/feed-experiment/flawed-pilot-final.
 
 ## Next review and interpretation
 
-Review 42 was actively read at 06:07 UTC. **Next: 06:26:33 UTC**.
+Review 61 was archived with a separately timed current-epoch snapshot.
+**Next: 12:46:33 UTC**.
 Read `data/strategy-reviews/latest.json`; do not also run a one-shot capture
 against that output, because it advances the same baseline. The scheduler
 collects evidence; the active agent researches and evaluates changes.
@@ -473,3 +475,28 @@ A bounded one-shot completion/replay watcher is being prepared.
 
 Production review 32 was actively read at 02:46; next 03:06:33 UTC. No production
 ledger has been replenished or strategy promoted.
+
+### Dated BTC carry, launched 30 September 12:42:51 UTC
+
+PID 279840 runs `.venv/bin/python scripts/dated_carry_endpoint.py --launch` with
+the exact config and freeze SHA arguments recorded in
+`reports/dated-carry/20260930-v1/terminal/process.json`. Source commit `1a2081c`,
+prepared metadata/config commit `f0b863b`, 37 focused tests passed.
+
+The 72-hour fixed window is **2026-09-30 12:45:00 through 2026-10-03 12:45:00
+UTC**. There are 864 paired depth-ten public snapshots, five minutes apart,
+with no retries and a separate 16 MiB physical cap. BTC_USDC spot and the
+9 October BTC_USDC future were selected by expiry before any book request.
+`terminal/status.json` and `terminal/index.json` expose collection health.
+Reading status/error/count fields is allowed; do not calculate interim economics.
+The process automatically waits to the original monotonic endpoint, then runs
+one full-denominator analysis. Expected outputs: `derived/rows.jsonl.gz`,
+`derived/summary.json`, and `terminal/analysis-result.json`. All-cost headroom
+and closed net remain null because contract/account/cash-flow unknowns remain.
+
+Do not restart acquisition. If the process dies, preserve all samples and the
+last index; endpoint-only `--finalize` requires original config/freeze hashes,
+the same host/boot clock and both elapsed endpoint clocks. A durable analysis
+claim prevents repetition after a partial finalizer failure. Existing indexed
+hashes must never be regenerated to accept changed samples. Check the method
+before any recovery. Source and tests are immutable during this run.

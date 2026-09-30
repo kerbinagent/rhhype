@@ -7,20 +7,21 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 11:16 UTC
+## Current status, 30 September 2026 12:43 UTC
 
-No qualifying positive result. The completed passive-exit, RH/HL delayed
-taker and 21-asset spread studies remain negative. Core/RH delayed taker
-replay also completed and passed root and peer audit: all 842 complete
-quotes have negative gross returns; 166 candidates remain censored. No
-predictor or successor is promoted. All evidence and capital history remain.
-See the latest entry below and [research map](README.md).
-Production reviews continue; next **11:26:33 UTC**. The user requested a
-separate broader research proposal with longer holds and a different return
-source at 11:07 UTC; this does not change the live policy or launch a study.
-The [proposal](broader-carry-research-proposal.md) recommends a single BTC
-spot/dated-futures feasibility stage, with a proposed 72-hour window and
-separate 16 MiB ceiling. Other carry mechanisms remain alternatives.
+No qualifying positive result. Prior passive, delayed taker and spread studies
+remain negative; no production strategy is promoted. The user authorized
+continuing the broader carry recommendation at 12:12 UTC. Its 16 MiB allocation
+and implementation are now frozen, and PID 279840 is running the public-data
+collector and endpoint finalizer. The fixed window is 30 September 12:45 UTC
+through 3 October 12:45 UTC, with 864 paired observations and no interim economic
+analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
+[method](dated-carry-method-v1.md) and [operations](live-operations.md).
+
+The original paper policy and scheduled review daemon continue independently.
+Reviews through 61 are preserved; no new winners. Next review: **12:46:33 UTC**.
+Contract settlement, conversion, inventory and margin unknowns keep actual
+all-cost feasibility and closed P&L null for the new study.
 
 ## Original experiment: RH passive exit v1
 
@@ -852,3 +853,17 @@ the frozen T0; fresh metadata and launch freeze are the next operational steps.
 Production reviews 58–61 are preserved in the review journal. No new winners
 occurred; the six old failed-rescue wins and three legacy funding uncertainties
 remain. The production policy and its capital history are unchanged.
+
+### Dated carry observation launched, 12:42:51 UTC
+
+Source freeze `1a2081c` follows the initial implementation `22cc9cc`; fresh
+metadata/config freeze is `f0b863b`. All 37 focused tests pass. Two fixed public
+metadata requests returned HTTP 200; expiry-only selection chose BTC_USDC-9OCT26.
+The config and freeze hashes are preserved in `source_control/config.json` and
+`freeze.json` under `reports/dated-carry/20260930-v1`. PID 279840 recorded its
+immutable UTC/monotonic/host/boot mapping before the first request deadline.
+The fixed window starts 12:45 UTC today and ends 12:45 UTC on 3 October.
+Initial accounted usage was 185,534 bytes (161,347 source/control, 24,187
+metadata); subsequent terminal records remain under the 16 MiB allocation.
+No quote or economic lookahead preceded activation. Missing slots are retained,
+there are no retries or automatic successors, and economics run only at endpoint.
