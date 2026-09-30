@@ -1756,3 +1756,41 @@ hindsight direction and favorable payment ownership, versus a 6 bp
 stress-plus-target hurdle at $1,000. This is an equal-reference-notional
 scenario, not verified funding cashflow or a bound on combined trading P&L.
 Neither result supports a new capture or strategy promotion.
+
+## Review 56 — 2026-09-30 10:46:33 UTC
+
+Exact daemon output is saved in
+`reports/live-review-catchup/review-20260930T104633Z.json`; completion and
+abort coverage is complete. There are no new winners.
+
+- Cooldown: 45 exact paired closes, −$50.0479.
+- Premium: three exact closes, −$5.7185: two paired/−$3.7274 and one failed
+  hedge/−$1.9911.
+- Convergence: one aborted attempt, no completion or booked P&L. Both
+  Hyperliquid and Core Lighter rejected at their price limits.
+- Other strategies: no completions. Premium's failed hedge adds one
+  Hyperliquid price-limit rejection. Portfolios remain separate.
+
+Cooldown fees $12.2294, stress $22.4714, capital $0.0016046, funding zero;
+removing stress alone leaves −$27.5765. All 45 exit comparisons are present:
+execution improved $0.823811 (nine worse, 17 better, 19 unchanged), median
+zero, p95 adverse $0.037679. Request-to-flat median 1.176 s, p95 1.766 s,
+with complete paired coverage. Premium's two paired comparisons worsened
+$0.106590 (one better, one worse).
+
+The separately timed snapshot at 10:46:56 UTC is preserved in
+`reports/live-review-catchup/current-epoch-at-review56.json`: cooldown 1,056
+exact plus two estimated completions/−$1,333.1526 (one old win), Premium
+181/−$305.3809 (one old win), convergence 74/−$73.0953 (three old wins),
+conservative 1/+$2.3198. Version `e3e83cda71a6`, epoch and six old
+failed-rescue win records remain unchanged. Two cooldown positions were
+open at review; the later snapshot is flat. Three legacy funding
+obligations remain unknown and retained, with no outstanding market quantity.
+
+All four feeds connected, 110 pairs, CPU 55.83% of one core, p95 lag 8.33 ms,
+RSS 266.65 MiB, 754.5 books/s, metadata age 586.2 s. Next checkpoint
+**11:06:33 UTC**. No capital reset or policy change.
+
+The completed liquidation schema review found all 65 previously ignored
+liquidation rows were subscription history predating capture, with zero
+live updates. It supplies no additional flow or supported successor study.
