@@ -63,3 +63,9 @@ one profit tally.
 The [SOTA strategy review](sota-strategy-review.md) and
 [carry follow-up](strategy-carry-followup.md) contain the broader literature
 and mechanisms considered. All work uses public data and paper execution.
+
+## Latest completed diagnostics
+
+- [Exploratory ACK readout](../reports/rh-passive-ack-exploratory/readout.md): base 12 conditional negative complete portfolios, plus200 none complete; other totals unknown.
+- [Rejected-target public reach](../reports/rejected-target-public-reach/REPORT.md): no eligible observed print reached any of 150 reconstructed strict targets within its fixed window; public completeness unproven.
+- [Rare-spread admission design](passive-rare-spread-admission-design.md): evidence prerequisite for a different entry gate; no capture launched.

@@ -1,0 +1,45 @@
+{
+  "schema": "completed-ack-artifact-inventory-v1",
+  "artifacts": [
+    {
+      "path": "data/derived/rh-passive-exit-v1-restart-ack-exploratory-base/REPORT.md",
+      "bytes": 1906,
+      "sha256": "4e4ae5fb7ec637849371eb81b3ed08cac6feeefdb7051476c6647533fe057cfe"
+    },
+    {
+      "path": "data/derived/rh-passive-exit-v1-restart-ack-exploratory-base/analysis.json",
+      "bytes": 7811383,
+      "sha256": "87af3fcb9ef55a75fdbe8e01a62366a4c3e985d7a15cb095fc346b99e0bed184"
+    },
+    {
+      "path": "data/derived/rh-passive-exit-v1-restart-ack-exploratory-base/audit.jsonl.gz",
+      "bytes": 4074113,
+      "sha256": "6b554184205bc5c419f70495c94b3a7073df3e6a047a4e3dc6e8cad72341ed7f"
+    },
+    {
+      "path": "data/derived/rh-passive-exit-v1-restart-ack-exploratory-plus200/REPORT.md",
+      "bytes": 1915,
+      "sha256": "7ee7e6557aaeefa83f6574fb34e54731ef3974d59fd881b4fb0daf7ad4cdad5f"
+    },
+    {
+      "path": "data/derived/rh-passive-exit-v1-restart-ack-exploratory-plus200/analysis.json",
+      "bytes": 6090771,
+      "sha256": "178bfe5eb86b959dd90df3d5a6106d87570ccf0e420c65d53c369b9293b37a0c"
+    },
+    {
+      "path": "data/derived/rh-passive-exit-v1-restart-ack-exploratory-plus200/audit.jsonl.gz",
+      "bytes": 2984977,
+      "sha256": "0bbce9de9d93f12b8e8b37b7b8250c7c89d9dd642970639f3b224cef4b01fd7a"
+    },
+    {
+      "path": "data/derived/rh-passive-exit-v1-restart-ack-readout/REPORT.md",
+      "bytes": 62573,
+      "sha256": "1972873251c8c6edad59a7e35ccc741bb701208fa16d79d44e0464ddd2f43845"
+    },
+    {
+      "path": "data/derived/rh-passive-exit-v1-restart-ack-readout/readout.json",
+      "bytes": 7859148,
+      "sha256": "fa7476f2d0b9271602a2e74538299859ae0b34f7d8c8bda1d171d3148040ad2f"
+    }
+  ]
+}

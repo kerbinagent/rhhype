@@ -84,9 +84,14 @@ They already have unknown whole-portfolio net; none is counted among the
   [corrected analysis](../../data/derived/rh-passive-exit-v1-restart-corrected/analysis.json),
   [comparison](../../data/derived/rh-passive-exit-v1-restart-comparison/comparison.json).
 
-No strategy is promoted. The next diagnostic is a separately labelled
-post-capture ACK sensitivity, preserving fees, losses and remaining unknowns.
-A wider target ceiling is a future hypothesis motivated by observed target
-abstentions and the independent quote-cost screen; any implementation needs
-separate review and fresh confirmation. Repeating the unchanged five-basis-point
-target policy is not supported by this readout.
+No strategy is promoted. The separately labelled post-capture ACK sensitivity
+also found no positive complete portfolio; see its
+[readout](../rh-passive-ack-exploratory/readout.md).
+The completed [target-reach diagnostic](../rejected-target-public-reach/REPORT.md)
+reconstructed all 150 targets rejected above the five-basis-point ceiling.
+None was reached by an eligible observed RH buy print within its fixed window,
+including qualifying source times received late. Public-tape completeness is
+unproven, so this is observed nonreach rather than an absolute no-fill bound.
+Widening the ceiling alone is unsupported by these observations. Repeating
+the unchanged target policy is also unsupported. A different entry gate needs
+its own feasibility evidence before another capture.

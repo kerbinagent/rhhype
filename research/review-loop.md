@@ -1063,3 +1063,34 @@ cooldown position and three flat funding-pending records. Both passive
 replays finished; their [readout](../reports/rh-passive-exit-v1-restart/readout.md)
 has 29 known negative portfolios and 99 unknown. Next review **04:26:33 UTC**.
 No strategy was promoted or capital replenished.
+
+
+## Review 37: 2026-09-30 04:26:33 UTC
+
+Archived in `reports/live-review-catchup/review-20260930T042633Z.json`;
+all completion coverage is complete. Cooldown completed **65 trades for
+−$99.0395**, all exact, zero wins: 61 paired −$89.3749 and four failed hedges
+−$9.6645. Premium completed **18 for −$27.3569**, all exact, zero wins:
+17 paired −$25.6815 and one failed hedge −$1.6754. Other strategies had
+no new completions. These independent strategy ledgers are not summed.
+
+Cooldown fees were $23.9488, stress $32.4535, capital $0.0022, funding zero;
+removing stress still leaves −$66.5860. Its 57 observed exit-price comparisons
+improved $1.220470 in aggregate (12 worse, 19 better, 26 unchanged, four
+missing), median approximately zero and p95 adverse $0.183210. Request-to-flat
+median 1.335 s, p95 2.062 s. Premium fees were $15.6372, stress $8.9889,
+capital $0.0006; observed exit-price movement worsened $0.006934 across
+16 observations (one worse, 15 unchanged, one missing).
+
+The separate current-version snapshot at 04:27:09 UTC has cooldown 167 exact
+plus one estimated completion for −$269.1555, Premium 18/−$27.3569 and
+convergence 4/−$6.0927; zero wins. It is saved in
+`reports/live-review-catchup/current-epoch-at-review37.json`. Version remains
+`e3e83cda71a6`, begun 03:36:13 UTC. Three legacy funding obligations remain
+outside its results. Snapshot and scheduled review cover different intervals.
+
+Health: four connected feeds, 112 pairs, CPU 46.23% of one core, p95 loop lag
+10.50 ms, RSS 188.93 MiB, 558.6 books/s. The scheduled snapshot has one active
+cooldown position and three flat funding-pending records. Both ACK replays
+finished without errors and produced no positive complete portfolio. Next
+review **04:46:33 UTC**. No strategy promoted or capital replenished.

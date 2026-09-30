@@ -1,6 +1,6 @@
 # Active paper research operations
 
-Current process summary: 2026-09-30 04:11 UTC. All processes below are paper simulation or
+Current process summary: 2026-09-30 04:30 UTC. All processes below are paper simulation or
 public quote observation. No private keys or real orders are involved.
 
 | Process | PID | Output | Expected end |
@@ -10,8 +10,8 @@ public quote observation. No private keys or real orders are involved.
 | Passive-exit v1 public capture, restarted | stopped | data/raw/rh-passive-exit-v1/20260930T0252Z | Completed 03:42:58 UTC |
 | One-shot strict replay supervisor | stopped | reports/rh-passive-exit-v1-restart/supervisor | Completed 03:58:17 UTC, exit 0 |
 | One-shot corrected replay supervisor | stopped | reports/rh-passive-exit-v1-restart/corrected-supervisor | Completed 03:58:14 UTC, exit 0 |
-| Exploratory ACK base supervisor / child | 3400364 / 3400479 | reports/rh-passive-ack-exploratory/base | Started 04:10:54 UTC; deadline 05:10:54 |
-| Exploratory ACK plus200 supervisor / child | 3400365 / 3400480 | reports/rh-passive-ack-exploratory/plus200 | Started 04:10:54 UTC; deadline 05:10:54 |
+| Exploratory ACK base supervisor / child | stopped | reports/rh-passive-ack-exploratory/base | Completed 04:26:25 UTC, exit 0 |
+| Exploratory ACK plus200 supervisor / child | stopped | reports/rh-passive-ack-exploratory/plus200 | Completed 04:23:27 UTC, exit 0 |
 | Legacy horizon v1, depth | stopped | data/horizon-research | Ended 18:14 UTC |
 | Legacy horizon v1, BBO | stopped | data/horizon-research-bbo | Ended 18:23:39 UTC |
 | Horizon v2, BBO, four frozen models | stopped | data/horizon-research-v2-bbo | Ended 18:45:22 UTC |
@@ -27,7 +27,7 @@ report is [flawed-pilot-final.md](../reports/feed-experiment/flawed-pilot-final.
 
 ## Next review and interpretation
 
-Review 36 was actively read at 04:06:33 UTC. **Next: 04:26:33 UTC**.
+Review 37 was actively read at 04:26 UTC. **Next: 04:46:33 UTC**.
 Read `data/strategy-reviews/latest.json`; do not also run a one-shot capture
 against that output, because it advances the same baseline. The scheduler
 collects evidence; the active agent researches and evaluates changes.
@@ -47,15 +47,16 @@ no-flow attempts followed by cancellation uncertainty. The comparison found
 no changed admissions or execution classifications from the entry correction.
 Eleven halted branches with retained passive asks have provisional closed
 contributions pending separate historical adjudication. No strategy was
-promoted. The separately prepared ACK replay remains an exploratory next
-diagnostic and was launched in both declared scenarios at 04:10:54 UTC;
+promoted. The exploratory ACK replay completed in both declared scenarios;
 no further raw capture has started. Both ACK processes use the same completed
-archive, separate outputs and 21 unchanged dependencies. Each has a one-hour
-deadline, 128 MB derived cap and 1 MB log cap. Their model changes combine
+archive, separate outputs and 21 unchanged dependencies. Both stayed within
+the one-hour deadline, 128 MB derived cap and 1 MB log cap. Their model changes combine
 assumed clocks with coverage, ID and historical-evidence guards; these are
 post-capture sensitivities, not prospective confirmations or isolated latency
 effects. Launch and implementation records are in
-`reports/rh-passive-ack-exploratory/`.
+`reports/rh-passive-ack-exploratory/`. Its [readout](../reports/rh-passive-ack-exploratory/readout.md)
+shows 12 conditional negative complete portfolios in base and none complete in
+plus200; all remaining totals unknown. No promotion follows.
 
 ### Versioned P&L rollout, 03:36 UTC
 

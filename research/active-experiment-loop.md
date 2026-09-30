@@ -210,8 +210,10 @@ asks have provisional closed contributions withheld from validated inference.
 Crypto targeted asks repeatedly exceeded the fixed 5 bp ceiling and were
 not posted. The [static exit-distance diagnostic](../reports/passive-universe-exit-markup/0310Z-input-v1/readout.md)
 confirms that cost-covering quote distances can exceed that ceiling, without
-establishing any maker fill. A separate stopped-data flow-reach diagnostic is
-being prepared before choosing a wider ceiling or fresh capture.
+establishing any maker fill. The subsequently completed stopped-data
+[flow-reach diagnostic](../reports/rejected-target-public-reach/REPORT.md)
+found no eligible observed buy print reaching any of the 150 rejected targets
+within its fixed window. Widening the ceiling alone is unsupported.
 
 The base and plus200 exploratory ACK scenarios launched at 04:10:54 UTC,
 each in its own process with a one-hour deadline and bounded outputs.
@@ -223,4 +225,20 @@ The [fixed storage amendment](experiment-storage.md) now preserves all seven
 current raw archives and permits at most one additional 128 MB complete
 archive, subject to separate design/freeze/preflight, under a fixed eight
 archive/512 MB selected-raw limit. No new capture has launched. Next
-production review is 04:26:33 UTC.
+production review after review 37 is 04:46:33 UTC.
+
+## Completed ACK sensitivity, 04:30 UTC
+
+Both exploratory scenarios completed with stable dependency hashes: base at
+04:26:25 UTC and plus200 at 04:23:27 UTC. Base has 12 conditional complete
+portfolios, all negative, and 116 unknown; plus200 has all 128 unknown.
+The [comparison](../reports/rh-passive-ack-exploratory/readout.md) preserves
+all four models and all six cohort alignments. The primary XAG branches
+remain without a completed trading cycle. Timing-model changes combine
+different clocks, coverage and historical-evidence checks; reduced losses
+in partial records cannot be interpreted as improved profitability.
+
+Next work checks the dominant coverage and late-anchor halt causes and
+inventories existing evidence for a contemporaneous spread admission gate.
+No further raw capture is justified by the results so far. Production review
+37 remains negative; no strategy promotion or wallet reset.
