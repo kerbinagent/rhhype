@@ -1637,3 +1637,45 @@ reconstruction, pre-validation float parsing and source-regression recovery
 issues. These are pre-run findings. No real archive hash/decode or network
 has occurred. Independent auditor arithmetic tests pass, but its publication
 checks and the main fake-archive run tests are not yet complete.
+
+## Review 53 — 2026-09-30 09:46:33 UTC
+
+Exact daemon output is preserved in
+`reports/live-review-catchup/review-20260930T094633Z.json`; all completion and
+abort coverage is complete. No new winners or aborts occurred.
+
+- Cooldown: 36 exact paired closes, −$39.2766.
+- Premium: seven exact closes, −$13.0495: three paired/−$5.1338 and four
+  failed hedges/−$7.9156.
+- Convergence: five exact failed hedges, −$7.1814.
+- Other strategies: no new completed trades. The nine failed hedges each
+  record a Hyperliquid price-limit rejection. Portfolios remain separate.
+
+Cooldown fees $10.6789, stress $17.9763, capital $0.0012747, funding zero;
+removing stress alone leaves −$21.3003. Its 35 observed exit comparisons
+improved $0.283336 (nine worse, 15 better, 11 unchanged), with one missing
+request price; p95 adverse $0.124187. All 36 paired request-to-flat times
+are present: median 1.170 s, p95 1.634 s. Premium's three exit comparisons
+improved $0.034240 (one better, two unchanged).
+
+The separately timed current-version snapshot at 09:46:53 UTC is saved in
+`reports/live-review-catchup/current-epoch-at-review53.json`: cooldown 917
+exact plus two estimated completions/−$1,172.1607 (one win), Premium
+173/−$291.4904 (one win), convergence 68/−$67.7188 (three wins), conservative
+1/+$2.3198. Version `e3e83cda71a6`, epoch, and the six old failed-rescue win
+records are unchanged. Review portfolios were flat; the later snapshot has
+one cooldown position. Three legacy funding obligations remain.
+
+Health: all four feeds connected, 110 pairs after normal metadata refresh,
+CPU 50.66% of one core, p95 lag 7.44 ms, RSS 257.47 MiB, 734.1 books/s,
+metadata age 590.9 s. A 09:41 storage check found the database 61,120,512
+bytes, WAL zero and 565.65 GiB free. Next checkpoint **10:06:33 UTC**.
+No capital reset or production policy change.
+
+Core/RH code remains unrun on historical streams. Root's all-missing toy
+summary exposed a 64,081-byte uncompressed output above the original
+summary cap; compressed summaries preserve all 160 groups within unchanged
+limits. Separate zero-raw source/runtime preparation, timeout failure
+rosters and completion-marker cleanup are implemented. The independent
+auditor's seven synthetic tests pass; the full decoder fixture and final
+combined source review remain prerequisites to any run.

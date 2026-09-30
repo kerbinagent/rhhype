@@ -682,3 +682,22 @@ the correct terminal evidence. Five auditor arithmetic fixtures pass; full
 admission/decoder/publication fixtures and final code review remain required.
 No raw traversal, fresh capture, network request, or production change has
 been made for this diagnostic.
+
+### Production review 53 and synthetic publication review, 09:47 UTC
+
+Cooldown 36 paired closes/−$39.2766; Premium seven/−$13.0495 (three paired,
+four failed hedges); convergence five failed hedges/−$7.1814. No new winners
+or aborts; complete retained coverage. Nine Hyperliquid price-limit
+rejections account for the failed hedges. The later current-version snapshot
+has one cooldown position; all previous losses, capital and three legacy
+funding obligations remain. All four feeds are connected; 110 pairs after
+metadata refresh. Next review 10:06:33 UTC.
+
+Root's synthetic all-missing summary exceeded the frozen summary limit;
+the helper now compresses the complete 32-group/128-stratum summary without
+raising caps. Every candidate now receives provenance references, including
+startup missing-book rows. The separate prepared source/runtime freeze,
+SIGTERM failure roster and removal of failed completion markers are in place.
+The independent auditor has seven passing synthetic tests. Main decoder
+fixtures and final combined review remain pending; no historical raw stream
+has been hashed or decoded for this study.
