@@ -2643,3 +2643,32 @@ capital change. Next checkpoint **19:26:33 UTC**.
 
 Carry has all 77 due arrivals through 19:05, 94,705 sample bytes, zero overdue
 missing files, no terminal error and no interim economic evaluation.
+
+## Review 82 — 2026-09-30 19:26:33 UTC
+
+Exact report and separate epoch snapshot preserved; guarded manual archive
+1,714,630/16,777,216 bytes. All 36 closes exact, paired and negative, zero
+aborts, no entry rejections, complete coverage and no new winners.
+
+- Cooldown: 35 paired closes/−$56.3786; no failed hedges.
+- Premium: one paired close/−$1.6741; no failed hedges.
+- No other strategy completions.
+
+Cooldown fees $16.6068, stress $17.4755, capital $0.0012462, funding zero;
+without stress −$38.9032. All 35 exit comparisons present: sixteen better,
+twelve worse, seven unchanged, net deterioration $0.137324; median zero,
+p95 adverse $0.32383. Request-to-flat median 1.138 s, p95 1.627 s.
+Premium's one comparison improved $0.051308. Losses persist in this window
+where every completed trade was paired and no entry was rejected.
+
+Four feeds connected, 111 pairs, CPU 52.14%, p95 lag 8.71 ms, RSS 315.99 MiB,
+691.1 books/s, metadata age 2,950.2 s. Review flat; later epoch snapshot one
+cooldown position. Epoch: cooldown 1,924 exact plus six estimated/
+−$2,563.2804; Premium 470/−$863.0344; convergence 263/−$308.5579;
+conservative two/−$1.7145; confirmed one/−$3.3006. Fifteen earlier win
+records and three legacy funding obligations remain. Reviews 66–82 have
+807 closes: 804 losses and three failed-hedge rescue gains. No policy or
+capital change. Next checkpoint **19:46:33 UTC**.
+
+Carry has all 81 due arrivals through 19:25, 99,636 sample bytes, zero overdue
+missing files, no terminal error and no interim economic evaluation.
