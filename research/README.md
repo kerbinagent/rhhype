@@ -6,8 +6,10 @@
 prospective primary policy, success threshold, and next decision. The current
 RH maker-entry/passive-exit study restarted at 02:52 UTC on 30 September
 after an interrupted capture. Its fresh 50-minute window completed at 03:42:58 UTC;
-strict and separately frozen corrected replays are running, with no completed
-holdout readout yet. Current process IDs and
+strict and separately frozen corrected replays completed at 03:58 UTC.
+The [holdout readout](../reports/rh-passive-exit-v1-restart/readout.md) found
+29 known complete portfolios, all negative, and 99 unknown. The primary
+XAG branch had no completed trading cycle. Current process IDs and
 commands are in [live operations](live-operations.md); the twenty-minute
 production readouts are in the [review journal](review-loop.md).
 

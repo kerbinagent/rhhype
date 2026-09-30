@@ -1,6 +1,6 @@
 # Active paper research operations
 
-Current process summary: 2026-09-30 03:44 UTC. All processes below are paper simulation or
+Current process summary: 2026-09-30 04:02 UTC. All processes below are paper simulation or
 public quote observation. No private keys or real orders are involved.
 
 | Process | PID | Output | Expected end |
@@ -8,8 +8,8 @@ public quote observation. No private keys or real orders are involved.
 | Production collector, original ledgers, 10s/10-cent exit | 3280600 | data/paper-monitor → paper-monitor-10s | Continuous |
 | Scheduled audit capture, 1,200s cadence | 2765645 | data/strategy-reviews | Continuous |
 | Passive-exit v1 public capture, restarted | stopped | data/raw/rh-passive-exit-v1/20260930T0252Z | Completed 03:42:58 UTC |
-| One-shot strict replay supervisor | 3161224 | reports/rh-passive-exit-v1-restart/supervisor | Replay started 03:42:59; maximum one hour |
-| One-shot corrected replay supervisor | 3296006 | reports/rh-passive-exit-v1-restart/corrected-supervisor | Replay started 03:43:34; maximum one hour |
+| One-shot strict replay supervisor | stopped | reports/rh-passive-exit-v1-restart/supervisor | Completed 03:58:17 UTC, exit 0 |
+| One-shot corrected replay supervisor | stopped | reports/rh-passive-exit-v1-restart/corrected-supervisor | Completed 03:58:14 UTC, exit 0 |
 | Legacy horizon v1, depth | stopped | data/horizon-research | Ended 18:14 UTC |
 | Legacy horizon v1, BBO | stopped | data/horizon-research-bbo | Ended 18:23:39 UTC |
 | Horizon v2, BBO, four frozen models | stopped | data/horizon-research-v2-bbo | Ended 18:45:22 UTC |
@@ -37,6 +37,16 @@ accounting was deployed at 03:36:13 UTC; existing viewers need a fresh
 `scripts/monitor.py --watch` invocation to load the layout. Later sections
 below are a chronological operations journal; their older PIDs and deadlines
 are historical.
+
+Both frozen replays completed without errors. The
+[readout](../reports/rh-passive-exit-v1-restart/readout.md) reports all 29
+known complete branches negative and 99 unknown; primary XAG had 56 closed
+no-flow attempts followed by cancellation uncertainty. The comparison found
+no changed admissions or execution classifications from the entry correction.
+Eleven halted branches with retained passive asks have provisional closed
+contributions pending separate historical adjudication. No strategy was
+promoted. The separately prepared ACK replay remains an exploratory next
+diagnostic; no further raw capture has started.
 
 ### Versioned P&L rollout, 03:36 UTC
 

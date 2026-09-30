@@ -1,0 +1,33 @@
+{
+  "schema": "rh-passive-corrected-replay-supervisor-v1",
+  "state": "replay_finished",
+  "updated_utc": "2026-09-30T03:58:14.803853+00:00",
+  "command": [
+    "/home/harry/projects/research/rhhype/.venv/bin/python",
+    "/home/harry/projects/research/rhhype/scripts/replay_passive_retirement_corrected.py",
+    "replay",
+    "--capture",
+    "/home/harry/projects/research/rhhype/data/raw/rh-passive-exit-v1/20260930T0252Z",
+    "--protocol",
+    "/home/harry/projects/research/rhhype/reports/rh-passive-exit-v1-restart/protocol.json",
+    "--correction-freeze",
+    "/home/harry/projects/research/rhhype/reports/rh-passive-exit-v1-restart/retirement-correction-freeze.json",
+    "--out",
+    "/home/harry/projects/research/rhhype/data/derived/rh-passive-exit-v1-restart-corrected"
+  ],
+  "implementation_variant": "entry-same-receipt-retirement-corrected-v1",
+  "maximum_replay_seconds": 3600,
+  "maximum_log_bytes": 1000000,
+  "launch_source_sha256": "e4d9cecdf5bcbb8c98c0a1382116293838f715c13e2b5960e3d707e4c695a331",
+  "bounded_runner_source_sha256": "d45769dbeaf3b8fb42ff40777c8f76f2e78244fc4bbc952a0889373d08697377",
+  "protocol_sha256": "759d993195470beec0e6db5e2c94a7bb717c9203818b13d862a0639a99a7e0f3",
+  "manifest_sha256": "5a9e61438df592d895d3cfc5d550241b01f0696fdbd5c83f46666d9ff1274250",
+  "frames_sha256": "c92c269e3bc3bb345beeaf834ad55d0a97601339b4506e36a9397287f8407bb6",
+  "archive_bytes": 48931302,
+  "replay_attempts": 1,
+  "replay_pid": 3296103,
+  "replay_exit_code": 0,
+  "log_bytes": 191,
+  "discarded_log_bytes": 0,
+  "analysis_path": "/home/harry/projects/research/rhhype/data/derived/rh-passive-exit-v1-restart-corrected/analysis.json"
+}
