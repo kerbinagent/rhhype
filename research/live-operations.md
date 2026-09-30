@@ -28,8 +28,8 @@ report is [flawed-pilot-final.md](../reports/feed-experiment/flawed-pilot-final.
 
 ## Next review and interpretation
 
-Review 61 was archived with a separately timed current-epoch snapshot.
-**Next: 12:46:33 UTC**.
+Review 62 was archived with a separately timed current-epoch snapshot.
+**Next: 13:06:33 UTC**.
 Read `data/strategy-reviews/latest.json`; do not also run a one-shot capture
 against that output, because it advances the same baseline. The scheduler
 collects evidence; the active agent researches and evaluates changes.

@@ -1870,3 +1870,44 @@ Nine Hyperliquid price-limit rejections. Portfolios remain separate.
 Four feeds connected, 109 pairs, CPU 56.92%, p95 lag 9.12 ms, RSS 278.96 MiB,
 874.0 books/s. One cooldown position was open at review. Epoch snapshot: conservative 1/2.3198; convergence 87/-92.8604; cooldown 1249/-1613.4328; premium 220/-376.3346. The same six old rescue wins and three legacy funding obligations
 remain. Next checkpoint **12:46:33 UTC**. No policy or capital reset.
+
+## Review 62 — 2026-09-30 12:46:33 UTC
+
+Exact review and separately timed epoch snapshot: `review-20260930T124633Z.json`
+and `current-epoch-at-review62.json`. Completion and abort coverage are complete.
+All 55 closes are exact; four aborts are retained. Portfolios remain separate.
+
+| Strategy | Completed | Net | Classification |
+| --- | ---: | ---: | --- |
+| Cooldown | 19 | −$41.1271 | 18 paired/−$37.1204; one failed/−$4.0068 |
+| Premium | 30 | −$61.9382 | 14 paired/−$26.8112; 16 failed/−$35.1270; two aborts |
+| Convergence | 6 | −$6.3697 | All failed hedges; one positive rescue; two aborts |
+
+There were 24 Hyperliquid price-limit, one Core notional-cap and two RH
+notional-cap rejections. No positive paired cycle occurred. The new convergence
+winner is preserved as the exact trade payload in `review62-convergence-win.json`:
+PUMP trade `1790771782086005-21714-convergence`, long 172,300 PUMP on Core,
+short rejected by Hyperliquid's price limit. The 1.3575-second rescue made
+$0.6892 in price P&L, charged $0.4981193 stress and $0.000002144 capital,
+zero fees/funding, for **+$0.191078556**. This is directional failed-hedge
+exposure, not a completed paired cycle; the full six-attempt set remains negative.
+There are now seven current-epoch win records, six older rescue wins plus this one.
+
+Cooldown fees $9.4320, stress $9.4865, capital $0.0006487, funding zero;
+removing stress alone leaves −$31.6406. Its 17 exit-price comparisons improved
+$0.497101 overall (ten improved, seven worsened, one request price missing),
+p95 adverse $0.64898. All 18 paired request-to-flat times are present, median
+1.174 s, p95 1.846 s. Premium's 13 comparable exits worsened $1.438491
+(seven improved, six worsened, one request price missing).
+
+Four feeds connected, 110 pairs, CPU 69.09%, p95 lag 16.35 ms, RSS 286.06 MiB,
+1,373.6 books/s. The review itself was flat; the later snapshot had one cooldown
+position. Snapshot current epoch: cooldown 1,262 exact plus three estimated
+closes/−$1,644.8124 (one old win); Premium 251/−$440.1297 (one old win);
+convergence 94/−$100.4677 (four wins); conservative one/+$2.3198. Same version
+and capital history; three retained legacy funding obligations. Next review
+**13:06:33 UTC**.
+
+The new dated-carry collector passed its first arrival check: both HTTP 200,
+predeadline, callback late only 1.188 ms, mapping drift roughly one microsecond.
+Only status/timing fields were inspected; no interim economic evaluation.

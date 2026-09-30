@@ -19,7 +19,9 @@ analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
 [method](dated-carry-method-v1.md) and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 61 are preserved; no new winners. Next review: **12:46:33 UTC**.
+Reviews through 62 are preserved. One new +$0.1911 single-leg rescue did not
+produce a positive paired cycle; all three active strategy windows lost money.
+Next review: **13:06:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -867,3 +869,17 @@ Initial accounted usage was 185,534 bytes (161,347 source/control, 24,187
 metadata); subsequent terminal records remain under the 16 MiB allocation.
 No quote or economic lookahead preceded activation. Missing slots are retained,
 there are no retries or automatic successors, and economics run only at endpoint.
+
+### Review 62 and first dated-carry observation, 12:49 UTC
+
+Production: cooldown 19/−$41.1271, Premium 30/−$61.9382, convergence six/−$6.3697;
+all exact, four aborts, complete coverage. One PUMP failed-hedge rescue made
++$0.1911 after stress, bringing epoch win records to seven, with no new positive
+paired cycle. Its exact record is preserved; no policy promotion follows.
+All feeds connected. Next checkpoint 13:06:33 UTC.
+
+The first dated-carry slot arrived before deadline on both endpoints. No prices
+or economics were evaluated. A bounded additional public-document review could
+not resolve routed spot fee currency or the selected weekly linear delivery
+exemption. The supplemental note retains those uncertainties; the frozen method
+and capture schedule are unchanged.
