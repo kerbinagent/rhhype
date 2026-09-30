@@ -13,7 +13,7 @@ XAG branch had no completed trading cycle. Current process IDs and
 commands are in [live operations](live-operations.md); the twenty-minute
 production readouts are in the [review journal](review-loop.md).
 
-The current offline diagnostic tests delayed taker entry and fixed
+The completed offline diagnostic tested delayed taker entry and fixed
 10/30/60/300-second exits on that same stopped archive, across all 7,200
 candidates and 28,800 outcomes. The [method](delayed-taker-fixed-quantity-plan.md)
 keeps funding-inclusive returns unknown and distinguishes quote feasibility
@@ -22,6 +22,14 @@ reviewed cache-disabled revision completed at 06:52 UTC: all 26,395 complete
 quotes were negative after fees alone. The [audited readout](../reports/delayed-taker-quotes/0252Z-v3-analysis.md)
 retains 2,405 incomplete outcomes and all funding uncertainty. Even forgiving
 all trading fees does not clear the declared stress allowance at these quotes.
+
+The next [spread-regime prerequisite watch](rh-spread-regime-sentinel-plan.md)
+is in implementation review. It will use one fixed twenty-minute window across
+the original 21 assets to ask whether fresh RH spreads persistently clear the
+$0.10 target and 5 bp stress even with a frictionless hedge. The 500 KB limit
+includes fresh metadata and sampled raw messages. Collection has not started.
+Passing this prerequisite would only justify considering a separately reviewed
+hedge-cost screen; it would not establish maker fills or profitable cycles.
 
 ## What the evidence currently supports
 

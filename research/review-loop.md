@@ -1374,3 +1374,35 @@ outcomes preserved. No additional canonical replay or execution capture is
 justified by that result. A separate single 20-minute RH spread-regime
 prerequisite watch is at method-review stage; no network collection launched.
 The isolated old LIT peak does not justify overriding its failed median gate.
+
+
+## Review 46: 2026-09-30 07:26:33 UTC
+
+Archived in `reports/live-review-catchup/review-20260930T072633Z.json`;
+all completion and aborted coverage is complete. Cooldown: **50 exact
+completions, −$60.6943**, comprising 49 paired −$59.4120 and one failed
+hedge −$1.2822, zero wins. Premium: **three exact completions, −$5.1906**,
+comprising one paired −$2.7767 and two failed hedges −$2.4139, zero wins;
+both recorded rejections were HL price-limit failures. Others have no new
+completions. Portfolios are separate.
+
+Cooldown fees $14.4360, stress $24.9671, capital $0.001757, funding zero;
+without stress it remains −$35.7272. Its 48 observed exit-price comparisons
+worsened $0.048471 (nine worse, 15 better, 24 unchanged; one missing request
+price), median zero and p95 adverse $0.071628. For 49 paired closes,
+request-to-flat median was 1.177 s, p95 1.822 s. Premium's single paired
+exit comparison improved $0.128263.
+
+The separate later current-version snapshot in
+`reports/live-review-catchup/current-epoch-at-review46.json` records cooldown
+540 exact plus two estimated completions, −$758.7532 (one win); Premium
+93/−$155.3691 (one win); convergence 44/−$34.8938 (two wins); conservative
+1/+$2.3198. Version `e3e83cda71a6` and win counts are unchanged. The review
+snapshot is flat; the later epoch snapshot has two cooldown positions open.
+Three legacy funding obligations remain outside current-version totals.
+
+Health: four connected feeds, 111 pairs, CPU 52.48% of one core, p95 loop lag
+12.95 ms, RSS 241.59 MiB, 801.1 books/s. Next review **07:46:33 UTC**.
+The single spread-regime prerequisite watch remains in implementation review;
+no new metadata or ticker request has started. No production strategy change,
+capital reset or interpretation of conditional quote budgets as realized P&L.

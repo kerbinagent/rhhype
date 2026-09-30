@@ -7,7 +7,16 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current experiment: RH passive exit v1
+## Current status, 30 September 2026 07:22 UTC
+
+The passive-exit replays and delayed taker diagnostic have completed without
+a qualifying positive result. The next prospective spread-regime prerequisite
+watch is in implementation review; its method and 500 KB allocation are frozen,
+and no metadata or ticker request has started. See the latest entry below and
+the [research map](README.md) for completed readouts. Production reviews continue
+every twenty minutes, with the next due at 07:26:33 UTC.
+
+## Original experiment: RH passive exit v1
 
 - Assets: XAG primary; BTC/ETH continuous crypto controls; NVDA a separately
   labeled out-of-regular-session cohort in the current UTC window.
@@ -409,3 +418,14 @@ Implementation is authorized after method review; no new metadata or ticker
 request has been made. Root will review code/tests, then separately review
 fresh metadata and freeze sources before launching. Even a positive
 prerequisite supplies no paired hedge, maker-fill or profitability evidence.
+
+
+### Production review 46, 07:26 UTC
+
+The complete twenty-minute review adds cooldown 50 exact closes/−$60.6943
+and Premium three/−$5.1906, both zero wins. Cooldown remains −$35.7272
+without the stress allowance. Current-version closed totals are −$758.7532
+cooldown and −$155.3691 Premium; two cooldown positions are open in the
+separate later snapshot. Four feeds remain connected. The sentinel is still
+in implementation review with no collection started. Next production review:
+**07:46:33 UTC**. Full accounting is in the [review journal](review-loop.md).
