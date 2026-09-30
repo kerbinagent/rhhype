@@ -1829,3 +1829,44 @@ are flat. Three legacy funding obligations remain unknown and retained.
 All four feeds connected, 110 pairs, CPU 54.09% of one core, p95 lag 9.61 ms,
 RSS 267.45 MiB, 786.4 books/s, metadata age 1,787.0 s. Next checkpoint
 **11:26:33 UTC**. No capital reset or policy change.
+
+## Reviews 58 through 60 — 2026-09-30 11:26 to 12:06 UTC
+
+All three daemon checkpoints completed on schedule and are preserved byte for
+byte in `reports/live-review-catchup/review-20260930T112633Z.json`,
+`review-20260930T114633Z.json` and `review-20260930T120633Z.json`.
+Completion and abort coverage is complete. All closes below are exact;
+there were no new winners or aborts. Portfolios remain separate.
+
+| Review | Cooldown | Premium | Convergence |
+| --- | --- | --- | --- |
+| 58 | 48 / −$65.6735; 46 paired, two failed | 6 / −$10.2831; four paired, two failed | No closes |
+| 59 | 27 / −$45.0318; 26 paired, one failed | 4 / −$7.0742; two paired, two failed | One failed / −$5.4481 |
+| 60 | 37 / −$49.1942; 35 paired, two failed | 4 / −$8.2189; two paired, two failed | Eight failed / −$10.4850 |
+
+All feeds remained connected. Pair counts were 110, 109 and 109; p95 loop
+lag 9.06, 8.07 and 9.68 ms; RSS 271.37, 269.11 and 272.39 MiB. The current
+snapshot read at 12:14:35 UTC is separately preserved in
+`current-epoch-after-review60.json`: cooldown 1,232 exact plus three estimated
+completions/−$1,575.3208; Premium 214/−$366.3507; convergence 87/−$92.8604;
+conservative one/+$2.3198. The six old rescue wins are unchanged. All current
+positions are flat, with the same three retained legacy funding obligations.
+Next checkpoint **12:26:33 UTC**. No production policy or capital reset.
+
+The user authorized proceeding with the broader recommendation at 12:12 UTC.
+The separate 16 MiB dated-carry allocation is frozen in `139efe1`. Contract
+inventory preparation and collector implementation are underway; no quote
+study has started.
+
+## Review 61 — 2026-09-30 12:26:33 UTC
+
+Exact daemon output and separately timed epoch snapshot are preserved as
+`review-20260930T122633Z.json` and `current-epoch-at-review61.json`.
+Completion/abort coverage is complete; all 46 closes are exact, with no wins
+or aborts. Cooldown: 34/−$53.9742 (32 paired, two failed hedges). Premium:
+9/−$15.3438 (three paired, six failed). Convergence: three failed/−$2.1797.
+Nine Hyperliquid price-limit rejections. Portfolios remain separate.
+
+Four feeds connected, 109 pairs, CPU 56.92%, p95 lag 9.12 ms, RSS 278.96 MiB,
+874.0 books/s. One cooldown position was open at review. Epoch snapshot: conservative 1/2.3198; convergence 87/-92.8604; cooldown 1249/-1613.4328; premium 220/-376.3346. The same six old rescue wins and three legacy funding obligations
+remain. Next checkpoint **12:46:33 UTC**. No policy or capital reset.

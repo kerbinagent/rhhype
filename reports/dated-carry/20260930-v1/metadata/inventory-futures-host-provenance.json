@@ -1,0 +1,16 @@
+{
+  "body_bytes": 158145,
+  "body_sha256": "b8850f7e04f9bd154ad8e8ead4a34567e062e25347b4edd2de34262902215af7",
+  "gzip_sha256": "c9a42515862434bd61fad02119806c731abff6d7b78bb3c714c31821efb3ba79",
+  "params": {
+    "currency": "USDC",
+    "expired": "false",
+    "extended": "true",
+    "kind": "future"
+  },
+  "received_at": 1790770570.2554846,
+  "sandbox_note": "Initial default sandbox failed DNS before HTTP; this is the host network execution of the authorized inventory request.",
+  "started_at": 1790770570.1069021,
+  "status": 200,
+  "url": "https://www.deribit.com/api/v2/public/get_instruments"
+}

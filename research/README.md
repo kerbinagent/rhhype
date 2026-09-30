@@ -6,7 +6,12 @@ The [broader carry proposal](broader-carry-research-proposal.md), requested
 30 September, recommends a single BTC funded-spot/dated-futures feasibility
 stage before considering a multiweek paper strategy. Spot/perpetual and
 cross-perpetual funding carry remain alternatives. The proposed 72-hour
-collection and 16 MiB allocation have not been launched or allocated.
+collection was authorized at 12:12 UTC; its separate 16 MiB allocation is now
+frozen. The [implementation method](dated-carry-method-v1.md),
+[contract preflight](dated-carry-contract-preflight.md) and
+[independent method review](dated-carry-method-review.md) define the pending
+launch. The observation produces conditional quote diagnostics; actual
+all-cost feasibility remains unresolved.
 
 [Active experiment loop](active-experiment-loop.md) records the mandate,
 prospective primary policy, success threshold, and next decision. The current

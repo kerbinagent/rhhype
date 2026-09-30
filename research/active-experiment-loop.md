@@ -837,3 +837,18 @@ The proposed 16 MiB allocation is separate from the 257,096 bytes remaining
 in the existing diagnostic allowance. No allocation or collector was started.
 Paper production and the scheduled review daemon continue; next checkpoint
 11:26:33 UTC. The proposal is ready for a decision on the bounded next stage.
+
+### Broader recommendation authorized and implemented, 12:34 UTC
+
+The user requested continued research and proceeding with the recommendation
+at 12:12 UTC. The new 16 MiB public-data allocation is frozen in `139efe1`,
+retaining every earlier allocation. Implemented a one-shot 72-hour BTC spot
+and dated-future collector, full-denominator endpoint analysis, and bounded
+metadata preparation. Contract preflight and independent method review identify
+known public entry fees and unresolved settlement, inventory and collateral
+cash flows. The method is `dated-carry-method-v1.md`. No quote request precedes
+the frozen T0; fresh metadata and launch freeze are the next operational steps.
+
+Production reviews 58–61 are preserved in the review journal. No new winners
+occurred; the six old failed-rescue wins and three legacy funding uncertainties
+remain. The production policy and its capital history are unchanged.
