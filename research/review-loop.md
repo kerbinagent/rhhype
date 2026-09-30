@@ -1238,3 +1238,37 @@ Health: four connected feeds, 111 pairs, CPU 52.95% of one core, p95 loop
 lag 11.86 ms, RSS 229.61 MiB, 814.5 books/s. Next review **06:06:33 UTC**.
 The delayed quote helper has 31 passing synthetic tests and awaits final
 independent signoff/source freeze. No new raw capture, promotion or reset.
+
+
+## Review 42: 2026-09-30 06:06:33 UTC
+
+Read at 06:07 UTC and archived in
+`reports/live-review-catchup/review-20260930T060633Z.json`. Completion coverage
+is complete. Cooldown has **41 exact paired completions, −$49.7978**, zero
+wins. Premium has **10 exact, −$16.3885**: five paired −$8.1426 and five
+failed hedges −$8.2459, zero wins. Convergence has **10 exact failed hedges,
+−$7.8872**, zero wins, plus one aborted attempt. Its combined rejection
+counts include 11 HL and one Core price-limit rejection. Other strategies
+have no new completions; separate ledgers are not summed.
+
+Cooldown fees were $11.4528, stress $20.4737, capital $0.0015, funding zero;
+removing stress leaves −$29.3241. Its 37 observed exit-price comparisons
+worsened $0.724761 in aggregate (12 worse, 15 better, 10 unchanged; four
+missing request prices), median zero, p95 adverse $0.446156. Request-to-flat
+median 1.292 s and p95 2.167 s over all 41 paired closes. Premium's five
+observations worsened $0.074024 in aggregate.
+
+The separate current-version snapshot in
+`reports/live-review-catchup/current-epoch-at-review42.json` records cooldown
+388 exact plus two estimated completions, −$537.1670 (one win); Premium
+45/−$76.5331 (one win); convergence 30/−$24.1182 (two wins); conservative
+1/+$2.3198. No active positions in either snapshot; three legacy funding
+obligations remain outside these current-version totals. Version remains
+`e3e83cda71a6`; all wins remain the same prior LIT rescue episode.
+
+Health: four connected feeds, 111 pairs, CPU 53.36% of one core, p95 loop lag
+9.93 ms, RSS 236.92 MiB, 768.9 books/s. Next review **06:26:33 UTC**.
+The first delayed quote scan reached its terminal checks but failed the
+outcome-file sublimit before publication; no economic conclusion is drawn.
+Its preserved failure and separately reviewed resource amendment are in
+`16be20f`. No new raw capture, promotion or capital reset.
