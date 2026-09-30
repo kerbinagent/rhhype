@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 11:08 UTC
+## Current status, 30 September 2026 11:16 UTC
 
 No qualifying positive result. The completed passive-exit, RH/HL delayed
 taker and 21-asset spread studies remain negative. Core/RH delayed taker
@@ -18,6 +18,9 @@ See the latest entry below and [research map](README.md).
 Production reviews continue; next **11:26:33 UTC**. The user requested a
 separate broader research proposal with longer holds and a different return
 source at 11:07 UTC; this does not change the live policy or launch a study.
+The [proposal](broader-carry-research-proposal.md) recommends a single BTC
+spot/dated-futures feasibility stage, with a proposed 72-hour window and
+separate 16 MiB ceiling. Other carry mechanisms remain alternatives.
 
 ## Original experiment: RH passive exit v1
 
@@ -819,3 +822,18 @@ The user selected “Prepare a broader research proposal.” Prepare a separate
 plan for longer holding periods and a different return source while the
 current paper reviews continue. No revised production policy, live orders,
 new capture or research budget increase is implied by proposal preparation.
+
+### Broader proposal prepared, 11:16 UTC
+
+The [proposal](broader-carry-research-proposal.md) prioritizes funded spot
+plus short dated futures, then spot/perpetual and cross-perpetual carry.
+It proposes BTC, one 7–30 day expiry selected by a frozen rule, one spot
+book and a single 72-hour feasibility window. ETH is a later replication
+candidate. Current primary specifications expose routed-spot fees, partial
+public trade coverage and cash-settlement/index mismatch; these are explicit
+preflight and accounting conditions.
+
+The proposed 16 MiB allocation is separate from the 257,096 bytes remaining
+in the existing diagnostic allowance. No allocation or collector was started.
+Paper production and the scheduled review daemon continue; next checkpoint
+11:26:33 UTC. The proposal is ready for a decision on the bounded next stage.

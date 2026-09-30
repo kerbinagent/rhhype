@@ -2,6 +2,12 @@
 
 ## Current work
 
+The [broader carry proposal](broader-carry-research-proposal.md), requested
+30 September, recommends a single BTC funded-spot/dated-futures feasibility
+stage before considering a multiweek paper strategy. Spot/perpetual and
+cross-perpetual funding carry remain alternatives. The proposed 72-hour
+collection and 16 MiB allocation have not been launched or allocated.
+
 [Active experiment loop](active-experiment-loop.md) records the mandate,
 prospective primary policy, success threshold, and next decision. The current
 RH maker-entry/passive-exit study restarted at 02:52 UTC on 30 September
