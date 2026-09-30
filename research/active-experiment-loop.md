@@ -701,3 +701,20 @@ SIGTERM failure roster and removal of failed completion markers are in place.
 The independent auditor has seven passing synthetic tests. Main decoder
 fixtures and final combined review remain pending; no historical raw stream
 has been hashed or decoded for this study.
+
+### Core/RH canonical replay launched, 10:01 UTC
+
+Root's final 28 synthetic tests pass, including actual CLI/decoder admission
+and all 1,008 identities; independent producer review also passes. Sources
+are frozen in `279ccd7`, prepared inputs in `dec83c6`. The zero-raw preparation
+and root review checked all 19 small source/input digests and eight historical
+rule sets. Source category uses 188,205 of the 190,000 internal bytes before
+the separate documentation reserve.
+
+The single canonical traversal is now running with a 900-second timeout and
+five-second termination grace, unchanged 600,000-byte allocation, unchanged
+economics and no retry. It covers the two stopped Core/RH archives and all
+1,008 scheduled candidates. The external log is capped at 9,000 bytes; no
+partial economics guide changes. Root will run the frozen derived auditor
+once only after completed publication, or retain the full failure roster if
+the run fails. Production review remains due 10:06:33 UTC.
