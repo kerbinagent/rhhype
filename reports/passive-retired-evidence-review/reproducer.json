@@ -1,0 +1,3562 @@
+{
+  "schema": "rh-passive-retired-after-halt-synthetic-diagnosis-v1",
+  "created_at": "2026-09-30T03:55:27.057061+00:00",
+  "post_capture_diagnosis": true,
+  "historical_replay_run": false,
+  "frozen_sources_unchanged": true,
+  "source_sha256": {
+    "scripts/analyze_rh_passive_exit.py": "d449743816f031467d8dab34c83bbb35df87a53e397c90b42dc220d4e21d9f5f",
+    "scripts/rh_passive_exit_engine.py": "486a7fc2d3d1dd8eec0cdf1607a0562bcb26d57cb047e17a9b27ce74c75f448b",
+    "scripts/rh_passive_exit_cache.py": "c676253a7cacb24cc3e5175ddaecfcf79c6b037f68a264a6de636b802fd73654",
+    "scripts/rh_maker_engine.py": "a25768d7e853f13cc81658ed9978e6c131f83713b43e276a95f94399ccc30763",
+    "scripts/rh_maker_sell_engine.py": "a92cc118acec27b91fee9ea7279946ab051ff8d6ec337f626c64958039bce635",
+    "scripts/rh_maker_late_flow_guard.py": "fc1c7b48c1c936a97409867a846db33b850e467338d671f29316926041fd1de6",
+    "scripts/rh_maker_model.py": "e368084c5f2b8a5129b6fcd941916324ca52a77575353e0010627174cd061ae9",
+    "scripts/rh_maker_sell_model.py": "12e804ec02291bf2a0780b54c840e37cb4b7c3abc4e61a723dca21618559a7c1",
+    "scripts/rh_maker_config.py": "9d6a411a60a1b85179bec12ac29eda452df4c1e62e707042db3767781c7d11bb",
+    "scripts/rh_maker_events.py": "5984caf23215035603fdc259910a1d1e7309fedfc961d176de3dfa2a9f31f29b",
+    "scripts/rh_maker_capture.py": "8a075d1b454752e0852f1a8ab6d40189c60bfba7bf62c7ff781b7349571b45b4",
+    "scripts/maker_book_archive.py": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2",
+    "scripts/maker_capture.py": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9",
+    "scripts/paper_streams.py": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734",
+    "scripts/analyze_maker_equity.py": "85d4de8cfd523b4a4497e3e2f6411b05f3737f2133d4c167ddce708af363843f",
+    "scripts/analyze_maker_capture.py": "d87ce8f116e039976b7afac20ede5704d14b3d49eb626473d214a7d47811b359",
+    "scripts/analyze_maker_roundtrip.py": "d7d23b255fcffc294069a77486cc944a9a64a32d6755cc515a960d1ae03a9c93",
+    "research/rh-passive-exit-method.md": "58abb8dcc71d783a5c51e7e7084009a25810b6f6e35507cfbd7d53d064d3f51e",
+    "scripts/rh_passive_retirement_guard.py": "6f4a92fc7ce84c52bd7fe9f0d6e7a6d66082c78037ef9a4f6d737ef1765af9fe",
+    "scripts/replay_passive_retirement_corrected.py": "5b81012825e2e44938ea9a6d194d197f6ad61a3cc2a8a1f84afb881e261043b2"
+  },
+  "reproducer_sha256": "d451bac117e8b013dfde1fae8c884834d952d2d82b06ecc59ddc53986aea8288",
+  "test_helper_sha256": "eded48e33419e74ec2008c2e427635594a4b51217d6d46a76ed5cb3937522487",
+  "synthetic_metadata": {
+    "rh": {
+      "price_tick": "0.1",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "min_notional": "10",
+      "taker_fee_bps": "0"
+    },
+    "hl": {
+      "price_tick_semantics": "hl_perp",
+      "sz_decimals": 2,
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "min_notional": "10",
+      "taker_fee_bps": "4.5"
+    }
+  },
+  "cases": [
+    {
+      "runtime_class": "scripts.rh_passive_exit_engine.PassiveExitBranch",
+      "prior_halt": false,
+      "callbacks": [
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100000000000,
+            "source_ns": 100000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100000000000,
+            "source_ns": 100000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": {
+            "policy": "fixed_best",
+            "reason": "quote",
+            "price": 100,
+            "quantity": 1,
+            "forecast_net_usd": null
+          }
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100400000000,
+            "source_ns": 100400000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "trade",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100500000000,
+            "source_ns": 100500000000,
+            "clock_valid": true,
+            "price": 100,
+            "qty": 1.5,
+            "trade_id": "entry",
+            "side": "sell"
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100700000000,
+            "source_ns": 100700000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100900000000,
+            "source_ns": 100900000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 102800000000,
+            "source_ns": 102800000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 102800000000,
+            "source_ns": 102800000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 103200000000,
+            "source_ns": 103200000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 103200000000,
+            "source_ns": 103200000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "trade",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 103300000000,
+            "source_ns": 103300000000,
+            "clock_valid": true,
+            "price": 100.4,
+            "qty": 10.5,
+            "trade_id": "partial-exit",
+            "side": "buy"
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 103500000000,
+            "source_ns": 103500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 104500000000,
+            "source_ns": 104500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 104500000000,
+            "source_ns": 104500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 106000000000,
+            "source_ns": 106000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 106000000000,
+            "source_ns": 106000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 107500000000,
+            "source_ns": 107500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 107500000000,
+            "source_ns": 107500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 109000000000,
+            "source_ns": 109000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 109000000000,
+            "source_ns": 109000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 110500000000,
+            "source_ns": 110500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 110500000000,
+            "source_ns": 110500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 112000000000,
+            "source_ns": 112000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 112000000000,
+            "source_ns": 112000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "trade",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 112300000000,
+            "source_ns": 103500000000,
+            "clock_valid": true,
+            "price": 100.4,
+            "qty": 0.01,
+            "trade_id": "genuine-late-passive",
+            "side": "buy"
+          },
+          "quote_diag": null
+        }
+      ],
+      "retired_passive_ask": {
+        "episode_number": 1,
+        "price": "100.4",
+        "remaining": "0.5",
+        "activation_due_ns": 103100000000,
+        "cancel_due_ns": 103600000000,
+        "retired_ns": 112000000000,
+        "seen_ids": [
+          "partial-exit"
+        ]
+      },
+      "before": {
+        "branch_unknown_reason": null,
+        "portfolio_complete_net": "-0.04032725363077118214104515474",
+        "closed_episodes": 1,
+        "retired_passive_asks": 1,
+        "episode_execution_unknown": false,
+        "episode_execution_unknown_reason": null,
+        "cohort_complete_net": "-0.04032725363077118214104515474",
+        "rh_position": "0.0",
+        "hl_position": "0.0",
+        "cash_rh": "0.20",
+        "cash_hl": "-0.1902250",
+        "fees_rh": "0.00",
+        "fees_hl": "0.0902250"
+      },
+      "after_process": {
+        "branch_unknown_reason": "retired_passive_quote_late_flow",
+        "portfolio_complete_net": null,
+        "closed_episodes": 1,
+        "retired_passive_asks": 1,
+        "episode_execution_unknown": true,
+        "episode_execution_unknown_reason": "retired_passive_quote_late_flow",
+        "cohort_complete_net": null,
+        "rh_position": "0.0",
+        "hl_position": "0.0",
+        "cash_rh": "0.20",
+        "cash_hl": "-0.1902250",
+        "fees_rh": "0.00",
+        "fees_hl": "0.0902250"
+      },
+      "isolated_existing_guard_probe": {
+        "branch_unknown_reason": "retired_passive_quote_late_flow",
+        "portfolio_complete_net": null,
+        "closed_episodes": 1,
+        "retired_passive_asks": 1,
+        "episode_execution_unknown": true,
+        "episode_execution_unknown_reason": "retired_passive_quote_late_flow",
+        "cohort_complete_net": null,
+        "rh_position": "0.0",
+        "hl_position": "0.0",
+        "cash_rh": "0.20",
+        "cash_hl": "-0.1902250",
+        "fees_rh": "0.00",
+        "fees_hl": "0.0902250"
+      }
+    },
+    {
+      "runtime_class": "scripts.rh_passive_exit_engine.PassiveExitBranch",
+      "prior_halt": true,
+      "callbacks": [
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100000000000,
+            "source_ns": 100000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100000000000,
+            "source_ns": 100000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": {
+            "policy": "fixed_best",
+            "reason": "quote",
+            "price": 100,
+            "quantity": 1,
+            "forecast_net_usd": null
+          }
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100400000000,
+            "source_ns": 100400000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "trade",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100500000000,
+            "source_ns": 100500000000,
+            "clock_valid": true,
+            "price": 100,
+            "qty": 1.5,
+            "trade_id": "entry",
+            "side": "sell"
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100700000000,
+            "source_ns": 100700000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100900000000,
+            "source_ns": 100900000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 102800000000,
+            "source_ns": 102800000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 102800000000,
+            "source_ns": 102800000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 103200000000,
+            "source_ns": 103200000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 103200000000,
+            "source_ns": 103200000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "trade",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 103300000000,
+            "source_ns": 103300000000,
+            "clock_valid": true,
+            "price": 100.4,
+            "qty": 10.5,
+            "trade_id": "partial-exit",
+            "side": "buy"
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 103500000000,
+            "source_ns": 103500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 104500000000,
+            "source_ns": 104500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 104500000000,
+            "source_ns": 104500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 106000000000,
+            "source_ns": 106000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 106000000000,
+            "source_ns": 106000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 107500000000,
+            "source_ns": 107500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 107500000000,
+            "source_ns": 107500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 109000000000,
+            "source_ns": 109000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 109000000000,
+            "source_ns": 109000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 110500000000,
+            "source_ns": 110500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 110500000000,
+            "source_ns": 110500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 112000000000,
+            "source_ns": 112000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 112000000000,
+            "source_ns": 112000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 112010000000,
+            "source_ns": 112010000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": {
+            "policy": "fixed_best",
+            "reason": "quote",
+            "price": 100,
+            "quantity": 1,
+            "forecast_net_usd": null
+          }
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "changed",
+            "received_ns": 112200000000,
+            "source_ns": 112200000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "trade",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 112300000000,
+            "source_ns": 103500000000,
+            "clock_valid": true,
+            "price": 100.4,
+            "qty": 0.01,
+            "trade_id": "genuine-late-passive",
+            "side": "buy"
+          },
+          "quote_diag": null
+        }
+      ],
+      "retired_passive_ask": {
+        "episode_number": 1,
+        "price": "100.4",
+        "remaining": "0.5",
+        "activation_due_ns": 103100000000,
+        "cancel_due_ns": 103600000000,
+        "retired_ns": 112000000000,
+        "seen_ids": [
+          "partial-exit"
+        ]
+      },
+      "before": {
+        "branch_unknown_reason": null,
+        "portfolio_complete_net": "-0.04032725363077118214104515474",
+        "closed_episodes": 1,
+        "retired_passive_asks": 1,
+        "episode_execution_unknown": false,
+        "episode_execution_unknown_reason": null,
+        "cohort_complete_net": "-0.04032725363077118214104515474",
+        "rh_position": "0.0",
+        "hl_position": "0.0",
+        "cash_rh": "0.20",
+        "cash_hl": "-0.1902250",
+        "fees_rh": "0.00",
+        "fees_hl": "0.0902250"
+      },
+      "after_process": {
+        "branch_unknown_reason": "book_generation_changed_during_obligation",
+        "portfolio_complete_net": null,
+        "closed_episodes": 1,
+        "retired_passive_asks": 1,
+        "episode_execution_unknown": false,
+        "episode_execution_unknown_reason": null,
+        "cohort_complete_net": "-0.04032725363077118214104515474",
+        "rh_position": "0.0",
+        "hl_position": "0.0",
+        "cash_rh": "0.20",
+        "cash_hl": "-0.1902250",
+        "fees_rh": "0.00",
+        "fees_hl": "0.0902250"
+      },
+      "isolated_existing_guard_probe": {
+        "branch_unknown_reason": "book_generation_changed_during_obligation",
+        "portfolio_complete_net": null,
+        "closed_episodes": 1,
+        "retired_passive_asks": 1,
+        "episode_execution_unknown": true,
+        "episode_execution_unknown_reason": "retired_passive_quote_late_flow",
+        "cohort_complete_net": null,
+        "rh_position": "0.0",
+        "hl_position": "0.0",
+        "cash_rh": "0.20",
+        "cash_hl": "-0.1902250",
+        "fees_rh": "0.00",
+        "fees_hl": "0.0902250"
+      }
+    },
+    {
+      "runtime_class": "scripts.rh_passive_retirement_guard.RetirementGuardPassiveExitBranch",
+      "prior_halt": false,
+      "callbacks": [
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100000000000,
+            "source_ns": 100000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100000000000,
+            "source_ns": 100000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": {
+            "policy": "fixed_best",
+            "reason": "quote",
+            "price": 100,
+            "quantity": 1,
+            "forecast_net_usd": null
+          }
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100400000000,
+            "source_ns": 100400000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "trade",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100500000000,
+            "source_ns": 100500000000,
+            "clock_valid": true,
+            "price": 100,
+            "qty": 1.5,
+            "trade_id": "entry",
+            "side": "sell"
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100700000000,
+            "source_ns": 100700000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100900000000,
+            "source_ns": 100900000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 102800000000,
+            "source_ns": 102800000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 102800000000,
+            "source_ns": 102800000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 103200000000,
+            "source_ns": 103200000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 103200000000,
+            "source_ns": 103200000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "trade",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 103300000000,
+            "source_ns": 103300000000,
+            "clock_valid": true,
+            "price": 100.4,
+            "qty": 10.5,
+            "trade_id": "partial-exit",
+            "side": "buy"
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 103500000000,
+            "source_ns": 103500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 104500000000,
+            "source_ns": 104500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 104500000000,
+            "source_ns": 104500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 106000000000,
+            "source_ns": 106000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 106000000000,
+            "source_ns": 106000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 107500000000,
+            "source_ns": 107500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 107500000000,
+            "source_ns": 107500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 109000000000,
+            "source_ns": 109000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 109000000000,
+            "source_ns": 109000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 110500000000,
+            "source_ns": 110500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 110500000000,
+            "source_ns": 110500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 112000000000,
+            "source_ns": 112000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 112000000000,
+            "source_ns": 112000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "trade",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 112300000000,
+            "source_ns": 103500000000,
+            "clock_valid": true,
+            "price": 100.4,
+            "qty": 0.01,
+            "trade_id": "genuine-late-passive",
+            "side": "buy"
+          },
+          "quote_diag": null
+        }
+      ],
+      "retired_passive_ask": {
+        "episode_number": 1,
+        "price": "100.4",
+        "remaining": "0.5",
+        "activation_due_ns": 103100000000,
+        "cancel_due_ns": 103600000000,
+        "retired_ns": 112000000000,
+        "seen_ids": [
+          "partial-exit"
+        ]
+      },
+      "before": {
+        "branch_unknown_reason": null,
+        "portfolio_complete_net": "-0.04032725363077118214104515474",
+        "closed_episodes": 1,
+        "retired_passive_asks": 1,
+        "episode_execution_unknown": false,
+        "episode_execution_unknown_reason": null,
+        "cohort_complete_net": "-0.04032725363077118214104515474",
+        "rh_position": "0.0",
+        "hl_position": "0.0",
+        "cash_rh": "0.20",
+        "cash_hl": "-0.1902250",
+        "fees_rh": "0.00",
+        "fees_hl": "0.0902250"
+      },
+      "after_process": {
+        "branch_unknown_reason": "retired_passive_quote_late_flow",
+        "portfolio_complete_net": null,
+        "closed_episodes": 1,
+        "retired_passive_asks": 1,
+        "episode_execution_unknown": true,
+        "episode_execution_unknown_reason": "retired_passive_quote_late_flow",
+        "cohort_complete_net": null,
+        "rh_position": "0.0",
+        "hl_position": "0.0",
+        "cash_rh": "0.20",
+        "cash_hl": "-0.1902250",
+        "fees_rh": "0.00",
+        "fees_hl": "0.0902250"
+      },
+      "isolated_existing_guard_probe": {
+        "branch_unknown_reason": "retired_passive_quote_late_flow",
+        "portfolio_complete_net": null,
+        "closed_episodes": 1,
+        "retired_passive_asks": 1,
+        "episode_execution_unknown": true,
+        "episode_execution_unknown_reason": "retired_passive_quote_late_flow",
+        "cohort_complete_net": null,
+        "rh_position": "0.0",
+        "hl_position": "0.0",
+        "cash_rh": "0.20",
+        "cash_hl": "-0.1902250",
+        "fees_rh": "0.00",
+        "fees_hl": "0.0902250"
+      }
+    },
+    {
+      "runtime_class": "scripts.rh_passive_retirement_guard.RetirementGuardPassiveExitBranch",
+      "prior_halt": true,
+      "callbacks": [
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100000000000,
+            "source_ns": 100000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100000000000,
+            "source_ns": 100000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": {
+            "policy": "fixed_best",
+            "reason": "quote",
+            "price": 100,
+            "quantity": 1,
+            "forecast_net_usd": null
+          }
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100400000000,
+            "source_ns": 100400000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "trade",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100500000000,
+            "source_ns": 100500000000,
+            "clock_valid": true,
+            "price": 100,
+            "qty": 1.5,
+            "trade_id": "entry",
+            "side": "sell"
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100700000000,
+            "source_ns": 100700000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 100900000000,
+            "source_ns": 100900000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 102800000000,
+            "source_ns": 102800000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 102800000000,
+            "source_ns": 102800000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 103200000000,
+            "source_ns": 103200000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 103200000000,
+            "source_ns": 103200000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "trade",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 103300000000,
+            "source_ns": 103300000000,
+            "clock_valid": true,
+            "price": 100.4,
+            "qty": 10.5,
+            "trade_id": "partial-exit",
+            "side": "buy"
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 103500000000,
+            "source_ns": 103500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 104500000000,
+            "source_ns": 104500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 104500000000,
+            "source_ns": 104500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 106000000000,
+            "source_ns": 106000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 106000000000,
+            "source_ns": 106000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 107500000000,
+            "source_ns": 107500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 107500000000,
+            "source_ns": 107500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 109000000000,
+            "source_ns": 109000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 109000000000,
+            "source_ns": 109000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 110500000000,
+            "source_ns": 110500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 110500000000,
+            "source_ns": 110500000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 112000000000,
+            "source_ns": 112000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 112000000000,
+            "source_ns": 112000000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "hyperliquid",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 112010000000,
+            "source_ns": 112010000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100.2,
+                10
+              ],
+              [
+                100.1,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.3,
+                10
+              ],
+              [
+                100.4,
+                10
+              ]
+            ]
+          },
+          "quote_diag": {
+            "policy": "fixed_best",
+            "reason": "quote",
+            "price": 100,
+            "quantity": 1,
+            "forecast_net_usd": null
+          }
+        },
+        {
+          "event": {
+            "type": "book",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "changed",
+            "received_ns": 112200000000,
+            "source_ns": 112200000000,
+            "clock_valid": true,
+            "valid": true,
+            "bids": [
+              [
+                100,
+                0.5
+              ],
+              [
+                99.9,
+                10
+              ]
+            ],
+            "asks": [
+              [
+                100.4,
+                10
+              ],
+              [
+                100.5,
+                10
+              ]
+            ]
+          },
+          "quote_diag": null
+        },
+        {
+          "event": {
+            "type": "trade",
+            "venue": "rh_lighter",
+            "asset": "BTC",
+            "generation": "g",
+            "received_ns": 112300000000,
+            "source_ns": 103500000000,
+            "clock_valid": true,
+            "price": 100.4,
+            "qty": 0.01,
+            "trade_id": "genuine-late-passive",
+            "side": "buy"
+          },
+          "quote_diag": null
+        }
+      ],
+      "retired_passive_ask": {
+        "episode_number": 1,
+        "price": "100.4",
+        "remaining": "0.5",
+        "activation_due_ns": 103100000000,
+        "cancel_due_ns": 103600000000,
+        "retired_ns": 112000000000,
+        "seen_ids": [
+          "partial-exit"
+        ]
+      },
+      "before": {
+        "branch_unknown_reason": null,
+        "portfolio_complete_net": "-0.04032725363077118214104515474",
+        "closed_episodes": 1,
+        "retired_passive_asks": 1,
+        "episode_execution_unknown": false,
+        "episode_execution_unknown_reason": null,
+        "cohort_complete_net": "-0.04032725363077118214104515474",
+        "rh_position": "0.0",
+        "hl_position": "0.0",
+        "cash_rh": "0.20",
+        "cash_hl": "-0.1902250",
+        "fees_rh": "0.00",
+        "fees_hl": "0.0902250"
+      },
+      "after_process": {
+        "branch_unknown_reason": "book_generation_changed_during_obligation",
+        "portfolio_complete_net": null,
+        "closed_episodes": 1,
+        "retired_passive_asks": 1,
+        "episode_execution_unknown": false,
+        "episode_execution_unknown_reason": null,
+        "cohort_complete_net": "-0.04032725363077118214104515474",
+        "rh_position": "0.0",
+        "hl_position": "0.0",
+        "cash_rh": "0.20",
+        "cash_hl": "-0.1902250",
+        "fees_rh": "0.00",
+        "fees_hl": "0.0902250"
+      },
+      "isolated_existing_guard_probe": {
+        "branch_unknown_reason": "book_generation_changed_during_obligation",
+        "portfolio_complete_net": null,
+        "closed_episodes": 1,
+        "retired_passive_asks": 1,
+        "episode_execution_unknown": true,
+        "episode_execution_unknown_reason": "retired_passive_quote_late_flow",
+        "cohort_complete_net": null,
+        "rh_position": "0.0",
+        "hl_position": "0.0",
+        "cash_rh": "0.20",
+        "cash_hl": "-0.1902250",
+        "fees_rh": "0.00",
+        "fees_hl": "0.0902250"
+      }
+    }
+  ]
+}
