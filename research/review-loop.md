@@ -2979,3 +2979,48 @@ current status and review journal instead of its stale review64 deadline.
 
 Carry has all 105 due arrivals through 21:25, 128,924 sample bytes, zero overdue
 missing files, no terminal error and no interim economic evaluation.
+
+
+### Review 89 — 30 September 2026 21:46 UTC
+
+Exact report, separate epoch snapshot and full positive record preserved;
+guarded manual archive 2,033,967/16,777,216 bytes. Report SHA-256
+`413eba21308258562ac46396a5bdc579e494a615e0960865b788399aae471a02`.
+83 exact closes: 82 losses and one failed-hedge rescue gain. All 74 paired
+closes negative. Nine failed hedges, zero aborts, complete coverage and nine
+Hyperliquid price-limit entry rejections.
+
+- Cooldown: sixty/−$64.8304; 59 paired/−$63.3769 and one failed hedge/−$1.4536.
+- Premium: nineteen/−$36.0979; fifteen paired/−$23.9702 and four failed hedges/
+  −$12.1277.
+- Convergence: four failed hedges/−$7.2472, including the gain.
+
+The bounded read-only winner query counted one across all strategies before
+fetching (cap 128), matching the ledger. LIT convergence
+`1790804630122062-23375-convergence`: 247-unit Lighter long entered for
+$993.9774; the Hyperliquid short was rejected at its price limit. The long sold
+for $994.6443 after 1.4390 s, 0.5280 s after rescue request. Price gain $0.6669
+minus stress $0.4969887 and capital $0.0000022678 gives net $0.1699090322.
+Fees and exact funding zero, both legs remaining zero; net arithmetic and
+5 bp stress reconcile. The full two-trade LIT/Lighter route lost $2.66547.
+Twenty-two epoch win records comprise four paired and eighteen rescues.
+
+Cooldown fees $13.8739, stress $29.9609, capital $0.0021039, funding zero;
+without stress −$34.8695. Exit comparisons: 58 observed, one missing request
+price; seventeen better, eight worse, 33 unchanged, aggregate improvement
+$0.645975, median zero, p95 adverse $0.04762. All 59 paired request-to-flat
+times present: median 1.132 s, p95 2.200 s. Premium's fifteen comparisons
+improved $0.426253 in aggregate. Convergence had no paired completions.
+
+Four feeds connected, 107 pairs following the scheduled metadata refresh,
+CPU 41.60%, p95 lag 8.50 ms, RSS 321.14 MiB, 481.8 books/s, metadata age
+536.6 s. Review and separate epoch snapshot flat. Epoch: cooldown 2,235 exact
+plus seven estimated/−$2,973.3199; Premium 638/−$1,171.0565; convergence
+361/−$425.3711; conservative four/−$3.0627; confirmed two/−$4.0150. Later
+epoch counts include completions after the review boundary. Three legacy
+funding obligations remain. Reviews 66–89 have 1,386 closes: 1,376 losses,
+two paired gains and eight rescue gains. No policy or capital change.
+Next checkpoint **22:06:33 UTC**.
+
+Carry has all 109 due arrivals through 21:45, 133,817 sample bytes, zero overdue
+missing files, no terminal error and no interim economic evaluation.

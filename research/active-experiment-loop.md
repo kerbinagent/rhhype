@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 21:28 UTC
+## Current status, 30 September 2026 21:48 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative; no production strategy is promoted. The user authorized
@@ -19,17 +19,17 @@ analysis. Instruments: BTC_USDC spot and BTC_USDC-9OCT26. See the
 [method](dated-carry-method-v1.md) and [operations](live-operations.md).
 
 The original paper policy and scheduled review daemon continue independently.
-Reviews through 88 are preserved. Review85 adds two paired MU gains
+Reviews through 89 are preserved. Review85 adds two paired MU gains
 (+$0.0473 and +$0.1896) sharing the same signal time and Hyperliquid fill
 observation; its complete three-trade convergence paired group lost $1.2929.
 Earlier paired gains were WLD +$0.3590 and CRCL +$0.3250 in review65.
-Reviews 66–88 have 1,303 closes: 1,294 losses, two paired gains and seven
+Reviews 66–89 have 1,386 closes: 1,376 losses, two paired gains and eight
 failed-hedge rescue gains.
 One loss each in reviews75,78,81 and87 has estimated funding and remains estimated.
-All three policies with completions lost money in review88; its sole winning
-record is an ENA failed-hedge rescue, with full accounting preserved. Twenty-one
-epoch win records comprise four paired and seventeen rescues. There is still
-no qualifying positive strategy window. Next review: **21:46:33 UTC**.
+All three policies with completions lost money in review89; its sole winning
+record is a LIT failed-hedge rescue, with full accounting preserved. Twenty-two
+epoch win records comprise four paired and eighteen rescues. There is still
+no qualifying positive strategy window. Next review: **22:06:33 UTC**.
 Contract settlement, conversion, inventory and margin unknowns keep actual
 all-cost feasibility and closed P&L null for the new study.
 
@@ -1258,4 +1258,19 @@ Twenty-one epoch win records comprise four paired and seventeen rescue gains.
 Four feeds connected, 110 pairs and normal performance; review and separate
 epoch snapshot each had one cooldown position. Three legacy funding obligations
 remain. Next review 21:46:33 UTC. Carry has all 105 due arrivals through 21:25,
+no terminal error or overdue missing files, and no economic evaluation.
+
+
+### Review 89, 21:46 UTC
+
+83 exact closes: 82 losses and one LIT rescue gain +$0.16991. Cooldown
+sixty/−$64.8304, Premium nineteen/−$36.0979, convergence four/−$7.2472.
+All 74 paired closes negative; zero aborts and complete coverage. Nine
+Hyperliquid price-limit rejections. Full winning record preserved: Lighter
+long filled, Hyperliquid short rejected, long closed after 1.4390 s; zero
+remaining quantities and exact funding, with arithmetic and stress reconciled.
+Twenty-two epoch win records comprise four paired and eighteen rescue gains.
+Four feeds connected, 107 pairs after metadata refresh and normal performance;
+review and separate epoch snapshot flat. Three legacy funding obligations
+remain. Next review 22:06:33 UTC. Carry has all 109 due arrivals through 21:45,
 no terminal error or overdue missing files, and no economic evaluation.
