@@ -1094,3 +1094,36 @@ Health: four connected feeds, 112 pairs, CPU 46.23% of one core, p95 loop lag
 cooldown position and three flat funding-pending records. Both ACK replays
 finished without errors and produced no positive complete portfolio. Next
 review **04:46:33 UTC**. No strategy promoted or capital replenished.
+
+
+## Review 38: 2026-09-30 04:46:33 UTC
+
+Actively read and archived in
+`reports/live-review-catchup/review-20260930T044633Z.json`. Complete coverage
+for every strategy. Cooldown **59 exact completions, −$73.9285**, zero wins:
+58 paired −$71.7132 and one failed hedge −$2.2153. Premium **8 exact,
+−$16.0973**, zero wins: two paired −$3.1405 and six failed hedges −$12.9568.
+Convergence had **six failed hedges, −$6.0716**, all exact and zero wins.
+All other strategies had no new completion. These independent ledgers are
+not summed into a portfolio.
+
+Cooldown fees were $19.1792, stress $29.4557, capital $0.0021, funding zero;
+removing stress leaves −$44.4728. Its 54 observed exit-price comparisons
+worsened $0.564518 in aggregate (16 worse, 16 better, 22 unchanged, four missing),
+median zero and p95 adverse $0.122481. Request-to-flat median 1.122 s,
+p95 2.356 s. Premium's two observed paired exit comparisons improved $0.193340
+in aggregate. Six convergence failed hedges were all LIT routes, four via
+Core and two via RH; recorded entry rejections were five HL and one Core
+price-limit failures. Failed hedges do not supply paired exit-price evidence.
+
+The separate version snapshot at 04:46:52 UTC is preserved in
+`reports/live-review-catchup/current-epoch-at-review38.json`: cooldown 225 exact
+plus one estimated completion, −$342.1200; Premium 26/−$43.4542;
+convergence 10/−$12.1643; zero wins. Version remains `e3e83cda71a6`, begun
+03:36:13 UTC; three legacy funding obligations remain carryover.
+
+Health: four feeds connected, 111 pairs, CPU 48.92% of one core, p95 loop lag
+8.54 ms, RSS 201.05 MiB, 613.0 books/s. No active filled position at the scheduled
+snapshot; three flat funding-pending records. Next review **05:06:33 UTC**.
+The single-scan offline spread-feasibility diagnostic is under review; no new
+raw capture, strategy promotion or capital replenishment.
