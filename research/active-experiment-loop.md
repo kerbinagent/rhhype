@@ -786,3 +786,19 @@ execution improved $0.823811 across all 45 comparisons, yet net remains
 capital history; later snapshot flat, three legacy funding obligations
 retained. Next review 11:06:33 UTC. No supported successor experiment or
 production policy change.
+
+### Cash-session coverage proposal reviewed, 10:56 UTC
+
+A source-only peer review considered a predeclared cash-open observation
+of NVDA/XAG with BTC/ETH controls, keeping the existing spread prerequisite.
+No successor is allocated. NVDA previously had 16/20 valid sentinel rows
+and no positive optimistic budgets; session coverage limits generalization
+but is not positive economic evidence. One cash-open window and crypto
+controls would not identify a causal session effect or recurrence.
+
+The unchanged compact collector also has no demonstrated resource fit:
+its prior metadata and control used 287,740 bytes, above the remaining
+257,096-byte shared reservation before samples or outputs. Fewer
+subscriptions do not shrink full metadata responses automatically. A
+descriptive session study would need a separate priority and resource
+design. No implementation, metadata request, capture or cap expansion.
