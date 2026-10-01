@@ -5040,3 +5040,52 @@ five audited paired gains and 26 audited failed-hedge rescue gains.
 Manual archive 3,649,755 / 5,242,880 B; 162 future scheduled pairs at
 5,342 B project 4,515,159 B, margin 727,721 B.
 Next review **18:46:33 UTC**.
+
+
+## Review 152 — 1 October 2026 18:46:33 UTC
+
+All eight strategy and aborted retained-trade coverage fields complete.
+Exact report `review-20261001T184633Z.json.gz`: raw 18,674 B, SHA-256
+`ea3f586cc6b61bb4b0e92cb2911ff2613b7b8bb9d8e1c21387fc60b338e055db`;
+gzip 2,732 B, SHA-256
+`994118e858123442fe13b5c802dc4c16775df96b82b598bb44ba448c16415924`.
+Independent `current-epoch-at-review152.json.gz`: read 18:47:09.450112 UTC,
+updated 18:47:09.176321 UTC; raw 9,293 B, SHA-256
+`a0b0c0c4194030d96648519e2ce355e7be620be63c1d36a59ba6d4e05b7e0fa4`;
+gzip 1,729 B, SHA-256
+`65f0065de53c67157ad62aea3dfd4076cce70c69a89a6a35df58ae8cdddce89e`.
+Exact decompression and per-write cap/growth guards passed.
+
+Eight exact Premium losses/−$12.3424644964 (seven paired, one failed
+hedge); no convergence closes, gains, estimates or aborts. One HL price
+limit. Fees $6.8479607941, other costs $3.9935835690, capital $0.0002531334.
+Separate epoch snapshot convergence unchanged 603 / −$705.7264469242;
+Premium 1,177 / −$2,121.0824127546, an increase nine versus report eight.
+Keep sampling boundaries distinct and use report deltas for accounting.
+
+IMPORTANT COLLECTION GAP: the 18:35 pulse found a snapshot 7.88 s old;
+by 18:37:44 it was 169.03 s old. Root confirmed collector PID 17101 had
+exited after 18:34:57 PaperStoreError: checkpoint batch exceeded reserved
+WAL budget; final checkpoint also failed, prior durable checkpoint retained.
+Stale running/feed flags were not treated as live health. Last durable
+checkpoint 18:34:54.802744 UTC; restart 18:41:35.899691 UTC; fresh recovery
+observed 18:41:51 and conservatively confirmed 18:42:14.795516 UTC.
+Treat this entire interval as a collection gap; complete retained-trade
+coverage does not establish uninterrupted market coverage. No active entry/
+exit exposure at incident; three awaiting-funding records retained. Root
+restored PID 2055172 using the same command with report interval 0.5 s
+(previously 2 s), unchanged 128 MiB DB cap; config/epochs/ledgers/positions/
+review baseline matched. Routine agent changed no services. Incident evidence
+is separately preserved in reports/monitor-wal-incident and funded by the
+root's research allocation, leaving manual 5 MiB unchanged.
+
+Review health running/ok, four feeds, 102 pairs, CPU 72.67%, p95 lag
+45.78 ms, RSS 145.18 MiB, 857.4 books/s, metadata age 294.8 s. Carry
+18:45 metadata: 219 sampled, persistent invalid slot 71, 644 future/
+interrupted; running, no errors/retries/economic evaluation. Carry samples
+and active root research economics remain unopened.
+
+Reviews 66–152: 2,341 completions, 2,309 exact losses, one estimated loss,
+five audited paired gains and 26 audited failed-hedge rescue gains.
+Archive 3,654,216 / 5,242,880 B; 161 future pairs at 5,342 B project
+4,514,278 B, margin 728,602 B. Next review **19:06:33 UTC**.

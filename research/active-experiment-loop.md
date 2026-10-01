@@ -1757,3 +1757,18 @@ pulses cleared at 18:25, retained in journal. Archive 3,649,755 B; 162 future
 pairs project 4,515,159 B, margin 727,721 B. Carry 18:25: 215 sampled,
 invalid slot 71, 648 future/interrupted; no errors/retries/evaluation.
 Next review 18:46:33 UTC.
+
+
+### Review 152, 1 October 18:46 UTC
+
+Eight exact Premium losses/−$12.34246 (seven paired, one failed hedge),
+no wins/estimates/aborts; one HL price limit. Retained-trade coverage complete,
+with explicit collector gap 18:34:54.802744–18:42:14.795516 UTC following
+WAL-budget checkpoint failure. Root recovered preserved ledgers/config/
+epochs/positions with report interval 0.5 s and unchanged DB cap; no active
+entry/exit exposure, three pending-funding records retained. Gap prevents
+continuous feed claims. Four feeds/102 pairs fresh after recovery, running/
+ok. Separate snapshot Premium increase nine versus report eight preserved.
+Archive 3,654,216 B; 161 future pairs project 4,514,278 B, margin 728,602 B.
+Carry 18:45: 219 sampled, invalid slot 71, 644 future/interrupted; no errors/
+retries/evaluation. Next review 19:06:33 UTC.
