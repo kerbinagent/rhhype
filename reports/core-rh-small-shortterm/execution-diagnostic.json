@@ -1,0 +1,483 @@
+{
+  "scope": "Post-outcome descriptive attribution only; no policy retuning or counterfactual profit claim. Positive opening-gap deterioration means the spread worsened between signal and actual delayed entry.",
+  "primary_entry_deterioration_count": 10,
+  "primary_median_entry_deterioration": "0.02671599999998",
+  "rows": [
+    {
+      "branch": "100-10",
+      "id": "1790829998845313-1-standard",
+      "asset": "ETH",
+      "exit_reason": "take_profit",
+      "signal_forecast_cash": 0.012081719661856874,
+      "signal_opening_gap": "0.00367999999999",
+      "filled_opening_gap": "0.004416",
+      "opening_gap_deterioration": "-0.00073600000001",
+      "exit_requested_mark_after_capital": 0.01106480262600275,
+      "realized_cash": -0.0033120000000081973,
+      "held_seconds": 1.120077133178711,
+      "entry_delays_seconds": [
+        0.5327754020690918,
+        0.5007674694061279
+      ]
+    },
+    {
+      "branch": "100-60",
+      "id": "1790829998845313-1-standard",
+      "asset": "ETH",
+      "exit_reason": "take_profit",
+      "signal_forecast_cash": 0.012081719661856874,
+      "signal_opening_gap": "0.00367999999999",
+      "filled_opening_gap": "0.004416",
+      "opening_gap_deterioration": "-0.00073600000001",
+      "exit_requested_mark_after_capital": 0.01106480262600275,
+      "realized_cash": -0.0033120000000081973,
+      "held_seconds": 1.120077133178711,
+      "entry_delays_seconds": [
+        0.5327754020690918,
+        0.5007674694061279
+      ]
+    },
+    {
+      "branch": "100-300",
+      "id": "1790829998845313-1-standard",
+      "asset": "ETH",
+      "exit_reason": "take_profit",
+      "signal_forecast_cash": 0.012081719661856874,
+      "signal_opening_gap": "0.00367999999999",
+      "filled_opening_gap": "0.004416",
+      "opening_gap_deterioration": "-0.00073600000001",
+      "exit_requested_mark_after_capital": 0.01106480262600275,
+      "realized_cash": -0.0033120000000081973,
+      "held_seconds": 1.120077133178711,
+      "entry_delays_seconds": [
+        0.5327754020690918,
+        0.5007674694061279
+      ]
+    },
+    {
+      "branch": "1000-10",
+      "id": "1790829998845313-1-standard",
+      "asset": "ETH",
+      "exit_reason": "take_profit",
+      "signal_forecast_cash": 0.11215567345813271,
+      "signal_opening_gap": "0.0368899999999",
+      "filled_opening_gap": "0.044268",
+      "opening_gap_deterioration": "-0.0073780000001",
+      "exit_requested_mark_after_capital": 0.13279414204195092,
+      "realized_cash": -0.06640200000003915,
+      "held_seconds": 3.587322950363159,
+      "entry_delays_seconds": [
+        0.5327754020690918,
+        0.5007674694061279
+      ]
+    },
+    {
+      "branch": "1000-60",
+      "id": "1790829998845313-1-standard",
+      "asset": "ETH",
+      "exit_reason": "take_profit",
+      "signal_forecast_cash": 0.11215567345813271,
+      "signal_opening_gap": "0.0368899999999",
+      "filled_opening_gap": "0.044268",
+      "opening_gap_deterioration": "-0.0073780000001",
+      "exit_requested_mark_after_capital": 0.13279414204195092,
+      "realized_cash": -0.06640200000003915,
+      "held_seconds": 3.587322950363159,
+      "entry_delays_seconds": [
+        0.5327754020690918,
+        0.5007674694061279
+      ]
+    },
+    {
+      "branch": "1000-300",
+      "id": "1790829998845313-1-standard",
+      "asset": "ETH",
+      "exit_reason": "take_profit",
+      "signal_forecast_cash": 0.11215567345813271,
+      "signal_opening_gap": "0.0368899999999",
+      "filled_opening_gap": "0.044268",
+      "opening_gap_deterioration": "-0.0073780000001",
+      "exit_requested_mark_after_capital": 0.13279414204195092,
+      "realized_cash": -0.06640200000003915,
+      "held_seconds": 3.587322950363159,
+      "entry_delays_seconds": [
+        0.5327754020690918,
+        0.5007674694061279
+      ]
+    },
+    {
+      "branch": "100-10",
+      "id": "1790830029216394-3-standard",
+      "asset": "ETH",
+      "exit_reason": "take_profit",
+      "signal_forecast_cash": 0.010783584254616865,
+      "signal_opening_gap": "0.005784",
+      "filled_opening_gap": "-0.013616",
+      "opening_gap_deterioration": "0.019400",
+      "exit_requested_mark_after_capital": 0.011407028118040964,
+      "realized_cash": -0.011040000000008376,
+      "held_seconds": 3.578554153442383,
+      "entry_delays_seconds": [
+        0.5021817684173584,
+        0.4816477298736572
+      ]
+    },
+    {
+      "branch": "100-60",
+      "id": "1790830029216394-3-standard",
+      "asset": "ETH",
+      "exit_reason": "take_profit",
+      "signal_forecast_cash": 0.010783584254616865,
+      "signal_opening_gap": "0.005784",
+      "filled_opening_gap": "-0.013616",
+      "opening_gap_deterioration": "0.019400",
+      "exit_requested_mark_after_capital": 0.011407028118040964,
+      "realized_cash": -0.011040000000008376,
+      "held_seconds": 3.578554153442383,
+      "entry_delays_seconds": [
+        0.5021817684173584,
+        0.4816477298736572
+      ]
+    },
+    {
+      "branch": "100-300",
+      "id": "1790830029216394-3-standard",
+      "asset": "ETH",
+      "exit_reason": "take_profit",
+      "signal_forecast_cash": 0.010783584254616865,
+      "signal_opening_gap": "0.005784",
+      "filled_opening_gap": "-0.013616",
+      "opening_gap_deterioration": "0.019400",
+      "exit_requested_mark_after_capital": 0.011407028118040964,
+      "realized_cash": -0.011040000000008376,
+      "held_seconds": 3.578554153442383,
+      "entry_delays_seconds": [
+        0.5021817684173584,
+        0.4816477298736572
+      ]
+    },
+    {
+      "branch": "100-10",
+      "id": "1790830024148837-2-standard",
+      "asset": "BTC",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.012233917871161588,
+      "signal_opening_gap": "0.02069799999998",
+      "filled_opening_gap": "-0.006018",
+      "opening_gap_deterioration": "0.02671599999998",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.018761999999995282,
+      "held_seconds": 10.501445055007935,
+      "entry_delays_seconds": [
+        0.4681522846221924,
+        0.49734973907470703
+      ]
+    },
+    {
+      "branch": "100-10",
+      "id": "1790830039349652-4-standard",
+      "asset": "SOL",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.014305043677973917,
+      "signal_opening_gap": "-0.00083800000001",
+      "filled_opening_gap": "-0.031844",
+      "opening_gap_deterioration": "0.03100599999999",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.02932999999998742,
+      "held_seconds": 10.749375581741333,
+      "entry_delays_seconds": [
+        0.46320557594299316,
+        0.4958949089050293
+      ]
+    },
+    {
+      "branch": "100-60",
+      "id": "1790830024148837-2-standard",
+      "asset": "BTC",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.012233917871161588,
+      "signal_opening_gap": "0.02069799999998",
+      "filled_opening_gap": "-0.006018",
+      "opening_gap_deterioration": "0.02671599999998",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.015339999999994802,
+      "held_seconds": 60.51857948303223,
+      "entry_delays_seconds": [
+        0.4681522846221924,
+        0.49734973907470703
+      ]
+    },
+    {
+      "branch": "100-60",
+      "id": "1790830039349652-4-standard",
+      "asset": "SOL",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.014305043677973917,
+      "signal_opening_gap": "-0.00083800000001",
+      "filled_opening_gap": "-0.031844",
+      "opening_gap_deterioration": "0.03100599999999",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.02765399999998408,
+      "held_seconds": 60.65198278427124,
+      "entry_delays_seconds": [
+        0.46320557594299316,
+        0.4958949089050293
+      ]
+    },
+    {
+      "branch": "100-10",
+      "id": "1790830101624173-5-standard",
+      "asset": "ETH",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.01402143239104791,
+      "signal_opening_gap": "0.01476000000001",
+      "filled_opening_gap": "-0.001107",
+      "opening_gap_deterioration": "0.01586700000001",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.011439000000009969,
+      "held_seconds": 10.513896703720093,
+      "entry_delays_seconds": [
+        0.4912681579589844,
+        0.576312780380249
+      ]
+    },
+    {
+      "branch": "100-10",
+      "id": "1790830102559172-6-standard",
+      "asset": "BTC",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.014907591613182902,
+      "signal_opening_gap": "0.01157399999997",
+      "filled_opening_gap": "-0.010874",
+      "opening_gap_deterioration": "0.02244799999997",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.007513999999986254,
+      "held_seconds": 10.541959285736084,
+      "entry_delays_seconds": [
+        0.4876084327697754,
+        0.5121781826019287
+      ]
+    },
+    {
+      "branch": "100-60",
+      "id": "1790830101624173-5-standard",
+      "asset": "ETH",
+      "exit_reason": "take_profit",
+      "signal_forecast_cash": 0.01402143239104791,
+      "signal_opening_gap": "0.01476000000001",
+      "filled_opening_gap": "-0.001107",
+      "opening_gap_deterioration": "0.01586700000001",
+      "exit_requested_mark_after_capital": 0.010328325033969623,
+      "realized_cash": -0.012915000000006671,
+      "held_seconds": 12.0584077835083,
+      "entry_delays_seconds": [
+        0.4912681579589844,
+        0.576312780380249
+      ]
+    },
+    {
+      "branch": "100-10",
+      "id": "1790830150200615-7-standard",
+      "asset": "BTC",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.011318304154391529,
+      "signal_opening_gap": "0.00916299999999",
+      "filled_opening_gap": "-0.012036",
+      "opening_gap_deterioration": "0.02119899999999",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.012697000000002845,
+      "held_seconds": 10.52222990989685,
+      "entry_delays_seconds": [
+        0.5449645519256592,
+        0.5195491313934326
+      ]
+    },
+    {
+      "branch": "100-60",
+      "id": "1790830102559172-6-standard",
+      "asset": "BTC",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.014907591613182902,
+      "signal_opening_gap": "0.01157399999997",
+      "filled_opening_gap": "-0.010874",
+      "opening_gap_deterioration": "0.02244799999997",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.013717999999983022,
+      "held_seconds": 60.53807759284973,
+      "entry_delays_seconds": [
+        0.4876084327697754,
+        0.5121781826019287
+      ]
+    },
+    {
+      "branch": "100-10",
+      "id": "1790830169340954-8-standard",
+      "asset": "SOL",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.01094399892844226,
+      "signal_opening_gap": "0.03184399999999",
+      "filled_opening_gap": "-0.002514",
+      "opening_gap_deterioration": "0.03435799999999",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.03603400000000079,
+      "held_seconds": 10.617170810699463,
+      "entry_delays_seconds": [
+        0.5582506656646729,
+        0.4771082401275635
+      ]
+    },
+    {
+      "branch": "100-10",
+      "id": "1790830182497050-9-standard",
+      "asset": "ETH",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.026311257915038497,
+      "signal_opening_gap": "0.029072",
+      "filled_opening_gap": "-0.012512",
+      "opening_gap_deterioration": "0.041584",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.025759999999991123,
+      "held_seconds": 10.700808048248291,
+      "entry_delays_seconds": [
+        0.4993138313293457,
+        0.47135114669799805
+      ]
+    },
+    {
+      "branch": "100-60",
+      "id": "1790830169340954-7-standard",
+      "asset": "SOL",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.01094399892844226,
+      "signal_opening_gap": "0.03184399999999",
+      "filled_opening_gap": "-0.002514",
+      "opening_gap_deterioration": "0.03435799999999",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.02681600000001083,
+      "held_seconds": 60.514220237731934,
+      "entry_delays_seconds": [
+        0.5582506656646729,
+        0.4771082401275635
+      ]
+    },
+    {
+      "branch": "100-60",
+      "id": "1790830182497050-8-standard",
+      "asset": "ETH",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.026311257915038497,
+      "signal_opening_gap": "0.029072",
+      "filled_opening_gap": "-0.012512",
+      "opening_gap_deterioration": "0.041584",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.01987199999999234,
+      "held_seconds": 60.514914989471436,
+      "entry_delays_seconds": [
+        0.4993138313293457,
+        0.47135114669799805
+      ]
+    },
+    {
+      "branch": "100-10",
+      "id": "1790830260037676-10-standard",
+      "asset": "BTC",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.018134459458878004,
+      "signal_opening_gap": "0.02291399999999",
+      "filled_opening_gap": "-0.005428",
+      "opening_gap_deterioration": "0.02834199999999",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.010737999999989256,
+      "held_seconds": 10.51832890510559,
+      "entry_delays_seconds": [
+        0.48480677604675293,
+        0.5103075504302979
+      ]
+    },
+    {
+      "branch": "100-10",
+      "id": "1790830300318684-11-standard",
+      "asset": "ETH",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.0197398656702383,
+      "signal_opening_gap": "0.02029200000001",
+      "filled_opening_gap": "-0.009200",
+      "opening_gap_deterioration": "0.02949200000001",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.01692800000000716,
+      "held_seconds": 10.496431112289429,
+      "entry_delays_seconds": [
+        0.5000479221343994,
+        0.486236572265625
+      ]
+    },
+    {
+      "branch": "100-60",
+      "id": "1790830260037676-9-standard",
+      "asset": "BTC",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.018134459458878004,
+      "signal_opening_gap": "0.02291399999999",
+      "filled_opening_gap": "-0.005428",
+      "opening_gap_deterioration": "0.02834199999999",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.016713999999993234,
+      "held_seconds": 60.51964783668518,
+      "entry_delays_seconds": [
+        0.48480677604675293,
+        0.5103075504302979
+      ]
+    },
+    {
+      "branch": "100-300",
+      "id": "1790830024148837-2-standard",
+      "asset": "BTC",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.012233917871161588,
+      "signal_opening_gap": "0.02069799999998",
+      "filled_opening_gap": "-0.006018",
+      "opening_gap_deterioration": "0.02671599999998",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.0028519999999900847,
+      "held_seconds": 300.5242328643799,
+      "entry_delays_seconds": [
+        0.4681522846221924,
+        0.49734973907470703
+      ]
+    },
+    {
+      "branch": "100-300",
+      "id": "1790830039349652-4-standard",
+      "asset": "SOL",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.014305043677973917,
+      "signal_opening_gap": "-0.00083800000001",
+      "filled_opening_gap": "-0.031844",
+      "opening_gap_deterioration": "0.03100599999999",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.031005999999990763,
+      "held_seconds": 300.55148696899414,
+      "entry_delays_seconds": [
+        0.46320557594299316,
+        0.4958949089050293
+      ]
+    },
+    {
+      "branch": "100-60",
+      "id": "1790830300318684-10-standard",
+      "asset": "ETH",
+      "exit_reason": "max_hold",
+      "signal_forecast_cash": 0.0197398656702383,
+      "signal_opening_gap": "0.02029200000001",
+      "filled_opening_gap": "-0.009200",
+      "opening_gap_deterioration": "0.02949200000001",
+      "exit_requested_mark_after_capital": null,
+      "realized_cash": -0.009568000000015786,
+      "held_seconds": 60.554850816726685,
+      "entry_delays_seconds": [
+        0.5000479221343994,
+        0.486236572265625
+      ]
+    }
+  ]
+}

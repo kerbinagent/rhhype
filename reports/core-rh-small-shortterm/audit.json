@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "audit_source_sha256": "7ebdb8eb347a3eafa4437ec72e7c0977fa906e79178a5f8ef5a0c5e5fcb381b4",
+  "raw_sha256": "f12fb85566ac45159a2b1626da430c690d16114810ad81b98760f8e683b5663f",
+  "record_counts": {
+    "sample": 3600,
+    "admission": 28,
+    "fill": 112,
+    "exit_request": 28,
+    "terminal_position": 28,
+    "invalid": 6
+  },
+  "audited_fills": 112,
+  "checks": "Source/plan/raw/metadata hashes; past-only reference; all recorded fills reconstructed from depth; lot grid, entry minima and cap; 400ms delay and advanced source clock; terminal leg and branch accounting; per-venue wallet identities. Full inbound event stream is not retained, so first eligible book selection cannot be independently replayed from this archive.",
+  "branches": [
+    {
+      "branch": "100-10",
+      "closed": 11,
+      "cash_pnl": "-0.18355400000002720",
+      "cash_wins": 0,
+      "capital_charge": "0.0000314625795216406580",
+      "after_capital_and_stress": "-0.7311451125795488406580",
+      "stressed_wins": 0,
+      "below_public_exit_minimum_cases": 0,
+      "pending_positions": 0,
+      "wallet_identity": "passed"
+    },
+    {
+      "branch": "100-60",
+      "closed": 10,
+      "cash_pnl": "-0.15694900000002720",
+      "cash_wins": 0,
+      "capital_charge": "0.0001390522661529694988",
+      "after_capital_and_stress": "-0.6550449862661801694988",
+      "stressed_wins": 0,
+      "below_public_exit_minimum_cases": 0,
+      "pending_positions": 0,
+      "wallet_identity": "passed"
+    },
+    {
+      "branch": "100-300",
+      "closed": 4,
+      "cash_pnl": "-0.04821000000002576",
+      "cash_wins": 0,
+      "capital_charge": "0.0001911537692867610618",
+      "after_capital_and_stress": "-0.2476396177693125210618",
+      "stressed_wins": 0,
+      "below_public_exit_minimum_cases": 0,
+      "pending_positions": 0,
+      "wallet_identity": "passed"
+    },
+    {
+      "branch": "1000-10",
+      "closed": 1,
+      "cash_pnl": "-0.066402",
+      "cash_wins": 0,
+      "capital_charge": "0.00001138496889638682",
+      "after_capital_and_stress": "-0.56599067646889638682",
+      "stressed_wins": 0,
+      "below_public_exit_minimum_cases": 0,
+      "pending_positions": 0,
+      "wallet_identity": "passed"
+    },
+    {
+      "branch": "1000-60",
+      "closed": 1,
+      "cash_pnl": "-0.066402",
+      "cash_wins": 0,
+      "capital_charge": "0.00001138496889638682",
+      "after_capital_and_stress": "-0.56599067646889638682",
+      "stressed_wins": 0,
+      "below_public_exit_minimum_cases": 0,
+      "pending_positions": 0,
+      "wallet_identity": "passed"
+    },
+    {
+      "branch": "1000-300",
+      "closed": 1,
+      "cash_pnl": "-0.066402",
+      "cash_wins": 0,
+      "capital_charge": "0.00001138496889638682",
+      "after_capital_and_stress": "-0.56599067646889638682",
+      "stressed_wins": 0,
+      "below_public_exit_minimum_cases": 0,
+      "pending_positions": 0,
+      "wallet_identity": "passed"
+    }
+  ]
+}
