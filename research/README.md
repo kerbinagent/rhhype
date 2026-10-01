@@ -7,7 +7,8 @@ with routine monitoring delegated to `gpt-6-luna`. The
 [active idea memo](active-idea-research.md) contains a new absolute-funding
 screen and collateral research. Subsequent tests found small ETH monthly
 candle surpluses with unproven execution, failed longer Core/RH funding
-persistence, and missing public option-box quotes. No profitable strategy
+persistence, missing public option-box quotes, and thin native-alt carry
+surpluses consumed by displayed spreads. No profitable strategy
 is established.
 
 - [August ETH replication](../reports/core-eth-august-replication/readout.md):
@@ -20,6 +21,20 @@ is established.
 - [ETH option-box quotes](../reports/derive-box-quote-screen/readout.md):
   all 12 size outcomes unknown; selected legs have no displayed prices or
   size. Atomic RFQ liquidity and prices were not observed.
+- [Native crypto carry](../reports/core-native-candle-window-correction/readout.md):
+  all seven native spot/perp pairs tested across September and every fixed
+  weekly block; no consistently positive asset. Candle proxies remain
+  unproven on thin spot markets.
+- [Native spot execution costs](../reports/core-native-quote-cost/readout.md):
+  all 84 displayed size observations retained. Current $1,000 crossing costs
+  are $2.86 UNI, $12.56 LINK and $56.89 SKY; only UNI retains a small positive
+  cross-period sensitivity, about $1.06. No larger collector follows.
+- [Four-hour basis deviation](../reports/core-rh-four-hour-basis/readout.md):
+  none of 120 fixed asset/anchor observations triggers the frozen rule.
+- [Staked ETH collateral](../reports/derive-staked-eth-preflight/readout.md):
+  corrected public simulations show feasible margin configurations, but the
+  measured staking yield alone fails capital and trading costs; historical
+  Derive funding coverage was absent.
 
 The [broader carry proposal](broader-carry-research-proposal.md) led to a
 BTC dated-futures feasibility study. Its original run was interrupted by a

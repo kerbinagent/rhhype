@@ -1,0 +1,15 @@
+{
+  "usage_including_full_research_map_and_memo": {
+    "source": 5454,
+    "raw": 25108,
+    "output": 57583,
+    "control": 5758
+  },
+  "limits": {
+    "source": 8192,
+    "raw": 65536,
+    "output": 73728,
+    "control": 16384
+  },
+  "control_includes_2048byte_self_allowance": true
+}

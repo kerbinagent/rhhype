@@ -69,6 +69,28 @@ quote screen found $0.47 median round-trip cost at $1,000. The
 [funding-swap assessment](core-eth-fixed-funding-assessment.md) is also marginal.
 These are research leads with inferred units and unproven execution.
 
+**Full native crypto universe follow-up:** a separately frozen screen kept
+all seven active native crypto spot/perp pairs. Four September funding-only
+budgets were positive. Adding fixed-quantity candle basis and inferred dollar
+funding leaves UNI +$3.92, LINK +$2.33 and SKY +$1.11 per roughly $1,000 spot
+with equal cash reserve; the other four monthly proxies are negative.
+All weekly blocks and the original DNS/date-validation failures remain in
+the [full readout](../reports/core-native-candle-window-correction/readout.md).
+Thin spot volume and unmatched candle trade times limit those proxies.
+Three prospective book rounds across all seven assets and four sizes found
+median $1,000 crossing costs of $2.86 UNI, $12.56 LINK and $56.89 SKY.
+Only UNI leaves about $1.06 in a cross-period sensitivity, with unstable
+weekly results and unresolved fills/margin. This does not justify a larger
+collector. [All quote outcomes](../reports/core-native-quote-cost/readout.md).
+
+**Staked collateral follow-up:** Derive supports simulated WSTETH collateral
+and ETH shorts. The valid, precision-corrected public simulations address
+current margin only. Observed Lido APR averages 2.261%; a fixed-price 30-day
+sensitivity loses $3.78 per roughly $1,000 spot after capital, perp fees and
+stress, before missing costs. Historical Derive funding returned no rows;
+instantaneous zero funding is not a monthly forecast.
+[Readout](../reports/derive-staked-eth-preflight/readout.md).
+
 ### 2. Portfolio-margin carry on Hyperliquid
 
 Current official documentation explicitly supports spot holdings offsetting
@@ -95,6 +117,11 @@ SOL/BTC/ETH. All 15 cost-adjusted rate proxies fail. SOL's aggregate
 14.21 bp is below 68.01 bp capital plus stress; its first two evaluated
 weeks lose funding before costs. The earlier favorable daily difference
 was not a stable monthly advantage. No expanded collector follows.
+
+A separate four-hour convergence rule using a prior-day median and fixed
+10 bp trigger found zero signals across all 120 predefined asset/anchors.
+[Readout](../reports/core-rh-four-hour-basis/readout.md). No trade P&L follows
+from the absence of signals.
 
 ## New documentation discrepancy to track
 
