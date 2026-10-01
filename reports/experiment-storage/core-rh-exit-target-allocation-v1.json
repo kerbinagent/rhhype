@@ -1,0 +1,77 @@
+{
+  "schema": "core-rh-exit-target-v1",
+  "recorded_utc": "2026-10-01T15:24:10.589730+00:00",
+  "previous": "reports/experiment-storage/future-review-gzip-rebalance-v2.json",
+  "previous_sha256": "938ae2a1dc0d16180e4b8dcb640aeb2a11f0ff6ddb46e3c143d03236f7358259",
+  "new_maximum_bytes": 491520,
+  "categories_bytes": {
+    "source": 32768,
+    "metadata": 65536,
+    "raw": 262144,
+    "output": 98304,
+    "control": 32768
+  },
+  "active_research_pool_bytes": 19922944,
+  "active_research_reserved_bytes": 19292160,
+  "active_research_headroom_bytes": 630784,
+  "overall_reservation_bytes": 836777216,
+  "assets": [
+    "PONS",
+    "CASHCAT"
+  ],
+  "confirmation_seconds": [
+    0,
+    0
+  ],
+  "exit_targets_bps": [
+    1,
+    6
+  ],
+  "entry_forecast_hurdle_bps": 1,
+  "duration_seconds": 900,
+  "entry_end_seconds": 700,
+  "raw_soft_cap": 160000,
+  "source_pins": [
+    {
+      "path": "scripts/core_rh_active_alt_confirmation.py",
+      "sha256": "72149e9542f105b82ad9500477940b869e2b6b649bb89dc61f02c8becc2fd479"
+    },
+    {
+      "path": "scripts/core_rh_persistent_entry.py",
+      "sha256": "d6a549af5ed2ca5767d364d228b50c279126daa217a7a85be22c5ad279c3ce04"
+    },
+    {
+      "path": "tests/test_core_rh_persistent_entry.py",
+      "sha256": "269dbfcd486b0e81c4a7e0c2259cab07ac8035d4412a3edceca19126b3c7f4f8"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/core_rh_exit_target.py",
+      "sha256": "963a3b808d37999092f3cb7484a4befec0a98a3b3dcbcc3946adb118a2e58190"
+    },
+    {
+      "path": "tests/test_core_rh_exit_target.py",
+      "sha256": "ec85972a812c4dca34505baa7bfe88bd9e112e97e98dd4d71bd1e44d9b4e1cf2"
+    },
+    {
+      "path": "scripts/audit_core_rh_exit_target.py",
+      "sha256": "c123994aa650f8568150e1d105e7a8a2eed1ce2f8782e6b578a6b6932cd1bfb7"
+    }
+  ],
+  "scope": "Prospective exit-only comparison: same immediate entry and1bp forecast hurdle, distinct1bpvs6bp take-profit targets. Independent100perleg600prefunded portfolios. Same120smedian2sembargo90count89span,5bpexcursion,400msorders10bplimits60shold30scooldown30attemptcap120shourguard. Public paper only; freshzeroStandardmetadata,parityconditional,separate5bpstress.",
+  "branch_construction": "Frozen collector accepts two confirmation arguments, both zero. Wrapper maps them in order to exit targets1and6; signal confirmation remains0 in both. Both arms fully reported; no performance pooling.",
+  "hypothesis": "Latest paired PONS exit request +.010890 cash mark became -.082798 after .599s. Test whether a larger exit target helps cash execution without changing the entry hurdle. Selected after past outcome; fresh capture prospective. May increase max-hold losses. No interim economics or extension.",
+  "limits": "One feed connection each max3attempts,128MBingress or250k messages,900sfixed endpoint,160000rawsoft admissionstop262144hard cap; retain all failures/partials/unresolved. No funding credit.",
+  "verification": "Synthetic test: same low forecast hurdle admits both, smaller profit mark exits only1bp arm, higher mark exits6bp arm,400ms entry and exit delays enforced. Independent auditor also rebuilds TP request marks and verifies target plus max-hold trigger. No economic outcome read before endpoint."
+}
