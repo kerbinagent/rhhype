@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-depth-context-preparation-v1",
+  "recorded_utc": "2026-10-01T21:13:34.347568+00:00",
+  "previous": "reports/experiment-storage/completed-single-venue-depth-prefix-closeout-v1.json",
+  "previous_sha256": "ac2aa47896dd6a9fe33a6c55cfc655e5908323119fddbcb18bbcd0d8cc727845",
+  "reserved_bytes": 32768,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 53321728,
+  "active_research_headroom_bytes": 155648,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retrospective all-episode local/reference price context for both depth samples. Source,protocol and compressedoutput within32768bytes. No raw acquisition, altered strategy or cash change. Use actual execution callbacks and latest prior reference; retain strict250ms freshness misses."
+}
