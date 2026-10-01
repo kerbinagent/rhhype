@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-depth-prefix-preparation-v1",
+  "recorded_utc": "2026-10-01T21:08:06.597516+00:00",
+  "previous": "reports/experiment-storage/single-venue-depth-replication-v1.json",
+  "previous_sha256": "2733c2bed734da15cd42d7ca396c4a56dec68f91b23198e81fb91afedd5d5d66",
+  "reserved_bytes": 32768,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 53452800,
+  "active_research_headroom_bytes": 24576,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare separate incomplete-prefix replay and audit before looking at economic results. Retain failed full replication; original files and gates unchanged. Source/test/control limited to32768bytes; use original replication output reservation131072 for descriptive outputs, no additional capture or extra output reservation."
+}
