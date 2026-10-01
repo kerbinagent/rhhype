@@ -1,0 +1,156 @@
+{
+  "schema": "single-venue-event-clustering-v1",
+  "recorded_utc": "2026-10-01T22:05:39.321988+00:00",
+  "previous": "reports/experiment-storage/single-venue-executable-shock-v1.json",
+  "previous_sha256": "b2d9878e8714d5fdd4fd79efe9ac2b49ff6e42a61d6736f7d12818340f4cb2f6",
+  "reserved_bytes": 8192,
+  "active_research_pool_bytes": 87031808,
+  "active_research_reserved_bytes": 84180992,
+  "active_research_headroom_bytes": 2850816,
+  "overall_reservation_bytes": 836777216,
+  "source": "reports/single-venue-research/depth-batch-timing.json",
+  "source_sha256": "0efad946f8c81b2f15334dde6f2d0b57d47e1b81466a2a234f68de0392c803c0",
+  "retrospective": true,
+  "method": "Group every priorbatch shock by(window,venue,exact storeddecisionoffset). Counts signals that sharedonepost-quoteupdate. This is not evidence they shareoneparentorder,and distinctupdatesare not necessarilyindependent. No activebatchdata,rulechangeornewcashoutcome.",
+  "windows": [
+    {
+      "window": 1,
+      "print_signals": 6,
+      "distinct_venue_decision_updates": 1,
+      "maximum_prints_per_update": 6,
+      "update_period_counts": {
+        "before_122s": 1
+      },
+      "updates": [
+        {
+          "venue": "lighter",
+          "offset_seconds": 5.58550561,
+          "period": "before_122s",
+          "print_signals": 6
+        }
+      ]
+    },
+    {
+      "window": 2,
+      "print_signals": 32,
+      "distinct_venue_decision_updates": 10,
+      "maximum_prints_per_update": 7,
+      "update_period_counts": {
+        "at_or_after_480s": 10
+      },
+      "updates": [
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 533.381427656,
+          "period": "at_or_after_480s",
+          "print_signals": 2
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 533.580482256,
+          "period": "at_or_after_480s",
+          "print_signals": 2
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 533.779843089,
+          "period": "at_or_after_480s",
+          "print_signals": 5
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 534.58003827,
+          "period": "at_or_after_480s",
+          "print_signals": 7
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 539.606372486,
+          "period": "at_or_after_480s",
+          "print_signals": 1
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 563.581858185,
+          "period": "at_or_after_480s",
+          "print_signals": 3
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 564.005554669,
+          "period": "at_or_after_480s",
+          "print_signals": 3
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 565.602053538,
+          "period": "at_or_after_480s",
+          "print_signals": 6
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 565.997966486,
+          "period": "at_or_after_480s",
+          "print_signals": 2
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 568.030959863,
+          "period": "at_or_after_480s",
+          "print_signals": 1
+        }
+      ]
+    },
+    {
+      "window": 3,
+      "print_signals": 8,
+      "distinct_venue_decision_updates": 6,
+      "maximum_prints_per_update": 2,
+      "update_period_counts": {
+        "before_122s": 2,
+        "admission_period": 4
+      },
+      "updates": [
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 33.214730847,
+          "period": "before_122s",
+          "print_signals": 2
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 71.270652068,
+          "period": "before_122s",
+          "print_signals": 1
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 236.012008834,
+          "period": "admission_period",
+          "print_signals": 1
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 284.222005655,
+          "period": "admission_period",
+          "print_signals": 2
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 374.862037029,
+          "period": "admission_period",
+          "print_signals": 1
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 378.011317442,
+          "period": "admission_period",
+          "print_signals": 1
+        }
+      ]
+    }
+  ],
+  "total_print_signals": 46,
+  "total_venue_decision_updates": 17,
+  "total_admission_period_updates": 4
+}
