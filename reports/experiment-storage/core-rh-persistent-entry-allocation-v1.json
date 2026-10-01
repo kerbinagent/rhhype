@@ -1,0 +1,74 @@
+{
+  "schema": "core-rh-persistent-entry-v1",
+  "recorded_utc": "2026-10-01T13:11:19.369354+00:00",
+  "previous": "reports/experiment-storage/completed-lit-offset-doc-refresh-closeout-v1.json",
+  "previous_sha256": "b409d90426c9e326dcdc351f9b00c3800696e3cc0c766b1948e8de47913cc6f3",
+  "new_maximum_bytes": 1064960,
+  "categories_bytes": {
+    "source": 49152,
+    "metadata": 65536,
+    "raw": 786432,
+    "output": 131072,
+    "control": 32768
+  },
+  "active_research_reserved_bytes": 10813440,
+  "active_research_headroom_bytes": 4915200,
+  "overall_reservation_bytes": 836777216,
+  "assets": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP",
+    "SUI",
+    "NEAR",
+    "HYPE",
+    "LIT",
+    "ZEC",
+    "VVV"
+  ],
+  "budgets": [
+    100
+  ],
+  "horizons": [
+    60
+  ],
+  "entry_slippage_bps": 10,
+  "primary": "100-60-2s-confirm",
+  "duration_seconds": 900,
+  "entry_end_seconds": 700,
+  "raw_soft_cap": 500000,
+  "scope": "Two independent $100perleg portfolios, $600prefunded each/$300pervenue, max3positions. Same10cryptoassets and400ms orders. Only difference is requiring last3eligible basis samples within4seconds, spanning>=2sec, latestage<=1.5sec, adjacentgaps<=1.5sec, each residual>=5bp versus current past-only median in entry direction. No future observations. Control immediate. No auth/orders.",
+  "strategy": "Arrival reference sampled>=1secapart,120smedian/2secembargo/90count/89secspan. Currentexcursion>=5bp and forecastclears costs+1bp target; confirmedbranch adds2sec persistence. Same10bp IOC limits,1bp takeprofit/60sec hold,30sec cooldown/30attemptcap, entryend700s, runtime900s,2secsourceage/250msskew,120sechourguard. All failures/partials/unresolved retained. USDGUSDC parityconditional; fee0freshmetadata;5bpstress separate.",
+  "storage": "Boundedchunkmetadata2MB each,1feedconnectioneach max3attempts; fullwireunretained; captureeveryorderpendingcallback, admission/history andfill/exit/terminal/invalidation, allsampledbasisbooks;500kBsoftstopadmissions786432Bhardcap. Endpointaudit. Nointerimeconomics.",
+  "source_pins": [
+    {
+      "path": "scripts/core_rh_persistent_entry.py",
+      "sha256": "d6a549af5ed2ca5767d364d228b50c279126daa217a7a85be22c5ad279c3ce04"
+    },
+    {
+      "path": "scripts/audit_core_rh_persistent_entry.py",
+      "sha256": "1ad71693944b112f10cac91759a53a712e97f0a34ae6600a3ff87707480dd119"
+    },
+    {
+      "path": "tests/test_core_rh_persistent_entry.py",
+      "sha256": "269dbfcd486b0e81c4a7e0c2259cab07ac8035d4412a3edceca19126b3c7f4f8"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    }
+  ],
+  "test": "Two tests passed: future/stale/gap/direction exclusions and signalspike filtered vs sustainedadmitted, 400ms delayed pairedentry andfullterminalcash. No economic tuning on future capture.",
+  "confirmation_seconds": [
+    0,
+    2
+  ]
+}
