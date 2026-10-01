@@ -5288,3 +5288,36 @@ Archive 3,681,440 / 5,242,880 B; 156 future pairs at 5,342 B project
 4,514,792 B, margin 728,088 B. Next review **20:46:33 UTC**.
 Review156's owned four files were preserved in root commit 702b445 due
 shared staging timing; future routine commits use exact owned paths.
+
+
+## Review 158 — 1 October 2026 20:46:33 UTC
+
+All eight strategy and aborted coverage fields complete. Exact report
+`review-20261001T204633Z.json.gz`: raw 18,277 B, SHA-256
+`a8111aff534ae6a934a51b9380848a26880805fb9a8926be95259198257c4647`;
+gzip 2,575 B, SHA-256
+`d53274f25a0ad487150859c3bad238d5a43c126f90bc01b2180d90b480f31f19`.
+Independent `current-epoch-at-review158.json.gz`: read 20:47:20.944631 UTC,
+updated 20:47:20.486836 UTC; raw 9,296 B, SHA-256
+`0919febd4e7c1b123c84ddb11a66e7fcf4a5f8966e2897164ca688aa4ea68d9c`;
+gzip 1,724 B, SHA-256
+`6766f38f439bd5b3192c036f8219d677056c5e0a59b8bd7810d0cd6dc3d3f715`.
+Exact decompression and per-write cap/growth guards passed.
+
+One exact Premium paired loss/−$1.5166069500. No convergence closes,
+gains, estimates, aborts or entry rejections. Fees $0.8788151752, other
+costs $0.4994454420, capital $0.0000343328.
+
+Separate epoch snapshot convergence 630 / −$739.4848469301 and Premium
+1,222 / −$2,193.5590510901. Convergence rose one while report delta zero;
+that later close stays in its own report window. Premium rose one matching
+report. Health running/ok, four feeds, 101 pairs, CPU 62.79%, p95 lag
+35.24 ms, RSS 229.07 MiB, 822.0 books/s, metadata age 285.3 s. Routine
+pulses fresh/ok, no service change. Carry 20:45: 243 sampled, persistent
+invalid slot 71, 620 future/interrupted; running, no errors/retries/economic
+evaluation. No carry sample contents or active root study outputs inspected.
+
+Reviews 66–158: 2,413 completions, 2,380 exact losses, one estimated loss,
+five audited paired gains and 27 audited failed-hedge rescue gains.
+Archive 3,685,739 / 5,242,880 B; 155 future pairs at 5,342 B project
+4,513,749 B, margin 729,131 B. Next review **21:06:33 UTC**.

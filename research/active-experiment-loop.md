@@ -1834,3 +1834,13 @@ running/ok. Separate epoch increments match report. Archive 3,681,440 B;
 156 future pairs project 4,514,792 B, margin 728,088 B. Carry 20:25:
 239 sampled, invalid slot 71, 624 future/interrupted; no errors/retries/
 evaluation. Next review 20:46:33 UTC. Review156 preserved in root702b445.
+
+
+### Review 158, 1 October 20:46 UTC
+
+Complete coverage: one exact Premium paired loss/−$1.51661; no convergence
+closes/gains/estimates/aborts/rejections. Separate epoch convergence rose
+one after report boundary; keep it in next report. Four feeds/101 pairs
+fresh, running/ok. Archive 3,685,739 B; 155 future pairs project 4,513,749 B,
+margin 729,131 B. Carry 20:45: 243 sampled, invalid slot 71, 620 future/
+interrupted; no errors/retries/evaluation. Next review 21:06:33 UTC.
