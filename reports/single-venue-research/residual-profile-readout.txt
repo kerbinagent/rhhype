@@ -1,0 +1,19 @@
+SMALLER RELATIVE GAPS: FIXED TWO-WINDOW QUOTE PROFILES
+Windows 1=2026-10-01 22:35..22:45UTC;2=23:05..23:15UTC. Ten assets, both venues, absresidual bins below1/[1,3)/atleast3bp,10/60second holds.240groups fully retained in gzip.
+Rolling reference, delays, native quantity, first-eligible clocks and all missing outcomes match frozen protocol. This is an exploratory retrospective quote study, NOT IOC execution, cash accounting or an independent statistical sample. Every sampled/admitted profile reconciles. Quotes include local entry/exit depth and spread, but no capital/funding/fee/private-fill costs. Both windows have zero Standard fee metadata.
+Each horizon uses the same entry observations; profiles overlap and can have common market drift. Reference contribution assumes USDC/USDG parity; it is accounting, not causal attribution. Missing reference pairs leave local quotes in the results.
+PREDECLARED SCREEN: same asset/venue/bin/horizon positive average quote change and at least30matched profiles in EACH window. RESULT: ZEROgroups pass. None pass5bp inboth either. Thirty overlapping profiles do not imply thirty independent observations.
+POSITIVE GROUPS with at least30matched profiles in individual windows (bp):
+Window1: 64groups with>=30matched;4positive;0above5bp.
+HYPE lighter below1 hold60s n=316 mean_quote=1.127991 mean_mid=2.084714 long/short=121/195
+ZEC lighter 1to3 hold60s n=60 mean_quote=0.607826 mean_mid=1.548172 long/short=34/26
+LIT lighter below1 hold60s n=213 mean_quote=0.124442 mean_mid=1.762140 long/short=95/118
+LIT rh_lighter 1to3 hold60s n=105 mean_quote=2.624274 mean_mid=6.238824 long/short=44/61
+Window1 10s: admitted=6366 matched=6341. Counts describe hypothetical profiles, not a trading portfolio.
+Window1 60s: admitted=6366 matched=6336. Counts describe hypothetical profiles, not a trading portfolio.
+Window2: 64groups with>=30matched;2positive;0above5bp.
+ZEC rh_lighter 1to3 hold60s n=40 mean_quote=0.032515 mean_mid=3.112807 long/short=21/19
+VVV rh_lighter atleast3 hold60s n=32 mean_quote=4.578176 mean_mid=10.298316 long/short=24/8
+Window2 10s: admitted=6156 matched=6099. Counts describe hypothetical profiles, not a trading portfolio.
+Window2 60s: admitted=6156 matched=6089. Counts describe hypothetical profiles, not a trading portfolio.
+Interpretation: widening the measurement to smaller gaps and60second holds did not reveal a positive average group that persisted across these two windows. No claim that opportunities never exist, or that all possible models/horizons are excluded. No threshold, asset or direction selected for live trading. A future event-window study remains useful to assess a different observed market regime, with rules frozen beforehand.
