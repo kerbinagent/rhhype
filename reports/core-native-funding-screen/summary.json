@@ -1,0 +1,134 @@
+{
+  "actual_pnl": null,
+  "development_not_holdout": true,
+  "rate_units_percent_inferred": true,
+  "direction": "long funded native spot / short corresponding perp, every asset",
+  "capital_scenario": "2x one-leg principal at 5% simple annual; 5bp stress per block",
+  "omitted": [
+    "changing oracle notional",
+    "basis",
+    "spreads and impact",
+    "margin path",
+    "actual execution"
+  ],
+  "overlap": "full-month row overlaps weekly diagnostics; boundary payments intentionally excluded",
+  "outcomes": [
+    {
+      "asset": "ETH",
+      "market_id": 0,
+      "status": "complete_rate_proxy",
+      "actual_pnl": null,
+      "blocks": [
+        {
+          "start_day": 1,
+          "end_day": 30,
+          "events": 719,
+          "rate_sum_bps": "68.6000",
+          "capital_and_stress_bps": "87.19178082191780821917808219",
+          "rate_residual_bps": "-18.59178082191780821917808219",
+          "negative_hours": 52,
+          "max_capital_multiple_before_execution_cost": "1.547600000000000000000000000"
+        },
+        {
+          "start_day": 1,
+          "end_day": 7,
+          "events": 167,
+          "rate_sum_bps": "18.5000",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-5.67808219178082191780821918",
+          "negative_hours": 1,
+          "max_capital_multiple_before_execution_cost": "1.407857142857142857142857143"
+        },
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "events": 167,
+          "rate_sum_bps": "14.4600",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-9.71808219178082191780821918",
+          "negative_hours": 12,
+          "max_capital_multiple_before_execution_cost": "0.9865428571428571428571428571"
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "events": 167,
+          "rate_sum_bps": "9.8900",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-14.28808219178082191780821918",
+          "negative_hours": 39,
+          "max_capital_multiple_before_execution_cost": "0.5099571428571428571428571429"
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "events": 167,
+          "rate_sum_bps": "19.8000",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-4.37808219178082191780821918",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "1.543428571428571428571428571"
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "events": 47,
+          "rate_sum_bps": "5.5700",
+          "capital_and_stress_bps": "10.47945205479452054794520548",
+          "rate_residual_bps": "-4.90945205479452054794520548",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "0.2080500000000000000000000000"
+        }
+      ]
+    },
+    {
+      "asset": "LIT",
+      "market_id": 120,
+      "status": "unknown",
+      "actual_pnl": null,
+      "error": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "asset": "UNI",
+      "market_id": 30,
+      "status": "unknown",
+      "actual_pnl": null,
+      "error": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "asset": "LINK",
+      "market_id": 8,
+      "status": "unknown",
+      "actual_pnl": null,
+      "error": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "asset": "LDO",
+      "market_id": 46,
+      "status": "unknown",
+      "actual_pnl": null,
+      "error": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "asset": "SKY",
+      "market_id": 79,
+      "status": "unknown",
+      "actual_pnl": null,
+      "error": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "asset": "AAVE",
+      "market_id": 27,
+      "status": "unknown",
+      "actual_pnl": null,
+      "error": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    }
+  ],
+  "provenance": [
+    {
+      "asset": "ETH",
+      "reused": "reports/core-eth-funding-history/202609-v1/response.json.gz",
+      "raw_sha256": "96e775bb3e89f79b72c19ac0f643cbaf61019632459c9b6010a114b48be848f3"
+    }
+  ]
+}

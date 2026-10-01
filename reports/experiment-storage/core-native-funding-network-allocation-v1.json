@@ -1,0 +1,107 @@
+{
+  "schema": "core-native-funding-network-correction-v1",
+  "recorded_utc": "2026-10-01T03:46:06.609557+00:00",
+  "previous": "reports/experiment-storage/core-native-funding-screen-allocation-v1.json",
+  "previous_sha256": "12b9f21ccf3be230647038d3663fe785337285d92558fedc3afa05ca5241fc65",
+  "new_maximum_bytes": 131072,
+  "categories_bytes": {
+    "source": 8192,
+    "raw": 65536,
+    "output": 49152,
+    "control": 8192
+  },
+  "active_research_reserved_bytes": 1351680,
+  "active_research_headroom_bytes": 2842624,
+  "requests_max": 6,
+  "retries": 0,
+  "universe": [
+    [
+      "ETH",
+      0
+    ],
+    [
+      "LIT",
+      120
+    ],
+    [
+      "UNI",
+      30
+    ],
+    [
+      "LINK",
+      8
+    ],
+    [
+      "LDO",
+      46
+    ],
+    [
+      "SKY",
+      79
+    ],
+    [
+      "AAVE",
+      27
+    ]
+  ],
+  "input_pins": [
+    {
+      "path": "reports/funding-carry/raw/lighter_core/markets.json",
+      "sha256": "3a94067dce1199f9cedff7193a319b565c7e0e90210fa5f27f01dcac37aee513"
+    },
+    {
+      "path": "reports/core-eth-funding-history/202609-v1/response.json.gz",
+      "sha256": "37a2a7d06c1db11872c364004b2363923360779dacc196d324faaaf4b3436a42"
+    },
+    {
+      "path": "scripts/core_native_funding_screen.py",
+      "sha256": "facc18b817305a45c0b8930c1b05e64583f14508f8bc94b671242a57c6e4e80e"
+    },
+    {
+      "path": "scripts/core_native_funding_network_correction.py",
+      "sha256": "5f82361540337551a877bc8cbdc3456268947e77a951b278f5aa0746f5204960"
+    },
+    {
+      "path": "reports/core-native-funding-screen/terminal.json",
+      "sha256": "3bfd677f417c6319160925c7f0dc2c1d4223658429c79340334543772b13c66d"
+    }
+  ],
+  "reused_eth": "reports/core-eth-funding-history/202609-v1/response.json.gz",
+  "universe_rule": "Every active native crypto USDC spot with corresponding active same-underlying perp in archived catalogue, exclude tokenized equities/gold and inactive AZTEC. No funding-based asset selection. Current-survivor/development universe, not historical listing proof.",
+  "window": "September1 00:00 to October1 00:00 UTC, 720 exact hourly rows; boundary events excluded separately per interval",
+  "blocks": [
+    [
+      0,
+      30
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      7,
+      14
+    ],
+    [
+      14,
+      21
+    ],
+    [
+      21,
+      28
+    ],
+    [
+      28,
+      30
+    ]
+  ],
+  "direction": "Long funded spot and short perp fixed for every asset, no reverse direction or borrowed spot",
+  "hurdle": "5% simple annual capital on2x principal, plus5bp stress per interval; Standard public zero fees scenario. No collateral solvency, basis, execution, or cashflow inference. ETH shares same2x scenario here for comparability.",
+  "classification": "Historical exploratory development, all42 asset/block rows retained, fullmonth overlaps diagnostics. Positive rows require separate candle/execution/collateral work, not automatic collector or promotion.",
+  "docs": [
+    "https://apidocs.lighter.xyz/reference/fundings",
+    "https://docs.lighter.xyz/trading/funding"
+  ],
+  "source_frozen_before_requests": true,
+  "correction": "All six initial new requests failed DNS resolution inside restricted network environment and retained no response. Explicit separate attempt with network permission, identical assets/endpoints/times/analysis; preserve original unknown outcomes. No further automatic retries."
+}
