@@ -4500,3 +4500,54 @@ with no terminal error, retries or economic evaluation. The invalid arrival's
 sample remains unopened. Reviews 66–139 total 2,056 closes: 2,033 losses, two
 paired gains and 21 audited failed-hedge rescue gains. The overall window
 remains deeply negative. Next review: **14:46:33 UTC**.
+
+
+## Review 140 — 1 October 2026 14:46:33 UTC
+
+All eight strategy ledgers and aborted-trade coverage were complete. The exact
+report `review-20261001T144633Z.json.gz` preserves 20,126 raw bytes (SHA-256
+`8947aff5ad8b07a5512ae28c3f08672cc40165161b0c1d4689df7845a8f96f52`) in a
+3,095-byte deterministic gzip (SHA-256
+`cfaf59033a8b31f934f8161a39502209f37202a78b8c8bc0248e16bd6e16828c`). Its
+separate epoch snapshot `current-epoch-at-review140.json.gz` was read at
+14:47:18.958904 UTC and updated at 14:47:18.504817 UTC; raw size 6,453 B,
+SHA-256 `54dbc6c421d9b16ecddbe7f9c9ea8e82c3e3d872c13b1b50d39848692ee7f2db`,
+gzip size 1,614 B, SHA-256
+`c256308f4c452f189d3467c53c13f71eb7a11014d72eebe0884ae8b1cf4b5931`. Both
+archives passed exact decompression equality.
+
+Review140 added 19 exact closes, net −$26.8649785189: convergence two /
+−$0.2702595191 (one loss and one win), Premium 17 / −$26.5947189998 (16
+losses and one win). There was one separate convergence abort and no estimated
+trades. Rejections were nine Hyperliquid price limits and one RH Lighter price
+limit. The two wins, IDs `1790864806385763-24070-convergence` and
+`1790864806111173-24069-premium`, were independently audited as one-sided
+NEAR-long rescues after Hyperliquid hedge price-limit rejection, not paired
+arbitrage. The source positions are retained in
+`review140-positive-records.json.gz` (2,244 B, SHA-256
+`f88b0bff40edb87f3e847ead33ffd7681e2c5c76d31de6d08bdfdba162b54410`); the
+root audit is `review140-positive-root-audit.json` (1,422 B, SHA-256
+`00c2d8c28f6f28ce663f590cfd58c28d7de56932081044c0a9c2ace07b4aa835`). Audit
+reconciled terminal quantity/cash, fees, 5 bp stress, capital and hour
+boundaries. Original depth has aged out of the bounded evidence archive; no
+fill-depth or private-fill claim is made. Combined win net was about $0.717461.
+
+The epoch snapshot counted convergence 558 / −$659.6922 and Premium 958 /
+−$1,758.8108. Convergence rose by two since review139, matching the report;
+Premium rose by 16 versus 17 closes in the report, so review accounting uses
+the report delta. Report health was running/performance ok, with four feeds,
+97 pairs, CPU 67.87%, p95 loop lag 13.96 ms, RSS 256.23 MiB, 1,269.0 books/s
+and metadata age 703.1 s. There were no open positions and three pending
+funding items. The previous 98-pair list is not retained, so the decrease
+cannot be assigned to a specific pair from available snapshots. Current
+`data/paper-monitor/markets.json` has 97 pairs and no failed venues; record
+this as coverage health without inferring a cause or changing the running
+service.
+
+Carry v2 metadata at 14:45 showed 171 sampled slots, persistent
+`arrival_invalid` slot 71 and 692 future/interrupted slots; status running,
+with no terminal error, retries or economic evaluation. The invalid sample
+remains unopened. Reviews 66–140 total 2,075 closes: 2,050 losses, two paired
+gains and 23 audited failed-hedge rescue gains. The overall window remains
+deeply negative. Manual archive size, including positive records and audit, is
+3,580,381 / 6,291,456 bytes. Next review: **15:06:33 UTC**.

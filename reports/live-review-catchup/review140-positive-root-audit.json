@@ -1,0 +1,35 @@
+{
+  "audit": "passed",
+  "source_sha256": "f88b0bff40edb87f3e847ead33ffd7681e2c5c76d31de6d08bdfdba162b54410",
+  "classification": "Both are failed-Hyperliquid-hedge one-sided NEAR-long rescues. Not paired arbitrage wins. Terminal quantity/cash/fees/5bpstress/capital/hour boundary reconciled. Original depth no longer available in the bounded rolling evidence archive; no new depth or private-fill claim.",
+  "records": [
+    {
+      "id": "1790864806385763-24070-convergence",
+      "asset": "NEAR",
+      "filled_venue": "lighter",
+      "side": "long",
+      "rejected_venue": "hyperliquid",
+      "cash_after_fees": "1.109900",
+      "fees": "0.000000",
+      "stress": "0.4987658530",
+      "capital": "0.000001826230955782333890728009576",
+      "net": "0.6111323207690442176661092720",
+      "unhedged_seconds": "1.1546905040740967",
+      "notional_size": "1000 budget; actual entry value 997.531706"
+    },
+    {
+      "id": "1790864806111173-24069-premium",
+      "asset": "NEAR",
+      "filled_venue": "rh_lighter",
+      "side": "long",
+      "rejected_venue": "hyperliquid",
+      "cash_after_fees": "0.60394955715",
+      "fees": "0.69712144285",
+      "stress": "0.497618620",
+      "capital": "0.000002115411936448982482496492897",
+      "net": "0.1063288217380635510175175035",
+      "unhedged_seconds": "1.3406176567077637",
+      "notional_size": "1000 budget; actual entry value 995.23724"
+    }
+  ]
+}
