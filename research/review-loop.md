@@ -4589,3 +4589,43 @@ Reviews 66–141 total 2,094 closes: 2,069 losses, two paired gains and 23
 audited failed-hedge rescue gains. The two review140 wins are included among
 the rescue gains; no new positive records this review. The overall window
 remains deeply negative. Next review: **15:26:33 UTC**.
+
+
+## Review 142 — 1 October 2026 15:26:33 UTC
+
+All eight strategy and aborted-trade coverage fields were complete. The exact
+report `review-20261001T152633Z.json.gz` preserves 20,275 raw bytes (SHA-256
+`b1b44d49e6950bc51612dd883a28d2ef4bc4602987de388b50cd32887e524b55`) in a
+3,079-byte deterministic gzip (SHA-256
+`b405f07daf15b5554f35205e7a6d83e17f554b505d48b2f5bc2a3243ed8de5d7`). Its
+separate epoch snapshot `current-epoch-at-review142.json.gz` was read at
+15:27:13.779075 UTC and updated at 15:27:13.402367 UTC; raw size 6,450 B,
+SHA-256 `14bf00cc517454a5b5725dfc7cdb6fe645a1162f2a6f1e573a76d2d4887cd971`,
+gzip size 1,612 B, SHA-256
+`81ed4aa8099f7b5963dba7ae16668dc366ee0cc98b140cc727c01838f858f900`. Both
+archives passed exact decompression equality. Manual review archive size is
+3,589,729 / 5,242,880 bytes.
+
+Review142 added 22 exact losses, net −$25.4840848349: convergence nine /
+−$5.8752566174 (all failed hedges), Premium 13 / −$19.6088282175 (six paired
+losses and seven failed hedges). There were no wins, estimates or aborts.
+Entry rejections: 16 Hyperliquid price limits. Fees were $10.1611324336, other
+costs $10.9783511750 and capital costs $0.0002582263. The epoch snapshot
+showed convergence 570 / −$667.6752 and Premium 985 / −$1,801.4928; since
+review141, convergence rose by nine, matching the report, while Premium rose
+by 11 versus 13 report closes. Review totals use report deltas only.
+
+Health remained running/performance ok, four feeds, 97 pairs, CPU 60.56%, p95
+loop lag 13.39 ms, RSS 261.80 MiB, 960.1 books/s and metadata age 698.7 s.
+No open positions; three pending funding items. Carry v2 metadata at 15:25
+showed 179 sampled slots, persistent `arrival_invalid` slot 71 and 684 future /
+interrupted slots; collector running, no terminal error, retries or economic
+evaluation. Its invalid sample remains unopened.
+
+Reviews 66–142 total 2,116 closes: 2,091 losses, two paired gains and 23
+audited failed-hedge rescue gains. The overall window remains deeply negative.
+The adopted 5,242,880 B manual archive cap preserves all prior artifacts. The
+remaining scheduled reports and snapshots through 4 October 00:26 UTC number
+171; at the prior worst observed 5,342 B per pair, projected use is 4,503,211 B
+including this review's archive, with 739,669 B headroom. Next review:
+**15:46:33 UTC**.
