@@ -1,0 +1,53 @@
+{
+  "schema": "spot-perp-unit-forecast-upper-bound-v1",
+  "raw_sha256": "b5423b552c8149f61f52a636ace663ce561c4ed736b7686844e9aea9c0ad9563",
+  "minimum_reference_count": 60,
+  "assets": {
+    "UNI": {
+      "eligible_samples": 247,
+      "excursion_at_least_5bp": 11,
+      "positive_optimistic_bound": 0,
+      "best_case": {
+        "timestamp": 1790872669.0641932,
+        "excursion_bps": "6.067496338754891202681721948",
+        "spot_spread_bps": "14.99647141848976711362032463",
+        "perp_spread_bps_on_spot_mid": "2.095095271700776287932251235",
+        "forecast_margin_upper_bound_bps": "-12.02482017500657668722653493",
+        "passive_spot_bid_saving_bps": "14.99647141848976711362032463"
+      }
+    },
+    "AAVE": {
+      "eligible_samples": 229,
+      "excursion_at_least_5bp": 5,
+      "positive_optimistic_bound": 0,
+      "best_case": {
+        "timestamp": 1790872567.9164815,
+        "excursion_bps": "5.282816474607231413198580173",
+        "spot_spread_bps": "11.37757550976871522284048284",
+        "perp_spread_bps_on_spot_mid": "2.725877465882088022138865679",
+        "forecast_margin_upper_bound_bps": "-9.821205379819060267541910366",
+        "passive_spot_bid_saving_bps": "11.37757550976871522284048284"
+      }
+    },
+    "LINK": {
+      "eligible_samples": 269,
+      "excursion_at_least_5bp": 0,
+      "positive_optimistic_bound": 0,
+      "best_case": null
+    },
+    "LDO": {
+      "eligible_samples": 26,
+      "excursion_at_least_5bp": 5,
+      "positive_optimistic_bound": 0,
+      "best_case": {
+        "timestamp": 1790872780.7151575,
+        "excursion_bps": "10.75330739383071842172184365",
+        "spot_spread_bps": "19.07541684382289739494156717",
+        "perp_spread_bps_on_spot_mid": "8.273674775634027785757788171",
+        "forecast_margin_upper_bound_bps": "-17.59673799646839790384725877",
+        "passive_spot_bid_saving_bps": "19.07541684382289739494156717"
+      }
+    }
+  },
+  "scope": "Retained fresh sample callbacks inside122..480s only. Optimistic current4bestprices, no depth impact/fees/capital, subtract minimumpossible1bp hurdle using spot ask. This upper-bounds per-unit forecast margin at these samples, not all decision callbacks. Passive-bid saving is an arithmetic spread difference, not evidence of a fill or realized return. No execution rules or results changed."
+}

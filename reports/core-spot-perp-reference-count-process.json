@@ -1,0 +1,12 @@
+{
+  "pid": 1780461,
+  "command": [
+    "/home/harry/miniconda3/bin/python",
+    "/home/harry/projects/research/rhhype/scripts/core_spot_perp_reference_count.py"
+  ],
+  "launched_utc": "2026-10-01T16:34:00.946201+00:00",
+  "plan_sha256": "f7f0cf8077941e5ed2a48c7b83fc494d00e95c08b7603aaf0dbf963fa006a4cd",
+  "fixed_capture_seconds": 600,
+  "public_read_only": true,
+  "log": "reports/core-spot-perp-reference-count.stdout.txt"
+}
