@@ -1,0 +1,384 @@
+{
+  "actual_pnl": null,
+  "quotes_observed": false,
+  "outcomes": [
+    {
+      "asset": "ETH",
+      "status": "metadata_selected",
+      "selection": {
+        "asset": "ETH",
+        "index": "2694.22",
+        "expiry": 1793347200000,
+        "low_strike": "2400.0",
+        "high_strike": "3000.0",
+        "face_per_base_unit": "600.0",
+        "legs": [
+          {
+            "side": "buy",
+            "instrument": {
+              "state": "open",
+              "price_index": "eth_usdc",
+              "kind": "option",
+              "instrument_name": "ETH_USDC-30OCT26-2400-C",
+              "maker_commission": 0.0003,
+              "taker_commission": 0.0003,
+              "instrument_type": "linear",
+              "instrument_id": 683386,
+              "product_group": "ETH",
+              "expiration_timestamp": 1793347200000,
+              "underlying_type": "crypto",
+              "creation_timestamp": 1787817625000,
+              "is_active": true,
+              "contract_size": 1.0,
+              "tick_size": 0.2,
+              "strike": 2400.0,
+              "counter_currency": "USDC",
+              "option_type": "call",
+              "min_trade_amount": 0.1,
+              "block_trade_commission": 0.0003,
+              "block_trade_min_trade_amount": 250,
+              "block_trade_tick_size": 0.2,
+              "settlement_currency": "USDC",
+              "settlement_period": "month",
+              "base_currency": "ETH",
+              "index_id": 2000004,
+              "quote_currency": "USDC",
+              "tick_size_steps": [
+                {
+                  "tick_size": 1.0,
+                  "above_price": 50.0
+                }
+              ],
+              "lot_size": 10,
+              "base_currency_uuid": "d85dce9b-5b73-5c3c-8978-522ce1d1c1b4",
+              "quote_currency_uuid": "2b92315d-eab7-5bef-84fa-089a131333f5"
+            }
+          },
+          {
+            "side": "sell",
+            "instrument": {
+              "state": "open",
+              "price_index": "eth_usdc",
+              "kind": "option",
+              "instrument_name": "ETH_USDC-30OCT26-3000-C",
+              "maker_commission": 0.0003,
+              "taker_commission": 0.0003,
+              "instrument_type": "linear",
+              "instrument_id": 683408,
+              "product_group": "ETH",
+              "expiration_timestamp": 1793347200000,
+              "underlying_type": "crypto",
+              "creation_timestamp": 1787817625000,
+              "is_active": true,
+              "contract_size": 1.0,
+              "tick_size": 0.2,
+              "strike": 3000.0,
+              "counter_currency": "USDC",
+              "option_type": "call",
+              "min_trade_amount": 0.1,
+              "block_trade_commission": 0.0003,
+              "block_trade_min_trade_amount": 250,
+              "block_trade_tick_size": 0.2,
+              "settlement_currency": "USDC",
+              "settlement_period": "month",
+              "base_currency": "ETH",
+              "index_id": 2000004,
+              "quote_currency": "USDC",
+              "tick_size_steps": [
+                {
+                  "tick_size": 1.0,
+                  "above_price": 50.0
+                }
+              ],
+              "lot_size": 10,
+              "base_currency_uuid": "d85dce9b-5b73-5c3c-8978-522ce1d1c1b4",
+              "quote_currency_uuid": "2b92315d-eab7-5bef-84fa-089a131333f5"
+            }
+          },
+          {
+            "side": "buy",
+            "instrument": {
+              "state": "open",
+              "price_index": "eth_usdc",
+              "kind": "option",
+              "instrument_name": "ETH_USDC-30OCT26-3000-P",
+              "maker_commission": 0.0003,
+              "taker_commission": 0.0003,
+              "instrument_type": "linear",
+              "instrument_id": 683409,
+              "product_group": "ETH",
+              "expiration_timestamp": 1793347200000,
+              "underlying_type": "crypto",
+              "creation_timestamp": 1787817625000,
+              "is_active": true,
+              "contract_size": 1.0,
+              "tick_size": 0.2,
+              "strike": 3000.0,
+              "counter_currency": "USDC",
+              "option_type": "put",
+              "min_trade_amount": 0.1,
+              "block_trade_commission": 0.0003,
+              "block_trade_min_trade_amount": 250,
+              "block_trade_tick_size": 0.2,
+              "settlement_currency": "USDC",
+              "settlement_period": "month",
+              "base_currency": "ETH",
+              "index_id": 2000004,
+              "quote_currency": "USDC",
+              "tick_size_steps": [
+                {
+                  "tick_size": 1.0,
+                  "above_price": 50.0
+                }
+              ],
+              "lot_size": 10,
+              "base_currency_uuid": "d85dce9b-5b73-5c3c-8978-522ce1d1c1b4",
+              "quote_currency_uuid": "2b92315d-eab7-5bef-84fa-089a131333f5"
+            }
+          },
+          {
+            "side": "sell",
+            "instrument": {
+              "state": "open",
+              "price_index": "eth_usdc",
+              "kind": "option",
+              "instrument_name": "ETH_USDC-30OCT26-2400-P",
+              "maker_commission": 0.0003,
+              "taker_commission": 0.0003,
+              "instrument_type": "linear",
+              "instrument_id": 683387,
+              "product_group": "ETH",
+              "expiration_timestamp": 1793347200000,
+              "underlying_type": "crypto",
+              "creation_timestamp": 1787817625000,
+              "is_active": true,
+              "contract_size": 1.0,
+              "tick_size": 0.2,
+              "strike": 2400.0,
+              "counter_currency": "USDC",
+              "option_type": "put",
+              "min_trade_amount": 0.1,
+              "block_trade_commission": 0.0003,
+              "block_trade_min_trade_amount": 250,
+              "block_trade_tick_size": 0.2,
+              "settlement_currency": "USDC",
+              "settlement_period": "month",
+              "base_currency": "ETH",
+              "index_id": 2000004,
+              "quote_currency": "USDC",
+              "tick_size_steps": [
+                {
+                  "tick_size": 1.0,
+                  "above_price": 50.0
+                }
+              ],
+              "lot_size": 10,
+              "base_currency_uuid": "d85dce9b-5b73-5c3c-8978-522ce1d1c1b4",
+              "quote_currency_uuid": "2b92315d-eab7-5bef-84fa-089a131333f5"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "asset": "BTC",
+      "status": "metadata_selected",
+      "selection": {
+        "asset": "BTC",
+        "index": "83703.72",
+        "expiry": 1793347200000,
+        "low_strike": "75000.0",
+        "high_strike": "93000.0",
+        "face_per_base_unit": "18000.0",
+        "legs": [
+          {
+            "side": "buy",
+            "instrument": {
+              "state": "open",
+              "price_index": "btc_usdc",
+              "kind": "option",
+              "instrument_name": "BTC_USDC-30OCT26-75000-C",
+              "maker_commission": 0.0003,
+              "taker_commission": 0.0003,
+              "instrument_type": "linear",
+              "instrument_id": 683001,
+              "product_group": "BTC",
+              "expiration_timestamp": 1793347200000,
+              "underlying_type": "crypto",
+              "creation_timestamp": 1787817624000,
+              "is_active": true,
+              "contract_size": 1.0,
+              "tick_size": 5.0,
+              "strike": 75000.0,
+              "counter_currency": "USDC",
+              "option_type": "call",
+              "min_trade_amount": 0.01,
+              "block_trade_commission": 0.0003,
+              "block_trade_min_trade_amount": 25,
+              "block_trade_tick_size": 5.0,
+              "settlement_currency": "USDC",
+              "settlement_period": "month",
+              "base_currency": "BTC",
+              "index_id": 1000004,
+              "quote_currency": "USDC",
+              "tick_size_steps": [
+                {
+                  "tick_size": 20.0,
+                  "above_price": 1000.0
+                }
+              ],
+              "lot_size": 1,
+              "base_currency_uuid": "5b71fc48-3dd3-540c-809b-f8c94d0e68b5",
+              "quote_currency_uuid": "2b92315d-eab7-5bef-84fa-089a131333f5"
+            }
+          },
+          {
+            "side": "sell",
+            "instrument": {
+              "state": "open",
+              "price_index": "btc_usdc",
+              "kind": "option",
+              "instrument_name": "BTC_USDC-30OCT26-93000-C",
+              "maker_commission": 0.0003,
+              "taker_commission": 0.0003,
+              "instrument_type": "linear",
+              "instrument_id": 699667,
+              "product_group": "BTC",
+              "expiration_timestamp": 1793347200000,
+              "underlying_type": "crypto",
+              "creation_timestamp": 1790008860000,
+              "is_active": true,
+              "contract_size": 1.0,
+              "tick_size": 5.0,
+              "strike": 93000.0,
+              "counter_currency": "USDC",
+              "option_type": "call",
+              "min_trade_amount": 0.01,
+              "block_trade_commission": 0.0003,
+              "block_trade_min_trade_amount": 25,
+              "block_trade_tick_size": 5.0,
+              "settlement_currency": "USDC",
+              "settlement_period": "month",
+              "base_currency": "BTC",
+              "index_id": 1000004,
+              "quote_currency": "USDC",
+              "tick_size_steps": [
+                {
+                  "tick_size": 20.0,
+                  "above_price": 1000.0
+                }
+              ],
+              "lot_size": 1,
+              "base_currency_uuid": "5b71fc48-3dd3-540c-809b-f8c94d0e68b5",
+              "quote_currency_uuid": "2b92315d-eab7-5bef-84fa-089a131333f5"
+            }
+          },
+          {
+            "side": "buy",
+            "instrument": {
+              "state": "open",
+              "price_index": "btc_usdc",
+              "kind": "option",
+              "instrument_name": "BTC_USDC-30OCT26-93000-P",
+              "maker_commission": 0.0003,
+              "taker_commission": 0.0003,
+              "instrument_type": "linear",
+              "instrument_id": 699668,
+              "product_group": "BTC",
+              "expiration_timestamp": 1793347200000,
+              "underlying_type": "crypto",
+              "creation_timestamp": 1790008860000,
+              "is_active": true,
+              "contract_size": 1.0,
+              "tick_size": 5.0,
+              "strike": 93000.0,
+              "counter_currency": "USDC",
+              "option_type": "put",
+              "min_trade_amount": 0.01,
+              "block_trade_commission": 0.0003,
+              "block_trade_min_trade_amount": 25,
+              "block_trade_tick_size": 5.0,
+              "settlement_currency": "USDC",
+              "settlement_period": "month",
+              "base_currency": "BTC",
+              "index_id": 1000004,
+              "quote_currency": "USDC",
+              "tick_size_steps": [
+                {
+                  "tick_size": 20.0,
+                  "above_price": 1000.0
+                }
+              ],
+              "lot_size": 1,
+              "base_currency_uuid": "5b71fc48-3dd3-540c-809b-f8c94d0e68b5",
+              "quote_currency_uuid": "2b92315d-eab7-5bef-84fa-089a131333f5"
+            }
+          },
+          {
+            "side": "sell",
+            "instrument": {
+              "state": "open",
+              "price_index": "btc_usdc",
+              "kind": "option",
+              "instrument_name": "BTC_USDC-30OCT26-75000-P",
+              "maker_commission": 0.0003,
+              "taker_commission": 0.0003,
+              "instrument_type": "linear",
+              "instrument_id": 683002,
+              "product_group": "BTC",
+              "expiration_timestamp": 1793347200000,
+              "underlying_type": "crypto",
+              "creation_timestamp": 1787817624000,
+              "is_active": true,
+              "contract_size": 1.0,
+              "tick_size": 5.0,
+              "strike": 75000.0,
+              "counter_currency": "USDC",
+              "option_type": "put",
+              "min_trade_amount": 0.01,
+              "block_trade_commission": 0.0003,
+              "block_trade_min_trade_amount": 25,
+              "block_trade_tick_size": 5.0,
+              "settlement_currency": "USDC",
+              "settlement_period": "month",
+              "base_currency": "BTC",
+              "index_id": 1000004,
+              "quote_currency": "USDC",
+              "tick_size_steps": [
+                {
+                  "tick_size": 20.0,
+                  "above_price": 1000.0
+                }
+              ],
+              "lot_size": 1,
+              "base_currency_uuid": "5b71fc48-3dd3-540c-809b-f8c94d0e68b5",
+              "quote_currency_uuid": "2b92315d-eab7-5bef-84fa-089a131333f5"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "catalogue_count": 3292,
+  "provenance": [
+    {
+      "name": "instruments",
+      "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=USDC&kind=option&expired=false&extended=true",
+      "raw_sha256": "f87a670b192ce4b64aec609822811aaa6b650ac531e075c33d359286e680fda4",
+      "received_utc": "2026-10-01T03:58:29.670248+00:00"
+    },
+    {
+      "name": "ETH",
+      "url": "https://www.deribit.com/api/v2/public/get_index_price?index_name=eth_usdc",
+      "raw_sha256": "beb8ac671f82b37afbf7f848bcc07539fd302ccdcb4a015bfe68b8795cb99db9",
+      "received_utc": "2026-10-01T03:58:31.833710+00:00"
+    },
+    {
+      "name": "BTC",
+      "url": "https://www.deribit.com/api/v2/public/get_index_price?index_name=btc_usdc",
+      "raw_sha256": "d5b730d2b3c339b9e9e4a9a05a8e88b7db35a670443c2b68b57466fbf5aa8fab",
+      "received_utc": "2026-10-01T03:58:33.978784+00:00"
+    }
+  ],
+  "errors": []
+}
