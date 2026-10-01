@@ -1,0 +1,31 @@
+{
+  "schema": "deribit-linear-box-quotes-v1",
+  "recorded_utc": "2026-10-01T04:01:31.552643+00:00",
+  "previous": "reports/experiment-storage/deribit-linear-box-preflight-allocation-v1.json",
+  "previous_sha256": "3514cb01015f918750a78552fdb135fbede0748165379261e151ef32c32a6173",
+  "new_maximum_bytes": 131072,
+  "categories_bytes": {
+    "source": 16384,
+    "raw": 32768,
+    "output": 65536,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 2105344,
+  "active_research_headroom_bytes": 2088960,
+  "requests_max": 24,
+  "retries": 0,
+  "selection_file": "reports/deribit-linear-box-preflight/summary.json",
+  "input_pins": [
+    {
+      "path": "reports/deribit-linear-box-preflight/summary.json",
+      "sha256": "c162c42c06fc7e7807cf8861724da4f3372abfab64facfb4e0c8d37f0ef81241"
+    },
+    {
+      "path": "reports/deribit-linear-box-preflight/instruments.json.gz",
+      "sha256": "be93476ccb89aa18bb4c1a3894745b7eb69d13b8cf426babc9042e228da24ead"
+    }
+  ],
+  "design": "3fixedrounds30s apart;8public optionbooks depth10 eachround. ETHprimaryBTCcontrol selectedfrommetadata beforeanyquotes; all4sizes100/250/500/1000 perasset/round(24rows). q=floor(cashbudget/(1.1*strike_width)/sharedstep)*sharedstep. Belowminimum retainedunknown. Openmatchingproductionbooks,positiveuncrosseddepth,rtt<=2s,booktimestampage[-1,5]s,4legreceiptspan<=1s. Noretry/deeperfetch.",
+  "economics": "Gross payoffwidth*q. Buyasks lowercall/higherput, sellbids highercall/lowerput, depthweighted. Fourfulltier0entryfees perfilllevel q*min(.0003*index,.125*premium). Nocombo discount. Optimisticbound setsdeliveryfee andextramargin costtozero, charges5%annual onnetdebit+entryfees throughfixedexpiry plus5bpface stress. Budgetcoverage onlynetdebit+fees; neitherpeakcashnormarginsolvencyknown. No fillsorlockednetprofitclaim.",
+  "decision": "Negativeoptimisticboundsrejectdisplayedfour-leg route. Positiveconditionalboundsrequiremargin/fee/executionresearch, never automaticpromotion. Incomplete remainunknown. No account,order,RFQ,combocreation orcarrysampleaccess."
+}
