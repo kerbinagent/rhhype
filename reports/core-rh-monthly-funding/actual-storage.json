@@ -1,0 +1,10 @@
+{
+  "usage_bytes_before_this_manifest": {
+    "source": 6016,
+    "raw": 29429,
+    "output": 12743,
+    "control": 2933
+  },
+  "maximum_bytes": 131072,
+  "plan_sha256": "6dff514933f04b7afb8f7392b8433abb5c0a3632b1a89600a39d7f1787ce811c"
+}

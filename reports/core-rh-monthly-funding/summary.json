@@ -1,0 +1,259 @@
+{
+  "actual_pnl": null,
+  "rate_sums_not_fixed_quantity_cashflows": true,
+  "aggregate_overlaps_blocks": true,
+  "historical_development_not_prospective_validation": true,
+  "primary_asset_selected_after_overlapping_48h_research": true,
+  "assets": [
+    {
+      "asset": "SOL",
+      "primary": true,
+      "core_hours": 720,
+      "rh_hours": 720,
+      "train_hours": 168,
+      "train_core_minus_rh_bps": "1.6100",
+      "selected_short_venue": "core",
+      "blocks": [
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "expected_hours": 168,
+          "observed_hours": 168,
+          "rate_bps": "-3.2600",
+          "capital_bps_2x": "19.17808219178082191780821918",
+          "stress_bps": "5",
+          "residual_rate_proxy_bps": "-27.43808219178082191780821918",
+          "max_capital_multiple_after_stress": "-0.8614",
+          "positive_hours": 44
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "expected_hours": 168,
+          "observed_hours": 168,
+          "rate_bps": "-2.1200",
+          "capital_bps_2x": "19.17808219178082191780821918",
+          "stress_bps": "5",
+          "residual_rate_proxy_bps": "-26.29808219178082191780821918",
+          "max_capital_multiple_after_stress": "-0.7425142857142857142857142857",
+          "positive_hours": 6
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "expected_hours": 168,
+          "observed_hours": 168,
+          "rate_bps": "16.7700",
+          "capital_bps_2x": "19.17808219178082191780821918",
+          "stress_bps": "5",
+          "residual_rate_proxy_bps": "-7.40808219178082191780821918",
+          "max_capital_multiple_after_stress": "1.227442857142857142857142857",
+          "positive_hours": 88
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "expected_hours": 48,
+          "observed_hours": 48,
+          "rate_bps": "2.8200",
+          "capital_bps_2x": "5.479452054794520547945205479",
+          "stress_bps": "5",
+          "residual_rate_proxy_bps": "-7.659452054794520547945205479",
+          "max_capital_multiple_after_stress": "-0.7957",
+          "positive_hours": 41
+        },
+        {
+          "start_day": 8,
+          "end_day": 30,
+          "expected_hours": 552,
+          "observed_hours": 552,
+          "rate_bps": "14.2100",
+          "capital_bps_2x": "63.01369863013698630136986301",
+          "stress_bps": "5",
+          "residual_rate_proxy_bps": "-53.80369863013698630136986301",
+          "max_capital_multiple_after_stress": "0.2923173913043478260869565217",
+          "positive_hours": 179
+        }
+      ]
+    },
+    {
+      "asset": "BTC",
+      "primary": false,
+      "core_hours": 720,
+      "rh_hours": 720,
+      "train_hours": 168,
+      "train_core_minus_rh_bps": "0.2800",
+      "selected_short_venue": "core",
+      "blocks": [
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "expected_hours": 168,
+          "observed_hours": 168,
+          "rate_bps": "-1.7300",
+          "capital_bps_2x": "19.17808219178082191780821918",
+          "stress_bps": "5",
+          "residual_rate_proxy_bps": "-25.90808219178082191780821918",
+          "max_capital_multiple_after_stress": "-0.7018428571428571428571428571",
+          "positive_hours": 22
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "expected_hours": 168,
+          "observed_hours": 168,
+          "rate_bps": "-0.7000",
+          "capital_bps_2x": "19.17808219178082191780821918",
+          "stress_bps": "5",
+          "residual_rate_proxy_bps": "-24.87808219178082191780821918",
+          "max_capital_multiple_after_stress": "-0.5944285714285714285714285714",
+          "positive_hours": 18
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "expected_hours": 168,
+          "observed_hours": 168,
+          "rate_bps": "4.3300",
+          "capital_bps_2x": "19.17808219178082191780821918",
+          "stress_bps": "5",
+          "residual_rate_proxy_bps": "-19.84808219178082191780821918",
+          "max_capital_multiple_after_stress": "-0.06987142857142857142857142857",
+          "positive_hours": 71
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "expected_hours": 48,
+          "observed_hours": 48,
+          "rate_bps": "-0.1900",
+          "capital_bps_2x": "5.479452054794520547945205479",
+          "stress_bps": "5",
+          "residual_rate_proxy_bps": "-10.66945205479452054794520548",
+          "max_capital_multiple_after_stress": "-1.89435",
+          "positive_hours": 23
+        },
+        {
+          "start_day": 8,
+          "end_day": 30,
+          "expected_hours": 552,
+          "observed_hours": 552,
+          "rate_bps": "1.7100",
+          "capital_bps_2x": "63.01369863013698630136986301",
+          "stress_bps": "5",
+          "residual_rate_proxy_bps": "-66.30369863013698630136986301",
+          "max_capital_multiple_after_stress": "-0.1044217391304347826086956522",
+          "positive_hours": 134
+        }
+      ]
+    },
+    {
+      "asset": "ETH",
+      "primary": false,
+      "core_hours": 720,
+      "rh_hours": 720,
+      "train_hours": 168,
+      "train_core_minus_rh_bps": "-1.4000",
+      "selected_short_venue": "rh",
+      "blocks": [
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "expected_hours": 168,
+          "observed_hours": 168,
+          "rate_bps": "3.8600",
+          "capital_bps_2x": "19.17808219178082191780821918",
+          "stress_bps": "5",
+          "residual_rate_proxy_bps": "-20.31808219178082191780821918",
+          "max_capital_multiple_after_stress": "-0.1188857142857142857142857143",
+          "positive_hours": 68
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "expected_hours": 168,
+          "observed_hours": 168,
+          "rate_bps": "7.4000",
+          "capital_bps_2x": "19.17808219178082191780821918",
+          "stress_bps": "5",
+          "residual_rate_proxy_bps": "-16.77808219178082191780821918",
+          "max_capital_multiple_after_stress": "0.2502857142857142857142857143",
+          "positive_hours": 67
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "expected_hours": 168,
+          "observed_hours": 168,
+          "rate_bps": "-0.1200",
+          "capital_bps_2x": "19.17808219178082191780821918",
+          "stress_bps": "5",
+          "residual_rate_proxy_bps": "-24.29808219178082191780821918",
+          "max_capital_multiple_after_stress": "-0.5339428571428571428571428571",
+          "positive_hours": 1
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "expected_hours": 48,
+          "observed_hours": 48,
+          "rate_bps": "-0.1700",
+          "capital_bps_2x": "5.479452054794520547945205479",
+          "stress_bps": "5",
+          "residual_rate_proxy_bps": "-10.64945205479452054794520548",
+          "max_capital_multiple_after_stress": "-1.88705",
+          "positive_hours": 1
+        },
+        {
+          "start_day": 8,
+          "end_day": 30,
+          "expected_hours": 552,
+          "observed_hours": 552,
+          "rate_bps": "10.9700",
+          "capital_bps_2x": "63.01369863013698630136986301",
+          "stress_bps": "5",
+          "residual_rate_proxy_bps": "-57.04369863013698630136986301",
+          "max_capital_multiple_after_stress": "0.1894826086956521739130434783",
+          "positive_hours": 137
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "name": "core_BTC",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=1&resolution=1h&start_timestamp=1788220800&end_timestamp=1790812799&count_back=721",
+      "raw_sha256": "65424114800354572d31b8a6a4d4521644649194bf59aea7aa6c7b0b759683e6",
+      "gzip_bytes": 6070,
+      "received_utc": "2026-10-01T03:09:14.231691+00:00"
+    },
+    {
+      "name": "core_SOL",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=2&resolution=1h&start_timestamp=1788220800&end_timestamp=1790812799&count_back=721",
+      "raw_sha256": "d8bb931019ac5f36c93280dd14859bc1d5c9f1181d105d8d7671c5f003099562",
+      "gzip_bytes": 5781,
+      "received_utc": "2026-10-01T03:09:16.446440+00:00"
+    },
+    {
+      "name": "rh_SOL",
+      "url": "https://api.rh.lighter.xyz/api/v1/fundings?market_id=3&resolution=1h&start_timestamp=1788220800&end_timestamp=1790812799&count_back=721",
+      "raw_sha256": "7963b8dd31ad7eb4b2e54ce1fa8c06ce1d39a7c728fc9451e7de74ad47f7f872",
+      "gzip_bytes": 5800,
+      "received_utc": "2026-10-01T03:09:18.701745+00:00"
+    },
+    {
+      "name": "rh_BTC",
+      "url": "https://api.rh.lighter.xyz/api/v1/fundings?market_id=1&resolution=1h&start_timestamp=1788220800&end_timestamp=1790812799&count_back=721",
+      "raw_sha256": "11bd9008a09e6fba6b08ddb464590360b08ca257b27122dac4c274b6b28d8a04",
+      "gzip_bytes": 6168,
+      "received_utc": "2026-10-01T03:09:20.969297+00:00"
+    },
+    {
+      "name": "rh_ETH",
+      "url": "https://api.rh.lighter.xyz/api/v1/fundings?market_id=0&resolution=1h&start_timestamp=1788220800&end_timestamp=1790812799&count_back=721",
+      "raw_sha256": "53c7cd9690c6ff2fa9e0a4b15ece30db0b7353189733bf5d902000b6f94a3ac0",
+      "gzip_bytes": 5610,
+      "received_utc": "2026-10-01T03:09:23.209320+00:00"
+    }
+  ]
+}
