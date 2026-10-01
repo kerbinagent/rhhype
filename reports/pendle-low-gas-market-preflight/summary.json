@@ -1,0 +1,25 @@
+{
+  "recorded_at": 1790828942.975564,
+  "actual_pnl": null,
+  "pricing_not_performed": true,
+  "chains": [
+    {
+      "chain": 42161,
+      "complete": false,
+      "total": null,
+      "received": 0,
+      "error": "HTTPError:HTTP Error 403: Forbidden",
+      "markets": [],
+      "first_candidate": null
+    },
+    {
+      "chain": 8453,
+      "complete": false,
+      "total": null,
+      "received": 0,
+      "error": "HTTPError:HTTP Error 403: Forbidden",
+      "markets": [],
+      "first_candidate": null
+    }
+  ]
+}
