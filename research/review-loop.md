@@ -4931,3 +4931,19 @@ two previously audited paired gains, two new paired gains pending audit,
 26 audited failed-hedge rescue gains. Archive 3,630,449 / 5,242,880 B;
 164 future pairs at 5,342 B project 4,506,537 B, margin 736,343 B.
 Next review **18:06:33 UTC**.
+
+
+Review149 parent audit passed terminal cash, four fill fees, 5 bp stress,
+capital, flatness and no-hour funding reconciliation. Preserved
+`review149-positive-records.json.gz` (2,965 B, SHA-256
+`6afdd58e75aa476f58a613fbf0303425d8a1aaed5000b4fa2214d7ed015294c4`)
+and `review149-positive-root-audit.json` (3,078 B). XAG paired gain
++$0.2892293447 at $1,000/leg had entry gap 1.723 s, exit gap 6.3815 s;
+max-hold exit mark stale, final flat 6.9005 s after request. ZEC paired
+gain +$0.1777317663 at $1,000/leg had entry gap 2.5211 s, exit gap
+1.3782 s and take-profit exit; independent TP mark +$0.210794709.
+Original rolling depth unavailable; no private-fill or original raw-depth
+proof. Neither is a $100 research study outcome. Cumulative paired gains
+now four, audited rescue gains 26; 2,274 exact losses and one estimated
+loss across 2,305 completions. Archive including audit 3,636,492 B;
+164 future pairs project 4,512,580 B, margin 730,300 B under 5,242,880 B.

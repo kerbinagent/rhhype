@@ -1718,3 +1718,11 @@ performance busy, p95 lag 62.58 ms. Preserved 17:30/17:35 busy pulses and
 Archive 3,630,449 B, 164 future pairs project 4,506,537 B, margin 736,343 B.
 Carry 17:45: 207 sampled, invalid slot 71, 656 future/interrupted; no errors,
 retries/economic evaluation. Next review 18:06:33 UTC.
+
+
+Review149 parent audit verified XAG +$0.2892293447 and ZEC +$0.1777317663
+as paired paper gains at $1,000/leg, including terminal accounting and
+ZEC profit mark. Original rolling depth unavailable; retained fill timing
+shows material leg gaps, and these are not $100 study results. Audit
+artifacts preserved; cumulative paired gains four, rescue gains 26.
+Manual archive 3,636,492 B, projected 4,512,580 B, margin 730,300 B.
