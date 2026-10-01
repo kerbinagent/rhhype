@@ -1,0 +1,52 @@
+{
+  "schema": "deribit-linear-box-preflight-v1",
+  "recorded_utc": "2026-10-01T03:58:23.291914+00:00",
+  "selection_time_ms": 1790827103291,
+  "previous": "reports/experiment-storage/core-native-quote-cost-allocation-v1.json",
+  "previous_sha256": "efd3a645b61a3697c56cec13edeb452f628d6d1899484ad5528a19e5ca70d169",
+  "new_maximum_bytes": 196608,
+  "categories_bytes": {
+    "source": 8192,
+    "raw": 131072,
+    "output": 32768,
+    "control": 24576
+  },
+  "active_research_reserved_bytes": 1974272,
+  "active_research_headroom_bytes": 2220032,
+  "requests_max": 3,
+  "retries": 0,
+  "requests": [
+    [
+      "instruments",
+      "get_instruments",
+      {
+        "currency": "USDC",
+        "kind": "option",
+        "expired": "false",
+        "extended": "true"
+      }
+    ],
+    [
+      "ETH",
+      "get_index_price",
+      {
+        "index_name": "eth_usdc"
+      }
+    ],
+    [
+      "BTC",
+      "get_index_price",
+      {
+        "index_name": "btc_usdc"
+      }
+    ]
+  ],
+  "selection": "ETHprimaryBTCcontrol; open/active linearUSDCoptions, nearest30day expiry within14-45days, ties earlier. Commoncallputstrikes highest<=90%index/lowest>=110%index. Buy lowcall/highput, sellhighcall/lowput. Four sameindex/expiry instruments, unitcontractmultiplier required. Metadataonly before quote plan. No strike or expiry retry if missing.",
+  "docs": [
+    "https://docs.deribit.com/api-reference/market-data/public-get_instruments",
+    "https://docs.deribit.com/api-reference/market-data/public-get_order_book",
+    "https://support.deribit.com/hc/en-us/articles/31424932728093-Linear-USDC-Options",
+    "https://support.deribit.com/hc/en-us/articles/25944746248989-Fees"
+  ],
+  "accounting": "Fourleg gross payoff strike width timesbasequantity if allsameunderlying/index/expiry contractsheld. LinearITMoptionssettleintoexpiryfuturethenUSDC; noextra deliveryfee ongeneratedfuture. Optiondelivery fees remain terminalprice-dependent; no locked netprofit claim. Later quote screen primary ordinaryfour-leg fees(no combo discount), optimisticzero delivery/margin cost upperbound, plus capital/stress. No account endpoints, RFQ, order, combo creation, or carry-study economic inspection."
+}
