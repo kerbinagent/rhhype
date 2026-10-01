@@ -1,0 +1,86 @@
+{
+  "schema": "completed-paradex-arrival-closeout-v1",
+  "recorded_utc": "2026-10-01T13:02:42.420058+00:00",
+  "previous": "reports/experiment-storage/completed-polymarket-subset-closeout-v1.json",
+  "previous_sha256": "db9bbda332d6542f95d3707098109720c018d6e68fd9ad3b35d06c93b2a63d95",
+  "old_reserved_bytes": 1097728,
+  "artifact_bytes": 219929,
+  "retention_reserved_bytes": 262144,
+  "released_bytes": 835584,
+  "active_research_reserved_bytes": 11190272,
+  "active_research_headroom_bytes": 4538368,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Allnewexperimentartifactsretained;sharedhelpersalreadyreservedbypriorstudies;32KiBcloseoutmargin.",
+  "files": [
+    {
+      "path": "reports/experiment-storage/paradex-core-arrival-allocation-v1.json",
+      "bytes": 5306,
+      "sha256": "6287215d60b9201195110e57336a0baa8dd91cb1b5af399c69fec05a4d55a1ac"
+    },
+    {
+      "path": "reports/paradex-core-arrival/audit.json",
+      "bytes": 1469,
+      "sha256": "d541a82de1514fdfe6d7c40800ed401b74c62b59116fea31869c0a7411918d2a"
+    },
+    {
+      "path": "reports/paradex-core-arrival/events.jsonl.gz",
+      "bytes": 138275,
+      "sha256": "be037ea86c4197876a65eed6cd56af75bd87aabf60b61687fc93e9ca73252c83"
+    },
+    {
+      "path": "reports/paradex-core-arrival/lighter-metadata.json.gz",
+      "bytes": 23042,
+      "sha256": "1e9d00ffa73c32040b248e68fdcc1aa24e65fb137d8920bd5a6da06b0361a66f"
+    },
+    {
+      "path": "reports/paradex-core-arrival/metadata.json",
+      "bytes": 3248,
+      "sha256": "b5bd20fbb3578792c72fd91de4a5d1962ab7a82b4824b551ad3277ed48b7d5b0"
+    },
+    {
+      "path": "reports/paradex-core-arrival/paradex-BTC-metadata.json.gz",
+      "bytes": 533,
+      "sha256": "9e68f235211b72e5eec0a4b25c2bfdfaeece1223b9586294eafafd49a51ea4d4"
+    },
+    {
+      "path": "reports/paradex-core-arrival/paradex-ETH-metadata.json.gz",
+      "bytes": 530,
+      "sha256": "ec32c34e3108dda4862efaaf3dc67f2e38dd158b7738e3e8c94b716717ed93cf"
+    },
+    {
+      "path": "reports/paradex-core-arrival/paradex-SOL-metadata.json.gz",
+      "bytes": 526,
+      "sha256": "fcc976ee92d6169f8afb0d5544b19b7850178f9d61589dcce1af57317dd8fc95"
+    },
+    {
+      "path": "reports/paradex-core-arrival/readout.md",
+      "bytes": 2115,
+      "sha256": "b71a8b0a2dc943cf3d03bd84f9044ed2b677a1f60f2a2e2e0987f558e8d8dd22"
+    },
+    {
+      "path": "reports/paradex-core-arrival/status.json",
+      "bytes": 272,
+      "sha256": "611f36d748168e65a16948cdf358580ca865120a19edb9f71627bec923a1f53d"
+    },
+    {
+      "path": "reports/paradex-core-arrival/summary.json",
+      "bytes": 3792,
+      "sha256": "ca4b2dac75ae11940eb809e35e57e7c3c43faa825ba370761e266741b53e1b8d"
+    },
+    {
+      "path": "reports/paradex-core-arrival/unresolved.json.gz",
+      "bytes": 38,
+      "sha256": "d0f2052384d81e20ba449c7a64221a0acb4c838b0059a96360ea5506bb349363"
+    },
+    {
+      "path": "scripts/audit_paradex_core_arrival.py",
+      "bytes": 12731,
+      "sha256": "a32afd5e8ed4757498bc8e163be4a831369455453c99eddab81c78acfe050676"
+    },
+    {
+      "path": "scripts/paradex_core_arrival.py",
+      "bytes": 28052,
+      "sha256": "6b9058bb2050f57bf4c43bebd21d781e431db1b0326eaac01a7ca8772b90e03c"
+    }
+  ]
+}
