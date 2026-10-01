@@ -1,0 +1,93 @@
+{
+  "schema": "core-spot-perp-alts-eligibility-v1",
+  "recorded_utc": "2026-10-01T16:03:47.095300+00:00",
+  "sources": [
+    {
+      "path": "reports/core-spot-perp-limits/lighter-metadata.json.gz",
+      "sha256": "a21bd4f0b2a5490c4d595be5aa55a0148c72b170996271816eb03ed0bbca8839"
+    },
+    {
+      "path": "reports/core-spot-perp-limits/assets-metadata.json.gz",
+      "sha256": "e73c27a657a78513e90efde38bef6aa55f102ec7595afbda440110d6d71140b4"
+    }
+  ],
+  "selected": [
+    {
+      "asset": "SKY",
+      "spot_market": 2053,
+      "perpetual_market": 79,
+      "size_decimals": [
+        0,
+        0
+      ],
+      "zero_published_fees": true
+    },
+    {
+      "asset": "UNI",
+      "spot_market": 2051,
+      "perpetual_market": 30,
+      "size_decimals": [
+        2,
+        2
+      ],
+      "zero_published_fees": true
+    },
+    {
+      "asset": "AAVE",
+      "spot_market": 2052,
+      "perpetual_market": 27,
+      "size_decimals": [
+        3,
+        3
+      ],
+      "zero_published_fees": true
+    },
+    {
+      "asset": "LINK",
+      "spot_market": 2050,
+      "perpetual_market": 8,
+      "size_decimals": [
+        1,
+        1
+      ],
+      "zero_published_fees": true
+    },
+    {
+      "asset": "LDO",
+      "spot_market": 2054,
+      "perpetual_market": 46,
+      "size_decimals": [
+        1,
+        1
+      ],
+      "zero_published_fees": true
+    }
+  ],
+  "excluded": [
+    [
+      "LIT",
+      "covered_by_current_replication"
+    ],
+    [
+      "ETH",
+      "covered_by_current_replication"
+    ],
+    [
+      "AZTEC",
+      "inactive_spot"
+    ],
+    [
+      "XAUT",
+      "no_exact_native_perpetual_symbol"
+    ],
+    [
+      "rhSPY",
+      "no_exact_native_perpetual_symbol"
+    ],
+    [
+      "rhQQQ",
+      "no_exact_native_perpetual_symbol"
+    ]
+  ],
+  "checks": "Existing frozen normalization function successfully validates all five selected symbols against these metadata: native spot base asset, USDCquote/collateral, unit multipliers, active/unfrozen/nonreduceonly, fees and lot/price decimals. Fresh metadata must pass again before capture. Selection uses metadata only; no candidate economic book screen."
+}

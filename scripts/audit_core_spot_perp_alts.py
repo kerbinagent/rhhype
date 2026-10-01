@@ -35,6 +35,8 @@ def main():
     assert digest(OUT/'unresolved.json.gz') == s['unresolved_sha256']
     assert digest(ROOT/'scripts/core_spot_perp_limits.py') == s['source_sha256']
     assert digest(ROOT/'reports/experiment-storage/core-spot-perp-alts-v1.json') == s['plan_sha256']
+    plan=json.loads((ROOT/'reports/experiment-storage/core-spot-perp-alts-v1.json').read_bytes())
+    for pin in plan['source_pins']:assert digest(ROOT/pin['path'])==pin['sha256']
     for m in s['metadata']:
         assert digest(OUT/f"{m['venue']}-metadata.json.gz") == m['sha256']
     rows = [json.loads(x) for x in gzip.decompress((OUT/'events.jsonl.gz').read_bytes()).splitlines()]
