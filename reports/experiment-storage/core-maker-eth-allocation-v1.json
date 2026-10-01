@@ -1,0 +1,154 @@
+{
+  "schema": "core-maker-eth-prospective-v1",
+  "recorded_utc": "2026-10-01T11:26:04.205137+00:00",
+  "previous": "reports/experiment-storage/completed-research-storage-closeout-v2.json",
+  "previous_sha256": "7d9120b73ff13e7c1ef4628c9f0edafc33afc03a6a7f85587f522ac011cbf1ca",
+  "new_maximum_bytes": 1507328,
+  "categories_bytes": {
+    "source": 196608,
+    "raw": 1048576,
+    "metadata": 65536,
+    "output": 163840,
+    "control": 32768
+  },
+  "active_research_reserved_bytes": 3964928,
+  "active_research_headroom_bytes": 229376,
+  "selected": {
+    "rh_lighter": {
+      "ETH": "0"
+    },
+    "lighter": {
+      "ETH": "0"
+    }
+  },
+  "budgets": [
+    100,
+    1000
+  ],
+  "exit_policies": [
+    "passive_best10s",
+    "control10s"
+  ],
+  "primary_branch": "100-passive_best10s",
+  "capture_seconds": 900,
+  "admission_window_seconds": [
+    10,
+    780
+  ],
+  "max_attempts_per_branch": 100,
+  "latencies_ms": {
+    "maker_activation": 400,
+    "maker_cancel": 400,
+    "rh_taker_exit": 400,
+    "core_taker_hedge_and_cover": 400
+  },
+  "latency_note": "Explicit public-clock paper assumptions. Core Standard taker300ms published plus100ms network allowance. RH assumed400ms for all paths pending actual account-specific latency; no private ACK observed. No faster-fill substitutions.",
+  "timing": {
+    "source_age_seconds": 2,
+    "pair_skew_seconds": 1,
+    "quote_rest_seconds": 5,
+    "hold_seconds": 10,
+    "timeout_seconds": 3,
+    "stop_admissions_before_hour_seconds": 120
+  },
+  "accounting": "Independent separate-wallet counterfactuals:2x budget prefunded per venue,400USD equivalent for100-per-leg case. Standard fee0 only after fresh metadata validation. Fixed-best RH maker buy; queue-ahead ordinary sell flow then contingent Core short. Passive-best ask exit with10second hold deadline and cancel-reconciliation/taker fallback; control10s exits bothlegs via taker. Firstpostdue source-and-receipt-valid books, actual lot/minimum/quote caps. Fee-only cash,5bp stress and5%annual capital separately. Hour crossing remains funding unknown. USDG/USDC parity conditional, no transfer/conversion.",
+  "coverage": "Preserve every received subscribed public frame in bounded batched gzip. RH order_book+trade and Core order_book only. Backlog,liquidations,duplicateprints excluded by frozen adapter. Unknown clocks,queue/cancel races,reconnections,partial hedge,dust andEOF inventory remain unknown or counted loss as appropriate. Two attemptspervenue then stopentirecapture. Hardrawcap endswithcensor; no automatic duration/cap extension.",
+  "decision": "No interim economic inspection. Replay once after fixed900second endpoint or mandatorytransport/cap stop using frozen engine. Public-flow maker fills remain conditional scenarios, never actual private fills. Retain all policies,negative/failed/censored episodes. Do not sum shared-capitalcounterfactuals or select profitable policy retrospectively.",
+  "source_pins": [
+    {
+      "path": "scripts/core_hedged_maker_base.py",
+      "sha256": "acb884b9add15c446cee7ad52c1648e823bdc9258b37083e5c94ddf31b4ba12f"
+    },
+    {
+      "path": "scripts/core_hedged_maker_exit.py",
+      "sha256": "4ad01155826a62200af0d8845ec33481fb4159d15f397184eb241b985bb152e7"
+    },
+    {
+      "path": "scripts/core_hedged_maker_late_flow.py",
+      "sha256": "61f7ed6b06713e7558f3dee590a7b66f4daa32336d4ed999c723b6192484b5c9"
+    },
+    {
+      "path": "scripts/core_hedged_maker_retirement.py",
+      "sha256": "98b922067dc2daacce092a0c2c6958ce27fca13e83d8deef595a1de498e18532"
+    },
+    {
+      "path": "scripts/core_hedged_maker_sell.py",
+      "sha256": "e3f600e3360b116124d3e271cfa9fab0f543bd652191ecf7e24dcca8c6e5bb88"
+    },
+    {
+      "path": "scripts/core_maker_capture.py",
+      "sha256": "db704b735932205bfd5f188a849804cd93774373f6dd4accb32ed69f32c5507c"
+    },
+    {
+      "path": "scripts/core_maker_events.py",
+      "sha256": "4b29411baaf2ea0d7624ba6c35d752fe137e6108214ec7289125b2d7c52303f3"
+    },
+    {
+      "path": "scripts/replay_core_maker_eth.py",
+      "sha256": "75c336ba64df8aad2ee582cf8db32ad043374fa9331abdf9ceaee02453b3b7ec"
+    },
+    {
+      "path": "tests/test_core_hedged_maker.py",
+      "sha256": "46a438ef8ad3b096c573ae84f7e849fee4ef42b3e68c6c65482fa18a106caea7"
+    },
+    {
+      "path": "tests/test_core_maker_events.py",
+      "sha256": "e193aa0d29b18fe17d01e3f63e076e962a668068e5168d365dbe7c4f7f491ecc"
+    },
+    {
+      "path": "scripts/maker_capture.py",
+      "sha256": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9"
+    },
+    {
+      "path": "scripts/maker_book_archive.py",
+      "sha256": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2"
+    },
+    {
+      "path": "scripts/core_rh_small_shortterm.py",
+      "sha256": "65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    }
+  ],
+  "fork_basis": [
+    {
+      "path": "scripts/rh_maker_engine.py",
+      "sha256": "a25768d7e853f13cc81658ed9978e6c131f83713b43e276a95f94399ccc30763"
+    },
+    {
+      "path": "scripts/rh_maker_sell_engine.py",
+      "sha256": "a92cc118acec27b91fee9ea7279946ab051ff8d6ec337f626c64958039bce635"
+    },
+    {
+      "path": "scripts/rh_maker_late_flow_guard.py",
+      "sha256": "fc1c7b48c1c936a97409867a846db33b850e467338d671f29316926041fd1de6"
+    },
+    {
+      "path": "scripts/rh_passive_exit_engine.py",
+      "sha256": "486a7fc2d3d1dd8eec0cdf1607a0562bcb26d57cb047e17a9b27ce74c75f448b"
+    },
+    {
+      "path": "scripts/rh_passive_retirement_guard.py",
+      "sha256": "6f4a92fc7ce84c52bd7fe9f0d6e7a6d66082c78037ef9a4f6d737ef1765af9fe"
+    },
+    {
+      "path": "scripts/passive_three_venue_events.py",
+      "sha256": "66c8c813e86aa229fc49539f7d0fe4be39bd3e6468b7a9313a1545909354fcca"
+    }
+  ],
+  "sources": [
+    "https://apidocs.lighter.xyz/docs/account-types",
+    "https://apidocs.rh.lighter.xyz/docs/account-types"
+  ],
+  "tests": "8 synthetic cases passed:Core identity/fees/grids,400ms advanced-source hedge,queue+dedupe,full passiveledger,failed hedge,retirement boundary,compressedmetadata pins/provenance/backlog,nonce+futureclock."
+}
