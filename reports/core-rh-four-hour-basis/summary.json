@@ -1,0 +1,894 @@
+{
+  "assets": [
+    {
+      "asset": "ETH",
+      "primary": true,
+      "expected_decisions": 40,
+      "counts": {
+        "no_signal": 40
+      },
+      "complete_proxy_sum": null,
+      "positive_proxies": 0,
+      "negative_proxies": 0,
+      "zero_proxies": 0,
+      "rows": [
+        {
+          "decision_time": 1789786800,
+          "status": "no_signal",
+          "last_basis_bps": "-0.6097932800780535398499910000",
+          "prior_24h_median_bps": "-1.268077857044448635788512500",
+          "deviation_bps": "0.6582845769663950959385215000"
+        },
+        {
+          "decision_time": 1789808400,
+          "status": "no_signal",
+          "last_basis_bps": "-1.662767979623534213340690000",
+          "prior_24h_median_bps": "-1.430371009493374509071380500",
+          "deviation_bps": "-0.232396970130159704269309500"
+        },
+        {
+          "decision_time": 1789830000,
+          "status": "no_signal",
+          "last_basis_bps": "-1.515610791148832979690815000",
+          "prior_24h_median_bps": "-1.430371009493374509071380500",
+          "deviation_bps": "-0.085239781655458470619434500"
+        },
+        {
+          "decision_time": 1789851600,
+          "status": "no_signal",
+          "last_basis_bps": "-1.896360126373438821525963000",
+          "prior_24h_median_bps": "-1.422623235486280639068520500",
+          "deviation_bps": "-0.473736890887158182457442500"
+        },
+        {
+          "decision_time": 1789873200,
+          "status": "no_signal",
+          "last_basis_bps": "-1.786879642002548245750334000",
+          "prior_24h_median_bps": "-1.725382104458792739944723500",
+          "deviation_bps": "-0.061497537543755505805610500"
+        },
+        {
+          "decision_time": 1789894800,
+          "status": "no_signal",
+          "last_basis_bps": "-1.592220642946462551747171000",
+          "prior_24h_median_bps": "-1.761950326733727615507226500",
+          "deviation_bps": "0.169729683787265063760055500"
+        },
+        {
+          "decision_time": 1789916400,
+          "status": "no_signal",
+          "last_basis_bps": "-1.160330616870433615551524000",
+          "prior_24h_median_bps": "-1.766080781604443554844077500",
+          "deviation_bps": "0.605750164734009939292553500"
+        },
+        {
+          "decision_time": 1789938000,
+          "status": "no_signal",
+          "last_basis_bps": "-1.555947704977135158725641000",
+          "prior_24h_median_bps": "-1.766080781604443554844077500",
+          "deviation_bps": "0.210133076627308396118436500"
+        },
+        {
+          "decision_time": 1789959600,
+          "status": "no_signal",
+          "last_basis_bps": "-2.291432671322156651352884000",
+          "prior_24h_median_bps": "-1.610451822209926261423758500",
+          "deviation_bps": "-0.680980849112230389929125500"
+        },
+        {
+          "decision_time": 1789981200,
+          "status": "no_signal",
+          "last_basis_bps": "-1.001056670930426561370335000",
+          "prior_24h_median_bps": "-1.681125903662320965818897000",
+          "deviation_bps": "0.680069232731894404448562000"
+        },
+        {
+          "decision_time": 1790002800,
+          "status": "no_signal",
+          "last_basis_bps": "-5.185964297192275104449703000",
+          "prior_24h_median_bps": "-1.681125903662320965818897000",
+          "deviation_bps": "-3.504838393529954138630806000"
+        },
+        {
+          "decision_time": 1790024400,
+          "status": "no_signal",
+          "last_basis_bps": "-4.057596323027756831484075000",
+          "prior_24h_median_bps": "-2.975331452668087490756264500",
+          "deviation_bps": "-1.082264870359669340727810500"
+        },
+        {
+          "decision_time": 1790046000,
+          "status": "no_signal",
+          "last_basis_bps": "-5.910165484633569739952719000",
+          "prior_24h_median_bps": "-4.079190639295244884385548500",
+          "deviation_bps": "-1.830974845338324855567170500"
+        },
+        {
+          "decision_time": 1790067600,
+          "status": "no_signal",
+          "last_basis_bps": "-7.054109382329092383379937000",
+          "prior_24h_median_bps": "-4.577292647179081413901769000",
+          "deviation_bps": "-2.476816735150010969478168000"
+        },
+        {
+          "decision_time": 1790089200,
+          "status": "no_signal",
+          "last_basis_bps": "-6.558810668998688237866200000",
+          "prior_24h_median_bps": "-4.708202699156934671773593000",
+          "deviation_bps": "-1.850607969841753566092607000"
+        },
+        {
+          "decision_time": 1790110800,
+          "status": "no_signal",
+          "last_basis_bps": "-4.287198715293673111997617000",
+          "prior_24h_median_bps": "-4.708202699156934671773593000",
+          "deviation_bps": "0.421003983863261559775976000"
+        },
+        {
+          "decision_time": 1790132400,
+          "status": "no_signal",
+          "last_basis_bps": "-6.005701798816225524956223000",
+          "prior_24h_median_bps": "-4.924498807591159712206602000",
+          "deviation_bps": "-1.081202991225065812749621000"
+        },
+        {
+          "decision_time": 1790154000,
+          "status": "no_signal",
+          "last_basis_bps": "-4.312660582647754309919485000",
+          "prior_24h_median_bps": "-4.601044825646627978085913500",
+          "deviation_bps": "0.288384242998873668166428500"
+        },
+        {
+          "decision_time": 1790175600,
+          "status": "no_signal",
+          "last_basis_bps": "-4.221095766577139591263452000",
+          "prior_24h_median_bps": "-4.313260562662080196412679500",
+          "deviation_bps": "0.092164796084940605149227500"
+        },
+        {
+          "decision_time": 1790197200,
+          "status": "no_signal",
+          "last_basis_bps": "-5.238873941466809862554400000",
+          "prior_24h_median_bps": "-4.299929648970713710958551000",
+          "deviation_bps": "-0.938944292496096151595849000"
+        },
+        {
+          "decision_time": 1790218800,
+          "status": "no_signal",
+          "last_basis_bps": "-3.945551390806865259420004000",
+          "prior_24h_median_bps": "-4.313260562662080196412679500",
+          "deviation_bps": "0.367709171855214936992675500"
+        },
+        {
+          "decision_time": 1790240400,
+          "status": "no_signal",
+          "last_basis_bps": "-5.954476343127635511148727000",
+          "prior_24h_median_bps": "-4.228790410909337491318315500",
+          "deviation_bps": "-1.725685932218298019830411500"
+        },
+        {
+          "decision_time": 1790262000,
+          "status": "no_signal",
+          "last_basis_bps": "-5.492107916158834770309514000",
+          "prior_24h_median_bps": "-4.639249899012690958349776500",
+          "deviation_bps": "-0.852858017146143811959737500"
+        },
+        {
+          "decision_time": 1790283600,
+          "status": "no_signal",
+          "last_basis_bps": "-4.017334052485725444975543000",
+          "prior_24h_median_bps": "-4.626350466686551315474210000",
+          "deviation_bps": "0.609016414200825870498667000"
+        },
+        {
+          "decision_time": 1790305200,
+          "status": "no_signal",
+          "last_basis_bps": "-4.220938094153066903736464000",
+          "prior_24h_median_bps": "-4.611120524874025048649496000",
+          "deviation_bps": "0.390182430720958144913032000"
+        },
+        {
+          "decision_time": 1790326800,
+          "status": "no_signal",
+          "last_basis_bps": "-3.418460429462670040538482000",
+          "prior_24h_median_bps": "-4.274243030423481823197840500",
+          "deviation_bps": "0.855782600960811782659358500"
+        },
+        {
+          "decision_time": 1790348400,
+          "status": "no_signal",
+          "last_basis_bps": "-2.521965204297725409912065000",
+          "prior_24h_median_bps": "-3.457703091080821266855998500",
+          "deviation_bps": "0.935737886783095856943933500"
+        },
+        {
+          "decision_time": 1790370000,
+          "status": "no_signal",
+          "last_basis_bps": "-3.054333615176313270334599000",
+          "prior_24h_median_bps": "-3.153186843341545669621783500",
+          "deviation_bps": "0.098853228165232399287184500"
+        },
+        {
+          "decision_time": 1790391600,
+          "status": "no_signal",
+          "last_basis_bps": "-1.598210004794630014383890000",
+          "prior_24h_median_bps": "-2.401501943149429285531884500",
+          "deviation_bps": "0.803291938354799271147994500"
+        },
+        {
+          "decision_time": 1790413200,
+          "status": "no_signal",
+          "last_basis_bps": "-1.895473905642565654012830000",
+          "prior_24h_median_bps": "-2.132877642469007437595746500",
+          "deviation_bps": "0.237403736826441783582916500"
+        },
+        {
+          "decision_time": 1790434800,
+          "status": "no_signal",
+          "last_basis_bps": "-1.413474879203692889105456000",
+          "prior_24h_median_bps": "-2.140518081128889210409000500",
+          "deviation_bps": "0.727043201925196321303544500"
+        },
+        {
+          "decision_time": 1790456400,
+          "status": "no_signal",
+          "last_basis_bps": "-1.569295610455992467381070000",
+          "prior_24h_median_bps": "-1.692799984299991623662743500",
+          "deviation_bps": "0.123504373843999156281673500"
+        },
+        {
+          "decision_time": 1790478000,
+          "status": "no_signal",
+          "last_basis_bps": "0.481888409471702029862250000",
+          "prior_24h_median_bps": "-1.191059749417294949932880500",
+          "deviation_bps": "1.672948158888996979795130500"
+        },
+        {
+          "decision_time": 1790499600,
+          "status": "no_signal",
+          "last_basis_bps": "0",
+          "prior_24h_median_bps": "-0.744858281833127252615829000",
+          "deviation_bps": "0.744858281833127252615829000"
+        },
+        {
+          "decision_time": 1790521200,
+          "status": "no_signal",
+          "last_basis_bps": "2.121395952972001295168060000",
+          "prior_24h_median_bps": "0.315304521634417063001335000",
+          "deviation_bps": "1.806091431337584232166725000"
+        },
+        {
+          "decision_time": 1790542800,
+          "status": "no_signal",
+          "last_basis_bps": "-0.0744756911344137273593900000",
+          "prior_24h_median_bps": "0.573175855244819693482230000",
+          "deviation_bps": "-0.6476515463792334208416200000"
+        },
+        {
+          "decision_time": 1790564400,
+          "status": "no_signal",
+          "last_basis_bps": "0.150826718953262570464360000",
+          "prior_24h_median_bps": "0.560721166423071226996405000",
+          "deviation_bps": "-0.409894447469808656532045000"
+        },
+        {
+          "decision_time": 1790586000,
+          "status": "no_signal",
+          "last_basis_bps": "1.019002509765440718585470000",
+          "prior_24h_median_bps": "0.281041368837959766476630000",
+          "deviation_bps": "0.737961140927480952108840000"
+        },
+        {
+          "decision_time": 1790607600,
+          "status": "no_signal",
+          "last_basis_bps": "0.487561554646274092104130000",
+          "prior_24h_median_bps": "0.465668922508516011635180000",
+          "deviation_bps": "0.021892632137758080468950000"
+        },
+        {
+          "decision_time": 1790629200,
+          "status": "no_signal",
+          "last_basis_bps": "0.783009440856686900624920000",
+          "prior_24h_median_bps": "0.394972737334524413467545000",
+          "deviation_bps": "0.388036703522162487157375000"
+        }
+      ]
+    },
+    {
+      "asset": "BTC",
+      "primary": false,
+      "expected_decisions": 40,
+      "counts": {
+        "no_signal": 40
+      },
+      "complete_proxy_sum": null,
+      "positive_proxies": 0,
+      "negative_proxies": 0,
+      "zero_proxies": 0,
+      "rows": [
+        {
+          "decision_time": 1789786800,
+          "status": "no_signal",
+          "last_basis_bps": "-1.279335532806345504242719000",
+          "prior_24h_median_bps": "0.083555505279422464347510000",
+          "deviation_bps": "-1.362891038085767968590229000"
+        },
+        {
+          "decision_time": 1789808400,
+          "status": "no_signal",
+          "last_basis_bps": "-1.020698034479917458732441000",
+          "prior_24h_median_bps": "0.0739714271262929346473820000",
+          "deviation_bps": "-1.094669461606210393379823000"
+        },
+        {
+          "decision_time": 1789830000,
+          "status": "no_signal",
+          "last_basis_bps": "-1.201376434143118258347421000",
+          "prior_24h_median_bps": "-0.1542932418510596750220335000",
+          "deviation_bps": "-1.047083192292058583325387500"
+        },
+        {
+          "decision_time": 1789851600,
+          "status": "no_signal",
+          "last_basis_bps": "-0.6777555693023553854457540000",
+          "prior_24h_median_bps": "-0.1725085628133963140449950000",
+          "deviation_bps": "-0.5052470064889590714007590000"
+        },
+        {
+          "decision_time": 1789873200,
+          "status": "no_signal",
+          "last_basis_bps": "-0.5103869978289879897225490000",
+          "prior_24h_median_bps": "-0.3384783453883573245650105000",
+          "deviation_bps": "-0.1719086524406306651575385000"
+        },
+        {
+          "decision_time": 1789894800,
+          "status": "no_signal",
+          "last_basis_bps": "-1.458000246738503294208250000",
+          "prior_24h_median_bps": "-0.594071283565671687584151500",
+          "deviation_bps": "-0.863928963172831606624098500"
+        },
+        {
+          "decision_time": 1789916400,
+          "status": "no_signal",
+          "last_basis_bps": "-1.053715960325734594982576000",
+          "prior_24h_median_bps": "-0.594071283565671687584151500",
+          "deviation_bps": "-0.459644676760062907398424500"
+        },
+        {
+          "decision_time": 1789938000,
+          "status": "no_signal",
+          "last_basis_bps": "0.296029504273925967954810000",
+          "prior_24h_median_bps": "-0.693065526524122471747009000",
+          "deviation_bps": "0.989095030798048439701819000"
+        },
+        {
+          "decision_time": 1789959600,
+          "status": "no_signal",
+          "last_basis_bps": "-0.2828763854793401846813830000",
+          "prior_24h_median_bps": "-0.526111776416085639741596500",
+          "deviation_bps": "0.2432353909367454550602135000"
+        },
+        {
+          "decision_time": 1789981200,
+          "status": "no_signal",
+          "last_basis_bps": "-0.6209162813801536051354550000",
+          "prior_24h_median_bps": "-0.3207979326074585278868730000",
+          "deviation_bps": "-0.3001183487726950772485820000"
+        },
+        {
+          "decision_time": 1790002800,
+          "status": "no_signal",
+          "last_basis_bps": "-1.060300822490495160484103000",
+          "prior_24h_median_bps": "-0.1661840299540351102701735000",
+          "deviation_bps": "-0.8941167925364600502139295000"
+        },
+        {
+          "decision_time": 1790024400,
+          "status": "no_signal",
+          "last_basis_bps": "-1.011597738159420906276619000",
+          "prior_24h_median_bps": "-0.2694894504940468261256190000",
+          "deviation_bps": "-0.7421082876653740801510000000"
+        },
+        {
+          "decision_time": 1790046000,
+          "status": "no_signal",
+          "last_basis_bps": "-1.131749661641853735940636000",
+          "prior_24h_median_bps": "-0.2884193828218693228941615000",
+          "deviation_bps": "-0.8433302788199844130464745000"
+        },
+        {
+          "decision_time": 1790067600,
+          "status": "no_signal",
+          "last_basis_bps": "-0.2900390160484388359922180000",
+          "prior_24h_median_bps": "-0.579778983781411697181310500",
+          "deviation_bps": "0.2897399677329728611890925000"
+        },
+        {
+          "decision_time": 1790089200,
+          "status": "no_signal",
+          "last_basis_bps": "0.173947530466909961279280000",
+          "prior_24h_median_bps": "-0.535026042017885890950317000",
+          "deviation_bps": "0.708973572484795852229597000"
+        },
+        {
+          "decision_time": 1790110800,
+          "status": "no_signal",
+          "last_basis_bps": "-1.437841197397043612970255000",
+          "prior_24h_median_bps": "-0.599228920282879524230994000",
+          "deviation_bps": "-0.838612277114164088739261000"
+        },
+        {
+          "decision_time": 1790132400,
+          "status": "no_signal",
+          "last_basis_bps": "-0.1040241151015275363390910000",
+          "prior_24h_median_bps": "-0.637416147827889066506311000",
+          "deviation_bps": "0.5333920327263615301672200000"
+        },
+        {
+          "decision_time": 1790154000,
+          "status": "no_signal",
+          "last_basis_bps": "-0.6868899485880336785634450000",
+          "prior_24h_median_bps": "-0.2027901171113051449583455000",
+          "deviation_bps": "-0.4840998314767285336050995000"
+        },
+        {
+          "decision_time": 1790175600,
+          "status": "no_signal",
+          "last_basis_bps": "-0.5323591555127565083864310000",
+          "prior_24h_median_bps": "-0.3485236971265636911566860000",
+          "deviation_bps": "-0.1838354583861928172297450000"
+        },
+        {
+          "decision_time": 1790197200,
+          "status": "no_signal",
+          "last_basis_bps": "-1.092409534835396443732003000",
+          "prior_24h_median_bps": "-0.1869666777078010697526945000",
+          "deviation_bps": "-0.9054428571275953739793085000"
+        },
+        {
+          "decision_time": 1790218800,
+          "status": "no_signal",
+          "last_basis_bps": "0.758865685516574100862740000",
+          "prior_24h_median_bps": "-0.0875976842788907661542130000",
+          "deviation_bps": "0.8464633697954648670169530000"
+        },
+        {
+          "decision_time": 1790240400,
+          "status": "no_signal",
+          "last_basis_bps": "1.004526347888999838558270000",
+          "prior_24h_median_bps": "-0.0296275217391673665292075000",
+          "deviation_bps": "1.034153869628167205087477500"
+        },
+        {
+          "decision_time": 1790262000,
+          "status": "no_signal",
+          "last_basis_bps": "0.681557298641668260952750000",
+          "prior_24h_median_bps": "0.077370013638846086520705000",
+          "deviation_bps": "0.604187285002822174432045000"
+        },
+        {
+          "decision_time": 1790283600,
+          "status": "no_signal",
+          "last_basis_bps": "1.992409867172675521821630000",
+          "prior_24h_median_bps": "0.178229508627764985616200000",
+          "deviation_bps": "1.814180358544910536205430000"
+        },
+        {
+          "decision_time": 1790305200,
+          "status": "no_signal",
+          "last_basis_bps": "1.164138822366670467936290000",
+          "prior_24h_median_bps": "0.178229508627764985616200000",
+          "deviation_bps": "0.985909313738905482320090000"
+        },
+        {
+          "decision_time": 1790326800,
+          "status": "no_signal",
+          "last_basis_bps": "0.663584946575486935078880000",
+          "prior_24h_median_bps": "0.260977973255625354046070000",
+          "deviation_bps": "0.402606973319861581032810000"
+        },
+        {
+          "decision_time": 1790348400,
+          "status": "no_signal",
+          "last_basis_bps": "1.095450664831389900659290000",
+          "prior_24h_median_bps": "0.652548221349547160269690000",
+          "deviation_bps": "0.442902443481842740389600000"
+        },
+        {
+          "decision_time": 1790370000,
+          "status": "no_signal",
+          "last_basis_bps": "0.763417965371838226961780000",
+          "prior_24h_median_bps": "0.874542177798637135097905000",
+          "deviation_bps": "-0.111124212426798908136125000"
+        },
+        {
+          "decision_time": 1790391600,
+          "status": "no_signal",
+          "last_basis_bps": "0.392936197877906388309080000",
+          "prior_24h_median_bps": "1.125816511101890371370735000",
+          "deviation_bps": "-0.732880313223983983061655000"
+        },
+        {
+          "decision_time": 1790413200,
+          "status": "no_signal",
+          "last_basis_bps": "1.984343883230274195924850000",
+          "prior_24h_median_bps": "1.101876640749058076744070000",
+          "deviation_bps": "0.882467242481216119180780000"
+        },
+        {
+          "decision_time": 1790434800,
+          "status": "no_signal",
+          "last_basis_bps": "0.797801402225270538027740000",
+          "prior_24h_median_bps": "0.857477202970628268143140000",
+          "deviation_bps": "-0.059675800745357730115400000"
+        },
+        {
+          "decision_time": 1790456400,
+          "status": "no_signal",
+          "last_basis_bps": "1.309671927182240848667410000",
+          "prior_24h_median_bps": "0.786447683731451211623530000",
+          "deviation_bps": "0.523224243450789637043880000"
+        },
+        {
+          "decision_time": 1790478000,
+          "status": "no_signal",
+          "last_basis_bps": "1.776872231040773294794950000",
+          "prior_24h_median_bps": "0.953052009445998395428295000",
+          "deviation_bps": "0.823820221594774899366655000"
+        },
+        {
+          "decision_time": 1790499600,
+          "status": "no_signal",
+          "last_basis_bps": "2.537178515880377343349880000",
+          "prior_24h_median_bps": "1.338594614624487846504135000",
+          "deviation_bps": "1.198583901255889496845745000"
+        },
+        {
+          "decision_time": 1790521200,
+          "status": "no_signal",
+          "last_basis_bps": "1.467669258365418871622730000",
+          "prior_24h_median_bps": "1.747310381372879111001680000",
+          "deviation_bps": "-0.279641123007460239378950000"
+        },
+        {
+          "decision_time": 1790542800,
+          "status": "no_signal",
+          "last_basis_bps": "0.650822876779113082249810000",
+          "prior_24h_median_bps": "1.795897583994700742943085000",
+          "deviation_bps": "-1.145074707215587660693275000"
+        },
+        {
+          "decision_time": 1790564400,
+          "status": "no_signal",
+          "last_basis_bps": "1.979167166456355165746250000",
+          "prior_24h_median_bps": "1.764875875091641792039645000",
+          "deviation_bps": "0.214291291364713373706605000"
+        },
+        {
+          "decision_time": 1790586000,
+          "status": "no_signal",
+          "last_basis_bps": "0.229127951077564635186090000",
+          "prior_24h_median_bps": "1.409335815195411249263045000",
+          "deviation_bps": "-1.180207864117846614076955000"
+        },
+        {
+          "decision_time": 1790607600,
+          "status": "no_signal",
+          "last_basis_bps": "2.651372265922996918382330000",
+          "prior_24h_median_bps": "1.181305324752151740400520000",
+          "deviation_bps": "1.470066941170845177981810000"
+        },
+        {
+          "decision_time": 1790629200,
+          "status": "no_signal",
+          "last_basis_bps": "0.299429885498011785560290000",
+          "prior_24h_median_bps": "1.181305324752151740400520000",
+          "deviation_bps": "-0.881875439254139954840230000"
+        }
+      ]
+    },
+    {
+      "asset": "SOL",
+      "primary": false,
+      "expected_decisions": 40,
+      "counts": {
+        "no_signal": 40
+      },
+      "complete_proxy_sum": null,
+      "positive_proxies": 0,
+      "negative_proxies": 0,
+      "zero_proxies": 0,
+      "rows": [
+        {
+          "decision_time": 1789786800,
+          "status": "no_signal",
+          "last_basis_bps": "1.848868228520113045085970000",
+          "prior_24h_median_bps": "0.534146208231990061983685000",
+          "deviation_bps": "1.314722020288122983102285000"
+        },
+        {
+          "decision_time": 1789808400,
+          "status": "no_signal",
+          "last_basis_bps": "0.980025302471445626414350000",
+          "prior_24h_median_bps": "1.102507895244956972980090000",
+          "deviation_bps": "-0.122482592773511346565740000"
+        },
+        {
+          "decision_time": 1789830000,
+          "status": "no_signal",
+          "last_basis_bps": "1.878942423835726748087510000",
+          "prior_24h_median_bps": "1.559227257844479072047565000",
+          "deviation_bps": "0.319715165991247676039945000"
+        },
+        {
+          "decision_time": 1789851600,
+          "status": "no_signal",
+          "last_basis_bps": "1.170264479772428568856560000",
+          "prior_24h_median_bps": "1.822325864430655955075400000",
+          "deviation_bps": "-0.652061384658227386218840000"
+        },
+        {
+          "decision_time": 1789873200,
+          "status": "no_signal",
+          "last_basis_bps": "-0.1857682912103733013811870000",
+          "prior_24h_median_bps": "1.561172621307587174269975000",
+          "deviation_bps": "-1.746940912517960475651162000"
+        },
+        {
+          "decision_time": 1789894800,
+          "status": "no_signal",
+          "last_basis_bps": "-3.515068543836604813793869000",
+          "prior_24h_median_bps": "1.138540775290525336919080000",
+          "deviation_bps": "-4.653609319127130150712949000"
+        },
+        {
+          "decision_time": 1789916400,
+          "status": "no_signal",
+          "last_basis_bps": "1.017548079146739683450040000",
+          "prior_24h_median_bps": "1.109020681085815650181305000",
+          "deviation_bps": "-0.091472601939075966731265000"
+        },
+        {
+          "decision_time": 1789938000,
+          "status": "no_signal",
+          "last_basis_bps": "2.270951801318968806206060000",
+          "prior_24h_median_bps": "0.730888420641781044504680000",
+          "deviation_bps": "1.540063380677187761701380000"
+        },
+        {
+          "decision_time": 1789959600,
+          "status": "no_signal",
+          "last_basis_bps": "-0.2697453603798014674147600000",
+          "prior_24h_median_bps": "0.968510334834408110174240000",
+          "deviation_bps": "-1.238255695214209577589000000"
+        },
+        {
+          "decision_time": 1789981200,
+          "status": "no_signal",
+          "last_basis_bps": "0.867069564991199243915340000",
+          "prior_24h_median_bps": "0.968510334834408110174240000",
+          "deviation_bps": "-0.101440769843208866258900000"
+        },
+        {
+          "decision_time": 1790002800,
+          "status": "no_signal",
+          "last_basis_bps": "9.413720285295090448042200000",
+          "prior_24h_median_bps": "1.052262146241968910548730000",
+          "deviation_bps": "8.361458139053121537493470000"
+        },
+        {
+          "decision_time": 1790024400,
+          "status": "no_signal",
+          "last_basis_bps": "-1.929983553183633739469003000",
+          "prior_24h_median_bps": "2.039547345250572073435225000",
+          "deviation_bps": "-3.969530898434205812904228000"
+        },
+        {
+          "decision_time": 1790046000,
+          "status": "no_signal",
+          "last_basis_bps": "-3.933674821915699638272946000",
+          "prior_24h_median_bps": "1.155801851365888953648200000",
+          "deviation_bps": "-5.089476673281588591921146000"
+        },
+        {
+          "decision_time": 1790067600,
+          "status": "no_signal",
+          "last_basis_bps": "3.491560642447158210277110000",
+          "prior_24h_median_bps": "1.539499489770793435057530000",
+          "deviation_bps": "1.952061152676364775219580000"
+        },
+        {
+          "decision_time": 1790089200,
+          "status": "no_signal",
+          "last_basis_bps": "1.968655579426693257782610000",
+          "prior_24h_median_bps": "2.216394108513062926446110000",
+          "deviation_bps": "-0.247738529086369668663500000"
+        },
+        {
+          "decision_time": 1790110800,
+          "status": "no_signal",
+          "last_basis_bps": "1.950838860710105345298480000",
+          "prior_24h_median_bps": "2.172292721118301187572320000",
+          "deviation_bps": "-0.221453860408195842273840000"
+        },
+        {
+          "decision_time": 1790132400,
+          "status": "no_signal",
+          "last_basis_bps": "3.462311472917968552078230000",
+          "prior_24h_median_bps": "2.481078227925116160909460000",
+          "deviation_bps": "0.981233244992852391168770000"
+        },
+        {
+          "decision_time": 1790154000,
+          "status": "no_signal",
+          "last_basis_bps": "3.410117819570666166516050000",
+          "prior_24h_median_bps": "3.003488611572577557683185000",
+          "deviation_bps": "0.406629207998088608832865000"
+        },
+        {
+          "decision_time": 1790175600,
+          "status": "no_signal",
+          "last_basis_bps": "1.564034165457436548002820000",
+          "prior_24h_median_bps": "3.014918960531870291837880000",
+          "deviation_bps": "-1.450884795074433743835060000"
+        },
+        {
+          "decision_time": 1790197200,
+          "status": "no_signal",
+          "last_basis_bps": "1.140580994411153127385350000",
+          "prior_24h_median_bps": "3.082590362246472493206130000",
+          "deviation_bps": "-1.942009367835319365820780000"
+        },
+        {
+          "decision_time": 1790218800,
+          "status": "no_signal",
+          "last_basis_bps": "-0.6072435480373021036651490000",
+          "prior_24h_median_bps": "2.893521474148035747113200000",
+          "deviation_bps": "-3.500765022185337850778349000"
+        },
+        {
+          "decision_time": 1790240400,
+          "status": "no_signal",
+          "last_basis_bps": "2.191598288800056104916190000",
+          "prior_24h_median_bps": "1.509520121123760982709195000",
+          "deviation_bps": "0.682078167676295122206995000"
+        },
+        {
+          "decision_time": 1790262000,
+          "status": "no_signal",
+          "last_basis_bps": "-1.222259084004120759197500000",
+          "prior_24h_median_bps": "0.914525210369688969235880000",
+          "deviation_bps": "-2.136784294373809728433380000"
+        },
+        {
+          "decision_time": 1790283600,
+          "status": "no_signal",
+          "last_basis_bps": "-0.0856428351204138261793020000",
+          "prior_24h_median_bps": "0.702539915322494407430850000",
+          "deviation_bps": "-0.7881827504429082336101520000"
+        },
+        {
+          "decision_time": 1790305200,
+          "status": "no_signal",
+          "last_basis_bps": "0.855717476318018842898830000",
+          "prior_24h_median_bps": "0.555901251323920492848885000",
+          "deviation_bps": "0.299816224994098350049945000"
+        },
+        {
+          "decision_time": 1790326800,
+          "status": "no_signal",
+          "last_basis_bps": "1.534683855125844076120320000",
+          "prior_24h_median_bps": "0.658244863587363926305950000",
+          "deviation_bps": "0.876438991538480149814370000"
+        },
+        {
+          "decision_time": 1790348400,
+          "status": "no_signal",
+          "last_basis_bps": "0.913666794026280379420900000",
+          "prior_24h_median_bps": "0.812990924083711799854625000",
+          "deviation_bps": "0.100675869942568579566275000"
+        },
+        {
+          "decision_time": 1790370000,
+          "status": "no_signal",
+          "last_basis_bps": "2.468891961287774047007700000",
+          "prior_24h_median_bps": "0.885378708333246199395830000",
+          "deviation_bps": "1.583513252954527847611870000"
+        },
+        {
+          "decision_time": 1790391600,
+          "status": "no_signal",
+          "last_basis_bps": "0.822747317843743829395120000",
+          "prior_24h_median_bps": "0.912455777184454204654865000",
+          "deviation_bps": "-0.089708459340710375259745000"
+        },
+        {
+          "decision_time": 1790413200,
+          "status": "no_signal",
+          "last_basis_bps": "1.326292928371892537115480000",
+          "prior_24h_median_bps": "0.912455777184454204654865000",
+          "deviation_bps": "0.413837151187438332460615000"
+        },
+        {
+          "decision_time": 1790434800,
+          "status": "no_signal",
+          "last_basis_bps": "0.248110227103561208793030000",
+          "prior_24h_median_bps": "0.620507120815330475188810000",
+          "deviation_bps": "-0.372396893711769266395780000"
+        },
+        {
+          "decision_time": 1790456400,
+          "status": "no_signal",
+          "last_basis_bps": "0",
+          "prior_24h_median_bps": "0.289917348379532673527895000",
+          "deviation_bps": "-0.289917348379532673527895000"
+        },
+        {
+          "decision_time": 1790478000,
+          "status": "no_signal",
+          "last_basis_bps": "0.165167769161525819851510000",
+          "prior_24h_median_bps": "0.289917348379532673527895000",
+          "deviation_bps": "-0.124749579218006853676385000"
+        },
+        {
+          "decision_time": 1790499600,
+          "status": "no_signal",
+          "last_basis_bps": "-0.1612136161020159762693560000",
+          "prior_24h_median_bps": "0.289917348379532673527895000",
+          "deviation_bps": "-0.4511309644815486497972510000"
+        },
+        {
+          "decision_time": 1790521200,
+          "status": "no_signal",
+          "last_basis_bps": "4.029737820323036942004670000",
+          "prior_24h_median_bps": "0.413313702465738570991280000",
+          "deviation_bps": "3.616424117857298371013390000"
+        },
+        {
+          "decision_time": 1790542800,
+          "status": "no_signal",
+          "last_basis_bps": "4.813458102518499180080440000",
+          "prior_24h_median_bps": "1.344019009261683624322415000",
+          "deviation_bps": "3.469439093256815555758025000"
+        },
+        {
+          "decision_time": 1790564400,
+          "status": "no_signal",
+          "last_basis_bps": "10.76291549859831798157789000",
+          "prior_24h_median_bps": "3.403986748961119840401475000",
+          "deviation_bps": "7.358928749637198141176415000"
+        },
+        {
+          "decision_time": 1790586000,
+          "status": "no_signal",
+          "last_basis_bps": "4.735529153101348780178430000",
+          "prior_24h_median_bps": "4.459277369313101778279025000",
+          "deviation_bps": "0.276251783788247001899405000"
+        },
+        {
+          "decision_time": 1790607600,
+          "status": "no_signal",
+          "last_basis_bps": "1.186722273081748211440000000",
+          "prior_24h_median_bps": "4.601412587339615725220705000",
+          "deviation_bps": "-3.414690314257867513780705000"
+        },
+        {
+          "decision_time": 1790629200,
+          "status": "no_signal",
+          "last_basis_bps": "6.149336208639396185726800000",
+          "prior_24h_median_bps": "4.459277369313101778279025000",
+          "deviation_bps": "1.690058839326294407447775000"
+        }
+      ]
+    }
+  ],
+  "expected_decisions": 120,
+  "actual_pnl": null,
+  "historical_development_only": true,
+  "candle_opens_not_synchronous_or_executable": true,
+  "funding_value_units_inferred": true,
+  "fixed_cost_scenario_not_verified_all_costs": true,
+  "not_a_wallet_or_margin_simulation": true,
+  "independent_asset_diagnostics_not_one_portfolio": true
+}
