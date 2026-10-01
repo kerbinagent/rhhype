@@ -1,0 +1,22 @@
+{
+  "schema": "pendle-doc-preflight-v1",
+  "recorded_utc": "2026-10-01T04:27:23.785472+00:00",
+  "previous": "reports/experiment-storage/hl-portfolio-funding-budget-allocation-v1.json",
+  "previous_sha256": "3370ecd6a034bba5e8370cb9a366b64c9e97a7d90f23850816726b8441ab3539",
+  "new_maximum_bytes": 131072,
+  "categories_bytes": {
+    "source": 4096,
+    "raw": 106496,
+    "output": 12288,
+    "control": 8192
+  },
+  "active_research_reserved_bytes": 2433024,
+  "active_research_headroom_bytes": 1761280,
+  "requests_max": 2,
+  "retries": 0,
+  "urls": [
+    "https://api-v2.pendle.finance/core/docs",
+    "https://api-v2.pendle.finance/core/docs-json"
+  ],
+  "scope": "Public documentation only, no market selection or account request. Preserve errors and source before fetch. Schema route discovery for $100 principal-token maturity study."
+}
