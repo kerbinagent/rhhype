@@ -1,0 +1,11 @@
+{
+  "schema": "lighter-minimum-rule-source-v1",
+  "recorded_utc": "2026-10-01T13:13:05.794216+00:00",
+  "previous": "reports/experiment-storage/core-rh-persistent-entry-allocation-v1.json",
+  "previous_sha256": "01714a306082aab24d9db27a24d18080bdc1676c7cbd2e76be1d8557fc3d050e",
+  "new_maximum_bytes": 262144,
+  "active_research_reserved_bytes": 11075584,
+  "active_research_headroom_bytes": 4653056,
+  "overall_reservation_bytes": 836777216,
+  "limits": "Max12 public official GitHub source GETs,20seconds/1MiBdecoded each;192KiBcompressedtotal;64KiBsource/control/analysis. No downloaded source execution, auth, order or account requests. Pin selected files to returned commit SHA. Study minimum-order vs reduce-only validation. Deployed RH sequencer equivalence unverified."
+}
