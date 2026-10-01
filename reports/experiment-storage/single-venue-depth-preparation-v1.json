@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-depth-preparation-v1",
+  "recorded_utc": "2026-10-01T20:32:15.124587+00:00",
+  "previous": "reports/experiment-storage/completed-single-venue-fast-print-closeout-v1.json",
+  "previous_sha256": "c0ed6df8eae6c5e3b1c8a8ca0a2f35a0279d1a15dc53fc0902656b4ddc47cb51",
+  "reserved_bytes": 131072,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 46080000,
+  "active_research_headroom_bytes": 7397376,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare a prospective twelve-arm LIT/VVV/ZEC single-position follow-versus-fade study on depth-consuming prints with observable local price impact and stable reference. No capture launch until full protocol, tests and storage reservation frozen."
+}
