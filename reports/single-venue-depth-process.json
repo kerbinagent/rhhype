@@ -1,0 +1,12 @@
+{
+  "pid": 2327255,
+  "command": [
+    "/home/harry/miniconda3/bin/python",
+    "/home/harry/projects/research/rhhype/scripts/single_venue_depth.py",
+    "capture"
+  ],
+  "launched_utc": "2026-10-01T20:37:33.885604+00:00",
+  "fixed_capture_seconds": 600,
+  "public_read_only": true,
+  "plan_sha256": "f1a6a96073b935d0e3bdfa4e0fd5f1daba867f67cdbbff7ec8f82c4109adaf3a"
+}

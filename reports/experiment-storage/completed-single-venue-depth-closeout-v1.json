@@ -1,0 +1,236 @@
+{
+  "schema": "completed-single-venue-depth-closeout-v1",
+  "recorded_utc": "2026-10-01T20:53:12.664464+00:00",
+  "previous": "reports/experiment-storage/single-venue-depth-v1.json",
+  "previous_sha256": "f1a6a96073b935d0e3bdfa4e0fd5f1daba867f67cdbbff7ec8f82c4109adaf3a",
+  "old_reserved_bytes": 7012352,
+  "artifact_bytes": 4905227,
+  "retention_reserved_bytes": 5046272,
+  "released_bytes": 1966080,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 50995200,
+  "active_research_headroom_bytes": 2482176,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retain original raw, all positive/negative/no-fill ledgers and independent audits, protocol/source/tests, posthoc all-episode reference context and source script, additional research citations.131072retention headroom includes closeout bookkeeping. No deletion/recompression or overall-reservation expansion.",
+  "files": [
+    {
+      "path": "reports/experiment-storage/single-venue-depth-preparation-v1.json",
+      "bytes": 753,
+      "sha256": "03cfd6a4441b1278f33d25f8cd4e9d13c629ed22aa5a95ce131b825cdbc8ccb7"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-depth-v1.json",
+      "bytes": 15091,
+      "sha256": "f1a6a96073b935d0e3bdfa4e0fd5f1daba867f67cdbbff7ec8f82c4109adaf3a"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-depth-wire-inventory-v1.json",
+      "bytes": 4289,
+      "sha256": "d81529070d60602da5ffb660be638b7c0e40bcf60eef610a90955cf56415b6c2"
+    },
+    {
+      "path": "reports/single-venue-depth/capture/frames.jsonl.gz",
+      "bytes": 4740482,
+      "sha256": "83113e3ff5e20a43aa86551a0c9364022267554a631d5a77d47bbae50b0dbd6d"
+    },
+    {
+      "path": "reports/single-venue-depth/capture/manifest.json",
+      "bytes": 2186,
+      "sha256": "e7c0982131996cffc4dace5c3359a976055f27b165db0f43e706dc386be4c36e"
+    },
+    {
+      "path": "reports/single-venue-depth/capture/metadata/core_assets.json.gz",
+      "bytes": 1012,
+      "sha256": "415600d0f433d260bc0a04c77089c941d927bc0f7e2f4191c9cd599049d73230"
+    },
+    {
+      "path": "reports/single-venue-depth/capture/metadata/core_assets.request.json",
+      "bytes": 458,
+      "sha256": "f42f41b2ba03cf6ecb8f9dd38b9485309439fe017715bb86fa1005c62aeb17f8"
+    },
+    {
+      "path": "reports/single-venue-depth/capture/metadata/core_markets.json.gz",
+      "bytes": 23230,
+      "sha256": "d3660eb96a4ff07b83c61509ead41ebbb67a91e2e462c1511a726cb43ea9e070"
+    },
+    {
+      "path": "reports/single-venue-depth/capture/metadata/core_markets.request.json",
+      "bytes": 465,
+      "sha256": "8bad314761594ae23abdf1efcb7847bcc16514f01995f000cad0865e170c11c1"
+    },
+    {
+      "path": "reports/single-venue-depth/capture/metadata/market_plan.json",
+      "bytes": 15091,
+      "sha256": "f1a6a96073b935d0e3bdfa4e0fd5f1daba867f67cdbbff7ec8f82c4109adaf3a"
+    },
+    {
+      "path": "reports/single-venue-depth/capture/metadata/normalized.json",
+      "bytes": 5264,
+      "sha256": "16bec6ec0a9f573e531e1c95e91e3082d73e3ddb910f361860a3f7e38f461670"
+    },
+    {
+      "path": "reports/single-venue-depth/capture/metadata/rh_assets.json.gz",
+      "bytes": 1803,
+      "sha256": "199d0fa06df7e91ac1e730648cf339460c1668687a94a2fb3db737ecb0dffdd7"
+    },
+    {
+      "path": "reports/single-venue-depth/capture/metadata/rh_assets.request.json",
+      "bytes": 448,
+      "sha256": "0a252db510d898b0cbb9a6e15d3dbb093a1314ae78b3cb07c66480ff38fa0ffc"
+    },
+    {
+      "path": "reports/single-venue-depth/capture/metadata/rh_markets.json.gz",
+      "bytes": 8018,
+      "sha256": "9fb15aaf1aff87c8527861fea0d6b0a8ca983c5edccb6ca3eb02a01fdabbf00a"
+    },
+    {
+      "path": "reports/single-venue-depth/capture/metadata/rh_markets.request.json",
+      "bytes": 453,
+      "sha256": "744cc64bbde3588b40f87947ce58ac02e179ade968086ccb277c2b018138cf29"
+    },
+    {
+      "path": "reports/single-venue-depth/capture/status.json",
+      "bytes": 162,
+      "sha256": "82bb51dd1ed970bee5975b9a859071e3fbf84e9dfafa1adf0120ebe652a86a7e"
+    },
+    {
+      "path": "reports/single-venue-depth/capture/terminal.json",
+      "bytes": 316,
+      "sha256": "5ddd8639465af19cc5fc3d425bfef16789f34cc7843dbb9a201c0d64f5388150"
+    },
+    {
+      "path": "reports/single-venue-depth-process.json",
+      "bytes": 369,
+      "sha256": "ce7bc77b1681ef354bc186cef7c6ecd2943a8767801c119945175d56bb75b5d9"
+    },
+    {
+      "path": "reports/single-venue-depth.stdout.txt",
+      "bytes": 302,
+      "sha256": "eff4564ca81edf6a9bc972b074969771156237f72ef6082c8b84494371ac10ce"
+    },
+    {
+      "path": "reports/single-venue-research/depth-episode-context.json.gz",
+      "bytes": 1363,
+      "sha256": "f1e228cd287c04c93b0bf4f87d4f5074c641059e095bd774b2231a10a6d5b742"
+    },
+    {
+      "path": "reports/single-venue-research/depth-readout.txt",
+      "bytes": 4902,
+      "sha256": "da781ec55b788f528009a7d91799e67f1cc9ca36af3710e503fadadfc293b24c"
+    },
+    {
+      "path": "reports/single-venue-research/flow-research-sources-v2.json",
+      "bytes": 3383,
+      "sha256": "5ba5c0d364768415aefb2af75706415513a7a003859c763102c157927e50ec82"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-lit/independent-audit.json",
+      "bytes": 634,
+      "sha256": "dc453405c68d8f27236662a81ecd3989affb26eee4ff9878677070e01f58806c"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-lit/metrics.json",
+      "bytes": 1449,
+      "sha256": "13dd2f2590fe53a9ee467b1aec18855ddbe01f486e1b68dc3c42f7a8dbde6188"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-lit/summary.json.gz",
+      "bytes": 3337,
+      "sha256": "9fb60460c2aea11568e149e42610ccd6de9525e012feff5a80f85f9963d4e93c"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-lit/trace.jsonl.gz",
+      "bytes": 5468,
+      "sha256": "66c49634aa6e7007250684f6e4c32e128d147dba9f5e1c1f1abc58e4700c7d78"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-vvv/independent-audit.json",
+      "bytes": 631,
+      "sha256": "998a29817f4e0fb59b443f51f2dfac2650539551af1d7b0980e3940180f12183"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-vvv/metrics.json",
+      "bytes": 1243,
+      "sha256": "5af204252a43df14d1e97542d98a1c5c53a9ecaa5c8fb101af39a1fd233148e5"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-vvv/summary.json.gz",
+      "bytes": 2628,
+      "sha256": "6f086e5637999a19b334e2effcdfc1871daa9066c3b5f9055d1f22802cd2601f"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-vvv/trace.jsonl.gz",
+      "bytes": 1410,
+      "sha256": "15d35290530e346c67c9c36c26912477b53941cf04078630dbbcbec74ba7305f"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-zec/independent-audit.json",
+      "bytes": 631,
+      "sha256": "e6307213d7e4195509e5613e02b6e21e19e1e82329023a727d29c3ffa1fa7abd"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-zec/metrics.json",
+      "bytes": 1056,
+      "sha256": "e8460259dacf6c14e48aa64800870ede10f811b23c09d1620258ddc60c6c252e"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-zec/summary.json.gz",
+      "bytes": 2516,
+      "sha256": "e984eb95423250dbc22828c918c63148434a70cc639b880f024b158d588ad17c"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-zec/trace.jsonl.gz",
+      "bytes": 1254,
+      "sha256": "ba834c7f4a4e657b949f5b09572e19713ac8b8af68c1bb9867e23df13fa136cb"
+    },
+    {
+      "path": "scripts/audit_single_venue_depth.py",
+      "bytes": 3621,
+      "sha256": "85a38739ce72ebbb01c9d713c69eca78a3037f6ec66046e9607fa2591cb21fd9"
+    },
+    {
+      "path": "scripts/launch_single_venue_depth.py",
+      "bytes": 1101,
+      "sha256": "0c5f98500bc392ceebcd7df08bf73eea31b0bc84deda9d81c8fb6113b8da7079"
+    },
+    {
+      "path": "scripts/single_venue_depth.py",
+      "bytes": 5746,
+      "sha256": "a06b2da1b0d290c71964ea8b2e585df835a5787876d40c80ce47754c6cffefed"
+    },
+    {
+      "path": "scripts/single_venue_depth_capture.py",
+      "bytes": 8241,
+      "sha256": "f5230d15c2bcaa0ce32f767b75f058d01eacae292f27977be55e41cdd6d2a4ed"
+    },
+    {
+      "path": "scripts/single_venue_depth_episode_context.py",
+      "bytes": 2614,
+      "sha256": "605ca727ac7bffaa31867e7cbb699d9e804c82aa33600e77f5b3b2a04c4e4ade"
+    },
+    {
+      "path": "scripts/single_venue_depth_events.py",
+      "bytes": 24461,
+      "sha256": "a6e681b4e9469422c29b6a27a4647223149dabe9637564539e71386e1c0d5fcc"
+    },
+    {
+      "path": "scripts/single_venue_depth_strategy.py",
+      "bytes": 3674,
+      "sha256": "a76fc598fac5c7022494b08afc228fe38540d6f89db6eecac5f8405b2396e0eb"
+    },
+    {
+      "path": "tests/test_single_venue_depth.py",
+      "bytes": 3672,
+      "sha256": "4ddd1496fc389fde62556fdb8a708593111a510528d8d20a891b903e1b7c0196"
+    }
+  ],
+  "raw_inventory_verification": {
+    "prior_count": 21,
+    "all_prior_sha256_verified": true,
+    "prior_bytes": 194365904,
+    "new_raw_bytes": 4740482,
+    "new_raw_sha256": "83113e3ff5e20a43aa86551a0c9364022267554a631d5a77d47bbae50b0dbd6d",
+    "total_count": 22,
+    "total_bytes": 199106386
+  }
+}

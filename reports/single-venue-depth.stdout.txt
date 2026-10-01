@@ -1,0 +1,1 @@
+{"status": "capture_completed", "started_ns": 1790887054062873302, "plan_sha256": "f1a6a96073b935d0e3bdfa4e0fd5f1daba867f67cdbbff7ec8f82c4109adaf3a", "end_reason": "duration_limit", "manifest_sha256": "e7c0982131996cffc4dace5c3359a976055f27b165db0f43e706dc386be4c36e", "ended_ns": 1790887655390125193}

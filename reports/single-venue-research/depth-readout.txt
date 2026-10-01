@@ -1,0 +1,76 @@
+PROSPECTIVE SINGLE-VENUE DEPTH-SHOCK FOLLOW / FADE COMPARISON
+Completed 2026-10-01, approximately20:52UTC. Public-book paper execution only.
+
+Protocol
+Frozen79f7f80 before capture: LIT/VVV/ZEC, Core and RH; fade and follow as12
+independent600-native-collateral ledgers. One position per ledger,100actual entry
+notional cap. New individual-print/depth signal was motivated by prior exploratory
+results. Asset/direction comparisons are correlated and cannot be summed as a
+single portfolio or treated as independent trials.
+
+A print must represent>=25%of displayed same-side depth within5bp, with both
+pre-quote sources strictly earlier than print source and no more than250ms old.
+At the first new post-print book callback within250ms, both sources must be after
+the print source, target move>=2bp in aggressor direction and reference move<=1bp.
+A failed first response is retired. Both directions use the same400ms minimum
+IOC delay, first eligible source book, native limits/grids/minima,1bp entry limit,
+10bp exit limit,10second hold, bounded exit retries and explicit unknowns.
+The former volume-baseline, relative-gap and forecast-cost gates are not part of
+this new hypothesis. Rules were not changed after observing this sample.
+
+Capture
+20:37:34.632430 to20:47:35.380811UTC,600.748381seconds,38,733wire records,
+4,740,482compressed raw bytes,56,242metadata bytes,two connections,no errors.
+Manifest SHA256e7c0982131996cffc4dace5c3359a976055f27b165db0f43e706dc386be4c36e.
+Raw SHA25683113e3ff5e20a43aa86551a0c9364022267554a631d5a77d47bbae50b0dbd6d.
+
+Results, each ledger separately
+Asset venue rule   attempts closed cash-after-fees/capital  after5bp stress
+LIT Core fade         1       1          +0.078800             +0.029314
+LIT Core follow       1       1          -0.106766             -0.156255
+LIT RH fade           4       4          -0.446621             -0.644423
+LIT RH follow         4       3          -0.269821             -0.418320
+VVV Core fade         0       0           0                     0
+VVV Core follow       0       0           0                     0
+VVV RH fade           1       1          -0.082194             -0.131673
+VVV RH follow         1       1          -0.022418             -0.071922
+ZEC Core fade         1       1          -0.033154             -0.082431
+ZEC Core follow       1       0           0                     0
+ZEC RH fade           0       0           0                     0
+ZEC RH follow         0       0           0                     0
+Native collateral units: CoreUSDC and RHUSDG. Cross-venue price comparison assumes
+parity. Standard fees were zero in fresh market metadata; capital charge5%annual
+on held notional. The5bp allowance is a separate stress, not a charged fee.
+14entry attempts;12closed paper episodes:onepositive,11negative;twozero-fill IOC
+entries. All ledgers ended flat, no pending orders or execution unknowns.
+These totals describe alternative ledgers, not a pooled strategy win rate.
+
+Independently audited positive example
+Core LIT fade short25.42LIT at3.8935, entry notional98.972770.
+Entry20:40:45.648479UTC; exit20:40:56.847152UTC at3.8904, notional98.893968.
+Held11.198673373seconds; gross0.078802,zero fees,capital0.0000017572991566.
+Net0.0788002427008434;after separate5bp stress0.0293138577008434.
+Signal-to-entry511.649881ms, later than the400ms minimum.
+Trigger print was5LIT at3.8925:33.36%of14.99LIT displayed ask depth within5bp.
+The qualifying post quote showed5.138bp local rise and zero reference movement.
+This print can be part of a larger execution and does not establish causality.
+The local price moved closer to the reference at the signal; a relative-price
+overshoot was not required by this depth-only rule.
+
+Checks and interpretation
+All three independent raw audits passed:14signals,26orders/IOC observations and
+12closed cash ledgers. Signals independently reconstruct prior clocks, depth and
+first post-print response. Execution audits walk first eligible raw native books
+and reconcile fees,capital,position sizes and cash. These are conditional public-
+book fills, not authenticated private orders.
+A posthoc context lookup covers every closed episode. For the winning Core LIT
+trade, the other venue's latest exit quote missed the250ms pair-skew requirement,
+so no synchronized target/reference return decomposition is asserted. This does
+not invalidate local execution accounting, which only requires the target book.
+The reference-context output retains all such missing freshness cases.
+
+There is now a positive prospective paper example under this new single-venue
+rule, including the cost stress. It does not establish a repeatable edge: the
+sample has one Core LIT fade trade and losses in the other active ledgers.
+Next: fresh LIT replication with both directions and both venues unchanged, to
+check the Core gain and RH losses without optimizing thresholds on this sample.

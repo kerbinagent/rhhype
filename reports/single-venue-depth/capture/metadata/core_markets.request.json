@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails",
+  "json_body": null,
+  "status": 200,
+  "raw_bytes": 374040,
+  "sha256": "ea7779889834c6667cafc269015a7b954a521607dfaa520a4708b12b875b55e2",
+  "compressed_sha256": "d3660eb96a4ff07b83c61509ead41ebbb67a91e2e462c1511a726cb43ea9e070",
+  "request_started_utc_ns": 1790887054163109828,
+  "response_completed_utc_ns": 1790887054272070925,
+  "raw_file": "core_markets.json.gz"
+}

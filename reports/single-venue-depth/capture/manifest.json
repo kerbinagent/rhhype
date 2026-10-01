@@ -1,0 +1,71 @@
+{
+  "schema": "single-venue-depth-public-capture-v1",
+  "read_only": true,
+  "started_utc": "2026-10-01T20:37:34.632430+00:00",
+  "ended_utc": "2026-10-01T20:47:35.380811+00:00",
+  "end_reason": "duration_limit",
+  "truncated": false,
+  "dropped_complete_frame_on_cap": 0,
+  "configured_seconds": 600,
+  "configured_total_bytes": 6422528,
+  "compressed_payload_bytes": 4740482,
+  "payload_records": 38733,
+  "frames_sha256": "83113e3ff5e20a43aa86551a0c9364022267554a631d5a77d47bbae50b0dbd6d",
+  "market_plan_sha256": "f1a6a96073b935d0e3bdfa4e0fd5f1daba867f67cdbbff7ec8f82c4109adaf3a",
+  "selected_markets": {
+    "rh_lighter": {
+      "LIT": "5",
+      "VVV": "8",
+      "ZEC": "4"
+    },
+    "lighter": {
+      "LIT": "120",
+      "VVV": "69",
+      "ZEC": "90"
+    }
+  },
+  "metadata_bytes": 56242,
+  "generations": [
+    {
+      "venue": "rh_lighter",
+      "generation": "rh_lighter:1:df0c6393",
+      "opened_utc": "2026-10-01T20:37:34.632668+00:00",
+      "closed_utc": "2026-10-01T20:47:35.380673+00:00"
+    },
+    {
+      "venue": "lighter",
+      "generation": "lighter:1:2de196fb",
+      "opened_utc": "2026-10-01T20:37:34.633184+00:00",
+      "closed_utc": "2026-10-01T20:47:35.380699+00:00"
+    }
+  ],
+  "errors": [],
+  "record_counts": {
+    "lighter|None|None": 1,
+    "lighter|None|connected": 1,
+    "rh_lighter|None|None": 1,
+    "rh_lighter|None|connected": 1,
+    "lighter|subscription_acks": 6,
+    "lighter|69|order_book": 5537,
+    "rh_lighter|subscription_acks": 6,
+    "rh_lighter|5|trade": 151,
+    "lighter|90|trade": 237,
+    "lighter|90|order_book": 10084,
+    "rh_lighter|4|order_book": 5635,
+    "rh_lighter|8|order_book": 2669,
+    "rh_lighter|4|trade": 54,
+    "lighter|120|order_book": 7891,
+    "lighter|120|trade": 449,
+    "lighter|69|trade": 33,
+    "rh_lighter|5|order_book": 5965,
+    "rh_lighter|8|trade": 6,
+    "rh_lighter|outbound_keepalive": 10,
+    "lighter|outbound_keepalive": 10,
+    "lighter|None|pong": 9,
+    "rh_lighter|None|pong": 9,
+    "rh_lighter|connections_ended": 1,
+    "lighter|connections_ended": 1
+  },
+  "source_sha256": "f5230d15c2bcaa0ce32f767b75f058d01eacae292f27977be55e41cdd6d2a4ed",
+  "economic_evaluation": false
+}
