@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-batch-reference-preparation-v1",
+  "recorded_utc": "2026-10-01T22:07:11.044181+00:00",
+  "previous": "reports/experiment-storage/single-venue-event-clustering-v1.json",
+  "previous_sha256": "c61f8500059bfebf54ccef2010a3fd010c426d7586d48f0e6c9b1f549c2e86c6",
+  "reserved_bytes": 32768,
+  "active_research_pool_bytes": 87031808,
+  "active_research_reserved_bytes": 84213760,
+  "active_research_headroom_bytes": 2818048,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Bounded retrospective reference-midpoint accounting for all52closedepisodes of completedbatch/controls. Source,plan,results<=32768;allmissingreferencepairsretained,no change to economicoutcomes,noread of active executable-shockbatch."
+}
