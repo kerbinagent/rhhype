@@ -1,0 +1,10 @@
+{
+  "recorded_utc": "2026-10-01T18:50:44.685947+00:00",
+  "original_plan_sha256": "028ed7f65a12f99b1106074eef4c9b2e9321b64a0597a5f6f46f3e76ec19e691",
+  "failure": "AssertionError in core_spot_passive_capture.select_three before raw event iteration: standalone adapter retained original five-market SELECTED global; LIT-only metadata requires frozen500ms wrapper configure()",
+  "economic_output_created": false,
+  "repair": "Separate wrapper invokes existing pinned core_spot_passive_skew500.configure() before unchanged pinned diagnostic main(). No raw/filter/forecast/grid/horizon change.",
+  "wrapper": "scripts/run_spot_basis_horizon_diagnostic.py",
+  "wrapper_sha256": "878619618c7bf06149fd6d5cec00550302b7c8d8924d7a6cd452d1de7873db2c",
+  "same_total_diagnostic_reservation_bytes": 65536
+}
