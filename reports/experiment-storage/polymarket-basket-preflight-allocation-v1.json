@@ -1,0 +1,19 @@
+{
+  "schema": "polymarket-basket-preflight-v1",
+  "recorded_utc": "2026-10-01T12:15:21.452907+00:00",
+  "previous": "reports/experiment-storage/completed-paradex-bounded-closeout-v1.json",
+  "previous_sha256": "72e031effa2604fbcbcff687bfb3c2986116073fea0663e042c89e31c1ad38e0",
+  "new_maximum_bytes": 655360,
+  "categories_bytes": {
+    "source": 16384,
+    "raw": 524288,
+    "output": 49152,
+    "control": 65536
+  },
+  "active_research_reserved_bytes": 6078464,
+  "active_research_headroom_bytes": 212992,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Read-only public Gamma/CLOB basket triage. No auth, wallets, orders or RPC writes. Three sequential catalog pages of20 active nonclosed events sorted descending liquidity, select first5 nonaugmented negative-risk events with2..8 questions and all markets active accepting orders, unique NO tokens, one common negRiskMarketID. Selection never by quoted profit. Fetch NO books twice separated1s. Retain every HTTP response within cumulative cap including errors. Max60s.",
+  "$100_screen": "Compute optimistic simultaneous ask-depth basket purchase under100 total dollars, equal share quantities and public minimum sizes. Payout upperbound q*(N-1) assumes catalog completeness and zero conversion fees. Report gross quote surplus only; no trade or profit claim. Fees, gas, onchain identity/completeness, delays, sequential fills remain unresolved. Positive candidates require separate chain verification and prospective execution model before any conclusion.",
+  "raw_policy": "gzip response envelopes; cap524288 bytes cumulative, uncompressed body at most2MB per request; bounded chunk reads stop if exceeded; all failures summarized. Max3 catalog +2 book requests. No refetch on failures."
+}
