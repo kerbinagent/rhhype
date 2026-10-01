@@ -1,0 +1,105 @@
+{
+  "schema": "terminated-pendle-storage-closeout-v1",
+  "recorded_utc": "2026-10-01T04:57:50.065405+00:00",
+  "previous": "reports/experiment-storage/base-atomic-cycle-slow-transport-allocation-v1.json",
+  "previous_sha256": "8dbad7525c69fe490342a7bbae66e05d3cb3d444ae45bb6588402e958b0dc604",
+  "closed_studies": [
+    "pendle-doc-preflight",
+    "pendle-low-gas-market-preflight",
+    "pendle-isolated-proxy-catalogue"
+  ],
+  "original_reserved_bytes": 524288,
+  "closed_retention_reservation_bytes": 65536,
+  "categories_bytes": {
+    "sealed_existing_artifacts": 49152,
+    "closeout_control": 16384
+  },
+  "retained_artifact_bytes": 35161,
+  "released_unused_reservation_bytes": 458752,
+  "active_research_reserved_bytes": 3727360,
+  "active_research_headroom_bytes": 466944,
+  "overall_storage_cap_unchanged_bytes": 836777216,
+  "scope": "User ended the maturity-holding branch. Seal all completed Pendle source, control and result artifacts at their recorded hashes. No files deleted or recompressed. Replace only unused prospective reservation with a fixed retention cap; reopening requires a new allocation. Old allocation records preserved as historical evidence, superseded only for future storage reservation by this closeout. Existing running studies and frozen BTC collector unaffected.",
+  "artifacts": [
+    {
+      "path": "reports/experiment-storage/pendle-doc-preflight-allocation-v1.json",
+      "bytes": 844,
+      "sha256": "df7e8c04b059e03cd919268e69d0d061ad5922f185311e2f60e8f9d9d602a59f"
+    },
+    {
+      "path": "scripts/pendle_doc_preflight.py",
+      "bytes": 1605,
+      "sha256": "c9a14c502c967ddc17862b02ad4d687ba86da5a8309f9c952a2c974d03000f78"
+    },
+    {
+      "path": "reports/pendle-doc-preflight/terminal.json",
+      "bytes": 616,
+      "sha256": "175ad712ef485111d5fde85c3a3463fde3f9536ec61e9529f2cb4d1db15b91be"
+    },
+    {
+      "path": "reports/experiment-storage/pendle-low-gas-market-preflight-allocation-v1.json",
+      "bytes": 1315,
+      "sha256": "2668eaab56e14ef3437df4ce177128261526416f6d8f463ee99eb9cd3973e244"
+    },
+    {
+      "path": "scripts/pendle_low_gas_market_preflight.py",
+      "bytes": 3602,
+      "sha256": "1a91ef4d6fde0b2a0e8060906a8c238ff9f425ca99d7f09b3560034751379bec"
+    },
+    {
+      "path": "reports/pendle-low-gas-market-preflight/readout.md",
+      "bytes": 1994,
+      "sha256": "1106175d7a5d3527d082559e3c32c6a85ddacde3401089645709189ce0b1bee1"
+    },
+    {
+      "path": "reports/pendle-low-gas-market-preflight/summary.json",
+      "bytes": 525,
+      "sha256": "4a31e58f2693e622644b41723e811e912685a73d75e826afa753e929033c2644"
+    },
+    {
+      "path": "reports/pendle-low-gas-market-preflight/terminal.json",
+      "bytes": 720,
+      "sha256": "dacf94cba285214fa1a20ccd0a2703d05e00fd85b75344471fcfec68861c3c6f"
+    },
+    {
+      "path": "reports/experiment-storage/pendle-isolated-proxy-catalogue-allocation-v1.json",
+      "bytes": 1967,
+      "sha256": "dccd4cd07d865c391f0a5a344cc3bea12c37f503f11f08bfb1705e5c6c4fd38c"
+    },
+    {
+      "path": "scripts/pendle_isolated_proxy_catalogue.py",
+      "bytes": 1471,
+      "sha256": "82e989c472a098c2e26e7421aa84b8751a9168bf5b202d9c09a71b40468d646e"
+    },
+    {
+      "path": "reports/pendle-isolated-proxy-catalogue/42161-0.json.gz",
+      "bytes": 5616,
+      "sha256": "e87452689fc3f9059ef56f2785a293ae29ba8889a95ad5c704370eb0daa2cd11"
+    },
+    {
+      "path": "reports/pendle-isolated-proxy-catalogue/8453-0.json.gz",
+      "bytes": 5435,
+      "sha256": "067f71e462c9e9a628c39f220e3a1825dad5306ee96d83672bfecaa1282323e7"
+    },
+    {
+      "path": "reports/pendle-isolated-proxy-catalogue/correction.json",
+      "bytes": 214,
+      "sha256": "a3ffef7e74c198c9b9c624e134a9dde8efdf7898f83ae3775200af4a49164123"
+    },
+    {
+      "path": "reports/pendle-isolated-proxy-catalogue/readout.md",
+      "bytes": 1434,
+      "sha256": "5346cd3479f68352c4c7d18de4fc336f7f8117706eb0c10fea22c7540a2f04de"
+    },
+    {
+      "path": "reports/pendle-isolated-proxy-catalogue/summary.json",
+      "bytes": 6868,
+      "sha256": "3dd9e813b568cb5dd0bce74e38264df5111af123d5bb1046042feebe63471701"
+    },
+    {
+      "path": "reports/pendle-isolated-proxy-catalogue/terminal.json",
+      "bytes": 935,
+      "sha256": "a5f9fe2f28b780f6ecfcba78e7cda7356788aeb1e6f2d6d29226d0983612a302"
+    }
+  ]
+}
