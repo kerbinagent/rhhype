@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 01 October 2026 03:27 UTC
+## Current status, 01 October 2026 03:47 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative or inconclusive; no strategy is promoted. After the host reboot,
@@ -16,7 +16,7 @@ all eight saved ledgers, strategy epoch and three legacy funding obligations.
 The 00:14 catch-up review96 covers an extended interval and is not a fresh
 uninterrupted validation window. All four feeds are connected.
 
-Reviews through 106 are preserved. Reviews 66–106 have 1,609 closes: 1,599 losses,
+Reviews through 107 are preserved. Reviews 66–107 have 1,620 closes: 1,610 losses,
 two paired gains and eight failed-hedge rescue gains. The four epoch paired gains
 remain the WLD/CRCL records from review65 and two MU records from review85;
 the latter share a signal and HL fill observation, and their full three-pair
@@ -28,12 +28,14 @@ Review 103 added two exact convergence failed-hedge losses/−$2.53326; review 1
 had no trade or abort changes. Review 105 added three exact Premium failed-hedge
 losses/−$6.19308. Review 106 added 17 exact losses across convergence and
 Premium/−$38.73372. No new wins or estimated trades. Three pending funding items
-remain across convergence, Premium and standard; no open positions. The
-convergence epoch is 378/−$445.2116 and Premium 671/−$1,241.6029. Premium's
-report delta was 14 closes, while separately read epoch snapshots increased by
-15 from 656 to 671; the extra close is retained as a cross-timestamp difference
-and is not added to review totals. Cooldown remains capital constrained. Next
-review: **1 October 03:46:33 UTC**.
+remain across convergence, Premium and standard; no open positions. Review 107
+added eleven exact losses/−$20.72763: three convergence and eight Premium.
+The convergence epoch is 382/−$449.1086 and Premium 679/−$1,258.3620. Review
+107 had a three-close convergence delta, while its later epoch snapshot increased
+by four from 378 to 382; one close appears only in the snapshot and is not
+added to review totals. The earlier Premium snapshot difference is recorded
+below.
+Cooldown remains capital constrained. Next review: **1 October 04:06:33 UTC**.
 
 The original dated-carry run was interrupted by reboot after 136 recorded slots:
 134 sampled and two late callbacks. Its last trusted index and all evidence
