@@ -1,0 +1,41 @@
+{
+  "schema": "single-venue-reference-accounting-v1",
+  "recorded_utc": "2026-10-01T21:36:46.062472+00:00",
+  "previous": "reports/experiment-storage/single-venue-reference-accounting-preparation-v1.json",
+  "previous_sha256": "f93ac330cad8acd9b83e86081249c2e25d6c9a377760e49c0c9dc1b8c4419ef9",
+  "reserved_bytes": 16384,
+  "active_research_pool_bytes": 87031808,
+  "active_research_reserved_bytes": 79667200,
+  "active_research_headroom_bytes": 7364608,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retrospective descriptive identity for ALL18 earlier closed episodes. For fresh paired entry/exit and singleexitcallback only:reference_gross=side*quantity*(reference_exit_mid-reference_entry_mid);residual=actual_gross-reference_gross;net=reference_gross+residual-fees-capital. The reference component is a hypothetical midpoint exposure with zero executioncost,not a tradable hedge or causal contribution. Missing freshness or multipleexit cases stay missing. No currentbatch data or tradingrule changes.",
+  "contexts": "reports/single-venue-research/depth-combined-execution-context.json.gz",
+  "pins": [
+    {
+      "path": "scripts/single_venue_reference_accounting.py",
+      "sha256": "5414fe83aa19d73889bebaadc2fbf67867af7dd54930e8589dfe2d2da359e7ae"
+    },
+    {
+      "path": "reports/single-venue-research/depth-combined-execution-context.json.gz",
+      "sha256": "70a077cda49b1eda9a8e83d608fa27956f8b183ec4a70dd3afefa30bc7eee74f"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-lit/summary.json.gz",
+      "sha256": "9fb60460c2aea11568e149e42610ccd6de9525e012feff5a80f85f9963d4e93c"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-vvv/summary.json.gz",
+      "sha256": "6f086e5637999a19b334e2effcdfc1871daa9066c3b5f9055d1f22802cd2601f"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-zec/summary.json.gz",
+      "sha256": "e984eb95423250dbc22828c918c63148434a70cc639b880f024b158d588ad17c"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-incomplete-prefix-lit/summary.json.gz",
+      "sha256": "48a413292f96069ad9a4c17bca8650d1c3535e8b8963421e6d4864bbc63546b9"
+    }
+  ],
+  "midpoint_precision": "Recover unique native half-tick reference midpoint from retained floatcontext,requiring difference<1e-8 and exact half-tick divisibility. Source metadata and complete context pinned.",
+  "output_max_bytes": 4096
+}

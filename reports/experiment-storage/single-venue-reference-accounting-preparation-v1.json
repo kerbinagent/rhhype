@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-reference-accounting-preparation-v1",
+  "recorded_utc": "2026-10-01T21:36:09.500939+00:00",
+  "previous": "reports/experiment-storage/single-venue-flow-literature-v3.json",
+  "previous_sha256": "1a025ce460db0e3735668768495f2cfcc9619fa4e1db568103e5225bde79ca0b",
+  "reserved_bytes": 16384,
+  "active_research_pool_bytes": 87031808,
+  "active_research_reserved_bytes": 79667200,
+  "active_research_headroom_bytes": 7364608,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retrospective accounting context for all18already-audited depth-study closes. Reference-midpoint counterfactual and fill residual,not a causal decomposition or executable hedge. Source,plan,result,readout capped16384bytes. No currentbatch data used."
+}
