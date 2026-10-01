@@ -1,0 +1,81 @@
+{
+  "schema": "completed-expanded-crypto-closeout-v1",
+  "recorded_utc": "2026-10-01T11:55:18.973817+00:00",
+  "previous": "reports/experiment-storage/paradex-core-shortterm-preparation-v1.json",
+  "previous_sha256": "8d559d3348518c55b8778d9c299391c864a8183dc4aa62b7da1ec447010e3bcf",
+  "old_reserved_bytes": 2200000,
+  "artifact_bytes": 770872,
+  "retention_reserved_bytes": 851968,
+  "released_bytes": 1348032,
+  "active_research_reserved_bytes": 4751360,
+  "active_research_headroom_bytes": 1540096,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Preserve all completed expanded-crypto artifacts without deletion/recompression.16KiB closeout manifest reserve included.",
+  "files": [
+    {
+      "path": "reports/core-rh-alt-shortterm/audit.json",
+      "bytes": 1546,
+      "sha256": "a3647584f338a4967bd0e5537fa549cc9f0ac0bce154acff3b577668c4d67193"
+    },
+    {
+      "path": "reports/core-rh-alt-shortterm/events.jsonl.gz",
+      "bytes": 690094,
+      "sha256": "ae5720413f3d055ec0c1fbaf922a6b61d2c4c537cf241aaee1a5cd1faf49d097"
+    },
+    {
+      "path": "reports/core-rh-alt-shortterm/lighter-metadata.json.gz",
+      "bytes": 23003,
+      "sha256": "7c003ab263756ff321d588e18870be597592e0adee8b2042ba728923b470e269"
+    },
+    {
+      "path": "reports/core-rh-alt-shortterm/metadata.json",
+      "bytes": 6929,
+      "sha256": "5526c75fe6ead73c9207d4d39f13ed9dd6874338675b36c7bafdbddfcda5da2a"
+    },
+    {
+      "path": "reports/core-rh-alt-shortterm/readout.md",
+      "bytes": 1904,
+      "sha256": "15963d46f2c0f7dc7457e108692b7789b43aabc4ee2a43d3af9e7b8b86c2dbab"
+    },
+    {
+      "path": "reports/core-rh-alt-shortterm/rh_lighter-metadata.json.gz",
+      "bytes": 8027,
+      "sha256": "da9f55d5b51dda3bd733b09194cd43115aa8c76254414dada82eea0ce8c78690"
+    },
+    {
+      "path": "reports/core-rh-alt-shortterm/status.json",
+      "bytes": 258,
+      "sha256": "31f95e59d5ec902d52be7880617dfead8d60a2a00de4a20f8a39f0624f607c96"
+    },
+    {
+      "path": "reports/core-rh-alt-shortterm/summary.json",
+      "bytes": 3505,
+      "sha256": "f24d4cae5d200b915fa9f417a0807452a3886cab69db2459ee9ba84555fde372"
+    },
+    {
+      "path": "reports/core-rh-alt-shortterm/trade-table.json",
+      "bytes": 1249,
+      "sha256": "418266407ce7f0d1a095fb418c90011710e1ddc6aa550384c3a0ee17629182d5"
+    },
+    {
+      "path": "reports/core-rh-alt-shortterm/unresolved.json.gz",
+      "bytes": 38,
+      "sha256": "d0f2052384d81e20ba449c7a64221a0acb4c838b0059a96360ea5506bb349363"
+    },
+    {
+      "path": "reports/experiment-storage/core-rh-alt-shortterm-allocation-v1.json",
+      "bytes": 3839,
+      "sha256": "c6c6da58edf0541159163b8880fa8534a887729a681c2b05518e392c5daf8e26"
+    },
+    {
+      "path": "scripts/audit_core_rh_alt_shortterm.py",
+      "bytes": 8911,
+      "sha256": "1f1d6d50267221bccc2fcfe572e376be1f591d1be8440cc998f1efd6177102bd"
+    },
+    {
+      "path": "scripts/core_rh_alt_shortterm.py",
+      "bytes": 21569,
+      "sha256": "6ab5b49b7f80f869ed943e100f19024e0920018bc990058b78ea50e787d0ba7d"
+    }
+  ]
+}

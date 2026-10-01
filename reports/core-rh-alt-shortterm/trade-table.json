@@ -1,0 +1,50 @@
+[
+  {
+    "asset": "HYPE",
+    "status": "CLOSED",
+    "exit_reason": "max_hold",
+    "cash_pnl": -0.033177000000009116,
+    "capital": 1.908415597137376e-05,
+    "entry_excursion_bps": 5.311205082917419
+  },
+  {
+    "asset": "NEAR",
+    "status": "CLOSED",
+    "exit_reason": "max_hold",
+    "cash_pnl": -0.07039499999999066,
+    "capital": 1.9134244796572458e-05,
+    "entry_excursion_bps": 5.069682290259609
+  },
+  {
+    "asset": "LIT",
+    "status": "CLOSED",
+    "exit_reason": "max_hold",
+    "cash_pnl": -0.05779900000000282,
+    "capital": 1.9236272625069963e-05,
+    "entry_excursion_bps": 8.19172720734752
+  },
+  {
+    "asset": "LIT",
+    "status": "CLOSED",
+    "exit_reason": "take_profit",
+    "cash_pnl": 0.014837999999997464,
+    "capital": 8.146643848975155e-06,
+    "entry_excursion_bps": 5.420926586600879
+  },
+  {
+    "asset": "NEAR",
+    "status": "CLOSED",
+    "exit_reason": "max_hold",
+    "cash_pnl": -0.07916999999999064,
+    "capital": 1.918580577520271e-05,
+    "entry_excursion_bps": 7.124137091205113
+  },
+  {
+    "asset": "NEAR",
+    "status": "CLOSED",
+    "exit_reason": "entry_failure",
+    "cash_pnl": -0.005850000000009459,
+    "capital": 1.2644816582900566e-07,
+    "entry_excursion_bps": 7.777743976871168
+  }
+]
