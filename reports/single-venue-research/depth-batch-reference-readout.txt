@@ -1,0 +1,15 @@
+Retrospective accounting for all 52 closed episodes in the completed LIT batch and fixed-clock controls.
+36 had fresh paired books at both actual target entry and exit callbacks; 16 did not. All 36 simple cash identities passed. All 36 fill-relative residuals were negative. Missing cases are retained; none were filled forward or imputed.
+
+For the two Core follow closes together:
+Actual gross: +0.068047 USDC.
+Signed same-quantity reference midpoint move: +0.1610405 under conditional USDC/USDG parity.
+Actual gross minus that reference midpoint component: -0.0929935.
+Recorded net after capital: +0.06804367876892645671280758498.
+Preset stressed net: -0.03093402623107354328719241502.
+Both individual Core follow residuals were negative (-0.0471960, -0.0457975).
+
+For the two Core fade closes: actual gross -0.195367, reference component -0.1610405, residual -0.0343265.
+For the two RH fade closes: actual gross -0.110260, reference component -0.0470040, residual -0.0632560.
+
+These are accounting identities with a frictionless reference-midpoint hypothetical, not executable hedge profits or causal attribution. Negative residual includes spread/depth and local relative movement. It does not by itself prove an inefficient execution or absence of every possible predictive signal. Controls have different entry times and fills; do not subtract their totals from trigger-strategy totals. All original cash outcomes remain unchanged.
