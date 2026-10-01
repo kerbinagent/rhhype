@@ -1,0 +1,24 @@
+{
+  "schema": "polymarket-subset-cash-v1",
+  "recorded_utc": "2026-10-01T12:59:31.412075+00:00",
+  "previous": "reports/experiment-storage/core-maker-lit-offset-allocation-v1.json",
+  "previous_sha256": "30815f7622209d02b1e26b3052833349e6d78a828176bf4950ef3602107333e2",
+  "new_maximum_bytes": 696320,
+  "categories_bytes": {
+    "raw": 524288,
+    "source": 24576,
+    "output": 131072,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 12427264,
+  "active_research_headroom_bytes": 3301376,
+  "overall_reservation_bytes": 836777216,
+  "source_sha256": "9be06f9d42d7a23c3b795b5f77ff707298ddda9cc2e30266885479411a133f15",
+  "selection": "Three fixed2028nominee/winner slugs selected from prior liquidity catalog, fresh metadata each. Per event top20 active named questions by catalogYESprice descending and marketIDtie. All19 prefixes k2..20 inboth snapshots; no postoutcome widening. Omit Other/placeholder/unnamed/person labels; confirm same negRiskMarketID and token/condition IDs. Augmentation does not invalidate subset cash identity, but selectedquestiononchain eligibility remainsunverified.",
+  "request_limits": "3catalogGET +2bulkbookPOST 1secapart;60sechard;2MBdecodedperresponse;raw524288Btotal. Publiconly,noauth/orders/transactions.",
+  "economics": "Buyequalq of selectedkNO, optimisticimmediatecash(q-floor(q*feeBips/10000))*(k-1). ScreenfeeBips0 upperbound,gas/tradingfees0. Value all returned complementYESzero, retainunliquidatedassetdisclosure. Notcompletecycle oractualPnL. Quantityfloor1e-6 subjectmaxminimum5orpublicmin and100cashbudget; allprefixresultsreported. Positivegross requires separatelyverifiedcontract/fees/gas/delayedexecution.",
+  "sources": [
+    "https://github.com/Polymarket/neg-risk-ctf-adapter/blob/main/docs/NegRiskAdapter.md",
+    "https://github.com/Polymarket/ctf-exchange-v2/blob/main/src/adapters/NegRiskCtfCollateralAdapter.sol"
+  ]
+}
