@@ -1,0 +1,127 @@
+{
+  "schema": "core-native-candle-screen-v1",
+  "recorded_utc": "2026-10-01T03:49:23.835950+00:00",
+  "previous": "reports/experiment-storage/core-native-funding-network-allocation-v1.json",
+  "previous_sha256": "3ae651cc0ab2952081ee2489f9fabc42d69763984d64d789f1b9e41b0da9fb0a",
+  "new_maximum_bytes": 163840,
+  "categories_bytes": {
+    "source": 8192,
+    "raw": 65536,
+    "output": 73728,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 1515520,
+  "active_research_headroom_bytes": 2678784,
+  "requests_max": 12,
+  "retries": 0,
+  "universe": [
+    {
+      "asset": "ETH",
+      "spot": 2048,
+      "perp": 0,
+      "decimals": 4,
+      "min_base": "0.0050",
+      "min_quote": "10.000000",
+      "funding": "reports/core-eth-funding-history/202609-v1/response.json.gz"
+    },
+    {
+      "asset": "LIT",
+      "spot": 2049,
+      "perp": 120,
+      "decimals": 2,
+      "min_base": "1.00",
+      "min_quote": "10.000000",
+      "funding": "reports/core-native-funding-network-correction/LIT.json.gz"
+    },
+    {
+      "asset": "UNI",
+      "spot": 2051,
+      "perp": 30,
+      "decimals": 2,
+      "min_base": "1.00",
+      "min_quote": "10.000000",
+      "funding": "reports/core-native-funding-network-correction/UNI.json.gz"
+    },
+    {
+      "asset": "LINK",
+      "spot": 2050,
+      "perp": 8,
+      "decimals": 1,
+      "min_base": "1.0",
+      "min_quote": "10.000000",
+      "funding": "reports/core-native-funding-network-correction/LINK.json.gz"
+    },
+    {
+      "asset": "LDO",
+      "spot": 2054,
+      "perp": 46,
+      "decimals": 1,
+      "min_base": "15.0",
+      "min_quote": "10.000000",
+      "funding": "reports/core-native-funding-network-correction/LDO.json.gz"
+    },
+    {
+      "asset": "SKY",
+      "spot": 2053,
+      "perp": 79,
+      "decimals": 0,
+      "min_base": "100",
+      "min_quote": "10.000000",
+      "funding": "reports/core-native-funding-network-correction/SKY.json.gz"
+    },
+    {
+      "asset": "AAVE",
+      "spot": 2052,
+      "perp": 27,
+      "decimals": 3,
+      "min_base": "0.050",
+      "min_quote": "10.000000",
+      "funding": "reports/core-native-funding-network-correction/AAVE.json.gz"
+    }
+  ],
+  "input_pins": [
+    {
+      "path": "reports/funding-carry/raw/lighter_core/markets.json",
+      "sha256": "3a94067dce1199f9cedff7193a319b565c7e0e90210fa5f27f01dcac37aee513"
+    },
+    {
+      "path": "reports/core-eth-collateral-candles/spot.json.gz",
+      "sha256": "ff5f77d6950722453644e5055b28bd1770de5ccf7385242d791e5adf868e081b"
+    },
+    {
+      "path": "reports/core-eth-collateral-candles/perp.json.gz",
+      "sha256": "27cfb02eb96d53e190216131ef8e83678a673162fe36a4d2725149baf3d63e39"
+    },
+    {
+      "path": "reports/core-eth-funding-history/202609-v1/response.json.gz",
+      "sha256": "37a2a7d06c1db11872c364004b2363923360779dacc196d324faaaf4b3436a42"
+    },
+    {
+      "path": "reports/core-native-funding-network-correction/LIT.json.gz",
+      "sha256": "52824b356814d6de4132db9cd818f31f9cfe53c3c9e10f0cc7ae8ba3cef4144f"
+    },
+    {
+      "path": "reports/core-native-funding-network-correction/UNI.json.gz",
+      "sha256": "acea0a278c7c8fa661e131cfffdf68433c26e2c06ebf27b9cf09a271a457410d"
+    },
+    {
+      "path": "reports/core-native-funding-network-correction/LINK.json.gz",
+      "sha256": "4d19fb402aaa59a3f2143af0c95e894a5f80cf4fb2be69a7c6bc44edc117f19a"
+    },
+    {
+      "path": "reports/core-native-funding-network-correction/LDO.json.gz",
+      "sha256": "0c8f445304c2f4f03190f806c8755e62653b88c60df2930f86c5885643c09b0e"
+    },
+    {
+      "path": "reports/core-native-funding-network-correction/SKY.json.gz",
+      "sha256": "e8b481ec1d4b4b0ce1143248dbdc17ef57f6d2d2be34c5c13da3eb7841107fc3"
+    },
+    {
+      "path": "reports/core-native-funding-network-correction/AAVE.json.gz",
+      "sha256": "e2037faa53f72af98786b638e25fb1e5790b91633d6391a58776b74c8f1debd9"
+    }
+  ],
+  "scope": "All7 native crypto pairs from preceding screen, no funding-winner selection. September1-Oct1 daily spot/perp30candles each; ETH reuses existing candles,12new public calls. Reuse720hour funding histories. Report fullmonth+4weeks+2daytail separately for each,42outcomes. Missing series stays unknown.",
+  "economics": "Long spot and short identical basequantity, $1000 spot floor to shared base step; current minima scenario. Equal cash reserve to spot principal;5%annual cost on2xprincipal,5bpstress; zero Standard fees. Quantity fixed each interval, hourly value perbase units inferred. Exclude both boundary payments. No spread/impact/fills/margin-solvency or historical listing/rule validity claims.",
+  "decision": "Historical development evidence only. All positive and negative proxies retained. Execution/margin remain necessary even ifpositive. No automatic collector or strategy promotion."
+}
