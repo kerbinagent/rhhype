@@ -1,0 +1,16 @@
+{
+  "active_research_pool_bytes": 20185088,
+  "overall_reservation_bytes": 836777216,
+  "schema": "core-spot-perp-alts-preparation-v1",
+  "recorded_utc": "2026-10-01T16:01:36.136272+00:00",
+  "previous": "reports/experiment-storage/future-review-gzip-rebalance-v3.json",
+  "previous_sha256": "90b157a59a4344615a276cdb17719fc1cccc70782ac05fba292140e32e46059a",
+  "new_maximum_bytes": 32768,
+  "active_research_reserved_bytes": 19914752,
+  "active_research_headroom_bytes": 270336,
+  "categories_bytes": {
+    "source": 24576,
+    "control": 8192
+  },
+  "scope": "Preparation only for SKY/UNI/AAVE/LINK/LDO samevenue spotbuy/perpshort; reuse frozen limits engine. No network or replay authorized by this preparation record; full capture reservation and source freeze required first."
+}
