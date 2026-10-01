@@ -1,0 +1,76 @@
+{
+  "schema": "rh-nvda-complete-input-cycles-v1",
+  "recorded_utc": "2026-10-01T05:23:16.615566+00:00",
+  "previous": "reports/experiment-storage/rh-nvda-low-fee-cycle-allocation-v1.json",
+  "previous_sha256": "f2e4c2d68ccb05b24bd15e27563e4a0574928a68220272ce4e9cbb4ef53e0981",
+  "new_maximum_bytes": 262144,
+  "categories_bytes": {
+    "source": 16384,
+    "raw": 131072,
+    "output": 98304,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 3907584,
+  "active_research_headroom_bytes": 286720,
+  "max_requests": 200,
+  "retries": 0,
+  "selected": {
+    "NVDA": {
+      "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+      "pools": [
+        {
+          "version": "v3",
+          "address": "0xb75d2d02b0ec3de50d32e40a4f1a8dae8acc4333"
+        },
+        {
+          "version": "v4",
+          "address": "0x6444a8e0b267406a15db74ca00c4a24bdfa81ed3180f5b6d0851f8ed6f4f29c5"
+        },
+        {
+          "version": "v3",
+          "address": "0xd4eb21209c4d6093f80b5b84f5c45cc093ea14a3"
+        },
+        {
+          "version": "v4",
+          "address": "0x2d6ec380a3dc18dc4a2067ba6884835b49455cd79c8afa1f7625b6b2f85670a6"
+        }
+      ]
+    }
+  },
+  "source_pins": [
+    {
+      "path": "scripts/rh_atomic_stock_cycle.py",
+      "sha256": "954926d3c1225c2f5b703f23c1a259d4776b75f889056af24cac86f366b036fc"
+    },
+    {
+      "path": "scripts/rh_small_canonical_amm.py",
+      "sha256": "39e1245ff155096d8222a8322d56661f84e6eca246163323486e9e2f30f52a19"
+    },
+    {
+      "path": "scripts/robinhood_probe.py",
+      "sha256": "f792e22f0cce967787b418c5302f3828c3c14566ec34aaaa9bc49e86310861b6"
+    },
+    {
+      "path": "reports/rh-low-fee-pool-preflight/summary.json",
+      "sha256": "15a325e9cc7d32bbcafdec0596448570e90a47785630a0ba9bf56b5a71bb21a7"
+    },
+    {
+      "path": "reports/rh-nvda-low-fee-cycle/input-completion-audit.json",
+      "sha256": "a3a119e8828dd1fcd0af5dd3e452d6dd6928463000e9692c84e553289ebf96e5"
+    }
+  ],
+  "primary_size_usdg": 100,
+  "control_size_usdg": 1000,
+  "rounds": 3,
+  "minimum_round_spacing_seconds": 60,
+  "planned_outcomes": 72,
+  "fixed_selection": "All four NVDA pools with positive active liquidity in the fixed lower-fee inventory (v3/v4 x100/500 fees), all12 ordered distinct-pool paths, both sizes,3rounds. No profitability-based choice. Includes previously found incomplete-input pool so failed/unknown cases remain visible.",
+  "cache": "Within a pinned block, identical pool/direction/exact-input requests are computed once and reused including errors, with raw requests retained. Different blocks never share quotes. No retries.",
+  "mandatory_quality": "Reject every v3 quote whose returned sqrtPriceX96After equals MIN_SQRT_RATIO+1 or MAX_SQRT_RATIO-1 before computing cycle profit. Standard no-hook v4 quoter enforces amountSpecified equality; otherwise it reverts. Invalid first legs stop dependent second requests; missing completion remains unknown. Exact first-output/second-input integer identity required.",
+  "scope": "New corrected source fork, leaving prior frozen source/output intact. Refresh canonical registry and onchain pool identity. Same-block queries and final hash recheck. No transaction, wallet, signatures. Positive gross only permits a separate fee/execution follow-up; no gas or actual profit claim.",
+  "sources": [
+    "https://github.com/Uniswap/v3-periphery/blob/main/contracts/lens/QuoterV2.sol",
+    "https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol",
+    "https://github.com/Uniswap/v4-periphery/blob/main/src/base/BaseV4Quoter.sol"
+  ]
+}
