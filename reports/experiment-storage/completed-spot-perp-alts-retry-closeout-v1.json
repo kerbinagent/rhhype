@@ -1,0 +1,87 @@
+{
+  "schema": "completed-spot-perp-alts-retry-closeout-v1",
+  "recorded_utc": "2026-10-01T16:33:33.420893+00:00",
+  "previous": "reports/experiment-storage/future-review-gzip-rebalance-v4.json",
+  "previous_sha256": "7c3fc33002fc34e680b91bdf6f44e9abf852052cd1d108dc5ff6d0b604082baf",
+  "old_reserved_bytes": 327680,
+  "artifact_bytes": 168190,
+  "retention_reserved_bytes": 196608,
+  "released_bytes": 131072,
+  "active_research_pool_bytes": 20283392,
+  "active_research_reserved_bytes": 20037632,
+  "active_research_headroom_bytes": 245760,
+  "overall_reservation_bytes": 836777216,
+  "scope": "All completed no-entry outcomes/raw/audits/coverage retained.24KiBcontrolslack. Shared original source stays in completed-spot-perp-limits-closeout-v1 and completed-core-passive-lit-closeout-v1.",
+  "files": [
+    {
+      "path": "reports/core-spot-perp-alts-retry/lighter-metadata.json.gz",
+      "bytes": 23256,
+      "sha256": "911be01c276e40569af9fc9e42eb0f33ff9392146bde73812ba66ff9e185d4bd"
+    },
+    {
+      "path": "reports/core-spot-perp-alts-retry/readout.md",
+      "bytes": 1472,
+      "sha256": "0bd82b7d4abd4227cf19e296095ed0280dc0b7b4309545731765b1a54d7d519b"
+    },
+    {
+      "path": "reports/core-spot-perp-alts-retry/reference-coverage.json",
+      "bytes": 1575,
+      "sha256": "922a06ca2fdb1160b62a9fc23c44be7fad801c426ad348ca6cc91e643c8b0b47"
+    },
+    {
+      "path": "reports/core-spot-perp-alts-retry/events.jsonl.gz",
+      "bytes": 112462,
+      "sha256": "2e02fcad996cf281a3300bbe11818ae0a7d8f9bd0771abebf6a76c68e7c73ac4"
+    },
+    {
+      "path": "reports/core-spot-perp-alts-retry/status.json",
+      "bytes": 237,
+      "sha256": "566d30ce971cc9182424fd6c9d06042203561cf0f7967bff2bfe8287a2b3ef5c"
+    },
+    {
+      "path": "reports/core-spot-perp-alts-retry/unresolved.json.gz",
+      "bytes": 43,
+      "sha256": "5db1bc1ef4048963019e2892b95ed4a15f159743a270562fe87b6a7bfc868b8c"
+    },
+    {
+      "path": "reports/core-spot-perp-alts-retry/summary.json",
+      "bytes": 3233,
+      "sha256": "273be338e7eeaaedab744a782166bc9bc5303cec37160be13d9816396ec59643"
+    },
+    {
+      "path": "reports/core-spot-perp-alts-retry/audit.json",
+      "bytes": 1370,
+      "sha256": "7a5c179aa25bfc005b4d850948b7a1a6f5a0c749a40c20e81bbde294be3b258b"
+    },
+    {
+      "path": "reports/core-spot-perp-alts-retry/metadata.json",
+      "bytes": 3575,
+      "sha256": "b412fc80ce9454c132ac7a818c1e799246f2be96e578999ad7b49e28800be82a"
+    },
+    {
+      "path": "reports/core-spot-perp-alts-retry/assets-metadata.json.gz",
+      "bytes": 1014,
+      "sha256": "20e573364fc9eed07e7c611f98a26029810d0e3df47c186d02d24c7567a94f45"
+    },
+    {
+      "path": "reports/experiment-storage/core-spot-perp-alts-retry-v1.json",
+      "bytes": 4035,
+      "sha256": "68860ca8fe9548fffcc32ed9eba604458d9dfe82573e53ab8d722699da0ead9f"
+    },
+    {
+      "path": "scripts/core_spot_perp_alts_retry.py",
+      "bytes": 427,
+      "sha256": "741a8116daf7fd383588a1b877e3597088d9cc48ebf38c330f7f91b459ab3ff2"
+    },
+    {
+      "path": "scripts/audit_core_spot_perp_alts_retry.py",
+      "bytes": 13543,
+      "sha256": "b2c3dc9efb3bffcb515e1092eafff9671eb08fc59e9aaaf5e4db4aabf98c8e0d"
+    },
+    {
+      "path": "scripts/spot_perp_alts_reference_coverage.py",
+      "bytes": 1948,
+      "sha256": "341f2ddb4b14dece392a2f538cfccff8301c6d731e449ca5c3c0853e80fb0688"
+    }
+  ]
+}

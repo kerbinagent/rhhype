@@ -1,0 +1,95 @@
+{
+  "schema": "spot-perp-reference-count-v1",
+  "recorded_utc": "2026-10-01T16:33:33.421247+00:00",
+  "previous": "reports/experiment-storage/completed-spot-perp-alts-retry-closeout-v1.json",
+  "previous_sha256": "13b07fbfee8a0ec2b1d6b75ea2fe25df66b8e608dd73029456570e02936f30e5",
+  "new_maximum_bytes": 237568,
+  "categories_bytes": {
+    "source": 24576,
+    "metadata": 32768,
+    "raw": 139264,
+    "output": 49152,
+    "control": 16384
+  },
+  "active_research_pool_bytes": 20283392,
+  "active_research_reserved_bytes": 20275200,
+  "active_research_headroom_bytes": 8192,
+  "overall_reservation_bytes": 836777216,
+  "assets": [
+    "SKY",
+    "UNI",
+    "AAVE",
+    "LINK",
+    "LDO"
+  ],
+  "budgets": [
+    100
+  ],
+  "horizons": [
+    60
+  ],
+  "entry_limits_bps": [
+    1,
+    1
+  ],
+  "duration_seconds": 600,
+  "entry_end_seconds": 480,
+  "raw_soft_cap": 90000,
+  "scope": "Two independent100perleg600USDC portfolios on5nativeCore spotbuy/perpshort pairs. Only signal reference minimum count differs90vs60; same122slookback2sembargo89spanfreshsample>=1s,5bpexcursion,1bpforecast/TP,1bpentrylimits,400msorders,60shold,480sadmission,30sattemptroutecooldown,30attemptcap120shourguard, max2positionsperportfolio. No spotborrow/credentials/realorders.",
+  "hypothesis": "Completedfive-assetretry generated0forecasts because90reference count nevermet. Test60countonfreshdata with90control. This updates preparation-only LIT/ETH scope BEFOREfreeze/data; includesall5previouslyselectedalts, not onlyfourwithhighercoverage. LDOmayremaininactive. No changing executionfreshness/source advancement. Legacyentry_limits[1,1] mapsfactoryinorder tocounts[90,60]; labels explicitlyencodecount. Samepastmedian rule, no interpolated/stale samples.",
+  "storage": "2boundedpublicmetadataGETs,oneCoreWSmax3connections;fixed600s or128MB/250kmessages. Rawsoft90000closesadmissions/hard139264endswithallretainedpartialstate; fullwire/idledepthnotretained. Ifcaperror/incomplete no completed-profitabilityclaim. No interim economics/extension. Boundedprocessrunsinownsession so userstatusquestions do not abort capture; PID/command/log retained.",
+  "source_pins": [
+    {
+      "path": "scripts/core_spot_perp_limits.py",
+      "sha256": "20ea1bb874ecca2e38b7e35c670b31aaf4df2c0ce862f9b90cd31c79fb40d274"
+    },
+    {
+      "path": "scripts/audit_core_spot_perp_limits.py",
+      "sha256": "289f51b74af223f2cf71406c5d73cc8f5898bb4362007e412f257f436c80726b"
+    },
+    {
+      "path": "tests/test_core_spot_perp_limits.py",
+      "sha256": "d6dcfc08c1f839b2bbb6a691ba043d74857b01732b67ed726a17bad2b2499c2a"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/core_spot_perp_reference_count.py",
+      "sha256": "f3c7399633ad9617afa9db8bc85c2ff25ae6de541b598fe569e963d9ccdaadd6"
+    },
+    {
+      "path": "scripts/audit_core_spot_perp_reference_count.py",
+      "sha256": "8b3492754f5da0bffb7a674f60a7c350748c73c4d3d3e9f370eefe20a67203cc"
+    },
+    {
+      "path": "tests/test_core_spot_perp_reference_count.py",
+      "sha256": "9a54c96192bdda866b0e6ac43bb0a3ee429b6c4a1819d9f93c91487cae5ad052"
+    },
+    {
+      "path": "scripts/launch_spot_perp_reference_count.py",
+      "sha256": "00d95197cf4afa81404040f26720b7112f7475a53155a8173d809828f1bee228"
+    }
+  ],
+  "verification": "2synthetic testsPASS:90control produces exactlyoriginalposition;60admits60freshsamplesover118swhere90abstains; global synchronous hookrestored; escrow200 and400msdelays unchanged; insufficientspan/futuresamples rejected. Independentauditor verifiesbothcountlabels, allsourcepins, pastreferencecount/span/median4walkforecasts and alloriginalfill/capital/cash checks.",
+  "total_study_reservation_bytes": 262144,
+  "already_reserved_preparation_bytes": 24576,
+  "preparation_manifest": "reports/experiment-storage/spot-perp-reference-count-preparation-v1.json",
+  "reference_minimum_counts": [
+    90,
+    60
+  ],
+  "canonical_retention_manifests": [
+    "reports/experiment-storage/completed-spot-perp-limits-closeout-v1.json",
+    "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json"
+  ]
+}

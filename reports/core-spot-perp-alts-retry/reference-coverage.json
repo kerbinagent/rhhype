@@ -1,0 +1,40 @@
+{
+  "schema": "reference-coverage-only-v1",
+  "raw_sha256": "2e02fcad996cf281a3300bbe11818ae0a7d8f9bd0771abebf6a76c68e7c73ac4",
+  "assets": {
+    "UNI": {
+      "sample_count": 348,
+      "sample_callbacks_inside_admission_time": 215,
+      "reference_eligible_at_count_30": 215,
+      "reference_eligible_at_count_60": 215,
+      "maximum_retained_reference_count": 78
+    },
+    "AAVE": {
+      "sample_count": 320,
+      "sample_callbacks_inside_admission_time": 194,
+      "reference_eligible_at_count_30": 194,
+      "reference_eligible_at_count_60": 142,
+      "maximum_retained_reference_count": 76
+    },
+    "SKY": {
+      "sample_count": 345,
+      "sample_callbacks_inside_admission_time": 211,
+      "reference_eligible_at_count_30": 211,
+      "reference_eligible_at_count_60": 211,
+      "maximum_retained_reference_count": 76
+    },
+    "LINK": {
+      "sample_count": 346,
+      "sample_callbacks_inside_admission_time": 217,
+      "reference_eligible_at_count_30": 217,
+      "reference_eligible_at_count_60": 217,
+      "maximum_retained_reference_count": 84
+    },
+    "LDO": {
+      "sample_count": 122,
+      "sample_callbacks_inside_admission_time": 73,
+      "maximum_retained_reference_count": 29
+    }
+  },
+  "scope": "At retained fresh sample callbacks only; past122s window ending2s before observation and89s minimum span. Counts30/60/90 compared solely for reference availability. Does not evaluate forecasts, trading eligibility, book callbacks not sampled, or hypothetical fills/P&L. Execution freshness and source advancement are unchanged."
+}
