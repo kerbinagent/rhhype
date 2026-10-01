@@ -1,0 +1,81 @@
+{
+  "schema": "derive-box-quote-v1",
+  "recorded_utc": "2026-10-01T03:19:21.067222+00:00",
+  "previous": "reports/experiment-storage/derive-catalog-completion-allocation-v1.json",
+  "previous_sha256": "5cdc4f9b4aa9156d1bb4cc9373178eb9a7d94660cf09a8a7ed69f5033d2678c6",
+  "new_maximum_bytes": 131072,
+  "categories_bytes": {
+    "source": 16384,
+    "raw": 65536,
+    "output": 32768,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 786432,
+  "active_research_headroom_bytes": 3407872,
+  "rounds": 3,
+  "interval_seconds": 30,
+  "retries": 0,
+  "url": "https://api.derive.xyz/v3/public/get_tickers",
+  "body": {
+    "currency": "ETH",
+    "instrument_type": "option",
+    "expiry_date": 20261030
+  },
+  "expiry": 1793347200,
+  "strike_low": "2400",
+  "strike_high": "3000",
+  "spot_metadata": "2686.0417158640685",
+  "legs": [
+    [
+      "ETH-20261030-2400-C",
+      "buy"
+    ],
+    [
+      "ETH-20261030-3000-C",
+      "sell"
+    ],
+    [
+      "ETH-20261030-3000-P",
+      "buy"
+    ],
+    [
+      "ETH-20261030-2400-P",
+      "sell"
+    ]
+  ],
+  "input_pins": [
+    {
+      "path": "reports/experiment-storage/derive-catalog-completion-allocation-v1.json",
+      "sha256": "5cdc4f9b4aa9156d1bb4cc9373178eb9a7d94660cf09a8a7ed69f5033d2678c6"
+    },
+    {
+      "path": "reports/derive-box-preflight/instruments.gz",
+      "sha256": "68651ecbbb94f342b4f48da8ce6cda1fae3f7437b6f2f53faadbad7ad1d2b9ed"
+    },
+    {
+      "path": "reports/derive-catalog-completion/page2.json.gz",
+      "sha256": "a2b645c472c45d3da0ac5169a8bfce3392462cb98539142fa4bea53b80bec6cc"
+    },
+    {
+      "path": "reports/derive-box-preflight/currency.gz",
+      "sha256": "a00ee4aae0ee672bd0ca7c65593d6bbc9b582079e5f40bcd5311def75061ad45"
+    },
+    {
+      "path": "reports/derive-box-preflight/fee_doc.gz",
+      "sha256": "dff73306ada650711e8f375ffff2d486b3b0f256d5958a0f301edf1f0bbe3abe"
+    },
+    {
+      "path": "reports/derive-box-preflight/tickers_doc.gz",
+      "sha256": "74bde40a4f13bebd963bb966715e94c2b7b86477beb5546e549d1e469e41cfa0"
+    },
+    {
+      "path": "reports/derive-box-preflight/settlement_doc.gz",
+      "sha256": "5d0417a2a9de9a652f0e63e3a08f1ec54b759a468b44b38c82f76fa83366722c"
+    }
+  ],
+  "selection": "Completed1010-instrument catalogue;active expiries14-45days;closest30days,tie earlier;highest strike<=0.9*metadata spot and lowest>=1.1*spot. Selected before option quote reads. Same contract address/index/units/expiry across4legs.",
+  "quantity": "Cash budgets100/250/500/1000,1000primary; q floor((budget-2)/(netdebit_perunit+variablefees+.1*strike_width),.01). Minimum.1;maximum10000;require all4top-book sizes >=q. Reserve10%payoff; capitalchargeonfullbudget. No quote-driven asset,strike or expiry change.",
+  "timing": "Three fixed30s rounds;HTTP<=2s,snapshotage[-.25,5]s,legskew<=1s;callback<=1s;UTC-monotonicdiscontinuity<=.5s. Invalidity retains all4missing rows.",
+  "costs": "Four independent orderbook fees: $2fixed plus each min(.0003*index,.125*max(mark,tradepremium))*q. Conservative fee-cap scenario,not verified account fee. Capital5%fullcashbudgetuntil expiry;5bpstressonbudget. Native RFQ .5%annual face+$0.5 separately yields maximum allowable RFQdebit,never apply discounted fee to public orderbook fills.",
+  "limits": "No RFQrequest/order/account. Topbook snapshots notfills,marginnotverified,settlement/transfersunknown,actualP&Lnull. Rate threshold is necessary cost headroom,notall-inprofit."
+}
