@@ -1,0 +1,137 @@
+{
+  "source_sha256": "ce91c6340c06dba83a46e34cd5c4056104ccd50e16a0a98e6c22b697b3f2ec3e",
+  "plan_sha256": "115ed0e2da768dafa79359efb3fc34abedee6557fb474af80e4fd97f3b1a3df1",
+  "started_at": 1790857445.7966878,
+  "actual_pnl": null,
+  "paper_trades": 0,
+  "catalog_count": 1,
+  "unique_count": 1,
+  "selected": [
+    {
+      "event_id": "606422",
+      "title": "Fed Decision in October?",
+      "liquidity": 2634384.31662,
+      "market_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a00",
+      "tokens": [
+        "61725366781282351729996972759460154434089275036953062948669003249092837754960",
+        "110888499829195123034987289109543572302716575133123608254293945182185650232552",
+        "42038775866198212615491650114881818219665139981763207699110491615333273795415",
+        "78632395083310670734315205502061249602319069653915932320155846460019107676757",
+        "41864497411878191766967581422432961750808440991174085516384293402629587721839"
+      ],
+      "conditions": [
+        "0xa69ef420d8b4075ad8ba8611d02c63cb2ece46f5c8c643af223c272689b0c96f",
+        "0x9cf563d7b55aa9aa876d5d7e55126347eee473f0ae56d799e325fdef2bf25297",
+        "0xdf9bf27ee5757c55b44b8b9826ddc9ec3a8809aa3278634c45edbb7fc8f1a3e3",
+        "0x12aa13b3da17ceae1b0a59b5d5b77121e91bb79b4bb0b52bf6543ed3f8d0953b",
+        "0xde5d75ab7702875623ba509bc923241e1211da74a113521b3b70ddac930d7316"
+      ]
+    }
+  ],
+  "selection_rejections": {},
+  "snapshots": [
+    {
+      "received": 1790857446.04121,
+      "baskets": [
+        {
+          "event_id": "606422",
+          "title": "Fed Decision in October?",
+          "questions": 5,
+          "catalog_completeness_onchain_verified": false,
+          "status": "quote_screen_only",
+          "max_budget_quantity": "24.943876",
+          "max_budget_cost": "99.999998884",
+          "max_budget_payout_upperbound": "99.775504",
+          "max_budget_gross_quote_surplus": "-0.224494884",
+          "best_quantity": "5",
+          "best_cost": "20.045",
+          "best_gross_quote_surplus": "-0.045",
+          "positive_candidate": false,
+          "best_ask_sum": "4.009",
+          "book_age_seconds": [
+            10.747210025787354,
+            8.594209909439087,
+            0.8192100524902344,
+            0.6612098217010498,
+            10.718209981918335
+          ],
+          "book_timestamp_span_seconds": 10.086000204086304,
+          "unmodeled": [
+            "onchain basket completeness/identity",
+            "conversion fee",
+            "CLOB fees",
+            "gas",
+            "taker delay",
+            "leg execution/unwind",
+            "collateral conversion availability"
+          ]
+        }
+      ]
+    },
+    {
+      "received": 1790857447.13161,
+      "baskets": [
+        {
+          "event_id": "606422",
+          "title": "Fed Decision in October?",
+          "questions": 5,
+          "catalog_completeness_onchain_verified": false,
+          "status": "quote_screen_only",
+          "max_budget_quantity": "24.943876",
+          "max_budget_cost": "99.999998884",
+          "max_budget_payout_upperbound": "99.775504",
+          "max_budget_gross_quote_surplus": "-0.224494884",
+          "best_quantity": "5",
+          "best_cost": "20.045",
+          "best_gross_quote_surplus": "-0.045",
+          "positive_candidate": false,
+          "best_ask_sum": "4.009",
+          "book_age_seconds": [
+            11.837610006332397,
+            9.68460988998413,
+            0.4526100158691406,
+            0.06360983848571777,
+            11.808609962463379
+          ],
+          "book_timestamp_span_seconds": 11.77400016784668,
+          "unmodeled": [
+            "onchain basket completeness/identity",
+            "conversion fee",
+            "CLOB fees",
+            "gas",
+            "taker delay",
+            "leg execution/unwind",
+            "collateral conversion availability"
+          ]
+        }
+      ]
+    }
+  ],
+  "catalog_stopped_for_book_reserve": true,
+  "ended_at": 1790857447.1342382,
+  "errors": [],
+  "requests": [
+    {
+      "path": "reports/polymarket-basket-fed/catalog-0.json.gz",
+      "bytes": 5227,
+      "sha256": "df936ea7f95b716059def5db7583e5f3c10db7f19dca0635b1bc99961f80caaa",
+      "status": 200,
+      "received": 1790857445.8791325
+    },
+    {
+      "path": "reports/polymarket-basket-fed/books-0.json.gz",
+      "bytes": 3331,
+      "sha256": "4737186a1b0a9fb9a005d8bfabb14d3bf57dadc4928374ca0ecc2b0da1fa6b73",
+      "status": 200,
+      "received": 1790857446.04121
+    },
+    {
+      "path": "reports/polymarket-basket-fed/books-1.json.gz",
+      "bytes": 3352,
+      "sha256": "7af5471423e081fa6ec712868be550abef30bf03a934fed2e66f0b60e28fa998",
+      "status": 200,
+      "received": 1790857447.13161
+    }
+  ],
+  "raw_bytes": 11910
+}

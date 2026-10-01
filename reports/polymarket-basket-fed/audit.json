@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "scope": "Independent raw response/hash and Gamma YES/NO token mapping checks; five CLOB conditionIDs; first-level quantities cover full100budget quantity; all positive quantities cost at least4.009 per share-set versus at most assumed4conversion payout. No onchain completeness, execution or fee proof.",
+  "checks": [
+    {
+      "snapshot": 0,
+      "sum_best_asks": "4.009",
+      "quantity": "24.943876",
+      "cost": "99.999998884",
+      "assumed_payout": "99.775504",
+      "gross_shortfall": "0.224494884",
+      "all_first_levels_cover_quantity": true
+    },
+    {
+      "snapshot": 1,
+      "sum_best_asks": "4.009",
+      "quantity": "24.943876",
+      "cost": "99.999998884",
+      "assumed_payout": "99.775504",
+      "gross_shortfall": "0.224494884",
+      "all_first_levels_cover_quantity": true
+    }
+  ]
+}

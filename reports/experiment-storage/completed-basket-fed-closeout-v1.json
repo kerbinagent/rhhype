@@ -1,0 +1,56 @@
+{
+  "schema": "completed-basket-fed-closeout-v1",
+  "recorded_utc": "2026-10-01T12:25:23.121228+00:00",
+  "previous": "reports/experiment-storage/polymarket-basket-fed-allocation-v1.json",
+  "previous_sha256": "115ed0e2da768dafa79359efb3fc34abedee6557fb474af80e4fd97f3b1a3df1",
+  "old_reserved_bytes": 114688,
+  "artifact_bytes": 28212,
+  "retention_reserved_bytes": 65536,
+  "released_bytes": 49152,
+  "active_research_reserved_bytes": 6242304,
+  "active_research_headroom_bytes": 49152,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retain all artifacts unchanged plus16KiB manifest margin.",
+  "files": [
+    {
+      "path": "reports/polymarket-basket-fed/audit.json",
+      "bytes": 851,
+      "sha256": "59f8aa4fbd9ac84560fd14892b29a77bccf9045fd6771c63993c3463de0d290c"
+    },
+    {
+      "path": "reports/polymarket-basket-fed/books-0.json.gz",
+      "bytes": 3331,
+      "sha256": "4737186a1b0a9fb9a005d8bfabb14d3bf57dadc4928374ca0ecc2b0da1fa6b73"
+    },
+    {
+      "path": "reports/polymarket-basket-fed/books-1.json.gz",
+      "bytes": 3352,
+      "sha256": "7af5471423e081fa6ec712868be550abef30bf03a934fed2e66f0b60e28fa998"
+    },
+    {
+      "path": "reports/polymarket-basket-fed/catalog-0.json.gz",
+      "bytes": 5227,
+      "sha256": "df936ea7f95b716059def5db7583e5f3c10db7f19dca0635b1bc99961f80caaa"
+    },
+    {
+      "path": "reports/polymarket-basket-fed/readout.md",
+      "bytes": 1522,
+      "sha256": "57a488700f95345e4deddcd71b6c6c8a1d1d4b82027b74e8f742bddfee5e0e9e"
+    },
+    {
+      "path": "reports/polymarket-basket-fed/summary.json",
+      "bytes": 4780,
+      "sha256": "78f752d7e2d7cdebbad5d60ba14143233bee5335d12a0cfb0d9f18e454aa7c21"
+    },
+    {
+      "path": "scripts/polymarket_basket_fed.py",
+      "bytes": 7354,
+      "sha256": "ce91c6340c06dba83a46e34cd5c4056104ccd50e16a0a98e6c22b697b3f2ec3e"
+    },
+    {
+      "path": "reports/experiment-storage/polymarket-basket-fed-allocation-v1.json",
+      "bytes": 1795,
+      "sha256": "115ed0e2da768dafa79359efb3fc34abedee6557fb474af80e4fd97f3b1a3df1"
+    }
+  ]
+}
