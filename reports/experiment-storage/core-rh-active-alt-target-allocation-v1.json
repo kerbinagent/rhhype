@@ -1,0 +1,125 @@
+{
+  "schema": "core-rh-active-alt-target-v1",
+  "recorded_utc": "2026-10-01T14:41:02.609667+00:00",
+  "previous": "reports/experiment-storage/completed-fair-value-exploration-closeout-v1.json",
+  "previous_sha256": "b87a3afd72635d7abb0cc358219e9d740e0b3f9ee8c11f69266c22589232f7b0",
+  "new_maximum_bytes": 491520,
+  "categories_bytes": {
+    "source": 32768,
+    "raw": 262144,
+    "metadata": 65536,
+    "output": 98304,
+    "control": 32768
+  },
+  "active_research_reserved_bytes": 18792448,
+  "active_research_headroom_bytes": 81920,
+  "overall_reservation_bytes": 836777216,
+  "assets": [
+    "PONS",
+    "CASHCAT"
+  ],
+  "budgets": [
+    100
+  ],
+  "horizons": [
+    60
+  ],
+  "entry_slippage_bps": 10,
+  "primary": "100-60-2s-confirm-6bp",
+  "duration_seconds": 900,
+  "entry_end_seconds": 700,
+  "raw_soft_cap": 160000,
+  "scope": "Same frozen confirmed1bpvs6bp policy, PONS/CASHCAT cohort. Each independent arm100perleg600prefunded; max3positions/30sattemptcooldown/30cap; no actualorders.",
+  "strategy": "Samepastonly120smedian/2sembargo90count89span arrivalreferences. Both5bpexcursion and2secconfirmation. Target policyrequiresforecastcash minuscapital toclear6bpoflargerentryleg; baseline1bp. Profitmarks6bpof100budget vs1bp. Same400msallorders,10bpentrylimit,60shold,30sattemptcooldown,30attemptcap,700sadmission/900sruntime/120shourguard. Fundingunknownretained;fee0freshmetadata;USDGUSDCparityconditional;5bpstress separate.",
+  "storage": "262144Brawhard,160000Bsoftadmissionstop,65536metadata,98304output,32768source/control each. Same900sruntime700sadmission128MBingressmaximum. No interim economics oroptionalextension.",
+  "source_pins": [
+    {
+      "path": "scripts/core_rh_active_alt_target.py",
+      "sha256": "4be4ad7598c4ce51cb1610c456ead02aa69b33c422bf5aacc56451131ff3ed9e"
+    },
+    {
+      "path": "scripts/audit_core_rh_active_alt_target.py",
+      "sha256": "bdc38f4153158de5ce1dec978e3a9d0b1b935d3eeeef5135ffcf3a1202dc7fa2"
+    },
+    {
+      "path": "scripts/core_rh_target_margin.py",
+      "sha256": "3644abc5fa34c379f1673ce99901194ee6dea6d5a314daa279319b7b431f295a"
+    },
+    {
+      "path": "tests/test_core_rh_target_margin.py",
+      "sha256": "b2db7eb8418ccbf34ecad2d331a53495824d4694703adee16f5b225a5602465d"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    }
+  ],
+  "test": "Synthetic5bpforecast admittedonlybaseline;8bpforecastadmitsboth; both2sconfirmed;400msentrydelay;6bptargetcontinuesholdingat3bpprofit thenrequestscloseabove6bp. One unittest passed. Independent endpoint auditor also reconstructs forecast bookwalk andformula.",
+  "confirmation_seconds": [
+    2
+  ],
+  "target_bps": [
+    1,
+    6
+  ],
+  "hypothesis": "AI did not meet reference warmup under its sparse paired updates. These two previously untested markets have higher archived daily trade counts on both venues and may supply more eligible observations. Exploratory cohort choice, prospective fixed-rule price test; selection not from new price outcomes. Same-symbol/unit-index compatibility remains conditional; no funding credit.",
+  "active_research_pool_bytes": 18874368,
+  "selection_evidence": [
+    {
+      "venue": "core",
+      "symbol": "CASHCAT",
+      "volume": 1174684.083779,
+      "trade_count": 6900,
+      "source": "reports/core-passive-lit/capture/metadata/core_markets.json.gz",
+      "source_sha256": "460fb30ba503060ce88158458b073e44e6ec7ec54e4f80cf7bebb3d217222ea9"
+    },
+    {
+      "venue": "core",
+      "symbol": "AI",
+      "volume": 318617.546557,
+      "trade_count": 5715,
+      "source": "reports/core-passive-lit/capture/metadata/core_markets.json.gz",
+      "source_sha256": "460fb30ba503060ce88158458b073e44e6ec7ec54e4f80cf7bebb3d217222ea9"
+    },
+    {
+      "venue": "core",
+      "symbol": "PONS",
+      "volume": 1602995.509863,
+      "trade_count": 7063,
+      "source": "reports/core-passive-lit/capture/metadata/core_markets.json.gz",
+      "source_sha256": "460fb30ba503060ce88158458b073e44e6ec7ec54e4f80cf7bebb3d217222ea9"
+    },
+    {
+      "venue": "rh",
+      "symbol": "PONS",
+      "volume": 1390790.46939,
+      "trade_count": 7058,
+      "source": "reports/core-passive-lit/capture/metadata/rh_markets.json.gz",
+      "source_sha256": "3661c978154a6b660446d2cc4ab38aeb63aef4786a78b8cd0356bdfbf4aea52f"
+    },
+    {
+      "venue": "rh",
+      "symbol": "CASHCAT",
+      "volume": 479655.243252,
+      "trade_count": 2293,
+      "source": "reports/core-passive-lit/capture/metadata/rh_markets.json.gz",
+      "source_sha256": "3661c978154a6b660446d2cc4ab38aeb63aef4786a78b8cd0356bdfbf4aea52f"
+    },
+    {
+      "venue": "rh",
+      "symbol": "AI",
+      "volume": 92128.364972,
+      "trade_count": 1076,
+      "source": "reports/core-passive-lit/capture/metadata/rh_markets.json.gz",
+      "source_sha256": "3661c978154a6b660446d2cc4ab38aeb63aef4786a78b8cd0356bdfbf4aea52f"
+    }
+  ]
+}
