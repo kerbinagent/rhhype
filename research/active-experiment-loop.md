@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 01 October 2026 04:27 UTC
+## Current status, 01 October 2026 04:47 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative or inconclusive; no strategy is promoted. After the host reboot,
@@ -16,7 +16,7 @@ all eight saved ledgers, strategy epoch and three legacy funding obligations.
 The 00:14 catch-up review96 covers an extended interval and is not a fresh
 uninterrupted validation window. All four feeds are connected.
 
-Reviews through 109 are preserved. Reviews 66–109 have 1,626 closes: 1,616 losses,
+Reviews through 110 are preserved. Reviews 66–110 have 1,627 closes: 1,617 losses,
 two paired gains and eight failed-hedge rescue gains. The four epoch paired gains
 remain the WLD/CRCL records from review65 and two MU records from review85;
 the latter share a signal and HL fill observation, and their full three-pair
@@ -31,12 +31,12 @@ Premium/−$38.73372. No new wins or estimated trades. Three pending funding ite
 remain across convergence, Premium and standard; no open positions. Review 107
 added eleven exact losses/−$20.72763: three convergence and eight Premium.
 Review 108 added four exact losses/−$6.57846: two each from convergence and
-Premium. Review 109 added two exact Premium losses/−$4.01441. The convergence
-epoch is 383/−$452.4346 and Premium 682/−$1,264.1213. The separately captured
-Premium epoch count rose by two, matching review109's delta. Earlier
-report/snapshot boundary differences are recorded in the review journal; review
-totals follow report deltas. No new wins or estimated trades. Next review:
-**1 October 04:46:33 UTC**.
+Premium. Review 109 added two exact Premium losses/−$4.01441. Review 110 added
+one exact Premium failed-hedge loss/−$1.63377. The convergence epoch is
+383/−$452.4346 and Premium 683/−$1,265.7550. The epoch snapshot changed by one
+Premium close, matching review110's delta. Earlier report/snapshot boundary
+differences are recorded in the review journal; review totals follow report
+deltas. No new wins or estimated trades. Next review: **1 October 05:06:33 UTC**.
 
 The original dated-carry run was interrupted by reboot after 136 recorded slots:
 134 sampled and two late callbacks. Its last trusted index and all evidence
