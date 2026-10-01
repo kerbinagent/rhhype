@@ -1,0 +1,7 @@
+{
+  "audit": "passed",
+  "forecasts_checked": 97,
+  "summary_sha256": "e6b23d2e4a9d6acaf37805d3f8009ac5f46ad396484713487874535a98abdbbd",
+  "checks": "Saved reference timing, cadence, count/span, median, quote identity, forecast cash arithmetic,6bp threshold and100ms activation; separate frozen fill auditor reads original full raw books.",
+  "limitation": "This formula audit does not independently rebuild reference values or all model-driven cancellation decisions from raw depth; must add that check before using positive results to justify prospective testing."
+}

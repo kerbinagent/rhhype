@@ -1,0 +1,8 @@
+{
+  "audit": "passed",
+  "raw_reference_values_checked": 458,
+  "raw_quote_caps_checked": 97,
+  "summary_sha256": "e6b23d2e4a9d6acaf37805d3f8009ac5f46ad396484713487874535a98abdbbd",
+  "checks": "Raw current and retained preceding books, branch-local taker depth depletion, reference VWAPs, reference source freshness/skew, quantities, closing medians, hedge VWAP, zero-fee/capital terms and downward-rounded6bp price cap.",
+  "limitations": "Model-driven cancellations inherit frozen lifecycle tests and are not separately reconstructed here. Public queue allocation and execution ACKs remain conditional."
+}

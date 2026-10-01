@@ -1,0 +1,122 @@
+{
+  "schema": "completed-fair-value-exploration-closeout-v1",
+  "recorded_utc": "2026-10-01T14:39:46.424632+00:00",
+  "previous": "reports/experiment-storage/completed-ai-target-closeout-v1.json",
+  "previous_sha256": "14a40547f2c6f2ed32ce71728cb9a972ea035eed208596f8942f8681730cb71f",
+  "old_reserved_bytes": 458752,
+  "artifact_bytes": 203620,
+  "retention_reserved_bytes": 229376,
+  "released_bytes": 229376,
+  "active_research_pool_bytes": 18874368,
+  "active_research_reserved_bytes": 18300928,
+  "active_research_headroom_bytes": 573440,
+  "overall_reservation_bytes": 836777216,
+  "scope": "All declared artifacts and sources retained, including incomplete first fair-value run where applicable; 24KiB closeout slack. No deletion or recompression of retained artifacts.",
+  "files": [
+    {
+      "path": "reports/core-passive-fair-retry/audit.jsonl.gz",
+      "bytes": 84037,
+      "sha256": "669b049a19c3c5e3f8ca8941b227ce225a2fdc40fa06c85590323f82cc11861d"
+    },
+    {
+      "path": "reports/core-passive-fair-retry/forecast-audit.json",
+      "bytes": 570,
+      "sha256": "d9ef77bb97aaff3d373fb90056dc37b384d9ff3728145a5c49b4266a8a24f43e"
+    },
+    {
+      "path": "reports/core-passive-fair-retry/independent-audit.json",
+      "bytes": 839,
+      "sha256": "1f055d7b8a09e9b4baaed266d18289b871e9c8339b7f6cb15da1d69312f495a4"
+    },
+    {
+      "path": "reports/core-passive-fair-retry/metrics.json",
+      "bytes": 354,
+      "sha256": "9be7206e599be4b202fa9e818009f99f4e3561a02033cd31985e9de14b4e23c3"
+    },
+    {
+      "path": "reports/core-passive-fair-retry/raw-reference-audit.json",
+      "bytes": 609,
+      "sha256": "0cace40079fc3d620bb335c4d41ed4d2d38ffb7a1f8500a63eaf6b8fb9dacb49"
+    },
+    {
+      "path": "reports/core-passive-fair-retry/readout.md",
+      "bytes": 2024,
+      "sha256": "046feaaf94e7822bf78777b081fec9f531f691f42e863d4159cc5bc060e49822"
+    },
+    {
+      "path": "reports/core-passive-fair-retry/summary.json.gz",
+      "bytes": 7070,
+      "sha256": "e6b23d2e4a9d6acaf37805d3f8009ac5f46ad396484713487874535a98abdbbd"
+    },
+    {
+      "path": "reports/core-passive-fair-value/audit.jsonl.gz",
+      "bytes": 80820,
+      "sha256": "1bb8699a6f94f62837cf4bdeef2287d4fea3b0f6d8e18f321008409ee95e8887"
+    },
+    {
+      "path": "reports/core-passive-fair-value/metrics.json",
+      "bytes": 306,
+      "sha256": "008f97ed236a2c4240e0c012193f11fad44e36147101ffc8f9d5d82310b2b653"
+    },
+    {
+      "path": "reports/core-passive-fair-value/readout.md",
+      "bytes": 752,
+      "sha256": "2a90f884262ab7c8154181a50ee839a41010d4a4e2323d622a4b19a8f9f0b9c5"
+    },
+    {
+      "path": "reports/core-passive-fair-value/summary.json.gz",
+      "bytes": 3288,
+      "sha256": "cc63c63026ea94727507b976091db3d0fb11b1ddc744fb6e6dfdd9ee282bb9f2"
+    },
+    {
+      "path": "reports/experiment-storage/core-passive-fair-retry-v1.json",
+      "bytes": 3186,
+      "sha256": "de4753991384bb4a6317b6ea380d9aa7eefdf02831b011dd0ca97f0809a594ef"
+    },
+    {
+      "path": "reports/experiment-storage/core-passive-fair-value-audit-extension-v1.json",
+      "bytes": 603,
+      "sha256": "58e8636d1e53eb1113da1bf5d0a6df10f18b7f3edbeeb3aa60a0761667c0aeee"
+    },
+    {
+      "path": "reports/experiment-storage/core-passive-fair-value-v1.json",
+      "bytes": 2396,
+      "sha256": "fca8b292b23a7af085ff9de785f64111489500f061e3b51e9c7d53931863d0a8"
+    },
+    {
+      "path": "scripts/audit_core_passive_fair_references.py",
+      "bytes": 3866,
+      "sha256": "8e4f828db0d7ae212b931891f9fffeacc74c638667d919229b6f27309672dbc8"
+    },
+    {
+      "path": "scripts/audit_core_passive_fair_retry.py",
+      "bytes": 456,
+      "sha256": "f0d7e6ba17d5b471bbb0b920fe4e0538d32ee4df9d35caf6f73eca796a2e8732"
+    },
+    {
+      "path": "scripts/audit_core_passive_fair_value.py",
+      "bytes": 2245,
+      "sha256": "9fae325fc5790745185b0533583bf0bed594a2f7baa3fe73cf8647f02d09825d"
+    },
+    {
+      "path": "scripts/core_passive_fair_value.py",
+      "bytes": 3328,
+      "sha256": "2b0a73e31f436cfaafdf2dba6d6b90d4c38c507804fc633fcf84048871c4eb60"
+    },
+    {
+      "path": "scripts/replay_core_passive_fair_retry.py",
+      "bytes": 1207,
+      "sha256": "24eb6c5c212782e4aad26dff02186d778bd4f240115dbeb3d7da1d4ba832f4e1"
+    },
+    {
+      "path": "scripts/replay_core_passive_fair_value.py",
+      "bytes": 3929,
+      "sha256": "6e49853b9cad4ef4ee565ec6956eb51ad7d394f1caf99eef568736727b553b85"
+    },
+    {
+      "path": "tests/test_core_passive_fair_value.py",
+      "bytes": 1735,
+      "sha256": "c6d46301f966b793c8ff7ab627e887cc2ff78b24991ac4ef74f5ea6cb5fc0729"
+    }
+  ]
+}

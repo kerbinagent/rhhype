@@ -1,0 +1,102 @@
+{
+  "schema": "completed-ai-target-closeout-v1",
+  "recorded_utc": "2026-10-01T14:39:46.423452+00:00",
+  "previous": "reports/experiment-storage/core-passive-fair-retry-v1.json",
+  "previous_sha256": "de4753991384bb4a6317b6ea380d9aa7eefdf02831b011dd0ca97f0809a594ef",
+  "old_reserved_bytes": 491520,
+  "artifact_bytes": 227273,
+  "retention_reserved_bytes": 262144,
+  "released_bytes": 229376,
+  "active_research_pool_bytes": 18874368,
+  "active_research_reserved_bytes": 18530304,
+  "active_research_headroom_bytes": 344064,
+  "overall_reservation_bytes": 836777216,
+  "scope": "All declared artifacts and sources retained, including incomplete first fair-value run where applicable; 24KiB closeout slack. No deletion or recompression of retained artifacts.",
+  "files": [
+    {
+      "path": "reports/core-rh-ai-target/audit.json",
+      "bytes": 1389,
+      "sha256": "21d0a902067a7e798c131201f0a068972ec0c842bbfe3e1987f071f67babf79e"
+    },
+    {
+      "path": "reports/core-rh-ai-target/events.jsonl.gz",
+      "bytes": 16618,
+      "sha256": "7f54470582913dfec723823cc906e57cd7faa2f2a8cb8b61252ea02e1e55f77d"
+    },
+    {
+      "path": "reports/core-rh-ai-target/lighter-metadata.json.gz",
+      "bytes": 23242,
+      "sha256": "e7a42d4752505a74de37b574ba4e7f5c6b350cc4d4eb293d09ac0412a6dfa710"
+    },
+    {
+      "path": "reports/core-rh-ai-target/metadata.json",
+      "bytes": 1158,
+      "sha256": "ff4979acfe0a9a0b2065c8e1aee588e2bd6e58f6b454c278fa5c42a50619f70a"
+    },
+    {
+      "path": "reports/core-rh-ai-target/readout.md",
+      "bytes": 1481,
+      "sha256": "635f08cc47d231a2bccc4c5c77fbd87582389d9f5a60e1fa1e45d68208cbc343"
+    },
+    {
+      "path": "reports/core-rh-ai-target/rh_lighter-metadata.json.gz",
+      "bytes": 8032,
+      "sha256": "cc3f2bf74fe944f927029da702025ce18cf22fafb5083b397111f8cb4b014c91"
+    },
+    {
+      "path": "reports/core-rh-ai-target/status.json",
+      "bytes": 283,
+      "sha256": "7f7df9459b16f610f5893ea1354b870e51d521b0a093e8dffc693c7f5f25ffb2"
+    },
+    {
+      "path": "reports/core-rh-ai-target/summary.json",
+      "bytes": 2992,
+      "sha256": "edeeeb08487e9ac1b33e38e5422f81b7be900ce507e49f66773497633802a428"
+    },
+    {
+      "path": "reports/core-rh-ai-target/unresolved.json.gz",
+      "bytes": 55,
+      "sha256": "4b40fedb74a2fa7ebedbdc4aed16f65ed7f16a9b7d68079098d69e060d2d5a1b"
+    },
+    {
+      "path": "reports/experiment-storage/core-rh-ai-target-allocation-v1.json",
+      "bytes": 3408,
+      "sha256": "c605c7e868703289e2160c86f5bde797ec85cea7b5484f68de3b19fc3b3ed7f0"
+    },
+    {
+      "path": "scripts/audit_core_rh_ai_target.py",
+      "bytes": 12611,
+      "sha256": "d2b10cfc135f1c2e64075150840d5e27009d048a26752942b2161cb17861c057"
+    },
+    {
+      "path": "scripts/core_rh_ai_target.py",
+      "bytes": 1043,
+      "sha256": "ccbe93597372363c8314affae38342c0e84296a645f35ddae5d2926f30f14178"
+    },
+    {
+      "path": "scripts/core_rh_target_margin.py",
+      "bytes": 20297,
+      "sha256": "3644abc5fa34c379f1673ce99901194ee6dea6d5a314daa279319b7b431f295a"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "bytes": 40963,
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "bytes": 59902,
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "bytes": 31735,
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "tests/test_core_rh_target_margin.py",
+      "bytes": 2064,
+      "sha256": "b2db7eb8418ccbf34ecad2d331a53495824d4694703adee16f5b225a5602465d"
+    }
+  ]
+}
