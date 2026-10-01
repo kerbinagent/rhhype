@@ -1,0 +1,30 @@
+{
+  "recorded_utc": "2026-10-01T22:34:50.973180+00:00",
+  "all_windows_normal": true,
+  "windows": [
+    {
+      "window": 1,
+      "manifest_sha256": "a026a5a22fadb6e8cebb4dc95512556eec90b5c6b29b87a7360a967ba585c43e",
+      "raw_sha256": "6c6c0b5fcddb4c034a6f5a46a5c93f0806f31165c64e90047527fd5e1b7ab0dd",
+      "raw_bytes": 1872350,
+      "started_utc": "2026-10-01T22:04:23.305388+00:00",
+      "ended_utc": "2026-10-01T22:14:24.127582+00:00"
+    },
+    {
+      "window": 2,
+      "manifest_sha256": "c9d028d921747bea42e2a7244d6104817f130808c5e00e154d0a95d1c69b6d55",
+      "raw_sha256": "e94c75df5a98f96bad1424815b8607015ddebe7779e88bc793cbb6185731f65f",
+      "raw_bytes": 1847289,
+      "started_utc": "2026-10-01T22:14:25.055568+00:00",
+      "ended_utc": "2026-10-01T22:24:25.884451+00:00"
+    },
+    {
+      "window": 3,
+      "manifest_sha256": "cdc8e3e55950bd6b9d4e8aea6857ef39521a50adc184dcd982104a0c851bb642",
+      "raw_sha256": "61e2dd878dd0b32275725cd693b55e85ab71bd015ecb840bd0a19c11f35e6210",
+      "raw_bytes": 1511049,
+      "started_utc": "2026-10-01T22:24:26.729850+00:00",
+      "ended_utc": "2026-10-01T22:34:27.500765+00:00"
+    }
+  ]
+}

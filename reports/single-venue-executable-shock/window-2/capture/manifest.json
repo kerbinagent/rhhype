@@ -1,0 +1,59 @@
+{
+  "schema": "single-venue-depth-public-capture-v1",
+  "read_only": true,
+  "started_utc": "2026-10-01T22:14:25.055568+00:00",
+  "ended_utc": "2026-10-01T22:24:25.884451+00:00",
+  "end_reason": "duration_limit",
+  "truncated": false,
+  "dropped_complete_frame_on_cap": 0,
+  "configured_seconds": 600,
+  "configured_total_bytes": 8519680,
+  "compressed_payload_bytes": 1847289,
+  "payload_records": 14760,
+  "frames_sha256": "e94c75df5a98f96bad1424815b8607015ddebe7779e88bc793cbb6185731f65f",
+  "market_plan_sha256": "b2d9878e8714d5fdd4fd79efe9ac2b49ff6e42a61d6736f7d12818340f4cb2f6",
+  "selected_markets": {
+    "rh_lighter": {
+      "LIT": "5"
+    },
+    "lighter": {
+      "LIT": "120"
+    }
+  },
+  "metadata_bytes": 56060,
+  "generations": [
+    {
+      "venue": "rh_lighter",
+      "generation": "rh_lighter:1:33912af8",
+      "opened_utc": "2026-10-01T22:14:25.055810+00:00",
+      "closed_utc": "2026-10-01T22:24:25.884306+00:00"
+    },
+    {
+      "venue": "lighter",
+      "generation": "lighter:1:22d98262",
+      "opened_utc": "2026-10-01T22:14:25.056242+00:00",
+      "closed_utc": "2026-10-01T22:24:25.884331+00:00"
+    }
+  ],
+  "errors": [],
+  "record_counts": {
+    "lighter|None|None": 1,
+    "lighter|None|connected": 1,
+    "rh_lighter|None|None": 1,
+    "rh_lighter|None|connected": 1,
+    "lighter|subscription_acks": 2,
+    "lighter|120|order_book": 8137,
+    "lighter|120|trade": 390,
+    "rh_lighter|subscription_acks": 2,
+    "rh_lighter|5|trade": 181,
+    "rh_lighter|5|order_book": 6030,
+    "lighter|outbound_keepalive": 9,
+    "rh_lighter|outbound_keepalive": 9,
+    "lighter|None|pong": 9,
+    "rh_lighter|None|pong": 9,
+    "rh_lighter|connections_ended": 1,
+    "lighter|connections_ended": 1
+  },
+  "source_sha256": "f5230d15c2bcaa0ce32f767b75f058d01eacae292f27977be55e41cdd6d2a4ed",
+  "economic_evaluation": false
+}

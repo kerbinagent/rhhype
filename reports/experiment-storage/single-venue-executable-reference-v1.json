@@ -1,0 +1,146 @@
+{
+  "schema": "single-venue-executable-reference-v1",
+  "recorded_utc": "2026-10-01T22:38:38.380263+00:00",
+  "previous": "reports/experiment-storage/single-venue-executable-reference-preparation-v1.json",
+  "previous_sha256": "5ff5e70688b3de8ebb7791a77d1e41075b0b6f66e62f7cb454df1c8f832f6fd8",
+  "reserved_bytes": 32768,
+  "preparation_included_bytes": 32768,
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 153042944,
+  "active_research_headroom_bytes": 1097728,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retrospective exact reference-midpoint accounting for every closed episode in the completed executable-shockLITbatch. Snapshot paired books at actual entry/exit fill callbacks; enforce original pairfresh checks; retain missing pairs or multiple exits as unmatched. Native reference half-tick Decimal midpoints, side*samequantity*reference change plus residual reconciles actualgross and recorded costs/stress. USDC/USDG parity and frictionless reference midpoint are hypothetical; no executable hedge,causal attribution or fairvalue claim. No new trading test, rule change, or economic inspection of the active ten-market capture.",
+  "windows": [
+    {
+      "index": 1,
+      "capture": "reports/single-venue-executable-shock/window-1/capture",
+      "manifest_sha256": "a026a5a22fadb6e8cebb4dc95512556eec90b5c6b29b87a7360a967ba585c43e",
+      "hard_bytes": 8519680,
+      "samples": [
+        "single-venue-executable-shock-1-lit"
+      ]
+    },
+    {
+      "index": 2,
+      "capture": "reports/single-venue-executable-shock/window-2/capture",
+      "manifest_sha256": "c9d028d921747bea42e2a7244d6104817f130808c5e00e154d0a95d1c69b6d55",
+      "hard_bytes": 8519680,
+      "samples": [
+        "single-venue-executable-shock-2-lit"
+      ]
+    },
+    {
+      "index": 3,
+      "capture": "reports/single-venue-executable-shock/window-3/capture",
+      "manifest_sha256": "cdc8e3e55950bd6b9d4e8aea6857ef39521a50adc184dcd982104a0c851bb642",
+      "hard_bytes": 8519680,
+      "samples": [
+        "single-venue-executable-shock-3-lit"
+      ]
+    }
+  ],
+  "expected_closes": 19,
+  "output_max_bytes": 8192,
+  "pins": [
+    {
+      "path": "scripts/single_venue_executable_reference.py",
+      "sha256": "fb49ba2afe5d7f11381699e6be0805a785b4cb3a53497a7b39ef8cdc9a865537"
+    },
+    {
+      "path": "scripts/single_venue_batch_reference.py",
+      "sha256": "82a35dfd0803e9a49ad1f672c6867f1694ad6e727d9a11b2a84e52a8603f5e56"
+    },
+    {
+      "path": "scripts/single_venue_depth_events.py",
+      "sha256": "a6e681b4e9469422c29b6a27a4647223149dabe9637564539e71386e1c0d5fcc"
+    },
+    {
+      "path": "scripts/single_venue_depth_capture.py",
+      "sha256": "f5230d15c2bcaa0ce32f767b75f058d01eacae292f27977be55e41cdd6d2a4ed"
+    },
+    {
+      "path": "scripts/single_venue_strategy.py",
+      "sha256": "5f4a8684e76781c311eb9dfbd9c2f46f9600bb2369db09aafda7fbc2c0c02679"
+    },
+    {
+      "path": "scripts/maker_book_archive.py",
+      "sha256": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2"
+    },
+    {
+      "path": "scripts/maker_capture.py",
+      "sha256": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9"
+    },
+    {
+      "path": "scripts/core_rh_small_shortterm.py",
+      "sha256": "65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-executable-shock-comparison.json.gz",
+      "sha256": "a706c168e3eb4a5366b891959c516591cfc8ff54720603846303879548acc9b4"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-executable-shock-v1.json",
+      "sha256": "b2d9878e8714d5fdd4fd79efe9ac2b49ff6e42a61d6736f7d12818340f4cb2f6"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-executable-shock-1-lit/summary.json.gz",
+      "sha256": "66be7fdc1e176788480b60c8da4b36ccaa1112207526bb2f38a82146d6f078d0"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-executable-shock-1-lit/trace.jsonl.gz",
+      "sha256": "d0d65de9d76d99b8858547f97a4336dc00594c87b79d66e05ae65e052b9e8848"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-executable-shock-1-lit/independent-audit.json",
+      "sha256": "5d52eacd7f05982dd0ffbd25bb2e5a5d522b064d439d413fedbf12609ccf8b0b"
+    },
+    {
+      "path": "reports/single-venue-executable-shock/window-1/capture/manifest.json",
+      "sha256": "a026a5a22fadb6e8cebb4dc95512556eec90b5c6b29b87a7360a967ba585c43e"
+    },
+    {
+      "path": "reports/single-venue-executable-shock/window-1/capture/frames.jsonl.gz",
+      "sha256": "6c6c0b5fcddb4c034a6f5a46a5c93f0806f31165c64e90047527fd5e1b7ab0dd"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-executable-shock-2-lit/summary.json.gz",
+      "sha256": "7bcb35a49a29e86f3787dac80129898d65fb61df90e5512d2bd2e81b95472efe"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-executable-shock-2-lit/trace.jsonl.gz",
+      "sha256": "b9d5333e564d1213138e608ac35e17b00b85a7349405f1522f18e7f1336e6d58"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-executable-shock-2-lit/independent-audit.json",
+      "sha256": "28902e817eabbb2c5976aa9522ae3fc836af76533024218f490e403f0f826545"
+    },
+    {
+      "path": "reports/single-venue-executable-shock/window-2/capture/manifest.json",
+      "sha256": "c9d028d921747bea42e2a7244d6104817f130808c5e00e154d0a95d1c69b6d55"
+    },
+    {
+      "path": "reports/single-venue-executable-shock/window-2/capture/frames.jsonl.gz",
+      "sha256": "e94c75df5a98f96bad1424815b8607015ddebe7779e88bc793cbb6185731f65f"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-executable-shock-3-lit/summary.json.gz",
+      "sha256": "b8258344894ac04fc12ec1c7ca425342d89e580ed99286e4795ce03077118b93"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-executable-shock-3-lit/trace.jsonl.gz",
+      "sha256": "90dc741d062d87e31941adbc44ca779dc0ac12eaaca83c6cd5983c6afc2baaec"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-executable-shock-3-lit/independent-audit.json",
+      "sha256": "f7d21e7ab98ecfd83238fb5f29dc8ac7279dd79f00e4f8db85f4ba810ee5e719"
+    },
+    {
+      "path": "reports/single-venue-executable-shock/window-3/capture/manifest.json",
+      "sha256": "cdc8e3e55950bd6b9d4e8aea6857ef39521a50adc184dcd982104a0c851bb642"
+    },
+    {
+      "path": "reports/single-venue-executable-shock/window-3/capture/frames.jsonl.gz",
+      "sha256": "61e2dd878dd0b32275725cd693b55e85ab71bd015ecb840bd0a19c11f35e6210"
+    }
+  ]
+}

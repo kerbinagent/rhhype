@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "sample": "single-venue-executable-shock-2-lit",
+  "counts": {
+    "signal": 2,
+    "request": 4,
+    "ioc": 4,
+    "closed": 2
+  },
+  "raw_capture_verified": true,
+  "signal_checks_vacuous": false,
+  "fill_checks_vacuous": false,
+  "summary_sha256": "7bcb35a49a29e86f3787dac80129898d65fb61df90e5512d2bd2e81b95472efe",
+  "trace_sha256": "b9d5333e564d1213138e608ac35e17b00b85a7349405f1522f18e7f1336e6d58",
+  "limits": "Conditional public-book IOC execution. Signal and first-eligible book checks plus cash reconciliation; no private order acknowledgments or authenticated fills. Independent arms must not be summed."
+}

@@ -1,0 +1,14 @@
+{
+  "pid": 2512537,
+  "command": [
+    "/home/harry/miniconda3/bin/python",
+    "/home/harry/projects/research/rhhype/scripts/single_venue_executable_shock.py",
+    "supervise"
+  ],
+  "launched_utc": "2026-10-01T22:04:22.397892+00:00",
+  "fixed_windows": 3,
+  "seconds_per_window": 600,
+  "per_process_timeout_seconds": 720,
+  "public_read_only": true,
+  "plan_sha256": "b2d9878e8714d5fdd4fd79efe9ac2b49ff6e42a61d6736f7d12818340f4cb2f6"
+}

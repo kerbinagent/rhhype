@@ -1,0 +1,14 @@
+Executable-shock LIT batch: three fixed ten-minute windows, 2026-10-01 22:04:23 through 22:34:27 UTC.
+All raw hashes verified; all three independent audits passed. All 18 ledgers ended flat and known.
+Cash below is native collateral after fees and capital costs, with maximum $100 entry notional. The separate stress deducts 5 basis points of entry notional.
+
+Venue/rule                 Closes  Base cash       Stressed cash
+Core baseline fade         6       -0.352052 USDC  -0.648985 USDC
+Core quote-side fade       3       -0.118948 USDC  -0.267419 USDC
+RH baseline fade           6       +0.056766 USDG  -0.240176 USDG
+RH quote-side fade          4       +0.191578 USDG  -0.006389 USDG
+Strict price filter both   0        no entries      no evidence
+
+No strategy/venue aggregate is positive after stress. RH results are dominated by one +0.271254 USDG close in window2 (+0.221761 stressed), entered by both baseline and quote-side filters. These duplicate arms are not independent wins. The same-market and cross-market ledgers must not be added as a portfolio return. Zero entries do not establish profitability. Public-book paper fills remain conditional, not authenticated executions.
+
+The ten-market comparison was frozen before this batch was economically inspected and began after its terminal. It retains identical thresholds across BTC,ETH,SOL,HYPE,XRP,SUI,NEAR,ZEC,VVV,LIT. Reference accounting matched17of19episodes;the dominantRHwin coincided with a similarly sized favorableCoremidpointmove. No causal attribution follows from it.

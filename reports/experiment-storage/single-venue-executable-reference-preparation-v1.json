@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-executable-reference-preparation-v1",
+  "recorded_utc": "2026-10-01T22:37:30.692036+00:00",
+  "previous": "reports/experiment-storage/single-venue-latency-literature-v4.json",
+  "previous_sha256": "bfabd7cc58475f8afe303c5c62ae2d8fe53338edc36e5ec29bf3d54a190bff57",
+  "reserved_bytes": 32768,
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 153042944,
+  "active_research_headroom_bytes": 1097728,
+  "overall_reservation_bytes": 836777216,
+  "scope": "All completed executable-shock LIT batch closes, once every cash audit passes. Copy existing exact-midpoint reference accounting with only plan/output/expectedcount configuration changes. All winners,losses,and missing pairs retained. No capture,execution change,or new cash backtest. Includes source,plans,gzipoutput<=8192,and readout<=4096."
+}

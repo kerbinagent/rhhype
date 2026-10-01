@@ -1,0 +1,6 @@
+Reference accounting for all19closed ledger episodes in the executable-shockLITbatch.
+17matched fresh entry/exit pairs;2missing pairs retained. Every matched cash identity passed. Fifteen matched residuals were negative;two were positive. These counts include duplicate strategy arms.
+
+The dominant RH window2 short (duplicated in baseline/quote-side arms) earned0.271254USDGnet after costs. The same quantity times the favorable Core reference-midpoint change was0.272745 under assumedUSDC/USDGparity. Fill-relative residual was-0.001489 before costs. Thus the observed win coincided almost exactly with a favorable shared-market move; it does not establish a local price-reversal advantage.
+
+This is descriptive arithmetic using frictionless reference midpoints at actual target fill callbacks, not an executable hedge or causal attribution. All19original cash results remain unchanged, including two missing reference pairs.
