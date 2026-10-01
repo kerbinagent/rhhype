@@ -1,0 +1,267 @@
+{
+  "actual_pnl": null,
+  "development_not_validation": true,
+  "funding_value_units_inferred": true,
+  "current_lot_rules_not_verified_for_history": true,
+  "candles_not_executable": true,
+  "no_margin_solvency_claim": true,
+  "full_month_overlaps_weekly_blocks": true,
+  "outcomes": [
+    {
+      "asset": "ETH",
+      "status": "complete_candle_proxy",
+      "actual_pnl": null,
+      "errors": [],
+      "blocks": [
+        {
+          "start_day": 1,
+          "end_day": 30,
+          "quantity": "0.4054",
+          "principal_usdc": "999.785318",
+          "status": "candle_proxy",
+          "funding_events": 719,
+          "inferred_funding_usdc": "7.197663832572",
+          "candle_basis_usdc": "0.563506",
+          "capital_usdc": "8.217413572602739726027397260",
+          "stress_usdc": "0.4998926590",
+          "candle_residual_usdc": "-0.956136399030739726027397260",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 1,
+          "end_day": 7,
+          "quantity": "0.4054",
+          "principal_usdc": "999.785318",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "1.848112741952",
+          "candle_basis_usdc": "0.916204",
+          "capital_usdc": "1.917396500273972602739726027",
+          "stress_usdc": "0.4998926590",
+          "candle_residual_usdc": "0.347027582678027397260273973",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "quantity": "0.4014",
+          "principal_usdc": "999.827190",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "1.454937540570",
+          "candle_basis_usdc": "-0.858996",
+          "capital_usdc": "1.917476802739726027397260274",
+          "stress_usdc": "0.4999135950",
+          "candle_residual_usdc": "-1.821448857169726027397260274",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "quantity": "0.3977",
+          "principal_usdc": "999.873478",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "1.046099230744",
+          "candle_basis_usdc": "0.783469",
+          "capital_usdc": "1.917565574246575342465753425",
+          "stress_usdc": "0.4999367390",
+          "candle_residual_usdc": "-0.587934082502575342465753425",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "quantity": "0.3601",
+          "principal_usdc": "999.806847",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "1.923989744781",
+          "candle_basis_usdc": "0.558155",
+          "capital_usdc": "1.917437788767123287671232877",
+          "stress_usdc": "0.4999034235",
+          "candle_residual_usdc": "0.064803532513876712328767123",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "quantity": "0.3716",
+          "principal_usdc": "999.9756",
+          "status": "candle_proxy",
+          "funding_events": 47,
+          "inferred_funding_usdc": "0.556380385340",
+          "candle_basis_usdc": "-0.836100",
+          "capital_usdc": "0.5479318356164383561643835616",
+          "stress_usdc": "0.49998780",
+          "candle_residual_usdc": "-1.327639250276438356164383562",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        }
+      ]
+    },
+    {
+      "asset": "LIT",
+      "status": "unknown",
+      "actual_pnl": null,
+      "errors": [
+        "AssertionError:incomplete daily candles"
+      ]
+    },
+    {
+      "asset": "UNI",
+      "status": "unknown",
+      "actual_pnl": null,
+      "errors": [
+        "AssertionError:incomplete daily candles"
+      ]
+    },
+    {
+      "asset": "LINK",
+      "status": "unknown",
+      "actual_pnl": null,
+      "errors": [
+        "AssertionError:incomplete daily candles"
+      ]
+    },
+    {
+      "asset": "LDO",
+      "status": "unknown",
+      "actual_pnl": null,
+      "errors": [
+        "AssertionError:incomplete daily candles"
+      ]
+    },
+    {
+      "asset": "SKY",
+      "status": "unknown",
+      "actual_pnl": null,
+      "errors": [
+        "AssertionError:incomplete daily candles"
+      ]
+    },
+    {
+      "asset": "AAVE",
+      "status": "unknown",
+      "actual_pnl": null,
+      "errors": [
+        "AssertionError:incomplete daily candles"
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "asset": "ETH",
+      "kind": "spot",
+      "raw_sha256": "d61df32baeba85ce5c4caf54f85e3bda397d69e186824081482101677a0fe746",
+      "reused": "reports/core-eth-collateral-candles/spot.json.gz"
+    },
+    {
+      "asset": "ETH",
+      "kind": "perp",
+      "raw_sha256": "0d6394e09fefdd043b9dc894cd0f336062da02067efcde58a06814da69fa645c",
+      "reused": "reports/core-eth-collateral-candles/perp.json.gz"
+    },
+    {
+      "asset": "LIT",
+      "kind": "spot",
+      "raw_sha256": "f7d8c912e30eef74ec4b5cb0390f5288ce8fac2ab52abfcd4376688dd9cebe11",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/candles?market_id=2049&resolution=1d&start_timestamp=1788220800&end_timestamp=1790812799&count_back=31",
+      "received_utc": "2026-10-01T03:49:40.581348+00:00"
+    },
+    {
+      "asset": "LIT",
+      "kind": "perp",
+      "raw_sha256": "729a865551fc2c545d261edfaad168863d1cfe5bbdf1d7e333de15c8b5e27dc3",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/candles?market_id=120&resolution=1d&start_timestamp=1788220800&end_timestamp=1790812799&count_back=31",
+      "received_utc": "2026-10-01T03:49:42.790287+00:00"
+    },
+    {
+      "asset": "UNI",
+      "kind": "spot",
+      "raw_sha256": "358acd36ff18e40f2ad3c1c82868ebd94e6ffb28d4e1b791357e65dff5752a65",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/candles?market_id=2051&resolution=1d&start_timestamp=1788220800&end_timestamp=1790812799&count_back=31",
+      "received_utc": "2026-10-01T03:49:45.026644+00:00"
+    },
+    {
+      "asset": "UNI",
+      "kind": "perp",
+      "raw_sha256": "84966269cae0e080de609969a1011ead72fce286b38c7936d3a3016aaa5dd36b",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/candles?market_id=30&resolution=1d&start_timestamp=1788220800&end_timestamp=1790812799&count_back=31",
+      "received_utc": "2026-10-01T03:49:47.234753+00:00"
+    },
+    {
+      "asset": "LINK",
+      "kind": "spot",
+      "raw_sha256": "b1d113381f4dee61b937c9086b64de27677d154fb74d770f46df78936f235e2d",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/candles?market_id=2050&resolution=1d&start_timestamp=1788220800&end_timestamp=1790812799&count_back=31",
+      "received_utc": "2026-10-01T03:49:49.452841+00:00"
+    },
+    {
+      "asset": "LINK",
+      "kind": "perp",
+      "raw_sha256": "241ca7ea7a0722960f812b1bba5ceecd0eaa5c140327015ac1e5bbc6614db50e",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/candles?market_id=8&resolution=1d&start_timestamp=1788220800&end_timestamp=1790812799&count_back=31",
+      "received_utc": "2026-10-01T03:49:51.667654+00:00"
+    },
+    {
+      "asset": "LDO",
+      "kind": "spot",
+      "raw_sha256": "464cfe8ad07848c417fd8ede61500cdd1bce18d3b9462633117788b2d41d00f9",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/candles?market_id=2054&resolution=1d&start_timestamp=1788220800&end_timestamp=1790812799&count_back=31",
+      "received_utc": "2026-10-01T03:49:53.904422+00:00"
+    },
+    {
+      "asset": "LDO",
+      "kind": "perp",
+      "raw_sha256": "6afe0fc095d38e8178d68b9d82cba090d23327ad48661ac221b7725b5e6dee29",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/candles?market_id=46&resolution=1d&start_timestamp=1788220800&end_timestamp=1790812799&count_back=31",
+      "received_utc": "2026-10-01T03:49:56.131383+00:00"
+    },
+    {
+      "asset": "SKY",
+      "kind": "spot",
+      "raw_sha256": "d7979511c4801e2899eebc0f49f45514d3282c27659ef39d2968451de2fc9864",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/candles?market_id=2053&resolution=1d&start_timestamp=1788220800&end_timestamp=1790812799&count_back=31",
+      "received_utc": "2026-10-01T03:49:58.373554+00:00"
+    },
+    {
+      "asset": "SKY",
+      "kind": "perp",
+      "raw_sha256": "3af811c837a8be221415e746bbdfa0ff55a9b37fbfb72b997d03d8211682a9d7",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/candles?market_id=79&resolution=1d&start_timestamp=1788220800&end_timestamp=1790812799&count_back=31",
+      "received_utc": "2026-10-01T03:50:00.580153+00:00"
+    },
+    {
+      "asset": "AAVE",
+      "kind": "spot",
+      "raw_sha256": "6ca0e028118519fbdf4a9b24e97f9ab09106ab4229ff61d4edefb8ac79e92e14",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/candles?market_id=2052&resolution=1d&start_timestamp=1788220800&end_timestamp=1790812799&count_back=31",
+      "received_utc": "2026-10-01T03:50:02.802368+00:00"
+    },
+    {
+      "asset": "AAVE",
+      "kind": "perp",
+      "raw_sha256": "2de7809cacee5445fc65b3f345ed2d9e2e28e6a76a4b8f3a3a2bdcac5a61403a",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/candles?market_id=27&resolution=1d&start_timestamp=1788220800&end_timestamp=1790812799&count_back=31",
+      "received_utc": "2026-10-01T03:50:05.003314+00:00"
+    }
+  ]
+}

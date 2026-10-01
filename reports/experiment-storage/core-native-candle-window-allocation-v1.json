@@ -1,0 +1,121 @@
+{
+  "schema": "core-native-candle-window-correction-v1",
+  "recorded_utc": "2026-10-01T03:51:16.632929+00:00",
+  "previous": "reports/experiment-storage/core-native-candle-screen-allocation-v1.json",
+  "previous_sha256": "06988887b2f1ed3eea8d09aaf004dd0612bb6184fa3c7d772d389a23848e22ff",
+  "new_maximum_bytes": 98304,
+  "categories_bytes": {
+    "source": 8192,
+    "raw": 0,
+    "output": 73728,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 1613824,
+  "active_research_headroom_bytes": 2580480,
+  "requests_max": 0,
+  "retries": 0,
+  "original_plan": "reports/experiment-storage/core-native-candle-screen-allocation-v1.json",
+  "input_pins": [
+    {
+      "path": "reports/funding-carry/raw/lighter_core/markets.json",
+      "sha256": "3a94067dce1199f9cedff7193a319b565c7e0e90210fa5f27f01dcac37aee513"
+    },
+    {
+      "path": "reports/core-eth-collateral-candles/spot.json.gz",
+      "sha256": "ff5f77d6950722453644e5055b28bd1770de5ccf7385242d791e5adf868e081b"
+    },
+    {
+      "path": "reports/core-eth-collateral-candles/perp.json.gz",
+      "sha256": "27cfb02eb96d53e190216131ef8e83678a673162fe36a4d2725149baf3d63e39"
+    },
+    {
+      "path": "reports/core-eth-funding-history/202609-v1/response.json.gz",
+      "sha256": "37a2a7d06c1db11872c364004b2363923360779dacc196d324faaaf4b3436a42"
+    },
+    {
+      "path": "reports/core-native-funding-network-correction/LIT.json.gz",
+      "sha256": "52824b356814d6de4132db9cd818f31f9cfe53c3c9e10f0cc7ae8ba3cef4144f"
+    },
+    {
+      "path": "reports/core-native-funding-network-correction/UNI.json.gz",
+      "sha256": "acea0a278c7c8fa661e131cfffdf68433c26e2c06ebf27b9cf09a271a457410d"
+    },
+    {
+      "path": "reports/core-native-funding-network-correction/LINK.json.gz",
+      "sha256": "4d19fb402aaa59a3f2143af0c95e894a5f80cf4fb2be69a7c6bc44edc117f19a"
+    },
+    {
+      "path": "reports/core-native-funding-network-correction/LDO.json.gz",
+      "sha256": "0c8f445304c2f4f03190f806c8755e62653b88c60df2930f86c5885643c09b0e"
+    },
+    {
+      "path": "reports/core-native-funding-network-correction/SKY.json.gz",
+      "sha256": "e8b481ec1d4b4b0ce1143248dbdc17ef57f6d2d2be34c5c13da3eb7841107fc3"
+    },
+    {
+      "path": "reports/core-native-funding-network-correction/AAVE.json.gz",
+      "sha256": "e2037faa53f72af98786b638e25fb1e5790b91633d6391a58776b74c8f1debd9"
+    },
+    {
+      "path": "reports/experiment-storage/core-native-candle-screen-allocation-v1.json",
+      "sha256": "06988887b2f1ed3eea8d09aaf004dd0612bb6184fa3c7d772d389a23848e22ff"
+    },
+    {
+      "path": "scripts/core_native_candle_screen.py",
+      "sha256": "af9289a67cf03b1da849dd0c0c70d6a3d271cbb28a0639db21b6a2a936316ae2"
+    },
+    {
+      "path": "reports/core-native-candle-screen/terminal.json",
+      "sha256": "cc76733cad1440a57d7f14c983f9c29767f28e212c39db705816b7ba8585e9e2"
+    },
+    {
+      "path": "reports/core-native-candle-screen/AAVE-perp.json.gz",
+      "sha256": "4a37548ae072d8aabcb3defd20fb96f3984b1d0e1ca9a93e5264851751eaea7b"
+    },
+    {
+      "path": "reports/core-native-candle-screen/AAVE-spot.json.gz",
+      "sha256": "8fb980c85aa9e96537ca0ad569a35f7876b4818431a953b065c77c4e1825e709"
+    },
+    {
+      "path": "reports/core-native-candle-screen/LDO-perp.json.gz",
+      "sha256": "a50cffc0b131a8de96c03ccff3784b4298c13752e10bdcfab95e8ad61342fab3"
+    },
+    {
+      "path": "reports/core-native-candle-screen/LDO-spot.json.gz",
+      "sha256": "fb13d076d09565081ee49cae79ad79b1d465c60c929bc59e0ab0d7e7b8c5dc0e"
+    },
+    {
+      "path": "reports/core-native-candle-screen/LINK-perp.json.gz",
+      "sha256": "c61c1a913d914519fc6398f7a699da82a8fd46d9e8fd0f784b962b86969f6971"
+    },
+    {
+      "path": "reports/core-native-candle-screen/LINK-spot.json.gz",
+      "sha256": "b3535114a186a1c0ea91f97857238347eb37cfe53f058f0b5e62399fb8a78ed0"
+    },
+    {
+      "path": "reports/core-native-candle-screen/LIT-perp.json.gz",
+      "sha256": "94a8884b20e878ab5db6ab674274d386cf83655adbba505a69e3c6cbf2365e2c"
+    },
+    {
+      "path": "reports/core-native-candle-screen/LIT-spot.json.gz",
+      "sha256": "6fc8829b9bcfedf71677e4a1d9c5ba9b73d1df9f4c976765529666c2f547766f"
+    },
+    {
+      "path": "reports/core-native-candle-screen/SKY-perp.json.gz",
+      "sha256": "153071896f2591db40654cfdef8fa759991bc0363fc5a4ada25536d4351755a2"
+    },
+    {
+      "path": "reports/core-native-candle-screen/SKY-spot.json.gz",
+      "sha256": "21b3607dc211acbbbb5bb3d652a0c600b3a082590f52718a8b1fe178203ef07c"
+    },
+    {
+      "path": "reports/core-native-candle-screen/UNI-perp.json.gz",
+      "sha256": "5c2852a2f3c334e3296ca5e15be4cc945642a25c8733c7155085e920f95e64f6"
+    },
+    {
+      "path": "reports/core-native-candle-screen/UNI-spot.json.gz",
+      "sha256": "d6f894b424fc1db7deaf71044973333789f844745364250d8931213c0ef9fecf"
+    }
+  ],
+  "correction": "Original exact-count validation rejected six assets because count_back31 supplied Aug31 plus all30September dates. Before inspecting economic values, freeze offline trim of exactly observed Aug31 timestamp for each12new candle series. Preserve original unknown outputs; remove no in-window row, retain exact original numeric decimal lexemes. Identical7assets, quantities, costmodel, cashflows and6intervals. No network requests."
+}
