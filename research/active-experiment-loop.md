@@ -1856,3 +1856,15 @@ convergence increase two versus report three retained. Archive 3,690,402 B;
 154 future pairs project 4,513,070 B, margin 729,810 B. Carry 21:05:
 247 sampled, invalid slot 71, 616 future/interrupted; no errors/retries/
 evaluation. Next review 21:26:33 UTC.
+
+
+### Review 160, 1 October 21:26 UTC
+
+Complete coverage: five exact losses, four convergence/−$4.65743 (two
+paired, two failed hedges), one Premium failed hedge/−$1.64576. No gains/
+estimates/aborts; three HL price limits. Four feeds/101 pairs fresh,
+running/ok. Separate epoch increments match report. Archive 3,695,000 B;
+153 future pairs project 4,512,326 B, margin 730,554 B. Carry 21:25:
+251 sampled, invalid slot 71, 612 future/interrupted; no errors/retries/
+evaluation. Active batch/control economic outputs untouched.
+Next review 21:46:33 UTC.

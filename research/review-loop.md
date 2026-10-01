@@ -5357,3 +5357,37 @@ Reviews 66–159: 2,434 completions, 2,401 exact losses, one estimated loss,
 five audited paired gains and 27 audited failed-hedge rescue gains.
 Archive 3,690,402 / 5,242,880 B; 154 future pairs at 5,342 B project
 4,513,070 B, margin 729,810 B. Next review **21:26:33 UTC**.
+
+
+## Review 160 — 1 October 2026 21:26:33 UTC
+
+All eight strategy and aborted coverage fields complete. Exact report
+`review-20261001T212633Z.json.gz`: raw 18,800 B, SHA-256
+`33646002ac0c670e25ab011e84cbd8fa959ca3723a6d19bcc1df06c55c6fa3a0`;
+gzip 2,860 B, SHA-256
+`919419f4217fce8f108e3c468d7a58827b659da28b1ff4a5ff9d5892d6833a3a`.
+Independent `current-epoch-at-review160.json.gz`: read 21:27:21.183907 UTC,
+updated 21:27:20.566404 UTC; raw 9,298 B, SHA-256
+`fb45b90cbfac2ef389f7cc43cf72f2c1ba7bba0728f2b7945168fb221c85a364`;
+gzip 1,738 B, SHA-256
+`052eae11e330ffdd03d2f82728386e6e626fed1c729632195ac77a4c4fe3d01f`.
+Exact decompression and per-write cap/growth guards passed.
+
+Five exact losses: four convergence/−$4.6574304382 (two paired, two
+failed hedges) and one Premium failed hedge/−$1.6457597931. No gains,
+estimates or aborts; three HL price limits. Convergence fees $1.0765244866,
+other costs $1.9932323085, capital $0.0000776432; Premium fees
+$0.6976768078, other costs $0.4984529840, capital $0.0000020013.
+
+Separate epoch convergence 636 / −$746.0471621518, Premium 1,241 /
+−$2,229.1973085251; increments four and one match report. Health running/
+ok, four feeds, 101 pairs, CPU 52.37%, p95 lag 30.11 ms, RSS 240.45 MiB,
+448.1 books/s, metadata age 2,685.4 s. Routine pulses fresh/ok, no service
+change. Carry 21:25: 251 sampled, persistent invalid slot 71, 612 future/
+interrupted; running, no errors/retries/economic evaluation. No carry
+sample or active batch/control economic outputs inspected.
+
+Reviews 66–160: 2,439 completions, 2,406 exact losses, one estimated loss,
+five audited paired gains and 27 audited failed-hedge rescue gains.
+Archive 3,695,000 / 5,242,880 B; 153 future pairs at 5,342 B project
+4,512,326 B, margin 730,554 B. Next review **21:46:33 UTC**.
