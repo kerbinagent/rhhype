@@ -1,0 +1,78 @@
+{
+  "schema": "core-rh-target-margin-v1",
+  "recorded_utc": "2026-10-01T13:44:30.266842+00:00",
+  "previous": "reports/experiment-storage/completed-equity-opening-closeout-v1.json",
+  "previous_sha256": "8dad72643fe475ee7bbb6fc83a3e4c6e62aba87692b9dca444d3e54d1967a1aa",
+  "new_maximum_bytes": 1064960,
+  "categories_bytes": {
+    "source": 49152,
+    "metadata": 65536,
+    "raw": 786432,
+    "output": 131072,
+    "control": 32768
+  },
+  "active_research_reserved_bytes": 15581184,
+  "active_research_headroom_bytes": 147456,
+  "overall_reservation_bytes": 836777216,
+  "assets": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP",
+    "SUI",
+    "NEAR",
+    "HYPE",
+    "LIT",
+    "ZEC",
+    "VVV"
+  ],
+  "budgets": [
+    100
+  ],
+  "horizons": [
+    60
+  ],
+  "entry_slippage_bps": 10,
+  "primary": "100-60-2s-confirm-6bp",
+  "duration_seconds": 900,
+  "entry_end_seconds": 700,
+  "raw_soft_cap": 500000,
+  "scope": "Two independent100perleg/600prefunded cryptoportfolios, same10assets, both2secondconfirmed. Concurrent1bp baseline and6bp forecast-hurdle/TP policy. Max3positions. No auth/orders.",
+  "strategy": "Samepastonly120smedian/2sembargo90count89span arrivalreferences. Both5bpexcursion and2secconfirmation. Target policyrequiresforecastcash minuscapital toclear6bpoflargerentryleg; baseline1bp. Profitmarks6bpof100budget vs1bp. Same400msallorders,10bpentrylimit,60shold,30sattemptcooldown,30attemptcap,700sadmission/900sruntime/120shourguard. Fundingunknownretained;fee0freshmetadata;USDGUSDCparityconditional;5bpstress separate.",
+  "storage": "Boundedchunkmetadata2MB each,1feedconnectioneach max3attempts; fullwireunretained; captureeveryorderpendingcallback, admission/history andfill/exit/terminal/invalidation, allsampledbasisbooks;500kBsoftstopadmissions786432Bhardcap. Endpointaudit. Nointerimeconomics.",
+  "source_pins": [
+    {
+      "path": "scripts/core_rh_target_margin.py",
+      "sha256": "3644abc5fa34c379f1673ce99901194ee6dea6d5a314daa279319b7b431f295a"
+    },
+    {
+      "path": "scripts/audit_core_rh_target_margin.py",
+      "sha256": "25706ede520d742779ae644fc62a035669cfccc7bce9e9c2a772164358746dcd"
+    },
+    {
+      "path": "tests/test_core_rh_target_margin.py",
+      "sha256": "b2db7eb8418ccbf34ecad2d331a53495824d4694703adee16f5b225a5602465d"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    }
+  ],
+  "test": "Synthetic5bpforecast admittedonlybaseline;8bpforecastadmitsboth; both2sconfirmed;400msentrydelay;6bptargetcontinuesholdingat3bpprofit thenrequestscloseabove6bp. One unittest passed. Independent endpoint auditor also reconstructs forecast bookwalk andformula.",
+  "confirmation_seconds": [
+    2
+  ],
+  "target_bps": [
+    1,
+    6
+  ],
+  "hypothesis": "Largerforecastmarginandprofitexitmayimprovestressnet; mayreduceentries orincreaseholdlosses. Freeze now, no interim economics or extension; comparepolicybundle not isolatedtargetcausality."
+}
