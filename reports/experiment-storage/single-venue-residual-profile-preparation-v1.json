@@ -1,0 +1,17 @@
+{
+  "schema": "single-venue-residual-profile-preparation-v1",
+  "recorded_utc": "2026-10-01T23:29:03.575687+00:00",
+  "previous": "reports/experiment-storage/completed-relative-unused-raw-reservation-v1.json",
+  "previous_sha256": "3c9b5216ef115d5a92821a2077d94d005ff817c2d7ad694a6a856a54ba452c9d",
+  "reserved_bytes": 196608,
+  "categories_bytes": {
+    "source_tests": 32768,
+    "protocol": 32768,
+    "output": 131072
+  },
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 95821824,
+  "active_research_headroom_bytes": 58318848,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare fixed retrospective profile of relative-gap fade at10and60seconds in two completed ten-asset captures; no new capture/trades. Full source/test/metadata/raw pins and protocol required before computation. Allocation covers both windows, all assets/venues/bins/horizons, outputgzip<=114688 and readout<=16384. No deletion, recompression or ceiling change."
+}

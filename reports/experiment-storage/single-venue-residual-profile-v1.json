@@ -1,0 +1,141 @@
+{
+  "reserved_bytes": 196608,
+  "categories_bytes": {
+    "source_tests": 32768,
+    "protocol": 32768,
+    "output": 131072
+  },
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 95821824,
+  "active_research_headroom_bytes": 58318848,
+  "overall_reservation_bytes": 836777216,
+  "schema": "single-venue-residual-profile-v1",
+  "recorded_utc": "2026-10-01T23:31:23.720281+00:00",
+  "previous": "reports/experiment-storage/single-venue-residual-profile-preparation-v1.json",
+  "previous_sha256": "ebc2668ac3a8756cc9445efa2fcb4bd51725134efb597b855cbbc9827940956f",
+  "preparation_included_no_double_allocation": true,
+  "windows": [
+    {
+      "index": 1,
+      "capture": "reports/single-venue-broad/capture",
+      "manifest_sha256": "eed280dd18fb6da31ad858d794735af75bc331e61564554d94758e7de8d62843",
+      "raw_sha256": "2a0082cb0b3865a75ac04a1b33034b6af49826bf7c2dbbbc37e43bacccb262bd",
+      "metadata_sha256": "decfa350ccc31b9c1ad09f9dffec368a7820b4d1368a7bfcea25584ffadc45f6"
+    },
+    {
+      "index": 2,
+      "capture": "reports/single-venue-broad-relative/capture",
+      "manifest_sha256": "44c423889dc2a49bf5a27377eb2a21c09c466c9280e9718e725b4ddc2800abc0",
+      "raw_sha256": "f0d9d94a000555430544305b6bbb056978c3c715cd5cb52bb09ae951ab99da24",
+      "metadata_sha256": "7c2100475a63e5a0f81ad5ac81970fdc3964747912cb40bd3d5cec02cc1166e1"
+    }
+  ],
+  "pins": [
+    {
+      "path": "scripts/single_venue_residual_profile.py",
+      "sha256": "e3a9a11ce389cffe46f990fe7cc7279dccb18bc59ab58672cc5fed3a6de6e23d"
+    },
+    {
+      "path": "tests/test_single_venue_residual_profile.py",
+      "sha256": "55d43232ed380a8fef0c3d46ae49e22045353163c8a9645c092852538cff9f0c"
+    },
+    {
+      "path": "scripts/single_venue_broad_quotes.py",
+      "sha256": "96f0c5a8b435ab4fd30429eb873a49614b7eed299a1be0071c7c0bc01530f341"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-broad-relative-v1.json",
+      "sha256": "9e10bef5d159da56799b578905a35eda9498291222ff548047c2252812b930c6"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-broad-v1.json",
+      "sha256": "caf9ab26627c767deed9f903445ccbe47b714302a588db5e9dcdea8c85b8a8d1"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-btc/independent-audit.json",
+      "sha256": "26eabb046fdb4b2f52e98819ab916b6758d56d87640207878c7b3cdfa6aa786b"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-eth/independent-audit.json",
+      "sha256": "f31e023197a7edfb6ecee7056af353e146e2ebb87c4ccb0d3cb36a076472faef"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-hype/independent-audit.json",
+      "sha256": "08c0d62af8a40f22b65a1414cacc394b17e5ad98d2933558bbdbac1d476f0660"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-lit/independent-audit.json",
+      "sha256": "a472b130ae8fbd844658ada08a684c3c2bf80ba3d2ad7281e9fe1c961918ba66"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-near/independent-audit.json",
+      "sha256": "a477730a175ea1abc0e9657013fdfa7c188d9afa8c73df8a07734f31fc9c5239"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-sol/independent-audit.json",
+      "sha256": "d52482a143e8a48d20892ccd3d485c0d4d62f014de4a8c981b740f100f3ecb53"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-sui/independent-audit.json",
+      "sha256": "e20859f4452694c2b4c348b8d70602471d0faaf3b3af140d11eda9960e97beb3"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-vvv/independent-audit.json",
+      "sha256": "acedef5a8cb7f182ff321ad1f866efc6485ab4c85e50f2a98b09aaef109c0f72"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-xrp/independent-audit.json",
+      "sha256": "e5cafd5ba96364179e401665a2993200656b9f070e1e3110c55c7039ccf1bb86"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-zec/independent-audit.json",
+      "sha256": "9b909026513adf13231146b293b3e589e8f9c0b5d8b9dbbe9568e4f56eb327f1"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-btc/independent-audit.json",
+      "sha256": "568b3e89cb6363fc1c94d33748184ce95ac695152d19d983a8f240548a89738c"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-eth/independent-audit.json",
+      "sha256": "15afd0b98c0c6072ef0cd575d9e4d8ef235af50bb5648c7212b235b408a9d904"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-hype/independent-audit.json",
+      "sha256": "39771973a07f3ce04b889f28f9f2a7ef86e764ca3b9e470d7235335ff4202ce3"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-lit/independent-audit.json",
+      "sha256": "1136c0599e3dfa67cf64a694e3045a7c303844b9b3b222c613a0d13ce2529752"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-near/independent-audit.json",
+      "sha256": "e4ae6a66d4ae68a29bd3f002e614411fc9ce2a2612f409a691ca15fbe4bb931c"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-sol/independent-audit.json",
+      "sha256": "9069e59bf2fc3719e3e140721547d793903f682c96035ac182177a2a0a50d082"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-sui/independent-audit.json",
+      "sha256": "ac842e88293e3674fc0cf0228d76c3478d4f5550f67ec78521049c52abd8a53b"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-vvv/independent-audit.json",
+      "sha256": "fdd40e7aa2fa575e9ee7049ce3d1af1998b1d24bc482d5f12465cd5824438d05"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-xrp/independent-audit.json",
+      "sha256": "970ae34d20a190a69b2005ccdb6932d55c253178acb6e699282c38bdffa4e9de"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-zec/independent-audit.json",
+      "sha256": "a032a9eed75665208f90d3eb3649f043d8f0842781fc44cb20c20fd3646c8a02"
+    }
+  ],
+  "scope": "Retrospective descriptive relative-gap fade profiles for two completed ten-asset windows; earlier strategy outcomes known. Same ten assets, both venues, all three absresidual bins below1bp/[1,3)bp/atleast3bp, both10and60second horizons retained. First1second evaluation after original120second basis median with2second embargo>=60rows spanning89seconds; original250msfreshpair,2secondsourceclocks,resetsoninvalidations. Admit only122<=elapsed<480seconds. Sign fades venue-relative deviation fromrollingmedian; no calibratedforecast or fairvalue claim. Native floor100/(ask*1.01) qty andminima. First targetbook withreceiptANDsource>=decision+400ms,within2seconds afterdue, freshand samegeneration. Full unlimiteddepthentryquote required <=100notional. Eachentryprofile exits atfirsteligiblebook>=entryreceipt+horizon+400ms, same2secondfirsteligiblegate/oppositesidefullquote. Preserveeverymissing/invalidated/generationchange/insufficientdepth/abovecap/unresolvedsample; no retry. Perhorizonalladmittedsamplesreconcileexactly. Full localquoteandmidpointmove, matchedreference accounting atfreshpairedentry/exit; localoutcomesretainedwhenreferencepairmissing. Referencecontribution=side*qty*(othermidexit-othermidentry)/localentryvalue*10000, residual=localquotechange-referencecontribution; USDG/USDCparityconditional, notcausalityorhedge. Requireszero feeStandardmetadata; omitscapital,funding/privateacks/IOCpricelimits/rescue/portfoliooverlap/competition. Notcashorprofit. Both10/60profilesreuseentries and allsamplesoverlap; no iid/significanceclaim. Descriptivecandidate screen fixedbeforecomputation: sameasset/venue/bin/horizon meanquote>0 and>=30matchedprofiles inEACHwindow; separatelyreportmeanquote>5bp inEACH. Thesecriteria onlyprioritizefreshvalidation, notestablisha tradableedge. All240rows retainedincludingempty. No newcapture, parameterfit, source mutation, orthresholdoptimization.",
+  "verification": "Five tests pass: rollingembargo/assetisolation/reset, oppositevenuesign/10and60timing/referenceidentity, firstbadeligiblebooknotretried, localquote retainedwithoutreference while executioninvalidationkillsownpending,100capandtailmissingaccounting.",
+  "output_caps": {
+    "gzip": 114688,
+    "readout": 16384
+  }
+}
