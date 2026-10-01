@@ -1,0 +1,69 @@
+{
+  "scope": "All five matched entries, not only the winning trade; branches share events and must not be pooled. Independent endpoint audit rebuilt both request marks from depth.",
+  "trades": [
+    {
+      "id": "1790868445540660-1-standard",
+      "asset": "PONS",
+      "identical_entries": true,
+      "exit1bp_reason": "max_hold",
+      "exit6bp_reason": "max_hold",
+      "exit1bp_cash": "-0.11818800000001772",
+      "exit6bp_cash": "-0.11818800000001772",
+      "cash_difference_6_minus_1": "0E-17"
+    },
+    {
+      "id": "1790868749406077-2-standard",
+      "asset": "PONS",
+      "identical_entries": true,
+      "exit1bp_reason": "max_hold",
+      "exit6bp_reason": "max_hold",
+      "exit1bp_cash": "-0.050948999999974376",
+      "exit6bp_cash": "-0.050948999999974376",
+      "cash_difference_6_minus_1": "0E-18"
+    },
+    {
+      "id": "1790868817655125-3-standard",
+      "asset": "PONS",
+      "identical_entries": true,
+      "exit1bp_reason": "take_profit",
+      "exit6bp_reason": "take_profit",
+      "exit1bp_cash": "-0.060912000000001854",
+      "exit6bp_cash": "0.016973999999990497",
+      "cash_difference_6_minus_1": "0.077885999999992351",
+      "100-60-exit1bp": {
+        "audited_request_net_mark": 0.014113206311496531,
+        "cash_mark": "0.01411400000000639882452395351",
+        "cash_after_delay": "-0.060912000000001854",
+        "change_after_request": "-0.07502600000000825282452395351",
+        "request_to_flat_seconds": 0.5008504390716553
+      },
+      "100-60-exit6bp": {
+        "audited_request_net_mark": 0.06412106122880079,
+        "cash_mark": "0.06412399999999252186191255860",
+        "cash_after_delay": "0.016973999999990497",
+        "change_after_request": "-0.04715000000000202486191255860",
+        "request_to_flat_seconds": 0.5045061111450195
+      }
+    },
+    {
+      "id": "1790868828675233-4-standard",
+      "asset": "CASHCAT",
+      "identical_entries": true,
+      "exit1bp_reason": "entry_failure",
+      "exit6bp_reason": "entry_failure",
+      "exit1bp_cash": "-0.12069999999999936",
+      "exit6bp_cash": "-0.12069999999999936",
+      "cash_difference_6_minus_1": "0E-17"
+    },
+    {
+      "id": "1790868886597475-5-standard",
+      "asset": "PONS",
+      "identical_entries": true,
+      "exit1bp_reason": "max_hold",
+      "exit6bp_reason": "max_hold",
+      "exit1bp_cash": "-0.12152400000000796",
+      "exit6bp_cash": "-0.12152400000000796",
+      "cash_difference_6_minus_1": "0E-17"
+    }
+  ]
+}
