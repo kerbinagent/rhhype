@@ -27,7 +27,8 @@ class SellTests(unittest.TestCase):
   b=self.start();b.process(self.core(.1));b.tick(T+5_100_000_000);b.process(self.core(5.6))
   b.process(trade(7.6,side='buy',price='100.5',qty='.01',source_ns=T+5_400_000_000))
   self.assertEqual(b.unknown_reason,'late_retired_quote_flow');self.assertTrue(b.episodes[0]['execution_unknown'])
-  b=self.start();b.capture_start_ns=T-480*NS;b.quote=None;b.process(self.core(.01),{})
+  b=CorePassiveSellBranch(self.start().cfg,META);b.capture_start_ns=T-480*NS
+  b.process(self.core(0));b.process(book('rh_lighter',0),{})
   self.assertIsNone(b.quote)
 
 if __name__=='__main__':unittest.main()
