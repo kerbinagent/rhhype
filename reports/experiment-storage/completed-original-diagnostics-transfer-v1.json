@@ -1,0 +1,158 @@
+{
+  "schema": "completed-original-diagnostics-transfer-v1",
+  "recorded_utc": "2026-10-01T12:43:44.004162+00:00",
+  "previous": "reports/experiment-storage/basis-forecast-diagnostic-allocation-v1.json",
+  "previous_sha256": "ed550a8a9c3a4720ef61dd3c8455cf5322a1cb3e0401efc26fd575a26fd428f4",
+  "original_pool_last_allocation": "reports/experiment-storage/boros-symbol-eligibility-allocation-v1.json",
+  "original_pool_last_allocation_sha256": "26fe34118bb1cc84044821c6c29dadf86c7f68a707c85a21b00d9eb7234ebe67",
+  "original_pool_previous_budget_bytes": 33000000,
+  "original_pool_previous_reserved_bytes": 32999608,
+  "old_completed_studies_reservation_bytes": 18000000,
+  "retained_artifact_bytes": 8481636,
+  "retention_reserved_bytes": 8519680,
+  "released_unused_reservation_bytes": 9480320,
+  "transfer_to_active_research_bytes": 8388608,
+  "original_pool_new_budget_bytes": 24611392,
+  "original_pool_new_reserved_bytes": 23519288,
+  "original_pool_new_headroom_bytes": 1092104,
+  "active_research_reserve_previous_bytes": 7340032,
+  "active_research_reserve_bytes": 15728640,
+  "active_research_reserved_bytes": 7307264,
+  "active_research_headroom_bytes": 8421376,
+  "overall_reservation_bytes": 836777216,
+  "overall_reservation_increase_bytes": 0,
+  "manual_review_cap_bytes": 9437184,
+  "scope": "Completed fixed-anchor16MB and reverse-bound2MB diagnostics retain every original file unchanged with verified archived output hashes. Close prospective reservations to actual retainedfiles+32KiBmanifest allowance and64KiBrounding. Reassign8MiB released reservation from original33MBdiagnosticpool to activepool; remainder staysoriginalpool. No deletion/recompression, no currentcapture/source/budgetchange, no newrawarchivecountpolicychange. Direct source/method/test files conservatively included inretention.",
+  "files": [
+    {
+      "path": "reports/experiment-storage/fixed-anchor-allocation-20260930.json",
+      "bytes": 4505,
+      "sha256": "4bcd6b481147ebe92a65ddeb149268afcdebaf119a12497ef780caeb4b64cdee"
+    },
+    {
+      "path": "reports/experiment-storage/reverse-bound-allocation-20260930.json",
+      "bytes": 587,
+      "sha256": "e77a32df9e4d90a6c41372052f8c5c298c3da375674d5e1fd26b881f169e216f"
+    },
+    {
+      "path": "reports/passive-rare-spread/0252Z-fixed-1s-v1/freeze.json",
+      "bytes": 5306,
+      "sha256": "559c6afac6693d1325fdc15d304fb52bf3c87551129f2949362cc26084c8e908"
+    },
+    {
+      "path": "reports/passive-rare-spread/0252Z-fixed-1s-v1/manifest.json",
+      "bytes": 6026,
+      "sha256": "506021b62405929a572e9cc69e21759fe04270eff9806b8e6d9712d53b5a2b0b"
+    },
+    {
+      "path": "reports/passive-rare-spread/0252Z-fixed-1s-v1/metadata.json",
+      "bytes": 12406,
+      "sha256": "34249d999bf176b73a2f9e30aa1602f3ab135a7cadc9238a080bfe060f048aba"
+    },
+    {
+      "path": "reports/passive-rare-spread/0252Z-fixed-1s-v1/method.md",
+      "bytes": 5192,
+      "sha256": "796f0a7317c8c0be630b6b40788d49b1d85ecf80f139e61367e2474fcd9b7f80"
+    },
+    {
+      "path": "reports/passive-rare-spread/0252Z-fixed-1s-v1/observations.csv",
+      "bytes": 5755916,
+      "sha256": "116262d013230c6f0e9a7973b3450e8789896774885b75e57f11ff1e173ed4ba"
+    },
+    {
+      "path": "reports/passive-rare-spread/0252Z-fixed-1s-v1/readout.md",
+      "bytes": 3823,
+      "sha256": "fcb2de761b73a4ba52b46382e48980357125b52689b763f934a060ee48a5999d"
+    },
+    {
+      "path": "reports/passive-rare-spread/0252Z-fixed-1s-v1/source.py",
+      "bytes": 20904,
+      "sha256": "2e33e4edb453e776fd5cc6cab0dd54bf179689bfc5d521cb42c6f4f6c820ee45"
+    },
+    {
+      "path": "reports/passive-rare-spread/0252Z-fixed-1s-v1/summary.json",
+      "bytes": 23850,
+      "sha256": "93c3a959a109309854b56468d1c3b709a601cf75b8a08541063b76d5cd43c7d2"
+    },
+    {
+      "path": "reports/passive-rare-spread/0252Z-fixed-1s-v1/tests.py",
+      "bytes": 6960,
+      "sha256": "98369536ea4740f440d10c761f88afc767e84a4ae187c00bbd9e4aca77b835d2"
+    },
+    {
+      "path": "reports/passive-rare-spread/0252Z-fixed-1s-v1/timing.csv",
+      "bytes": 1714082,
+      "sha256": "56f34dd6a462dfa527b6c46264c0fc729f2bf409f6a95db59caa97f824241b19"
+    },
+    {
+      "path": "reports/passive-rare-spread/0252Z-fixed-1s-v1/verification.json",
+      "bytes": 1338,
+      "sha256": "92f4c331f14cd94f1c96a139ae0de7853a6bf107f5b21c5477b807f94af2b39e"
+    },
+    {
+      "path": "reports/passive-rare-spread-reverse-bound/0252Z-v1/REPORT.md",
+      "bytes": 652,
+      "sha256": "12c7c4f0f12e12fcef7857f4fed5fbce110f11ef2e3283a9e812ea4cab1946fa"
+    },
+    {
+      "path": "reports/passive-rare-spread-reverse-bound/0252Z-v1/analysis.json",
+      "bytes": 813185,
+      "sha256": "144a86677c4423fb5e928bb7bede48d4a123acb922d531aca61208a8fa5691c3"
+    },
+    {
+      "path": "reports/passive-rare-spread-reverse-bound/0252Z-v1/freeze.json",
+      "bytes": 1754,
+      "sha256": "a76c1a502bec22b1604b587a918a5dc31a6b573a1ebeda4a82e0818880bc22a6"
+    },
+    {
+      "path": "reports/passive-rare-spread-reverse-bound/0252Z-v1/manifest.json",
+      "bytes": 2212,
+      "sha256": "cc0e2bfeafc1146161a5f2de1f966712bd420392906e9bead681441a69050bbe"
+    },
+    {
+      "path": "reports/passive-rare-spread-reverse-bound/0252Z-v1/method.md",
+      "bytes": 5454,
+      "sha256": "8a98bcc23bc1c2a8cf4f881b950ed3918dda286ccb4b986d765d330810414759"
+    },
+    {
+      "path": "reports/passive-rare-spread-reverse-bound/0252Z-v1/source.py",
+      "bytes": 18482,
+      "sha256": "64d67e88ec9d812cea71f43a268688e7505b22ca7b84ecb5e939f6c56ea14d72"
+    },
+    {
+      "path": "reports/passive-rare-spread-reverse-bound/0252Z-v1/tests.py",
+      "bytes": 11005,
+      "sha256": "ecdbdb9f8d5b3dbd17f3eaf8083cab9d087962366cccfc4fc66556b1a340a147"
+    },
+    {
+      "path": "research/passive-rare-spread-fixed-anchor-method.md",
+      "bytes": 5192,
+      "sha256": "796f0a7317c8c0be630b6b40788d49b1d85ecf80f139e61367e2474fcd9b7f80"
+    },
+    {
+      "path": "research/reverse-static-upper-bound-method.md",
+      "bytes": 5454,
+      "sha256": "8a98bcc23bc1c2a8cf4f881b950ed3918dda286ccb4b986d765d330810414759"
+    },
+    {
+      "path": "scripts/analyze_passive_rare_spread.py",
+      "bytes": 20904,
+      "sha256": "2e33e4edb453e776fd5cc6cab0dd54bf179689bfc5d521cb42c6f4f6c820ee45"
+    },
+    {
+      "path": "scripts/analyze_reverse_static_upper_bound.py",
+      "bytes": 18482,
+      "sha256": "64d67e88ec9d812cea71f43a268688e7505b22ca7b84ecb5e939f6c56ea14d72"
+    },
+    {
+      "path": "tests/test_passive_rare_spread.py",
+      "bytes": 6960,
+      "sha256": "98369536ea4740f440d10c761f88afc767e84a4ae187c00bbd9e4aca77b835d2"
+    },
+    {
+      "path": "tests/test_reverse_static_upper_bound.py",
+      "bytes": 11005,
+      "sha256": "ecdbdb9f8d5b3dbd17f3eaf8083cab9d087962366cccfc4fc66556b1a340a147"
+    }
+  ]
+}
