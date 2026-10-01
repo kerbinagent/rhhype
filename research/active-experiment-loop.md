@@ -1927,3 +1927,14 @@ report. Archive 3,717,206 B; 148 future pairs project 4,507,822 B, margin
 no errors/retries/evaluation. Relative broad capture status-only scope
 added; two connections/no errors, economic outputs untouched.
 Next review 23:26:33 UTC.
+
+
+### Review 166, 1 October 23:26 UTC
+
+Complete coverage: one exact Premium failed-hedge loss/−$1.22951; no
+other closes/gains/estimates/aborts, one HL price limit. Four feeds/101
+pairs fresh, running/ok. Separate epoch increments match report. Archive
+3,721,436 B; 147 future pairs project 4,506,710 B, margin 736,170 B.
+Carry 23:25: 275 sampled, invalid slot 71, 588 future/interrupted; no errors/
+retries/evaluation. Relative broad capture normal terminal23:15 confirmed
+via status only, no economic outputs read. Next23:46:33UTC.
