@@ -1,0 +1,7 @@
+{
+  "status": "failed_no_retry",
+  "requests": 40,
+  "error": "AssertionError:wrong token symbol",
+  "summary_sha256": "356e10d89b13198924a47256de14a15455031674fc44b84d6938a005cd6ee18b",
+  "retained_projected_trace_bytes": 7518
+}
