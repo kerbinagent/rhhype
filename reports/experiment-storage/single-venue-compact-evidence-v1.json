@@ -1,0 +1,38 @@
+{
+  "schema": "single-venue-compact-evidence-v1",
+  "recorded_utc": "2026-10-01T19:49:19.052732+00:00",
+  "frozen_plan": "reports/experiment-storage/single-venue-research-v1.json",
+  "frozen_plan_sha256": "15e65eaf3cd6a3caeca2d7de631c5172730dfa0ca5642de496aac566f148e6fe",
+  "original_failure": {
+    "reason": "49KiBretrospectivetracecap reachedwhileduplicatingfullbooks, beforecompletedtrade. Nooutcomeclaim orverifiedcapturecompletion.",
+    "files": [
+      {
+        "path": "reports/single-venue-research/core-maker-lit-offset/metrics.json",
+        "bytes": 1611,
+        "sha256": "40a6fb4d7fe25f7a55343bc776ff11da00d95f0b0c5784cb53e95adcd18810b6"
+      },
+      {
+        "path": "reports/single-venue-research/core-maker-lit-offset/summary.json.gz",
+        "bytes": 891,
+        "sha256": "764fc30b4a0ae3c383e333b8989c3cf6fe62179eb4af85746a83b984eda4aa39"
+      },
+      {
+        "path": "reports/single-venue-research/core-maker-lit-offset/trace.jsonl.gz",
+        "bytes": 43580,
+        "sha256": "bf63f5c5232ffdaddcd4b0aba9ca2b30308b54599e80e517180948ef5eb399c7"
+      }
+    ]
+  },
+  "source_pins": [
+    {
+      "path": "scripts/single_venue_compact_evidence.py",
+      "sha256": "5be023f9b4f365e3d8df3d65b660bf69a4d61a89ccdf401cf96c861e9e018524"
+    },
+    {
+      "path": "tests/test_single_venue_compact_evidence.py",
+      "sha256": "63b98ab3f7e39b6d4023a80f7fa1ce67f0873011c76996d4c069af0e0042873b"
+    }
+  ],
+  "scope": "Loggingandverificationrepresentationonly: replacecompletebookcopies withSHA256ofcanonicalfullbids/asks plus clocks/sequence/identity. Originalrawbookarchivesretainedandindependentaudit walksfulloriginalbooks, validateshashes. No sourceedits to frozenfeature/execution/accounting; noeconomicparameterchange. Retrospectivereplays separate -compact outputnames; originalfailurepreserved. Prospectivecapturecontinueswithoutinterimeconomicreads; futureprospectivereplayusescompactwitnessfromstart. Syntheticcompletecycle producesidentical economics and passesindependentaudit; changeddepthandfillvaluerejected.",
+  "allocation": "Within existingstudy source/control/retrospective/outputcategories. Noadditionalreservation."
+}
