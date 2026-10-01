@@ -1,0 +1,28 @@
+QUEUE IMBALANCE: COMPLETED BROAD CAPTURE DIAGNOSTIC
+Data: 2026-10-01 22:35:09..22:45:10 UTC. All ten assets and both venues; rules frozen before this diagnostic, but earlier results from this archive already known.
+Four tests passed. Raw/manifest pins verified. Every admitted sample reconciles exactly to a matched or missing outcome.
+Signed follow-imbalance quote change includes entry and exit depth/spread with400ms entry delay and10.4seconds to exit quote. These are unlimited-depth hypothetical quotes, not IOC fills, native cash, a strategy portfolio, or profit. No funding, fees, capital, order caps, rescue path or private acknowledgments modeled. Each sample has native quantity/minima and at most100entryquote notional.
+Samples overlap. No independent-observation count, statistical significance, or attribution to predictive imbalance versus directional market drift is claimed.
+HIGH absolute imbalance>=0.6: asset venue matched mean_midpoint_bp mean_quote_bp missing
+BTC rh_lighter 358 0.004102 -0.972877 0
+BTC lighter 446 -0.081048 -0.475402 0
+ETH rh_lighter 399 0.318021 -0.865435 0
+ETH lighter 283 0.202531 -0.179127 0
+SOL rh_lighter 397 -0.026989 -2.589186 0
+SOL lighter 340 0.103521 -0.360868 0
+HYPE rh_lighter 354 0.205983 -1.661837 0
+HYPE lighter 258 0.595192 -0.381437 0
+XRP rh_lighter 368 0.130095 -2.428808 13
+XRP lighter 220 -0.045263 -1.291899 0
+SUI rh_lighter 327 -0.508841 -4.822154 1
+SUI lighter 161 0.104195 -4.093847 2
+NEAR rh_lighter 393 -0.477081 -4.342924 0
+NEAR lighter 26 0.574619 -1.937531 0
+ZEC rh_lighter 396 0.141086 -3.129874 0
+ZEC lighter 230 -0.132117 -1.385803 0
+VVV rh_lighter 508 0.451526 -5.710840 1
+VVV lighter 71 2.319962 0.300454 0
+LIT rh_lighter 408 0.895715 -2.877056 0
+LIT lighter 121 0.135254 -1.672510 0
+Nineteen of20high-imbalance asset/venue groups have negative average quote change. VVVCore is the sole positive high-imbalance group: +0.300454bp over71overlapping samples, far below the existing5bpstress allowance. This is exploratory selection, not validation.
+Sources: https://arxiv.org/abs/1512.03492 (nextmidprice direction in Nasdaq stocks); https://arxiv.org/abs/1011.6402 (contemporaneous order-flow impact, not this static predictor). No stock result is transferred to crypto.
