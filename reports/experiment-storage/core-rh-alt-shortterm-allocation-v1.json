@@ -1,0 +1,88 @@
+{
+  "schema": "core-rh-alt-shortterm-v1",
+  "recorded_utc": "2026-10-01T11:38:42.746360+00:00",
+  "previous": "reports/experiment-storage/active-research-reserve-v2.json",
+  "previous_sha256": "29161bff87b62890df5048fc8a2df62b6b754967b8ca7c348be6dd56c242194b",
+  "new_maximum_bytes": 2200000,
+  "categories_bytes": {
+    "source": 49152,
+    "metadata": 65536,
+    "raw": 1900000,
+    "output": 119776,
+    "control": 65536
+  },
+  "active_research_reserved_bytes": 6164928,
+  "active_research_headroom_bytes": 126528,
+  "assets": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP",
+    "SUI",
+    "NEAR",
+    "HYPE",
+    "LIT",
+    "ZEC",
+    "VVV"
+  ],
+  "budgets": [
+    100,
+    1000
+  ],
+  "horizons": [
+    60
+  ],
+  "primary": {
+    "budget": 100,
+    "horizon": 60
+  },
+  "duration_seconds": 900,
+  "warmup_seconds": 122,
+  "entry_end_seconds": 700,
+  "max_attempts_per_branch": 30,
+  "cooldown_seconds": 30,
+  "history_seconds": 120,
+  "history_embargo_seconds": 2,
+  "minimum_history_samples": 90,
+  "forecast_hurdle_bps": 1,
+  "take_profit_bps": 1,
+  "stress_report_bps": 5,
+  "capital_rate": 0.05,
+  "network_ms": 100,
+  "standard_taker_ms": 300,
+  "metadata_requests_max": 2,
+  "metadata_retries": 0,
+  "websocket_connections_max_per_venue": 3,
+  "raw_soft_cap": 1300000,
+  "scope": "Fresh expanded shared crypto universe; two independent $100/$1000 per-leg 60s portfolios, capital6x budget equally split venues. Fixed asset list, absent markets explicitly excluded; metadata must establish active perp, unit multipliers1 and fees0. No live orders, authentication or conversion. USDG/USDC parity conditional. No changes after launch.",
+  "forecast": "Past-only 120s median RH/Core mid basis,2s embargo and90valid1Hzsamples. Favorable directional excursion>=5bp; expected full four-walk roundtrip after fees and capital>=1bp own entry notional. Source/receipt age<=2s, source<=receipt, pair clock skew<=250ms.400ms delayed first eligible books.1bp take profit or60s max hold. No entries within120s of UTC hour. Max30attempts,30s cooldown per pair,3positions per portfolio.5bp stress disclosed separately.",
+  "source_pins": [
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/paper_funding.py",
+      "sha256": "12d3355202cd1786cb260a4775791b0f7ac242b141010471738ec60fc0abd2b0"
+    },
+    {
+      "path": "scripts/core_rh_alt_shortterm.py",
+      "sha256": "6ab5b49b7f80f869ed943e100f19024e0920018bc990058b78ea50e787d0ba7d"
+    },
+    {
+      "path": "scripts/audit_core_rh_alt_shortterm.py",
+      "sha256": "1f1d6d50267221bccc2fcfe572e376be1f591d1be8440cc998f1efd6177102bd"
+    }
+  ],
+  "decision": "Descriptive feasibility only. All attempts, rejected-candidate counters, raw decisions, samples and filled book evidence retained under hardcap. Stop admissions at softcap; hardcap leaves explicit incomplete trial. Positive modeled cash trade is not validated repeatable advantage. Runtime expiry preserves unresolved quantities; no resetting or merging portfolios.",
+  "archive": "1Hz paired references, all admissions/history, every normalized top10 callback while an order intent exists for that market (or exit retry possible), invalidations and all execution/lifecycle evidence. Not full wire stream. Pre-write gzip hardcap, close admissions at1.3MB. Hardcap leaves explicit incomplete sample and unresolved exposure. Two connections each with max3 attempts;128MB ingress and250000 message limits.",
+  "minimum_favorable_excursion_bps": 5
+}
