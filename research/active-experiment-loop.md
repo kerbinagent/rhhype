@@ -1823,3 +1823,14 @@ snapshot preserved, increments match report. Archive 3,676,765 B; 157 future
 pairs project 4,515,459 B, margin 727,421 B. Carry 20:05: 235 sampled,
 invalid slot 71, 628 future/interrupted; no errors/retries/evaluation.
 Next review 20:26:33 UTC.
+
+
+### Review 157, 1 October 20:26 UTC
+
+Complete coverage: nine exact losses, four convergence failed hedges/
+−$3.59244 and five Premium/−$8.47659 (two paired, three failed hedges).
+No gains/estimates/aborts; seven HL price limits. Four feeds/103 pairs fresh,
+running/ok. Separate epoch increments match report. Archive 3,681,440 B;
+156 future pairs project 4,514,792 B, margin 728,088 B. Carry 20:25:
+239 sampled, invalid slot 71, 624 future/interrupted; no errors/retries/
+evaluation. Next review 20:46:33 UTC. Review156 preserved in root702b445.

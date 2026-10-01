@@ -5252,3 +5252,39 @@ Reviews 66–156: 2,403 completions, 2,370 exact losses, one estimated loss,
 five audited paired gains and 27 audited failed-hedge rescue gains.
 Archive 3,676,765 / 5,242,880 B; 157 future pairs at 5,342 B project
 4,515,459 B, margin 727,421 B. Next review **20:26:33 UTC**.
+
+
+## Review 157 — 1 October 2026 20:26:33 UTC
+
+All eight strategy and aborted coverage fields complete. Exact report
+`review-20261001T202633Z.json.gz`: raw 19,699 B, SHA-256
+`07f4995aee380b9b932e2b8ec75f189ba66354584f65577ba3b5f44e2f2e4435`;
+gzip 2,936 B, SHA-256
+`002fbf75d36a10aa5d50dd4a7fd3b0bda65c48a304e075f62005f00349a490b5`.
+Independent `current-epoch-at-review157.json.gz`: read 20:27:17.523812 UTC,
+updated 20:27:16.885748 UTC; raw 9,293 B, SHA-256
+`fc4e71579c46a409a9c55ad9b91ce9a67897990bd9569b6e8a006e925b4b3696`;
+gzip 1,739 B, SHA-256
+`18ffadb2d421a7d6e12d04f7a24cb00a92772bd349d2b3144a77a1cf7a03eee3`.
+Exact decompression and per-write cap/growth guards passed.
+
+Nine exact losses: four convergence failed hedges/−$3.5924358242 and
+five Premium/−$8.4765938711 (two paired, three failed hedges). No gains,
+estimates or aborts; seven HL price limits. Convergence fees zero, other
+costs $1.9942526415, capital $0.0000071827; Premium fees $3.8440777826,
+other costs $2.4891533635, capital $0.0000767250.
+
+Separate epoch convergence 629 / −$738.7972976383, Premium 1,221 /
+−$2,192.0424441401; increments four and five match report. Health running/
+ok, four feeds, 103 pairs, CPU 59.73%, p95 lag 27.70 ms, RSS 225.48 MiB,
+784.6 books/s, metadata age 2,689.9 s. Routine pulses remained fresh/ok;
+no service intervention. Carry 20:25: 239 sampled, persistent invalid
+slot 71, 624 future/interrupted; running, no errors/retries/economic
+evaluation. No sample contents or active research economics inspected.
+
+Reviews 66–157: 2,412 completions, 2,379 exact losses, one estimated loss,
+five audited paired gains and 27 audited failed-hedge rescue gains.
+Archive 3,681,440 / 5,242,880 B; 156 future pairs at 5,342 B project
+4,514,792 B, margin 728,088 B. Next review **20:46:33 UTC**.
+Review156's owned four files were preserved in root commit 702b445 due
+shared staging timing; future routine commits use exact owned paths.
