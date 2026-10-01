@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 01 October 2026 00:47 UTC
+## Current status, 01 October 2026 01:08 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative or inconclusive; no strategy is promoted. After the host reboot,
@@ -16,7 +16,7 @@ all eight saved ledgers, strategy epoch and three legacy funding obligations.
 The 00:14 catch-up review96 covers an extended interval and is not a fresh
 uninterrupted validation window. All four feeds are connected.
 
-Reviews through 98 are preserved. Reviews 66–98 have 1,581 closes: 1,571 losses,
+Reviews through 99 are preserved. Reviews 66–99 have 1,583 closes: 1,573 losses,
 two paired gains and eight failed-hedge rescue gains. The four epoch paired gains
 remain the WLD/CRCL records from review65 and two MU records from review85;
 the latter share a signal and HL fill observation, and their full three-pair
@@ -24,7 +24,7 @@ convergence group lost $1.2929. Twenty-two epoch win records comprise four
 paired and eighteen rescues. Estimated funding losses remain labeled estimated.
 Cooldown cannot admit new pairs because its HL paper balance $1,000.35611 is
 below the $1,000.50 minimum reserve before venue fees. No reset or top-up.
-Next review: **1 October 01:06:33 UTC**.
+Next review: **1 October 01:26:33 UTC**.
 
 The original dated-carry run was interrupted by reboot after 136 recorded slots:
 134 sampled and two late callbacks. Its last trusted index and all evidence
@@ -1396,3 +1396,15 @@ review and epoch snapshot flat. Cooldown remains capital constrained.
 Twenty-two earlier win records and three legacy funding obligations remain.
 Next review 01:06:33 UTC. Fresh carry v2 has all four due arrivals through 00:45,
 no terminal error or timing failures, and no economic evaluation.
+
+
+### Review 99, 1 October 01:06 UTC
+
+Two exact losses: one Premium GOOGL pair/−$1.66938 and one convergence
+SKHYNIXUSD failed hedge/−$0.44088. One additional convergence abort, complete
+coverage, two Hyperliquid and one Lighter price-limit rejections. Four feeds
+connected, 107 pairs, normal performance. Review flat; later epoch snapshot
+has one Premium position. Cooldown remains capital constrained. Twenty-two
+earlier win records and three legacy funding obligations remain.
+Next review 01:26:33 UTC. Fresh carry v2 has all eight due arrivals through
+01:05, no terminal error or timing failures, and no economic evaluation.

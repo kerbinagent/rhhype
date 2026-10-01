@@ -3366,3 +3366,32 @@ gains. Next checkpoint **01:06:33 UTC**. No policy or capital change.
 Fresh carry v2 has all four due arrivals through 00:45, 4,934 sample bytes,
 all sampled, zero overdue files, no terminal error and no economic evaluation.
 Retired v1 remains preserved and separate.
+
+
+## Review 99 — 1 October 2026 01:06:33 UTC
+
+Exact report and separate epoch snapshot preserved; guarded manual archive
+2,565,243/16,777,216 bytes. Report SHA-256
+`4d3c8f7ff1dd2631a73b95bfdcc2a654ec7478ffbc1408959743fe2bbfbbfbea`.
+Two exact closes, both losses: Premium paired GOOGL −$1.66938 and convergence
+SKHYNIXUSD failed hedge −$0.44088. One additional convergence abort, complete
+completion and abort coverage, two Hyperliquid and one Lighter price-limit
+rejections. No new wins or estimated records.
+
+Premium fees $0.87900, stress $0.49949 and capital $0.00003647; without stress
+−$1.16989. Its exit improved $0.02231 against the request price and flattened
+in 1.4685 s. Convergence fees zero, stress $0.49894 and capital $0.00000262;
+without stress +$0.05806. That sensitivity is a failed-hedge rescue, not a
+paired arbitrage gain; primary stressed net remains negative.
+
+Four feeds connected, 107 pairs, CPU 50.08%, p95 lag 8.87 ms, RSS 171.27 MiB,
+701.3 books/s, metadata age 3,162.3 s; normal performance. Review snapshot
+flat; the later separate epoch snapshot has one Premium position, with no
+additional settled closes. Premium epoch 651/−$1,192.3379; convergence
+371/−$438.2783. Other epoch counts and P&L unchanged; cooldown remains capital
+constrained. Twenty-two earlier win records and three legacy funding
+obligations remain. Reviews 66–99 have 1,583 closes: 1,573 losses, two paired
+gains and eight rescue gains. Next checkpoint **01:26:33 UTC**.
+
+Fresh carry v2 has all eight due arrivals through 01:05, 9,820 sample bytes,
+all sampled, zero overdue files, no terminal error and no economic evaluation.
