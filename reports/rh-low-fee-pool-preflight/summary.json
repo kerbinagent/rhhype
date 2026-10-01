@@ -1,0 +1,245 @@
+{
+  "actual_pnl": null,
+  "quote_outcomes": null,
+  "scope": "Pool existence and current active liquidity only. Zero active liquidity is not proof that every possible swap is impossible. Tokens reused from the recently verified canonical registry at the pinned prior study, not a fresh registry request.",
+  "rows": [
+    {
+      "symbol": "NVDA",
+      "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+      "version": "v3",
+      "fee": 100,
+      "address": "0xb75d2d02b0ec3de50d32e40a4f1a8dae8acc4333",
+      "exists": true,
+      "block": "0x498ae02",
+      "sqrt_price_x96": "5504213223544515881124108767577244",
+      "active_liquidity": "14297015922504961"
+    },
+    {
+      "symbol": "NVDA",
+      "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+      "version": "v4",
+      "fee": 100,
+      "tick_spacing": 1,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "currencies": [
+        "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec"
+      ],
+      "address": "0x6444a8e0b267406a15db74ca00c4a24bdfa81ed3180f5b6d0851f8ed6f4f29c5",
+      "initialized": true,
+      "sqrt_price_x96": "5212305427577536988963802234247060",
+      "active_liquidity": "165523392888365524",
+      "protocol_fee_packed": 102425,
+      "lp_fee": 100,
+      "block": "0x498ae02"
+    },
+    {
+      "symbol": "NVDA",
+      "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+      "version": "v3",
+      "fee": 500,
+      "address": "0xd4eb21209c4d6093f80b5b84f5c45cc093ea14a3",
+      "exists": true,
+      "block": "0x498ae02",
+      "sqrt_price_x96": "5212051558874400126153258184904818",
+      "active_liquidity": "7656882447249397741"
+    },
+    {
+      "symbol": "NVDA",
+      "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+      "version": "v4",
+      "fee": 500,
+      "tick_spacing": 10,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "currencies": [
+        "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec"
+      ],
+      "address": "0x2d6ec380a3dc18dc4a2067ba6884835b49455cd79c8afa1f7625b6b2f85670a6",
+      "initialized": true,
+      "sqrt_price_x96": "5219031235384523312247924456735727",
+      "active_liquidity": "12780327839514",
+      "protocol_fee_packed": 512125,
+      "lp_fee": 500,
+      "block": "0x498ae02"
+    },
+    {
+      "symbol": "AAPL",
+      "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+      "version": "v3",
+      "fee": 100,
+      "address": "0x0000000000000000000000000000000000000000",
+      "exists": false,
+      "block": "0x498ae02"
+    },
+    {
+      "symbol": "AAPL",
+      "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+      "version": "v4",
+      "fee": 100,
+      "tick_spacing": 1,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "currencies": [
+        "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9"
+      ],
+      "address": "0xedde76f103d3c7411374a1d5bbc7573eb70d7a743ecd64ec413e1813b3940dc2",
+      "initialized": false,
+      "sqrt_price_x96": "0",
+      "active_liquidity": "0",
+      "protocol_fee_packed": 0,
+      "lp_fee": 0,
+      "block": "0x498ae02"
+    },
+    {
+      "symbol": "AAPL",
+      "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+      "version": "v3",
+      "fee": 500,
+      "address": "0xaae0d815ee56e4092a5e5c2911e676fea50b2d6d",
+      "exists": true,
+      "block": "0x498ae02",
+      "sqrt_price_x96": "4330926435113682463166617067443423",
+      "active_liquidity": "799987267174607765"
+    },
+    {
+      "symbol": "AAPL",
+      "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+      "version": "v4",
+      "fee": 500,
+      "tick_spacing": 10,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "currencies": [
+        "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9"
+      ],
+      "address": "0xfc92d9360d3cf2333b1ff0b43122fb230deb83377a7df63d82d0dee8153e1e6c",
+      "initialized": true,
+      "sqrt_price_x96": "4371802979956188953986826220965665",
+      "active_liquidity": "0",
+      "protocol_fee_packed": 512125,
+      "lp_fee": 500,
+      "block": "0x498ae02"
+    },
+    {
+      "symbol": "MSFT",
+      "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+      "version": "v3",
+      "fee": 100,
+      "address": "0x3d69ea64810300877b938e9ad9916c25912c08f5",
+      "exists": true,
+      "block": "0x498ae02",
+      "sqrt_price_x96": "79224540476309625746982357947",
+      "active_liquidity": "0"
+    },
+    {
+      "symbol": "MSFT",
+      "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+      "version": "v4",
+      "fee": 100,
+      "tick_spacing": 1,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "currencies": [
+        "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "0xe93237c50d904957cf27e7b1133b510c669c2e74"
+      ],
+      "address": "0x25d55332861306a74c9afb6dedcff4f279eac212b5d42e13bab20591d2285c9a",
+      "initialized": false,
+      "sqrt_price_x96": "0",
+      "active_liquidity": "0",
+      "protocol_fee_packed": 0,
+      "lp_fee": 0,
+      "block": "0x498ae02"
+    },
+    {
+      "symbol": "MSFT",
+      "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+      "version": "v3",
+      "fee": 500,
+      "address": "0x38fa8bf13a6b2ac49be77babb22c1837d1e505f9",
+      "exists": true,
+      "block": "0x498ae02",
+      "sqrt_price_x96": "1461446703485210103287273052203988822378723970341",
+      "active_liquidity": "0"
+    },
+    {
+      "symbol": "MSFT",
+      "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+      "version": "v4",
+      "fee": 500,
+      "tick_spacing": 10,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "currencies": [
+        "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "0xe93237c50d904957cf27e7b1133b510c669c2e74"
+      ],
+      "address": "0x42a076f7c02257747f27bbe473ccc969ccd2b6a761c09eb8d262316b6c231b17",
+      "initialized": true,
+      "sqrt_price_x96": "4005414497977109691725966763978357",
+      "active_liquidity": "0",
+      "protocol_fee_packed": 512125,
+      "lp_fee": 500,
+      "block": "0x498ae02"
+    },
+    {
+      "symbol": "TSLA",
+      "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+      "version": "v3",
+      "fee": 100,
+      "address": "0x7868622ff2c3b1b6c8acb15fe0bdaebf043dda48",
+      "exists": true,
+      "block": "0x498ae02",
+      "sqrt_price_x96": "79313359176821422936418836",
+      "active_liquidity": "0"
+    },
+    {
+      "symbol": "TSLA",
+      "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+      "version": "v4",
+      "fee": 100,
+      "tick_spacing": 1,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "currencies": [
+        "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+        "0x5fc5360d0400a0fd4f2af552add042d716f1d168"
+      ],
+      "address": "0x6eeada7da3e4d9d10b26d8ee8a0692d598e9da262040c28b13d28fd128103dbb",
+      "initialized": false,
+      "sqrt_price_x96": "0",
+      "active_liquidity": "0",
+      "protocol_fee_packed": 0,
+      "lp_fee": 0,
+      "block": "0x498ae02"
+    },
+    {
+      "symbol": "TSLA",
+      "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+      "version": "v3",
+      "fee": 500,
+      "address": "0xc4f0172d6ac8dd294dd1137d047d5e1893760236",
+      "exists": true,
+      "block": "0x498ae02",
+      "sqrt_price_x96": "1497930891719024725656855",
+      "active_liquidity": "59129776560695996"
+    },
+    {
+      "symbol": "TSLA",
+      "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+      "version": "v4",
+      "fee": 500,
+      "tick_spacing": 10,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "currencies": [
+        "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+        "0x5fc5360d0400a0fd4f2af552add042d716f1d168"
+      ],
+      "address": "0x3f750513949b41f4ed777e05f2bc61d63e470a2a5840a20f71c8967b1709d4b4",
+      "initialized": true,
+      "sqrt_price_x96": "1521331708824944872349467",
+      "active_liquidity": "0",
+      "protocol_fee_packed": 512125,
+      "lp_fee": 500,
+      "block": "0x498ae02"
+    }
+  ]
+}
