@@ -1,0 +1,21 @@
+{
+  "source_sha256": "be0056b4db004da997165797354cf971435c977e7f0257b30a8468fd73f5c2ac",
+  "plan_sha256": "21c28dca29eae15fd9ca9dfa5f992d2cb531af1d56d5a94fc28542be063fc7d2",
+  "started_at": 1790857023.5765598,
+  "actual_pnl": null,
+  "paper_trades": 0,
+  "ended_at": 1790857023.853251,
+  "errors": [
+    "ValueError: incomplete_or_http_error catalog-0"
+  ],
+  "requests": [
+    {
+      "path": "reports/polymarket-basket-preflight/catalog-0.json.gz",
+      "bytes": 185730,
+      "sha256": "a7a8143fc00fa79a70008d4b13a94cebc46a499b708b7258f931d4135fc20629",
+      "status": 200,
+      "received": 1790857023.803437
+    }
+  ],
+  "raw_bytes": 185730
+}

@@ -1,0 +1,121 @@
+{
+  "schema": "completed-spot-and-basket-preflight-closeout-v1",
+  "recorded_utc": "2026-10-01T12:17:50.653091+00:00",
+  "previous": "reports/experiment-storage/polymarket-basket-preflight-allocation-v1.json",
+  "previous_sha256": "21c28dca29eae15fd9ca9dfa5f992d2cb531af1d56d5a94fc28542be063fc7d2",
+  "released_bytes": 622592,
+  "active_research_reserved_bytes": 5455872,
+  "active_research_headroom_bytes": 835584,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Preserve all artifacts unchanged, include16KiB manifest margin per group.",
+  "groups": [
+    {
+      "name": "core-spot-perp-shortterm",
+      "old_reserved_bytes": 327680,
+      "artifact_bytes": 110567,
+      "retention_reserved_bytes": 131072,
+      "released_bytes": 196608,
+      "files": [
+        {
+          "path": "reports/core-spot-perp-shortterm/assets-metadata.json.gz",
+          "bytes": 1011,
+          "sha256": "b3c0e71f59c3396407429ec6125845fac6da37b4bc05cc3823e64ad310f70ee4"
+        },
+        {
+          "path": "reports/core-spot-perp-shortterm/audit.json",
+          "bytes": 1361,
+          "sha256": "4f0ec4f8725c3e43a61d39d4128c7424c4c09c3248b1ea1394e0eb5331cf1642"
+        },
+        {
+          "path": "reports/core-spot-perp-shortterm/events.jsonl.gz",
+          "bytes": 43458,
+          "sha256": "fde6aa2412cf934f6326f2795044b2c3b98220d2f442b60539fea6279a7d8e06"
+        },
+        {
+          "path": "reports/core-spot-perp-shortterm/lighter-metadata.json.gz",
+          "bytes": 23125,
+          "sha256": "0d3f22225b2752ce8149d918fbb78647e4c7f8f7b88a768e5ad6c6c812cf4557"
+        },
+        {
+          "path": "reports/core-spot-perp-shortterm/metadata.json",
+          "bytes": 1749,
+          "sha256": "9728aa3a0dc3e218d09c80a425b84df3269c4b66bd36b2825f5a65751f438991"
+        },
+        {
+          "path": "reports/core-spot-perp-shortterm/readout.md",
+          "bytes": 1067,
+          "sha256": "35040eb0c32eb5ad40b75bbe28c257f7140ff7bd0f9ec2dbe9c761f11a20ceb4"
+        },
+        {
+          "path": "reports/core-spot-perp-shortterm/status.json",
+          "bytes": 228,
+          "sha256": "e89e0484018aa5590c548fe5ca1763f2aaba45defd5fa595b4b0393d10b4ccd3"
+        },
+        {
+          "path": "reports/core-spot-perp-shortterm/summary.json",
+          "bytes": 3203,
+          "sha256": "b37812571976cb40647fc5ab75d7e7b0a6e71ecb5d3c6f4c1086b76f6a563967"
+        },
+        {
+          "path": "reports/core-spot-perp-shortterm/unresolved.json.gz",
+          "bytes": 38,
+          "sha256": "d0f2052384d81e20ba449c7a64221a0acb4c838b0059a96360ea5506bb349363"
+        },
+        {
+          "path": "scripts/core_spot_perp_shortterm.py",
+          "bytes": 19840,
+          "sha256": "94e23b2ac3df2d2920a80946e83161c1ec43edb4fc944a8448583600569e3b97"
+        },
+        {
+          "path": "scripts/audit_core_spot_perp_shortterm.py",
+          "bytes": 9566,
+          "sha256": "eeb510be0f8a59da98f7b40b6c0ad236864fdf938bf2c2e7501d54fb518ac311"
+        },
+        {
+          "path": "tests/test_core_spot_perp_shortterm.py",
+          "bytes": 2636,
+          "sha256": "dd801f4aff7da9de64f72a368a34cc774f97bb309f3db09e1e6db2d1aeb265c4"
+        },
+        {
+          "path": "reports/experiment-storage/core-spot-perp-shortterm-allocation-v1.json",
+          "bytes": 3285,
+          "sha256": "dfa967a29ce6514e3f60a7cfd24ca2e4b5870d4798a202ccc219699b19316a15"
+        }
+      ]
+    },
+    {
+      "name": "polymarket-basket-preflight",
+      "old_reserved_bytes": 655360,
+      "artifact_bytes": 195826,
+      "retention_reserved_bytes": 229376,
+      "released_bytes": 425984,
+      "files": [
+        {
+          "path": "reports/polymarket-basket-preflight/catalog-0.json.gz",
+          "bytes": 185730,
+          "sha256": "a7a8143fc00fa79a70008d4b13a94cebc46a499b708b7258f931d4135fc20629"
+        },
+        {
+          "path": "reports/polymarket-basket-preflight/readout.md",
+          "bytes": 475,
+          "sha256": "6178ed2b6844cde25bf1e5624eed625867c17c479bc84031c506c87e5f0216c2"
+        },
+        {
+          "path": "reports/polymarket-basket-preflight/summary.json",
+          "bytes": 650,
+          "sha256": "314f1943fae1998c29a0609ff67759c5f8a0847538c23017aabef9158a85aa07"
+        },
+        {
+          "path": "scripts/polymarket_basket_preflight.py",
+          "bytes": 7216,
+          "sha256": "be0056b4db004da997165797354cf971435c977e7f0257b30a8468fd73f5c2ac"
+        },
+        {
+          "path": "reports/experiment-storage/polymarket-basket-preflight-allocation-v1.json",
+          "bytes": 1755,
+          "sha256": "21c28dca29eae15fd9ca9dfa5f992d2cb531af1d56d5a94fc28542be063fc7d2"
+        }
+      ]
+    }
+  ]
+}
