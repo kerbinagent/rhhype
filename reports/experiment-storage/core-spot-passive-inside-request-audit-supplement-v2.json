@@ -1,0 +1,10 @@
+{
+  "schema": "core-spot-passive-inside-request-audit-supplement-v2",
+  "recorded_utc": "2026-10-01T17:45:49.853450+00:00",
+  "previous": "reports/experiment-storage/core-spot-passive-inside-request-audit-supplement-v1.json",
+  "source": "scripts/audit_core_spot_passive_requests_v2.py",
+  "source_sha256": "e7585b32c3ff06ca4778aecb747672d9f7445a4ed71ed8b8a90f8664ca85b61b",
+  "allocation_delta": 0,
+  "funded_from": "Existing131072controlbytes",
+  "scope": "Before endpoint: correct only chronological assertion to permit differently weighted requests sharing a timestamp. Synthetic exit-plus-cancel test passed. Original auditor and supplement retained; no economic read or protocol change."
+}
