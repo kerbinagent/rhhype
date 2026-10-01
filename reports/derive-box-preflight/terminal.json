@@ -1,0 +1,94 @@
+{
+  "status": "completed_metadata_only",
+  "provenance": [
+    {
+      "name": "fee_doc",
+      "url": "https://docs.derive.xyz/integrators/trading/trading-fees.md",
+      "body": null,
+      "http_status": 200,
+      "raw_sha256": "2e2f97a5c148cae5ac846a4da507427b3672bd8ff7c30991a84564a2f1ec2641",
+      "bytes": 6522,
+      "gzip_bytes": 2769,
+      "received_utc": "2026-10-01T03:14:29.086723+00:00"
+    },
+    {
+      "name": "settlement_doc",
+      "url": "https://docs.derive.xyz/settlement.md",
+      "body": null,
+      "http_status": 200,
+      "raw_sha256": "a28fd4c5b961dd4728084f3ad0a1b1c92fbda1aa13b48c601d19558e3d039117",
+      "bytes": 5567,
+      "gzip_bytes": 2360,
+      "received_utc": "2026-10-01T03:14:29.254985+00:00"
+    },
+    {
+      "name": "instruments_doc",
+      "url": "https://docs.derive.xyz/api-reference/market-data/publicget_all_instruments.md",
+      "body": null,
+      "http_status": 200,
+      "raw_sha256": "09959359dc756a5586bd6a37f37e3e57001aa22d4885f384e2647008ee1d2341",
+      "bytes": 10486,
+      "gzip_bytes": 2805,
+      "received_utc": "2026-10-01T03:14:29.421557+00:00"
+    },
+    {
+      "name": "tickers_doc",
+      "url": "https://docs.derive.xyz/api-reference/market-data/publicget_tickers.md",
+      "body": null,
+      "http_status": 200,
+      "raw_sha256": "abe9395a27f05fbb9f971b8f84fa5326982fae47fd29cb6c7e98ce3aaedaa9f2",
+      "bytes": 9839,
+      "gzip_bytes": 2794,
+      "received_utc": "2026-10-01T03:14:29.585245+00:00"
+    },
+    {
+      "name": "margin_doc",
+      "url": "https://docs.derive.xyz/api-reference/subaccounts/publicget_margin.md",
+      "body": null,
+      "http_status": 200,
+      "raw_sha256": "f03e5e7862661fc2d78f21056dfd117ac7d6a786b16eccd75b71fa17615cd535",
+      "bytes": 7874,
+      "gzip_bytes": 2332,
+      "received_utc": "2026-10-01T03:14:29.958442+00:00"
+    },
+    {
+      "name": "instruments",
+      "url": "https://api.derive.xyz/v3/public/get_all_instruments",
+      "body": {
+        "currency": "ETH",
+        "instrument_type": "option",
+        "expired": false,
+        "page": 1,
+        "page_size": 1000
+      },
+      "http_status": 200,
+      "raw_sha256": "85b89c90c189f56923ecc520e5043f68b45e054604176ef06d22f5810574e6eb",
+      "bytes": 742727,
+      "gzip_bytes": 17485,
+      "received_utc": "2026-10-01T03:14:31.101621+00:00"
+    },
+    {
+      "name": "universes",
+      "url": "https://api.derive.xyz/v3/public/get_risk_universes",
+      "body": {},
+      "http_status": 200,
+      "raw_sha256": "fe8d7a1efe6826c66bbafb6f89382c6e4a3584a208f0f12f7c381e26c43b1ce7",
+      "bytes": 35164,
+      "gzip_bytes": 2354,
+      "received_utc": "2026-10-01T03:14:31.515373+00:00"
+    },
+    {
+      "name": "currency",
+      "url": "https://api.derive.xyz/v3/public/get_currency",
+      "body": {
+        "currency": "ETH"
+      },
+      "http_status": 200,
+      "raw_sha256": "a73caeaeb780c2d627dcb0d266a390cb76b88f12640ae49110625b72d7aec1d6",
+      "bytes": 2306,
+      "gzip_bytes": 715,
+      "received_utc": "2026-10-01T03:14:31.848060+00:00"
+    }
+  ],
+  "requests": 8
+}

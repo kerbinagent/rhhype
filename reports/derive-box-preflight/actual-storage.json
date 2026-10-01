@@ -1,0 +1,10 @@
+{
+  "usage_bytes_before_this_manifest": {
+    "source": 2974,
+    "raw": 33614,
+    "output": 2846,
+    "control": 5446
+  },
+  "maximum_bytes": 262144,
+  "gate": "incomplete_catalogue_1000_of_1010"
+}
