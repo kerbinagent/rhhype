@@ -1,0 +1,42 @@
+{
+  "status": "unknown",
+  "actual_pnl": null,
+  "ethereum_rate_not_verified_on_bnb_chain": true,
+  "symbol": "wBETH",
+  "boundaries": [
+    {
+      "target": 1788134400,
+      "before": {
+        "number": "0x18ac4af",
+        "hash": "0xd28e5051104d6f578ddde8d76a17300bc6f0d3a2b31e36d5a6844bd66aa87e5b",
+        "parentHash": "0x7d74aefa140aca98de38fb5998fbe38f1a52d76f8304237f7a12fdc19175ccd4",
+        "timestamp": "0x6a94c3ff",
+        "stateRoot": "0x45a111b655a530956f99ab6b8741e3efeccd773641abf25ea1132ef4a4c44a5e"
+      },
+      "after": {
+        "number": "0x18ac4b0",
+        "hash": "0x452ea65e333ed4f809b9000efa1ed7a95a7473295c9a663519c36146b3c7aecd",
+        "parentHash": "0xd28e5051104d6f578ddde8d76a17300bc6f0d3a2b31e36d5a6844bd66aa87e5b",
+        "timestamp": "0x6a94c40b",
+        "stateRoot": "0x64e8813d7fb30c3d5428ee919d7edad177ad7b924cb8ecda8771feab28403980"
+      }
+    },
+    {
+      "target": 1790640000,
+      "before": {
+        "number": "0x18df0a4",
+        "hash": "0x31868801c3f7242338e7f191929032c3fc9387e9ec07ace2c0264f13c7914bae",
+        "parentHash": "0x37e307dc95b4b9bffd1f783485870ba39dd2f61b47ecf4eb56565dd80950e821",
+        "timestamp": "0x6abaff7f",
+        "stateRoot": "0xe8e8c2bd5b83dccf10553a7c2847e013e61658baa5b822c87decd2d02edb638d"
+      },
+      "after": {
+        "number": "0x18df0a5",
+        "hash": "0xaa8b965c8e6728cb61a480a80a1aa32881ee629f51ddc79fbdc65a61439f6a6d",
+        "parentHash": "0x31868801c3f7242338e7f191929032c3fc9387e9ec07ace2c0264f13c7914bae",
+        "timestamp": "0x6abaff8b",
+        "stateRoot": "0xa9c1dbdbafb2f9c4ce4dab8ee7cb2d8c6e2c74b6d80ddf4360ccbf537588923f"
+      }
+    }
+  ]
+}
