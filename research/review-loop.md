@@ -3767,3 +3767,29 @@ result.
 Fresh carry v2 has all sixty-eight due arrivals through 06:05, zero retries,
 zero errors and no economic evaluation; 796 future slots remain interrupted
 pending their due times.
+
+
+## Review 115 — 1 October 2026 06:26:33 UTC
+
+Exact report and separate epoch snapshot preserved; guarded manual archive
+2,971,913/12,582,912 bytes. Report SHA-256
+`fd613655d4d69e3c588789ae8c400a8b1eb0510c627e45dcce5b8bd81d50245e`.
+No closed trades, wins or estimates. One separate convergence abort and two
+entry rejections (one Hyperliquid price limit and one Lighter notional cap),
+complete trade and abort coverage. Four feeds connected, 107 pairs, normal
+performance; CPU 40.91%, p95 lag 5.59 ms, resident memory 198.61 MiB, 769.0
+books/s and metadata age 737.6 s. No open positions; three pending funding
+items remain across convergence, Premium and standard.
+
+The epoch snapshot read at 06:27:10.513 UTC and updated at 06:27:09.942 UTC
+showed convergence 391/−$467.0259 and Premium 688/−$1,275.2228, unchanged from
+the prior snapshot read at 06:07:07.353 UTC. Cooldown remains capital
+constrained. Twenty-two epoch win records and three legacy funding obligations
+remain. Reviews 66–115 have 1,640 closes: 1,630 losses, two paired gains and
+eight rescue gains. Next checkpoint **06:46:33 UTC**. No qualifying positive
+result.
+
+Fresh carry v2's 06:25 index shows one `arrival_invalid` slot (slot 71), 71
+sampled slots and 792 future/interrupted slots; status remains running, with no
+terminal error or retries and no economic evaluation. Its referenced sample
+was left unopened.
