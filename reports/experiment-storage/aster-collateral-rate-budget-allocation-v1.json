@@ -1,0 +1,63 @@
+{
+  "schema": "aster-collateral-rate-budget-v1",
+  "recorded_utc": "2026-10-01T04:08:01.295105+00:00",
+  "previous": "reports/experiment-storage/deribit-linear-box-quotes-allocation-v1.json",
+  "previous_sha256": "7b240a0881f64ed21398ce206f29b711609f639b89304035c18a094926d9caa0",
+  "new_maximum_bytes": 32768,
+  "categories_bytes": {
+    "source": 4096,
+    "raw": 0,
+    "output": 20480,
+    "control": 8192
+  },
+  "active_research_reserved_bytes": 2138112,
+  "active_research_headroom_bytes": 2056192,
+  "requests_max": 0,
+  "retries": 0,
+  "window_start_ms": 1788134400000,
+  "blocks": [
+    [
+      0,
+      29
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      7,
+      14
+    ],
+    [
+      14,
+      21
+    ],
+    [
+      21,
+      28
+    ],
+    [
+      28,
+      29
+    ]
+  ],
+  "input_pins": [
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/fundings_30d/ETH.json",
+      "sha256": "de5ebc91b3ba2bbe83fffe8c61de7a36c537cca2bad86150aa8cc99963e76f10"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/aster/fundings_30d/BTC.json",
+      "sha256": "df2da703a6d52bdf71ff401ada7445c894ddf85a303b9e80b7e99462dfe10b6b"
+    }
+  ],
+  "scope": "ETHprimaryBTCnonstakingcontrol using allcompleteUTCdays in old90settlementAsterarchive Aug31throughSep28inclusive. Fixedlongunderlyingcollateral/shortsameperp, no reverse or assetoptimization. 29dayagg+4weeks+1daytail, all12outcomes. Excludeeachentry/exitboundarypayment. Reusedhistoricaldevelopment, notfreshholdout orcashflows.",
+  "costs": "Ratebudgetonly:1.1xprincipalcapitalat5%annual,2perptakerfees4bp each,5bpstress; zerospeculativeyield/points/traderewards. Solveextraannualyieldneededbeforeallmissingcosts. 1.1x is accounting scenario, not demonstratedmarginfeasibility. WBETH90%collateral/currentdocs,ETH95%; noclaimrateforWBETHorUSDF.",
+  "docs": [
+    "https://docs.asterdex.com/trading/perpetuals/single-asset-mode-and-multi-asset-mode",
+    "https://docs.asterdex.com/trading/perpetuals/fees-and-specs/fees",
+    "https://docs.asterdex.com/program-and-rewards/trade-and-earn",
+    "https://docs.asterdex.com/earn/overview/mint-asbnb"
+  ],
+  "decision": "Onlyratebudget; no yieldforecastorPnL. Anypositive requiresactualstakedconversion/rewardrates, basis, costsandcollateralpath. No newmarketrequests orcollector."
+}
