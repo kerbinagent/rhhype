@@ -1,0 +1,25 @@
+{
+  "schema": "single-venue-liquidity-compact-v1",
+  "recorded_utc": "2026-10-01T20:19:50.301375+00:00",
+  "source_pins": [
+    {
+      "path": "scripts/single_venue_liquidity_compact.py",
+      "sha256": "ba521ed60172beb0ac8b7ed15c1df800e53cbeef07a82384ac7077418b64ae8a"
+    },
+    {
+      "path": "scripts/single_venue_liquidity_diagnostic.py",
+      "sha256": "36fd18316494e0bb93870b688fa282604b362dd0102fefea4eaf81375591e4e5"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-liquidity-diagnostic-v1.json",
+      "sha256": "f69814c7f074f8b8b5fd35e3bbafeece259fc817a30b1902cde07d43642a8a32"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-multi-v1.json",
+      "sha256": "7e2b6d250eff3f38a4a0977c3268b6b495ad6a697be4d63781a4352f4eebd28b"
+    }
+  ],
+  "scope": "After original output-cap failure, retain identical measurement, sampling and aggregate distributions. Replace repeated per-second rows with count and SHA256 of exact canonical full rows. Original raw remains unchanged and permits full reconstruction. No new thresholds, future returns or strategy modifications. Original script and failure record retained.",
+  "allocation": "Same131072 output cap within existing1048576 output reservation. No reservation increase.",
+  "canonical_rows": "json.dumps(rows,separators=(comma,colon),allow_nan=False) plus newline, UTF8; row and object key order preserved as original implementation."
+}

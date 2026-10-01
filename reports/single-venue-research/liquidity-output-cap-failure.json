@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-10-01T20:19:50.301375+00:00",
+  "status": "output_cap_assertion",
+  "script": "scripts/single_venue_liquidity_diagnostic.py",
+  "cap_bytes": 131072,
+  "manifest_sha256": "8954370a5bf35efff4fe69bbb5ff2fa9e7f712299215dfad45de33f85d41dab2",
+  "stage": "After complete raw read and measurements, before output write; no artifact written. Exact packed size was not emitted by original failure.",
+  "effect": "No change to trading replay. Preserve original source and protocol. Descriptive output requires compact format supplement."
+}
