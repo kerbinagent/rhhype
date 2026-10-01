@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 01 October 2026 04:07 UTC
+## Current status, 01 October 2026 04:27 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative or inconclusive; no strategy is promoted. After the host reboot,
@@ -16,7 +16,7 @@ all eight saved ledgers, strategy epoch and three legacy funding obligations.
 The 00:14 catch-up review96 covers an extended interval and is not a fresh
 uninterrupted validation window. All four feeds are connected.
 
-Reviews through 108 are preserved. Reviews 66–108 have 1,624 closes: 1,614 losses,
+Reviews through 109 are preserved. Reviews 66–109 have 1,626 closes: 1,616 losses,
 two paired gains and eight failed-hedge rescue gains. The four epoch paired gains
 remain the WLD/CRCL records from review65 and two MU records from review85;
 the latter share a signal and HL fill observation, and their full three-pair
@@ -31,11 +31,12 @@ Premium/−$38.73372. No new wins or estimated trades. Three pending funding ite
 remain across convergence, Premium and standard; no open positions. Review 107
 added eleven exact losses/−$20.72763: three convergence and eight Premium.
 Review 108 added four exact losses/−$6.57846: two each from convergence and
-Premium. The convergence epoch is 383/−$452.4346 and Premium 680/−$1,260.1069.
-Review 108 reported two closes per strategy, while the separately read snapshots
-increased by one each; their observation boundaries differ, so cumulative
-review totals follow report deltas without adding snapshot differences.
-Cooldown remains capital constrained. Next review: **1 October 04:06:33 UTC**.
+Premium. Review 109 added two exact Premium losses/−$4.01441. The convergence
+epoch is 383/−$452.4346 and Premium 682/−$1,264.1213. The separately captured
+Premium epoch count rose by two, matching review109's delta. Earlier
+report/snapshot boundary differences are recorded in the review journal; review
+totals follow report deltas. No new wins or estimated trades. Next review:
+**1 October 04:46:33 UTC**.
 
 The original dated-carry run was interrupted by reboot after 136 recorded slots:
 134 sampled and two late callbacks. Its last trusted index and all evidence
