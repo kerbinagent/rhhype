@@ -25,6 +25,12 @@ class TestParadexCore(unittest.TestCase):
    branch.settle_funding(pos['id'],settle,166.);self.assertEqual(pos['status'],'CLOSED_ESTIMATED');self.assertFalse(branch.positions)
    self.assertEqual(len(branch.retail_requests),2)
    archive.close()
+ def test_partial_exit_funding(self):
+  rows=[{'created':float(t),'received':float(t),'index':t*.01} for t in (100,105,110,115)]
+  leg={'venue':'paradex','quantity':1.,'entry_time':102.,'side':'long','exit_fills':[{'timestamp':107.,'quantity':.4},{'timestamp':112.,'quantity':.6}]}
+  result=funding_settlement({'legs':[leg]},rows,116.)
+  self.assertAlmostEqual(result['cashflow_usd'],-.08)
+  self.assertEqual(len(result['events']),2)
  def test_funding_gap_and_limits(self):
   rows=[{'created':1.,'index':1.},{'created':10.,'index':2.}]
   self.assertIsNone(interpolate_index(rows,5.));self.assertIsNone(interpolate_index(rows,11.))

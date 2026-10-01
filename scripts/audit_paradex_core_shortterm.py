@@ -67,6 +67,10 @@ def main():
     audited_fills = 0
     for branch in s['branches']:
         label = branch['branch']
+        requests=branch['retail_request_times'];assert requests==sorted(requests)
+        for i,t in enumerate(requests):
+            for window,limit in ((1,3),(60,30),(3600,300),(86400,1000)):
+                assert sum(t-window<at<=t for at in requests[:i+1])<=limit
         assert admissions[label] == branch['attempts']
         all_positions = positions[label] + pending[label]
         assert len(all_positions) == branch['attempts']

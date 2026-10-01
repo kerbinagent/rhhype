@@ -393,7 +393,7 @@ async def run():
                     for leg in r['legs'] for fill in leg['exit_fills']) for r in closed),
                 'unresolved':[{'id':p['id'],'status':p['status'],'asset':p['asset'],
                     'legs':[{'venue':l['venue'],'remaining':l['remaining'],'quantity':l['quantity']} for l in p['legs']]} for p in b.positions.values()],
-                'gates':dict(b.gates),'stats':dict(b.stats),'ledger':b.ledgers})
+                'gates':dict(b.gates),'stats':dict(b.stats),'ledger':b.ledgers,'retail_request_times':list(b.retail_requests)})
         out=encode(summary)
         assert len(out)+len(pending_bytes)<=plan['categories_bytes']['output']-8192
         (OUT/'summary.json').write_bytes(out)
