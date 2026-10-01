@@ -1,0 +1,52 @@
+{
+  "schema": "failed-spot-perp-replication-closeout-v1",
+  "recorded_utc": "2026-10-01T15:55:36.174254+00:00",
+  "previous": "reports/experiment-storage/core-spot-perp-limits-replication-v1.json",
+  "previous_sha256": "a3836b84a130a294b48f3a902928bb7cf8bb99bceb59815ef73db9d8178e6834",
+  "old_reserved_bytes": 327680,
+  "artifact_bytes": 18537,
+  "retention_reserved_bytes": 65536,
+  "released_bytes": 262144,
+  "active_research_pool_bytes": 19922944,
+  "active_research_reserved_bytes": 19587072,
+  "active_research_headroom_bytes": 335872,
+  "overall_reservation_bytes": 836777216,
+  "files": [
+    {
+      "path": "reports/core-spot-perp-limits-replication/readout.md",
+      "bytes": 384,
+      "sha256": "6d72ea1b24f48f69bb8d0c2ee9d26a1f6a90280a68d82a4a4546667008353e10"
+    },
+    {
+      "path": "reports/core-spot-perp-limits-replication/events.jsonl.gz",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/core-spot-perp-limits-replication/unresolved.json.gz",
+      "bytes": 23,
+      "sha256": "8b0b8749aba12de93f3cf5d86f9fac9d6de7cac400a17473718f182a34ebb7e9"
+    },
+    {
+      "path": "reports/core-spot-perp-limits-replication/summary.json",
+      "bytes": 747,
+      "sha256": "a0206998ae280269b4e7101b4b5225832c5198800a7dd438a1d74893b5e75a0a"
+    },
+    {
+      "path": "reports/experiment-storage/core-spot-perp-limits-replication-v1.json",
+      "bytes": 3633,
+      "sha256": "a3836b84a130a294b48f3a902928bb7cf8bb99bceb59815ef73db9d8178e6834"
+    },
+    {
+      "path": "scripts/core_spot_perp_limits_replication.py",
+      "bytes": 397,
+      "sha256": "8fe984802a42c0ea23654f1844b8683355219ef1c371254c5709a900cd1fdef0"
+    },
+    {
+      "path": "scripts/audit_core_spot_perp_limits_replication.py",
+      "bytes": 13353,
+      "sha256": "9b2a576b8d1a7036fc48c483221f7af5ad2dda0d0eb873edc6ea63bb5355f979"
+    }
+  ],
+  "scope": "All failed attempt artifacts retained. Shared original source remains in completed-spot-perp-limits-closeout-v1."
+}

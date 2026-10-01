@@ -1,0 +1,77 @@
+{
+  "schema": "core-spot-perp-limits-retry-v1",
+  "recorded_utc": "2026-10-01T15:55:36.174664+00:00",
+  "previous": "reports/experiment-storage/failed-spot-perp-replication-closeout-v1.json",
+  "previous_sha256": "f840cfe31ffa43d7c37a4fec1195c97012cd2ab630c9206666c24fd46a546edc",
+  "new_maximum_bytes": 327680,
+  "categories_bytes": {
+    "source": 49152,
+    "metadata": 49152,
+    "raw": 163840,
+    "output": 49152,
+    "control": 16384
+  },
+  "active_research_pool_bytes": 19922944,
+  "active_research_reserved_bytes": 19914752,
+  "active_research_headroom_bytes": 8192,
+  "overall_reservation_bytes": 836777216,
+  "assets": [
+    "LIT",
+    "ETH"
+  ],
+  "budgets": [
+    100
+  ],
+  "horizons": [
+    60
+  ],
+  "entry_limits_bps": [
+    1,
+    10
+  ],
+  "duration_seconds": 600,
+  "entry_end_seconds": 480,
+  "raw_soft_cap": 100000,
+  "scope": "Prospective same-venue Core spotbuy/perpshort two independent100perleg600USDC funded ledgers. Nativeassetidentity/USDCquote/multipliers/status/fees metadata checked; no spot borrow. Compare1bpvs10bp entry limits, all other strategy rules retained.120smedian2sembargo90count89span5bpexcursion1bpforecast/TP60shold400msorders30scooldown30attemptcap120shourguard.5bpstress separate.",
+  "hypothesis": "One separately recorded unchanged retry after pre-capture metadata timeout. No economic observations from failed attempt. Fixed600sendpoint, no interim economics/extension; same limits and hour-boundary guard. Public network capture only, no orders or credentials.",
+  "storage": "Two boundedpublicmetadataGETs;oneCoreWSmax3connections.600sfixed or128MBingress/250kmessages;rawsoft100000hard163840. All normalizedreference/pendingbook/fill/exit/terminal/invalid events retained;fullwire/idledepth not retained. No interim economics or extension.",
+  "source_pins": [
+    {
+      "path": "scripts/core_spot_perp_limits.py",
+      "sha256": "20ea1bb874ecca2e38b7e35c670b31aaf4df2c0ce862f9b90cd31c79fb40d274"
+    },
+    {
+      "path": "scripts/audit_core_spot_perp_limits.py",
+      "sha256": "289f51b74af223f2cf71406c5d73cc8f5898bb4362007e412f257f436c80726b"
+    },
+    {
+      "path": "tests/test_core_spot_perp_limits.py",
+      "sha256": "d6dcfc08c1f839b2bbb6a691ba043d74857b01732b67ed726a17bad2b2499c2a"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/core_spot_perp_limits_retry.py",
+      "sha256": "f94af6a10042c948302ad16390c9a42e2b1cfe19df24089907ad52abe4f41e7e"
+    },
+    {
+      "path": "scripts/audit_core_spot_perp_limits_retry.py",
+      "sha256": "33087de2c1e4648b0a1eed4394020a4c63deab5406c98c6b420da60c683c0336"
+    }
+  ],
+  "verification": "4synthetictests pass: paired cash/inventory, tight rejected hedge with losing spot rescue, wider permitted hedge/paired cash reconciliation, arrival sample spacing/skew. Auditor independently verifies per-branch actual price-limit formula, forecast4walks, capital/hour intervals, fill quantities/firsteligible/depth and exact USDCcash+spotinventory identity.",
+  "canonical_retention_manifests": [
+    "reports/experiment-storage/completed-spot-perp-limits-closeout-v1.json",
+    "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json"
+  ]
+}
