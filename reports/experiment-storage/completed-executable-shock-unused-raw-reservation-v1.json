@@ -1,0 +1,44 @@
+{
+  "schema": "completed-executable-shock-unused-raw-reservation-v1",
+  "recorded_utc": "2026-10-01T22:41:05.009305+00:00",
+  "previous": "reports/experiment-storage/single-venue-executable-reference-v1.json",
+  "previous_sha256": "e9f5001dcd0713cb8b1a8dcd0a6783859eaaf3224eb031dfcfa4c3aec1320f6a",
+  "completed_plan": "reports/experiment-storage/single-venue-executable-shock-v1.json",
+  "completed_plan_sha256": "b2d9878e8714d5fdd4fd79efe9ac2b49ff6e42a61d6736f7d12818340f4cb2f6",
+  "supervisor": "PID2512537 hostps exited/no matching process; batch terminal3of3normal and all3auditspassed",
+  "old_batch_reservation_bytes": 25952256,
+  "old_raw_reservation_bytes": 25165824,
+  "retained_raw_reservation_bytes": 5234688,
+  "actual_raw_bytes": 5230688,
+  "raw_archives": [
+    {
+      "path": "reports/single-venue-executable-shock/window-1/capture/frames.jsonl.gz",
+      "bytes": 1872350,
+      "sha256": "6c6c0b5fcddb4c034a6f5a46a5c93f0806f31165c64e90047527fd5e1b7ab0dd"
+    },
+    {
+      "path": "reports/single-venue-executable-shock/window-2/capture/frames.jsonl.gz",
+      "bytes": 1847289,
+      "sha256": "e94c75df5a98f96bad1424815b8607015ddebe7779e88bc793cbb6185731f65f"
+    },
+    {
+      "path": "reports/single-venue-executable-shock/window-3/capture/frames.jsonl.gz",
+      "bytes": 1511049,
+      "sha256": "61e2dd878dd0b32275725cd693b55e85ab71bd015ecb840bd0a19c11f35e6210"
+    }
+  ],
+  "all_nonraw_categories_retained_in_full": {
+    "source_and_preparation": 65536,
+    "metadata": 196608,
+    "output": 393216,
+    "control": 131072
+  },
+  "new_batch_retention_reservation_bytes": 6021120,
+  "released_unused_bytes": 19931136,
+  "new_control_reservation_bytes": 8192,
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 133120000,
+  "active_research_headroom_bytes": 21020672,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Only unused raw reservation from completed three-windowLITbatch released. All raw/source/metadata/output/control artifacts retained. Entire nonraw allocation remains funded. Reference-analysis allocation separately retained. Active ten-market capture keeps its full68,747,264allocation. Overall reservation unchanged; no files deleted/recompressed."
+}
