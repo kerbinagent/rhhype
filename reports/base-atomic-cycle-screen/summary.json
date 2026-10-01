@@ -1,0 +1,13 @@
+{
+  "actual_pnl": null,
+  "gas_not_subtracted": true,
+  "scope": "Pool-fee-inclusive same-block eth_call quotes, no execution. Positive pre-gas quotes require separate gas and inclusion investigation. Negative pre-gas quotes already fail a necessary condition.",
+  "pools": {
+    "100": {
+      "address": "0xb4cb800910b228ed3d0834cf79d697127bbb00e5",
+      "exists": true
+    }
+  },
+  "rounds": [],
+  "rows": []
+}

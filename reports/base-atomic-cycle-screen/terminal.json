@@ -1,0 +1,7 @@
+{
+  "status": "failed_no_retry",
+  "requests": 12,
+  "error": "HTTPError: HTTP Error 429: Too Many Requests",
+  "summary_sha256": "5199b528ca3793b3b305c55f37075755c228e556e000f5609042c853d32430b7",
+  "ended_utc": "2026-10-01T04:51:59.791423+00:00"
+}
