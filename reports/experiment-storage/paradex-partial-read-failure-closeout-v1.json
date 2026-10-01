@@ -1,0 +1,60 @@
+{
+  "schema": "paradex-partial-read-failure-closeout-v1",
+  "recorded_utc": "2026-10-01T11:58:35.989125+00:00",
+  "previous": "reports/experiment-storage/paradex-core-targeted-allocation-v1.json",
+  "previous_sha256": "3fa4901e6492e46cbce008d63b0946267aeaaea06c0b971441c5bc18e0c44ffb",
+  "old_reserved_bytes": 1032192,
+  "retention_reserved_bytes": 65536,
+  "artifact_bytes": 52254,
+  "released_bytes": 966656,
+  "active_research_reserved_bytes": 4882432,
+  "active_research_headroom_bytes": 1409024,
+  "scope": "Preserve all failed targeted-load files and source without modification. No book/order/economic activity.8KiB closeout reserve included.",
+  "files": [
+    {
+      "path": "reports/experiment-storage/paradex-core-targeted-allocation-v1.json",
+      "bytes": 5485,
+      "sha256": "3fa4901e6492e46cbce008d63b0946267aeaaea06c0b971441c5bc18e0c44ffb"
+    },
+    {
+      "path": "reports/paradex-core-targeted/events.jsonl.gz",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/paradex-core-targeted/lighter-metadata.json.gz",
+      "bytes": 2951,
+      "sha256": "5b25dd5fcd9cc8d0c7b990da35ac5a1ea733439375a8b25104d6c73e6c595ac7"
+    },
+    {
+      "path": "reports/paradex-core-targeted/readout.md",
+      "bytes": 457,
+      "sha256": "a5a7d544b75f5a4059490778f6db96a3dab1764900400ebb50b82418a763619c"
+    },
+    {
+      "path": "reports/paradex-core-targeted/summary.json",
+      "bytes": 924,
+      "sha256": "65633e2d968d42c9a6087b8e1c108a63b4c70ebeb627b20d0b10384bd3b37a26"
+    },
+    {
+      "path": "reports/paradex-core-targeted/unresolved.json.gz",
+      "bytes": 23,
+      "sha256": "8b0b8749aba12de93f3cf5d86f9fac9d6de7cac400a17473718f182a34ebb7e9"
+    },
+    {
+      "path": "scripts/audit_paradex_core_targeted.py",
+      "bytes": 11518,
+      "sha256": "1052ef925be191ab9be73cb494bc50e9bb890eaa334d40c90ad24671b1fe1fc0"
+    },
+    {
+      "path": "scripts/paradex_core_targeted.py",
+      "bytes": 27874,
+      "sha256": "a9bd259e2f337faa6da569edda50dca556ad4d96728de2ccea8b9427be4c7f0a"
+    },
+    {
+      "path": "tests/test_paradex_core_targeted.py",
+      "bytes": 3022,
+      "sha256": "3e768b822a899d77a502267ef66c6a542f4f9d53df85c323936d82ce7a93ca68"
+    }
+  ]
+}
