@@ -1,0 +1,40 @@
+{
+  "schema": "paradex-public-transport-v1",
+  "recorded_utc": "2026-10-01T05:28:56.929862+00:00",
+  "previous": "reports/experiment-storage/paradex-public-preflight-allocation-v1.json",
+  "previous_sha256": "1011c84672975bb66ed1c000ec236c443be1c7eb44ca6e2b8c99c544ce74685f",
+  "new_maximum_bytes": 65536,
+  "categories_bytes": {
+    "source": 8192,
+    "raw": 32768,
+    "output": 16384,
+    "control": 8192
+  },
+  "active_research_reserved_bytes": 4038656,
+  "active_research_headroom_bytes": 155648,
+  "source_sha256": "9aaa15c3eb81b41aa5ed2afae6dfe8df5e51a4a3250538d8a6a83fa14bad9757",
+  "assets": [
+    "BTC",
+    "ETH",
+    "SOL"
+  ],
+  "max_requests": 12,
+  "retries": 0,
+  "scope": "Three market metadata reads then three rounds of three ordinary public books, 1s spacing. No auth, interactive private book, orders or economic strategy selection. Check schema, fees, limits, source clocks and available depth before any separately frozen short-term strategy.",
+  "documented_retail_order_latency_ms": 300,
+  "documented_retail_limits": {
+    "second": 3,
+    "minute": 30,
+    "hour": 300,
+    "day": 1000
+  },
+  "sources": [
+    "https://docs.paradex.trade/trading/trader-profiles",
+    "https://docs.paradex.trade/trading/trading-fees",
+    "https://docs.paradex.trade/api/prod/markets/get-orderbook",
+    "https://docs.paradex.trade/api/prod/markets/get-markets"
+  ],
+  "original_source_sha256": "9aaa15c3eb81b41aa5ed2afae6dfe8df5e51a4a3250538d8a6a83fa14bad9757",
+  "wrapper_sha256": "4858dfe5285307e0bddbb1b65d02abe3e349af8f5329cfbecca8996669143760",
+  "reason": "All12 initial requests failed sandbox DNS before any data was received. Preserve those failures. Single corrected transport run with same fixed12 URLs and no within-run retries."
+}
