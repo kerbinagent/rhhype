@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "take_profit_marks_checked": 2,
+  "cases": [
+    {
+      "branch": "100-60-1bp",
+      "position_id": "1790869591160725-1-standard",
+      "request_time": "1790869594.1696305",
+      "cash_mark": "0.074855",
+      "capital_mark": "7.784502217321510337392186707E-7",
+      "net_mark": "0.07485422154977826784896626078",
+      "eventual_cash": "0.07485499999998524",
+      "exit_request_to_final_fill_seconds": "0.6931033"
+    },
+    {
+      "branch": "100-60-10bp",
+      "position_id": "1790869591160725-1-standard",
+      "request_time": "1790869594.1696305",
+      "cash_mark": "0.074768",
+      "capital_mark": "7.775401105077398845763571791E-7",
+      "net_mark": "0.07476722245988949226011542364",
+      "eventual_cash": "0.07476800000000594",
+      "exit_request_to_final_fill_seconds": "0.6931033"
+    }
+  ],
+  "raw_sha256": "70969aa20e64fe27c6796cf323d4de75aea859e15a0c34967f267c1d9ad5175f",
+  "checks": "Every recorded take-profit reconstructed independently from saved quote depth and actual entry costs; receipt/source freshness, receive skew, time-before-exit, same funding hour, zero fees and capital.1cent decision threshold.",
+  "limitations": "Does not assert a take-profit trigger was available earlier than the recorded request; private execution remains unverified."
+}

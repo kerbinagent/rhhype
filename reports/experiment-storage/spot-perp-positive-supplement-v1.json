@@ -1,0 +1,27 @@
+{
+  "active_research_pool_bytes": 19922944,
+  "active_research_reserved_bytes": 19914752,
+  "active_research_headroom_bytes": 8192,
+  "overall_reservation_bytes": 836777216,
+  "schema": "spot-perp-positive-supplement-v1",
+  "recorded_utc": "2026-10-01T15:57:26.622516+00:00",
+  "previous": "reports/experiment-storage/core-spot-perp-limits-retry-v1.json",
+  "previous_sha256": "490e92d8061bcd18806358b8211737af1b724eb33a7bb657e89432cdc2d9dc0e",
+  "new_maximum_bytes": 0,
+  "canonical_retention_manifest": "reports/experiment-storage/completed-spot-perp-limits-closeout-v1.json",
+  "retention_reserved_bytes": 196608,
+  "updated_artifact_bytes": 157240,
+  "scope": "Supplement funded from existing spot-perp retention slack; original closeout and readout preserved. Offline exit signal audit passes both overlapping variants.",
+  "additional_files": [
+    {
+      "path": "scripts/audit_spot_perp_exit_marks.py",
+      "bytes": 2766,
+      "sha256": "437abd6bf37e1efa140d0eddecea1c7254ff99db53202d65c89dd0ec46af5ebe"
+    },
+    {
+      "path": "reports/core-spot-perp-limits/exit-mark-audit.json",
+      "bytes": 1314,
+      "sha256": "52bea047017a532a341b7f908f6bbe1ac19b241c6cba752dce56d7a373f88ccc"
+    }
+  ]
+}
