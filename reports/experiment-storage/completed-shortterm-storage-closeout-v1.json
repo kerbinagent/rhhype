@@ -1,0 +1,161 @@
+{
+  "schema": "completed-shortterm-storage-closeout-v1",
+  "recorded_utc": "2026-10-01T05:13:26.645009+00:00",
+  "previous": "reports/experiment-storage/rh-low-fee-pool-preflight-allocation-v1.json",
+  "previous_sha256": "b8d183a3d35222239adebd936da5a1ee32c10f6d59097bbe259b048642ad7b2f",
+  "closed_studies": [
+    "core-rh-small-shortterm",
+    "base-atomic-cycle-screen",
+    "base-atomic-cycle-slow-transport"
+  ],
+  "original_reserved_bytes": 1359872,
+  "closed_retention_reservation_bytes": 655360,
+  "retained_artifact_bytes": 540641,
+  "released_unused_reservation_bytes": 704512,
+  "active_research_reserved_bytes": 3383296,
+  "active_research_headroom_bytes": 811008,
+  "overall_storage_cap_unchanged_bytes": 836777216,
+  "scope": "The fixed collectors completed and all outputs/readouts were audited and committed. Seal every source/control/result artifact below; preserve all failure and negative evidence. No deletion/recompression. Replace unused prospective allocation with a bounded retention cap including16384 bytes for this closeout. Old allocation history preserved and superseded only for prospective storage. Any new capture or change to sealed artifacts requires a separate allocation. Ongoing collectors unaffected.",
+  "artifacts": [
+    {
+      "path": "reports/experiment-storage/core-rh-small-shortterm-allocation-v1.json",
+      "bytes": 3567,
+      "sha256": "9469c04b18402f4e642a1c3c3c4c138ba636abbc6bc26e8f1e3766655e9e1049"
+    },
+    {
+      "path": "scripts/core_rh_small_shortterm.py",
+      "bytes": 20672,
+      "sha256": "65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3"
+    },
+    {
+      "path": "reports/core-rh-small-shortterm/audit.json",
+      "bytes": 2966,
+      "sha256": "3a10b32b03915587ca17f00e7a76a1fff8b35d4b5761ee6646aa290f5abc6981"
+    },
+    {
+      "path": "reports/core-rh-small-shortterm/events.jsonl.gz",
+      "bytes": 359641,
+      "sha256": "f12fb85566ac45159a2b1626da430c690d16114810ad81b98760f8e683b5663f"
+    },
+    {
+      "path": "reports/core-rh-small-shortterm/execution-diagnostic.json",
+      "bytes": 16236,
+      "sha256": "2ed6af705184d07aad52eb903ed2adda197a42bd870e7289c69f88f0aacbee8b"
+    },
+    {
+      "path": "reports/core-rh-small-shortterm/lighter-metadata.json.gz",
+      "bytes": 23137,
+      "sha256": "009801f633b08c4646a87619335f32e16a1bc886598a8bbec5e40cdcf2ca5ee9"
+    },
+    {
+      "path": "reports/core-rh-small-shortterm/metadata.json",
+      "bytes": 2404,
+      "sha256": "cb876ab5f4ce3346f78d010a83f2ed4b41ea36fdae620fe1e6164c442ce3780e"
+    },
+    {
+      "path": "reports/core-rh-small-shortterm/readout.md",
+      "bytes": 4582,
+      "sha256": "09e7771e8eeb8c5caa4a1aa316fc49a610ca1348b4c291f1e2929d903b935941"
+    },
+    {
+      "path": "reports/core-rh-small-shortterm/rh_lighter-metadata.json.gz",
+      "bytes": 8091,
+      "sha256": "8909ca90e3212b7c57a42e72f2b93dec9224a420c3eb5b78d1d3338b8991ef2f"
+    },
+    {
+      "path": "reports/core-rh-small-shortterm/status.json",
+      "bytes": 442,
+      "sha256": "a72f345823cab56111c1089804e805372e4d64feff5c1dea78ef51b0e7968ac3"
+    },
+    {
+      "path": "reports/core-rh-small-shortterm/summary.json",
+      "bytes": 8399,
+      "sha256": "4e95ecc270792c1ce02a917984252845ca5a019e63042e478decbf82beb5e40d"
+    },
+    {
+      "path": "reports/core-rh-small-shortterm/unresolved.json.gz",
+      "bytes": 49,
+      "sha256": "979357e13ccacc43384cabaf990415d2ad898878014256add9c5625ac2e77029"
+    },
+    {
+      "path": "scripts/audit_core_rh_small_shortterm.py",
+      "bytes": 7977,
+      "sha256": "7ebdb8eb347a3eafa4437ec72e7c0977fa906e79178a5f8ef5a0c5e5fcb381b4"
+    },
+    {
+      "path": "reports/experiment-storage/base-atomic-cycle-screen-allocation-v1.json",
+      "bytes": 2025,
+      "sha256": "ef260097a7c137c530792ad7c7c0c667b29b3646ac214f5f72ca03a313543728"
+    },
+    {
+      "path": "scripts/base_atomic_cycle_screen.py",
+      "bytes": 9130,
+      "sha256": "507318829bc30a9449fcdad34b98d21ce72d1265a5291f0dcc78b6bc80ac6e32"
+    },
+    {
+      "path": "reports/base-atomic-cycle-screen/claim.json",
+      "bytes": 227,
+      "sha256": "81f3ce84458522d7f86207d31be7b8c762ec2a6ec1be2f127f728be0271dc412"
+    },
+    {
+      "path": "reports/base-atomic-cycle-screen/readout.md",
+      "bytes": 600,
+      "sha256": "7a2b827c2fdd12839def5cb2b3ef5950a204bc86b8e7537c9f62026982370b56"
+    },
+    {
+      "path": "reports/base-atomic-cycle-screen/summary.json",
+      "bytes": 415,
+      "sha256": "5199b528ca3793b3b305c55f37075755c228e556e000f5609042c853d32430b7"
+    },
+    {
+      "path": "reports/base-atomic-cycle-screen/terminal.json",
+      "bytes": 250,
+      "sha256": "ce29f47154d48fcaaaaf83d4e851d23cd9d67b380cf36cb3ce48d9bfa3444d0f"
+    },
+    {
+      "path": "reports/base-atomic-cycle-screen/trace.json.gz",
+      "bytes": 19640,
+      "sha256": "48c6947eba1b443ae66256f5d47d41e7e6529aa5257e732a94d88169480d7a06"
+    },
+    {
+      "path": "reports/experiment-storage/base-atomic-cycle-slow-transport-allocation-v1.json",
+      "bytes": 2692,
+      "sha256": "8dbad7525c69fe490342a7bbae66e05d3cb3d444ae45bb6588402e958b0dc604"
+    },
+    {
+      "path": "scripts/base_atomic_cycle_slow_transport.py",
+      "bytes": 723,
+      "sha256": "ec6f45c9b1476bec8db03a183317161f7f08878bdfe12f8f81b58d200416449d"
+    },
+    {
+      "path": "reports/base-atomic-cycle-slow-transport/audit.json",
+      "bytes": 333,
+      "sha256": "102cbc906aa00f0ab182c8c42ed1b660ac127a4be1987738f8eebf607adced2b"
+    },
+    {
+      "path": "reports/base-atomic-cycle-slow-transport/claim.json",
+      "bytes": 227,
+      "sha256": "45f16e2c177aeab9e15279a27912b54b42f50bdf28160d3693195d1e1f7471ff"
+    },
+    {
+      "path": "reports/base-atomic-cycle-slow-transport/readout.md",
+      "bytes": 2404,
+      "sha256": "97896bb129b0f411b564f99ae11360ada59b4be21a47b9e89b0e42ada119a42b"
+    },
+    {
+      "path": "reports/base-atomic-cycle-slow-transport/summary.json",
+      "bytes": 18407,
+      "sha256": "b8688264efa7393fa56321cdd14d10319ce4f916129642e10cc8491dfe1830bb"
+    },
+    {
+      "path": "reports/base-atomic-cycle-slow-transport/terminal.json",
+      "bytes": 198,
+      "sha256": "a03918ad3f372fd3228bee307e345a5ec2d075a36b9997d308ea3833b656f7dc"
+    },
+    {
+      "path": "reports/base-atomic-cycle-slow-transport/trace.json.gz",
+      "bytes": 25207,
+      "sha256": "1928f1490da1e076faba5c888b010042f2e8cd65da85719059cbecbb8783d2e8"
+    }
+  ]
+}
