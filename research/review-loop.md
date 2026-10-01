@@ -4803,3 +4803,42 @@ Cumulative reviews 66–146: 2,235 closes, 2,207 losses, two paired gains,
 26 audited failed-hedge rescue gains. Archive including both root artifacts
 is 3,612,956 B; 167 remaining pairs project 4,505,070 B, leaving 737,810 B
 under the 5,242,880 B cap. All artifacts preserved.
+
+
+## Review 147 — 1 October 2026 17:06:33 UTC
+
+All eight strategy and aborted coverage fields complete. Exact report
+`review-20261001T170633Z.json.gz`: raw 19,404 B, SHA-256
+`658fa60080f998fea9bfbf3b43002a162b8734a480c5799c469e76b5bf3c1d15`;
+gzip 3,061 B, SHA-256
+`1cbb871f9a35ef5bd553d0bc2be142fd2c2c7c578cb09a7b3884108a91f47736`.
+Independent `current-epoch-at-review147.json.gz`: read 17:07:03.919021 UTC,
+updated 17:07:02.814665 UTC; raw 9,291 B, SHA-256
+`1499e6898b1539f3d178737d25c7b69694aec2121137c1e3be52b891030b477e`;
+gzip 1,738 B, SHA-256
+`3b206d75853833eb2d67372a8fc88b13a4873f913e09980b36f4d925391c25d1`.
+Exact decompression equality and both prewrite cap/growth guards passed.
+
+Two exact convergence losses, −$1.2725776629 (one paired, one failed hedge).
+Premium had 18 exact losses/−$29.0282353585 and one estimated loss/
+−$1.2953710125, for 19 completions/−$30.3236063709. Its completion classes
+were 17 paired and two failed hedges across both quality groups. The new
+estimate was immediately flagged to the parent. No wins or aborts. Three
+Hyperliquid price-limit entry rejections. Convergence fees $0.1797207120,
+other costs $0.9977758585, capital $0.0000380924; Premium fees
+$16.3324397258, other costs $9.4846046610, capital $0.0006155216 and
+funding −$0.0022454626, with estimated accounting explicitly separate.
+
+The separate epoch snapshot counted convergence 585 / −$681.2879191852
+and Premium 1,109 exact / −$2,006.2198254360. Report deltas remain the
+window authority. Health running/ok, four feeds, 100 pairs, CPU 70.69%,
+p95 lag 11.04 ms, RSS 264.39 MiB, 1,087.1 books/s, metadata age 3,093.2 s.
+An earlier 16:51 busy pulse (87.06% CPU, 55.91 ms p95) cleared at 16:56;
+no intervention. Carry metadata 17:05: 199 sampled, slot 71 invalid, 664
+future/interrupted; running, no errors/retries/economic evaluation. No
+sample contents opened.
+
+Reviews 66–147 total 2,256 completions: 2,227 exact losses, one estimated
+loss, two paired gains and 26 audited failed-hedge rescue gains. Archive
+3,617,755 / 5,242,880 B; 166 future scheduled pairs at 5,342 B project
+4,504,527 B, leaving 738,353 B. Next review **17:26:33 UTC**.

@@ -1676,3 +1676,15 @@ following rejected HL hedges, not paired wins. Accounting independently
 reconciled; original raw depth unavailable. Root artifacts retained;
 manual archive now 3,612,956 B, projected 4,505,070 B, margin 737,810 B.
 Cumulative audited rescue gains now 26; paired gains remain two.
+
+
+### Review 147, 1 October 17:06 UTC
+
+Complete coverage: two convergence exact losses/−$1.27258; Premium 18
+exact losses/−$29.02824 plus one estimated loss/−$1.29537, immediately
+flagged to the parent. No wins/aborts; three HL price-limit rejections.
+Four feeds, 100 pairs, running/ok; earlier busy pulse cleared. Independent
+epoch snapshot retained, report deltas authoritative. Archive 3,617,755 B,
+166 future pairs project 4,504,527 B, margin 738,353 B under 5 MiB cap.
+Carry 17:05: 199 sampled, persistent invalid slot 71, 664 future/interrupted,
+no errors/retries/economic evaluation. Next review 17:26:33 UTC.
