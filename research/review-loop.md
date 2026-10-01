@@ -5127,3 +5127,43 @@ Reviews 66–153: 2,354 completions, 2,322 exact losses, one estimated loss,
 five audited paired gains and 26 audited failed-hedge rescue gains.
 Manual archive 3,658,883 / 5,242,880 B; 160 future pairs at 5,342 B project
 4,513,603 B, margin 729,277 B. Next review **19:26:33 UTC**.
+
+
+## Review 154 — 1 October 2026 19:26:33 UTC
+
+All eight strategy and aborted coverage fields complete. Exact report
+`review-20261001T192633Z.json.gz`: raw 19,767 B, SHA-256
+`96f2fec4ca7aa018e653f7313269125a1b3a2d402b3897e1b2240b4a6018b2a5`;
+gzip 3,044 B, SHA-256
+`893ef194a04847436ff37a28f6ea1ce2d11dc62e4442d39a831f7217f8862ddf`.
+Independent `current-epoch-at-review154.json.gz`: read 19:27:22.196977 UTC,
+updated 19:27:21.808664 UTC; raw 9,294 B, SHA-256
+`da4e68b7b7a8dace8445bba852e133478011de64785dabe99ec44c9dd15c06c1`;
+gzip 1,733 B, SHA-256
+`937b1d28d455d526b0afca3b9db80e5fd3478b7acb8b982012b80fc4daab3a09`.
+Exact decompression and per-write cap/growth guards passed.
+
+Convergence six exact closes/−$9.2907351300, all failed hedges, including
+one new gain immediately flagged for parent audit. Premium five exact
+losses/−$9.5755721679 (two paired, three failed hedges). One convergence
+abort, no estimates or paired gains. Nine HL price limits, one Lighter
+notional cap and one Lighter price limit. Convergence fees $0.8994690765,
+other costs $2.9853176615, capital $0.0000113920; Premium fees
+$3.8466825180, other costs $2.4914855900, capital $0.0000770598.
+
+Separate epoch snapshot convergence 612 / −$719.1200856410, Premium
+1,192 / −$2,147.7903219475; increases seven and five versus report six
+and five. Keep distinct boundaries and report accounting authority.
+Health running/ok, four feeds, 102 pairs, CPU 70.37%, p95 lag 47.84 ms,
+RSS 200.13 MiB, 1,035.5 books/s, metadata age 2,694.3 s. Snapshots remained
+fresh; 19:10 pulse briefly busy at 77.67% CPU, 52.12 ms lag, age 0.58 s,
+19:14 returned ok (70.32%, 45.85 ms, age 0.61 s). No WAL failure recurrence.
+Carry 19:25: 227 sampled, persistent invalid slot 71, 636 future/interrupted;
+running, no errors/retries/economic evaluation. No samples or active root
+study economic outputs inspected.
+
+Reviews 66–154: 2,365 completions, 2,332 exact losses, one estimated loss,
+five audited paired gains, 26 audited rescue gains and one new failed-hedge
+gain awaiting parent audit. Archive 3,663,660 / 5,242,880 B; 159 future
+pairs at 5,342 B project 4,513,038 B, margin 729,842 B.
+Next review **19:46:33 UTC**.

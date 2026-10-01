@@ -1783,3 +1783,17 @@ snapshot Premium increase ten versus report eleven; report governs window.
 Archive 3,658,883 B, 160 future pairs project 4,513,603 B, margin 729,277 B.
 Carry 19:05: 223 sampled, persistent invalid slot 71, 640 future/interrupted;
 no errors/retries/evaluation. Next review 19:26:33 UTC.
+
+
+### Review 154, 1 October 19:26 UTC
+
+Complete coverage: convergence six exact closes/−$9.29074, all failed
+hedges including one new gain immediately flagged for parent audit.
+Premium five exact losses/−$9.57557 (two paired, three failed hedges).
+One convergence abort, no estimates/paired gains. Nine HL limits, one
+Lighter notional cap and one Lighter limit. Four feeds/102 pairs fresh,
+running/ok; no WAL incident recurrence. Separate epoch increase seven
+convergence versus report six retained. Archive 3,663,660 B; 159 future
+pairs project 4,513,038 B, margin 729,842 B. Carry 19:25: 227 sampled,
+invalid slot 71, 636 future/interrupted; no errors/retries/evaluation.
+Next review 19:46:33 UTC.
