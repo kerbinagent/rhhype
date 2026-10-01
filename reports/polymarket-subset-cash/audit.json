@@ -1,0 +1,61 @@
+{
+  "audit": "passed",
+  "all_quote_rows_checked": 114,
+  "positive_gross_cash_candidates": 0,
+  "book_age_seconds": [
+    "0.1347737",
+    "74.1257737"
+  ],
+  "closest_budget_quotes": [
+    {
+      "event": "Democratic Presidential Nominee 2028",
+      "k": 20,
+      "gross_at_max_budget": "-0.799456474",
+      "gross_at_best_size": "-0.76541",
+      "ask_sum": "19.153",
+      "cash_per_share": 19
+    },
+    {
+      "event": "Democratic Presidential Nominee 2028",
+      "k": 20,
+      "gross_at_max_budget": "-0.799456474",
+      "gross_at_best_size": "-0.76541",
+      "ask_sum": "19.153",
+      "cash_per_share": 19
+    },
+    {
+      "event": "Presidential Election Winner 2028",
+      "k": 20,
+      "gross_at_max_budget": "-0.819543768",
+      "gross_at_best_size": "-0.785",
+      "ask_sum": "19.157",
+      "cash_per_share": 19
+    },
+    {
+      "event": "Presidential Election Winner 2028",
+      "k": 20,
+      "gross_at_max_budget": "-0.819543768",
+      "gross_at_best_size": "-0.785",
+      "ask_sum": "19.157",
+      "cash_per_share": 19
+    },
+    {
+      "event": "Democratic Presidential Nominee 2028",
+      "k": 19,
+      "gross_at_max_budget": "-0.871048917",
+      "gross_at_best_size": "-0.79041",
+      "ask_sum": "18.158",
+      "cash_per_share": 18
+    },
+    {
+      "event": "Democratic Presidential Nominee 2028",
+      "k": 19,
+      "gross_at_max_budget": "-0.871048917",
+      "gross_at_best_size": "-0.79041",
+      "ask_sum": "18.158",
+      "cash_per_share": 18
+    }
+  ],
+  "summary_sha256": "5a663775f76a24caef96723dea3b58a06cc4d2313222bcfff9f5be8805aecb3d",
+  "limitations": "Optimistic zero conversion/trading fees and gas. Selected conditionIDs and tokenIDs verified against public metadata only. No onchain convertibility or actual fills; complementYES retained atzero valuation, not a completedcycle."
+}

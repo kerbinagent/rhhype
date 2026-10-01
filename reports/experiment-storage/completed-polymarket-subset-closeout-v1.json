@@ -1,0 +1,70 @@
+{
+  "schema": "completed-polymarket-subset-closeout-v1",
+  "recorded_utc": "2026-10-01T13:01:33.504727+00:00",
+  "previous": "reports/experiment-storage/polymarket-subset-cash-allocation-v1.json",
+  "previous_sha256": "702ebfb5769bd89e2bca8c9e72c94df9eb6c8cd65cff1a2f5582451e661fc0f8",
+  "old_reserved_bytes": 696320,
+  "artifact_bytes": 258445,
+  "retention_reserved_bytes": 294912,
+  "released_bytes": 401408,
+  "active_research_reserved_bytes": 12025856,
+  "active_research_headroom_bytes": 3702784,
+  "overall_reservation_bytes": 836777216,
+  "files": [
+    {
+      "path": "reports/polymarket-subset-cash/audit.json",
+      "bytes": 1851,
+      "sha256": "b2e62d6a2ae773fdcda971c03f4cb50543cd47436e7f93def34a89c78d778c2d"
+    },
+    {
+      "path": "reports/polymarket-subset-cash/books-0.json.gz",
+      "bytes": 46788,
+      "sha256": "4aa92b80632fe7db9e682b8e68766be82363712032e7e018a7fae7de837dbb03"
+    },
+    {
+      "path": "reports/polymarket-subset-cash/books-1.json.gz",
+      "bytes": 46766,
+      "sha256": "6e1a7cfd1b482428d290c263b8cc81f953ba6a75cf7985ffa49650c6f63b3d98"
+    },
+    {
+      "path": "reports/polymarket-subset-cash/catalog-0.json.gz",
+      "bytes": 42098,
+      "sha256": "80a22212500e02d4d24d008a14c3ddd71b371ef2120d14ecb90e6bd653fd1733"
+    },
+    {
+      "path": "reports/polymarket-subset-cash/catalog-1.json.gz",
+      "bytes": 42627,
+      "sha256": "2a4d1b13ae8c6d1283ec2bd084438787cc779d2bde2cf9f04c533a10792d304a"
+    },
+    {
+      "path": "reports/polymarket-subset-cash/catalog-2.json.gz",
+      "bytes": 40385,
+      "sha256": "21630685ea81d3bbfa0d3a9c8eb9492fdf9ba0fbaa881205c38ad7f85b4adc56"
+    },
+    {
+      "path": "reports/polymarket-subset-cash/readout.md",
+      "bytes": 2197,
+      "sha256": "7ea30631172d0319731958d12940d8c434483f44bdb29b8be1578d56faedbc5c"
+    },
+    {
+      "path": "reports/polymarket-subset-cash/summary.json.gz",
+      "bytes": 21063,
+      "sha256": "5a663775f76a24caef96723dea3b58a06cc4d2313222bcfff9f5be8805aecb3d"
+    },
+    {
+      "path": "scripts/polymarket_subset_cash.py",
+      "bytes": 8763,
+      "sha256": "9be06f9d42d7a23c3b795b5f77ff707298ddda9cc2e30266885479411a133f15"
+    },
+    {
+      "path": "scripts/audit_polymarket_subset_cash.py",
+      "bytes": 4010,
+      "sha256": "e097fc0fdbff8ddc9fcb4a155507c080dbfc6c225d81e8f47353e646e73ce200"
+    },
+    {
+      "path": "reports/experiment-storage/polymarket-subset-cash-allocation-v1.json",
+      "bytes": 1897,
+      "sha256": "702ebfb5769bd89e2bca8c9e72c94df9eb6c8cd65cff1a2f5582451e661fc0f8"
+    }
+  ]
+}
