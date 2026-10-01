@@ -1,0 +1,19 @@
+{
+  "recorded_utc": "2026-10-01T19:52:52.243777+00:00",
+  "scope": "Largeordinaryflow eventdiagnostic complementing frozenonevenuepaperstrategy. Definedafterfirst2retroreplays, beforeactiveprospectiveendpointandanyprospectiveeconomicread. No tradingparameterchange or addedtrades. Select allcompleted1secondreceiptbins>=5xpast120snonemptybinmedian(min20bins,60sspan); retainallremaininggatefailures. Fixed1,5,10,30secondfirstfreshpairwithin250msafterdecision;invalidations/missingretained. Counterfactualfadereturns calculatedonmidpricesonly, notcash. Noeffectsizeindependenceorprofitabletradingclaim. BothvenuesoneLITsample; eachcaptureseparate.",
+  "source_pins": [
+    {
+      "path": "scripts/single_venue_shock_diagnostic.py",
+      "sha256": "612a29bd691e13f366f9bc3158739380544fc65c60882ef8cfefdc9774b1a303"
+    },
+    {
+      "path": "scripts/single_venue_strategy.py",
+      "sha256": "5f4a8684e76781c311eb9dfbd9c2f46f9600bb2369db09aafda7fbc2c0c02679"
+    },
+    {
+      "path": "scripts/run_single_venue_study.py",
+      "sha256": "81b12f74f8d9c3e8f88e1a7741c10d64fea793cf46a409da8c7aa83b3bdab9a0"
+    }
+  ],
+  "allocation": "Existingstudy source,retrospective andprospectiveoutputbudgets;32KiBcompressedoutputcappercase. No newreservation."
+}
