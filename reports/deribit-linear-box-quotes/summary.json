@@ -1,0 +1,1089 @@
+{
+  "actual_pnl": null,
+  "fills_observed": false,
+  "four_leg_fees_no_combo_discount": true,
+  "delivery_fee_assumed_zero_for_optimistic_bound": true,
+  "extra_margin_assumed_zero": true,
+  "capital_feasibility_unknown": true,
+  "outcomes": [
+    {
+      "asset": "ETH",
+      "round": 0,
+      "cash_budget": 100,
+      "quantity": "0.1",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "60.00",
+      "debit_usdc": "62.32",
+      "entry_fee_usdc": "0.3233940",
+      "gross_before_all_costs_usdc": "-2.32",
+      "after_entry_fee_usdc": "-2.6433940",
+      "minimum_capital_charge_usdc": "0.2502779266324922818366311517",
+      "stress_usdc": "0.030000",
+      "optimistic_residual_usdc": "-2.923671926632492281836631152",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519903.278",
+      "legs": [
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-C",
+          "side": "buy",
+          "premium_usdc": "35.20",
+          "entry_fee_usdc": "0.0808485",
+          "book_age_ms": 533
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-C",
+          "side": "sell",
+          "premium_usdc": "4.92",
+          "entry_fee_usdc": "0.0808485",
+          "book_age_ms": 535
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-P",
+          "side": "buy",
+          "premium_usdc": "36.10",
+          "entry_fee_usdc": "0.0808485",
+          "book_age_ms": 529
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-P",
+          "side": "sell",
+          "premium_usdc": "4.06",
+          "entry_fee_usdc": "0.0808485",
+          "book_age_ms": 97
+        }
+      ]
+    },
+    {
+      "asset": "ETH",
+      "round": 0,
+      "cash_budget": 250,
+      "quantity": "0.3",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "180.00",
+      "debit_usdc": "186.96",
+      "entry_fee_usdc": "0.9701820",
+      "gross_before_all_costs_usdc": "-6.96",
+      "after_entry_fee_usdc": "-7.9301820",
+      "minimum_capital_charge_usdc": "0.7508337798974768455098934551",
+      "stress_usdc": "0.090000",
+      "optimistic_residual_usdc": "-8.771015779897476845509893455",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519903.278",
+      "legs": [
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-C",
+          "side": "buy",
+          "premium_usdc": "105.60",
+          "entry_fee_usdc": "0.2425455",
+          "book_age_ms": 533
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-C",
+          "side": "sell",
+          "premium_usdc": "14.76",
+          "entry_fee_usdc": "0.2425455",
+          "book_age_ms": 535
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-P",
+          "side": "buy",
+          "premium_usdc": "108.30",
+          "entry_fee_usdc": "0.2425455",
+          "book_age_ms": 529
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-P",
+          "side": "sell",
+          "premium_usdc": "12.18",
+          "entry_fee_usdc": "0.2425455",
+          "book_age_ms": 97
+        }
+      ]
+    },
+    {
+      "asset": "ETH",
+      "round": 0,
+      "cash_budget": 500,
+      "quantity": "0.7",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "420.00",
+      "debit_usdc": "436.24",
+      "entry_fee_usdc": "2.2637580",
+      "gross_before_all_costs_usdc": "-16.24",
+      "after_entry_fee_usdc": "-18.5037580",
+      "minimum_capital_charge_usdc": "1.751945486427445972856418062",
+      "stress_usdc": "0.210000",
+      "optimistic_residual_usdc": "-20.46570348642744597285641806",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519903.278",
+      "legs": [
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-C",
+          "side": "buy",
+          "premium_usdc": "246.40",
+          "entry_fee_usdc": "0.5659395",
+          "book_age_ms": 533
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-C",
+          "side": "sell",
+          "premium_usdc": "34.44",
+          "entry_fee_usdc": "0.5659395",
+          "book_age_ms": 535
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-P",
+          "side": "buy",
+          "premium_usdc": "252.70",
+          "entry_fee_usdc": "0.5659395",
+          "book_age_ms": 529
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-P",
+          "side": "sell",
+          "premium_usdc": "28.42",
+          "entry_fee_usdc": "0.5659395",
+          "book_age_ms": 97
+        }
+      ]
+    },
+    {
+      "asset": "ETH",
+      "round": 0,
+      "cash_budget": 1000,
+      "quantity": "1.5",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "900.00",
+      "debit_usdc": "934.80",
+      "entry_fee_usdc": "4.8509100",
+      "gross_before_all_costs_usdc": "-34.80",
+      "after_entry_fee_usdc": "-39.6509100",
+      "minimum_capital_charge_usdc": "3.754168899487384227549467275",
+      "stress_usdc": "0.450000",
+      "optimistic_residual_usdc": "-43.85507889948738422754946728",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519903.278",
+      "legs": [
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-C",
+          "side": "buy",
+          "premium_usdc": "528.00",
+          "entry_fee_usdc": "1.2127275",
+          "book_age_ms": 533
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-C",
+          "side": "sell",
+          "premium_usdc": "73.80",
+          "entry_fee_usdc": "1.2127275",
+          "book_age_ms": 535
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-P",
+          "side": "buy",
+          "premium_usdc": "541.50",
+          "entry_fee_usdc": "1.2127275",
+          "book_age_ms": 529
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-P",
+          "side": "sell",
+          "premium_usdc": "60.90",
+          "entry_fee_usdc": "1.2127275",
+          "book_age_ms": 97
+        }
+      ]
+    },
+    {
+      "asset": "BTC",
+      "round": 0,
+      "cash_budget": 100,
+      "quantity": "0.00",
+      "status": "unknown",
+      "errors": [
+        "AssertionError:below minimum quantity"
+      ],
+      "actual_pnl": null
+    },
+    {
+      "asset": "BTC",
+      "round": 0,
+      "cash_budget": 250,
+      "quantity": "0.01",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "180.000",
+      "debit_usdc": "185.100",
+      "entry_fee_usdc": "1.00465764",
+      "gross_before_all_costs_usdc": "-5.100",
+      "after_entry_fee_usdc": "-6.10465764",
+      "minimum_capital_charge_usdc": "0.7435402978373907380136986301",
+      "stress_usdc": "0.0900000",
+      "optimistic_residual_usdc": "-6.938197937837390738013698630",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519903.277",
+      "legs": [
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-C",
+          "side": "buy",
+          "premium_usdc": "98.800",
+          "entry_fee_usdc": "0.25116441",
+          "book_age_ms": 562
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-C",
+          "side": "sell",
+          "premium_usdc": "6.550",
+          "entry_fee_usdc": "0.25116441",
+          "book_age_ms": 567
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-P",
+          "side": "buy",
+          "premium_usdc": "98.800",
+          "entry_fee_usdc": "0.25116441",
+          "book_age_ms": 565
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-P",
+          "side": "sell",
+          "premium_usdc": "5.950",
+          "entry_fee_usdc": "0.25116441",
+          "book_age_ms": 561
+        }
+      ]
+    },
+    {
+      "asset": "BTC",
+      "round": 0,
+      "cash_budget": 500,
+      "quantity": "0.02",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "360.000",
+      "debit_usdc": "370.200",
+      "entry_fee_usdc": "2.00931528",
+      "gross_before_all_costs_usdc": "-10.200",
+      "after_entry_fee_usdc": "-12.20931528",
+      "minimum_capital_charge_usdc": "1.487080595674781476027397260",
+      "stress_usdc": "0.1800000",
+      "optimistic_residual_usdc": "-13.87639587567478147602739726",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519903.277",
+      "legs": [
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-C",
+          "side": "buy",
+          "premium_usdc": "197.600",
+          "entry_fee_usdc": "0.50232882",
+          "book_age_ms": 562
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-C",
+          "side": "sell",
+          "premium_usdc": "13.100",
+          "entry_fee_usdc": "0.50232882",
+          "book_age_ms": 567
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-P",
+          "side": "buy",
+          "premium_usdc": "197.600",
+          "entry_fee_usdc": "0.50232882",
+          "book_age_ms": 565
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-P",
+          "side": "sell",
+          "premium_usdc": "11.900",
+          "entry_fee_usdc": "0.50232882",
+          "book_age_ms": 561
+        }
+      ]
+    },
+    {
+      "asset": "BTC",
+      "round": 0,
+      "cash_budget": 1000,
+      "quantity": "0.05",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "900.000",
+      "debit_usdc": "925.500",
+      "entry_fee_usdc": "5.02328820",
+      "gross_before_all_costs_usdc": "-25.500",
+      "after_entry_fee_usdc": "-30.52328820",
+      "minimum_capital_charge_usdc": "3.717701489186953690068493151",
+      "stress_usdc": "0.4500000",
+      "optimistic_residual_usdc": "-34.69098968918695369006849315",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519903.277",
+      "legs": [
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-C",
+          "side": "buy",
+          "premium_usdc": "494.000",
+          "entry_fee_usdc": "1.25582205",
+          "book_age_ms": 562
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-C",
+          "side": "sell",
+          "premium_usdc": "32.750",
+          "entry_fee_usdc": "1.25582205",
+          "book_age_ms": 567
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-P",
+          "side": "buy",
+          "premium_usdc": "494.000",
+          "entry_fee_usdc": "1.25582205",
+          "book_age_ms": 565
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-P",
+          "side": "sell",
+          "premium_usdc": "29.750",
+          "entry_fee_usdc": "1.25582205",
+          "book_age_ms": 561
+        }
+      ]
+    },
+    {
+      "asset": "ETH",
+      "round": 1,
+      "cash_budget": 100,
+      "quantity": "0.1",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "60.00",
+      "debit_usdc": "62.30",
+      "entry_fee_usdc": "0.3234156",
+      "gross_before_all_costs_usdc": "-2.30",
+      "after_entry_fee_usdc": "-2.6234156",
+      "minimum_capital_charge_usdc": "0.2501951314386478526128868595",
+      "stress_usdc": "0.030000",
+      "optimistic_residual_usdc": "-2.903610731438647852612886860",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519873.306",
+      "legs": [
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-C",
+          "side": "buy",
+          "premium_usdc": "35.20",
+          "entry_fee_usdc": "0.0808539",
+          "book_age_ms": 297
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-C",
+          "side": "sell",
+          "premium_usdc": "4.94",
+          "entry_fee_usdc": "0.0808539",
+          "book_age_ms": 291
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-P",
+          "side": "buy",
+          "premium_usdc": "36.10",
+          "entry_fee_usdc": "0.0808539",
+          "book_age_ms": 298
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-P",
+          "side": "sell",
+          "premium_usdc": "4.06",
+          "entry_fee_usdc": "0.0808539",
+          "book_age_ms": 299
+        }
+      ]
+    },
+    {
+      "asset": "ETH",
+      "round": 1,
+      "cash_budget": 250,
+      "quantity": "0.3",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "180.00",
+      "debit_usdc": "186.90",
+      "entry_fee_usdc": "0.9702468",
+      "gross_before_all_costs_usdc": "-6.90",
+      "after_entry_fee_usdc": "-7.8702468",
+      "minimum_capital_charge_usdc": "0.7505853943159435578386605784",
+      "stress_usdc": "0.090000",
+      "optimistic_residual_usdc": "-8.710832194315943557838660578",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519873.306",
+      "legs": [
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-C",
+          "side": "buy",
+          "premium_usdc": "105.60",
+          "entry_fee_usdc": "0.2425617",
+          "book_age_ms": 297
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-C",
+          "side": "sell",
+          "premium_usdc": "14.82",
+          "entry_fee_usdc": "0.2425617",
+          "book_age_ms": 291
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-P",
+          "side": "buy",
+          "premium_usdc": "108.30",
+          "entry_fee_usdc": "0.2425617",
+          "book_age_ms": 298
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-P",
+          "side": "sell",
+          "premium_usdc": "12.18",
+          "entry_fee_usdc": "0.2425617",
+          "book_age_ms": 299
+        }
+      ]
+    },
+    {
+      "asset": "ETH",
+      "round": 1,
+      "cash_budget": 500,
+      "quantity": "0.7",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "420.00",
+      "debit_usdc": "436.10",
+      "entry_fee_usdc": "2.2639092",
+      "gross_before_all_costs_usdc": "-16.10",
+      "after_entry_fee_usdc": "-18.3639092",
+      "minimum_capital_charge_usdc": "1.751365920070534968290208016",
+      "stress_usdc": "0.210000",
+      "optimistic_residual_usdc": "-20.32527512007053496829020802",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519873.306",
+      "legs": [
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-C",
+          "side": "buy",
+          "premium_usdc": "246.40",
+          "entry_fee_usdc": "0.5659773",
+          "book_age_ms": 297
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-C",
+          "side": "sell",
+          "premium_usdc": "34.58",
+          "entry_fee_usdc": "0.5659773",
+          "book_age_ms": 291
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-P",
+          "side": "buy",
+          "premium_usdc": "252.70",
+          "entry_fee_usdc": "0.5659773",
+          "book_age_ms": 298
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-P",
+          "side": "sell",
+          "premium_usdc": "28.42",
+          "entry_fee_usdc": "0.5659773",
+          "book_age_ms": 299
+        }
+      ]
+    },
+    {
+      "asset": "ETH",
+      "round": 1,
+      "cash_budget": 1000,
+      "quantity": "1.5",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "900.00",
+      "debit_usdc": "934.50",
+      "entry_fee_usdc": "4.8512340",
+      "gross_before_all_costs_usdc": "-34.50",
+      "after_entry_fee_usdc": "-39.3512340",
+      "minimum_capital_charge_usdc": "3.752926971579717789193302892",
+      "stress_usdc": "0.450000",
+      "optimistic_residual_usdc": "-43.55416097157971778919330289",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519873.306",
+      "legs": [
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-C",
+          "side": "buy",
+          "premium_usdc": "528.00",
+          "entry_fee_usdc": "1.2128085",
+          "book_age_ms": 297
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-C",
+          "side": "sell",
+          "premium_usdc": "74.10",
+          "entry_fee_usdc": "1.2128085",
+          "book_age_ms": 291
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-P",
+          "side": "buy",
+          "premium_usdc": "541.50",
+          "entry_fee_usdc": "1.2128085",
+          "book_age_ms": 298
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-P",
+          "side": "sell",
+          "premium_usdc": "60.90",
+          "entry_fee_usdc": "1.2128085",
+          "book_age_ms": 299
+        }
+      ]
+    },
+    {
+      "asset": "BTC",
+      "round": 1,
+      "cash_budget": 100,
+      "quantity": "0.00",
+      "status": "unknown",
+      "errors": [
+        "AssertionError:below minimum quantity"
+      ],
+      "actual_pnl": null
+    },
+    {
+      "asset": "BTC",
+      "round": 1,
+      "cash_budget": 250,
+      "quantity": "0.01",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "180.000",
+      "debit_usdc": "185.100",
+      "entry_fee_usdc": "1.00458312",
+      "gross_before_all_costs_usdc": "-5.100",
+      "after_entry_fee_usdc": "-6.10458312",
+      "minimum_capital_charge_usdc": "0.7435311554793376811263318113",
+      "stress_usdc": "0.0900000",
+      "optimistic_residual_usdc": "-6.938114275479337681126331811",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519873.302",
+      "legs": [
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-C",
+          "side": "buy",
+          "premium_usdc": "98.800",
+          "entry_fee_usdc": "0.25114578",
+          "book_age_ms": 327
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-C",
+          "side": "sell",
+          "premium_usdc": "6.550",
+          "entry_fee_usdc": "0.25114578",
+          "book_age_ms": 331
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-P",
+          "side": "buy",
+          "premium_usdc": "98.800",
+          "entry_fee_usdc": "0.25114578",
+          "book_age_ms": 254
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-P",
+          "side": "sell",
+          "premium_usdc": "5.950",
+          "entry_fee_usdc": "0.25114578",
+          "book_age_ms": 332
+        }
+      ]
+    },
+    {
+      "asset": "BTC",
+      "round": 1,
+      "cash_budget": 500,
+      "quantity": "0.02",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "360.000",
+      "debit_usdc": "370.200",
+      "entry_fee_usdc": "2.00916624",
+      "gross_before_all_costs_usdc": "-10.200",
+      "after_entry_fee_usdc": "-12.20916624",
+      "minimum_capital_charge_usdc": "1.487062310958675362252663623",
+      "stress_usdc": "0.1800000",
+      "optimistic_residual_usdc": "-13.87622855095867536225266362",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519873.302",
+      "legs": [
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-C",
+          "side": "buy",
+          "premium_usdc": "197.600",
+          "entry_fee_usdc": "0.50229156",
+          "book_age_ms": 327
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-C",
+          "side": "sell",
+          "premium_usdc": "13.100",
+          "entry_fee_usdc": "0.50229156",
+          "book_age_ms": 331
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-P",
+          "side": "buy",
+          "premium_usdc": "197.600",
+          "entry_fee_usdc": "0.50229156",
+          "book_age_ms": 254
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-P",
+          "side": "sell",
+          "premium_usdc": "11.900",
+          "entry_fee_usdc": "0.50229156",
+          "book_age_ms": 332
+        }
+      ]
+    },
+    {
+      "asset": "BTC",
+      "round": 1,
+      "cash_budget": 1000,
+      "quantity": "0.05",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "900.000",
+      "debit_usdc": "925.500",
+      "entry_fee_usdc": "5.02291560",
+      "gross_before_all_costs_usdc": "-25.500",
+      "after_entry_fee_usdc": "-30.52291560",
+      "minimum_capital_charge_usdc": "3.717655777396688405631659056",
+      "stress_usdc": "0.4500000",
+      "optimistic_residual_usdc": "-34.69057137739668840563165906",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519873.302",
+      "legs": [
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-C",
+          "side": "buy",
+          "premium_usdc": "494.000",
+          "entry_fee_usdc": "1.25572890",
+          "book_age_ms": 327
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-C",
+          "side": "sell",
+          "premium_usdc": "32.750",
+          "entry_fee_usdc": "1.25572890",
+          "book_age_ms": 331
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-P",
+          "side": "buy",
+          "premium_usdc": "494.000",
+          "entry_fee_usdc": "1.25572890",
+          "book_age_ms": 254
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-P",
+          "side": "sell",
+          "premium_usdc": "29.750",
+          "entry_fee_usdc": "1.25572890",
+          "book_age_ms": 332
+        }
+      ]
+    },
+    {
+      "asset": "ETH",
+      "round": 2,
+      "cash_budget": 100,
+      "quantity": "0.1",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "60.00",
+      "debit_usdc": "62.30",
+      "entry_fee_usdc": "0.3234444",
+      "gross_before_all_costs_usdc": "-2.30",
+      "after_entry_fee_usdc": "-2.6234444",
+      "minimum_capital_charge_usdc": "0.2501922679360518626331811263",
+      "stress_usdc": "0.030000",
+      "optimistic_residual_usdc": "-2.903636667936051862633181126",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519843.307",
+      "legs": [
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-C",
+          "side": "buy",
+          "premium_usdc": "35.20",
+          "entry_fee_usdc": "0.0808611",
+          "book_age_ms": 475
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-C",
+          "side": "sell",
+          "premium_usdc": "4.94",
+          "entry_fee_usdc": "0.0808611",
+          "book_age_ms": 477
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-P",
+          "side": "buy",
+          "premium_usdc": "36.10",
+          "entry_fee_usdc": "0.0808611",
+          "book_age_ms": 474
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-P",
+          "side": "sell",
+          "premium_usdc": "4.06",
+          "entry_fee_usdc": "0.0808611",
+          "book_age_ms": 471
+        }
+      ]
+    },
+    {
+      "asset": "ETH",
+      "round": 2,
+      "cash_budget": 250,
+      "quantity": "0.3",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "180.00",
+      "debit_usdc": "186.90",
+      "entry_fee_usdc": "0.9703332",
+      "gross_before_all_costs_usdc": "-6.90",
+      "after_entry_fee_usdc": "-7.8703332",
+      "minimum_capital_charge_usdc": "0.7505768038081555878995433790",
+      "stress_usdc": "0.090000",
+      "optimistic_residual_usdc": "-8.710910003808155587899543379",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519843.307",
+      "legs": [
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-C",
+          "side": "buy",
+          "premium_usdc": "105.60",
+          "entry_fee_usdc": "0.2425833",
+          "book_age_ms": 475
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-C",
+          "side": "sell",
+          "premium_usdc": "14.82",
+          "entry_fee_usdc": "0.2425833",
+          "book_age_ms": 477
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-P",
+          "side": "buy",
+          "premium_usdc": "108.30",
+          "entry_fee_usdc": "0.2425833",
+          "book_age_ms": 474
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-P",
+          "side": "sell",
+          "premium_usdc": "12.18",
+          "entry_fee_usdc": "0.2425833",
+          "book_age_ms": 471
+        }
+      ]
+    },
+    {
+      "asset": "ETH",
+      "round": 2,
+      "cash_budget": 500,
+      "quantity": "0.7",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "420.00",
+      "debit_usdc": "436.10",
+      "entry_fee_usdc": "2.2641108",
+      "gross_before_all_costs_usdc": "-16.10",
+      "after_entry_fee_usdc": "-18.3641108",
+      "minimum_capital_charge_usdc": "1.751345875552363038432267884",
+      "stress_usdc": "0.210000",
+      "optimistic_residual_usdc": "-20.32545667555236303843226788",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519843.307",
+      "legs": [
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-C",
+          "side": "buy",
+          "premium_usdc": "246.40",
+          "entry_fee_usdc": "0.5660277",
+          "book_age_ms": 475
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-C",
+          "side": "sell",
+          "premium_usdc": "34.58",
+          "entry_fee_usdc": "0.5660277",
+          "book_age_ms": 477
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-P",
+          "side": "buy",
+          "premium_usdc": "252.70",
+          "entry_fee_usdc": "0.5660277",
+          "book_age_ms": 474
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-P",
+          "side": "sell",
+          "premium_usdc": "28.42",
+          "entry_fee_usdc": "0.5660277",
+          "book_age_ms": 471
+        }
+      ]
+    },
+    {
+      "asset": "ETH",
+      "round": 2,
+      "cash_budget": 1000,
+      "quantity": "1.5",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "900.00",
+      "debit_usdc": "934.50",
+      "entry_fee_usdc": "4.8516660",
+      "gross_before_all_costs_usdc": "-34.50",
+      "after_entry_fee_usdc": "-39.3516660",
+      "minimum_capital_charge_usdc": "3.752884019040777939497716895",
+      "stress_usdc": "0.450000",
+      "optimistic_residual_usdc": "-43.55455001904077793949771690",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519843.307",
+      "legs": [
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-C",
+          "side": "buy",
+          "premium_usdc": "528.00",
+          "entry_fee_usdc": "1.2129165",
+          "book_age_ms": 475
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-C",
+          "side": "sell",
+          "premium_usdc": "74.10",
+          "entry_fee_usdc": "1.2129165",
+          "book_age_ms": 477
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-3000-P",
+          "side": "buy",
+          "premium_usdc": "541.50",
+          "entry_fee_usdc": "1.2129165",
+          "book_age_ms": 474
+        },
+        {
+          "instrument_name": "ETH_USDC-30OCT26-2400-P",
+          "side": "sell",
+          "premium_usdc": "60.90",
+          "entry_fee_usdc": "1.2129165",
+          "book_age_ms": 471
+        }
+      ]
+    },
+    {
+      "asset": "BTC",
+      "round": 2,
+      "cash_budget": 100,
+      "quantity": "0.00",
+      "status": "unknown",
+      "errors": [
+        "AssertionError:below minimum quantity"
+      ],
+      "actual_pnl": null
+    },
+    {
+      "asset": "BTC",
+      "round": 2,
+      "cash_budget": 250,
+      "quantity": "0.01",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "180.000",
+      "debit_usdc": "185.100",
+      "entry_fee_usdc": "1.0045404",
+      "gross_before_all_costs_usdc": "-5.100",
+      "after_entry_fee_usdc": "-6.1045404",
+      "minimum_capital_charge_usdc": "0.7435221327985927207001522070",
+      "stress_usdc": "0.0900000",
+      "optimistic_residual_usdc": "-6.938062532798592720700152207",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519843.302",
+      "legs": [
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-C",
+          "side": "buy",
+          "premium_usdc": "98.800",
+          "entry_fee_usdc": "0.2511351",
+          "book_age_ms": 473
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-C",
+          "side": "sell",
+          "premium_usdc": "6.550",
+          "entry_fee_usdc": "0.2511351",
+          "book_age_ms": 473
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-P",
+          "side": "buy",
+          "premium_usdc": "98.800",
+          "entry_fee_usdc": "0.2511351",
+          "book_age_ms": 477
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-P",
+          "side": "sell",
+          "premium_usdc": "5.950",
+          "entry_fee_usdc": "0.2511351",
+          "book_age_ms": 482
+        }
+      ]
+    },
+    {
+      "asset": "BTC",
+      "round": 2,
+      "cash_budget": 500,
+      "quantity": "0.02",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "360.000",
+      "debit_usdc": "370.200",
+      "entry_fee_usdc": "2.0090808",
+      "gross_before_all_costs_usdc": "-10.200",
+      "after_entry_fee_usdc": "-12.2090808",
+      "minimum_capital_charge_usdc": "1.487044265597185441400304414",
+      "stress_usdc": "0.1800000",
+      "optimistic_residual_usdc": "-13.87612506559718544140030441",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519843.302",
+      "legs": [
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-C",
+          "side": "buy",
+          "premium_usdc": "197.600",
+          "entry_fee_usdc": "0.5022702",
+          "book_age_ms": 473
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-C",
+          "side": "sell",
+          "premium_usdc": "13.100",
+          "entry_fee_usdc": "0.5022702",
+          "book_age_ms": 473
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-P",
+          "side": "buy",
+          "premium_usdc": "197.600",
+          "entry_fee_usdc": "0.5022702",
+          "book_age_ms": 477
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-P",
+          "side": "sell",
+          "premium_usdc": "11.900",
+          "entry_fee_usdc": "0.5022702",
+          "book_age_ms": 482
+        }
+      ]
+    },
+    {
+      "asset": "BTC",
+      "round": 2,
+      "cash_budget": 1000,
+      "quantity": "0.05",
+      "status": "displayed_conditional_bound",
+      "errors": [],
+      "actual_pnl": null,
+      "face_usdc": "900.000",
+      "debit_usdc": "925.500",
+      "entry_fee_usdc": "5.0227020",
+      "gross_before_all_costs_usdc": "-25.500",
+      "after_entry_fee_usdc": "-30.5227020",
+      "minimum_capital_charge_usdc": "3.717610663992963603500761035",
+      "stress_usdc": "0.4500000",
+      "optimistic_residual_usdc": "-34.69031266399296360350076104",
+      "cash_budget_covers_net_debit_and_fees": true,
+      "remaining_seconds": "2519843.302",
+      "legs": [
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-C",
+          "side": "buy",
+          "premium_usdc": "494.000",
+          "entry_fee_usdc": "1.2556755",
+          "book_age_ms": 473
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-C",
+          "side": "sell",
+          "premium_usdc": "32.750",
+          "entry_fee_usdc": "1.2556755",
+          "book_age_ms": 473
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-93000-P",
+          "side": "buy",
+          "premium_usdc": "494.000",
+          "entry_fee_usdc": "1.2556755",
+          "book_age_ms": 477
+        },
+        {
+          "instrument_name": "BTC_USDC-30OCT26-75000-P",
+          "side": "sell",
+          "premium_usdc": "29.750",
+          "entry_fee_usdc": "1.2556755",
+          "book_age_ms": 482
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "round": 0,
+      "raw_sha256": "cc81c160c486177d476e6d00457e520072ae79847af7ff44daf04c414d07eb9d",
+      "gzip_bytes": 2470
+    },
+    {
+      "round": 1,
+      "raw_sha256": "2e024a1dcbd9cd801c8036de144363289e881c787070d49d31f88fc9becd4e53",
+      "gzip_bytes": 2495
+    },
+    {
+      "round": 2,
+      "raw_sha256": "e40f4aec07f489a45a7b16c47165f03d8bf51ccd28b63c828bc337b3496248dc",
+      "gzip_bytes": 2453
+    }
+  ]
+}
