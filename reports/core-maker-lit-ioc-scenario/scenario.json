@@ -1,0 +1,7 @@
+{
+  "exploratory": true,
+  "prospective_validation": false,
+  "deployed_API_acceptance_verified": false,
+  "plan_sha256": "9f54e9972077762499473c200bc18de6eb52ea76498c9c187852fd8e8111b780",
+  "difference": "Only IOC minimum base/quote checks exempted; maker resting minima, all latency, queue/unknown and cash rules retained."
+}

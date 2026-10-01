@@ -1,0 +1,34 @@
+{
+  "schema": "core-maker-lit-ioc-coordinator-v1",
+  "recorded_utc": "2026-10-01T13:26:26.388648+00:00",
+  "previous": "reports/experiment-storage/core-rh-equity-open-allocation-v1.json",
+  "previous_sha256": "6683378caccf26da257bd171217af8e08343229bbdfec974d06db1dcf11ad4b1",
+  "new_maximum_bytes": 0,
+  "active_research_reserved_bytes": 12468224,
+  "active_research_headroom_bytes": 3260416,
+  "overall_reservation_bytes": 836777216,
+  "manifest_sha256": "61ca057c88c083607ea66a2d4898b6686f83fde05089502e4cd474b443a99476",
+  "storage": "Uses unspent source/control/output in core-maker-lit-ioc-scenario327680B reservation. Original+new output cappedcombined262144B; retain originalinvalidrun/error. No rawnewdata or network.",
+  "repair": "Recompute quote price and gate at actual _on_diagnostic call after process deadlines and currentbook updates. Prevent stale previousquote diagnostic from starting newquote after retirement; freeze same10..480secondwindow/100cap/hourguard/5and10bpoffsets. Activequote remainsfixed untilfrozenrest/cancel. All economicparameters unchanged.",
+  "classification": "Exploratory repair following invalid original IOC replay; no prospective/actual profit claim. Older normal-minimum run stopped before triggering rollover and is preserved.",
+  "audit_repair": "Original auditor used latest scheduledqty>=fillqty, ambiguous for multiple partials; new auditor consumes exact qty intent matching immediate hedge_result, then checks firsteligible book. Also checks control exit400ms firsteligible.",
+  "tests": "5passed:3actualstate decision/cutoff/fixed-rest tests plus2IOC minimum/execution tests.",
+  "source_pins": [
+    {
+      "path": "scripts/replay_core_maker_lit_ioc_coordinator.py",
+      "sha256": "375251fb11a3550ed032035155e47aeaa9765e2a75de522e13cf8539580882fb"
+    },
+    {
+      "path": "scripts/audit_core_maker_lit_ioc_coordinator.py",
+      "sha256": "53edb4a1134289d33011b03b2109b42d31ea89c900ead866db0cbc836caa821c"
+    },
+    {
+      "path": "tests/test_core_maker_lit_coordinator.py",
+      "sha256": "5bc8537a0c8224878ce9a55e8083bc93393a5de19359bcfee5f169115aa4dfc6"
+    },
+    {
+      "path": "scripts/core_maker_ioc_minimum_scenario.py",
+      "sha256": "342b0b0e0bb13bec492742a4f50e1be6c66acfc3674f588463880a8681fdbf8d"
+    }
+  ]
+}

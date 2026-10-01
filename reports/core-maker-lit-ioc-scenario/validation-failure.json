@@ -1,0 +1,6 @@
+{
+  "strategy_validation": "failed",
+  "reason": "Pre-process diagnostic can be reused after quote retires during event, preserving stale price and bypassing admission gates; original seven closedpaths are not a valid evaluation of frozen strategy.",
+  "audit_failure": "AssertionError on inferred intent source time: latest qty>=fill is ambiguous with multiple partials. No passing audit file was written. Exact scheduled-quantity matching required.",
+  "original_summary_sha256": "5556f49f21d9d836f7589193e60698c06c9238f0f41bd81c61b4614e9f74e3c8"
+}
