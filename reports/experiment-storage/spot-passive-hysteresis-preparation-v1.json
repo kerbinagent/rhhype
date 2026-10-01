@@ -1,0 +1,12 @@
+{
+  "schema": "spot-passive-hysteresis-preparation-v1",
+  "recorded_utc": "2026-10-01T18:02:48.216516+00:00",
+  "previous": "reports/experiment-storage/completed-spot-passive-inside-closeout-v1.json",
+  "previous_sha256": "c48bbb09b74f5b6317e399c4186d4d4964954432714574edd64b72310c7caa14",
+  "preparation_reserved_bytes": 131072,
+  "active_research_pool_bytes": 36700160,
+  "active_research_reserved_bytes": 29097984,
+  "active_research_headroom_bytes": 7602176,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare LIT inside-bid variant with5bp excursion gate only at admission; retain active quote only while original-price cash forecast>=.01 with all other gates unchanged. No capture before full allocation/source freeze."
+}

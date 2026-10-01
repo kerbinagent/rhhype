@@ -1,0 +1,87 @@
+{
+  "schema": "full-wire-physical-inventory-v1",
+  "prior_archives": [
+    {
+      "path": "data/raw/maker-capture/20260929T1823Z/frames.jsonl.gz",
+      "bytes": 24934135,
+      "sha256": "dd1693a4b248f14f7c2bbb111590df24d67acb6ea28f3a677ce4cc05e54a2bf7"
+    },
+    {
+      "path": "data/raw/maker-capture/20260929T2022Z/frames.jsonl.gz",
+      "bytes": 3755149,
+      "sha256": "3a1ffe9e3578899df800bf8fceec7beda8fc82b136a6c00edc64a20a8316f775"
+    },
+    {
+      "path": "data/raw/maker-capture/20260929T1939Z/frames.jsonl.gz",
+      "bytes": 23644715,
+      "sha256": "5f6ade0523703efe0ecd40c17ead0782eccc3bf7f780ae17364d8c26fc56567d"
+    },
+    {
+      "path": "data/raw/rh-passive-exit-v1/20260930T0227Z/frames.jsonl.gz",
+      "bytes": 22966216,
+      "sha256": "4372474a45847f6c3fafea2133cabcb8b45aad3b1b85a51341131fb3166d1fcc"
+    },
+    {
+      "path": "data/raw/rh-passive-exit-v1/20260930T0252Z/frames.jsonl.gz",
+      "bytes": 48680716,
+      "sha256": "c92c269e3bc3bb345beeaf834ad55d0a97601339b4506e36a9397287f8407bb6"
+    },
+    {
+      "path": "data/raw/rh-small-maker/20260929T212132Z/frames.jsonl.gz",
+      "bytes": 41368405,
+      "sha256": "07cf628056fda14b2d93553fdd1591ae842e260455d9bb47b249967f113c90fa"
+    },
+    {
+      "path": "data/raw/rh-passive-exit-preflight/20260930T0222Z/frames.jsonl.gz",
+      "bytes": 603977,
+      "sha256": "44f84f78a71211ae22f7173b03e1a89acc65740bf04c203ac696b1d9f4874bda"
+    },
+    {
+      "path": "reports/paradex-sbe-preflight/frames.jsonl.gz",
+      "bytes": 10042,
+      "sha256": "2660eae3fe7a3c83a335bc590e7db6def9da0d9e1672789da6732e6d1cd840d1"
+    },
+    {
+      "path": "reports/core-maker-eth/capture/frames.jsonl.gz",
+      "bytes": 1048566,
+      "sha256": "a467b2829746f72d88ad81ad3eebc7d45ee085dd944878a110071fa33091db74"
+    },
+    {
+      "path": "reports/core-spot-passive/capture/frames.jsonl.gz",
+      "bytes": 2815877,
+      "sha256": "3e95e428d811b0c0c0b11f5ceb9b2428563a04626ffc56ca96c25180078158a9"
+    },
+    {
+      "path": "reports/core-passive-lit/capture/frames.jsonl.gz",
+      "bytes": 2235468,
+      "sha256": "19c2424d04d2e56a2344f917bc856c56c4a8fb4564c118ba233bce4552ebcb00"
+    },
+    {
+      "path": "reports/core-maker-lit-retry/capture/frames.jsonl.gz",
+      "bytes": 2507349,
+      "sha256": "5da5e7012003d3b0cc2f69e0bf0c4584359a66ea5af9560decacc54ac5c4e50c"
+    },
+    {
+      "path": "reports/core-maker-lit-offset/capture/frames.jsonl.gz",
+      "bytes": 1952893,
+      "sha256": "146f18e5bf71a7da4d73a2d9c5938317a5d2cc9a9528ab33ca230b69f6ad9139"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/capture/frames.jsonl.gz",
+      "bytes": 3840542,
+      "sha256": "ab07208d03ca1153d649edd5ac815035a65f81776a1ff883ee41ab28590a5018"
+    },
+    {
+      "path": "reports/core-spot-passive-inside/capture/frames.jsonl.gz",
+      "bytes": 1327080,
+      "sha256": "377e2be07b6c516aa27ce9a04826b54d06cc50ffe60da1d7508ef7be2c4f248f"
+    }
+  ],
+  "prior_count": 15,
+  "prior_bytes": 181691130,
+  "additional_count": 1,
+  "new_maximum_count": 16,
+  "additional_raw_cap": 4194304,
+  "raw_byte_limit": 512000000,
+  "scope": "All15olderfullwirearchives retained plus one bounded LIT active-cash-retention capture. Normalized archives retained separately. No byte-cap change."
+}
