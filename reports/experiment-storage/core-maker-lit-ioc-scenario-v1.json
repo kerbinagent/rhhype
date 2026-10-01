@@ -1,0 +1,48 @@
+{
+  "schema": "core-maker-lit-ioc-scenario-v1",
+  "recorded_utc": "2026-10-01T13:18:05.328578+00:00",
+  "previous": "reports/experiment-storage/lighter-minimum-rule-source-v1.json",
+  "previous_sha256": "0716174d40acd3f142501f480462379b1640702e793fb63266297f93a50a30de",
+  "new_maximum_bytes": 327680,
+  "categories_bytes": {
+    "source": 32768,
+    "output": 262144,
+    "control": 32768
+  },
+  "active_research_reserved_bytes": 11403264,
+  "active_research_headroom_bytes": 4325376,
+  "overall_reservation_bytes": 836777216,
+  "manifest_sha256": "61ca057c88c083607ea66a2d4898b6686f83fde05089502e4cd474b443a99476",
+  "method": "Exploratory same-capture sensitivity after original outcomes. Only IOC minimum base/quote checks relaxed to positive lot, based pinned official circuit. Resting maker minima/maximum/grid/fees unchanged. Same5/10bpquotes,400ms all paths,10shold/1bptarget,queue/unknown/funding/capital rules. Preserve terminal unknowns; no deployedAPI acceptance oractualfill claim. No freshraw/newnetwork.",
+  "source_pins": [
+    {
+      "path": "scripts/core_maker_ioc_minimum_scenario.py",
+      "sha256": "342b0b0e0bb13bec492742a4f50e1be6c66acfc3674f588463880a8681fdbf8d"
+    },
+    {
+      "path": "scripts/replay_core_maker_lit_ioc_scenario.py",
+      "sha256": "1efae9a8a777459bc435f50c1bfddaebbe4160ab349eb98838120b6192675f4d"
+    },
+    {
+      "path": "scripts/audit_core_maker_lit_ioc_scenario.py",
+      "sha256": "795736316b702bd45d10778a7fa50102e7bffdde39095d360922882b760d3def"
+    },
+    {
+      "path": "tests/test_core_maker_ioc_minimum_scenario.py",
+      "sha256": "cfc2765cf3a88d7c6901d6a94377acdf549b5f958b40ee13d39c65db1f1f923d"
+    },
+    {
+      "path": "scripts/replay_core_maker_lit_corrected.py",
+      "sha256": "636f4d74d631cc7b3ef104d6e55c881bba54ee180a3b3f71022d139dc6a883f2"
+    },
+    {
+      "path": "scripts/audit_core_maker_lit.py",
+      "sha256": "407bec427fe9a9d3e5e27e89e22193d50b3c665797ce602dfe369dced5476dab"
+    },
+    {
+      "path": "reports/lighter-minimum-rule-source/audit.json",
+      "sha256": "a610959042e8a7aa954f6707e289eea9c66a0169ac1c76b85455d5d30e9ec17b"
+    }
+  ],
+  "tests": "5passed:smallpartial IOChedge/close with400ms andexactnegativecash; resting minimum retained, lot/max remain; inherited3assembly/unknown tests. Initial latency assertion expected tick11+400ms; corrected test to frozen scheduled deadline10.901+400ms after reading trace, no production code change."
+}
