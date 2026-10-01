@@ -209,7 +209,7 @@ feeds remain connected with 106 pairs and performance ok; p95 lag 9.24 ms, RSS
 243.09 MiB, CPU 54.90%, 1,066.5 books/s and metadata age 3,120.7 s. No open
 positions; three pending funding items remain. Carry v2 at 11:05 has 127 sampled
 slots and one persistent `arrival_invalid` slot 71; no terminal error or
-economic evaluation. Next review: **1 October 11:26:33 UTC**.
+economic evaluation. Review 130 added one exact Premium failed-hedge loss/−$1.70157; one Hyperliquid price-limit rejection, no aborts, wins or estimates. Reviews 66–130 have 1,731 closes: 1,721 losses, two paired gains and eight failed-hedge rescue gains. The review130 epoch snapshot read at 11:27:05 UTC showed convergence 428/−$526.7032 unchanged and Premium 742/−$1,367.5656, matching the Premium report delta. Four feeds remain connected with 106 pairs and performance ok; p95 lag 10.70 ms, RSS 247.79 MiB, CPU 53.64%, 878.5 books/s and metadata age 717.7 s. No open positions; three pending funding items remain. Carry v2 at 11:25 had 131 sampled slots and one persistent `arrival_invalid` slot 71; no terminal error, retries or economic evaluation. Next review: **1 October 11:46:33 UTC**.
 
 The original dated-carry run was interrupted by reboot after 136 recorded slots:
 134 sampled and two late callbacks. Its last trusted index and all evidence

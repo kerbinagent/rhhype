@@ -4181,3 +4181,27 @@ Fresh carry v2 at 11:05 had 127 sampled slots and one persistent
 `arrival_invalid` slot (slot 71), with 736 future/interrupted slots. Status
 remains running with no terminal error or retries and no economic evaluation.
 The invalid arrival's sample remains unopened.
+
+
+## Review 130 — 1 October 2026 11:26:33 UTC
+
+Exact report and separate epoch snapshot preserved; guarded manual archive
+3,352,465/12,582,912 bytes. Report SHA-256
+`5aa80deb9a3711c4a15f478335e587ba0475b78092a4018df6d807fb9c318a7e`. One exact
+Premium failed-hedge loss/−$1.701574; no aborts, wins or estimates, one
+Hyperliquid price-limit rejection, complete coverage. Fees $0.696912, other
+costs $0.497921 and capital $0.00000171. Four feeds connected, 106 pairs,
+normal performance; CPU 53.64%, p95 lag 10.70 ms, resident memory 247.79 MiB,
+878.5 books/s and metadata age 717.7 s. No open positions; three pending
+funding items remain.
+
+The epoch snapshot read at 11:27:05 UTC and updated at 11:27:03 UTC showed
+convergence 428/−$526.7032 unchanged and Premium 742/−$1,367.5656, matching
+the report deltas. Reviews 66–130 have 1,731 closes: 1,721 losses, two paired
+gains and eight rescue gains. Next checkpoint **11:46:33 UTC**. No qualifying
+positive result.
+
+Fresh carry v2 at 11:25 had 131 sampled slots and one persistent
+`arrival_invalid` slot (slot 71), with 732 future/interrupted slots. Status
+remains running with no terminal error or retries and no economic evaluation.
+The invalid arrival's sample remains unopened.
