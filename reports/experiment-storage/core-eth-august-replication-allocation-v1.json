@@ -1,0 +1,54 @@
+{
+  "schema": "core-eth-august-replication-v1",
+  "recorded_utc": "2026-10-01T03:02:26.023910+00:00",
+  "previous": "reports/experiment-storage/boros-eth-depth-correction-allocation-v2.json",
+  "previous_sha256": "17dd5c1fffe296c9f8e002af83f78082965aeec27c69e27de97d06782b31c32b",
+  "new_maximum_bytes": 65536,
+  "categories_bytes": {
+    "source": 8192,
+    "raw": 32768,
+    "output": 16384,
+    "control": 8192
+  },
+  "active_research_reserved_bytes": 229376,
+  "active_research_headroom_bytes": 3964928,
+  "requests_max": 4,
+  "retries": 0,
+  "window": [
+    1785542400,
+    1788220799
+  ],
+  "primary": "Full August month,31days;four fixed7day blocks+3daytail diagnostic only",
+  "fixed_design": "ETH funded spot plus equal short;1000USDC target;0.0001lot;10%cash;zero Standard fees;5%annual capital;5bp stress;exclude opening-hour funding;funding value inferred;non-executable candles;current margin settings not historical eligibility",
+  "requests": [
+    [
+      "funding",
+      "fundings",
+      0,
+      "1h",
+      745
+    ],
+    [
+      "spot",
+      "candles",
+      2048,
+      "1d",
+      31
+    ],
+    [
+      "perp",
+      "candles",
+      0,
+      "1d",
+      31
+    ],
+    [
+      "mark",
+      "markPriceCandles",
+      0,
+      "1d",
+      31
+    ]
+  ],
+  "interpretation": "Previously unseen historical replication after September idea selection;not fresh prospective or a chronological holdout. No alternate assets or optimized rules. Full outcomes retained."
+}
