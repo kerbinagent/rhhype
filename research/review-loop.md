@@ -3395,3 +3395,26 @@ gains and eight rescue gains. Next checkpoint **01:26:33 UTC**.
 
 Fresh carry v2 has all eight due arrivals through 01:05, 9,820 sample bytes,
 all sampled, zero overdue files, no terminal error and no economic evaluation.
+
+
+## Review 100 — 1 October 2026 01:26:33 UTC
+
+Exact report and separate epoch snapshot preserved; guarded manual archive
+2,592,745/16,777,216 bytes. Report SHA-256
+`8c77362ebd083bf7f52d5c76250b69e472b7bad1eed2a7e113f4c6353126a9c0`.
+One exact Premium paired XAG loss −$1.70881; no other completions, no aborts
+or entry rejections, complete coverage. No new wins or estimated records.
+Fees $0.87853, stress $0.49921 and capital $0.00003467; without stress
+−$1.20961. The exit improved $0.18117 against the request price and flattened
+in 0.7503 s; the entry had deteriorated $0.74609 against its signal.
+
+Four feeds connected, 108 pairs after metadata refresh, CPU 42.38%, p95 lag
+6.95 ms, RSS 182.64 MiB, 817.6 books/s, metadata age 758.2 s; normal performance.
+Review and separate epoch snapshot flat. Premium epoch 652/−$1,194.0467;
+other epoch counts and P&L unchanged. Cooldown remains capital constrained.
+Twenty-two earlier win records and three legacy funding obligations remain.
+Reviews 66–100 have 1,584 closes: 1,574 losses, two paired gains and eight rescue
+gains. Next checkpoint **01:46:33 UTC**. No qualifying positive result.
+
+Fresh carry v2 has all twelve due arrivals through 01:25, 14,757 sample bytes,
+all sampled, zero overdue files, no terminal error and no economic evaluation.
