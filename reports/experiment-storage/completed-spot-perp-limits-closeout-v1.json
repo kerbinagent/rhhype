@@ -1,0 +1,105 @@
+{
+  "schema": "completed-spot-perp-limits-closeout-v1",
+  "recorded_utc": "2026-10-01T15:51:59.740593+00:00",
+  "previous": "reports/experiment-storage/completed-maker-cash-exit-closeout-v1.json",
+  "previous_sha256": "910ce9204e1eff49543724b0763404bbaf23b0ce809237db0c3d988c24415400",
+  "old_reserved_bytes": 327680,
+  "artifact_bytes": 153160,
+  "retention_reserved_bytes": 196608,
+  "released_bytes": 131072,
+  "active_research_pool_bytes": 19922944,
+  "active_research_reserved_bytes": 19521536,
+  "active_research_headroom_bytes": 401408,
+  "overall_reservation_bytes": 836777216,
+  "scope": "All results and sources retained; unchanged shared sources refer to canonical retention; 24KiB control slack. No deletion or recompression.",
+  "files": [
+    {
+      "path": "reports/core-spot-perp-limits/assets-metadata.json.gz",
+      "bytes": 1017,
+      "sha256": "e73c27a657a78513e90efde38bef6aa55f102ec7595afbda440110d6d71140b4"
+    },
+    {
+      "path": "reports/core-spot-perp-limits/audit.json",
+      "bytes": 1601,
+      "sha256": "8ba9dfddb36abad37eb7b1906ef970760a1dc3db4b35afe9abd844c0de43035c"
+    },
+    {
+      "path": "reports/core-spot-perp-limits/events.jsonl.gz",
+      "bytes": 79787,
+      "sha256": "70969aa20e64fe27c6796cf323d4de75aea859e15a0c34967f267c1d9ad5175f"
+    },
+    {
+      "path": "reports/core-spot-perp-limits/lighter-metadata.json.gz",
+      "bytes": 23179,
+      "sha256": "a21bd4f0b2a5490c4d595be5aa55a0148c72b170996271816eb03ed0bbca8839"
+    },
+    {
+      "path": "reports/core-spot-perp-limits/metadata.json",
+      "bytes": 1748,
+      "sha256": "9820a565a3818e0b0a93e04fa390b5fc7391fc6bdd69c7d83d04778727a56b0a"
+    },
+    {
+      "path": "reports/core-spot-perp-limits/readout.md",
+      "bytes": 2071,
+      "sha256": "d34f2429e05e1a2f56e443f30113bc03a4a5db32c0f054ba3ad707b709367d34"
+    },
+    {
+      "path": "reports/core-spot-perp-limits/status.json",
+      "bytes": 237,
+      "sha256": "ecc66ed672f32d287612b3fff5ac31c8623e11f7deecc5f99a6aa65c58d8c7ea"
+    },
+    {
+      "path": "reports/core-spot-perp-limits/summary.json",
+      "bytes": 3774,
+      "sha256": "9fc8b797f5f8b1dc1f3061ef83ec78203ce09a2753fd6f8991cd8469a82efa8b"
+    },
+    {
+      "path": "reports/core-spot-perp-limits/unresolved.json.gz",
+      "bytes": 43,
+      "sha256": "5db1bc1ef4048963019e2892b95ed4a15f159743a270562fe87b6a7bfc868b8c"
+    },
+    {
+      "path": "reports/experiment-storage/core-spot-perp-limits-allocation-v1.json",
+      "bytes": 3057,
+      "sha256": "cd172c4ddadb52640c5677d90b2e1c516adc828887875ca0104fe7699c4e72f3"
+    },
+    {
+      "path": "scripts/core_spot_perp_limits.py",
+      "bytes": 19994,
+      "sha256": "20ea1bb874ecca2e38b7e35c670b31aaf4df2c0ce862f9b90cd31c79fb40d274"
+    },
+    {
+      "path": "scripts/audit_core_spot_perp_limits.py",
+      "bytes": 13340,
+      "sha256": "289f51b74af223f2cf71406c5d73cc8f5898bb4362007e412f257f436c80726b"
+    },
+    {
+      "path": "tests/test_core_spot_perp_limits.py",
+      "bytes": 3312,
+      "sha256": "d6dcfc08c1f839b2bbb6a691ba043d74857b01732b67ed726a17bad2b2499c2a"
+    }
+  ],
+  "shared_source_references": [
+    {
+      "path": "scripts/paper_engine.py",
+      "bytes": 59902,
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "bytes": 31735,
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "bytes": 40963,
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    }
+  ]
+}

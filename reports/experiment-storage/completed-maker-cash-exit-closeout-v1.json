@@ -1,0 +1,259 @@
+{
+  "schema": "completed-maker-cash-exit-closeout-v1",
+  "recorded_utc": "2026-10-01T15:51:59.738056+00:00",
+  "previous": "reports/experiment-storage/core-passive-fair-sell-v1.json",
+  "previous_sha256": "e26fb222f0d72183dd3cda314042ef4cb0115f4b4bf02ac9f9a497378954c950",
+  "old_reserved_bytes": 262144,
+  "artifact_bytes": 100659,
+  "retention_reserved_bytes": 131072,
+  "released_bytes": 131072,
+  "active_research_pool_bytes": 19922944,
+  "active_research_reserved_bytes": 19652608,
+  "active_research_headroom_bytes": 270336,
+  "overall_reservation_bytes": 836777216,
+  "scope": "All results and sources retained; unchanged shared sources refer to canonical retention; 24KiB control slack. No deletion or recompression.",
+  "files": [
+    {
+      "path": "reports/core-maker-cash-exit/audit.jsonl.gz",
+      "bytes": 57559,
+      "sha256": "73a58c1c399a6bf033b3bbb281a5d923bbeb7a54c799a2cd5f307f373a912cac"
+    },
+    {
+      "path": "reports/core-maker-cash-exit/independent-audit.json",
+      "bytes": 1092,
+      "sha256": "81288742af85b7753d54ba61a3bb14c0d33c1d5644951c4066b4e663ebb3f5d5"
+    },
+    {
+      "path": "reports/core-maker-cash-exit/metrics.json",
+      "bytes": 948,
+      "sha256": "a40748d58bac8a35389f3ffc292e0ce281fde27798342a16fa7c96948362ad0a"
+    },
+    {
+      "path": "reports/core-maker-cash-exit/prior-trace-equivalence.json",
+      "bytes": 250,
+      "sha256": "bbd996792d85cc68d7a6b3b294a1c4e30eca05de0ea4b3579dd247a3f1f572ea"
+    },
+    {
+      "path": "reports/core-maker-cash-exit/quote-gate-audit.json",
+      "bytes": 809,
+      "sha256": "40a48bc3e25de48cf885fca54b06331633231ee770bc2ae2122072de06575928"
+    },
+    {
+      "path": "reports/core-maker-cash-exit/readout.md",
+      "bytes": 1186,
+      "sha256": "5589b91a290c64a127a1bba3127cba8fe3830c212ebc8628ec5fcb3ccd30f32c"
+    },
+    {
+      "path": "reports/core-maker-cash-exit/summary.json.gz",
+      "bytes": 10378,
+      "sha256": "d7471d9685cfc71fd1770b1764f94c9806aa0f131497cef4d174f38d92453940"
+    },
+    {
+      "path": "reports/experiment-storage/core-maker-cash-exit-v1.json",
+      "bytes": 6539,
+      "sha256": "49283551dcfbf3c934450de93ebbd82214291eff604b01db3a0457a8fb7bbb25"
+    },
+    {
+      "path": "scripts/core_maker_cash_exit.py",
+      "bytes": 533,
+      "sha256": "cd63c41a4c5130fca80de1d42a940369841ed96162a7de2c7052e1d88efc0474"
+    },
+    {
+      "path": "tests/test_core_maker_cash_exit.py",
+      "bytes": 1785,
+      "sha256": "6dc6659551a9c29eff312f27ba121213755fb8741be56f8deb19220f2068aece"
+    },
+    {
+      "path": "scripts/replay_core_maker_cash_exit.py",
+      "bytes": 6092,
+      "sha256": "2cf3b044b31299f9e0b0c5f9ef72a862e2d8308e1d3e54e3a38f2dbc570bf19c"
+    },
+    {
+      "path": "scripts/audit_core_maker_cash_exit_fills.py",
+      "bytes": 7506,
+      "sha256": "20fb91ba4d4e286629b26c8e4908adbfa4c1ee03b739be71bca1f1af616cc48b"
+    },
+    {
+      "path": "scripts/audit_core_maker_cash_exit_quotes.py",
+      "bytes": 5982,
+      "sha256": "6b926c4519d8f51c9a11f91f6d338d72e0d93fc4edb5afee361866f6562f7802"
+    }
+  ],
+  "shared_source_references": [
+    {
+      "path": "scripts/core_passive_hedged_exit.py",
+      "bytes": 31641,
+      "sha256": "7ca4ca6b783c84eac83294bd5e9786d7e30eec3cd33297d95005f956cd359ed0",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/core_passive_hedged_base.py",
+      "bytes": 44028,
+      "sha256": "6bc4d04f8cb5c6cbff78c198dc19314f0a50571187311b61c6a99d03d6b386fb",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/core_passive_hedged_retirement.py",
+      "bytes": 2952,
+      "sha256": "23036c5b4a565ccafd226debd9e590cd82da0c4aad5183299f049a2fd2cff8e8",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/core_passive_hedged_sell.py",
+      "bytes": 15096,
+      "sha256": "632b7f63e7525b0cb8a761f53bba3cff35e7aee8b9246f85fc07d56d003c006d",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/core_passive_hedged_late_flow.py",
+      "bytes": 7392,
+      "sha256": "c163b0814a5bff8fc949ea31c5d9240d57503f8dbde5dcb2d8da3e6ebfdf9539",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/core_passive_lit_branch.py",
+      "bytes": 2784,
+      "sha256": "fb8a97beef9bd0da13af80635127c61a1a7601596977be8726058f9f92b86c74",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/core_passive_lit_capture.py",
+      "bytes": 8193,
+      "sha256": "7da167cc8b55da838100141fda57cb854eab4d0525d5c97b43a9d1ef7f2d51d8",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/core_passive_lit_events.py",
+      "bytes": 24441,
+      "sha256": "8fa7c271c85d46d5f997bc8f48c3b1174367bb6bb37605e48e6c30faff2577a2",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/replay_core_passive_lit.py",
+      "bytes": 6209,
+      "sha256": "99f8f82ae23c587c00c7d4f1333fbb3b54f028b1b0930ac89dc1e75643131527",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/audit_core_passive_lit_fills.py",
+      "bytes": 7202,
+      "sha256": "d06f1e634ff6d479668be374095b5e48e8ff75cbb6e85a77c81d5bce26c17df4",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/audit_core_passive_lit_quotes.py",
+      "bytes": 3126,
+      "sha256": "24dae75611fda741a290e51d3ee1b1c7b13d6f22306724ed5b3d402dc7aa78cd",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "tests/test_core_passive_lit_events.py",
+      "bytes": 4217,
+      "sha256": "8167e7fc4f9b512d01ff50647142d340473c17cc89d8d5f002849b2cc93305fc",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "tests/test_core_passive_hedged.py",
+      "bytes": 4268,
+      "sha256": "1c33cd6cf7028ca364ed17c53658f3bd02a570e4ea09e213c4d9ff7ea2107dcc",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "tests/test_core_passive_lit_branch.py",
+      "bytes": 2976,
+      "sha256": "7111b8c96667b8d7393e4e22ac09c5b84efc36624254c5ce94eb20dfef8d08fa",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/maker_capture.py",
+      "bytes": 28133,
+      "sha256": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/maker_book_archive.py",
+      "bytes": 18974,
+      "sha256": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/core_rh_small_shortterm.py",
+      "bytes": 20672,
+      "sha256": "65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "bytes": 31735,
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "bytes": 59902,
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "bytes": 40963,
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/core_passive_sell_branch.py",
+      "bytes": 4654,
+      "sha256": "a55f9db16fa520af589a6b1f2ecb64fe054950ddbd46e27142993a03592f500b",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-sell-closeout-v1.json",
+      "canonical_manifest_sha256": "920c5791f914fda9fd5d0be6887a6e65a92e1f6cd30d7e466710ea4407d7793e"
+    },
+    {
+      "path": "tests/test_core_passive_sell_branch.py",
+      "bytes": 2072,
+      "sha256": "eb911d3cf2ec77c1e5baea310f2afdf18027019b58afed4dd9485eb29db09fd2",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-sell-closeout-v1.json",
+      "canonical_manifest_sha256": "920c5791f914fda9fd5d0be6887a6e65a92e1f6cd30d7e466710ea4407d7793e"
+    },
+    {
+      "path": "scripts/replay_core_passive_sell.py",
+      "bytes": 6013,
+      "sha256": "6522aac96a70d103292afa769d0e0a8438cd5f50be47cb4f25cdd221f4787973",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-sell-closeout-v1.json",
+      "canonical_manifest_sha256": "920c5791f914fda9fd5d0be6887a6e65a92e1f6cd30d7e466710ea4407d7793e"
+    },
+    {
+      "path": "scripts/audit_core_passive_sell_fills.py",
+      "bytes": 7400,
+      "sha256": "b993fbbab703f4edf28e67542e4dea2475916334a0968009100bd55966f81c8a",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-sell-closeout-v1.json",
+      "canonical_manifest_sha256": "920c5791f914fda9fd5d0be6887a6e65a92e1f6cd30d7e466710ea4407d7793e"
+    },
+    {
+      "path": "scripts/audit_core_passive_sell_quotes.py",
+      "bytes": 3822,
+      "sha256": "90a4bab6082de7772eba3b6bd9ce0413154cd15de361d2f45a72996dade0474e",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-sell-closeout-v1.json",
+      "canonical_manifest_sha256": "920c5791f914fda9fd5d0be6887a6e65a92e1f6cd30d7e466710ea4407d7793e"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "audit": "passed",
+  "quotes_checked": {
+    "100-10bp-100ms-buy": 83,
+    "100-10bp-100ms-sell": 83
+  },
+  "taker_depth_depletions": 12,
+  "activation_queue_snapshots_checked": 166,
+  "cash_take_profit_marks_checked": 0,
+  "checks": "Every actual quote time inside10..480s,100cap,hourguard,exact10bp currentbook offset, 100ms activation and commonlot quantity; branch-local depth subtracts preceding takerfills before quote decisions. Cash-only profit request marks independently rebuilt from remaining executable books, FIFO capital and episode cash; no reserve subtraction. Freshness and pair skew checked independently; every activation checks source advancement, post-only price and queue ahead at the quote.",
+  "summary_sha256": "d7471d9685cfc71fd1770b1764f94c9806aa0f131497cef4d174f38d92453940"
+}

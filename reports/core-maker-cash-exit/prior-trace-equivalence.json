@@ -1,0 +1,12 @@
+{
+  "buy": {
+    "same_complete_trace_after_label_normalization": true,
+    "records": 4573,
+    "take_profit_marks": 0
+  },
+  "sell": {
+    "same_complete_trace_after_label_normalization": true,
+    "records": 4567,
+    "take_profit_marks": 0
+  }
+}
