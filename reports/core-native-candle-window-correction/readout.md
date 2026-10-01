@@ -30,4 +30,4 @@ UNI/LINK/SKY monthly positives are tiny budgets for execution, with mixed weekly
 
 The archived ETH collateral experiment used1.1x capital; this full-universe comparison fixes2x for every asset. The different ETH residual is therefore expected.
 
-Verified42quantity/funding/basis/net identities separately with exact decimal parsing and all26input pins. Next: bounded current displayed cost diagnostic across this same full universe. Comparing new costs with historical residuals is a sensitivity, not a reconstructed trade or future-profit forecast.
+Verified42quantity/funding/basis/net identities separately with exact decimal parsing and all input pins. Next: bounded current displayed cost diagnostic across this same full universe. Comparing new costs with historical residuals is a sensitivity, not a reconstructed trade or future-profit forecast.

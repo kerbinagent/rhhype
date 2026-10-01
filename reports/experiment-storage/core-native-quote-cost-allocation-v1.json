@@ -1,0 +1,98 @@
+{
+  "schema": "core-native-quote-cost-v1",
+  "recorded_utc": "2026-10-01T03:53:59.051527+00:00",
+  "previous": "reports/experiment-storage/core-native-candle-window-allocation-v1.json",
+  "previous_sha256": "10d18abd41efdbdd0f8080ca146e5eee4d585c969934459441a991ce9b599d32",
+  "new_maximum_bytes": 163840,
+  "categories_bytes": {
+    "source": 8192,
+    "raw": 65536,
+    "output": 73728,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 1777664,
+  "active_research_headroom_bytes": 2416640,
+  "requests_max": 42,
+  "retries": 0,
+  "universe": [
+    {
+      "asset": "ETH",
+      "spot": 2048,
+      "perp": 0,
+      "decimals": 4,
+      "min_base": "0.0050",
+      "min_quote": "10.000000",
+      "funding": "reports/core-eth-funding-history/202609-v1/response.json.gz"
+    },
+    {
+      "asset": "LIT",
+      "spot": 2049,
+      "perp": 120,
+      "decimals": 2,
+      "min_base": "1.00",
+      "min_quote": "10.000000",
+      "funding": "reports/core-native-funding-network-correction/LIT.json.gz"
+    },
+    {
+      "asset": "UNI",
+      "spot": 2051,
+      "perp": 30,
+      "decimals": 2,
+      "min_base": "1.00",
+      "min_quote": "10.000000",
+      "funding": "reports/core-native-funding-network-correction/UNI.json.gz"
+    },
+    {
+      "asset": "LINK",
+      "spot": 2050,
+      "perp": 8,
+      "decimals": 1,
+      "min_base": "1.0",
+      "min_quote": "10.000000",
+      "funding": "reports/core-native-funding-network-correction/LINK.json.gz"
+    },
+    {
+      "asset": "LDO",
+      "spot": 2054,
+      "perp": 46,
+      "decimals": 1,
+      "min_base": "15.0",
+      "min_quote": "10.000000",
+      "funding": "reports/core-native-funding-network-correction/LDO.json.gz"
+    },
+    {
+      "asset": "SKY",
+      "spot": 2053,
+      "perp": 79,
+      "decimals": 0,
+      "min_base": "100",
+      "min_quote": "10.000000",
+      "funding": "reports/core-native-funding-network-correction/SKY.json.gz"
+    },
+    {
+      "asset": "AAVE",
+      "spot": 2052,
+      "perp": 27,
+      "decimals": 3,
+      "min_base": "0.050",
+      "min_quote": "10.000000",
+      "funding": "reports/core-native-funding-network-correction/AAVE.json.gz"
+    }
+  ],
+  "input_pins": [
+    {
+      "path": "reports/experiment-storage/core-native-candle-screen-allocation-v1.json",
+      "sha256": "06988887b2f1ed3eea8d09aaf004dd0612bb6184fa3c7d772d389a23848e22ff"
+    },
+    {
+      "path": "scripts/core_eth_quote_cost.py",
+      "sha256": "bb7d37a1fd3e9d99ae1579be661243f706fb3424b4e6e514c86edc83b6384d3a"
+    },
+    {
+      "path": "reports/funding-carry/raw/lighter_core/markets.json",
+      "sha256": "3a94067dce1199f9cedff7193a319b565c7e0e90210fa5f27f01dcac37aee513"
+    }
+  ],
+  "design": "3fixed rounds30s apart, all7native pairs each round; public10orders per side spot/perp fetched in14threads, no deeper retry. Sizes100/250/500/1000 sharedlot/minima. Receipt RTT<=2s and pairskew<=250ms; actualbook ageunverified. Retainall84outcomes. Immediate4cross cost from identicalsamepair snapshots, zero Standard fee scenario. No fills, futureexit forecast or historicalexecutioncost. Rawsource frozen ETHfetch helper reused.",
+  "decision": "Compare descriptive medianquotes with historicalcandle budgets only as crossperiod sensitivity; never claim combinedrealizedPnL. No automatic larger collector."
+}
