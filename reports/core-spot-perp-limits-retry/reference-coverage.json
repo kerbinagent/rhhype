@@ -1,0 +1,23 @@
+{
+  "schema": "reference-coverage-only-v1",
+  "raw_sha256": "2040d3e63a91dc54532ab96b26540a19404a3c4dfb3d8f50cf0789c71190df2b",
+  "assets": {
+    "ETH": {
+      "sample_count": 395,
+      "sample_callbacks_inside_admission_time": 226,
+      "reference_eligible_at_count_30": 226,
+      "reference_eligible_at_count_60": 226,
+      "reference_eligible_at_count_90": 52,
+      "maximum_retained_reference_count": 97
+    },
+    "LIT": {
+      "sample_count": 479,
+      "sample_callbacks_inside_admission_time": 273,
+      "reference_eligible_at_count_30": 273,
+      "reference_eligible_at_count_60": 273,
+      "reference_eligible_at_count_90": 231,
+      "maximum_retained_reference_count": 107
+    }
+  },
+  "scope": "At retained fresh sample callbacks only; past122s window ending2s before observation and89s minimum span. Counts30/60/90 compared solely for reference availability. Does not evaluate forecasts, trading eligibility, book callbacks not sampled, or hypothetical fills/P&L. Execution freshness and source advancement are unchanged."
+}

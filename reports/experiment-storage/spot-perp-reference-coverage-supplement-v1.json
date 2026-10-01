@@ -1,0 +1,27 @@
+{
+  "active_research_pool_bytes": 20185088,
+  "active_research_reserved_bytes": 20144128,
+  "active_research_headroom_bytes": 40960,
+  "overall_reservation_bytes": 836777216,
+  "schema": "spot-perp-reference-coverage-supplement-v1",
+  "recorded_utc": "2026-10-01T16:25:14.269678+00:00",
+  "previous": "reports/experiment-storage/core-spot-perp-alts-retry-v1.json",
+  "previous_sha256": "68860ca8fe9548fffcc32ed9eba604458d9dfe82573e53ab8d722699da0ead9f",
+  "new_maximum_bytes": 0,
+  "canonical_retention_manifest": "reports/experiment-storage/completed-spot-perp-retry-closeout-v1.json",
+  "retention_reserved_bytes": 163840,
+  "updated_artifact_bytes": 119956,
+  "additional_files": [
+    {
+      "path": "scripts/spot_perp_reference_coverage.py",
+      "bytes": 1950,
+      "sha256": "867e2b998074a005cdfe2f50f80460d6e7c2918270c03a6c29bd5ca6bb1de63e"
+    },
+    {
+      "path": "reports/core-spot-perp-limits-retry/reference-coverage.json",
+      "bytes": 1049,
+      "sha256": "1b88cf06cbdb5e2fe6b2e3f15900834a8831a0e4d27a93497a88a2883c416782"
+    }
+  ],
+  "scope": "Coverage-only diagnostics from completed retry, funded within existing retention. No hypothetical P&L inference or existing execution-rule change."
+}
