@@ -8,7 +8,7 @@ sys.path.insert(0,str(ROOT));sys.path.insert(0,str(ROOT/'scripts'))
 from scripts import single_venue_depth_events as adapter
 from scripts import single_venue_depth_capture as capture
 from scripts.single_venue_strategy import pair_fresh
-PLAN=ROOT/'reports/experiment-storage/single-venue-batch-reference-v1.json'
+PLAN=ROOT/'reports/experiment-storage/single-venue-batch-reference-v2.json'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def decode(p):return json.loads(gzip.decompress(p.read_bytes()))
 
@@ -18,7 +18,7 @@ def main():
     rows=[]
     for window in plan['windows']:
         source=ROOT/window['capture'];manifest=json.loads((source/'manifest.json').read_bytes())
-        capture.SELECTED=manifest['selected'];adapter.HARD_BYTES=window['hard_bytes']
+        capture.SELECTED=manifest['selected_markets'];adapter.HARD_BYTES=window['hard_bytes']
         episodes=[];wanted=set();books={};snapshots={}
         for name in window['samples']:
             directory=ROOT/'reports/single-venue-research'/name
@@ -73,7 +73,7 @@ def main():
             matched_reference_gross=str(sum((D(r['reference_midpoint_gross']) for r in matched),D(0))),
             matched_fill_residual=str(sum((D(r['fill_relative_residual']) for r in matched),D(0)))))
     result=dict(plan_sha256=sha(PLAN),scope=plan['scope'],rows=rows,totals=totals)
-    blob=gzip.compress((json.dumps(result,separators=(',',':'))+'\n').encode(),mtime=0);assert len(blob)<=16384
+    blob=gzip.compress((json.dumps(result,separators=(',',':'))+'\n').encode(),mtime=0);assert len(blob)<=8192
     out=ROOT/'reports/single-venue-research/depth-batch-reference.json.gz';assert not out.exists();out.write_bytes(blob)
     print(json.dumps(totals,indent=2))
 

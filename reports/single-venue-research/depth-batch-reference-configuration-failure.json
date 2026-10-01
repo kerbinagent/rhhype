@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-10-01T22:09:01.322205+00:00",
+  "source_sha256": "49f8fceac96d3e00623718e82ffe3568b44fe4a93a9ad506e03eb31a59247ea1",
+  "source_backup": "reports/single-venue-research/depth-batch-reference-source-v1.py.gz",
+  "error": "KeyError: 'selected'",
+  "stage": "manifest selection before any eventiteration or output",
+  "correction": "Use actualmanifest key 'selected_markets'",
+  "economic_output_created": false
+}

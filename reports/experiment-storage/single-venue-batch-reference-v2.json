@@ -1,0 +1,124 @@
+{
+  "schema": "single-venue-batch-reference-v2",
+  "recorded_utc": "2026-10-01T22:09:01.322661+00:00",
+  "previous": "reports/experiment-storage/single-venue-batch-reference-v1.json",
+  "previous_sha256": "a4c7a3bbee727ee1188e1357a74b5af5e7a86b600c109c0cc6062c2702bdd5ad",
+  "reserved_bytes": 32768,
+  "preparation_included_bytes": 32768,
+  "active_research_pool_bytes": 87031808,
+  "active_research_reserved_bytes": 84213760,
+  "active_research_headroom_bytes": 2818048,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retrospective exact reference-midpoint accounting of all52closedepisodes fromcompletedthree-windowLITbatchandclockcontrols. Window1containsnoclosesandiscoveredbycomparisonhash. Snapshotpairedbooksatactualtargetfillcallbackentry/exit;freshnessandsource/receiptclockskewfromoriginalpairfilter;missingpairsandmultipleexitattemptsexcludedonlyfromsimpledecompositionandretainedasrows. Actualgross=side*quantity*(referenceexitmid-referenceentrymid)+fill_relative_residual. Subtractrecordedfees/capitalandstresswithidentityassertions. ReferenceisfrictionlessmidpointhypotheticalunderUSDC/USDGparity,notexecutablehedge,causalprofitattributionorprooffairvalue. All originalcashresultsunchanged. No activecaptureeconomics.",
+  "pins": [
+    {
+      "path": "scripts/single_venue_batch_reference.py",
+      "sha256": "82a35dfd0803e9a49ad1f672c6867f1694ad6e727d9a11b2a84e52a8603f5e56"
+    },
+    {
+      "path": "scripts/single_venue_depth_events.py",
+      "sha256": "a6e681b4e9469422c29b6a27a4647223149dabe9637564539e71386e1c0d5fcc"
+    },
+    {
+      "path": "scripts/single_venue_depth_capture.py",
+      "sha256": "f5230d15c2bcaa0ce32f767b75f058d01eacae292f27977be55e41cdd6d2a4ed"
+    },
+    {
+      "path": "scripts/single_venue_strategy.py",
+      "sha256": "5f4a8684e76781c311eb9dfbd9c2f46f9600bb2369db09aafda7fbc2c0c02679"
+    },
+    {
+      "path": "reports/single-venue-research/depth-batch-comparison.json",
+      "sha256": "588fb7debb4f4a44007fce2f98dbac448531019eef36d4634b76ed2b2af154d6"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-batch-2-lit/summary.json.gz",
+      "sha256": "0df35cbb3f6784d2b04cb0bc6a7987cfd1cd921cd3eba3ba714e2a975dc8fa62"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-batch-2-lit/independent-audit.json",
+      "sha256": "22ca0d21018b02b889312d31b868fced6fab5c4010a7f6f58e279be9830c6faf"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-batch-2-lit/trace.jsonl.gz",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-clock-control-2-lit/summary.json.gz",
+      "sha256": "30981818b171c37860eb1e6f3a22298862668715e9410c368e20855a93abe163"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-clock-control-2-lit/independent-audit.json",
+      "sha256": "d356df37416083ec3ea7ae6fe611ed604ad2a3ad24e52358258c0755c30a94ad"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-clock-control-2-lit/trace.jsonl.gz",
+      "sha256": "f4ecaaf90fcc7d4920b449b1fba5d172a8aa16aafba0293135b2b600241977d8"
+    },
+    {
+      "path": "reports/single-venue-depth-batch/window-2/capture/manifest.json",
+      "sha256": "67e36f3e1ce62ec0f61d1e7793fc9e5be5c5d3d5371e1c1f2b2afc809c8e2c5c"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-batch-3-lit/summary.json.gz",
+      "sha256": "b6ead66d059e56cbd5cd884e3db984d76e3fb4d5836c4d3e8c704f3ebcf2fee5"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-batch-3-lit/independent-audit.json",
+      "sha256": "8df8276be0d4a5c5ff65f1d6fb4cec63ea50117474c42f718d143131debfd21c"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-batch-3-lit/trace.jsonl.gz",
+      "sha256": "e52dccf01e7e5c294c50e1856bae731f63d0b80409b880b9767183fa06d77166"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-clock-control-3-lit/summary.json.gz",
+      "sha256": "736638d1e184c09896421f6e283d4891fc43f24dd722430b7a5f9d451da581fb"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-clock-control-3-lit/independent-audit.json",
+      "sha256": "fff337901e4ca342fb2d21be1b4bc9a1dbcc7eb339fa728c408d8baae997dde9"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-clock-control-3-lit/trace.jsonl.gz",
+      "sha256": "7639598d35d64bf1ac606aca626685c4b14aab4b367eebd1edf37d17e323f6cb"
+    },
+    {
+      "path": "reports/single-venue-depth-batch/window-3/capture/manifest.json",
+      "sha256": "9c68fc19adae6cabe5a47aa3214a1f179103c273f68514be2a18fcd9984eb485"
+    },
+    {
+      "path": "reports/single-venue-research/depth-batch-reference-source-v1.py.gz",
+      "sha256": "d946eda3042e42ed89cfdf41c031cbc10e8dfae60efab27f1733ab1d75cb6fa8"
+    },
+    {
+      "path": "reports/single-venue-research/depth-batch-reference-configuration-failure.json",
+      "sha256": "58cc768f4b3b208b0bff880f780f5989576e36ce6b6cef8a81829d3a550076f9"
+    }
+  ],
+  "windows": [
+    {
+      "index": 2,
+      "capture": "reports/single-venue-depth-batch/window-2/capture",
+      "manifest_sha256": "67e36f3e1ce62ec0f61d1e7793fc9e5be5c5d3d5371e1c1f2b2afc809c8e2c5c",
+      "hard_bytes": 8519680,
+      "samples": [
+        "single-venue-depth-batch-2-lit",
+        "single-venue-clock-control-2-lit"
+      ]
+    },
+    {
+      "index": 3,
+      "capture": "reports/single-venue-depth-batch/window-3/capture",
+      "manifest_sha256": "9c68fc19adae6cabe5a47aa3214a1f179103c273f68514be2a18fcd9984eb485",
+      "hard_bytes": 8519680,
+      "samples": [
+        "single-venue-depth-batch-3-lit",
+        "single-venue-clock-control-3-lit"
+      ]
+    }
+  ],
+  "expected_closed_episodes": 52,
+  "output_max_bytes": 8192,
+  "correction": "Manifestfieldnameonly;v1failedbeforeevents/output. Fulloriginalsource preservedgzip. Sameaccountingmethod;gzipoutputcapreducedto8192topreserve32768totalreservation."
+}
