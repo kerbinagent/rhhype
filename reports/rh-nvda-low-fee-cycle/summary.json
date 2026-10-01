@@ -1,0 +1,383 @@
+{
+  "actual_pnl": null,
+  "gas_not_subtracted": true,
+  "scope": "Same-block exact chained input through independent v3/v4 no-hook pools, with no persistent state changes. Necessary gross-profit screen only; complete router transaction simulation, transfer eligibility, gas, inclusion and first-use approval costs unresolved. USDG amounts are not a bank-dollar redemption claim.",
+  "verified": {
+    "NVDA": {
+      "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+      "pools": [
+        {
+          "version": "v3",
+          "address": "0xb75d2d02b0ec3de50d32e40a4f1a8dae8acc4333",
+          "token0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+          "token1": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+          "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+          "fee": 100,
+          "verified_block": "0x498b4df"
+        },
+        {
+          "version": "v4",
+          "address": "0x6444a8e0b267406a15db74ca00c4a24bdfa81ed3180f5b6d0851f8ed6f4f29c5",
+          "fee": 100,
+          "tick_spacing": 1,
+          "currencies": [
+            "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+            "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec"
+          ],
+          "hooks": "0x0000000000000000000000000000000000000000",
+          "verified_block": "0x498b4df"
+        }
+      ]
+    }
+  },
+  "rows": [
+    {
+      "round": 0,
+      "symbol": "NVDA",
+      "block": "0x498b520",
+      "block_hash": "0x5e9698c1ef611bf90d7f6cad36e2327846ce5cbcb5c5e642cd429e74e832184d",
+      "input_usdg": 100,
+      "buy_pool_version": "v3",
+      "sell_pool_version": "v4",
+      "actual_pnl": null,
+      "after_gas_profit": null,
+      "first": {
+        "pool": "0xb75d2d02b0ec3de50d32e40a4f1a8dae8acc4333",
+        "version": "v3",
+        "input_raw": "100000000",
+        "output_raw": "10809261490",
+        "quote_gas_estimate": 32564181
+      },
+      "second": {
+        "pool": "0x6444a8e0b267406a15db74ca00c4a24bdfa81ed3180f5b6d0851f8ed6f4f29c5",
+        "version": "v4",
+        "input_raw": "10809261490",
+        "output_raw": "2",
+        "quote_gas_estimate": 42422
+      },
+      "status": "quote_only",
+      "output_usdg": "0.000002",
+      "surplus_after_pool_fees_before_gas_usdg": "-99.999998",
+      "block_hash_recheck_passed": true
+    },
+    {
+      "round": 0,
+      "symbol": "NVDA",
+      "block": "0x498b520",
+      "block_hash": "0x5e9698c1ef611bf90d7f6cad36e2327846ce5cbcb5c5e642cd429e74e832184d",
+      "input_usdg": 1000,
+      "buy_pool_version": "v3",
+      "sell_pool_version": "v4",
+      "actual_pnl": null,
+      "after_gas_profit": null,
+      "first": {
+        "pool": "0xb75d2d02b0ec3de50d32e40a4f1a8dae8acc4333",
+        "version": "v3",
+        "input_raw": "1000000000",
+        "output_raw": "10809261490",
+        "quote_gas_estimate": 32564181
+      },
+      "second": {
+        "pool": "0x6444a8e0b267406a15db74ca00c4a24bdfa81ed3180f5b6d0851f8ed6f4f29c5",
+        "version": "v4",
+        "input_raw": "10809261490",
+        "output_raw": "2",
+        "quote_gas_estimate": 42422
+      },
+      "status": "quote_only",
+      "output_usdg": "0.000002",
+      "surplus_after_pool_fees_before_gas_usdg": "-999.999998",
+      "block_hash_recheck_passed": true
+    },
+    {
+      "round": 0,
+      "symbol": "NVDA",
+      "block": "0x498b520",
+      "block_hash": "0x5e9698c1ef611bf90d7f6cad36e2327846ce5cbcb5c5e642cd429e74e832184d",
+      "input_usdg": 100,
+      "buy_pool_version": "v4",
+      "sell_pool_version": "v3",
+      "actual_pnl": null,
+      "after_gas_profit": null,
+      "first": {
+        "pool": "0x6444a8e0b267406a15db74ca00c4a24bdfa81ed3180f5b6d0851f8ed6f4f29c5",
+        "version": "v4",
+        "input_raw": "100000000",
+        "output_raw": "432662820659006785",
+        "quote_gas_estimate": 42981
+      },
+      "second": {
+        "pool": "0xb75d2d02b0ec3de50d32e40a4f1a8dae8acc4333",
+        "version": "v3",
+        "input_raw": "432662820659006785",
+        "output_raw": "82296459",
+        "quote_gas_estimate": 19265509
+      },
+      "status": "quote_only",
+      "output_usdg": "82.296459",
+      "surplus_after_pool_fees_before_gas_usdg": "-17.703541",
+      "block_hash_recheck_passed": true
+    },
+    {
+      "round": 0,
+      "symbol": "NVDA",
+      "block": "0x498b520",
+      "block_hash": "0x5e9698c1ef611bf90d7f6cad36e2327846ce5cbcb5c5e642cd429e74e832184d",
+      "input_usdg": 1000,
+      "buy_pool_version": "v4",
+      "sell_pool_version": "v3",
+      "actual_pnl": null,
+      "after_gas_profit": null,
+      "first": {
+        "pool": "0x6444a8e0b267406a15db74ca00c4a24bdfa81ed3180f5b6d0851f8ed6f4f29c5",
+        "version": "v4",
+        "input_raw": "1000000000",
+        "output_raw": "4325081876858310360",
+        "quote_gas_estimate": 63664
+      },
+      "second": {
+        "pool": "0xb75d2d02b0ec3de50d32e40a4f1a8dae8acc4333",
+        "version": "v3",
+        "input_raw": "4325081876858310360",
+        "output_raw": "82296459",
+        "quote_gas_estimate": 19265509
+      },
+      "status": "quote_only",
+      "output_usdg": "82.296459",
+      "surplus_after_pool_fees_before_gas_usdg": "-917.703541",
+      "block_hash_recheck_passed": true
+    },
+    {
+      "round": 1,
+      "symbol": "NVDA",
+      "block": "0x498b76e",
+      "block_hash": "0xbaa95fe81d0d0aa6c3f7c57f97383fccd04f7ff8b512a9d326cbb267caee94aa",
+      "input_usdg": 100,
+      "buy_pool_version": "v3",
+      "sell_pool_version": "v4",
+      "actual_pnl": null,
+      "after_gas_profit": null,
+      "first": {
+        "pool": "0xb75d2d02b0ec3de50d32e40a4f1a8dae8acc4333",
+        "version": "v3",
+        "input_raw": "100000000",
+        "output_raw": "10809261490",
+        "quote_gas_estimate": 32564181
+      },
+      "second": {
+        "pool": "0x6444a8e0b267406a15db74ca00c4a24bdfa81ed3180f5b6d0851f8ed6f4f29c5",
+        "version": "v4",
+        "input_raw": "10809261490",
+        "output_raw": "2",
+        "quote_gas_estimate": 42426
+      },
+      "status": "quote_only",
+      "output_usdg": "0.000002",
+      "surplus_after_pool_fees_before_gas_usdg": "-99.999998",
+      "block_hash_recheck_passed": true
+    },
+    {
+      "round": 1,
+      "symbol": "NVDA",
+      "block": "0x498b76e",
+      "block_hash": "0xbaa95fe81d0d0aa6c3f7c57f97383fccd04f7ff8b512a9d326cbb267caee94aa",
+      "input_usdg": 1000,
+      "buy_pool_version": "v3",
+      "sell_pool_version": "v4",
+      "actual_pnl": null,
+      "after_gas_profit": null,
+      "first": {
+        "pool": "0xb75d2d02b0ec3de50d32e40a4f1a8dae8acc4333",
+        "version": "v3",
+        "input_raw": "1000000000",
+        "output_raw": "10809261490",
+        "quote_gas_estimate": 32564181
+      },
+      "second": {
+        "pool": "0x6444a8e0b267406a15db74ca00c4a24bdfa81ed3180f5b6d0851f8ed6f4f29c5",
+        "version": "v4",
+        "input_raw": "10809261490",
+        "output_raw": "2",
+        "quote_gas_estimate": 42426
+      },
+      "status": "quote_only",
+      "output_usdg": "0.000002",
+      "surplus_after_pool_fees_before_gas_usdg": "-999.999998",
+      "block_hash_recheck_passed": true
+    },
+    {
+      "round": 1,
+      "symbol": "NVDA",
+      "block": "0x498b76e",
+      "block_hash": "0xbaa95fe81d0d0aa6c3f7c57f97383fccd04f7ff8b512a9d326cbb267caee94aa",
+      "input_usdg": 100,
+      "buy_pool_version": "v4",
+      "sell_pool_version": "v3",
+      "actual_pnl": null,
+      "after_gas_profit": null,
+      "first": {
+        "pool": "0x6444a8e0b267406a15db74ca00c4a24bdfa81ed3180f5b6d0851f8ed6f4f29c5",
+        "version": "v4",
+        "input_raw": "100000000",
+        "output_raw": "432645780364060974",
+        "quote_gas_estimate": 42981
+      },
+      "second": {
+        "pool": "0xb75d2d02b0ec3de50d32e40a4f1a8dae8acc4333",
+        "version": "v3",
+        "input_raw": "432645780364060974",
+        "output_raw": "82296459",
+        "quote_gas_estimate": 19265509
+      },
+      "status": "quote_only",
+      "output_usdg": "82.296459",
+      "surplus_after_pool_fees_before_gas_usdg": "-17.703541",
+      "block_hash_recheck_passed": true
+    },
+    {
+      "round": 1,
+      "symbol": "NVDA",
+      "block": "0x498b76e",
+      "block_hash": "0xbaa95fe81d0d0aa6c3f7c57f97383fccd04f7ff8b512a9d326cbb267caee94aa",
+      "input_usdg": 1000,
+      "buy_pool_version": "v4",
+      "sell_pool_version": "v3",
+      "actual_pnl": null,
+      "after_gas_profit": null,
+      "first": {
+        "pool": "0x6444a8e0b267406a15db74ca00c4a24bdfa81ed3180f5b6d0851f8ed6f4f29c5",
+        "version": "v4",
+        "input_raw": "1000000000",
+        "output_raw": "4324911559310540906",
+        "quote_gas_estimate": 64613
+      },
+      "second": {
+        "pool": "0xb75d2d02b0ec3de50d32e40a4f1a8dae8acc4333",
+        "version": "v3",
+        "input_raw": "4324911559310540906",
+        "output_raw": "82296459",
+        "quote_gas_estimate": 19265509
+      },
+      "status": "quote_only",
+      "output_usdg": "82.296459",
+      "surplus_after_pool_fees_before_gas_usdg": "-917.703541",
+      "block_hash_recheck_passed": true
+    },
+    {
+      "round": 2,
+      "symbol": "NVDA",
+      "block": "0x498b9cd",
+      "block_hash": "0xdfcb656ddd19bdce2d9bfd632d593947230ff6ea4939b5c56e90b5c13add52f1",
+      "input_usdg": 100,
+      "buy_pool_version": "v3",
+      "sell_pool_version": "v4",
+      "actual_pnl": null,
+      "after_gas_profit": null,
+      "first": {
+        "pool": "0xb75d2d02b0ec3de50d32e40a4f1a8dae8acc4333",
+        "version": "v3",
+        "input_raw": "100000000",
+        "output_raw": "10809261490",
+        "quote_gas_estimate": 32564181
+      },
+      "second": {
+        "pool": "0x6444a8e0b267406a15db74ca00c4a24bdfa81ed3180f5b6d0851f8ed6f4f29c5",
+        "version": "v4",
+        "input_raw": "10809261490",
+        "output_raw": "2",
+        "quote_gas_estimate": 42422
+      },
+      "status": "quote_only",
+      "output_usdg": "0.000002",
+      "surplus_after_pool_fees_before_gas_usdg": "-99.999998",
+      "block_hash_recheck_passed": true
+    },
+    {
+      "round": 2,
+      "symbol": "NVDA",
+      "block": "0x498b9cd",
+      "block_hash": "0xdfcb656ddd19bdce2d9bfd632d593947230ff6ea4939b5c56e90b5c13add52f1",
+      "input_usdg": 1000,
+      "buy_pool_version": "v3",
+      "sell_pool_version": "v4",
+      "actual_pnl": null,
+      "after_gas_profit": null,
+      "first": {
+        "pool": "0xb75d2d02b0ec3de50d32e40a4f1a8dae8acc4333",
+        "version": "v3",
+        "input_raw": "1000000000",
+        "output_raw": "10809261490",
+        "quote_gas_estimate": 32564181
+      },
+      "second": {
+        "pool": "0x6444a8e0b267406a15db74ca00c4a24bdfa81ed3180f5b6d0851f8ed6f4f29c5",
+        "version": "v4",
+        "input_raw": "10809261490",
+        "output_raw": "2",
+        "quote_gas_estimate": 42422
+      },
+      "status": "quote_only",
+      "output_usdg": "0.000002",
+      "surplus_after_pool_fees_before_gas_usdg": "-999.999998",
+      "block_hash_recheck_passed": true
+    },
+    {
+      "round": 2,
+      "symbol": "NVDA",
+      "block": "0x498b9cd",
+      "block_hash": "0xdfcb656ddd19bdce2d9bfd632d593947230ff6ea4939b5c56e90b5c13add52f1",
+      "input_usdg": 100,
+      "buy_pool_version": "v4",
+      "sell_pool_version": "v3",
+      "actual_pnl": null,
+      "after_gas_profit": null,
+      "first": {
+        "pool": "0x6444a8e0b267406a15db74ca00c4a24bdfa81ed3180f5b6d0851f8ed6f4f29c5",
+        "version": "v4",
+        "input_raw": "100000000",
+        "output_raw": "432628583034766705",
+        "quote_gas_estimate": 42981
+      },
+      "second": {
+        "pool": "0xb75d2d02b0ec3de50d32e40a4f1a8dae8acc4333",
+        "version": "v3",
+        "input_raw": "432628583034766705",
+        "output_raw": "82296459",
+        "quote_gas_estimate": 19265509
+      },
+      "status": "quote_only",
+      "output_usdg": "82.296459",
+      "surplus_after_pool_fees_before_gas_usdg": "-17.703541",
+      "block_hash_recheck_passed": true
+    },
+    {
+      "round": 2,
+      "symbol": "NVDA",
+      "block": "0x498b9cd",
+      "block_hash": "0xdfcb656ddd19bdce2d9bfd632d593947230ff6ea4939b5c56e90b5c13add52f1",
+      "input_usdg": 1000,
+      "buy_pool_version": "v4",
+      "sell_pool_version": "v3",
+      "actual_pnl": null,
+      "after_gas_profit": null,
+      "first": {
+        "pool": "0x6444a8e0b267406a15db74ca00c4a24bdfa81ed3180f5b6d0851f8ed6f4f29c5",
+        "version": "v4",
+        "input_raw": "1000000000",
+        "output_raw": "4324739670927283973",
+        "quote_gas_estimate": 64613
+      },
+      "second": {
+        "pool": "0xb75d2d02b0ec3de50d32e40a4f1a8dae8acc4333",
+        "version": "v3",
+        "input_raw": "4324739670927283973",
+        "output_raw": "82296459",
+        "quote_gas_estimate": 19265509
+      },
+      "status": "quote_only",
+      "output_usdg": "82.296459",
+      "surplus_after_pool_fees_before_gas_usdg": "-917.703541",
+      "block_hash_recheck_passed": true
+    }
+  ]
+}

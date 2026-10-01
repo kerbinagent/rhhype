@@ -1,0 +1,48 @@
+{
+  "scope": "Post-outcome quality correction, no new requests or changes to original data. Boundary attainment cannot establish that all requested input was consumed. Quoted output minus full requested input is not a valid wallet P&L when an input remainder may exist.",
+  "studies": {
+    "base-atomic-cycle-slow-transport": {
+      "trace_sha256": "1928f1490da1e076faba5c888b010042f2e8cd65da85719059cbecbb8783d2e8",
+      "v3_quote_count": 36,
+      "v3_price_limit_request_ids": [],
+      "v4_quote_count": 0,
+      "full_input_status": "v3_limits_not_reached_v4_standard_implementation_enforces_amount"
+    },
+    "rh-atomic-stock-cycle": {
+      "trace_sha256": "7a98bd2c2c03486bd499e3f1bdb0588d33496a738f7586a46eeb55e1420ce0fa",
+      "v3_quote_count": 48,
+      "v3_price_limit_request_ids": [],
+      "v4_quote_count": 48,
+      "full_input_status": "v3_limits_not_reached_v4_standard_implementation_enforces_amount"
+    },
+    "rh-nvda-low-fee-cycle": {
+      "trace_sha256": "f580c35546e39bd77647a057a8d68c1592ed7f98ebd743b656ba7fe6f4bbe6cc",
+      "v3_quote_count": 12,
+      "v3_price_limit_request_ids": [
+        15,
+        17,
+        20,
+        22,
+        25,
+        27,
+        30,
+        32,
+        35,
+        37,
+        40,
+        42
+      ],
+      "v4_quote_count": 12,
+      "full_input_status": "not_established_at_v3_limit"
+    }
+  },
+  "low_fee_nvda_complete_cycles": 0,
+  "low_fee_nvda_unknown_cycles": 12,
+  "low_fee_nvda_validated_profit_or_loss": null,
+  "implementation_basis": [
+    "https://github.com/Uniswap/v3-periphery/blob/main/contracts/lens/QuoterV2.sol",
+    "https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol",
+    "https://github.com/Uniswap/v4-periphery/blob/main/src/base/BaseV4Quoter.sol"
+  ],
+  "v4_assumption": "Official standard BaseV4Quoter._swap checks the input-side BalanceDelta equals amountSpecified and reverts NotEnoughLiquidity otherwise. No hook pools only; deployment identity assumed from official contract list. Full transaction/transfer eligibility remains unverified."
+}
