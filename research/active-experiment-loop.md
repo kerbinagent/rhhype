@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 01 October 2026 09:07 UTC
+## Current status, 01 October 2026 09:27 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative or inconclusive; no strategy is promoted. After the host reboot,
@@ -16,7 +16,7 @@ all eight saved ledgers, strategy epoch and three legacy funding obligations.
 The 00:14 catch-up review96 covers an extended interval and is not a fresh
 uninterrupted validation window. All four feeds are connected.
 
-Reviews through 123 are preserved. Reviews 66–123 have 1,701 closes: 1,691 losses,
+Reviews through 124 are preserved. Reviews 66–124 have 1,705 closes: 1,695 losses,
 two paired gains and eight failed-hedge rescue gains. The four epoch paired gains
 remain the WLD/CRCL records from review65 and two MU records from review85;
 the latter share a signal and HL fill observation, and their full three-pair
@@ -146,7 +146,18 @@ remain connected with 106 pairs and performance ok; p95 lag 5.81 ms, RSS
 233.23 MiB, CPU 41.69%, 729.3 books/s and metadata age 3,129.6 s. No open
 positions; three pending funding items remain. Carry v2 at 09:05 has 103 sampled
 slots and one persistent `arrival_invalid` slot 71; no terminal error or
-economic evaluation. Next review: **1 October 09:26:33 UTC**.
+economic evaluation. Review 124 added four exact losses/−$4.31127: three
+convergence/−$3.02158 and one Premium/−$1.28969, plus one separate convergence
+abort. There were four Hyperliquid and one Lighter price-limit rejections; no
+wins or estimates. Reviews 66–124 have 1,705 closes: 1,695 losses, two paired
+gains and eight failed-hedge rescue gains. The review124 epoch snapshot at
+09:27:09.460 UTC showed convergence 415/−$504.0401 and Premium
+729/−$1,344.4408; both increased by their report deltas. Four feeds remain
+connected with 106 pairs and performance ok; p95 lag 6.59 ms, RSS 235.91 MiB,
+CPU 48.87%, 909.4 books/s and metadata age 726.6 s. No open positions; three
+pending funding items remain. Carry v2 at 09:25 has 107 sampled slots and one
+persistent `arrival_invalid` slot 71; no terminal error or economic evaluation.
+Next review: **1 October 09:46:33 UTC**.
 
 The original dated-carry run was interrupted by reboot after 136 recorded slots:
 134 sampled and two late callbacks. Its last trusted index and all evidence
