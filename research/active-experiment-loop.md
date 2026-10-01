@@ -1903,3 +1903,15 @@ report 13 retained. Archive 3,708,278 B; 150 future pairs project 4,509,578 B,
 margin 733,302 B. Carry 22:25: 263 sampled, invalid slot 71, 600 future/
 interrupted; no errors/retries/evaluation. Batch status-only window2→3
 transition notified, no economic outputs opened. Next 22:46:33 UTC.
+
+
+### Review 164, 1 October 22:46 UTC
+
+Complete coverage: 24 exact losses, two convergence failed hedges/−$2.44679
+and 22 Premium paired/−$36.33814. No gains/estimates/aborts; two HL price
+limits. Four feeds/101 pairs fresh, running/ok. Separate Premium increase
+20 versus report22 retained. Archive 3,712,827 B;149 future pairs project
+4,508,785 B, margin734,095 B. Carry22:45:267 sampled, invalidslot71,
+596future/interrupted; no errors/retries/evaluation. Status-only monitoring
+confirmed normal executable-shockbatch22:34 and broadcapture22:45 endpoints;
+no economic outputs opened. Next23:06:33UTC.
