@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-broad-preparation-v1",
+  "recorded_utc": "2026-10-01T22:17:56.729566+00:00",
+  "previous": "reports/experiment-storage/completed-ack-unused-reservation-rebalance-v4.json",
+  "previous_sha256": "b49aea2da4a1eea2fc6bb63deca424d02a9952071d0792278c98c7eca6aa9e33",
+  "reserved_bytes": 65536,
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 84287488,
+  "active_research_headroom_bytes": 69853184,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Bounded preparation source, tests, protocol and wire inventory for a ten-crypto-asset common-window study. No capture authorized by this preparation allocation. Existing LIT capture remains unchanged and fully funded; broad capture requires a separate frozen allocation and must begin after its terminal."
+}
