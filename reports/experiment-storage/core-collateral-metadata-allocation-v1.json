@@ -1,0 +1,24 @@
+{
+  "schema": "core-collateral-metadata-v1",
+  "recorded_utc": "2026-10-01T02:33:07.388595+00:00",
+  "previous": "reports/experiment-storage/core-eth-funding-history-allocation-v1.json",
+  "previous_sha256": "b3b14225c41da28f209b7185aeb2126d5869394cfad343260a3f721d56344491",
+  "previous_shared_reserved_bytes": 32961208,
+  "new_maximum_bytes": 16384,
+  "categories_bytes": {
+    "source": 4096,
+    "raw": 8192,
+    "control": 2048,
+    "documentation": 2048
+  },
+  "projected_shared_reserved_bytes": 32977592,
+  "shared_allowance_bytes": 33000000,
+  "shared_headroom_bytes": 22408,
+  "overall_reservation_bytes": 836777216,
+  "overall_reservation_increase_bytes": 0,
+  "endpoint": "https://mainnet.zklighter.elliot.ai/api/v1/assetDetails",
+  "request_budget": 1,
+  "retry_budget": 0,
+  "decoded_byte_limit": 131072,
+  "scope": "Public deployment metadata only; verify ETH collateral eligibility. No account data, quotes, orders, or SDK installation."
+}
