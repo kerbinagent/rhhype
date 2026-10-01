@@ -1,0 +1,26 @@
+{
+  "schema": "pendle-low-gas-market-preflight-v1",
+  "recorded_utc": "2026-10-01T04:28:53.460935+00:00",
+  "previous": "reports/experiment-storage/pendle-doc-preflight-allocation-v1.json",
+  "previous_sha256": "df7e8c04b059e03cd919268e69d0d061ad5922f185311e2f60e8f9d9d602a59f",
+  "new_maximum_bytes": 196608,
+  "categories_bytes": {
+    "source": 8192,
+    "raw": 131072,
+    "output": 40960,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 2629632,
+  "active_research_headroom_bytes": 1564672,
+  "requests_max": 4,
+  "retries": 0,
+  "chains": [
+    42161,
+    8453
+  ],
+  "max_pages_per_chain": 2,
+  "page_size": 100,
+  "selection": "Catalogue only for Arbitrum and Base. Retain all active records; incomplete chain not eligible. Prospective shortlist nonvolatile markets with 7-90 days to expiry; rank distance to 30 days then descending liquidity then address, no yield ranking. Accounting asset and redemption must be verified before pricing. $100 primary; $1000 control. Unknown flags retained.",
+  "source": "https://raw.githubusercontent.com/pendle-finance/pendle-examples-public/main/backend-api-demo/src/get-all-markets.ts",
+  "documentation_failure": "Prior /docs and /docs-json returned HTTP403; this requests distinct documented market resources, not alternate credentials or a retry."
+}
