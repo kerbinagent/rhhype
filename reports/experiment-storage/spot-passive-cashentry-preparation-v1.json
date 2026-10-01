@@ -1,0 +1,12 @@
+{
+  "schema": "spot-passive-cashentry-preparation-v1",
+  "recorded_utc": "2026-10-01T18:44:48.352070+00:00",
+  "previous": "reports/experiment-storage/completed-spot-passive-skew500-closeout-v1.json",
+  "previous_sha256": "5319518272c1111402fa10b3bc3142b99e72aca1325af802b4ddfdbe517a32fe",
+  "preparation_reserved_bytes": 131072,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 34807808,
+  "active_research_headroom_bytes": 18669568,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare cash-forecast-only new admission, removing5bp excursion gate.500ms timing and all remaining rules unchanged. Capture awaits source/test freeze and full allocation."
+}
