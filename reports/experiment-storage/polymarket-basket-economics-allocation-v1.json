@@ -1,0 +1,20 @@
+{
+  "schema": "polymarket-basket-economics-v1",
+  "recorded_utc": "2026-10-01T12:22:32.484901+00:00",
+  "previous": "reports/experiment-storage/completed-basket-smallpages-closeout-v1.json",
+  "previous_sha256": "6d5454c23c7eed13ac4052e9d003c3d8484c4c3c0fb87ad9c0ab827c69803f93",
+  "new_maximum_bytes": 180224,
+  "categories_bytes": {
+    "source": 8192,
+    "raw": 131072,
+    "output": 24576,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 6291456,
+  "active_research_headroom_bytes": 0,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Read-only public economics-tag Gamma/CLOB subset. At most5 sequential catalog pages of1event descending liquidity; first2 nonaugmented negative-risk events with2..20questions, allactive/acceptingorders and commonmarketID. Stop catalogue if2selected or less64KiB remains forbooks. Selection notbasedonquotes.2booksnapshots1sapart. Max60seconds7requests. Same optimistic100totalbudget screen; nofees/gas/execution/chain proof.",
+  "$100_screen": "Compute optimistic simultaneous ask-depth basket purchase under100 total dollars, equal share quantities and public minimum sizes. Payout upperbound q*(N-1) assumes catalog completeness and zero conversion fees. Report gross quote surplus only; no trade or profit claim. Fees, gas, onchain identity/completeness, delays, sequential fills remain unresolved. Positive candidates require separate chain verification and prospective execution model before any conclusion.",
+  "raw_policy": "Compressed envelopes131072B total, source8192B, output24576B, control16384B. Perbody2MB decoded bound, recordtruncateddataexplicitly; compressedovercap stopsbeforewrite and recordsfailure. No retries.",
+  "source_sha256": "c27ff0ef2d6bc098740757b60fd6f17e907365b6cf954b8a8d3b19ea43a0f8af"
+}
