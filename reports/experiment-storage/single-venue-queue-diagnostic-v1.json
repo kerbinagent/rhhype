@@ -1,0 +1,50 @@
+{
+  "schema": "single-venue-queue-diagnostic-v1",
+  "recorded_utc": "2026-10-01T23:11:58.501624+00:00",
+  "previous": "reports/experiment-storage/single-venue-broad-relative-v1.json",
+  "previous_sha256": "9e10bef5d159da56799b578905a35eda9498291222ff548047c2252812b930c6",
+  "reserved_bytes": 65536,
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 149688320,
+  "active_research_headroom_bytes": 4452352,
+  "overall_reservation_bytes": 836777216,
+  "categories_bytes": {
+    "source_tests": 16384,
+    "protocol": 16384,
+    "output": 32768
+  },
+  "capture": "reports/single-venue-broad/capture",
+  "manifest_sha256": "eed280dd18fb6da31ad858d794735af75bc331e61564554d94758e7de8d62843",
+  "raw_sha256": "2a0082cb0b3865a75ac04a1b33034b6af49826bf7c2dbbbc37e43bacccb262bd",
+  "pins": [
+    {
+      "path": "scripts/single_venue_queue_diagnostic.py",
+      "sha256": "8a3729d076b8e671c337ee4502c0dfc69ece9a59f22c6fb788b4c8e0757213a7"
+    },
+    {
+      "path": "tests/test_single_venue_queue_diagnostic.py",
+      "sha256": "a6291419ebfec1b52d428ef42eb2f3f310aa8137c2bf6f0b4fdfdde3e1756c09"
+    },
+    {
+      "path": "scripts/single_venue_broad_quotes.py",
+      "sha256": "96f0c5a8b435ab4fd30429eb873a49614b7eed299a1be0071c7c0bc01530f341"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-broad-v1.json",
+      "sha256": "caf9ab26627c767deed9f903445ccbe47b714302a588db5e9dcdea8c85b8a8d1"
+    }
+  ],
+  "scope": "Exploratory descriptive offline diagnostic on completed ten-asset capture; outcomes of previous shock rules known. First local book each integer second3..569; fresh original2second clocks. Local top bid/ask quantity imbalance (bidqty-askqty)/(bidqty+askqty); follow sign, zero excluded. Fixed absolute imbalance buckets low<0.2, medium[0.2,0.6),high>=0.6. Native floor100/(ask*1.01) quantity and minima. First local book with receipt AND source>=sample+400ms, no later than due+2sec; no retry if invalid/missing depth/generationchanged. Full unlimited-depth entry quote for fixedqty required <=100notional; not simulated IOC. Exit first eligible local book>=entryreceipt+10.4seconds, same firsteligible2sec rules, opposite-side full quote sameqty. Report signed midpoint and executable quote change in bps of midpoint/entryvalue respectively; no fill, fee, funding, capital or cash claim. Original raw adapter checks retained. Samples overlap and are correlated; every admitted sample reconciles matched or missing, invalidated, insufficientdepth, abovecap, generationchanged or unresolved. No new capture or threshold tuning. Subsequent strategy requires independent execution accounting and fresh validation.",
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/1512.03492",
+      "finding": "Gould/Bonart find queue imbalance predictive of next midprice direction in ten Nasdaq stocks, stronger large tick. Does not establish delayed crypto trading profitability."
+    },
+    {
+      "url": "https://arxiv.org/abs/1011.6402",
+      "finding": "Cont/Kukanov/Stoikov study contemporaneous price impact of order-flow imbalance including adds/cancels/trades. This static queue diagnostic is different; contemporaneous impact does not establish a forward signal."
+    }
+  ],
+  "verification": "Four tests pass: both directional quote signs and400ms+10.4second gates, first eligible bad book not retried, adjacent-second pending samples preserved and invalidated, generation change and100cap rejection. All groups reconcile every admitted sample.",
+  "output_max_bytes": 24576
+}
