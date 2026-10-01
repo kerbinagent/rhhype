@@ -1,0 +1,884 @@
+{
+  "actual_pnl": null,
+  "development_not_validation": true,
+  "funding_value_units_inferred": true,
+  "current_lot_rules_not_verified_for_history": true,
+  "candles_not_executable": true,
+  "no_margin_solvency_claim": true,
+  "full_month_overlaps_weekly_blocks": true,
+  "outcomes": [
+    {
+      "asset": "ETH",
+      "status": "complete_candle_proxy",
+      "actual_pnl": null,
+      "blocks": [
+        {
+          "start_day": 1,
+          "end_day": 30,
+          "quantity": "0.4054",
+          "principal_usdc": "999.785318",
+          "status": "candle_proxy",
+          "funding_events": 719,
+          "inferred_funding_usdc": "7.197663832572",
+          "candle_basis_usdc": "0.563506",
+          "capital_usdc": "8.217413572602739726027397260",
+          "stress_usdc": "0.4998926590",
+          "candle_residual_usdc": "-0.956136399030739726027397260",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 1,
+          "end_day": 7,
+          "quantity": "0.4054",
+          "principal_usdc": "999.785318",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "1.848112741952",
+          "candle_basis_usdc": "0.916204",
+          "capital_usdc": "1.917396500273972602739726027",
+          "stress_usdc": "0.4998926590",
+          "candle_residual_usdc": "0.347027582678027397260273973",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "quantity": "0.4014",
+          "principal_usdc": "999.827190",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "1.454937540570",
+          "candle_basis_usdc": "-0.858996",
+          "capital_usdc": "1.917476802739726027397260274",
+          "stress_usdc": "0.4999135950",
+          "candle_residual_usdc": "-1.821448857169726027397260274",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "quantity": "0.3977",
+          "principal_usdc": "999.873478",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "1.046099230744",
+          "candle_basis_usdc": "0.783469",
+          "capital_usdc": "1.917565574246575342465753425",
+          "stress_usdc": "0.4999367390",
+          "candle_residual_usdc": "-0.587934082502575342465753425",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "quantity": "0.3601",
+          "principal_usdc": "999.806847",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "1.923989744781",
+          "candle_basis_usdc": "0.558155",
+          "capital_usdc": "1.917437788767123287671232877",
+          "stress_usdc": "0.4999034235",
+          "candle_residual_usdc": "0.064803532513876712328767123",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "quantity": "0.3716",
+          "principal_usdc": "999.9756",
+          "status": "candle_proxy",
+          "funding_events": 47,
+          "inferred_funding_usdc": "0.556380385340",
+          "candle_basis_usdc": "-0.836100",
+          "capital_usdc": "0.5479318356164383561643835616",
+          "stress_usdc": "0.49998780",
+          "candle_residual_usdc": "-1.327639250276438356164383562",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        }
+      ]
+    },
+    {
+      "asset": "LIT",
+      "status": "complete_candle_proxy",
+      "actual_pnl": null,
+      "blocks": [
+        {
+          "start_day": 1,
+          "end_day": 30,
+          "quantity": "279.97",
+          "principal_usdc": "999.996846",
+          "status": "candle_proxy",
+          "funding_events": 719,
+          "inferred_funding_usdc": "7.0181815714",
+          "candle_basis_usdc": "-1.679820",
+          "capital_usdc": "8.219152158904109589041095890",
+          "stress_usdc": "0.4999984230",
+          "candle_residual_usdc": "-3.380789010504109589041095890",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 1,
+          "end_day": 7,
+          "quantity": "279.97",
+          "principal_usdc": "999.996846",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "0.0745840080",
+          "candle_basis_usdc": "-0.671928",
+          "capital_usdc": "1.917802170410958904109589041",
+          "stress_usdc": "0.4999984230",
+          "candle_residual_usdc": "-3.015144585410958904109589041",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "quantity": "212.01",
+          "principal_usdc": "999.987567",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "0.8635358109",
+          "candle_basis_usdc": "-0.614829",
+          "capital_usdc": "1.917784375068493150684931507",
+          "stress_usdc": "0.4999937835",
+          "candle_residual_usdc": "-2.169071347668493150684931507",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "quantity": "228.05",
+          "principal_usdc": "999.99925",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "3.5582618695",
+          "candle_basis_usdc": "-0.296465",
+          "capital_usdc": "1.917806780821917808219178082",
+          "stress_usdc": "0.499999625",
+          "candle_residual_usdc": "0.843990463678082191780821918",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "quantity": "211.12",
+          "principal_usdc": "999.969880",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "0.8768489184",
+          "candle_basis_usdc": "-0.253344",
+          "capital_usdc": "1.917750454794520547945205479",
+          "stress_usdc": "0.4999849400",
+          "candle_residual_usdc": "-1.794230476394520547945205479",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "quantity": "225.26",
+          "principal_usdc": "999.974192",
+          "status": "candle_proxy",
+          "funding_events": 47,
+          "inferred_funding_usdc": "0.2290353576",
+          "candle_basis_usdc": "0.405468",
+          "capital_usdc": "0.5479310641095890410958904110",
+          "stress_usdc": "0.4999870960",
+          "candle_residual_usdc": "-0.4134148025095890410958904110",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        }
+      ]
+    },
+    {
+      "asset": "UNI",
+      "status": "complete_candle_proxy",
+      "actual_pnl": null,
+      "blocks": [
+        {
+          "start_day": 1,
+          "end_day": 30,
+          "quantity": "190.74",
+          "principal_usdc": "999.954450",
+          "status": "candle_proxy",
+          "funding_events": 719,
+          "inferred_funding_usdc": "23.5122832824",
+          "candle_basis_usdc": "-10.872180",
+          "capital_usdc": "8.218803698630136986301369863",
+          "stress_usdc": "0.4999772250",
+          "candle_residual_usdc": "3.921322358769863013698630137",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 1,
+          "end_day": 7,
+          "quantity": "190.74",
+          "principal_usdc": "999.954450",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "2.7662640720",
+          "candle_basis_usdc": "27.657300",
+          "capital_usdc": "1.917720863013698630136986301",
+          "stress_usdc": "0.4999772250",
+          "candle_residual_usdc": "28.00586598398630136986301370",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "quantity": "142.65",
+          "principal_usdc": "999.933705",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "1.9032091965",
+          "candle_basis_usdc": "1.483560",
+          "capital_usdc": "1.917681078082191780821917808",
+          "stress_usdc": "0.4999668525",
+          "candle_residual_usdc": "0.969121265917808219178082192",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "quantity": "149.28",
+          "principal_usdc": "999.937152",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "6.0938275488",
+          "candle_basis_usdc": "-54.920112",
+          "capital_usdc": "1.917687688767123287671232877",
+          "stress_usdc": "0.4999685760",
+          "candle_residual_usdc": "-51.24394071596712328767123288",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "quantity": "113.57",
+          "principal_usdc": "999.915708",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "5.4900385349",
+          "candle_basis_usdc": "21.566943",
+          "capital_usdc": "1.917646563287671232876712329",
+          "stress_usdc": "0.4999578540",
+          "candle_residual_usdc": "24.63937711761232876712328767",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "quantity": "113.72",
+          "principal_usdc": "999.917216",
+          "status": "candle_proxy",
+          "funding_events": 47,
+          "inferred_funding_usdc": "0.5693596496",
+          "candle_basis_usdc": "-3.911968",
+          "capital_usdc": "0.5478998443835616438356164384",
+          "stress_usdc": "0.4999586080",
+          "candle_residual_usdc": "-4.390466802783561643835616438",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        }
+      ]
+    },
+    {
+      "asset": "LINK",
+      "status": "complete_candle_proxy",
+      "actual_pnl": null,
+      "blocks": [
+        {
+          "start_day": 1,
+          "end_day": 30,
+          "quantity": "88.3",
+          "principal_usdc": "999.286685",
+          "status": "candle_proxy",
+          "funding_events": 719,
+          "inferred_funding_usdc": "2.929821373",
+          "candle_basis_usdc": "8.117419",
+          "capital_usdc": "8.213315219178082191780821918",
+          "stress_usdc": "0.4996433425",
+          "candle_residual_usdc": "2.334281811321917808219178082",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 1,
+          "end_day": 7,
+          "quantity": "88.3",
+          "principal_usdc": "999.286685",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "0.524671536",
+          "candle_basis_usdc": "-0.422074",
+          "capital_usdc": "1.916440217808219178082191781",
+          "stress_usdc": "0.4996433425",
+          "candle_residual_usdc": "-2.313486024308219178082191781",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "quantity": "78.3",
+          "principal_usdc": "999.905094",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "-1.163387664",
+          "candle_basis_usdc": "12.657195",
+          "capital_usdc": "1.917626207671232876712328767",
+          "stress_usdc": "0.4999525470",
+          "candle_residual_usdc": "9.076228581328767123287671233",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "quantity": "85.6",
+          "principal_usdc": "998.945152",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "0.630079344",
+          "candle_basis_usdc": "-18.696752",
+          "capital_usdc": "1.915785223013698630136986301",
+          "stress_usdc": "0.4994725760",
+          "candle_residual_usdc": "-20.48193045501369863013698630",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "quantity": "76.1",
+          "principal_usdc": "999.515664",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "2.014913398",
+          "candle_basis_usdc": "10.454618",
+          "capital_usdc": "1.916879355616438356164383562",
+          "stress_usdc": "0.4997578320",
+          "candle_residual_usdc": "10.05289421038356164383561644",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "quantity": "64.3",
+          "principal_usdc": "999.06768",
+          "status": "candle_proxy",
+          "funding_events": 47,
+          "inferred_funding_usdc": "0.520046826",
+          "candle_basis_usdc": "1.035230",
+          "capital_usdc": "0.5474343452054794520547945205",
+          "stress_usdc": "0.499533840",
+          "candle_residual_usdc": "0.508308640794520547945205480",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        }
+      ]
+    },
+    {
+      "asset": "LDO",
+      "status": "complete_candle_proxy",
+      "actual_pnl": null,
+      "blocks": [
+        {
+          "start_day": 1,
+          "end_day": 30,
+          "quantity": "2717.8",
+          "principal_usdc": "999.987332",
+          "status": "candle_proxy",
+          "funding_events": 719,
+          "inferred_funding_usdc": "14.701015048",
+          "candle_basis_usdc": "-17.122140",
+          "capital_usdc": "8.219073961643835616438356164",
+          "stress_usdc": "0.4999936660",
+          "candle_residual_usdc": "-11.14019257964383561643835616",
+          "zero_volume_days": {
+            "spot": 1,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 1,
+          "end_day": 7,
+          "quantity": "2717.8",
+          "principal_usdc": "999.987332",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "2.345760358",
+          "candle_basis_usdc": "-10.300462",
+          "capital_usdc": "1.917783924383561643835616438",
+          "stress_usdc": "0.4999936660",
+          "candle_residual_usdc": "-10.37247923238356164383561644",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "quantity": "2492.6",
+          "principal_usdc": "999.981268",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "1.878074396",
+          "candle_basis_usdc": "-43.919612",
+          "capital_usdc": "1.917772294794520547945205479",
+          "stress_usdc": "0.4999906340",
+          "candle_residual_usdc": "-44.45930053279452054794520548",
+          "zero_volume_days": {
+            "spot": 1,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "quantity": "2784.9",
+          "principal_usdc": "999.974043",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "2.316646914",
+          "candle_basis_usdc": "62.827344",
+          "capital_usdc": "1.917758438630136986301369863",
+          "stress_usdc": "0.4999870215",
+          "candle_residual_usdc": "62.72624545386986301369863014",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "quantity": "2264.9",
+          "principal_usdc": "999.975999",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "5.748859776",
+          "candle_basis_usdc": "-18.753372",
+          "capital_usdc": "1.917762189863013698630136986",
+          "stress_usdc": "0.4999879995",
+          "candle_residual_usdc": "-15.42226241336301369863013699",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "quantity": "2251.1",
+          "principal_usdc": "999.961131",
+          "status": "candle_proxy",
+          "funding_events": 47,
+          "inferred_funding_usdc": "0.875767944",
+          "candle_basis_usdc": "3.646782",
+          "capital_usdc": "0.5479239073972602739726027397",
+          "stress_usdc": "0.4999805655",
+          "candle_residual_usdc": "3.474645471102739726027397260",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        }
+      ]
+    },
+    {
+      "asset": "SKY",
+      "status": "complete_candle_proxy",
+      "actual_pnl": null,
+      "blocks": [
+        {
+          "start_day": 1,
+          "end_day": 30,
+          "quantity": "14705",
+          "principal_usdc": "999.940",
+          "status": "candle_proxy",
+          "funding_events": 719,
+          "inferred_funding_usdc": "11.32637920",
+          "candle_basis_usdc": "-1.499910",
+          "capital_usdc": "8.218684931506849315068493151",
+          "stress_usdc": "0.4999700",
+          "candle_residual_usdc": "1.107814268493150684931506849",
+          "zero_volume_days": {
+            "spot": 1,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 1,
+          "end_day": 7,
+          "quantity": "14705",
+          "principal_usdc": "999.940",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "2.03487790",
+          "candle_basis_usdc": "36.174300",
+          "capital_usdc": "1.917693150684931506849315068",
+          "stress_usdc": "0.4999700",
+          "candle_residual_usdc": "35.79151474931506849315068493",
+          "zero_volume_days": {
+            "spot": 1,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "quantity": "14775",
+          "principal_usdc": "999.97200",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "1.87125375",
+          "candle_basis_usdc": "18.705150",
+          "capital_usdc": "1.917754520547945205479452055",
+          "stress_usdc": "0.499986000",
+          "candle_residual_usdc": "18.15866322945205479452054794",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "quantity": "15551",
+          "principal_usdc": "999.991504",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "2.02380714",
+          "candle_basis_usdc": "-7.200113",
+          "capital_usdc": "1.917791925479452054794520548",
+          "stress_usdc": "0.4999957520",
+          "candle_residual_usdc": "-7.594093537479452054794520548",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "quantity": "14063",
+          "principal_usdc": "999.949615",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "3.38777670",
+          "candle_basis_usdc": "-4.781420",
+          "capital_usdc": "1.917711590410958904109589041",
+          "stress_usdc": "0.4999748075",
+          "candle_residual_usdc": "-3.811329697910958904109589041",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "quantity": "12612",
+          "principal_usdc": "999.992868",
+          "status": "candle_proxy",
+          "funding_events": 47,
+          "inferred_funding_usdc": "1.64939736",
+          "candle_basis_usdc": "-0.050448",
+          "capital_usdc": "0.5479412975342465753424657534",
+          "stress_usdc": "0.4999964340",
+          "candle_residual_usdc": "0.551011628465753424657534247",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        }
+      ]
+    },
+    {
+      "asset": "AAVE",
+      "status": "complete_candle_proxy",
+      "actual_pnl": null,
+      "blocks": [
+        {
+          "start_day": 1,
+          "end_day": 30,
+          "quantity": "8.031",
+          "principal_usdc": "999.883593",
+          "status": "candle_proxy",
+          "funding_events": 719,
+          "inferred_funding_usdc": "10.28960992995",
+          "candle_basis_usdc": "-3.654105",
+          "capital_usdc": "8.218221312328767123287671233",
+          "stress_usdc": "0.4999417965",
+          "candle_residual_usdc": "-2.082658178878767123287671233",
+          "zero_volume_days": {
+            "spot": 1,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 1,
+          "end_day": 7,
+          "quantity": "8.031",
+          "principal_usdc": "999.883593",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "2.10807630378",
+          "candle_basis_usdc": "-8.312085",
+          "capital_usdc": "1.917584972876712328767123288",
+          "stress_usdc": "0.4999417965",
+          "candle_residual_usdc": "-8.621535465596712328767123288",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "quantity": "7.585",
+          "principal_usdc": "999.877455",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "1.92222232945",
+          "candle_basis_usdc": "23.536255",
+          "capital_usdc": "1.917573201369863013698630137",
+          "stress_usdc": "0.4999387275",
+          "candle_residual_usdc": "23.04096540058013698630136986",
+          "zero_volume_days": {
+            "spot": 1,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "quantity": "7.642",
+          "principal_usdc": "999.963342",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "2.11501940710",
+          "candle_basis_usdc": "-25.172748",
+          "capital_usdc": "1.917737916164383561643835616",
+          "stress_usdc": "0.4999816710",
+          "candle_residual_usdc": "-25.47544818006438356164383562",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "quantity": "6.886",
+          "principal_usdc": "999.957376",
+          "status": "candle_proxy",
+          "funding_events": 167,
+          "inferred_funding_usdc": "2.69032218928",
+          "candle_basis_usdc": "5.742924",
+          "capital_usdc": "1.917726474520547945205479452",
+          "stress_usdc": "0.4999786880",
+          "candle_residual_usdc": "6.015541026759452054794520548",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "quantity": "6.689",
+          "principal_usdc": "999.851653",
+          "status": "candle_proxy",
+          "funding_events": 47,
+          "inferred_funding_usdc": "0.60999211748",
+          "candle_basis_usdc": "-0.421407",
+          "capital_usdc": "0.5478639194520547945205479452",
+          "stress_usdc": "0.4999258265",
+          "candle_residual_usdc": "-0.8592046284720547945205479452",
+          "zero_volume_days": {
+            "spot": 0,
+            "perp": 0
+          }
+        }
+      ]
+    }
+  ],
+  "trimmed": [
+    {
+      "asset": "ETH",
+      "kind": "spot",
+      "removed_timestamps": [],
+      "input_sha256": "ff5f77d6950722453644e5055b28bd1770de5ccf7385242d791e5adf868e081b"
+    },
+    {
+      "asset": "ETH",
+      "kind": "perp",
+      "removed_timestamps": [],
+      "input_sha256": "27cfb02eb96d53e190216131ef8e83678a673162fe36a4d2725149baf3d63e39"
+    },
+    {
+      "asset": "LIT",
+      "kind": "spot",
+      "removed_timestamps": [
+        1788134400000
+      ],
+      "input_sha256": "6fc8829b9bcfedf71677e4a1d9c5ba9b73d1df9f4c976765529666c2f547766f"
+    },
+    {
+      "asset": "LIT",
+      "kind": "perp",
+      "removed_timestamps": [
+        1788134400000
+      ],
+      "input_sha256": "94a8884b20e878ab5db6ab674274d386cf83655adbba505a69e3c6cbf2365e2c"
+    },
+    {
+      "asset": "UNI",
+      "kind": "spot",
+      "removed_timestamps": [
+        1788134400000
+      ],
+      "input_sha256": "d6f894b424fc1db7deaf71044973333789f844745364250d8931213c0ef9fecf"
+    },
+    {
+      "asset": "UNI",
+      "kind": "perp",
+      "removed_timestamps": [
+        1788134400000
+      ],
+      "input_sha256": "5c2852a2f3c334e3296ca5e15be4cc945642a25c8733c7155085e920f95e64f6"
+    },
+    {
+      "asset": "LINK",
+      "kind": "spot",
+      "removed_timestamps": [
+        1788134400000
+      ],
+      "input_sha256": "b3535114a186a1c0ea91f97857238347eb37cfe53f058f0b5e62399fb8a78ed0"
+    },
+    {
+      "asset": "LINK",
+      "kind": "perp",
+      "removed_timestamps": [
+        1788134400000
+      ],
+      "input_sha256": "c61c1a913d914519fc6398f7a699da82a8fd46d9e8fd0f784b962b86969f6971"
+    },
+    {
+      "asset": "LDO",
+      "kind": "spot",
+      "removed_timestamps": [
+        1788134400000
+      ],
+      "input_sha256": "fb13d076d09565081ee49cae79ad79b1d465c60c929bc59e0ab0d7e7b8c5dc0e"
+    },
+    {
+      "asset": "LDO",
+      "kind": "perp",
+      "removed_timestamps": [
+        1788134400000
+      ],
+      "input_sha256": "a50cffc0b131a8de96c03ccff3784b4298c13752e10bdcfab95e8ad61342fab3"
+    },
+    {
+      "asset": "SKY",
+      "kind": "spot",
+      "removed_timestamps": [
+        1788134400000
+      ],
+      "input_sha256": "21b3607dc211acbbbb5bb3d652a0c600b3a082590f52718a8b1fe178203ef07c"
+    },
+    {
+      "asset": "SKY",
+      "kind": "perp",
+      "removed_timestamps": [
+        1788134400000
+      ],
+      "input_sha256": "153071896f2591db40654cfdef8fa759991bc0363fc5a4ada25536d4351755a2"
+    },
+    {
+      "asset": "AAVE",
+      "kind": "spot",
+      "removed_timestamps": [
+        1788134400000
+      ],
+      "input_sha256": "8fb980c85aa9e96537ca0ad569a35f7876b4818431a953b065c77c4e1825e709"
+    },
+    {
+      "asset": "AAVE",
+      "kind": "perp",
+      "removed_timestamps": [
+        1788134400000
+      ],
+      "input_sha256": "4a37548ae072d8aabcb3defd20fb96f3984b1d0e1ca9a93e5264851751eaea7b"
+    }
+  ]
+}
