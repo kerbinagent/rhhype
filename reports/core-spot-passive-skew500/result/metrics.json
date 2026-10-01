@@ -1,0 +1,30 @@
+{
+  "error": null,
+  "completion_marker_received": true,
+  "metrics": {
+    "LIT": {
+      "attempts": 0,
+      "episodes": 0,
+      "known_flow_closes": 0,
+      "paired_flow_closes": 0,
+      "rescue_closes": 0,
+      "cash_sum": "0",
+      "stressed_sum": "0",
+      "cash_wins": 0,
+      "stressed_wins": 0,
+      "unknown_episodes": 0,
+      "branch_unknown_reason": null,
+      "spot_inventory": "0",
+      "perp_inventory": "0",
+      "actual_cash_usdc": "600",
+      "counts": {
+        "decision_opportunity": 12608,
+        "abstain:stale_or_skewed_pair": 1056,
+        "abstain:outside_admission_window": 5359,
+        "abstain:under_5bp_excursion": 6193,
+        "invalidation": 4
+      }
+    }
+  },
+  "summary_sha256": "d6d9615363b53cddf72d0dc059b4ebca4d5fab9532ac1ba640f59fc3744cc19a"
+}

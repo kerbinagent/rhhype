@@ -1,0 +1,42 @@
+{
+  "checked_utc": "2026-10-01T18:42:15.630807+00:00",
+  "snapshot_age_seconds": 0.8353183269500732,
+  "snapshot_updated_at": 1790880134.7955155,
+  "durable_updated_at": 1790880135.5105374,
+  "status": "running",
+  "feeds": {
+    "hyperliquid": true,
+    "aster": true,
+    "lighter": true,
+    "rh_lighter": true
+  },
+  "performance": {
+    "cpu_percent_one_core": 54.3392383431001,
+    "loop_lag_p95_ms": 22.952849001740105,
+    "performance_status": "ok",
+    "pair_count": 102
+  },
+  "epochs_unchanged": true,
+  "ledgers_unchanged_at_check": true,
+  "positions_unchanged_at_check": true,
+  "config_file_unchanged": true,
+  "review_baseline_unchanged": true,
+  "gap_from_durable_checkpoint_utc": "2026-10-01T18:34:54.802744+00:00",
+  "restart_launched_utc": "2026-10-01T18:41:35.899691+00:00",
+  "snapshot_coverage_resumed_utc": "2026-10-01T18:42:14.795516+00:00",
+  "gap_scope": "Uncheckpointed interval and downtime not claimed observed. Restart invalidates cached books/intents and censors unresolved probes. Three prior positions awaiting funding remain retained.",
+  "files": [
+    {
+      "path": "data/paper-monitor-10s/paper.sqlite3",
+      "bytes": 37048320
+    },
+    {
+      "path": "data/paper-monitor-10s/paper.sqlite3-wal",
+      "bytes": 0
+    },
+    {
+      "path": "data/paper-monitor-10s/paper.sqlite3-shm",
+      "bytes": 32768
+    }
+  ]
+}

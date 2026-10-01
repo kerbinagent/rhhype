@@ -1,0 +1,20 @@
+{
+  "pid": 2055172,
+  "command": [
+    "/home/harry/projects/research/rhhype/.venv/bin/python",
+    "scripts/monitor.py",
+    "--no-tui",
+    "--holding-seconds",
+    "10",
+    "--take-profit-usd",
+    "0.10",
+    "--shadow-strategies",
+    "--report-seconds",
+    "0.5"
+  ],
+  "launched_utc": "2026-10-01T18:41:35.899691+00:00",
+  "pre_state_sha256": "415ff3c07691e2d90c0ecf85990b84e515f45ede5a42220469c2d23451e505dc",
+  "paper_only": true,
+  "existing_database_preserved": true,
+  "change": "Checkpoint interval2s to0.5s; all economic settings unchanged"
+}

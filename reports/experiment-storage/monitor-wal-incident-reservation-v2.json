@@ -1,0 +1,39 @@
+{
+  "schema": "monitor-wal-incident-reservation-v2",
+  "recorded_utc": "2026-10-01T18:40:35.600105+00:00",
+  "previous": "reports/experiment-storage/monitor-wal-incident-reservation-v1.json",
+  "previous_sha256": "1fa622f2d2a9d678e7daac5632e570e7e0db715fb90c64fbc6bef92e3c8d7349",
+  "additional_reserved_bytes": 1048576,
+  "total_incident_reserved_bytes": 2097152,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 38412288,
+  "active_research_headroom_bytes": 15065088,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Correction: preserved failure-log artifact exceeded initial1MiB incident reservation. No artifact deleted. Transfer another1MiB from existingresearchheadroom before recovery; exact budget violation recorded. Total incident allocation2MiB; no overallcap increase.",
+  "files": [
+    {
+      "path": "reports/monitor-wal-incident/pre-config.json",
+      "bytes": 1165
+    },
+    {
+      "path": "reports/monitor-wal-incident/failure.log",
+      "bytes": 1193975
+    },
+    {
+      "path": "reports/monitor-wal-incident/pre-review-state.json",
+      "bytes": 3028
+    },
+    {
+      "path": "reports/monitor-wal-incident/pre-state.json.gz",
+      "bytes": 128021
+    },
+    {
+      "path": "reports/monitor-wal-incident/pre-snapshot.json.gz",
+      "bytes": 10720
+    },
+    {
+      "path": "reports/monitor-wal-incident/pre-restart.json",
+      "bytes": 21450
+    }
+  ]
+}

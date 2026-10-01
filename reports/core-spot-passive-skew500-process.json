@@ -1,0 +1,13 @@
+{
+  "pid": 2017646,
+  "command": [
+    "/home/harry/miniconda3/bin/python",
+    "/home/harry/projects/research/rhhype/scripts/core_spot_passive_skew500.py",
+    "capture"
+  ],
+  "launched_utc": "2026-10-01T18:26:37.514812+00:00",
+  "plan_sha256": "d25db9914bdc305de10941716470454957a3273c3199297a2f93d1e2ab613c22",
+  "fixed_capture_seconds": 600,
+  "public_read_only": true,
+  "log": "reports/core-spot-passive-skew500.stdout.txt"
+}

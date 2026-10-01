@@ -1,0 +1,12 @@
+{
+  "schema": "monitor-wal-incident-reservation-v1",
+  "recorded_utc": "2026-10-01T18:40:01.646033+00:00",
+  "previous": "reports/experiment-storage/completed-ack-unused-reservation-rebalance-v2.json",
+  "previous_sha256": "46c65dac7f728c2044cb963ce5761441be263809e79877a7fe8c58b4ae86cea9",
+  "reserved_bytes": 1048576,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 37363712,
+  "active_research_headroom_bytes": 16113664,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Preserve durable pre-restart state, stale snapshot, failure log, launcher and health evidence for monitor WAL batch incident. Same existing database128MiB cap and strategy epoch. Reduce checkpoint interval from2s to0.5s. No economic setting change or extra live-data capture."
+}
