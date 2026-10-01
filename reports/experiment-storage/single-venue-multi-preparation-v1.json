@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-multi-preparation-v1",
+  "recorded_utc": "2026-10-01T20:02:35.435283+00:00",
+  "previous": "reports/experiment-storage/completed-single-venue-research-closeout-v1.json",
+  "previous_sha256": "7b0f6c0a714c72bafeae2930bd3cf75f1548f6766f56b48294fd577bad715061",
+  "preparation_reserved_bytes": 131072,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 40902656,
+  "active_research_headroom_bytes": 12574720,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare fresh LIT/VVV/ZEC asset comparison for single-venue gap, leader and shock rules. Existing rule/latency/accounting sources unchanged. Generic asset capture/adapter and isolated per-asset ledgers required; no capture before full frozen allocation. Prior studies retained."
+}
