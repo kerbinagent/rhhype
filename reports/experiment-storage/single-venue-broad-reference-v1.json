@@ -1,0 +1,182 @@
+{
+  "schema": "single-venue-broad-reference-v1",
+  "recorded_utc": "2026-10-01T22:53:35.941334+00:00",
+  "previous": "reports/experiment-storage/single-venue-broad-quotes-v1.json",
+  "previous_sha256": "fcf34bd74d5cfb76898dd2fe61a10648b27e2dad7de163c33b4cbdcc8a526d3a",
+  "reserved_bytes": 65536,
+  "preparation_included_bytes": 65536,
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 133251072,
+  "active_research_headroom_bytes": 20889600,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retrospective exact reference midpoint accounting for all six closes in broad screen, including overlapping rules. Asset/venue/receipt keys prevent cross-asset book contamination. Original fresh-pair checks; retain unavailable/multiple-exit pairs. Side*sameqty*other-mid-change plus residual less recorded costs reconciles actual cash and stress. Frictionless reference and USDC/USDG parity are hypotheses, not executable hedge, causal attribution or fair value. No pooling different asset/rule/venue accounts.",
+  "windows": [
+    {
+      "index": 1,
+      "capture": "reports/single-venue-broad/capture",
+      "manifest_sha256": "eed280dd18fb6da31ad858d794735af75bc331e61564554d94758e7de8d62843",
+      "hard_bytes": 67371008,
+      "samples": [
+        "single-venue-broad-btc",
+        "single-venue-broad-eth",
+        "single-venue-broad-sol",
+        "single-venue-broad-hype",
+        "single-venue-broad-xrp",
+        "single-venue-broad-sui",
+        "single-venue-broad-near",
+        "single-venue-broad-zec",
+        "single-venue-broad-vvv",
+        "single-venue-broad-lit"
+      ]
+    }
+  ],
+  "expected_closes": 6,
+  "output_max_bytes": 16384,
+  "pins": [
+    {
+      "path": "reports/experiment-storage/single-venue-broad-quotes-v1.json",
+      "sha256": "fcf34bd74d5cfb76898dd2fe61a10648b27e2dad7de163c33b4cbdcc8a526d3a"
+    },
+    {
+      "path": "scripts/single_venue_broad_reference.py",
+      "sha256": "41e6ecf3ea784f1c9e7b45aad499c6e3aea6b0300da9d46726fc12ef65dde66a"
+    },
+    {
+      "path": "tests/test_single_venue_broad_reference.py",
+      "sha256": "7f53a6008f3b1c3fd75660ff9bca0061e02f4c89896f36880a9d737cdc0c7b9b"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-broad-v1.json",
+      "sha256": "caf9ab26627c767deed9f903445ccbe47b714302a588db5e9dcdea8c85b8a8d1"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-comparison.json.gz",
+      "sha256": "74d471812263910439de69911a84154fa3fc36486d17fd6ee75b3c0a58d20f72"
+    },
+    {
+      "path": "reports/single-venue-broad/capture/manifest.json",
+      "sha256": "eed280dd18fb6da31ad858d794735af75bc331e61564554d94758e7de8d62843"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-btc/summary.json.gz",
+      "sha256": "f70f0ff5a01a10532191df8f9997c44b5209c5c35b53ad4a696b3bd97b929e5d"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-btc/trace.jsonl.gz",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-btc/independent-audit.json",
+      "sha256": "26eabb046fdb4b2f52e98819ab916b6758d56d87640207878c7b3cdfa6aa786b"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-eth/summary.json.gz",
+      "sha256": "ad557df8d58bf574f5d58ac627d4238e07230881a97029462ab8ed03b041403e"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-eth/trace.jsonl.gz",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-eth/independent-audit.json",
+      "sha256": "f31e023197a7edfb6ecee7056af353e146e2ebb87c4ccb0d3cb36a076472faef"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-sol/summary.json.gz",
+      "sha256": "dccd2089bb66910a9559ec33dfecc73eeca00e14510c3d033e6fd3e2afd1dc59"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-sol/trace.jsonl.gz",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-sol/independent-audit.json",
+      "sha256": "d52482a143e8a48d20892ccd3d485c0d4d62f014de4a8c981b740f100f3ecb53"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-hype/summary.json.gz",
+      "sha256": "e912b4715a5ba44b5d29ae498783ebd6d50c0befd67a8b63489170ec1c7a6e2b"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-hype/trace.jsonl.gz",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-hype/independent-audit.json",
+      "sha256": "08c0d62af8a40f22b65a1414cacc394b17e5ad98d2933558bbdbac1d476f0660"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-xrp/summary.json.gz",
+      "sha256": "3d2ad1865b19bc0e3184a32cd6cd45b3945bf6565d7903176ed193d44a9343e1"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-xrp/trace.jsonl.gz",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-xrp/independent-audit.json",
+      "sha256": "e5cafd5ba96364179e401665a2993200656b9f070e1e3110c55c7039ccf1bb86"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-sui/summary.json.gz",
+      "sha256": "237dab07c2fc901c658264e1eac90e405ea7b3926168fa2432766d9fa2549ac3"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-sui/trace.jsonl.gz",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-sui/independent-audit.json",
+      "sha256": "e20859f4452694c2b4c348b8d70602471d0faaf3b3af140d11eda9960e97beb3"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-near/summary.json.gz",
+      "sha256": "b9f11fd4d7681071a03b9000c6789aeeb251aaeecabbbefb1c07c4cfce68dccc"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-near/trace.jsonl.gz",
+      "sha256": "29be117aa189805f01bf3234e2304f4e74a4eafcc23524486462b70f35ef8bb6"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-near/independent-audit.json",
+      "sha256": "a477730a175ea1abc0e9657013fdfa7c188d9afa8c73df8a07734f31fc9c5239"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-zec/summary.json.gz",
+      "sha256": "1d43692464d33aedb241f8b0f7765d3bf31317227c13c88fcb99bf26770e3124"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-zec/trace.jsonl.gz",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-zec/independent-audit.json",
+      "sha256": "9b909026513adf13231146b293b3e589e8f9c0b5d8b9dbbe9568e4f56eb327f1"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-vvv/summary.json.gz",
+      "sha256": "a712ee5aa847718028ee8d2b1a6206c23d5d8ecaa2f3fa51c47e427fd308af60"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-vvv/trace.jsonl.gz",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-vvv/independent-audit.json",
+      "sha256": "acedef5a8cb7f182ff321ad1f866efc6485ab4c85e50f2a98b09aaef109c0f72"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-lit/summary.json.gz",
+      "sha256": "de211dfec86d9710fa217c02a8cf87bea7f1174c4c1c62c23fb078f4e4d27341"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-lit/trace.jsonl.gz",
+      "sha256": "4981bd2d1442c3dc7369f14bfd87011ff6f6a388a37c98aaea93ac8d6e770df3"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-lit/independent-audit.json",
+      "sha256": "a472b130ae8fbd844658ada08a684c3c2bf80ba3d2ad7281e9fe1c961918ba66"
+    }
+  ],
+  "verification": "Three tests pass: interleaved assets/shared receipt timestamps, asset-specific invalidation and no future backfill, stale pair retained."
+}

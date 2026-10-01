@@ -1,0 +1,32 @@
+{
+  "schema": "completed-broad-unused-raw-reservation-v1",
+  "recorded_utc": "2026-10-01T22:55:16.141167+00:00",
+  "previous": "reports/experiment-storage/single-venue-broad-reference-v1.json",
+  "previous_sha256": "c2470901e7f201b6f4b31cde52efd24c6d46665ca65de3ff73506d867f86298f",
+  "completed_plan": "reports/experiment-storage/single-venue-broad-v1.json",
+  "completed_plan_sha256": "caf9ab26627c767deed9f903445ccbe47b714302a588db5e9dcdea8c85b8a8d1",
+  "supervisor": "PID2603703 host ps exited/no matching process; normal terminal and10independent audits passed",
+  "old_batch_reservation_bytes": 68747264,
+  "old_raw_reservation_bytes": 67108864,
+  "retained_raw_reservation_bytes": 14626816,
+  "actual_raw_bytes": 14626154,
+  "raw_archive": {
+    "path": "reports/single-venue-broad/capture/frames.jsonl.gz",
+    "bytes": 14626154,
+    "sha256": "2a0082cb0b3865a75ac04a1b33034b6af49826bf7c2dbbbc37e43bacccb262bd"
+  },
+  "all_nonraw_categories_retained_in_full": {
+    "source_and_preparation": 65536,
+    "metadata": 131072,
+    "output": 1310720,
+    "control": 131072
+  },
+  "new_batch_retention_reservation_bytes": 16265216,
+  "released_unused_bytes": 52482048,
+  "new_control_reservation_bytes": 8192,
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 80777216,
+  "active_research_headroom_bytes": 73363456,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Release only unused raw reservation from completed broad capture. All source/raw/metadata/output retained, nonrawcategories retainedinfull; separate reference65536 andquote65536 remain funded. No deletion or recompression, overallreservation unchanged."
+}

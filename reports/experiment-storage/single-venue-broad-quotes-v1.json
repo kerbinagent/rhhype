@@ -1,0 +1,36 @@
+{
+  "schema": "single-venue-broad-quotes-v1",
+  "recorded_utc": "2026-10-01T22:50:45.586198+00:00",
+  "previous": "reports/experiment-storage/single-venue-broad-reference-preparation-v1.json",
+  "previous_sha256": "83948da2e07cf4ed25c7590a79d3660854c7677dc06a6dc223d0acc0748b6b03",
+  "reserved_bytes": 65536,
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 133251072,
+  "active_research_headroom_bytes": 20889600,
+  "overall_reservation_bytes": 836777216,
+  "categories_bytes": {
+    "source_tests": 16384,
+    "protocol": 16384,
+    "output": 32768
+  },
+  "scope": "Exploratory offline quote-cost diagnostic on completed ten-asset capture. At most one target book per elapsed integer second, seconds3..569; original fresh250ms crossvenue pair required. Both directions, target qty floor100/(ask*1.01) on native grid with native minima; full local and other-venue depth for sameqty. Report immediate local roundtrip cost and signed other-opposite-side minus local entry value in bp of local entry. Fixed thresholds0 and5bp, descriptive distributions, no cash/PnL or executable hedge. For each initial pair, first targetbook at/after400ms and within2s must itself have fresh pair; do not skip unfavorable/missing books to retry. Other venue qty grid/parity not certified, so reference value is hypothetical. No strategy optimization or new capture; positive candidates need fresh validation.",
+  "capture": "reports/single-venue-broad/capture",
+  "manifest_sha256": "eed280dd18fb6da31ad858d794735af75bc331e61564554d94758e7de8d62843",
+  "raw_sha256": "2a0082cb0b3865a75ac04a1b33034b6af49826bf7c2dbbbc37e43bacccb262bd",
+  "output_max_bytes": 24576,
+  "pins": [
+    {
+      "path": "scripts/single_venue_broad_quotes.py",
+      "sha256": "96f0c5a8b435ab4fd30429eb873a49614b7eed299a1be0071c7c0bc01530f341"
+    },
+    {
+      "path": "tests/test_single_venue_broad_quotes.py",
+      "sha256": "707c45566994a8a637a4eecdafe103c6cd392502ed5c52a222a1be5edfc73809"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-broad-v1.json",
+      "sha256": "caf9ab26627c767deed9f903445ccbe47b714302a588db5e9dcdea8c85b8a8d1"
+    }
+  ],
+  "verification": "Three tests pass: signed buy/sell depth values, partial-depth rejection, first-eligible missing pair not retried, adjacent-second pending samples both preserved. Every initial full-depth sample must reconcile to exactly one delayed outcome."
+}

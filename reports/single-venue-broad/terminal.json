@@ -1,0 +1,17 @@
+{
+  "state": "finished",
+  "started_utc": "2026-10-01T22:35:09.357292+00:00",
+  "economic_evaluation": false,
+  "plan_sha256": "caf9ab26627c767deed9f903445ccbe47b714302a588db5e9dcdea8c85b8a8d1",
+  "returncode": 0,
+  "normal_endpoint": true,
+  "terminal": {
+    "status": "capture_completed",
+    "started_ns": 1790894109569579737,
+    "plan_sha256": "caf9ab26627c767deed9f903445ccbe47b714302a588db5e9dcdea8c85b8a8d1",
+    "end_reason": "duration_limit",
+    "manifest_sha256": "eed280dd18fb6da31ad858d794735af75bc331e61564554d94758e7de8d62843",
+    "ended_ns": 1790894710744417303
+  },
+  "ended_utc": "2026-10-01T22:45:10.818740+00:00"
+}

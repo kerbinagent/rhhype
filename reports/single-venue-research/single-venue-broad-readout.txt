@@ -1,0 +1,59 @@
+{
+  "capture": "2026-10-01T22:35:09.954317+00:00 to 2026-10-01T22:45:10.719028+00:00",
+  "assets": 10,
+  "arms": 60,
+  "all_flat_known": true,
+  "active_rows": [
+    {
+      "asset": "NEAR",
+      "venue": "rh_lighter",
+      "rule": "baseline_fade",
+      "closed": 1,
+      "closed_cash_after_capital": "-0.1202357334406727592093559741",
+      "closed_stressed_cash": "-0.1697337909406727592093559741"
+    },
+    {
+      "asset": "LIT",
+      "venue": "lighter",
+      "rule": "baseline_fade",
+      "closed": 1,
+      "closed_cash_after_capital": "-0.02611173796053729230454084221",
+      "closed_stressed_cash": "-0.07561760346053729230454084221"
+    },
+    {
+      "asset": "LIT",
+      "venue": "rh_lighter",
+      "rule": "baseline_fade",
+      "closed": 2,
+      "closed_cash_after_capital": "-0.00372937335874978071670154744",
+      "closed_stressed_cash": "-0.1026886563587497807167015474"
+    },
+    {
+      "asset": "LIT",
+      "venue": "lighter",
+      "rule": "side_fade",
+      "closed": 1,
+      "closed_cash_after_capital": "-0.02611173796053729230454084221",
+      "closed_stressed_cash": "-0.07561760346053729230454084221"
+    },
+    {
+      "asset": "LIT",
+      "venue": "rh_lighter",
+      "rule": "side_fade",
+      "closed": 1,
+      "closed_cash_after_capital": "-0.02358168678733327522644596651",
+      "closed_stressed_cash": "-0.07306582478733327522644596651"
+    }
+  ],
+  "no_entry_assets": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "HYPE",
+    "XRP",
+    "SUI",
+    "ZEC",
+    "VVV"
+  ],
+  "limits": "Conditional public-book paper executions, no private acknowledgments or fills. Independent asset/rule/venue ledgers cannot be summed. Aggregates combine only the same asset/rule/venue across fixed windows. Unknown/open obligations prevent a total profit claim. Zero signals/fills provide no profitability evidence. Cross-asset screening has multiple comparisons and correlated events; any positive arm requires fresh validation. USDC and USDG are separate native collateral. Reference filters condition on parity, not an executable hedge or established fair value."
+}
