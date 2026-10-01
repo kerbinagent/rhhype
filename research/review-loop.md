@@ -5167,3 +5167,51 @@ five audited paired gains, 26 audited rescue gains and one new failed-hedge
 gain awaiting parent audit. Archive 3,663,660 / 5,242,880 B; 159 future
 pairs at 5,342 B project 4,513,038 B, margin 729,842 B.
 Next review **19:46:33 UTC**.
+
+
+Review154 parent audit passed for VVV trade
+`1790882403834911-24380-convergence`: Lighter long 38.06, rejected HL
+short price limit, entry value $996.275164 to exit $996.993118; gross/
+cash +$0.717954, stress $0.498137582, capital $0.00000183519 give
++$0.219814582807. Unhedged 1.1618204 s, legacy $1,000 target: rescue
+only. Parent committed `review154-positive-record.json.gz` and
+`review154-positive-root-audit.json`, total 3,377 B. Audited rescue gains
+now 27; paired gains five. Archive before review155 3,667,037 B.
+
+## Review 155 — 1 October 2026 19:46:33 UTC
+
+All eight strategy and aborted coverage fields complete. Exact report
+`review-20261001T194633Z.json.gz`: raw 20,030 B, SHA-256
+`f585c337026f9449cef7a7d6faecb1779fef32e076461746b62fadfb8b078cbf`;
+gzip 3,055 B, SHA-256
+`8e64a556349ce58dbe0b42d7290b03b0ecd157cd773c7551cd39fda1957f5af2`.
+Independent `current-epoch-at-review155.json.gz`: read 19:47:08.962578 UTC,
+updated 19:47:08.823748 UTC; raw 9,292 B, SHA-256
+`c37109fc6d34a7c29ed271c2a55a768f4d81c01097f95b6a22fd314fb5ce6bee`;
+gzip 1,732 B, SHA-256
+`bef9c3e6e7581bed7fb61f0361912a913551a8cc5365689ab076eb4de436e923`.
+Exact decompression and per-write cap/growth guards passed.
+
+Twenty-one exact losses: six convergence failed hedges/−$10.7328331334,
+15 Premium/−$22.7593468414 (seven paired, eight failed hedges). No wins,
+estimates or aborts; 14 HL price limits. Convergence fees zero, other
+costs $2.9896325100, capital $0.0000126234; Premium fees $11.7339706870,
+other costs $7.4831175515, capital $0.0002696028.
+
+Separate epoch snapshot convergence 617 / −$727.8056121546, Premium
+1,207 / −$2,170.5496687889. Increases five and 15 versus report six and
+15; keep boundaries separate. Health running/ok, four feeds, 103 pairs,
+CPU 66.82%, p95 lag 41.14 ms, RSS 205.89 MiB, 1,031.3 books/s,
+metadata age 289.9 s. At 19:29:23 pulse performance busy, CPU 70.14%,
+lag 67.18 ms, age 0.39 s; 19:34:52 returned ok (66.42%, 49.25 ms,
+age 0.57 s). Parent's later PID absence check used sandbox process
+namespace; advancing snapshots at 19:44:21 and 19:44:47 confirmed live
+writer, not a new failure. No service intervention. Carry 19:45: 231
+sampled, persistent invalid slot 71, 632 future/interrupted; running,
+no errors/retries/economic evaluation. No carry sample or active root
+research economics opened.
+
+Reviews 66–155: 2,386 completions, 2,353 exact losses, one estimated loss,
+five audited paired gains and 27 audited failed-hedge rescue gains.
+Archive 3,671,824 / 5,242,880 B; 158 future pairs at 5,342 B project
+4,515,860 B, margin 727,020 B. Next review **20:06:33 UTC**.
