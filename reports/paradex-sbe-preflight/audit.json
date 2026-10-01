@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "raw_sha256": "2660eae3fe7a3c83a335bc590e7db6def9da0d9e1672789da6732e6d1cd840d1",
+  "counts": {
+    "ack": 4,
+    "template_3": 194,
+    "template_5": 24
+  },
+  "fresh_books": 193,
+  "book_count": 194,
+  "checks": "Independent fixed-layout struct decode agrees with schema-driven collector: headers, block lengths, groups, signed mantissas, exact frame exhaustion, prices, sorting, seq monotonicity, market names, counts and timestamp ages. No private ACK/execution validation.",
+  "funding_index_change": {
+    "BTC-USD-PERP": 0.01435495,
+    "ETH-USD-PERP": 0.00050503
+  }
+}
