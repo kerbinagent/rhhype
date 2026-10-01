@@ -4854,3 +4854,37 @@ lacks its reference price, so the result remains an estimated loss and is
 not promoted to exact. Archive including audit is 3,620,663 B; 166 future
 pairs project 4,507,435 B, leaving 735,445 B under 5,242,880 B. Counts
 unchanged: 2,227 exact losses, one estimated loss and 28 gains.
+
+
+## Review 148 — 1 October 2026 17:26:33 UTC
+
+All eight strategy and aborted coverage fields complete. Exact report
+`review-20261001T172633Z.json.gz`: raw 19,003 B, SHA-256
+`c87c9ca40b98687394aa0b5772f55cdda6db0fa064842cc837f465da3b566048`;
+gzip 2,915 B, SHA-256
+`0af09fe782bce88e9e178eb500ed45190d365d04c61df4c475b08a3e58eaf65b`.
+Independent `current-epoch-at-review148.json.gz`: read 17:27:02.386423 UTC,
+updated 17:27:02.051792 UTC; raw 9,291 B, SHA-256
+`12d2b64854efe813da57b39934df0fbca5cc1baf63e2cb6cac28defd872f4c1e`;
+gzip 1,732 B, SHA-256
+`43da91073b8299c1b2e87e3adea0a50fa451a5b240fd3dafaf25c448a154ad88`.
+Exact decompression and both cap/growth prewrite guards passed.
+
+Added 17 exact losses: two convergence failed hedges/−$1.6862538817 and
+15 Premium/−$25.7163171699 (14 paired, one failed hedge). No gains,
+estimates or aborts; three Hyperliquid price-limit rejections. Convergence
+fees zero, other costs $0.6682026395, capital $0.0000022422; Premium fees
+$13.0022385394, other costs $7.4895189155, capital $0.0005027149.
+
+Separate epoch snapshot: convergence 587 / −$682.9741730669, Premium
+1,124 exact / −$2,031.9361426059; increases two and 15 match report deltas,
+which remain authoritative. Health running/ok, four feeds, 102 pairs,
+CPU 64.42%, p95 lag 21.18 ms, RSS 265.69 MiB, 1,074.6 books/s, metadata
+age 690.4 s. Carry 17:25 metadata: 203 sampled, slot 71 arrival_invalid,
+660 future/interrupted; running, no errors/retries/economic evaluation;
+no sample opened. Root-owned frozen research study not inspected.
+
+Reviews 66–148: 2,273 completions, 2,244 exact losses, one estimated loss,
+two paired gains and 26 audited failed-hedge rescue gains. Manual archive
+3,625,310 / 5,242,880 B; 165 remaining scheduled pairs at 5,342 B project
+4,506,740 B, margin 736,140 B. Next review **17:46:33 UTC**.
