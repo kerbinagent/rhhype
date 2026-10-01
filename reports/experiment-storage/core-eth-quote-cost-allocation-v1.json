@@ -1,0 +1,112 @@
+{
+  "schema": "core-eth-quote-cost-screen-v1",
+  "recorded_utc": "2026-10-01T02:41:59.017162+00:00",
+  "previous": "reports/experiment-storage/core-eth-collateral-candle-allocation-v1.json",
+  "previous_sha256": "955ec46d9f7ba9395e1b4c7133388263abcf54cdc6c391c360fe6ef42a5d0ce4",
+  "previous_shared_reserved_bytes": 32998072,
+  "completed_reservation_released_bytes": 36864,
+  "completed_studies_frozen": [
+    {
+      "name": "funding_history",
+      "directory": "reports/core-eth-funding-history/202609-v1",
+      "new_reservation_bytes": 20480,
+      "actual_bytes": 17521,
+      "pins": {
+        "reports/core-eth-funding-history/202609-v1/readout.md": {
+          "bytes": 1245,
+          "sha256": "ab50846bfd8c396232a87804a456bcdca57da8487ce662d7016efc67c901877f"
+        },
+        "reports/core-eth-funding-history/202609-v1/request-claim.json": {
+          "bytes": 422,
+          "sha256": "c814ad742501f40293381223500ef4d60d975bbb950f75377e0e01b84bd45469"
+        },
+        "reports/core-eth-funding-history/202609-v1/response.json.gz": {
+          "bytes": 5800,
+          "sha256": "37a2a7d06c1db11872c364004b2363923360779dacc196d324faaaf4b3436a42"
+        },
+        "reports/core-eth-funding-history/202609-v1/summary.json": {
+          "bytes": 2446,
+          "sha256": "696fd60324e843ac080fe7a93db83a9748046a72ddd5ad3fb2f53c142d6c7764"
+        },
+        "reports/core-eth-funding-history/202609-v1/terminal.json": {
+          "bytes": 245,
+          "sha256": "13dac4ef219450a45cef5447800d153849b9101c5450a3839fb57392be81238a"
+        },
+        "scripts/core_eth_funding_history.py": {
+          "bytes": 5222,
+          "sha256": "26a2ecb891e55687fdfd050e84f43706bda218603306057d4a77cc84161f7d48"
+        },
+        "reports/experiment-storage/core-eth-funding-history-allocation-v1.json": {
+          "bytes": 1646,
+          "sha256": "b3b14225c41da28f209b7185aeb2126d5869394cfad343260a3f721d56344491"
+        },
+        "reports/experiment-storage/core-eth-funding-history-actual-v1.json": {
+          "bytes": 495,
+          "sha256": "ca35883834f1acb3823cce313e0c613d8c54a070dc22e1a764328380ea6b2814"
+        }
+      }
+    },
+    {
+      "name": "collateral_metadata",
+      "directory": "reports/core-collateral-metadata",
+      "new_reservation_bytes": 8192,
+      "actual_bytes": 6555,
+      "pins": {
+        "reports/core-collateral-metadata/claim.json": {
+          "bytes": 228,
+          "sha256": "374b2ae28dc70b726cecda026723a3b4be3ef175b80924dd400bb373efa6a0b5"
+        },
+        "reports/core-collateral-metadata/readout.md": {
+          "bytes": 1662,
+          "sha256": "ffbaa50ed35a5b61a9766878da023f536f15e47d99bc1658f54148bf83251528"
+        },
+        "reports/core-collateral-metadata/response.json.gz": {
+          "bytes": 1018,
+          "sha256": "114fcf07123aa0e757d0faf545a230c52d2333d1b7eea7e7d3cd0fcb6527665b"
+        },
+        "reports/core-collateral-metadata/terminal.json": {
+          "bytes": 294,
+          "sha256": "22bddd136669e14aa44815bcf15eccea2e79bfabeb4bba124d962d231ca2267b"
+        },
+        "scripts/core_collateral_metadata.py": {
+          "bytes": 2398,
+          "sha256": "69134f33c5356fe6bf2a281806b8c2f8f837051549bba85e17042221c7bb5caf"
+        },
+        "reports/experiment-storage/core-collateral-metadata-allocation-v1.json": {
+          "bytes": 955,
+          "sha256": "ee0712ca9b9010560cab73a9982a02936419de3335a76524db0943de7c51183d"
+        }
+      }
+    }
+  ],
+  "new_maximum_bytes": 32768,
+  "categories_bytes": {
+    "source": 8192,
+    "raw": 8192,
+    "output": 8192,
+    "control": 8192
+  },
+  "projected_shared_reserved_bytes": 32993976,
+  "shared_allowance_bytes": 33000000,
+  "shared_headroom_bytes": 6024,
+  "overall_reservation_bytes": 836777216,
+  "overall_reservation_increase_bytes": 0,
+  "requests_max": 10,
+  "retries": 0,
+  "rounds": 5,
+  "interval_seconds": 30,
+  "markets": {
+    "spot": 2048,
+    "perp": 0
+  },
+  "depth": 10,
+  "sizes": [
+    100,
+    250,
+    500,
+    1000
+  ],
+  "max_rtt_seconds": 2,
+  "max_receipt_skew_seconds": 0.25,
+  "scope": "Fixed ETH same-venue quote cost diagnostic. Five paired rounds, zero Standard fees, equal quantity on shared 0.0001 lot. Immediate spread/impact roundtrip cost and signed opening basis, no fill or future exit inference. All rounds/sizes including rejection. Does not alter funded carry or production monitor."
+}
