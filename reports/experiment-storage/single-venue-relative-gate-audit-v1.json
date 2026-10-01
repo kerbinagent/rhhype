@@ -1,0 +1,76 @@
+{
+  "schema": "single-venue-relative-gate-audit-v1",
+  "recorded_utc": "2026-10-01T23:20:41.269610+00:00",
+  "previous": "reports/experiment-storage/single-venue-queue-diagnostic-v1.json",
+  "previous_sha256": "8950805e2c8827235f0b6f2ea085b51c6ae5d520a347ee0484964420dcaab22f",
+  "reserved_bytes": 32768,
+  "categories_bytes": {
+    "source_tests": 8192,
+    "protocol": 8192,
+    "output": 16384
+  },
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 149721088,
+  "active_research_headroom_bytes": 4419584,
+  "overall_reservation_bytes": 836777216,
+  "pins": [
+    {
+      "path": "scripts/single_venue_relative_gate_audit.py",
+      "sha256": "f8b4a96650d66e1bc8329698d0a018ebcc23257fe57479202fea8caa15640301"
+    },
+    {
+      "path": "tests/test_single_venue_relative_gate_audit.py",
+      "sha256": "c92b33acc070bb87f56adf11202269922ad6b7dc1c8161c0243241243d1bbb46"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-broad-relative-v1.json",
+      "sha256": "9e10bef5d159da56799b578905a35eda9498291222ff548047c2252812b930c6"
+    },
+    {
+      "path": "reports/single-venue-broad-relative/external-verification.json",
+      "sha256": "9d6b74f292c3a52e27f6ea4667f6690b722d39c72615ebd0b1b66241fd47a58b"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-btc/summary.json.gz",
+      "sha256": "305e21fa9e50fde1cf28d8ffe5e286858e55a2154b695f80ece6d028095ded8e"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-eth/summary.json.gz",
+      "sha256": "da6bdede050cfe927602b4468fd1c01effa5624c6b11fab49729762a836fdf6d"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-hype/summary.json.gz",
+      "sha256": "3b1bec61a54ddd162d3ddda9ab2785ceff3ab2acc10a91a9505c1530f7cb8107"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-lit/summary.json.gz",
+      "sha256": "3427f0abc305630cc26e1fa4f168c960795fd331e6c31db397d70936b0678b51"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-near/summary.json.gz",
+      "sha256": "f165318b8e11a0df26dc2c6679a3e0131cf9b09c3ee9fc6295601c84346267a6"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-sol/summary.json.gz",
+      "sha256": "82f8a0516ac6196c223ee2637a5d1e7515ed0c5b353965be0f08e25d61317615"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-sui/summary.json.gz",
+      "sha256": "dd996cdb8a17c1a1b7048f4e260869d169d6b092f3ad173332faa58acbfbafbe"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-vvv/summary.json.gz",
+      "sha256": "3714460f422fdc8d357268168ae753628c42a592d3e37ade91cf34b16d80cf5e"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-xrp/summary.json.gz",
+      "sha256": "a7bfc14dd2dc69d74f13ee2da92738b289cdd7278d21d8bae1a14a0430870524"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-zec/summary.json.gz",
+      "sha256": "d7b2b063a5e22b852b1af4b0058a8170da831a99be5cc6d49f3dff247cf7964a"
+    }
+  ],
+  "manifest_sha256": "44c423889dc2a49bf5a27377eb2a21c09c466c9280e9718e725b4ddc2800abc0",
+  "scope": "Offline diagnostic of no-signal replay. Independently reconstruct fresh pairs,120second rolling median with2second embargo60rows/89second span,1second evaluation cadence and resets, without using production Features class. Necessary common gate of all three rules is absresidual>=spread+4bp. Count all and122..480second admission cases, exactgaprule5bp, maximumresidual and maximumcostmargin. All twenty groups retained. Reconcile warmup/nonfresh/evaluation counts to production summary. If every common gate fails, no rule can signal; unlike the cash auditor, this checks non-events. If some pass, no claim of exhaustive absence for leader/shock without further checks. Two tests: smalljumpfails,6bpjump insideadmission passes, invalidation resets history. No threshold change/new strategy/capture. Outcome already known zeroentries; this is accounting diagnostics, not prospective performance."
+}
