@@ -1,0 +1,18 @@
+{
+  "schema": "basis-forecast-diagnostic-v1",
+  "recorded_utc": "2026-10-01T12:37:14.319446+00:00",
+  "previous": "reports/experiment-storage/completed-nvda-sub100-closeout-v1.json",
+  "previous_sha256": "820b7e4f5d2911ccaf10054ba3b955c71977588a0843e9fa0c5aaf629c731483",
+  "new_maximum_bytes": 32768,
+  "categories_bytes": {
+    "source": 8192,
+    "output": 16384,
+    "control": 8192
+  },
+  "active_research_reserved_bytes": 7307264,
+  "active_research_headroom_bytes": 32768,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Read sealed expanded-crypto900s capture only. Diagnostic, not newstrategy/execution/PnL. At valid1Hzrows use same120smedian with2sembargo90countspan89s; compare60s-aheadbasis to pastmedian versus no-change baseline, targetwithin.25s. Use nonoverlapping60s-spacedorigins perasset for principal errorcomparison. Separatelydescribe all>=5bpexcursions with explicit overlapping/autocorrelated label; empiricalmean/std notsignificance. Pricebasis-only noexecutioncost/papertradeclaims. No retuning active capture.",
+  "source_raw": "reports/core-rh-alt-shortterm/events.jsonl.gz",
+  "source_raw_sha256": "ae5720413f3d055ec0c1fbaf922a6b61d2c4c537cf241aaee1a5cd1faf49d097"
+}
