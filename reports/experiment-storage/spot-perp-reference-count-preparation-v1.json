@@ -1,0 +1,16 @@
+{
+  "active_research_pool_bytes": 20185088,
+  "overall_reservation_bytes": 836777216,
+  "schema": "spot-perp-reference-count-preparation-v1",
+  "recorded_utc": "2026-10-01T16:27:36.558119+00:00",
+  "previous": "reports/experiment-storage/spot-perp-reference-coverage-supplement-v1.json",
+  "previous_sha256": "595e9816888a8c62d342e7f4cd244eba79dedb0279e7a17a19bc5be15acaa519",
+  "new_maximum_bytes": 24576,
+  "active_research_reserved_bytes": 20168704,
+  "active_research_headroom_bytes": 16384,
+  "categories_bytes": {
+    "source": 20480,
+    "control": 4096
+  },
+  "scope": "Preparation only for prospective60vs90past-reference count onLIT/ETH. Both1bpentrylimit, allsource-freshness/execution/medianembargo/spanrules unchanged. No capture until fullreservation and sourcefreeze."
+}
