@@ -1,0 +1,74 @@
+{
+  "schema": "core-rh-small-shortterm-v1",
+  "recorded_utc": "2026-10-01T04:38:35.389941+00:00",
+  "previous": "reports/experiment-storage/pendle-isolated-proxy-catalogue-allocation-v1.json",
+  "previous_sha256": "dccd4cd07d865c391f0a5a344cc3bea12c37f503f11f08bfb1705e5c6c4fd38c",
+  "new_maximum_bytes": 1048576,
+  "categories_bytes": {
+    "source": 49152,
+    "metadata": 131072,
+    "raw": 720896,
+    "output": 81920,
+    "control": 65536
+  },
+  "active_research_reserved_bytes": 3874816,
+  "active_research_headroom_bytes": 319488,
+  "assets": [
+    "BTC",
+    "ETH",
+    "SOL"
+  ],
+  "budgets": [
+    100,
+    1000
+  ],
+  "horizons": [
+    10,
+    60,
+    300
+  ],
+  "primary": {
+    "budget": 100,
+    "horizon": 10
+  },
+  "duration_seconds": 1200,
+  "warmup_seconds": 122,
+  "entry_end_seconds": 890,
+  "max_attempts_per_branch": 12,
+  "cooldown_seconds": 30,
+  "history_seconds": 120,
+  "history_embargo_seconds": 2,
+  "minimum_history_samples": 90,
+  "forecast_hurdle_bps": 1,
+  "take_profit_bps": 1,
+  "stress_report_bps": 5,
+  "capital_rate": 0.05,
+  "network_ms": 100,
+  "standard_taker_ms": 300,
+  "metadata_requests_max": 2,
+  "metadata_retries": 0,
+  "websocket_connections_max_per_venue": 3,
+  "raw_soft_cap": 500000,
+  "scope": "User explicitly redirects to short-term trading; no maturity carry. Fresh paper experiment, $100 primary, cash P&L separated from 5bp stress/opportunity charge. Six independent counterfactual size/horizon portfolios. Shared BTC ETH SOL public Core/RH books; no accounts or orders. No parameter adjustment after launch. First eligible delayed books and actual full existing paper lifecycle, retaining partials/rescue/unresolved. Fixed 30s per-pair entry cooldown and max12 attempts per branch. Each portfolio6xsize capital, equally split venues. USDG/USDC parity remains conditional, no paid conversion claimed.",
+  "forecast": "Past-only 120s median RH/Core mid basis in bp, 2s embargo, >=90 valid 1Hz samples. Add expected basis reversion to current full four-walk liquidation value at original q. Require forecast after 4 fees and capital >=1bp own larger entry notional. No stress expense in cash decision. Source/receipt age<=2s, neither source future, paired source and receipt skew<=250ms. No admission if longest branch horizon+10s would cross UTC hour; unexpected crossing remains unknown funding.",
+  "source_pins": [
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/paper_funding.py",
+      "sha256": "12d3355202cd1786cb260a4775791b0f7ac242b141010471738ec60fc0abd2b0"
+    }
+  ],
+  "decision": "Descriptive feasibility only. All attempts, rejected-candidate counters, raw decisions, samples and filled book evidence retained under hardcap. Stop admissions at softcap; hardcap leaves explicit incomplete trial. Positive modeled cash trade is not validated repeatable advantage. Runtime expiry preserves unresolved quantities; no resetting or merging portfolios.",
+  "archive": "Complete gzip members, up to30 records or32768 decoded bytes per batch; pending bytes prechecked against hardcap, final flush on normal/error completion. Abrupt process/host death may lose the bounded pending batch and invalidates completion."
+}
