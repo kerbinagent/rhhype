@@ -1,0 +1,32 @@
+{
+  "schema": "wbeth-historical-rate-probe-v1",
+  "recorded_utc": "2026-10-01T04:13:32.545152+00:00",
+  "previous": "reports/experiment-storage/aster-collateral-clock-correction-allocation-v1.json",
+  "previous_sha256": "82478469eb6a7efa70343a3b1e6e9c4fb5caa336c9f610c31bc6a523a06fc365",
+  "new_maximum_bytes": 65536,
+  "categories_bytes": {
+    "source": 8192,
+    "raw": 32768,
+    "output": 16384,
+    "control": 8192
+  },
+  "active_research_reserved_bytes": 2236416,
+  "active_research_headroom_bytes": 1957888,
+  "requests_max": 52,
+  "retries": 0,
+  "rpc_url": "https://ethereum-rpc.publicnode.com",
+  "contract": "0xa2E3356610840701BDf5611a53974510Ae27E2e1",
+  "target_timestamps": [
+    1788134400,
+    1790640000
+  ],
+  "scope": "Read-only Ethereum RPC chainId, blockheaders, eth_call only. No wallet, signer, privateendpoint or transaction. FixedAug31andSep29midnight boundaries matchingAster29daybudget. Searchlatest400000blockspan bydeterministicbinarysearch for lastblock<=target, verifyadjacentbracketgap<=60s, max52RPCcalls. Readsymbol/decimals atsamehead andexchangeRate atbothfixedblocks. Noalternateprovider ormethod retry.",
+  "storage": "Full eth_call/chainId responses; blockresponses retain exactnumber/hash/parentHash/timestamp/stateRoot projection+rawresponsehash, omit unrelatedtransactionhashes explicitly. Tracegzip<=32KiB, eachdecodedRPC<=512KiB. Preserveterminalonfailure.",
+  "limitations": "Ethereumtokenrate is not BNBChainrateverification or executableWBETHprice/redemption. ETHunitgrowthsimpleannualization overfixedperiod, notforecast orUSDprofit; hedginggrowingETHclaimrequiresseparateaccounting. Missingorprunedstates remainunknown.",
+  "sources": [
+    "https://www.binance.com/en/earn/ethereum-staking",
+    "https://www.binance.com/en/support/faq/detail/e252366155174ba6887f6b32e3798273",
+    "https://www.binance.com/en/research/projects/wrapped-beacon-eth-wbeth",
+    "https://hackmd.io/@PrismaRisk/WBETH"
+  ]
+}
