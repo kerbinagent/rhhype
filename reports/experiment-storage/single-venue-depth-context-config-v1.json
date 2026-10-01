@@ -1,0 +1,26 @@
+{
+  "schema": "single-venue-depth-context-config-v1",
+  "recorded_utc": "2026-10-01T21:15:21.778414+00:00",
+  "previous": "reports/experiment-storage/single-venue-depth-context-v1.json",
+  "previous_sha256": "86c001495666caa12b3f5b0e101fc16b231740d50cf538003f1550363dcc8f60",
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 53321728,
+  "active_research_headroom_bytes": 155648,
+  "overall_reservation_bytes": 836777216,
+  "additional_reserved_bytes": 0,
+  "scope": "Configuration-only wrapper sets capture.SELECTED from independently pinned manifest before each sample reader. Original source,failed attempt and plan retained. No measurements,freshness rules,signals,execution or cash changes. Uses existing32768byte context allocation.",
+  "pins": [
+    {
+      "path": "scripts/single_venue_depth_context_configured.py",
+      "sha256": "2e72b6c3ba7fe74c905a340da6b01b554c0f3b68424849360bfef6afed6d629d"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-depth-context-v1.json",
+      "sha256": "86c001495666caa12b3f5b0e101fc16b231740d50cf538003f1550363dcc8f60"
+    },
+    {
+      "path": "reports/single-venue-research/depth-context-configuration-failure.json",
+      "sha256": "9fa906b3dc8a636d86d6738c3ea5d2f6b215909c4e8bfb17e8adfe6b8f79118e"
+    }
+  ]
+}

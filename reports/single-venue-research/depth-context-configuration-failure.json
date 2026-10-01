@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-10-01T21:15:21.778042+00:00",
+  "source_sha256": "a10e282be7e76c3a5e8f5120b3317aaccef35755a0f35800711bf4d2b78e1d9d",
+  "plan_sha256": "86c001495666caa12b3f5b0e101fc16b231740d50cf538003f1550363dcc8f60",
+  "status": "failed_before_output",
+  "error": "AssertionError in single_venue_depth_capture.select_three: LIT-only manifest selected markets differs from original three-asset capture.SELECTED global.",
+  "output_written": false,
+  "economic_rule_changed": false
+}
