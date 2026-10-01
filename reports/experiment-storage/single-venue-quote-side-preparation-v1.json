@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-quote-side-preparation-v1",
+  "recorded_utc": "2026-10-01T21:41:59.379650+00:00",
+  "previous": "reports/experiment-storage/single-venue-reference-accounting-v1.json",
+  "previous_sha256": "cf4f9b8f66dba2f532d403890bfdf77913a647984437e08905452f5cc2da930e",
+  "reserved_bytes": 16384,
+  "active_research_pool_bytes": 87031808,
+  "active_research_reserved_bytes": 79683584,
+  "active_research_headroom_bytes": 7348224,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retrospective quote-side anatomy of ALL admitted depth signals in original and capped-prefix studies. No current batch data. Source/protocol/compressedoutput/readout capped16384bytes;no execution or strategy changes."
+}

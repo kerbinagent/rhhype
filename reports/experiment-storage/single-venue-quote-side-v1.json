@@ -1,0 +1,57 @@
+{
+  "schema": "single-venue-quote-side-v1",
+  "recorded_utc": "2026-10-01T21:42:29.951995+00:00",
+  "previous": "reports/experiment-storage/single-venue-quote-side-preparation-v1.json",
+  "previous_sha256": "3690537715223867dc2c279af5a8064a94350d5f93a2103f7d7938a35c9b1d2a",
+  "reserved_bytes": 16384,
+  "active_research_pool_bytes": 87031808,
+  "active_research_reserved_bytes": 79683584,
+  "active_research_headroom_bytes": 7348224,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retrospective descriptive anatomy of every admittedsignal from four earlierdepthsummaries;paired fade/follow ofsameprint/decision deduplicated but alladmittedrules kept. Recover nativebid/ask from auditedmid/spread usingtickanderror<1e-8. Signed quotechanges determine share ofmidmove reflected in the fade-entry side. Compare optimistic targettopquote to contemporaneous referenceMID underconditionalUSDC/USDGparity. This omits depth,400msdelay,fees,exitspread andfundingbasis;reference is not established fairvalue. Neither tradableprofit nor a newsignal. No currentbatchdata.",
+  "pins": [
+    {
+      "path": "scripts/single_venue_quote_side.py",
+      "sha256": "b654e833314e7bf67de0c60cb9cbc60ba1cce7c10130ba00438f3dbaa6d13837"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-lit/summary.json.gz",
+      "sha256": "9fb60460c2aea11568e149e42610ccd6de9525e012feff5a80f85f9963d4e93c"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-lit/trace.jsonl.gz",
+      "sha256": "66c49634aa6e7007250684f6e4c32e128d147dba9f5e1c1f1abc58e4700c7d78"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-vvv/summary.json.gz",
+      "sha256": "6f086e5637999a19b334e2effcdfc1871daa9066c3b5f9055d1f22802cd2601f"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-vvv/trace.jsonl.gz",
+      "sha256": "15d35290530e346c67c9c36c26912477b53941cf04078630dbbcbec74ba7305f"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-zec/summary.json.gz",
+      "sha256": "e984eb95423250dbc22828c918c63148434a70cc639b880f024b158d588ad17c"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-zec/trace.jsonl.gz",
+      "sha256": "ba834c7f4a4e657b949f5b09572e19713ac8b8af68c1bb9867e23df13fa136cb"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-incomplete-prefix-lit/summary.json.gz",
+      "sha256": "48a413292f96069ad9a4c17bca8650d1c3535e8b8963421e6d4864bbc63546b9"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-incomplete-prefix-lit/trace.jsonl.gz",
+      "sha256": "968526c985b19b14877dafda31a2470df98c3bec5e42d3946f2b5f7291f908df"
+    }
+  ],
+  "samples": [
+    "single-venue-depth-lit",
+    "single-venue-depth-vvv",
+    "single-venue-depth-zec",
+    "single-venue-depth-incomplete-prefix-lit"
+  ],
+  "output_max_bytes": 4096
+}
