@@ -28,6 +28,7 @@ class ReferenceBranch(OriginalBranch):
 def main():
  base.PLAN=ROOT/'reports/experiment-storage/spot-perp-reference-count-v1.json'
  base.OUT=ROOT/'reports/core-spot-perp-reference-count'
+ base.ASSETS=['SKY','UNI','AAVE','LINK','LDO']
  counts=iter((90,60))
  def factory(*args,**kwargs):return ReferenceBranch(*args,minimum=next(counts),**kwargs)
  base.Branch=factory

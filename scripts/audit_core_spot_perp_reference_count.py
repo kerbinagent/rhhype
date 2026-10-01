@@ -26,7 +26,7 @@ def digest(path):
 def main():
     s = json.loads((OUT/'summary.json').read_text())
     assert s['error'] is None
-    assert s['selection']=={'included':['LIT','ETH'],'missing':[]}
+    assert s['selection']=={'included':['SKY','UNI','AAVE','LINK','LDO'],'missing':[]}
     if s['counters'].get('runtime_completed')==1:assert 600<=s['ended_at']-s['started_at']<605
     else:
         assert s['counters'].get('ingress_cap',0)>=1
