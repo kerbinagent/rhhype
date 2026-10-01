@@ -1,0 +1,81 @@
+{
+  "schema": "derive-staked-eth-preflight-v1",
+  "recorded_utc": "2026-10-01T03:33:01.326233+00:00",
+  "previous": "reports/experiment-storage/core-rh-four-hour-basis-allocation-v1.json",
+  "previous_sha256": "e7b5f2adf90c46e7e27a6b88f3f41b5fde03be1c45a2e11235838e1e3a02b54f",
+  "new_maximum_bytes": 131072,
+  "categories_bytes": {
+    "source": 16384,
+    "raw": 65536,
+    "output": 32768,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 1048576,
+  "active_research_headroom_bytes": 3145728,
+  "requests_max": 16,
+  "retries": 0,
+  "requests": [
+    [
+      "funding_doc",
+      "https://docs.derive.xyz/perp-funding.md",
+      null,
+      65536
+    ],
+    [
+      "portfolio_doc",
+      "https://docs.derive.xyz/portfolio-margin.md",
+      null,
+      65536
+    ],
+    [
+      "history_doc",
+      "https://docs.derive.xyz/api-reference/market-data/publicget_funding_rate_history.md",
+      null,
+      65536
+    ],
+    [
+      "eth_currency",
+      "https://api.derive.xyz/v3/public/get_currency",
+      {
+        "currency": "ETH"
+      },
+      65536
+    ],
+    [
+      "wsteth_currency",
+      "https://api.derive.xyz/v3/public/get_currency",
+      {
+        "currency": "WSTETH"
+      },
+      65536
+    ],
+    [
+      "eth_perp",
+      "https://api.derive.xyz/v3/public/get_instrument",
+      {
+        "instrument_name": "ETH-PERP"
+      },
+      65536
+    ],
+    [
+      "funding_history",
+      "https://api.derive.xyz/v3/public/get_funding_rate_history",
+      {
+        "instrument_name": "ETH-PERP",
+        "period": 3600,
+        "start_timestamp": 1788220800000,
+        "end_timestamp": 1790812799999
+      },
+      1048576
+    ],
+    [
+      "staking_sma",
+      "https://eth-api.lido.fi/v1/protocol/steth/apr/sma",
+      null,
+      65536
+    ]
+  ],
+  "margin_url": "https://api.derive.xyz/v3/public/get_margin",
+  "margin_scenarios": "$1000ETH exposuretarget roundeddown to publishedETHperplot;WSTETHquantity=currentprice-ratio equivalent. SM andPM2,each0/10/25/50%cashreserve;10%primary,othersdiagnostic. Public fullysimulatedportfolio fromcurrent collateralstoaddingequal shortETH. No accountid,auth,RFQororder. Allresults/errors retained. No assumptionPMdiscountmeanssameasSM.",
+  "interpretation": "Distinct stakedcollateral hypothesis. CurrentLidoSMA nothistoricalyield;fundinghistoryOHLC notsettledcash. Marginpresenttime only,hedgeprice-ratio notverifiedredemptionratio. Historicalcoverage andrateunitsmustbecheckedbeforearithmetic. No executableprices,bridge,transfer,rebalanceorborrowcosts established;actualP&Lnull. Noautoextension."
+}
