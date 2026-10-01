@@ -1,0 +1,44 @@
+INDIVIDUAL-PRINT / SHORT-HORIZON DIAGNOSTIC
+Exploratory retrospective analysis of the sealed20:08:13–20:18:14UTC capture.
+Protocol3e8f011 frozen before this query, after prior aggregate outcomes were known.
+
+Selection:ordinary print quantity>=25%of displayed same-side depth within5bp.
+Both pre-quote source timestamps must be strictly earlier than the print source,
+within250ms. No activity-baseline filter or future-return filter. First post-source
+paired quote within250ms of print receipt anchors returns; already-known quotes
+can anchor at receipt. Each horizon needs both source and receipt timestamps at
+or after its due time, observed within250ms thereafter. Actual clocks retained.
+
+838ordinary prints;727had qualifying strict pre-clock coverage;111did not.
+32depth-consuming print candidates, all found an anchor. They occupy25distinct
+asset/venue/receipt groups; some are trade fragments sharing the exact move.
+Only7also showed>=2bp aligned local impact while reference moved<=1bp.
+The7are diagnostic labels, not a fitted profitable subset or independent events.
+
+100ms target (observed100–350ms):31matched,1missing;only1had a positive fade
+return. At400ms (observed400–650ms):31matched,1missing;4positive fade returns.
+This sample mostly continued in the trade direction initially. At longer horizons
+results were mixed and missingness substantial:148of192total horizons matched,
+44missing. Returns are midpoint changes, before spread, fees and execution.
+
+Per market: candidate count / local-impact-stable-reference labels
+LIT Core7/2;LIT RH8/1;VVV Core3/2;VVV RH5/1;ZEC Core3/1;ZEC RH6/0.
+Mean fade returns at400ms, in the same order:
+-7.483,-2.347,-0.506,-1.872,-5.351,+1.173bp.
+Later average recovery can be dominated by fragments of the same event; different
+horizons can have different matched samples. Never subtract unmatched means.
+Outputafter_400ms uses only observations with both endpoints matched.
+
+Independent reference audit passed:32print candidates with multiplicity checked,
+424raw quote references,148matched-horizon calculations,44missing horizons.
+It verifies raw quote identity, depth fractions, clocks and arithmetic. It does
+not independently rescan candidate completeness or first-observation selection.
+Four synthetic timing tests passed. No private fill or causal claim.
+
+Next forward test:compare following versus fading independently, after an
+observable local displacement and stable reference, using the same400ms modeled
+order delay and10second holding period. Candidate decisions will be made on a
+new post-print book callback. The activity-baseline and relative-gap requirements
+are removed for this new hypothesis; keep explicit spread/fees in realized paper
+cash and separate5bp stress. This is a new exploratory rule, not a repair to prior
+negative trials, and its own prospective sample is required.

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "counts": {
+    "raw_quote_references": 424,
+    "candidate_prints": 32,
+    "matched_horizons": 148,
+    "missing_horizons": 44
+  },
+  "manifest_sha256": "8954370a5bf35efff4fe69bbb5ff2fa9e7f712299215dfad45de33f85d41dab2",
+  "diagnostic_sha256": "b9b9a70a12641b09b3ab2c5f44e5e69cab1f06ec1ce5c5306660b8d6789037cc",
+  "limits": "Validates all recorded candidate print multiplicities, raw quote references, source/receipt inequalities, depth fractions and return arithmetic. Does not independently rescan candidate completeness or first eligible observation selection. No private fills, PnL, causal or independent-sample claim."
+}

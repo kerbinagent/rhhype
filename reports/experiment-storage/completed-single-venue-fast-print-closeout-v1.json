@@ -1,0 +1,57 @@
+{
+  "schema": "completed-single-venue-fast-print-closeout-v1",
+  "recorded_utc": "2026-10-01T20:31:48.545603+00:00",
+  "previous": "reports/experiment-storage/single-venue-fast-print-v1.json",
+  "previous_sha256": "11d8964013ccbfe46ef88da0a6f53a11dc4bd55f89e3a4ea047e354230f230c4",
+  "artifact_bytes": 38472,
+  "old_reserved_bytes": 262144,
+  "retention_reserved_bytes": 131072,
+  "released_bytes": 131072,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 45948928,
+  "active_research_headroom_bytes": 7528448,
+  "overall_reservation_bytes": 836777216,
+  "files": [
+    {
+      "path": "scripts/single_venue_fast_print.py",
+      "bytes": 8455,
+      "sha256": "480aa8ef4416e1f993718f7fbbd72919f1f1790784fc1b879663cca6023487d2"
+    },
+    {
+      "path": "scripts/audit_single_venue_fast_print.py",
+      "bytes": 5370,
+      "sha256": "a1813255061874f8cc375051e344f62fab2ab06085e8004147402bfd8a2f4d73"
+    },
+    {
+      "path": "tests/test_single_venue_fast_print.py",
+      "bytes": 2388,
+      "sha256": "a4b9788c7f0f96ea96c17a6ecdd9de93ce73d921f1ac0f13fb5ed0231de0e4e4"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-fast-print-preparation-v1.json",
+      "bytes": 820,
+      "sha256": "4e86c638026509f4c26c4d983c399bc6a6f6f024bdea39c356466b11f2da14c2"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-fast-print-v1.json",
+      "bytes": 3054,
+      "sha256": "11d8964013ccbfe46ef88da0a6f53a11dc4bd55f89e3a4ea047e354230f230c4"
+    },
+    {
+      "path": "reports/single-venue-research/fast-print-diagnostic.json.gz",
+      "bytes": 14874,
+      "sha256": "b9b9a70a12641b09b3ab2c5f44e5e69cab1f06ec1ce5c5306660b8d6789037cc"
+    },
+    {
+      "path": "reports/single-venue-research/fast-print-independent-reference-audit.json",
+      "bytes": 654,
+      "sha256": "de729434de7bc8348686911d81d8f2439f14d816ce615cb0c834ca10f71c3931"
+    },
+    {
+      "path": "reports/single-venue-research/fast-print-readout.txt",
+      "bytes": 2857,
+      "sha256": "eeab34a3fa6091a76c274ef86b8ea4fa16556499a34bf7e61e8eb59c60d7b3c9"
+    }
+  ],
+  "scope": "Retain all exploratory diagnostic results, missing cases, raw-reference audit, tests and pins. Source raw remains retained under completed multi capture. No deletion or recompression.65536headroom for closeout bookkeeping."
+}
