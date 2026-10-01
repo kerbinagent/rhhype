@@ -1,0 +1,34 @@
+{
+  "schema": "core-maker-hedge-drift-v1",
+  "recorded_utc": "2026-10-01T14:43:13.735235+00:00",
+  "previous": "reports/experiment-storage/core-rh-active-alt-target-allocation-v1.json",
+  "previous_sha256": "db10c8762d70f7f785426a52c4b0bc9f608b2280371fbf68c59aa1f4a81824c4",
+  "new_maximum_bytes": 32768,
+  "categories_bytes": {
+    "source": 8192,
+    "output": 8192,
+    "control": 16384
+  },
+  "active_research_pool_bytes": 18874368,
+  "active_research_reserved_bytes": 18825216,
+  "active_research_headroom_bytes": 49152,
+  "overall_reservation_bytes": 836777216,
+  "source_pins": [
+    {
+      "path": "scripts/core_maker_hedge_drift.py",
+      "sha256": "2a36d1011fd6f0d3bf731e498d7c33dd16aa3c8bcc644a4da4489b7810f358b4"
+    }
+  ],
+  "inputs": [
+    {
+      "summary": "reports/core-passive-lit/result/summary.json.gz",
+      "summary_sha256": "479780225e9dcaa3cf7fa9fe663922bd22cc9552ad09a4412d1c2f2941fd2940"
+    },
+    {
+      "summary": "reports/core-passive-fair-retry/summary.json.gz",
+      "summary_sha256": "e6b23d2e4a9d6acaf37805d3f8009ac5f46ad396484713487874535a98abdbbd"
+    }
+  ],
+  "manifest_sha256": "30d8c14cd7ab754b895e2873871db70825fa273ebf85a560b46a2fa9a78baca1",
+  "scope": "Posthoc replay diagnostic only: compare available RH depth at five recorded Coremaker flow increments with first eligible hedge book, retaining actual fills/zero fills. No new strategy, raw data, orders, or P&L counterfactual. All arms overlap."
+}
