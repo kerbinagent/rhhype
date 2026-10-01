@@ -1,0 +1,11 @@
+{
+  "recorded_utc": "2026-10-01T21:17:03.595101+00:00",
+  "status": "passed",
+  "combined_context_sha256": "70a077cda49b1eda9a8e83d608fa27956f8b183ec4a70dd3afefa30bc7eee74f",
+  "original_context_sha256": "f1e228cd287c04c93b0bf4f87d4f5074c641059e095bd774b2231a10a6d5b742",
+  "all_12_original_rows_reproduce_exactly": true,
+  "total_episodes": 18,
+  "fresh_pairs": 12,
+  "missing_pairs": 6,
+  "limits": "Descriptive signed midpoint returns, not causal or executable cash decomposition. Incomplete sample remains incomplete."
+}

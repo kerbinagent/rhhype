@@ -1,0 +1,25 @@
+ALL-EPISODE EXECUTION PRICE CONTEXT,2026-10-01
+
+18closed paper episodes retained:12from the original complete sample and6from
+the capped prefix. Original12quote contexts reproduce exactly.12episodes have
+fresh paired entry/exit quotes;6do not. No later quote substitutes were used.
+
+Latest Core LIT fade winner:entry Coremid3.83535,RHmid3.83450;exit Coremid3.82775,
+RHmid3.82820. Over10.50seconds both prices fell:Core19.8353bp andRH16.4433bp.
+The signed relative midpoint move was+3.3920bp for the short. Core changed from
+about2.22bp aboveRH to1.18bp belowRH. There was local relative convergence,
+but a much larger shared directional decline. This is descriptive midpoint
+context,not an executable paired profit or a causal share of the cash gain.
+Actual local paper cash remains+0.147058USDC,+0.097593after5bpstress.
+
+The earlier Corefade winner lacks a fresh paired exit under the250ms rule;
+no equivalent relative-return assertion is made for it. Both winners are shorts.
+The only positive Corefollow episode in the prefix gained0.041070cash before
+stress and lost0.008396afterstress;its local signed midpoint move6.0965bp was
+smaller than reference8.1688bp. Other positive relative moves also coexist with
+cash losses. Reference convergence alone therefore does not establish that an
+entry survives execution costs or market-wide directional moves.
+
+Next useful test:collect more fixed fresh samples with both directions and
+venues unchanged,then report attempt/fill counts,all losses,and market context.
+No threshold optimization or claim of repeatable profitability from two fills.
