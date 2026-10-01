@@ -1,0 +1,11 @@
+{
+  "audit": "passed",
+  "conservative_request_upper_bound_per_66_seconds": {
+    "LIT": 10
+  },
+  "published_standard_per_60_seconds": 60,
+  "published_default_transaction_type_per_60_seconds": 40,
+  "source": "https://apidocs.lighter.xyz/docs/rate-limits",
+  "summary_sha256": "4ca7e1a5672e1f241fcfbca38564a8aff8c160f3682ee92d1e316b527c542a7e",
+  "method": "Quote/cancel/hedge requests counted once, exit requests twice, exit and hedge results each counted once more for retries or late covering.66seconds allows up to3seconds displacement at both ends. Bound applies separately to each independent portfolio; no actual order requests sent."
+}

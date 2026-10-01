@@ -1,0 +1,44 @@
+{
+  "schema": "core-spot-passive-public-capture-v1",
+  "read_only": true,
+  "started_utc": "2026-10-01T18:46:52.435287+00:00",
+  "ended_utc": "2026-10-01T18:56:53.210209+00:00",
+  "end_reason": "duration_limit",
+  "truncated": false,
+  "dropped_complete_frame_on_cap": 0,
+  "configured_seconds": 600,
+  "configured_total_bytes": 3407872,
+  "compressed_payload_bytes": 1509180,
+  "payload_records": 13464,
+  "frames_sha256": "b5e9f2f1a40eb35d97c55019997ac1ed8458e0e21c8a4cbee68a2a6486385596",
+  "market_plan_sha256": "b66369e4734af513d4998afda43ee82da62d5eaae775c93371f92032a065031e",
+  "selected_markets": {
+    "lighter": {
+      "LIT_spot": "2049",
+      "LIT_perp": "120"
+    }
+  },
+  "metadata_bytes": 41912,
+  "generations": [
+    {
+      "venue": "lighter",
+      "generation": "lighter:1:30993019",
+      "opened_utc": "2026-10-01T18:46:52.435542+00:00",
+      "closed_utc": "2026-10-01T18:56:53.210112+00:00"
+    }
+  ],
+  "errors": [],
+  "record_counts": {
+    "lighter|None|None": 1,
+    "lighter|None|connected": 1,
+    "lighter|subscription_acks": 3,
+    "lighter|2049|trade": 416,
+    "lighter|2049|order_book": 4467,
+    "lighter|120|order_book": 8570,
+    "lighter|outbound_keepalive": 9,
+    "lighter|None|pong": 9,
+    "lighter|connections_ended": 1
+  },
+  "source_sha256": "b1d41e7b7bcbb5c3e8d04b67c92feb1aae9037002c38a851e030834c54d712fb",
+  "economic_evaluation": false
+}
