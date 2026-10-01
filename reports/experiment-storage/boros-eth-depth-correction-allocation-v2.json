@@ -1,0 +1,20 @@
+{
+  "schema": "boros-eth-depth-schema-correction-v2",
+  "recorded_utc": "2026-10-01T02:55:34.194270+00:00",
+  "previous": "reports/experiment-storage/boros-eth-book-assets-allocation-v1.json",
+  "previous_sha256": "b5719611a4edea60bea00f1fddfc61a43d5fafbcde8e6645d60bfbba4f801f64",
+  "new_maximum_bytes": 32768,
+  "categories_bytes": {
+    "source": 4096,
+    "raw_and_schema": 16384,
+    "output": 8192,
+    "control": 4096
+  },
+  "active_research_reserved_bytes": 163840,
+  "active_research_headroom_bytes": 4030464,
+  "requests_max": 2,
+  "retries": 0,
+  "docs_url": "https://api-boros.pendle.finance/apis/docs",
+  "book_url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=199&tickSize=0.0001&includeAmm=false",
+  "reason": "Original tickSize=1 request returned HTTP400 and remains preserved. Official embedded OpenAPI allows only .0001/.001/.01/.1. Correct request keeps market199, earliest-maturity selection and side unchanged. One docs read plus one corrected public book read. No account/transaction calls or alternate markets."
+}

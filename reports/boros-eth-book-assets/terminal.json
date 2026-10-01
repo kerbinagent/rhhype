@@ -1,0 +1,17 @@
+[
+  {
+    "name": "assets",
+    "url": "https://api-boros.pendle.finance/apis/v1/assets",
+    "status": "completed",
+    "raw_bytes": 3269,
+    "gzip_bytes": 821,
+    "raw_sha256": "f235778dbb3ad05e3f50b563cea376251fac8746a085307b14f708c4c5627699",
+    "received_utc": "2026-10-01T02:53:30.030579+00:00"
+  },
+  {
+    "name": "book",
+    "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=199&tickSize=1",
+    "status": "failed_no_retry",
+    "error": "HTTP Error 400: Bad Request"
+  }
+]
