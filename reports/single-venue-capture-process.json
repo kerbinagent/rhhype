@@ -1,0 +1,11 @@
+{
+  "pid": 2236837,
+  "command": [
+    "/home/harry/miniconda3/bin/python",
+    "/home/harry/projects/research/rhhype/scripts/capture_single_venue_study.py"
+  ],
+  "launched_utc": "2026-10-01T19:46:49.796007+00:00",
+  "fixed_capture_seconds": 600,
+  "public_read_only": true,
+  "plan_sha256": "15e65eaf3cd6a3caeca2d7de631c5172730dfa0ca5642de496aac566f148e6fe"
+}

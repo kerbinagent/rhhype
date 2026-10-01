@@ -1,0 +1,93 @@
+SINGLE-VENUE SHORT-HORIZON RESEARCH — FIRST CYCLE
+Completed 2026-10-01, approximately 20:00 UTC. Public-data paper research only.
+
+Question
+Can a price difference identify a profitable short trade on just one venue?
+More specifically, can an unusually large trade temporarily dislocate a thin
+venue while a reference venue stays stable?
+
+Research
+Cross-venue price discovery and temporary order-flow impact are documented
+mechanisms. They do not establish that our venues, fees, data delays or chosen
+signals offer a profitable trade. Large orders can also carry information, and
+liquidity can recover without the traded price returning to its old level.
+Sources and applicability limits are in reports/single-venue-research-sources.json.
+
+Experiment
+Three fixed rules: gap fade, leader follow, and local liquidity-shock fade.
+Each rule/venue pair has its own independent paper ledger, one perpetual
+position at a time, at most $100 actual entry notional, $600 starting collateral,
+400 ms minimum order delay, native quantity/price rules and minimum order sizes.
+The quantity calculation leaves 1% room below the notional limit. Each holding
+period targets ten seconds from entry; subsequent book arrival and exit delay
+extend actual holding time. Entry IOC limit: 1 bp; exit IOC limit: 10 bp.
+No stop-loss guarantee. Partial and unresolved executions remain explicit.
+Published Standard zero fees are checked against archived market metadata.
+RH latency is an archived model assumption, not a fresh verification.
+Capital uses 5% annualized held notional; a separate 5 bp allowance stresses costs.
+Ledger cash stays in its own collateral. Cross-venue price comparison assumes
+USDG/USDC parity. The independent ledgers must not be added as one portfolio.
+
+The shock rule requires a completed one-second burst at least five times its
+past median nonempty-second notional, strongly one-sided flow, a substantial
+fraction of nearby depth, a local price move, stable reference, an aligned
+relative-price deviation and enough room after estimated round-trip costs.
+The thresholds are uncalibrated research hypotheses, not measured probabilities.
+
+Historical exploration: three preselected ten-minute LIT captures
+1. One Core short gained $0.068524 after fees/capital, or $0.019042 after stress.
+   Gap and leader rules selected the SAME event; it is one unique success.
+2. Gap-fade trades lost $0.121586 on Core and $0.027920 on RH. Another entry
+   did not fill. The leader rule made no entry.
+3. Four entry attempts produced no fills. No completed trade.
+All three independent raw-event audits passed. The shock rule traded none.
+Across the old captures, 47 unusually large flow bursts were observed. Of these,
+46 failed the trading cost hurdle; rejection categories overlap. The old
+captures have ordinary trade data for only one venue apiece, although both books
+are present. Their lack of other-venue trades is missing coverage, not inactivity.
+
+Fresh prospective sample
+Protocol frozen at f0b90a0 before capture. Capture ran 19:46:50.507215 through
+19:56:51.262773 UTC (600.756 seconds), both trade feeds and books, no recorded
+errors, 15,087 wire records and 1,830,908 compressed raw bytes.
+Core gap fade: two trades, both losses; total cash after fees/capital -$0.040428,
+or -$0.139406 after the separate stress allowance. Both positions finished flat.
+All five other rule/venue ledgers had zero entries. No execution unknowns.
+Independent audit reproduced two signals, four orders, four depth executions
+and both closed cash ledgers. None of these are authenticated private fills.
+
+Fresh shock diagnostics
+There were 52 large Core flow bins and three large RH bins. None passed the
+complete shock rule. On Core, 47/52 failed the depth-fraction condition and
+43/52 lacked the required local move; every burst failed the cost hurdle.
+Of 49 Core bursts with a matched ten-second future observation, fading the
+trade direction had a mean midpoint return of -0.233 bp, before any costs;
+21 were positive. Three RH observations averaged +2.295 bp, far too few for a
+conclusion. Missing targets are retained. Events overlap and are dependent.
+These are price diagnostics, not executed cash returns or evidence of causality.
+
+Interpretation and next research
+A large trade relative to recent activity is often small relative to available
+liquidity. LIT alone has not established the proposed thin-book mechanism.
+The next comparison will include other assets and retain LIT as a control.
+The existing signal and execution rules should remain fixed for that comparison;
+asset selection must not be based on whichever historical trade made money.
+Further work can examine faster burst detection and an additional independent
+reference venue. The current one-second detector may miss faster reversals.
+No repeatably profitable one-venue strategy is established by this first cycle.
+
+Evidence preservation
+The original historical replay hit its trace-size cap before any completed
+trade and remains preserved. Supplement 512a20c stores hashes of full raw books
+instead of duplicate depth in each trace. Full books remain in original captures
+and the audit reconstructs them. Synthetic tests verify identical economics and
+reject changed depth or corrupted fill values. Trading rules were unchanged.
+Large-flow diagnostic 5c2532a was specified after initial historical exploration,
+before the prospective endpoint and before reading its economic outcomes.
+
+Primary references
+https://arxiv.org/abs/2108.09750
+https://dare.uva.nl/id/84569e65-bf29-4378-aa86-936157b871c3
+https://arxiv.org/abs/1602.00731
+https://www.sciencedirect.com/science/article/pii/S1386418106000528
+https://apidocs.lighter.xyz/docs/account-types

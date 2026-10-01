@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "sample": "prospective",
+  "counts": {
+    "signal": 2,
+    "request": 4,
+    "ioc": 4,
+    "closed": 2
+  },
+  "raw_capture_verified": true,
+  "signal_checks_vacuous": false,
+  "fill_checks_vacuous": false,
+  "summary_sha256": "eee4c29dc6b3715444ab4327502458763c805b74fb509490919f76ad4a5ec3e7",
+  "trace_sha256": "ca40c96259321e21983b91394109b8e0eb4bba86b00c7106b905f801fccc93b2",
+  "limits": "Conditional public-book IOC execution. Signal and first-eligible book checks plus cash reconciliation; no private order acknowledgments or authenticated fills. Independent arms must not be summed."
+}
