@@ -1,0 +1,18 @@
+{
+  "recorded_utc": "2026-10-01T22:33:23.231452+00:00",
+  "plan_sha256": "caf9ab26627c767deed9f903445ccbe47b714302a588db5e9dcdea8c85b8a8d1",
+  "source_pins_verified": 74,
+  "tests_passed": 5,
+  "fixture_independent_audited_closes": 30,
+  "fixture_independent_audited_IOCs": 60,
+  "archived_catalog_preflight": {
+    "source": "reports/single-venue-depth-batch/window-3/capture/metadata",
+    "native_markets": 20,
+    "normalized_bytes": 12260,
+    "total_metadata_bytes": 66865,
+    "metadata_cap": 131072,
+    "fresh_metadata_required_at_capture": true
+  },
+  "gate": "Prior LIT batch still collecting; no broad capture started and no prior-batch economics inspected.",
+  "allocation": "Included in existing65536byte broad preparation reservation"
+}
