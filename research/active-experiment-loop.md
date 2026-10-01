@@ -1892,3 +1892,14 @@ journal. Separate epoch increments match report. Archive 3,703,796 B;
 259 sampled, invalid slot 71, 604 future/interrupted; no errors/retries/
 evaluation. Prior batch completion notified; new executable-shock batch
 status-only scope added, no research economics read. Next 22:26:33 UTC.
+
+
+### Review 163, 1 October 22:26 UTC
+
+Complete coverage: 13 exact Premium losses/−$21.42802 (12 paired, one
+failed hedge); no other closes/gains/estimates/aborts, one HL price limit.
+Four feeds/101 pairs fresh, running/ok. Separate Premium increase 15 versus
+report 13 retained. Archive 3,708,278 B; 150 future pairs project 4,509,578 B,
+margin 733,302 B. Carry 22:25: 263 sampled, invalid slot 71, 600 future/
+interrupted; no errors/retries/evaluation. Batch status-only window2→3
+transition notified, no economic outputs opened. Next 22:46:33 UTC.
