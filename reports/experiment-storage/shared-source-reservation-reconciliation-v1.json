@@ -1,0 +1,55 @@
+{
+  "schema": "shared-source-reservation-reconciliation-v1",
+  "recorded_utc": "2026-10-01T14:53:48.328454+00:00",
+  "previous": "reports/experiment-storage/core-maker-hedge-drift-v1.json",
+  "previous_sha256": "3d743270cd19cce0d62394158ca36594dff9cd00dfe4eadab820f5b1cd618068",
+  "adjusted_retention": "reports/experiment-storage/completed-ai-target-closeout-v1.json",
+  "adjusted_retention_sha256": "14a40547f2c6f2ed32ce71728cb9a972ea035eed208596f8942f8681730cb71f",
+  "previous_retention_bytes": 262144,
+  "shared_source_bytes_already_retained": 154961,
+  "unique_artifact_bytes": 72312,
+  "replacement_retention_bytes": 98304,
+  "released_bytes": 163840,
+  "active_research_pool_bytes": 18874368,
+  "active_research_reserved_bytes": 18661376,
+  "active_research_headroom_bytes": 212992,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Reservation accounting only. Five exact same path/hash source files were charged again in AI closeout although explicitly retained by older completed studies. Canonical retentions remain fully funded. No file deleted, changed, moved or recompressed; old manifests and full AI evidence remain. 24KiB target closeout slack retained. Future allocations must not count these same source paths again when retaining a wrapper study.",
+  "shared_references": [
+    {
+      "path": "scripts/core_rh_target_margin.py",
+      "bytes": 20297,
+      "sha256": "3644abc5fa34c379f1673ce99901194ee6dea6d5a314daa279319b7b431f295a",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-target-margin-closeout-v1.json",
+      "canonical_manifest_sha256": "ea9c0e21705f87cf068125cfe314cab506a02e4404b3e76696772b42a2597d83"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "bytes": 40963,
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "bytes": 59902,
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "bytes": 31735,
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "tests/test_core_rh_target_margin.py",
+      "bytes": 2064,
+      "sha256": "b2db7eb8418ccbf34ecad2d331a53495824d4694703adee16f5b225a5602465d",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-target-margin-closeout-v1.json",
+      "canonical_manifest_sha256": "ea9c0e21705f87cf068125cfe314cab506a02e4404b3e76696772b42a2597d83"
+    }
+  ]
+}
