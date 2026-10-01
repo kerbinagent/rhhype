@@ -1,0 +1,74 @@
+{
+  "schema": "core-rh-equity-open-v1",
+  "recorded_utc": "2026-10-01T13:22:15.930001+00:00",
+  "previous": "reports/experiment-storage/core-maker-lit-ioc-scenario-v1.json",
+  "previous_sha256": "9f54e9972077762499473c200bc18de6eb52ea76498c9c187852fd8e8111b780",
+  "new_maximum_bytes": 1064960,
+  "categories_bytes": {
+    "source": 49152,
+    "metadata": 65536,
+    "raw": 786432,
+    "output": 131072,
+    "control": 32768
+  },
+  "active_research_reserved_bytes": 12468224,
+  "active_research_headroom_bytes": 3260416,
+  "overall_reservation_bytes": 836777216,
+  "assets": [
+    "AAPL",
+    "AMZN",
+    "NVDA",
+    "TSLA"
+  ],
+  "budgets": [
+    100
+  ],
+  "horizons": [
+    60
+  ],
+  "entry_slippage_bps": 10,
+  "primary": "100-60-2s-confirm",
+  "duration_seconds": 900,
+  "entry_end_seconds": 700,
+  "raw_soft_cap": 500000,
+  "scope": "Separate opening-session cohort, four preselected stock perps AAPL/AMZN/NVDA/TSLA, freshmetadata required all4bothvenues, contract/quote multiplier1, active/nonfrozen/nonforced-reduce-only, positiveindex/mark, zeroStandardfees. Same sharedpersistententryengine and 0/2sec independent confirmationbranches,100perleg/600prefundedtotal/3positions. No pooling with crypto or past equities. Sameunderlyingdisplaycontract interpreted from venue symbol/unit metadata; oracle/collateral basis remainsrisk, not redeemableequivalence. No orders/auth.",
+  "strategy": "Arrival reference sampled>=1secapart,120smedian/2secembargo/90count/89secspan. Currentexcursion>=5bp and forecastclears costs+1bp target; confirmedbranch adds2sec persistence. Same10bp IOC limits,1bp takeprofit/60sec hold,30sec cooldown/30attemptcap, entryend700s, runtime900s,2secsourceage/250msskew,120sechourguard. All failures/partials/unresolved retained. USDGUSDC parityconditional; fee0freshmetadata;5bpstress separate.",
+  "storage": "Boundedchunkmetadata2MB each,1feedconnectioneach max3attempts; fullwireunretained; captureeveryorderpendingcallback, admission/history andfill/exit/terminal/invalidation, allsampledbasisbooks;500kBsoftstopadmissions786432Bhardcap. Endpointaudit. Nointerimeconomics.",
+  "source_pins": [
+    {
+      "path": "scripts/core_rh_equity_open.py",
+      "sha256": "070397698b0d1e8d912a522c08f352257fc56d12407edeb2270d8d12e793ec59"
+    },
+    {
+      "path": "scripts/audit_core_rh_equity_open.py",
+      "sha256": "9081bb2c921c3d8eac7e8bd15f5218d408f6d30adbd4c0bd62c6ce9a0976f51f"
+    },
+    {
+      "path": "scripts/core_rh_persistent_entry.py",
+      "sha256": "d6a549af5ed2ca5767d364d228b50c279126daa217a7a85be22c5ad279c3ce04"
+    },
+    {
+      "path": "tests/test_core_rh_persistent_entry.py",
+      "sha256": "269dbfcd486b0e81c4a7e0c2259cab07ac8035d4412a3edceca19126b3c7f4f8"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    }
+  ],
+  "test": "Inherited2mechanism/lifecycle tests already passed; wrapper metadata-selection and fixed UTCstart verified statically; Python compile passed. No copied untested strategy implementation.",
+  "confirmation_seconds": [
+    0,
+    2
+  ],
+  "not_before_utc": "2026-10-01T13:25:00+00:00",
+  "session": "Start13:25UTC (+<=60secmetadatawindow), duration900s coversbeforeandafterUS09:30ET opening; no claims of only regular-session trading. Onefixedcohort; no runtime/assets changed after crypto outcomes. Source/receipt timestamp gates unchanged. Stopbeforehour so no plannedfunding."
+}
