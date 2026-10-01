@@ -1,0 +1,16 @@
+{
+  "schema": "active-research-reserve-v1",
+  "recorded_utc": "2026-10-01T02:51:09.631978+00:00",
+  "overall_reservation_bytes": 836777216,
+  "overall_reservation_increase_bytes": 0,
+  "manual_review_archive_previous_cap": 16777216,
+  "manual_review_archive_new_cap": 12582912,
+  "manual_review_archive_observed_bytes": 2696701,
+  "active_research_reserve_bytes": 4194304,
+  "existing_33m_diagnostic_budget_unchanged": true,
+  "existing_diagnostic_reserved_bytes": 32999608,
+  "existing_diagnostic_headroom_bytes": 392,
+  "monitor_adoption": "routine_monitor acknowledged 12,582,912-byte pre-write guard; no existing report changed/deleted",
+  "frozen_btc_carry_storage_and_sources_unchanged": true,
+  "scope": "Reassign 4 MiB of unused manual review archive reservation to bounded active research. Every child study reserves source/raw/output/control maxima before requests. No old economic data is removed."
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "boros-core-eth-market-lookup-v1",
+  "reserve": "reports/experiment-storage/active-research-reserve-v1.json",
+  "reserve_sha256": "a70324ffba1949338f4b1fa37c79da82725b6558319e6b9b1cca8560f93108c6",
+  "new_maximum_bytes": 65536,
+  "categories_bytes": {
+    "source": 8192,
+    "raw": 32768,
+    "output": 16384,
+    "control": 8192
+  },
+  "active_research_reserved_bytes": 65536,
+  "active_research_headroom_bytes": 4128768,
+  "url": "https://api-boros.pendle.finance/apis/v1/markets",
+  "params": {
+    "isMatured": "false",
+    "isUiWhitelisted": "true",
+    "limit": 100
+  },
+  "requests_max": 2,
+  "retries": 0,
+  "decoded_limit_per_response": 262144,
+  "selection": "Match metadata.fundingRateSymbol exactly lighter-eth; inspect all returned candidates, then choose earliest future maturity 7\u201390 days away independent of quoted rate. Token units and live status must be checked. A remaining resumeToken means incomplete registry coverage, never absence proof. No order/account/simulation endpoint."
+}
