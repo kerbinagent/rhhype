@@ -1,0 +1,19 @@
+{
+  "schema": "rh-account-doc-refresh-v1",
+  "recorded_utc": "2026-10-01T15:06:53.210018+00:00",
+  "previous": "reports/experiment-storage/core-rh-active-alt-confirmation-allocation-v1.json",
+  "previous_sha256": "f82e9111b28505e4358d910e6cb267a76e38c970d50dcb9eb10d0c3c245036bc",
+  "new_maximum_bytes": 8192,
+  "categories_bytes": {
+    "source": 3072,
+    "output": 4096,
+    "control": 1024
+  },
+  "active_research_pool_bytes": 18874368,
+  "active_research_reserved_bytes": 18866176,
+  "active_research_headroom_bytes": 8192,
+  "overall_reservation_bytes": 836777216,
+  "url": "https://apidocs.rh.lighter.xyz/docs/account-types",
+  "source_sha256": "5086ac413f8776a8602ad080b231d1978d2f187a6135ae04af56cfcd10035a7f",
+  "scope": "One bounded unauthenticated documentation GET;2MB ingress max. Extract account tables only; no credentials or transactions. Prior unsaved probe succeeded; this preserves current evidence."
+}
