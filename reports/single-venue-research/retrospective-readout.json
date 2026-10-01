@@ -1,0 +1,483 @@
+{
+  "recorded_utc": "2026-10-01T19:55:48.873800+00:00",
+  "scope": "Retrospective exploration on all3preselectedold10minLITcaptures. Frozenrulesbeforetheseoutcomes, butcaptures/earlierpairedresultsalreadyknown; not prospectivevalidation. Freshcapturestillrunning, noeconomicreads.",
+  "observations": [
+    "Firstsample: oneCoreLITshort98.964234entrynotional held10.550187116seconds; cashaftercapital+.0685243446043,5bpstressed+.0190422276043. Gapandleaderarms selectedexactlythesameevent, countedonce when describing unique evidence.",
+    "Secondsample:gapCore\u2212.1215856709856andgapRH\u2212.0279196710519;onefurtherCorerequestnofill. Leaderarmsnoentries.",
+    "Thirdsample:4entryrequests acrossgapCore/gapRH/leaderRH allzeroIOCfills; zero completedtrades.",
+    "Localshockrule admittednone. Acrosssamples47observedlargeburstbins;46failedcosthurdle,44failedalignedresidual,35failedreference-stability. Failuresoverlap.",
+    "Ten-secondmidpointfadeaveragesonmatchedlargebursts werepositivebutsmall(about.69to2.59bp),whilemeanrelativevenueoutperformance wasnonpositive ineachsample. Theseomitspread/fees/delay,includeoverlappingevents andmissingtargets, anddonotestablishprofitability orcausality."
+  ],
+  "cases": [
+    {
+      "sample": "core-maker-lit-offset-compact",
+      "metrics": {
+        "gap_fade:lighter": {
+          "attempts": 1,
+          "closed": 1,
+          "complete": true,
+          "unknown": null,
+          "cash": "600.0685243446042832134558219",
+          "wins": 1,
+          "cash_after_capital_sum": "0.06852434460428321345582191781",
+          "stressed_sum": "0.01904222760428321345582191781"
+        },
+        "gap_fade:rh_lighter": {
+          "attempts": 0,
+          "closed": 0,
+          "complete": true,
+          "unknown": null,
+          "cash": "600",
+          "wins": 0,
+          "cash_after_capital_sum": "0",
+          "stressed_sum": "0"
+        },
+        "leader_follow:lighter": {
+          "attempts": 1,
+          "closed": 1,
+          "complete": true,
+          "unknown": null,
+          "cash": "600.0685243446042832134558219",
+          "wins": 1,
+          "cash_after_capital_sum": "0.06852434460428321345582191781",
+          "stressed_sum": "0.01904222760428321345582191781"
+        },
+        "leader_follow:rh_lighter": {
+          "attempts": 0,
+          "closed": 0,
+          "complete": true,
+          "unknown": null,
+          "cash": "600",
+          "wins": 0,
+          "cash_after_capital_sum": "0",
+          "stressed_sum": "0"
+        },
+        "local_shock_fade:lighter": {
+          "attempts": 0,
+          "closed": 0,
+          "complete": true,
+          "unknown": null,
+          "cash": "600",
+          "wins": 0,
+          "cash_after_capital_sum": "0",
+          "stressed_sum": "0"
+        },
+        "local_shock_fade:rh_lighter": {
+          "attempts": 0,
+          "closed": 0,
+          "complete": true,
+          "unknown": null,
+          "cash": "600",
+          "wins": 0,
+          "cash_after_capital_sum": "0",
+          "stressed_sum": "0"
+        }
+      },
+      "audit_counts": {
+        "signal": 2,
+        "request": 4,
+        "ioc": 4,
+        "closed": 2
+      },
+      "large_flow_summary": {
+        "lighter": {
+          "large_flow_bins": 0,
+          "full_rule_passes": 0,
+          "failed_gates": {},
+          "horizons": {
+            "1": {
+              "n": 0,
+              "missing": 0,
+              "favorable_target_count": 0,
+              "mean_favorable_target_bps": null,
+              "mean_favorable_relative_bps": null
+            },
+            "5": {
+              "n": 0,
+              "missing": 0,
+              "favorable_target_count": 0,
+              "mean_favorable_target_bps": null,
+              "mean_favorable_relative_bps": null
+            },
+            "10": {
+              "n": 0,
+              "missing": 0,
+              "favorable_target_count": 0,
+              "mean_favorable_target_bps": null,
+              "mean_favorable_relative_bps": null
+            },
+            "30": {
+              "n": 0,
+              "missing": 0,
+              "favorable_target_count": 0,
+              "mean_favorable_target_bps": null,
+              "mean_favorable_relative_bps": null
+            }
+          }
+        },
+        "rh_lighter": {
+          "large_flow_bins": 11,
+          "full_rule_passes": 0,
+          "failed_gates": {
+            "reference_ready": 0,
+            "imbalance": 2,
+            "pre_clock": 2,
+            "post_clock": 0,
+            "depth_fraction": 5,
+            "local_move": 7,
+            "reference_stable": 9,
+            "residual_aligned": 10,
+            "cost_hurdle": 11
+          },
+          "horizons": {
+            "1": {
+              "n": 10,
+              "missing": 1,
+              "favorable_target_count": 3,
+              "mean_favorable_target_bps": -0.908875621276887,
+              "mean_favorable_relative_bps": -1.0122565104075474
+            },
+            "5": {
+              "n": 10,
+              "missing": 1,
+              "favorable_target_count": 6,
+              "mean_favorable_target_bps": 1.6559128270412005,
+              "mean_favorable_relative_bps": -0.15293274485531305
+            },
+            "10": {
+              "n": 9,
+              "missing": 2,
+              "favorable_target_count": 6,
+              "mean_favorable_target_bps": 2.5888795646089067,
+              "mean_favorable_relative_bps": -0.14161542858641182
+            },
+            "30": {
+              "n": 9,
+              "missing": 2,
+              "favorable_target_count": 5,
+              "mean_favorable_target_bps": 5.798869552256373,
+              "mean_favorable_relative_bps": -0.4852260778149413
+            }
+          }
+        }
+      },
+      "summary_sha256": "9788ac371f13e7214db4b39d9f34f1ba2fb1d38ef8e3047b9bc63bedf4d108a6",
+      "diagnostic_sha256": "1776219317e366382cf2404da93d60d5eb1fa57bcc37cc87ae5c8f3cacdb3544"
+    },
+    {
+      "sample": "core-maker-lit-retry-compact",
+      "metrics": {
+        "gap_fade:lighter": {
+          "attempts": 2,
+          "closed": 1,
+          "complete": true,
+          "unknown": null,
+          "cash": "599.8784143290143935100162529",
+          "wins": 0,
+          "cash_after_capital_sum": "-0.1215856709856064899837471461",
+          "stressed_sum": "-0.1710817574856064899837471461"
+        },
+        "gap_fade:rh_lighter": {
+          "attempts": 1,
+          "closed": 1,
+          "complete": true,
+          "unknown": null,
+          "cash": "599.9720803289480796706785103",
+          "wins": 0,
+          "cash_after_capital_sum": "-0.02791967105192032932148972603",
+          "stressed_sum": "-0.07740686405192032932148972603"
+        },
+        "leader_follow:lighter": {
+          "attempts": 0,
+          "closed": 0,
+          "complete": true,
+          "unknown": null,
+          "cash": "600",
+          "wins": 0,
+          "cash_after_capital_sum": "0",
+          "stressed_sum": "0"
+        },
+        "leader_follow:rh_lighter": {
+          "attempts": 0,
+          "closed": 0,
+          "complete": true,
+          "unknown": null,
+          "cash": "600",
+          "wins": 0,
+          "cash_after_capital_sum": "0",
+          "stressed_sum": "0"
+        },
+        "local_shock_fade:lighter": {
+          "attempts": 0,
+          "closed": 0,
+          "complete": true,
+          "unknown": null,
+          "cash": "600",
+          "wins": 0,
+          "cash_after_capital_sum": "0",
+          "stressed_sum": "0"
+        },
+        "local_shock_fade:rh_lighter": {
+          "attempts": 0,
+          "closed": 0,
+          "complete": true,
+          "unknown": null,
+          "cash": "600",
+          "wins": 0,
+          "cash_after_capital_sum": "0",
+          "stressed_sum": "0"
+        }
+      },
+      "audit_counts": {
+        "signal": 3,
+        "request": 5,
+        "ioc": 5,
+        "closed": 2
+      },
+      "large_flow_summary": {
+        "lighter": {
+          "large_flow_bins": 0,
+          "full_rule_passes": 0,
+          "failed_gates": {},
+          "horizons": {
+            "1": {
+              "n": 0,
+              "missing": 0,
+              "favorable_target_count": 0,
+              "mean_favorable_target_bps": null,
+              "mean_favorable_relative_bps": null
+            },
+            "5": {
+              "n": 0,
+              "missing": 0,
+              "favorable_target_count": 0,
+              "mean_favorable_target_bps": null,
+              "mean_favorable_relative_bps": null
+            },
+            "10": {
+              "n": 0,
+              "missing": 0,
+              "favorable_target_count": 0,
+              "mean_favorable_target_bps": null,
+              "mean_favorable_relative_bps": null
+            },
+            "30": {
+              "n": 0,
+              "missing": 0,
+              "favorable_target_count": 0,
+              "mean_favorable_target_bps": null,
+              "mean_favorable_relative_bps": null
+            }
+          }
+        },
+        "rh_lighter": {
+          "large_flow_bins": 13,
+          "full_rule_passes": 0,
+          "failed_gates": {
+            "reference_ready": 1,
+            "imbalance": 1,
+            "pre_clock": 0,
+            "post_clock": 0,
+            "depth_fraction": 9,
+            "local_move": 8,
+            "reference_stable": 10,
+            "residual_aligned": 13,
+            "cost_hurdle": 12
+          },
+          "horizons": {
+            "1": {
+              "n": 13,
+              "missing": 0,
+              "favorable_target_count": 5,
+              "mean_favorable_target_bps": -0.698112859934726,
+              "mean_favorable_relative_bps": -1.4385111542581364
+            },
+            "5": {
+              "n": 12,
+              "missing": 1,
+              "favorable_target_count": 5,
+              "mean_favorable_target_bps": -0.3191534999235282,
+              "mean_favorable_relative_bps": -2.434303240832672
+            },
+            "10": {
+              "n": 13,
+              "missing": 0,
+              "favorable_target_count": 6,
+              "mean_favorable_target_bps": 0.6904712630218851,
+              "mean_favorable_relative_bps": -2.1388715006131145
+            },
+            "30": {
+              "n": 13,
+              "missing": 0,
+              "favorable_target_count": 11,
+              "mean_favorable_target_bps": 6.928624520553693,
+              "mean_favorable_relative_bps": -3.3277261344955766
+            }
+          }
+        }
+      },
+      "summary_sha256": "682fecb26252f8de51833ad76844495668938a1e2e9b9818f2b3874158915721",
+      "diagnostic_sha256": "1ac02d9596cb9142261f68b1793444324acfac07c70f8aeab9f78ee28c508477"
+    },
+    {
+      "sample": "core-passive-lit-compact",
+      "metrics": {
+        "gap_fade:lighter": {
+          "attempts": 1,
+          "closed": 0,
+          "complete": true,
+          "unknown": null,
+          "cash": "600",
+          "wins": 0,
+          "cash_after_capital_sum": "0",
+          "stressed_sum": "0"
+        },
+        "gap_fade:rh_lighter": {
+          "attempts": 1,
+          "closed": 0,
+          "complete": true,
+          "unknown": null,
+          "cash": "600",
+          "wins": 0,
+          "cash_after_capital_sum": "0",
+          "stressed_sum": "0"
+        },
+        "leader_follow:lighter": {
+          "attempts": 0,
+          "closed": 0,
+          "complete": true,
+          "unknown": null,
+          "cash": "600",
+          "wins": 0,
+          "cash_after_capital_sum": "0",
+          "stressed_sum": "0"
+        },
+        "leader_follow:rh_lighter": {
+          "attempts": 2,
+          "closed": 0,
+          "complete": true,
+          "unknown": null,
+          "cash": "600",
+          "wins": 0,
+          "cash_after_capital_sum": "0",
+          "stressed_sum": "0"
+        },
+        "local_shock_fade:lighter": {
+          "attempts": 0,
+          "closed": 0,
+          "complete": true,
+          "unknown": null,
+          "cash": "600",
+          "wins": 0,
+          "cash_after_capital_sum": "0",
+          "stressed_sum": "0"
+        },
+        "local_shock_fade:rh_lighter": {
+          "attempts": 0,
+          "closed": 0,
+          "complete": true,
+          "unknown": null,
+          "cash": "600",
+          "wins": 0,
+          "cash_after_capital_sum": "0",
+          "stressed_sum": "0"
+        }
+      },
+      "audit_counts": {
+        "signal": 4,
+        "request": 4,
+        "ioc": 4
+      },
+      "large_flow_summary": {
+        "lighter": {
+          "large_flow_bins": 23,
+          "full_rule_passes": 0,
+          "failed_gates": {
+            "reference_ready": 0,
+            "imbalance": 1,
+            "pre_clock": 0,
+            "post_clock": 0,
+            "depth_fraction": 9,
+            "local_move": 13,
+            "reference_stable": 16,
+            "residual_aligned": 21,
+            "cost_hurdle": 23
+          },
+          "horizons": {
+            "1": {
+              "n": 23,
+              "missing": 0,
+              "favorable_target_count": 9,
+              "mean_favorable_target_bps": -0.23959767315210204,
+              "mean_favorable_relative_bps": 0.22873677901748107
+            },
+            "5": {
+              "n": 23,
+              "missing": 0,
+              "favorable_target_count": 10,
+              "mean_favorable_target_bps": 0.22559214569127273,
+              "mean_favorable_relative_bps": 0.05605907690303215
+            },
+            "10": {
+              "n": 22,
+              "missing": 1,
+              "favorable_target_count": 12,
+              "mean_favorable_target_bps": 1.0362108494824955,
+              "mean_favorable_relative_bps": -0.046817277668814355
+            },
+            "30": {
+              "n": 22,
+              "missing": 1,
+              "favorable_target_count": 10,
+              "mean_favorable_target_bps": -0.7052565046998245,
+              "mean_favorable_relative_bps": -0.09407866646037454
+            }
+          }
+        },
+        "rh_lighter": {
+          "large_flow_bins": 0,
+          "full_rule_passes": 0,
+          "failed_gates": {},
+          "horizons": {
+            "1": {
+              "n": 0,
+              "missing": 0,
+              "favorable_target_count": 0,
+              "mean_favorable_target_bps": null,
+              "mean_favorable_relative_bps": null
+            },
+            "5": {
+              "n": 0,
+              "missing": 0,
+              "favorable_target_count": 0,
+              "mean_favorable_target_bps": null,
+              "mean_favorable_relative_bps": null
+            },
+            "10": {
+              "n": 0,
+              "missing": 0,
+              "favorable_target_count": 0,
+              "mean_favorable_target_bps": null,
+              "mean_favorable_relative_bps": null
+            },
+            "30": {
+              "n": 0,
+              "missing": 0,
+              "favorable_target_count": 0,
+              "mean_favorable_target_bps": null,
+              "mean_favorable_relative_bps": null
+            }
+          }
+        }
+      },
+      "summary_sha256": "84fc247eddefc4d966d28b591d85657bb761747a33d2f307b651748263c15db9",
+      "diagnostic_sha256": "e770a987d9814f02921e94d10feec82ec3a06f7050ce2c4b4ff9d6859e677e97"
+    }
+  ],
+  "limitations": [
+    "OnlyLITandtwo venues,30totalhistoricalminutes.",
+    "Oldoffset/retrycapturesrecordordinaryRHtradesonly;oldpassivecapture recordsordinaryCoretradesonly. Oppositevenueabsenceis missingtradecoverage, notzeroactivity. Bothbooksarepresent.",
+    "Fullrawsignal,bookclocks,firsteligibleIOCdepth andterminalcash audits passed; no privatefills authenticated. Thirdsamplehaszeroactualattributedfillchecks despite4auditedno-fillIOCdecisions.",
+    "One-secondclosedflowbinsmaymissfasterrecovery;no claim onotherthresholds,otherassetsorliquidation-driven shocks."
+  ]
+}
