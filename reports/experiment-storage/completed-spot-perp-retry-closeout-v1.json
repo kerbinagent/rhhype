@@ -1,0 +1,126 @@
+{
+  "schema": "completed-spot-perp-retry-closeout-v1",
+  "recorded_utc": "2026-10-01T16:07:43.500337+00:00",
+  "previous": "reports/experiment-storage/core-spot-perp-alts-preparation-v1.json",
+  "previous_sha256": "5ef9391314c822c76e20dae3df7de6b59190c97153b87f0317c4df0d10a7cefc",
+  "old_reserved_bytes": 327680,
+  "artifact_bytes": 116957,
+  "retention_reserved_bytes": 163840,
+  "released_bytes": 163840,
+  "active_research_pool_bytes": 20185088,
+  "active_research_reserved_bytes": 19750912,
+  "active_research_headroom_bytes": 434176,
+  "overall_reservation_bytes": 836777216,
+  "scope": "All no-entry capture outcomes/raw/audits retained. Shared original sources canonical; supplemental exit-mark source funded by spot-perp-positive-supplement-v1.json.24KiBcontrol slack.",
+  "files": [
+    {
+      "path": "reports/core-spot-perp-limits-retry/lighter-metadata.json.gz",
+      "bytes": 23369,
+      "sha256": "b2b938a9080ce71a2a7339c56a9041fa1fd27b556901a78961ec063096e652e2"
+    },
+    {
+      "path": "reports/core-spot-perp-limits-retry/readout.md",
+      "bytes": 1452,
+      "sha256": "de89584369a1aee9f7ee6ac5c23caa9eb749759e3e9ec20bfd6e7c68a2a6fc29"
+    },
+    {
+      "path": "reports/core-spot-perp-limits-retry/exit-mark-audit.json",
+      "bytes": 545,
+      "sha256": "4f2c18376269262cb7212fa902c7e27d30c7cc045bf38aa8cfe95e19fa1bf92f"
+    },
+    {
+      "path": "reports/core-spot-perp-limits-retry/events.jsonl.gz",
+      "bytes": 66600,
+      "sha256": "2040d3e63a91dc54532ab96b26540a19404a3c4dfb3d8f50cf0789c71190df2b"
+    },
+    {
+      "path": "reports/core-spot-perp-limits-retry/status.json",
+      "bytes": 237,
+      "sha256": "c746de943f1512012bde1568bfaea468becf1a3a9d6764f9ab5388bbc59cd809"
+    },
+    {
+      "path": "reports/core-spot-perp-limits-retry/unresolved.json.gz",
+      "bytes": 43,
+      "sha256": "5db1bc1ef4048963019e2892b95ed4a15f159743a270562fe87b6a7bfc868b8c"
+    },
+    {
+      "path": "reports/core-spot-perp-limits-retry/summary.json",
+      "bytes": 3298,
+      "sha256": "cc53c3227e2905f382c074b0c616515f00fe66983686009f580f6dfa4df3f1f2"
+    },
+    {
+      "path": "reports/core-spot-perp-limits-retry/audit.json",
+      "bytes": 1368,
+      "sha256": "f791f830dec043b3fe9ef76b1aa12aada167b7115a86a32cc0f636ded73b3e7d"
+    },
+    {
+      "path": "reports/core-spot-perp-limits-retry/metadata.json",
+      "bytes": 1740,
+      "sha256": "b0b1075521e75855cdf0cd7c976d41f024529e575a65d55e4f141025d49f60ba"
+    },
+    {
+      "path": "reports/core-spot-perp-limits-retry/assets-metadata.json.gz",
+      "bytes": 1017,
+      "sha256": "d4f43e57c413c218c919da40ed766178886e741a289ef1e2c65515765f4f41d0"
+    },
+    {
+      "path": "reports/experiment-storage/core-spot-perp-limits-retry-v1.json",
+      "bytes": 3562,
+      "sha256": "490e92d8061bcd18806358b8211737af1b724eb33a7bb657e89432cdc2d9dc0e"
+    },
+    {
+      "path": "scripts/core_spot_perp_limits_retry.py",
+      "bytes": 385,
+      "sha256": "f94af6a10042c948302ad16390c9a42e2b1cfe19df24089907ad52abe4f41e7e"
+    },
+    {
+      "path": "scripts/audit_core_spot_perp_limits_retry.py",
+      "bytes": 13341,
+      "sha256": "33087de2c1e4648b0a1eed4394020a4c63deab5406c98c6b420da60c683c0336"
+    }
+  ],
+  "shared_source_references": [
+    {
+      "path": "scripts/core_spot_perp_limits.py",
+      "bytes": 19994,
+      "sha256": "20ea1bb874ecca2e38b7e35c670b31aaf4df2c0ce862f9b90cd31c79fb40d274",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-spot-perp-limits-closeout-v1.json",
+      "canonical_manifest_sha256": "1b262d9a92f122773b7084de89a42463315d236be7c60179f899a0c645091d9b"
+    },
+    {
+      "path": "scripts/audit_core_spot_perp_limits.py",
+      "bytes": 13340,
+      "sha256": "289f51b74af223f2cf71406c5d73cc8f5898bb4362007e412f257f436c80726b",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-spot-perp-limits-closeout-v1.json",
+      "canonical_manifest_sha256": "1b262d9a92f122773b7084de89a42463315d236be7c60179f899a0c645091d9b"
+    },
+    {
+      "path": "tests/test_core_spot_perp_limits.py",
+      "bytes": 3312,
+      "sha256": "d6dcfc08c1f839b2bbb6a691ba043d74857b01732b67ed726a17bad2b2499c2a",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-spot-perp-limits-closeout-v1.json",
+      "canonical_manifest_sha256": "1b262d9a92f122773b7084de89a42463315d236be7c60179f899a0c645091d9b"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "bytes": 59902,
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "bytes": 31735,
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "bytes": 40963,
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    }
+  ]
+}

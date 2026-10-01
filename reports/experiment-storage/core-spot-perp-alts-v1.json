@@ -1,0 +1,85 @@
+{
+  "schema": "core-spot-perp-alts-v1",
+  "recorded_utc": "2026-10-01T16:07:43.500661+00:00",
+  "previous": "reports/experiment-storage/completed-spot-perp-retry-closeout-v1.json",
+  "previous_sha256": "ddda0dc4c0f8c556f291a9e8d80ff217fd19b82163b09507c1cc7bb3737c18a0",
+  "new_maximum_bytes": 360448,
+  "categories_bytes": {
+    "source": 32768,
+    "metadata": 49152,
+    "raw": 245760,
+    "output": 49152,
+    "control": 16384
+  },
+  "active_research_pool_bytes": 20185088,
+  "active_research_reserved_bytes": 20111360,
+  "active_research_headroom_bytes": 73728,
+  "overall_reservation_bytes": 836777216,
+  "assets": [
+    "SKY",
+    "UNI",
+    "AAVE",
+    "LINK",
+    "LDO"
+  ],
+  "budgets": [
+    100
+  ],
+  "horizons": [
+    60
+  ],
+  "entry_limits_bps": [
+    1,
+    10
+  ],
+  "duration_seconds": 600,
+  "entry_end_seconds": 480,
+  "raw_soft_cap": 160000,
+  "scope": "Prospective samevenue Core spotbuy/perpshort two independent100perleg600USDC ledgers across5additional native assets. Original limits trading rules unchanged, max2positions perportfolio shared acrossassets.1vs10bp limits, past122swindow2sembargo90count89span,5bpexcursion1bpforecast/TP60shold400msorders30scooldown30attemptcap480sadmission120shourguard. No spotborrow, actual orders or credentials.5bpstress separate.",
+  "hypothesis": "Broaden beyond LIT/ETH to ALL5other active exact native spot/perpetual matches in savedmetadata. Selection uses contract metadata only, no economic book screen. LITpositivepaper event occurred once; unchanged replication had0forecastpasses/0trades. Freshmetadata must revalidate every market before capture. Retainallfailures/unknowns/zerooutcomes.",
+  "storage": "2boundedpublicmetadataGETs;oneCoreWSmax3connections;fixed600s or128MB/250kmessages. Normalizedreferences and allpendingbook/fill/exit/terminal/invalid records retained. Rawsoft160000/hard245760;idledepth/fullwire notretained. No interim economics or extension.",
+  "source_pins": [
+    {
+      "path": "scripts/core_spot_perp_limits.py",
+      "sha256": "20ea1bb874ecca2e38b7e35c670b31aaf4df2c0ce862f9b90cd31c79fb40d274"
+    },
+    {
+      "path": "scripts/audit_core_spot_perp_limits.py",
+      "sha256": "289f51b74af223f2cf71406c5d73cc8f5898bb4362007e412f257f436c80726b"
+    },
+    {
+      "path": "tests/test_core_spot_perp_limits.py",
+      "sha256": "d6dcfc08c1f839b2bbb6a691ba043d74857b01732b67ed726a17bad2b2499c2a"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/core_spot_perp_alts.py",
+      "sha256": "92f23cafbd9a93cd4ca15c4130667fdf6872795400e11906bedead5ced812d3b"
+    },
+    {
+      "path": "scripts/audit_core_spot_perp_alts.py",
+      "sha256": "58351933e5dfadc8af0c675031a093a5c54faff91a709ac081a6d8d05682dd08"
+    }
+  ],
+  "verification": "Unchanged frozen trading engine and4existing synthetic tests. Existing normalise function validated all5assets from frozenmetadata: matchingnativeasset/USDC/multipliers/fees/lotgrids/status. Newauditor checks allsourcepins,5assetselection, original4walkforecasts, allfills/firsteligible/capital/hour/cashinventory. Publishedmetadata selection record core-spot-perp-alts-eligibility-v1.json.",
+  "total_study_reservation_bytes": 393216,
+  "already_reserved_preparation_bytes": 32768,
+  "preparation_manifest": "reports/experiment-storage/core-spot-perp-alts-preparation-v1.json",
+  "canonical_retention_manifests": [
+    "reports/experiment-storage/completed-spot-perp-limits-closeout-v1.json",
+    "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json"
+  ],
+  "eligibility_manifest": "reports/experiment-storage/core-spot-perp-alts-eligibility-v1.json",
+  "eligibility_manifest_sha256": "6a8729c860349abfe70f15fdd5e9156009840f8b27f3cd77d4aee787abb23535"
+}

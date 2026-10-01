@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "take_profit_marks_checked": 0,
+  "cases": [],
+  "raw_sha256": "2040d3e63a91dc54532ab96b26540a19404a3c4dfb3d8f50cf0789c71190df2b",
+  "checks": "Every recorded take-profit reconstructed independently from saved quote depth and actual entry costs; receipt/source freshness, receive skew, time-before-exit, same funding hour, zero fees and capital.1cent decision threshold.",
+  "limitations": "Does not assert a take-profit trigger was available earlier than the recorded request; private execution remains unverified."
+}
