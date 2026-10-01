@@ -1,0 +1,15 @@
+{
+  "schema": "lighter-account-doc-refresh-v1",
+  "recorded_utc": "2026-10-01T13:05:58.707279+00:00",
+  "previous": "reports/experiment-storage/core-maker-lit-replay-compatibility-v1.json",
+  "previous_sha256": "79219f8f9c95ea836d9015237aeb7401256ba94fcb8213a0ded77e6eaae998d0",
+  "new_maximum_bytes": 49152,
+  "active_research_reserved_bytes": 11272192,
+  "active_research_headroom_bytes": 4456448,
+  "overall_reservation_bytes": 836777216,
+  "bounds": "Exactly2publicaccount-types.md GETs,20sectimeouteach,32768decodedbytesperresponse,32768totalcompressedraw;16384source/output/control. No retries or economicrequests. Preserve failures.",
+  "urls": [
+    "https://apidocs.lighter.xyz/docs/account-types.md",
+    "https://apidocs.rh.lighter.xyz/docs/account-types.md"
+  ]
+}
