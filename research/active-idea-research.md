@@ -1,6 +1,38 @@
 # Active idea research — 1 October 2026
 
-## Working change
+## Current scope: short-term trading
+
+The user's latest instruction excludes buy-and-hold yield and maturity
+strategies. Research now targets $100-sized trading cycles lasting seconds
+to minutes. The completed carry work below is historical context, not the
+active plan. The already frozen BTC collector remains unchanged, with its
+economic evidence unopened until its endpoint.
+
+- [Fresh Core/RH paper test](../reports/core-rh-small-shortterm/readout.md):
+  the primary $100-per-leg, ten-second branch closed 11 paired trades,
+  zero wins, and −$0.183554 cash P&L. One-minute and five-minute controls
+  were also negative. All 112 recorded fills and venue wallets passed the
+  independent audit. No unresolved inventory or below-minimum exits.
+- [Base atomic cycles](../reports/base-atomic-cycle-slow-transport/readout.md):
+  all 36 same-block USDC/WETH round trips were negative before gas;
+  best $100 surplus −$0.042124. The initial rate-limit failure is retained.
+- [RH stock-token atomic cycles](../reports/rh-atomic-stock-cycle/readout.md):
+  all 48 exact chained v3/v4 round trips were negative before gas;
+  best 100-USDG surplus −0.087617 USDG.
+
+The paper test separates cash from the extra 5 bp stress allowance. Its
+losses persist with zero Standard trading fees and without the stress or
+capital deductions. In 10 of the 11 primary trades the entry spread worsened
+between signal and delayed fill, with median deterioration $0.026716.
+Displayed take-profit marks also failed to survive delayed exits. These
+records motivate testing different execution structures; they do not
+justify assuming faster fills or retuning this sample into a winner.
+
+No profitable strategy has been established. Public quotes and simulated
+fills remain distinct from actual account execution. The next branch stays
+market neutral unless the user chooses to allow directional paper exposure.
+
+## Division of work
 
 The user explicitly asked the primary agent to research ideas and a cheap
 model to monitor. A `gpt-6-luna` agent now owns scheduled report preservation
@@ -9,7 +41,7 @@ experiment decisions. Repeating healthy collection checks is not research
 progress. The fresh BTC dated-carry study continues unchanged to its frozen
 endpoint, 4 October 00:30 UTC, with no interim economic inspection.
 
-## First new calculation: absolute funding versus a funding difference
+## Earlier carry research: absolute funding versus a funding difference
 
 The old funding screen primarily compared two perpetuals. Funded spot plus
 a short perpetual receives the short's absolute funding rate instead. Those
@@ -42,7 +74,7 @@ cost assumption, not an exchange debit. None clears this simple hurdle.
 Full inputs and negative results are in the
 [summary](../reports/spot-perp-idea-screen/summary.json).
 
-## Ranked ideas to investigate
+## Earlier carry branches, superseded by the short-term scope
 
 ### 1. Same-venue spot/perpetual carry with a justified collateral buffer
 

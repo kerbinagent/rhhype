@@ -2,6 +2,27 @@
 
 ## Current work
 
+The latest instruction focuses on **short-term trading**, with $100 primary
+size and seconds-to-minutes holding periods. New buy-and-hold or
+maturity-yield research is out of scope. No profitable strategy is established.
+
+- [Fresh Core/RH paper test](../reports/core-rh-small-shortterm/readout.md):
+  primary $100 per leg, ten-second maximum hold; 11 paired closes, zero wins,
+  −$0.183554 cash P&L before capital and the separate 5 bp stress allowance.
+  All six size/hold branches were cash-negative; fill and wallet audit passed.
+- [Base atomic swap cycles](../reports/base-atomic-cycle-slow-transport/readout.md):
+  all 36 cycles negative before gas; best $100 cycle lost $0.042124.
+- [RH stock-token atomic cycles](../reports/rh-atomic-stock-cycle/readout.md):
+  all 48 exact chained v3/v4 cycles negative before gas; best 100-USDG
+  cycle lost 0.087617 USDG.
+
+The [active idea memo](active-idea-research.md) records the scope correction
+and execution diagnosis. Routine health checks and twenty-minute reviews
+remain delegated to the cheap monitoring agent. The existing frozen BTC
+collector continues unchanged; its economics remain unopened.
+
+## Earlier carry research
+
 The user redirected the primary agent to active idea research on 1 October,
 with routine monitoring delegated to `gpt-6-luna`. The
 [active idea memo](active-idea-research.md) contains a new absolute-funding
