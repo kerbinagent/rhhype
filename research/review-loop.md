@@ -4708,3 +4708,44 @@ artifacts and keeping the total reservation fixed. There are 169 scheduled
 report/snapshot pairs through 4 October 00:26 UTC; the prior worst observed
 5,342 B per pair projects total use of 4,501,412 B including this archive,
 leaving 479,324 B. Next review: **16:26:33 UTC**.
+
+
+## Review 145 — 1 October 2026 16:26:33 UTC
+
+All eight strategy and aborted-trade coverage fields were complete. The exact
+report `review-20261001T162633Z.json.gz` preserves 19,144 raw bytes (SHA-256
+`029271e2928747835338166c72d117b719ceb37db50c570fe14e27d20f7e1661`) in a
+2,911-byte deterministic gzip (SHA-256
+`074ffeef22edd2e01188452f68284b26b882b84df7b7ee31c6ad24fe9257c8eb`). Its
+independent snapshot `current-epoch-at-review145.json.gz` was read at
+16:27:02.176077 UTC and updated at 16:27:01.765090 UTC; raw size 9,253 B,
+SHA-256 `cdeb7e2a9883e857a08abc44561b08ef0a55d5b1658a5f2e5c5c3a7b2a82808c`,
+gzip size 1,699 B, SHA-256
+`23a230fa6a2e80842c40d5e9489a0a8cf421696b403305e9b81e635a2aab07b0`.
+Both archives passed exact decompression equality. Each exclusive write had
+an exact current-size cap guard and remaining-growth projection guard.
+
+The report added 52 exact losses: five convergence failed hedges,
+net −$3.5940592997, and 47 Premium GOOGL closes, net −$77.0889860159
+(46 paired and one failed hedge). No wins, estimates or aborts. Five
+Hyperliquid price-limit entry rejections. Premium fees were $40.6819765646,
+other costs $23.4717378835 and capital costs $0.0016360889; convergence
+fees were zero, other costs $2.4941840515 and capital costs $0.0000112482.
+
+The separate epoch snapshot showed convergence 576 / −$672.2430393386
+and Premium 1,061 / −$1,925.2195916675. Their increases from review144's
+snapshot were five and 43, while authoritative report deltas were five and
+47; do not pool separate sampling boundaries. The report health was running,
+performance ok, four feeds, 100 pairs, CPU 63.48%, p95 loop lag 16.42 ms,
+RSS 263.67 MiB, 899.7 books/s and metadata age 693.2 s; all portfolios flat,
+three legacy funding items pending. Advancing paper snapshots and carry
+metadata confirm external collectors survived the interrupted agent turn;
+no service was changed. Carry v2 metadata at 16:25 showed 191 sampled slots,
+persistent arrival_invalid slot 71 and 672 future/interrupted slots; running,
+no error, retry or economic evaluation. Sample contents remain unopened.
+
+Reviews 66–145 total 2,198 closes: 2,173 losses, two paired gains and 23
+audited failed-hedge rescue gains. Manual archive size is 3,603,224 /
+4,980,736 B, preserving every artifact. The remaining 168 scheduled pairs
+through 4 October 00:26 UTC at the prior worst 5,342 B per pair project
+4,500,680 B total, leaving 480,056 B. Next review: **16:46:33 UTC**.

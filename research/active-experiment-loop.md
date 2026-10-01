@@ -1639,3 +1639,19 @@ remains capital constrained. Twenty-two earlier win records and three legacy
 funding obligations remain. Next review 02:26:33 UTC. Fresh carry v2 has all
 twenty due arrivals through 02:05, no terminal error or timing failures, and
 no economic evaluation.
+
+
+### Review 145, 1 October 16:26 UTC
+
+Resumed the authorized routine after the agent interruption; external paper
+and carry collectors continue advancing. Complete report coverage: 52 exact
+losses, five convergence failed hedges/−$3.59406 and 47 Premium GOOGL
+closes/−$77.08899 (46 paired, one failed hedge); no wins, estimates or
+aborts. Five Hyperliquid price-limit rejections. Four feeds, 100 pairs,
+running/normal performance, all portfolios flat, three legacy funding
+obligations. Separately timed epoch snapshot retained; report deltas govern
+window accounting. Deterministic archives verified with cap/growth guards;
+3,603,224 B of 4,980,736 B used, projected 4,500,680 B through cutoff.
+Carry v2 metadata at 16:25: 191 sampled, slot 71 still arrival_invalid,
+672 future/interrupted; running, no errors/retries/economic evaluation.
+No carry sample opened or services changed. Next review 16:46:33 UTC.
