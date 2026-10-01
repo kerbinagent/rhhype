@@ -1,0 +1,39 @@
+{
+  "schema": "base-atomic-cycle-screen-v1",
+  "recorded_utc": "2026-10-01T04:51:43.801881+00:00",
+  "previous": "reports/experiment-storage/core-rh-small-shortterm-allocation-v1.json",
+  "previous_sha256": "9469c04b18402f4e642a1c3c3c4c138ba636abbc6bc26e8f1e3766655e9e1049",
+  "new_maximum_bytes": 196608,
+  "categories_bytes": {
+    "source": 16384,
+    "raw": 65536,
+    "output": 65536,
+    "control": 49152
+  },
+  "active_research_reserved_bytes": 4071424,
+  "active_research_headroom_bytes": 122880,
+  "rpc_url": "https://mainnet.base.org",
+  "max_requests": 80,
+  "retries": 0,
+  "rounds": 3,
+  "round_spacing_seconds": 60,
+  "sizes_usdc": [
+    100,
+    1000
+  ],
+  "primary_size_usdc": 100,
+  "fee_tiers": [
+    100,
+    500,
+    3000
+  ],
+  "universe": "All six ordered distinct-fee-pool USDC/WETH/USDC cycles; missing pools and errors remain unknown. No quote-ranked selection. Three fixed rounds, two sizes. Same block number for all quotes each round, header hash rechecked; all outcomes retained. Pool fees included by exact-input QuoterV2; gas and actual inclusion unresolved, no profitable trade claim from pre-gas surplus. Reject gross-negative candidates; positives may justify separately frozen follow-up. No signatures, wallets, state-changing RPC, or orders.",
+  "sources": [
+    "https://docs.base.org/get-started/connect-to-base",
+    "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+    "https://specs.optimism.io/protocol/predeploys.html",
+    "https://developers.uniswap.org/docs/protocols/v3/deployments/v3-base-deployments",
+    "https://github.com/Uniswap/v3-periphery/blob/main/contracts/interfaces/IQuoterV2.sol"
+  ],
+  "projection": "Keep full contract call responses and request/response hashes; block headers retain identity/time/stateRoot while unrelated transaction hash lists are explicitly omitted. Bounded HTTP errors retain type/message. Quoter gas estimate is not an executed router gas bill. All research uses existing allocated storage; overall cap unchanged."
+}
