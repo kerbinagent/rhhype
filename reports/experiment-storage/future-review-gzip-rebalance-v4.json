@@ -1,0 +1,22 @@
+{
+  "schema": "future-review-gzip-rebalance-v4",
+  "recorded_utc": "2026-10-01T16:30:02.800018+00:00",
+  "previous": "reports/experiment-storage/spot-perp-reference-count-preparation-v1.json",
+  "previous_sha256": "43bf93d2190449577b5c07ad5d2f57e9b4ebbef9da54b7cbe39fe4e14d697e42",
+  "transfer_from_manual_review_bytes": 98304,
+  "manual_review_old_cap_bytes": 4980736,
+  "manual_review_new_cap_bytes": 4882432,
+  "manual_review_retained_bytes": 3603224,
+  "next_review_utc": "2026-10-01T16:46:33+00:00",
+  "last_review_utc": "2026-10-04T00:26:33+00:00",
+  "remaining_reviews_inclusive": 168,
+  "conservative_worst_pair_bytes": 5342,
+  "projected_manual_review_bytes": 4500680,
+  "projected_manual_review_margin_bytes": 381752,
+  "agent_assessment": "Replacement routine monitor independently checked exactfolder bytes andinclusivecount; adoption only afterthisrecord. Keepallartifacts, prewritecapandgrowthalerts.",
+  "active_research_pool_bytes": 20283392,
+  "active_research_reserved_bytes": 20168704,
+  "active_research_headroom_bytes": 114688,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Unused allowance transfer to support next boundedspot/perp experiment; no totalcapincrease/deletion/recompression."
+}
