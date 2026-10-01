@@ -4667,3 +4667,44 @@ Under the adopted 5,242,880 B manual archive cap, 170 scheduled report/snapshot
 pairs remain through 4 October 00:26 UTC. At the prior worst observed 5,342 B
 per pair, projected use is 4,502,346 B including this archive, leaving
 740,534 B. Next review: **16:06:33 UTC**.
+
+
+## Review 144 — 1 October 2026 16:06:33 UTC
+
+All eight strategy and aborted-trade coverage fields were complete. The exact
+report `review-20261001T160633Z.json.gz` preserves 18,662 raw bytes (SHA-256
+`11fd2fe13e0abfdb4fff6e970fe4211fbebcbc3cef7d7d4dcc0872f68a796d51`) in a
+2,754-byte deterministic gzip (SHA-256
+`b542ffd432a0f3ea8fb3d1d0ff8c9b119f1b1377963d6c7c5e870fa4d5acbc19`). Its
+separate epoch snapshot `current-epoch-at-review144.json.gz` was read at
+16:07:27.064544 UTC and updated at 16:07:26.517632 UTC; raw size 6,476 B,
+SHA-256 `c518b06ad2f7901fa02d53cd0092aeec9804b7610a2ee8aa0b1db885b686be94`,
+gzip size 1,654 B, SHA-256
+`be68ec1b6af4edc09e0c95dc482ca5f698e0d72b1270d0dbc49738e0cef92b53`. Both
+archives passed exact decompression equality. Manual archive size is 3,598,614
+/ 4,980,736 bytes.
+
+Review144 added 23 exact Premium losses, net −$36.6424056276 (22 paired and
+one failed hedge); no convergence closes, wins, estimates or aborts. Entry
+rejections: one Hyperliquid price limit. Fees were $20.4714733534, other costs
+$11.4861547110 and capital costs $0.0007870421. The health snapshot reported
+one open Premium position and three pending funding items; keep any later
+closure in its own report window.
+
+The epoch snapshot showed convergence 571 / −$668.64898 (unchanged) and
+Premium 1,018 / −$1,854.1552. Convergence matched the report delta; Premium
+rose by 27 while its report delta was 23. Use report deltas for review
+accounting. Health remained running/performance ok, four feeds, 97 pairs, CPU
+55.23%, p95 loop lag 9.24 ms, RSS 263.17 MiB, 910.4 books/s and metadata age
+3,099.1 s. Carry v2 metadata at 16:05 showed 187 sampled slots, persistent
+`arrival_invalid` slot 71 and 676 future/interrupted slots; collector running,
+no terminal error, retries or economic evaluation. Its invalid sample remains
+unopened.
+
+Reviews 66–144 total 2,146 closes: 2,121 losses, two paired gains and 23
+audited failed-hedge rescue gains. The overall window remains deeply negative.
+The parent reduced the manual archive cap to 4,980,736 B while preserving all
+artifacts and keeping the total reservation fixed. There are 169 scheduled
+report/snapshot pairs through 4 October 00:26 UTC; the prior worst observed
+5,342 B per pair projects total use of 4,501,412 B including this archive,
+leaving 479,324 B. Next review: **16:26:33 UTC**.
