@@ -1,0 +1,18 @@
+{
+  "schema": "future-review-gzip-rebalance-v1",
+  "recorded_utc": "2026-10-01T13:59:55.134534+00:00",
+  "previous": "reports/experiment-storage/completed-target-margin-closeout-v1.json",
+  "previous_sha256": "ea9c0e21705f87cf068125cfe314cab506a02e4404b3e76696772b42a2597d83",
+  "overall_reservation_bytes": 836777216,
+  "manual_review_old_cap_bytes": 9437184,
+  "manual_review_new_cap_bytes": 6291456,
+  "transfer_bytes": 3145728,
+  "active_research_pool_bytes": 18874368,
+  "active_research_reserved_bytes": 15155200,
+  "active_research_headroom_bytes": 3719168,
+  "archive_current_bytes": 3562309,
+  "remaining_scheduled_reviews": 175,
+  "future_copy_format": "From review138 only: gzip(mtime=0), raw and compressed hashes, verify exact decompression before writing; all existing artifacts unchanged. Preserve every review through Oct4.",
+  "projection": "Last7 pairs compressed4193,4241,4337,4135,4375,4460,5342B. Worst observed5342*175+3562309=4497159, leaves1794297B below6MiB for audits/formatgrowth. Pre-write checks remain mandatory.",
+  "agent_adoption": "routine_monitor acknowledged futuregzip/fullcoverage/6MiBcap before this transfer. No data deleted or recompressed."
+}

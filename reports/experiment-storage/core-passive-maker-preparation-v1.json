@@ -1,0 +1,19 @@
+{
+  "schema": "core-passive-maker-preparation-v1",
+  "recorded_utc": "2026-10-01T13:59:55.134758+00:00",
+  "previous": "reports/experiment-storage/future-review-gzip-rebalance-v1.json",
+  "previous_sha256": "e1d79f3d262c6a2227b2f39b338a1762c05bc0c996d85b6404a0c44303178f92",
+  "new_maximum_bytes": 3178496,
+  "categories_bytes": {
+    "source": 196608,
+    "raw": 2621440,
+    "metadata": 65536,
+    "output": 262144,
+    "control": 32768
+  },
+  "active_research_pool_bytes": 18874368,
+  "active_research_reserved_bytes": 18333696,
+  "active_research_headroom_bytes": 540672,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare Core maker / RH hedge LIT study; no capture until role/provenance tests, metadata rules, independent audit and economic plan are frozen. Two branches100ms vs400ms maker activation; common400mscancel/hedge/exit and10bpquoteoffset,100perleg400prefunded,10shold1bpTP. Current officialCore Standardmakerprocessing0ms motivates100msnetworkassumption; no privateACK. IOCminimumexemption remainsdeployedunverified.6MiBmanualarchivefuturegzip fullypreservesOct4reviewcoverage."
+}
