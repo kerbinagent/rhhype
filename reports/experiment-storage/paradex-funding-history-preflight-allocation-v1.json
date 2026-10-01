@@ -1,0 +1,17 @@
+{
+  "schema": "paradex-funding-history-preflight-v1",
+  "recorded_utc": "2026-10-01T11:46:23.889868+00:00",
+  "previous": "reports/experiment-storage/paradex-sbe-preflight-allocation-v1.json",
+  "previous_sha256": "e26854aa763195d58984eb66d598adceb68550001336b6c3ba55c9e44e64c549",
+  "new_maximum_bytes": 16384,
+  "categories_bytes": {
+    "source": 4096,
+    "raw": 8192,
+    "output": 2048,
+    "control": 2048
+  },
+  "active_research_reserved_bytes": 6279616,
+  "active_research_headroom_bytes": 11840,
+  "source_sha256": "0d69e5c0279cb2012845021dc4a088c2b4fa1d1c5b5584d24dbed3d91fbf7bb1",
+  "scope": "Two public funding/data requests BTC/ETH latest20rows;65,536bytes per response,15s timeout,no retries,no auth. Check whether history can resolve continuous-funding timing for future short-term trading model."
+}
