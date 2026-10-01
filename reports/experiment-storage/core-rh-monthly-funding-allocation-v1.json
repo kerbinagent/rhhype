@@ -1,0 +1,71 @@
+{
+  "schema": "core-rh-monthly-funding-v1",
+  "recorded_utc": "2026-10-01T03:08:32.532618+00:00",
+  "previous": "reports/experiment-storage/core-eth-august-replication-allocation-v1.json",
+  "previous_sha256": "3c02d25ac942b6a324dbdd009d31bdaeadddc4c55fa9f4024fd27ce87250637d",
+  "new_maximum_bytes": 131072,
+  "categories_bytes": {
+    "source": 16384,
+    "raw": 65536,
+    "output": 32768,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 360448,
+  "active_research_headroom_bytes": 3833856,
+  "requests_max": 5,
+  "retries": 0,
+  "reused_core_eth": "reports/core-eth-funding-history/202609-v1/response.json.gz",
+  "input_pins": [
+    {
+      "path": "reports/core-eth-funding-history/202609-v1/response.json.gz",
+      "sha256": "37a2a7d06c1db11872c364004b2363923360779dacc196d324faaaf4b3436a42"
+    },
+    {
+      "path": "reports/funding-carry/raw/lighter_core/markets.json",
+      "sha256": "3a94067dce1199f9cedff7193a319b565c7e0e90210fa5f27f01dcac37aee513"
+    },
+    {
+      "path": "reports/funding-carry/raw/rh_lighter/markets.json",
+      "sha256": "2a51f54c54fd9f55620e1fe92e50652d65a978921898a9f2f1a91c257a3deefd"
+    }
+  ],
+  "window": [
+    1788220800,
+    1790812799
+  ],
+  "requests": [
+    [
+      "core_BTC",
+      "https://mainnet.zklighter.elliot.ai",
+      1
+    ],
+    [
+      "core_SOL",
+      "https://mainnet.zklighter.elliot.ai",
+      2
+    ],
+    [
+      "rh_SOL",
+      "https://api.rh.lighter.xyz",
+      3
+    ],
+    [
+      "rh_BTC",
+      "https://api.rh.lighter.xyz",
+      1
+    ],
+    [
+      "rh_ETH",
+      "https://api.rh.lighter.xyz",
+      0
+    ]
+  ],
+  "design": "SOL primary;BTC and ETH controls. Sep1-7 choose sign independently per asset,tie short Core. Hold sign over Sep8-14,15-21,22-28,29-30;aggregate8-30 overlaps. All scheduled hours and missing coverage retained. Rate basis points only,not execution cashflows. Capital5%on2xnotional plus5bpstress for each separately evaluated hold. Zero Standard fees is optimistic assumption;no conversion,spread,basis or margin feasibility. Max capital multiple descriptive only. No optimization or automatic extension. Selection follows prior overlapping48h data;historical development only.",
+  "sources": [
+    "https://apidocs.lighter.xyz/reference/fundings",
+    "https://docs.lighter.xyz/trading/funding",
+    "https://docs.lighter.xyz/trading/trading-fees",
+    "https://apidocs.rh.lighter.xyz/reference/fundings"
+  ],
+  "source_limitations": "RH docs unavailable via web at preparation; archived identity/schema and fees retained as scenarios; no actual account fees claim."
+}
