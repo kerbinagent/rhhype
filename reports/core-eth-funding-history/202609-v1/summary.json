@@ -1,0 +1,78 @@
+{
+  "schema": "core-eth-historical-rate-screen-v1",
+  "expected_hours": 720,
+  "received_hours": 720,
+  "outside_window_rows": 0,
+  "not_pnl_or_fresh_validation": true,
+  "actual_net_pnl": null,
+  "omitted": [
+    "entry/exit basis",
+    "spread/impact",
+    "changing index notional",
+    "fills",
+    "margin/liquidation",
+    "withdrawal/conversion"
+  ],
+  "blocks": [
+    {
+      "start_utc": "2026-09-01T00:00:00+00:00",
+      "days": "7",
+      "expected_hours": 168,
+      "received_hours": 168,
+      "negative_hours": 1,
+      "funding_rate_sum_bps": "18.6200",
+      "capital_bps": "19.17808219178082191780821918",
+      "stress_bps": 5,
+      "rate_less_capital_stress_bps": "-5.55808219178082191780821918"
+    },
+    {
+      "start_utc": "2026-09-08T00:00:00+00:00",
+      "days": "7",
+      "expected_hours": 168,
+      "received_hours": 168,
+      "negative_hours": 12,
+      "funding_rate_sum_bps": "14.5700",
+      "capital_bps": "19.17808219178082191780821918",
+      "stress_bps": 5,
+      "rate_less_capital_stress_bps": "-9.60808219178082191780821918"
+    },
+    {
+      "start_utc": "2026-09-15T00:00:00+00:00",
+      "days": "7",
+      "expected_hours": 168,
+      "received_hours": 168,
+      "negative_hours": 39,
+      "funding_rate_sum_bps": "9.9200",
+      "capital_bps": "19.17808219178082191780821918",
+      "stress_bps": 5,
+      "rate_less_capital_stress_bps": "-14.25808219178082191780821918"
+    },
+    {
+      "start_utc": "2026-09-22T00:00:00+00:00",
+      "days": "7",
+      "expected_hours": 168,
+      "received_hours": 168,
+      "negative_hours": 0,
+      "funding_rate_sum_bps": "19.9200",
+      "capital_bps": "19.17808219178082191780821918",
+      "stress_bps": 5,
+      "rate_less_capital_stress_bps": "-4.25808219178082191780821918"
+    },
+    {
+      "start_utc": "2026-09-29T00:00:00+00:00",
+      "days": "2",
+      "expected_hours": 48,
+      "received_hours": 48,
+      "negative_hours": 0,
+      "funding_rate_sum_bps": "5.6900",
+      "capital_bps": "5.479452054794520547945205479",
+      "stress_bps": 5,
+      "rate_less_capital_stress_bps": "-4.789452054794520547945205479"
+    }
+  ],
+  "raw_sha256": "96e775bb3e89f79b72c19ac0f643cbaf61019632459c9b6010a114b48be848f3",
+  "gzip_sha256": "37a2a7d06c1db11872c364004b2363923360779dacc196d324faaaf4b3436a42",
+  "raw_bytes": 58415,
+  "compressed_bytes": 5800,
+  "plan_sha256": "b3b14225c41da28f209b7185aeb2126d5869394cfad343260a3f721d56344491"
+}

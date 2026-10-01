@@ -53,13 +53,13 @@ an RH USDG/USDC venue conversion. It still has spot spread, two non-atomic
 fills, spot/perp basis, withdrawal economics and a margin path.
 [Lighter fees](https://docs.lighter.xyz/trading/trading-fees).
 
-**Next discriminating test:** one bounded 30-day historical ETH funding
-pull, retaining every hourly slot and fixed nonoverlapping weekly blocks.
-Check how much funding is available to pay the complete basis round trip,
-capital and a margin buffer. This can reject an insufficient rate regime;
-positive rate arithmetic would only justify a separate depth/risk study.
-ETH is selected from the documented available spot/perp pair, not a ranking
-of the next data pull. No automatic extension or search for another winner.
+**Completed discriminating test:** the bounded September history returned
+720/720 hourly slots. All four fixed weekly blocks fail the current capital
+plus stress hurdle before spread/basis costs.
+[Full readout](../reports/core-eth-funding-history/202609-v1/readout.md).
+ETH was selected before this pull; no automatic asset search or extension.
+The simple always-on version does not advance. Collateral efficiency and
+selective entry remain distinct hypotheses requiring their own evidence.
 
 The two-day sample gives only 0.1403 bp/day over the existing 2x-capital
 charge before execution and stress. The economic question is whether actual

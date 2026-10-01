@@ -1,0 +1,17 @@
+{
+  "schema": "core-eth-funding-history-actual-v1",
+  "categories_bytes": {
+    "raw": 5800,
+    "source": 5222,
+    "output": 3691,
+    "control_before_this_record": 2313
+  },
+  "shared_reserved_bytes": 32961208,
+  "shared_headroom_bytes": 38792,
+  "overall_reservation_bytes": 836777216,
+  "requests": 1,
+  "retries": 0,
+  "coverage": "720/720 hours; all five blocks complete",
+  "root_checks": "Raw hash, unique hours and independent Decimal block resummation passed",
+  "actual_pnl": null
+}

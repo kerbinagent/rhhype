@@ -1,0 +1,8 @@
+{
+  "url": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=0&resolution=1h&start_timestamp=1788220800&end_timestamp=1790812799&count_back=721",
+  "started_utc": "2026-10-01T02:26:07.838342+00:00",
+  "plan_sha256": "b3b14225c41da28f209b7185aeb2126d5869394cfad343260a3f721d56344491",
+  "script_sha256": "26a2ecb891e55687fdfd050e84f43706bda218603306057d4a77cc84161f7d48",
+  "requests_max": 1,
+  "retries": 0
+}
