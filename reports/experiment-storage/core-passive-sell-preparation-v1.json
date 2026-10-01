@@ -1,0 +1,16 @@
+{
+  "schema": "core-passive-sell-preparation-v1",
+  "recorded_utc": "2026-10-01T15:11:58.567695+00:00",
+  "previous": "reports/experiment-storage/rh-account-doc-refresh-v1.json",
+  "previous_sha256": "2895c3dcf555e7426ae08f2589903348235573f6e90558266c43d9aa4588907b",
+  "new_maximum_bytes": 8192,
+  "categories_bytes": {
+    "source_and_tests": 7168,
+    "control": 1024
+  },
+  "active_research_pool_bytes": 18874368,
+  "active_research_reserved_bytes": 18874368,
+  "active_research_headroom_bytes": 0,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare Core maker-sell/RH-buy branch and synthetic tests only. No replay/capture/output admitted until separately funded. Intended exploratory mirror of completed Core 10bp buy quote:100ms maker400ms takers,5s rest10s hold. Preserve IOC,publicflow,late-report,depth and unknown controls."
+}
