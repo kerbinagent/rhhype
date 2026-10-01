@@ -1,0 +1,35 @@
+{
+  "sha256": "81d476104894a6db38221df013b0c5f4c85bf785a8964fee3e2d3e89e1c90080",
+  "source_sha256": "0d69e5c0279cb2012845021dc4a088c2b4fa1d1c5b5584d24dbed3d91fbf7bb1",
+  "plan_sha256": "0ee4bbac666d41b3f3cf297f2d1d66175357d63a37a1d29f9e79df69213e4e87",
+  "assets": [
+    {
+      "asset": "BTC",
+      "error": null,
+      "http_status": 200,
+      "n": 20,
+      "time_min": 1790855092072,
+      "time_max": 1790855187072,
+      "gaps_ms": [
+        5000
+      ],
+      "oldest_age": 97.9765145778656,
+      "newest_age": 2.9765145778656006,
+      "has_index": true
+    },
+    {
+      "asset": "ETH",
+      "error": null,
+      "http_status": 200,
+      "n": 20,
+      "time_min": 1790855092072,
+      "time_max": 1790855187072,
+      "gaps_ms": [
+        5000
+      ],
+      "oldest_age": 98.12564992904663,
+      "newest_age": 3.125649929046631,
+      "has_index": true
+    }
+  ]
+}
