@@ -5427,3 +5427,44 @@ Reviews 66–161: 2,449 completions, 2,416 exact losses, one estimated loss,
 five audited paired gains and 27 audited failed-hedge rescue gains.
 Archive 3,699,569 / 5,242,880 B; 152 future pairs at 5,342 B project
 4,511,553 B, margin 731,327 B. Next review **22:06:33 UTC**.
+
+
+## Review 162 — 1 October 2026 22:06:33 UTC
+
+All eight strategy and aborted coverage fields complete. Exact report
+`review-20261001T220633Z.json.gz`: raw 18,168 B, SHA-256
+`0369f856ec8f87a3f9efe4eab694b6014af0439e614ba078ab3d99df7797755a`;
+gzip 2,492 B, SHA-256
+`59261f1ff91dcc76d000fe01696810d00346bf4a55e19c8915391831c9fa4bdb`.
+Independent `current-epoch-at-review162.json.gz`: read 22:07:33.670805 UTC,
+updated 22:07:33.020448 UTC; raw 9,296 B, SHA-256
+`a661aa165fb6c81a77ec79b64c30eee56837db23497ff8c8b88f94b18ef78217`;
+gzip 1,735 B, SHA-256
+`9ff178c8e82edc7c5c78b1a5860ef3fca6efd37821c32ae8a1a5a312e7e9a79f`.
+Exact decompression and per-write cap/growth guards passed.
+
+One exact convergence failed-hedge loss/−$0.9816510100. No other closes,
+gains, estimates or aborts; one HL price limit. Fees zero, other costs
+$0.4976488000, capital $0.0000022100.
+
+Separate epoch convergence 643 / −$754.1853145595, Premium unchanged
+1,245 / −$2,235.0252400169; increments match report. Health running/ok,
+four feeds, 101 pairs, CPU 54.71%, p95 lag 34.29 ms, RSS 245.45 MiB,
+589.1 books/s, metadata age 1,481.8 s. At 21:50:57 pulse busy (CPU
+93.05%, p95 100.72 ms, age 1.07 s), 21:55:15 busy (80.48%, 114.82 ms,
+age 0.85 s); 21:59:58 returned ok (51.75%, 26.59 ms, age 0.34 s).
+Four feeds stayed connected; no daemon intervention/causal claim. Carry
+22:05: 259 sampled, persistent invalid slot 71, 604 future/interrupted;
+running, no errors/retries/economic evaluation. No carry samples opened.
+
+Authorized batch status-only checks confirmed prior depth batch finished
+21:50:50.486359 UTC, 3/3 normal duration endpoints, no errors/retries.
+Root now requested executable-shock batch health monitoring: status.json
+and current window capture/status.json only, window1 collecting at 22:04:48,
+two connections/errors empty/economic evaluation false. No raw/metadata/
+economic research output inspected by routine agent.
+
+Reviews 66–162: 2,450 completions, 2,417 exact losses, one estimated loss,
+five audited paired gains and 27 audited failed-hedge rescue gains.
+Archive 3,703,796 / 5,242,880 B; 151 future pairs at 5,342 B project
+4,510,438 B, margin 732,442 B. Next review **22:26:33 UTC**.
