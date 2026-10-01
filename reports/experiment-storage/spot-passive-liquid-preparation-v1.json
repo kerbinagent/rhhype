@@ -1,0 +1,12 @@
+{
+  "schema": "spot-passive-liquid-preparation-v1",
+  "recorded_utc": "2026-10-01T17:17:47.545962+00:00",
+  "previous": "reports/experiment-storage/completed-spot-passive-closeout-v1.json",
+  "previous_sha256": "65d001cce0f5b9c518dd42cab94da1afbee41145abfdb255ac83d90ee2c1fc46",
+  "preparation_reserved_bytes": 65536,
+  "active_research_pool_bytes": 36700160,
+  "active_research_reserved_bytes": 23396352,
+  "active_research_headroom_bytes": 13303808,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Bounded wrappers/plan/test preparation to run unchanged passive spot/perp entry logic on higher-volume LIT and ETH, using corrected schema adapter. No capture until allocation and source freeze."
+}
