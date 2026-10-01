@@ -1,0 +1,20 @@
+{
+  "schema": "polymarket-basket-fed-v1",
+  "recorded_utc": "2026-10-01T12:23:58.606076+00:00",
+  "previous": "reports/experiment-storage/completed-basket-economics-closeout-v1.json",
+  "previous_sha256": "8cd82efbd49143603acce823a62c69b2b42c25c3fbdffe5e98d1a79db7667f61",
+  "new_maximum_bytes": 114688,
+  "categories_bytes": {
+    "source": 8192,
+    "raw": 65536,
+    "output": 24576,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 6291456,
+  "active_research_headroom_bytes": 0,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Read-only targeted October2026 Fed decision event, found via official Polymarket event page because narrow economics tag omitsit. GET events?slug=fed-decision-in-october-20260617190323537 once, verify same2..20 nonaugmented negRisk basket conditions, then2NO orderbook snapshots1sapart. At most3requests60s.100totaldollar optimistic depth screen, nofee/gas/execution/chainproof. Websiteindicativepricesalreadyseen, selectionbasedonfiveoutcomeformatnotpositiveedge; this isexploratory quoteanalysis.",
+  "$100_screen": "Compute optimistic simultaneous ask-depth basket purchase under100 total dollars, equal share quantities and public minimum sizes. Payout upperbound q*(N-1) assumes catalog completeness and zero conversion fees. Report gross quote surplus only; no trade or profit claim. Fees, gas, onchain identity/completeness, delays, sequential fills remain unresolved. Positive candidates require separate chain verification and prospective execution model before any conclusion.",
+  "raw_policy": "65536B cumulative compressed response envelopes;8192source24576output16384control.2MB perbody bound, no retries. Any failure preserved and labeled.",
+  "source_sha256": "ce91c6340c06dba83a46e34cd5c4056104ccd50e16a0a98e6c22b697b3f2ec3e"
+}
