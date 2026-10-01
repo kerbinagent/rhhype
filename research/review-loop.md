@@ -5089,3 +5089,41 @@ Reviews 66–152: 2,341 completions, 2,309 exact losses, one estimated loss,
 five audited paired gains and 26 audited failed-hedge rescue gains.
 Archive 3,654,216 / 5,242,880 B; 161 future pairs at 5,342 B project
 4,514,278 B, margin 728,602 B. Next review **19:06:33 UTC**.
+
+
+## Review 153 — 1 October 2026 19:06:33 UTC
+
+All eight strategy and aborted coverage fields complete. Exact report
+`review-20261001T190633Z.json.gz`: raw 19,336 B, SHA-256
+`0ce6e162aa204ca9160564d0a8e079ca476800a2af2330daf455cf67f9ba156b`;
+gzip 2,936 B, SHA-256
+`5f38430e764d25892ce98242b092254b41df3d59bd9c6081f9a8ed876646cb7c`.
+Independent `current-epoch-at-review153.json.gz`: read 19:07:04.417556 UTC,
+updated 19:07:04.043610 UTC; raw 9,296 B, SHA-256
+`bbdbab75e6caf55254d15307aaaf2893aff34c5b726f68194a5e9f0ec6e0a271`;
+gzip 1,731 B, SHA-256
+`9b781cebf646425f66e836eedaeb60cdc455dbcb9525458c84fda7362355f238`.
+Exact decompression and per-write cap/growth guards passed.
+
+Thirteen exact losses: two convergence failed hedges/−$2.0555969670 and
+11 Premium/−$18.3436064554 (nine paired, two failed hedges). No wins,
+estimates or aborts; four HL price-limit rejections. Convergence fees zero,
+other costs $0.9968276310, capital $0.0000043360; Premium fees
+$9.3006513859, other costs $5.4893622695, capital $0.0003288000.
+
+Separate epoch snapshot convergence 605 / −$707.7820438912, Premium
+1,187 / −$2,138.2147497797. Increases two and ten versus report two and
+11; retain sampling boundaries and report authority. Health running/ok,
+four feeds, 102 pairs, CPU 61.41%, p95 lag 46.53 ms, RSS 195.99 MiB,
+881.6 books/s, metadata age 1,493.9 s. Post-recovery snapshots stayed
+fresh; 18:59:18 pulse briefly busy (CPU 74.25%, lag 50.53 ms, age 0.65 s),
+19:03:56 ok (59.60%, 40.97 ms, age 0.62 s); no incident recurrence or
+continuous coverage claim across the prior recorded gap. Carry 19:05:
+223 sampled, persistent invalid slot 71, 640 future/interrupted; running,
+no errors/retries/economic evaluation. Root active research outputs and
+carry samples unopened.
+
+Reviews 66–153: 2,354 completions, 2,322 exact losses, one estimated loss,
+five audited paired gains and 26 audited failed-hedge rescue gains.
+Manual archive 3,658,883 / 5,242,880 B; 160 future pairs at 5,342 B project
+4,513,603 B, margin 729,277 B. Next review **19:26:33 UTC**.
