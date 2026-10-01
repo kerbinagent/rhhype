@@ -1,0 +1,37 @@
+{
+  "schema": "paradex-public-preflight-v1",
+  "recorded_utc": "2026-10-01T05:28:18.176335+00:00",
+  "previous": "reports/experiment-storage/rh-nvda-complete-input-cycles-allocation-v1.json",
+  "previous_sha256": "fe42f443dad60a3620a3ce83f48bac0c00b392bdd44f748c634efa1cecb908ae",
+  "new_maximum_bytes": 65536,
+  "categories_bytes": {
+    "source": 8192,
+    "raw": 32768,
+    "output": 16384,
+    "control": 8192
+  },
+  "active_research_reserved_bytes": 3973120,
+  "active_research_headroom_bytes": 221184,
+  "source_sha256": "9aaa15c3eb81b41aa5ed2afae6dfe8df5e51a4a3250538d8a6a83fa14bad9757",
+  "assets": [
+    "BTC",
+    "ETH",
+    "SOL"
+  ],
+  "max_requests": 12,
+  "retries": 0,
+  "scope": "Three market metadata reads then three rounds of three ordinary public books, 1s spacing. No auth, interactive private book, orders or economic strategy selection. Check schema, fees, limits, source clocks and available depth before any separately frozen short-term strategy.",
+  "documented_retail_order_latency_ms": 300,
+  "documented_retail_limits": {
+    "second": 3,
+    "minute": 30,
+    "hour": 300,
+    "day": 1000
+  },
+  "sources": [
+    "https://docs.paradex.trade/trading/trader-profiles",
+    "https://docs.paradex.trade/trading/trading-fees",
+    "https://docs.paradex.trade/api/prod/markets/get-orderbook",
+    "https://docs.paradex.trade/api/prod/markets/get-markets"
+  ]
+}
