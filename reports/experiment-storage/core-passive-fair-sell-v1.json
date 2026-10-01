@@ -1,0 +1,26 @@
+{
+  "schema": "core-passive-fair-sell-exploration-v1",
+  "recorded_utc": "2026-10-01T15:45:44.828754+00:00",
+  "previous": "reports/experiment-storage/completed-exit-target-closeout-v1.json",
+  "previous_sha256": "42e5e4c3ea3516236e8271b7d5f290cd7f89a497f840781646a180adc8c40290",
+  "new_maximum_bytes": 196608,
+  "categories_bytes": {
+    "source": 32768,
+    "output": 131072,
+    "control": 32768
+  },
+  "active_research_pool_bytes": 19922944,
+  "active_research_reserved_bytes": 19783680,
+  "active_research_headroom_bytes": 139264,
+  "overall_reservation_bytes": 836777216,
+  "budgets": [
+    100
+  ],
+  "maker_activation_ms": [
+    100
+  ],
+  "input_manifest": "reports/core-passive-lit/capture/manifest.json",
+  "input_manifest_sha256": "30d8c14cd7ab754b895e2873871db70825fa273ebf85a560b46a2fa9a78baca1",
+  "scope": "Exploratory Core maker-sell/RH-buy on completedLITcapture; prior results known.100maker quote budget400prefunded. Past120s median closing RHbid-Coreask VWAP normalizedCoremid, sampled>=1s,2sembargo90count89span. Ask floor maxCoreask,RHentryVWAP-closing+6bpunit+fees+10scapital;roundup. Quantity monotonically decreased to fit both current entry values within100,16iteration maxelseabstain. Quote retained only while above current model floor;5srest100msactivation400mscancel/alltakers10shold. Cash-afterfees/capital TP6bp budget;5bp stress separate from decision. No actualorders/privateACKclaim. Same source/hour/cutoff/minimum/lateflow controls.",
+  "source_pins": []
+}
