@@ -1,0 +1,214 @@
+{
+  "schema": "core-maker-lit-replication-v1",
+  "recorded_utc": "2026-10-01T13:38:57.192986+00:00",
+  "previous": "reports/experiment-storage/completed-lit-ioc-source-closeout-v1.json",
+  "previous_sha256": "cda30c575f6a7e03ce26cdcecf4a373db58b9a15fb378e40dd247b19a8388867",
+  "new_maximum_bytes": 3014656,
+  "categories_bytes": {
+    "raw": 2621440,
+    "metadata": 65536,
+    "source": 32768,
+    "output": 262144,
+    "control": 32768
+  },
+  "active_research_reserved_bytes": 15171584,
+  "active_research_headroom_bytes": 557056,
+  "selected": {
+    "rh_lighter": {
+      "LIT": "5"
+    },
+    "lighter": {
+      "LIT": "120"
+    }
+  },
+  "budgets": [
+    100
+  ],
+  "exit_policies": [
+    "control10s"
+  ],
+  "primary_branch": "100-10bp-control10s",
+  "capture_seconds": 600,
+  "admission_window_seconds": [
+    10,
+    480
+  ],
+  "max_attempts_per_branch": 100,
+  "latencies_ms": {
+    "maker_activation": 400,
+    "maker_cancel": 400,
+    "rh_taker_exit": 400,
+    "core_taker_hedge_and_cover": 400
+  },
+  "latency_note": "Explicit public-clock paper assumptions. Core Standard taker300ms published plus100ms network allowance. RH assumed400ms for all paths pending actual account-specific latency; no private ACK observed. No faster-fill substitutions.",
+  "timing": {
+    "source_age_seconds": 2,
+    "pair_skew_seconds": 0.25,
+    "quote_rest_seconds": 5,
+    "hold_seconds": 10,
+    "timeout_seconds": 3,
+    "stop_admissions_before_hour_seconds": 120
+  },
+  "accounting": "Two independent100perleg maker-offsetbranches,400prefunded each(200pervenue), allfee0conditionalfreshmetadata. RHpassiveBUY atbestbidminus5or10bp roundedDOWNtotick; entirebetter-pricedqueue mustbeinside retainedbookdepth orabstain. Fix quoteprice through5srest ratherthanrepricing;400msactivation/cancel/hedge/exit,partialhedgesrescuedandunknownsretained. CorehedgeSHORTafterconditionalqueuefill; takerexitbothlegs10smaxhold or1bppricetakeprofit. Hourguard120s andfundingunknownifcrossed. Capital5%annual and5bpstressseparate,USDG/USDCparityconditional.",
+  "coverage": "Fresh600s publicLITcapture,2.5MiBrawcap;4metadataGETs,2publicfeeds. Sharedadapter limits3,276,800Bwholecapture/128MiBdecoded/100000records. No interim economics; endpoint and all unknowns retained.",
+  "decision": "Prospective replication of corrected coordinator and source-consistent IOCminimum exemption. Both5/10bp offsets unchanged;10bpprimary declared based exploratoryoldcapture. No actual orders/auth. Same400msallpaths,10smaxhold/1bpTP,5squote,10..480sadmission/100cap. No extension if negative/capped. DeployedIOCacceptanceunverified; queuefillsconditional.",
+  "source_pins": [
+    {
+      "path": "scripts/core_hedged_maker_base.py",
+      "sha256": "acb884b9add15c446cee7ad52c1648e823bdc9258b37083e5c94ddf31b4ba12f"
+    },
+    {
+      "path": "scripts/core_hedged_maker_exit.py",
+      "sha256": "4ad01155826a62200af0d8845ec33481fb4159d15f397184eb241b985bb152e7"
+    },
+    {
+      "path": "scripts/core_hedged_maker_late_flow.py",
+      "sha256": "61f7ed6b06713e7558f3dee590a7b66f4daa32336d4ed999c723b6192484b5c9"
+    },
+    {
+      "path": "scripts/core_hedged_maker_retirement.py",
+      "sha256": "98b922067dc2daacce092a0c2c6958ce27fca13e83d8deef595a1de498e18532"
+    },
+    {
+      "path": "scripts/core_hedged_maker_sell.py",
+      "sha256": "e3f600e3360b116124d3e271cfa9fab0f543bd652191ecf7e24dcca8c6e5bb88"
+    },
+    {
+      "path": "scripts/core_maker_capture.py",
+      "sha256": "db704b735932205bfd5f188a849804cd93774373f6dd4accb32ed69f32c5507c"
+    },
+    {
+      "path": "scripts/core_maker_events.py",
+      "sha256": "4b29411baaf2ea0d7624ba6c35d752fe137e6108214ec7289125b2d7c52303f3"
+    },
+    {
+      "path": "scripts/replay_core_maker_eth.py",
+      "sha256": "75c336ba64df8aad2ee582cf8db32ad043374fa9331abdf9ceaee02453b3b7ec"
+    },
+    {
+      "path": "tests/test_core_hedged_maker.py",
+      "sha256": "46a438ef8ad3b096c573ae84f7e849fee4ef42b3e68c6c65482fa18a106caea7"
+    },
+    {
+      "path": "tests/test_core_maker_events.py",
+      "sha256": "e193aa0d29b18fe17d01e3f63e076e962a668068e5168d365dbe7c4f7f491ecc"
+    },
+    {
+      "path": "scripts/maker_capture.py",
+      "sha256": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9"
+    },
+    {
+      "path": "scripts/maker_book_archive.py",
+      "sha256": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2"
+    },
+    {
+      "path": "scripts/core_rh_small_shortterm.py",
+      "sha256": "65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/core_maker_lit_capture.py",
+      "sha256": "86b0e8223422fc741ba366cc837333d313f51882a0bf44f46fa06c7f58831b59"
+    },
+    {
+      "path": "scripts/core_maker_lit_events.py",
+      "sha256": "edae9ba65054aba6cd8f011ff99199036d0f948fd99baf0c731adbba1f2c72af"
+    },
+    {
+      "path": "scripts/replay_core_maker_lit.py",
+      "sha256": "44cb87b7bd7f2b4da9cc6c715246a9830d68e0f261a61d98a2af1aa22b7a870f"
+    },
+    {
+      "path": "scripts/audit_core_maker_lit.py",
+      "sha256": "407bec427fe9a9d3e5e27e89e22193d50b3c665797ce602dfe369dced5476dab"
+    },
+    {
+      "path": "tests/test_core_maker_lit_planner.py",
+      "sha256": "5b59d66120722d992c34fc885b0e8551b7df9cc3d2e0d3b80edd250620974727"
+    },
+    {
+      "path": "tests/test_core_maker_lit_events.py",
+      "sha256": "2118121734d06151df14d3cc6ab9b6c169d8488d423c2ec8b03f45abf902aa94"
+    },
+    {
+      "path": "scripts/core_maker_ioc_minimum_scenario.py",
+      "sha256": "342b0b0e0bb13bec492742a4f50e1be6c66acfc3674f588463880a8681fdbf8d"
+    },
+    {
+      "path": "scripts/replay_core_maker_lit_corrected.py",
+      "sha256": "636f4d74d631cc7b3ef104d6e55c881bba54ee180a3b3f71022d139dc6a883f2"
+    },
+    {
+      "path": "scripts/replay_core_maker_lit_ioc_coordinator.py",
+      "sha256": "375251fb11a3550ed032035155e47aeaa9765e2a75de522e13cf8539580882fb"
+    },
+    {
+      "path": "scripts/core_maker_lit_replication.py",
+      "sha256": "48a01923bb324efc8465fa7b059d83f30700350bb214d4e2bcc7ffd7615921c2"
+    },
+    {
+      "path": "scripts/audit_core_maker_lit_replication.py",
+      "sha256": "4204b3acfbfcffff212aad825fb865992b1e8e07d7c37b777d774e049a5536ce"
+    },
+    {
+      "path": "scripts/audit_core_maker_lit_ioc_coordinator.py",
+      "sha256": "53edb4a1134289d33011b03b2109b42d31ea89c900ead866db0cbc836caa821c"
+    },
+    {
+      "path": "scripts/audit_lit_ioc_stream_boundaries.py",
+      "sha256": "b5fe8aacd318642f5db57866ebcc03c6f66346518f968b25773804e47052ec1f"
+    },
+    {
+      "path": "scripts/audit_lit_ioc_quote_gates.py",
+      "sha256": "95b02e591e9ea1d2a3a990805e264eebf2bf946ec851da122ad6ae629440b24d"
+    }
+  ],
+  "fork_basis": [
+    {
+      "path": "scripts/rh_maker_engine.py",
+      "sha256": "a25768d7e853f13cc81658ed9978e6c131f83713b43e276a95f94399ccc30763"
+    },
+    {
+      "path": "scripts/rh_maker_sell_engine.py",
+      "sha256": "a92cc118acec27b91fee9ea7279946ab051ff8d6ec337f626c64958039bce635"
+    },
+    {
+      "path": "scripts/rh_maker_late_flow_guard.py",
+      "sha256": "fc1c7b48c1c936a97409867a846db33b850e467338d671f29316926041fd1de6"
+    },
+    {
+      "path": "scripts/rh_passive_exit_engine.py",
+      "sha256": "486a7fc2d3d1dd8eec0cdf1607a0562bcb26d57cb047e17a9b27ce74c75f448b"
+    },
+    {
+      "path": "scripts/rh_passive_retirement_guard.py",
+      "sha256": "6f4a92fc7ce84c52bd7fe9f0d6e7a6d66082c78037ef9a4f6d737ef1765af9fe"
+    },
+    {
+      "path": "scripts/passive_three_venue_events.py",
+      "sha256": "66c8c813e86aa229fc49539f7d0fe4be39bd3e6468b7a9313a1545909354fcca"
+    }
+  ],
+  "sources": [
+    "https://apidocs.lighter.xyz/docs/account-types",
+    "https://apidocs.rh.lighter.xyz/docs/account-types"
+  ],
+  "tests": "6unittestpassed:3coordinatorstate/gates,2IOCsmallpartial/minima,1offsetplanner. pytestnotinstalled; usedexistingunittest framework.",
+  "overall_reservation_bytes": 836777216,
+  "offsets_bps": [
+    5,
+    10
+  ],
+  "source_scenario": "reports/core-maker-lit-ioc-coordinator/readout.md"
+}
