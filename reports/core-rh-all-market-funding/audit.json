@@ -1,0 +1,13 @@
+{
+  "audit": "passed",
+  "assets": 42,
+  "joined_hourly_events": 1008,
+  "raw_requests": 84,
+  "events_over_5bp": 1,
+  "events_at_least_6bp": 1,
+  "lagged_entries": 1,
+  "lagged_credit_bps": "0.4500",
+  "lagged_less_5bp_per_entry": "-4.5500",
+  "summary_sha256": "925e6eec8bb0be34286261bee00c6214c4132871abd3a6c0539d66626dcc70eb",
+  "checks": "Rebuilt entire matching active unit-perp universe, exact requests/raw hashes, 24 timestamps and payer signs per venue, all rate gaps, hindsight thresholds and previous-hour-only selection. Rates are not actual PnL; no quote/ownership/collateral/settlement-reference equivalence assertion."
+}
