@@ -4985,3 +4985,18 @@ four audited paired gains and one new paired gain pending parent audit,
 26 audited failed-hedge rescue gains. Manual archive 3,641,329 / 5,242,880 B;
 163 future pairs at 5,342 B project 4,512,075 B, margin 730,805 B.
 Next review **18:26:33 UTC**.
+
+
+Review150 parent audit passed. Preserved `review150-positive-record.json.gz`
+(1,992 B; SHA-256 `bd42959669d8a6ab689624b754cae13326c70fbb50dde638f90573b1b5550d15`)
+and `review150-positive-root-audit.json` (1,862 B). LIT trade
+`1790877399893849-24331-convergence` paired Core perp long 251 with HL
+short: net +$0.33583068657, cash after fees +$0.834076305, 5 bp stress
+$0.498235, capital $0.00001061843, no-hour funding, final flat. Independently
+verified take-profit mark +$0.371975542828. Entry gap 0.6887719 s,
+exit gap 0.5682292 s. Source signal skew 504.19 ms exceeds the separate
+$100 study's 250 ms gate; this legacy $1,000 size result is not evidence
+for that study. No original raw-depth/private-fill proof. Cumulative audited
+paired gains now five, rescue gains 26, 2,294 exact losses and one estimated
+loss across 2,326 completions. Archive 3,645,183 B; 163 future pairs project
+4,515,929 B, leaving 726,951 B under 5,242,880 B.

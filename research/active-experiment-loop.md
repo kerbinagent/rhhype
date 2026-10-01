@@ -1738,3 +1738,10 @@ five failed hedges). No estimates/aborts; seven HL price limits. Four feeds,
 pairs project 4,512,075 B, margin 730,805 B. Carry 18:05: 211 sampled,
 invalid slot 71, 652 future/interrupted; no errors/retries/economic
 evaluation. Next review 18:26:33 UTC.
+
+
+Review150 parent audit verified paired LIT gain +$0.33583068657 and its
+profit mark, cash/fees/stress/capital/funding/flatness. Source signal skew
+504.19 ms exceeds the $100 study gate, with legacy $1,000 size and no
+original depth proof. Audited paired gains now five. Audit artifacts
+preserved: archive 3,645,183 B, projected 4,515,929 B, margin 726,951 B.
