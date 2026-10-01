@@ -1,6 +1,6 @@
 # Active paper research operations
 
-Current process summary: 2026-10-01 00:20 UTC. All processes below are paper simulation or
+Current process summary: 2026-10-01 00:28 UTC. All processes below are paper simulation or
 public quote observation. No private keys or real orders are involved.
 
 | Process | PID | Output | Expected end |
@@ -8,7 +8,7 @@ public quote observation. No private keys or real orders are involved.
 | Production collector, original ledgers, 10s/10-cent exit | 17101 | data/paper-monitor → paper-monitor-10s | Continuous |
 | Scheduled audit capture, 1,200s cadence | 19334 | data/strategy-reviews | Continuous |
 | Dated BTC carry v1 | stopped by reboot | reports/dated-carry/20260930-v1 | Interrupted; same-boot gate blocks economics |
-| Fresh dated BTC carry v2 | preparing | reports/dated-carry/20261001-v2 | Fresh fixed 72-hour window pending |
+| Fresh dated BTC carry v2 | 42223 | reports/dated-carry/20261001-v2 | 2026-10-04 00:30 UTC |
 | Passive-exit v1 public capture, restarted | stopped | data/raw/rh-passive-exit-v1/20260930T0252Z | Completed 03:42:58 UTC |
 | One-shot strict replay supervisor | stopped | reports/rh-passive-exit-v1-restart/supervisor | Completed 03:58:17 UTC, exit 0 |
 | One-shot corrected replay supervisor | stopped | reports/rh-passive-exit-v1-restart/corrected-supervisor | Completed 03:58:14 UTC, exit 0 |
@@ -542,3 +542,23 @@ its actual interrupted condition. Its 136 recorded slots contain 134 sampled
 and two callback-late statuses; no economic evaluation occurred. The user then
 explicitly chose a fresh run within the existing storage allowance. V2 uses
 the [relaunch addendum](dated-carry-relaunch-v2.md), retaining v1 intact.
+
+
+## Fresh carry v2 launch, 1 October 2026 00:26:07 UTC
+
+User explicitly authorized the separate fresh run within the existing storage
+budget. Wrapper `scripts/dated_carry_relaunch.py` uses the unchanged original
+collector/evaluator and 1 MiB retired + 15 MiB fresh caps. Forty-four tests pass.
+Source commit `5935d08`; fresh metadata and freeze commit `48e3880`.
+PID **42223** runs the wrapper's `launch` mode, fixed window **1 October
+00:30 UTC–4 October 00:30 UTC**, 864 paired slots. Eastern endpoint is
+**Saturday, 3 October, 8:30 p.m.** BTC_USDC / BTC_USDC-9OCT26.
+
+Config SHA `42423b4991ca8f71082113ee3811d04d2e6bfd9244e559992133d6e13fdb1049`;
+freeze SHA `4fb2182e64f12a5a704380f4e159ff058e772f2696659591a38e0d3d1eff4d5c`.
+All future operational calls must use the v2 wrapper; do not launch v2 with the
+original entrypoint. Same no-retry, no sampling resume, no interim economic
+readout and original boot/UTC/monotonic endpoint gates apply. The interrupted
+v1 remains preserved; its same-boot economic publication gate is blocked.
+Health-only files are `terminal/status.json` and `terminal/index.json` under
+the v2 directory. The wrapper automatically finalizes only at the endpoint.

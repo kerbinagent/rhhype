@@ -3294,3 +3294,45 @@ storage budget. The prospective [v2 addendum](dated-carry-relaunch-v2.md)
 subdivides the existing 16 MiB into 1 MiB for retired v1 and 15 MiB for fresh v2;
 all other reservations remain unchanged. No original quote economics have been
 inspected. Fresh metadata, source freeze and launch follow validation.
+
+
+## Review 97 — 1 October 2026 00:26:33 UTC
+
+Exact report and separate epoch snapshot preserved; guarded manual archive
+2,508,882/16,777,216 bytes. Report SHA-256
+`38e8bf42ebea203a440655154b93826067777e43c1dc200df7f12ec7cb7c4d5f`.
+Two exact Premium paired GOOGL losses/−$3.45060; no other completions,
+no aborts or entry rejections and complete coverage. This first scheduled
+post-recovery interval is approximately twelve minutes because the catch-up
+checkpoint was at 00:14. Fees $1.75756, stress $0.99886 and capital $0.00007138;
+without stress −$2.45174. Both exits worsened against request prices, total
+$0.093322, median $0.046661 and p95 $0.06478. Both flattening times present:
+median 1.4180 s, p95 1.5539 s. No new wins.
+
+Four feeds connected, 107 pairs, CPU 44.71%, p95 lag 7.03 ms, RSS 143.54 MiB,
+769.9 books/s, metadata age 762.8 s; performance normal. Review and separate
+epoch snapshot flat. Premium epoch 646/−$1,183.4061; other epoch counts and P&L
+unchanged from review96. Twenty-two earlier win records and three legacy
+funding obligations remain. Reviews 66–97 have 1,575 closes: 1,565 losses,
+two paired gains and eight rescue gains. Next checkpoint **00:46:33 UTC**.
+
+### Fresh carry launched, 00:26:07 UTC
+
+Fresh-run wrapper passed all 44 focused and adjacent tests; original source
+hashes remain unchanged. Root reviewed the storage implementation; no new
+independent-agent review is claimed. Source commit `5935d08`, metadata/freeze
+commit `48e3880`. Exactly two fresh public instrument metadata requests
+selected BTC_USDC and BTC_USDC-9OCT26. Metadata was under two minutes old
+at launch. No market quote economics were read.
+
+PID 42223 is running the wrapper at the committed fixed identity. Window:
+**1 October 00:30 UTC through 4 October 00:30 UTC**, equivalent to
+30 September 8:30 p.m. through 3 October 8:30 p.m. Eastern. The fresh 864-slot
+roster is separate from interrupted v1. V2 config SHA-256
+`42423b4991ca8f71082113ee3811d04d2e6bfd9244e559992133d6e13fdb1049`;
+freeze SHA-256
+`4fb2182e64f12a5a704380f4e159ff058e772f2696659591a38e0d3d1eff4d5c`.
+Retired usage including external dependencies 464,077 bytes, below its
+1 MiB reservation; v2 category caps total 15 MiB. Combined 16 MiB and total
+experimental reservation 836,777,216 bytes unchanged. Endpoint analysis must
+use the v2 wrapper so its smaller budget and retired-evidence guards apply.
