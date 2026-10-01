@@ -1,0 +1,66 @@
+{
+  "error": null,
+  "completion_marker_received": true,
+  "metrics": {
+    "LIT": {
+      "attempts": 6,
+      "episodes": 6,
+      "known_flow_closes": 0,
+      "paired_flow_closes": 0,
+      "rescue_closes": 0,
+      "cash_sum": "0",
+      "stressed_sum": "0",
+      "cash_wins": 0,
+      "stressed_wins": 0,
+      "unknown_episodes": 0,
+      "branch_unknown_reason": null,
+      "spot_inventory": "0",
+      "perp_inventory": "0",
+      "actual_cash_usdc": "600",
+      "counts": {
+        "decision_opportunity": 13598,
+        "abstain:stale_or_skewed_pair": 2161,
+        "abstain:outside_admission_window": 4786,
+        "abstain:under_5bp_excursion": 3289,
+        "quote_requested": 6,
+        "spot_admission": 6,
+        "activation_stale_source": 9,
+        "activated": 6,
+        "cancel_requested": 6,
+        "cancel_stale_source": 6,
+        "cancel_effective": 6,
+        "episode_flat": 6,
+        "retired_quote_guarded": 6,
+        "abstain:cooldown": 3354,
+        "touch": 1,
+        "equal_price_touch": 1,
+        "abstain:forecast_below_1bp": 2,
+        "invalidation": 4
+      }
+    },
+    "ETH": {
+      "attempts": 0,
+      "episodes": 0,
+      "known_flow_closes": 0,
+      "paired_flow_closes": 0,
+      "rescue_closes": 0,
+      "cash_sum": "0",
+      "stressed_sum": "0",
+      "cash_wins": 0,
+      "stressed_wins": 0,
+      "unknown_episodes": 0,
+      "branch_unknown_reason": null,
+      "spot_inventory": "0",
+      "perp_inventory": "0",
+      "actual_cash_usdc": "600",
+      "counts": {
+        "decision_opportunity": 13599,
+        "abstain:stale_or_skewed_pair": 6918,
+        "abstain:outside_admission_window": 3439,
+        "abstain:under_5bp_excursion": 3242,
+        "invalidation": 4
+      }
+    }
+  },
+  "summary_sha256": "aae2739dbbfe6acb17258e6174e4da10b0355cd033825da0d64c8b6ebd63e477"
+}

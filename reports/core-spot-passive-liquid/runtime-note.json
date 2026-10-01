@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-10-01T17:33:44.689710+00:00",
+  "capture_finished_before_replay": true,
+  "offline_replay_pid": 1908232,
+  "offline_replay_nice": 10,
+  "reason": "Background monitor reported CPU102.36% of one core and p95looplag105.64ms at17:30:51. Only the offline replay process was lowered to nice+10 to favor live collectors. Captured data and protocol unchanged.",
+  "future_audit_nice": 10,
+  "allocation": "Existing control reservation."
+}

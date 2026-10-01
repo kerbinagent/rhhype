@@ -1,0 +1,11 @@
+{
+  "audit": "passed",
+  "conservative_request_upper_bound_per_66_seconds": {
+    "LIT": 4,
+    "ETH": 0
+  },
+  "published_standard_per_60_seconds": 60,
+  "published_default_transaction_type_per_60_seconds": 40,
+  "source": "https://apidocs.lighter.xyz/docs/rate-limits",
+  "method": "Count quote/cancel/hedge requests once, exit requests twice, each exit result once again for possible retry, each hedge result once for possible late exit.66seconds covers up to3seconds of request/response timestamp displacement at both window ends. No actual order requests sent. This no-fill study has only quote/cancel requests."
+}

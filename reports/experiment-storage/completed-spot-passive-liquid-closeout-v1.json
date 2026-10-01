@@ -1,0 +1,271 @@
+{
+  "schema": "completed-spot-passive-liquid-closeout-v1",
+  "recorded_utc": "2026-10-01T17:38:42.001422+00:00",
+  "previous": "reports/experiment-storage/core-spot-passive-liquid-v1.json",
+  "previous_sha256": "92e588068618c6a2b49bd8f9b46165ffe057699ccbc4db6dd9b0fea3b0879a74",
+  "old_reserved_bytes": 8388608,
+  "artifact_bytes": 3935761,
+  "retention_reserved_bytes": 4063232,
+  "released_bytes": 4325376,
+  "active_research_pool_bytes": 36700160,
+  "active_research_reserved_bytes": 27394048,
+  "active_research_headroom_bytes": 9306112,
+  "overall_reservation_bytes": 836777216,
+  "scope": "All current raw, metadata, outputs, audits, documentation and runtime checks, diagnostic, wrapper sources, tests and launch files retained. Original shared sources stay in prior canonical retention. No deletion or recompression.",
+  "files": [
+    {
+      "path": "reports/core-spot-passive-liquid/capture/frames.jsonl.gz",
+      "bytes": 3840542,
+      "sha256": "ab07208d03ca1153d649edd5ac815035a65f81776a1ff883ee41ab28590a5018"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/capture/manifest.json",
+      "bytes": 1544,
+      "sha256": "5b48833bc1deb6089f3ca962082b034e6021be2e597179312e03c81f4ae8de9e"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/capture/metadata/core_assets.json.gz",
+      "bytes": 1028,
+      "sha256": "cc3ac56f250df743a6194bf170f83e362017b0cb99969ea19c7a7ba5d7641040"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/capture/metadata/core_assets.request.json",
+      "bytes": 458,
+      "sha256": "e06fa1afe4d08f6615404746e0a40e6aa095170f438938d227a651b82bbf5f35"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/capture/metadata/core_markets.json.gz",
+      "bytes": 23309,
+      "sha256": "5506b6d656118aaef188f9b66744a9d57d014cff402c714fa5084b2f849a56e3"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/capture/metadata/core_markets.request.json",
+      "bytes": 465,
+      "sha256": "b90e659a396ed7f77b366c1378b497ff8f920c334918438486505f1f78c386bc"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/capture/metadata/market_plan.json",
+      "bytes": 9247,
+      "sha256": "92e588068618c6a2b49bd8f9b46165ffe057699ccbc4db6dd9b0fea3b0879a74"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/capture/metadata/normalized.json",
+      "bytes": 3138,
+      "sha256": "f2ccc21094d9c4155bae840b7169fc4747a69b53a3ad4fcf4541ffb0d45d7a7d"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/capture/status.json",
+      "bytes": 162,
+      "sha256": "d8b0da70145149f88b3bb4f8b1be5646bd565d3d0312b6b41b6a94bc4e2b0ad1"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/capture/terminal.json",
+      "bytes": 316,
+      "sha256": "a1f7b6911b37e9d2d59e6ecfa7d2d53564f8413461f1eb23d93704f0e8c36140"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/documentation-check.json",
+      "bytes": 1445,
+      "sha256": "8a0e4a37784f55df460823dfc7388782e277d179b8edad783602a9a0fc313554"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/quote-flow-diagnostic.json",
+      "bytes": 4407,
+      "sha256": "54d8c8389ea6a98a1a4b2221a8946d851f99efe00c506f2855cf5e4095679927"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/readout.md",
+      "bytes": 3441,
+      "sha256": "92bf0b6086c1c568692d228ff2be961a804ab9cb2720f1bc335ac5edf9c02a9e"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/request-rate-audit.json",
+      "bytes": 620,
+      "sha256": "63db9e631a597e03bae65b36399c792d0550d966b6ab699c502e6f288aa94f72"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/result/audit.jsonl.gz",
+      "bytes": 12182,
+      "sha256": "85f4da0d8ba3b94db3c50791749244987a1988e96cdf60ea968e5759bc7ce9f7"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/result/boundary-audit.json",
+      "bytes": 1373,
+      "sha256": "80d113793d5273341612a0ce35a4eb57532804411e9259fb071d71e3fc9fa511"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/result/independent-audit.json",
+      "bytes": 948,
+      "sha256": "7e4b419c1553c927bbb456d8f1c6532c02d4190327291280d87fca909fe137c1"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/result/metrics.json",
+      "bytes": 1844,
+      "sha256": "0575dee3a213584452d3f412a1ab9a8095dff104f1e7955163f097dc7ca05565"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/result/summary.json.gz",
+      "bytes": 11099,
+      "sha256": "aae2739dbbfe6acb17258e6174e4da10b0355cd033825da0d64c8b6ebd63e477"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid/runtime-note.json",
+      "bytes": 457,
+      "sha256": "c68dd860336d798a606eba61a1f4c59bab9a703b55c3a730ef79af8dfdd8f822"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid-process.json",
+      "bytes": 431,
+      "sha256": "7204e25705b3de56bd5e907f618f7851e3499cadca36d44d2571c8583c37709f"
+    },
+    {
+      "path": "reports/core-spot-passive-liquid.stdout.txt",
+      "bytes": 302,
+      "sha256": "bd4502cab1dc24f26a853f96cb9f29c2457658c1487b75d9a5e2dd7e9f38a4ac"
+    },
+    {
+      "path": "reports/experiment-storage/core-spot-passive-liquid-v1.json",
+      "bytes": 9247,
+      "sha256": "92e588068618c6a2b49bd8f9b46165ffe057699ccbc4db6dd9b0fea3b0879a74"
+    },
+    {
+      "path": "reports/experiment-storage/core-spot-passive-liquid-wire-inventory-v1.json",
+      "bytes": 2902,
+      "sha256": "9d8929bc180f82a00a86cf02f69a7276cfcd154cdbce2ff7513e28791acf0ed0"
+    },
+    {
+      "path": "reports/experiment-storage/spot-passive-liquid-preparation-v1.json",
+      "bytes": 704,
+      "sha256": "7216857bf3545a75b4f1648bde93d8cb051888dc7887a394a51698930ed21e89"
+    },
+    {
+      "path": "scripts/core_spot_passive_liquid.py",
+      "bytes": 1520,
+      "sha256": "024f278c6d50e70e972cf92735836b1c1a65f9ee528d3a1f9aa73fc17a4de98b"
+    },
+    {
+      "path": "scripts/launch_core_spot_passive_liquid.py",
+      "bytes": 1320,
+      "sha256": "2c595aba4f113ed45bd2fae4c48d711c574eec53d76f57206542bd511e08f83d"
+    },
+    {
+      "path": "tests/test_core_spot_passive_liquid.py",
+      "bytes": 1310,
+      "sha256": "d69d119acb483f8d412c52900351d0b847eef72780a63c3d7ce8f59ee806ed6a"
+    }
+  ],
+  "shared_sources": [
+    {
+      "path": "reports/core-spot-passive/flow-diagnostic.json",
+      "sha256": "113cc22c1ced7ada6e74fb4315d2445b8dce5ed87750ba6a21e0bde5b42ef276"
+    },
+    {
+      "path": "scripts/analyze_maker_capture.py",
+      "sha256": "d87ce8f116e039976b7afac20ede5704d14b3d49eb626473d214a7d47811b359"
+    },
+    {
+      "path": "scripts/analyze_maker_equity.py",
+      "sha256": "85d4de8cfd523b4a4497e3e2f6411b05f3737f2133d4c167ddce708af363843f"
+    },
+    {
+      "path": "scripts/analyze_maker_roundtrip.py",
+      "sha256": "d7d23b255fcffc294069a77486cc944a9a64a32d6755cc515a960d1ae03a9c93"
+    },
+    {
+      "path": "scripts/audit_core_spot_passive.py",
+      "sha256": "9e1d8b1fdc88596901a1db592406d1e87a51c12c37728485f096ac55216222f3"
+    },
+    {
+      "path": "scripts/audit_core_spot_passive_boundaries.py",
+      "sha256": "aef85f1ddd75589dfdc7cdea7cf314e269a66ee9f7840c9a2cfe1c2222dbc187"
+    },
+    {
+      "path": "scripts/core_passive_hedged_base.py",
+      "sha256": "6bc4d04f8cb5c6cbff78c198dc19314f0a50571187311b61c6a99d03d6b386fb"
+    },
+    {
+      "path": "scripts/core_passive_hedged_exit.py",
+      "sha256": "7ca4ca6b783c84eac83294bd5e9786d7e30eec3cd33297d95005f956cd359ed0"
+    },
+    {
+      "path": "scripts/core_passive_hedged_late_flow.py",
+      "sha256": "c163b0814a5bff8fc949ea31c5d9240d57503f8dbde5dcb2d8da3e6ebfdf9539"
+    },
+    {
+      "path": "scripts/core_passive_hedged_retirement.py",
+      "sha256": "23036c5b4a565ccafd226debd9e590cd82da0c4aad5183299f049a2fd2cff8e8"
+    },
+    {
+      "path": "scripts/core_passive_hedged_sell.py",
+      "sha256": "632b7f63e7525b0cb8a761f53bba3cff35e7aee8b9246f85fc07d56d003c006d"
+    },
+    {
+      "path": "scripts/core_passive_lit_branch.py",
+      "sha256": "fb8a97beef9bd0da13af80635127c61a1a7601596977be8726058f9f92b86c74"
+    },
+    {
+      "path": "scripts/core_passive_lit_capture.py",
+      "sha256": "7da167cc8b55da838100141fda57cb854eab4d0525d5c97b43a9d1ef7f2d51d8"
+    },
+    {
+      "path": "scripts/core_passive_lit_events.py",
+      "sha256": "8fa7c271c85d46d5f997bc8f48c3b1174367bb6bb37605e48e6c30faff2577a2"
+    },
+    {
+      "path": "scripts/core_rh_small_shortterm.py",
+      "sha256": "65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3"
+    },
+    {
+      "path": "scripts/core_spot_passive_branch.py",
+      "sha256": "a5962c285dbe78ab15a4c5b1e38f794a2589af182be8668f8723b7a64a4fffbe"
+    },
+    {
+      "path": "scripts/core_spot_passive_capture.py",
+      "sha256": "b1d41e7b7bcbb5c3e8d04b67c92feb1aae9037002c38a851e030834c54d712fb"
+    },
+    {
+      "path": "scripts/core_spot_passive_events.py",
+      "sha256": "4a2493efa4a9dc1ad9babb813bd1ef40350bd0eb77d437797f3344a3b62c425b"
+    },
+    {
+      "path": "scripts/core_spot_passive_events_v2.py",
+      "sha256": "a45217f4fbb6b7a6d05cca64575d4956e0bd3adbf9ec65286dc07b76101d0500"
+    },
+    {
+      "path": "scripts/launch_core_spot_passive.py",
+      "sha256": "0deaecfaa9b5506cc9c1e9f6b3de8c0901024bf4a198b7005c561be9ef16c0b3"
+    },
+    {
+      "path": "scripts/maker_book_archive.py",
+      "sha256": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2"
+    },
+    {
+      "path": "scripts/maker_capture.py",
+      "sha256": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/replay_core_passive_lit.py",
+      "sha256": "99f8f82ae23c587c00c7d4f1333fbb3b54f028b1b0930ac89dc1e75643131527"
+    },
+    {
+      "path": "scripts/replay_core_spot_passive.py",
+      "sha256": "b4977a52895f6eec4ad947fca04d685cb0093aa878bff153e83e0ace42ced8d2"
+    },
+    {
+      "path": "tests/test_core_spot_passive.py",
+      "sha256": "6f34030950ddfedd8c02fda717bd572444d8eadb5e00cebcc5310729771ec252"
+    }
+  ]
+}

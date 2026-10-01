@@ -1,0 +1,26 @@
+{
+  "recorded_utc": "2026-10-01T17:21:03.381141+00:00",
+  "account_types_source": "https://apidocs.lighter.xyz/docs/account-types",
+  "published_standard": {
+    "maker_fee_percent": 0,
+    "taker_fee_percent": 0,
+    "maker_processing_ms": 0,
+    "taker_processing_ms": 300,
+    "cancel_processing_ms": 300
+  },
+  "model_network_allowance_ms": 100,
+  "model_total_delay_ms": {
+    "maker": 100,
+    "taker": 400,
+    "cancel": 400
+  },
+  "note": "Current public documentation agrees with the already-frozen Standard fee and processing assumptions. The extra100ms remains a modeling allowance, not a measured ACK. No frozen parameters changed. Paid-tier fees printed on others public trades do not set the simulated Standard-account fee.",
+  "websocket_source": "https://apidocs.lighter.xyz/docs/websocket-reference",
+  "trade_subscription": "trade/{MARKET_INDEX}",
+  "trade_updates": "update/trade contains new trade records; subscribed backlog excluded from fills.",
+  "funding": "Existing study control reservation; no allocation change.",
+  "rate_limit_source": "https://apidocs.lighter.xyz/docs/rate-limits",
+  "published_standard_requests_per_minute": 60,
+  "published_default_transaction_type_requests_per_minute": 40,
+  "rate_limit_scope": "If fills occur, independently compare conservative request-count bounds to these limits before claiming executable paper outcomes. This documentation check does not change the frozen strategy."
+}

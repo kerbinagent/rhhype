@@ -1,0 +1,13 @@
+{
+  "pid": 1878207,
+  "command": [
+    "/home/harry/miniconda3/bin/python",
+    "/home/harry/projects/research/rhhype/scripts/core_spot_passive_liquid.py",
+    "capture"
+  ],
+  "launched_utc": "2026-10-01T17:19:42.081262+00:00",
+  "plan_sha256": "92e588068618c6a2b49bd8f9b46165ffe057699ccbc4db6dd9b0fea3b0879a74",
+  "fixed_capture_seconds": 600,
+  "public_read_only": true,
+  "log": "reports/core-spot-passive-liquid.stdout.txt"
+}

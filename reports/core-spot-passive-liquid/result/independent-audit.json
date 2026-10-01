@@ -1,0 +1,31 @@
+{
+  "audit": "passed",
+  "checks": {
+    "admissions": 6,
+    "reference_rows": 649,
+    "queue_episodes": 6,
+    "maker_flow_matches": 0
+  },
+  "branches": {
+    "LIT": {
+      "fills": 0,
+      "cash_spot": "0",
+      "cash_perp_synthetic": "0",
+      "capital": "0",
+      "spot_inventory": "0",
+      "perp_inventory": "0",
+      "unknown_reason": null
+    },
+    "ETH": {
+      "fills": 0,
+      "cash_spot": "0",
+      "cash_perp_synthetic": "0",
+      "capital": "0",
+      "spot_inventory": "0",
+      "perp_inventory": "0",
+      "unknown_reason": null
+    }
+  },
+  "summary_sha256": "aae2739dbbfe6acb17258e6174e4da10b0355cd033825da0d64c8b6ebd63e477",
+  "limitations": "Queue checked only before first unknown callback; unknown outcomes retained. Public-flow attribution remains conditional on queue and ACK assumptions. No private order/fill proof. All fills independently reconciled even in unknown branches; zero checks are vacuous."
+}
