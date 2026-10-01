@@ -1,0 +1,39 @@
+{
+  "scope": "Post-outcome accounting decomposition of all paired closes. Forecast+entry change+exit forecast miss=cash. Request mark independently walked from retained trigger books; no private execution inference. Arms overlap.",
+  "trades": [
+    {
+      "branch": "100-60-0s-confirm",
+      "position_id": "1790867189202641-1-standard",
+      "asset": "PONS",
+      "forecast_gross": "0.012994079404855745",
+      "entry_change": "-2E-14",
+      "exit_forecast_miss": "-0.095792079404835745",
+      "cash": "-0.082798",
+      "exit_reason": "take_profit",
+      "exit_request_cash_mark": "0.010890",
+      "exit_request_net_mark": "0.01088362387709384481641410731",
+      "request_to_flat_seconds": 0.5994460582733154,
+      "cash_change_after_request": "-0.093688"
+    },
+    {
+      "branch": "100-60-0s-confirm",
+      "position_id": "1790867423987696-2-standard",
+      "asset": "PONS",
+      "forecast_gross": "0.013640999999993644",
+      "entry_change": "-0.048882",
+      "exit_forecast_miss": "-0.121538999999993644",
+      "cash": "-0.156780",
+      "exit_reason": "max_hold"
+    },
+    {
+      "branch": "100-60-2s-confirm",
+      "position_id": "1790867436421817-1-standard",
+      "asset": "PONS",
+      "forecast_gross": "0.013086743417700109",
+      "entry_change": "-0.06221400000000",
+      "exit_forecast_miss": "-0.035309743417700109",
+      "cash": "-0.084437",
+      "exit_reason": "max_hold"
+    }
+  ]
+}

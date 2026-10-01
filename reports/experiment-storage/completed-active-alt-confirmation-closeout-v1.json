@@ -1,0 +1,124 @@
+{
+  "schema": "completed-active-alt-confirmation-closeout-v1",
+  "recorded_utc": "2026-10-01T15:16:29.802010+00:00",
+  "previous": "reports/experiment-storage/core-passive-sell-preparation-v1.json",
+  "previous_sha256": "033ccd15f975f7393d5ae8cb6f800e9287246c4e3e93ea74d831a4e46238e6c7",
+  "old_reserved_bytes": 491520,
+  "artifact_bytes": 194145,
+  "retention_reserved_bytes": 229376,
+  "released_bytes": 262144,
+  "active_research_pool_bytes": 18874368,
+  "active_research_reserved_bytes": 18612224,
+  "active_research_headroom_bytes": 262144,
+  "overall_reservation_bytes": 836777216,
+  "scope": "All raw, metadata, outcomes, audits, diagnostic, readout and pre-eligibility plan erratum retained. Shared exact source paths/hashes already funded by canonical completed retentions. 24KiB closeout slack, no deletion or recompression.",
+  "files": [
+    {
+      "path": "reports/core-rh-active-alt-confirmation/audit.json",
+      "bytes": 1624,
+      "sha256": "c0d9645b882e66099f39864bf2eb53c9a70aa44fcceebe1b2f98c80b0a3a7b3c"
+    },
+    {
+      "path": "reports/core-rh-active-alt-confirmation/events.jsonl.gz",
+      "bytes": 131662,
+      "sha256": "2a293011c126a84ad2da43352395c6f1fbd558b3a8ca4ace140461ee001bce04"
+    },
+    {
+      "path": "reports/core-rh-active-alt-confirmation/execution-decomposition.json",
+      "bytes": 1430,
+      "sha256": "1c36c112dc558476b4b37d0ebca316797686cc07989303aa5baae26cf0f43cc2"
+    },
+    {
+      "path": "reports/core-rh-active-alt-confirmation/lighter-metadata.json.gz",
+      "bytes": 23248,
+      "sha256": "2d265ebc96229140db4730bc534e262b77a8a2d51a0063446880758ace49eecf"
+    },
+    {
+      "path": "reports/core-rh-active-alt-confirmation/metadata.json",
+      "bytes": 1811,
+      "sha256": "47db8b1853e209c82b70b7896a661b87bdbed2c58567c00d6d48a56afd9670e2"
+    },
+    {
+      "path": "reports/core-rh-active-alt-confirmation/readout.md",
+      "bytes": 3158,
+      "sha256": "1df3bac3434e473f561f9e2d44182eb849883d960f7f3b1c70c7dc720f04a63e"
+    },
+    {
+      "path": "reports/core-rh-active-alt-confirmation/rh_lighter-metadata.json.gz",
+      "bytes": 7975,
+      "sha256": "673ccdb89f7f3b0b2eed809648d6981b6b662e8ee703bf3b489d695e9707687d"
+    },
+    {
+      "path": "reports/core-rh-active-alt-confirmation/status.json",
+      "bytes": 278,
+      "sha256": "756f4892fac27140b28668bb7c378959df8cec8b4f3512119802bbbcc706d63e"
+    },
+    {
+      "path": "reports/core-rh-active-alt-confirmation/summary.json",
+      "bytes": 3641,
+      "sha256": "9cd834c68ac4488c77c3efc414019fac3a530e3b85ef97f69f4950814dc2a75d"
+    },
+    {
+      "path": "reports/core-rh-active-alt-confirmation/unresolved.json.gz",
+      "bytes": 51,
+      "sha256": "6667baff8fd5d329ce237a91b83851d2cdefdd69833f96e816ea58dda0c87876"
+    },
+    {
+      "path": "reports/experiment-storage/core-rh-active-alt-confirmation-allocation-v1.json",
+      "bytes": 3947,
+      "sha256": "f82e9111b28505e4358d910e6cb267a76e38c970d50dcb9eb10d0c3c245036bc"
+    },
+    {
+      "path": "reports/experiment-storage/core-rh-active-alt-confirmation-plan-text-erratum-v1.json",
+      "bytes": 1274,
+      "sha256": "286dde669df003018c4512171b3ca21e1eee7368222ff0c70628a59b203b11bd"
+    },
+    {
+      "path": "scripts/audit_core_rh_active_alt_confirmation.py",
+      "bytes": 12955,
+      "sha256": "fee26b16f9b5b3006daadc888a41cc2f7652279abc09e1cd46df51d84a0f242b"
+    },
+    {
+      "path": "scripts/core_rh_active_alt_confirmation.py",
+      "bytes": 1091,
+      "sha256": "72149e9542f105b82ad9500477940b869e2b6b649bb89dc61f02c8becc2fd479"
+    }
+  ],
+  "shared_source_references": [
+    {
+      "path": "scripts/core_rh_persistent_entry.py",
+      "bytes": 20172,
+      "sha256": "d6a549af5ed2ca5767d364d228b50c279126daa217a7a85be22c5ad279c3ce04",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-persistent-entry-closeout-v1.json",
+      "canonical_manifest_sha256": "0dc1948757f7868f788215ea94e47574dbf9f902fb2958b6b329e477aaab366d"
+    },
+    {
+      "path": "tests/test_core_rh_persistent_entry.py",
+      "bytes": 2378,
+      "sha256": "269dbfcd486b0e81c4a7e0c2259cab07ac8035d4412a3edceca19126b3c7f4f8",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-persistent-entry-closeout-v1.json",
+      "canonical_manifest_sha256": "0dc1948757f7868f788215ea94e47574dbf9f902fb2958b6b329e477aaab366d"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "bytes": 59902,
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "bytes": 31735,
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "bytes": 40963,
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    }
+  ]
+}
