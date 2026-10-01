@@ -1,0 +1,12 @@
+{
+  "schema": "spot-passive-skew500-preparation-v1",
+  "recorded_utc": "2026-10-01T18:25:40.113087+00:00",
+  "previous": "reports/experiment-storage/completed-spot-passive-hysteresis-closeout-v1.json",
+  "previous_sha256": "d3d5b58f2d75b2b1244dae361f9c3161485ddb76c2b8b4a9a6340ba68bf2c0a6",
+  "preparation_reserved_bytes": 131072,
+  "active_research_pool_bytes": 36700160,
+  "active_research_reserved_bytes": 31129600,
+  "active_research_headroom_bytes": 5570560,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare separate500ms pair-skew timing assumption, unchanged cash-retention branch and all other economic parameters. No capture until full allocation/source freeze."
+}
