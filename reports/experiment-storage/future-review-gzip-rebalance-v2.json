@@ -1,0 +1,20 @@
+{
+  "schema": "future-review-gzip-rebalance-v2",
+  "recorded_utc": "2026-10-01T15:22:10.740906+00:00",
+  "previous": "reports/experiment-storage/core-passive-sell-exploration-v1.json",
+  "previous_sha256": "c627e8b140907dd5ccce663ce7e0788849950e8b38a7049a69574265ff63ee4b",
+  "overall_reservation_bytes": 836777216,
+  "manual_review_old_cap_bytes": 6291456,
+  "manual_review_new_cap_bytes": 5242880,
+  "transfer_bytes": 1048576,
+  "active_research_pool_bytes": 19922944,
+  "active_research_reserved_bytes": 18800640,
+  "active_research_headroom_bytes": 1122304,
+  "archive_current_bytes": 3585038,
+  "remaining_scheduled_reviews": 172,
+  "worst_observed_pair_bytes": 5342,
+  "projected_archive_bytes": 4503862,
+  "projected_margin_bytes": 739018,
+  "scope": "Transfer unused manual-review reservation only. Overall cap and existing evidence unchanged. Gzip before write, exact decompression/hash verification and pre-write cap remain. Preserve every scheduled review through Oct4; escalate projection growth before new writes. Manifest uses existing control slack.",
+  "agent_adoption": "routine_monitor explicitly acknowledged feasibility and5MiB pre-writecap before this manifest;172reviews inclusive calculated through final Oct4 00:26:33UTC checkpoint."
+}
