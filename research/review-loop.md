@@ -4315,3 +4315,36 @@ Fresh carry v2 at 12:45 had 147 sampled slots and one persistent
 `arrival_invalid` slot (slot 71), with 716 future/interrupted slots. Status
 remains running with no terminal error or retries and no economic evaluation.
 The invalid arrival's sample remains unopened.
+
+
+## Review 135 — 1 October 2026 13:06:33 UTC
+
+Exact report, separate epoch snapshot, and audited positive record are preserved;
+manual archive 3,494,549/9,437,184 bytes. Exact report
+`review-20261001T130633Z.json`, SHA-256
+`00246bc34c93f2e134a99e0b275d33779ec1c5e9ad466e7adcd096196f1ef98d`. Seven exact
+closes/−$8.681406: convergence five/−$4.514306 and Premium two/−$4.167099.
+One convergence win was audited as a profitable failed-hedge unwind, not a paired
+trade: `1790859980717247-23755-convergence`, route
+`NEAR|hyperliquid:NEAR|lighter:10`. The Hyperliquid long was rejected; 203.1
+Lighter short units entered at $999.239814 and were covered at $998.151198 after
+1.164010 s unhedged. Gross +$1.088616 minus $0.499619907 stress allowance and
+$0.000001844 capital cost gives +$0.588994249; fees/funding $0. Root's audit
+`review135-positive-record.json` confirms arithmetic and hourly funding. Raw
+fill-depth evidence aged out, so no independent execution-depth claim. Six
+losses, no estimates or aborts; seven Hyperliquid price-limit rejections, full
+coverage. Fees $1.393173, other costs $3.483796 and capital $0.00001220.
+
+Four feeds connected, 105 pairs, normal performance; CPU 55.93%, p95 lag
+12.03 ms, resident memory 253.74 MiB, 987.0 books/s and metadata age
+3,112.1 s. No open positions; three pending funding items remain. Snapshot read
+at 13:07:08 UTC and updated at 13:07:07 UTC showed convergence
+441/−$543.8409 (+5) and Premium 748/−$1,379.6668 (+2), matching report deltas.
+Reviews 66–135 have 1,750 closes: 1,738 losses, two paired gains and ten
+failed-hedge rescue gains. Next checkpoint **13:26:33 UTC**. This positive
+unwind does not make the overall window positive.
+
+Fresh carry v2 at 13:05 had 151 sampled slots and one persistent
+`arrival_invalid` slot (slot 71), with 712 future/interrupted slots. Status
+remains running with no terminal error or retries and no economic evaluation.
+The invalid arrival's sample remains unopened.
