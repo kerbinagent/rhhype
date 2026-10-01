@@ -1,0 +1,44 @@
+{
+  "checked_utc": "2026-10-01T19:46:20.530044+00:00",
+  "research_question": "Can a cross-venue price gap predict a profitable10second directional trade on just one venue? Can local large aggressive flow on a relatively thin book identify transient dislocations?",
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2108.09750",
+      "title": "Albers et al., Fragmentation, Price Formation, and Cross-Impact in Bitcoin Markets",
+      "finding": "Order-book/trade features predict subsecond Bitcoin returns across markets. Trading tests emphasize fee dependence. The paper separates out-of-sample testing; synthetic taker analysis omits some latency and impact effects. Historical centralized-Bitcoin results do not validate these2026LIT venues."
+    },
+    {
+      "url": "https://dare.uva.nl/id/84569e65-bf29-4378-aa86-936157b871c3",
+      "title": "Degryse et al., Aggressive Orders and the Resiliency of a Limit Order Market",
+      "finding": "Aggressive orders show partial subsequent reversal and persistent effects. Order-flow persistence and longer-term price changes mean large flow alone is not a reliable fade signal. Equity evidence, not crypto validation."
+    },
+    {
+      "url": "https://arxiv.org/abs/1602.00731",
+      "title": "Xu et al., Limit-order book resiliency after effective market orders",
+      "finding": "Chinese-stock data show different outcomes by order aggressiveness: recovery dominates after aggressive orders, continuation after less aggressive orders. Spread/depth recovery differs from tradable price recovery."
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S1386418106000528",
+      "title": "Large, Measuring the resiliency of an electronic limit order book",
+      "finding": "In a historical LSE sample, replenishment after large trades was unreliable in most cases; when present it was fast. This supports measuring probability and delay separately; its numerical frequencies are not transferred to LIT."
+    },
+    {
+      "url": "https://apidocs.lighter.xyz/docs/account-types",
+      "title": "Lighter official account types",
+      "finding": "Read today: Standard0%maker/taker,300ms taker and cancel/modify latency. Model adds explicit100ms network delay. RH equivalent documentation not accessible today; RH profile remains an archived assumption checked against freshzero-fee metadata, not a new latency verification."
+    }
+  ],
+  "hypotheses": [
+    "gap_fade: directional return after an unusual deviation from past cross-venue basis",
+    "leader_follow: referencevenue1second move with targetlag and gapalignment",
+    "local_shock_fade: completed1second large directional flow relative to pastnonemptybins andpre-eventdepth, localmove, stable reference"
+  ],
+  "limitations": [
+    "Cross-venue gap closure need not generate a favorable target return.",
+    "Illiquidity raises spread, exit risk and price impact as well as signal size.",
+    "Sparse or delayed public prints, omitted liquidations and trade batching limit causal labels.",
+    "Currentprototype heuristics do not establish venue leadership or classify informed flow.",
+    "Dollar-denominated cross-venue comparison uses USDG/USDC parity; each tradingledgerstays in itsowncollateral.",
+    "No realorders, wallet, auth or position exposure."
+  ]
+}

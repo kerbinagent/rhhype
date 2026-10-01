@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-research-preparation-v1",
+  "recorded_utc": "2026-10-01T19:34:08.526699+00:00",
+  "previous": "reports/experiment-storage/completed-spot-passive-eth-cash-closeout-v1.json",
+  "previous_sha256": "471185f3f652b7596ea69fed635ee12ccd6c6837f95bbd20c7e371d36e57dbb1",
+  "preparation_reserved_bytes": 262144,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 38805504,
+  "active_research_headroom_bytes": 14671872,
+  "overall_reservation_bytes": 836777216,
+  "scope": "User-authorized single-venue short-horizon research. Literature, separate causal receipt-ordered gap/leader/local-shock signal rules, bounded retrospective replay and prospective experiment preparation. No live orders. Prior perp-maker preparation retained; no new full-wire capture before separately frozen allocation. This262144 covers sources, tests, plan and retrospective output."
+}
