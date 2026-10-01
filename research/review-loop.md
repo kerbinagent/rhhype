@@ -4466,3 +4466,37 @@ sample remains unopened. Reviews 66–138 total 2,016 closes: 1,993 losses, two
 paired gains and 21 audited failed-hedge rescue gains. The overall window
 remains deeply negative. Manual archive size is 3,567,230 / 6,291,456 bytes.
 Next review: **14:26:33 UTC**.
+
+
+## Review 139 — 1 October 2026 14:26:33 UTC
+
+All eight strategy and aborted-trade coverage fields were complete. The exact
+report `review-20261001T142633Z.json.gz` preserves 20,645 raw bytes (SHA-256
+`06624f3648bf898e0e770a91c023c1237e0996a81e6b10a3e5512b31300b6059`) in a
+3,160-byte deterministic gzip (SHA-256
+`f3ee6a333d15073f2491d2e9162fc27a340230ebe44b6b051012bd6bff7c892f`). Its
+separate epoch snapshot `current-epoch-at-review139.json.gz` was read at
+14:28:57.693623 UTC and updated at 14:28:56.443632 UTC; raw size 6,448 B,
+SHA-256 `1e8d89886fa917a1ae4a2332648e9c2e19c2d223a247b1312bcca3e1649632d9`,
+gzip size 1,616 B, SHA-256
+`4a9c6c348b36c38c5aa4e1b4b8e0c2c7458bf9f238ab2cef6555e9ab565b5f7d`. Both
+archives passed exact decompression equality. Combined manual archive size is
+3,572,006 / 6,291,456 bytes.
+
+Review139 added 40 exact losses, net −$64.7228721009: convergence eight /
+−$8.7466903356 (all failed hedges); Premium 32 / −$55.9761817654 (19 paired
+losses and 13 failed hedges). There were no wins, estimates or aborts. Entry
+rejections: 21 Hyperliquid price limits. Fees were $25.3334502945, other costs
+$19.9593213615 and capital costs $0.0007296378. The epoch snapshot showed
+convergence 556 / −$657.9792 and Premium 942 / −$1,731.3196, each matching the
+report delta from review138. Health at review was running/performance ok, four
+feeds connected, 97 pairs, CPU 66.50%, p95 lag 14.34 ms, RSS 256.03 MiB,
+1,266.0 books/s and metadata age 703.1 s. No open positions; three pending
+funding items remain.
+
+Carry v2 metadata at 14:25 showed 167 sampled slots, persistent
+`arrival_invalid` slot 71 and 696 future/interrupted slots; status running,
+with no terminal error, retries or economic evaluation. The invalid arrival's
+sample remains unopened. Reviews 66–139 total 2,056 closes: 2,033 losses, two
+paired gains and 21 audited failed-hedge rescue gains. The overall window
+remains deeply negative. Next review: **14:46:33 UTC**.
