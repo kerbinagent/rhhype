@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "endpoint": "frozen128MB ingress cap at828.0582158seconds; no runtimeextension",
+  "independent_capital_and_no_hour_cross": [
+    {
+      "branch": "100-60-0s-confirm",
+      "id": "1790860475789367-1-standard",
+      "asset": "HYPE",
+      "exit_reason": "take_profit",
+      "both_legs_filled": true,
+      "cash": "0.000040",
+      "capital_recomputed": "0.000007887003824560106544901065449",
+      "stress": "0.0497553480",
+      "stressed_net": "-0.04972323500382456010654490107"
+    },
+    {
+      "branch": "100-60-0s-confirm",
+      "id": "1790860545081151-2-standard",
+      "asset": "HYPE",
+      "exit_reason": "take_profit",
+      "both_legs_filled": true,
+      "cash": "0.003248",
+      "capital_recomputed": "4.102164585178031456113647895E-7",
+      "stress": "0.049761040",
+      "stressed_net": "-0.04651345021645851780314561136"
+    },
+    {
+      "branch": "100-60-0s-confirm",
+      "id": "1790860579190788-3-standard",
+      "asset": "ZEC",
+      "exit_reason": "max_hold",
+      "both_legs_filled": true,
+      "cash": "-0.039816",
+      "capital_recomputed": "0.00001915418922908184931506849315",
+      "stress": "0.049816440",
+      "stressed_net": "-0.08965159418922908184931506849"
+    },
+    {
+      "branch": "100-60-0s-confirm",
+      "id": "1790860760624741-4-standard",
+      "asset": "VVV",
+      "exit_reason": "take_profit",
+      "both_legs_filled": true,
+      "cash": "0.051840",
+      "capital_recomputed": "0.000001188188495348937721968543886",
+      "stress": "0.0499478825",
+      "stressed_net": "0.00189092931150465106227803146"
+    },
+    {
+      "branch": "100-60-2s-confirm",
+      "id": "1790860763520246-1-standard",
+      "asset": "VVV",
+      "exit_reason": "take_profit",
+      "both_legs_filled": true,
+      "cash": "0.045840",
+      "capital_recomputed": "2.612549981659357559614408929E-7",
+      "stress": "0.0499448825",
+      "stressed_net": "-0.00410514375499816593575596144"
+    },
+    {
+      "branch": "100-60-0s-confirm",
+      "id": "1790860783364276-5-standard",
+      "asset": "NEAR",
+      "exit_reason": "take_profit",
+      "both_legs_filled": true,
+      "cash": "0.064438",
+      "capital_recomputed": "0.00001232544090761992104261796043",
+      "stress": "0.0498880410",
+      "stressed_net": "0.01453763355909238007895738204"
+    },
+    {
+      "branch": "100-60-0s-confirm",
+      "id": "1790860823005275-6-standard",
+      "asset": "NEAR",
+      "exit_reason": "take_profit",
+      "both_legs_filled": true,
+      "cash": "-0.117316",
+      "capital_recomputed": "0.00001210005182578104071537290715",
+      "stress": "0.0497969620",
+      "stressed_net": "-0.1671250620518257810407153729"
+    }
+  ],
+  "summary_sha256": "e27ec27b291bf1326e4dd8df61a267d5d224c54d6cfb0c4cfce013f322aeeb65",
+  "auditor_adaptation": "Original auditor requires900s; separate cap auditor changes only endpoint assertion and retains every fill/reference/accounting check. Freeze128MB mandatory stop was honored."
+}
