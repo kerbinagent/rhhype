@@ -1745,3 +1745,15 @@ profit mark, cash/fees/stress/capital/funding/flatness. Source signal skew
 504.19 ms exceeds the $100 study gate, with legacy $1,000 size and no
 original depth proof. Audited paired gains now five. Audit artifacts
 preserved: archive 3,645,183 B, projected 4,515,929 B, margin 726,951 B.
+
+
+### Review 151, 1 October 18:26 UTC
+
+Complete coverage: seven exact losses, two convergence failed hedges/
+−$2.45811 and five Premium/−$9.15962 (three paired, two failed hedges).
+One convergence abort, no wins/estimates. Five HL price limits, one Lighter
+notional cap. Four feeds, 101 pairs, running/ok; busy 18:15/18:20 health
+pulses cleared at 18:25, retained in journal. Archive 3,649,755 B; 162 future
+pairs project 4,515,159 B, margin 727,721 B. Carry 18:25: 215 sampled,
+invalid slot 71, 648 future/interrupted; no errors/retries/evaluation.
+Next review 18:46:33 UTC.
