@@ -1,0 +1,227 @@
+{
+  "schema": "completed-core-passive-lit-closeout-v1",
+  "recorded_utc": "2026-10-01T14:30:18.509615+00:00",
+  "previous": "reports/experiment-storage/core-rh-ai-target-allocation-v1.json",
+  "previous_sha256": "c605c7e868703289e2160c86f5bde797ec85cea7b5484f68de3b19fc3b3ed7f0",
+  "old_reserved_bytes": 3178496,
+  "artifact_bytes": 2784335,
+  "retention_reserved_bytes": 2818048,
+  "released_bytes": 360448,
+  "active_research_pool_bytes": 18874368,
+  "active_research_reserved_bytes": 18300928,
+  "active_research_headroom_bytes": 573440,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Full capture, metadata, both counterfactuals, source and both independent audits retained; 24KiB closeout slack. No deletion or recompression.",
+  "files": [
+    {
+      "path": "reports/core-passive-lit/capture/frames.jsonl.gz",
+      "bytes": 2235468,
+      "sha256": "19c2424d04d2e56a2344f917bc856c56c4a8fb4564c118ba233bce4552ebcb00"
+    },
+    {
+      "path": "reports/core-passive-lit/capture/manifest.json",
+      "bytes": 1816,
+      "sha256": "30d8c14cd7ab754b895e2873871db70825fa273ebf85a560b46a2fa9a78baca1"
+    },
+    {
+      "path": "reports/core-passive-lit/capture/metadata/core_assets.json.gz",
+      "bytes": 1020,
+      "sha256": "2650364eda985dce4af01aa31604fa65f6ee2aedbb31e51def7d876abd4d5770"
+    },
+    {
+      "path": "reports/core-passive-lit/capture/metadata/core_assets.request.json",
+      "bytes": 458,
+      "sha256": "001fe41c6d5eb1d95402c18c88f123db2c0c4dc20c12c71f4394338645fb84d8"
+    },
+    {
+      "path": "reports/core-passive-lit/capture/metadata/core_markets.json.gz",
+      "bytes": 23297,
+      "sha256": "460fb30ba503060ce88158458b073e44e6ec7ec54e4f80cf7bebb3d217222ea9"
+    },
+    {
+      "path": "reports/core-passive-lit/capture/metadata/core_markets.request.json",
+      "bytes": 465,
+      "sha256": "de8b23bd76d088da063e29d5a44afd86ac3db5de1cc4eb81664dd7d3d87b2574"
+    },
+    {
+      "path": "reports/core-passive-lit/capture/metadata/market_plan.json",
+      "bytes": 6812,
+      "sha256": "2ce193934952f57b42a17c1e67585498fc565629f7af3100e30cb3faec5b4884"
+    },
+    {
+      "path": "reports/core-passive-lit/capture/metadata/normalized.json",
+      "bytes": 3264,
+      "sha256": "e6d39114d1813f665c3166d7c844a6c0cff72e2ce32db80ca373087300a468da"
+    },
+    {
+      "path": "reports/core-passive-lit/capture/metadata/rh_assets.json.gz",
+      "bytes": 1811,
+      "sha256": "82415b84fa68b9a0d90764621b90811a2e9fc01d2784e1de4a1cb2972c78feb9"
+    },
+    {
+      "path": "reports/core-passive-lit/capture/metadata/rh_assets.request.json",
+      "bytes": 448,
+      "sha256": "cc765d863a67df7ad612cdfe02be94b53d45728154add5d13d06c8d6f30e0e7d"
+    },
+    {
+      "path": "reports/core-passive-lit/capture/metadata/rh_markets.json.gz",
+      "bytes": 7967,
+      "sha256": "3661c978154a6b660446d2cc4ab38aeb63aef4786a78b8cd0356bdfbf4aea52f"
+    },
+    {
+      "path": "reports/core-passive-lit/capture/metadata/rh_markets.request.json",
+      "bytes": 453,
+      "sha256": "a68e3872dfc5f66e9f339a3e1c4c8dc0d05863fbda6dd9ba96c6d24c2caba4a5"
+    },
+    {
+      "path": "reports/core-passive-lit/capture/status.json",
+      "bytes": 162,
+      "sha256": "3860bb71c49ac21ed7979f8e2923df99a1252659e8064311d82744b9e5c3fd86"
+    },
+    {
+      "path": "reports/core-passive-lit/capture/terminal.json",
+      "bytes": 316,
+      "sha256": "9b5186b890e25297ca53f6931fc39903655b7ddfec81ba1ac56360a4972656e2"
+    },
+    {
+      "path": "reports/core-passive-lit/readout.md",
+      "bytes": 1879,
+      "sha256": "be7469b5da6730052a2dec63be1209daa665ef4e662efc94d30bb820785e532d"
+    },
+    {
+      "path": "reports/core-passive-lit/result/audit.jsonl.gz",
+      "bytes": 112178,
+      "sha256": "12f7b53fc6711196faa04fcc9e84a61347cbc16d2c8c530beca4a4a55896b025"
+    },
+    {
+      "path": "reports/core-passive-lit/result/independent-audit.json",
+      "bytes": 1105,
+      "sha256": "de6872b5e2fb88b03fc955349a972e9aaac5edb26db2e024e9300406e3c431f1"
+    },
+    {
+      "path": "reports/core-passive-lit/result/metrics.json",
+      "bytes": 961,
+      "sha256": "f8bb3a5e8bd2a6219ea8dec45b533d293d3075ba9e961500b772f50478e4e6fb"
+    },
+    {
+      "path": "reports/core-passive-lit/result/quote-gate-audit.json",
+      "bytes": 524,
+      "sha256": "b22faf407370b96384a54bdeeb86ae560288f050a7b65c0de3f5b1ac475e3a1f"
+    },
+    {
+      "path": "reports/core-passive-lit/result/summary.json.gz",
+      "bytes": 11105,
+      "sha256": "479780225e9dcaa3cf7fa9fe663922bd22cc9552ad09a4412d1c2f2941fd2940"
+    },
+    {
+      "path": "reports/experiment-storage/core-passive-lit-allocation-v1.json",
+      "bytes": 6812,
+      "sha256": "2ce193934952f57b42a17c1e67585498fc565629f7af3100e30cb3faec5b4884"
+    },
+    {
+      "path": "reports/experiment-storage/core-passive-maker-preparation-v1.json",
+      "bytes": 1110,
+      "sha256": "66b39eadbbc913fcc5c6026fdf2d44edab0380a6d765abcb179bec87ae4322a5"
+    },
+    {
+      "path": "scripts/audit_core_passive_lit_fills.py",
+      "bytes": 7202,
+      "sha256": "d06f1e634ff6d479668be374095b5e48e8ff75cbb6e85a77c81d5bce26c17df4"
+    },
+    {
+      "path": "scripts/audit_core_passive_lit_quotes.py",
+      "bytes": 3126,
+      "sha256": "24dae75611fda741a290e51d3ee1b1c7b13d6f22306724ed5b3d402dc7aa78cd"
+    },
+    {
+      "path": "scripts/core_passive_hedged_base.py",
+      "bytes": 44028,
+      "sha256": "6bc4d04f8cb5c6cbff78c198dc19314f0a50571187311b61c6a99d03d6b386fb"
+    },
+    {
+      "path": "scripts/core_passive_hedged_exit.py",
+      "bytes": 31641,
+      "sha256": "7ca4ca6b783c84eac83294bd5e9786d7e30eec3cd33297d95005f956cd359ed0"
+    },
+    {
+      "path": "scripts/core_passive_hedged_late_flow.py",
+      "bytes": 7392,
+      "sha256": "c163b0814a5bff8fc949ea31c5d9240d57503f8dbde5dcb2d8da3e6ebfdf9539"
+    },
+    {
+      "path": "scripts/core_passive_hedged_retirement.py",
+      "bytes": 2952,
+      "sha256": "23036c5b4a565ccafd226debd9e590cd82da0c4aad5183299f049a2fd2cff8e8"
+    },
+    {
+      "path": "scripts/core_passive_hedged_sell.py",
+      "bytes": 15096,
+      "sha256": "632b7f63e7525b0cb8a761f53bba3cff35e7aee8b9246f85fc07d56d003c006d"
+    },
+    {
+      "path": "scripts/core_passive_lit_branch.py",
+      "bytes": 2784,
+      "sha256": "fb8a97beef9bd0da13af80635127c61a1a7601596977be8726058f9f92b86c74"
+    },
+    {
+      "path": "scripts/core_passive_lit_capture.py",
+      "bytes": 8193,
+      "sha256": "7da167cc8b55da838100141fda57cb854eab4d0525d5c97b43a9d1ef7f2d51d8"
+    },
+    {
+      "path": "scripts/core_passive_lit_events.py",
+      "bytes": 24441,
+      "sha256": "8fa7c271c85d46d5f997bc8f48c3b1174367bb6bb37605e48e6c30faff2577a2"
+    },
+    {
+      "path": "scripts/core_rh_small_shortterm.py",
+      "bytes": 20672,
+      "sha256": "65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3"
+    },
+    {
+      "path": "scripts/maker_book_archive.py",
+      "bytes": 18974,
+      "sha256": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2"
+    },
+    {
+      "path": "scripts/maker_capture.py",
+      "bytes": 28133,
+      "sha256": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "bytes": 40963,
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "bytes": 59902,
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "bytes": 31735,
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/replay_core_passive_lit.py",
+      "bytes": 6209,
+      "sha256": "99f8f82ae23c587c00c7d4f1333fbb3b54f028b1b0930ac89dc1e75643131527"
+    },
+    {
+      "path": "tests/test_core_passive_hedged.py",
+      "bytes": 4268,
+      "sha256": "1c33cd6cf7028ca364ed17c53658f3bd02a570e4ea09e213c4d9ff7ea2107dcc"
+    },
+    {
+      "path": "tests/test_core_passive_lit_branch.py",
+      "bytes": 2976,
+      "sha256": "7111b8c96667b8d7393e4e22ac09c5b84efc36624254c5ce94eb20dfef8d08fa"
+    },
+    {
+      "path": "tests/test_core_passive_lit_events.py",
+      "bytes": 4217,
+      "sha256": "8167e7fc4f9b512d01ff50647142d340473c17cc89d8d5f002849b2cc93305fc"
+    }
+  ]
+}

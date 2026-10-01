@@ -1,0 +1,26 @@
+{
+  "audit": "passed",
+  "raw_taker_walks": 10,
+  "maker_flow_matches": 4,
+  "branches": {
+    "100-10bp-100ms-control10s": {
+      "fills": 8,
+      "cash_maker": "-0.113579",
+      "cash_hedge": "0.054180",
+      "maker_position": "0.00",
+      "hedge_position": "0.00",
+      "capital_recomputed": "0.000003992930215927649869989852866"
+    },
+    "100-10bp-400ms-control10s": {
+      "fills": 6,
+      "cash_maker": "-0.123448",
+      "cash_hedge": "0.055840",
+      "maker_position": "0.00",
+      "hedge_position": "0.00",
+      "capital_recomputed": "0.000003599447671540871267757483510"
+    }
+  },
+  "summary_sha256": "479780225e9dcaa3cf7fa9fe663922bd22cc9552ad09a4412d1c2f2941fd2940",
+  "audit_trace_sha256": "12f7b53fc6711196faa04fcc9e84a61347cbc16d2c8c530beca4a4a55896b025",
+  "limitations": "Public trade flow and queue assumptions are conditional maker evidence. Checks retain branch unknowns and do not authenticate ACKs/fills. Entry intent matching consumes exact scheduled quantities in stream order; entry and control-exit first eligible timestamps checked against retained full books."
+}

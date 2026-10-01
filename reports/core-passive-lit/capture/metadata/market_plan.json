@@ -1,0 +1,163 @@
+{
+  "schema": "core-passive-lit-v1",
+  "recorded_utc": "2026-10-01T14:06:57.584041+00:00",
+  "previous": "reports/experiment-storage/completed-lit-replication-closeout-v1.json",
+  "previous_sha256": "87c407e2b3e97dab22947a9dfc0c4ab7a489ff84ea70c1f24531e2f3caaf0e8d",
+  "new_maximum_bytes": 0,
+  "reserved_by": "reports/experiment-storage/core-passive-maker-preparation-v1.json",
+  "categories_bytes": {
+    "source": 196608,
+    "raw": 2621440,
+    "metadata": 65536,
+    "output": 262144,
+    "control": 32768
+  },
+  "active_research_pool_bytes": 18874368,
+  "active_research_reserved_bytes": 18071552,
+  "active_research_headroom_bytes": 802816,
+  "overall_reservation_bytes": 836777216,
+  "selected": {
+    "rh_lighter": {
+      "LIT": "5"
+    },
+    "lighter": {
+      "LIT": "120"
+    }
+  },
+  "budgets": [
+    100
+  ],
+  "offsets_bps": [
+    10
+  ],
+  "maker_activation_ms": [
+    100,
+    400
+  ],
+  "primary_branch": "100-10bp-100ms-control10s",
+  "capture_seconds": 600,
+  "admission_window_seconds": [
+    10,
+    480
+  ],
+  "max_attempts_per_branch": 100,
+  "latencies_ms": {
+    "maker_activation": [
+      100,
+      400
+    ],
+    "maker_cancel": 400,
+    "maker_taker_exit": 400,
+    "rh_taker_hedge_and_cover": 400
+  },
+  "latency_evidence": {
+    "core_url": "https://apidocs.lighter.xyz/docs/account-types",
+    "checked_utc": "2026-10-01T13:53:00+00:00",
+    "core_standard_processing_ms": {
+      "maker": 0,
+      "taker": 300,
+      "cancel": 300
+    },
+    "core_primary_network_assumption_ms": 100,
+    "rh_url": "https://apidocs.rh.lighter.xyz/docs/account-types",
+    "rh_current_page_access": "unavailable_in_web_tool",
+    "rh_archived_source": "reports/rh-passive-exit-v1/metadata/rh_account_types_current.md",
+    "rh_archived_sha256": "8fd715cbe6b008bfa936406a23b9593d9c283dd9f56bb09e7ab2f7225db81795",
+    "rh_taker_model_ms": 400,
+    "private_ACK_verified": false
+  },
+  "timing": {
+    "source_age_seconds": 2,
+    "pair_skew_seconds": 0.25,
+    "quote_rest_seconds": 5,
+    "hold_seconds": 10,
+    "stop_admissions_before_hour_seconds": 120
+  },
+  "accounting": "Independent100perleg/400prefundedbranches200USDCatCore+200USDGatRH. CorepassiveBUY10bpbelowCorebestbid, RHcontingentshortfollowingconditionalqueuefill. Fixrestprice5s, takeprofit1bpofbudget or10shold. FreshzeroStandardfees. Capital5%annual and5bpstressseparate;USDGUSDCparityconditional. IOCminimumexemption(sourceconsistentIOCnotTWAPinthisstudy) appliesonlytakerhedge/exit,minimaonrestingquotesremain. Positivegrid/maxquote/depth/partial/unknownretained. Noactualorders/auth.",
+  "decision": "Differentphysicalmakerorientation motivated documentedCoremaker0ms. BothbranchesCoremaker/RHhedge; differONLYactivation100vs400ms includingactivation-relative5srest timing. Same10bpoffsetchosenbeforecapture frompriorRHstudy. No interim economics oroptionalextension; rawcap/transportfailurekept. No APIdeployment orqueuefillproof. Sourcevenueidentity and collateralnames preservedexplicitly.",
+  "coverage": "FourfreshmetadataGETs,Corebook+ordinarytrade/RHbook feeds600sor2.5MiBcompressedcap. Rawadapter3276800Bwholecapture/128MiBdecoded/100000records/100000tradeIDs. NoRHtradeframesrequired. No deletion ofpreviouscaptures.",
+  "source_pins": [
+    {
+      "path": "scripts/core_passive_hedged_exit.py",
+      "sha256": "7ca4ca6b783c84eac83294bd5e9786d7e30eec3cd33297d95005f956cd359ed0"
+    },
+    {
+      "path": "scripts/core_passive_hedged_base.py",
+      "sha256": "6bc4d04f8cb5c6cbff78c198dc19314f0a50571187311b61c6a99d03d6b386fb"
+    },
+    {
+      "path": "scripts/core_passive_hedged_retirement.py",
+      "sha256": "23036c5b4a565ccafd226debd9e590cd82da0c4aad5183299f049a2fd2cff8e8"
+    },
+    {
+      "path": "scripts/core_passive_hedged_sell.py",
+      "sha256": "632b7f63e7525b0cb8a761f53bba3cff35e7aee8b9246f85fc07d56d003c006d"
+    },
+    {
+      "path": "scripts/core_passive_hedged_late_flow.py",
+      "sha256": "c163b0814a5bff8fc949ea31c5d9240d57503f8dbde5dcb2d8da3e6ebfdf9539"
+    },
+    {
+      "path": "scripts/core_passive_lit_branch.py",
+      "sha256": "fb8a97beef9bd0da13af80635127c61a1a7601596977be8726058f9f92b86c74"
+    },
+    {
+      "path": "scripts/core_passive_lit_capture.py",
+      "sha256": "7da167cc8b55da838100141fda57cb854eab4d0525d5c97b43a9d1ef7f2d51d8"
+    },
+    {
+      "path": "scripts/core_passive_lit_events.py",
+      "sha256": "8fa7c271c85d46d5f997bc8f48c3b1174367bb6bb37605e48e6c30faff2577a2"
+    },
+    {
+      "path": "scripts/replay_core_passive_lit.py",
+      "sha256": "99f8f82ae23c587c00c7d4f1333fbb3b54f028b1b0930ac89dc1e75643131527"
+    },
+    {
+      "path": "scripts/audit_core_passive_lit_fills.py",
+      "sha256": "d06f1e634ff6d479668be374095b5e48e8ff75cbb6e85a77c81d5bce26c17df4"
+    },
+    {
+      "path": "scripts/audit_core_passive_lit_quotes.py",
+      "sha256": "24dae75611fda741a290e51d3ee1b1c7b13d6f22306724ed5b3d402dc7aa78cd"
+    },
+    {
+      "path": "tests/test_core_passive_lit_events.py",
+      "sha256": "8167e7fc4f9b512d01ff50647142d340473c17cc89d8d5f002849b2cc93305fc"
+    },
+    {
+      "path": "tests/test_core_passive_hedged.py",
+      "sha256": "1c33cd6cf7028ca364ed17c53658f3bd02a570e4ea09e213c4d9ff7ea2107dcc"
+    },
+    {
+      "path": "tests/test_core_passive_lit_branch.py",
+      "sha256": "7111b8c96667b8d7393e4e22ac09c5b84efc36624254c5ce94eb20dfef8d08fa"
+    },
+    {
+      "path": "scripts/maker_capture.py",
+      "sha256": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9"
+    },
+    {
+      "path": "scripts/maker_book_archive.py",
+      "sha256": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2"
+    },
+    {
+      "path": "scripts/core_rh_small_shortterm.py",
+      "sha256": "65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    }
+  ],
+  "tests": "11unittestpassed:6inheritedqueue/hedge/roundtrip/lateflow withphysicalrolesreversed;3new100msactivation/400mshedgeandexit/smallIOCnegativecash/sourcecurrency/cutoff/ordinaryminima;2compressedmetadata/realCoretrade/backlogdedupe/nonce/future/endmarker. Independentrawauditorsreadybeforecapture.",
+  "test_corrections": "Initialsynthetictest incorrectly countedbetterqueuesatatradeexactlyatquote; changedtradeqty.75to.55for.05fill aftersame-price.5queue. Initialslowarmexpectedunknownbeforeactivation; corrected tonofillbefore400ms thenUNKNOWN foreligibleflowat401mswithoutactivationbook. Productionrulesunchanged."
+}
