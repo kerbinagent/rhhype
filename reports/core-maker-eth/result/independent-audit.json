@@ -1,0 +1,42 @@
+{
+  "audit": "passed",
+  "raw_taker_walks": 0,
+  "maker_flow_matches": 0,
+  "branches": {
+    "100-passive_best10s": {
+      "fills": 0,
+      "cash_maker": "0",
+      "cash_hedge": "0",
+      "maker_position": "0",
+      "hedge_position": "0",
+      "capital_recomputed": "0"
+    },
+    "100-control10s": {
+      "fills": 0,
+      "cash_maker": "0",
+      "cash_hedge": "0",
+      "maker_position": "0",
+      "hedge_position": "0",
+      "capital_recomputed": "0"
+    },
+    "1000-passive_best10s": {
+      "fills": 0,
+      "cash_maker": "0",
+      "cash_hedge": "0",
+      "maker_position": "0",
+      "hedge_position": "0",
+      "capital_recomputed": "0"
+    },
+    "1000-control10s": {
+      "fills": 0,
+      "cash_maker": "0",
+      "cash_hedge": "0",
+      "maker_position": "0",
+      "hedge_position": "0",
+      "capital_recomputed": "0"
+    }
+  },
+  "summary_sha256": "fd65e0972c88b196b21be1b81f9492d6702679f18dc0bc5fea58d25af48c17a0",
+  "audit_trace_sha256": "56afac35b8f0a130e62274b1eb01e98efc0973e8d1d8abfa0ddd769feb204efd",
+  "limitations": "Public trade flow and queue assumptions are conditional maker evidence. Checks retain branch unknowns and do not authenticate ACKs/fills. Taker deadline check independently covers logged entry/passive-cover intents; fallback timing follows frozen engine and synthetic tests."
+}

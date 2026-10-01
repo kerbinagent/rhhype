@@ -1,0 +1,22 @@
+{
+  "schema": "active-research-reserve-v2",
+  "recorded_utc": "2026-10-01T11:32:33.343715+00:00",
+  "previous": "reports/experiment-storage/core-maker-eth-allocation-v1.json",
+  "previous_sha256": "238865f40394f29509fa80ba19467203ea0351e31998bc215089ab1a7871a655",
+  "overall_reservation_bytes": 836777216,
+  "overall_reservation_increase_bytes": 0,
+  "manual_review_archive_previous_cap": 12582912,
+  "manual_review_archive_new_cap": 10485760,
+  "manual_review_archive_observed_bytes": 3352465,
+  "future_reviews_through_frozen_btc_endpoint": 182,
+  "recent_max_report_snapshot_pair_bytes": 26527,
+  "projected_archive_bytes_at_observed_max": 8180379,
+  "active_research_reserve_previous_bytes": 4194304,
+  "active_research_reserve_bytes": 6291456,
+  "active_research_reserved_bytes": 3964928,
+  "active_research_headroom_bytes": 2326528,
+  "new_maximum_bytes": 0,
+  "scope": "Reassign2MiB of unused manual-review archive reservation to future bounded research. Preserve all old evidence. Current study caps and frozenBTCcollector unchanged. Cheap monitor must adopt10MiB pre-write guard; no optional writes exceeding guard. This manifest fits current study control reservation.",
+  "monitor_feasibility": "routine_monitor read-only assessment:3,352,465B/224files;28recent reviewpairs mean25,170B,max26,527B;182futureticks throughOct4 00:26. 10MiB leaves about2.2MiB above projected maximum-observed-pair growth.",
+  "monitor_adoption": "routine_monitor explicitly acknowledged 2026-10-01 11:33:01 UTC and adopted 10,485,760-byte directory pre-write cap."
+}
