@@ -1669,3 +1669,10 @@ preserved with exact report; archive 3,608,065 B, 167 future pairs project
 4,500,179 B under restored 5,242,880 B cap (parent c31e204). Carry 16:45:
 195 sampled, persistent invalid slot 71, 668 future/interrupted; no errors,
 retries or economic evaluation. Next review 17:06:33 UTC.
+
+
+Review146 parent audit confirmed all three gains as one-leg ZEC rescues
+following rejected HL hedges, not paired wins. Accounting independently
+reconciled; original raw depth unavailable. Root artifacts retained;
+manual archive now 3,612,956 B, projected 4,505,070 B, margin 737,810 B.
+Cumulative audited rescue gains now 26; paired gains remain two.

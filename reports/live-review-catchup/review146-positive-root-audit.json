@@ -1,0 +1,57 @@
+{
+  "audit": "passed",
+  "source_sha256": "0cdca598ee2013fbaa967b25f64f18e40ebfcf06fda9e8dc3c383500376c4ff2",
+  "window_start_at": 1790871990.7894087,
+  "window_end_at": 1790873190.3096511,
+  "classification": "Three failed-Hyperliquid-hedge one-sided ZEC rescues (one long, two shorts); not paired arbitrage. Terminal quantities/cash/fees/5bpstress/capital/no-hour-boundary reconcile. Original depth no longer retained by rolling evidence; no private-fill or new raw-depth verification.",
+  "records": [
+    {
+      "id": "1790872692951640-24237-premium",
+      "asset": "ZEC",
+      "filled_venue": "rh_lighter",
+      "side": "long",
+      "rejected_venue": "hyperliquid",
+      "rejection": "price_limit",
+      "cash_after_fees": "1.205800887",
+      "fees": "0.696179113",
+      "stress": "0.49679530",
+      "capital": "0.000002198301544533744848744894723",
+      "net": "0.7090033886984554662551512551",
+      "unhedged_seconds": "1.3954567909240723",
+      "actual_entry_value": 993.5906,
+      "budget": 1000
+    },
+    {
+      "id": "1790872744491408-24243-convergence",
+      "asset": "ZEC",
+      "filled_venue": "rh_lighter",
+      "side": "short",
+      "rejected_venue": "hyperliquid",
+      "rejection": "price_limit",
+      "cash_after_fees": "1.7094",
+      "fees": "0.0000",
+      "stress": "0.49599240",
+      "capital": "0.000002059716066566595022355403349",
+      "net": "1.213405540283933433404977645",
+      "unhedged_seconds": "1.309600830078125",
+      "actual_entry_value": 991.9848,
+      "budget": 1000
+    },
+    {
+      "id": "1790872744603613-24244-convergence",
+      "asset": "ZEC",
+      "filled_venue": "lighter",
+      "side": "short",
+      "rejected_venue": "hyperliquid",
+      "rejection": "price_limit",
+      "cash_after_fees": "1.50442",
+      "fees": "0.00000",
+      "stress": "0.4960775",
+      "capital": "0.000001707192166509482004094526890",
+      "net": "1.008340792807833490517995905",
+      "unhedged_seconds": "1.0852742195129395",
+      "actual_entry_value": 992.155,
+      "budget": 1000
+    }
+  ]
+}

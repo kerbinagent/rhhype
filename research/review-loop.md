@@ -4790,3 +4790,16 @@ under c31e204 using verified unused completed ACK replay reservation;
 overall reservation remains 836,777,216 B and all artifacts are preserved.
 Exact manual archive 3,608,065 B; 167 future scheduled pairs at 5,342 B
 project 4,500,179 B, margin 742,701 B. Next review **17:06:33 UTC**.
+
+
+Review146 root audit: `review146-positive-records.json.gz` (2,834 B) and
+`review146-positive-root-audit.json` (2,057 B) preserve three one-leg ZEC
+rescue gains after rejected Hyperliquid hedges: Premium RH long
++$0.7090033887, convergence RH short +$1.2134055403, convergence Core
+short +$1.0083407928. The parent independently reconciled quantities,
+values, fees, 5 bp stress, capital and no-hour funding. Original raw depth
+has aged out; no private-fill proof or paired arbitrage gain is inferred.
+Cumulative reviews 66–146: 2,235 closes, 2,207 losses, two paired gains,
+26 audited failed-hedge rescue gains. Archive including both root artifacts
+is 3,612,956 B; 167 remaining pairs project 4,505,070 B, leaving 737,810 B
+under the 5,242,880 B cap. All artifacts preserved.
