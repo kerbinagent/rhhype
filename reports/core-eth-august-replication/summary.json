@@ -1,0 +1,135 @@
+{
+  "actual_pnl": null,
+  "funding_value_units_inferred": true,
+  "candles_not_executable": true,
+  "current_margin_rules_not_verified_for_history": true,
+  "full_month_overlaps_weekly_blocks": true,
+  "results": [
+    {
+      "primary": true,
+      "start_day": 1,
+      "end_day": 31,
+      "funding_events": 743,
+      "quantity_eth": "0.5366",
+      "principal_usdc": "999.836048",
+      "funding_rate_sum_bps": "65.2500",
+      "inferred_funding_usdc": "7.628028242192",
+      "candle_basis_usdc": "-1.201984",
+      "capital_usdc": "4.670467018739726027397260274",
+      "stress_usdc": "0.4999180240",
+      "candle_residual_usdc": "1.255659199452273972602739726",
+      "price_only_imr_headroom_proxy": "501.37328320",
+      "price_only_mmr_headroom_proxy": "702.358573248"
+    },
+    {
+      "primary": false,
+      "start_day": 1,
+      "end_day": 7,
+      "funding_events": 167,
+      "quantity_eth": "0.5366",
+      "principal_usdc": "999.836048",
+      "funding_rate_sum_bps": "13.3000",
+      "inferred_funding_usdc": "1.339363720276",
+      "candle_basis_usdc": "-1.615166",
+      "capital_usdc": "1.054621584876712328767123288",
+      "stress_usdc": "0.4999180240",
+      "candle_residual_usdc": "-1.830341888600712328767123288",
+      "price_only_imr_headroom_proxy": "710.17292880",
+      "price_only_mmr_headroom_proxy": "898.759163628"
+    },
+    {
+      "primary": false,
+      "start_day": 8,
+      "end_day": 14,
+      "funding_events": 167,
+      "quantity_eth": "0.5230",
+      "principal_usdc": "999.850480",
+      "funding_rate_sum_bps": "9.4900",
+      "inferred_funding_usdc": "0.945275158040",
+      "candle_basis_usdc": "-1.093070",
+      "capital_usdc": "1.054636807671232876712328767",
+      "stress_usdc": "0.4999252400",
+      "candle_residual_usdc": "-1.702356889631232876712328767",
+      "price_only_imr_headroom_proxy": "725.40387650",
+      "price_only_mmr_headroom_proxy": "910.453326420"
+    },
+    {
+      "primary": false,
+      "start_day": 15,
+      "end_day": 21,
+      "funding_events": 167,
+      "quantity_eth": "0.5326",
+      "principal_usdc": "999.961826",
+      "funding_rate_sum_bps": "14.8500",
+      "inferred_funding_usdc": "1.656221618336",
+      "candle_basis_usdc": "-2.252898",
+      "capital_usdc": "1.054754254821917808219178082",
+      "stress_usdc": "0.4999809130",
+      "candle_residual_usdc": "-2.151411549485917808219178082",
+      "price_only_imr_headroom_proxy": "508.68892300",
+      "price_only_mmr_headroom_proxy": "708.175999928"
+    },
+    {
+      "primary": false,
+      "start_day": 22,
+      "end_day": 28,
+      "funding_events": 167,
+      "quantity_eth": "0.3983",
+      "principal_usdc": "999.77283",
+      "funding_rate_sum_bps": "21.8800",
+      "inferred_funding_usdc": "2.147296164223",
+      "candle_basis_usdc": "2.911573",
+      "capital_usdc": "1.054554902876712328767123288",
+      "stress_usdc": "0.499886415",
+      "candle_residual_usdc": "3.504427846346287671232876712",
+      "price_only_imr_headroom_proxy": "710.86891225",
+      "price_only_mmr_headroom_proxy": "891.961551586"
+    },
+    {
+      "primary": false,
+      "start_day": 29,
+      "end_day": 31,
+      "funding_events": 71,
+      "quantity_eth": "0.4095",
+      "principal_usdc": "999.892530",
+      "funding_rate_sum_bps": "5.2200",
+      "inferred_funding_usdc": "0.526622401305",
+      "candle_basis_usdc": "-0.090090",
+      "capital_usdc": "0.4520062121917808219178082192",
+      "stress_usdc": "0.4999462650",
+      "candle_residual_usdc": "-0.5154200758867808219178082192",
+      "price_only_imr_headroom_proxy": "694.96511175",
+      "price_only_mmr_headroom_proxy": "881.092689750"
+    }
+  ],
+  "provenance": [
+    {
+      "name": "funding",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=0&resolution=1h&start_timestamp=1785542400&end_timestamp=1788220799&count_back=745",
+      "raw_sha256": "e178b2a8f77a7b3fe85df02b8483712e258f2ac5f93578edf631c108855e345a",
+      "received_utc": "2026-10-01T03:04:04.380463+00:00",
+      "gzip_bytes": 6194
+    },
+    {
+      "name": "spot",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/candles?market_id=2048&resolution=1d&start_timestamp=1785542400&end_timestamp=1788220799&count_back=31",
+      "raw_sha256": "bbe8452bf03c93f50d09a6e6f96c5f9618c5092b0dd08dc291bc6f99cd27c632",
+      "received_utc": "2026-10-01T03:04:06.596755+00:00",
+      "gzip_bytes": 1368
+    },
+    {
+      "name": "perp",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/candles?market_id=0&resolution=1d&start_timestamp=1785542400&end_timestamp=1788220799&count_back=31",
+      "raw_sha256": "edaf49a0c0dfa90854e8c0454cd12234c80e2c1ad6a221ca2afc1bb83416ccda",
+      "received_utc": "2026-10-01T03:04:08.840958+00:00",
+      "gzip_bytes": 1469
+    },
+    {
+      "name": "mark",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/markPriceCandles?market_id=0&resolution=1d&start_timestamp=1785542400&end_timestamp=1788220799&count_back=31",
+      "raw_sha256": "a117262e4e160087203bf88448a9d8943afd398d2ae74ae872ef071665f005f0",
+      "received_utc": "2026-10-01T03:04:11.048397+00:00",
+      "gzip_bytes": 841
+    }
+  ]
+}

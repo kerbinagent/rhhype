@@ -1,0 +1,11 @@
+{
+  "plan_sha256": "3c02d25ac942b6a324dbdd009d31bdaeadddc4c55fa9f4024fd27ce87250637d",
+  "usage_bytes_before_this_manifest": {
+    "source": 5384,
+    "raw": 9872,
+    "output": 8882,
+    "control": 1831
+  },
+  "total_maximum_bytes": 65536,
+  "checks": "synthetic and six independent Decimal identities passed; raw hashes verified"
+}
