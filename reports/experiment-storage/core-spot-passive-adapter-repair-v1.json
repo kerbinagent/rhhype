@@ -1,0 +1,28 @@
+{
+  "schema": "core-spot-passive-adapter-repair-v1",
+  "recorded_utc": "2026-10-01T17:13:47.848672+00:00",
+  "allocation_delta_bytes": 0,
+  "funding": "Existing262144 source/preparation and131072 control; old failed output retained within1835008 output reserve. No new market capture.",
+  "original_plan": "reports/experiment-storage/core-spot-passive-v1.json",
+  "original_plan_sha256": "c5f0849e9d31eabd12f5cae559f455805ed55fea5f7cbd32b0452a92a3d6afb8",
+  "failed_summary": "reports/core-spot-passive/result/summary.json.gz",
+  "failed_summary_sha256": "0d6eae1518616c70ab20704682424996c24b863eb9c1873fef2b8e915cb3a219",
+  "manifest_path": "reports/core-spot-passive/capture/manifest.json",
+  "manifest_sha256": "0b292f60d546162d9e6c0388252982397411f664ba5d3f1cd2590f3c4032c889",
+  "change": "Only expected schema literal and error text in copied adapter corrected from old two-venue LIT schema to captured Core spot/perp schema. All original files/failed output preserved; no records or economics had been processed. Corrected replay and both independent audits use distinct output folder corrected-result, original trading source pins unchanged.",
+  "preflight": "New adapter verified completed real archive hashes/metadata and yielded first connection_open control; no economic event read in this check.",
+  "source_pins": [
+    {
+      "path": "scripts/core_spot_passive_events_v2.py",
+      "sha256": "a45217f4fbb6b7a6d05cca64575d4956e0bd3adbf9ec65286dc07b76101d0500"
+    },
+    {
+      "path": "scripts/core_spot_passive_corrected_adapter.py",
+      "sha256": "08c972c8a74ecb7157b84cbf03e846c4b8a4874d8380bf2ee85e1519d471bd45"
+    },
+    {
+      "path": "scripts/audit_core_spot_passive_boundaries.py",
+      "sha256": "aef85f1ddd75589dfdc7cdea7cf314e269a66ee9f7840c9a2cfe1c2222dbc187"
+    }
+  ]
+}
