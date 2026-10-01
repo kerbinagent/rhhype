@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 01 October 2026 02:47 UTC
+## Current status, 01 October 2026 03:07 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative or inconclusive; no strategy is promoted. After the host reboot,
@@ -16,7 +16,7 @@ all eight saved ledgers, strategy epoch and three legacy funding obligations.
 The 00:14 catch-up review96 covers an extended interval and is not a fresh
 uninterrupted validation window. All four feeds are connected.
 
-Reviews through 104 are preserved. Reviews 66–104 have 1,589 closes: 1,579 losses,
+Reviews through 105 are preserved. Reviews 66–105 have 1,592 closes: 1,582 losses,
 two paired gains and eight failed-hedge rescue gains. The four epoch paired gains
 remain the WLD/CRCL records from review65 and two MU records from review85;
 the latter share a signal and HL fill observation, and their full three-pair
@@ -25,9 +25,11 @@ paired and eighteen rescues. Estimated funding losses remain labeled estimated.
 Cooldown cannot admit new pairs because its HL paper balance $1,000.35611 is
 below the $1,000.50 minimum reserve before venue fees. No reset or top-up.
 Review 103 added two exact convergence failed-hedge losses/−$2.53326; review 104
-had no trade or abort changes. No new wins or estimated trades. Three pending
-funding items remain across convergence, Premium and standard; no open positions.
-Next review: **1 October 03:06:33 UTC**.
+had no trade or abort changes. Review 105 added three exact Premium failed-hedge
+losses/−$6.19308. No new wins or estimated trades. Three pending funding items
+remain across convergence, Premium and standard; no open positions. The Premium
+epoch is now 656/−$1,203.3718; cooldown remains capital constrained. Next review:
+**1 October 03:26:33 UTC**.
 
 The original dated-carry run was interrupted by reboot after 136 recorded slots:
 134 sampled and two late callbacks. Its last trusted index and all evidence
