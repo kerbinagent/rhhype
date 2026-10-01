@@ -1,0 +1,20 @@
+{
+  "schema": "polymarket-basket-smallpages-v1",
+  "recorded_utc": "2026-10-01T12:20:36.351117+00:00",
+  "previous": "reports/experiment-storage/core-spot-perp-arrival-allocation-v1.json",
+  "previous_sha256": "897382993f902ecd72959698cf2628368c6ed0e15c89a4e7401ea4bf332c999b",
+  "new_maximum_bytes": 458752,
+  "categories_bytes": {
+    "source": 16384,
+    "raw": 393216,
+    "output": 32768,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 6242304,
+  "active_research_headroom_bytes": 49152,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Read-only public Gamma/CLOB triage. At most10 sequential catalog pages of1 event, descending liquidity. Keep first3 nonaugmented negative-risk events with2..20 questions, all accepting orders/active and common marketID. Stop catalog if3selected or less128KiB remains for books. Partial catalogue progress retained in summary. Selection never by quote profit. Fetch selected NO books twice1sapart. Max60s; at most12requests; zero trades/auth/RPC/wallets.",
+  "$100_screen": "Compute optimistic simultaneous ask-depth basket purchase under100 total dollars, equal share quantities and public minimum sizes. Payout upperbound q*(N-1) assumes catalog completeness and zero conversion fees. Report gross quote surplus only; no trade or profit claim. Fees, gas, onchain identity/completeness, delays, sequential fills remain unresolved. Positive candidates require separate chain verification and prospective execution model before any conclusion.",
+  "raw_policy": "gzip full HTTP envelopes up to393216B cumulative. Perbody2MB bound via chunked EOF reads; truncated responses explicitly recorded. If compressed response exceeds remainingcap no bodywrite; summarize failure and preserve earlierdata. No retry. Source byte cap16KiB; output32KiB; control16KiB.",
+  "source_sha256": "09f7855ebea7d3e90eba27601544033ebd7f7171b21075e749e6d7ac8202c189"
+}
