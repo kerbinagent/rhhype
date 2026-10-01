@@ -1,0 +1,8 @@
+{
+  "status": "capture_completed",
+  "started_ns": 1790888188115711278,
+  "plan_sha256": "2733c2bed734da15cd42d7ca396c4a56dec68f91b23198e81fb91afedd5d5d66",
+  "end_reason": "compressed_size_cap",
+  "manifest_sha256": "5316899734a8ad3792595515998079b376a092d6f71bbe2eb95be33d856fee84",
+  "ended_ns": 1790888743407618408
+}

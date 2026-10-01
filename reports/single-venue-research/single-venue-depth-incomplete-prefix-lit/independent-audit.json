@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "sample": "single-venue-depth-incomplete-prefix-lit",
+  "counts": {
+    "signal": 10,
+    "request": 16,
+    "ioc": 16,
+    "closed": 6
+  },
+  "raw_capture_verified": true,
+  "complete_capture_verified": false,
+  "descriptive_incomplete_prefix": true,
+  "signal_checks_vacuous": false,
+  "fill_checks_vacuous": false,
+  "summary_sha256": "48a413292f96069ad9a4c17bca8650d1c3535e8b8963421e6d4864bbc63546b9",
+  "trace_sha256": "968526c985b19b14877dafda31a2470df98c3bec5e42d3946f2b5f7291f908df",
+  "limits": "Conditional public-book IOC execution. Signal and first-eligible book checks plus cash reconciliation; no private order acknowledgments or authenticated fills. Independent arms must not be summed."
+}

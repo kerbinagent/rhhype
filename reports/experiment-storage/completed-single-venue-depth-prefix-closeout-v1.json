@@ -1,0 +1,181 @@
+{
+  "schema": "completed-single-venue-depth-prefix-closeout-v1",
+  "recorded_utc": "2026-10-01T21:12:01.335314+00:00",
+  "previous": "reports/experiment-storage/single-venue-depth-prefix-v1.json",
+  "previous_sha256": "f941120ce788663b4f04d86f90804e055f231decd8ba7027835686a637004001",
+  "old_reserved_bytes": 2457600,
+  "artifact_bytes": 2225298,
+  "retention_reserved_bytes": 2293760,
+  "released_bytes": 163840,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 53288960,
+  "active_research_headroom_bytes": 188416,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retain incomplete replication raw and all artifacts plus separately labeled descriptive prefix replay, all outcomes, independent audit, source/tests/protocol.65536retention headroom includes this closeout bookkeeping. Full replication remains incomplete. No deletion,recompression,retry,extension or overall-reservation expansion.",
+  "files": [
+    {
+      "path": "reports/experiment-storage/single-venue-depth-prefix-preparation-v1.json",
+      "bytes": 823,
+      "sha256": "ebea955665b6730437c923d24d88001efce0b26c3592ec9c39d9c4d783292482"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-depth-prefix-v1.json",
+      "bytes": 12099,
+      "sha256": "f941120ce788663b4f04d86f90804e055f231decd8ba7027835686a637004001"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-depth-replication-preparation-v1.json",
+      "bytes": 690,
+      "sha256": "988d42c886f14181a7d1c9b964e9f86c1f710bac9ba2b093808b7535fc2d052b"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-depth-replication-v1.json",
+      "bytes": 15365,
+      "sha256": "2733c2bed734da15cd42d7ca396c4a56dec68f91b23198e81fb91afedd5d5d66"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-depth-replication-wire-inventory-v1.json",
+      "bytes": 4477,
+      "sha256": "aefdc538c7ed33868bf1ac02df2d289042cdb7a5e708a0c5bb6f82184815841e"
+    },
+    {
+      "path": "reports/single-venue-depth-replication/capture/frames.jsonl.gz",
+      "bytes": 2097099,
+      "sha256": "54be96a40b5eaf25112e0984ca84ec475f8c1cc5ed8ec75b0aa69cd4fbb4cd1e"
+    },
+    {
+      "path": "reports/single-venue-depth-replication/capture/manifest.json",
+      "bytes": 1853,
+      "sha256": "5316899734a8ad3792595515998079b376a092d6f71bbe2eb95be33d856fee84"
+    },
+    {
+      "path": "reports/single-venue-depth-replication/capture/metadata/core_assets.json.gz",
+      "bytes": 1006,
+      "sha256": "3864321ad4d9a861cc98343c440369ef3cfbf50740bd62d68461d8254183fe4e"
+    },
+    {
+      "path": "reports/single-venue-depth-replication/capture/metadata/core_assets.request.json",
+      "bytes": 458,
+      "sha256": "3f4bc00ca3a7bc3b251ecf866eaae4c3563bbd902514893abb13c3a68dfcab8b"
+    },
+    {
+      "path": "reports/single-venue-depth-replication/capture/metadata/core_markets.json.gz",
+      "bytes": 23180,
+      "sha256": "99c113ca32588b9c641806f635ff2f7334623d890cd85c9c01cef11586f76239"
+    },
+    {
+      "path": "reports/single-venue-depth-replication/capture/metadata/core_markets.request.json",
+      "bytes": 465,
+      "sha256": "74002848d16fa1a18e63a2d4167fd44330c90d7aaeeda6000ecc949afea498b9"
+    },
+    {
+      "path": "reports/single-venue-depth-replication/capture/metadata/market_plan.json",
+      "bytes": 15365,
+      "sha256": "2733c2bed734da15cd42d7ca396c4a56dec68f91b23198e81fb91afedd5d5d66"
+    },
+    {
+      "path": "reports/single-venue-depth-replication/capture/metadata/normalized.json",
+      "bytes": 3264,
+      "sha256": "a63144adf263aa06a068997b0e20e051329fdd39a2bdd43d968e72f09a41eab5"
+    },
+    {
+      "path": "reports/single-venue-depth-replication/capture/metadata/rh_assets.json.gz",
+      "bytes": 1799,
+      "sha256": "10e394eb8e504981ceb0f94963edca09b687fed55d964e2d682dde9ae31d78f0"
+    },
+    {
+      "path": "reports/single-venue-depth-replication/capture/metadata/rh_assets.request.json",
+      "bytes": 448,
+      "sha256": "7800d555d3e78ab1d70aee04d8c28d8ebce9403e442f631cf6cf9e079ad62491"
+    },
+    {
+      "path": "reports/single-venue-depth-replication/capture/metadata/rh_markets.json.gz",
+      "bytes": 8034,
+      "sha256": "3e0fbcec675a304db039db745bc203a763f1b112e4332606163fdabfe8a8a2b4"
+    },
+    {
+      "path": "reports/single-venue-depth-replication/capture/metadata/rh_markets.request.json",
+      "bytes": 453,
+      "sha256": "f13de7a52782e1f232e81cb6d042d974aad70a673726694d179b7ca9583e40b4"
+    },
+    {
+      "path": "reports/single-venue-depth-replication/capture/status.json",
+      "bytes": 162,
+      "sha256": "84c681549f1d34319ad7ecf5bf3f9bd2e883917cf8a7bfc2026650c4b524b268"
+    },
+    {
+      "path": "reports/single-venue-depth-replication/capture/terminal.json",
+      "bytes": 321,
+      "sha256": "f747e7900fa00ab76ee9fba7207228f0f0f61db1c43b841b580e19b51daf0752"
+    },
+    {
+      "path": "reports/single-venue-depth-replication-process.json",
+      "bytes": 381,
+      "sha256": "1a060ca8148a2e4f34bfa7793c9a25f53e6e8a5aa4ae7223154eee258ca40e06"
+    },
+    {
+      "path": "reports/single-venue-depth-replication.stdout.txt",
+      "bytes": 307,
+      "sha256": "c0546ac001752ff144b929ee08ce2557646b7dfe2c2514575342c13b8c3283af"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-incomplete-prefix-lit/independent-audit.json",
+      "bytes": 731,
+      "sha256": "80d308841e4166cea7c4ee5ad5d92af427ca62053fe28bae920326c19fefb089"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-incomplete-prefix-lit/metrics.json",
+      "bytes": 1496,
+      "sha256": "9e0051523d97c088dfe8ad589fa0093c08df05ed500b775621de4bc5d4dbdc63"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-incomplete-prefix-lit/readout.txt",
+      "bytes": 3238,
+      "sha256": "18d0f641933a47f31120d2afef24437c75981ec7f8ac1de3c69edf69cef0156e"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-incomplete-prefix-lit/summary.json.gz",
+      "bytes": 3086,
+      "sha256": "48a413292f96069ad9a4c17bca8650d1c3535e8b8963421e6d4864bbc63546b9"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-depth-incomplete-prefix-lit/trace.jsonl.gz",
+      "bytes": 5554,
+      "sha256": "968526c985b19b14877dafda31a2470df98c3bec5e42d3946f2b5f7291f908df"
+    },
+    {
+      "path": "scripts/audit_single_venue_depth_prefix.py",
+      "bytes": 13782,
+      "sha256": "d4ff43861eb32c29ed2e6474c341a2fcce587873bc9c79bfbd97f1134e3a1906"
+    },
+    {
+      "path": "scripts/single_venue_depth_prefix.py",
+      "bytes": 4099,
+      "sha256": "3689fd92595747a307d49774ef6560c4cb989102ceed9af788fe73322552e2d8"
+    },
+    {
+      "path": "scripts/single_venue_depth_replication.py",
+      "bytes": 2050,
+      "sha256": "75b33e83f908a9d4770dd2d411177c9dd9b4b6ac7c098bd273cd7c3de177f647"
+    },
+    {
+      "path": "tests/test_single_venue_depth_prefix.py",
+      "bytes": 1569,
+      "sha256": "42080356ffec4efe971e1bc5fe9afcee44258afefed6b50ea66f1c267d41333c"
+    },
+    {
+      "path": "tests/test_single_venue_depth_replication.py",
+      "bytes": 1644,
+      "sha256": "b3ee006a6af94452e30894d501f8b3c7087590e7909b29c3c3678467b8c72e06"
+    }
+  ],
+  "raw_inventory_verification": {
+    "prior_count": 22,
+    "all_prior_sha256_verified": true,
+    "prior_bytes": 199106386,
+    "new_raw_bytes": 2097099,
+    "new_raw_sha256": "54be96a40b5eaf25112e0984ca84ec475f8c1cc5ed8ec75b0aa69cd4fbb4cd1e",
+    "total_count": 23,
+    "total_bytes": 201203485
+  }
+}

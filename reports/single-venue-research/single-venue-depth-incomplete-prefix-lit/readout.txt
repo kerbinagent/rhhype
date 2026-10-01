@@ -1,0 +1,49 @@
+LIT DEPTH-SHOCK REPLICATION: INCOMPLETE CAPTURE, DESCRIPTIVE PREFIX ANALYSIS
+
+The planned600-second replication stopped at its preset2MiB raw cap after
+554.755503seconds:20:56:28.647464 to21:05:43.402967UTC on2026-10-01.
+It remains an INCOMPLETE replication. No retry, extension or threshold changes.
+Raw2,097,099bytes,14,876records,two connections,no errors;one complete frame
+was omitted when it would exceed the cap. Original raw and manifest retained.
+Manifest5316899734a8ad3792595515998079b376a092d6f71bbe2eb95be33d856fee84.
+Raw54be96a40b5eaf25112e0984ca84ec475f8c1cc5ed8ec75b0aa69cd4fbb4cd1e.
+
+Before inspecting economic outcomes, a separate descriptive-prefix protocol was
+frozen asd87e552. Original completed-run checks remain unchanged and reject this
+sample. The same detector,Portfolio,entry window122..480seconds,400msminimum
+IOCdelay,10secondhold,native limits/fees and independent signal/IOC/cash checks
+were reused. The cap was75seconds after the entry window ended, but the sample
+is still incomplete and stopping by bytes may correlate with market activity.
+LIT was selected after the earlier Core fade winner; selection is outcome-informed.
+
+Four alternative600-native-collateral portfolios;100maximum actual entry notional.
+Venue rule     attempts closes zero-fill-entry cash-after-fees/capital stress5bp
+depth_fade:lighter          3   1   2 +0.147058352 +0.097593302
+depth_fade:rh_lighter       2   1   1 -0.203426662 -0.252889837
+depth_follow:lighter        3   3   0 -0.436592958 -0.585043840
+depth_follow:rh_lighter     2   1   1 -0.000744485 -0.014976833
+
+Core values areUSDC;RH values areUSDG. Cross-venue reference assumes parity.
+Fresh metadataStandardfees0;5%annualcapital;5bpstress is separate,not a chargedfee.
+All ledgers ended flat with no pending orders/unknowns.10entry attempts,6closed
+alternative paper episodes and4zero-fill entries. One RHfollow entry partially
+filled28.464696notional. Do not sum alternatives as one portfolio or win rate.
+Independent audit passed10signals,16IOCobservations and6closed cash ledgers.
+The audit explicitly records complete_capture_verified=false.
+
+Core fade closed one short:25.80LIT,entry98.930100 at21:03:59.073702379UTC,
+exit98.783040 at21:04:09.578240497UTC;hold10.504538118seconds.
+Gross+0.147060;zero fees;capital0.0000016476645841;net+0.1470583523354159;
+after5bpstress+0.0975933023354159. Signal-to-entry495.659839ms.
+Trigger ordinary print1133.67LITbuy at3.8363,32.97%of prior askdepth within5bp.
+At signal Coremid rose3.8329 to3.83445 whileRHmid stayed3.83355.
+Here the local midpoint crossed above the reference; this is trigger context,
+not a synchronized entry-to-exit relative-return attribution or causal proof.
+
+Across the completed original sample and this incomplete prefix, Corefade has
+TWO closed gains,4total entryattempts and2no-fill entries. Their cash sum within
+that same rule/venue is+0.2258585950362593 and stresssum+0.1269071600362593.
+These tiny adjacent samples,one selected after a winner,do not establish edge.
+Corefollow,RHfade,andRHfollow each lost overall in both samples. Both Corefade
+fills were shorts,so no evidence of symmetric long-side profitability.
+No authenticated order,private acknowledgment or live profit is claimed.
