@@ -1,0 +1,18 @@
+{
+  "schema": "paradex-sbe-preflight-v1",
+  "recorded_utc": "2026-10-01T11:42:33.019956+00:00",
+  "previous": "reports/experiment-storage/core-rh-alt-shortterm-allocation-v1.json",
+  "previous_sha256": "c6c6da58edf0541159163b8880fa8534a887729a681c2b05518e392c5daf8e26",
+  "new_maximum_bytes": 98304,
+  "categories_bytes": {
+    "source": 8192,
+    "metadata": 16384,
+    "raw": 49152,
+    "output": 16384,
+    "control": 8192
+  },
+  "active_research_reserved_bytes": 6263232,
+  "active_research_headroom_bytes": 28224,
+  "source_sha256": "0d698ef7a56ed4d8f6959b40d90eda30a9ff33d687bad714135554f1696b2098",
+  "scope": "One official public schema GET, one public unauthenticated WebSocket connection, BTC/ETH snapshot15@100ms plus funding_data. Schema1:1 only.60seconds or49,152compressed raw bytes; no retry. Raw frames and schema retained; no execution or economics. Followup for stale REST preflight."
+}
