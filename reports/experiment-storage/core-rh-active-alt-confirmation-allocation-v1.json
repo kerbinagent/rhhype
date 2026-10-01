@@ -1,0 +1,74 @@
+{
+  "schema": "core-rh-active-alt-confirmation-v1",
+  "recorded_utc": "2026-10-01T14:59:13.348082+00:00",
+  "previous": "reports/experiment-storage/completed-active-alt-target-closeout-v1.json",
+  "previous_sha256": "4b7a11b1ec906bd231749a1f566dc66af7cbc5f7c7a079b10f9dd3b35a0eebfe",
+  "new_maximum_bytes": 491520,
+  "categories_bytes": {
+    "source": 32768,
+    "metadata": 65536,
+    "raw": 262144,
+    "output": 98304,
+    "control": 32768
+  },
+  "active_research_reserved_bytes": 18857984,
+  "active_research_headroom_bytes": 16384,
+  "overall_reservation_bytes": 836777216,
+  "assets": [
+    "PONS",
+    "CASHCAT"
+  ],
+  "budgets": [
+    100
+  ],
+  "horizons": [
+    60
+  ],
+  "entry_slippage_bps": 10,
+  "primary": "100-60-2s-confirm",
+  "duration_seconds": 900,
+  "entry_end_seconds": 700,
+  "raw_soft_cap": 160000,
+  "scope": "Prospective comparison of immediate vs2sconfirmed entry on PONS/CASHCAT. Same frozen persistent-entry engine,100perleg600prefunded independent ledgers;900smax/700sadmission/128MBingress cap. Same120sreference2sembargo90count89span,5bpexcursion,1bpforecast/TP,60shold400msorders10bplimits and120shourguard. No funding credit or actualorders.",
+  "strategy": "Arrival reference sampled>=1secapart,120smedian/2secembargo/90count/89secspan. Currentexcursion>=5bp and forecastclears costs+1bp target; confirmedbranch adds2sec persistence. Same10bp IOC limits,1bp takeprofit/60sec hold,30sec cooldown/30attemptcap, entryend700s, runtime900s,2secsourceage/250msskew,120sechourguard. All failures/partials/unresolved retained. USDGUSDC parityconditional; fee0freshmetadata;5bpstress separate.",
+  "storage": "Boundedchunkmetadata2MB each,1feedconnectioneach max3attempts; fullwireunretained; captureeveryorderpendingcallback, admission/history andfill/exit/terminal/invalidation, allsampledbasisbooks;500kBsoftstopadmissions786432Bhardcap. Endpointaudit. Nointerimeconomics.",
+  "source_pins": [
+    {
+      "path": "scripts/core_rh_active_alt_confirmation.py",
+      "sha256": "72149e9542f105b82ad9500477940b869e2b6b649bb89dc61f02c8becc2fd479"
+    },
+    {
+      "path": "scripts/audit_core_rh_active_alt_confirmation.py",
+      "sha256": "fee26b16f9b5b3006daadc888a41cc2f7652279abc09e1cd46df51d84a0f242b"
+    },
+    {
+      "path": "scripts/core_rh_persistent_entry.py",
+      "sha256": "d6a549af5ed2ca5767d364d228b50c279126daa217a7a85be22c5ad279c3ce04"
+    },
+    {
+      "path": "tests/test_core_rh_persistent_entry.py",
+      "sha256": "269dbfcd486b0e81c4a7e0c2259cab07ac8035d4412a3edceca19126b3c7f4f8"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    }
+  ],
+  "test": "Two tests passed: future/stale/gap/direction exclusions and signalspike filtered vs sustainedadmitted, 400ms delayed pairedentry andfullterminalcash. No economic tuning on future capture.",
+  "confirmation_seconds": [
+    0,
+    2
+  ],
+  "active_research_pool_bytes": 18874368,
+  "primary_branch": "100-60-0s-confirm",
+  "hypothesis": "Previous PONS/CASHCAT run had9positive1bpforecasts, all rejected by2sconfirmation. Test whether entering without confirmation produces executable paired profits after modeled delay. Cohort and timing-rule focus selected exploratorily from earlier result; new observations prospective. Retain all failures, partials/rescues and5bpstress. No interim economics or optionalextension.",
+  "verification": "Frozen persistent-entry synthetic tests retained; new wrapper changes asset selection only. Endpoint auditor also independently rebuilds entry forecast and capital/time-boundary accounting, beyond inherited depth/firsteligible/wallet checks."
+}
