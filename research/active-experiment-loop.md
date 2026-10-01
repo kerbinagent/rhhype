@@ -1915,3 +1915,15 @@ limits. Four feeds/101 pairs fresh, running/ok. Separate Premium increase
 596future/interrupted; no errors/retries/evaluation. Status-only monitoring
 confirmed normal executable-shockbatch22:34 and broadcapture22:45 endpoints;
 no economic outputs opened. Next23:06:33UTC.
+
+
+### Review 165, 1 October 23:06 UTC
+
+Complete coverage: two exact Premium losses/−$3.80045 (one paired, one
+failed hedge); no other closes/gains/estimates/aborts, one HL price limit.
+Four feeds/101 pairs fresh, running/ok. Separate epoch increases match
+report. Archive 3,717,206 B; 148 future pairs project 4,507,822 B, margin
+735,058 B. Carry 23:05: 271 sampled, invalid slot 71, 592 future/interrupted;
+no errors/retries/evaluation. Relative broad capture status-only scope
+added; two connections/no errors, economic outputs untouched.
+Next review 23:26:33 UTC.

@@ -5546,3 +5546,38 @@ Reviews 66–164: 2,487 completions, 2,454 exact losses, one estimated loss,
 five audited paired gains and 27 audited failed-hedge rescue gains.
 Archive 3,712,827 / 5,242,880 B; 149 future pairs at 5,342 B project
 4,508,785 B, margin 734,095 B. Next review **23:06:33 UTC**.
+
+
+## Review 165 — 1 October 2026 23:06:33 UTC
+
+All eight strategy and aborted coverage fields complete. Exact report
+`review-20261001T230633Z.json.gz`: raw 18,514 B, SHA-256
+`5db1354ea2283d5f7bd84cac9ad05ff7d4a7a56a0a962a1a7e43bdd69c8b0c1c`;
+gzip 2,655 B, SHA-256
+`39a05d31e0519751887bc2c0a8553da05c90a38a7388f1c07a2660adfdafbd50`.
+Independent `current-epoch-at-review165.json.gz`: read 23:07:00.200257 UTC,
+updated 23:07:00.130742 UTC; raw 9,285 B, SHA-256
+`adabb995ddead4c1049bf3cd9088f9f05d5d2f08edd332b241c6955db4af6d97`;
+gzip 1,724 B, SHA-256
+`6f5d3ab26f50d4f3ff4ccd65f41836b616f38b7f972956fc8eff891ca5597a7e`.
+Exact decompression and per-write cap/growth guards passed.
+
+Two exact Premium losses/−$3.8004482356 (one paired, one failed hedge).
+No other closes, gains, estimates or aborts; one HL price limit. Fees
+$1.5771038335, other costs $0.9979367360, capital $0.0000376661.
+
+Separate epoch convergence unchanged 645 / −$756.6321052590, Premium
+1,282 / −$2,296.5918506227; increases match report. Health running/ok,
+four feeds, 101 pairs, CPU 51.38%, p95 lag 37.94 ms, RSS 241.93 MiB,
+526.2 books/s, metadata age 1,477.0 s. Routine pulses fresh/ok; no daemon
+change. Carry 23:05: 271 sampled, persistent invalid slot 71, 592 future/
+interrupted; running, no errors/retries/economic evaluation. Parent added
+relative broad capture status-only supervision: collecting at 23:07,
+97.13 s, 2,853,801 compressed B, 19,659 records, two connections, errors
+empty, economic evaluation false. No active economic outputs or carry
+samples inspected.
+
+Reviews 66–165: 2,489 completions, 2,456 exact losses, one estimated loss,
+five audited paired gains and 27 audited failed-hedge rescue gains.
+Archive 3,717,206 / 5,242,880 B; 148 future pairs at 5,342 B project
+4,507,822 B, margin 735,058 B. Next review **23:26:33 UTC**.
