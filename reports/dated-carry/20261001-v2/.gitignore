@@ -1,0 +1,6 @@
+samples/
+terminal/claim-*.json
+terminal/collector.lock
+terminal/index.json
+terminal/status.json
+terminal/process.log
