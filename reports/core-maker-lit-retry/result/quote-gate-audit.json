@@ -1,0 +1,10 @@
+{
+  "audit": "passed",
+  "quotes_checked": {
+    "100-5bp-control10s": 69,
+    "100-10bp-control10s": 70
+  },
+  "taker_depth_depletions": 20,
+  "checks": "Every actual quote time inside10..480s,100cap,hourguard,exact5/10bp currentbook offset and commonlot quantity; branch-local depth subtracts preceding takerfills before quote decisions. Freshness is checked by frozen engine and main audit.",
+  "summary_sha256": "c19ea3e4fc1f5f24dd3299da3aa4bdf90fee14cc6634fec3638d1287c3f8b47f"
+}
