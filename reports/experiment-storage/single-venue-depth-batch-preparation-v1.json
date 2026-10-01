@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-depth-batch-preparation-v1",
+  "recorded_utc": "2026-10-01T21:19:02.788949+00:00",
+  "previous": "reports/experiment-storage/completed-ack-unused-reservation-rebalance-v3.json",
+  "previous_sha256": "e197f45f7368f292dcd0de4714d212bebc1c483c240ad8c9aa0ef6bf522737a1",
+  "reserved_bytes": 65536,
+  "active_research_pool_bytes": 87031808,
+  "active_research_reserved_bytes": 53395456,
+  "active_research_headroom_bytes": 33636352,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare fixed three-window LIT follow/fade comparison. Configuration-only use of original600second signal and execution engine; no capture until prospective batch protocol and full reservation freeze. Original capped replication remains incomplete and retained. Source,test,plan,inventory within65536bytes."
+}
