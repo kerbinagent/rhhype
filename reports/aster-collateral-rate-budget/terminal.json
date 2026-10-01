@@ -1,0 +1,5 @@
+{
+  "status": "failed_before_economic_analysis",
+  "error": "Strict exact-8hour funding timestamp validation failed; archived timestamps lag nominal settlement by0to11milliseconds. No outcomes computed, no network request.",
+  "source_sha256": "387d9bc9695173b22f5a71a31535d24fa6cf7118835300312f96659d2832ff51"
+}
