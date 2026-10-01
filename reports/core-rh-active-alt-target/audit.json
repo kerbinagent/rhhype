@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "audit_source_sha256": "bdc38f4153158de5ce1dec978e3a9d0b1b935d3eeeef5135ffcf3a1202dc7fa2",
+  "raw_sha256": "87a9eabfe36cf99b99741586f1b5ce1837e9036377bc4f29a44010ed5e3234f6",
+  "record_counts": {
+    "sample": 1468,
+    "invalid": 4
+  },
+  "audited_fills": 0,
+  "checks": "Source/plan/raw/metadata hashes; past-only reference; all recorded fills reconstructed from depth; lot grid, entry minima and cap; 400ms delay and advanced source clock; terminal leg and branch accounting; per-venue wallet identities. First eligible book checked against all retained normalized callbacks during pending intents. Full wire stream and idle books are not retained; completeness depends on frozen callback capture.",
+  "branches": [
+    {
+      "branch": "100-60-2s-confirm-1bp",
+      "closed": 0,
+      "cash_pnl": "0",
+      "cash_wins": 0,
+      "capital_charge": "0",
+      "after_capital_and_stress": "0",
+      "stressed_wins": 0,
+      "below_public_exit_minimum_cases": 0,
+      "pending_positions": 0,
+      "wallet_identity": "passed"
+    },
+    {
+      "branch": "100-60-2s-confirm-6bp",
+      "closed": 0,
+      "cash_pnl": "0",
+      "cash_wins": 0,
+      "capital_charge": "0",
+      "after_capital_and_stress": "0",
+      "stressed_wins": 0,
+      "below_public_exit_minimum_cases": 0,
+      "pending_positions": 0,
+      "wallet_identity": "passed"
+    }
+  ]
+}

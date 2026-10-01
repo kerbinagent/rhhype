@@ -1,0 +1,114 @@
+{
+  "schema": "completed-active-alt-target-closeout-v1",
+  "recorded_utc": "2026-10-01T14:57:30.060029+00:00",
+  "previous": "reports/experiment-storage/shared-source-reservation-reconciliation-v1.json",
+  "previous_sha256": "302ba489063a9ff42b05cc0e5cfb8541743d85f01242e165065012ad44819e04",
+  "old_reserved_bytes": 491520,
+  "artifact_bytes": 170329,
+  "retention_reserved_bytes": 196608,
+  "released_bytes": 294912,
+  "active_research_pool_bytes": 18874368,
+  "active_research_reserved_bytes": 18366464,
+  "active_research_headroom_bytes": 507904,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Full declared evidence and new wrapper/auditor retained. Shared unchanged source files remain funded by canonical earlier retentions and are referenced rather than charged again. 24KiB closeout slack, no deletion or recompression.",
+  "files": [
+    {
+      "path": "reports/core-rh-active-alt-target/audit.json",
+      "bytes": 1390,
+      "sha256": "2484137ce9c5105129621085306465c944f687f923680042814fd3a36414a6bd"
+    },
+    {
+      "path": "reports/core-rh-active-alt-target/events.jsonl.gz",
+      "bytes": 111847,
+      "sha256": "87a9eabfe36cf99b99741586f1b5ce1837e9036377bc4f29a44010ed5e3234f6"
+    },
+    {
+      "path": "reports/core-rh-active-alt-target/lighter-metadata.json.gz",
+      "bytes": 23176,
+      "sha256": "418f06f0c7366751097d707db63575a16565e5ecf3dfffd366070b8027755460"
+    },
+    {
+      "path": "reports/core-rh-active-alt-target/metadata.json",
+      "bytes": 1814,
+      "sha256": "69e2fa48d27e05a29d0e6f4b09707c4dc6c0c25c2719833b45b423cf90386cfa"
+    },
+    {
+      "path": "reports/core-rh-active-alt-target/readout.md",
+      "bytes": 1637,
+      "sha256": "e907fd778630e136f76b61a177a9802726a699b731d59ea6b9ac7d01c59c2330"
+    },
+    {
+      "path": "reports/core-rh-active-alt-target/rh_lighter-metadata.json.gz",
+      "bytes": 8022,
+      "sha256": "e2bf8a62f141521a692ffb85b1291f9fdd53af9316523b371c85f2628268bd03"
+    },
+    {
+      "path": "reports/core-rh-active-alt-target/status.json",
+      "bytes": 286,
+      "sha256": "0a2985429deb3cad21a69cb8d68c3970889eafeec3bf4e85e8de0cf29688994b"
+    },
+    {
+      "path": "reports/core-rh-active-alt-target/summary.json",
+      "bytes": 3149,
+      "sha256": "fc246413e47ecf65045dc5782bd1f43f21b08ac12148b44d2a978d994fd9dcf0"
+    },
+    {
+      "path": "reports/core-rh-active-alt-target/unresolved.json.gz",
+      "bytes": 55,
+      "sha256": "4b40fedb74a2fa7ebedbdc4aed16f65ed7f16a9b7d68079098d69e060d2d5a1b"
+    },
+    {
+      "path": "reports/experiment-storage/core-rh-active-alt-target-allocation-v1.json",
+      "bytes": 5223,
+      "sha256": "db10c8762d70f7f785426a52c4b0bc9f608b2280371fbf68c59aa1f4a81824c4"
+    },
+    {
+      "path": "scripts/audit_core_rh_active_alt_target.py",
+      "bytes": 12639,
+      "sha256": "bdc38f4153158de5ce1dec978e3a9d0b1b935d3eeeef5135ffcf3a1202dc7fa2"
+    },
+    {
+      "path": "scripts/core_rh_active_alt_target.py",
+      "bytes": 1091,
+      "sha256": "4be4ad7598c4ce51cb1610c456ead02aa69b33c422bf5aacc56451131ff3ed9e"
+    }
+  ],
+  "shared_source_references": [
+    {
+      "path": "scripts/core_rh_target_margin.py",
+      "bytes": 20297,
+      "sha256": "3644abc5fa34c379f1673ce99901194ee6dea6d5a314daa279319b7b431f295a",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-target-margin-closeout-v1.json",
+      "canonical_manifest_sha256": "ea9c0e21705f87cf068125cfe314cab506a02e4404b3e76696772b42a2597d83"
+    },
+    {
+      "path": "tests/test_core_rh_target_margin.py",
+      "bytes": 2064,
+      "sha256": "b2db7eb8418ccbf34ecad2d331a53495824d4694703adee16f5b225a5602465d",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-target-margin-closeout-v1.json",
+      "canonical_manifest_sha256": "ea9c0e21705f87cf068125cfe314cab506a02e4404b3e76696772b42a2597d83"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "bytes": 59902,
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "bytes": 31735,
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "bytes": 40963,
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88",
+      "canonical_retention_manifest": "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+      "canonical_manifest_sha256": "e24b4b1cf318dbe4d27527647a8bdcee7bdcbf063c3b4037948f7a68af6ab7a8"
+    }
+  ]
+}
