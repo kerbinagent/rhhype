@@ -1,0 +1,542 @@
+{
+  "actual_pnl": null,
+  "development_not_holdout": true,
+  "rate_units_percent_inferred": true,
+  "direction": "long funded native spot / short corresponding perp, every asset",
+  "capital_scenario": "2x one-leg principal at 5% simple annual; 5bp stress per block",
+  "omitted": [
+    "changing oracle notional",
+    "basis",
+    "spreads and impact",
+    "margin path",
+    "actual execution"
+  ],
+  "overlap": "full-month row overlaps weekly diagnostics; boundary payments intentionally excluded",
+  "outcomes": [
+    {
+      "asset": "ETH",
+      "market_id": 0,
+      "status": "complete_rate_proxy",
+      "actual_pnl": null,
+      "blocks": [
+        {
+          "start_day": 1,
+          "end_day": 30,
+          "events": 719,
+          "rate_sum_bps": "68.6000",
+          "capital_and_stress_bps": "87.19178082191780821917808219",
+          "rate_residual_bps": "-18.59178082191780821917808219",
+          "negative_hours": 52,
+          "max_capital_multiple_before_execution_cost": "1.547600000000000000000000000"
+        },
+        {
+          "start_day": 1,
+          "end_day": 7,
+          "events": 167,
+          "rate_sum_bps": "18.5000",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-5.67808219178082191780821918",
+          "negative_hours": 1,
+          "max_capital_multiple_before_execution_cost": "1.407857142857142857142857143"
+        },
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "events": 167,
+          "rate_sum_bps": "14.4600",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-9.71808219178082191780821918",
+          "negative_hours": 12,
+          "max_capital_multiple_before_execution_cost": "0.9865428571428571428571428571"
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "events": 167,
+          "rate_sum_bps": "9.8900",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-14.28808219178082191780821918",
+          "negative_hours": 39,
+          "max_capital_multiple_before_execution_cost": "0.5099571428571428571428571429"
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "events": 167,
+          "rate_sum_bps": "19.8000",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-4.37808219178082191780821918",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "1.543428571428571428571428571"
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "events": 47,
+          "rate_sum_bps": "5.5700",
+          "capital_and_stress_bps": "10.47945205479452054794520548",
+          "rate_residual_bps": "-4.90945205479452054794520548",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "0.2080500000000000000000000000"
+        }
+      ]
+    },
+    {
+      "asset": "LIT",
+      "market_id": 120,
+      "status": "complete_rate_proxy",
+      "actual_pnl": null,
+      "blocks": [
+        {
+          "start_day": 1,
+          "end_day": 30,
+          "events": 719,
+          "rate_sum_bps": "52.9200",
+          "capital_and_stress_bps": "87.19178082191780821917808219",
+          "rate_residual_bps": "-34.27178082191780821917808219",
+          "negative_hours": 109,
+          "max_capital_multiple_before_execution_cost": "1.166053333333333333333333333"
+        },
+        {
+          "start_day": 1,
+          "end_day": 7,
+          "events": 167,
+          "rate_sum_bps": "0.0500",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-24.12808219178082191780821918",
+          "negative_hours": 47,
+          "max_capital_multiple_before_execution_cost": "-0.5162142857142857142857142857"
+        },
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "events": 167,
+          "rate_sum_bps": "9.1700",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-15.00808219178082191780821918",
+          "negative_hours": 28,
+          "max_capital_multiple_before_execution_cost": "0.4348714285714285714285714286"
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "events": 167,
+          "rate_sum_bps": "32.7000",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "8.52191780821917808219178082",
+          "negative_hours": 2,
+          "max_capital_multiple_before_execution_cost": "2.888714285714285714285714286"
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "events": 167,
+          "rate_sum_bps": "8.7300",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-15.44808219178082191780821918",
+          "negative_hours": 28,
+          "max_capital_multiple_before_execution_cost": "0.3889857142857142857142857143"
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "events": 47,
+          "rate_sum_bps": "2.3500",
+          "capital_and_stress_bps": "10.47945205479452054794520548",
+          "rate_residual_bps": "-8.12945205479452054794520548",
+          "negative_hours": 3,
+          "max_capital_multiple_before_execution_cost": "-0.9672499999999999999999999999"
+        }
+      ]
+    },
+    {
+      "asset": "UNI",
+      "market_id": 30,
+      "status": "complete_rate_proxy",
+      "actual_pnl": null,
+      "blocks": [
+        {
+          "start_day": 1,
+          "end_day": 30,
+          "events": 719,
+          "rate_sum_bps": "148.9000",
+          "capital_and_stress_bps": "87.19178082191780821917808219",
+          "rate_residual_bps": "61.70821917808219178082191781",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "3.501566666666666666666666666"
+        },
+        {
+          "start_day": 1,
+          "end_day": 7,
+          "events": 167,
+          "rate_sum_bps": "22.6100",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-1.56808219178082191780821918",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "1.836471428571428571428571429"
+        },
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "events": 167,
+          "rate_sum_bps": "20.8600",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-3.31808219178082191780821918",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "1.653971428571428571428571429"
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "events": 167,
+          "rate_sum_bps": "48.3300",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "24.15191780821917808219178082",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "4.518700000000000000000000000"
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "events": 167,
+          "rate_sum_bps": "50.0000",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "25.82191780821917808219178082",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "4.692857142857142857142857143"
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "events": 47,
+          "rate_sum_bps": "5.6400",
+          "capital_and_stress_bps": "10.47945205479452054794520548",
+          "rate_residual_bps": "-4.83945205479452054794520548",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "0.2336000000000000000000000000"
+        }
+      ]
+    },
+    {
+      "asset": "LINK",
+      "market_id": 8,
+      "status": "complete_rate_proxy",
+      "actual_pnl": null,
+      "blocks": [
+        {
+          "start_day": 1,
+          "end_day": 30,
+          "events": 719,
+          "rate_sum_bps": "23.3700",
+          "capital_and_stress_bps": "87.19178082191780821917808219",
+          "rate_residual_bps": "-63.82178082191780821917808219",
+          "negative_hours": 198,
+          "max_capital_multiple_before_execution_cost": "0.4470033333333333333333333333"
+        },
+        {
+          "start_day": 1,
+          "end_day": 7,
+          "events": 167,
+          "rate_sum_bps": "4.9100",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-19.26808219178082191780821918",
+          "negative_hours": 50,
+          "max_capital_multiple_before_execution_cost": "-0.009385714285714285714285714286"
+        },
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "events": 167,
+          "rate_sum_bps": "-12.4300",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-36.60808219178082191780821918",
+          "negative_hours": 101,
+          "max_capital_multiple_before_execution_cost": "-1.817700000000000000000000000"
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "events": 167,
+          "rate_sum_bps": "5.7200",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-18.45808219178082191780821918",
+          "negative_hours": 46,
+          "max_capital_multiple_before_execution_cost": "0.07508571428571428571428571429"
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "events": 167,
+          "rate_sum_bps": "19.5700",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-4.60808219178082191780821918",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "1.519442857142857142857142857"
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "events": 47,
+          "rate_sum_bps": "5.5100",
+          "capital_and_stress_bps": "10.47945205479452054794520548",
+          "rate_residual_bps": "-4.96945205479452054794520548",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "0.1861500000000000000000000000"
+        }
+      ]
+    },
+    {
+      "asset": "LDO",
+      "market_id": 46,
+      "status": "complete_rate_proxy",
+      "actual_pnl": null,
+      "blocks": [
+        {
+          "start_day": 1,
+          "end_day": 30,
+          "events": 719,
+          "rate_sum_bps": "127.5800",
+          "capital_and_stress_bps": "87.19178082191780821917808219",
+          "rate_residual_bps": "40.38821917808219178082191781",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "2.982780000000000000000000000"
+        },
+        {
+          "start_day": 1,
+          "end_day": 7,
+          "events": 167,
+          "rate_sum_bps": "22.3100",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-1.86808219178082191780821918",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "1.805185714285714285714285714"
+        },
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "events": 167,
+          "rate_sum_bps": "20.0400",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-4.13808219178082191780821918",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "1.568457142857142857142857143"
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "events": 167,
+          "rate_sum_bps": "21.5400",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-2.63808219178082191780821918",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "1.724885714285714285714285714"
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "events": 167,
+          "rate_sum_bps": "54.5300",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "30.35191780821917808219178082",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "5.165271428571428571428571429"
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "events": 47,
+          "rate_sum_bps": "8.3600",
+          "capital_and_stress_bps": "10.47945205479452054794520548",
+          "rate_residual_bps": "-2.11945205479452054794520548",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "1.226400000000000000000000000"
+        }
+      ]
+    },
+    {
+      "asset": "SKY",
+      "market_id": 79,
+      "status": "complete_rate_proxy",
+      "actual_pnl": null,
+      "blocks": [
+        {
+          "start_day": 1,
+          "end_day": 30,
+          "events": 719,
+          "rate_sum_bps": "107.8100",
+          "capital_and_stress_bps": "87.19178082191780821917808219",
+          "rate_residual_bps": "20.61821917808219178082191781",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "2.501710000000000000000000000"
+        },
+        {
+          "start_day": 1,
+          "end_day": 7,
+          "events": 167,
+          "rate_sum_bps": "20.0200",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-4.15808219178082191780821918",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "1.566371428571428571428571429"
+        },
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "events": 167,
+          "rate_sum_bps": "20.0400",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-4.13808219178082191780821918",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "1.568457142857142857142857143"
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "events": 167,
+          "rate_sum_bps": "20.0100",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-4.16808219178082191780821918",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "1.565328571428571428571428571"
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "events": 167,
+          "rate_sum_bps": "31.2100",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "7.03191780821917808219178082",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "2.733328571428571428571428571"
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "events": 47,
+          "rate_sum_bps": "16.0500",
+          "capital_and_stress_bps": "10.47945205479452054794520548",
+          "rate_residual_bps": "5.57054794520547945205479452",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "4.033250000000000000000000000"
+        }
+      ]
+    },
+    {
+      "asset": "AAVE",
+      "market_id": 27,
+      "status": "complete_rate_proxy",
+      "actual_pnl": null,
+      "blocks": [
+        {
+          "start_day": 1,
+          "end_day": 30,
+          "events": 719,
+          "rate_sum_bps": "93.3200",
+          "capital_and_stress_bps": "87.19178082191780821917808219",
+          "rate_residual_bps": "6.12821917808219178082191781",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "2.149120000000000000000000000"
+        },
+        {
+          "start_day": 1,
+          "end_day": 7,
+          "events": 167,
+          "rate_sum_bps": "20.0400",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-4.13808219178082191780821918",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "1.568457142857142857142857143"
+        },
+        {
+          "start_day": 8,
+          "end_day": 14,
+          "events": 167,
+          "rate_sum_bps": "20.0400",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-4.13808219178082191780821918",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "1.568457142857142857142857143"
+        },
+        {
+          "start_day": 15,
+          "end_day": 21,
+          "events": 167,
+          "rate_sum_bps": "20.8400",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "-3.33808219178082191780821918",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "1.651885714285714285714285714"
+        },
+        {
+          "start_day": 22,
+          "end_day": 28,
+          "events": 167,
+          "rate_sum_bps": "26.2800",
+          "capital_and_stress_bps": "24.17808219178082191780821918",
+          "rate_residual_bps": "2.10191780821917808219178082",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "2.219200000000000000000000000"
+        },
+        {
+          "start_day": 29,
+          "end_day": 30,
+          "events": 47,
+          "rate_sum_bps": "5.6400",
+          "capital_and_stress_bps": "10.47945205479452054794520548",
+          "rate_residual_bps": "-4.83945205479452054794520548",
+          "negative_hours": 0,
+          "max_capital_multiple_before_execution_cost": "0.2336000000000000000000000000"
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "asset": "ETH",
+      "reused": "reports/core-eth-funding-history/202609-v1/response.json.gz",
+      "raw_sha256": "96e775bb3e89f79b72c19ac0f643cbaf61019632459c9b6010a114b48be848f3"
+    },
+    {
+      "asset": "LIT",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=120&resolution=1h&start_timestamp=1788220800&end_timestamp=1790812799&count_back=721",
+      "raw_sha256": "53557f4ae368bd5cd6e909aea43676460b77818f88d216d90dd71131a0f89d31",
+      "received_utc": "2026-10-01T03:46:17.765509+00:00",
+      "gzip_bytes": 5256
+    },
+    {
+      "asset": "UNI",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=30&resolution=1h&start_timestamp=1788220800&end_timestamp=1790812799&count_back=721",
+      "raw_sha256": "c80533240d7b3853e086996591fa5c0ea23b6209e350664d232400fbaf60e135",
+      "received_utc": "2026-10-01T03:46:20.006237+00:00",
+      "gzip_bytes": 5206
+    },
+    {
+      "asset": "LINK",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=8&resolution=1h&start_timestamp=1788220800&end_timestamp=1790812799&count_back=721",
+      "raw_sha256": "ea61bf6af4a0b359004d292233263c7460f6b4dc03f492d96d63fdb1c4b50613",
+      "received_utc": "2026-10-01T03:46:22.249630+00:00",
+      "gzip_bytes": 5510
+    },
+    {
+      "asset": "LDO",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=46&resolution=1h&start_timestamp=1788220800&end_timestamp=1790812799&count_back=721",
+      "raw_sha256": "3f9b64e265ebf513afe353f7b7450aca796f79e15b217ca17bfba6cfb78b9ee7",
+      "received_utc": "2026-10-01T03:46:24.478937+00:00",
+      "gzip_bytes": 4407
+    },
+    {
+      "asset": "SKY",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=79&resolution=1h&start_timestamp=1788220800&end_timestamp=1790812799&count_back=721",
+      "raw_sha256": "cc8f096f415900e9211d0ac2a0ef1041906b2d26a8056d6ca2f45f85a552e254",
+      "received_utc": "2026-10-01T03:46:26.731989+00:00",
+      "gzip_bytes": 3350
+    },
+    {
+      "asset": "AAVE",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=27&resolution=1h&start_timestamp=1788220800&end_timestamp=1790812799&count_back=721",
+      "raw_sha256": "bfaf555198e881e3a19343e28ed1d513dc0a2a34a86bf2ef4286a40154352196",
+      "received_utc": "2026-10-01T03:46:28.963650+00:00",
+      "gzip_bytes": 5239
+    }
+  ]
+}
