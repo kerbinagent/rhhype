@@ -1,0 +1,19 @@
+{
+  "recorded_utc": "2026-10-01T22:24:19.406076+00:00",
+  "allocation": "single-venue-flow-literature-v3 existing8192bytes",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1602.00731v2",
+      "read": "Sections2.2-2.4,3.1,4",
+      "finding": "Shenzhen2003 stock data; orders classified by levels consumed and residual size. Spread/depth recovery measured in bestquote/depth updates, not seconds. Multiplelevel sweeps show reversal behavior; less aggressive orders more continuation.",
+      "limit": "Our individual print/depth ratio is not the paper order classification. Public executions do not reveal unexecuted parent residual. Stock average patterns do not prove delayed crypto profit."
+    },
+    {
+      "url": "https://arxiv.org/html/1708.02715v1",
+      "read": "Sections3,5-6;AppendicesA-B",
+      "finding": "Six large-tick Nasdaq stocks. ORCL1percentADV buckets have median170second duration. Limit flow and deeper shape explain liquidity/price behavior; lagged predictors generally weak relative to contemporaneous covariates.",
+      "limit": "Do not label contemporaneous explanation as future-trade alpha. Batched public depth cannot uniquely separate every limit addition/cancellation. Timescale differs from our10second holding period."
+    }
+  ],
+  "next_measurement": "Inspect completed raw public trade schema for event grouping and sweep evidence; no active strategy or threshold changes. Broad protocol already frozen before this review."
+}

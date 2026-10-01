@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-public-trade-grouping-v1",
+  "recorded_utc": "2026-10-01T22:26:03.973021+00:00",
+  "previous": "reports/experiment-storage/single-venue-broad-v1.json",
+  "previous_sha256": "caf9ab26627c767deed9f903445ccbe47b714302a588db5e9dcdea8c85b8a8d1",
+  "reserved_bytes": 32768,
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 153001984,
+  "active_research_headroom_bytes": 1138688,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retrospective public trade schema grouping on three completed original depth batch windows only. Source, tests, plan, output total32768bytes. No current batch data or cash analysis, no new capture or execution change. Group by venue,market,generation,transaction hash,aggressor orderID/version; explicitly not latent metaorder identification. All prior artifacts retained."
+}

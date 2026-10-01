@@ -1,0 +1,454 @@
+{
+  "schema": "single-venue-public-trade-grouping-v1",
+  "retrospective": true,
+  "source_sha256": "f36a87fbd955c2447e7ed24550aedbb5b17e10663d0af21256d9065933085b2a",
+  "timing_sha256": "0efad946f8c81b2f15334dde6f2d0b57d47e1b81466a2a234f68de0392c803c0",
+  "windows": [
+    {
+      "window": 1,
+      "manifest_sha256": "41de184ed453051144811ed29bc077d5d42fddbb9c68b99e08f5c39e7a12c776",
+      "raw_sha256": "4df6a5e26b12df60a0e7720c689fceb3ca21b412e6b4719a68a2cac43811ebd7",
+      "venues": {
+        "lighter": {
+          "counts": {
+            "update_batches": 390,
+            "unique_prints": 500
+          },
+          "observed_groups": 500,
+          "multi_print_groups": 0,
+          "multi_price_groups": 0,
+          "max_prints_per_group": 1,
+          "groups_spanning_receipt_frames": 0,
+          "detected_shock_prints": 6,
+          "detected_shock_groups": 6,
+          "shock_groups_at_multiple_prices": 0,
+          "max_shock_prints_per_group": 1,
+          "shock_group_details": [
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "755.07",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "547.20",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "293.30",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "439.60",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "492.00",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "343.00",
+              "receipt_span_ms": 0.0
+            }
+          ]
+        },
+        "rh_lighter": {
+          "counts": {
+            "update_batches": 112,
+            "unique_prints": 143
+          },
+          "observed_groups": 143,
+          "multi_print_groups": 0,
+          "multi_price_groups": 0,
+          "max_prints_per_group": 1,
+          "groups_spanning_receipt_frames": 0,
+          "detected_shock_prints": 0,
+          "detected_shock_groups": 0,
+          "shock_groups_at_multiple_prices": 0,
+          "max_shock_prints_per_group": 0,
+          "shock_group_details": []
+        }
+      }
+    },
+    {
+      "window": 2,
+      "manifest_sha256": "67e36f3e1ce62ec0f61d1e7793fc9e5be5c5d3d5371e1c1f2b2afc809c8e2c5c",
+      "raw_sha256": "d4d21d3fc8221ab17bd8e5366429993e653c349adc73c5e1d9d9f21e367c5146",
+      "venues": {
+        "lighter": {
+          "counts": {
+            "update_batches": 455,
+            "unique_prints": 807
+          },
+          "observed_groups": 807,
+          "multi_print_groups": 0,
+          "multi_price_groups": 0,
+          "max_prints_per_group": 1,
+          "groups_spanning_receipt_frames": 0,
+          "detected_shock_prints": 17,
+          "detected_shock_groups": 17,
+          "shock_groups_at_multiple_prices": 0,
+          "max_shock_prints_per_group": 1,
+          "shock_group_details": [
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "33.71",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "26.24",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "44.81",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "78.59",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "37.40",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "1.61",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "79.40",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "138.55",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "138.62",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "3.24",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "3.70",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "39.78",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "4.28",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "4.31",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "3.18",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "330.97",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "500.00",
+              "receipt_span_ms": 0.0
+            }
+          ]
+        },
+        "rh_lighter": {
+          "counts": {
+            "update_batches": 188,
+            "unique_prints": 384
+          },
+          "observed_groups": 384,
+          "multi_print_groups": 0,
+          "multi_price_groups": 0,
+          "max_prints_per_group": 1,
+          "groups_spanning_receipt_frames": 0,
+          "detected_shock_prints": 15,
+          "detected_shock_groups": 15,
+          "shock_groups_at_multiple_prices": 0,
+          "max_shock_prints_per_group": 1,
+          "shock_group_details": [
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "23.52",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "27.46",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "11.18",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "6.56",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "1335.01",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "889.42",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "225.17",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "303.78",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "23.07",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "33.16",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "23.64",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "274.46",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "528.57",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "105.86",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "35.17",
+              "receipt_span_ms": 0.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "window": 3,
+      "manifest_sha256": "9c68fc19adae6cabe5a47aa3214a1f179103c273f68514be2a18fcd9984eb485",
+      "raw_sha256": "8459bbd37d12c72d8005ae417b5a7a17671f1c003d103269d30ac90ac3619823",
+      "venues": {
+        "lighter": {
+          "counts": {
+            "update_batches": 441,
+            "unique_prints": 700
+          },
+          "observed_groups": 700,
+          "multi_print_groups": 0,
+          "multi_price_groups": 0,
+          "max_prints_per_group": 1,
+          "groups_spanning_receipt_frames": 0,
+          "detected_shock_prints": 4,
+          "detected_shock_groups": 4,
+          "shock_groups_at_multiple_prices": 0,
+          "max_shock_prints_per_group": 1,
+          "shock_group_details": [
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "2.68",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "117.04",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "120.01",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "495.59",
+              "receipt_span_ms": 0.0
+            }
+          ]
+        },
+        "rh_lighter": {
+          "counts": {
+            "update_batches": 190,
+            "unique_prints": 330
+          },
+          "observed_groups": 330,
+          "multi_print_groups": 0,
+          "multi_price_groups": 0,
+          "max_prints_per_group": 1,
+          "groups_spanning_receipt_frames": 0,
+          "detected_shock_prints": 4,
+          "detected_shock_groups": 4,
+          "shock_groups_at_multiple_prices": 0,
+          "max_shock_prints_per_group": 1,
+          "shock_group_details": [
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "506.06",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "1058.44",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "20.00",
+              "receipt_span_ms": 0.0
+            },
+            {
+              "prints": 1,
+              "detector_shock_prints": 1,
+              "distinct_execution_prices": 1,
+              "total_observed_quantity": "20.00",
+              "receipt_span_ms": 0.0
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "method": "Deduplicate ordinary update/trade prints by venue,market,generation,tradeID; exclude subscribed backlog. Group only matching venue,market,generation,transaction hash,aggressor orderID and order version. is_maker_ask implies buyer is aggressor; otherwise seller. No account identifiers used or output.",
+  "limits": "Observed public execution groups are not latent parent metaorders, whole-order completion, or proof of independent shocks. More than one execution price is observed multi-price execution, not exact reconstruction of unobserved pre-order depth or residual. This raw-schema diagnostic does not certify adapter-valid tradable events or change prior strategy/cash results; no new PnL test or active capture inspection."
+}

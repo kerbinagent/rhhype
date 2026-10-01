@@ -1,0 +1,123 @@
+{
+  "schema": "public-trade-groups-simultaneous-v2",
+  "retrospective": true,
+  "source_sha256": "fdaa130bf9883341d0a7bbf15b5cc984ce8265986611717e1eec8c775331b774",
+  "grouping_source_sha256": "f36a87fbd955c2447e7ed24550aedbb5b17e10663d0af21256d9065933085b2a",
+  "strict_report_sha256": "f24130a37cdeb9cd46641267321a295274cbc1ce6a42fd05a70842b5a8899d45",
+  "windows": [
+    {
+      "window": 1,
+      "manifest_sha256": "41de184ed453051144811ed29bc077d5d42fddbb9c68b99e08f5c39e7a12c776",
+      "raw_sha256": "4df6a5e26b12df60a0e7720c689fceb3ca21b412e6b4719a68a2cac43811ebd7",
+      "venues": {
+        "lighter": {
+          "counts": {
+            "update_batches": 390,
+            "unique_prints": 500
+          },
+          "observed_groups": 401,
+          "multi_print_groups": 35,
+          "multi_price_groups": 28,
+          "max_prints_per_group": 33,
+          "groups_spanning_receipt_frames": 0,
+          "detected_shock_prints": 6,
+          "detected_shock_groups": 1,
+          "shock_groups_at_multiple_prices": 1,
+          "max_shock_prints_per_group": 6
+        },
+        "rh_lighter": {
+          "counts": {
+            "update_batches": 112,
+            "unique_prints": 143
+          },
+          "observed_groups": 114,
+          "multi_print_groups": 21,
+          "multi_price_groups": 16,
+          "max_prints_per_group": 5,
+          "groups_spanning_receipt_frames": 0,
+          "detected_shock_prints": 0,
+          "detected_shock_groups": 0,
+          "shock_groups_at_multiple_prices": 0,
+          "max_shock_prints_per_group": 0
+        }
+      }
+    },
+    {
+      "window": 2,
+      "manifest_sha256": "67e36f3e1ce62ec0f61d1e7793fc9e5be5c5d3d5371e1c1f2b2afc809c8e2c5c",
+      "raw_sha256": "d4d21d3fc8221ab17bd8e5366429993e653c349adc73c5e1d9d9f21e367c5146",
+      "venues": {
+        "lighter": {
+          "counts": {
+            "update_batches": 455,
+            "unique_prints": 807
+          },
+          "observed_groups": 485,
+          "multi_print_groups": 91,
+          "multi_price_groups": 84,
+          "max_prints_per_group": 55,
+          "groups_spanning_receipt_frames": 1,
+          "detected_shock_prints": 17,
+          "detected_shock_groups": 9,
+          "shock_groups_at_multiple_prices": 6,
+          "max_shock_prints_per_group": 3
+        },
+        "rh_lighter": {
+          "counts": {
+            "update_batches": 188,
+            "unique_prints": 384
+          },
+          "observed_groups": 213,
+          "multi_print_groups": 74,
+          "multi_price_groups": 64,
+          "max_prints_per_group": 14,
+          "groups_spanning_receipt_frames": 1,
+          "detected_shock_prints": 15,
+          "detected_shock_groups": 10,
+          "shock_groups_at_multiple_prices": 9,
+          "max_shock_prints_per_group": 3
+        }
+      }
+    },
+    {
+      "window": 3,
+      "manifest_sha256": "9c68fc19adae6cabe5a47aa3214a1f179103c273f68514be2a18fcd9984eb485",
+      "raw_sha256": "8459bbd37d12c72d8005ae417b5a7a17671f1c003d103269d30ac90ac3619823",
+      "venues": {
+        "lighter": {
+          "counts": {
+            "update_batches": 441,
+            "unique_prints": 700
+          },
+          "observed_groups": 442,
+          "multi_print_groups": 108,
+          "multi_price_groups": 103,
+          "max_prints_per_group": 24,
+          "groups_spanning_receipt_frames": 0,
+          "detected_shock_prints": 4,
+          "detected_shock_groups": 3,
+          "shock_groups_at_multiple_prices": 2,
+          "max_shock_prints_per_group": 2
+        },
+        "rh_lighter": {
+          "counts": {
+            "update_batches": 190,
+            "unique_prints": 330
+          },
+          "observed_groups": 195,
+          "multi_print_groups": 59,
+          "multi_price_groups": 53,
+          "max_prints_per_group": 9,
+          "groups_spanning_receipt_frames": 0,
+          "detected_shock_prints": 4,
+          "detected_shock_groups": 3,
+          "shock_groups_at_multiple_prices": 1,
+          "max_shock_prints_per_group": 2
+        }
+      }
+    }
+  ],
+  "reason": "Strict transaction-hash grouping yielded only single prints. Window2 schema inspection found repeated taker orderIDs with identical versions and source milliseconds but distinct tx_hash values. This follow-up drops transaction hash from grouping and retains exact source timestamp. Strict result retained.",
+  "method": "Same venue/market/generation/aggressor orderID/order version/source millisecond. No account fields used. Aggregates only; no new cash or active capture analysis.",
+  "limits": "Same observed order identity and timestamp is a narrower observable than a latent parent metaorder. Does not establish completion, residual size, exact presweep depth, or independent events. Distinct tx_hash semantics not established; these groups are exploratory."
+}
