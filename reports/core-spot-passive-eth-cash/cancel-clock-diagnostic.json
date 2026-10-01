@@ -1,0 +1,78 @@
+{
+  "scope": "Post-outcome raw annotation clock diagnostic, no alternative cancellation or fills. Original unknown outcome retained; no private cancel ACK exists.",
+  "quote": {
+    "branch": "ETH",
+    "event": "quote_requested",
+    "ns": 1790882356787092778,
+    "price": "2701.80",
+    "qty": "0.0370",
+    "competitiveness": "inside",
+    "due_ns": 1790882356887092778,
+    "callback_market": "0",
+    "callback_kind": "book"
+  },
+  "cancel": {
+    "branch": "ETH",
+    "event": "cancel_requested",
+    "ns": 1790882357485545273,
+    "due_ns": 1790882357885545273,
+    "reason": "model_reprice_or_threshold",
+    "callback_market": "2048",
+    "callback_kind": "book"
+  },
+  "unknown": {
+    "branch": "ETH",
+    "event": "unknown",
+    "ns": 1790882359891693591,
+    "reason": "cancel_confirmation_book_timeout",
+    "maker_pos": "0",
+    "hedge_pos": "0",
+    "callback_market": "0",
+    "callback_kind": "book"
+  },
+  "spot_book_callbacks": [
+    {
+      "received_ns": 1790882356790919858,
+      "source_ns": 1790882356668290000,
+      "quality": "wire_ok",
+      "reason": null
+    },
+    {
+      "received_ns": 1790882356883913441,
+      "source_ns": 1790882356779005000,
+      "quality": "wire_ok",
+      "reason": null
+    },
+    {
+      "received_ns": 1790882356930263972,
+      "source_ns": 1790882356841096000,
+      "quality": "wire_ok",
+      "reason": null
+    },
+    {
+      "received_ns": 1790882357485545273,
+      "source_ns": 1790882357378603000,
+      "quality": "wire_ok",
+      "reason": null
+    },
+    {
+      "received_ns": 1790882357985343498,
+      "source_ns": 1790882357878029000,
+      "quality": "wire_ok",
+      "reason": null
+    },
+    {
+      "received_ns": 1790882361883079480,
+      "source_ns": 1790882361796559000,
+      "quality": "wire_ok",
+      "reason": null
+    }
+  ],
+  "first_annotated_eligible_after_cancel": {
+    "received_ns": 1790882361883079480,
+    "source_ns": 1790882361796559000,
+    "quality": "wire_ok",
+    "reason": null
+  },
+  "raw_sha256": "8b6e15dba489515db2f7d7b3200affc09da0e1e06fd02a87d47f93d444aa1cac"
+}

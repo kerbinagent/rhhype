@@ -1,0 +1,69 @@
+{
+  "markets": {
+    "maker": {
+      "ETH": {
+        "venue": "lighter",
+        "asset": "ETH",
+        "market": "2048",
+        "market_kind": "spot",
+        "price_tick": "0.01",
+        "qty_step": "0.0001",
+        "min_qty": "0.005",
+        "min_notional": "10.0",
+        "max_quote": "2500000.0",
+        "max_qty": null,
+        "maker_fee_bps": "0",
+        "taker_fee_bps": "0",
+        "collateral": "USDC",
+        "contract_multiplier": "1",
+        "processing_delay_ms": 300
+      }
+    },
+    "hedge": {
+      "ETH": {
+        "venue": "lighter",
+        "asset": "ETH",
+        "market": "0",
+        "market_kind": "perp",
+        "price_tick": "0.01",
+        "qty_step": "0.0001",
+        "min_qty": "0.002",
+        "min_notional": "10.0",
+        "max_quote": "281474976.710655",
+        "max_qty": null,
+        "maker_fee_bps": "0",
+        "taker_fee_bps": "0",
+        "collateral": "USDC",
+        "contract_multiplier": "1",
+        "processing_delay_ms": 300
+      }
+    }
+  },
+  "raw_requests": {
+    "core_markets": {
+      "method": "GET",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails",
+      "json_body": null,
+      "status": 200,
+      "raw_bytes": 374085,
+      "sha256": "8b7d8f5f2344849f057ff6f472246823259e3f3947d46d2b7216e5c13fd46a6a",
+      "compressed_sha256": "6bd923cfdba07eaeca53f4cbf08c89612d71b42cb3679d331b8ee7c9452a5c15",
+      "request_started_utc_ns": 1790881900745853467,
+      "response_completed_utc_ns": 1790881900843914408,
+      "raw_file": "core_markets.json.gz"
+    },
+    "core_assets": {
+      "method": "GET",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/assetDetails",
+      "json_body": null,
+      "status": 200,
+      "raw_bytes": 6119,
+      "sha256": "56e461644140241cb018d47bc70fc9339cf37f7d1c9af6cf28e335ecc01e33c4",
+      "compressed_sha256": "295f38495c2cb7b73f2e407d41eee4daba02f849bdfc3a5a3a628f555c8266e1",
+      "request_started_utc_ns": 1790881900850026920,
+      "response_completed_utc_ns": 1790881901017787533,
+      "raw_file": "core_assets.json.gz"
+    }
+  },
+  "market_plan_sha256": "d6ab62c2c8ff391658285a9cf604310112f7c22597244cd27396eece50370865"
+}

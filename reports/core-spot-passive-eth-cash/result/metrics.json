@@ -1,0 +1,39 @@
+{
+  "error": null,
+  "completion_marker_received": true,
+  "metrics": {
+    "ETH": {
+      "attempts": 1,
+      "episodes": 0,
+      "known_flow_closes": 0,
+      "paired_flow_closes": 0,
+      "rescue_closes": 0,
+      "cash_sum": "0",
+      "stressed_sum": "0",
+      "cash_wins": 0,
+      "stressed_wins": 0,
+      "unknown_episodes": 0,
+      "branch_unknown_reason": "cancel_confirmation_book_timeout",
+      "spot_inventory": "0",
+      "perp_inventory": "0",
+      "actual_cash_usdc": "600",
+      "counts": {
+        "stale_source_book": 1,
+        "decision_opportunity": 8543,
+        "abstain:stale_or_skewed_pair": 5055,
+        "abstain:outside_admission_window": 739,
+        "abstain:reference_warmup": 2099,
+        "abstain:forecast_below_1bp": 649,
+        "quote_requested": 1,
+        "spot_admission": 1,
+        "activation_stale_source": 1,
+        "activated": 1,
+        "inside_quote_check": 1,
+        "cancel_requested": 1,
+        "cancel_stale_source": 1,
+        "unknown": 1
+      }
+    }
+  },
+  "summary_sha256": "cc99442e8d810b2a58f1234af71fb00e69f8ae4eb84fb9473a304e26893ee252"
+}

@@ -1,0 +1,12 @@
+{
+  "scope": "All raw trade-channel frames afterfixedendpoint. Subscriptionbacklog isnotliveflow; no executions reconstructed.",
+  "frames": [
+    {
+      "type": "subscribed/trade",
+      "channel": "trade:2048",
+      "ordinary_prints": 50,
+      "liquidation_prints": 0
+    }
+  ],
+  "raw_sha256": "8b6e15dba489515db2f7d7b3200affc09da0e1e06fd02a87d47f93d444aa1cac"
+}

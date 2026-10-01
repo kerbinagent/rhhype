@@ -1,0 +1,12 @@
+{
+  "schema": "perp-maker-spot-hedge-preparation-v1",
+  "recorded_utc": "2026-10-01T19:15:54.914753+00:00",
+  "previous": "reports/experiment-storage/core-spot-passive-eth-cash-v1.json",
+  "previous_sha256": "d6ab62c2c8ff391658285a9cf604310112f7c22597244cd27396eece50370865",
+  "preparation_reserved_bytes": 131072,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 43196416,
+  "active_research_headroom_bytes": 10280960,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare separate same-venue passiveperpsell/contingentspotbuy study. ExistingLITspotbuy/perpshort exposure retained with opposite executionorder; no spotborrowing. Reuse sell-sidequeue/depth/lateflow machinery, enforcepublishedminima withoutoldIOCexemption, newcashaccounting andindependentrawaudit required beforeanycapture. ActiveETHstudy unchanged."
+}
