@@ -61,10 +61,13 @@ ETH was selected before this pull; no automatic asset search or extension.
 The simple always-on version does not advance. Collateral efficiency and
 selective entry remain distinct hypotheses requiring their own evidence.
 
-The two-day sample gives only 0.1403 bp/day over the existing 2x-capital
-charge before execution and stress. The economic question is whether actual
-required collateral and rate persistence justify a different design. Simply
-lowering the reserve in a spreadsheet does not establish a safe portfolio.
+**New collateral evidence:** Core's public metadata enables ETH at 70% LTV
+and 85% liquidation threshold; the official multi-asset margin page explicitly
+describes spot ETH collateral against an ETH short. A separate fixed 1.1x
+capital [September candle screen](../reports/core-eth-collateral-candles/readout.md)
+leaves $2.74 on ~$1,100 for the full month; three weekly blocks positive,
+one negative. This is an exploratory lead, with inferred funding units and
+non-executable candle prices. Next check actual spread/impact costs.
 
 ### 2. Portfolio-margin carry on Hyperliquid
 
