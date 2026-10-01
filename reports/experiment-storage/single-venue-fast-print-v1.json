@@ -1,0 +1,34 @@
+{
+  "schema": "single-venue-fast-print-v1",
+  "recorded_utc": "2026-10-01T20:26:51.826889+00:00",
+  "previous": "reports/experiment-storage/single-venue-fast-print-preparation-v1.json",
+  "previous_sha256": "4e86c638026509f4c26c4d983c399bc6a6f6f024bdea39c356466b11f2da14c2",
+  "manifest_sha256": "8954370a5bf35efff4fe69bbb5ff2fa9e7f712299215dfad45de33f85d41dab2",
+  "source_pins": [
+    {
+      "path": "scripts/single_venue_fast_print.py",
+      "sha256": "480aa8ef4416e1f993718f7fbbd72919f1f1790784fc1b879663cca6023487d2"
+    },
+    {
+      "path": "tests/test_single_venue_fast_print.py",
+      "sha256": "a4b9788c7f0f96ea96c17a6ecdd9de93ce73d921f1ac0f13fb5ed0231de0e4e4"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-multi-v1.json",
+      "sha256": "7e2b6d250eff3f38a4a0977c3268b6b495ad6a697be4d63781a4352f4eebd28b"
+    }
+  ],
+  "retrospective": true,
+  "scope": "Exploratory diagnostic specified after the same sample produced no admitted trades and62 large-flow bins. Prior sample outcomes and liquidity distributions known; not prospective validation. No parameter search and no cash-PnL claim.",
+  "selection": "All ordinary prints with valid source age<=2s and a prior fresh paired quote:both book sources strictly before print source, no more than250ms earlier, receipt point no later than print receipt. Keep prints whose quantity>=25%displayed same-side depth within5bp of own best. No activity baseline or price/future-return gate. Max2000 candidate rows perasset; capfails whole output, no selective dropping.",
+  "observation": "First fresh paired quote after candidate becomes observable, with both book sources>=print source and decision clock within250ms of print receipt. Prices already known at receipt are allowed when source constraints pass. Record local impact and reference movement;>=2bp aligned local impact and<=1bp reference move is a diagnostic label only. Horizons100,400,1000,5000,10000,30000ms from decision; both source and receipt timestamps>=due, first fresh pair bydue+250ms. Missing, late, invalidated and unanchored candidates retained. No exact100ms claim when actual recorded delay is longer.",
+  "returns": "Fade sign opposite aggressor, log-midpoint returns on target and relative to other venue. Report all selected candidates regardless initial impact. Remaining fade after400ms only when both endpoints matched; uses actual recorded endpoints. Overlapping dependent observations, possible print fragmentation, source-time uncertainty and no causal attribution. No fees, spread subtraction, fill model or profitability estimate.",
+  "tests": "Four synthetic timing/depth tests passed:strict pre source and quarter-depth boundary;both source/receipt post horizon;late baseline;invalidation and zero-impact retention.",
+  "reserved_bytes": 262144,
+  "source_tests_control_bytes": 65536,
+  "output_bytes": 196608,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 46080000,
+  "active_research_headroom_bytes": 7397376,
+  "overall_reservation_bytes": 836777216
+}

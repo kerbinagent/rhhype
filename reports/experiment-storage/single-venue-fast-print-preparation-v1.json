@@ -1,0 +1,14 @@
+{
+  "schema": "single-venue-fast-print-preparation-v1",
+  "recorded_utc": "2026-10-01T20:24:05.016989+00:00",
+  "previous": "reports/experiment-storage/completed-single-venue-multi-closeout-v1.json",
+  "previous_sha256": "cc12be1d5ab5c5a3604dcdcda217204d8145ebbbbbfe11fd40464b7509375b17",
+  "reserved_bytes": 262144,
+  "source_tests_control_bytes": 65536,
+  "output_bytes": 196608,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 46080000,
+  "active_research_headroom_bytes": 7397376,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retrospective individual-print/depth and subsecond-to30s midpoint diagnostics on already sealed three-asset capture. No new raw, order simulation or live execution. Predeclare selection and measurement before query. All existing evidence retained."
+}
