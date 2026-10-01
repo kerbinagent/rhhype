@@ -1,0 +1,12 @@
+{
+  "schema": "spot-passive-inside-preparation-v1",
+  "recorded_utc": "2026-10-01T17:40:59.694075+00:00",
+  "previous": "reports/experiment-storage/completed-spot-passive-liquid-closeout-v1.json",
+  "previous_sha256": "3a6caf27f83b51118bd307ff5a931eb2e401797042e9e2107e5862bf067b692d",
+  "preparation_reserved_bytes": 131072,
+  "active_research_pool_bytes": 36700160,
+  "active_research_reserved_bytes": 27525120,
+  "active_research_headroom_bytes": 9175040,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Bounded LIT inside-bid policy, independent auditor, tests and protocol preparation; no capture before full allocation and source freeze."
+}
