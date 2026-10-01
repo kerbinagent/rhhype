@@ -1,0 +1,12 @@
+{
+  "schema": "spot-passive-eth-cash-preparation-v1",
+  "recorded_utc": "2026-10-01T19:08:54.511695+00:00",
+  "previous": "reports/experiment-storage/completed-spot-passive-cashentry-closeout-v1.json",
+  "previous_sha256": "101aaff365760cfa8d8b3ef46622ea9f82a2c0865b61789d285e804cca2a0874",
+  "preparation_reserved_bytes": 131072,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 36839424,
+  "active_research_headroom_bytes": 16637952,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare ETH spot/perp asset comparison with existingCashEntrySpotBranch and500ms timing, unchangedcash/risk/executionparameters. Reuse repairedindependentaudit. No capture until fullallocationandfreeze."
+}
