@@ -1,0 +1,14 @@
+{
+  "schema": "paradex-core-shortterm-preparation-v1",
+  "recorded_utc": "2026-10-01T11:48:10.143433+00:00",
+  "previous": "reports/experiment-storage/completed-maker-and-paradex-preflight-closeout-v1.json",
+  "previous_sha256": "f18c7d6f01043e81e468b873f286bb5853481c3ebe03b694d0647be59ab3a566",
+  "new_maximum_bytes": 65536,
+  "categories_bytes": {
+    "source": 49152,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 6099392,
+  "active_research_headroom_bytes": 192064,
+  "scope": "Prepare source, synthetic tests and audit for public Paradex/Core hedged short-term experiment. No new market capture authorized by this preparation allocation; final raw/metadata/output allocation and frozen plan required before launch."
+}
