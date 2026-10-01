@@ -1,0 +1,37 @@
+{
+  "schema": "pendle-isolated-proxy-catalogue-v1",
+  "recorded_utc": "2026-10-01T04:32:22.631726+00:00",
+  "previous": "reports/experiment-storage/pendle-low-gas-market-preflight-allocation-v1.json",
+  "previous_sha256": "2668eaab56e14ef3437df4ce177128261526416f6d8f463ee99eb9cd3973e244",
+  "new_maximum_bytes": 196608,
+  "categories_bytes": {
+    "source": 8192,
+    "raw": 131072,
+    "output": 40960,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 2826240,
+  "active_research_headroom_bytes": 1368064,
+  "requests_max": 4,
+  "retries": 0,
+  "chains": [
+    42161,
+    8453
+  ],
+  "max_pages_per_chain": 2,
+  "page_size": 100,
+  "selection": "Catalogue only for Arbitrum and Base. Retain all active records; incomplete chain not eligible. Prospective shortlist nonvolatile markets with 7-90 days to expiry; rank distance to 30 days then descending liquidity then address, no yield ranking. Accounting asset and redemption must be verified before pricing. $100 primary; $1000 control. Unknown flags retained.",
+  "source": "https://raw.githubusercontent.com/pendle-finance/pendle-examples-public/main/backend-api-demo/src/get-all-markets.ts",
+  "documentation_failure": "Prior /docs and /docs-json returned HTTP403; this requests distinct documented market resources, not alternate credentials or a retry.",
+  "correction": "Explicit client-routing successor after public direct HTTP403; same two chains, page cap, selection and sizes. curl SOCKS5 remote DNS through existing isolated Japan container, verified JP while direct US. No global proxy or host route changes. Stop if proxy cannot connect; no direct fallback.",
+  "input_pins": [
+    {
+      "path": "scripts/pendle_low_gas_market_preflight.py",
+      "sha256": "1a91ef4d6fde0b2a0e8060906a8c238ff9f425ca99d7f09b3560034751379bec"
+    },
+    {
+      "path": "skills/nordvpn-japan-proxy/SKILL.md",
+      "sha256": "24f211fd17344327ae19765bf664f730fd5ec5a82d5df27194eaa1df063760ad"
+    }
+  ]
+}
