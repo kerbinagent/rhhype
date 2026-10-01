@@ -24,6 +24,10 @@ class CorePassiveSellBranch(GuardedMakerSellBranch):
   if filled>0:self.entry_hedge_qty+=filled;self._deplete(book,'buy',filled)
  def _fill_exit(self,venue,book):
   before=self.maker_pos if venue=='maker' else self.hedge_pos
+  intent=self.exits.get(venue)
+  if intent and book.received_ns>=intent.due_ns and book.source_ns>=intent.due_ns:
+   if (before>0 and not book.bids) or (before<0 and not book.asks):
+    self._unknown('exit_public_depth_unavailable',book.received_ns);return
   with self._ioc_rules():super()._fill_exit(venue,book)
   after=self.maker_pos if venue=='maker' else self.hedge_pos
   if abs(before)>abs(after):self._deplete(book,'sell' if before>0 else 'buy',abs(before)-abs(after))
