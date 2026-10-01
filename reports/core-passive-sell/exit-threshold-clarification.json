@@ -1,0 +1,8 @@
+{
+  "scope": "Source-based clarification discovered after completed Core sell replay; no source, past outcome or active taker experiment changed.",
+  "implementation": "scripts/core_passive_hedged_base.py and scripts/core_passive_hedged_sell.py _episode_executable_exit_mark subtract episode reserve_cost and capital_cost; configured reserve_bps is5.",
+  "affected_completed_runs": ["core-passive-lit", "core-passive-fair-value", "core-passive-fair-retry", "core-passive-sell"],
+  "correction": "A configured1bp maker profit mark requires cash after fees above capital plus the5bp filled-notional reserve plus1bp of the100USD quote budget. Fair-value configured6bp target similarly requires reserve plus6bp of budget. Descriptions saying stress is separate refer correctly to accounting columns but incompletely describe the exit decision: stress also influenced that trigger.",
+  "limits": "No counterfactual profitability follows from this clarification. Fair-value runs had no paired closes. Other policy exits, including hold/rescue, remain as executed. The active core-rh-exit-target taker experiment uses extra_cost_bps0 and reports its5bp stress separately; this clarification does not change it.",
+  "next": "Freeze separate maker exit variant that adds only the episode reserve back to the decision mark, retaining fees/capital, cash accounting, latency, queues, limits and separate stress reporting. Compare on the existing capture as exploration."
+}

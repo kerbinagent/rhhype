@@ -1,0 +1,10 @@
+{
+  "audit": "passed",
+  "quotes_checked": {
+    "100-10bp-100ms-sell": 83
+  },
+  "taker_depth_depletions": 6,
+  "activation_queue_snapshots_checked": 83,
+  "checks": "Every actual quote time inside10..480s,100cap,hourguard,exact10bp currentbook offset, 100ms activation and commonlot quantity; branch-local depth subtracts preceding takerfills before quote decisions. Freshness and pair skew checked independently; every activation checks source advancement, post-only price and queue ahead at the quote.",
+  "summary_sha256": "3f858b4620e579364da48f4b61362db7e48ca2de45e7c0d7592104c588416c7e"
+}
