@@ -1,0 +1,67 @@
+{
+  "audit": "passed",
+  "checks": "Independent per-leg Decimal cash, inventory-weighted capital from actual exit intervals, and hourly boundary exclusion. Paired means both entry legs positive.",
+  "raw_sha256": "d7277d2a91c442870f420c81eb4420e1960a393985c6776b5158d830fad3fbe8",
+  "trades": [
+    {
+      "asset": "NVDA",
+      "id": "1790861260485680-1-standard",
+      "paired": false,
+      "cash": "-0.01732",
+      "capital": "8.679968708616818873668188737E-8",
+      "stressed": "-0.06718869679968708616818873668",
+      "exit_reason": "entry_failure",
+      "duration_seconds": 1.0413005352020264
+    },
+    {
+      "asset": "AAPL",
+      "id": "1790861280573958-2-standard",
+      "paired": false,
+      "cash": "-0.07826",
+      "capital": "7.901072217675355149670218163E-8",
+      "stressed": "-0.1280364490107221767535514967",
+      "exit_reason": "entry_failure",
+      "duration_seconds": 1.0025861263275146
+    },
+    {
+      "asset": "AMZN",
+      "id": "1790861403044984-3-standard",
+      "paired": false,
+      "cash": "-0.13860",
+      "capital": "7.728993629851598173515981735E-8",
+      "stressed": "-0.1884049972899362985159817352",
+      "exit_reason": "entry_failure",
+      "duration_seconds": 1.0377752780914307
+    },
+    {
+      "asset": "AAPL",
+      "id": "1790861404892219-4-standard",
+      "paired": false,
+      "cash": "-0.01505",
+      "capital": "8.575832471492897006595636733E-8",
+      "stressed": "-0.06486558575832471492897006596",
+      "exit_reason": "entry_failure",
+      "duration_seconds": 1.0380704402923584
+    },
+    {
+      "asset": "TSLA",
+      "id": "1790861506644965-5-standard",
+      "paired": true,
+      "cash": "-0.058719",
+      "capital": "0.00001920214972784339421613394216",
+      "stressed": "-0.1087115181497278433942161339",
+      "exit_reason": "max_hold",
+      "duration_seconds": 61.1839542388916
+    },
+    {
+      "asset": "TSLA",
+      "id": "1790861660371033-6-standard",
+      "paired": true,
+      "cash": "-0.077478",
+      "capital": "0.00001916370396784662227295788940",
+      "stressed": "-0.1274066257039678466222729579",
+      "exit_reason": "max_hold",
+      "duration_seconds": 61.103620529174805
+    }
+  ]
+}

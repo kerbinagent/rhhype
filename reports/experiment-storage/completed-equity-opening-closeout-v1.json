@@ -1,0 +1,81 @@
+{
+  "schema": "completed-equity-opening-closeout-v1",
+  "recorded_utc": "2026-10-01T13:42:11.339476+00:00",
+  "previous": "reports/experiment-storage/core-maker-lit-retry-v1.json",
+  "previous_sha256": "918c9cb5df16a07c331aaec16ae30f2707121218df46d135c5094bed27f08e0b",
+  "old_reserved_bytes": 1064960,
+  "artifact_bytes": 376939,
+  "retention_reserved_bytes": 409600,
+  "released_bytes": 655360,
+  "active_research_reserved_bytes": 14516224,
+  "active_research_headroom_bytes": 1212416,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Allraw,metadata,6losingtrades,independentaudits/source/readout retained. No deletion/recompression;16KiB closeoutslack.",
+  "files": [
+    {
+      "path": "reports/core-rh-equity-open/audit.json",
+      "bytes": 1566,
+      "sha256": "88a49ca39725f1853075003d1bb8252c12c23a24c7a4f984cf630cdc6a55723b"
+    },
+    {
+      "path": "reports/core-rh-equity-open/events.jsonl.gz",
+      "bytes": 317384,
+      "sha256": "d7277d2a91c442870f420c81eb4420e1960a393985c6776b5158d830fad3fbe8"
+    },
+    {
+      "path": "reports/core-rh-equity-open/lighter-metadata.json.gz",
+      "bytes": 23171,
+      "sha256": "1fac1c26e3363d56b1590d3391ba0f35ea6102a8d46fecdf373dd094a32d4329"
+    },
+    {
+      "path": "reports/core-rh-equity-open/metadata.json",
+      "bytes": 3078,
+      "sha256": "9c95e5f3617e93b552ca59a2e87566c1dc6c41c0e704d30e1ca544865a688420"
+    },
+    {
+      "path": "reports/core-rh-equity-open/readout.md",
+      "bytes": 2085,
+      "sha256": "09f3f49637657bce59affe875880a00d9e6259fc1b714f220342948efca27468"
+    },
+    {
+      "path": "reports/core-rh-equity-open/rh_lighter-metadata.json.gz",
+      "bytes": 7988,
+      "sha256": "2699be739db213ba6405286c458cd2809e5564bd1882a76ea23fae374a0b118d"
+    },
+    {
+      "path": "reports/core-rh-equity-open/status.json",
+      "bytes": 278,
+      "sha256": "76ee1a2e7c97852851eb9dbdd817fc8dc8b438d561fe41f7017f9dd210f63cbf"
+    },
+    {
+      "path": "reports/core-rh-equity-open/summary.json",
+      "bytes": 3444,
+      "sha256": "37c4a93c72fbcb2605893aff29dea8787fef23a897b48152e809754812591255"
+    },
+    {
+      "path": "reports/core-rh-equity-open/trade-audit-addendum.json",
+      "bytes": 2196,
+      "sha256": "a414f75b797149b2ff25543702e38a49038897736e431287b4ab8ff2c62787d1"
+    },
+    {
+      "path": "reports/core-rh-equity-open/unresolved.json.gz",
+      "bytes": 51,
+      "sha256": "6667baff8fd5d329ce237a91b83851d2cdefdd69833f96e816ea58dda0c87876"
+    },
+    {
+      "path": "reports/experiment-storage/core-rh-equity-open-allocation-v1.json",
+      "bytes": 3724,
+      "sha256": "6683378caccf26da257bd171217af8e08343229bbdfec974d06db1dcf11ad4b1"
+    },
+    {
+      "path": "scripts/audit_core_rh_equity_open.py",
+      "bytes": 10682,
+      "sha256": "9081bb2c921c3d8eac7e8bd15f5218d408f6d30adbd4c0bd62c6ce9a0976f51f"
+    },
+    {
+      "path": "scripts/core_rh_equity_open.py",
+      "bytes": 1292,
+      "sha256": "070397698b0d1e8d912a522c08f352257fc56d12407edeb2270d8d12e793ec59"
+    }
+  ]
+}
