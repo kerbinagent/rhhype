@@ -1,0 +1,66 @@
+{
+  "schema": "core-spot-perp-shortterm-v1",
+  "recorded_utc": "2026-10-01T12:03:36.275041+00:00",
+  "previous": "reports/experiment-storage/expanded-crypto-entry-drift-allocation-v1.json",
+  "previous_sha256": "b0c13e804d7e6328ea39ae8336d91174ef0574373b5fd7bbf9f5edfed711729a",
+  "new_maximum_bytes": 327680,
+  "categories_bytes": {
+    "source": 49152,
+    "metadata": 49152,
+    "raw": 163840,
+    "output": 49152,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 6258688,
+  "active_research_headroom_bytes": 32768,
+  "overall_reservation_bytes": 836777216,
+  "assets": [
+    "LIT",
+    "ETH"
+  ],
+  "budgets": [
+    100,
+    1000
+  ],
+  "horizons": [
+    60
+  ],
+  "primary": "100-60",
+  "duration_seconds": 600,
+  "entry_end_seconds": 480,
+  "raw_soft_cap": 100000,
+  "scope": "Prospective short-term same-venue Core spot/perp trial. Buy spot and short matching native perp only, no spot borrow. Verify asset IDs/quoteUSDC and unit multipliers. Separate100/1000 portfolios each6xbudget Corecash, max2pairs. Generic locked-cost-basis ledger explicitly reconciled to actual cash plus spot inventory. Endpoint cash verified from spot buys/sells and perp P&L. No trade beyond60s planned, not maturity/funding carry. Public-only noorders/auth.",
+  "strategy": "120s past median perp/spot basis with2s embargo and90valid1Hzsamples; favorable excursion>=5bp and forecast4walkpriceP&L lessfees/capital>1bp. One-bp ENTRY SLIPPAGE LIMIT on bothlegs, first400ms delayed eligible books.1bp pricetakeprofit or60s hold;30s paircooldown;30attemptsmax. Allfailed/partialhedges retained andrescued at delayed books; noassumingbothlegsfill. Sourceage2s/pairskew250ms;hourguard120s;5bp stressseparate.",
+  "storage": "Normalized1Hzreference, allpending-order bookcallbacks, allinvalidations/decisions/fills/closes. Rawsoftcap100000 endsadmissions;hard163840 or600s stop. Fullwirestreamnotretained. TwofreshpublicmetadataGETs boundedthroughEOF;oneCoreWS max3connections. No parameterchanges aftercapture.",
+  "source_pins": [
+    {
+      "path": "scripts/core_spot_perp_shortterm.py",
+      "sha256": "94e23b2ac3df2d2920a80946e83161c1ec43edb4fc944a8448583600569e3b97"
+    },
+    {
+      "path": "scripts/audit_core_spot_perp_shortterm.py",
+      "sha256": "eeb510be0f8a59da98f7b40b6c0ad236864fdf938bf2c2e7501d54fb518ac311"
+    },
+    {
+      "path": "tests/test_core_spot_perp_shortterm.py",
+      "sha256": "dd801f4aff7da9de64f72a368a34cc774f97bb309f3db09e1e6db2d1aeb265c4"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/paper_funding.py",
+      "sha256": "12d3355202cd1786cb260a4775791b0f7ac242b141010471738ec60fc0abd2b0"
+    }
+  ],
+  "tests": "Two complete synthetic lifecycle cases passed: cash-funded spot inventory and profitable paired close; perp rejection with retained losing spot rescue. Archived metadata fixture joins native LIT2049/120 and ETH2048/0 with assetIDs and USDC."
+}
