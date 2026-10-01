@@ -1,0 +1,17 @@
+{
+  "schema": "single-venue-broad-reference-preparation-v1",
+  "recorded_utc": "2026-10-01T22:46:42.026527+00:00",
+  "previous": "reports/experiment-storage/completed-executable-shock-unused-raw-reservation-v1.json",
+  "previous_sha256": "e94d2d15c88181b9dea9685d9eb0c9c9a518511946d2ee59d28d19cf81fb4e9d",
+  "reserved_bytes": 65536,
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 133185536,
+  "active_research_headroom_bytes": 20955136,
+  "overall_reservation_bytes": 836777216,
+  "categories_bytes": {
+    "source_tests": 16384,
+    "protocol": 16384,
+    "output": 32768
+  },
+  "scope": "Offline asset-separated midpoint reference accounting for all closed episodes from completed broad capture. No new capture, strategy change, or source mutation. Require every independent audit before economic reference readout. All existing allocations retained; no deletion or recompression."
+}
