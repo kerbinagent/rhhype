@@ -1,0 +1,12 @@
+{
+  "schema": "active-alt-confirmation-plan-text-erratum-v1",
+  "recorded_utc": "2026-10-01T15:00:04.434607+00:00",
+  "frozen_plan": "reports/experiment-storage/core-rh-active-alt-confirmation-allocation-v1.json",
+  "frozen_plan_sha256": "f82e9111b28505e4358d910e6cb267a76e38c970d50dcb9eb10d0c3c245036bc",
+  "last_health_elapsed_seconds": 30.98074131300382,
+  "before_earliest_reference_eligibility": true,
+  "primary": "100-60-0s-confirm",
+  "correction": "The inherited primary=100-60-2s-confirm text conflicts with the new primary_branch=100-60-0s-confirm. Immediate entry is the intended focal hypothesis of this cohort comparison; both independent arms will be reported in full. This clarification is before any entry can pass the90-observation/89-second warmup and uses no economic outcomes.",
+  "storage_text_correction": "Actual executed limits are categories_bytes.raw=262144 and raw_soft_cap=160000, plus900seconds/128MBingress. The inherited storage prose saying500kB/786432B is stale and does not drive execution. All callbacks and sample capture rules are unchanged.",
+  "mutation": "No source, frozen plan, process or economic rule changed. Original conflicting text retained for traceability. This small erratum is within existing32KiBcontrol reservation."
+}
