@@ -1,0 +1,59 @@
+{
+  "independent_capital_and_funding_hour_checks": "passed",
+  "trades": [
+    {
+      "branch": "100-60-1bp",
+      "id": "1790857966996045-1-standard",
+      "asset": "LIT",
+      "classification": "failed_hedge",
+      "cash_pnl": "0.0025249999999914507",
+      "independent_capital": "7.821996398354261796042617960E-8",
+      "exit_reason": "entry_failure"
+    },
+    {
+      "branch": "100-60-10bp",
+      "id": "1790857966996045-1-standard",
+      "asset": "LIT",
+      "classification": "paired",
+      "cash_pnl": "-0.04578100000000518",
+      "independent_capital": "0.00001916179364192846080669710807",
+      "exit_reason": "max_hold"
+    },
+    {
+      "branch": "100-60-1bp",
+      "id": "1790858070914972-2-standard",
+      "asset": "LIT",
+      "classification": "failed_hedge",
+      "cash_pnl": "0.0",
+      "independent_capital": "8.653885816121004566210045662E-8",
+      "exit_reason": "entry_failure"
+    },
+    {
+      "branch": "100-60-10bp",
+      "id": "1790858070914972-2-standard",
+      "asset": "LIT",
+      "classification": "paired",
+      "cash_pnl": "-0.08463300000001084",
+      "independent_capital": "0.00001922460893246995528919330289",
+      "exit_reason": "max_hold"
+    },
+    {
+      "branch": "100-60-1bp",
+      "id": "1790858490727937-3-standard",
+      "asset": "VVV",
+      "classification": "failed_hedge",
+      "cash_pnl": "-0.06713299999999833",
+      "independent_capital": "8.802183148029870624048706240E-8",
+      "exit_reason": "entry_failure"
+    },
+    {
+      "branch": "100-60-10bp",
+      "id": "1790858490727937-3-standard",
+      "asset": "VVV",
+      "classification": "failed_hedge",
+      "cash_pnl": "-0.06713299999999833",
+      "independent_capital": "8.802183148029870624048706240E-8",
+      "exit_reason": "entry_failure"
+    }
+  ]
+}

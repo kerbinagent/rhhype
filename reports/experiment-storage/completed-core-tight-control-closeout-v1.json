@@ -1,0 +1,86 @@
+{
+  "schema": "completed-core-tight-control-closeout-v1",
+  "recorded_utc": "2026-10-01T12:48:17.747674+00:00",
+  "previous": "reports/experiment-storage/paradex-core-arrival-allocation-v1.json",
+  "previous_sha256": "6287215d60b9201195110e57336a0baa8dd91cb1b5af399c69fec05a4d55a1ac",
+  "old_reserved_bytes": 1064960,
+  "artifact_bytes": 771094,
+  "retention_reserved_bytes": 819200,
+  "released_bytes": 245760,
+  "active_research_reserved_bytes": 8159232,
+  "active_research_headroom_bytes": 7569408,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Preserve all completeddata/source/audits/readout;16KiBcloseoutallowance. No previousresultsmodified.",
+  "files": [
+    {
+      "path": "reports/core-rh-tight-control/audit.json",
+      "bytes": 1618,
+      "sha256": "0042b09a41201b7ce174a932a4d4861bedc5d7cede07138a4cc562d5dd4bdb96"
+    },
+    {
+      "path": "reports/core-rh-tight-control/events.jsonl.gz",
+      "bytes": 686805,
+      "sha256": "4e74d70e81c5914018a8a4a4e93a5ad8e22d19ec80e1a2c5e583663349f0e7dc"
+    },
+    {
+      "path": "reports/core-rh-tight-control/lighter-metadata.json.gz",
+      "bytes": 23099,
+      "sha256": "79c91c56dad32598e84dda4dcb190c03b5529362b32dd77663ba15f7ed6b8e8f"
+    },
+    {
+      "path": "reports/core-rh-tight-control/metadata.json",
+      "bytes": 6962,
+      "sha256": "461e22a68acd132d9a6cfdfacbce02ec5d98fe0efb653c8eaa3d0319443d59b0"
+    },
+    {
+      "path": "reports/core-rh-tight-control/readout.md",
+      "bytes": 2318,
+      "sha256": "bd585eb53f6a9fb8a1140b85e9a6278d4db81be1784e250ce267415c5a5f3cb0"
+    },
+    {
+      "path": "reports/core-rh-tight-control/rh_lighter-metadata.json.gz",
+      "bytes": 8019,
+      "sha256": "f4d908f4ac7533ba364d0dd70d9a17eaf1840046db04456b40d3e95920e474b9"
+    },
+    {
+      "path": "reports/core-rh-tight-control/status.json",
+      "bytes": 266,
+      "sha256": "46ee25aa2fa0f327fc56067882a331c020bdedbd42dd9ab41b7cab6df1ca58cd"
+    },
+    {
+      "path": "reports/core-rh-tight-control/summary.json",
+      "bytes": 3678,
+      "sha256": "41884be14e79886058c2ca28d95a0cb1c718ffc1da396ca3566a131b3074b551"
+    },
+    {
+      "path": "reports/core-rh-tight-control/trade-audit-addendum.json",
+      "bytes": 1801,
+      "sha256": "ae94e100c179788526dc9a7a5ade3a7bbbaae779517a97c9206af14c766b339a"
+    },
+    {
+      "path": "reports/core-rh-tight-control/unresolved.json.gz",
+      "bytes": 43,
+      "sha256": "5db1bc1ef4048963019e2892b95ed4a15f159743a270562fe87b6a7bfc868b8c"
+    },
+    {
+      "path": "scripts/core_rh_tight_control.py",
+      "bytes": 21738,
+      "sha256": "5db0dd04b0a46b7a57de94fb2ea82f8c72b3f8b1eb58afb3477ade62b18e8508"
+    },
+    {
+      "path": "scripts/audit_core_rh_tight_control.py",
+      "bytes": 10127,
+      "sha256": "44e1b5eddfd9206183c492ff4a8868f30a5fc3c4acb9ef6e17e4b6d3d6a9e3d0"
+    },
+    {
+      "path": "tests/test_core_rh_tight_control.py",
+      "bytes": 2033,
+      "sha256": "ee92db37d1fff8f39de4e59adc40c86f3ca81dd57fc01ab34e57a7c10eac12e9"
+    },
+    {
+      "path": "reports/experiment-storage/core-rh-tight-control-allocation-v1.json",
+      "bytes": 2587,
+      "sha256": "fb2e3cfb877861044a9cbb19e678edb9561db70e0cfaea3d278d8c40b4d7b6e9"
+    }
+  ]
+}
