@@ -1705,3 +1705,16 @@ ok. Separate epoch snapshot retained. Archive 3,625,310 B; 165 future pairs
 project 4,506,740 B, margin 736,140 B under 5 MiB. Carry 17:25: 203 sampled,
 persistent invalid slot 71, 660 future/interrupted; no errors, retries or
 economic evaluation. Next review 17:46:33 UTC.
+
+
+### Review 149, 1 October 17:46 UTC
+
+Complete coverage: 32 exact closes, convergence nine/−$12.52435 and Premium
+23/−$38.09161. Two NEW PAIRED WINS (one each) immediately sent to parent
+for audit; 30 losses, one convergence abort, no estimates. Eight HL price
+limits and one Lighter notional cap. Four feeds/102 pairs remain running;
+performance busy, p95 lag 62.58 ms. Preserved 17:30/17:35 busy pulses and
+17:40 recovery in review journal; no daemon change or causal conclusion.
+Archive 3,630,449 B, 164 future pairs project 4,506,537 B, margin 736,343 B.
+Carry 17:45: 207 sampled, invalid slot 71, 656 future/interrupted; no errors,
+retries/economic evaluation. Next review 18:06:33 UTC.

@@ -4888,3 +4888,46 @@ Reviews 66–148: 2,273 completions, 2,244 exact losses, one estimated loss,
 two paired gains and 26 audited failed-hedge rescue gains. Manual archive
 3,625,310 / 5,242,880 B; 165 remaining scheduled pairs at 5,342 B project
 4,506,740 B, margin 736,140 B. Next review **17:46:33 UTC**.
+
+
+## Review 149 — 1 October 2026 17:46:33 UTC
+
+All eight strategy and aborted coverage fields complete. Exact report
+`review-20261001T174633Z.json.gz`: raw 20,720 B, SHA-256
+`1cb68d4ba0dbf8a2308b32e6b8bf8bcb7f241a4b603dec643b840c95b0c2a375`;
+gzip 3,369 B, SHA-256
+`f38f59cebfd9cace48de583c00f176b18eec5c2ce3b50ee5be82d016b3473a0f`.
+Independent `current-epoch-at-review149.json.gz`: read 17:47:09.340387 UTC,
+updated 17:47:07.747811 UTC; raw 9,311 B, SHA-256
+`852a69f34122f2b6fbebe156f2515025f727e2070f608ee6c18888ecbebc73cc`;
+gzip 1,770 B, SHA-256
+`c69a8bfc2524045b616afab475b1bb6aaa033df2a17ced0b55238c3baa79dad7`.
+Exact decompression and per-write cap/growth guards passed.
+
+Nine convergence exact closes/−$12.5243466146: five paired including one
+win, four failed-hedge losses. Premium 23 exact closes/−$38.0916080933:
+19 paired including one win, four failed-hedge losses. Both NEW PAIRED
+WINS immediately flagged to parent for audit. One convergence abort,
+no estimates. Eight HL price-limit rejections and one Lighter notional cap.
+Convergence fees $3.1236232365, other costs $4.4921497185, capital
+$0.0001996596; Premium fees $20.1862715801, other $11.4753035620,
+capital $0.0006839511.
+
+Separate epoch snapshot: convergence 596 / −$695.4985196816 and Premium
+1,147 / −$2,070.0277506991; count increases nine and 23 match report.
+Health running but busy, four feeds, 102 pairs, CPU 70.96%, p95 lag
+62.58 ms, RSS 273.85 MiB, 1,035.9 books/s, metadata age 1,888.3 s.
+Between reviews: 17:30:51 busy CPU 102.36%, p95 105.64 ms, snapshot age
+2.79 s; 17:35:40 busy CPU 73.96%, p95 56.93 ms, age 0.31 s; 17:40:04
+ok CPU 76.75%, p95 33.68 ms, age 2.66 s. Four feeds remained connected.
+Parent reported lowering only the separate offline replay priority to
+nice +10 after the 17:30 pulse; no daemon change or causal attribution.
+Carry 17:45 metadata: 207 sampled, persistent invalid slot 71, 656
+future/interrupted; running, no errors/retries/economic evaluation.
+No sample contents or root-owned active research outputs inspected.
+
+Reviews 66–149: 2,305 completions, 2,274 exact losses, one estimated loss,
+two previously audited paired gains, two new paired gains pending audit,
+26 audited failed-hedge rescue gains. Archive 3,630,449 / 5,242,880 B;
+164 future pairs at 5,342 B project 4,506,537 B, margin 736,343 B.
+Next review **18:06:33 UTC**.
