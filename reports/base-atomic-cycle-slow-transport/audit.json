@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "rows": 36,
+  "requests": 62,
+  "same_block_header_rechecks": 3,
+  "checks": "Independently decoded all 36 calldata sizes and fee paths and first return words; checked exact Decimal surplus identities, matching block tags, repeated block hashes, summary/source/plan hashes. No transaction or gas profit."
+}
