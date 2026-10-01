@@ -1,0 +1,23 @@
+{
+  "reviewed_at_utc": "2026-10-01T00:24:31.797064+00:00",
+  "tests": {
+    "command": ".venv/bin/python -m unittest tests.test_dated_carry_relaunch tests.test_dated_carry_collector tests.test_dated_carry_endpoint tests.test_dated_carry_analysis",
+    "passed": 44
+  },
+  "review": "Root code and accounting review; no independent-agent review claimed.",
+  "original_source_hashes_match": true,
+  "retired_usage_including_external_bytes": 464077,
+  "retired_reservation_bytes": 1048576,
+  "fresh_category_total_bytes": 15728640,
+  "combined_reservation_bytes": 16777216,
+  "checks": [
+    "Retired last index and freeze identity checks before writes",
+    "Retired external dependencies verified and physically accounted",
+    "Fresh study path enforced",
+    "7 MiB sample category and atomic replacement peak enforced",
+    "Original entrypoint rejects the distinct fresh-run freeze constants",
+    "Economic evaluator, fixed 72-hour gate, boot identity, slot denominator and no-retry rules unchanged"
+  ],
+  "network_performed": false,
+  "economic_evaluation_performed": false
+}

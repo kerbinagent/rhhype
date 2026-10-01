@@ -1,0 +1,17 @@
+{
+  "launched_at_utc": "2026-10-01T00:13:47.271771+00:00",
+  "pid": 17101,
+  "command": [
+    "/home/harry/projects/research/rhhype/.venv/bin/python",
+    "scripts/monitor.py",
+    "--no-tui",
+    "--holding-seconds",
+    "10",
+    "--take-profit-usd",
+    "0.10",
+    "--shadow-strategies"
+  ],
+  "reason": "User requested continuation after host restart",
+  "preserve_existing_database": true,
+  "paper_only": true
+}

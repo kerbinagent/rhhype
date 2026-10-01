@@ -3245,3 +3245,52 @@ No policy, size or capital change. Next checkpoint **1 October 00:06:33 UTC**.
 
 Carry has all 133 due arrivals through 23:45, 163,448 sample bytes, zero overdue
 missing files, no terminal error and no interim economic evaluation.
+
+
+## Review 96 — 1 October 2026 00:14:35 UTC, reboot catch-up
+
+The host reboot stopped production, reviewer and carry processes. Last durable
+paper checkpoint was 00:02:25 UTC; its three retained positions were all flat
+legacy funding obligations. A guarded archive preserves the pre-restart snapshot,
+selected durable state, payload hash and last carry index. Paper monitor PID
+17101 restarted at 00:13:47 with the same settings and database. All eight
+saved ledgers matched every saved field before reviewer restart, epoch
+`b8204da0453a4e8a940d3d1b3c33714e` remained unchanged, and all four feeds
+reconnected. Reviewer PID 19334 restarted at 00:14:34 from its existing baseline.
+No wallet was replenished and cooldown remains capital constrained.
+
+Review96 covers the extended checkpoint interval 23:46:31–00:14:34; the
+00:06 scheduled capture was unavailable during downtime. Its one exact
+convergence paired SAMSUNGUSD close/−$2.07057 reconciles the extra close already
+visible in review95's later epoch snapshot. Zero aborts or entry rejections,
+complete retained coverage, no new wins. This is not a fresh uninterrupted
+20-minute validation window. Fees $0.0897115, stress $0.4993282, capital
+$0.00003549; without stress −$1.57124. Entry price deteriorated $0.434902;
+exit improved $0.00908 against the request price and took 1.3319 s to flatten.
+Report SHA-256
+`f56a97207f1174b5f6f3bb958fef621411c2443590d7e21754801a469bec0335`.
+Manual archive including recovery evidence: 2,481,376/16,777,216 bytes.
+
+Restart health: 107 pairs, CPU 31.06%, p95 lag 6.09 ms, RSS 102.30 MiB,
+604.2 books/s, metadata age 44.6 s, normal performance. Snapshot flat.
+Epoch counts and P&L match review95's separate later snapshot. Twenty-two
+previous win records and three legacy funding obligations remain. Reviews
+66–96 total 1,573 closes: 1,563 losses, two paired gains and eight rescue gains.
+Next review remains **00:26:33 UTC** on the original schedule.
+
+### Carry interruption and explicit fresh-run authorization
+
+Before reboot, 23:50 and 23:55 slots were `callback_late`; 00:00 arrived sampled.
+Health evidence at 00:01 records elevated host load and paper loop lag while all
+three processes were alive. The last preserved index has 136 recorded slots:
+134 sampled, two callback-late, and 728 uncollected fixed identities. Its SHA-256
+is `4b15af4f7c06ad9745b69da8a8f291efa4a385fe2239ec3d16b41a76d4599cb1`.
+Boot identity changed, so the original no-resume and same-boot rules prohibit
+continuing sampling or publishing economic analysis. All original evidence
+and frozen sources are retained, with a separate recovery observation.
+
+The user explicitly authorized a separate fresh 72-hour run within the existing
+storage budget. The prospective [v2 addendum](dated-carry-relaunch-v2.md)
+subdivides the existing 16 MiB into 1 MiB for retired v1 and 15 MiB for fresh v2;
+all other reservations remain unchanged. No original quote economics have been
+inspected. Fresh metadata, source freeze and launch follow validation.

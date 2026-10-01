@@ -1,0 +1,62 @@
+{
+  "read_at_utc": "2026-10-01T00:01:32.857526+00:00",
+  "carry_health_only": {
+    "arrivals": 136,
+    "non_sampled_arrivals": [
+      {
+        "slot": 133,
+        "status": "callback_late",
+        "planned_utc_ns": 1790812200000000000,
+        "file": "samples/slot-133.json.gz",
+        "bytes": 387
+      },
+      {
+        "slot": 134,
+        "status": "callback_late",
+        "planned_utc_ns": 1790812500000000000,
+        "file": "samples/slot-134.json.gz",
+        "bytes": 385
+      }
+    ],
+    "status": {
+      "economics_evaluated": false,
+      "error": null,
+      "schema": "dated-carry-collector-status-v1",
+      "slots": 864,
+      "status": "running"
+    }
+  },
+  "snapshot_health": {
+    "updated_at": 1790812890.8615859,
+    "cpu_percent_one_core": 66.32393979031608,
+    "loop_lag_p95_ms": 584.6900378819555,
+    "resident_memory_mb": 299.234375,
+    "performance_status": "busy",
+    "book_events_per_second": 913.5879882041771,
+    "storage": {
+      "evidence_seen": 3949830,
+      "signals_seen": 4383847,
+      "trades_seen": 23573,
+      "db_bytes": 61865984,
+      "wal_bytes": 0,
+      "max_db_bytes": 134217728,
+      "main_db_limit_bytes": 100663296,
+      "wal_budget_bytes": 33554432,
+      "retained": {
+        "events": 20000,
+        "trades": 4566,
+        "evidence": 2000
+      },
+      "evidence_bytes": 948952,
+      "book_ring_bytes": 16747968,
+      "book_ring_max_bytes": 16777216
+    }
+  },
+  "loadavg": [
+    32.021484375,
+    51.22265625,
+    38.453125
+  ],
+  "logical_cpus": 64,
+  "interpretation": "Two late callbacks remain fixed missing observations under the frozen protocol; no retry, restart, repair or economic inspection. All three task processes alive at host PID check."
+}

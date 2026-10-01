@@ -1,0 +1,1130 @@
+{
+  "read_at_utc": "2026-10-01T00:13:28.650541+00:00",
+  "boot_id": "23c8d3f4-7c72-4efd-8851-9004ec92e0f6",
+  "durable_checkpoint_at": 1790812945.2269053,
+  "durable_payload_sha256": "6c81de6eac98baeb09fd4ce7dd01b2bfb0d1753572d5078667a80cf487656955",
+  "durable_payload_bytes": 1365366,
+  "engine": {
+    "ledgers": {
+      "confirmed": {
+        "aborted_trades": 0,
+        "capital_costs_usd": 7.095231524834476e-05,
+        "closed_loss_sum_estimated": 0.0,
+        "closed_loss_sum_exact": -4.015014851904811,
+        "closed_losses_estimated": 0,
+        "closed_losses_exact": 2,
+        "closed_pnl_estimated": 0.0,
+        "closed_pnl_exact": -4.015014851904811,
+        "closed_profit_sum_estimated": 0.0,
+        "closed_profit_sum_exact": 0.0,
+        "closed_trades": 2,
+        "closed_wins_estimated": 0,
+        "closed_wins_exact": 0,
+        "entry_attempts": 2,
+        "estimated_trades": 0,
+        "fees_usd": 1.0783346625899999,
+        "funding_usd": 0.0,
+        "initial_capital": 20000,
+        "other_costs_usd": 0.9988462370000001,
+        "started_at": 1790698122.4645865,
+        "wallets": {
+          "aster": 5000.0,
+          "hyperliquid": 4996.475956855709,
+          "lighter": 4999.509028292387,
+          "rh_lighter": 5000.0
+        }
+      },
+      "conservative": {
+        "aborted_trades": 0,
+        "capital_costs_usd": 0.00014900180725047036,
+        "closed_loss_sum_estimated": 0.0,
+        "closed_loss_sum_exact": -13.132673306802623,
+        "closed_losses_estimated": 0,
+        "closed_losses_exact": 7,
+        "closed_pnl_estimated": 0.0,
+        "closed_pnl_exact": -10.812902384307726,
+        "closed_profit_sum_estimated": 0.0,
+        "closed_profit_sum_exact": 2.3197709224948984,
+        "closed_trades": 8,
+        "closed_wins_estimated": 0,
+        "closed_wins_exact": 1,
+        "entry_attempts": 8,
+        "estimated_trades": 0,
+        "fees_usd": 2.1540877245,
+        "funding_usd": 0.0,
+        "initial_capital": 20000,
+        "other_costs_usd": 3.9841866579999996,
+        "wallets": {
+          "aster": 5000.0,
+          "hyperliquid": 4993.850558923844,
+          "lighter": 4997.086397227185,
+          "rh_lighter": 4998.25014146466
+        }
+      },
+      "convergence": {
+        "aborted_trades": 60,
+        "capital_costs_usd": 0.0028799937524544702,
+        "closed_loss_sum_estimated": 0.0,
+        "closed_loss_sum_exact": -908.2613667099606,
+        "closed_losses_estimated": 0,
+        "closed_losses_exact": 595,
+        "closed_pnl_estimated": 0.0,
+        "closed_pnl_exact": -863.2966612933154,
+        "closed_profit_sum_estimated": 0.0,
+        "closed_profit_sum_exact": 44.964705416645415,
+        "closed_trades": 641,
+        "closed_wins_estimated": 0,
+        "closed_wins_exact": 46,
+        "entry_attempts": 702,
+        "estimated_trades": 0,
+        "fees_usd": 60.086381042289986,
+        "funding_usd": 0.0,
+        "initial_capital": 20000,
+        "other_costs_usd": 314.8788192770002,
+        "wallets": {
+          "aster": 4909.760860767345,
+          "hyperliquid": 4759.419848257101,
+          "lighter": 4630.8964977954465,
+          "rh_lighter": 4832.101732867062
+        }
+      },
+      "cooldown": {
+        "aborted_trades": 0,
+        "capital_costs_usd": 0.1481041602239847,
+        "closed_loss_sum_estimated": -17.132301388068946,
+        "closed_loss_sum_exact": -6038.730475532101,
+        "closed_losses_estimated": 12,
+        "closed_losses_exact": 4229,
+        "closed_pnl_estimated": -17.132301388068946,
+        "closed_pnl_exact": -6030.553326417661,
+        "closed_profit_sum_estimated": 0.0,
+        "closed_profit_sum_exact": 8.177149114438018,
+        "closed_trades": 4232,
+        "closed_wins_estimated": 0,
+        "closed_wins_exact": 3,
+        "entry_attempts": 4244,
+        "estimated_trades": 12,
+        "fees_usd": 1406.66377590834,
+        "funding_usd": 0.6971022903297198,
+        "initial_capital": 20000,
+        "other_costs_usd": 2119.147301027501,
+        "wallets": {
+          "aster": 4847.731351017659,
+          "hyperliquid": 1000.3561108021636,
+          "lighter": 3759.054675033979,
+          "rh_lighter": 4345.172235340489
+        }
+      },
+      "plus": {
+        "aborted_trades": 17,
+        "capital_costs_usd": 0.17199478573804494,
+        "closed_loss_sum_estimated": -18.748661952531652,
+        "closed_loss_sum_exact": -6541.236639720556,
+        "closed_losses_estimated": 16,
+        "closed_losses_exact": 4910,
+        "closed_pnl_estimated": -18.748661952531652,
+        "closed_pnl_exact": -6514.03141347392,
+        "closed_profit_sum_estimated": 0.0,
+        "closed_profit_sum_exact": 27.20522624663482,
+        "closed_trades": 4925,
+        "closed_wins_estimated": 0,
+        "closed_wins_exact": 15,
+        "entry_attempts": 4958,
+        "estimated_trades": 16,
+        "fees_usd": 1832.7884677626332,
+        "funding_usd": -0.0047776070507420075,
+        "initial_capital": 20000,
+        "other_costs_usd": 2465.1454222709904,
+        "wallets": {
+          "aster": 4653.176577770099,
+          "hyperliquid": 1000.195403166524,
+          "lighter": 3963.1500158480044,
+          "rh_lighter": 3850.697927788964
+        }
+      },
+      "premium": {
+        "aborted_trades": 67,
+        "capital_costs_usd": 0.08466482490905697,
+        "closed_loss_sum_estimated": -20.299278722386763,
+        "closed_loss_sum_exact": -9546.658548542417,
+        "closed_losses_estimated": 8,
+        "closed_losses_exact": 3727,
+        "closed_pnl_estimated": -20.299278722386763,
+        "closed_pnl_exact": -9454.710999701105,
+        "closed_profit_sum_estimated": 0.0,
+        "closed_profit_sum_exact": 91.94754884131758,
+        "closed_trades": 3795,
+        "closed_wins_estimated": 0,
+        "closed_wins_exact": 68,
+        "entry_attempts": 3871,
+        "estimated_trades": 8,
+        "fees_usd": 3302.6570868740055,
+        "funding_usd": 0.38483215250013747,
+        "initial_capital": 20000,
+        "other_costs_usd": 1890.8043362164942,
+        "wallets": {
+          "aster": 4733.756448001572,
+          "hyperliquid": 1503.8831095138485,
+          "lighter": 1000.0788993080857,
+          "rh_lighter": 3286.0745704135597
+        }
+      },
+      "shadow_baseline": {
+        "aborted_trades": 18,
+        "capital_costs_usd": 0.17073108040340862,
+        "closed_loss_sum_estimated": -15.574051382972488,
+        "closed_loss_sum_exact": -5942.824905352783,
+        "closed_losses_estimated": 13,
+        "closed_losses_exact": 4890,
+        "closed_pnl_estimated": -15.574051382972488,
+        "closed_pnl_exact": -5915.607973813168,
+        "closed_profit_sum_estimated": 0.0,
+        "closed_profit_sum_exact": 27.216931539615516,
+        "closed_trades": 4903,
+        "closed_wins_estimated": 0,
+        "closed_wins_exact": 13,
+        "entry_attempts": 4934,
+        "estimated_trades": 13,
+        "fees_usd": 1301.0180310754522,
+        "funding_usd": 0.093224436719255,
+        "initial_capital": 20000,
+        "other_costs_usd": 2453.262469476997,
+        "wallets": {
+          "aster": 4692.7085447140025,
+          "hyperliquid": 1000.3344950295663,
+          "lighter": 4232.8314370601865,
+          "rh_lighter": 4142.9434980001
+        }
+      },
+      "standard": {
+        "aborted_trades": 14,
+        "capital_costs_usd": 0.16800192313277573,
+        "closed_loss_sum_estimated": -22.245261070094195,
+        "closed_loss_sum_exact": -5874.546522779238,
+        "closed_losses_estimated": 18,
+        "closed_losses_exact": 4805,
+        "closed_pnl_estimated": -22.245261070094195,
+        "closed_pnl_exact": -5845.4888094197795,
+        "closed_profit_sum_estimated": 0.0,
+        "closed_profit_sum_exact": 29.057713359458997,
+        "closed_trades": 4821,
+        "closed_wins_estimated": 0,
+        "closed_wins_exact": 16,
+        "entry_attempts": 4854,
+        "estimated_trades": 18,
+        "fees_usd": 1250.9455095090989,
+        "funding_usd": 0.1638204609290175,
+        "initial_capital": 20000,
+        "other_costs_usd": 2415.6888834659926,
+        "wallets": {
+          "aster": 4918.241516140147,
+          "hyperliquid": 1000.061420803494,
+          "lighter": 4138.942616135218,
+          "rh_lighter": 4073.977528483877
+        }
+      }
+    },
+    "positions": {
+      "1790697580055382-4707-premium": {
+        "asset": "XAG",
+        "capital_costs_usd": 3.722593026245415e-05,
+        "closed_at": 1790697593.4370165,
+        "created_at": 1790697580.0553825,
+        "exit_due": 1790697591.3103137,
+        "exit_reason": "max_hold",
+        "exit_requested_at": 1790697591.3995254,
+        "exit_trigger_pnl_usd": null,
+        "fees_usd": 0.42942711349999996,
+        "funding": {
+          "cashflow_usd": null,
+          "complete": false,
+          "estimated": false,
+          "events": [],
+          "missing": [
+            {
+              "market": "XAGUSDT",
+              "reason": "settlement_sequence_uncertain_15s",
+              "time": 1790697600,
+              "venue": "aster"
+            }
+          ],
+          "venue_results": {
+            "aster": {
+              "cashflow_usd": null,
+              "complete": false,
+              "covered_until": null,
+              "estimated": false,
+              "events": [],
+              "missing": [
+                {
+                  "market": "XAGUSDT",
+                  "reason": "settlement_sequence_uncertain_15s",
+                  "time": 1790697600,
+                  "venue": "aster"
+                }
+              ]
+            },
+            "hyperliquid": {
+              "cashflow_usd": 0,
+              "complete": true,
+              "covered_until": 1790697593.4370165,
+              "estimated": false,
+              "events": [],
+              "missing": []
+            }
+          }
+        },
+        "id": "1790697580055382-4707-premium",
+        "legs": [
+          {
+            "entry_fee": 0.08979245999999999,
+            "entry_fee_bps": 0.9,
+            "entry_result": "filled",
+            "entry_time": 1790697581.3103137,
+            "entry_value": 997.694,
+            "entry_vwap": 60.835,
+            "exit_fee": 0.08984215349999998,
+            "exit_fills": [
+              {
+                "fee": 0.08984215349999998,
+                "fee_bps": 0.9,
+                "quantity": 16.4,
+                "timestamp": 1790697593.4370165,
+                "value": 998.2461499999998
+              }
+            ],
+            "exit_time": 1790697593.4370165,
+            "exit_value": 998.2461499999998,
+            "fee_bps": 0.9,
+            "fees_usd": 0.17963461349999998,
+            "intent": null,
+            "key": "hyperliquid:xyz:SILVER",
+            "market": "xyz:SILVER",
+            "min_notional": 10.0,
+            "min_qty": 0.0,
+            "price_pnl": 0.5521499999998696,
+            "quantity": 16.4,
+            "remaining": 0,
+            "side": "long",
+            "step": "0.01",
+            "venue": "hyperliquid"
+          },
+          {
+            "entry_fee": 0.12484499999999998,
+            "entry_fee_bps": 1.25,
+            "entry_result": "filled",
+            "entry_time": 1790697580.2778163,
+            "entry_value": 998.7599999999999,
+            "entry_vwap": 60.9,
+            "exit_fee": 0.12494749999999999,
+            "exit_fills": [
+              {
+                "fee": 0.12494749999999999,
+                "fee_bps": 1.25,
+                "quantity": 16.4,
+                "timestamp": 1790697591.6723456,
+                "value": 999.5799999999999
+              }
+            ],
+            "exit_time": 1790697591.6723456,
+            "exit_value": 999.5799999999999,
+            "fee_bps": 1.25,
+            "fees_usd": 0.24979249999999997,
+            "intent": null,
+            "key": "aster:XAGUSDT",
+            "market": "XAGUSDT",
+            "min_notional": 5.0,
+            "min_qty": 0.001,
+            "price_pnl": -0.82000000000005,
+            "quantity": 16.4,
+            "remaining": 0,
+            "side": "short",
+            "step": "0.001",
+            "venue": "aster"
+          }
+        ],
+        "opened_at": 1790697581.3103137,
+        "other_costs_usd": 0.49937999999999994,
+        "pair_id": "XAG|hyperliquid:xyz:SILVER|aster:XAGUSDT",
+        "paper_epoch_id": "legacy",
+        "paper_strategy_version": "legacy/unversioned",
+        "price_net_before_funding": -1.1966943394304428,
+        "price_pnl": -0.26785000000018044,
+        "reserved": {
+          "aster": 1000.75,
+          "hyperliquid": 1000.68
+        },
+        "signal": {
+          "asset": "XAG",
+          "buy": "hyperliquid:xyz:SILVER",
+          "buy_fee_bps": 0.9,
+          "buy_value": 997.6611999999999,
+          "lifetime_is_sampled": true,
+          "net_edge_bps": 1.7051813877246211,
+          "net_edge_usd": 0.17011933094950107,
+          "notional": 1000,
+          "opening_edge_usd": 0.884165491999983,
+          "pair_id": "XAG|hyperliquid:xyz:SILVER|aster:XAGUSDT",
+          "quantity": 16.4,
+          "route": "XAG|hyperliquid:xyz:SILVER|aster:XAGUSDT",
+          "sell": "aster:XAGUSDT",
+          "sell_fee_bps": 1.25,
+          "sell_value": 998.7599999999999,
+          "skew_ms": 98.54507446289062,
+          "source_skew_ms": 264.9998664855957,
+          "strategy": "premium",
+          "timestamp": 1790697580.0553825
+        },
+        "status": "AWAITING_FUNDING",
+        "strategy": "premium"
+      },
+      "1790697591500585-4714-standard": {
+        "asset": "XAG",
+        "capital_costs_usd": 3.755220970790437e-05,
+        "closed_at": 1790697605.2216382,
+        "created_at": 1790697591.500585,
+        "exit_due": 1790697603.4370165,
+        "exit_reason": "max_hold",
+        "exit_requested_at": 1790697603.461714,
+        "exit_trigger_pnl_usd": null,
+        "fees_usd": 0.42931709520000005,
+        "funding": {
+          "cashflow_usd": null,
+          "complete": false,
+          "estimated": false,
+          "events": [],
+          "missing": [
+            {
+              "market": "xyz:SILVER",
+              "reason": "settlement_reference_missing",
+              "time": 1790697600,
+              "venue": "hyperliquid"
+            },
+            {
+              "market": "XAGUSDT",
+              "reason": "settlement_sequence_uncertain_15s",
+              "time": 1790697600,
+              "venue": "aster"
+            },
+            {
+              "market": "XAGUSDT",
+              "reason": "settlement_reference_missing",
+              "time": 1790697600,
+              "venue": "aster"
+            }
+          ],
+          "venue_results": {
+            "aster": {
+              "cashflow_usd": null,
+              "complete": false,
+              "covered_until": null,
+              "estimated": false,
+              "events": [],
+              "missing": [
+                {
+                  "market": "XAGUSDT",
+                  "reason": "settlement_sequence_uncertain_15s",
+                  "time": 1790697600,
+                  "venue": "aster"
+                },
+                {
+                  "market": "XAGUSDT",
+                  "reason": "settlement_reference_missing",
+                  "time": 1790697600,
+                  "venue": "aster"
+                }
+              ]
+            },
+            "hyperliquid": {
+              "cashflow_usd": null,
+              "complete": false,
+              "covered_until": null,
+              "estimated": false,
+              "events": [],
+              "missing": [
+                {
+                  "market": "xyz:SILVER",
+                  "reason": "settlement_reference_missing",
+                  "time": 1790697600,
+                  "venue": "hyperliquid"
+                }
+              ]
+            }
+          }
+        },
+        "id": "1790697591500585-4714-standard",
+        "legs": [
+          {
+            "entry_fee": 0.0897952374,
+            "entry_fee_bps": 0.9,
+            "entry_result": "filled",
+            "entry_time": 1790697593.4370165,
+            "entry_value": 997.72486,
+            "entry_vwap": 60.874,
+            "exit_fee": 0.0897997203,
+            "exit_fills": [
+              {
+                "fee": 0.0897997203,
+                "fee_bps": 0.9,
+                "quantity": 16.39,
+                "timestamp": 1790697605.2216382,
+                "value": 997.77467
+              }
+            ],
+            "exit_time": 1790697605.2216382,
+            "exit_value": 997.77467,
+            "fee_bps": 0.9,
+            "fees_usd": 0.1795949577,
+            "intent": null,
+            "key": "hyperliquid:xyz:SILVER",
+            "market": "xyz:SILVER",
+            "min_notional": 10.0,
+            "min_qty": 0.0,
+            "price_pnl": 0.04980999999997948,
+            "quantity": 16.39,
+            "remaining": 0,
+            "side": "long",
+            "step": "0.01",
+            "venue": "hyperliquid"
+          },
+          {
+            "entry_fee": 0.12485082500000001,
+            "entry_fee_bps": 1.25,
+            "entry_result": "filled",
+            "entry_time": 1790697591.829231,
+            "entry_value": 998.8066,
+            "entry_vwap": 60.94,
+            "exit_fee": 0.12487131250000003,
+            "exit_fills": [
+              {
+                "fee": 0.12487131250000003,
+                "fee_bps": 1.25,
+                "quantity": 16.39,
+                "timestamp": 1790697603.7706015,
+                "value": 998.9705000000001
+              }
+            ],
+            "exit_time": 1790697603.7706015,
+            "exit_value": 998.9705000000001,
+            "fee_bps": 1.25,
+            "fees_usd": 0.24972213750000005,
+            "intent": null,
+            "key": "aster:XAGUSDT",
+            "market": "XAGUSDT",
+            "min_notional": 5.0,
+            "min_qty": 0.001,
+            "price_pnl": -0.16390000000012606,
+            "quantity": 16.39,
+            "remaining": 0,
+            "side": "short",
+            "step": "0.001",
+            "venue": "aster"
+          }
+        ],
+        "open_funding": {
+          "cashflow_usd": null,
+          "complete": false,
+          "covered_until": 1790697604.3864865,
+          "estimated": true,
+          "events": [
+            {
+              "cashflow_usd": -0.006235575500000001,
+              "market": "xyz:SILVER",
+              "quality": "estimated",
+              "quantity": 16.39,
+              "rate_fraction": 6.25e-06,
+              "reference_price": 60.872,
+              "reference_skew_seconds": 0.30341410636901855,
+              "reference_time": 1790697599.696586,
+              "side": "long",
+              "source": "sampled_oracle_price",
+              "time": 1790697600,
+              "venue": "hyperliquid"
+            },
+            {
+              "cashflow_usd": 0.029095672232000002,
+              "market": "XAGUSDT",
+              "quality": "estimated",
+              "quantity": 16.39,
+              "rate_fraction": 2.914e-05,
+              "reference_price": 60.92,
+              "reference_skew_seconds": 0.0,
+              "reference_time": 1790697600.0,
+              "side": "short",
+              "source": "sampled_mark_price",
+              "time": 1790697600,
+              "venue": "aster"
+            }
+          ],
+          "missing": [
+            {
+              "market": "XAGUSDT",
+              "reason": "settlement_sequence_uncertain_15s",
+              "time": 1790697600,
+              "venue": "aster"
+            }
+          ]
+        },
+        "opened_at": 1790697593.4370165,
+        "other_costs_usd": 0.4994033,
+        "pair_id": "XAG|hyperliquid:xyz:SILVER|aster:XAGUSDT",
+        "paper_epoch_id": "legacy",
+        "paper_strategy_version": "legacy/unversioned",
+        "price_net_before_funding": -1.0428479474098546,
+        "price_pnl": -0.11409000000014657,
+        "reserved": {
+          "aster": 1000.75,
+          "hyperliquid": 1000.68
+        },
+        "signal": {
+          "asset": "XAG",
+          "buy": "hyperliquid:xyz:SILVER",
+          "buy_fee_bps": 0.9,
+          "buy_value": 997.74125,
+          "lifetime_is_sampled": true,
+          "net_edge_bps": 1.369292589050139,
+          "net_edge_usd": 0.1366199699414622,
+          "notional": 1000,
+          "opening_edge_usd": 0.8507024624999667,
+          "pair_id": "XAG|hyperliquid:xyz:SILVER|aster:XAGUSDT",
+          "quantity": 16.39,
+          "route": "XAG|hyperliquid:xyz:SILVER|aster:XAGUSDT",
+          "sell": "aster:XAGUSDT",
+          "sell_fee_bps": 1.25,
+          "sell_value": 998.8066,
+          "skew_ms": 118.25990676879883,
+          "source_skew_ms": 549.9999523162842,
+          "strategy": "standard",
+          "timestamp": 1790697591.500585
+        },
+        "status": "AWAITING_FUNDING",
+        "strategy": "standard"
+      },
+      "1790737213289030-19989-convergence": {
+        "asset": "GRASS",
+        "capital_costs_usd": 1.5797267921185021e-06,
+        "closed_at": 1790737214.5895567,
+        "created_at": 1790737213.2890306,
+        "exit_reason": "entry_failure",
+        "exit_request_observation": {
+          "capture_type": "entry_failure_first_intent",
+          "captured_at": 1790737214.3644147,
+          "closing_price_status": "entry_failure_unpaired",
+          "exit_reason": "entry_failure",
+          "legs": [
+            {
+              "book_engine_time": 1790737214.184,
+              "book_generation": "46e0c5ba9d5948caa6fec30086dcdf4e:aster:0:1",
+              "book_received_at": 1790737214.3093853,
+              "book_source": null,
+              "book_valid": true,
+              "clock_valid": true,
+              "exit_fee_bps": 4.0,
+              "exit_side": "sell",
+              "exit_walk_value_usd": 991.2983999999999,
+              "key": "aster:GRASSUSDT",
+              "receipt_age_seconds": 0.05502939224243164,
+              "remaining_quantity": 1352.0,
+              "side": "long",
+              "source_age_seconds": 0.18041467666625977,
+              "walk_status": "valid"
+            },
+            {
+              "book_engine_time": 1790737213.828,
+              "book_generation": "46e0c5ba9d5948caa6fec30086dcdf4e:hyperliquid:0:1",
+              "book_received_at": 1790737214.3644147,
+              "book_source": "targeted_rest",
+              "book_valid": true,
+              "clock_valid": true,
+              "exit_fee_bps": 4.5,
+              "exit_side": "buy",
+              "exit_walk_value_usd": null,
+              "key": "hyperliquid:GRASS",
+              "receipt_age_seconds": 0.0,
+              "remaining_quantity": 0.0,
+              "side": "short",
+              "source_age_seconds": 0.536414623260498,
+              "walk_status": "no_remaining"
+            }
+          ],
+          "mark_status": "entry_failure_unpaired",
+          "net_liquidation_pnl_usd": null,
+          "receipt_pair_skew_valid": true,
+          "received_skew_seconds": 0.05502939224243164,
+          "requested_at": 1790737214.3644147,
+          "requested_closing_liability_usd": null,
+          "version": 1
+        },
+        "fees_usd": 0.79433184,
+        "funding": {
+          "cashflow_usd": null,
+          "complete": false,
+          "estimated": false,
+          "events": [],
+          "missing": [
+            {
+              "market": "GRASSUSDT",
+              "reason": "aster_empty_hour_schedule_unverified",
+              "time": 1790737200,
+              "venue": "aster"
+            }
+          ],
+          "venue_results": {
+            "aster": {
+              "cashflow_usd": null,
+              "complete": false,
+              "covered_until": null,
+              "estimated": false,
+              "events": [],
+              "missing": [
+                {
+                  "market": "GRASSUSDT",
+                  "reason": "aster_empty_hour_schedule_unverified",
+                  "time": 1790737200,
+                  "venue": "aster"
+                }
+              ]
+            }
+          }
+        },
+        "id": "1790737213289030-19989-convergence",
+        "legs": [
+          {
+            "entry_fee": 0.39781248,
+            "entry_fee_bps": 4.0,
+            "entry_observation": {
+              "attempted_quantity": 1352.0,
+              "attempted_value": 994.5312,
+              "book_engine_time": 1790737213.533,
+              "book_received_at": 1790737213.5877125,
+              "book_source": null,
+              "eligible_quantity": 14915.7,
+              "observed_at": 1790737213.5877125,
+              "price_limit": 0.7363356,
+              "receipt_age_seconds": 0.0,
+              "side_quantity": 102298.8,
+              "signal_to_receipt_seconds": 0.29868197441101074,
+              "source_age_seconds": 0.054712533950805664
+            },
+            "entry_result": "filled",
+            "entry_time": 1790737213.5877125,
+            "entry_value": 994.5312,
+            "entry_vwap": 0.7356,
+            "exit_fee": 0.39651936,
+            "exit_fills": [
+              {
+                "fee": 0.39651936,
+                "fee_bps": 4.0,
+                "quantity": 1352.0,
+                "timestamp": 1790737214.5895567,
+                "value": 991.2984
+              }
+            ],
+            "exit_time": 1790737214.5895567,
+            "exit_value": 991.2984,
+            "fee_bps": 4.0,
+            "fees_usd": 0.79433184,
+            "intent": null,
+            "key": "aster:GRASSUSDT",
+            "market": "GRASSUSDT",
+            "min_notional": 5.0,
+            "min_qty": 0.1,
+            "price_pnl": -3.2327999999999975,
+            "quantity": 1352.0,
+            "remaining": 0.0,
+            "side": "long",
+            "step": "0.1",
+            "venue": "aster"
+          },
+          {
+            "entry_fee": 0.0,
+            "entry_observation": {
+              "attempted_quantity": 0.0,
+              "attempted_value": 0.0,
+              "book_engine_time": 1790737213.828,
+              "book_received_at": 1790737214.3644147,
+              "book_source": "targeted_rest",
+              "eligible_quantity": 0.0,
+              "observed_at": 1790737214.3644147,
+              "price_limit": 0.7379085931442307,
+              "receipt_age_seconds": 0.0,
+              "side_quantity": 6535.5,
+              "signal_to_receipt_seconds": 1.0753841400146484,
+              "source_age_seconds": 0.536414623260498
+            },
+            "entry_rejection_reason": "price_limit",
+            "entry_result": "rejected",
+            "entry_time": null,
+            "entry_value": 0.0,
+            "entry_vwap": 0.0,
+            "exit_fee": 0.0,
+            "exit_fills": [],
+            "exit_time": null,
+            "exit_value": 0.0,
+            "fee_bps": 4.5,
+            "fees_usd": 0.0,
+            "intent": null,
+            "key": "hyperliquid:GRASS",
+            "market": "GRASS",
+            "min_notional": 10.0,
+            "min_qty": 0.0,
+            "price_pnl": 0.0,
+            "quantity": 0.0,
+            "remaining": 0.0,
+            "side": "short",
+            "step": "0.1",
+            "venue": "hyperliquid"
+          }
+        ],
+        "opened_at": 1790737214.3644147,
+        "other_costs_usd": 0.49726560000000003,
+        "pair_id": "GRASS|hyperliquid:GRASS|aster:GRASSUSDT",
+        "paper_epoch_id": "legacy",
+        "paper_strategy_version": "legacy/unversioned",
+        "price_net_before_funding": -4.52439901972679,
+        "price_pnl": -3.2327999999999975,
+        "reserved": {
+          "aster": 1001.3,
+          "hyperliquid": 1001.4
+        },
+        "signal": {
+          "asset": "GRASS",
+          "buy": "aster:GRASSUSDT",
+          "buy_fee_bps": 4.0,
+          "buy_generation": "46e0c5ba9d5948caa6fec30086dcdf4e:aster:0:1",
+          "buy_received": 1790737213.274337,
+          "buy_source_time": 1790737213.225,
+          "buy_value": 994.5312,
+          "entry_policy": {
+            "confirmation_expiry_seconds": null,
+            "confirmation_min_seconds": null,
+            "entry_skew_limit_seconds": 1.0,
+            "forecast_is_historical_spread": true,
+            "forecast_net_usd": 0.3210048185859493,
+            "forecast_threshold_usd": 0.25,
+            "historical_closing_spread_bps": 16.139223416183192,
+            "historical_samples": 151,
+            "historical_span_seconds": 807.5631318092346,
+            "margin_usd": 0.25,
+            "policy": "convergence",
+            "reason": "allowed",
+            "route": "GRASS|aster:GRASSUSDT|hyperliquid:GRASS",
+            "target_usd": 0.1,
+            "training_skew_limit_seconds": 1.0,
+            "version": 3
+          },
+          "lifetime_is_sampled": true,
+          "net_edge_bps": 19.366923246876784,
+          "net_edge_usd": 1.9261009417024264,
+          "notional": 1000,
+          "opening_edge_usd": 3.2726635389499945,
+          "pair_id": "GRASS|hyperliquid:GRASS|aster:GRASSUSDT",
+          "quantity": 1352.0,
+          "route": "GRASS|aster:GRASSUSDT|hyperliquid:GRASS",
+          "sell": "hyperliquid:GRASS",
+          "sell_fee_bps": 4.5,
+          "sell_generation": "46e0c5ba9d5948caa6fec30086dcdf4e:hyperliquid:0:1",
+          "sell_received": 1790737213.2585287,
+          "sell_source_time": 1790737212.749,
+          "sell_value": 998.651069,
+          "skew_ms": 15.808343887329102,
+          "source_skew_ms": 475.9998321533203,
+          "strategy": "convergence",
+          "timestamp": 1790737213.2890306
+        },
+        "status": "AWAITING_FUNDING",
+        "strategy": "convergence"
+      }
+    },
+    "sequence": 23573
+  },
+  "epoch": {
+    "version": "e3e83cda71a6",
+    "epoch_id": "b8204da0453a4e8a940d3d1b3c33714e",
+    "started_at": 1790739373.545437,
+    "started_utc": "2026-09-30T03:36:13.545437+00:00",
+    "strategies": {
+      "confirmed": {
+        "closed_trades": 2,
+        "estimated_trades": 0,
+        "closed_wins": 0,
+        "closed_losses": 2,
+        "closed_pnl_exact": -4.015014851904811,
+        "closed_pnl_estimated": 0,
+        "closed_net_usd": -4.015014851904811,
+        "fees_usd": 1.07833466259,
+        "funding_usd": 0.0,
+        "other_costs_usd": 0.9988462370000001,
+        "capital_costs_usd": 7.095231524834476e-05,
+        "closed_winning_sum_usd": 0,
+        "closed_losing_sum_usd": -4.015014851904811,
+        "open_liquidation_pnl": 0,
+        "open_positions": 0,
+        "pending_funding": 0
+      },
+      "conservative": {
+        "closed_trades": 4,
+        "estimated_trades": 0,
+        "closed_wins": 1,
+        "closed_losses": 3,
+        "closed_pnl_exact": -3.0627084997059524,
+        "closed_pnl_estimated": 0,
+        "closed_net_usd": -3.0627084997059524,
+        "fees_usd": 1.2579362054999998,
+        "funding_usd": 0.0,
+        "other_costs_usd": 1.9958057480000002,
+        "capital_costs_usd": 0.00010854620562442534,
+        "closed_winning_sum_usd": 2.3197709224948984,
+        "closed_losing_sum_usd": -5.38247942220085,
+        "open_liquidation_pnl": 0,
+        "open_positions": 0,
+        "pending_funding": 0
+      },
+      "convergence": {
+        "closed_trades": 368,
+        "estimated_trades": 0,
+        "closed_wins": 19,
+        "closed_losses": 349,
+        "closed_pnl_exact": -435.2461325734002,
+        "closed_pnl_estimated": 0,
+        "closed_net_usd": -435.2461325734002,
+        "fees_usd": 16.844204173590004,
+        "funding_usd": 0.0,
+        "other_costs_usd": 179.97054129100007,
+        "capital_costs_usd": 0.001896108810362762,
+        "closed_winning_sum_usd": 11.414476455355373,
+        "closed_losing_sum_usd": -446.66060902875563,
+        "open_liquidation_pnl": 0,
+        "open_positions": 0,
+        "pending_funding": 0
+      },
+      "cooldown": {
+        "closed_trades": 2404,
+        "estimated_trades": 9,
+        "closed_wins": 1,
+        "closed_losses": 2412,
+        "closed_pnl_exact": -3144.9277818953706,
+        "closed_pnl_estimated": -13.089948760862937,
+        "closed_net_usd": -3158.017730656234,
+        "fees_usd": 787.4657670395607,
+        "funding_usd": 0.6989183645459768,
+        "other_costs_usd": 1204.9070271784997,
+        "capital_costs_usd": 0.08483580271470441,
+        "closed_winning_sum_usd": 2.3197709224948984,
+        "closed_losing_sum_usd": -3160.3375015787287,
+        "open_liquidation_pnl": 0,
+        "open_positions": 0,
+        "pending_funding": 0
+      },
+      "plus": {
+        "closed_trades": 0,
+        "estimated_trades": 0,
+        "closed_wins": 0,
+        "closed_losses": 0,
+        "closed_pnl_exact": 0,
+        "closed_pnl_estimated": 0,
+        "closed_net_usd": 0,
+        "fees_usd": 0,
+        "funding_usd": 0,
+        "other_costs_usd": 0,
+        "capital_costs_usd": 0,
+        "closed_winning_sum_usd": 0,
+        "closed_losing_sum_usd": 0,
+        "open_liquidation_pnl": 0,
+        "open_positions": 0,
+        "pending_funding": 0
+      },
+      "premium": {
+        "closed_trades": 644,
+        "estimated_trades": 0,
+        "closed_wins": 1,
+        "closed_losses": 643,
+        "closed_pnl_exact": -1179.9555358157404,
+        "closed_pnl_estimated": 0,
+        "closed_net_usd": -1179.9555358157404,
+        "fees_usd": 519.6287458098004,
+        "funding_usd": 0.0,
+        "other_costs_usd": 320.7144609425002,
+        "capital_costs_usd": 0.012405063438586527,
+        "closed_winning_sum_usd": 2.2972712546693352,
+        "closed_losing_sum_usd": -1182.2528070704095,
+        "open_liquidation_pnl": 0,
+        "open_positions": 0,
+        "pending_funding": 0
+      },
+      "shadow_baseline": {
+        "closed_trades": 0,
+        "estimated_trades": 0,
+        "closed_wins": 0,
+        "closed_losses": 0,
+        "closed_pnl_exact": 0,
+        "closed_pnl_estimated": 0,
+        "closed_net_usd": 0,
+        "fees_usd": 0,
+        "funding_usd": 0,
+        "other_costs_usd": 0,
+        "capital_costs_usd": 0,
+        "closed_winning_sum_usd": 0,
+        "closed_losing_sum_usd": 0,
+        "open_liquidation_pnl": 0,
+        "open_positions": 0,
+        "pending_funding": 0
+      },
+      "standard": {
+        "closed_trades": 0,
+        "estimated_trades": 0,
+        "closed_wins": 0,
+        "closed_losses": 0,
+        "closed_pnl_exact": 0,
+        "closed_pnl_estimated": 0,
+        "closed_net_usd": 0,
+        "fees_usd": 0,
+        "funding_usd": 0,
+        "other_costs_usd": 0,
+        "capital_costs_usd": 0,
+        "closed_winning_sum_usd": 0,
+        "closed_losing_sum_usd": 0,
+        "open_liquidation_pnl": 0,
+        "open_positions": 0,
+        "pending_funding": 0
+      }
+    },
+    "carryover": {
+      "active_positions": 0,
+      "pending_entries": 0,
+      "pending_funding": 3,
+      "reserved_usd": 6005.5599999999995,
+      "remaining_quantity_by_market": {}
+    },
+    "wallets_all_versions": {
+      "confirmed": {
+        "wallet_cash_usd": 19995.984985148098,
+        "wallets": {
+          "aster": 5000.0,
+          "hyperliquid": 4996.475956855709,
+          "lighter": 4999.509028292387,
+          "rh_lighter": 5000.0
+        },
+        "available_collateral_by_venue": {
+          "aster": 5000.0,
+          "hyperliquid": 4996.475956855709,
+          "lighter": 4999.509028292387,
+          "rh_lighter": 5000.0
+        }
+      },
+      "conservative": {
+        "wallet_cash_usd": 19989.18709761569,
+        "wallets": {
+          "aster": 5000.0,
+          "hyperliquid": 4993.850558923844,
+          "lighter": 4997.086397227185,
+          "rh_lighter": 4998.25014146466
+        },
+        "available_collateral_by_venue": {
+          "aster": 5000.0,
+          "hyperliquid": 4993.850558923844,
+          "lighter": 4997.086397227185,
+          "rh_lighter": 4998.25014146466
+        }
+      },
+      "convergence": {
+        "wallet_cash_usd": 19132.178939686954,
+        "wallets": {
+          "aster": 4909.760860767345,
+          "hyperliquid": 4759.419848257101,
+          "lighter": 4630.8964977954465,
+          "rh_lighter": 4832.101732867062
+        },
+        "available_collateral_by_venue": {
+          "aster": null,
+          "hyperliquid": 3758.019848257101,
+          "lighter": 4630.8964977954465,
+          "rh_lighter": 4832.101732867062
+        }
+      },
+      "cooldown": {
+        "wallet_cash_usd": 13952.31437219429,
+        "wallets": {
+          "aster": 4847.731351017659,
+          "hyperliquid": 1000.3561108021636,
+          "lighter": 3759.054675033979,
+          "rh_lighter": 4345.172235340489
+        },
+        "available_collateral_by_venue": {
+          "aster": 4847.731351017659,
+          "hyperliquid": 1000.3561108021636,
+          "lighter": 3759.054675033979,
+          "rh_lighter": 4345.172235340489
+        }
+      },
+      "plus": {
+        "wallet_cash_usd": 13467.219924573592,
+        "wallets": {
+          "aster": 4653.176577770099,
+          "hyperliquid": 1000.195403166524,
+          "lighter": 3963.1500158480044,
+          "rh_lighter": 3850.697927788964
+        },
+        "available_collateral_by_venue": {
+          "aster": 4653.176577770099,
+          "hyperliquid": 1000.195403166524,
+          "lighter": 3963.1500158480044,
+          "rh_lighter": 3850.697927788964
+        }
+      },
+      "premium": {
+        "wallet_cash_usd": 10523.793027237065,
+        "wallets": {
+          "aster": 4733.756448001572,
+          "hyperliquid": 1503.8831095138485,
+          "lighter": 1000.0788993080857,
+          "rh_lighter": 3286.0745704135597
+        },
+        "available_collateral_by_venue": {
+          "aster": null,
+          "hyperliquid": 1503.8831095138485,
+          "lighter": 1000.0788993080857,
+          "rh_lighter": 3286.0745704135597
+        }
+      },
+      "shadow_baseline": {
+        "wallet_cash_usd": 14068.817974803855,
+        "wallets": {
+          "aster": 4692.7085447140025,
+          "hyperliquid": 1000.3344950295663,
+          "lighter": 4232.8314370601865,
+          "rh_lighter": 4142.9434980001
+        },
+        "available_collateral_by_venue": {
+          "aster": 4692.7085447140025,
+          "hyperliquid": 1000.3344950295663,
+          "lighter": 4232.8314370601865,
+          "rh_lighter": 4142.9434980001
+        }
+      },
+      "standard": {
+        "wallet_cash_usd": 14131.223081562735,
+        "wallets": {
+          "aster": 4918.241516140147,
+          "hyperliquid": 1000.061420803494,
+          "lighter": 4138.942616135218,
+          "rh_lighter": 4073.977528483877
+        },
+        "available_collateral_by_venue": {
+          "aster": null,
+          "hyperliquid": null,
+          "lighter": 4138.942616135218,
+          "rh_lighter": 4073.977528483877
+        }
+      }
+    },
+    "fees_scope": "settled_closed_trades_only",
+    "historical_epoch_count": 0,
+    "archived_epoch_count": 0
+  },
+  "carry_index_sha256": "4b15af4f7c06ad9745b69da8a8f291efa4a385fe2239ec3d16b41a76d4599cb1",
+  "carry_last_status_is_stale": true,
+  "carry_collector_dead": true,
+  "carry_restart_prohibited_by_frozen_method": true,
+  "carry_boot_identity_mismatch": true
+}

@@ -7,34 +7,38 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 30 September 2026 23:49 UTC
+## Current status, 01 October 2026 00:21 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
-remain negative; no production strategy is promoted. The user authorized
-continuing the broader carry recommendation at 12:12 UTC and reiterated
-continuing at 22:21 UTC. Its 16 MiB allocation and implementation are frozen,
-and PID 279840 is running the public-data collector and endpoint finalizer.
-The fixed window is 30 September 12:45 UTC through 3 October 12:45 UTC, with
-864 paired observations and no interim economic analysis. Instruments:
-BTC_USDC spot and BTC_USDC-9OCT26. See the [method](dated-carry-method-v1.md)
-and [operations](live-operations.md).
+remain negative or inconclusive; no strategy is promoted. After the host reboot,
+production monitor PID 17101 and reviewer PID 19334 resumed the same database,
+all eight saved ledgers, strategy epoch and three legacy funding obligations.
+The 00:14 catch-up review96 covers an extended interval and is not a fresh
+uninterrupted validation window. All four feeds are connected.
 
-The original paper policy and scheduled review daemon continue independently.
-Reviews through 95 are preserved. Review85 adds two paired MU gains
-(+$0.0473 and +$0.1896) sharing the same signal time and Hyperliquid fill
-observation; its complete three-trade convergence paired group lost $1.2929.
-Earlier paired gains were WLD +$0.3590 and CRCL +$0.3250 in review65.
-Reviews 66–95 have 1,572 closes: 1,562 losses, two paired gains and eight
-failed-hedge rescue gains. One loss each in reviews75,78,81,87,90 and93 has
-estimated funding and remains estimated. The single review95 completed pair lost money.
-Twenty-two epoch win records comprise four paired and eighteen rescues.
-Cooldown is now unable to admit new pairs: its Hyperliquid paper balance
-$1,000.35611 is below the $1,000.50 entry reserve floor before venue fees.
-Capital-limit evidence is preserved; no top-up, reset or rule change was made.
-There is still no qualifying positive strategy window.
-Next review: **1 October 00:06:33 UTC**.
-Contract settlement, conversion, inventory and margin unknowns keep actual
-all-cost feasibility and closed P&L null for the new study.
+Reviews through 96 are preserved. Reviews 66–96 have 1,573 closes: 1,563 losses,
+two paired gains and eight failed-hedge rescue gains. The four epoch paired gains
+remain the WLD/CRCL records from review65 and two MU records from review85;
+the latter share a signal and HL fill observation, and their full three-pair
+convergence group lost $1.2929. Twenty-two epoch win records comprise four
+paired and eighteen rescues. Estimated funding losses remain labeled estimated.
+Cooldown cannot admit new pairs because its HL paper balance $1,000.35611 is
+below the $1,000.50 minimum reserve before venue fees. No reset or top-up.
+Next review: **1 October 00:26:33 UTC**.
+
+The original dated-carry run was interrupted by reboot after 136 recorded slots:
+134 sampled and two late callbacks. Its last trusted index and all evidence
+are preserved. The frozen no-resume and same-boot rules prevent resuming
+sampling or publishing its economic analysis. The original status file is a
+stale pre-reboot record; see its separate recovery observation.
+
+The user explicitly authorized a separate fresh 72-hour run within the existing
+storage budget. [V2 preparation](dated-carry-relaunch-v2.md) keeps the original
+method and source files, subdividing the same 16 MiB into 1 MiB for retired v1
+and 15 MiB for fresh v2. No new economic outcomes have been inspected.
+Fresh metadata and launch are pending wrapper validation and source freeze.
+Actual all-cost feasibility and closed P&L remain null because settlement,
+conversion, net inventory, margin and execution details remain unresolved.
 
 ## Original experiment: RH passive exit v1
 
@@ -1355,3 +1359,14 @@ epoch snapshot flat with one additional close. Twenty-two earlier win records
 and three legacy funding obligations remain. Next review 1 October 00:06:33 UTC.
 Carry has all 133 due arrivals through 23:45, no terminal error or overdue
 files, and no economic evaluation.
+
+
+### Review 96 and reboot recovery, 1 October 00:14 UTC
+
+The missed 00:06 review was captured after monitor/reviewer restoration. One
+exact convergence paired SAMSUNGUSD loss −$2.07057, complete coverage, no aborts
+or entry rejections. All saved ledgers and original epoch matched on restart;
+no open exposure at the last durable checkpoint, three legacy funding records
+retained. Next review 00:26:33 UTC. The original carry run is interrupted and
+preserved; the user explicitly authorized a separate fresh run within the same
+16 MiB budget. See the v2 addendum and recovery evidence.

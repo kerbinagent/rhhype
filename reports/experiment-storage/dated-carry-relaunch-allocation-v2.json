@@ -1,0 +1,31 @@
+{
+  "schema": "dated-carry-relaunch-allocation-v2",
+  "authorization": "User 2026-10-01 explicitly selected: Start a fresh run within the existing storage budget.",
+  "supersedes_reservation_layout_only": "reports/experiment-storage/dated-carry-allocation-v1.json",
+  "original_allocation_sha256": "f4242e1543035dd806ba7cfdc837f0a5aeb0af9e33af0ca69f7bf6f62b8e3e2a",
+  "total_experiment_reservation_bytes": 836777216,
+  "combined_dated_carry_reservation_bytes": 16777216,
+  "retired_run": "reports/dated-carry/20260930-v1",
+  "retired_run_reservation_bytes": 1048576,
+  "retired_last_index_sha256": "4b15af4f7c06ad9745b69da8a8f291efa4a385fe2239ec3d16b41a76d4599cb1",
+  "fresh_run": "reports/dated-carry/20261001-v2",
+  "fresh_run_reservation_bytes": 15728640,
+  "fresh_categories_bytes": {
+    "source_control": 1048576,
+    "metadata": 2097152,
+    "samples": 7340032,
+    "derived": 2097152,
+    "terminal": 3145728
+  },
+  "all_existing_data_retained": true,
+  "all_other_allocations_unchanged": true,
+  "external_pinned_dependencies_counted": true,
+  "automatic_successor": false,
+  "sampling_resume": false,
+  "sample_retry": false,
+  "interim_economic_evaluation": false,
+  "private_api": false,
+  "orders": false,
+  "fresh_metadata_requests_maximum": 2,
+  "fresh_sample_requests_maximum": 1728
+}

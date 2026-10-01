@@ -1,0 +1,20 @@
+{
+  "launched_at_utc": "2026-10-01T00:14:34.970196+00:00",
+  "pid": 19334,
+  "command": [
+    "/home/harry/projects/research/rhhype/.venv/bin/python",
+    "scripts/review_loop.py"
+  ],
+  "same_epoch": true,
+  "all_saved_ledger_fields_equal_before_start": true,
+  "carryover_equal": true,
+  "preserve_review_baseline": true,
+  "monitor_pid": 17101,
+  "monitor_feeds_connected": {
+    "hyperliquid": true,
+    "aster": true,
+    "lighter": true,
+    "rh_lighter": true
+  },
+  "snapshot_updated_at": 1790813674.5184896
+}

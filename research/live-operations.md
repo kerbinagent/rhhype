@@ -1,13 +1,14 @@
 # Active paper research operations
 
-Current process summary: 2026-09-30 13:28 UTC. All processes below are paper simulation or
+Current process summary: 2026-10-01 00:20 UTC. All processes below are paper simulation or
 public quote observation. No private keys or real orders are involved.
 
 | Process | PID | Output | Expected end |
 |---|---:|---|---|
-| Production collector, original ledgers, 10s/10-cent exit | 3280600 | data/paper-monitor → paper-monitor-10s | Continuous |
-| Scheduled audit capture, 1,200s cadence | 2765645 | data/strategy-reviews | Continuous |
-| Dated BTC carry public collector and endpoint analysis | 279840 | reports/dated-carry/20260930-v1 | 2026-10-03 12:45 UTC |
+| Production collector, original ledgers, 10s/10-cent exit | 17101 | data/paper-monitor → paper-monitor-10s | Continuous |
+| Scheduled audit capture, 1,200s cadence | 19334 | data/strategy-reviews | Continuous |
+| Dated BTC carry v1 | stopped by reboot | reports/dated-carry/20260930-v1 | Interrupted; same-boot gate blocks economics |
+| Fresh dated BTC carry v2 | preparing | reports/dated-carry/20261001-v2 | Fresh fixed 72-hour window pending |
 | Passive-exit v1 public capture, restarted | stopped | data/raw/rh-passive-exit-v1/20260930T0252Z | Completed 03:42:58 UTC |
 | One-shot strict replay supervisor | stopped | reports/rh-passive-exit-v1-restart/supervisor | Completed 03:58:17 UTC, exit 0 |
 | One-shot corrected replay supervisor | stopped | reports/rh-passive-exit-v1-restart/corrected-supervisor | Completed 03:58:14 UTC, exit 0 |
@@ -519,3 +520,25 @@ and writing concise journal decisions if an extra copy does not fit. This
 adds a limit to previously uncapped manual copies; it does not alter daemon
 retention, trading policy, study capture or either experimental allocation.
 The fixed carry endpoint is 3 October 12:45 UTC; reassess archive needs then.
+
+
+## Host reboot recovery, 1 October 2026 00:14 UTC
+
+User reported host restart and requested continuation. The three previous
+processes were gone. Boot ID changed from `7214aa8b-7d9a-48b0-820e-ac0ee1cec113`
+to `23c8d3f4-7c72-4efd-8851-9004ec92e0f6`. Last durable paper checkpoint:
+00:02:25 UTC, no open exposure, three flat legacy funding obligations.
+
+Monitor PID 17101 resumed at 00:13:47 using the same CLI, database, ledgers and
+strategy epoch. All saved ledger fields and carryover matched exactly before
+reviewer PID 19334 resumed at 00:14:34. Fresh four-feed connection and normal
+performance verified. Review96 is a downtime-spanning catch-up; the next
+scheduled checkpoint remains 00:26:33 UTC. Recovery artifacts are in
+`reports/live-review-catchup/restart-20261001-*`.
+
+Carry v1 cannot resume or pass the original same-boot endpoint gate. Preserve
+its last index and stale last status; `terminal/recovery-20261001.json` records
+its actual interrupted condition. Its 136 recorded slots contain 134 sampled
+and two callback-late statuses; no economic evaluation occurred. The user then
+explicitly chose a fresh run within the existing storage allowance. V2 uses
+the [relaunch addendum](dated-carry-relaunch-v2.md), retaining v1 intact.
