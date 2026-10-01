@@ -1,0 +1,61 @@
+{
+  "schema": "completed-nvda-sub100-closeout-v1",
+  "recorded_utc": "2026-10-01T12:35:20.798877+00:00",
+  "previous": "reports/experiment-storage/rh-nvda-sub100-cycles-allocation-v1.json",
+  "previous_sha256": "20a4050e168b7eaa2fe9e56457dc97ac83680780701346fe2c03c3460a73cf3b",
+  "old_reserved_bytes": 196608,
+  "artifact_bytes": 89834,
+  "retention_reserved_bytes": 131072,
+  "released_bytes": 65536,
+  "active_research_reserved_bytes": 7274496,
+  "active_research_headroom_bytes": 65536,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Preserve allquoteevidence/source/readout/audit,16KiBcloseoutmargin.",
+  "files": [
+    {
+      "path": "reports/rh-nvda-sub100-cycles/audit.json",
+      "bytes": 9448,
+      "sha256": "127b79f00477939809d7f382fcda1b8959e508d067e68964ff32d18508b90040"
+    },
+    {
+      "path": "reports/rh-nvda-sub100-cycles/claim.json",
+      "bytes": 227,
+      "sha256": "b7b0f56f5c916c7dad130f9d3a45d76a975adb6a6e89ae245fde6e39da655f2a"
+    },
+    {
+      "path": "reports/rh-nvda-sub100-cycles/readout.md",
+      "bytes": 1536,
+      "sha256": "c95abe12d35c99de80f38a64c2b005e292f313d0d66d2611368b8cbb1f9c8a4b"
+    },
+    {
+      "path": "reports/rh-nvda-sub100-cycles/summary.json",
+      "bytes": 16694,
+      "sha256": "b92a1c7933f09f1c8de7a2dadef9f4be82e68e90de1d7f24cfa46c3357b8237c"
+    },
+    {
+      "path": "reports/rh-nvda-sub100-cycles/terminal.json",
+      "bytes": 198,
+      "sha256": "756643499668142cf56e2069bac6dac22896a0b92d6d42ab87b1f4bd9ccc1015"
+    },
+    {
+      "path": "reports/rh-nvda-sub100-cycles/trace.json.gz",
+      "bytes": 43267,
+      "sha256": "06de635e2052a72a1d1e142e37ddfe8da07bb2e2bb0c4432787fd2b9d4ba6cd0"
+    },
+    {
+      "path": "scripts/rh_nvda_sub100_cycles.py",
+      "bytes": 10966,
+      "sha256": "70a0707242c507641d0e10ffe9bf83e79c3cd4ddfb5de66c7685ec3a8af29bc7"
+    },
+    {
+      "path": "scripts/audit_nvda_sub100_cycles.py",
+      "bytes": 4894,
+      "sha256": "982a4716597316e7befb1df0818cf60f2fe45732b2bf9da3d0ac3fcb41b5662d"
+    },
+    {
+      "path": "reports/experiment-storage/rh-nvda-sub100-cycles-allocation-v1.json",
+      "bytes": 2604,
+      "sha256": "20a4050e168b7eaa2fe9e56457dc97ac83680780701346fe2c03c3460a73cf3b"
+    }
+  ]
+}
