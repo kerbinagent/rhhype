@@ -1,0 +1,6 @@
+{
+  "audit": "failed_before_result_written",
+  "source_sha256": "53edb4a1134289d33011b03b2109b42d31ea89c900ead866db0cbc836caa821c",
+  "failure": "Episode cash selected by inclusive timestamp double-counts preceding episode terminal fill when a new quote starts on the same receipt. Full branch wallet and inventory already reconcile. Replacement uses ordered quote_requested..episode_flat stream boundaries, retaining all fills.",
+  "engine_changed": false
+}

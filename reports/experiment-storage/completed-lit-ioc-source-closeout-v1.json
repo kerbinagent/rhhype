@@ -1,0 +1,186 @@
+{
+  "schema": "completed-lit-ioc-source-closeout-v1",
+  "recorded_utc": "2026-10-01T13:38:07.204950+00:00",
+  "previous": "reports/experiment-storage/completed-persistent-entry-closeout-v1.json",
+  "previous_sha256": "0dc1948757f7868f788215ea94e47574dbf9f902fb2958b6b329e477aaab366d",
+  "old_reserved_bytes": 589824,
+  "artifact_bytes": 441516,
+  "retention_reserved_bytes": 491520,
+  "released_bytes": 98304,
+  "active_research_reserved_bytes": 12156928,
+  "active_research_headroom_bytes": 3571712,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retain official source evidence, invalid and repaired replays, original failed auditors and successful independent wrapper/gate checks. No deletion/recompression. 16KiB closeout allowance.",
+  "files": [
+    {
+      "path": "reports/core-maker-lit-ioc-coordinator/audit-boundary-failure.json",
+      "bytes": 459,
+      "sha256": "6b3d16f4461d84413e109d3144f2d37f1ba7f9d8825b52d511b131c6395a690b"
+    },
+    {
+      "path": "reports/core-maker-lit-ioc-coordinator/audit.jsonl.gz",
+      "bytes": 164735,
+      "sha256": "6ddeec565e578e3adab9e10be35666a60ac9e31415b232d1c7afacf950fb7fd8"
+    },
+    {
+      "path": "reports/core-maker-lit-ioc-coordinator/independent-audit.json",
+      "bytes": 1095,
+      "sha256": "dd24b4e6503b65e8ee38b00843f8fc8ac141537c132370fc3c47b7c3c971fbea"
+    },
+    {
+      "path": "reports/core-maker-lit-ioc-coordinator/metrics.json",
+      "bytes": 949,
+      "sha256": "5665ddeaacc85a4d303f0aabcb5f7c59b5edc54ed6a31d7cc42fdcfe7ed4d459"
+    },
+    {
+      "path": "reports/core-maker-lit-ioc-coordinator/quote-gate-audit.json",
+      "bytes": 485,
+      "sha256": "7529f3ce7a73519c5727b47a254a82d7dfa75958a0af7f5ff1b51cd31d48f161"
+    },
+    {
+      "path": "reports/core-maker-lit-ioc-coordinator/readout.md",
+      "bytes": 2536,
+      "sha256": "3aad713c431dc5735bb5ceeac9fa6ed65802d0aaaa2442f9f8903b06aca9ff24"
+    },
+    {
+      "path": "reports/core-maker-lit-ioc-coordinator/scenario.json",
+      "bytes": 314,
+      "sha256": "a1a6f2b5e97d234392730ff297bb935254cf60e245e8a0c2ea8106e70b84595b"
+    },
+    {
+      "path": "reports/core-maker-lit-ioc-coordinator/summary.json.gz",
+      "bytes": 10997,
+      "sha256": "4cf9d5a47d89d34d44c67c79b7b517440d2644277442580d4e038d986a6ea57a"
+    },
+    {
+      "path": "reports/core-maker-lit-ioc-scenario/audit.jsonl.gz",
+      "bytes": 53516,
+      "sha256": "fdfe4857dc1fc839432a4e072b499dc5270f3135869070ffc741c40e753750e1"
+    },
+    {
+      "path": "reports/core-maker-lit-ioc-scenario/metrics.json",
+      "bytes": 902,
+      "sha256": "8266c1cee7be5b11a43f15815394e4601a19d5b68ac68135ce124bf1c177cdd9"
+    },
+    {
+      "path": "reports/core-maker-lit-ioc-scenario/scenario.json",
+      "bytes": 329,
+      "sha256": "2dac5ccb8a4b0ddf881c89cfd69f306744b18d91adfc8097153f139f909eaa17"
+    },
+    {
+      "path": "reports/core-maker-lit-ioc-scenario/summary.json.gz",
+      "bytes": 8447,
+      "sha256": "5556f49f21d9d836f7589193e60698c06c9238f0f41bd81c61b4614e9f74e3c8"
+    },
+    {
+      "path": "reports/core-maker-lit-ioc-scenario/validation-failure.json",
+      "bytes": 551,
+      "sha256": "73088a16c6ce17348f44caa94768b5c56ee80e92966bbbfef4d7a702e6d0956d"
+    },
+    {
+      "path": "reports/experiment-storage/core-maker-lit-ioc-coordinator-v1.json",
+      "bytes": 2290,
+      "sha256": "d324fff74bd5ce21c91e5885639d7d59389cddd355e11e1fe49802d85cd6ece2"
+    },
+    {
+      "path": "reports/experiment-storage/core-maker-lit-ioc-scenario-v1.json",
+      "bytes": 2449,
+      "sha256": "9f54e9972077762499473c200bc18de6eb52ea76498c9c187852fd8e8111b780"
+    },
+    {
+      "path": "reports/experiment-storage/lighter-minimum-rule-source-v1.json",
+      "bytes": 780,
+      "sha256": "0716174d40acd3f142501f480462379b1640702e793fb63266297f93a50a30de"
+    },
+    {
+      "path": "reports/lighter-minimum-rule-source/audit.json",
+      "bytes": 1036,
+      "sha256": "a610959042e8a7aa954f6707e289eea9c66a0169ac1c76b85455d5d30e9ec17b"
+    },
+    {
+      "path": "reports/lighter-minimum-rule-source/commit.json.gz",
+      "bytes": 101375,
+      "sha256": "7cf58292d0a906380daa792f75971195df9fb5d434ab02daf0650ab202a6f0c8"
+    },
+    {
+      "path": "reports/lighter-minimum-rule-source/internalorder.json.gz",
+      "bytes": 5093,
+      "sha256": "225a5938e565f60631e6ec8c630eea27429dd6d7ce11fbf2b96552994646cea8"
+    },
+    {
+      "path": "reports/lighter-minimum-rule-source/l2order.json.gz",
+      "bytes": 7108,
+      "sha256": "d1c70aaaf96a5c20378c2157bc14fd99b207222b78955ba2b0c525c320fb6f9f"
+    },
+    {
+      "path": "reports/lighter-minimum-rule-source/matching.json.gz",
+      "bytes": 21704,
+      "sha256": "8e14403e1041b702f2b3b71c06f47cca3ab07efc2489cfd68af61045b36f6a8d"
+    },
+    {
+      "path": "reports/lighter-minimum-rule-source/readout.md",
+      "bytes": 1721,
+      "sha256": "e9bade95834f112e3f9a08b457444b73b609434d87447e57d321333a5876febe"
+    },
+    {
+      "path": "reports/lighter-minimum-rule-source/state.json.gz",
+      "bytes": 4042,
+      "sha256": "519f6a3c5ebaf5e7ff570871c407f041dbec709ff1f7670ab0c5c971c58fd214"
+    },
+    {
+      "path": "reports/lighter-minimum-rule-source/tree.json.gz",
+      "bytes": 27435,
+      "sha256": "6ad869a70013108ea73bd0409042ab4ef8fc5c5f9e29dba0ccc2f1b1e8a7d782"
+    },
+    {
+      "path": "scripts/audit_core_maker_lit_ioc_coordinator.py",
+      "bytes": 6855,
+      "sha256": "53edb4a1134289d33011b03b2109b42d31ea89c900ead866db0cbc836caa821c"
+    },
+    {
+      "path": "scripts/audit_core_maker_lit_ioc_scenario.py",
+      "bytes": 360,
+      "sha256": "795736316b702bd45d10778a7fa50102e7bffdde39095d360922882b760d3def"
+    },
+    {
+      "path": "scripts/audit_lit_ioc_quote_gates.py",
+      "bytes": 3060,
+      "sha256": "95b02e591e9ea1d2a3a990805e264eebf2bf946ec851da122ad6ae629440b24d"
+    },
+    {
+      "path": "scripts/audit_lit_ioc_stream_boundaries.py",
+      "bytes": 988,
+      "sha256": "b5fe8aacd318642f5db57866ebcc03c6f66346518f968b25773804e47052ec1f"
+    },
+    {
+      "path": "scripts/core_maker_ioc_minimum_scenario.py",
+      "bytes": 1095,
+      "sha256": "342b0b0e0bb13bec492742a4f50e1be6c66acfc3674f588463880a8681fdbf8d"
+    },
+    {
+      "path": "scripts/lighter_rule_source_probe.py",
+      "bytes": 1941,
+      "sha256": "b0b4a6aefe5eddf934c2f3f00fa5bb4b975a4379222f5e4137db90c085462689"
+    },
+    {
+      "path": "scripts/replay_core_maker_lit_ioc_coordinator.py",
+      "bytes": 2338,
+      "sha256": "375251fb11a3550ed032035155e47aeaa9765e2a75de522e13cf8539580882fb"
+    },
+    {
+      "path": "scripts/replay_core_maker_lit_ioc_scenario.py",
+      "bytes": 1123,
+      "sha256": "1efae9a8a777459bc435f50c1bfddaebbe4160ab349eb98838120b6192675f4d"
+    },
+    {
+      "path": "tests/test_core_maker_ioc_minimum_scenario.py",
+      "bytes": 1870,
+      "sha256": "cfc2765cf3a88d7c6901d6a94377acdf549b5f958b40ee13d39c65db1f1f923d"
+    },
+    {
+      "path": "tests/test_core_maker_lit_coordinator.py",
+      "bytes": 1538,
+      "sha256": "5bc8537a0c8224878ce9a55e8083bc93393a5de19359bcfee5f169115aa4dfc6"
+    }
+  ]
+}

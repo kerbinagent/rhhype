@@ -1,0 +1,7 @@
+{
+  "exploratory": true,
+  "prospective_validation": false,
+  "deployed_API_acceptance_verified": false,
+  "plan_sha256": "d324fff74bd5ce21c91e5885639d7d59389cddd355e11e1fe49802d85cd6ece2",
+  "difference": "IOC minimum exemption plus actual-state quote planner/cutoff repair; all economic parameters unchanged."
+}
