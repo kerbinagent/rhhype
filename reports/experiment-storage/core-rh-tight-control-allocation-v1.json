@@ -1,0 +1,61 @@
+{
+  "schema": "core-rh-tight-control-v1",
+  "recorded_utc": "2026-10-01T12:27:54.459528+00:00",
+  "previous": "reports/experiment-storage/active-research-reserve-v3.json",
+  "previous_sha256": "89aeed88b5b03951b0fcafc170e49cd7379e73b25cb84d30d3b5e834eb40ceac",
+  "new_maximum_bytes": 1064960,
+  "categories_bytes": {
+    "source": 49152,
+    "metadata": 65536,
+    "raw": 786432,
+    "output": 131072,
+    "control": 32768
+  },
+  "active_research_reserved_bytes": 7307264,
+  "active_research_headroom_bytes": 32768,
+  "overall_reservation_bytes": 836777216,
+  "assets": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP",
+    "SUI",
+    "NEAR",
+    "HYPE",
+    "LIT",
+    "ZEC",
+    "VVV"
+  ],
+  "budgets": [
+    100
+  ],
+  "horizons": [
+    60
+  ],
+  "entry_slippage_bps": [
+    1,
+    10
+  ],
+  "primary": "100-60-1bp",
+  "duration_seconds": 900,
+  "entry_end_seconds": 700,
+  "raw_soft_cap": 500000,
+  "scope": "Two prospective independent100perleg portfolios,600prefunded each,300pervenue, maximum3positions. Same public Core/RH feed callbacks and strategy, one-bp vs ten-bp entry limits. Equal policy arms differing only entry_slippage_bps (includes its built-in budget/lot rounding). No trades/auth. USDG/USDC parity conditional.",
+  "strategy": "Arrival-timed synchronizedreference samples separatedatleast1s,120smedian2sembargo90validcountspan89s;5bpfavorableexcursion;1bp forecast afterfees/capital;1bp priceTP or60shold,30spaircooldown30attemptcap; 400msdelayed orders firsteligiblebook; allpartialhedges/rescue retained. Sourceage2s/skew250ms, sourceclockadvance, publiclot/minima. Funding samehourorunknown,120shourguard.5bpstressreported separately.",
+  "storage": "Boundedchunkmetadata2MB each,1feedconnectioneach max3attempts; fullwireunretained; captureeveryorderpendingcallback, admission/history andfill/exit/terminal/invalidation, allsampledbasisbooks;500kBsoftstopadmissions786432Bhardcap. Endpointaudit. Nointerimeconomics.",
+  "source_pins": [
+    {
+      "path": "scripts/core_rh_tight_control.py",
+      "sha256": "5db0dd04b0a46b7a57de94fb2ea82f8c72b3f8b1eb58afb3477ade62b18e8508"
+    },
+    {
+      "path": "scripts/audit_core_rh_tight_control.py",
+      "sha256": "44e1b5eddfd9206183c492ff4a8868f30a5fc3c4acb9ef6e17e4b6d3d6a9e3d0"
+    },
+    {
+      "path": "tests/test_core_rh_tight_control.py",
+      "sha256": "ee92db37d1fff8f39de4e59adc40c86f3ca81dd57fc01ab34e57a7c10eac12e9"
+    }
+  ],
+  "test": "Same delayed price drift produces tight-Core rejection and retained losing RHrescue while control completesbothlegs; independentwallets andlossreconcile. Passed."
+}

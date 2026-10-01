@@ -1,0 +1,22 @@
+{
+  "schema": "active-research-reserve-v3",
+  "recorded_utc": "2026-10-01T12:26:54.057767+00:00",
+  "previous": "reports/experiment-storage/completed-basket-fed-closeout-v1.json",
+  "previous_sha256": "79410e34d1e7ab30c4da74983651a52aab53395b94cda6319dddab5ebf1b229e",
+  "overall_reservation_bytes": 836777216,
+  "overall_reservation_increase_bytes": 0,
+  "manual_review_archive_previous_cap": 10485760,
+  "manual_review_archive_new_cap": 9437184,
+  "manual_review_archive_observed_bytes": 3402494,
+  "future_reviews_through_frozen_btc_endpoint": 181,
+  "recent_max_report_snapshot_pair_bytes": 26527,
+  "projected_archive_bytes_at_observed_max": 8203881,
+  "projected_margin_bytes": 1233303,
+  "active_research_reserve_previous_bytes": 6291456,
+  "active_research_reserve_bytes": 7340032,
+  "active_research_reserved_bytes": 6242304,
+  "active_research_headroom_bytes": 1097728,
+  "new_maximum_bytes": 0,
+  "scope": "Reassign1MiB unused manual-review reserve to future bounded research; unchanged overallcap/currentcaptures/allcompletedartifacts. Use existingcontrolmargin for manifest. Requires routine_monitor acknowledgement before newcapture allocation.",
+  "monitor_adoption": "routine_monitor acknowledged9,437,184B pre-writecap at2026-10-01approximately12:27UTC; allarchivefilespreserved."
+}
