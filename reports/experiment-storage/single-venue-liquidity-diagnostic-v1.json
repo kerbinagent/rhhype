@@ -1,0 +1,17 @@
+{
+  "schema": "single-venue-liquidity-diagnostic-v1",
+  "recorded_utc": "2026-10-01T20:13:44.404840+00:00",
+  "source_pins": [
+    {
+      "path": "scripts/single_venue_liquidity_diagnostic.py",
+      "sha256": "36fd18316494e0bb93870b688fa282604b362dd0102fefea4eaf81375591e4e5"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-multi-v1.json",
+      "sha256": "7e2b6d250eff3f38a4a0977c3268b6b495ad6a697be4d63781a4352f4eebd28b"
+    }
+  ],
+  "scope": "Descriptive displayed-liquidity measurement for current three-asset capture; specified during health-only capture before endpoint and before economics. No strategy changes or future returns. First fresh local book each asset/venue per capture-relative second in [0,600), missing seconds retained. Distribution of spreads, displayed notional within5bps of each own best, and fixed quantity100/mid VWAP costs from midpoint and own best. Incomplete visible depth retained; no native lot/minimum rounding because benchmark only, no order claim. Venues sampled independently, not assumed synchronous.",
+  "allocation": "Existing source/preparation and output reservations of single-venue-multi-v1; maximum131072 compressed output. Three traces589824 + summaries98304 + flow diagnostics98304 + liquidity131072 =917504, leaving131072 for metrics within1048576 output bytes. No reservation increase.",
+  "verification": "Synthetic symmetric bid/ask multi-level cost, five-bp displayed depth and incomplete-depth handling passed before freeze."
+}
