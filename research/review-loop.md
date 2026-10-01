@@ -3336,3 +3336,33 @@ Retired usage including external dependencies 464,077 bytes, below its
 1 MiB reservation; v2 category caps total 15 MiB. Combined 16 MiB and total
 experimental reservation 836,777,216 bytes unchanged. Endpoint analysis must
 use the v2 wrapper so its smaller budget and retired-evidence guards apply.
+
+
+## Review 98 — 1 October 2026 00:46:33 UTC
+
+Exact report and separate epoch snapshot preserved; guarded manual archive
+2,537,286/16,777,216 bytes. Report SHA-256
+`f8c70180df9f153bd49825ae90476c2bc833b7951ba0369b46a5687a6048737b`.
+All six exact closes negative: four Premium pairs/−$7.26233 and two convergence
+SOXL failed hedges/−$2.59127. Zero aborts, complete coverage, two Hyperliquid
+price-limit rejections. No new wins or estimated records.
+
+Premium fees $3.51584, stress $1.99765 and capital $0.00014507; without stress
+−$5.26468. Four exit comparisons: two better and two worse, aggregate
+improvement $0.06344, median deterioration $0.000015 and p95 adverse $0.13573.
+All four flattening times present: median 1.4347 s and p95 1.5175 s. Convergence
+fees zero, stress $0.99860 and capital $0.00000414; without stress −$1.59267.
+Failed hedges do not contribute paired execution timing observations.
+
+Four feeds connected, 107 pairs, CPU 65.95%, p95 lag 13.45 ms, RSS 167.52 MiB,
+894.6 books/s, metadata age 1,961.7 s; normal performance. Review and separate
+epoch snapshot flat. Premium epoch 650/−$1,190.6685; convergence 370/−$437.8374;
+cooldown unchanged at 2,404 exact plus nine estimated/−$3,158.0177 and remains
+capital constrained. Conservative four/−$3.0627; confirmed two/−$4.0150.
+Twenty-two earlier win records and three legacy funding obligations remain.
+Reviews 66–98 have 1,581 closes: 1,571 losses, two paired gains and eight rescue
+gains. Next checkpoint **01:06:33 UTC**. No policy or capital change.
+
+Fresh carry v2 has all four due arrivals through 00:45, 4,934 sample bytes,
+all sampled, zero overdue files, no terminal error and no economic evaluation.
+Retired v1 remains preserved and separate.

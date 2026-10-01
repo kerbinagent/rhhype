@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 01 October 2026 00:28 UTC
+## Current status, 01 October 2026 00:47 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative or inconclusive; no strategy is promoted. After the host reboot,
@@ -16,7 +16,7 @@ all eight saved ledgers, strategy epoch and three legacy funding obligations.
 The 00:14 catch-up review96 covers an extended interval and is not a fresh
 uninterrupted validation window. All four feeds are connected.
 
-Reviews through 97 are preserved. Reviews 66–97 have 1,575 closes: 1,565 losses,
+Reviews through 98 are preserved. Reviews 66–98 have 1,581 closes: 1,571 losses,
 two paired gains and eight failed-hedge rescue gains. The four epoch paired gains
 remain the WLD/CRCL records from review65 and two MU records from review85;
 the latter share a signal and HL fill observation, and their full three-pair
@@ -24,7 +24,7 @@ convergence group lost $1.2929. Twenty-two epoch win records comprise four
 paired and eighteen rescues. Estimated funding losses remain labeled estimated.
 Cooldown cannot admit new pairs because its HL paper balance $1,000.35611 is
 below the $1,000.50 minimum reserve before venue fees. No reset or top-up.
-Next review: **1 October 00:46:33 UTC**.
+Next review: **1 October 01:06:33 UTC**.
 
 The original dated-carry run was interrupted by reboot after 136 recorded slots:
 134 sampled and two late callbacks. Its last trusted index and all evidence
@@ -1385,3 +1385,14 @@ Next review 00:46:33 UTC. Fresh carry PID 42223 launched under the committed
 v2 freeze after 44 passing tests. T0 00:30 UTC; endpoint 4 October 00:30 UTC.
 Retired v1 remains intact. The existing 16 MiB allowance is enforced as 1 MiB
 retired plus 15 MiB fresh, with no extra experimental reservation.
+
+
+### Review 98, 1 October 00:46 UTC
+
+All six exact closes negative: four Premium pairs/−$7.26233 and two convergence
+SOXL failed hedges/−$2.59127. Zero aborts, complete coverage and two Hyperliquid
+price-limit rejections. Four feeds connected, 107 pairs, normal performance;
+review and epoch snapshot flat. Cooldown remains capital constrained.
+Twenty-two earlier win records and three legacy funding obligations remain.
+Next review 01:06:33 UTC. Fresh carry v2 has all four due arrivals through 00:45,
+no terminal error or timing failures, and no economic evaluation.
