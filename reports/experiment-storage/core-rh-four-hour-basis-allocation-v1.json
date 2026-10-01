@@ -1,0 +1,101 @@
+{
+  "schema": "core-rh-four-hour-basis-v1",
+  "recorded_utc": "2026-10-01T03:28:15.672830+00:00",
+  "previous": "reports/experiment-storage/derive-box-quote-allocation-v1.json",
+  "previous_sha256": "4154bf3b032e784fd571b6b2167b4672f5cc8453e76b70674398b5b94daf1577",
+  "new_maximum_bytes": 131072,
+  "categories_bytes": {
+    "source": 16384,
+    "raw": 0,
+    "output": 98304,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 917504,
+  "active_research_headroom_bytes": 3276800,
+  "network_requests": 0,
+  "input_roots": [
+    "data/raw/comparators/20260929T035055Z/lighter",
+    "data/raw/comparators/rh_lighter/20260929T040726Z/history"
+  ],
+  "input_pins": [
+    {
+      "path": "reports/experiment-storage/derive-box-quote-allocation-v1.json",
+      "sha256": "4154bf3b032e784fd571b6b2167b4672f5cc8453e76b70674398b5b94daf1577"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d/BTC.json",
+      "sha256": "e0b60e299713ed619ac5e36cce7cacee405ecb4058fd7a4ae7a939f35b68f523"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d/ETH.json",
+      "sha256": "eee0e93c326043822157c50ed05d13ce29be7fd35d717097592cde565b7d8366"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/candles_30d/SOL.json",
+      "sha256": "f2dae8e62135c0881dac169bbd4994a0529eedd43dc0a55280c9a85772189389"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/fundings_30d/BTC.json",
+      "sha256": "1ceb999edd64dff9cbbc691b002bac4cb95e8b677276391cc705a3cd80f62a10"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/fundings_30d/ETH.json",
+      "sha256": "69e5c5cb0f6fdae3b22e57ce4339b2082229ca713382043b30557ff3170fb348"
+    },
+    {
+      "path": "data/raw/comparators/20260929T035055Z/lighter/fundings_30d/SOL.json",
+      "sha256": "b23a4601c54286cc5de1cb2715199c4c5332816449efd416f304c250c28f5828"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d/BTC.json",
+      "sha256": "ca00dfcf5f88eecc8cbc85c49b6d0effab135b84bdb852fb971bfe47ec976910"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d/ETH.json",
+      "sha256": "778172aa95dd631a13f6cb395fdfec8c17f6f57e187eaa7840deb29f894fcee1"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/candles_30d/SOL.json",
+      "sha256": "749eab347228fadf9f6b1228c6a15ca3f38b843598ee861b6548261b47b76295"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/fundings_30d/BTC.json",
+      "sha256": "032108b9c5f00a113b3a92e3e3c0844c2535319a75e198313a06184a71c11ccd"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/fundings_30d/ETH.json",
+      "sha256": "755159f0bf0213c39f4d3b655a4d8dbd5211ef1aad0b6e20e1514c2f56606e8f"
+    },
+    {
+      "path": "data/raw/comparators/rh_lighter/20260929T040726Z/history/fundings_30d/SOL.json",
+      "sha256": "d01b8e620ed7de24b6bf83f66ec72a1f17408535480d8361b6d4cfa31fce7418"
+    },
+    {
+      "path": "reports/funding-carry/raw/lighter_core/markets.json",
+      "sha256": "3a94067dce1199f9cedff7193a319b565c7e0e90210fa5f27f01dcac37aee513"
+    },
+    {
+      "path": "reports/funding-carry/raw/rh_lighter/markets.json",
+      "sha256": "2a51f54c54fd9f55620e1fe92e50652d65a978921898a9f2f1a91c257a3deefd"
+    }
+  ],
+  "evaluation_start": 1789786800,
+  "evaluation_end": 1790650800,
+  "assets": {
+    "ETH": {
+      "step": ".0001",
+      "minimum": ".005"
+    },
+    "BTC": {
+      "step": ".00001",
+      "minimum": ".00020"
+    },
+    "SOL": {
+      "step": ".001",
+      "minimum": ".100"
+    }
+  },
+  "selection": "ETH primary,BTC/SOL controls. Prior25 hourly closes;center median first24;last basis Core/RH deviation>=10bp triggers opposite-direction trade. Decision every6hours over last10days of existing archive,40anchors perasset;1hdelay to entry open,4hhold to exit open. No threshold/horizon optimization. Prior candlesbothvol>=1000 required. Futurebarvolume only marks outcomeunknown,never suppresses signal. Retain all120decisions.",
+  "costs": "q floor1000/maxentryprices to sharedlot;zero Standard fees optimistic. Inferredfundingvalues interiorhours;at bothambiguousboundaries include eachvenuedebit and omitcredits. Capital5%on2000for4hours;5bpstresson1000. Spreads,conversion,accountfees,margin,capitalrecycling andidlewalletcostsnotverified. Reportcyclecostheadroom,notportfolioP&L.",
+  "interpretation": "Reused public archive previously inspected for other studies. Historical exploratory diagnostic,notfreshholdout. Candleopens asynchronous andnotexecutable;cannotprovepaperfillprofits. No newcaptureautomaticallyfollows."
+}
