@@ -1,0 +1,173 @@
+{
+  "actual_pnl": null,
+  "registry_complete": true,
+  "rows_received": 32,
+  "exact_stream_matches": [
+    {
+      "marketId": 199,
+      "address": "0x6314757a6a930a3dcb5d6f724a29500514f8536a",
+      "tokenId": 2,
+      "imData": {
+        "name": "Lighter ETH 30 Oct 2026",
+        "symbol": "LIGHTER-ETH-30OCT2026",
+        "isIsolatedOnly": false,
+        "maturity": 1793318400,
+        "tickStep": 2,
+        "iTickThresh": 770,
+        "marginFloor": 0.08003999738290433
+      },
+      "config": {
+        "maxOpenOrders": 80,
+        "markRateOracle": "0x0000000000000000000000000000000000000000",
+        "fIndexOracle": "0x22acce10af691052c11f09a6187db4086319b675",
+        "hardOICap": "20000000000000000000000",
+        "takerFee": "500000000000000",
+        "otcFee": "500000000000000",
+        "liqSettings": {
+          "base": "250000000000000000",
+          "slope": "500000000000000000",
+          "feeRate": "500000000000000"
+        },
+        "kIM": "645161290322580645",
+        "kMM": "444444444444444444",
+        "tThresh": 432000,
+        "maxRateDeviationFactorBase1e4": 2500,
+        "closingOrderBoundBase1e4": 1000,
+        "loUpperConstBase1e4": 71,
+        "loUpperSlopeBase1e4": 10889,
+        "loLowerConstBase1e4": -71,
+        "loLowerSlopeBase1e4": 9111,
+        "status": 2,
+        "useImpliedAsMarkRate": true,
+        "softOICap": 9500,
+        "cloLowerThresh": 9300,
+        "cloUpperThresh": 9500
+      },
+      "extConfig": {
+        "ammAddress": "0x0000000000000000000000000000000000000000",
+        "ammId": 0,
+        "isPositiveAMM": true,
+        "settleFeeRate": "1000000000000000",
+        "paymentPeriod": 3600,
+        "maxUpdateDelay": 900
+      },
+      "metadata": {
+        "name": "ETHUSDC",
+        "underlyingSymbol": "ETH",
+        "fundingRateSymbol": "lighter-eth",
+        "maxLeverage": 1.55,
+        "maxPerpLeverage": 50,
+        "isUiWhitelisted": true
+      },
+      "data": {
+        "volume24h": 0,
+        "notionalOI": 473.3159984202909,
+        "markApr": 0.08295997256972867,
+        "lastTradedApr": 0.08295997256972867,
+        "midApr": 0.08491222761334,
+        "bestBid": 0.08328490117520607,
+        "bestAsk": 0.08653955405147394,
+        "floatingApr": 0.10511999999999999,
+        "longYieldApr": 0.26711710170402475,
+        "nextSettlementTime": 1790823600,
+        "timeToMaturity": 2498400,
+        "assetMarkPrice": 2683.26,
+        "rateSensitivity": 0.0007922374429223744,
+        "settlementsToMaturity": 694,
+        "dailyVolatility": 0.002106634279263065,
+        "dailyVolatilityState": "ready"
+      },
+      "platform": {
+        "name": "Lighter",
+        "platformId": "Lighter"
+      }
+    },
+    {
+      "marketId": 212,
+      "address": "0x446a014461a5198284d507e39648d4bc529ad947",
+      "tokenId": 2,
+      "imData": {
+        "name": "Lighter ETH 27 Nov 2026",
+        "symbol": "LIGHTER-ETH-27NOV2026",
+        "isIsolatedOnly": false,
+        "maturity": 1795737600,
+        "tickStep": 2,
+        "iTickThresh": 770,
+        "marginFloor": 0.08003999738290433
+      },
+      "config": {
+        "maxOpenOrders": 80,
+        "markRateOracle": "0x0000000000000000000000000000000000000000",
+        "fIndexOracle": "0x7b447cd9ce627932afa9f5f020b1c857404a2f43",
+        "hardOICap": "20000000000000000000000",
+        "takerFee": "500000000000000",
+        "otcFee": "500000000000000",
+        "liqSettings": {
+          "base": "250000000000000000",
+          "slope": "500000000000000000",
+          "feeRate": "500000000000000"
+        },
+        "kIM": "645161290322580645",
+        "kMM": "444444444444444444",
+        "tThresh": 432000,
+        "maxRateDeviationFactorBase1e4": 2500,
+        "closingOrderBoundBase1e4": 1000,
+        "loUpperConstBase1e4": 71,
+        "loUpperSlopeBase1e4": 10889,
+        "loLowerConstBase1e4": -71,
+        "loLowerSlopeBase1e4": 9111,
+        "status": 2,
+        "useImpliedAsMarkRate": true,
+        "softOICap": 9500,
+        "cloLowerThresh": 9300,
+        "cloUpperThresh": 9500
+      },
+      "extConfig": {
+        "ammAddress": "0x0000000000000000000000000000000000000000",
+        "ammId": 0,
+        "isPositiveAMM": true,
+        "settleFeeRate": "1000000000000000",
+        "paymentPeriod": 3600,
+        "maxUpdateDelay": 900
+      },
+      "metadata": {
+        "name": "ETHUSDC",
+        "underlyingSymbol": "ETH",
+        "fundingRateSymbol": "lighter-eth",
+        "maxLeverage": 1.55,
+        "maxPerpLeverage": 50,
+        "isUiWhitelisted": true
+      },
+      "data": {
+        "volume24h": 21.1147858,
+        "notionalOI": 173.1490074074074,
+        "markApr": 0.08220218479013157,
+        "lastTradedApr": 0.08220218479013157,
+        "midApr": 0.08312281594638576,
+        "bestBid": 0.08220218479013157,
+        "bestAsk": 0.08404344710263996,
+        "floatingApr": 0.10511999999999999,
+        "longYieldApr": 0.27879812766995604,
+        "nextSettlementTime": 1790823600,
+        "timeToMaturity": 4917600,
+        "assetMarkPrice": 2683.26,
+        "rateSensitivity": 0.0015593607305936074,
+        "settlementsToMaturity": 1366,
+        "dailyVolatility": 0.0019114397023862295,
+        "dailyVolatilityState": "ready"
+      },
+      "platform": {
+        "name": "Lighter",
+        "platformId": "Lighter"
+      }
+    }
+  ],
+  "provenance": [
+    {
+      "url": "https://api-boros.pendle.finance/apis/v1/markets?isMatured=false&isUiWhitelisted=true&limit=100",
+      "received_utc": "2026-10-01T02:51:36.648504+00:00",
+      "raw_sha256": "0c1e73b575ae3602d4caee5f4a89e172a13b2f23de387ffb364e39259f5f04aa",
+      "gzip_bytes": 7439
+    }
+  ]
+}

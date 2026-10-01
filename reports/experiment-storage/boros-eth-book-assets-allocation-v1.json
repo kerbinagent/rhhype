@@ -1,0 +1,29 @@
+{
+  "schema": "boros-eth-book-assets-v1",
+  "recorded_utc": "2026-10-01T02:53:23.335481+00:00",
+  "previous": "reports/experiment-storage/boros-core-eth-market-allocation-v1.json",
+  "previous_sha256": "79a42b1150041d79f7f5196f62fc2c7717b6554942e2dd51af1a581aac78f138",
+  "new_maximum_bytes": 65536,
+  "categories_bytes": {
+    "source": 8192,
+    "raw": 32768,
+    "output": 16384,
+    "control": 8192
+  },
+  "active_research_reserved_bytes": 131072,
+  "active_research_headroom_bytes": 4063232,
+  "requests_max": 2,
+  "retries": 0,
+  "requests": [
+    [
+      "assets",
+      "https://api-boros.pendle.finance/apis/v1/assets"
+    ],
+    [
+      "book",
+      "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=199&tickSize=1"
+    ]
+  ],
+  "selected_market_id": 199,
+  "selection": "Earliest eligible maturity from previously completed exact lighter-eth registry; 30 October 2026. No alternate maturity search after depth result. Read public collateral metadata and displayed depth only; no account, simulation, or transaction calls."
+}
