@@ -1,0 +1,13 @@
+{
+  "pid": 2697478,
+  "command": [
+    "/home/harry/miniconda3/bin/python",
+    "/home/harry/projects/research/rhhype/scripts/single_venue_broad_relative.py",
+    "supervise"
+  ],
+  "launched_utc": "2026-10-01T23:05:22.233763+00:00",
+  "seconds": 600,
+  "per_process_timeout_seconds": 720,
+  "public_read_only": true,
+  "plan_sha256": "9e10bef5d159da56799b578905a35eda9498291222ff548047c2252812b930c6"
+}

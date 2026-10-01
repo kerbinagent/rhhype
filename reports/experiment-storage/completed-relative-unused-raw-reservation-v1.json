@@ -1,0 +1,32 @@
+{
+  "schema": "completed-relative-unused-raw-reservation-v1",
+  "recorded_utc": "2026-10-01T23:22:34.480936+00:00",
+  "previous": "reports/experiment-storage/single-venue-relative-gate-audit-v1.json",
+  "previous_sha256": "d1618db4539560d761299089b01eb8e39207128fa5a9b7a3e3b01053183e61a7",
+  "completed_plan": "reports/experiment-storage/single-venue-broad-relative-v1.json",
+  "completed_plan_sha256": "9e10bef5d159da56799b578905a35eda9498291222ff548047c2252812b930c6",
+  "supervisor": "PID2697478 host ps exited/no matching process; normal terminal,10independent raw/cash audits passed and independent necessary-gate scan complete",
+  "old_batch_reservation_bytes": 68747264,
+  "old_raw_reservation_bytes": 67108864,
+  "retained_raw_reservation_bytes": 13004800,
+  "actual_raw_bytes": 13002772,
+  "raw_archive": {
+    "path": "reports/single-venue-broad-relative/capture/frames.jsonl.gz",
+    "bytes": 13002772,
+    "sha256": "f0d9d94a000555430544305b6bbb056978c3c715cd5cb52bb09ae951ab99da24"
+  },
+  "all_nonraw_categories_retained_in_full": {
+    "source_and_preparation": 65536,
+    "metadata": 131072,
+    "output": 1310720,
+    "control": 131072
+  },
+  "new_batch_retention_reservation_bytes": 14643200,
+  "released_unused_bytes": 54104064,
+  "new_control_reservation_bytes": 8192,
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 95625216,
+  "active_research_headroom_bytes": 58515456,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Release unused raw reservation only after terminal and host process exit; original raw/metadata/source/outputs retained. No deletion/recompression. All nonraw and separate diagnostic allocations retained in full; overall ceiling unchanged."
+}

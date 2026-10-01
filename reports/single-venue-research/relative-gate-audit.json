@@ -1,0 +1,300 @@
+{
+  "plan_sha256": "d1618db4539560d761299089b01eb8e39207128fa5a9b7a3e3b01053183e61a7",
+  "rows": [
+    {
+      "asset": "BTC",
+      "venue": "lighter",
+      "evaluated": 485,
+      "admission_evaluated": 343,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 1.028162517642175,
+      "max_cost_margin_bp": -3.3797568690087787
+    },
+    {
+      "asset": "BTC",
+      "venue": "rh_lighter",
+      "evaluated": 485,
+      "admission_evaluated": 343,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 1.028162517642175,
+      "max_cost_margin_bp": -3.1907167644697125
+    },
+    {
+      "asset": "ETH",
+      "venue": "lighter",
+      "evaluated": 484,
+      "admission_evaluated": 340,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 1.5194204970443121,
+      "max_cost_margin_bp": -2.5176413165005336
+    },
+    {
+      "asset": "ETH",
+      "venue": "rh_lighter",
+      "evaluated": 484,
+      "admission_evaluated": 340,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 1.5194204970443121,
+      "max_cost_margin_bp": -2.814086383386767
+    },
+    {
+      "asset": "HYPE",
+      "venue": "lighter",
+      "evaluated": 446,
+      "admission_evaluated": 319,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 1.7687093475378324,
+      "max_cost_margin_bp": -2.9301799340788643
+    },
+    {
+      "asset": "HYPE",
+      "venue": "rh_lighter",
+      "evaluated": 446,
+      "admission_evaluated": 319,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 1.7687093475378324,
+      "max_cost_margin_bp": -2.8982627013100437
+    },
+    {
+      "asset": "LIT",
+      "venue": "lighter",
+      "evaluated": 469,
+      "admission_evaluated": 329,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 3.9565680717946243,
+      "max_cost_margin_bp": -0.3070998121381585
+    },
+    {
+      "asset": "LIT",
+      "venue": "rh_lighter",
+      "evaluated": 469,
+      "admission_evaluated": 329,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 3.9565680717946243,
+      "max_cost_margin_bp": -0.83383121157719
+    },
+    {
+      "asset": "NEAR",
+      "venue": "lighter",
+      "evaluated": 457,
+      "admission_evaluated": 322,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 4.717977117685747,
+      "max_cost_margin_bp": -2.781868119187169
+    },
+    {
+      "asset": "NEAR",
+      "venue": "rh_lighter",
+      "evaluated": 457,
+      "admission_evaluated": 322,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 4.717977117685747,
+      "max_cost_margin_bp": -2.218264493053116
+    },
+    {
+      "asset": "SOL",
+      "venue": "lighter",
+      "evaluated": 464,
+      "admission_evaluated": 324,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 2.4121449190682807,
+      "max_cost_margin_bp": -1.672530161479294
+    },
+    {
+      "asset": "SOL",
+      "venue": "rh_lighter",
+      "evaluated": 464,
+      "admission_evaluated": 324,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 2.4121449190682807,
+      "max_cost_margin_bp": -2.433735579512595
+    },
+    {
+      "asset": "SUI",
+      "venue": "lighter",
+      "evaluated": 288,
+      "admission_evaluated": 194,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 4.566188428533282,
+      "max_cost_margin_bp": -2.065168462142307
+    },
+    {
+      "asset": "SUI",
+      "venue": "rh_lighter",
+      "evaluated": 288,
+      "admission_evaluated": 194,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 4.566188428533282,
+      "max_cost_margin_bp": -2.2360354635556963
+    },
+    {
+      "asset": "VVV",
+      "venue": "lighter",
+      "evaluated": 414,
+      "admission_evaluated": 291,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 4.808140995575371,
+      "max_cost_margin_bp": -1.8950607755919981
+    },
+    {
+      "asset": "VVV",
+      "venue": "rh_lighter",
+      "evaluated": 414,
+      "admission_evaluated": 291,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 4.808140995575371,
+      "max_cost_margin_bp": -4.525598717926361
+    },
+    {
+      "asset": "XRP",
+      "venue": "lighter",
+      "evaluated": 393,
+      "admission_evaluated": 285,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 1.046460654080296,
+      "max_cost_margin_bp": -3.4532859962674722
+    },
+    {
+      "asset": "XRP",
+      "venue": "rh_lighter",
+      "evaluated": 393,
+      "admission_evaluated": 285,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 1.046460654080296,
+      "max_cost_margin_bp": -3.624342632855736
+    },
+    {
+      "asset": "ZEC",
+      "venue": "lighter",
+      "evaluated": 465,
+      "admission_evaluated": 333,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 2.7392374117100635,
+      "max_cost_margin_bp": -2.060423293001756
+    },
+    {
+      "asset": "ZEC",
+      "venue": "rh_lighter",
+      "evaluated": 465,
+      "admission_evaluated": 333,
+      "common_gate_pass": 0,
+      "admission_common_gate_pass": 0,
+      "gap_rule_pass": 0,
+      "admission_gap_rule_pass": 0,
+      "max_abs_residual_bp": 2.7392374117100635,
+      "max_cost_margin_bp": -3.653612192258127
+    }
+  ],
+  "counts": {
+    "BTC": {
+      "nonfresh": 670,
+      "warmup": 89,
+      "evaluated": 485
+    },
+    "SOL": {
+      "nonfresh": 1632,
+      "warmup": 86,
+      "evaluated": 464
+    },
+    "ETH": {
+      "nonfresh": 887,
+      "warmup": 88,
+      "evaluated": 484
+    },
+    "XRP": {
+      "nonfresh": 1756,
+      "warmup": 81,
+      "evaluated": 393
+    },
+    "SUI": {
+      "nonfresh": 1440,
+      "warmup": 90,
+      "evaluated": 288
+    },
+    "NEAR": {
+      "nonfresh": 1248,
+      "warmup": 83,
+      "evaluated": 457
+    },
+    "VVV": {
+      "nonfresh": 2166,
+      "warmup": 82,
+      "evaluated": 414
+    },
+    "HYPE": {
+      "nonfresh": 1587,
+      "warmup": 83,
+      "evaluated": 446
+    },
+    "ZEC": {
+      "nonfresh": 1585,
+      "warmup": 84,
+      "evaluated": 465
+    },
+    "LIT": {
+      "nonfresh": 966,
+      "warmup": 85,
+      "evaluated": 469
+    }
+  },
+  "all_common_gates_failed": true,
+  "admission_common_gates_failed": true,
+  "scope": "Offline diagnostic of no-signal replay. Independently reconstruct fresh pairs,120second rolling median with2second embargo60rows/89second span,1second evaluation cadence and resets, without using production Features class. Necessary common gate of all three rules is absresidual>=spread+4bp. Count all and122..480second admission cases, exactgaprule5bp, maximumresidual and maximumcostmargin. All twenty groups retained. Reconcile warmup/nonfresh/evaluation counts to production summary. If every common gate fails, no rule can signal; unlike the cash auditor, this checks non-events. If some pass, no claim of exhaustive absence for leader/shock without further checks. Two tests: smalljumpfails,6bpjump insideadmission passes, invalidation resets history. No threshold change/new strategy/capture. Outcome already known zeroentries; this is accounting diagnostics, not prospective performance."
+}

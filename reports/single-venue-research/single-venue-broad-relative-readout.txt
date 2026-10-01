@@ -1,0 +1,17 @@
+TEN-ASSET RELATIVE GAP TEST: 2026-10-01 23:05:23..23:15:24 UTC
+One fresh ten-minute window, BTC ETH SOL HYPE XRP SUI NEAR ZEC VVV LIT, both venues, three original rules: gap_fade, leader_follow, local_shock_fade.
+60 independent ledgers, each600nativecollateral with100maximum entrynotional. All60 had0signals/0entryattempts/0fills/0closes and remain flat/known. Noprofit or loss; no profitability evidence.
+Capture ended normally with no reported transport errors. Raw/manifest hashes externally verified. All10 independent raw/cash audits passed, with signal/fill checks explicitly vacuous because traces are empty.
+Separate independent necessary-gate audit reconstructs original paired-book freshness, rolling basis reference and evaluation cadence. Its warmup, nonfresh and evaluation counts exactly match production. ALL20 asset/venue groups fail the necessary absresidual>=localspread+4bp gate at EVERY eligible evaluation, including outside the admission window. This independently explains why none of the three rules can fire.
+Maximum absolute departure from the rolling basis baseline, in bp:
+BTC: 1.028163
+ETH: 1.519420
+HYPE: 1.768709
+LIT: 3.956568
+NEAR: 4.717977
+SOL: 2.412145
+SUI: 4.566188
+VVV: 4.808141
+XRP: 1.046461
+ZEC: 2.739237
+The largest persistent absolute cross-venue gap is not the largest departure from its own recent baseline. The earlier NEAR gap was persistent; this relative rule does not label the entire gap as expected profit. No threshold was lowered after seeing zero trades. One quiet ten-minute sample does not establish absence of opportunities at other times or under other rules.
