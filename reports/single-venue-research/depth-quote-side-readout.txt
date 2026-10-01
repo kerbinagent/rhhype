@@ -1,0 +1,32 @@
+BID/ASK ANATOMY OF EARLIER DEPTH SHOCKS
+
+Retrospective check of all 24 admitted signal rows: 13 distinct asset/venue/
+print/decision opportunities after deduplicating paired follow/fade alternatives.
+This includes entries that did not fill. It excludes non-admitted detector events.
+No current three-window batch data was inspected.
+
+In 10 of 13 opportunities, less than half of the combined bid/ask movement was
+on the side used to enter the fade. Several midpoint jumps mainly widened the
+spread. For the latest Core LIT winner, the bid moved 3.8324 -> 3.8325 while the
+ask moved 3.8334 -> 3.8364. The entry-side bid supplied only 3.23% of that combined
+quote movement. Its signal-time bid was below the reference midpoint 3.83355.
+This does not negate the later audited cash gain; it changes its interpretation.
+
+Only four opportunities had positive optimistic top-quote advantage versus the
+reference midpoint in the fade direction, under conditional USDG/USDC parity:
+Asset venue  trigger trade ID  quote advantage  actual fade entry/outcome
+ZEC   Core   32921019963        +4.3174 bp       filled; net -0.033154
+LIT   Core   32922093345        +4.4108 bp       no fill at 509.061 ms
+LIT   Core   32922247503       +11.4856 bp       no fill at 500.407 ms
+LIT   RH      1226952203        +1.4381 bp       no fill at 470.721 ms
+Times run from signal to the first eligible IOC observation. Outcomes are joined
+by venue, rule and request time to the already independently audited traces.
+Both Core LIT fade winners began with negative signal-time quote advantage.
+
+This optimistic quote comparison omits size/depth, order delay, fees and exit
+spread. The reference midpoint is not established fair value; venue basis and
+collateral parity also matter. A positive value is not an executable profit.
+Potential future tests: detect movement in the executable side, distinguish
+spread widening from a shifted book, and compare a wider entry IOC allowance.
+These are new hypotheses, not changes to the active frozen batch or evidence
+that a different entry rule would be profitable.
