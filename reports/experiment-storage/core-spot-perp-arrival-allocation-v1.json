@@ -1,0 +1,50 @@
+{
+  "schema": "core-spot-perp-arrival-v1",
+  "recorded_utc": "2026-10-01T12:19:40.196419+00:00",
+  "previous": "reports/experiment-storage/completed-spot-and-basket-preflight-closeout-v1.json",
+  "previous_sha256": "0eed623b0c1a70a236fc8d2ac758e25a215e449e493a0de847fadc3408b15bdc",
+  "new_maximum_bytes": 327680,
+  "categories_bytes": {
+    "source": 49152,
+    "metadata": 49152,
+    "raw": 163840,
+    "output": 49152,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 5783552,
+  "active_research_headroom_bytes": 507904,
+  "overall_reservation_bytes": 836777216,
+  "assets": [
+    "LIT",
+    "ETH"
+  ],
+  "budgets": [
+    100,
+    1000
+  ],
+  "horizons": [
+    60
+  ],
+  "primary": "100-60",
+  "duration_seconds": 600,
+  "entry_end_seconds": 480,
+  "raw_soft_cap": 100000,
+  "scope": "Prospective short-term same-venue Core spot/perp trial. Buy spot and short matching native perp only, no spot borrow. Verify asset IDs/quoteUSDC and unit multipliers. Separate100/1000 portfolios each6xbudget Corecash, max2pairs. Generic locked-cost-basis ledger explicitly reconciled to actual cash plus spot inventory. Endpoint cash verified from spot buys/sells and perp P&L. No trade beyond60s planned, not maturity/funding carry. Public-only noorders/auth. Reference collection changed prospectively: sample synchronized book callbacks at least1second apart per asset, reset on invalidation. Other strategy, exposure, fees, timing and thresholds unchanged.",
+  "strategy": "120s past median perp/spot basis with2s embargo and90valid1Hzsamples; favorable excursion>=5bp and forecast4walkpriceP&L lessfees/capital>1bp. One-bp ENTRY SLIPPAGE LIMIT on bothlegs, first400ms delayed eligible books.1bp pricetakeprofit or60s hold;30s paircooldown;30attemptsmax. Allfailed/partialhedges retained andrescued at delayed books; noassumingbothlegsfill. Sourceage2s/pairskew250ms;hourguard120s;5bp stressseparate.",
+  "storage": "Normalized1Hzreference, allpending-order bookcallbacks, allinvalidations/decisions/fills/closes. Rawsoftcap100000 endsadmissions;hard163840 or600s stop. Fullwirestreamnotretained. TwofreshpublicmetadataGETs boundedthroughEOF;oneCoreWS max3connections. No parameterchanges aftercapture.",
+  "source_pins": [
+    {
+      "path": "scripts/core_spot_perp_arrival.py",
+      "sha256": "4ce541697020b30a2ecec9bc68b25da34c617ebcacdc74ea654acad7ca34b8db"
+    },
+    {
+      "path": "scripts/audit_core_spot_perp_arrival.py",
+      "sha256": "c3767548e5f8127836839117051fa0437c20e09192b3040749eef0ccb15a5110"
+    },
+    {
+      "path": "tests/test_core_spot_perp_arrival.py",
+      "sha256": "5fb5e210b09b00a22275c2326b45b4a62ef4dff04144451687e869a566346cb4"
+    }
+  ],
+  "tests": "3 meaningful tests: profitable paired cash/inventory reconciliation, losing spot rescue on failed perp, arrival-sample spacing and skew rejection. Offline audit additionally links admitted history to retained sampled books and invalidations."
+}
