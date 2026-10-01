@@ -1,0 +1,13 @@
+{
+  "assumptions": "ConstantETH/staking-token price for30days,current7daySMAannualstaking2.261%,zero observedinstantaneousETHfundingcarriedasensitivity,1.1xcapital5%,two current-price perpfees0.03%+.01each,5bpstress. Notforecast orhistory. Spottrade,transfer,bridge,basis,rebalanceandaccountcosts omitted.",
+  "principal": "999.1460426916809484",
+  "staking_sensitivity": "1.856769207555526540547178082",
+  "capital_sensitivity": "4.516687590250064561260273973",
+  "perp_roundtrip_fee_scenario": "0.61948762561500856904",
+  "stress": "0.49957302134584047420",
+  "residual_sensitivity": "-3.778979029655387063953095891",
+  "required_constant_perp_funding_annual_fraction_before_missing_costs": "0.04601687464054583836068749474",
+  "history_observed_hours": 0,
+  "history_expected_hours": 720,
+  "actual_pnl": null
+}

@@ -1,0 +1,300 @@
+{
+  "rows": [
+    {
+      "name": "SM_0",
+      "body": {
+        "margin_type": "SM",
+        "simulated_collaterals": [
+          {
+            "asset_name": "WSTETH",
+            "amount": "0.298872794828"
+          },
+          {
+            "asset_name": "USDC",
+            "amount": "0.000000"
+          }
+        ],
+        "simulated_positions": [],
+        "simulated_position_changes": [
+          {
+            "instrument_name": "ETH-PERP",
+            "amount": "-0.372"
+          }
+        ]
+      },
+      "status": "simulation_returned",
+      "http_status": 200,
+      "raw_sha256": "d4edcc2ad713878e92ea0adbce42467cf2ff8e4b561f04752f34d98b510ffcfa",
+      "received_utc": "2026-10-01T03:35:44.515338+00:00",
+      "result": {
+        "subaccount_id": 0,
+        "pre_initial_margin": "0",
+        "pre_maintenance_margin": "799.621274679031",
+        "post_initial_margin": "-65.96256832044",
+        "post_maintenance_margin": "749.649632047328",
+        "is_valid_trade": false
+      },
+      "error": null
+    },
+    {
+      "name": "SM_p1",
+      "body": {
+        "margin_type": "SM",
+        "simulated_collaterals": [
+          {
+            "asset_name": "WSTETH",
+            "amount": "0.298872794828"
+          },
+          {
+            "asset_name": "USDC",
+            "amount": "99.914604"
+          }
+        ],
+        "simulated_positions": [],
+        "simulated_position_changes": [
+          {
+            "instrument_name": "ETH-PERP",
+            "amount": "-0.372"
+          }
+        ]
+      },
+      "status": "simulation_returned",
+      "http_status": 200,
+      "raw_sha256": "78f5ae3b96e6b2d36640a16b9dd6c484c94401051303a03c5f981e31c57bf8e8",
+      "received_utc": "2026-10-01T03:35:45.246333+00:00",
+      "result": {
+        "subaccount_id": 0,
+        "pre_initial_margin": "99.914604",
+        "pre_maintenance_margin": "899.535878679031",
+        "post_initial_margin": "33.95203567956",
+        "post_maintenance_margin": "849.564236047328",
+        "is_valid_trade": true
+      },
+      "error": null
+    },
+    {
+      "name": "SM_p25",
+      "body": {
+        "margin_type": "SM",
+        "simulated_collaterals": [
+          {
+            "asset_name": "WSTETH",
+            "amount": "0.298872794828"
+          },
+          {
+            "asset_name": "USDC",
+            "amount": "249.786510"
+          }
+        ],
+        "simulated_positions": [],
+        "simulated_position_changes": [
+          {
+            "instrument_name": "ETH-PERP",
+            "amount": "-0.372"
+          }
+        ]
+      },
+      "status": "simulation_returned",
+      "http_status": 200,
+      "raw_sha256": "7f4ed1011d0b0ae7d37ddadd189bf91cf2a6591114730dda6d285fef1f0781aa",
+      "received_utc": "2026-10-01T03:35:45.964341+00:00",
+      "result": {
+        "subaccount_id": 0,
+        "pre_initial_margin": "249.78651",
+        "pre_maintenance_margin": "1049.396712895337",
+        "post_initial_margin": "183.823676501304",
+        "post_maintenance_margin": "999.424869370931",
+        "is_valid_trade": true
+      },
+      "error": null
+    },
+    {
+      "name": "SM_p5",
+      "body": {
+        "margin_type": "SM",
+        "simulated_collaterals": [
+          {
+            "asset_name": "WSTETH",
+            "amount": "0.298872794828"
+          },
+          {
+            "asset_name": "USDC",
+            "amount": "499.573021"
+          }
+        ],
+        "simulated_positions": [],
+        "simulated_position_changes": [
+          {
+            "instrument_name": "ETH-PERP",
+            "amount": "-0.372"
+          }
+        ]
+      },
+      "status": "simulation_returned",
+      "http_status": 200,
+      "raw_sha256": "f560e426afc2c7ccdffa87730e425ab6eb5fdffeaceff3228d79e15c0ef1b470",
+      "received_utc": "2026-10-01T03:35:46.724358+00:00",
+      "result": {
+        "subaccount_id": 0,
+        "pre_initial_margin": "499.573021",
+        "pre_maintenance_margin": "1299.186177668461",
+        "post_initial_margin": "433.609473707985",
+        "post_maintenance_margin": "1249.213793391556",
+        "is_valid_trade": true
+      },
+      "error": null
+    },
+    {
+      "name": "PM2_0",
+      "body": {
+        "margin_type": "PM2",
+        "simulated_collaterals": [
+          {
+            "asset_name": "WSTETH",
+            "amount": "0.298872794828"
+          },
+          {
+            "asset_name": "USDC",
+            "amount": "0.000000"
+          }
+        ],
+        "simulated_positions": [],
+        "simulated_position_changes": [
+          {
+            "instrument_name": "ETH-PERP",
+            "amount": "-0.372"
+          }
+        ],
+        "market": "ETH"
+      },
+      "status": "simulation_returned",
+      "http_status": 200,
+      "raw_sha256": "7386c4eb11876efa75e1e3f6f516de7fe207ad72a71b3b98f36323ed3732b68b",
+      "received_utc": "2026-10-01T03:35:47.475860+00:00",
+      "result": {
+        "subaccount_id": 0,
+        "pre_initial_margin": "239.881013290282",
+        "pre_maintenance_margin": "785.610318721984",
+        "post_initial_margin": "384.579868893358",
+        "post_maintenance_margin": "905.86682641096",
+        "is_valid_trade": true
+      },
+      "error": null
+    },
+    {
+      "name": "PM2_p1",
+      "body": {
+        "margin_type": "PM2",
+        "simulated_collaterals": [
+          {
+            "asset_name": "WSTETH",
+            "amount": "0.298872794828"
+          },
+          {
+            "asset_name": "USDC",
+            "amount": "99.914604"
+          }
+        ],
+        "simulated_positions": [],
+        "simulated_position_changes": [
+          {
+            "instrument_name": "ETH-PERP",
+            "amount": "-0.372"
+          }
+        ],
+        "market": "ETH"
+      },
+      "status": "simulation_returned",
+      "http_status": 200,
+      "raw_sha256": "2c09aa6e48e41888923a9513a0afabbce7d2eb4f4c7a592c2ced85ae3a9f99b2",
+      "received_utc": "2026-10-01T03:35:48.243011+00:00",
+      "result": {
+        "subaccount_id": 0,
+        "pre_initial_margin": "339.795617290282",
+        "pre_maintenance_margin": "885.524922721984",
+        "post_initial_margin": "484.494472893358",
+        "post_maintenance_margin": "1005.78143041096",
+        "is_valid_trade": true
+      },
+      "error": null
+    },
+    {
+      "name": "PM2_p25",
+      "body": {
+        "margin_type": "PM2",
+        "simulated_collaterals": [
+          {
+            "asset_name": "WSTETH",
+            "amount": "0.298872794828"
+          },
+          {
+            "asset_name": "USDC",
+            "amount": "249.786510"
+          }
+        ],
+        "simulated_positions": [],
+        "simulated_position_changes": [
+          {
+            "instrument_name": "ETH-PERP",
+            "amount": "-0.372"
+          }
+        ],
+        "market": "ETH"
+      },
+      "status": "simulation_returned",
+      "http_status": 200,
+      "raw_sha256": "0cbb3439dcaafda462ba2f9b95f16d3c037290f205764c7505137ba93b3ebdf7",
+      "received_utc": "2026-10-01T03:35:48.972261+00:00",
+      "result": {
+        "subaccount_id": 0,
+        "pre_initial_margin": "489.665163438012",
+        "pre_maintenance_margin": "1035.389100205746",
+        "post_initial_margin": "634.364019041088",
+        "post_maintenance_margin": "1155.645607894722",
+        "is_valid_trade": true
+      },
+      "error": null
+    },
+    {
+      "name": "PM2_p5",
+      "body": {
+        "margin_type": "PM2",
+        "simulated_collaterals": [
+          {
+            "asset_name": "WSTETH",
+            "amount": "0.298872794828"
+          },
+          {
+            "asset_name": "USDC",
+            "amount": "499.573021"
+          }
+        ],
+        "simulated_positions": [],
+        "simulated_position_changes": [
+          {
+            "instrument_name": "ETH-PERP",
+            "amount": "-0.372"
+          }
+        ],
+        "market": "ETH"
+      },
+      "status": "simulation_returned",
+      "http_status": 200,
+      "raw_sha256": "b58594d9dcbb983b5b3122ce072b6dd6cef11c8ab0ef84d0d4b2a76b0b77d8f6",
+      "received_utc": "2026-10-01T03:35:49.725334+00:00",
+      "result": {
+        "subaccount_id": 0,
+        "pre_initial_margin": "739.454110799531",
+        "pre_maintenance_margin": "1285.183590289794",
+        "post_initial_margin": "884.139329200524",
+        "post_maintenance_margin": "1405.428764993603",
+        "is_valid_trade": true
+      },
+      "error": null
+    }
+  ],
+  "expected_scenarios": 8,
+  "valid_response_scenarios": 8,
+  "actual_pnl": null,
+  "present_margin_only": true
+}

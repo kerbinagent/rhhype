@@ -1,0 +1,9 @@
+{
+  "usage_bytes_before_this_manifest": {
+    "source": 3198,
+    "raw": 1488,
+    "output": 8515,
+    "control": 1717
+  },
+  "maximum_bytes": 40960
+}
