@@ -3462,3 +3462,24 @@ Next checkpoint **02:26:33 UTC**. No qualifying positive result.
 
 Fresh carry v2 has all twenty due arrivals through 02:05, 24,679 sample bytes,
 all sampled, zero overdue files, no terminal error and no economic evaluation.
+
+
+## Review 103 — 1 October 2026 02:26:33 UTC
+
+Exact report and separate epoch snapshot preserved; guarded manual archive
+2,672,459/16,777,216 bytes. Report SHA-256
+`fecb56bc9043bd7ddda92e68e6f489f99879531b9bee3b1d2c98648ba7b5b9dd`.
+Two exact convergence failed-hedge losses, total −$2.53326. Zero aborts, two
+Hyperliquid price-limit rejections, complete trade and abort coverage. No new
+wins or estimated records. The review window has two failed hedges and no paired
+trades. Four feeds connected, 108 pairs, normal performance; CPU 47.70%, p95
+lag 7.27 ms, RSS 196.78 MiB, 952.6 books/s and metadata age 754.5 s. No open
+positions; three pending funding items remain across convergence, Premium and
+standard. Epoch counts and P&L unchanged. Cooldown remains capital constrained. Twenty-two epoch win
+records and three legacy funding obligations remain. Reviews 66–103 have
+1,589 closes: 1,579 losses, two paired gains and eight rescue gains. Next
+checkpoint **02:46:33 UTC**. No qualifying positive result.
+
+Fresh carry v2 has all twenty-four due arrivals through 02:25, 29,649 sample
+bytes, all sampled, zero overdue files, no terminal error and no economic
+evaluation.
