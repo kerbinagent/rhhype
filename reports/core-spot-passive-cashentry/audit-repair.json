@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-10-01T19:03:46.593560+00:00",
+  "failed_command": "nice -n 10 python scripts/core_spot_passive_cashentry.py audit",
+  "failure": "TypeError: tuple object does not support item assignment at audit_core_spot_passive_cashentry.py:19, level[1]=q-take, first raw taker depth depletion",
+  "original_auditor_sha256": "7c3d1ab65bf39d15ccb463ae4a75ea31e9d170ac9538e5f0310f09ea2ee28cb8",
+  "original_auditor_preserved": true,
+  "repair": "Audit-only wrapper converts individual price-level tuples to lists immediately before depletion. Values/order/arithmetic unchanged. Original replay and plan sources remain untouched.",
+  "wrapper_sha256": "e7e386d5db91c1cbacc4a30bb2f36e38aa52531ed2ebac2e7e87f2e882eb44f6",
+  "test_sha256": "e1347eff5b86b8e6e91ade7773c782959f9b81f693e698cccd92fb5475e714ea",
+  "test": "Complete synthetic below5bp admission and four-fill cycle replayed using tuple price levels: independent audit PASS,240reference rows,1queue match,3taker walks,1take-profit mark.",
+  "summary_sha256": "4ca7e1a5672e1f241fcfbca38564a8aff8c160f3682ee92d1e316b527c542a7e",
+  "trace_sha256": "229a8b2eb3093c048aa04fa79ecc94bec05332b12ab5b597a2ff1efa2b305347",
+  "allocation": "New audit wrapper/test/record covered by existing source/control reservations; no overall or currentstudy allocation change."
+}
