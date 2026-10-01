@@ -1,0 +1,35 @@
+{
+  "recorded_utc": "2026-10-01T21:25:52.590164+00:00",
+  "scope": "Primary-source review during health-only capture. Context for later research,not a change to frozen batch or clock controls.",
+  "sources": [
+    {
+      "title": "The price impact of order book events",
+      "authors": [
+        "Rama Cont",
+        "Arseniy Kukanov",
+        "Sasha Stoikov"
+      ],
+      "url": "https://arxiv.org/html/1011.6402v3",
+      "finding": "In50USstocks, contemporaneous quote-based order-flow imbalance explains short-interval midpoint changes more robustly than trade volume,with sensitivity related to depth.",
+      "limit": "This explains movements over the same interval;it does not establish profitable future-return prediction,400ms-later execution,or ten-second reversal on Core/RH. Quote additions/cancellations matter. Our batched public messages may merge underlying events,so a quote-derived imbalance would be a proxy."
+    },
+    {
+      "title": "The price impact of order book events:market orders,limit orders and cancellations",
+      "authors": [
+        "Zoltan Eisler",
+        "Jean-Philippe Bouchaud",
+        "Julien Kockelkoren"
+      ],
+      "url": "https://arxiv.org/abs/0904.0900",
+      "finding": "The paper studies interactions among trades,limit orders and cancellations;the response depends on event history and changes in subsequent book activity.",
+      "limit": "A large print alone cannot identify temporary impact versus continuing informed flow. Abstract reviewed;no coefficients or expected profits transferred to our venues."
+    },
+    {
+      "title": "Lighter Account Types",
+      "url": "https://apidocs.lighter.xyz/docs/account-types",
+      "finding": "Current official table lists Standard taker latency300ms and zero maker/taker fees.",
+      "limit": "Supports Core model component only. Additional100msnetwork remains assumed;RH timing remains separately archived,not newlyverified. No account access or tier change."
+    }
+  ],
+  "research_implication": "Any future OFI feature should use only prior available quotes and predict genuinely later executable outcomes. Separate broad directional drift from local relative moves;compare fixed controls without calling explanatory fit tradingalpha."
+}

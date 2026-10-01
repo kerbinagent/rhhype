@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-flow-literature-v3",
+  "recorded_utc": "2026-10-01T21:25:52.590164+00:00",
+  "previous": "reports/experiment-storage/single-venue-clock-control-v1.json",
+  "previous_sha256": "4ceea8d54c002ae063bc620438dd1523a11c5567330f2116989e1933aebc468a",
+  "reserved_bytes": 8192,
+  "active_research_pool_bytes": 87031808,
+  "active_research_reserved_bytes": 79650816,
+  "active_research_headroom_bytes": 7380992,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Small primary-source research record and ledger only. Reviewed after batchfreeze without reading any current sample economics. No activecapture or tradingrule change."
+}
