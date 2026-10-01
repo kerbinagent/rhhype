@@ -1,0 +1,21 @@
+{
+  "recorded_utc": "2026-10-01T21:48:53.977153+00:00",
+  "allocation": "single-venue-flow-literature-v3; existing 8192 bytes",
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/1512.03492",
+      "title": "Queue Imbalance as a One-Tick-Ahead Price Predictor in a Limit Order Book",
+      "read": "abstract",
+      "finding": "Across ten Nasdaq stocks, queue imbalance predicts the direction of the next midpoint change; improvement is larger in large-tick stocks.",
+      "application_limit": "Different markets and target. It does not establish profit after our delayed IOC fills, ten-second hold, and costs."
+    },
+    {
+      "url": "https://arxiv.org/abs/1511.04116",
+      "title": "Latency and liquidity provision in a limit order book",
+      "read": "abstract",
+      "finding": "Order flow after market orders passes through distinct phases; some observations support stimulated refill and some do not.",
+      "application_limit": "Refill and reversal should be measured on these venues instead of assumed from a large print."
+    }
+  ],
+  "research_implication": "Candidate future measurements: executable-side quote movement, refill persistence, and queue imbalance. No active batch rule or threshold changed. This record was made before batch economic evaluation."
+}
