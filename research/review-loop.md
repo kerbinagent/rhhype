@@ -3516,8 +3516,10 @@ wins or estimated records. Fees $2.09214, other costs $1.49404 and capital
 $0.00000703. Four feeds connected, 108 pairs, normal performance; CPU 53.42%,
 p95 lag 9.92 ms, resident memory 128.29 MiB, 738.6 books/s and metadata age
 3,154.2 s. No open positions; three pending funding items remain across
-convergence, Premium and standard. Premium epoch 656/−$1,203.3718; other epoch
-counts and P&L unchanged. Cooldown remains capital constrained. Twenty-two
+convergence, Premium and standard. The separate epoch snapshot, read at
+03:07:21.784 UTC and updated at 03:07:20.156 UTC (after the 03:06:33 report
+checkpoint), showed Premium at 656/−$1,203.3718; other epoch counts and P&L
+were unchanged. Cooldown remains capital constrained. Twenty-two
 epoch win records and three legacy funding obligations remain. Reviews 66–105
 have 1,592 closes: 1,582 losses, two paired gains and eight rescue gains. Next
 checkpoint **03:26:33 UTC**. No qualifying positive result.
@@ -3539,7 +3541,12 @@ Hyperliquid price-limit rejections, complete trade and abort coverage. Fees
 $18.07783, other costs $8.47231 and capital $0.00037254. Four feeds connected,
 105 pairs, normal performance; CPU 50.44%, p95 lag 8.07 ms, resident memory
 151.00 MiB, 604.8 books/s and metadata age 751.7 s. No open positions; three
-pending funding items remain across convergence, Premium and standard.
+pending funding items remain across convergence, Premium and standard. The
+Premium interval delta is 14 closes, while the separate epoch snapshot, read
+at 03:27:10.745 UTC and updated at 03:27:09.489 UTC, shows 671 versus 656 in
+the 03:07 snapshot, a 15-close increase. One close appears only in the later
+epoch snapshot and likely completed after the review report checkpoint. Keep
+the separate timestamps and do not add that close to review totals.
 Convergence epoch 378/−$445.2116; Premium epoch 671/−$1,241.6029. Cooldown
 remains capital constrained. Twenty-two epoch win records and three legacy
 funding obligations remain. Reviews 66–106 have 1,609 closes: 1,599 losses,

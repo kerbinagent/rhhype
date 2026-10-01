@@ -29,8 +29,11 @@ had no trade or abort changes. Review 105 added three exact Premium failed-hedge
 losses/−$6.19308. Review 106 added 17 exact losses across convergence and
 Premium/−$38.73372. No new wins or estimated trades. Three pending funding items
 remain across convergence, Premium and standard; no open positions. The
-convergence epoch is 378/−$445.2116 and Premium 671/−$1,241.6029; cooldown
-remains capital constrained. Next review: **1 October 03:46:33 UTC**.
+convergence epoch is 378/−$445.2116 and Premium 671/−$1,241.6029. Premium's
+report delta was 14 closes, while separately read epoch snapshots increased by
+15 from 656 to 671; the extra close is retained as a cross-timestamp difference
+and is not added to review totals. Cooldown remains capital constrained. Next
+review: **1 October 03:46:33 UTC**.
 
 The original dated-carry run was interrupted by reboot after 136 recorded slots:
 134 sampled and two late callbacks. Its last trusted index and all evidence
