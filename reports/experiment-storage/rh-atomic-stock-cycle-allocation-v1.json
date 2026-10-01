@@ -1,0 +1,120 @@
+{
+  "schema": "rh-atomic-stock-cycle-v1",
+  "recorded_utc": "2026-10-01T05:03:31.381533+00:00",
+  "previous": "reports/experiment-storage/terminated-pendle-storage-closeout-v1.json",
+  "previous_sha256": "9b72bd79e8d034bef6446a3e84d97b76cc080f6d1c4a747cd82a2b506e4c4dc3",
+  "new_maximum_bytes": 262144,
+  "categories_bytes": {
+    "source": 16384,
+    "raw": 131072,
+    "output": 98304,
+    "control": 16384
+  },
+  "active_research_reserved_bytes": 3989504,
+  "active_research_headroom_bytes": 204800,
+  "max_requests": 160,
+  "retries": 0,
+  "rpc_url": "https://rpc.mainnet.chain.robinhood.com",
+  "primary": {
+    "symbol": "NVDA",
+    "input_usdg": 100
+  },
+  "controls": [
+    "AAPL",
+    "MSFT",
+    "TSLA"
+  ],
+  "sizes_usdg": [
+    100,
+    1000
+  ],
+  "rounds": 3,
+  "minimum_round_spacing_seconds": 60,
+  "minimum_request_spacing_seconds": 0.5,
+  "selected": {
+    "NVDA": {
+      "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+      "pools": [
+        {
+          "version": "v3",
+          "address": "0xd4EB21209C4D6093f80B5b84f5C45cc093EA14a3",
+          "archived_index_liquidity_usd": 5313168.16
+        },
+        {
+          "version": "v4",
+          "address": "0x3bb34a44f1b2b5f32c034c38a53065a521a47b199700fa9bd19d60985ff24bf1",
+          "archived_index_liquidity_usd": 995681.18
+        }
+      ]
+    },
+    "AAPL": {
+      "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+      "pools": [
+        {
+          "version": "v3",
+          "address": "0xAae0d815EE56e4092a5E5C2911E676Fea50B2d6D",
+          "archived_index_liquidity_usd": 357578.12
+        },
+        {
+          "version": "v4",
+          "address": "0xc748f4671a867db48b552f6b7650bf3255e05f80f00e3f7aad1b17ccb7898fdb",
+          "archived_index_liquidity_usd": 757001.31
+        }
+      ]
+    },
+    "MSFT": {
+      "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+      "pools": [
+        {
+          "version": "v3",
+          "address": "0xeb60bCD1D920ad6E102690CCFC6fB488899E1510",
+          "archived_index_liquidity_usd": 547233.97
+        },
+        {
+          "version": "v4",
+          "address": "0x9194a557b6a6bb2236b49ea7e2bbccec5d3eeb705aef00903be4b3de1d949579",
+          "archived_index_liquidity_usd": 347935
+        }
+      ]
+    },
+    "TSLA": {
+      "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+      "pools": [
+        {
+          "version": "v3",
+          "address": "0xf4ACdAEEB7022862A763C9B1B885e11191c889E3",
+          "archived_index_liquidity_usd": 529793.96
+        },
+        {
+          "version": "v4",
+          "address": "0x8517f8071ae5b831b738052f12125e8e3d6c158b78728aa44ce3b25e5104d32e",
+          "archived_index_liquidity_usd": 856977.28
+        }
+      ]
+    }
+  },
+  "source_pins": [
+    {
+      "path": "scripts/rh_small_canonical_amm.py",
+      "sha256": "39e1245ff155096d8222a8322d56661f84e6eca246163323486e9e2f30f52a19"
+    },
+    {
+      "path": "scripts/robinhood_probe.py",
+      "sha256": "f792e22f0cce967787b418c5302f3828c3c14566ec34aaaa9bc49e86310861b6"
+    },
+    {
+      "path": "data/raw/rh_small_canonical_amm/20260929T224037Z/frozen-plan.json",
+      "sha256": "a17a58d3e6f231b78c3405f2895af31cdf32bbf1102572cc3c1932f414f3de59"
+    }
+  ],
+  "scope": "Fresh atomic-cycle necessary-condition screen using the previously frozen four-token/two-pool universe. Both v3-to-v4 and v4-to-v3 directions; exact integer output of first quoter becomes exact second input; same block per token/round and header recheck. Current registry status/address and chain/token/pool identity validation. No HL/perp leg, no exposure held to maturity, no constant multiplier assumption needed within same-token cycle. All 48 fixed route/size/round outcomes including errors retained. No route enlargement or retries after observing prices.",
+  "limitations": "No complete router transaction execution, user transfer eligibility, gas or first-use approvals measured. All amounts in USDG. Positive gross surplus requires separately frozen execution/gas follow-up; negative gross already fails necessary condition. No wallet/signature/order or state-changing RPC.",
+  "sources": [
+    "https://docs.robinhood.com/chain/add-network-to-wallet/",
+    "https://docs.robinhood.com/chain/stock-token-apis/",
+    "https://developers.uniswap.org/docs/protocols/v4/deployments",
+    "https://github.com/Uniswap/v4-periphery/blob/main/src/interfaces/IV4Quoter.sol",
+    "https://developers.uniswap.org/docs/protocols/v3/deployments/v3-robinhood-chain-deployments"
+  ],
+  "v3_documentation_note": "Previously cited official v3 page currently unavailable through browser. Retain original provenance and additionally verify current deployed code, pool factory and factory getPool identity rather than infer a new contract address."
+}
