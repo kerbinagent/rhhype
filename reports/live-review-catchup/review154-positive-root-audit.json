@@ -1,0 +1,31 @@
+{
+  "audit": "passed",
+  "source_sha256": "39c31d1372069ffc4cc0e1848de10456d1e2a39cee8abeecae7d59f97946e475",
+  "window_start_at": 1790881593.0808141,
+  "window_end_at": 1790882792.6182137,
+  "records": [
+    {
+      "id": "1790882403834911-24380-convergence",
+      "asset": "VVV",
+      "classification": "unhedged_rescue_gain",
+      "strategy": "convergence",
+      "budget": 1000,
+      "filled_leg": "lighter:69",
+      "rejected_leg": "hyperliquid:VVV",
+      "rejection": "price_limit",
+      "quantity": "38.06",
+      "entry_value": 996.275164,
+      "exit_value": "996.993118",
+      "gross": "0.717954",
+      "fees": "0.000000",
+      "reserve": "0.498137582",
+      "capital": "0.000001835192810674381024860476915",
+      "funding": "0",
+      "cash_after_fees": "0.717954",
+      "net": "0.2198145828071893256189751395",
+      "unhedged_seconds": "1.1618204",
+      "exit_reason": "entry_failure"
+    }
+  ],
+  "limitations": "Legacy1000USD target per leg. Only Lighter VVV long filled; Hyperliquid short rejected. Positive price movement during 1.162seconds of unhedged exposure, not paired arbitrage. Terminal cashflows, fees, stress, capital and no-hour funding reconcile. Original rolling depth unavailable; no new raw-depth or private-fill verification. Not a100USD-per-leg result."
+}
