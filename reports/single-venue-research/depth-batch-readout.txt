@@ -1,0 +1,23 @@
+Fixed LIT batch: three complete 600-second windows, 2026-10-01 21:20:46 to21:50:50UTC.
+Maximum100notional each entry; every rule/venue/window has an independent600-native-collateral ledger.
+All five independent audits passed. All20ledgers flat and known. Base includes recorded fee and capital cost;stress adds5bpofentrynotional.
+
+DEPTH TRIGGER: ALL THREE WINDOWS
+Rule | Venue | Attempts | Closes | No fills | Base cash | Stressed cash
+depth_fade | lighter | 2 | 2 | 0 | -0.1953703218515561633040223871 | -0.2943663833515561633040223871
+depth_fade | rh_lighter | 2 | 2 | 0 | -0.1102633813041224830568746829 | -0.2092268723041224830568746829
+depth_follow | lighter | 2 | 2 | 0 | 0.06804367876892645671280758498 | -0.03093402623107354328719241502
+depth_follow | rh_lighter | 2 | 0 | 2 | 0 | 0
+
+FIXED-CLOCK CONTROLS: WINDOWS2AND3ONLY
+Rule | Venue | Attempts | Closes | No fills | Base cash | Stressed cash
+clock_long | lighter | 12 | 12 | 0 | -0.7421839451089439772034547818 | -1.336140487608943977203454782
+clock_long | rh_lighter | 12 | 11 | 1 | -0.8527804963443009893820649416 | -1.397243916844300989382064942
+clock_short | lighter | 12 | 12 | 0 | 0.08893006009984790129153348561 | -0.5048710749001520987084665144
+clock_short | rh_lighter | 12 | 11 | 1 | -0.1242894583138147860204131786 | -0.6685458368138147860204131785
+
+Depth rules made no attempts in windows1/2;all six closeddepthtrades were inwindow3. Everydetectedshockinwindows1/2wasrejectedoutsidefrozen122..480secondadmissionperiod; separate descriptive timingcheck records allshocks.
+EarlierselectedCorefadewins didnotreplicate:bothnewCorefadecloseslost. Corefollowtwo basewins total+.0680436788 butstress total-.0309340262(oneindividualstresspositive). RHoverallfadenegative;RHfollowtwozerofillentries.
+Clockcontrol longssufferedmorethan shorts inthesesamples. Controlsuseddifferenttimesandfills,so nocausalprofitattribution, subtraction,matchedtradeorstatisticalsignificanceclaim.
+No rule/venue aggregate positiveafterpresetstress. NativeUSDCandUSDGcashnotpooled. Eacharmalternative,and sixdepthclosesoverlapindirectionandtime. Smallselectedassetandshortadjacentwindowsdonotestablishpopulationedge. Publicbookpaperfillsremainconditional,notprivatefills.
+Completeoriginalrulesretained. No retry, extension, tuning or retrospective change to these outcomes.

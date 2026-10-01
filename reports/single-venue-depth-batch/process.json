@@ -1,0 +1,14 @@
+{
+  "pid": 2431490,
+  "command": [
+    "/home/harry/miniconda3/bin/python",
+    "/home/harry/projects/research/rhhype/scripts/single_venue_depth_batch.py",
+    "supervise"
+  ],
+  "launched_utc": "2026-10-01T21:20:45.276823+00:00",
+  "fixed_windows": 3,
+  "seconds_per_window": 600,
+  "per_process_timeout_seconds": 720,
+  "public_read_only": true,
+  "plan_sha256": "afd5a5a1dbc0da0f5dbadeeda9ecd3f4e3fb6bf1b019c9c8da9408e9e601cced"
+}

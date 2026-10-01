@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "sample": "single-venue-clock-control-2-lit",
+  "counts": {
+    "signal": 24,
+    "request": 46,
+    "ioc": 46,
+    "closed": 22
+  },
+  "raw_capture_verified": true,
+  "signal_checks_vacuous": false,
+  "fill_checks_vacuous": false,
+  "summary_sha256": "30981818b171c37860eb1e6f3a22298862668715e9410c368e20855a93abe163",
+  "trace_sha256": "f4ecaaf90fcc7d4920b449b1fba5d172a8aa16aafba0293135b2b600241977d8",
+  "limits": "Conditional public-book IOC execution. Signal and first-eligible book checks plus cash reconciliation; no private order acknowledgments or authenticated fills. Independent arms must not be summed."
+}

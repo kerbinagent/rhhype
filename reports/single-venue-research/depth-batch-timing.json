@@ -1,0 +1,315 @@
+{
+  "schema": "single-venue-batch-timing-v1",
+  "retrospective": true,
+  "source_sha256": "3799aa278138866112800e38c6251204efe40f44e684c6034496a7775fed5b00",
+  "scope": "All detector shocks, one row per fade/follow pair, classified by frozen admission times. No outcome selection or execution change.",
+  "windows": [
+    {
+      "window": 1,
+      "manifest_sha256": "41de184ed453051144811ed29bc077d5d42fddbb9c68b99e08f5c39e7a12c776",
+      "counts": {
+        "lighter:before_122s": 6
+      },
+      "shocks": [
+        {
+          "venue": "lighter",
+          "offset_seconds": 5.58550561,
+          "period": "before_122s",
+          "trade_id": 32923393041
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 5.58550561,
+          "period": "before_122s",
+          "trade_id": 32923393032
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 5.58550561,
+          "period": "before_122s",
+          "trade_id": 32923393025
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 5.58550561,
+          "period": "before_122s",
+          "trade_id": 32923393021
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 5.58550561,
+          "period": "before_122s",
+          "trade_id": 32923393018
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 5.58550561,
+          "period": "before_122s",
+          "trade_id": 32923393014
+        }
+      ]
+    },
+    {
+      "window": 2,
+      "manifest_sha256": "67e36f3e1ce62ec0f61d1e7793fc9e5be5c5d3d5371e1c1f2b2afc809c8e2c5c",
+      "counts": {
+        "rh_lighter:at_or_after_480s": 15,
+        "lighter:at_or_after_480s": 17
+      },
+      "shocks": [
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 533.381427656,
+          "period": "at_or_after_480s",
+          "trade_id": 1227288415
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 533.381427656,
+          "period": "at_or_after_480s",
+          "trade_id": 1227288413
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 533.580482256,
+          "period": "at_or_after_480s",
+          "trade_id": 1227288561
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 533.580482256,
+          "period": "at_or_after_480s",
+          "trade_id": 1227288557
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 533.779843089,
+          "period": "at_or_after_480s",
+          "trade_id": 32924440008
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 533.779843089,
+          "period": "at_or_after_480s",
+          "trade_id": 32924440007
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 533.779843089,
+          "period": "at_or_after_480s",
+          "trade_id": 32924440021
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 533.779843089,
+          "period": "at_or_after_480s",
+          "trade_id": 32924440020
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 533.779843089,
+          "period": "at_or_after_480s",
+          "trade_id": 32924440019
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 534.58003827,
+          "period": "at_or_after_480s",
+          "trade_id": 1227289211
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 534.58003827,
+          "period": "at_or_after_480s",
+          "trade_id": 1227289210
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 534.58003827,
+          "period": "at_or_after_480s",
+          "trade_id": 1227289208
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 534.58003827,
+          "period": "at_or_after_480s",
+          "trade_id": 1227289207
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 534.58003827,
+          "period": "at_or_after_480s",
+          "trade_id": 1227289205
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 534.58003827,
+          "period": "at_or_after_480s",
+          "trade_id": 1227289199
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 534.58003827,
+          "period": "at_or_after_480s",
+          "trade_id": 1227289197
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 539.606372486,
+          "period": "at_or_after_480s",
+          "trade_id": 32924457427
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 563.581858185,
+          "period": "at_or_after_480s",
+          "trade_id": 1227299105
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 563.581858185,
+          "period": "at_or_after_480s",
+          "trade_id": 1227299102
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 563.581858185,
+          "period": "at_or_after_480s",
+          "trade_id": 1227299095
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 564.005554669,
+          "period": "at_or_after_480s",
+          "trade_id": 32924497926
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 564.005554669,
+          "period": "at_or_after_480s",
+          "trade_id": 32924497925
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 564.005554669,
+          "period": "at_or_after_480s",
+          "trade_id": 32924497923
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 565.602053538,
+          "period": "at_or_after_480s",
+          "trade_id": 32924501393
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 565.602053538,
+          "period": "at_or_after_480s",
+          "trade_id": 32924501392
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 565.602053538,
+          "period": "at_or_after_480s",
+          "trade_id": 32924501454
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 565.602053538,
+          "period": "at_or_after_480s",
+          "trade_id": 32924501441
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 565.602053538,
+          "period": "at_or_after_480s",
+          "trade_id": 32924501440
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 565.602053538,
+          "period": "at_or_after_480s",
+          "trade_id": 32924501486
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 565.997966486,
+          "period": "at_or_after_480s",
+          "trade_id": 32924502595
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 565.997966486,
+          "period": "at_or_after_480s",
+          "trade_id": 32924502587
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 568.030959863,
+          "period": "at_or_after_480s",
+          "trade_id": 1227300947
+        }
+      ]
+    },
+    {
+      "window": 3,
+      "manifest_sha256": "9c68fc19adae6cabe5a47aa3214a1f179103c273f68514be2a18fcd9984eb485",
+      "counts": {
+        "rh_lighter:before_122s": 2,
+        "lighter:before_122s": 1,
+        "rh_lighter:admission_period": 2,
+        "lighter:admission_period": 3
+      },
+      "shocks": [
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 33.214730847,
+          "period": "before_122s",
+          "trade_id": 1227312137
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 33.214730847,
+          "period": "before_122s",
+          "trade_id": 1227312134
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 71.270652068,
+          "period": "before_122s",
+          "trade_id": 32924609527
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 236.012008834,
+          "period": "admission_period",
+          "trade_id": 1227343082
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 284.222005655,
+          "period": "admission_period",
+          "trade_id": 32924781722
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 284.222005655,
+          "period": "admission_period",
+          "trade_id": 32924781721
+        },
+        {
+          "venue": "lighter",
+          "offset_seconds": 374.862037029,
+          "period": "admission_period",
+          "trade_id": 32924866607
+        },
+        {
+          "venue": "rh_lighter",
+          "offset_seconds": 378.011317442,
+          "period": "admission_period",
+          "trade_id": 1227365329
+        }
+      ]
+    }
+  ]
+}

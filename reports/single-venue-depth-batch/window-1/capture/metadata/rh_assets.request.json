@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.rh.lighter.xyz/api/v1/assetDetails",
+  "json_body": null,
+  "status": 200,
+  "raw_bytes": 14044,
+  "sha256": "45a0dca02353b23a636d85a47ecd36683dd3b7f43ec75f80de1750a5225d62b8",
+  "compressed_sha256": "5ff902b027e0d98284de8efede737c780cbae35f4b6c4b5357b757a04a001ef9",
+  "request_started_utc_ns": 1790889645895733396,
+  "response_completed_utc_ns": 1790889645913293936,
+  "raw_file": "rh_assets.json.gz"
+}

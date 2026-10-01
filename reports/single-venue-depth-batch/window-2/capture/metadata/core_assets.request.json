@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://mainnet.zklighter.elliot.ai/api/v1/assetDetails",
+  "json_body": null,
+  "status": 200,
+  "raw_bytes": 6119,
+  "sha256": "3cb6ce56b8a793a80432313585f123e8e4d2247eb630f268b96418e3d3808d59",
+  "compressed_sha256": "ce7b2e5325b8de930d63a540b370043ad85187380cf14ca0fcdf99efcd18827c",
+  "request_started_utc_ns": 1790890247532555403,
+  "response_completed_utc_ns": 1790890247698679921,
+  "raw_file": "core_assets.json.gz"
+}
