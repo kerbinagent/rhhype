@@ -1,0 +1,77 @@
+{
+  "schema": "interrupted-spot-perp-alts-closeout-v1",
+  "recorded_utc": "2026-10-01T16:19:59.136716+00:00",
+  "previous": "reports/experiment-storage/core-spot-perp-alts-v1.json",
+  "previous_sha256": "80ee840d1d49f552ea05cf8fa9a2efaba7cc30fb2272828097547408f0dd543a",
+  "old_reserved_bytes": 393216,
+  "artifact_bytes": 69197,
+  "retention_reserved_bytes": 98304,
+  "released_bytes": 294912,
+  "active_research_pool_bytes": 20185088,
+  "active_research_reserved_bytes": 19816448,
+  "active_research_headroom_bytes": 368640,
+  "overall_reservation_bytes": 836777216,
+  "scope": "All partial capture/source/preparation/freeze artifacts retained.24KiBcontrol slack. Original core limits and engine sources stay funded by completed-spot-perp-limits-closeout-v1 and completed-core-passive-lit-closeout-v1. No completed economic outcome inferred.",
+  "files": [
+    {
+      "path": "reports/core-spot-perp-alts/lighter-metadata.json.gz",
+      "bytes": 23388,
+      "sha256": "5377995442a95955cdd09773ce6b789a285ab3cdc03a62d6ca160a176ebd3192"
+    },
+    {
+      "path": "reports/core-spot-perp-alts/readout.md",
+      "bytes": 486,
+      "sha256": "920f055286dd7a26528839e9784c56cacd47c78b70d4ce1bf98c31e3609c6134"
+    },
+    {
+      "path": "reports/core-spot-perp-alts/events.jsonl.gz",
+      "bytes": 18559,
+      "sha256": "f8e390fd99882ed29c74be40009bc6dc29c3eb70ecfdb569a53da9efa2e392ea"
+    },
+    {
+      "path": "reports/core-spot-perp-alts/status.json",
+      "bytes": 235,
+      "sha256": "88510eee772e92da651433fffe5864803b50e3487f8d9fe75240b7f86672de7d"
+    },
+    {
+      "path": "reports/core-spot-perp-alts/interruption.json",
+      "bytes": 950,
+      "sha256": "bcf4158eeecdd6c855eba220f90a34ae95babc2c58010ea67d87534a81740a29"
+    },
+    {
+      "path": "reports/core-spot-perp-alts/metadata.json",
+      "bytes": 3590,
+      "sha256": "cfe86983709c4e3e52a6716ae21a0bd7d959bad9e9af7a5b995340bf28a43066"
+    },
+    {
+      "path": "reports/core-spot-perp-alts/assets-metadata.json.gz",
+      "bytes": 1005,
+      "sha256": "93fc6576c5a269b41f9a32a8e5f65b7ed3248ab2794f7ffef65b1722834e65b2"
+    },
+    {
+      "path": "reports/experiment-storage/core-spot-perp-alts-v1.json",
+      "bytes": 4104,
+      "sha256": "80ee840d1d49f552ea05cf8fa9a2efaba7cc30fb2272828097547408f0dd543a"
+    },
+    {
+      "path": "reports/experiment-storage/core-spot-perp-alts-preparation-v1.json",
+      "bytes": 784,
+      "sha256": "5ef9391314c822c76e20dae3df7de6b59190c97153b87f0317c4df0d10a7cefc"
+    },
+    {
+      "path": "reports/experiment-storage/core-spot-perp-alts-eligibility-v1.json",
+      "bytes": 2156,
+      "sha256": "6a8729c860349abfe70f15fdd5e9156009840f8b27f3cd77d4aee787abb23535"
+    },
+    {
+      "path": "scripts/core_spot_perp_alts.py",
+      "bytes": 415,
+      "sha256": "92f23cafbd9a93cd4ca15c4130667fdf6872795400e11906bedead5ced812d3b"
+    },
+    {
+      "path": "scripts/audit_core_spot_perp_alts.py",
+      "bytes": 13525,
+      "sha256": "58351933e5dfadc8af0c675031a093a5c54faff91a709ac081a6d8d05682dd08"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "interrupted-public-capture-v1",
+  "recorded_utc": "2026-10-01T16:19:59.135496+00:00",
+  "completion_marker": false,
+  "valid_fixed_endpoint_trial": false,
+  "actual_pnl": null,
+  "raw_sha256": "f8e390fd99882ed29c74be40009bc6dc29c3eb70ecfdb569a53da9efa2e392ea",
+  "complete_gzip_members_readable": true,
+  "retained_record_counts": {
+    "sample": 240
+  },
+  "first_retained_sample": 1790870872.2479901,
+  "last_retained_sample": 1790870969.935678,
+  "sample_span_seconds": 97.68768787384033,
+  "last_health_elapsed_seconds": 90.96085657799995,
+  "reason": "Tool session disappeared following explicitly interrupted assistant turn. External process check returned no matching process. No final summary/unresolved snapshot exists.",
+  "limitation": "Only flushed complete gzip blocks are retained; unflushed tail and final ledger unavailable. No admissions or fills appear in retained records. Exclude from completed trial economics."
+}
