@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-depth-replication-preparation-v1",
+  "recorded_utc": "2026-10-01T20:54:09.955901+00:00",
+  "previous": "reports/experiment-storage/completed-single-venue-depth-closeout-v1.json",
+  "previous_sha256": "b546426963bec53bfb8e9c489c7fe1b05f41ec80c29f7caa9c7b8efda5edbdc5",
+  "reserved_bytes": 65536,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 51060736,
+  "active_research_headroom_bytes": 2416640,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare same-rule LIT replication, keeping both directions and both venues. Outcome-informed asset focus explicitly disclosed. No new capture until protocol/reservation freeze."
+}
