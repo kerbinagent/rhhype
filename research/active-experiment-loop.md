@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 01 October 2026 05:48 UTC
+## Current status, 01 October 2026 06:07 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative or inconclusive; no strategy is promoted. After the host reboot,
@@ -16,7 +16,7 @@ all eight saved ledgers, strategy epoch and three legacy funding obligations.
 The 00:14 catch-up review96 covers an extended interval and is not a fresh
 uninterrupted validation window. All four feeds are connected.
 
-Reviews through 113 are preserved. Reviews 66–113 have 1,637 closes: 1,627 losses,
+Reviews through 114 are preserved. Reviews 66–114 have 1,640 closes: 1,630 losses,
 two paired gains and eight failed-hedge rescue gains. The four epoch paired gains
 remain the WLD/CRCL records from review65 and two MU records from review85;
 the latter share a signal and HL fill observation, and their full three-pair
@@ -44,11 +44,17 @@ aborts, wins or estimates. Reviews 66–113 have 1,637 closes: 1,627 losses, two
 paired gains and eight failed-hedge rescue gains. The review113 epoch snapshot
 at 05:47:18 UTC showed convergence 388/−$460.9603 and Premium 688/−$1,275.2228.
 Since the 05:27:19 snapshot, convergence increased by two, matching its report
-delta; Premium increased by one while the report delta was two. Keep timestamps
-and use report deltas for review totals. Four feeds remain connected with 106
-pairs and performance ok; p95 lag 6.41 ms, RSS 188.51 MiB, CPU 37.42%, and
-654.4 books/s. Metadata age is 1,942 s; no open positions and three pending
-funding items remain. Next review: **1 October 06:06:33 UTC**.
+delta; Premium increased by one while the report delta was two. Review 114
+added three exact convergence failed-hedge losses/−$6.06559 and three
+Hyperliquid price-limit rejections, with no aborts, wins or estimates. Reviews
+66–114 have 1,640 closes: 1,630 losses, two paired gains and eight failed-hedge
+rescue gains. The review114 epoch snapshot at 06:07:07 UTC showed convergence
+391/−$467.0259 and Premium 688/−$1,275.2228; since the 05:47:18 snapshot,
+convergence rose by three, matching its report delta, while Premium was flat.
+Four feeds remain connected with 106 pairs and performance ok; p95 lag 6.85
+ms, RSS 191.76 MiB, CPU 43.61%, and 760.9 books/s. Metadata age is 3,143 s;
+no open positions and three pending funding items remain. Next review:
+**1 October 06:26:33 UTC**.
 
 The original dated-carry run was interrupted by reboot after 136 recorded slots:
 134 sampled and two late callbacks. Its last trusted index and all evidence
