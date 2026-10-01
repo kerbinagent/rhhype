@@ -1,0 +1,183 @@
+{
+  "schema": "completed-hysteresis-quote-diagnostic-v1",
+  "manifest_sha256": "ce683b0722a63ab89fa2883bd7250bb1581026446ff33e941a6a76d059c66461",
+  "ordinary_live_prints": 396,
+  "ordinary_live_value": "11819.040467",
+  "quotes": [
+    {
+      "request": {
+        "branch": "LIT",
+        "event": "quote_requested",
+        "ns": 1790878017244130164,
+        "price": "3.9157",
+        "qty": "25.48",
+        "competitiveness": "inside",
+        "due_ns": 1790878017344130164,
+        "callback_market": "120",
+        "callback_kind": "book"
+      },
+      "activated": {
+        "branch": "LIT",
+        "event": "activated",
+        "ns": 1790878017440208922,
+        "ahead_better": "100.0",
+        "ahead_same": "0",
+        "callback_market": "2049",
+        "callback_kind": "book"
+      },
+      "cancel_requested": {
+        "branch": "LIT",
+        "event": "cancel_requested",
+        "ns": 1790878018536461677,
+        "due_ns": 1790878018936461677,
+        "reason": "invalid_pair",
+        "callback_market": "120",
+        "callback_kind": "book"
+      },
+      "cancel_effective": {
+        "branch": "LIT",
+        "event": "cancel_effective",
+        "ns": 1790878019490032862,
+        "reason": "invalid_pair",
+        "callback_market": "2049",
+        "callback_kind": "book"
+      },
+      "activation_source_ns": 1790878017355270000,
+      "cancel_book_clocks": {
+        "2049": {
+          "receipt_age_ms": 243.185101,
+          "source_age_ms": 335.476677
+        },
+        "120": {
+          "receipt_age_ms": 0.0,
+          "source_age_ms": 76.165677
+        }
+      },
+      "cancel_receipt_skew_ms": 243.185101,
+      "cancel_source_skew_ms": 259.311,
+      "admission_forecast": "0.03561213885446488642283210623",
+      "active_check_count": 29,
+      "under5bp_retained_checks": 25,
+      "active_rest_before_cancel_seconds": 1.096252755,
+      "eligible_sell_prints": 0,
+      "eligible_sell_qty": "0"
+    },
+    {
+      "request": {
+        "branch": "LIT",
+        "event": "quote_requested",
+        "ns": 1790878085349772071,
+        "price": "3.9177",
+        "qty": "25.47",
+        "competitiveness": "inside",
+        "due_ns": 1790878085449772071,
+        "callback_market": "120",
+        "callback_kind": "book"
+      },
+      "activated": {
+        "branch": "LIT",
+        "event": "activated",
+        "ns": 1790878085598865189,
+        "ahead_better": "0",
+        "ahead_same": "0",
+        "callback_market": "2049",
+        "callback_kind": "book"
+      },
+      "cancel_requested": {
+        "branch": "LIT",
+        "event": "cancel_requested",
+        "ns": 1790878085648079469,
+        "due_ns": 1790878086048079469,
+        "reason": "model_reprice_or_threshold",
+        "callback_market": "120",
+        "callback_kind": "book"
+      },
+      "cancel_effective": {
+        "branch": "LIT",
+        "event": "cancel_effective",
+        "ns": 1790878086186806978,
+        "reason": "model_reprice_or_threshold",
+        "callback_market": "2049",
+        "callback_kind": "book"
+      },
+      "activation_source_ns": 1790878085512833000,
+      "cancel_book_clocks": {
+        "2049": {
+          "receipt_age_ms": 5.329524,
+          "source_age_ms": 98.820469
+        },
+        "120": {
+          "receipt_age_ms": 0.0,
+          "source_age_ms": 98.097469
+        }
+      },
+      "cancel_receipt_skew_ms": 5.329524,
+      "cancel_source_skew_ms": 0.723,
+      "admission_forecast": "0.02789178866597592703602976641",
+      "active_check_count": 3,
+      "under5bp_retained_checks": 2,
+      "active_rest_before_cancel_seconds": 0.04921428,
+      "eligible_sell_prints": 0,
+      "eligible_sell_qty": "0"
+    },
+    {
+      "request": {
+        "branch": "LIT",
+        "event": "quote_requested",
+        "ns": 1790878149947906663,
+        "price": "3.9321",
+        "qty": "25.38",
+        "competitiveness": "inside",
+        "due_ns": 1790878150047906663,
+        "callback_market": "120",
+        "callback_kind": "book"
+      },
+      "activated": {
+        "branch": "LIT",
+        "event": "activated",
+        "ns": 1790878150146065752,
+        "ahead_better": "580.0",
+        "ahead_same": "755.78",
+        "callback_market": "2049",
+        "callback_kind": "book"
+      },
+      "cancel_requested": {
+        "branch": "LIT",
+        "event": "cancel_requested",
+        "ns": 1790878153138108725,
+        "due_ns": 1790878153538108725,
+        "reason": "invalid_pair",
+        "callback_market": "120",
+        "callback_kind": "book"
+      },
+      "cancel_effective": {
+        "branch": "LIT",
+        "event": "cancel_effective",
+        "ns": 1790878153688996242,
+        "reason": "invalid_pair",
+        "callback_market": "2049",
+        "callback_kind": "book"
+      },
+      "activation_source_ns": 1790878150058994000,
+      "cancel_book_clocks": {
+        "2049": {
+          "receipt_age_ms": 249.72384,
+          "source_age_ms": 346.071725
+        },
+        "120": {
+          "receipt_age_ms": 0.0,
+          "source_age_ms": 68.289725
+        }
+      },
+      "cancel_receipt_skew_ms": 249.72384,
+      "cancel_source_skew_ms": 277.782,
+      "admission_forecast": "0.01000675755432481388232914074",
+      "active_check_count": 101,
+      "under5bp_retained_checks": 90,
+      "active_rest_before_cancel_seconds": 2.992042973,
+      "eligible_sell_prints": 0,
+      "eligible_sell_qty": "0"
+    }
+  ],
+  "scope": "Completed-data trace and raw clock/print diagnostic. Ordinary updates only, initial backlog IDs excluded and deduplicated. No alternate quotes or P&L simulated."
+}

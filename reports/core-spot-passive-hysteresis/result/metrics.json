@@ -1,0 +1,41 @@
+{
+  "error": null,
+  "completion_marker_received": true,
+  "metrics": {
+    "LIT": {
+      "attempts": 3,
+      "episodes": 3,
+      "known_flow_closes": 0,
+      "paired_flow_closes": 0,
+      "rescue_closes": 0,
+      "cash_sum": "0",
+      "stressed_sum": "0",
+      "cash_wins": 0,
+      "stressed_wins": 0,
+      "unknown_episodes": 0,
+      "branch_unknown_reason": null,
+      "spot_inventory": "0",
+      "perp_inventory": "0",
+      "actual_cash_usdc": "600",
+      "counts": {
+        "decision_opportunity": 14764,
+        "abstain:stale_or_skewed_pair": 1782,
+        "abstain:outside_admission_window": 5704,
+        "abstain:under_5bp_excursion": 5192,
+        "quote_requested": 3,
+        "spot_admission": 3,
+        "activation_stale_source": 2,
+        "activated": 3,
+        "inside_quote_check": 133,
+        "cancel_requested": 3,
+        "cancel_effective": 3,
+        "episode_flat": 3,
+        "retired_quote_guarded": 3,
+        "abstain:cooldown": 2083,
+        "cancel_stale_source": 1,
+        "invalidation": 4
+      }
+    }
+  },
+  "summary_sha256": "ca5670d82563968ca25782f3cd60b5a5f3dc2c41c9b4eabfd8de257a145fd7ec"
+}

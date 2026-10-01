@@ -1,0 +1,13 @@
+{
+  "pid": 1979146,
+  "command": [
+    "/home/harry/miniconda3/bin/python",
+    "/home/harry/projects/research/rhhype/scripts/core_spot_passive_hysteresis.py",
+    "capture"
+  ],
+  "launched_utc": "2026-10-01T18:04:30.599306+00:00",
+  "plan_sha256": "6f3d1c5003f845e616ee886c44608b36f717e3aa2f2d76fcac50897341107fdb",
+  "fixed_capture_seconds": 600,
+  "public_read_only": true,
+  "log": "reports/core-spot-passive-hysteresis.stdout.txt"
+}

@@ -1,0 +1,6 @@
+{
+  "checked_utc": "2026-10-01T18:24:31.894286+00:00",
+  "source": "https://apidocs.lighter.xyz/docs/websocket-reference",
+  "facts": "Official documentation describes50ms batching, initial full snapshot followed by state changes, and begin_nonce continuity against prior nonce.",
+  "inference": "Source timestamps on the two native markets can represent different last state-change times. This motivates a prospective500ms skew sensitivity test, but does not prove that500ms books are executable or that old canceled quotes would profit."
+}
