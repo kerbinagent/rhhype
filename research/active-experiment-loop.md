@@ -1726,3 +1726,15 @@ ZEC profit mark. Original rolling depth unavailable; retained fill timing
 shows material leg gaps, and these are not $100 study results. Audit
 artifacts preserved; cumulative paired gains four, rescue gains 26.
 Manual archive 3,636,492 B, projected 4,512,580 B, margin 730,300 B.
+
+
+### Review 150, 1 October 18:06 UTC
+
+Complete coverage: convergence five exact closes/−$7.76982, including a
+NEW PAIRED GAIN +$0.3358306866 immediately flagged for parent audit;
+four failed-hedge losses. Premium 16 exact losses/−$28.34131 (11 paired,
+five failed hedges). No estimates/aborts; seven HL price limits. Four feeds,
+102 pairs, running/ok, p95 lag 38.36 ms. Archive 3,641,329 B, 163 future
+pairs project 4,512,075 B, margin 730,805 B. Carry 18:05: 211 sampled,
+invalid slot 71, 652 future/interrupted; no errors/retries/economic
+evaluation. Next review 18:26:33 UTC.
