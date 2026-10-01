@@ -1,0 +1,46 @@
+{
+  "schema": "core-eth-collateral-candle-screen-v1",
+  "recorded_utc": "2026-10-01T02:37:19.678588+00:00",
+  "previous": "reports/experiment-storage/core-collateral-metadata-allocation-v1.json",
+  "previous_sha256": "ee0712ca9b9010560cab73a9982a02936419de3335a76524db0943de7c51183d",
+  "previous_shared_reserved_bytes": 32977592,
+  "new_maximum_bytes": 20480,
+  "categories_bytes": {
+    "source": 7168,
+    "raw": 5120,
+    "output": 5120,
+    "control": 2048,
+    "documentation": 1024
+  },
+  "projected_shared_reserved_bytes": 32998072,
+  "shared_allowance_bytes": 33000000,
+  "shared_headroom_bytes": 1928,
+  "overall_reservation_bytes": 836777216,
+  "overall_reservation_increase_bytes": 0,
+  "requests_max": 3,
+  "retries": 0,
+  "window": [
+    1788220800,
+    1790812799
+  ],
+  "resolution": "1d",
+  "count_back": 30,
+  "requests": [
+    [
+      "spot",
+      "candles",
+      2048
+    ],
+    [
+      "perp",
+      "candles",
+      0
+    ],
+    [
+      "mark",
+      "markPriceCandles",
+      0
+    ]
+  ],
+  "scope": "Historical screen only: fixed ETH, 30 daily candles each. All four fixed seven-day blocks, two-day remainder, full-month overlapping sensitivity. No holdout, fills or profit claim. Fixed 10% cash buffer and $1000 target, shared 4-decimal quantity, 5% cash hurdle plus 5bp stress. Funding value remains inferred units. Current margin metadata is a design sensitivity, not historical availability."
+}
