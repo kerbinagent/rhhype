@@ -1,0 +1,14 @@
+{
+  "schema": "expanded-crypto-entry-drift-diagnostic-v1",
+  "recorded_utc": "2026-10-01T12:00:12.704360+00:00",
+  "previous": "reports/experiment-storage/paradex-core-bounded-allocation-v1.json",
+  "previous_sha256": "b136dbbc189f6cee3dc0e271bd4f36cc001d16806c089ad5486ce100039dd3c7",
+  "new_maximum_bytes": 16384,
+  "categories_bytes": {
+    "output": 12288,
+    "control": 4096
+  },
+  "active_research_reserved_bytes": 5931008,
+  "active_research_headroom_bytes": 360448,
+  "scope": "Exploratory arithmetic on completed expanded-crypto trades only. Separate entry drift from realized cash. Same-exit arithmetic is not an executable strategy, forecast, or new profitable trade. Source dataset sealed unchanged."
+}

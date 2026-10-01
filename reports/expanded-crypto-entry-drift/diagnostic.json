@@ -1,0 +1,97 @@
+{
+  "source_sha256": "ae5720413f3d055ec0c1fbaf922a6b61d2c4c537cf241aaee1a5cd1faf49d097",
+  "paired_count": 5,
+  "rescue_count": 1,
+  "entry_drift_sum": -0.32814100000001645,
+  "paired_cash": -0.22570299999999577,
+  "same_exit_decision_entry_arithmetic_sum": 0.10243800000002068,
+  "trades": [
+    {
+      "position_id": "1790855031810060-1-standard",
+      "asset": "HYPE",
+      "exit_reason": "max_hold",
+      "actual_cash": -0.033177000000009116,
+      "decision_entry_gap": 0.016286000000008016,
+      "modeled_entry_gap": -0.04081000000000756,
+      "entry_drift": -0.05709600000001558,
+      "forecast_gross": 0.046998353435073366,
+      "same_exit_decision_entry_arithmetic": 0.023919000000006463,
+      "hold_seconds": 60.700666189193726,
+      "entry_delays_seconds": [
+        0.5270352363586426,
+        0.5160176753997803
+      ]
+    },
+    {
+      "position_id": "1790855135816097-2-standard",
+      "asset": "NEAR",
+      "exit_reason": "max_hold",
+      "actual_cash": -0.07039499999999066,
+      "decision_entry_gap": -0.1515150000000034,
+      "modeled_entry_gap": -0.22386000000000195,
+      "entry_drift": -0.07234499999999855,
+      "forecast_gross": 0.018112149740855954,
+      "same_exit_decision_entry_arithmetic": 0.0019500000000078899,
+      "hold_seconds": 60.698100090026855,
+      "entry_delays_seconds": [
+        0.6040167808532715,
+        0.6693987846374512
+      ]
+    },
+    {
+      "position_id": "1790855145560086-3-standard",
+      "asset": "LIT",
+      "exit_reason": "max_hold",
+      "actual_cash": -0.05779900000000282,
+      "decision_entry_gap": 0.11811099999999897,
+      "modeled_entry_gap": 0.032668999999998505,
+      "entry_drift": -0.08544200000000046,
+      "forecast_gross": 0.04904534537832299,
+      "same_exit_decision_entry_arithmetic": 0.02764299999999764,
+      "hold_seconds": 60.93508982658386,
+      "entry_delays_seconds": [
+        0.520230770111084,
+        0.5252799987792969
+      ]
+    },
+    {
+      "position_id": "1790855264254293-4-standard",
+      "asset": "LIT",
+      "exit_reason": "take_profit",
+      "actual_cash": 0.014837999999997464,
+      "decision_entry_gap": -0.026266000000006784,
+      "modeled_entry_gap": -0.05060400000000698,
+      "entry_drift": -0.024338000000000193,
+      "forecast_gross": 0.01925652794903112,
+      "same_exit_decision_entry_arithmetic": 0.03917599999999766,
+      "hold_seconds": 25.696886777877808,
+      "entry_delays_seconds": [
+        0.5833451747894287,
+        0.5229384899139404
+      ]
+    },
+    {
+      "position_id": "1790855272153169-5-standard",
+      "asset": "NEAR",
+      "exit_reason": "max_hold",
+      "actual_cash": -0.07916999999999064,
+      "decision_entry_gap": 0.22697999999999752,
+      "modeled_entry_gap": 0.13805999999999585,
+      "entry_drift": -0.08892000000000166,
+      "forecast_gross": 0.01654252707198567,
+      "same_exit_decision_entry_arithmetic": 0.009750000000011028,
+      "hold_seconds": 60.789900064468384,
+      "entry_delays_seconds": [
+        0.5327968597412109,
+        0.5201728343963623
+      ]
+    },
+    {
+      "position_id": "1790855418480147-6-standard",
+      "asset": "NEAR",
+      "exit_reason": "entry_failure",
+      "actual_cash": -0.005850000000009459
+    }
+  ],
+  "limitations": "Ex post decomposition on observed closes. Alternate entry timing could alter quantities, later decisions and exits; same-exit arithmetic is not an executable counterfactual. Sample five paired trades is too small to establish a stable latency penalty."
+}
