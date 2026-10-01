@@ -7,7 +7,7 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 01 October 2026 06:27 UTC
+## Current status, 01 October 2026 06:47 UTC
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative or inconclusive; no strategy is promoted. After the host reboot,
@@ -16,7 +16,7 @@ all eight saved ledgers, strategy epoch and three legacy funding obligations.
 The 00:14 catch-up review96 covers an extended interval and is not a fresh
 uninterrupted validation window. All four feeds are connected.
 
-Reviews through 115 are preserved. Reviews 66–115 have 1,640 closes: 1,630 losses,
+Reviews through 116 are preserved. Reviews 66–116 have 1,643 closes: 1,633 losses,
 two paired gains and eight failed-hedge rescue gains. The four epoch paired gains
 remain the WLD/CRCL records from review65 and two MU records from review85;
 the latter share a signal and HL fill observation, and their full three-pair
@@ -63,6 +63,16 @@ books/s, metadata age 738 s. No open positions and three pending funding items
 remain. Next review: **1 October 06:46:33 UTC**. Carry v2 reports one
 `arrival_invalid` slot at 06:25 (slot 71); do not open its sample under the
 monitor-only constraint. It has no terminal error or economic evaluation.
+Review 116 added three exact Premium failed-hedge losses/−$3.49904, with no
+aborts, wins, estimates or rejections. Reviews 66–116 have 1,643 closes: 1,633
+losses, two paired gains and eight failed-hedge rescue gains. The review116
+epoch snapshot at 06:47:03 UTC showed convergence 391/−$467.0259 and Premium
+692/−$1,280.3203. Premium's epoch count rose by four from the prior snapshot,
+while the report delta was three; use report deltas for review totals. Four
+feeds remain connected with 107 pairs and performance ok; p95 lag 7.00 ms, RSS
+205.20 MiB, CPU 48.78%, and 849.4 books/s. Metadata age is 1,936.8 s; no open
+positions and three pending funding items remain. Next review:
+**1 October 07:06:33 UTC**.
 
 The original dated-carry run was interrupted by reboot after 136 recorded slots:
 134 sampled and two late callbacks. Its last trusted index and all evidence
