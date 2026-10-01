@@ -4842,3 +4842,15 @@ Reviews 66–147 total 2,256 completions: 2,227 exact losses, one estimated
 loss, two paired gains and 26 audited failed-hedge rescue gains. Archive
 3,617,755 / 5,242,880 B; 166 future scheduled pairs at 5,342 B project
 4,504,527 B, leaving 738,353 B. Next review **17:26:33 UTC**.
+
+
+Review147 parent estimate audit retained in `review147-estimate-record.json.gz`
+(1,922 B) and `review147-estimate-root-audit.json` (986 B). The $1,000-budget
+Premium MU pair crossed 17:00 UTC: price +$0.0846, fees $0.87842389,
+stress $0.4992669, capital $0.00003475985 and estimated funding
+−$0.0022454626 produce estimated net −$1.29537101245. HL uses a sampled
+oracle with 108 ms skew; arithmetic verified. RH inferred per-unit credit
+lacks its reference price, so the result remains an estimated loss and is
+not promoted to exact. Archive including audit is 3,620,663 B; 166 future
+pairs project 4,507,435 B, leaving 735,445 B under 5,242,880 B. Counts
+unchanged: 2,227 exact losses, one estimated loss and 28 gains.

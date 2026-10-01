@@ -1688,3 +1688,9 @@ epoch snapshot retained, report deltas authoritative. Archive 3,617,755 B,
 166 future pairs project 4,504,527 B, margin 738,353 B under 5 MiB cap.
 Carry 17:05: 199 sampled, persistent invalid slot 71, 664 future/interrupted,
 no errors/retries/economic evaluation. Next review 17:26:33 UTC.
+
+
+Review147 parent audit verified MU pair funding-estimate arithmetic while
+retaining estimated quality because RH lacks a funding reference price.
+Estimated loss remains −$1.29537101245; audit artifacts preserved. Manual
+archive 3,620,663 B, projected 4,507,435 B, margin 735,445 B.

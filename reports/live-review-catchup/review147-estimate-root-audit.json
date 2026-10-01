@@ -1,0 +1,14 @@
+{
+  "audit": "terminal_arithmetic_passed_funding_remains_estimated",
+  "source_sha256": "cfc6e5cd0f6726850bd1b4d84d1fef5341f10bc2b4a6f1665d17874655351dd0",
+  "id": "1790873995417702-24260-premium",
+  "asset": "MU",
+  "classification": "Paired1000-budget Premium trade crossing17:00UTC funding; estimated-loss bucket, excluded from exact results.",
+  "price_pnl": "0.0846",
+  "fees": "0.87842389",
+  "stress": "0.49926690",
+  "capital": "0.00003475985252140841499901463707",
+  "estimated_funding": "-0.0022454626",
+  "estimated_net": "-1.295371012452521408414999015",
+  "provenance": "HL uses sampled oracle1061.4 at16:59:59.8916953 with108.3ms skew; arithmetic of\u22120.94*1061.4*0.00000625 verified but sampled price remains estimated. RH credit0.0039902624 is inferred settled per-unit value without retained reference price; total can be reconciled but cannot promote to exact. Both inventory intervals span17:00. Original order-book depth absent from rolling terminal evidence."
+}
