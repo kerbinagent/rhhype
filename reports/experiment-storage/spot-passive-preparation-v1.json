@@ -1,0 +1,12 @@
+{
+  "schema": "spot-passive-preparation-v1",
+  "recorded_utc": "2026-10-01T16:50:54.587833+00:00",
+  "previous": "reports/experiment-storage/completed-reference-count-closeout-v1.json",
+  "previous_sha256": "7d0567a65b389cd9cbf27f5786a64ba1285dc159f736a33a7ce51b1ce4d17755",
+  "preparation_reserved_bytes": 262144,
+  "active_research_pool_bytes": 36700160,
+  "active_research_reserved_bytes": 20512768,
+  "active_research_headroom_bytes": 16187392,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Bounded preparation only: new Core spot passive-entry/perp-hedge sources, tests, protocol, audits; no capture until final allocation and source freeze. Existing artifacts preserved."
+}

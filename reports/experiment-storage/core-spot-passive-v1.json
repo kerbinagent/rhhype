@@ -1,0 +1,179 @@
+{
+  "schema": "core-spot-passive-v1",
+  "recorded_utc": "2026-10-01T17:01:46.183902+00:00",
+  "previous": "reports/experiment-storage/spot-passive-preparation-v1.json",
+  "previous_sha256": "c2ca546e4c87cde4bf35fbbf0621df6e6e42dea455d9e13fea69c63feb4a44db",
+  "preparation_included_bytes": 262144,
+  "reserved_bytes": 10682368,
+  "categories_bytes": {
+    "source_and_preparation": 262144,
+    "metadata": 65536,
+    "raw": 8388608,
+    "output": 1835008,
+    "control": 131072
+  },
+  "active_research_pool_bytes": 36700160,
+  "active_research_reserved_bytes": 30932992,
+  "active_research_headroom_bytes": 5767168,
+  "overall_reservation_bytes": 836777216,
+  "selected": {
+    "lighter": {
+      "SKY_spot": "2053",
+      "SKY_perp": "79",
+      "UNI_spot": "2051",
+      "UNI_perp": "30",
+      "AAVE_spot": "2052",
+      "AAVE_perp": "27",
+      "LINK_spot": "2050",
+      "LINK_perp": "8",
+      "LDO_spot": "2054",
+      "LDO_perp": "46"
+    }
+  },
+  "duration_seconds": 600,
+  "hard_decoded_bytes": 134217728,
+  "hard_records": 100000,
+  "metadata_max_age_seconds": 1800,
+  "portfolios": "Five independent $600 USDC portfolios, one per asset; do not sum as a $600 combined portfolio. One spot-long/perp-short position per asset. No spot borrowing.",
+  "per_leg_budget": 100,
+  "maker_activation_ms": 100,
+  "cancel_and_taker_delay_ms": 400,
+  "hedge_limit_bps": 1,
+  "hold_seconds": 10,
+  "quote_rest_seconds": 5,
+  "reference": {
+    "min_count": 60,
+    "minimum_span_seconds": 89,
+    "lookback_seconds": 122,
+    "embargo_seconds": 2,
+    "sample_min_seconds": 1,
+    "source_and_receipt_max_age_seconds": 2,
+    "source_and_receipt_pair_skew_ms": 250,
+    "basis": "perp_mid/spot_mid-1 in bps; reference median is sampled only from preceding fresh callback pairs"
+  },
+  "entry": {
+    "price": "current spot bid, full displayed equal-price queue ahead on activation; no cancellation-based queue credit",
+    "excursion_bps": 5,
+    "forecast_cash_after_capital_usd": 0.01,
+    "forecast": "perp bid walk - spot bid purchase + spot bid liquidation - perp ask liquidation + qty*(current absolute mid basis - historical median bps*current spot mid/10000), less four fees and ten-second 5% annual capital",
+    "take_profit_cash_after_capital_usd": 0.01,
+    "stress_bps": 5,
+    "admission_seconds": [
+      122,
+      480
+    ],
+    "cooldown_after_flat_seconds": 30,
+    "attempt_cap_per_asset": 30,
+    "funding_boundary_guard_seconds": 120,
+    "public_minima": "Enforced for all submitted maker/hedge/exit quantities. Partial executions may be smaller than order minimum but unsubmitable residuals remain unknown. No inherited IOC exemption."
+  },
+  "accounting": "Spot purchase cash outflows and inventory tracked; synthetic open-perp notional proceeds removed from actual cash; 1x perp margin reserved. Both markets settle USDC. All funding-crossing, clock, late-flow, endpoint and execution unknowns retained.",
+  "evaluation": "No economic evaluation before fixed endpoint. Replay exact pinned protocol only after completed duration. Capture caps/errors sealed as incomplete; no automatic extension/retry. All outcomes retained, including no fills and failed hedges.",
+  "evidence": "Public book/trade observations support only conditional maker attribution, not private order ACKs or real fills. Internal role alias rh_lighter is only a hedge parser alias; every logged source venue and market remains Core.",
+  "wire_inventory": "reports/experiment-storage/core-spot-passive-wire-inventory-v1.json",
+  "wire_inventory_sha256": "61145abe0a32a9b8e5168ea37afce1edffd2f9473260c8e0c0965a4f471370e7",
+  "source_pins": [
+    {
+      "path": "scripts/analyze_maker_capture.py",
+      "sha256": "d87ce8f116e039976b7afac20ede5704d14b3d49eb626473d214a7d47811b359"
+    },
+    {
+      "path": "scripts/analyze_maker_equity.py",
+      "sha256": "85d4de8cfd523b4a4497e3e2f6411b05f3737f2133d4c167ddce708af363843f"
+    },
+    {
+      "path": "scripts/analyze_maker_roundtrip.py",
+      "sha256": "d7d23b255fcffc294069a77486cc944a9a64a32d6755cc515a960d1ae03a9c93"
+    },
+    {
+      "path": "scripts/audit_core_spot_passive.py",
+      "sha256": "9e1d8b1fdc88596901a1db592406d1e87a51c12c37728485f096ac55216222f3"
+    },
+    {
+      "path": "scripts/core_passive_hedged_base.py",
+      "sha256": "6bc4d04f8cb5c6cbff78c198dc19314f0a50571187311b61c6a99d03d6b386fb"
+    },
+    {
+      "path": "scripts/core_passive_hedged_exit.py",
+      "sha256": "7ca4ca6b783c84eac83294bd5e9786d7e30eec3cd33297d95005f956cd359ed0"
+    },
+    {
+      "path": "scripts/core_passive_hedged_late_flow.py",
+      "sha256": "c163b0814a5bff8fc949ea31c5d9240d57503f8dbde5dcb2d8da3e6ebfdf9539"
+    },
+    {
+      "path": "scripts/core_passive_hedged_retirement.py",
+      "sha256": "23036c5b4a565ccafd226debd9e590cd82da0c4aad5183299f049a2fd2cff8e8"
+    },
+    {
+      "path": "scripts/core_passive_hedged_sell.py",
+      "sha256": "632b7f63e7525b0cb8a761f53bba3cff35e7aee8b9246f85fc07d56d003c006d"
+    },
+    {
+      "path": "scripts/core_passive_lit_branch.py",
+      "sha256": "fb8a97beef9bd0da13af80635127c61a1a7601596977be8726058f9f92b86c74"
+    },
+    {
+      "path": "scripts/core_passive_lit_capture.py",
+      "sha256": "7da167cc8b55da838100141fda57cb854eab4d0525d5c97b43a9d1ef7f2d51d8"
+    },
+    {
+      "path": "scripts/core_passive_lit_events.py",
+      "sha256": "8fa7c271c85d46d5f997bc8f48c3b1174367bb6bb37605e48e6c30faff2577a2"
+    },
+    {
+      "path": "scripts/core_rh_small_shortterm.py",
+      "sha256": "65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3"
+    },
+    {
+      "path": "scripts/core_spot_passive_branch.py",
+      "sha256": "a5962c285dbe78ab15a4c5b1e38f794a2589af182be8668f8723b7a64a4fffbe"
+    },
+    {
+      "path": "scripts/core_spot_passive_capture.py",
+      "sha256": "b1d41e7b7bcbb5c3e8d04b67c92feb1aae9037002c38a851e030834c54d712fb"
+    },
+    {
+      "path": "scripts/core_spot_passive_events.py",
+      "sha256": "4a2493efa4a9dc1ad9babb813bd1ef40350bd0eb77d437797f3344a3b62c425b"
+    },
+    {
+      "path": "scripts/launch_core_spot_passive.py",
+      "sha256": "0deaecfaa9b5506cc9c1e9f6b3de8c0901024bf4a198b7005c561be9ef16c0b3"
+    },
+    {
+      "path": "scripts/maker_book_archive.py",
+      "sha256": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2"
+    },
+    {
+      "path": "scripts/maker_capture.py",
+      "sha256": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/replay_core_passive_lit.py",
+      "sha256": "99f8f82ae23c587c00c7d4f1333fbb3b54f028b1b0930ac89dc1e75643131527"
+    },
+    {
+      "path": "scripts/replay_core_spot_passive.py",
+      "sha256": "b4977a52895f6eec4ad947fca04d685cb0093aa878bff153e83e0ace42ced8d2"
+    },
+    {
+      "path": "tests/test_core_spot_passive.py",
+      "sha256": "6f34030950ddfedd8c02fda717bd572444d8eadb5e00cebcc5310729771ec252"
+    }
+  ],
+  "tests": "Five direct Python tests passed:60-reference/span forecast, actual cash excludes short proceeds, queue touch/partial below-minimum unknown, source identity, and full profitable synthetic cycle independently audited (120 reference rows, one maker queue match, three taker walks and TP mark). pytest unavailable; no dependency installed.",
+  "motivation": "Completed taker test failed cost threshold; optimistic passive bid entry can save sampled11\u201319bp spot spread. Fresh full books and spot trades are required to test whether this survives actual public flow and adverse selection. This is a new hypothesis, not a claimed profitable strategy."
+}
