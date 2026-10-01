@@ -1,0 +1,69 @@
+{
+  "markets": {
+    "maker": {
+      "LIT": {
+        "venue": "lighter",
+        "asset": "LIT",
+        "market": "2049",
+        "market_kind": "spot",
+        "price_tick": "0.0001",
+        "qty_step": "0.01",
+        "min_qty": "1.0",
+        "min_notional": "0.001",
+        "max_quote": "281474976.710655",
+        "max_qty": null,
+        "maker_fee_bps": "0",
+        "taker_fee_bps": "0",
+        "collateral": "USDC",
+        "contract_multiplier": "1",
+        "processing_delay_ms": 300
+      }
+    },
+    "hedge": {
+      "LIT": {
+        "venue": "lighter",
+        "asset": "LIT",
+        "market": "120",
+        "market_kind": "perp",
+        "price_tick": "0.0001",
+        "qty_step": "0.01",
+        "min_qty": "1.0",
+        "min_notional": "10.0",
+        "max_quote": "281474976.710655",
+        "max_qty": null,
+        "maker_fee_bps": "0",
+        "taker_fee_bps": "0",
+        "collateral": "USDC",
+        "contract_multiplier": "1",
+        "processing_delay_ms": 300
+      }
+    }
+  },
+  "raw_requests": {
+    "core_markets": {
+      "method": "GET",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails",
+      "json_body": null,
+      "status": 200,
+      "raw_bytes": 374184,
+      "sha256": "280f7775b8a375d26276750a6008b5961b5d81b287f6d792d23549512c371b86",
+      "compressed_sha256": "8560b2f0fce680b6aeddb9530a648bb79aaffd88ce4cd0406d81b93b311bc71b",
+      "request_started_utc_ns": 1790876640794349518,
+      "response_completed_utc_ns": 1790876640894934542,
+      "raw_file": "core_markets.json.gz"
+    },
+    "core_assets": {
+      "method": "GET",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/assetDetails",
+      "json_body": null,
+      "status": 200,
+      "raw_bytes": 6119,
+      "sha256": "396950bb2b176a6d87e2f608cf3565d3ab817472f58d36ab3420bf98e83fe13e",
+      "compressed_sha256": "6b17cea02b221d2ea1ab05bf4978b507f2b2c49461a0e64cb5edd57712628734",
+      "request_started_utc_ns": 1790876640901882398,
+      "response_completed_utc_ns": 1790876641068938505,
+      "raw_file": "core_assets.json.gz"
+    }
+  },
+  "market_plan_sha256": "d17de879ef19287495f0d8acf541df79c162a09fc31a1097902a219234240a32"
+}

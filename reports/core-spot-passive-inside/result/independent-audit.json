@@ -1,0 +1,23 @@
+{
+  "audit": "passed",
+  "checks": {
+    "admissions": 2,
+    "reference_rows": 188,
+    "active_checks": 2,
+    "queue_episodes": 2,
+    "maker_flow_matches": 0
+  },
+  "branches": {
+    "LIT": {
+      "fills": 0,
+      "cash_spot": "0",
+      "cash_perp_synthetic": "0",
+      "capital": "0",
+      "spot_inventory": "0",
+      "perp_inventory": "0",
+      "unknown_reason": null
+    }
+  },
+  "summary_sha256": "b2515d827037942fa2bc2706e8da7afd2649fe83cc99092cd1be5be7f6724cd3",
+  "limitations": "Queue checked only before first unknown callback; unknown outcomes retained. Public-flow attribution remains conditional on queue and ACK assumptions. No private order/fill proof. All fills independently reconciled even in unknown branches; zero checks are vacuous."
+}

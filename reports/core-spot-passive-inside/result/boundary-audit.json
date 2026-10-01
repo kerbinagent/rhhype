@@ -1,0 +1,25 @@
+{
+  "audit": "passed",
+  "checks": {
+    "activated": 2,
+    "cancel_effective": 2
+  },
+  "actual_entry_budgets": [
+    {
+      "asset": "LIT",
+      "attempt": 1,
+      "actual_entry_spot": "0",
+      "actual_entry_perp": "0",
+      "within_100_per_leg": true
+    },
+    {
+      "asset": "LIT",
+      "attempt": 2,
+      "actual_entry_spot": "0",
+      "actual_entry_perp": "0",
+      "within_100_per_leg": true
+    }
+  ],
+  "summary_sha256": "b2515d827037942fa2bc2706e8da7afd2649fe83cc99092cd1be5be7f6724cd3",
+  "note": "Supplementary source prepared during capture without reading economics. Original engine and protocol unchanged. If delayed hedge repricing crosses100 actual entry notional, retain the outcome but exclude it from a100-per-leg profit claim."
+}

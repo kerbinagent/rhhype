@@ -1,0 +1,51 @@
+{
+  "diagnostic": "completed_capture_activation_only",
+  "manifest_sha256": "132babb5f5951abb2cc35e821e39b7a2062363321fc91c59eb81418b4a2c9776",
+  "quotes": [
+    {
+      "decided_ns": 1790876786296579559,
+      "price": "3.9408",
+      "qty": "25.31",
+      "activation_ns": 1790876786492737982,
+      "ahead_same": "0",
+      "ahead_better": "612.28",
+      "cancel_due_ns": 1790876786892737982,
+      "activation_source_ns": 1790876786410827000,
+      "activation_delay_ms": "196.158423",
+      "basis_bps": "18.26159738250437517437289000",
+      "reference_bps": "14.02389524659921892852407000",
+      "excursion_bps": "4.23770213590515624584882000",
+      "forecast_at_original_quote_ignoring_excursion_gate": "0.02456775196477813278901698816",
+      "spot_bid": 3.9413,
+      "spot_ask": 3.9441,
+      "perp_bid": 3.9493,
+      "perp_ask": 3.9505,
+      "eligible_sell_prints": 0,
+      "eligible_sell_quantity": "0"
+    },
+    {
+      "decided_ns": 1790876975937220944,
+      "price": "3.9390",
+      "qty": "25.32",
+      "activation_ns": 1790876976185101592,
+      "ahead_same": "613.37",
+      "ahead_better": "0",
+      "cancel_due_ns": 1790876976585101592,
+      "activation_source_ns": 1790876976073611000,
+      "activation_delay_ms": "247.880648",
+      "basis_bps": "19.02780596711995128881672000",
+      "reference_bps": "14.72492320190916245652339000",
+      "excursion_bps": "4.30288276521078883229333000",
+      "forecast_at_original_quote_ignoring_excursion_gate": "0.002428168210250778704065376963",
+      "spot_bid": 3.939,
+      "spot_ask": 3.9442,
+      "perp_bid": 3.9483,
+      "perp_ask": 3.9499,
+      "eligible_sell_prints": 0,
+      "eligible_sell_quantity": "0"
+    }
+  ],
+  "ordinary_live_prints": 287,
+  "ordinary_live_value": "4971.630553",
+  "scope": "Recompute original admitted price/quantity forecast at activation without the5bp excursion gate, solely to diagnose cancellation. Does not change quote policy, attribute alternate fills or estimate alternate P&L."
+}
