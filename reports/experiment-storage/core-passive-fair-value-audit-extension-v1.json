@@ -1,0 +1,10 @@
+{
+  "schema": "fair-value-audit-extension-v1",
+  "recorded_utc": "2026-10-01T14:32:55.183477+00:00",
+  "allocation": "reports/experiment-storage/core-passive-fair-value-v1.json",
+  "allocation_sha256": "fca8b292b23a7af085ff9de785f64111489500f061e3b51e9c7d53931863d0a8",
+  "new_reserved_bytes": 0,
+  "scope": "One additional independent raw-reference auditor within original32KiBsource/128KiBoutput bounds. No change to running simulation or economics.",
+  "source": "scripts/audit_core_passive_fair_references.py",
+  "source_sha256": "8e4f828db0d7ae212b931891f9fffeacc74c638667d919229b6f27309672dbc8"
+}
