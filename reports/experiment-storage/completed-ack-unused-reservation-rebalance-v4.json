@@ -1,0 +1,75 @@
+{
+  "schema": "completed-ack-unused-reservation-rebalance-v4",
+  "recorded_utc": "2026-10-01T22:12:49.604031+00:00",
+  "previous": "reports/experiment-storage/single-venue-batch-reference-v2.json",
+  "previous_sha256": "e078db5a6fe078620303f947be667c669dc570c302c971c97ae14ed93c143dfa",
+  "prior_ack_retention": "reports/experiment-storage/completed-ack-unused-reservation-rebalance-v3.json",
+  "prior_ack_retention_sha256": "e197f45f7368f292dcd0de4714d212bebc1c483c240ad8c9aa0ef6bf522737a1",
+  "scenarios": [
+    {
+      "scenario": "base",
+      "status_path": "reports/rh-passive-ack-exploratory/base/status.json",
+      "status_sha256": "bb68ebdfd36a2a6a8e2f24d069356c7a3154a815892ae8af51fdbe816eb8d93e",
+      "old_retained_derived_reservation_bytes": 94445568,
+      "new_retained_derived_reservation_bytes": 60891136,
+      "released_unused_bytes": 33554432,
+      "artifact_bytes": 11887402,
+      "files": [
+        {
+          "path": "data/derived/rh-passive-exit-v1-restart-ack-exploratory-base/REPORT.md",
+          "bytes": 1906,
+          "sha256": "4e4ae5fb7ec637849371eb81b3ed08cac6feeefdb7051476c6647533fe057cfe"
+        },
+        {
+          "path": "data/derived/rh-passive-exit-v1-restart-ack-exploratory-base/analysis.json",
+          "bytes": 7811383,
+          "sha256": "87af3fcb9ef55a75fdbe8e01a62366a4c3e985d7a15cb095fc346b99e0bed184"
+        },
+        {
+          "path": "data/derived/rh-passive-exit-v1-restart-ack-exploratory-base/audit.jsonl.gz",
+          "bytes": 4074113,
+          "sha256": "6b554184205bc5c419f70495c94b3a7073df3e6a047a4e3dc6e8cad72341ed7f"
+        }
+      ]
+    },
+    {
+      "scenario": "plus200",
+      "status_path": "reports/rh-passive-ack-exploratory/plus200/status.json",
+      "status_sha256": "cfa22d1d7d5c6471aa985e41c54d56a3d5a6277c418e28aa5bd27cf6832e0141",
+      "old_retained_derived_reservation_bytes": 94445568,
+      "new_retained_derived_reservation_bytes": 60891136,
+      "released_unused_bytes": 33554432,
+      "artifact_bytes": 9077663,
+      "files": [
+        {
+          "path": "data/derived/rh-passive-exit-v1-restart-ack-exploratory-plus200/REPORT.md",
+          "bytes": 1915,
+          "sha256": "7ee7e6557aaeefa83f6574fb34e54731ef3974d59fd881b4fb0daf7ad4cdad5f"
+        },
+        {
+          "path": "data/derived/rh-passive-exit-v1-restart-ack-exploratory-plus200/analysis.json",
+          "bytes": 6090771,
+          "sha256": "178bfe5eb86b959dd90df3d5a6106d87570ccf0e420c65d53c369b9293b37a0c"
+        },
+        {
+          "path": "data/derived/rh-passive-exit-v1-restart-ack-exploratory-plus200/audit.jsonl.gz",
+          "bytes": 2984977,
+          "sha256": "0bbce9de9d93f12b8e8b37b7b8250c7c89d9dd642970639f3b224cef4b01fd7a"
+        }
+      ]
+    }
+  ],
+  "process_check": "Read-only host pgrep for replay_passive_ack_exploratory.py returned exit1/no matches. Exactcompletedstatus/directory/filehashes unchanged.",
+  "all_existing_data_retained": true,
+  "old_combined_ack_retention_reservation_bytes": 188891136,
+  "new_combined_ack_retention_reservation_bytes": 121782272,
+  "released_unused_reservation_bytes": 67108864,
+  "new_control_reservation_bytes": 8192,
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 84221952,
+  "active_research_headroom_bytes": 69918720,
+  "overall_reservation_bytes": 836777216,
+  "overall_reservation_increase_bytes": 0,
+  "manual_review_cap_bytes": 5242880,
+  "scope": "Transfer 32 MiB of unused reservation from each completed ACK derived allocation. Each retains 60,891,136 bytes, over four times its actual files. All source, raw data, metadata, outputs, and logs remain funded and retained. No deletion, recompression, new ACK scenario, or rerun. The active LIT batch retains its full allocation. Future broader comparison needs a separate frozen protocol, raw inventory, and allocation. Overall reservation unchanged."
+}

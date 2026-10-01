@@ -1,0 +1,19 @@
+{
+  "recorded_utc": "2026-10-01T22:14:45.518020+00:00",
+  "allocation": "Existing single-venue-flow-literature-v3, within 8192 total bytes",
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/0809.0822",
+      "read": "abstract",
+      "finding": "The review connects persistent order flow to large orders being executed incrementally.",
+      "application_limit": "A public print is not necessarily a whole parent order or evidence that its execution has ended."
+    },
+    {
+      "url": "https://arxiv.org/abs/2501.17096",
+      "read": "abstract, version 2 revised 2025-12-03",
+      "finding": "The authors find that public-data price/flow models can produce trajectories unlike real metaorders and argue that modeling the source of flow autocorrelation matters.",
+      "application_limit": "Public-tape clustering alone does not identify a parent order or establish a predictable reversal after the last observed print."
+    }
+  ],
+  "implication": "Measure clustering and subsequent flow; retain uncertainty about parent-order completion. No square-root or fixed relaxation fraction is imported as a trading rule. Active protocol unchanged."
+}
