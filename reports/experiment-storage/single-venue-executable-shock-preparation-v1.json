@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-executable-shock-preparation-v1",
+  "recorded_utc": "2026-10-01T21:58:38.286154+00:00",
+  "previous": "reports/experiment-storage/completed-single-venue-depth-batch-closeout-v1.json",
+  "previous_sha256": "d14949b6fdda8b0143cffbd73a164b1d722df5dc7260d80ad1bd7d37d35732e6",
+  "reserved_bytes": 65536,
+  "active_research_pool_bytes": 87031808,
+  "active_research_reserved_bytes": 58286080,
+  "active_research_headroom_bytes": 28745728,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare prospective LIT shock comparison:baseline fade,executable-side-move fade,and additionally reference-depth-priced fade. Admission3..570seconds;unchanged400msIOC,1bpentrylimit,10shold,5bpstress,nativeledgers. Source,test,independentauditor andprotocol within65536bytes. No capture untilfullfreeze andreservation. No change to previousoutcomes."
+}
