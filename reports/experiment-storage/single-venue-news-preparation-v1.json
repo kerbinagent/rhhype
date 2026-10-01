@@ -1,0 +1,19 @@
+{
+  "schema": "single-venue-news-preparation-v1",
+  "recorded_utc": "2026-10-01T23:36:25.277530+00:00",
+  "previous": "reports/experiment-storage/single-venue-residual-profile-v1.json",
+  "previous_sha256": "ffe5e8afa19217e2ea5b00c29fde71d2808bbcf1231a2b5e5036205a276598e8",
+  "reserved_bytes": 65536,
+  "categories_bytes": {
+    "source_protocol_inventory_tests": 65536
+  },
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 95887360,
+  "active_research_headroom_bytes": 58253312,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare one bounded scheduled public-data window aroundBLS2026-10-02EmploymentSituation08:30Eastern/12:30UTC. Same10assets, originalrelative3rules and originaldepthfade/follow, no newparameters. No network/capture until full allocation/source freeze. Scheduled launch target12:26UTC,600seconds raw48MiB, no retry, late start or missing pre-eventwarmup incomplete. Protocol/fullallocationwillinclude thispreparationwithoutdoublecount.",
+  "sources": [
+    "https://www.bls.gov/schedule/2026/",
+    "https://www.bls.gov/schedule/news_release/empsit.htm"
+  ]
+}
