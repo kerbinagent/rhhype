@@ -1938,3 +1938,14 @@ pairs fresh, running/ok. Separate epoch increments match report. Archive
 Carry 23:25: 275 sampled, invalid slot 71, 588 future/interrupted; no errors/
 retries/evaluation. Relative broad capture normal terminal23:15 confirmed
 via status only, no economic outputs read. Next23:46:33UTC.
+
+
+### Review 167, 1 October 23:46 UTC
+
+Complete coverage, zero closes/gains/estimates/aborts/rejections. Separate
+epoch unchanged. Four feeds/101 pairs fresh, running/ok. Archive 3,725,499 B;
+146 future pairs project 4,505,431 B, margin737,449 B. Carry23:45:279sampled,
+invalidslot71,584future/interrupted; no errors/retries/evaluation. Added
+news capture and analysis-companion status supervision; both waiting with
+fresh heartbeats, no economic outputs read or competing jobs launched.
+Next review2October00:06:33UTC.
