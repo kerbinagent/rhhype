@@ -1,0 +1,86 @@
+{
+  "schema": "completed-paradex-bounded-closeout-v1",
+  "recorded_utc": "2026-10-01T12:14:41.258091+00:00",
+  "previous": "reports/experiment-storage/core-spot-perp-shortterm-allocation-v1.json",
+  "previous_sha256": "dfa967a29ce6514e3f60a7cfd24ca2e4b5870d4798a202ccc219699b19316a15",
+  "old_reserved_bytes": 1032192,
+  "artifact_bytes": 152658,
+  "retention_reserved_bytes": 196608,
+  "released_bytes": 835584,
+  "active_research_reserved_bytes": 5423104,
+  "active_research_headroom_bytes": 868352,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Preserve completed capture and all source/plan/readout bytes. No deletion or recompression. Includes 16KiB closeout manifest allowance. No fills; reference coverage failure.",
+  "files": [
+    {
+      "path": "reports/paradex-core-bounded/audit.json",
+      "bytes": 1469,
+      "sha256": "63e0903077212989748226eca42abcafed7e3b5ddb943b6fa3faa0c2437e47b7"
+    },
+    {
+      "path": "reports/paradex-core-bounded/events.jsonl.gz",
+      "bytes": 71608,
+      "sha256": "f5dd2747199d18bf4d53d70aa5c35d7a8a72f6d0c3d4313909a5028d6ac77686"
+    },
+    {
+      "path": "reports/paradex-core-bounded/lighter-metadata.json.gz",
+      "bytes": 23079,
+      "sha256": "d11b291401f948cad8f4b621d2c4e151b7fe1aa550eed08c2568c9d8fbd361ac"
+    },
+    {
+      "path": "reports/paradex-core-bounded/metadata.json",
+      "bytes": 2271,
+      "sha256": "7f1e04fd42a7ea45e49532c5f5ff351b54b4c8b3ada6182672f269b8d01a23e6"
+    },
+    {
+      "path": "reports/paradex-core-bounded/paradex-BTC-metadata.json.gz",
+      "bytes": 533,
+      "sha256": "9e68f235211b72e5eec0a4b25c2bfdfaeece1223b9586294eafafd49a51ea4d4"
+    },
+    {
+      "path": "reports/paradex-core-bounded/paradex-ETH-metadata.json.gz",
+      "bytes": 530,
+      "sha256": "ec32c34e3108dda4862efaaf3dc67f2e38dd158b7738e3e8c94b716717ed93cf"
+    },
+    {
+      "path": "reports/paradex-core-bounded/readout.md",
+      "bytes": 1399,
+      "sha256": "6e58db540ebb22f47fe5ffda1c6fc85dddf1d0d92f5ca9ee4a90d75706d13c2d"
+    },
+    {
+      "path": "reports/paradex-core-bounded/status.json",
+      "bytes": 253,
+      "sha256": "88d78a1f5fe0437df2f3de27dde7fd0153142644598425ba432ca339513e492f"
+    },
+    {
+      "path": "reports/paradex-core-bounded/summary.json",
+      "bytes": 3420,
+      "sha256": "4e8327540ca9cfb8690c37e5662e3b0772fc5b2f0c641ffefb072b3d1ef5d7bd"
+    },
+    {
+      "path": "reports/paradex-core-bounded/unresolved.json.gz",
+      "bytes": 38,
+      "sha256": "d0f2052384d81e20ba449c7a64221a0acb4c838b0059a96360ea5506bb349363"
+    },
+    {
+      "path": "scripts/paradex_core_bounded.py",
+      "bytes": 28072,
+      "sha256": "dd27ef7cd2708c43ef1380466fd98920b25a578afdb5881430bed190593df7e3"
+    },
+    {
+      "path": "scripts/audit_paradex_core_bounded.py",
+      "bytes": 11515,
+      "sha256": "5fd0fa61ab7c3aa776dceceffb3fb84fec3e364517351702f3b93fad967d8bf5"
+    },
+    {
+      "path": "tests/test_paradex_core_bounded.py",
+      "bytes": 3021,
+      "sha256": "b4cc167bbaf56e88b83991a143634c4f250c3dea6dd20bd167ade772be3ecfb5"
+    },
+    {
+      "path": "reports/experiment-storage/paradex-core-bounded-allocation-v1.json",
+      "bytes": 5450,
+      "sha256": "b136dbbc189f6cee3dc0e271bd4f36cc001d16806c089ad5486ce100039dd3c7"
+    }
+  ]
+}
