@@ -1,0 +1,17 @@
+{
+  "recorded_utc": "2026-10-01T21:32:05.733912+00:00",
+  "allocation": "Unused balance of single-venue-flow-literature-v3 reserved8192bytes.",
+  "sources": [
+    {
+      "url": "https://docs.robinhood.com/chain/lighter-domains/",
+      "finding": "Official Robinhood documentation describes RH Lighter as having separate execution,sequencing and liquidity from Core.",
+      "limit": "Establishes distinct venues,not statistical independence of their prices or market makers."
+    },
+    {
+      "url": "https://apidocs.rh.lighter.xyz/docs/account-types",
+      "status": "not_accessible_via_web_tool",
+      "limit": "RH latency table was not freshly verified;retain archived timing assumption."
+    }
+  ],
+  "scope": "Documentation-only. No activebatch economics inspected,no strategy change."
+}
