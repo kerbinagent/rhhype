@@ -1,0 +1,66 @@
+SINGLE-VENUE RESEARCH — SIMULTANEOUS THREE-ASSET COMPARISON
+Completed 2026-10-01, approximately20:22 UTC. Public-data paper research only.
+
+Question and protocol
+LIT retained as control; VVV and ZEC added as exploratory contrasts. Selection
+was not random or blind to old broad-monitor outcomes. No asset assumed thin.
+Frozen702b445 used the unchanged three rules, two venues and separate600-native-
+collateral ledgers with100 maximum actual entry notional:18 independent arms.
+Execution assumptions and limitations are the same as readout.txt:400ms modeled
+minimum order delay, native rules, bounded IOC confirmations, explicit unknowns.
+The arms are counterfactual alternatives and must not be added as one portfolio.
+
+Capture and outcome
+20:08:13.738309 to20:18:14.509069 UTC,600.770760 seconds;38,562 records;
+4,714,475 compressed raw bytes;53,898 metadata bytes;two connections,no errors.
+Manifest SHA2568954370a5bf35efff4fe69bbb5ff2fa9e7f712299215dfad45de33f85d41dab2.
+Raw SHA256ef125721e44eaf7e894c93b2f461467f4405ec5493f67b62706bf8248b305fd2.
+Both books and ordinary trade feeds were present for all three assets.
+All18 arms had zero entry attempts, zero closed trades and no obligations or
+unknowns. Five feature signals were outside the fixed admission window:four
+VVV rule/venue selections and one ZEC RH gap signal. They were not admitted.
+Allthree raw audits passed, explicitly marking signal/fill checks vacuous.
+This sample validates no actual trade execution or realized positive return.
+
+Descriptive liquidity
+Frozen70f01f2 during health-only capture, before endpoint/economic evaluation.
+First fresh local book per capture-relative second, independently per market.
+Median displayed notional within5bp of each own best quote and spread:
+Asset venue       samples/600  spread(bp)  ask-side depth   bid-side depth
+LIT   Core        590          1.792          5,813.71         5,986.35
+LIT   RH          599          6.398         37,322.12        11,590.99
+VVV   Core        590          2.927         29,865.46         7,077.09
+VVV   RH          591          7.495         16,773.59        23,743.31
+ZEC   Core        599          1.142        209,586.49       151,725.83
+ZEC   RH          598          3.007         82,064.08        77,123.41
+Depth notionals remain in each venue's collateral; cross-venue dollar comparison
+assumesUSDC/USDG parity. Wide spreads did not consistently imply shallower books.
+All3,567 sampled books had enough total displayed depth for quantity100/mid on
+both sides. This benchmark ignores native lot rules, latency and fees; it is not
+an order simulation. It does not guarantee future liquidity or real execution.
+
+The original diagnostic exceeded its131072-byte output cap before writing.
+Failure metadata and frozen source remain. Supplementd522775 changes storage
+only:identical sampling/measurements/aggregate distributions, replacing repeated
+per-second rows with their count and canonical SHA256. Full raw is retained.
+Row SHA2562a11e50e3b118090fae5c69df23c3081a8c1c3bac4a21a4e96087c22c3f63abc.
+
+Large-flow diagnostics
+LIT Core35 large bins;ZEC Core27;VVV and RH none under the fixed baseline rule.
+All62 failed the cost hurdle.58/62 failed the depth-fraction condition;60/62
+failed aligned residual. Rejection categories overlap. Sparse flows often lacked
+the required20 active baseline seconds; zero detections is not zero trading.
+At10seconds,LIT Core32 matched/3 missing,16 favorable,mean fade return-1.116bp.
+ZEC Core27 matched,15 favorable,mean fade return+1.252bp. Corresponding mean
+relative returns were+0.239bp and+0.236bp. These midpoint observations overlap,
+include no costs and provide no independent profitability or causality claim.
+
+Interpretation and continuation
+The larger-asset comparison does not establish a tradeable one-venue edge.
+At100 trade size, these books were generally deep enough that spread and timing
+matter more than mechanical exhaustion by our own order. Occasional shallow
+snapshots remain visible in the stored distributions. Large relative-volume bins
+usually failed to represent substantial consumption of nearby displayed depth.
+Next:exploratory individual-print/depth and shorter-horizon diagnostics on the
+sealed data to test whether one-second bins miss rapid recovery. Retain missing
+source-clock coverage and avoid treating posthoc diagnostics as prospective proof.

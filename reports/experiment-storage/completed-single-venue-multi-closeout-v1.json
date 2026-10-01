@@ -1,0 +1,256 @@
+{
+  "schema": "completed-single-venue-multi-closeout-v1",
+  "recorded_utc": "2026-10-01T20:22:48.882595+00:00",
+  "previous": "reports/experiment-storage/single-venue-multi-v1.json",
+  "previous_sha256": "7e2b6d250eff3f38a4a0977c3268b6b495ad6a697be4d63781a4352f4eebd28b",
+  "old_reserved_bytes": 9764864,
+  "artifact_bytes": 4890533,
+  "retention_reserved_bytes": 5046272,
+  "released_bytes": 4718592,
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 45817856,
+  "active_research_headroom_bytes": 7659520,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retain all original raw, protocol and source pins, no-entry outcomes, audits, diagnostic cap failure and compact supplement. No deletion/recompression. Other prior allocations, including perp-maker preparation, remain reserved. 131072 additional retention headroom covers closeout bookkeeping.",
+  "files": [
+    {
+      "path": "reports/experiment-storage/single-venue-liquidity-compact-v1.json",
+      "bytes": 1436,
+      "sha256": "5c8bf156ce30c7e0fd333a6b384b06807cbd4e48937b5a28a61e69980b783670"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-liquidity-diagnostic-v1.json",
+      "bytes": 1506,
+      "sha256": "f69814c7f074f8b8b5fd35e3bbafeece259fc817a30b1902cde07d43642a8a32"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-multi-preparation-v1.json",
+      "bytes": 796,
+      "sha256": "d1fd4b84dd969add8128112310ea0f6a5f010862a9f9a305cfb812f80851212b"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-multi-v1.json",
+      "bytes": 12622,
+      "sha256": "7e2b6d250eff3f38a4a0977c3268b6b495ad6a697be4d63781a4352f4eebd28b"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-multi-wire-inventory-v1.json",
+      "bytes": 4035,
+      "sha256": "0cb8883db2a21aa56975fa8ab2baae7c55e901ca253d34a9a83601780a720296"
+    },
+    {
+      "path": "reports/single-venue-multi/capture/frames.jsonl.gz",
+      "bytes": 4714475,
+      "sha256": "ef125721e44eaf7e894c93b2f461467f4405ec5493f67b62706bf8248b305fd2"
+    },
+    {
+      "path": "reports/single-venue-multi/capture/manifest.json",
+      "bytes": 2185,
+      "sha256": "8954370a5bf35efff4fe69bbb5ff2fa9e7f712299215dfad45de33f85d41dab2"
+    },
+    {
+      "path": "reports/single-venue-multi/capture/metadata/core_assets.json.gz",
+      "bytes": 1016,
+      "sha256": "eec60135bf7ebb48be287dba92806a32309616bbc190c58329fef149c293eec8"
+    },
+    {
+      "path": "reports/single-venue-multi/capture/metadata/core_assets.request.json",
+      "bytes": 458,
+      "sha256": "3bbb74b4a864f73990ed4a37c66fb16b6673621284a0cf02a43c748095563a15"
+    },
+    {
+      "path": "reports/single-venue-multi/capture/metadata/core_markets.json.gz",
+      "bytes": 23336,
+      "sha256": "283ccfc7196df950545f09bf34347b56c57c01a96e449c0ef6d1603aa3b8d74b"
+    },
+    {
+      "path": "reports/single-venue-multi/capture/metadata/core_markets.request.json",
+      "bytes": 465,
+      "sha256": "2971d37dc29be122a159813857ed097627ca00279c4772ad1f311d75ca48cb40"
+    },
+    {
+      "path": "reports/single-venue-multi/capture/metadata/market_plan.json",
+      "bytes": 12622,
+      "sha256": "7e2b6d250eff3f38a4a0977c3268b6b495ad6a697be4d63781a4352f4eebd28b"
+    },
+    {
+      "path": "reports/single-venue-multi/capture/metadata/normalized.json",
+      "bytes": 5264,
+      "sha256": "799197f21253bd6a300f40b5e5c35dc942684a9947d80be18a7cade373c9736e"
+    },
+    {
+      "path": "reports/single-venue-multi/capture/metadata/rh_assets.json.gz",
+      "bytes": 1809,
+      "sha256": "c2eab4881fd3402b5ddbca9c802acaad8b3e05f36ccdf9b87e44e599e0f784b8"
+    },
+    {
+      "path": "reports/single-venue-multi/capture/metadata/rh_assets.request.json",
+      "bytes": 448,
+      "sha256": "2fd7f61e0176c58e43765e4b28cdd1f6a4b3c27d906293fd2eef34b8f20c1642"
+    },
+    {
+      "path": "reports/single-venue-multi/capture/metadata/rh_markets.json.gz",
+      "bytes": 8027,
+      "sha256": "27bcae02119c697df3090cd7f46cb68d4c094ffce19185aa15814e6d05588ac8"
+    },
+    {
+      "path": "reports/single-venue-multi/capture/metadata/rh_markets.request.json",
+      "bytes": 453,
+      "sha256": "72f0d8757d96d1e0f4ab21157aa5f225f2041dc77450fb53e771014ad60690ae"
+    },
+    {
+      "path": "reports/single-venue-multi/capture/status.json",
+      "bytes": 161,
+      "sha256": "a3dfaec1fea1929a091f8a4789f69eb0c857ff50190da8418984e15980c90c2c"
+    },
+    {
+      "path": "reports/single-venue-multi/capture/terminal.json",
+      "bytes": 316,
+      "sha256": "5936efa1accc24bedbbd118413eb45fdfcd5718ea5e385c2b7edc7124fd11d9c"
+    },
+    {
+      "path": "reports/single-venue-multi-process.json",
+      "bytes": 369,
+      "sha256": "4ca09cc3e00b18e9727a626c449a99b8e582fb98b0525cf570d50beadf33aa20"
+    },
+    {
+      "path": "reports/single-venue-multi.stdout.txt",
+      "bytes": 302,
+      "sha256": "9749cb37dd24a54a40be42cb012fe2de3265b32c6a1eb93673774a1af31a12d1"
+    },
+    {
+      "path": "reports/single-venue-research/liquidity-output-cap-failure.json",
+      "bytes": 556,
+      "sha256": "0fd3da6cf7f2fb5c741dc6b4e7c044467582a1fe88e6ceb0f8baff7c01b32b75"
+    },
+    {
+      "path": "reports/single-venue-research/multi-liquidity-diagnostic.json.gz",
+      "bytes": 2387,
+      "sha256": "f3247402153564809f2e46be186c574bfca08ea1aeb991dc4e4f30f000163a3a"
+    },
+    {
+      "path": "reports/single-venue-research/multi-readout.txt",
+      "bytes": 4373,
+      "sha256": "803977527a8385500ea4fa09c3e8ca67656f8b870704b4bdf4403f5f3a28d334"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-multi-lit/independent-audit.json",
+      "bytes": 561,
+      "sha256": "18ab074dc4570b2d8e485761e86e3ce1fbb5507176904d1ce53537fac7685aa3"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-multi-lit/metrics.json",
+      "bytes": 1834,
+      "sha256": "69dc9130249eefc1013e3e8d2171f3e9d59e54c07d732db10926888c63512cd2"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-multi-lit/shock-diagnostic.json.gz",
+      "bytes": 13056,
+      "sha256": "69a98f2545ff131f4d4567f2bd6208fd04c313f3199f5b56c646c640f0cb624c"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-multi-lit/summary.json.gz",
+      "bytes": 2398,
+      "sha256": "e9a5cd7c3b290126a0377f261fcee28a39d895fb34b6347f23d95dc5e9982443"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-multi-lit/trace.jsonl.gz",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-multi-vvv/independent-audit.json",
+      "bytes": 561,
+      "sha256": "7eaf89e74d29a4bcd29d9d23797c261b8ab8e8042196e30b55964311cf6737af"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-multi-vvv/metrics.json",
+      "bytes": 1575,
+      "sha256": "45c14845f8d9b5d91ea25504997ed7104e50c4d4fd631817437de418a3a0643e"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-multi-vvv/shock-diagnostic.json.gz",
+      "bytes": 576,
+      "sha256": "40f41bdb16ce22639547882a977096e5731b24d89ba0a41e2aedf071a4cf1907"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-multi-vvv/summary.json.gz",
+      "bytes": 2342,
+      "sha256": "a4cb7daf70f6ef6d4d7a70c823afa069bf9dd12bba49cc0059253e8f1b94fc2f"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-multi-vvv/trace.jsonl.gz",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-multi-zec/independent-audit.json",
+      "bytes": 561,
+      "sha256": "aea756be204e4c465f38c0e8167dba356460174fd0ad142f1d5f6fe99b99d703"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-multi-zec/metrics.json",
+      "bytes": 1682,
+      "sha256": "5549721c47b3557ef3e717df8ce3c48697e1c548b0a8127ebad4b8680890c086"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-multi-zec/shock-diagnostic.json.gz",
+      "bytes": 11800,
+      "sha256": "847e71456578734a284c5c0502c40b023852ac7d0d3551d733c14a729e5bc697"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-multi-zec/summary.json.gz",
+      "bytes": 2405,
+      "sha256": "7cb92a3b0dd01c083548e48287078270d6c4a79fbe63e2a2cb777d0618a10038"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-multi-zec/trace.jsonl.gz",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "scripts/launch_single_venue_multi.py",
+      "bytes": 1101,
+      "sha256": "d144ad1de142979e9005ef09594c37a0bca0ae1db9df516efacd59dff7cd2b49"
+    },
+    {
+      "path": "scripts/single_venue_liquidity_compact.py",
+      "bytes": 4610,
+      "sha256": "ba521ed60172beb0ac8b7ed15c1df800e53cbeef07a82384ac7077418b64ae8a"
+    },
+    {
+      "path": "scripts/single_venue_liquidity_diagnostic.py",
+      "bytes": 4280,
+      "sha256": "36fd18316494e0bb93870b688fa282604b362dd0102fefea4eaf81375591e4e5"
+    },
+    {
+      "path": "scripts/single_venue_multi.py",
+      "bytes": 5966,
+      "sha256": "a834ddc458bc1f935b7e2fead605d7a0c84ee40e39c23220bebbf0f8f05c187c"
+    },
+    {
+      "path": "scripts/single_venue_multi_capture.py",
+      "bytes": 8241,
+      "sha256": "6137ea554407ddaa061f14c1d9de0330421fee5eb35aeda03693bc2c53a52538"
+    },
+    {
+      "path": "scripts/single_venue_multi_events.py",
+      "bytes": 24461,
+      "sha256": "89597d57108558c617b479e6de2e03be6deaec05a552a1dc9ccff9e815cdfe3d"
+    },
+    {
+      "path": "tests/test_single_venue_multi.py",
+      "bytes": 3106,
+      "sha256": "bee73e4379e24f7f682de824e5341f98ffd71afb68c9e97effc5d9b5ee9fa140"
+    }
+  ],
+  "raw_inventory_verification": {
+    "prior_count": 20,
+    "all_prior_sha256_verified": true,
+    "prior_bytes": 189651429,
+    "new_raw_bytes": 4714475,
+    "new_raw_sha256": "ef125721e44eaf7e894c93b2f461467f4405ec5493f67b62706bf8248b305fd2",
+    "total_count": 21,
+    "total_bytes": 194365904
+  }
+}

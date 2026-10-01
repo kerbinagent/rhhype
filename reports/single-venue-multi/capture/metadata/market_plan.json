@@ -1,0 +1,295 @@
+{
+  "schema": "single-venue-multi-v1",
+  "recorded_utc": "2026-10-01T20:07:32.777213+00:00",
+  "previous": "reports/experiment-storage/single-venue-multi-preparation-v1.json",
+  "previous_sha256": "d1fd4b84dd969add8128112310ea0f6a5f010862a9f9a305cfb812f80851212b",
+  "preparation_included_bytes": 131072,
+  "reserved_bytes": 9764864,
+  "categories_bytes": {
+    "source_and_preparation": 131072,
+    "metadata": 65536,
+    "raw": 8388608,
+    "output": 1048576,
+    "control": 131072
+  },
+  "active_research_pool_bytes": 53477376,
+  "active_research_reserved_bytes": 50536448,
+  "active_research_headroom_bytes": 2940928,
+  "overall_reservation_bytes": 836777216,
+  "selected": {
+    "rh_lighter": {
+      "LIT": "5",
+      "VVV": "8",
+      "ZEC": "4"
+    },
+    "lighter": {
+      "LIT": "120",
+      "VVV": "69",
+      "ZEC": "90"
+    }
+  },
+  "duration_seconds": 600,
+  "capture_hard_bytes": 8519680,
+  "hard_decoded_bytes": 134217728,
+  "hard_records": 100000,
+  "parameters": {
+    "pair_skew_ms": 250,
+    "book_age_seconds": 2,
+    "reference_seconds": 120,
+    "reference_embargo_seconds": 2,
+    "reference_min_count": 60,
+    "reference_min_span_seconds": 89,
+    "signal_interval_seconds": 1,
+    "admission_start_seconds": 122,
+    "admission_stop_seconds": 480,
+    "budget": 100,
+    "sizing_headroom_fraction": 0.01,
+    "initial_cash": 600,
+    "delay_ms": 400,
+    "confirmation_timeout_seconds": 2,
+    "entry_limit_bps": 1,
+    "exit_limit_bps": 10,
+    "max_exit_attempts": 3,
+    "hold_seconds": 10,
+    "cooldown_seconds": 30,
+    "max_attempts": 20,
+    "gap_min_bps": 5,
+    "other_gap_min_bps": 3,
+    "forecast_buffer_bps": 2,
+    "leader_min_move_bps": 3,
+    "target_max_leader_fraction": 0.5,
+    "shock_min_local_move_bps": 2,
+    "shock_max_reference_move_bps": 1,
+    "shock_flow_multiple": 5,
+    "shock_imbalance": 0.8,
+    "shock_depth_fraction": 0.25,
+    "shock_depth_band_bps": 5,
+    "shock_min_baseline_bins": 20,
+    "shock_min_baseline_span_seconds": 60,
+    "capital_rate": 0.05,
+    "stress_bps": 5,
+    "funding_guard_seconds": 120
+  },
+  "source_pins": [
+    {
+      "path": "reports/experiment-storage/single-venue-compact-evidence-v1.json",
+      "sha256": "be63402ae099f02b8237ac6bc0c97896c65c74639fbec26066b292518ecb1d57"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-shock-diagnostic-v1.json",
+      "sha256": "160b17c7d7b17c22a42e9ace7a22a0cd6291405a1f4cc9a8bc7e1055c9aeefb6"
+    },
+    {
+      "path": "reports/single-venue-research-sources.json",
+      "sha256": "dcc6dda95afe4c2834e6931f5beac48f7f2d53f2aa53b03504d87bcd06d6f8fc"
+    },
+    {
+      "path": "scripts/audit_core_maker_lit.py",
+      "sha256": "407bec427fe9a9d3e5e27e89e22193d50b3c665797ce602dfe369dced5476dab"
+    },
+    {
+      "path": "scripts/audit_core_passive_lit_fills.py",
+      "sha256": "d06f1e634ff6d479668be374095b5e48e8ff75cbb6e85a77c81d5bce26c17df4"
+    },
+    {
+      "path": "scripts/audit_core_passive_lit_quotes.py",
+      "sha256": "24dae75611fda741a290e51d3ee1b1c7b13d6f22306724ed5b3d402dc7aa78cd"
+    },
+    {
+      "path": "scripts/audit_single_venue_study.py",
+      "sha256": "a306e4272648f4c098de6f015d2e5f293f2aa40ac9799b0a51d6ff7a86c81bb6"
+    },
+    {
+      "path": "scripts/capture_single_venue_study.py",
+      "sha256": "e5cb7a3af610ec359d245991192f99e0b28c8d47a448afcef93f307313c100e7"
+    },
+    {
+      "path": "scripts/core_hedged_maker_base.py",
+      "sha256": "acb884b9add15c446cee7ad52c1648e823bdc9258b37083e5c94ddf31b4ba12f"
+    },
+    {
+      "path": "scripts/core_hedged_maker_exit.py",
+      "sha256": "4ad01155826a62200af0d8845ec33481fb4159d15f397184eb241b985bb152e7"
+    },
+    {
+      "path": "scripts/core_hedged_maker_late_flow.py",
+      "sha256": "61f7ed6b06713e7558f3dee590a7b66f4daa32336d4ed999c723b6192484b5c9"
+    },
+    {
+      "path": "scripts/core_hedged_maker_retirement.py",
+      "sha256": "98b922067dc2daacce092a0c2c6958ce27fca13e83d8deef595a1de498e18532"
+    },
+    {
+      "path": "scripts/core_hedged_maker_sell.py",
+      "sha256": "e3f600e3360b116124d3e271cfa9fab0f543bd652191ecf7e24dcca8c6e5bb88"
+    },
+    {
+      "path": "scripts/core_maker_capture.py",
+      "sha256": "db704b735932205bfd5f188a849804cd93774373f6dd4accb32ed69f32c5507c"
+    },
+    {
+      "path": "scripts/core_maker_events.py",
+      "sha256": "4b29411baaf2ea0d7624ba6c35d752fe137e6108214ec7289125b2d7c52303f3"
+    },
+    {
+      "path": "scripts/core_maker_lit_capture.py",
+      "sha256": "86b0e8223422fc741ba366cc837333d313f51882a0bf44f46fa06c7f58831b59"
+    },
+    {
+      "path": "scripts/core_maker_lit_events.py",
+      "sha256": "edae9ba65054aba6cd8f011ff99199036d0f948fd99baf0c731adbba1f2c72af"
+    },
+    {
+      "path": "scripts/core_passive_hedged_base.py",
+      "sha256": "6bc4d04f8cb5c6cbff78c198dc19314f0a50571187311b61c6a99d03d6b386fb"
+    },
+    {
+      "path": "scripts/core_passive_hedged_exit.py",
+      "sha256": "7ca4ca6b783c84eac83294bd5e9786d7e30eec3cd33297d95005f956cd359ed0"
+    },
+    {
+      "path": "scripts/core_passive_hedged_late_flow.py",
+      "sha256": "c163b0814a5bff8fc949ea31c5d9240d57503f8dbde5dcb2d8da3e6ebfdf9539"
+    },
+    {
+      "path": "scripts/core_passive_hedged_retirement.py",
+      "sha256": "23036c5b4a565ccafd226debd9e590cd82da0c4aad5183299f049a2fd2cff8e8"
+    },
+    {
+      "path": "scripts/core_passive_hedged_sell.py",
+      "sha256": "632b7f63e7525b0cb8a761f53bba3cff35e7aee8b9246f85fc07d56d003c006d"
+    },
+    {
+      "path": "scripts/core_passive_lit_branch.py",
+      "sha256": "fb8a97beef9bd0da13af80635127c61a1a7601596977be8726058f9f92b86c74"
+    },
+    {
+      "path": "scripts/core_passive_lit_capture.py",
+      "sha256": "7da167cc8b55da838100141fda57cb854eab4d0525d5c97b43a9d1ef7f2d51d8"
+    },
+    {
+      "path": "scripts/core_passive_lit_events.py",
+      "sha256": "8fa7c271c85d46d5f997bc8f48c3b1174367bb6bb37605e48e6c30faff2577a2"
+    },
+    {
+      "path": "scripts/core_rh_small_shortterm.py",
+      "sha256": "65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3"
+    },
+    {
+      "path": "scripts/launch_single_venue_multi.py",
+      "sha256": "d144ad1de142979e9005ef09594c37a0bca0ae1db9df516efacd59dff7cd2b49"
+    },
+    {
+      "path": "scripts/launch_single_venue_study.py",
+      "sha256": "10a59d1d99d2dc93c69992ceb633582b8f8e99f00159291644d15341ab62543c"
+    },
+    {
+      "path": "scripts/maker_book_archive.py",
+      "sha256": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2"
+    },
+    {
+      "path": "scripts/maker_capture.py",
+      "sha256": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/replay_core_maker_eth.py",
+      "sha256": "75c336ba64df8aad2ee582cf8db32ad043374fa9331abdf9ceaee02453b3b7ec"
+    },
+    {
+      "path": "scripts/replay_core_maker_lit.py",
+      "sha256": "44cb87b7bd7f2b4da9cc6c715246a9830d68e0f261a61d98a2af1aa22b7a870f"
+    },
+    {
+      "path": "scripts/replay_core_passive_lit.py",
+      "sha256": "99f8f82ae23c587c00c7d4f1333fbb3b54f028b1b0930ac89dc1e75643131527"
+    },
+    {
+      "path": "scripts/run_single_venue_study.py",
+      "sha256": "81b12f74f8d9c3e8f88e1a7741c10d64fea793cf46a409da8c7aa83b3bdab9a0"
+    },
+    {
+      "path": "scripts/single_venue_compact_evidence.py",
+      "sha256": "5be023f9b4f365e3d8df3d65b660bf69a4d61a89ccdf401cf96c861e9e018524"
+    },
+    {
+      "path": "scripts/single_venue_multi.py",
+      "sha256": "a834ddc458bc1f935b7e2fead605d7a0c84ee40e39c23220bebbf0f8f05c187c"
+    },
+    {
+      "path": "scripts/single_venue_multi_capture.py",
+      "sha256": "6137ea554407ddaa061f14c1d9de0330421fee5eb35aeda03693bc2c53a52538"
+    },
+    {
+      "path": "scripts/single_venue_multi_events.py",
+      "sha256": "89597d57108558c617b479e6de2e03be6deaec05a552a1dc9ccff9e815cdfe3d"
+    },
+    {
+      "path": "scripts/single_venue_shock_diagnostic.py",
+      "sha256": "612a29bd691e13f366f9bc3158739380544fc65c60882ef8cfefdc9774b1a303"
+    },
+    {
+      "path": "scripts/single_venue_strategy.py",
+      "sha256": "5f4a8684e76781c311eb9dfbd9c2f46f9600bb2369db09aafda7fbc2c0c02679"
+    },
+    {
+      "path": "tests/test_core_hedged_maker.py",
+      "sha256": "46a438ef8ad3b096c573ae84f7e849fee4ef42b3e68c6c65482fa18a106caea7"
+    },
+    {
+      "path": "tests/test_core_maker_events.py",
+      "sha256": "e193aa0d29b18fe17d01e3f63e076e962a668068e5168d365dbe7c4f7f491ecc"
+    },
+    {
+      "path": "tests/test_core_maker_lit_events.py",
+      "sha256": "2118121734d06151df14d3cc6ab9b6c169d8488d423c2ec8b03f45abf902aa94"
+    },
+    {
+      "path": "tests/test_core_maker_lit_planner.py",
+      "sha256": "5b59d66120722d992c34fc885b0e8551b7df9cc3d2e0d3b80edd250620974727"
+    },
+    {
+      "path": "tests/test_core_passive_hedged.py",
+      "sha256": "1c33cd6cf7028ca364ed17c53658f3bd02a570e4ea09e213c4d9ff7ea2107dcc"
+    },
+    {
+      "path": "tests/test_core_passive_lit_branch.py",
+      "sha256": "7111b8c96667b8d7393e4e22ac09c5b84efc36624254c5ce94eb20dfef8d08fa"
+    },
+    {
+      "path": "tests/test_core_passive_lit_events.py",
+      "sha256": "8167e7fc4f9b512d01ff50647142d340473c17cc89d8d5f002849b2cc93305fc"
+    },
+    {
+      "path": "tests/test_single_venue_compact_evidence.py",
+      "sha256": "63b98ab3f7e39b6d4023a80f7fa1ce67f0873011c76996d4c069af0e0042873b"
+    },
+    {
+      "path": "tests/test_single_venue_multi.py",
+      "sha256": "bee73e4379e24f7f682de824e5341f98ffd71afb68c9e97effc5d9b5ee9fa140"
+    },
+    {
+      "path": "tests/test_single_venue_strategy.py",
+      "sha256": "a643a3b97cd8b83653050b93e9cf64438bed9385396c863e05e4c27a15c4b2b5"
+    }
+  ],
+  "wire_inventory": "reports/experiment-storage/single-venue-multi-wire-inventory-v1.json",
+  "wire_inventory_sha256": "0cb8883db2a21aa56975fa8ab2baae7c55e901ca253d34a9a83601780a720296",
+  "scope": "Prospective exploratory LIT/VVV/ZEC comparison. Three unchanged single-venue rules x two venues x three assets = eighteen independent counterfactual portfolios. Do not sum correlated portfolios. Each has600native collateral and one position up to100notional. No live orders, wallet, auth, borrowing or transfers.",
+  "asset_selection": "LIT is retained as control; VVV and ZEC are exploratory crypto contrasts supported by both public feeds and current minima. They are not assumed thin. Prior broad-monitor outcomes are known, including VVV rescue gains and losses. Asset selection is neither random nor blind and establishes no profitability.",
+  "identity": "All source asset, venue, market, generation and clock fields remain native. The frozen Study constructor uses a LIT-named metadata slot for each actual asset; only that slot name is reused. Output directories and metadata identify actual assets. Other-asset events advance physical time but cannot influence books, flow or fills. Audit drops only redundant foreign clock tokens at exact tied receipts; native event order is preserved and tests reproduce identical traces and economics.",
+  "execution": "Unchanged f0b90a0 rules:400ms minimum request delay, first fresh eligible source book within2seconds,1bp entry and10bp exit IOC limits, native minima and grids, partial inventory retained,10second hold before exit request, at most3exit attempts,30second cooldown,100actual entry cap with1%quantity headroom.5%annual capital, separate5bp stress. Zero Standard fees checked against fresh metadata; RH300msprocessing is an archived assumption, plus100msnetwork assumption. Unknowns stop admissions and retain obligations. No stop-loss guarantee.",
+  "diagnostics": "Same fixed large-flow detector and1/5/10/30second first-fresh-pair horizons as5c2532a for each asset after endpoint. Gate failures and missing targets retained; observations overlap. Midpoint diagnostics are not cash returns. No threshold fitting to first-cycle results.",
+  "evaluation": "Freeze before capture. Exactly600seconds or cap/error, no retry or extension. Health only until endpoint. All assets share the recorded interval. Independently audit raw signals, first eligible IOC depth and cash before any profit claim. Retain all raw data and negative/no-fill/unknown outcomes. No authenticated private fills. Relative-price USD comparison is conditional on USDC/USDG parity."
+}

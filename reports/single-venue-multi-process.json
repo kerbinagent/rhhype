@@ -1,0 +1,12 @@
+{
+  "pid": 2276471,
+  "command": [
+    "/home/harry/miniconda3/bin/python",
+    "/home/harry/projects/research/rhhype/scripts/single_venue_multi.py",
+    "capture"
+  ],
+  "launched_utc": "2026-10-01T20:08:13.170361+00:00",
+  "fixed_capture_seconds": 600,
+  "public_read_only": true,
+  "plan_sha256": "7e2b6d250eff3f38a4a0977c3268b6b495ad6a697be4d63781a4352f4eebd28b"
+}

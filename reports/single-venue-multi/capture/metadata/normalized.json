@@ -1,0 +1,161 @@
+{
+  "markets": {
+    "rh_lighter": {
+      "LIT": {
+        "venue": "rh_lighter",
+        "asset": "LIT",
+        "market": "5",
+        "price_tick": "0.0001",
+        "qty_step": "0.01",
+        "min_qty": "5.00",
+        "min_notional": "10.000000",
+        "max_quote": "281474976.710655",
+        "maker_fee_bps": "0",
+        "taker_fee_bps": "0",
+        "collateral": "USDG",
+        "contract_multiplier": "1",
+        "processing_delay_ms": 300,
+        "max_qty": null,
+        "maximum_base_quantity_unknown": true
+      },
+      "VVV": {
+        "venue": "rh_lighter",
+        "asset": "VVV",
+        "market": "8",
+        "price_tick": "0.001",
+        "qty_step": "0.001",
+        "min_qty": "0.500",
+        "min_notional": "10.000000",
+        "max_quote": "281474976.710655",
+        "maker_fee_bps": "0",
+        "taker_fee_bps": "0",
+        "collateral": "USDG",
+        "contract_multiplier": "1",
+        "processing_delay_ms": 300,
+        "max_qty": null,
+        "maximum_base_quantity_unknown": true
+      },
+      "ZEC": {
+        "venue": "rh_lighter",
+        "asset": "ZEC",
+        "market": "4",
+        "price_tick": "0.01",
+        "qty_step": "0.0001",
+        "min_qty": "0.0150",
+        "min_notional": "10.000000",
+        "max_quote": "281474976.710655",
+        "maker_fee_bps": "0",
+        "taker_fee_bps": "0",
+        "collateral": "USDG",
+        "contract_multiplier": "1",
+        "processing_delay_ms": 300,
+        "max_qty": null,
+        "maximum_base_quantity_unknown": true
+      }
+    },
+    "lighter": {
+      "LIT": {
+        "venue": "lighter",
+        "asset": "LIT",
+        "market": "120",
+        "price_tick": "0.0001",
+        "qty_step": "0.01",
+        "min_qty": "1.00",
+        "min_notional": "10.000000",
+        "max_quote": "281474976.710655",
+        "maker_fee_bps": "0",
+        "taker_fee_bps": "0",
+        "collateral": "USDC",
+        "contract_multiplier": "1",
+        "processing_delay_ms": 300,
+        "max_qty": null,
+        "maximum_base_quantity_unknown": true
+      },
+      "VVV": {
+        "venue": "lighter",
+        "asset": "VVV",
+        "market": "69",
+        "price_tick": "0.0001",
+        "qty_step": "0.01",
+        "min_qty": "0.20",
+        "min_notional": "10.000000",
+        "max_quote": "281474976.710655",
+        "maker_fee_bps": "0",
+        "taker_fee_bps": "0",
+        "collateral": "USDC",
+        "contract_multiplier": "1",
+        "processing_delay_ms": 300,
+        "max_qty": null,
+        "maximum_base_quantity_unknown": true
+      },
+      "ZEC": {
+        "venue": "lighter",
+        "asset": "ZEC",
+        "market": "90",
+        "price_tick": "0.001",
+        "qty_step": "0.001",
+        "min_qty": "0.004",
+        "min_notional": "10.000000",
+        "max_quote": "281474976.710655",
+        "maker_fee_bps": "0",
+        "taker_fee_bps": "0",
+        "collateral": "USDC",
+        "contract_multiplier": "1",
+        "processing_delay_ms": 300,
+        "max_qty": null,
+        "maximum_base_quantity_unknown": true
+      }
+    }
+  },
+  "raw_requests": {
+    "rh_markets": {
+      "method": "GET",
+      "url": "https://api.rh.lighter.xyz/api/v1/orderBookDetails",
+      "json_body": null,
+      "status": 200,
+      "raw_bytes": 98543,
+      "sha256": "479f4a7ad05271eeabf02702b05d13347a2d972aa722aa77c81bec1d9ce7d7ea",
+      "compressed_sha256": "27bcae02119c697df3090cd7f46cb68d4c094ffce19185aa15814e6d05588ac8",
+      "request_started_utc_ns": 1790885293373471038,
+      "response_completed_utc_ns": 1790885293459520564,
+      "raw_file": "rh_markets.json.gz"
+    },
+    "core_markets": {
+      "method": "GET",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails",
+      "json_body": null,
+      "status": 200,
+      "raw_bytes": 374085,
+      "sha256": "771b8c60fc654cf650e120087608cc6c8d85451ed49b447f24cbce7ea73b4859",
+      "compressed_sha256": "283ccfc7196df950545f09bf34347b56c57c01a96e449c0ef6d1603aa3b8d74b",
+      "request_started_utc_ns": 1790885293462163678,
+      "response_completed_utc_ns": 1790885293542328401,
+      "raw_file": "core_markets.json.gz"
+    },
+    "rh_assets": {
+      "method": "GET",
+      "url": "https://api.rh.lighter.xyz/api/v1/assetDetails",
+      "json_body": null,
+      "status": 200,
+      "raw_bytes": 14044,
+      "sha256": "acc87049051628c0e012417db1c94f0d45453a6c3919fab4f9b24323ccef2a1b",
+      "compressed_sha256": "c2eab4881fd3402b5ddbca9c802acaad8b3e05f36ccdf9b87e44e599e0f784b8",
+      "request_started_utc_ns": 1790885293548589788,
+      "response_completed_utc_ns": 1790885293566637241,
+      "raw_file": "rh_assets.json.gz"
+    },
+    "core_assets": {
+      "method": "GET",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/assetDetails",
+      "json_body": null,
+      "status": 200,
+      "raw_bytes": 6119,
+      "sha256": "1192b177eb2769331de3c335c9f6d947dc6777af4dd4e4dcf13b44044056c053",
+      "compressed_sha256": "eec60135bf7ebb48be287dba92806a32309616bbc190c58329fef149c293eec8",
+      "request_started_utc_ns": 1790885293567173209,
+      "response_completed_utc_ns": 1790885293731100783,
+      "raw_file": "core_assets.json.gz"
+    }
+  },
+  "market_plan_sha256": "7e2b6d250eff3f38a4a0977c3268b6b495ad6a697be4d63781a4352f4eebd28b"
+}
