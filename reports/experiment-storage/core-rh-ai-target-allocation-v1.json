@@ -1,0 +1,74 @@
+{
+  "schema": "core-rh-ai-target-v1",
+  "recorded_utc": "2026-10-01T14:22:06.053267+00:00",
+  "previous": "reports/experiment-storage/completed-all-market-funding-closeout-v1.json",
+  "previous_sha256": "99a9a306121bb32e544bb69f7406171b7c99814709fee21623dfa235947672f5",
+  "new_maximum_bytes": 491520,
+  "categories_bytes": {
+    "source": 32768,
+    "raw": 262144,
+    "metadata": 65536,
+    "output": 98304,
+    "control": 32768
+  },
+  "active_research_reserved_bytes": 18661376,
+  "active_research_headroom_bytes": 212992,
+  "overall_reservation_bytes": 836777216,
+  "assets": [
+    "AI"
+  ],
+  "budgets": [
+    100
+  ],
+  "horizons": [
+    60
+  ],
+  "entry_slippage_bps": 10,
+  "primary": "100-60-2s-confirm-6bp",
+  "duration_seconds": 900,
+  "entry_end_seconds": 700,
+  "raw_soft_cap": 160000,
+  "scope": "Same confirmed1bpvs6bp policy, onlyAI cohort. $100perleg600prefunded per independentarm;max3positionsbutoneasset/cooldown. Assetselectedexploratorilyfollowing42marketfunding screen, notfromnewpriceoutcomes. No auth/orders.",
+  "strategy": "Samepastonly120smedian/2sembargo90count89span arrivalreferences. Both5bpexcursion and2secconfirmation. Target policyrequiresforecastcash minuscapital toclear6bpoflargerentryleg; baseline1bp. Profitmarks6bpof100budget vs1bp. Same400msallorders,10bpentrylimit,60shold,30sattemptcooldown,30attemptcap,700sadmission/900sruntime/120shourguard. Fundingunknownretained;fee0freshmetadata;USDGUSDCparityconditional;5bpstress separate.",
+  "storage": "262144Brawhard,160000Bsoftadmissionstop,65536metadata,98304output,32768source/control each. Same900sruntime700sadmission128MBingressmaximum. No interim economics oroptionalextension.",
+  "source_pins": [
+    {
+      "path": "scripts/core_rh_ai_target.py",
+      "sha256": "ccbe93597372363c8314affae38342c0e84296a645f35ddae5d2926f30f14178"
+    },
+    {
+      "path": "scripts/audit_core_rh_ai_target.py",
+      "sha256": "d2b10cfc135f1c2e64075150840d5e27009d048a26752942b2161cb17861c057"
+    },
+    {
+      "path": "scripts/core_rh_target_margin.py",
+      "sha256": "3644abc5fa34c379f1673ce99901194ee6dea6d5a314daa279319b7b431f295a"
+    },
+    {
+      "path": "tests/test_core_rh_target_margin.py",
+      "sha256": "b2db7eb8418ccbf34ecad2d331a53495824d4694703adee16f5b225a5602465d"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    }
+  ],
+  "test": "Synthetic5bpforecast admittedonlybaseline;8bpforecastadmitsboth; both2sconfirmed;400msentrydelay;6bptargetcontinuesholdingat3bpprofit thenrequestscloseabove6bp. One unittest passed. Independent endpoint auditor also reconstructs forecast bookwalk andformula.",
+  "confirmation_seconds": [
+    2
+  ],
+  "target_bps": [
+    1,
+    6
+  ],
+  "hypothesis": "AI haslarger historicalfundingpremiumdispersion andsparsedailytrades versusprior10crypto cohort; mayhavepersistentpricebasisopportunities orworsefills. Testpriceconvergence separately; nofuturefundingcreditassumed andhourguardmaintained. Same-symbol/indexcompatibilityconditional, notassetredemptionclaim.",
+  "active_research_pool_bytes": 18874368
+}
