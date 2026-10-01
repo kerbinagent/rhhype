@@ -1,0 +1,33 @@
+REFERENCE-MIDPOINT ACCOUNTING OF EARLIER DEPTH TRADES
+
+Retrospective diagnostic of all18closed alternative paper episodes.12have fresh
+paired entry/exit quotes and one exit callback;6remain missing. Inputs are the
+already audited cash summaries and verified execution quote contexts. No active
+batch data was inspected. Midpoints recover their native half-tick grid before
+Decimal arithmetic. All12net and stress identities pass.
+
+Under conditionalUSDC/USDGparity:
+reference gross = side * quantity * (reference exit mid - entry mid)
+fill residual = actual local gross - reference gross
+net = reference gross + fill residual - fees - capital
+
+This compares actual fills to frictionless reference-midpoint exposure.
+The reference component is neither an executable hedge nor a causal estimate.
+Reference prices are converted numerically under parity,not by a live FX trade;
+actual cash stays in its native collateral. The residual mixes relative price
+movement and local execution costs. No automatic strategy-profit claim.
+
+Latest Core LITfade winner,25.80LITshort:
+Reference midpoint3.83450→3.82820:counterfactual gross+0.1625400.
+Actual local gross+0.147060:fill residual−0.0154800.
+Fees0;capital0.0000016476645841;actualnet+0.1470583523354159USDC.
+The extra local midpoint convergence did not fully cover local execution
+friction in this example. Most favorable midpoint movement was shared with
+the reference. This does not establish what caused either move.
+
+11of12matched episodes have negative fill residual. The one positive residual
+(+0.0142120Corefollow short) still has negative actualgross(−0.232560),because
+the reference moved strongly against it. The earlier Corefade winner remains
+missing due to stale paired exit data;no decomposition is made for that trade.
+These dependent,selected observations do not estimate an out-of-sample edge.
+The prospective clock controls provide another descriptive comparison.
