@@ -1,0 +1,81 @@
+{
+  "schema": "completed-core-arrival-closeout-v1",
+  "recorded_utc": "2026-10-01T12:31:31.903637+00:00",
+  "previous": "reports/experiment-storage/core-rh-tight-control-allocation-v1.json",
+  "previous_sha256": "fb2e3cfb877861044a9cbb19e678edb9561db70e0cfaea3d278d8c40b4d7b6e9",
+  "old_reserved_bytes": 327680,
+  "artifact_bytes": 137761,
+  "retention_reserved_bytes": 163840,
+  "released_bytes": 163840,
+  "active_research_reserved_bytes": 7143424,
+  "active_research_headroom_bytes": 196608,
+  "overall_reservation_bytes": 836777216,
+  "scope": "All completed sources, metadata, evidence, result and audit preserved;16KiB closeout allowance.",
+  "files": [
+    {
+      "path": "reports/core-spot-perp-arrival/assets-metadata.json.gz",
+      "bytes": 1024,
+      "sha256": "26c717381ab6d445d6c27d461fcb72f1fdf2fc6e5414a6b859f7f08b03e57cb8"
+    },
+    {
+      "path": "reports/core-spot-perp-arrival/audit.json",
+      "bytes": 1501,
+      "sha256": "5ea65c376a8d7e8412cc6c04098c96f39accef937b6b06852c11316b37e0bf42"
+    },
+    {
+      "path": "reports/core-spot-perp-arrival/events.jsonl.gz",
+      "bytes": 67680,
+      "sha256": "fd4e7886b989c4931294c84a6111b9064241d56d89c1fdcfd42a6996c1617844"
+    },
+    {
+      "path": "reports/core-spot-perp-arrival/lighter-metadata.json.gz",
+      "bytes": 23177,
+      "sha256": "a22092d1cf492c2a8c5ce4760f7711a7c9a579a52e10908347a70bce94d07445"
+    },
+    {
+      "path": "reports/core-spot-perp-arrival/metadata.json",
+      "bytes": 1743,
+      "sha256": "6a37d8a1753de7d3ac35595ed1e96d554ba899d4af8e284516699030175e8cb4"
+    },
+    {
+      "path": "reports/core-spot-perp-arrival/readout.md",
+      "bytes": 2065,
+      "sha256": "56523de170e91fe1aaa5f5da44be0a5b8678f7bcc2d3b99b5aabe18f4f18508c"
+    },
+    {
+      "path": "reports/core-spot-perp-arrival/status.json",
+      "bytes": 228,
+      "sha256": "bbf95b8ef39edae7aed744128078ee7e842d289753ee6c8d9d34982b2c4a9246"
+    },
+    {
+      "path": "reports/core-spot-perp-arrival/summary.json",
+      "bytes": 3602,
+      "sha256": "5d84c6172ab6535f6c2df030afd5b9eb59ab46708c37c04d2e2d5328d6482805"
+    },
+    {
+      "path": "reports/core-spot-perp-arrival/unresolved.json.gz",
+      "bytes": 38,
+      "sha256": "d0f2052384d81e20ba449c7a64221a0acb4c838b0059a96360ea5506bb349363"
+    },
+    {
+      "path": "scripts/core_spot_perp_arrival.py",
+      "bytes": 19810,
+      "sha256": "4ce541697020b30a2ecec9bc68b25da34c617ebcacdc74ea654acad7ca34b8db"
+    },
+    {
+      "path": "scripts/audit_core_spot_perp_arrival.py",
+      "bytes": 10776,
+      "sha256": "c3767548e5f8127836839117051fa0437c20e09192b3040749eef0ccb15a5110"
+    },
+    {
+      "path": "tests/test_core_spot_perp_arrival.py",
+      "bytes": 3177,
+      "sha256": "5fb5e210b09b00a22275c2326b45b4a62ef4dff04144451687e869a566346cb4"
+    },
+    {
+      "path": "reports/experiment-storage/core-spot-perp-arrival-allocation-v1.json",
+      "bytes": 2940,
+      "sha256": "897382993f902ecd72959698cf2628368c6ed0e15c89a4e7401ea4bf332c999b"
+    }
+  ]
+}
