@@ -1,0 +1,318 @@
+{
+  "status": "completed_public_simulations",
+  "requests": 16,
+  "provenance": [
+    {
+      "name": "funding_doc",
+      "url": "https://docs.derive.xyz/perp-funding.md",
+      "body": null,
+      "http_status": 200,
+      "raw_sha256": "39bbf38cd084040d52d12d1904f687b2c33986e56aad4a9071cd89fdbe9b0684",
+      "gzip_bytes": 1036,
+      "received_utc": "2026-10-01T03:33:26.231025+00:00"
+    },
+    {
+      "name": "portfolio_doc",
+      "url": "https://docs.derive.xyz/portfolio-margin.md",
+      "body": null,
+      "http_status": 200,
+      "raw_sha256": "818bf9bc2d6d5199300fcc5c47fc5a35329a7f39a2b1bb64e61b8dfb0a7c1f6f",
+      "gzip_bytes": 8808,
+      "received_utc": "2026-10-01T03:33:27.084008+00:00"
+    },
+    {
+      "name": "history_doc",
+      "url": "https://docs.derive.xyz/api-reference/market-data/publicget_funding_rate_history.md",
+      "body": null,
+      "http_status": 200,
+      "raw_sha256": "74d7376649cc60722ccbcf4ad8d09e268baad3b3924ba390c9c6a0029b525401",
+      "gzip_bytes": 2015,
+      "received_utc": "2026-10-01T03:33:27.789092+00:00"
+    },
+    {
+      "name": "eth_currency",
+      "url": "https://api.derive.xyz/v3/public/get_currency",
+      "body": {
+        "currency": "ETH"
+      },
+      "http_status": 200,
+      "raw_sha256": "a975382d4dd449bdb1a19d2ea53e17166eae70d43b729e9f0078c5593688c79e",
+      "gzip_bytes": 715,
+      "received_utc": "2026-10-01T03:33:28.646822+00:00"
+    },
+    {
+      "name": "wsteth_currency",
+      "url": "https://api.derive.xyz/v3/public/get_currency",
+      "body": {
+        "currency": "WSTETH"
+      },
+      "http_status": 200,
+      "raw_sha256": "075a22ad89aea02d207c0dea4702283d40ffe9e29cdcc4ecc4692cd573b4396e",
+      "gzip_bytes": 536,
+      "received_utc": "2026-10-01T03:33:29.410784+00:00"
+    },
+    {
+      "name": "eth_perp",
+      "url": "https://api.derive.xyz/v3/public/get_instrument",
+      "body": {
+        "instrument_name": "ETH-PERP"
+      },
+      "http_status": 200,
+      "raw_sha256": "0bca5f8240e1b463f442dce8e7f1d930779d0b5c1456e8f16f5a7361c501f623",
+      "gzip_bytes": 488,
+      "received_utc": "2026-10-01T03:33:30.144984+00:00"
+    },
+    {
+      "name": "funding_history",
+      "url": "https://api.derive.xyz/v3/public/get_funding_rate_history",
+      "body": {
+        "instrument_name": "ETH-PERP",
+        "period": 3600,
+        "start_timestamp": 1788220800000,
+        "end_timestamp": 1790812799999
+      },
+      "http_status": 200,
+      "raw_sha256": "533d261b928f61d5b90ae79df0c6f17445a624f35b9c340331bb72880e06ecac",
+      "gzip_bytes": 100,
+      "received_utc": "2026-10-01T03:33:30.908259+00:00"
+    },
+    {
+      "name": "staking_sma",
+      "url": "https://eth-api.lido.fi/v1/protocol/steth/apr/sma",
+      "body": null,
+      "http_status": 200,
+      "raw_sha256": "87f141d4820f3e51481b19caa426bb7683cd0b515220324eb6ffac9110bf9861",
+      "gzip_bytes": 216,
+      "received_utc": "2026-10-01T03:33:31.482467+00:00"
+    },
+    {
+      "name": "SM_0",
+      "url": "https://api.derive.xyz/v3/public/get_margin",
+      "body": {
+        "margin_type": "SM",
+        "simulated_collaterals": [
+          {
+            "asset_name": "WSTETH",
+            "amount": "0.298872794828704105"
+          },
+          {
+            "asset_name": "USDC",
+            "amount": "0E-16"
+          }
+        ],
+        "simulated_positions": [],
+        "simulated_position_changes": [
+          {
+            "instrument_name": "ETH-PERP",
+            "amount": "-0.372"
+          }
+        ]
+      },
+      "http_status": 200,
+      "raw_sha256": "6c2408f81e0cef952402395a9f1b25605095ef574228f0a5f025de0181b87a3b",
+      "gzip_bytes": 113,
+      "received_utc": "2026-10-01T03:33:32.230872+00:00"
+    },
+    {
+      "name": "SM_p1",
+      "url": "https://api.derive.xyz/v3/public/get_margin",
+      "body": {
+        "margin_type": "SM",
+        "simulated_collaterals": [
+          {
+            "asset_name": "WSTETH",
+            "amount": "0.298872794828704105"
+          },
+          {
+            "asset_name": "USDC",
+            "amount": "99.91460426916809484"
+          }
+        ],
+        "simulated_positions": [],
+        "simulated_position_changes": [
+          {
+            "instrument_name": "ETH-PERP",
+            "amount": "-0.372"
+          }
+        ]
+      },
+      "http_status": 200,
+      "raw_sha256": "6c2408f81e0cef952402395a9f1b25605095ef574228f0a5f025de0181b87a3b",
+      "gzip_bytes": 113,
+      "received_utc": "2026-10-01T03:33:32.988956+00:00"
+    },
+    {
+      "name": "SM_p25",
+      "url": "https://api.derive.xyz/v3/public/get_margin",
+      "body": {
+        "margin_type": "SM",
+        "simulated_collaterals": [
+          {
+            "asset_name": "WSTETH",
+            "amount": "0.298872794828704105"
+          },
+          {
+            "asset_name": "USDC",
+            "amount": "249.786510672920237100"
+          }
+        ],
+        "simulated_positions": [],
+        "simulated_position_changes": [
+          {
+            "instrument_name": "ETH-PERP",
+            "amount": "-0.372"
+          }
+        ]
+      },
+      "http_status": 200,
+      "raw_sha256": "6c2408f81e0cef952402395a9f1b25605095ef574228f0a5f025de0181b87a3b",
+      "gzip_bytes": 113,
+      "received_utc": "2026-10-01T03:33:33.726718+00:00"
+    },
+    {
+      "name": "SM_p5",
+      "url": "https://api.derive.xyz/v3/public/get_margin",
+      "body": {
+        "margin_type": "SM",
+        "simulated_collaterals": [
+          {
+            "asset_name": "WSTETH",
+            "amount": "0.298872794828704105"
+          },
+          {
+            "asset_name": "USDC",
+            "amount": "499.57302134584047420"
+          }
+        ],
+        "simulated_positions": [],
+        "simulated_position_changes": [
+          {
+            "instrument_name": "ETH-PERP",
+            "amount": "-0.372"
+          }
+        ]
+      },
+      "http_status": 200,
+      "raw_sha256": "6c2408f81e0cef952402395a9f1b25605095ef574228f0a5f025de0181b87a3b",
+      "gzip_bytes": 113,
+      "received_utc": "2026-10-01T03:33:34.467285+00:00"
+    },
+    {
+      "name": "PM2_0",
+      "url": "https://api.derive.xyz/v3/public/get_margin",
+      "body": {
+        "margin_type": "PM2",
+        "simulated_collaterals": [
+          {
+            "asset_name": "WSTETH",
+            "amount": "0.298872794828704105"
+          },
+          {
+            "asset_name": "USDC",
+            "amount": "0E-16"
+          }
+        ],
+        "simulated_positions": [],
+        "simulated_position_changes": [
+          {
+            "instrument_name": "ETH-PERP",
+            "amount": "-0.372"
+          }
+        ],
+        "market": "ETH"
+      },
+      "http_status": 200,
+      "raw_sha256": "6c2408f81e0cef952402395a9f1b25605095ef574228f0a5f025de0181b87a3b",
+      "gzip_bytes": 113,
+      "received_utc": "2026-10-01T03:33:35.200631+00:00"
+    },
+    {
+      "name": "PM2_p1",
+      "url": "https://api.derive.xyz/v3/public/get_margin",
+      "body": {
+        "margin_type": "PM2",
+        "simulated_collaterals": [
+          {
+            "asset_name": "WSTETH",
+            "amount": "0.298872794828704105"
+          },
+          {
+            "asset_name": "USDC",
+            "amount": "99.91460426916809484"
+          }
+        ],
+        "simulated_positions": [],
+        "simulated_position_changes": [
+          {
+            "instrument_name": "ETH-PERP",
+            "amount": "-0.372"
+          }
+        ],
+        "market": "ETH"
+      },
+      "http_status": 200,
+      "raw_sha256": "6c2408f81e0cef952402395a9f1b25605095ef574228f0a5f025de0181b87a3b",
+      "gzip_bytes": 113,
+      "received_utc": "2026-10-01T03:33:35.954702+00:00"
+    },
+    {
+      "name": "PM2_p25",
+      "url": "https://api.derive.xyz/v3/public/get_margin",
+      "body": {
+        "margin_type": "PM2",
+        "simulated_collaterals": [
+          {
+            "asset_name": "WSTETH",
+            "amount": "0.298872794828704105"
+          },
+          {
+            "asset_name": "USDC",
+            "amount": "249.786510672920237100"
+          }
+        ],
+        "simulated_positions": [],
+        "simulated_position_changes": [
+          {
+            "instrument_name": "ETH-PERP",
+            "amount": "-0.372"
+          }
+        ],
+        "market": "ETH"
+      },
+      "http_status": 200,
+      "raw_sha256": "6c2408f81e0cef952402395a9f1b25605095ef574228f0a5f025de0181b87a3b",
+      "gzip_bytes": 113,
+      "received_utc": "2026-10-01T03:33:36.694397+00:00"
+    },
+    {
+      "name": "PM2_p5",
+      "url": "https://api.derive.xyz/v3/public/get_margin",
+      "body": {
+        "margin_type": "PM2",
+        "simulated_collaterals": [
+          {
+            "asset_name": "WSTETH",
+            "amount": "0.298872794828704105"
+          },
+          {
+            "asset_name": "USDC",
+            "amount": "499.57302134584047420"
+          }
+        ],
+        "simulated_positions": [],
+        "simulated_position_changes": [
+          {
+            "instrument_name": "ETH-PERP",
+            "amount": "-0.372"
+          }
+        ],
+        "market": "ETH"
+      },
+      "http_status": 200,
+      "raw_sha256": "6c2408f81e0cef952402395a9f1b25605095ef574228f0a5f025de0181b87a3b",
+      "gzip_bytes": 113,
+      "received_utc": "2026-10-01T03:33:37.457159+00:00"
+    }
+  ],
+  "summary_sha256": "2ef8823093c8ea9f6f49e2a038d71e33e2659476dc65e0be829c70ff80902a47"
+}

@@ -1,0 +1,102 @@
+{
+  "eth_spot": "2685.8764588486047",
+  "wsteth_spot": "3343.0478115759292",
+  "short_eth_quantity": "0.372",
+  "wsteth_quantity": "0.298872794828704105",
+  "spot_principal_target_usdc": "999.1460426916809484",
+  "scenarios": [
+    {
+      "mode": "SM",
+      "cash_fraction": "0",
+      "cash_usdc": "0E-16",
+      "result": null,
+      "error": {
+        "code": -32602,
+        "message": "Invalid params",
+        "data": "Invalid params: too many fractional digits; max is 12"
+      }
+    },
+    {
+      "mode": "SM",
+      "cash_fraction": ".1",
+      "cash_usdc": "99.91460426916809484",
+      "result": null,
+      "error": {
+        "code": -32602,
+        "message": "Invalid params",
+        "data": "Invalid params: too many fractional digits; max is 12"
+      }
+    },
+    {
+      "mode": "SM",
+      "cash_fraction": ".25",
+      "cash_usdc": "249.786510672920237100",
+      "result": null,
+      "error": {
+        "code": -32602,
+        "message": "Invalid params",
+        "data": "Invalid params: too many fractional digits; max is 12"
+      }
+    },
+    {
+      "mode": "SM",
+      "cash_fraction": ".5",
+      "cash_usdc": "499.57302134584047420",
+      "result": null,
+      "error": {
+        "code": -32602,
+        "message": "Invalid params",
+        "data": "Invalid params: too many fractional digits; max is 12"
+      }
+    },
+    {
+      "mode": "PM2",
+      "cash_fraction": "0",
+      "cash_usdc": "0E-16",
+      "result": null,
+      "error": {
+        "code": -32602,
+        "message": "Invalid params",
+        "data": "Invalid params: too many fractional digits; max is 12"
+      }
+    },
+    {
+      "mode": "PM2",
+      "cash_fraction": ".1",
+      "cash_usdc": "99.91460426916809484",
+      "result": null,
+      "error": {
+        "code": -32602,
+        "message": "Invalid params",
+        "data": "Invalid params: too many fractional digits; max is 12"
+      }
+    },
+    {
+      "mode": "PM2",
+      "cash_fraction": ".25",
+      "cash_usdc": "249.786510672920237100",
+      "result": null,
+      "error": {
+        "code": -32602,
+        "message": "Invalid params",
+        "data": "Invalid params: too many fractional digits; max is 12"
+      }
+    },
+    {
+      "mode": "PM2",
+      "cash_fraction": ".5",
+      "cash_usdc": "499.57302134584047420",
+      "result": null,
+      "error": {
+        "code": -32602,
+        "message": "Invalid params",
+        "data": "Invalid params: too many fractional digits; max is 12"
+      }
+    }
+  ],
+  "hedge_uses_current_price_ratio_not_verified_steth_per_token": true,
+  "present_simulated_margin_not_future_solvency": true,
+  "actual_pnl": null,
+  "staking_apr_is_current_only": true,
+  "funding_history_is_rate_OHLC_not_cash_payments": true
+}
