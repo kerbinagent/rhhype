@@ -1,0 +1,92 @@
+{
+  "schema": "paradex-core-targeted-v1",
+  "recorded_utc": "2026-10-01T11:57:34.999068+00:00",
+  "previous": "reports/experiment-storage/paradex-metadata-failure-closeout-v1.json",
+  "previous_sha256": "fd9aba137b67cd0f5b2a79fc02a889ccd954fef84ee0634c4be2b5702db0c754",
+  "new_maximum_bytes": 1032192,
+  "categories_bytes": {
+    "source": 49152,
+    "metadata": 98304,
+    "raw": 720896,
+    "output": 131072,
+    "control": 32768
+  },
+  "source_preparation_reserved_bytes": 0,
+  "active_research_reserved_bytes": 5849088,
+  "active_research_headroom_bytes": 442368,
+  "overall_reservation_bytes": 836777216,
+  "assets": [
+    "BTC",
+    "ETH"
+  ],
+  "budgets": [
+    100,
+    1000
+  ],
+  "horizons": [
+    60
+  ],
+  "primary": "100-60",
+  "duration_seconds": 900,
+  "entry_end_seconds": 700,
+  "raw_soft_cap": 500000,
+  "max_attempts_per_branch": 30,
+  "max_positions": 1,
+  "capital_multiple": 6,
+  "favorable_excursion_bps": 5,
+  "forecast_hurdle_bps": 1,
+  "take_profit_price_bps": 1,
+  "stress_report_bps": 5,
+  "scope": "Fresh public-only Paradex/Core market-neutral paper study; genuine venue labels. No credentials, authentication, JWT generation, orders or RPI/private feed. Counterfactual zero-fee Paradex interactive retail eligibility explicit and conditional; Core Standard0fees verified with fresh market metadata. Independent $100 and$1000 portfolios, each prefunded3xbudget pervenue.400ms taker delay for BOTH venues, first source-and-receipt eligible callback. Source ages<=2s, source<=receipt, paired source/receipt skew<=250ms. Actual lots,minima,maxsizes; preserve failed hedges, partials,rescues and unresolved exposure.",
+  "strategy": "Prior120s median Paradex/Core basis,2s embargo,>=90valid1Hzsamples. Favorable excursion>=5bp and predicted4-walk cash including current funding-premium forecast, fees and capital exceeds1bp hurdle.1bp price-only takeprofit or60s maxhold;30s paircooldown,max30attempts,1position perbranch. Core hourly settlement avoided by120s boundary guard. No parameter changes or outcome reads before endpoint.",
+  "funding": "Paradex continuous funding ESTIMATED by linear interpolation of bracketing public funding indices at each modeled entry/exit receipt timestamp, maxbracketgap6s; every partialexit independently allocated. Wait for later endpoint to settle. Missing coverage staysunknown. Forecast uses latestreceived premium/period<=7s old. Actual account funding unknown; all completed funding-model trades CLOSED_ESTIMATED. Core same-hour executed inventory has0hourlysettlement. Do not call estimated cash exact.",
+  "retail_rate_limits": "Model Paradex entry/exit request creation times; defer excess requests, limits3/sec,30/min,300/hour,1000/day. Fees remainconditional interactive orderflow; no ordinaryAPIzero fee assumption. Independent portfolios are alternatives and cannotpool rates/capital.",
+  "transport": "Fresh public metadata GET3 no retries. Core public book WS and Paradex schema1:1 public15level snapshot@100ms+funding_data;max3connections pervenue,128MBingress or250000frames. Archive normalized1Hz paired references, every book callback during pending intents/exit retry, invalidations, allfundingobservations, trades and order evidence. Not fullwirearchive; officialschema and decoderpinned. Stopadmissions500k;hardrawcap720896 or900s runtime. No extensions.",
+  "source_pins": [
+    {
+      "path": "scripts/paradex_core_targeted.py",
+      "sha256": "a9bd259e2f337faa6da569edda50dca556ad4d96728de2ccea8b9427be4c7f0a"
+    },
+    {
+      "path": "scripts/audit_paradex_core_targeted.py",
+      "sha256": "1052ef925be191ab9be73cb494bc50e9bb890eaa334d40c90ad24671b1fe1fc0"
+    },
+    {
+      "path": "tests/test_paradex_core_targeted.py",
+      "sha256": "3e768b822a899d77a502267ef66c6a542f4f9d53df85c323936d82ce7a93ca68"
+    },
+    {
+      "path": "scripts/paradex_sbe_preflight.py",
+      "sha256": "0d698ef7a56ed4d8f6959b40d90eda30a9ff33d687bad714135554f1696b2098"
+    },
+    {
+      "path": "reports/paradex-sbe-preflight/schema.xml.gz",
+      "sha256": "2864545ded7010a0cae8f99f9f16c0847ecd5a8db9bd88b57333073096d3ff24"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/paper_funding.py",
+      "sha256": "12d3355202cd1786cb260a4775791b0f7ac242b141010471738ec60fc0abd2b0"
+    }
+  ],
+  "sources": [
+    "https://docs.paradex.trade/trading/trader-profiles",
+    "https://docs.paradex.trade/trading/trading-fees",
+    "https://docs.paradex.trade/risk/funding-mechanism",
+    "https://docs.paradex.trade/api/prod/markets/get-funding-data",
+    "https://docs.paradex.trade/ws/general-information/binary-encoding-sbe"
+  ],
+  "tests": "Three synthetic tests pass complete delayed lifecycle with estimated funding, separate partialexit accruals, missing-index gaps and retail limit checks. Archived realmetadata verifies authenticvenue, interactivezero fees, lots andmaxsizes.",
+  "correction": "Only metadata transport changed after first launch failed before any book/order. Request Core catalogue and separately BTC/ETH Paradex metadata (3 GETs total), boundedreads. All trading strategy parameters unchanged."
+}

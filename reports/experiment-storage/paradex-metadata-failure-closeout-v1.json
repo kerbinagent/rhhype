@@ -1,0 +1,45 @@
+{
+  "schema": "paradex-metadata-failure-closeout-v1",
+  "recorded_utc": "2026-10-01T11:57:34.998087+00:00",
+  "previous": "reports/experiment-storage/paradex-core-shortterm-allocation-v1.json",
+  "previous_sha256": "6c9467a27f6c5c4c9379be0f360c794b2979e41d397a3900701b76492c0fa836",
+  "old_reserved_bytes": 983040,
+  "retention_reserved_bytes": 65536,
+  "artifact_bytes": 29937,
+  "released_bytes": 917504,
+  "active_research_reserved_bytes": 4816896,
+  "active_research_headroom_bytes": 1474560,
+  "scope": "Preserve failed metadata-stage run unchanged. Source preparation65,536 reservation remains allocated. No economics or capture occurred.8KiB closeout reserve included.",
+  "files": [
+    {
+      "path": "reports/experiment-storage/paradex-core-shortterm-allocation-v1.json",
+      "bytes": 5236,
+      "sha256": "6c9467a27f6c5c4c9379be0f360c794b2979e41d397a3900701b76492c0fa836"
+    },
+    {
+      "path": "reports/paradex-core-shortterm/events.jsonl.gz",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/paradex-core-shortterm/lighter-metadata.json.gz",
+      "bytes": 23081,
+      "sha256": "c03584590dbf79a1ea3d6334f872aa53517d62fe03f2cd5518bb89afe0ae2fa1"
+    },
+    {
+      "path": "reports/paradex-core-shortterm/readout.md",
+      "bytes": 738,
+      "sha256": "dfb4799d617efcb49b9fa69663717ce069e5e2111e948ac853a751fae5c6f450"
+    },
+    {
+      "path": "reports/paradex-core-shortterm/summary.json",
+      "bytes": 859,
+      "sha256": "94de4b9f29292e7beaa70af9d30769c2ca1ebf2976411ccf9e4bc3f694b42c30"
+    },
+    {
+      "path": "reports/paradex-core-shortterm/unresolved.json.gz",
+      "bytes": 23,
+      "sha256": "8b0b8749aba12de93f3cf5d86f9fac9d6de7cac400a17473718f182a34ebb7e9"
+    }
+  ]
+}
