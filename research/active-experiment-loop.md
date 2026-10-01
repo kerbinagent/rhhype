@@ -7,7 +7,9 @@ researching and improving until the user stops the work or paper P&L is
 convincingly positive. Public data and paper execution only. Maintain the
 twenty-minute production reviews while experiments remain separate.
 
-## Current status, 01 October 2026 11:07 UTC
+## Current status, 01 October 2026 14:09 UTC
+
+Review 138 is archived with lossless gzip compression; both raw records round-trip exactly, and future review archives use deterministic gzip under the 6 MiB manual cap. Reviews 66–138 contain 2,016 closes: 1,993 losses, two paired gains and 21 audited failed-hedge rescue gains. Review 138 added 58 exact losses/−$94.69717 (10 convergence, 48 Premium), no wins, estimates or aborts, and 20 entry price-limit rejections (19 Hyperliquid, one Lighter). All eight strategy and aborted coverage fields are complete. The epoch snapshot increased convergence by 10, matching the report; Premium increased by 54 while the report delta was 48, so review totals use report deltas only. A Premium position visible in the report health snapshot closed after the report window and was confirmed flat on follow-up; it belongs to the subsequent interval. At review time health remained running/ok with four feeds and 98 pairs; p95 lag 20.81 ms, CPU 76.67%, RSS 256.39 MiB and 1,328 books/s. One pending Premium position/funding record was reported in the review health data; the separate later snapshot retained three pending funding items and no open positions. Fresh carry v2 metadata at 14:05 had 163 sampled slots, one persistent `arrival_invalid` slot (71), and 700 future/interrupted slots, without terminal error, retries or economic evaluation. Next review: **1 October 14:26:33 UTC**.
 
 No qualifying positive result. Prior passive, delayed taker and spread studies
 remain negative or inconclusive; no strategy is promoted. After the host reboot,

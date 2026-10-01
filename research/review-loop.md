@@ -4420,3 +4420,49 @@ Fresh carry v2 at 13:45 had 159 sampled slots and one persistent
 `arrival_invalid` slot (slot 71), with 704 future/interrupted slots. Status
 remains running with no terminal error or retries and no economic evaluation.
 The invalid arrival's sample remains unopened.
+
+
+## Review 138 — 1 October 2026 14:06:33 UTC
+
+All eight strategy ledgers and aborted-trade coverage were complete. The exact
+report was preserved as `review-20261001T140633Z.json.gz`: raw size 21,088 B,
+SHA-256 `6b1e9c5d2b231c32bdd230538a315d9e3949f399f144ddcead06b25b9262fd9f`;
+gzip size 3,310 B, SHA-256
+`2122f90fa3ec679f9aec27a984524a6500892430563877829e2ee9f319579261`. Decompression
+matched the original bytes. The separate epoch snapshot
+`current-epoch-at-review138.json.gz` was read at 14:08:28.193306 UTC; raw size
+6,441 B, SHA-256
+`9427ca845c8083db34429a0ed49a5940a39ba150d214fe621011e22dd70fe536`; gzip
+size 1,611 B, SHA-256
+`1c06cab2106551de6411516bbba13f052e4945aaace9524a0e8caf85ea5c7484`, also
+verified by exact decompression. Future report and snapshot archives use
+lossless deterministic gzip (`mtime=0`), record raw and compressed hashes, and
+are checked against a 6,291,456-byte manual archive cap before each write.
+Existing artifacts remain unchanged. The seven-pair reviews131–137 projection
+estimated 4,339,384 B using mean compression and 4,497,159 B at the largest
+observed compressed pair size, including the existing 3,562,309 B; both fit
+under the cap. Coverage through 4 October 00:26 UTC remains reserved.
+
+Review138 added 58 exact losses, net −$94.6971719564: convergence 10 /
+−$10.3024640365 (one paired loss and nine failed hedges), Premium 48 /
+−$84.3947079199 (35 paired losses and 13 failed hedges). There were no wins,
+estimates or aborts. Entry rejections: 19 Hyperliquid and one Lighter price
+limit. Fees were $40.8101069246, other costs $28.9516380205 and capital costs
+$0.0013458183. The report snapshot counted one open Premium position and one
+pending funding item. A post-window read confirmed that brief MU position closed
+at 14:07:21 UTC for −$1.6600887852, outside the review138 window; do not fold it
+into review138. The separate archived epoch snapshot showed convergence
+548/−$651.4345 and Premium 914/−$1,685.6537. Convergence rose by ten since
+review137, matching its report delta; Premium rose by 54 while its report delta
+was 48, so use report deltas for review accounting. The later position check
+showed no open positions and three pending funding items.
+
+Health at the review was running/performance ok, with four feeds connected,
+98 pairs, CPU 76.67%, p95 loop lag 20.81 ms, resident memory 256.39 MiB,
+1,328.1 books/s and metadata age 3,107.9 s. Fresh carry v2 metadata at 14:05
+showed 163 sampled slots, persistent `arrival_invalid` slot 71 and 700 future /
+interrupted slots; no terminal error, retries or economic evaluation. Its
+sample remains unopened. Reviews 66–138 total 2,016 closes: 1,993 losses, two
+paired gains and 21 audited failed-hedge rescue gains. The overall window
+remains deeply negative. Manual archive size is 3,567,230 / 6,291,456 bytes.
+Next review: **14:26:33 UTC**.
