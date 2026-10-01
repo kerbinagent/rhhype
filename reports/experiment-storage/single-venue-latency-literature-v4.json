@@ -1,0 +1,34 @@
+{
+  "schema": "single-venue-latency-literature-v4",
+  "recorded_utc": "2026-10-01T22:30:16.097677+00:00",
+  "previous": "reports/experiment-storage/single-venue-public-trade-grouping-v1.json",
+  "previous_sha256": "d6a2e19156537200bd3db05e47d1b2f2105c899716332dc0129b450bca14e4ff",
+  "reserved_bytes": 8192,
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 153010176,
+  "active_research_headroom_bytes": 1130496,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Small source evidence records only; no capture, execution change, fitting, current-window economics, or deployment.",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2108.09750v1",
+      "read": "Abstract;Section6.1-6.3 latency,queue,and live-result passages",
+      "evidence": "BTC cross-market models forecast500ms returns. Authors acknowledge taker backtest latency/impact omissions. Their2021Bybit maker experiment used sub1ms cloud-colocated latency and2000USDorders. Average roundtrip price difference was negative4.4749bp;5bp roundtrip rebates produced positive0.5251bp. Median time between opposite fills328seconds. Benchmark had different dates and100USDorders.",
+      "application": "Useful evidence that prediction and rebates can offset adverse selection in some settings. Does not establish a400ms,100USD,10second,zero-rebate RH/Core strategy. No permission or need for live trading follows from a paper."
+    },
+    {
+      "url": "https://arrakis.finance/blog/crypto-price-discovery",
+      "published": "2026-06-04",
+      "read": "Author methodology,results,caveats",
+      "evidence": "Author trade-tape analysis of29perps acrossBinance/CoreLighter/Hyperliquid,16days ending2026-02-26,side-separated modifiedHY estimator,100mslaggrid. Reported Core/Binance near100msresolution and largerHLfilllags.",
+      "application": "Primary practitioner analysis,not an audited executable strategy. Lag in printed fills need not mean stale executable quotes remain available. Does not coverRH. Architectural causal explanation is author inference; do not adopt as established fact. No present-day latency or profit assumed."
+    },
+    {
+      "url": "https://arxiv.org/abs/1908.03281",
+      "read": "Abstract",
+      "evidence": "Theoretical liquidity-taking model balances missed fills against worse prices from walking the book during latency.",
+      "application": "Supports measuring fill probability and conditional postfill value together. Does not validate our fixed1bpentrylimit or prove widening it improves expected profit."
+    }
+  ],
+  "decision": "Keep current fixed thresholds. Future diagnostics should report nofill frequency alongside filled-trade outcomes and distinguish local-receipt executable quote persistence from trade-tape leadlag."
+}
