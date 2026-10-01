@@ -1,0 +1,175 @@
+{
+  "schema": "core-passive-fair-sell-exploration-v1",
+  "recorded_utc": "2026-10-01T15:45:44.828754+00:00",
+  "previous": "reports/experiment-storage/completed-exit-target-closeout-v1.json",
+  "previous_sha256": "42e5e4c3ea3516236e8271b7d5f290cd7f89a497f840781646a180adc8c40290",
+  "new_maximum_bytes": 196608,
+  "categories_bytes": {
+    "source": 32768,
+    "output": 131072,
+    "control": 32768
+  },
+  "active_research_pool_bytes": 19922944,
+  "active_research_reserved_bytes": 19783680,
+  "active_research_headroom_bytes": 139264,
+  "overall_reservation_bytes": 836777216,
+  "budgets": [
+    100
+  ],
+  "maker_activation_ms": [
+    100
+  ],
+  "input_manifest": "reports/core-passive-lit/capture/manifest.json",
+  "input_manifest_sha256": "30d8c14cd7ab754b895e2873871db70825fa273ebf85a560b46a2fa9a78baca1",
+  "scope": "Exploratory Core maker-sell/RH-buy on completedLITcapture; prior results known.100maker quote budget400prefunded. Past120s median closing RHbid-Coreask VWAP normalizedCoremid, sampled>=1s,2sembargo90count89span. Ask floor maxCoreask,RHentryVWAP-closing+6bpunit+fees+10scapital;roundup. Quantity monotonically decreased to fit both current entry values within100,16iteration maxelseabstain. Quote retained only while above current model floor;5srest100msactivation400mscancel/alltakers10shold. Cash-afterfees/capital TP6bp budget;5bp stress separate from decision. No actualorders/privateACKclaim. Same source/hour/cutoff/minimum/lateflow controls.",
+  "source_pins": [
+    {
+      "path": "scripts/core_passive_hedged_exit.py",
+      "sha256": "7ca4ca6b783c84eac83294bd5e9786d7e30eec3cd33297d95005f956cd359ed0"
+    },
+    {
+      "path": "scripts/core_passive_hedged_base.py",
+      "sha256": "6bc4d04f8cb5c6cbff78c198dc19314f0a50571187311b61c6a99d03d6b386fb"
+    },
+    {
+      "path": "scripts/core_passive_hedged_retirement.py",
+      "sha256": "23036c5b4a565ccafd226debd9e590cd82da0c4aad5183299f049a2fd2cff8e8"
+    },
+    {
+      "path": "scripts/core_passive_hedged_sell.py",
+      "sha256": "632b7f63e7525b0cb8a761f53bba3cff35e7aee8b9246f85fc07d56d003c006d"
+    },
+    {
+      "path": "scripts/core_passive_hedged_late_flow.py",
+      "sha256": "c163b0814a5bff8fc949ea31c5d9240d57503f8dbde5dcb2d8da3e6ebfdf9539"
+    },
+    {
+      "path": "scripts/core_passive_lit_branch.py",
+      "sha256": "fb8a97beef9bd0da13af80635127c61a1a7601596977be8726058f9f92b86c74"
+    },
+    {
+      "path": "scripts/core_passive_lit_capture.py",
+      "sha256": "7da167cc8b55da838100141fda57cb854eab4d0525d5c97b43a9d1ef7f2d51d8"
+    },
+    {
+      "path": "scripts/core_passive_lit_events.py",
+      "sha256": "8fa7c271c85d46d5f997bc8f48c3b1174367bb6bb37605e48e6c30faff2577a2"
+    },
+    {
+      "path": "scripts/replay_core_passive_lit.py",
+      "sha256": "99f8f82ae23c587c00c7d4f1333fbb3b54f028b1b0930ac89dc1e75643131527"
+    },
+    {
+      "path": "scripts/audit_core_passive_lit_fills.py",
+      "sha256": "d06f1e634ff6d479668be374095b5e48e8ff75cbb6e85a77c81d5bce26c17df4"
+    },
+    {
+      "path": "scripts/audit_core_passive_lit_quotes.py",
+      "sha256": "24dae75611fda741a290e51d3ee1b1c7b13d6f22306724ed5b3d402dc7aa78cd"
+    },
+    {
+      "path": "tests/test_core_passive_lit_events.py",
+      "sha256": "8167e7fc4f9b512d01ff50647142d340473c17cc89d8d5f002849b2cc93305fc"
+    },
+    {
+      "path": "tests/test_core_passive_hedged.py",
+      "sha256": "1c33cd6cf7028ca364ed17c53658f3bd02a570e4ea09e213c4d9ff7ea2107dcc"
+    },
+    {
+      "path": "tests/test_core_passive_lit_branch.py",
+      "sha256": "7111b8c96667b8d7393e4e22ac09c5b84efc36624254c5ce94eb20dfef8d08fa"
+    },
+    {
+      "path": "scripts/maker_capture.py",
+      "sha256": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9"
+    },
+    {
+      "path": "scripts/maker_book_archive.py",
+      "sha256": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2"
+    },
+    {
+      "path": "scripts/core_rh_small_shortterm.py",
+      "sha256": "65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/core_passive_sell_branch.py",
+      "sha256": "a55f9db16fa520af589a6b1f2ecb64fe054950ddbd46e27142993a03592f500b"
+    },
+    {
+      "path": "tests/test_core_passive_sell_branch.py",
+      "sha256": "eb911d3cf2ec77c1e5baea310f2afdf18027019b58afed4dd9485eb29db09fd2"
+    },
+    {
+      "path": "scripts/replay_core_passive_sell.py",
+      "sha256": "6522aac96a70d103292afa769d0e0a8438cd5f50be47cb4f25cdd221f4787973"
+    },
+    {
+      "path": "scripts/audit_core_passive_sell_fills.py",
+      "sha256": "b993fbbab703f4edf28e67542e4dea2475916334a0968009100bd55966f81c8a"
+    },
+    {
+      "path": "scripts/audit_core_passive_sell_quotes.py",
+      "sha256": "90a4bab6082de7772eba3b6bd9ce0413154cd15de361d2f45a72996dade0474e"
+    },
+    {
+      "path": "scripts/core_maker_cash_exit.py",
+      "sha256": "cd63c41a4c5130fca80de1d42a940369841ed96162a7de2c7052e1d88efc0474"
+    },
+    {
+      "path": "tests/test_core_maker_cash_exit.py",
+      "sha256": "6dc6659551a9c29eff312f27ba121213755fb8741be56f8deb19220f2068aece"
+    },
+    {
+      "path": "scripts/replay_core_maker_cash_exit.py",
+      "sha256": "2cf3b044b31299f9e0b0c5f9ef72a862e2d8308e1d3e54e3a38f2dbc570bf19c"
+    },
+    {
+      "path": "scripts/audit_core_maker_cash_exit_fills.py",
+      "sha256": "20fb91ba4d4e286629b26c8e4908adbfa4c1ee03b739be71bca1f1af616cc48b"
+    },
+    {
+      "path": "scripts/audit_core_maker_cash_exit_quotes.py",
+      "sha256": "6b926c4519d8f51c9a11f91f6d338d72e0d93fc4edb5afee361866f6562f7802"
+    },
+    {
+      "path": "scripts/core_passive_fair_sell.py",
+      "sha256": "df36f34dfbe11506e24e1f285a2e44f8202fec087d28d141455220a86b48e14f"
+    },
+    {
+      "path": "tests/test_core_passive_fair_sell.py",
+      "sha256": "752e8b4db356e2a866722ba833172514bac7fc5388d71c6f39e41262b3fd01e8"
+    },
+    {
+      "path": "scripts/replay_core_passive_fair_sell.py",
+      "sha256": "38e5bb708a865a7731bb5ab69a6cc711be490f6bc8c257bc6fa639f00bc05f14"
+    },
+    {
+      "path": "scripts/audit_core_passive_fair_sell_fills.py",
+      "sha256": "ad996e7338239ac448a6e3ccfcc7b9310409d3a716b5306db8b0fe1a6baab5e0"
+    },
+    {
+      "path": "scripts/audit_core_passive_fair_sell_references.py",
+      "sha256": "0bf15835988efefd38907bca4cb8f2dce0c682e089e30a3bb0a0a2f9b0dc59ff"
+    }
+  ],
+  "verification": "2syntheticsPASS: embargo/reference span/quantitybudget/forecast; model-floor cancel400ms. Independent rawreference/price/quantity/fill auditors prepared before firstreplay; model cancellation decisions not independently replay-audited.",
+  "allocation_manifest": "reports/experiment-storage/core-passive-fair-sell-v1.json",
+  "allocation_manifest_sha256": "e26fb222f0d72183dd3cda314042ef4cb0115f4b4bf02ac9f9a497378954c950",
+  "canonical_retention_manifests": [
+    "reports/experiment-storage/completed-core-passive-lit-closeout-v1.json",
+    "reports/experiment-storage/completed-core-passive-sell-closeout-v1.json",
+    "reports/experiment-storage/completed-maker-cash-exit-closeout-v1.json"
+  ]
+}
