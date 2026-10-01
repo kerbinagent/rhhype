@@ -1,0 +1,155 @@
+{
+  "source_url": "https://api-boros.pendle.finance/apis/docs",
+  "full_html_sha256": "7138f2facf6e86b7ec3fa50e5c4dc8464ef51464153ac75128b1178f26593b1b",
+  "endpoint": {
+    "description": "Returns aggregated order book data for a market, grouped by `tickSize` (tick aggregation step). The response contains `long` (bid) and `short` (ask) sides as parallel arrays: `ia[i]` is the **tick index** at level `i` \u2014 a signed integer, NOT an APR. Multiply by the requested `tickSize` to get the implied APR as a unitless decimal (e.g. `ia[i] = 316` at `tickSize = 0.0001` \u2192 `0.0316` = 3.16% APR; negative values are valid on negative-funding markets). `sz[i]` is the total notional size at that level as a **bigint string** in 18-decimal YU (yield units). Long levels are sorted descending by APR (best bid first); short levels ascending by APR (best ask first). Each side is capped at the **best 50 entries**.\n\n**AMM merging.** When `includeAmm=true`, on-chain AMM positions are merged into the book before the 50-entry cap is applied. When `includeAmm=false` (default), only resting limit orders are returned, also capped at 50 entries per side.\n\n**Tick size.** `tickSize` controls how raw ticks are bucketed before aggregation. See [Order Book mechanics](https://docs.pendle.finance/boros-dev/Mechanics/OrderBook) for the tick-to-rate exponential mapping and matching rules.",
+    "operationId": "MarketsController_getOrderBook",
+    "parameters": [
+      {
+        "name": "marketId",
+        "required": true,
+        "in": "query",
+        "description": "Numeric market identifier (1-based).",
+        "schema": {
+          "minimum": 1,
+          "type": "number"
+        }
+      },
+      {
+        "name": "tickSize",
+        "required": true,
+        "in": "query",
+        "description": "Tick aggregation step. Adjacent raw ticks are grouped into a single price level before sizes are summed; larger values produce coarser, more readable books.",
+        "schema": {
+          "type": "number",
+          "enum": [
+            0.0001,
+            0.001,
+            0.01,
+            0.1
+          ]
+        }
+      },
+      {
+        "name": "includeAmm",
+        "required": false,
+        "in": "query",
+        "description": "When `true`, on-chain AMM liquidity is merged into both sides of the book and each side is capped at **50** entries. When `false` (default), only resting limit orders are returned.",
+        "schema": {
+          "default": false,
+          "example": false,
+          "type": "boolean"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Order book with long and short sides (up to 50 entries each), optionally including AMM liquidity",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/OrderBooksResponse"
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Invalid marketId or tickSize"
+      },
+      "410": {
+        "description": "Market has matured; its order book is no longer available (`MARKET_MATURED`)"
+      }
+    },
+    "summary": "Get market order book",
+    "tags": [
+      "Markets"
+    ],
+    "x-computing-unit": "2"
+  },
+  "schemas": {
+    "OrderBooksResponse": {
+      "type": "object",
+      "properties": {
+        "long": {
+          "description": "Bid side \u2014 orders to go long on rates. Best bid first.",
+          "allOf": [
+            {
+              "$ref": "#/components/schemas/SideTickResponse"
+            }
+          ]
+        },
+        "short": {
+          "description": "Ask side \u2014 orders to go short on rates. Best ask first.",
+          "allOf": [
+            {
+              "$ref": "#/components/schemas/SideTickResponse"
+            }
+          ]
+        },
+        "syncStatus": {
+          "description": "Current sync status of the order book",
+          "allOf": [
+            {
+              "$ref": "#/components/schemas/SyncStatusResponse"
+            }
+          ]
+        }
+      },
+      "required": [
+        "long",
+        "short",
+        "syncStatus"
+      ]
+    },
+    "SideTickResponse": {
+      "type": "object",
+      "properties": {
+        "ia": {
+          "description": "Implied APR at each aggregated tick level (unitless decimal, `0.085` = 8.5%). For the long side, sorted **descending** (best bid first). For the short side, sorted **ascending** (best ask first). `ia[i]` corresponds 1:1 with `sz[i]`.",
+          "example": [
+            0.085,
+            0.086,
+            0.087
+          ],
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "sz": {
+          "description": "Total resting notional at the matching `ia[i]` level as a **bigint string** in 18-decimal YU (yield units). Includes AMM contribution at this level when the request used `includeAmm=true`.",
+          "example": [
+            "1000000000000000000",
+            "2000000000000000000",
+            "500000000000000000"
+          ],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "ia",
+        "sz"
+      ]
+    },
+    "SyncStatusResponse": {
+      "type": "object",
+      "properties": {
+        "blockNumber": {
+          "type": "number",
+          "description": "Latest fully processed block number"
+        },
+        "timestamp": {
+          "type": "number",
+          "description": "Timestamp of the latest fully processed block"
+        }
+      },
+      "required": [
+        "blockNumber",
+        "timestamp"
+      ]
+    }
+  }
+}

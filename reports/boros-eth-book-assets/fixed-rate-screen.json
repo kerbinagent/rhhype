@@ -1,0 +1,72 @@
+{
+  "actual_pnl": null,
+  "fixed_usd_return_established": false,
+  "market_id": 199,
+  "collateral": "WETH",
+  "aggregated_top_rate": "0.0833",
+  "rate_sensitivity_used": "0.0832",
+  "top_depth_eth": "15",
+  "funding_period_anchor": 1790820000,
+  "years_to_maturity": "0.07922374429223744292237442922",
+  "price_usd_sensitivity": "2684.23362681",
+  "source_sha256": {
+    "reports/boros-eth-depth-corrected/book.json.gz": "b78a479aa9ce8a33e78dd60fe64df9edb7d1fa27e42d5e1406f8a5c105988e20",
+    "reports/boros-core-eth-markets/summary.json": "19d592d51da279455bf8787a44e1229c71db26a656530621f23f33275b041b81",
+    "reports/boros-eth-book-assets/assets.json.gz": "0e8a5e1b3e9b82e8961e3887039422861081b8c0642fbd2444423a320b7aa287"
+  },
+  "rows": [
+    {
+      "notional_usd": 100,
+      "hypothetical_swap_yu_eth": "0.03725458134538092144079319183",
+      "fixed_gross_constant_price_usd": "0.6591415525114155251141552511",
+      "capital_usd": "0.4357305936073059360730593607",
+      "swap_and_settlement_fees_usd": "0.01188356164383561643835616438",
+      "illustrative_entrance_usd": "0.7247430792387",
+      "earlier_median_spread_cost_usd": "0.032736",
+      "stress_usd": "0.0500",
+      "conditional_residual_usd": "-0.5959516819784260273972602740"
+    },
+    {
+      "notional_usd": 250,
+      "hypothetical_swap_yu_eth": "0.09313645336345230360198297959",
+      "fixed_gross_constant_price_usd": "1.647853881278538812785388128",
+      "capital_usd": "1.089326484018264840182648402",
+      "swap_and_settlement_fees_usd": "0.02970890410958904109589041096",
+      "illustrative_entrance_usd": "0.7247430792387",
+      "earlier_median_spread_cost_usd": "0.089354",
+      "stress_usd": "0.1250",
+      "conditional_residual_usd": "-0.4102785860880150684931506850"
+    },
+    {
+      "notional_usd": 500,
+      "hypothetical_swap_yu_eth": "0.1862729067269046072039659592",
+      "fixed_gross_constant_price_usd": "3.295707762557077625570776256",
+      "capital_usd": "2.178652968036529680365296804",
+      "swap_and_settlement_fees_usd": "0.05941780821917808219178082192",
+      "illustrative_entrance_usd": "0.7247430792387",
+      "earlier_median_spread_cost_usd": "0.208522",
+      "stress_usd": "0.2500",
+      "conditional_residual_usd": "-0.125628092937330136986301370"
+    },
+    {
+      "notional_usd": 1000,
+      "hypothetical_swap_yu_eth": "0.3725458134538092144079319183",
+      "fixed_gross_constant_price_usd": "6.591415525114155251141552511",
+      "capital_usd": "4.357305936073059360730593607",
+      "swap_and_settlement_fees_usd": "0.1188356164383561643835616438",
+      "illustrative_entrance_usd": "0.7247430792387",
+      "earlier_median_spread_cost_usd": "0.472528",
+      "stress_usd": "0.5000",
+      "conditional_residual_usd": "0.418002893364039726027397260"
+    }
+  ],
+  "omitted": [
+    "gas/bridge/deposit/withdrawal",
+    "future basis",
+    "currency rehedging",
+    "margin replenishment path",
+    "actual fills",
+    "exact personal entrance fee"
+  ],
+  "capital_assumption": "Spot plus10%cash; Boros margin carved from held ETH, not free extra capital"
+}
