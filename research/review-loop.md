@@ -4749,3 +4749,44 @@ audited failed-hedge rescue gains. Manual archive size is 3,603,224 /
 4,980,736 B, preserving every artifact. The remaining 168 scheduled pairs
 through 4 October 00:26 UTC at the prior worst 5,342 B per pair project
 4,500,680 B total, leaving 480,056 B. Next review: **16:46:33 UTC**.
+
+
+## Review 146 — 1 October 2026 16:46:33 UTC
+
+All eight strategy and aborted coverage fields complete. Exact report
+`review-20261001T164633Z.json.gz`: raw 20,258 B, SHA-256
+`0fdd41eaf1231733f384e385b563a7ff50c34a04ba222b8cca265387944d2ab3`;
+gzip 3,136 B, SHA-256
+`8ec573aeb3c790892e9cd96161bed08bdad8c132723eaf53abe300777f4149da`.
+Independent `current-epoch-at-review146.json.gz`: read 16:47:01.897453 UTC,
+updated 16:47:00.455132 UTC; raw 9,263 B, SHA-256
+`c1026b84fbc7cf576e588f97d1952ac0437cc10469bcb0f4b0df113d9de2445b`;
+gzip 1,705 B, SHA-256
+`4a91622f9310cb65f76c3d5dbd6b29391153e8fc9b3a5c415e741614e6cd246c`.
+Both exact decompression checks passed; exclusive writes guarded exact cap
+and remaining growth before each write.
+
+Seven convergence closes net −$7.7723021838, all failed hedges, including
+two exact gains; 30 Premium closes net −$51.9719984100, 22 paired losses
+and eight failed hedges including one exact gain. Three new failed-hedge
+wins were immediately flagged to the parent for independent audit; no
+paired wins or estimates. One convergence abort. Entry rejections: 16
+Hyperliquid price limits and one Lighter notional cap. Convergence fees
+zero, other costs $3.4762692045, capital $0.0000139793; Premium fees
+$24.8862024354, other costs $14.9549243225, capital $0.0008066521.
+
+Separate epoch snapshot: convergence 583 / −$680.0153415223 and Premium
+1,091 / −$1,977.1915900775; counts increased seven and 30 from review145,
+matching this report, without merging sampling boundaries. Health running/
+performance ok, four feeds, 100 pairs, CPU 66.66%, p95 lag 12.17 ms, RSS
+263.67 MiB, 1,010.5 books/s, metadata age 1,892.7 s. Carry metadata at
+16:45: 195 sampled, slot 71 arrival_invalid, 668 future/interrupted;
+running, no errors/retries/economic evaluation; no sample opened.
+
+Reviews 66–146 total 2,235 closes: 2,207 losses, two paired gains, 23
+previously audited failed-hedge rescue gains and three new failed-hedge
+gains awaiting the parent audit. The parent restored manual cap 5,242,880 B
+under c31e204 using verified unused completed ACK replay reservation;
+overall reservation remains 836,777,216 B and all artifacts are preserved.
+Exact manual archive 3,608,065 B; 167 future scheduled pairs at 5,342 B
+project 4,500,179 B, margin 742,701 B. Next review **17:06:33 UTC**.

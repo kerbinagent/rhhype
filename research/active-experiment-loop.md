@@ -1655,3 +1655,17 @@ window accounting. Deterministic archives verified with cap/growth guards;
 Carry v2 metadata at 16:25: 191 sampled, slot 71 still arrival_invalid,
 672 future/interrupted; running, no errors/retries/economic evaluation.
 No carry sample opened or services changed. Next review 16:46:33 UTC.
+
+
+### Review 146, 1 October 16:46 UTC
+
+Complete coverage: 37 exact closes/−$59.74430: seven convergence failed
+hedges and 30 Premium (22 paired, eight failed hedges). Three new exact
+failed-hedge gains (two convergence, one Premium) immediately sent to the
+parent for audit; no paired gains or estimates. One convergence abort,
+16 Hyperliquid price-limit rejections and one Lighter notional cap. Four
+feeds, 100 pairs, running/normal performance. Independent epoch snapshot
+preserved with exact report; archive 3,608,065 B, 167 future pairs project
+4,500,179 B under restored 5,242,880 B cap (parent c31e204). Carry 16:45:
+195 sampled, persistent invalid slot 71, 668 future/interrupted; no errors,
+retries or economic evaluation. Next review 17:06:33 UTC.
