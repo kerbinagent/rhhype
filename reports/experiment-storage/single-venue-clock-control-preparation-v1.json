@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-clock-control-preparation-v1",
+  "recorded_utc": "2026-10-01T21:23:27.670536+00:00",
+  "previous": "reports/experiment-storage/single-venue-depth-batch-v1.json",
+  "previous_sha256": "afd5a5a1dbc0da0f5dbadeeda9ecd3f4e3fb6bf1b019c9c8da9408e9e601cced",
+  "reserved_bytes": 65536,
+  "active_research_pool_bytes": 87031808,
+  "active_research_reserved_bytes": 79347712,
+  "active_research_headroom_bytes": 7684096,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare independent clock long/short controls for already-frozen batch. Specified during collection before any batch economic data inspected. No active strategy or capture change. Source/test/protocol preparation65536; future outputs require full allocation before evaluation."
+}
