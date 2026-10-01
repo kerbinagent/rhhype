@@ -1,0 +1,11 @@
+{
+  "schema": "core-spot-passive-inside-request-audit-supplement-v1",
+  "recorded_utc": "2026-10-01T17:45:12.619391+00:00",
+  "plan": "reports/experiment-storage/core-spot-passive-inside-v1.json",
+  "plan_sha256": "d17de879ef19287495f0d8acf541df79c162a09fc31a1097902a219234240a32",
+  "source": "scripts/audit_core_spot_passive_requests.py",
+  "source_sha256": "7597e1f03c729b0bc6606edc22b3437306d1fb6e62ac85bd875dfead2eb46d2e",
+  "allocation_delta": 0,
+  "funded_from": "Existing131072controlbytes",
+  "scope": "Prepare conservative independent request count audit before capture endpoint; no economic data read and no capture/replay protocol change."
+}
