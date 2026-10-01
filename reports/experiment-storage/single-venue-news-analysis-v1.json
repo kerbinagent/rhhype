@@ -1,0 +1,37 @@
+{
+  "schema": "single-venue-news-analysis-v1",
+  "recorded_utc": "2026-10-01T23:45:03.070773+00:00",
+  "previous": "reports/experiment-storage/single-venue-news-v1.json",
+  "previous_sha256": "e9efab93a06e4e53fdb76b2f4b0e955f25f37a749c810062736a66f04ec90ffe",
+  "reserved_bytes": 0,
+  "allocation_note": "No new allocation: companion source/tests/protocol fit existingnews source/preparation65536; status/process/terminal/stdout/externalhash/shortreadout fit existingnews control262144. Existing20replay/auditoutputs2621440 retained. Originalcaptureprotocol/source unchanged.",
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 149233664,
+  "active_research_headroom_bytes": 4907008,
+  "overall_reservation_bytes": 836777216,
+  "pins": [
+    {
+      "path": "scripts/single_venue_news_analysis.py",
+      "sha256": "548d2f1000d43cb009f26f41a6c77ccf391887a31a36aecc231e3af9e311a606"
+    },
+    {
+      "path": "tests/test_single_venue_news_analysis.py",
+      "sha256": "62335b79024cffb18f32938a4d5bda766d87253714ae9d9cda3c43a28457f74a"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-news-v1.json",
+      "sha256": "e9efab93a06e4e53fdb76b2f4b0e955f25f37a749c810062736a66f04ec90ffe"
+    }
+  ],
+  "scope": "One bounded offline analysis companion to alreadyarmed news PID2794210. No network/auth/orders. Wait for capture terminal only, 30secondstatusheartbeat,14hourmonotonicbound and2026-10-02T12:40UTCwall deadline. Require normal endpoint AND eventcoverage AND exact captureprotocolhash; abnormal/missingcapture stops without economic evaluation. Afterterminal verifyfullnews sourcepins, independently hash raw/manifest andterminal/pin external-verification.json once. Then freshprocess commands: relative replay,10relativeaudits,relativecomparison;depthreplay,10depthaudits,depthcomparison;finalreadout. 24commands serialized, eachnice19, max600seconds andremainingtotal3600secondbudget. Stop on any error/timeout, no retries or overwriting existing results. Preservepartialevidence/failedstatus, no success claim untilallcommands andreadoutfinish. Canonicaloutputsremain inpreviouslyallocated20dirs. Childstdoutdiscarded becausecanonicalresultsretained;boundedfailuremessage andcontrollerstate retained. Successfulreadout reportsall100rowsincomparisonfiles pluscompactactivearmtable,neverindependentcashsums. Originalcapture/protocolunchanged. This companion isoffline workflowautomation, notnew economic hypothesis.",
+  "verification": "FourtestsPASS:onlynormalcoveredterminaleligible/missingdeadline;exact24commandorderingandfirstfailurestop;incompletecaptureneverevaluated;percommand600secondandtotaldeadlineenforced.",
+  "owned_paths": [
+    "reports/single-venue-news/analysis-process.json",
+    "reports/single-venue-news/analysis-status.json",
+    "reports/single-venue-news/analysis-terminal.json",
+    "reports/single-venue-news/analysis-stdout.txt",
+    "reports/single-venue-news/external-verification.json",
+    "reports/single-venue-research/single-venue-news-readout.txt"
+  ],
+  "replay_ownership": "Companion owns allnewsreplay/audit/comparisonoutputs once armed; rootmust not race by manuallywritingthe sameoutputs whilecompanionrunning."
+}
