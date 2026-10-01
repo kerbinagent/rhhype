@@ -1868,3 +1868,15 @@ running/ok. Separate epoch increments match report. Archive 3,695,000 B;
 251 sampled, invalid slot 71, 612 future/interrupted; no errors/retries/
 evaluation. Active batch/control economic outputs untouched.
 Next review 21:46:33 UTC.
+
+
+### Review 161, 1 October 21:46 UTC
+
+Complete coverage: ten exact failed-hedge losses, six convergence/−$7.15650
+and four Premium/−$5.82793. No gains/estimates/aborts; ten HL price limits.
+Four feeds/101 pairs fresh, running/ok. Separate epoch increments match
+report. Archive 3,699,569 B; 152 future pairs project 4,511,553 B, margin
+731,327 B. Carry 21:45: 255 sampled, invalid slot 71, 608 future/interrupted;
+no errors/retries/evaluation. Added authorized batch status health check;
+window2→3 transition notified, no batch economics read.
+Next review 22:06:33 UTC.
