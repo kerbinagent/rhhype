@@ -1,0 +1,71 @@
+{
+  "scope": "Retrospective diagnostic using recorded request mark, adding back modeled capital. This does not independently reconstruct mark depth because full idle books are not retained. Actual fills independently audited separately. Delay change includes market movement and bid/ask costs between request and fill. Max-hold exits excluded because no trigger mark stored.",
+  "trades": [
+    {
+      "study": "core-rh-persistent-entry",
+      "branch": "100-60-0s-confirm",
+      "id": "1790860475789367-1-standard",
+      "asset": "HYPE",
+      "cash_mark_at_exit_request": "0.01370399999996716175012683917",
+      "actual_cash": "0.000040",
+      "exit_execution_change": "-0.01366399999996716175012683917",
+      "request_to_flat_seconds": 0.5217328071594238,
+      "raw_sha256": "38d1646929ccc1f8785322769352aa9079cd73fdb721e5a604759441d4f0cd53"
+    },
+    {
+      "study": "core-rh-persistent-entry",
+      "branch": "100-60-0s-confirm",
+      "id": "1790860545081151-2-standard",
+      "asset": "HYPE",
+      "cash_mark_at_exit_request": "0.01679999999999440456722475901",
+      "actual_cash": "0.003248",
+      "exit_execution_change": "-0.01355199999999440456722475901",
+      "request_to_flat_seconds": 0.5077657699584961,
+      "raw_sha256": "38d1646929ccc1f8785322769352aa9079cd73fdb721e5a604759441d4f0cd53"
+    },
+    {
+      "study": "core-rh-persistent-entry",
+      "branch": "100-60-0s-confirm",
+      "id": "1790860760624741-4-standard",
+      "asset": "VVV",
+      "cash_mark_at_exit_request": "0.03724000000002002741581050228",
+      "actual_cash": "0.051840",
+      "exit_execution_change": "0.01459999999997997258418949772",
+      "request_to_flat_seconds": 0.6296868324279785,
+      "raw_sha256": "38d1646929ccc1f8785322769352aa9079cd73fdb721e5a604759441d4f0cd53"
+    },
+    {
+      "study": "core-rh-persistent-entry",
+      "branch": "100-60-2s-confirm",
+      "id": "1790860763520246-1-standard",
+      "asset": "VVV",
+      "cash_mark_at_exit_request": "0.03123999999998273139405758498",
+      "actual_cash": "0.045840",
+      "exit_execution_change": "0.01460000000001726860594241502",
+      "request_to_flat_seconds": 0.6296868324279785,
+      "raw_sha256": "38d1646929ccc1f8785322769352aa9079cd73fdb721e5a604759441d4f0cd53"
+    },
+    {
+      "study": "core-rh-persistent-entry",
+      "branch": "100-60-0s-confirm",
+      "id": "1790860783364276-5-standard",
+      "asset": "NEAR",
+      "cash_mark_at_exit_request": "0.02424000000003226751293759513",
+      "actual_cash": "0.064438",
+      "exit_execution_change": "0.04019799999996773248706240487",
+      "request_to_flat_seconds": 0.48839831352233887,
+      "raw_sha256": "38d1646929ccc1f8785322769352aa9079cd73fdb721e5a604759441d4f0cd53"
+    },
+    {
+      "study": "core-rh-persistent-entry",
+      "branch": "100-60-0s-confirm",
+      "id": "1790860823005275-6-standard",
+      "asset": "NEAR",
+      "cash_mark_at_exit_request": "0.04105200000003026927968036530",
+      "actual_cash": "-0.117316",
+      "exit_execution_change": "-0.1583680000000302692796803653",
+      "request_to_flat_seconds": 0.5840208530426025,
+      "raw_sha256": "38d1646929ccc1f8785322769352aa9079cd73fdb721e5a604759441d4f0cd53"
+    }
+  ]
+}

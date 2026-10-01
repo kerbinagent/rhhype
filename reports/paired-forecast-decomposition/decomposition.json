@@ -1,0 +1,158 @@
+{
+  "scope": "Retrospective paired-only decomposition. Forecast is a model expectation, not promised profit. Separate independent branches; do not sum overlapping arms. No active-run outcomes.",
+  "studies": {
+    "core-rh-persistent-entry": {
+      "raw_sha256": "38d1646929ccc1f8785322769352aa9079cd73fdb721e5a604759441d4f0cd53",
+      "excluded_rescue_ids": [],
+      "paired_trades": [
+        {
+          "id": "1790860475789367-1-standard",
+          "branch": "100-60-0s-confirm",
+          "asset": "HYPE",
+          "forecast_gross": "0.04029492874199664",
+          "entry_price_change": "-0.03721200000001",
+          "exit_forecast_miss": "-0.00304292874198664",
+          "actual_gross": "0.000040",
+          "cash": "0.000040",
+          "exit_reason": "take_profit",
+          "holding_seconds_after_paired_entry": 24.998740911483765
+        },
+        {
+          "id": "1790860545081151-2-standard",
+          "branch": "100-60-0s-confirm",
+          "asset": "HYPE",
+          "forecast_gross": "0.03720803603702939",
+          "entry_price_change": "-0.03303999999999",
+          "exit_forecast_miss": "-0.00092003603703939",
+          "actual_gross": "0.003248",
+          "cash": "0.003248",
+          "exit_reason": "take_profit",
+          "holding_seconds_after_paired_entry": 1.3002924919128418
+        },
+        {
+          "id": "1790860579190788-3-standard",
+          "branch": "100-60-0s-confirm",
+          "asset": "ZEC",
+          "forecast_gross": "0.023759265618090428",
+          "entry_price_change": "-0.047777",
+          "exit_forecast_miss": "-0.015798265618090428",
+          "actual_gross": "-0.039816",
+          "cash": "-0.039816",
+          "exit_reason": "max_hold",
+          "holding_seconds_after_paired_entry": 60.64628314971924
+        },
+        {
+          "id": "1790860760624741-4-standard",
+          "branch": "100-60-0s-confirm",
+          "asset": "VVV",
+          "forecast_gross": "0.023480168920507555",
+          "entry_price_change": "0.009500",
+          "exit_forecast_miss": "0.018859831079492445",
+          "actual_gross": "0.051840",
+          "cash": "0.051840",
+          "exit_reason": "take_profit",
+          "holding_seconds_after_paired_entry": 3.7982442378997803
+        },
+        {
+          "id": "1790860763520246-1-standard",
+          "branch": "100-60-2s-confirm",
+          "asset": "VVV",
+          "forecast_gross": "0.011912945295179528",
+          "entry_price_change": "0.026860",
+          "exit_forecast_miss": "0.007067054704820472",
+          "actual_gross": "0.045840",
+          "cash": "0.045840",
+          "exit_reason": "take_profit",
+          "holding_seconds_after_paired_entry": 0.8486204147338867
+        },
+        {
+          "id": "1790860783364276-5-standard",
+          "branch": "100-60-0s-confirm",
+          "asset": "NEAR",
+          "forecast_gross": "0.05743820345301144",
+          "entry_price_change": "-0.06201400000001",
+          "exit_forecast_miss": "0.06901379654699856",
+          "actual_gross": "0.064438",
+          "cash": "0.064438",
+          "exit_reason": "take_profit",
+          "holding_seconds_after_paired_entry": 38.99520397186279
+        },
+        {
+          "id": "1790860823005275-6-standard",
+          "branch": "100-60-0s-confirm",
+          "asset": "NEAR",
+          "forecast_gross": "0.03456666812196281",
+          "entry_price_change": "-0.09509600000001",
+          "exit_forecast_miss": "-0.05678666812195281",
+          "actual_gross": "-0.117316",
+          "cash": "-0.117316",
+          "exit_reason": "take_profit",
+          "holding_seconds_after_paired_entry": 38.344231843948364
+        }
+      ],
+      "paired_branch_totals": {
+        "100-60-0s-confirm": {
+          "paired_count": 6,
+          "forecast_gross": "0.216747270892598263",
+          "entry_price_change": "-0.26563900000002",
+          "exit_forecast_miss": "0.011325729107421737",
+          "actual_gross": "-0.037566",
+          "cash": "-0.037566"
+        },
+        "100-60-2s-confirm": {
+          "paired_count": 1,
+          "forecast_gross": "0.011912945295179528",
+          "entry_price_change": "0.026860",
+          "exit_forecast_miss": "0.007067054704820472",
+          "actual_gross": "0.045840",
+          "cash": "0.045840"
+        }
+      }
+    },
+    "core-rh-equity-open": {
+      "raw_sha256": "d7277d2a91c442870f420c81eb4420e1960a393985c6776b5158d830fad3fbe8",
+      "excluded_rescue_ids": [
+        "1790861260485680-1-standard",
+        "1790861280573958-2-standard",
+        "1790861403044984-3-standard",
+        "1790861404892219-4-standard"
+      ],
+      "paired_trades": [
+        {
+          "id": "1790861506644965-5-standard",
+          "branch": "100-60-0s-confirm",
+          "asset": "TSLA",
+          "forecast_gross": "0.014948451203827318",
+          "entry_price_change": "-0.073715",
+          "exit_forecast_miss": "0.000047548796172682",
+          "actual_gross": "-0.058719",
+          "cash": "-0.058719",
+          "exit_reason": "max_hold",
+          "holding_seconds_after_paired_entry": 60.603795766830444
+        },
+        {
+          "id": "1790861660371033-6-standard",
+          "branch": "100-60-0s-confirm",
+          "asset": "TSLA",
+          "forecast_gross": "0.014632065154587925",
+          "entry_price_change": "-0.04189299999998",
+          "exit_forecast_miss": "-0.050217065154607925",
+          "actual_gross": "-0.077478",
+          "cash": "-0.077478",
+          "exit_reason": "max_hold",
+          "holding_seconds_after_paired_entry": 60.59831929206848
+        }
+      ],
+      "paired_branch_totals": {
+        "100-60-0s-confirm": {
+          "paired_count": 2,
+          "forecast_gross": "0.029580516358415243",
+          "entry_price_change": "-0.11560799999998",
+          "exit_forecast_miss": "-0.050169516358435243",
+          "actual_gross": "-0.136197",
+          "cash": "-0.136197"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "paired-forecast-decomposition-v1",
+  "recorded_utc": "2026-10-01T13:46:15.400005+00:00",
+  "previous": "reports/experiment-storage/core-rh-target-margin-allocation-v1.json",
+  "previous_sha256": "eb2e117b5de85f155e82010cf377ddae88d410337908d70e8e33b183ac647614",
+  "new_maximum_bytes": 32768,
+  "active_research_reserved_bytes": 15613952,
+  "active_research_headroom_bytes": 114688,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Offline retrospective algebraic decomposition of all paired closes from sealedpersistentcryptoandequityopeningruns;originalarchivesread-only,no interimeconomicsfromactiveexperiments.32KiBsource/output/control combined. Separate entrypricechange and exitforecastmiss; thisisdiagnostic notanewprofitstrategy."
+}
