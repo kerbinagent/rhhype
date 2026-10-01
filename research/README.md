@@ -5,8 +5,21 @@
 The user redirected the primary agent to active idea research on 1 October,
 with routine monitoring delegated to `gpt-6-luna`. The
 [active idea memo](active-idea-research.md) contains a new absolute-funding
-screen and prioritizes same-venue ETH spot/perpetual carry, collateral design,
-and a later Core/RH funding comparison. No profitable strategy is established.
+screen and collateral research. Subsequent tests found small ETH monthly
+candle surpluses with unproven execution, failed longer Core/RH funding
+persistence, and missing public option-box quotes. No profitable strategy
+is established.
+
+- [August ETH replication](../reports/core-eth-august-replication/readout.md):
+  +$1.26 full-month candle proxy before executable spreads; three of four
+  weekly diagnostics negative.
+- [Funding-swap assessment](core-eth-fixed-funding-assessment.md): small-size
+  economics remain marginal and WETH cashflows require separate accounting.
+- [Monthly Core/RH test](../reports/core-rh-monthly-funding/readout.md): all
+  15 asset/period rate proxies fail capital plus stress.
+- [ETH option-box quotes](../reports/derive-box-quote-screen/readout.md):
+  all 12 size outcomes unknown; selected legs have no displayed prices or
+  size. Atomic RFQ liquidity and prices were not observed.
 
 The [broader carry proposal](broader-carry-research-proposal.md) led to a
 BTC dated-futures feasibility study. Its original run was interrupted by a

@@ -1,0 +1,13 @@
+{
+  "usage_bytes_before_this_manifest": {
+    "source": 6803,
+    "raw": 13501,
+    "output": 24278,
+    "control": 3834
+  },
+  "maximum_bytes": 131072,
+  "additional_mutable_documentation_charged_conservatively_in_full": {
+    "research/README.md": 9575,
+    "research/active-idea-research.md": 6643
+  }
+}

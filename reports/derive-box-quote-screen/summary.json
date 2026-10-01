@@ -1,0 +1,65 @@
+{
+  "rounds": [
+    {
+      "round": 0,
+      "planned_utc": 1790824807.687658,
+      "status": "failed_no_retry",
+      "http_status": 200,
+      "received": 1790824808.1605637,
+      "request_seconds": 0.4724454879997211,
+      "raw_sha256": "0ff803c83771d361ddf93c7a515d84d4cd22f274b91ab615bd7dcbd5f846ccc0",
+      "gzip_bytes": 4564,
+      "error": "",
+      "missing_cash_budgets": [
+        100,
+        250,
+        500,
+        1000
+      ]
+    },
+    {
+      "round": 1,
+      "planned_utc": 1790824837.687658,
+      "status": "failed_no_retry",
+      "http_status": 200,
+      "received": 1790824838.1117475,
+      "request_seconds": 0.4238027000010334,
+      "raw_sha256": "0d6aa16eb93a079d8e4a021f12903eba30e9d374f3ed844a5533d1e676efe339",
+      "gzip_bytes": 4326,
+      "error": "",
+      "missing_cash_budgets": [
+        100,
+        250,
+        500,
+        1000
+      ]
+    },
+    {
+      "round": 2,
+      "planned_utc": 1790824867.687658,
+      "status": "failed_no_retry",
+      "http_status": 200,
+      "received": 1790824868.128263,
+      "request_seconds": 0.4402991730003123,
+      "raw_sha256": "0d1b272f0bdc16ccb2477083a97607b4e65a2185a84595a0b327d9efef5df04d",
+      "gzip_bytes": 4611,
+      "error": "",
+      "missing_cash_budgets": [
+        100,
+        250,
+        500,
+        1000
+      ]
+    }
+  ],
+  "expected_size_rows": 12,
+  "actual_pnl": null,
+  "rfq_price_observed": false,
+  "unknown_costs": [
+    "settlement_if_any",
+    "bridge_and_transfer",
+    "account_specific_fees",
+    "margin_and_legged_execution"
+  ],
+  "not_a_complete_cost_or_execution_test": true
+}

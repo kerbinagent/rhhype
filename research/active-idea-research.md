@@ -61,13 +61,13 @@ ETH was selected before this pull; no automatic asset search or extension.
 The simple always-on version does not advance. Collateral efficiency and
 selective entry remain distinct hypotheses requiring their own evidence.
 
-**New collateral evidence:** Core's public metadata enables ETH at 70% LTV
-and 85% liquidation threshold; the official multi-asset margin page explicitly
-describes spot ETH collateral against an ETH short. A separate fixed 1.1x
-capital [September candle screen](../reports/core-eth-collateral-candles/readout.md)
-leaves $2.74 on ~$1,100 for the full month; three weekly blocks positive,
-one negative. This is an exploratory lead, with inferred funding units and
-non-executable candle prices. Next check actual spread/impact costs.
+**Collateral follow-up:** ETH margin at 70% LTV supports a separate 1.1x
+capital design. Monthly candle proxies leave $2.74 in September and
+[$1.26 in August](../reports/core-eth-august-replication/readout.md), before
+execution costs. Three of August's four weeks are negative. A five-round
+quote screen found $0.47 median round-trip cost at $1,000. The
+[funding-swap assessment](core-eth-fixed-funding-assessment.md) is also marginal.
+These are research leads with inferred units and unproven execution.
 
 ### 2. Portfolio-margin carry on Hyperliquid
 
@@ -89,12 +89,12 @@ cost/rate evidence changes.
 
 ### 3. Core/RH multi-day funding difference
 
-The full reused 24-hour SOL difference is 3.21 bp with a direction selected
-on the preceding day, versus the 3.454 bp/day seven-day illustrative hurdle.
-It is closer than the HL routes, but remains below the hurdle before basis
-and conversion. A longer paired history could distinguish a persistent
-funding opportunity from a brief RH imbalance. Prioritize after the simpler
-same-venue ETH test; no third collector is launched automatically.
+The [September persistence test](../reports/core-rh-monthly-funding/readout.md)
+selected directions on the first week and retained all later blocks for
+SOL/BTC/ETH. All 15 cost-adjusted rate proxies fail. SOL's aggregate
+14.21 bp is below 68.01 bp capital plus stress; its first two evaluated
+weeks lose funding before costs. The earlier favorable daily difference
+was not a stable monthly advantage. No expanded collector follows.
 
 ## New documentation discrepancy to track
 

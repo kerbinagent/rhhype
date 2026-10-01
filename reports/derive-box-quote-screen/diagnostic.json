@@ -1,0 +1,135 @@
+{
+  "expected_size_rows": 12,
+  "usable_size_rows": 0,
+  "unknown_size_rows": 12,
+  "diagnosis": "All four legs in all three snapshots have zero bid,ask,bid-size,ask-size. Ages6.56\u20137.46s also exceed frozen5s gate. Empty AssertionError in frozen summary is diagnosed here without modifying it.",
+  "rounds": [
+    {
+      "round": 0,
+      "legs": [
+        {
+          "name": "ETH-20261030-2400-C",
+          "side": "buy",
+          "bid": "0",
+          "ask": "0",
+          "bid_size": "0",
+          "ask_size": "0",
+          "snapshot_age_seconds": 7.444563627243042
+        },
+        {
+          "name": "ETH-20261030-3000-C",
+          "side": "sell",
+          "bid": "0",
+          "ask": "0",
+          "bid_size": "0",
+          "ask_size": "0",
+          "snapshot_age_seconds": 7.310563802719116
+        },
+        {
+          "name": "ETH-20261030-3000-P",
+          "side": "buy",
+          "bid": "0",
+          "ask": "0",
+          "bid_size": "0",
+          "ask_size": "0",
+          "snapshot_age_seconds": 7.458563804626465
+        },
+        {
+          "name": "ETH-20261030-2400-P",
+          "side": "sell",
+          "bid": "0",
+          "ask": "0",
+          "bid_size": "0",
+          "ask_size": "0",
+          "snapshot_age_seconds": 7.343563795089722
+        }
+      ],
+      "all_zero_price_and_size": true
+    },
+    {
+      "round": 1,
+      "legs": [
+        {
+          "name": "ETH-20261030-2400-C",
+          "side": "buy",
+          "bid": "0",
+          "ask": "0",
+          "bid_size": "0",
+          "ask_size": "0",
+          "snapshot_age_seconds": 7.030747413635254
+        },
+        {
+          "name": "ETH-20261030-3000-C",
+          "side": "sell",
+          "bid": "0",
+          "ask": "0",
+          "bid_size": "0",
+          "ask_size": "0",
+          "snapshot_age_seconds": 6.899747610092163
+        },
+        {
+          "name": "ETH-20261030-3000-P",
+          "side": "buy",
+          "bid": "0",
+          "ask": "0",
+          "bid_size": "0",
+          "ask_size": "0",
+          "snapshot_age_seconds": 7.049747467041016
+        },
+        {
+          "name": "ETH-20261030-2400-P",
+          "side": "sell",
+          "bid": "0",
+          "ask": "0",
+          "bid_size": "0",
+          "ask_size": "0",
+          "snapshot_age_seconds": 6.9287474155426025
+        }
+      ],
+      "all_zero_price_and_size": true
+    },
+    {
+      "round": 2,
+      "legs": [
+        {
+          "name": "ETH-20261030-2400-C",
+          "side": "buy",
+          "bid": "0",
+          "ask": "0",
+          "bid_size": "0",
+          "ask_size": "0",
+          "snapshot_age_seconds": 6.674263000488281
+        },
+        {
+          "name": "ETH-20261030-3000-C",
+          "side": "sell",
+          "bid": "0",
+          "ask": "0",
+          "bid_size": "0",
+          "ask_size": "0",
+          "snapshot_age_seconds": 6.56026291847229
+        },
+        {
+          "name": "ETH-20261030-3000-P",
+          "side": "buy",
+          "bid": "0",
+          "ask": "0",
+          "bid_size": "0",
+          "ask_size": "0",
+          "snapshot_age_seconds": 6.696263074874878
+        },
+        {
+          "name": "ETH-20261030-2400-P",
+          "side": "sell",
+          "bid": "0",
+          "ask": "0",
+          "bid_size": "0",
+          "ask_size": "0",
+          "snapshot_age_seconds": 6.589262962341309
+        }
+      ],
+      "all_zero_price_and_size": true
+    }
+  ],
+  "economic_calculation_performed": false
+}
