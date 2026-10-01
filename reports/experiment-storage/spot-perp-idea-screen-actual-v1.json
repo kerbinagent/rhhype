@@ -1,0 +1,21 @@
+{
+  "schema": "spot-perp-idea-screen-actual-v1",
+  "category_actual_bytes_plus_readme_allowance": {
+    "source": 5278,
+    "outputs": 6013,
+    "documentation": 7976,
+    "provenance": 1174
+  },
+  "readme_increment_allowance_bytes": 1500,
+  "total_allocated_bytes": 32768,
+  "shared_reserved_bytes": 32912056,
+  "shared_headroom_bytes": 87944,
+  "overall_reservation_bytes": 836777216,
+  "source_sha256": {
+    "scripts/spot_perp_idea_screen.py": "25e25ffec9c9b2b10a7575326b069cec7df67be1baf73f375b4847222ee1e3bc",
+    "reports/spot-perp-idea-screen/summary.json": "c35fa98651c0acda00cef25675247fc0f9395b70bd8a3b55934a15b4ce531cb6",
+    "research/active-idea-research.md": "9459e726532697178e1610f16ff1f3db9bffe0051d319034ccd52264011e45a8",
+    "reports/experiment-storage/spot-perp-idea-screen-allocation-v1.json": "d275ef0b3b25125e013530cbfbb20dd74ff9797215542e6b4b05e5eb5ef83cd7"
+  },
+  "checks": "48 unique consecutive hourly slots; Decimal rate conversion; all four HL second-day totals match old CSV; no frozen carry reads or changes. Root review; no independent economic audit claimed."
+}

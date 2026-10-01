@@ -2,17 +2,19 @@
 
 ## Current work
 
-The [broader carry proposal](broader-carry-research-proposal.md), requested
-30 September, recommends a single BTC funded-spot/dated-futures feasibility
-stage before considering a multiweek paper strategy. Spot/perpetual and
-cross-perpetual funding carry remain alternatives. The proposed 72-hour
-collection was authorized at 12:12 UTC; its separate 16 MiB allocation is now
-frozen. The [implementation method](dated-carry-method-v1.md),
-[contract preflight](dated-carry-contract-preflight.md) and
-[independent method review](dated-carry-method-review.md) define the
-study launched as PID 279840. Its frozen window is 30 September 12:45 UTC
-to 3 October 12:45 UTC. The observation produces conditional quote diagnostics; actual
-all-cost feasibility remains unresolved.
+The user redirected the primary agent to active idea research on 1 October,
+with routine monitoring delegated to `gpt-6-luna`. The
+[active idea memo](active-idea-research.md) contains a new absolute-funding
+screen and prioritizes same-venue ETH spot/perpetual carry, collateral design,
+and a later Core/RH funding comparison. No profitable strategy is established.
+
+The [broader carry proposal](broader-carry-research-proposal.md) led to a
+BTC dated-futures feasibility study. Its original run was interrupted by a
+host reboot and is preserved without resumption or economic evaluation.
+The explicitly authorized [fresh v2 run](dated-carry-relaunch-v2.md) is
+collecting from 1 October 00:30 UTC to 4 October 00:30 UTC within the same
+16 MiB budget. Its frozen samples remain unopened for economic analysis.
+Actual all-cost feasibility remains unresolved.
 
 [Active experiment loop](active-experiment-loop.md) records the mandate,
 prospective primary policy, success threshold, and next decision. The current

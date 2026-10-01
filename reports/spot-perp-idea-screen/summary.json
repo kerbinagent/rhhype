@@ -1,0 +1,124 @@
+{
+  "schema": "exploratory-spot-perp-rate-hurdle-v1",
+  "window": "2026-09-27T17:00Z through 2026-09-29T16:00Z; two 24-event days",
+  "not_fresh_validation": true,
+  "actual_cashflow_or_pnl": null,
+  "capital_scenario": "5% annual on 2x one-leg notional, 365-day simple basis",
+  "capital_bps_per_day": "2.739726027397260273972602740",
+  "stress_bps": 5,
+  "seven_day_numbers_are_extrapolations_not_observed_returns": true,
+  "omitted": [
+    "entry/exit basis",
+    "spreads and impact",
+    "changing oracle notional",
+    "actual fills",
+    "collateral path",
+    "conversions",
+    "private fees"
+  ],
+  "spot_perp_candidates": [
+    {
+      "candidate": "funded spot + short HL BTC",
+      "first_day_rate_bps": "1.7317380000",
+      "second_day_rate_bps": "1.4286740000",
+      "second_day_negative_hours": 5,
+      "second_day_after_capital_bps": "-1.311052027397260273972602740",
+      "roundtrip_fee_scenario_bps": "9",
+      "seven_day_required_daily_rate_bps": "4.739726027397260273972602740",
+      "seven_day_constant_second_day_rate_residual_bps": "-23.17736419178082191780821918"
+    },
+    {
+      "candidate": "funded spot + short HL ETH",
+      "first_day_rate_bps": "3.0000000",
+      "second_day_rate_bps": "3.0000000",
+      "second_day_negative_hours": 0,
+      "second_day_after_capital_bps": "0.260273972602739726027397260",
+      "roundtrip_fee_scenario_bps": "9",
+      "seven_day_required_daily_rate_bps": "4.739726027397260273972602740",
+      "seven_day_constant_second_day_rate_residual_bps": "-12.17808219178082191780821918"
+    },
+    {
+      "candidate": "funded spot + short HL SOL",
+      "first_day_rate_bps": "2.7532490000",
+      "second_day_rate_bps": "2.3897640000",
+      "second_day_negative_hours": 2,
+      "second_day_after_capital_bps": "-0.349962027397260273972602740",
+      "roundtrip_fee_scenario_bps": "9",
+      "seven_day_required_daily_rate_bps": "4.739726027397260273972602740",
+      "seven_day_constant_second_day_rate_residual_bps": "-16.44973419178082191780821918"
+    },
+    {
+      "candidate": "funded spot + short HL HYPE",
+      "first_day_rate_bps": "2.4074430000",
+      "second_day_rate_bps": "2.7120530000",
+      "second_day_negative_hours": 1,
+      "second_day_after_capital_bps": "-0.027673027397260273972602740",
+      "roundtrip_fee_scenario_bps": "9",
+      "seven_day_required_daily_rate_bps": "4.739726027397260273972602740",
+      "seven_day_constant_second_day_rate_residual_bps": "-14.19371119178082191780821918"
+    },
+    {
+      "candidate": "Core ETH spot + short Core ETH perp",
+      "first_day_rate_bps": "2.6400",
+      "second_day_rate_bps": "2.8800",
+      "second_day_negative_hours": 0,
+      "second_day_after_capital_bps": "0.140273972602739726027397260",
+      "roundtrip_fee_scenario_bps": "0",
+      "seven_day_required_daily_rate_bps": "3.454011741682974559686888454",
+      "seven_day_constant_second_day_rate_residual_bps": "-4.018082191780821917808219180"
+    }
+  ],
+  "core_rh_comparisons": [
+    {
+      "candidate": "BTC: short Core / long RH",
+      "first_day_rate_bps": "1.6100",
+      "second_day_rate_bps": "0.9600",
+      "second_day_negative_hours": 3,
+      "second_day_after_capital_bps": "-1.779726027397260273972602740",
+      "roundtrip_fee_scenario_bps": "0",
+      "seven_day_required_daily_rate_bps": "3.454011741682974559686888454",
+      "seven_day_constant_second_day_rate_residual_bps": "-17.45808219178082191780821918"
+    },
+    {
+      "candidate": "ETH: short Core / long RH",
+      "first_day_rate_bps": "0.1200",
+      "second_day_rate_bps": "0.0000",
+      "second_day_negative_hours": 0,
+      "second_day_after_capital_bps": "-2.739726027397260273972602740",
+      "roundtrip_fee_scenario_bps": "0",
+      "seven_day_required_daily_rate_bps": "3.454011741682974559686888454",
+      "seven_day_constant_second_day_rate_residual_bps": "-24.17808219178082191780821918"
+    },
+    {
+      "candidate": "SOL: short Core / long RH",
+      "first_day_rate_bps": "8.3900",
+      "second_day_rate_bps": "3.2100",
+      "second_day_negative_hours": 0,
+      "second_day_after_capital_bps": "0.470273972602739726027397260",
+      "roundtrip_fee_scenario_bps": "0",
+      "seven_day_required_daily_rate_bps": "3.454011741682974559686888454",
+      "seven_day_constant_second_day_rate_residual_bps": "-1.708082191780821917808219180"
+    }
+  ],
+  "archived_core_eth_spot": {
+    "symbol": "ETH/USDC",
+    "market_id": 2048,
+    "status": "active",
+    "market_type": "spot"
+  },
+  "source_sha256": {
+    "reports/funding-carry/raw/hl/BTC.json": "f343a5d0730f34a42ef5ab100e5bb031fc35fb6c47f513406516d49d0e8409c4",
+    "reports/funding-carry/raw/hl/ETH.json": "ee866200e6605d774814656b0084308cabff5e75f08a01942b6298f1cd279689",
+    "reports/funding-carry/raw/hl/SOL.json": "ec570b32b48ec3bdebabb12f8b14ee2a555252afc26be89ac8f54c94f2825c21",
+    "reports/funding-carry/raw/hl/HYPE.json": "14e50ce391361c002fb13f938edd8ac976503978b045c96c28fdd64470021614",
+    "reports/funding-carry/raw/lighter_core/ETH.json": "7dc797e7f9b010c43d45f73f1d50469d53f4abfc39d2019389f1b738744045a4",
+    "reports/funding-carry/raw/lighter_core/markets.json": "3a94067dce1199f9cedff7193a319b565c7e0e90210fa5f27f01dcac37aee513",
+    "reports/funding-carry/raw/lighter_core/BTC.json": "3d6cd3af62096f5476f0aab13be5c9d6936b604b0e5b49e9c37b905f399da6f5",
+    "reports/funding-carry/raw/rh_lighter/BTC.json": "dded5b42d7b0e7f05c2df136e676c0baf33e8c03a9fc65851a3710a81dfdf614",
+    "reports/funding-carry/raw/rh_lighter/ETH.json": "3be4342c4874d5b1150a02271b00a880c45f88cc08df246b028300a1e23d297e",
+    "reports/funding-carry/raw/lighter_core/SOL.json": "e575189281e485d2e1b046b1024b14b21d036fa27e3379e4a294821fe1250418",
+    "reports/funding-carry/raw/rh_lighter/SOL.json": "3c432797b6ea1a84da506d753b0977b32ce7a244d3302e0cdcbbf6f496babf0d"
+  },
+  "script_sha256": "25e25ffec9c9b2b10a7575326b069cec7df67be1baf73f375b4847222ee1e3bc",
+  "checks": "48 unique consecutive hours each; finite rates; historical CSV cross-check"
+}

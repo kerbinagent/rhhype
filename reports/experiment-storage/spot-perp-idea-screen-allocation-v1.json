@@ -1,0 +1,21 @@
+{
+  "schema": "spot-perp-idea-screen-allocation-v1",
+  "recorded_utc": "2026-10-01T02:21:32.516471+00:00",
+  "authorization": "User explicitly redirected root to active idea research and delegated routine monitoring, 1 October 2026. Existing stopped-data exploratory analysis only.",
+  "previous": "reports/experiment-storage/spot-fee-inventory-envelope-actual-v1.json",
+  "previous_sha256": "25fc2ad32b28f6e63d7579ad3575d3d521a84ea87820b061af276e076bda913d",
+  "previous_shared_reserved_bytes": 32879288,
+  "new_maximum_bytes": 32768,
+  "categories_bytes": {
+    "source": 8192,
+    "outputs": 8192,
+    "documentation": 8192,
+    "provenance": 8192
+  },
+  "projected_shared_reserved_bytes": 32912056,
+  "shared_allowance_bytes": 33000000,
+  "shared_headroom_bytes": 87944,
+  "overall_reservation_bytes": 836777216,
+  "overall_reservation_increase_bytes": 0,
+  "scope": "One offline absolute funding/capital hurdle screen, BTC ETH SOL HYPE HL and ETH Core, plus BTC ETH SOL Core/RH direction comparison. Reused Sept27-29 archive, no new market data, no carry-v2 sample read, no claims of untouched validation, no policy changes. Research memo and source links included."
+}

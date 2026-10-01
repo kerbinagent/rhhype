@@ -1,0 +1,33 @@
+{
+  "schema": "core-eth-funding-history-allocation-v1",
+  "recorded_utc": "2026-10-01T02:25:43.300642+00:00",
+  "previous": "reports/experiment-storage/spot-perp-idea-screen-allocation-v1.json",
+  "previous_sha256": "d275ef0b3b25125e013530cbfbb20dd74ff9797215542e6b4b05e5eb5ef83cd7",
+  "previous_shared_reserved_bytes": 32912056,
+  "new_maximum_bytes": 49152,
+  "categories_bytes": {
+    "raw": 32768,
+    "source": 8192,
+    "output": 4096,
+    "control": 4096
+  },
+  "projected_shared_reserved_bytes": 32961208,
+  "shared_allowance_bytes": 33000000,
+  "shared_headroom_bytes": 38792,
+  "overall_reservation_bytes": 836777216,
+  "overall_reservation_increase_bytes": 0,
+  "scope": "Exactly one public Core Lighter ETH funding-history request, 720 fixed hourly slots Sept1 through Sep30 2026. No retries or fresh quote collector. 256KiB decoded response bound, gzip raw at most32KiB. Four fixed seven-day blocks plus two-day remainder, all outcomes. Reused-history exploratory screen, no independent holdout or P&L claim. No changes to frozen dated carry.",
+  "endpoint": "https://mainnet.zklighter.elliot.ai/api/v1/fundings",
+  "params": {
+    "market_id": 0,
+    "resolution": "1h",
+    "start_timestamp": 1788220800,
+    "end_timestamp": 1790812799,
+    "count_back": 721
+  },
+  "blocks": "Sept1-7,8-14,15-21,22-28,29-30 UTC inclusive; each interval starts00:00",
+  "direction": "long funded spot / short ETH perp fixed",
+  "scenario": "zero Standard trading fees,5% annual opportunity cost on2x oneleg notional,5bp stress per complete hold. Excludes basis/spread/margin/execution; actualP&Lnull",
+  "request_budget": 1,
+  "retry_budget": 0
+}
