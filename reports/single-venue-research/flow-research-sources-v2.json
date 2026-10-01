@@ -1,0 +1,52 @@
+{
+  "recorded_utc": "2026-10-01T20:39:09.499788+00:00",
+  "scope": "Additional literature reviewed during health-only capture after prospective depth protocol79f7f80 was frozen. Inform later interpretation/research only; no active-rule changes. Primary research sources, not proof of an executable strategy.",
+  "allocation": "Existing single-venue-depth-v1 control reservation; JSON under8192bytes.",
+  "sources": [
+    {
+      "title": "Trading in the Sunshine or in the Shade: Market Impact and Adverse Selection on Hyperliquid",
+      "authors": [
+        "Davide Barone",
+        "Fabrizio Lillo"
+      ],
+      "date": "2026-06-14",
+      "url": "https://arxiv.org/abs/2606.15715",
+      "full_text": "https://arxiv.org/html/2606.15715v1",
+      "finding": "Visible TWAP executions were associated with smaller persistent displacement and more supplied liquidity than inferred hidden order sequences. The comparison is observational: execution method strongly depends on trader identity.",
+      "scope_limit": "Transaction sample spans July2025\u2013March2026 across201markets; book snapshots are one-minute frequency. This does not validate100ms-to10s rules on Core/RH. Identifying continuing parent orders would require evidence beyond anonymous print size."
+    },
+    {
+      "title": "The Neutrinos of the Order Book: Pervasive, Weakly Interacting Order Flow and its Consequences",
+      "authors": [
+        "Jakob Albers",
+        "Mihai Cucuringu",
+        "Sam Howison",
+        "Alexander Y. Shestopaloff"
+      ],
+      "date": "2026-07-22",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7162966",
+      "finding": "The Hyperliquid BTC study uses complete message traffic, including rejected orders, and finds that much replenishment after spread widening was submitted before the widening occurred.",
+      "scope_limit": "Abstract inspected through primary SSRN indexed text; full manuscript not fetched. Our public snapshots omit rejected and in-flight orders. Observed book recovery cannot establish that a reactive retail order could capture the same opportunity."
+    },
+    {
+      "title": "Order Flow Impact and Price Formation in Centralized Crypto Exchanges",
+      "authors": [
+        "Carol Alexander",
+        "Daniel F. Heck",
+        "Andreas Kaeck",
+        "Ryan Riordan"
+      ],
+      "date": "2024-06-15",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4867599",
+      "finding": "For BTC on Coinbase and Binance, submissions and cancellations contribute substantially to price discovery, and very short-term cross-market discrepancies persist despite broader price integration.",
+      "scope_limit": "Abstract inspected through primary SSRN indexed text; direct fetch returned403. Different venues and assets. Suggests recording quote changes alongside prints; it does not identify a profitable Core/RH trade."
+    },
+    {
+      "title": "Order flow and cryptocurrency returns",
+      "date": "2026",
+      "url": "https://doi.org/10.1016/j.finmar.2026.101047",
+      "finding": "The study separates components of flow associated with reversal and persistence using daily and weekly cryptocurrency returns.",
+      "scope_limit": "Daily observations for84coins during2018\u20132022. Its horizons are far longer than this experiment; no parameter or expected-return transfer is justified."
+    }
+  ]
+}
