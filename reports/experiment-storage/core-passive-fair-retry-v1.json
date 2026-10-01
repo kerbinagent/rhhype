@@ -1,0 +1,52 @@
+{
+  "schema": "core-passive-fair-value-retry-v1",
+  "recorded_utc": "2026-10-01T14:34:26.262318+00:00",
+  "previous": "reports/experiment-storage/core-passive-fair-value-v1.json",
+  "previous_sha256": "fca8b292b23a7af085ff9de785f64111489500f061e3b51e9c7d53931863d0a8",
+  "new_maximum_bytes": 262144,
+  "categories_bytes": {
+    "source": 32768,
+    "output": 196608,
+    "control": 32768
+  },
+  "active_research_pool_bytes": 18874368,
+  "active_research_reserved_bytes": 18759680,
+  "active_research_headroom_bytes": 114688,
+  "overall_reservation_bytes": 836777216,
+  "manifest_sha256": "30d8c14cd7ab754b895e2873871db70825fa273ebf85a560b46a2fa9a78baca1",
+  "scope": "Exploratory one100perleg400prefunded Coremaker/RHhedge branch on completed14:07capture; no newraw ornetwork. No claim of prospectivity. All predecessor files unchanged.",
+  "policy": "Past120s closingVWAPbasis at100reference quantity, normalizedCoremid,1sarrivalcadence/2sembargo/90count89span. Currentquantitycommonlot100/maxCorebid,RHbid. Buyprice cappedby Corebid and currentRHsellVWAP +medianclosingbasis*Coremid -6bpmaxentryunit -4legfeeproxy -10scapital. Roundeddown; full hedge/depth/grid/freshness/hour/480scutoff retained. Activequote canceledonlyif capdropsbelowprice, staleor depthfails; same100msactivation400mscancelandtakerdelay5sTTL10shold; takeprofit6bp100budget. IOCconditional inherited. Stress5bpseparate.",
+  "source_pins": [
+    {
+      "path": "scripts/core_passive_fair_value.py",
+      "sha256": "2b0a73e31f436cfaafdf2dba6d6b90d4c38c507804fc633fcf84048871c4eb60"
+    },
+    {
+      "path": "scripts/replay_core_passive_fair_value.py",
+      "sha256": "6e49853b9cad4ef4ee565ec6956eb51ad7d394f1caf99eef568736727b553b85"
+    },
+    {
+      "path": "scripts/audit_core_passive_fair_value.py",
+      "sha256": "9fae325fc5790745185b0533583bf0bed594a2f7baa3fe73cf8647f02d09825d"
+    },
+    {
+      "path": "tests/test_core_passive_fair_value.py",
+      "sha256": "c6d46301f966b793c8ff7ab627e887cc2ff78b24991ac4ef74f5ea6cb5fc0729"
+    },
+    {
+      "path": "scripts/replay_core_passive_fair_retry.py",
+      "sha256": "24eb6c5c212782e4aad26dff02186d778bd4f240115dbeb3d7da1d4ba832f4e1"
+    },
+    {
+      "path": "scripts/audit_core_passive_fair_retry.py",
+      "sha256": "f0d7e6ba17d5b471bbb0b920fe4e0538d32ee4df9d35caf6f73eca796a2e8732"
+    },
+    {
+      "path": "scripts/audit_core_passive_fair_references.py",
+      "sha256": "8e4f828db0d7ae212b931891f9fffeacc74c638667d919229b6f27309672dbc8"
+    }
+  ],
+  "inherited_source_plan": "reports/experiment-storage/core-passive-lit-allocation-v1.json",
+  "verification": "2synthetictests pass: referencewarmup/embargo and6bpforecast; adversehedgebid triggers400mscancel. Endpointauditorrawfills+savedforecast arithmetic; rawreferencevalues notindependentlyrebuilt yet; mustcheckbeforeactingonpositive result.",
+  "retry_reason": "Previous incomplete audit hard cap. Same economics and same already completed raw capture. Full lossless continuousgzip trace cap131072B; summary32768B; remainingoutput32768B audits/readout. Old failed artifacts retained unchanged except added readout; independentrawreferenceauditor now included. No newraw ornetwork."
+}
