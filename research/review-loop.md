@@ -4255,3 +4255,38 @@ Fresh carry v2 at 12:05 had 139 sampled slots and one persistent
 `arrival_invalid` slot (slot 71), with 724 future/interrupted slots. Status
 remains running with no terminal error or retries and no economic evaluation.
 The invalid arrival's sample remains unopened.
+
+
+## Review 133 — 1 October 2026 12:26:33 UTC
+
+Exact report, separate epoch snapshot and root's positive-record audit are
+preserved; manual archive 3,435,956/9,437,184 bytes under the adopted 9 MiB
+cap. The exact report is `review-20261001T122633Z.json`, SHA-256
+`f08c3685ebfe1e1ed341e1c2a3937266532e1fa3e644533dc2a555d3e83bbe85`. Five exact
+closes/−$7.101493: three convergence/−$2.942257 and two Premium/−$4.159236.
+One convergence win was the failed-hedge rescue documented in
+`review133-positive-record.json`, not paired arbitrage: trade
+`1790857580211159-23748-convergence` had a rejected Hyperliquid long and a
+3,799-unit Lighter short entered at $998.753599 then covered at $998.012446
+after 1.494255 s unhedged. Gross +$0.741153; fees/funding $0; other costs
+$0.4993768 and capital $0.00000237; net +$0.2417738343. The audit confirms
+funding complete. Fill-depth rows have aged out (zero retained), so no new
+independent execution-depth claim. Four losses, no estimates or aborts; five
+Hyperliquid price-limit rejections, complete coverage. Total fees $1.396163,
+other costs $2.493049 and capital $0.00001293.
+
+Four feeds connected, 105 pairs, normal performance; CPU 64.53%, p95 lag
+18.75 ms, resident memory 251.61 MiB, 1,180.5 books/s and metadata age
+711.9 s. No open positions; three pending funding items remain. The separate
+epoch snapshot read at 12:27:44 UTC and updated at 12:27:43 UTC showed
+convergence 435/−$535.5557, an increase of four versus the report's three, and
+Premium 746/−$1,375.4997, an increase of two matching its report delta. Record
+the snapshot/report boundary mismatch and use report deltas for review totals.
+Reviews 66–133 have 1,741 closes: 1,730 losses, two paired gains and nine
+failed-hedge rescue gains. Next checkpoint **12:46:33 UTC**. This isolated
+positive unwind does not make the overall window positive.
+
+Fresh carry v2 at 12:25 had 143 sampled slots and one persistent
+`arrival_invalid` slot (slot 71), with 720 future/interrupted slots. Status
+remains running with no terminal error or retries and no economic evaluation.
+The invalid arrival's sample remains unopened.
