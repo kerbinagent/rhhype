@@ -1,0 +1,76 @@
+{
+  "schema": "derive-box-preflight-v1",
+  "recorded_utc": "2026-10-01T03:14:07.400671+00:00",
+  "previous": "reports/experiment-storage/core-rh-monthly-funding-allocation-v1.json",
+  "previous_sha256": "6dff514933f04b7afb8f7392b8433abb5c0a3632b1a89600a39d7f1787ce811c",
+  "new_maximum_bytes": 262144,
+  "categories_bytes": {
+    "source": 16384,
+    "raw": 131072,
+    "output": 65536,
+    "control": 49152
+  },
+  "active_research_reserved_bytes": 622592,
+  "active_research_headroom_bytes": 3571712,
+  "requests_max": 8,
+  "retries": 0,
+  "requests": [
+    [
+      "fee_doc",
+      "https://docs.derive.xyz/integrators/trading/trading-fees.md",
+      null,
+      65536
+    ],
+    [
+      "settlement_doc",
+      "https://docs.derive.xyz/settlement.md",
+      null,
+      65536
+    ],
+    [
+      "instruments_doc",
+      "https://docs.derive.xyz/api-reference/market-data/publicget_all_instruments.md",
+      null,
+      65536
+    ],
+    [
+      "tickers_doc",
+      "https://docs.derive.xyz/api-reference/market-data/publicget_tickers.md",
+      null,
+      65536
+    ],
+    [
+      "margin_doc",
+      "https://docs.derive.xyz/api-reference/subaccounts/publicget_margin.md",
+      null,
+      65536
+    ],
+    [
+      "instruments",
+      "https://api.derive.xyz/v3/public/get_all_instruments",
+      {
+        "currency": "ETH",
+        "instrument_type": "option",
+        "expired": false,
+        "page": 1,
+        "page_size": 1000
+      },
+      4194304
+    ],
+    [
+      "universes",
+      "https://api.derive.xyz/v3/public/get_risk_universes",
+      {},
+      262144
+    ],
+    [
+      "currency",
+      "https://api.derive.xyz/v3/public/get_currency",
+      {
+        "currency": "ETH"
+      },
+      262144
+    ]
+  ],
+  "scope": "Metadata and documentation only. Five source pages and three public read-only mainnet POSTs. No account, RFQ request or order. All errors retained; no automatic endpoint fallback. No option quote economics yet. Full metadata pagination must fit one page or preflight remains incomplete. Any following quote study must freeze its expiry,strikes,sizes,costs and coverage rules before quotes."
+}
