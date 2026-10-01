@@ -4,7 +4,7 @@ from collections import defaultdict,deque
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def run():
- out=ROOT/'reports/core-spot-perp-limits-retry';raw=out/'events.jsonl.gz';s=json.loads((out/'summary.json').read_text());assert s['error'] is None and s['counters']['runtime_completed']==1
+ out=ROOT/'reports/core-spot-perp-alts-retry';raw=out/'events.jsonl.gz';s=json.loads((out/'summary.json').read_text());assert s['error'] is None and s['counters']['runtime_completed']==1
  history=defaultdict(lambda:deque(maxlen=125));counts=defaultdict(lambda:defaultdict(int));maximum=defaultdict(int)
  for line in gzip.decompress(raw.read_bytes()).splitlines():
   r=json.loads(line)
