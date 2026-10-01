@@ -1,0 +1,89 @@
+{
+  "plan_sha256": "8dfe0769f2ded07ba306403cedd8b56a510c6cccd6c991f6d1c1e1c3bb68c573",
+  "source_sha256": "c2ea2e9d5a9c81152e42b648357aa745fb3c99c9d3ebbedd50e6393329496240",
+  "requests": [
+    {
+      "venue": "lighter",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=10&resolution=1h&start_timestamp=1790870400&end_timestamp=1790895599&count_back=7",
+      "started_ns": 1790895524342178276,
+      "http_status": 200,
+      "raw_bytes": 610,
+      "compressed_sha256": "ac20a31c3681689b325585b99ced3ee16e45abee034ffa2c5216f91065b19014",
+      "ended_ns": 1790895524567422257
+    },
+    {
+      "venue": "rh_lighter",
+      "url": "https://api.rh.lighter.xyz/api/v1/fundings?market_id=7&resolution=1h&start_timestamp=1790870400&end_timestamp=1790895599&count_back=7",
+      "started_ns": 1790895524567445758,
+      "http_status": 200,
+      "raw_bytes": 610,
+      "compressed_sha256": "92e3e0503dc02a27afd77ec056746476ff087d2b1d22ff6f09f9f3c493bfe631",
+      "ended_ns": 1790895524816126598
+    }
+  ],
+  "rows": [
+    {
+      "venue": "lighter",
+      "asset": "NEAR",
+      "status": "complete",
+      "events": [
+        {
+          "timestamp": 1790874000,
+          "signed_long_payment_bps": "0.1500"
+        },
+        {
+          "timestamp": 1790877600,
+          "signed_long_payment_bps": "0.5700"
+        },
+        {
+          "timestamp": 1790881200,
+          "signed_long_payment_bps": "1.1800"
+        },
+        {
+          "timestamp": 1790884800,
+          "signed_long_payment_bps": "0.4600"
+        },
+        {
+          "timestamp": 1790888400,
+          "signed_long_payment_bps": "0.6100"
+        },
+        {
+          "timestamp": 1790892000,
+          "signed_long_payment_bps": "0.4600"
+        }
+      ]
+    },
+    {
+      "venue": "rh_lighter",
+      "asset": "NEAR",
+      "status": "complete",
+      "events": [
+        {
+          "timestamp": 1790874000,
+          "signed_long_payment_bps": "0.1200"
+        },
+        {
+          "timestamp": 1790877600,
+          "signed_long_payment_bps": "0.1200"
+        },
+        {
+          "timestamp": 1790881200,
+          "signed_long_payment_bps": "0.1200"
+        },
+        {
+          "timestamp": 1790884800,
+          "signed_long_payment_bps": "0.1200"
+        },
+        {
+          "timestamp": 1790888400,
+          "signed_long_payment_bps": "0.1200"
+        },
+        {
+          "timestamp": 1790892000,
+          "signed_long_payment_bps": "0.1200"
+        }
+      ]
+    }
+  ],
+  "limits": "Historical API rates, not account cash payments or explanation of the current basis. Percent rate converted to bp; positive means longs pay. Six hourly settlements ending22:00UTC. Public data only, no retry, auth, orders, wallet or proxy."
+}

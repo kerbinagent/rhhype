@@ -1,0 +1,45 @@
+{
+  "schema": "single-venue-broad-dynamics-v1",
+  "recorded_utc": "2026-10-01T22:57:31.646844+00:00",
+  "previous": "reports/experiment-storage/completed-broad-unused-raw-reservation-v1.json",
+  "previous_sha256": "7dc7317043ccc78ccc8066d9476b23ab7ff8da929ae77b72e55558e3addb0424",
+  "reserved_bytes": 98304,
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 80875520,
+  "active_research_headroom_bytes": 73265152,
+  "overall_reservation_bytes": 836777216,
+  "categories_bytes": {
+    "source_tests": 16384,
+    "protocol": 16384,
+    "offline_output": 32768,
+    "funding_raw_control": 32768
+  },
+  "scope": "Retrospective all-ten-asset basis dynamics after NEAR stood out in quote diagnostic. First RH book in each integer second3..569; retain only original250msfreshpair. Report full distribution, minute medians, first/last pair and paired forward10s/60s midpoint changes using first available sampled pair at/after horizon and no laterthan horizon+1s; missingpairs explicit. Overlapping conditional midpoint observations are not IOC fills, cash profits, causal attribution, or independent observations. Preserve complete NEAR sample path only; allassets summary, sourcearchive retained. Optional exactlytwo public GET historical-fundings for NEAR Core10/RH7 with UTC16:00..22:59:59Oct1,6settlements17..22. Each15secondtimeout and16KiBresponsecap,no retry; gzipraw+requests+summary bounded32768. Funding interprets percent rate*100bp, positive means longspay. Historical rates cannot explain or establish future meanreversion.",
+  "capture": "reports/single-venue-broad/capture",
+  "manifest_sha256": "eed280dd18fb6da31ad858d794735af75bc331e61564554d94758e7de8d62843",
+  "output_max_bytes": 24576,
+  "funding_sources": [
+    "https://apidocs.lighter.xyz/reference/fundings",
+    "https://docs.lighter.xyz/trading/funding"
+  ],
+  "funding_formula_note": "Rendered funding formula has multiplication/sign formatting inconsistencies; use documented payment direction and historical API rates, do not reconstruct formula.",
+  "pins": [
+    {
+      "path": "scripts/single_venue_broad_dynamics.py",
+      "sha256": "db267f03f2ffb872d8ad1da5329e1642c57159b1a760b2adc546660197243b0e"
+    },
+    {
+      "path": "tests/test_single_venue_broad_dynamics.py",
+      "sha256": "83ed3a44e769d24535f1e758628157c372d93ad4e3a1e9371dc246afe3587636"
+    },
+    {
+      "path": "scripts/single_venue_broad_quotes.py",
+      "sha256": "96f0c5a8b435ab4fd30429eb873a49614b7eed299a1be0071c7c0bc01530f341"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-broad-v1.json",
+      "sha256": "caf9ab26627c767deed9f903445ccbe47b714302a588db5e9dcdea8c85b8a8d1"
+    }
+  ],
+  "verification": "Two forward-join tests pass: exact horizon with explicit missingtail; earlier sample and morethan1secondlate sample rejected."
+}

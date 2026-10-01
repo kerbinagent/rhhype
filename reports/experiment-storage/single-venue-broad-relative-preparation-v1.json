@@ -1,0 +1,12 @@
+{
+  "schema": "single-venue-broad-relative-preparation-v1",
+  "recorded_utc": "2026-10-01T23:01:34.486523+00:00",
+  "previous": "reports/experiment-storage/single-venue-broad-dynamics-v2.json",
+  "previous_sha256": "310abd873157d5091014fa73d23a65523087c3ab6dee0466abd243a8f3bede61",
+  "reserved_bytes": 65536,
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 80941056,
+  "active_research_headroom_bytes": 73199616,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Prepare fresh same-ten-asset comparison using original unmodified single_venue_strategy.Study/Features/Portfolio and original independent auditor. Relative-gap/leader-laggard/large-flow shock rules with trailing120second gapmedian,2secondembargo; original122..480entrywindow,10shold400msdelay. Existingrulesfromearlierthreeassetstudy unchanged; scope broadens to10assets, no new fit. Preparationonly65536, nextcapture must separatelyreserve fullraw/output beforelaunch."
+}

@@ -1,0 +1,112 @@
+{
+  "near": {
+    "asset": "NEAR",
+    "sampled_target_seconds": 564,
+    "samples": 475,
+    "first": {
+      "t": 1790894112965739726,
+      "second": 3,
+      "rh_mid": "4.78715",
+      "core_mid": "4.795505",
+      "basis_bps": "17.45297306330488913027584000"
+    },
+    "last": {
+      "t": 1790894679266314713,
+      "second": 569,
+      "rh_mid": "4.7683",
+      "core_mid": "4.776095",
+      "basis_bps": "16.34754524673363672587715000"
+    },
+    "basis_bps": {
+      "n": 475,
+      "mean": "15.26286275953821283538053059",
+      "p0": "12.37507440709295403991353000",
+      "p50": "15.31881966664575360227534000",
+      "p90": "16.45422457764697256930989000",
+      "p99": "17.35028969440900248907110000",
+      "p100": "18.32780954969837004819806000"
+    },
+    "minute_medians": {
+      "0": "15.52707592521142475781307000",
+      "1": "13.96227991394974832389983000",
+      "2": "14.83130565659099460679794000",
+      "3": "15.23182269614761382050076000",
+      "4": "15.41472194897339835492580000",
+      "5": "15.17418922737214437456178000",
+      "6": "15.16814584836035583989296000",
+      "7": "15.72534598904149773182052000",
+      "8": "15.65217391304347826086957000",
+      "9": "15.85470712832665729924711000"
+    },
+    "horizons": [
+      {
+        "seconds": 10,
+        "matched": 325,
+        "missing": 150,
+        "basis_change_bps": {
+          "n": 325,
+          "mean": "-0.05869805818372161094923793846",
+          "p0": "-3.57359417914067606204294000",
+          "p50": "-0.08742823690127560832642000",
+          "p90": "1.58532367376724293350634000",
+          "p99": "2.63600022332661152976487000",
+          "p100": "3.37386879216217071769114000"
+        },
+        "rh_mid_return_bps": {
+          "n": 325,
+          "mean": "-0.5204315614888792361527261169",
+          "p0": "-20.17266969082509354683613100",
+          "p50": "-0.9386439723412909483432930000",
+          "p90": "6.377150981663077341250760000",
+          "p99": "14.86412929698949043252523000",
+          "p100": "18.00556916441597052111467000"
+        },
+        "core_mid_return_bps": {
+          "n": 325,
+          "mean": "-0.5789947096168173942767317969",
+          "p0": "-19.88953274207366640474260000",
+          "p50": "-1.099087443396996665054672000",
+          "p90": "5.731256187151565674985670000",
+          "p99": "14.52671138246218352148386000",
+          "p100": "18.56577311914396732591190000"
+        },
+        "basis_decrease_count": 177
+      },
+      {
+        "seconds": 60,
+        "matched": 305,
+        "missing": 170,
+        "basis_change_bps": {
+          "n": 305,
+          "mean": "-0.02443821889466073358388616393",
+          "p0": "-4.84346863926466185412621000",
+          "p50": "-0.06338920219465036760502000",
+          "p90": "1.71905597388412006380394000",
+          "p99": "2.95505033465529997775861000",
+          "p100": "3.84914597738868345638138000"
+        },
+        "rh_mid_return_bps": {
+          "n": 305,
+          "mean": "-4.755737016126902273897640695",
+          "p0": "-31.18676596366063792060412600",
+          "p50": "-4.078004914518743137972500000",
+          "p90": "10.15090311643190523033132000",
+          "p99": "13.92116226004312420188825000",
+          "p100": "16.11974668969487622337363000"
+        },
+        "core_mid_return_bps": {
+          "n": 305,
+          "mean": "-4.780293409406705142862034908",
+          "p0": "-31.38276874555376056811873200",
+          "p50": "-3.684933008335464609506710000",
+          "p90": "9.769910764665315249420070000",
+          "p99": "14.52660511148385613435542000",
+          "p100": "16.37292230019183589880761000"
+        },
+        "basis_decrease_count": 161
+      }
+    ]
+  },
+  "limits": "Retrospective all-ten-asset basis dynamics after NEAR stood out in quote diagnostic. First RH book in each integer second3..569; retain only original250msfreshpair. Report full distribution, minute medians, first/last pair and paired forward10s/60s midpoint changes using first available sampled pair at/after horizon and no laterthan horizon+1s; missingpairs explicit. Overlapping conditional midpoint observations are not IOC fills, cash profits, causal attribution, or independent observations. Preserve complete NEAR sample path only; allassets summary, sourcearchive retained. Optional exactlytwo public GET historical-fundings for NEAR Core10/RH7 with UTC16:00..22:59:59Oct1,6settlements17..22. Each15secondtimeout and16KiBresponsecap,no retry; gzipraw+requests+summary bounded32768. Funding interprets percent rate*100bp, positive means longspay. Historical rates cannot explain or establish future meanreversion.",
+  "funding_summary": "near-funding-context/summary.json"
+}
