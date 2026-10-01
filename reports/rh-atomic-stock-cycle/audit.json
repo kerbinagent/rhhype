@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "cycles": 48,
+  "quote_responses": 96,
+  "total_requests": 151,
+  "checks": "All integer first-output/second-input identities; independently decoded both quote calldata formats, amounts, token directions and fee tiers; exact Decimal roundtrip surplus; matching block tags and repeated block hashes; plan/source/input/summary hashes. No complete router transaction or gas profit claimed."
+}
