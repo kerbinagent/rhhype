@@ -1,0 +1,131 @@
+{
+  "actual_pnl": null,
+  "cashflow_not_computed": true,
+  "development_not_validation": true,
+  "account_eligibility_and_margin_feasibility_unknown": true,
+  "borrow_cost_optimistically_zero": true,
+  "capital_one_times_spot_principal": true,
+  "full_period_overlaps_weeks": true,
+  "results": [
+    {
+      "asset": "HYPE",
+      "start_day": 1,
+      "end_day": 28,
+      "events": 671,
+      "funding_bps": "71.9084520000",
+      "capital_bps": "38.35616438356164383561643836",
+      "trading_fee_bps": "23",
+      "stress_bps": "5",
+      "residual_before_borrow_basis_spread_bps": "5.55228761643835616438356164",
+      "negative_hours": 66
+    },
+    {
+      "asset": "HYPE",
+      "start_day": 1,
+      "end_day": 7,
+      "events": 167,
+      "funding_bps": "17.4882010000",
+      "capital_bps": "9.589041095890410958904109589",
+      "trading_fee_bps": "23",
+      "stress_bps": "5",
+      "residual_before_borrow_basis_spread_bps": "-20.10084009589041095890410959",
+      "negative_hours": 12
+    },
+    {
+      "asset": "HYPE",
+      "start_day": 8,
+      "end_day": 14,
+      "events": 167,
+      "funding_bps": "8.4893710000",
+      "capital_bps": "9.589041095890410958904109589",
+      "trading_fee_bps": "23",
+      "stress_bps": "5",
+      "residual_before_borrow_basis_spread_bps": "-29.09967009589041095890410959",
+      "negative_hours": 43
+    },
+    {
+      "asset": "HYPE",
+      "start_day": 15,
+      "end_day": 21,
+      "events": 167,
+      "funding_bps": "27.1298670000",
+      "capital_bps": "9.589041095890410958904109589",
+      "trading_fee_bps": "23",
+      "stress_bps": "5",
+      "residual_before_borrow_basis_spread_bps": "-10.45917409589041095890410959",
+      "negative_hours": 3
+    },
+    {
+      "asset": "HYPE",
+      "start_day": 22,
+      "end_day": 28,
+      "events": 167,
+      "funding_bps": "18.7352500000",
+      "capital_bps": "9.589041095890410958904109589",
+      "trading_fee_bps": "23",
+      "stress_bps": "5",
+      "residual_before_borrow_basis_spread_bps": "-18.85379109589041095890410959",
+      "negative_hours": 7
+    },
+    {
+      "asset": "BTC",
+      "start_day": 1,
+      "end_day": 28,
+      "events": 671,
+      "funding_bps": "68.3455530000",
+      "capital_bps": "38.35616438356164383561643836",
+      "trading_fee_bps": "23",
+      "stress_bps": "5",
+      "residual_before_borrow_basis_spread_bps": "1.98938861643835616438356164",
+      "negative_hours": 57
+    },
+    {
+      "asset": "BTC",
+      "start_day": 1,
+      "end_day": 7,
+      "events": 167,
+      "funding_bps": "17.5516670000",
+      "capital_bps": "9.589041095890410958904109589",
+      "trading_fee_bps": "23",
+      "stress_bps": "5",
+      "residual_before_borrow_basis_spread_bps": "-20.03737409589041095890410959",
+      "negative_hours": 10
+    },
+    {
+      "asset": "BTC",
+      "start_day": 8,
+      "end_day": 14,
+      "events": 167,
+      "funding_bps": "11.3360200000",
+      "capital_bps": "9.589041095890410958904109589",
+      "trading_fee_bps": "23",
+      "stress_bps": "5",
+      "residual_before_borrow_basis_spread_bps": "-26.25302109589041095890410959",
+      "negative_hours": 35
+    },
+    {
+      "asset": "BTC",
+      "start_day": 15,
+      "end_day": 21,
+      "events": 167,
+      "funding_bps": "21.6996280000",
+      "capital_bps": "9.589041095890410958904109589",
+      "trading_fee_bps": "23",
+      "stress_bps": "5",
+      "residual_before_borrow_basis_spread_bps": "-15.88941309589041095890410959",
+      "negative_hours": 1
+    },
+    {
+      "asset": "BTC",
+      "start_day": 22,
+      "end_day": 28,
+      "events": 167,
+      "funding_bps": "17.5987730000",
+      "capital_bps": "9.589041095890410958904109589",
+      "trading_fee_bps": "23",
+      "stress_bps": "5",
+      "residual_before_borrow_basis_spread_bps": "-19.99026809589041095890410959",
+      "negative_hours": 10
+    }
+  ]
+}
