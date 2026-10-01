@@ -1,0 +1,22 @@
+{
+  "schema": "future-review-gzip-rebalance-v3",
+  "recorded_utc": "2026-10-01T16:00:34.958851+00:00",
+  "previous": "reports/experiment-storage/completed-fair-sell-closeout-v1.json",
+  "previous_sha256": "472bfabe0934b74b9034c08d26e5836422ad3ea5a1bbb4b44515bf328ad54e59",
+  "transfer_from_manual_review_bytes": 262144,
+  "manual_review_old_cap_bytes": 5242880,
+  "manual_review_new_cap_bytes": 4980736,
+  "manual_review_retained_bytes": 3594206,
+  "next_review_utc": "2026-10-01T16:06:33+00:00",
+  "last_review_utc": "2026-10-04T00:26:33+00:00",
+  "remaining_reviews_inclusive": 170,
+  "conservative_worst_pair_bytes": 5342,
+  "projected_manual_review_bytes": 4502346,
+  "projected_manual_review_margin_bytes": 478390,
+  "agent_assessment": "Existing routine monitor checked exact retained bytes and inclusive cadence, acknowledged proposal; adopts only after this record. Preserve all artifacts and prewrite cap/growth alerts.",
+  "active_research_pool_bytes": 20185088,
+  "active_research_reserved_bytes": 19881984,
+  "active_research_headroom_bytes": 303104,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Internal unused-capacity transfer only; no raised overall limit or deletion/recompression."
+}
