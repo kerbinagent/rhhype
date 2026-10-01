@@ -1,0 +1,64 @@
+{
+  "schema": "core-spot-passive-public-capture-v1",
+  "read_only": true,
+  "started_utc": "2026-10-01T17:02:14.557045+00:00",
+  "ended_utc": "2026-10-01T17:12:15.339904+00:00",
+  "end_reason": "duration_limit",
+  "truncated": false,
+  "dropped_complete_frame_on_cap": 0,
+  "configured_seconds": 600,
+  "configured_total_bytes": 8650752,
+  "compressed_payload_bytes": 2815877,
+  "payload_records": 28010,
+  "frames_sha256": "3e95e428d811b0c0c0b11f5ceb9b2428563a04626ffc56ca96c25180078158a9",
+  "market_plan_sha256": "c5f0849e9d31eabd12f5cae559f455805ed55fea5f7cbd32b0452a92a3d6afb8",
+  "selected_markets": {
+    "lighter": {
+      "SKY_spot": "2053",
+      "SKY_perp": "79",
+      "UNI_spot": "2051",
+      "UNI_perp": "30",
+      "AAVE_spot": "2052",
+      "AAVE_perp": "27",
+      "LINK_spot": "2050",
+      "LINK_perp": "8",
+      "LDO_spot": "2054",
+      "LDO_perp": "46"
+    }
+  },
+  "metadata_bytes": 39195,
+  "generations": [
+    {
+      "venue": "lighter",
+      "generation": "lighter:1:ceb4b219",
+      "opened_utc": "2026-10-01T17:02:14.557329+00:00",
+      "closed_utc": "2026-10-01T17:12:15.339795+00:00"
+    }
+  ],
+  "errors": [],
+  "record_counts": {
+    "lighter|None|None": 1,
+    "lighter|None|connected": 1,
+    "lighter|subscription_acks": 15,
+    "lighter|2053|order_book": 507,
+    "lighter|2053|trade": 1,
+    "lighter|2050|trade": 1,
+    "lighter|2052|trade": 1,
+    "lighter|2051|trade": 1,
+    "lighter|79|order_book": 557,
+    "lighter|2050|order_book": 1218,
+    "lighter|2054|order_book": 510,
+    "lighter|2051|order_book": 1489,
+    "lighter|2052|order_book": 1761,
+    "lighter|46|order_book": 2496,
+    "lighter|27|order_book": 7587,
+    "lighter|8|order_book": 6805,
+    "lighter|30|order_book": 5064,
+    "lighter|2054|trade": 1,
+    "lighter|outbound_keepalive": 9,
+    "lighter|None|pong": 9,
+    "lighter|connections_ended": 1
+  },
+  "source_sha256": "b1d41e7b7bcbb5c3e8d04b67c92feb1aae9037002c38a851e030834c54d712fb",
+  "economic_evaluation": false
+}

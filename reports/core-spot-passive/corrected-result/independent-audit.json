@@ -1,0 +1,58 @@
+{
+  "audit": "passed",
+  "checks": {
+    "admissions": 6,
+    "reference_rows": 493,
+    "queue_episodes": 6,
+    "maker_flow_matches": 0
+  },
+  "branches": {
+    "SKY": {
+      "fills": 0,
+      "cash_spot": "0",
+      "cash_perp_synthetic": "0",
+      "capital": "0",
+      "spot_inventory": "0",
+      "perp_inventory": "0",
+      "unknown_reason": null
+    },
+    "UNI": {
+      "fills": 0,
+      "cash_spot": "0",
+      "cash_perp_synthetic": "0",
+      "capital": "0",
+      "spot_inventory": "0",
+      "perp_inventory": "0",
+      "unknown_reason": null
+    },
+    "AAVE": {
+      "fills": 0,
+      "cash_spot": "0",
+      "cash_perp_synthetic": "0",
+      "capital": "0",
+      "spot_inventory": "0",
+      "perp_inventory": "0",
+      "unknown_reason": null
+    },
+    "LINK": {
+      "fills": 0,
+      "cash_spot": "0",
+      "cash_perp_synthetic": "0",
+      "capital": "0",
+      "spot_inventory": "0",
+      "perp_inventory": "0",
+      "unknown_reason": null
+    },
+    "LDO": {
+      "fills": 0,
+      "cash_spot": "0",
+      "cash_perp_synthetic": "0",
+      "capital": "0",
+      "spot_inventory": "0",
+      "perp_inventory": "0",
+      "unknown_reason": null
+    }
+  },
+  "summary_sha256": "47d51403252b28704b47ba6fa805512eb7bb0d15487d79067ba39ed46c53b509",
+  "limitations": "Queue checked only before first unknown callback; unknown outcomes retained. Public-flow attribution remains conditional on queue and ACK assumptions. No private order/fill proof. All fills independently reconciled even in unknown branches; zero checks are vacuous."
+}

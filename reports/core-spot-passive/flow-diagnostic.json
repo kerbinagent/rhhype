@@ -1,0 +1,122 @@
+{
+  "schema": "completed-spot-passive-flow-diagnostic-v1",
+  "manifest_sha256": "0b292f60d546162d9e6c0388252982397411f664ba5d3f1cd2590f3c4032c889",
+  "observed_live_ordinary_trade_frames": 0,
+  "backlogs": {
+    "2053": {
+      "backlog_count": 50,
+      "newest_backlog_utc": "2026-10-01T11:43:27.117000+00:00",
+      "newest_backlog_age_seconds_at_start": 19127.440044879913,
+      "backlog_quote_notional": 5484.242876,
+      "backlog_is_not_live_fill_evidence": true
+    },
+    "2050": {
+      "backlog_count": 50,
+      "newest_backlog_utc": "2026-10-01T14:49:43.103000+00:00",
+      "newest_backlog_age_seconds_at_start": 7951.454045057297,
+      "backlog_quote_notional": 8601.089464,
+      "backlog_is_not_live_fill_evidence": true
+    },
+    "2052": {
+      "backlog_count": 50,
+      "newest_backlog_utc": "2026-10-01T14:09:36.535000+00:00",
+      "newest_backlog_age_seconds_at_start": 10358.02204489708,
+      "backlog_quote_notional": 7.919934,
+      "backlog_is_not_live_fill_evidence": true
+    },
+    "2051": {
+      "backlog_count": 50,
+      "newest_backlog_utc": "2026-10-01T15:35:55.286000+00:00",
+      "newest_backlog_age_seconds_at_start": 5179.271044969559,
+      "backlog_quote_notional": 1708.894346,
+      "backlog_is_not_live_fill_evidence": true
+    },
+    "2054": {
+      "backlog_count": 50,
+      "newest_backlog_utc": "2026-10-01T15:50:30.947000+00:00",
+      "newest_backlog_age_seconds_at_start": 4303.610044956207,
+      "backlog_quote_notional": 1390.904671,
+      "backlog_is_not_live_fill_evidence": true
+    }
+  },
+  "metadata_daily_spot_activity": [
+    {
+      "symbol": "LIT/USDC",
+      "market_id": 2049,
+      "daily_trades_count": 44976,
+      "daily_base_token_volume": 916457.23,
+      "daily_quote_token_volume": 3640899.345669
+    },
+    {
+      "symbol": "ETH/USDC",
+      "market_id": 2048,
+      "daily_trades_count": 1611,
+      "daily_base_token_volume": 112.836,
+      "daily_quote_token_volume": 304262.755697
+    },
+    {
+      "symbol": "XAUT/USDC",
+      "market_id": 2056,
+      "daily_trades_count": 21,
+      "daily_base_token_volume": 10.1638,
+      "daily_quote_token_volume": 42399.614825
+    },
+    {
+      "symbol": "UNI/USDC",
+      "market_id": 2051,
+      "daily_trades_count": 124,
+      "daily_base_token_volume": 1002.6700000000001,
+      "daily_quote_token_volume": 8977.70177
+    },
+    {
+      "symbol": "LDO/USDC",
+      "market_id": 2054,
+      "daily_trades_count": 56,
+      "daily_base_token_volume": 11054.5,
+      "daily_quote_token_volume": 4871.167262
+    },
+    {
+      "symbol": "LINK/USDC",
+      "market_id": 2050,
+      "daily_trades_count": 15,
+      "daily_base_token_volume": 145.9,
+      "daily_quote_token_volume": 2081.8884089999997
+    },
+    {
+      "symbol": "AAVE/USDC",
+      "market_id": 2052,
+      "daily_trades_count": 2236,
+      "daily_base_token_volume": 4.872,
+      "daily_quote_token_volume": 808.942881
+    },
+    {
+      "symbol": "rhQQQ/USDC",
+      "market_id": 2058,
+      "daily_trades_count": 5,
+      "daily_base_token_volume": 0.4271,
+      "daily_quote_token_volume": 317.546768
+    },
+    {
+      "symbol": "SKY/USDC",
+      "market_id": 2053,
+      "daily_trades_count": 4,
+      "daily_base_token_volume": 1534,
+      "daily_quote_token_volume": 121.589468
+    },
+    {
+      "symbol": "rhSPY/USDC",
+      "market_id": 2057,
+      "daily_trades_count": 2,
+      "daily_base_token_volume": 0.0018,
+      "daily_quote_token_volume": 1.383012
+    },
+    {
+      "symbol": "AZTEC/USDC",
+      "market_id": 2055,
+      "daily_trades_count": 0,
+      "daily_base_token_volume": 0,
+      "daily_quote_token_volume": 0
+    }
+  ],
+  "interpretation": "Healthy single connection and five subscription backlogs, but no live trade updates in fixed600s. Everyquote canceled onbestbidchange atactivation. Broadaltmakerfilltest is limited by absent observed trade flow; backlog prints not replayed. Daily spot activity informs only a future frozen asset choice."
+}

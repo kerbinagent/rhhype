@@ -1,0 +1,13 @@
+{
+  "pid": 1848571,
+  "command": [
+    "/home/harry/miniconda3/bin/python",
+    "/home/harry/projects/research/rhhype/scripts/core_spot_passive_capture.py",
+    "run"
+  ],
+  "launched_utc": "2026-10-01T17:02:14.088058+00:00",
+  "plan_sha256": "c5f0849e9d31eabd12f5cae559f455805ed55fea5f7cbd32b0452a92a3d6afb8",
+  "fixed_capture_seconds": 600,
+  "public_read_only": true,
+  "log": "reports/core-spot-passive.stdout.txt"
+}
