@@ -3483,3 +3483,23 @@ checkpoint **02:46:33 UTC**. No qualifying positive result.
 Fresh carry v2 has all twenty-four due arrivals through 02:25, 29,649 sample
 bytes, all sampled, zero overdue files, no terminal error and no economic
 evaluation.
+
+
+## Review 104 — 1 October 2026 02:46:33 UTC
+
+Exact report and separate epoch snapshot preserved; guarded manual archive
+2,696,701/16,777,216 bytes. Report SHA-256
+`82ad57fcaa426b0152dea07ce6337a3f24b38edb98d0b49bed4e5c592d5e2515`.
+No trade, P&L or abort changes across the eight strategies; complete trade and
+abort coverage. No new wins or estimated records. Four feeds connected, 108
+pairs, normal performance; CPU 43.47%, p95 lag 7.89 ms, RSS 123.11 MiB,
+634.4 books/s and metadata age 1,954.8 s. No open positions; three pending
+funding items remain across convergence, Premium and standard. Epoch counts and
+P&L unchanged. Cooldown remains capital constrained. Twenty-two epoch win
+records and three legacy funding obligations remain. Reviews 66–104 have
+1,589 closes: 1,579 losses, two paired gains and eight rescue gains. Next
+checkpoint **03:06:33 UTC**. No qualifying positive result.
+
+Fresh carry v2 has all twenty-eight due arrivals through 02:45, 34,596 sample
+bytes, all sampled, zero overdue files, no terminal error and no economic
+evaluation.
