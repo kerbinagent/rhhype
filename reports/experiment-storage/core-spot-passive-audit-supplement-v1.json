@@ -1,0 +1,9 @@
+{
+  "schema": "core-spot-passive-audit-supplement-v1",
+  "recorded_utc": "2026-10-01T17:06:06.652580+00:00",
+  "plan_sha256": "c5f0849e9d31eabd12f5cae559f455805ed55fea5f7cbd32b0452a92a3d6afb8",
+  "funding": "Existing131072-byte control reservation; zeroallocation change. Prepared while capture ongoing before any economics. Original source pins and entry rules unchanged.",
+  "source": "scripts/audit_core_spot_passive_boundaries.py",
+  "source_sha256": "aef85f1ddd75589dfdc7cdea7cf314e269a66ee9f7840c9a2cfe1c2222dbc187",
+  "scope": "Independently check first eligible maker activation/cancel and actual100-per-leg execution notional; any scope breach excludes that result from100size profit claims."
+}
