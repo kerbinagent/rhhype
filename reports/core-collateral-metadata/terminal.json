@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "raw_bytes": 6119,
+  "gzip_bytes": 1018,
+  "raw_sha256": "72deed9ce45c84273ce1935f6bd179b31671990387e38770b91102a109b1b998",
+  "gzip_sha256": "114fcf07123aa0e757d0faf545a230c52d2333d1b7eea7e7d3cd0fcb6527665b",
+  "received_utc": "2026-10-01T02:33:23.387466+00:00"
+}
