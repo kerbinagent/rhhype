@@ -1,0 +1,91 @@
+{
+  "audit": "passed",
+  "source_sha256": "b1f7d87b1cc0658c267ed6a90318c68d1c57df15cd1b636051eb5f05e749acc4",
+  "classification": "All seven are failed-hedge one-sided rescues, not paired arbitrage wins. Quantity/terminal cash/fees/5bpstress/capital/hour boundaries reconciled. Original public depth unavailable in rolling archive; no fill-depth or privateexecution claim.",
+  "records": [
+    {
+      "id": "1790861425854417-23820-convergence",
+      "asset": "MU",
+      "filled_venue": "lighter",
+      "side": "long",
+      "rejected_venue": "hyperliquid",
+      "cash": "0.713645",
+      "stress": "0.499267870",
+      "capital": "0.000001959760325765353881278538813",
+      "net": "0.2143751702396742346461187215",
+      "unhedged_seconds": 1.23787260055542
+    },
+    {
+      "id": "1790861571619883-23858-convergence",
+      "asset": "MU",
+      "filled_venue": "lighter",
+      "side": "long",
+      "rejected_venue": "hyperliquid",
+      "cash": "0.797674",
+      "stress": "0.4986349580",
+      "capital": "0.000002044400481710057077625570776",
+      "net": "0.2990369975995182899429223744",
+      "unhedged_seconds": 1.2929742336273193
+    },
+    {
+      "id": "1790861572052888-23859-convergence",
+      "asset": "SOXL",
+      "filled_venue": "rh_lighter",
+      "side": "long",
+      "rejected_venue": "hyperliquid",
+      "cash": "0.6012",
+      "stress": "0.49889580",
+      "capital": "0.000001965569877993340943683409437",
+      "net": "0.1023022344301220066590563166",
+      "unhedged_seconds": 1.2424681186676025
+    },
+    {
+      "id": "1790861692615959-23890-convergence",
+      "asset": "SOXL",
+      "filled_venue": "rh_lighter",
+      "side": "long",
+      "rejected_venue": "hyperliquid",
+      "cash": "0.5985",
+      "stress": "0.49884975",
+      "capital": "0.000002139035331872146118721461187",
+      "net": "0.09964811096466812785388127854",
+      "unhedged_seconds": 1.352243185043335
+    },
+    {
+      "id": "1790861816898265-23911-convergence",
+      "asset": "MU",
+      "filled_venue": "rh_lighter",
+      "side": "short",
+      "rejected_venue": "hyperliquid",
+      "cash": "0.643967",
+      "stress": "0.4989080780",
+      "capital": "0.000002194395037468556570268899036",
+      "net": "0.1450567276049625314434297311",
+      "unhedged_seconds": 1.387078046798706
+    },
+    {
+      "id": "1790861816898265-23910-convergence",
+      "asset": "MU",
+      "filled_venue": "lighter",
+      "side": "short",
+      "rejected_venue": "hyperliquid",
+      "cash": "0.820564",
+      "stress": "0.4992548735",
+      "capital": "0.000002245709086422687087772704211",
+      "net": "0.3213068807909135773129122273",
+      "unhedged_seconds": 1.418527603149414
+    },
+    {
+      "id": "1790862173243139-23946-convergence",
+      "asset": "SNDK",
+      "filled_venue": "lighter",
+      "side": "long",
+      "rejected_venue": "hyperliquid",
+      "cash": "0.715434",
+      "stress": "0.498003220",
+      "capital": "0.000002056090368134005580923389143",
+      "net": "0.2174287239096318659944190766",
+      "unhedged_seconds": 1.3020169734954834
+    }
+  ]
+}

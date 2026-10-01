@@ -4383,3 +4383,40 @@ Fresh carry v2 at 13:25 had 155 sampled slots and one persistent
 `arrival_invalid` slot (slot 71), with 708 future/interrupted slots. Status
 remains running with no terminal error or retries and no economic evaluation.
 The invalid arrival's sample remains unopened.
+
+
+## Review 137 — 1 October 2026 13:46:33 UTC
+
+Exact report, epoch snapshot, seven positive terminal payloads and root audit
+are preserved; manual archive 3,562,309/9,437,184 bytes. Report
+`review-20261001T134633Z.json`, SHA-256
+`24431f132afd48f842a3da7f6ffb2eec17f706aa7f456f152ad330933b177e29`. One hundred
+sixty-seven exact closes/−$239.151096: 85 convergence/−$84.937067 and 82
+Premium/−$154.214028, with seven wins, 160 losses, four separate aborts and no
+estimates. All seven new wins were independently audited as one-leg failed-hedge
+rescues after Hyperliquid entry price-limit rejection, not paired arbitrage. The
+records are in `review137-positive-records.json.gz` (5,439 B, SHA-256
+`b1f7d87b1cc0658c267ed6a90318c68d1c57df15cd1b636051eb5f05e749acc4`) and the
+audited IDs and arithmetic in `review137-positive-root-audit.json`. Their net
+gains sum to about $1.399155. All 21 paired closes (five convergence, sixteen
+Premium) lost. Audit reconciled quantities, terminal cash, fees, 5 bp stress,
+capital and hourly funding; raw depth has aged out, so no depth or private-fill
+claim is made. Fees $62.264249, other costs $83.325262 and capital $0.001042.
+Entry rejections: 145 Hyperliquid price limits, one Lighter price limit, three
+RH Lighter price limits, and one RH Lighter notional cap.
+
+Four feeds connected, 98 pairs, normal performance; CPU 76.30%, p95 lag
+29.29 ms, resident memory 254.32 MiB, 1,315.7 books/s and metadata age
+1,907.1 s. No open positions; three pending funding items remain. The snapshot
+read at 13:47:09 UTC and updated at 13:47:07 UTC showed convergence
+538/−$640.5342 (+85) and Premium 860/−$1,590.0554 (+82), matching report
+deltas. Pair discovery still has 98 pairs; the seven pair identities removed
+at the 13:14 refresh remain unrecoverable because the prior pair list was not
+retained. Reviews 66–137 have 1,958 closes: 1,935 losses, two paired gains
+and 21 failed-hedge rescue gains. Next checkpoint **14:06:33 UTC**. The overall
+window remains deeply negative.
+
+Fresh carry v2 at 13:45 had 159 sampled slots and one persistent
+`arrival_invalid` slot (slot 71), with 704 future/interrupted slots. Status
+remains running with no terminal error or retries and no economic evaluation.
+The invalid arrival's sample remains unopened.
