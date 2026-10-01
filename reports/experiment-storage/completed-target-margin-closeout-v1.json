@@ -1,0 +1,81 @@
+{
+  "schema": "completed-target-margin-closeout-v1",
+  "recorded_utc": "2026-10-01T13:55:26.030657+00:00",
+  "previous": "reports/experiment-storage/paired-forecast-decomposition-v1.json",
+  "previous_sha256": "48c8eebc9ec6d06d0738b87de64b1ecbb18e845df661e2975c86fdfd55e6af3e",
+  "old_reserved_bytes": 1064960,
+  "artifact_bytes": 574219,
+  "retention_reserved_bytes": 606208,
+  "released_bytes": 458752,
+  "active_research_reserved_bytes": 15155200,
+  "active_research_headroom_bytes": 573440,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retain allzero-entrydata/source/audits/readout; no deletion/recompression;16KiBcloseoutallowance.",
+  "files": [
+    {
+      "path": "reports/core-rh-target-margin/audit.json",
+      "bytes": 1391,
+      "sha256": "4c8e6f15ee9c53798ce6545f0327a20289356ee85e504491dd7dabd4f4b8e380"
+    },
+    {
+      "path": "reports/core-rh-target-margin/events.jsonl.gz",
+      "bytes": 491034,
+      "sha256": "1c9ca267f6dd2e61bbb9819b11e7549aa6c6053fc420caa7d3deb5ff5949d639"
+    },
+    {
+      "path": "reports/core-rh-target-margin/lighter-metadata.json.gz",
+      "bytes": 23189,
+      "sha256": "4b67e05d0a5d0a9a93a79b4bcd095ee86d5c130d4160035909d90bf3b373ed44"
+    },
+    {
+      "path": "reports/core-rh-target-margin/metadata.json",
+      "bytes": 6949,
+      "sha256": "2581b9649eb603e745d2b310481480c2d914b699854c0bd9b0bc3bdccb3b287f"
+    },
+    {
+      "path": "reports/core-rh-target-margin/readout.md",
+      "bytes": 1954,
+      "sha256": "f0a971fb4c048192e6a49968ddd918818d93889bf7361aa79c5b1df9684a9ee6"
+    },
+    {
+      "path": "reports/core-rh-target-margin/rh_lighter-metadata.json.gz",
+      "bytes": 7965,
+      "sha256": "7c2e320e2ab2d3ed5103aa5db72bdb25fed74254028f11737d29c1ea014c5a88"
+    },
+    {
+      "path": "reports/core-rh-target-margin/status.json",
+      "bytes": 288,
+      "sha256": "10cbaf0884763d668bd4af966d035efbaaef446048bf312156582d390ba99157"
+    },
+    {
+      "path": "reports/core-rh-target-margin/summary.json",
+      "bytes": 3219,
+      "sha256": "ca50c02e670ae95cdb4db3d3025037fcecd9212b61d3e8acba1c89d687ae1a13"
+    },
+    {
+      "path": "reports/core-rh-target-margin/unresolved.json.gz",
+      "bytes": 55,
+      "sha256": "4b40fedb74a2fa7ebedbdc4aed16f65ed7f16a9b7d68079098d69e060d2d5a1b"
+    },
+    {
+      "path": "reports/experiment-storage/core-rh-target-margin-allocation-v1.json",
+      "bytes": 3255,
+      "sha256": "eb2e117b5de85f155e82010cf377ddae88d410337908d70e8e33b183ac647614"
+    },
+    {
+      "path": "scripts/audit_core_rh_target_margin.py",
+      "bytes": 12559,
+      "sha256": "25706ede520d742779ae644fc62a035669cfccc7bce9e9c2a772164358746dcd"
+    },
+    {
+      "path": "scripts/core_rh_target_margin.py",
+      "bytes": 20297,
+      "sha256": "3644abc5fa34c379f1673ce99901194ee6dea6d5a314daa279319b7b431f295a"
+    },
+    {
+      "path": "tests/test_core_rh_target_margin.py",
+      "bytes": 2064,
+      "sha256": "b2db7eb8418ccbf34ecad2d331a53495824d4694703adee16f5b225a5602465d"
+    }
+  ]
+}
