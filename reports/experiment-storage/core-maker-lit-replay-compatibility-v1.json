@@ -1,0 +1,29 @@
+{
+  "schema": "core-maker-lit-replay-compatibility-v1",
+  "recorded_utc": "2026-10-01T13:05:11.763392+00:00",
+  "previous": "reports/experiment-storage/paradex-arrival-test-retention-addendum-v1.json",
+  "previous_sha256": "ea0351bd9dde7d2641d473f79a93b2d290ac0b92e936c745a10a9b63d40deb49",
+  "new_maximum_bytes": 32768,
+  "active_research_reserved_bytes": 11223040,
+  "active_research_headroom_bytes": 4505600,
+  "overall_reservation_bytes": 836777216,
+  "manifest_sha256": "61ca057c88c083607ea66a2d4898b6686f83fde05089502e4cd474b443a99476",
+  "failure": "Original replay raised ValueError fixed_best entry and policy-matching hold_ns required during first branch construction, before event iteration. Empty20B audit gzip retained; zero economic outcomes read.",
+  "repair": "New wrapper initializes parent bookkeeping with fixed_best then restores exact frozen adaptive config before processing. It permits only adaptive plus control10s and hold10s. Frozen engine source, delays, offsets, unknown rules and quote diagnostic unchanged. Output separate result-corrected. No events/outcomes processed before compatibility freeze.",
+  "tests": "10passed:3new assembly/rest/unknown/rejection tests plus planner and6 lifecycle tests.",
+  "source_pins": [
+    {
+      "path": "scripts/replay_core_maker_lit_corrected.py",
+      "sha256": "636f4d74d631cc7b3ef104d6e55c881bba54ee180a3b3f71022d139dc6a883f2"
+    },
+    {
+      "path": "scripts/audit_core_maker_lit_corrected.py",
+      "sha256": "42687a9c65af43fbe71f303a73aa5e5bdbded544fdbdc8009d6d53a88450c4a9"
+    },
+    {
+      "path": "tests/test_core_maker_lit_assembly.py",
+      "sha256": "03147b1ea176d2d68ad2abf5cbce5cfbd7f582a4498034e04857bdb5e79f5406"
+    }
+  ],
+  "output_accounting": "Original262144B output allowance covers corrected replay/audit; additional32768B reserved for compatibility source/tests/failure/amendment. No raw capture or output discarded."
+}

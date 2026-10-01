@@ -1,0 +1,5 @@
+{
+  "error": "Original replay raised ValueError fixed_best entry and policy-matching hold_ns required during first branch construction, before event iteration. Empty20B audit gzip retained; zero economic outcomes read.",
+  "market_events_processed": 0,
+  "compatibility_plan_sha256": "79219f8f9c95ea836d9015237aeb7401256ba94fcb8213a0ded77e6eaae998d0"
+}

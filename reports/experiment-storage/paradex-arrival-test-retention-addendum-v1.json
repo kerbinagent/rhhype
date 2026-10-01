@@ -1,0 +1,14 @@
+{
+  "schema": "paradex-arrival-test-retention-addendum-v1",
+  "previous": "reports/experiment-storage/completed-paradex-arrival-closeout-v1.json",
+  "previous_sha256": "3a1418fab5fe898476e72c454c13640b7f3866c9b097c34c904bc77b1437a468",
+  "note": "Original closeout file list omitted the newly frozen test. Add it under the existing retention slack; no evidence removed and no reserve released. Original artifact_bytes219929 plus3021test=222950;262144retention leaves39194 before this addendum.",
+  "added_file": {
+    "path": "tests/test_paradex_core_arrival.py",
+    "bytes": 3021,
+    "sha256": "594fe13796b015d49df2da58ceb1e6ab017cddf6914fe4b3b2a376f832c6d242"
+  },
+  "active_research_reserved_bytes": 11190272,
+  "active_research_headroom_bytes": 4538368,
+  "overall_reservation_bytes": 836777216
+}
