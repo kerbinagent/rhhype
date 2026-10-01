@@ -1,0 +1,61 @@
+{
+  "schema": "completed-basket-economics-closeout-v1",
+  "recorded_utc": "2026-10-01T12:23:24.169065+00:00",
+  "previous": "reports/experiment-storage/polymarket-basket-economics-allocation-v1.json",
+  "previous_sha256": "4a7fea4542935df1f1bdb66ec11a0b93c6ff7af6e25e31ef18cd7f9f9639fc0f",
+  "old_reserved_bytes": 180224,
+  "artifact_bytes": 25231,
+  "retention_reserved_bytes": 65536,
+  "released_bytes": 114688,
+  "active_research_reserved_bytes": 6176768,
+  "active_research_headroom_bytes": 114688,
+  "overall_reservation_bytes": 836777216,
+  "scope": "All artifacts preserved,16KiB closeout allowance.",
+  "files": [
+    {
+      "path": "reports/polymarket-basket-economics/catalog-0.json.gz",
+      "bytes": 4068,
+      "sha256": "8e0913e87a8e5c203ea9c9c85dccb2dbff8e1b7ab15b20b0ff43f57d8257eeab"
+    },
+    {
+      "path": "reports/polymarket-basket-economics/catalog-1.json.gz",
+      "bytes": 3049,
+      "sha256": "0b0fd42e5dd078a983761e9516d5c6ecac00c211f2588d7e79812bbf970d1bc3"
+    },
+    {
+      "path": "reports/polymarket-basket-economics/catalog-2.json.gz",
+      "bytes": 3346,
+      "sha256": "5dba721b5d27f33478ae86eea0d119deaa27dc660caf33313357127d02e77c10"
+    },
+    {
+      "path": "reports/polymarket-basket-economics/catalog-3.json.gz",
+      "bytes": 3012,
+      "sha256": "23a5264303459cc59944829a0cf94e66f1ea9beba3f8eb075298a6ecfe896002"
+    },
+    {
+      "path": "reports/polymarket-basket-economics/catalog-4.json.gz",
+      "bytes": 219,
+      "sha256": "8184dfd9dca363e7dfae1da3e1e38b681f1a67621bf6f779eb787b9356133c93"
+    },
+    {
+      "path": "reports/polymarket-basket-economics/readout.md",
+      "bytes": 617,
+      "sha256": "5ca66ed1864afb971a7b52d98ea69fff98a501e93ec442f30c71aa0ad71c58e1"
+    },
+    {
+      "path": "reports/polymarket-basket-economics/summary.json",
+      "bytes": 1724,
+      "sha256": "8d644230871937a55e5dc67de00e158921fe6dbebb7b9f214b9dde8664eff26a"
+    },
+    {
+      "path": "scripts/polymarket_basket_economics.py",
+      "bytes": 7414,
+      "sha256": "c27ff0ef2d6bc098740757b60fd6f17e907365b6cf954b8a8d3b19ea43a0f8af"
+    },
+    {
+      "path": "reports/experiment-storage/polymarket-basket-economics-allocation-v1.json",
+      "bytes": 1782,
+      "sha256": "4a7fea4542935df1f1bdb66ec11a0b93c6ff7af6e25e31ef18cd7f9f9639fc0f"
+    }
+  ]
+}

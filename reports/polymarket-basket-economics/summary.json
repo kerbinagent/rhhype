@@ -1,0 +1,54 @@
+{
+  "source_sha256": "c27ff0ef2d6bc098740757b60fd6f17e907365b6cf954b8a8d3b19ea43a0f8af",
+  "plan_sha256": "4a7fea4542935df1f1bdb66ec11a0b93c6ff7af6e25e31ef18cd7f9f9639fc0f",
+  "started_at": 1790857359.782999,
+  "actual_pnl": null,
+  "paper_trades": 0,
+  "catalog_count": 4,
+  "unique_count": 4,
+  "selected": [],
+  "selection_rejections": {
+    "type_or_question_count": 4
+  },
+  "snapshots": [],
+  "ended_at": 1790857360.6662326,
+  "errors": [],
+  "requests": [
+    {
+      "path": "reports/polymarket-basket-economics/catalog-0.json.gz",
+      "bytes": 4068,
+      "sha256": "8e0913e87a8e5c203ea9c9c85dccb2dbff8e1b7ab15b20b0ff43f57d8257eeab",
+      "status": 200,
+      "received": 1790857359.9953136
+    },
+    {
+      "path": "reports/polymarket-basket-economics/catalog-1.json.gz",
+      "bytes": 3049,
+      "sha256": "0b0fd42e5dd078a983761e9516d5c6ecac00c211f2588d7e79812bbf970d1bc3",
+      "status": 200,
+      "received": 1790857360.1634707
+    },
+    {
+      "path": "reports/polymarket-basket-economics/catalog-2.json.gz",
+      "bytes": 3346,
+      "sha256": "5dba721b5d27f33478ae86eea0d119deaa27dc660caf33313357127d02e77c10",
+      "status": 200,
+      "received": 1790857360.3720253
+    },
+    {
+      "path": "reports/polymarket-basket-economics/catalog-3.json.gz",
+      "bytes": 3012,
+      "sha256": "23a5264303459cc59944829a0cf94e66f1ea9beba3f8eb075298a6ecfe896002",
+      "status": 200,
+      "received": 1790857360.5081458
+    },
+    {
+      "path": "reports/polymarket-basket-economics/catalog-4.json.gz",
+      "bytes": 219,
+      "sha256": "8184dfd9dca363e7dfae1da3e1e38b681f1a67621bf6f779eb787b9356133c93",
+      "status": 200,
+      "received": 1790857360.6651776
+    }
+  ],
+  "raw_bytes": 13694
+}
