@@ -1844,3 +1844,15 @@ one after report boundary; keep it in next report. Four feeds/101 pairs
 fresh, running/ok. Archive 3,685,739 B; 155 future pairs project 4,513,749 B,
 margin 729,131 B. Carry 20:45: 243 sampled, invalid slot 71, 620 future/
 interrupted; no errors/retries/evaluation. Next review 21:06:33 UTC.
+
+
+### Review 159, 1 October 21:06 UTC
+
+Complete coverage: 21 exact losses, three convergence failed hedges/
+−$2.59243 and 18 Premium/−$33.99250 (17 paired, one failed hedge).
+One convergence abort, no gains/estimates; five HL price limits, one
+Lighter notional cap. Four feeds/101 pairs fresh, running/ok. Separate
+convergence increase two versus report three retained. Archive 3,690,402 B;
+154 future pairs project 4,513,070 B, margin 729,810 B. Carry 21:05:
+247 sampled, invalid slot 71, 616 future/interrupted; no errors/retries/
+evaluation. Next review 21:26:33 UTC.
