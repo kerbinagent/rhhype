@@ -1,0 +1,179 @@
+{
+  "public_requests": 12,
+  "errors": 0,
+  "markets": [
+    {
+      "symbol": "BTC-USD-PERP",
+      "order_size_increment": "0.00001",
+      "price_tick_size": "0.1",
+      "min_notional": "10",
+      "max_order_size": "100",
+      "fee_config": {
+        "interactive_fee": {
+          "maker_fee": {
+            "fee": "0"
+          },
+          "taker_fee": {
+            "fee": "0"
+          }
+        },
+        "api_fee": {
+          "maker_fee": {
+            "fee": "0"
+          },
+          "taker_fee": {
+            "fee": "0.0002"
+          }
+        },
+        "rpi_fee": {
+          "maker_fee": {
+            "fee": "0"
+          },
+          "taker_fee": {
+            "fee": "0.0002"
+          }
+        }
+      },
+      "funding_period_hours": 8,
+      "max_funding_rate": "0.02"
+    },
+    {
+      "symbol": "ETH-USD-PERP",
+      "order_size_increment": "0.0001",
+      "price_tick_size": "0.01",
+      "min_notional": "10",
+      "max_order_size": "1000",
+      "fee_config": {
+        "interactive_fee": {
+          "maker_fee": {
+            "fee": "0"
+          },
+          "taker_fee": {
+            "fee": "0"
+          }
+        },
+        "api_fee": {
+          "maker_fee": {
+            "fee": "0"
+          },
+          "taker_fee": {
+            "fee": "0.0002"
+          }
+        },
+        "rpi_fee": {
+          "maker_fee": {
+            "fee": "0"
+          },
+          "taker_fee": {
+            "fee": "0.0002"
+          }
+        }
+      },
+      "funding_period_hours": 8,
+      "max_funding_rate": "0.02"
+    },
+    {
+      "symbol": "SOL-USD-PERP",
+      "order_size_increment": "0.01",
+      "price_tick_size": "0.001",
+      "min_notional": "10",
+      "max_order_size": "10000",
+      "fee_config": {
+        "interactive_fee": {
+          "maker_fee": {
+            "fee": "0"
+          },
+          "taker_fee": {
+            "fee": "0"
+          }
+        },
+        "api_fee": {
+          "maker_fee": {
+            "fee": "0"
+          },
+          "taker_fee": {
+            "fee": "0.0002"
+          }
+        },
+        "rpi_fee": {
+          "maker_fee": {
+            "fee": "0"
+          },
+          "taker_fee": {
+            "fee": "0.0002"
+          }
+        }
+      },
+      "funding_period_hours": 8,
+      "max_funding_rate": "0.02"
+    }
+  ],
+  "book_samples": [
+    {
+      "market": "BTC-USD-PERP",
+      "age_seconds": 2.69453763961792,
+      "rtt_seconds": 0.6205024719238281,
+      "fresh_within2s": false,
+      "seq_no": 7683277336
+    },
+    {
+      "market": "ETH-USD-PERP",
+      "age_seconds": 5.489238023757935,
+      "rtt_seconds": 0.6238665580749512,
+      "fresh_within2s": false,
+      "seq_no": 8102771871
+    },
+    {
+      "market": "SOL-USD-PERP",
+      "age_seconds": 11.73653793334961,
+      "rtt_seconds": 0.6835441589355469,
+      "fresh_within2s": false,
+      "seq_no": 6181876682
+    },
+    {
+      "market": "BTC-USD-PERP",
+      "age_seconds": 0.12761569023132324,
+      "rtt_seconds": 0.6212005615234375,
+      "fresh_within2s": true,
+      "seq_no": 7683277358
+    },
+    {
+      "market": "ETH-USD-PERP",
+      "age_seconds": 10.407854080200195,
+      "rtt_seconds": 0.6113483905792236,
+      "fresh_within2s": false,
+      "seq_no": 8102771871
+    },
+    {
+      "market": "SOL-USD-PERP",
+      "age_seconds": 2.621880054473877,
+      "rtt_seconds": 0.6230616569519043,
+      "fresh_within2s": false,
+      "seq_no": 6181876686
+    },
+    {
+      "market": "BTC-USD-PERP",
+      "age_seconds": 0.9697527885437012,
+      "rtt_seconds": 0.6158261299133301,
+      "fresh_within2s": true,
+      "seq_no": 7683277373
+    },
+    {
+      "market": "ETH-USD-PERP",
+      "age_seconds": 0.6438093185424805,
+      "rtt_seconds": 0.6400866508483887,
+      "fresh_within2s": true,
+      "seq_no": 8102771888
+    },
+    {
+      "market": "SOL-USD-PERP",
+      "age_seconds": 4.142285585403442,
+      "rtt_seconds": 0.6114871501922607,
+      "fresh_within2s": false,
+      "seq_no": 6181876690
+    }
+  ],
+  "scope": "Metadata and transport only, no economic strategy selection. Retail zero fee conditional on interactive classification; ordinary API fee docs and metadata differ, use conservative official4.5bp before account-specific verification.",
+  "fresh_books": 3,
+  "trace_sha256": "d919857968f181ba2c9cffe1a1c9b8af49c181abe2992a8ff232140aa266a98c"
+}

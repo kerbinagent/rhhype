@@ -19,6 +19,18 @@ economic evidence unopened until its endpoint.
 - [RH stock-token atomic cycles](../reports/rh-atomic-stock-cycle/readout.md):
   all 48 exact chained v3/v4 round trips were negative before gas;
   best 100-USDG surplus −0.087617 USDG.
+- [Lower-fee NVDA complete-input screen](../reports/rh-nvda-complete-input-cycles/readout.md):
+  all four active v3/v4 pools, 72 fixed outcomes. Of these, 39 complete
+  quote cycles were negative before gas; 33 were unknown because a v3 leg
+  reached its price limit. Best 100-USDG surplus −0.014920 USDG. The earlier
+  12 low-fee quotes are also unknown after the input-completion correction,
+  rather than valid full-cycle losses.
+- [Paradex public preflight](../reports/paradex-public-transport/readout.md):
+  12 successful metadata/book reads. Interactive orders have conditional
+  zero fees and a documented 300 ms delay. Only 3 of 9 public books met the
+  current two-second source-age gate. Funding accrues continuously, so a
+  future short-term test needs funding-index accounting. No paper trades
+  or economic results were produced by this transport/schema check.
 
 The paper test separates cash from the extra 5 bp stress allowance. Its
 losses persist with zero Standard trading fees and without the stress or
