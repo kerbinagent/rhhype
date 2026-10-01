@@ -1,0 +1,86 @@
+{
+  "schema": "completed-basket-smallpages-closeout-v1",
+  "recorded_utc": "2026-10-01T12:21:59.257129+00:00",
+  "previous": "reports/experiment-storage/polymarket-basket-smallpages-allocation-v1.json",
+  "previous_sha256": "f01ef88fb2844ee65bfdbb4d6d852f2129e867eb9c9c33832efabdf6628c88a8",
+  "old_reserved_bytes": 458752,
+  "artifact_bytes": 283424,
+  "retention_reserved_bytes": 327680,
+  "released_bytes": 131072,
+  "active_research_reserved_bytes": 6111232,
+  "active_research_headroom_bytes": 180224,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Retain all catalogs, source and reports unchanged;16KiB manifest allowance.",
+  "files": [
+    {
+      "path": "reports/polymarket-basket-smallpages/catalog-0.json.gz",
+      "bytes": 42196,
+      "sha256": "642445908079a7d1fcc8473a7b90b01c1c715d63dd9ec4301524c334ad38d20e"
+    },
+    {
+      "path": "reports/polymarket-basket-smallpages/catalog-1.json.gz",
+      "bytes": 42672,
+      "sha256": "fe37bd5145608b456023558369d1a44a12881f3d3e17074264cb4d9b7a1eb2fe"
+    },
+    {
+      "path": "reports/polymarket-basket-smallpages/catalog-2.json.gz",
+      "bytes": 40418,
+      "sha256": "622883b785509529eacc450afd68445a27436253c34d98b5b9e146788110b639"
+    },
+    {
+      "path": "reports/polymarket-basket-smallpages/catalog-3.json.gz",
+      "bytes": 13818,
+      "sha256": "c8808bb8ac79d268566204406b7baba98453d20ecdb72d346453b3bc27b68978"
+    },
+    {
+      "path": "reports/polymarket-basket-smallpages/catalog-4.json.gz",
+      "bytes": 41640,
+      "sha256": "88691b47a44d534628c2118a334d59ce1916cb119c4215d95f928a7516691ee2"
+    },
+    {
+      "path": "reports/polymarket-basket-smallpages/catalog-5.json.gz",
+      "bytes": 17486,
+      "sha256": "469122c1905f9a10044756d501ee86d394dbfad3d239048663966ceaf91b7296"
+    },
+    {
+      "path": "reports/polymarket-basket-smallpages/catalog-6.json.gz",
+      "bytes": 11428,
+      "sha256": "0c147de540c566562f4ef41b34baf877d383ae2d13647e2d0d100d3eac4b0177"
+    },
+    {
+      "path": "reports/polymarket-basket-smallpages/catalog-7.json.gz",
+      "bytes": 16308,
+      "sha256": "da0ff520191dd364653bb7698247d4a0ff8fc3ec62a5b109b0e333581c874e9b"
+    },
+    {
+      "path": "reports/polymarket-basket-smallpages/catalog-8.json.gz",
+      "bytes": 27795,
+      "sha256": "0606ae31b56c97372b9cdbfc0f0e9e28a86ba1ed9d3698f04abaa48dbd275810"
+    },
+    {
+      "path": "reports/polymarket-basket-smallpages/catalog-9.json.gz",
+      "bytes": 16204,
+      "sha256": "a10caf2704e78f90f00817e8dda85ec74fd786d9d21f82ee3071025fa1d28270"
+    },
+    {
+      "path": "reports/polymarket-basket-smallpages/readout.md",
+      "bytes": 1132,
+      "sha256": "55cedf2be06d5c7604b7e9f79109bf743e2a95cf86c278c3e02e91ad429a6956"
+    },
+    {
+      "path": "reports/polymarket-basket-smallpages/summary.json",
+      "bytes": 3023,
+      "sha256": "40b35252a0ee6bf33bf38cef412ec3593235c092be51c5c1a742d9e1c416b666"
+    },
+    {
+      "path": "scripts/polymarket_basket_smallpages.py",
+      "bytes": 7399,
+      "sha256": "09f7855ebea7d3e90eba27601544033ebd7f7171b21075e749e6d7ac8202c189"
+    },
+    {
+      "path": "reports/experiment-storage/polymarket-basket-smallpages-allocation-v1.json",
+      "bytes": 1905,
+      "sha256": "f01ef88fb2844ee65bfdbb4d6d852f2129e867eb9c9c33832efabdf6628c88a8"
+    }
+  ]
+}
