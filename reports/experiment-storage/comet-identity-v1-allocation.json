@@ -1,0 +1,45 @@
+{
+  "schema": "comet-identity-v1-allocation",
+  "status": "allocated_offline_preparation_only",
+  "recorded_utc": "2026-10-02T14:16:30.881982+00:00",
+  "previous_global_allocation": {
+    "path": "reports/experiment-storage/news-candidate-rolling-v1-allocation.json",
+    "bytes": 3828,
+    "sha256": "f179818fbac5f6f062c19631665806cde8b9e40bce10f0cce83183fb0c5418d8"
+  },
+  "referenced_offline_source": {
+    "path": "scripts/peer_comet_eligibility_v1.py",
+    "sha256": "879f58149d222bdfaa627d28b4335c2b01c72aba51a3771655f61764f473a908"
+  },
+  "reserved_bytes": 524288,
+  "categories_bytes": {
+    "source": 65536,
+    "tests_and_temporary_fixtures": 65536,
+    "protocol_design_and_allocation": 16384,
+    "raw_responses_and_all_copies": 327680,
+    "derived_projection": 16384,
+    "controls": 12288,
+    "margin": 20480
+  },
+  "previous_active_research_reserved_bytes": 249298944,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 249823232,
+  "active_research_headroom_bytes": 4931584,
+  "overall_reservation_bytes": 2845690112,
+  "scope": "One root-host bounded Ethereum mainnet Comet proxy/implementation identity pass, maximum6public RPC requests. ChainId,latest parent header,proxy runtime code,ERC1967implementation slot,implementation runtime code,original-number header recheck. State selectors use blockHash/requireCanonical. Fingerprints only, no source-equivalence/economic/eligibility claim.",
+  "preparation_authority": "Prepare source,focused offline synthetics,design and exact draft plan only. No API/RPC/data query until root review and separately committed frozen exact plan SHA. No account,transaction,signature,simulation,eth_call,balances,reserves,inventory,pool or price queries. Do not modify the archived peer package.",
+  "endpoint_draft": "https://ethereum-rpc.publicnode.com",
+  "endpoint_source": "https://ethereum.publicnode.com/",
+  "specification_sources": [
+    "https://eips.ethereum.org/EIPS/eip-1898",
+    "https://eips.ethereum.org/EIPS/eip-1967"
+  ],
+  "request_bounds_draft": "One fixed endpoint, no retries/fallback/redirect/proxy. Per-response4096B chainId andslot,65536B each of2headers and2code responses; maximum270336B response bodies before framing. Max10s/request and75s/process. Retain framed exact bodies and failure prefixes progressively; raw327680B includes pending/final/transit copies. Root launches host process explicitly.",
+  "owned_paths": [
+    "scripts/comet_identity_v1.py",
+    "tests/test_comet_identity_v1.py",
+    "reports/comet-identity-v1/",
+    "reports/experiment-storage/comet-identity-v1.json"
+  ],
+  "retention": "Preserve every previous result,source,raw/failure and reservation. This is separate from the nearly-full peer Comet source package; no package recopy. All drafts,temporary files,output and retained bytecode count; disable bytecode and do not retain test logs. Existing dependency source is referenced by pins without copy."
+}
