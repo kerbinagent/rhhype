@@ -1,0 +1,32 @@
+{
+  "schema": "polymarket-no-basket-chain-root-receipt-v2",
+  "reviewed_utc": "2026-10-02T10:04:09.207153+00:00",
+  "status": "metadata_mapping_compatible_conversion_unproven",
+  "plan_sha256": "690f657d353ad965debddc8dc00e2a74a6eaa4a64cb722a86f7cc797e3fb5e02",
+  "trace_sha256": "dec5d0a538254deccbfa0bfe897294b5b70fcc0d68fd723859185821de151d48",
+  "requests_attempted_and_passed": 55,
+  "total_response_bytes": 140781,
+  "retained_trace_plaintext_bytes": 207458,
+  "observed_minimum_http_start_spacing_seconds": 0.996867,
+  "transport_pacing_note": "Collector invocation starts use a one-second monotonic spacing gate. HTTP timestamps follow TLS-context construction, so small wall-clock deviations are not wire-spacing proof.",
+  "question_count": "5",
+  "conversion_fee_bips": "0",
+  "frozen_header": {
+    "number": "0x5a6d717",
+    "hash": "0x6b413d5693c6a6638893382592935a01efc215eb4efa458b63ddc449d0347158",
+    "parentHash": "0x6740be4e89f37127b3a78fc2104248d01237ae1d53f19b83dae88c6db9ee22ef",
+    "timestamp": "0x6abf8117",
+    "stateRoot": "0xf99c939474bcd128d07d0d3aaa54b5719779e004fce626e5931fce9ff7bb60fb"
+  },
+  "checks": [
+    "All55 manifest IDs, target/calldata parameters and canonical block references checked.",
+    "All53 retained non-header bodies verified by byte count/SHA256 and decoded ABI observations; summary agrees with trace.",
+    "Both projected headers agree. Header original body receipts cannot independently reconstruct omitted transaction hashes.",
+    "Five registered questions, all five conditions and ten YES/NO tokens match the pinned event. Six-decimal bindings, unpaused wrapper, wrapper role bit2, adapter approval and unresolved states passed."
+  ],
+  "limitations": [
+    "Originalv1 failure preserved; v2 is an explicit post-observation implementation-address correction corroborated by the official deployment table.",
+    "Code/getter compatibility does not prove compiled-source equivalence or actual conversion.",
+    "No prices, trades, balances, wallet eligibility, net economics or profit were queried."
+  ]
+}

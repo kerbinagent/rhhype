@@ -74,8 +74,18 @@ independently reproduced runtime equivalence. The original failure remains
 inconclusive; remaining question/token checks and the final header were not run.
 The retained trace is31947 bytes, SHA256
 d87bde66002a366f7c99b80ee172b26210f96da4148be6464613ff40421a175e.
-A separately frozen successor can recheck the exact observed implementation;
-no economic fields have been observed before that metadata correction.
+A separately frozen successor rechecked the exact observed implementation;
+no economic fields had been observed before that metadata correction.
+
+Chain-v2 completed55/55 requests at10:01:57–10:02:51UTC. It found exactly5
+registered questions, the expected5conditions/10positions, zero conversion fee,
+six-decimal collateral bindings, unpaused wrapper, wrapper role bit2 and adapter
+approval. All conditions remained unresolved and both projected headers agreed.
+Root verified the full request manifest and53 retained non-header body digests
+and observations. Source equivalence and actual conversion remain untested.
+The trace is49379 bytes, SHA256
+dec5d0a538254deccbfa0bfe897294b5b70fcc0d68fd723859185821de151d48.
+This is the corrected metadata version, not independent replication ofv1.
 
 Fee-source review: current docs and SDK imply the nominal taker fee
 Q*0.05*p*(1-p) in collateral cash for the reported exponent1 schedule. Makers

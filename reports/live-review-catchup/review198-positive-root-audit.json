@@ -1,0 +1,26 @@
+{
+  "audit": "passed_terminal_record_arithmetic",
+  "reviewed_utc": "2026-10-02T10:17:58.254673+00:00",
+  "source_sha256": "6d62bbc141c095030e4f642cd72a21120f253ffee99f1a2e61f1037445e758c5",
+  "window_start_at": 1790934392.8662794,
+  "window_end_at": 1790935592.691137,
+  "classification": "One-sided partial VVV long on Lighter rescued after Hyperliquid hedge price-limit rejection. No paired gain or demonstrated strategy edge.",
+  "record": {
+    "id": "1790935317386135-24681-convergence",
+    "quantity": "9.76",
+    "signal_quantity": "33.26",
+    "entry_value": "292.417408",
+    "exit_value": "293.101584",
+    "gross_cash": "0.684176",
+    "fees": "0.0",
+    "five_bp_stress": "0.1462087040",
+    "capital_at_five_percent_year": "6.515631685017757483510908168E-7",
+    "net": "0.5379666444368314982242516489",
+    "unhedged_seconds": "1.4053675",
+    "signal_to_lighter_entry_seconds": "0.4938729",
+    "signal_to_hedge_rejection_seconds": "1.3556525",
+    "closed_at": "1790935319.285376",
+    "settled_at": "1790935319.7540455"
+  },
+  "limitations": "All terminal quantities, native step/minimum, exit fill totals, gross cash, zero fees,5bp reserve and capital reconcile within1e-9USD. No funding boundary crossed; recorded funding complete with0cash. Entry observations occur after400ms in source and receipt clocks. This remains a public paper-model terminal audit, without an independent raw-depth/first-eligible-book audit or private fills. Actual292.42USD entry is within user-authorized larger sizing. The seven-completion review remains negative overall; rescuing a favorable unhedged price move does not establish the paired route."
+}

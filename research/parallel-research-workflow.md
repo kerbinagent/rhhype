@@ -199,9 +199,12 @@ The [budget amendment](../reports/experiment-storage/parler-peer-primary-issuanc
 reclassifies 512 KiB within the existing peer grant for both raw metadata copies;
 the total ceiling is unchanged. A strict cumulative-read correction was reviewed
 before the run; both original and corrected sources remain retained. The peer
-is now checking whether a rigorous gross-return bound can cheaply reject the
-route before compiling a transaction harness. Further collection needs its own
-frozen design.
+has derived a post-submit quote bound for the fixed balanceOf-only sale policy.
+Its [design](../reports/peer-research/20261002-0941/peer-primary-issuance-bound-design-v1.json)
+allows a compiler-free necessary-condition test, conditional on the stated
+runtime/source provenance. A pre-submit quote is insufficient because issuance
+can change the pool's reserve rounding. Offline implementation is authorized
+within the existing grant; economic collection still needs an exact freeze.
 
 ## Polymarket full-NO conversion metadata
 
@@ -210,6 +213,13 @@ price inspection. Its UTC end-day mismatch remains an inconclusive original
 result. A separately frozen offline correction used the same response and the
 New York meeting date; no second query ran. The [metadata readout](../reports/polymarket-no-basket/metadata-readout.txt)
 records five coherent outcome definitions, token identifiers and fee schedules.
-On-chain completeness, conversion fee and current wrapper bindings remain
-unverified. A bounded contract-mapping preflight is the next justified step;
-no quote, execution or profit conclusion follows from metadata availability.
+The first contract preflight stopped on a documented implementation mismatch;
+its failure remains preserved. The observed implementation also appears in
+the official current deployment repository. A separately frozen successor
+passed all55 metadata checks: five registered questions, all ten positions,
+zero conversion fee and required wrapper bindings/permissions at one stable
+block. [Root receipt](../reports/polymarket-no-basket/chain-metadata-v2/root-receipt.json).
+Actual conversion and deployed-source equivalence remain unproven. A fixed
+five-NO book screen is being prepared to test the conditional zero-cost bound
+4 minus the sum of best asks, with all sampled slots retained. No price has
+yet been observed for this study.
