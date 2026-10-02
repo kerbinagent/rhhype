@@ -1,0 +1,59 @@
+{
+  "active_research_headroom_bytes": 3108864,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 251645952,
+  "all_prior_evidence_preserved": true,
+  "bounds": {
+    "body_bytes": 196608,
+    "cpu_seconds": 20,
+    "fallbacks": 0,
+    "ram_bytes": 536870912,
+    "raw_bytes": 262144,
+    "request_seconds": 20,
+    "requests": 13,
+    "retries": 0,
+    "total_supplied_gas": 6000000,
+    "wall_seconds": 180
+  },
+  "categories_bytes": {
+    "controls_reviews": 32768,
+    "margin": 147456,
+    "projection": 16384,
+    "raw_request_header_body_receipt_files": 262144,
+    "source_tests_design_plan": 65536
+  },
+  "headroom_after_pending_escrow_bytes": 1011712,
+  "manifest": [
+    "chain",
+    "parent",
+    "provider_oracle",
+    "oracle_unit",
+    "collateral_source",
+    "source_description",
+    "source_decimals",
+    "source_aggregator",
+    "source_round",
+    "without_prefix_views",
+    "with_prefix_views",
+    "parent_recheck",
+    "event_recheck"
+  ],
+  "new_reserved_bytes": 524288,
+  "overall_reservation_bytes": 2846726400,
+  "owned_paths": [
+    "scripts/aave_state_transition_v1.py",
+    "tests/test_aave_state_transition_v1.py",
+    "reports/aave-state-transition-v1/"
+  ],
+  "pending_mac_expansion_escrow_bytes": 2097152,
+  "previous_global_allocation": {
+    "path": "reports/experiment-storage/aave-root-completed-reservation-closeout-v1.json",
+    "sha256": "cbf67a985fedab5fe0d67c9488ce79d645364589b0349c2dbb784dec69a8a09c"
+  },
+  "question": "Does the sole preceding transaction change the selected borrower health factor and collateral oracle price across the liquidation threshold at the same target timestamp, and does the oracle source chain match the observed event emitter?",
+  "recorded_utc": "2026-10-02T22:42:19.849170+00:00",
+  "schema": "aave-state-transition-allocation-v1",
+  "scope": "Public historical calls at pinned parent plus paired eth_simulateV1 view probes. Original prefix included in one branch. Probe sender is the historical prefix sender with its corresponding nonce, original fee fields, zero value, view methods only. No state/balance overrides, signing or transaction submission; no claim of account control.",
+  "selection": "Same first chronological census event, after observed positive/omission replays. Post-hoc mechanism attribution, no alternate borrower, event, window, price optimization or winner search.",
+  "status": "funded_single_frozen_run"
+}

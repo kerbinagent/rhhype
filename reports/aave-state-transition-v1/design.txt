@@ -1,0 +1,86 @@
+Historical paired state views around the selected prefix transaction
+
+The first chronological liquidation in the fixed census reproduces after its
+original preceding transaction and reverts without it at identical target
+block context. This experiment asks whether the preceding transaction changes
+the borrower's health and collateral oracle price across necessary liquidation
+eligibility, and whether the feed chain identifies the observed update emitter.
+This is post-hoc mechanism attribution for the same event, not a new untouched
+economic sample, alternative target search or profit optimization.
+
+Fixed13RPC maximum against publicnode, no retries/fallbacks/reruns:
+1 chainId must be1.
+2 Parent header must match retained canonical header/context.
+3 AddressesProvider.getPriceOracle() at parent hash (requireCanonical).
+4 Oracle.BASE_CURRENCY_UNIT() at parent hash.
+5 Oracle.getSourceOfAsset(selected collateral) at parent hash.
+6 source.description() at parent hash, optional availability.
+7 source.decimals() at parent hash, optional availability, uint8 ABI.
+8 source.aggregator() at parent hash, optional availability.
+9 source.latestRoundData() at parent hash, optional availability, V3 ABI.
+10 eth_simulateV1 of health then oracle-price views at target block context.
+11 eth_simulateV1 of original prefix, health then oracle-price views there.
+12 Parent header recheck.
+13 Target header and original transaction-prefix recheck.
+
+Metadata descriptions/interfaces are provider assertions. Optional RPC errors,
+nulls and noncanonical return values remain unavailable, not zeroes; no extra
+fallback/interface discovery. Required oracle/source/unit failure stops.
+Source or source.aggregator equality with the retained AnswerUpdated emitter
+is a parent-state wiring snapshot, explicitly named parent_* in the projection.
+The seven metadata calls specify the same historical prefix sender as the
+paired probes. Lack of equality does not disprove an indirect feed
+connection; no recursive address chase or bytecode/source identity claim.
+No post-prefix provider/source/aggregator lookup is made. The price probe uses
+the parent oracle address; post-prefix wiring is unverified. Co-movement of
+health and this price does not prove this selected price alone caused the
+crossing: other reserve prices or state could also change. Both assertions
+remain explicitly false in the projection.
+
+The paired simulations retain the original parent block number, target
+number/time/gasLimit/feeRecipient/prevRandao/baseFee and validation=true,
+traceTransfers=true, returnFullTransactions=false. In the with-prefix branch,
+the original prefix's fields are unchanged and its receipt must match gas,
+status and every log before the new views are admitted. The liquidation itself
+does not run in either probe branch.
+
+Use the historical prefix transaction sender for declared view probes, with
+the corresponding original nonce (without prefix) or original nonce+1 (with
+prefix), then increment for the next view. Preserve original type2 fee fields
+and chain ID; set zero value, empty access list, Pool.getUserAccountData(borrower)
+gas1000000, Oracle.getAssetPrice(collateral) gas300000. Both must succeed with
+canonical return values and no logs. These are artificial diagnostic calls
+from a historical sender, not control of that account. Validation checks the
+actual historical funding; no balance/state override, fabricated funding,
+signature or transaction submission. Hypothetical probe fees and sender nonce
+changes are not real costs. Any probe failure makes the study unavailable.
+
+Compare both health outputs, eligibility predicates, price outputs and
+debt/threshold equality. A crossing of debt-positive/HF<1 is necessary
+eligibility only, not proof of every liquidation condition, precise internal
+executor error, obtainable ordering or operator profit. No economics/closed
+cash is inferred. Previously retained successful liquidation/omission controls
+remain distinct evidence. No original source or result is changed.
+
+Reserve512KiB:256KiB raw,64KiB source/tests/design/plan (including capture.py),
+32KiB controls/reviews,16KiB projection,144KiB margin. All from existing free
+headroom; pending Mac expansion escrow is untouched.13requests,192KiB total
+response bodies, per-slot caps in frozen source, one retained overrun sentinel,
+8192B request cap,2048B each header/receipt. Reserve the entire maximum next
+response+sentinel+request+header+receipt before dispatch. Use52 fixed raw files
+(request/header/body/receipt for each slot), stream and fsync body chunks.
+Successful output requires exact replay, every body hash, complete manifest,
+and pre/post source/input pins. Transport failures retain their prefix and
+cannot be converted into a negative eligibility observation.
+
+20s/request,165s work,180s wall,20CPU seconds,512MiB address space. Aggregate
+supplied gas including seven300000-gas metadata calls and both probe branches
+must stay≤6000000. Default dry, exact frozen plan hash and runtime required,
+exclusive output claim. Prior helpers are imported through immutable hashes;
+new reusable capture.py is pinned separately and does not change those helpers.
+
+Primary references reviewed2026-10-02:
+https://aave.com/docs/aave-v3/smart-contracts/oracles
+https://aave.com/docs/aave-v3/smart-contracts/pool-addresses-provider
+https://docs.chain.link/data-feeds/api-reference
+https://ethereum.github.io/execution-apis/docs/ethsimulatev1-notes/
