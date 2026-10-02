@@ -109,9 +109,6 @@ and carry studies retain their own analysis boundaries and ownership.
    Public witnesses remain conditional on accepted/live placement and matching
    assumptions. Park this version without an execution branch or tuning.
 
-The corrected news companion and its original outputs are complete; see the
-result below. Capture and analysis hashes have separate roles.
-
 Liquidation events are a possible separate mechanism. The ordinary adapter
 counts and excludes `liquidation_trades`; the raw capture retains the field.
 The two old broad windows contained zero live liquidation rows. The first three
@@ -229,12 +226,11 @@ Root independently reconciled every response with rational arithmetic. No
 positive candidate remains at these recorded quotes. The result is conditional
 on conversion/payoff assumptions, not proof of simultaneous executable depth.
 
-The local Claude session owns continuing HIP-4 research over the coming hours
-under a separate [1 MiB allocation](../reports/experiment-storage/hip4-research-continuation-allocation-v1.json).
-Its new paths are exclusive; the first four files and completed evidence are
-read-only. Checkpoints do not end the task. It may choose hypotheses, write
-designs and test code independently. Root coordinates shared files, commits and
-prospective data gates. The original 512 KiB grant stays reserved.
+The local Claude session continues HIP-4 research under its
+[1 MiB allocation](../reports/experiment-storage/hip4-research-continuation-allocation-v1.json).
+It owns new paths and offline work; completed evidence remains read-only.
+Root coordinates shared files, commits and data gates. The original 512 KiB stays
+reserved, and checkpoints do not end the task.
 
 ## Conversion price screens, 2 October 12:02 UTC
 
@@ -270,13 +266,14 @@ The correction changed which policies were positive, despite the same count.
 Several winners overlap the release move; alternative ledgers cannot be added.
 
 Core NEAR depth-follow's three closes returned +0.7371 USDC net and +0.5889
-stressed. Select it with its unchanged depth-fade comparator for an untouched
-test; keep all 100 policies visible without substituting winners. Ordinary
-future windows test broader applicability, not independent news replication.
-One event and conditional public-book fills do not meet the research objective.
+stressed. The [frozen successor](../reports/experiment-storage/news-candidate-rolling-v1.json)
+keeps it and the unchanged fade comparator, plus all 100 descriptive policies.
+It selects the first reserved chunk launched at or after 15:00 UTC, retaining failure
+without replacement. A [pre-cutoff host startup repair](../reports/experiment-storage/news-candidate-host-startup-recovery-v1.json)
+preserves the failed sandbox launch. One ordinary block tests applicability;
+it does not establish news replication or repeatable profit.
 
-The remote peer owns continuing source/design work on Compound's already
-absorbed collateral and Clipper auction-reset rewards. No live availability
-or price has been observed. A [storage reconciliation](../reports/experiment-storage/parler-peer-contractual-closures-and-cache-reconciliation-v1.json)
-counts all reported bytecode, preserves prior grants and funds a bounded new
-source package. Each prospective data stage still requires an exact freeze.
+The [Comet identity pass](../reports/comet-identity-v1/root-reconciliation.json)
+reconciled six fixed reads at block 26105238 after freeze 63a09a7. The remote peer
+now studies source/artifact equivalence and dependencies. The reviewed Clipper
+census stays offline. No economic eligibility, prices or profit were observed.
