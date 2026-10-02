@@ -6780,3 +6780,18 @@ Paperfresh20:51busy70.89%CPU/51.39mslag,20:56ok62.03%/35.69ms,21:00ok59.59%/38.1
 HIP4terminaloperationaltransition observed20:51:11,statusinconclusive/ended20:50:01.292187UTC,frozenplan982619f2837589e06146e9608fbf859db4fa3661d3f31fd1e7c1a66d36ee74c9 matches. Rootnotified; routine onlystate/end/planfields,no actualbundle/projection/outcomes read. Root/pairingowner controls post-close admission and classification. ExpiryOct3timerunchanged.
 
 Carry21:05:00.139661UTC:534sampled,two invalid(71,389),328future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–231:2,980completions=2,933exact losses,one estimated loss,seven audited paired gains,39audited rescue gains. Archive4,053,382/5,242,880B;82future pairs at5,342B project4,491,426B,margin751,454B. Next **21:26:33 UTC**.
+
+
+### Review 232 — 2026-10-02 21:26:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Explicit UTC wall-clock pre-read guard passed. Exact report and independently timed snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap and growth guards.
+
+`review-20261002T212633Z.json.gz` raw 18,640 B SHA-256 `f14d2427c2045b03e04988cb67e3c7e996f79a2b54824bc4f0fad0e198704171`; gzip 2,702 B SHA-256 `bc5732ee60e321302adf3a6d9c887310cb0eaa599082a76606f4f23e2232e45f`.
+
+`current-epoch-at-review232.json.gz` raw 9,283 B SHA-256 `bab75e18c94bffd4bad762ffbfda7e400e0a5a6331fe42017ea3b9fc856032b6`; gzip 1,734 B SHA-256 `45926cf2c7e53223ce1a5b41ede8a4fd8f0dd841af487d13d86597be8a954783`.
+
+Snapshot read 2026-10-02T21:27:17.996224Z, updated epoch seconds 1790976437.4377768; counts not pooled. Two exact losses:conservative−$0.9301380661741678 and convergence−$1.2132798801526405;one HL price_limit reject;no gains, estimates or aborts. Conservativefees$1.69035894825/other$0.4993974000000003/capital$0.000036717924233922164;convergencefees0/other$0.4941829150000103/capital$0.0000019651527268880337.
+
+Paperfresh/ok21:11CPU52.66%/37.84mslag,21:16CPU66.39%/35.17ms,21:21CPU57.62%/35.68ms; reviewfresh/ok61.75%/36.40ms,RSS309.86MiB,122pairs. Rolling111healthy123.15s/3,523,136compressed B/25,117records,two connections/no errors/economics false; chunks1,926,777,421B/controls65,500B under separate2GB. Frozenpressure lifecycle/pins unchanged,recovery gap retained,no routine mutation/rawdecode. HIP4terminalmetadata previouslyflagged, actualresearchdata/replayroot/peerowned,no routineeconomics. ExpiryOct3timerscope unchanged.
+
+Carry21:25:00.136620UTC:538sampled,two invalid(71,389),324future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–232:2,982completions=2,935exact losses,one estimated loss,seven audited paired gains,39audited rescue gains. Archive4,057,818/5,242,880B;81future pairs at5,342B project4,490,520B,margin752,360B. Next **21:46:33 UTC**.
