@@ -102,6 +102,12 @@ and carry studies retain their own analysis boundaries and ownership.
    policies meets the three-chunk forecast, support and cash gate. Park this
    version. A publication-only successor increased the file allowance and
    reused the first table exactly; scientific rules stayed frozen.
+6. **Passive PERP strict-through:** the [fixed screen](../reports/single-venue-research/passive-through-v1/readout.txt)
+   evaluated all 120 market/side/size alternatives. None passed the initial
+   three-block gate; later blocks stayed unopened. The 610 full-witness profiles
+   include 557 complete conditional values and 53 retained unknown closes.
+   Public witnesses remain conditional on accepted/live placement and matching
+   assumptions. Park this version without an execution branch or tuning.
 
 The [corrected news companion](../reports/experiment-storage/single-venue-news-ordinary-feed-fix-v1.json)
 is separately frozen and armed for the original October 2 capture. It applies
@@ -174,3 +180,22 @@ The [immutable input export](../data/evidence/rolling-exploratory-000001-000003-
 contains only chunks 1–3, 45 verified members, 55,818,240 tar bytes through Git LFS.
 Its [64 MiB reservation](../reports/experiment-storage/rolling-exploratory-peer-export-v1.json)
 comes from existing headroom. Rolling and reserved data retain their rules.
+
+## Peer primary-issuance compatibility proposal
+
+The peer's next [proposal](../reports/peer-research/20261002-0743/peer-primary-issuance-v1-proposal.json)
+examines native ETH issuance through Lido followed by a sale on one fixed Curve
+pool. An executable premium must cover the complete transaction, gas, residual
+share disposal and capital; no premium or profit has been observed.
+
+A capability and contract-metadata check is being implemented and reviewed.
+Its fixed first stage tests synthetic success/revert gas evidence before any
+Lido/Curve metadata. The proposed single run has at most 20 sequential requests,
+180 seconds and no endpoint fallback or retry. It excludes market quotes,
+balances, share ratios and economic collection. A positive compatibility result
+would not establish route correctness or obtainable inclusion.
+
+The [budget amendment](../reports/experiment-storage/parler-peer-primary-issuance-v1.json)
+reclassifies 512 KiB within the existing peer grant for both raw metadata copies;
+the total ceiling is unchanged. Exact source/protocol review and freeze remain
+required before that probe. The later economic design remains separate.

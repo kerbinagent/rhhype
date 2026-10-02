@@ -1,0 +1,39 @@
+{
+  "schema": "bounded-passive-through-run-v1",
+  "started_utc": "2026-10-02T07:42:45.537778+00:00",
+  "command": [
+    "/home/harry/projects/research/rhhype/.venv/bin/python",
+    "scripts/single_venue_passive_through.py",
+    "run"
+  ],
+  "cwd": "/home/harry/projects/research/rhhype",
+  "hard_timeout_seconds": 1800,
+  "nice": 19,
+  "frozen_commit": "58a4f6a",
+  "plan_sha256": "f773daf99f71df97494ca3b377fa17c57a542f58f9d437390cea7c87c5e18c62",
+  "supervisor_sha256": "71c66972d3798253ad593f823eabca37e8f3e3a35d4bb503eb427283a90273c6",
+  "supervisor_bytes": 3192,
+  "supervisor_pid": 4021233,
+  "state": "finished",
+  "maximum_receipt_bytes": 8192,
+  "internal_plus_external_control_cap": 16384,
+  "raw_capture": "none",
+  "inputs": "existing sealed exploratory captures only",
+  "child_pid": 4021234,
+  "ended_utc": "2026-10-02T07:47:21.637289+00:00",
+  "elapsed_seconds": 276.0991706450004,
+  "returncode": 0,
+  "timed_out": false,
+  "output_bytes_seen": {
+    "stdout": 0,
+    "stderr": 0
+  },
+  "output_truncated": {
+    "stdout": false,
+    "stderr": false
+  },
+  "output": {
+    "stdout": "",
+    "stderr": ""
+  }
+}

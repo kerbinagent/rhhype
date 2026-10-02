@@ -1,0 +1,251 @@
+{
+  "schema": "passive-through-root-receipt-v1",
+  "checked_utc": "2026-10-02T07:52:49.709307+00:00",
+  "plan_sha256": "f773daf99f71df97494ca3b377fa17c57a542f58f9d437390cea7c87c5e18c62",
+  "run_receipt_sha256": "4fd314e8ae8a8536b0de4385a1b7f7ad244afd5722e1447f250c44698c379bd4",
+  "all_assertions_passed": true,
+  "assertions": {
+    "producer_output_hash": 7,
+    "terminal_run_success": 1,
+    "frozen_plan_identity": 1,
+    "bounded_decompression": 5,
+    "first_summary_hash": 1,
+    "barrier_hash": 1,
+    "closed_second_stage": 1,
+    "no_second_stage_outputs": 1,
+    "saved_first_summary_unchanged": 1,
+    "fixed_decision": 1,
+    "table_identity": 3,
+    "unique_calendar_identity": 1680,
+    "calendar_clock": 1680,
+    "fixed_action_clocks": 1680,
+    "native_currency": 1680,
+    "unknown_max_qty_flag": 10080,
+    "unknown_max_quote_flag": 10080,
+    "unwitnessed_cash_unknown": 9470,
+    "full_single_print_quantity": 610,
+    "strict_native_through_direction": 610,
+    "native_witness_and_order_grids": 610,
+    "native_entry_value_and_minima": 610,
+    "native_entry_known_maxima": 610,
+    "decision_book_clocks": 610,
+    "placement_proxy_clocks": 610,
+    "witness_clocks": 610,
+    "witness_generation": 610,
+    "funding_boundary_excluded_from_witnesses": 610,
+    "fixed_exit_clocks": 557,
+    "exit_generation": 557,
+    "native_exit_notional_bounds": 557,
+    "captured_fee_rates": 557,
+    "closed_native_cash_arithmetic": 557,
+    "net_basis_points": 557,
+    "extra_cost_stress_arithmetic": 1671,
+    "failed_witness_cash_unknown": 53,
+    "complete_chunk_calendar": 3,
+    "summary_status_denominator": 360,
+    "saved_chunk_gate": 360,
+    "saved_arm_gate": 120,
+    "all_prespecified_arms": 1,
+    "total_control_cap": 1,
+    "total_summary_cap": 1,
+    "table_disk_cap": 3,
+    "sealed_input_identities_after_run": 1
+  },
+  "assertion_total": 48389,
+  "math_counts": {
+    "profiles": 10080,
+    "full_witness_profiles": 610,
+    "complete_conditional_values": 557,
+    "nonpositive_complete_values": 390,
+    "positive_complete_values": 167,
+    "full_witness_close_failures": 53,
+    "unique_full_witness_prints": 489
+  },
+  "chunk_counts": [
+    {
+      "chunk": "chunk-000001",
+      "profiles": 3360,
+      "full_witness_profiles": 169,
+      "complete_conditional_values": 146,
+      "nonpositive_complete_values": 98,
+      "positive_complete_values": 48,
+      "full_witness_close_failures": 23,
+      "unique_full_witness_prints": 137,
+      "statuses": {
+        "placement_crossed_proxy_unknown": 108,
+        "no_full_witness_unknown": 435,
+        "complete_conditional_value": 146,
+        "smaller_through_only_unknown": 305,
+        "decision_book_stale": 1068,
+        "book_path_interbook_gap": 1292,
+        "placement_first_eligible_missing": 6
+      }
+    },
+    {
+      "chunk": "chunk-000002",
+      "profiles": 3360,
+      "full_witness_profiles": 178,
+      "full_witness_close_failures": 17,
+      "complete_conditional_values": 161,
+      "nonpositive_complete_values": 114,
+      "positive_complete_values": 47,
+      "unique_full_witness_prints": 146,
+      "statuses": {
+        "decision_book_stale": 552,
+        "book_path_interbook_gap": 1367,
+        "no_full_witness_unknown": 780,
+        "smaller_through_only_unknown": 338,
+        "complete_conditional_value": 161,
+        "placement_crossed_proxy_unknown": 162
+      }
+    },
+    {
+      "chunk": "chunk-000003",
+      "profiles": 3360,
+      "full_witness_profiles": 263,
+      "complete_conditional_values": 250,
+      "nonpositive_complete_values": 178,
+      "full_witness_close_failures": 13,
+      "positive_complete_values": 72,
+      "unique_full_witness_prints": 206,
+      "statuses": {
+        "placement_crossed_proxy_unknown": 165,
+        "smaller_through_only_unknown": 441,
+        "complete_conditional_value": 250,
+        "no_full_witness_unknown": 945,
+        "decision_book_stale": 648,
+        "book_path_interbook_gap": 791,
+        "funding_boundary_excluded": 120
+      }
+    }
+  ],
+  "unique_full_witness_prints": 489,
+  "decoded_bytes": {
+    "summary.json.gz": 292836,
+    "first-stage-summary.json.gz": 292596,
+    "chunk-000001.json.gz": 1646175,
+    "chunk-000002.json.gz": 1701840,
+    "chunk-000003.json.gz": 1771255
+  },
+  "producer_files": {
+    "provenance.json": {
+      "bytes": 11689,
+      "sha256": "bad26669bca3b8ca5056f1f370e946197729dbc1948819716ff55114fcb0a2cb"
+    },
+    "started.json": {
+      "bytes": 170,
+      "sha256": "01e93b9e40c251b4b5ecb19429c08b6d035e8ef5314444e9bf3c93c622969747"
+    },
+    "first-stage-sha.json": {
+      "bytes": 205,
+      "sha256": "093678a451bc9d3019f1db5dbacad0134609a4d6fbe9e13c78df68f1bd5fe819"
+    },
+    "chunk-000002.json.gz": {
+      "bytes": 92505,
+      "sha256": "48fdb6533a85903ba293a8f9ab410b4f1bf1ad47add608cf77d07c4f52a19696"
+    },
+    "chunk-000003.json.gz": {
+      "bytes": 99432,
+      "sha256": "b25adb4c9fd23325fdd17ad4cab0c911e515fffbe225ce23b6942e716142a34a"
+    },
+    "chunk-000001.json.gz": {
+      "bytes": 83789,
+      "sha256": "d80abf7d0db25c33b019be0383f907d4dde6c98beab122048c71c06147b7ba7c"
+    },
+    "terminal.json": {
+      "bytes": 334,
+      "sha256": "0cf38e82c89d2b4e96697026fd5de385844ba8a68cbebfbc1c2206736ab72db3"
+    },
+    "summary.json.gz": {
+      "bytes": 16009,
+      "sha256": "b6bcb0a6c31569bfa174f38b4571ddd753179211d870deb7ee8387787952d068"
+    },
+    "first-stage-summary.json.gz": {
+      "bytes": 15880,
+      "sha256": "48e2454f57fc9304937203b91bb49bc3ba3890d8a08c658dd742e004065f2e9e"
+    }
+  },
+  "control_bytes": 1835,
+  "captured_maker_taker_fee_rates_for_completed_cells": {
+    "BTC/rh_lighter": [
+      "0",
+      "0"
+    ],
+    "SOL/lighter": [
+      "0",
+      "0"
+    ],
+    "ZEC/lighter": [
+      "0",
+      "0"
+    ],
+    "ZEC/rh_lighter": [
+      "0",
+      "0"
+    ],
+    "BTC/lighter": [
+      "0",
+      "0"
+    ],
+    "ETH/lighter": [
+      "0",
+      "0"
+    ],
+    "ETH/rh_lighter": [
+      "0",
+      "0"
+    ],
+    "HYPE/lighter": [
+      "0",
+      "0"
+    ],
+    "VVV/lighter": [
+      "0",
+      "0"
+    ],
+    "NEAR/lighter": [
+      "0",
+      "0"
+    ],
+    "NEAR/rh_lighter": [
+      "0",
+      "0"
+    ],
+    "SOL/rh_lighter": [
+      "0",
+      "0"
+    ],
+    "LIT/lighter": [
+      "0",
+      "0"
+    ],
+    "HYPE/rh_lighter": [
+      "0",
+      "0"
+    ],
+    "XRP/lighter": [
+      "0",
+      "0"
+    ],
+    "LIT/rh_lighter": [
+      "0",
+      "0"
+    ]
+  },
+  "decision": "park_fixed_screen",
+  "second_stage_opened": false,
+  "limitations": "Saved-profile arithmetic, grids, identities and clocks independently checked; no raw replay or source scientific changes. Actual full-depth sweep and path reconstruction rely on the frozen source, reviewed helpers and targeted synthetics. Public accepted/live order and RH matching remain assumptions; all-calendar cash unknown. Counts across sizes/cells are dependent alternatives, not independent trades.",
+  "independent_saved_output_review": {
+    "reviewer": "independent Sol",
+    "verdict": "passed",
+    "scope": "Saved outputs only; no raw replay. Reconciled all120 arms/28-anchor calendars,610 arm-level generation/trade-ID pairs,53 retained unknown-cash close failures,7 producer output hashes, first/final summary equality and stage barrier.",
+    "chunk_gate_counts": [
+      0,
+      3,
+      2
+    ],
+    "first_stage_intersection": 0,
+    "close_failure_status": "book_path_interbook_gap"
+  },
+  "publication_cap_check": "Saved assertions exclude one additional successful combined provenance-cap check."
+}

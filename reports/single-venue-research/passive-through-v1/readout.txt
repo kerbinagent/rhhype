@@ -1,0 +1,164 @@
+FIXED PASSIVE-PERP STRICT-THROUGH SCREEN — EXPLORATORY
+
+Decision: park this fixed screen. No alternative among 120 passed all three initial blocks.
+Chunk-level gate passes: 0, 3, 2. Chunks 7–9 were not decoded by this run because the frozen first-stage gate failed.
+This does not reject all passive policies. It supplies no actual fill record or all-calendar strategy profit.
+
+Method: 10 assets x 2 venues x 2 sides x 3 native target sizes (100/1000/10000). Each alternative has 28 original decision-clock anchors per chunk.
+Entry uses the original native BBO limit, with a 400 ms modeled eligibility floor and a subsequent public placement-state proxy.
+One unique ordinary print strictly through that limit must itself cover the entire quantity. No print summation, queue-position estimate or cancellation credit.
+Flatten request is fixed at decision+10s; delayed full-quantity close uses the first eligible native book, with failures final.
+Cash uses captured per-market maker/taker fees and 5% annual opportunity cost on the full native target from modeled eligibility to close.
+Captured fee rates are zero for every cell with a completed valuation; this is metadata evidence, not private account execution verification.
+Extra 1/2/5 bp scenarios are retained per profile and independently checked; they are not measured fees.
+
+Data and interpretation:
+All three initial ten-minute captures were already inspected for other hypotheses; these results are exploratory and adjacent chunks are dependent.
+There are 10,080 alternative profiles, 610 full-witness profiles and 557 complete conditional values. 53 full witnesses retain failed closes and unknown cash.
+The 610 witness profiles reference 489 unique chunk/market/venue/generation/trade identities; sizes share evidence. These are not independent trades.
+Of 557 complete conditional values, 167 are positive and 390 nonpositive. These signs do not estimate whole-policy profit or fill probability.
+Nonwitnessed quantities/cash, earlier same-price fills, partial fills, post-only acceptance, cancellation and expiry remain unresolved.
+Core price priority is documented; RH price priority/maker-price execution is an explicit unverified venue-model assumption.
+Unchanged executable aggressor flow and accepted/live status are hypothetical. No order was placed and exact fill time is unknown.
+A full witness followed by a failed close cannot disappear from the denominator. All 53 such failures are interbook-gap failures.
+Native USDC(Core) and USDG(RH) and all size/side alternatives stay separate. No cash is summed into a portfolio.
+
+Block coverage (profile counts include dependent alternatives):
+chunk-000001: scheduled3360; full169; complete146; failedclose23; >=3-witness arms21; also all closes10; positive gates0.
+  Status counts: {"book_path_interbook_gap":1292,"complete_conditional_value":146,"decision_book_stale":1068,"no_full_witness_unknown":435,"placement_crossed_proxy_unknown":108,"placement_first_eligible_missing":6,"smaller_through_only_unknown":305}
+chunk-000002: scheduled3360; full178; complete161; failedclose17; >=3-witness arms23; also all closes17; positive gates3.
+  Status counts: {"book_path_interbook_gap":1367,"complete_conditional_value":161,"decision_book_stale":552,"no_full_witness_unknown":780,"placement_crossed_proxy_unknown":162,"smaller_through_only_unknown":338}
+chunk-000003: scheduled3360; full263; complete250; failedclose13; >=3-witness arms34; also all closes28; positive gates2.
+  Status counts: {"book_path_interbook_gap":791,"complete_conditional_value":250,"decision_book_stale":648,"funding_boundary_excluded":120,"no_full_witness_unknown":945,"placement_crossed_proxy_unknown":165,"smaller_through_only_unknown":441}
+
+All 120 alternatives follow in frozen order. Each block entry is full-witness count / failed-close count / mean completed conditional native cash / gate.
+NA means no complete valuation. Means are rounded to 6 decimals here; exact decimals and all statuses remain in the bounded JSON tables/summaries.
+Passing requires >= 3 witnessed anchors, every full witness closed, and strictly positive mean in EACH initial block.
+Asset venue native-target side collateral | chunk1 | chunk2 | chunk3
+BTC lighter 100 BUY USDC | 16/3/-0.003422/FAIL | 12/0/-0.005709/FAIL | 9/0/-0.004956/FAIL
+BTC lighter 100 SELL USDC | 16/0/-0.002590/FAIL | 10/0/+0.004453/PASS | 16/0/-0.011964/FAIL
+BTC lighter 1000 BUY USDC | 9/2/+0.009286/FAIL | 8/0/-0.105261/FAIL | 9/0/-0.053908/FAIL
+BTC lighter 1000 SELL USDC | 6/0/-0.079086/FAIL | 6/0/-0.032578/FAIL | 12/0/-0.147353/FAIL
+BTC lighter 10000 BUY USDC | 1/1/NA/FAIL | 1/0/-0.687275/FAIL | 3/0/-1.913615/FAIL
+BTC lighter 10000 SELL USDC | 2/0/-0.082076/FAIL | 3/0/-0.743501/FAIL | 9/0/-1.307350/FAIL
+BTC rh_lighter 100 BUY USDG | 7/1/-0.008146/FAIL | 9/1/-0.017760/FAIL | 12/0/-0.013619/FAIL
+BTC rh_lighter 100 SELL USDG | 8/0/-0.003272/FAIL | 10/2/-0.003873/FAIL | 11/0/-0.013731/FAIL
+BTC rh_lighter 1000 BUY USDG | 0/0/NA/FAIL | 1/0/-0.152369/FAIL | 4/0/-0.318056/FAIL
+BTC rh_lighter 1000 SELL USDG | 2/0/+0.002314/FAIL | 4/2/-0.075726/FAIL | 5/0/-0.415090/FAIL
+BTC rh_lighter 10000 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+BTC rh_lighter 10000 SELL USDG | 1/0/+1.161187/FAIL | 0/0/NA/FAIL | 3/0/-5.419770/FAIL
+ETH lighter 100 BUY USDC | 12/0/-0.003946/FAIL | 13/0/-0.011547/FAIL | 10/0/-0.022070/FAIL
+ETH lighter 100 SELL USDC | 13/0/-0.006631/FAIL | 9/0/-0.009180/FAIL | 13/0/-0.004533/FAIL
+ETH lighter 1000 BUY USDC | 10/0/-0.042158/FAIL | 9/0/-0.163885/FAIL | 7/0/-0.344670/FAIL
+ETH lighter 1000 SELL USDC | 7/0/-0.071986/FAIL | 7/0/-0.179539/FAIL | 8/0/+0.018692/PASS
+ETH lighter 10000 BUY USDC | 1/0/-0.873596/FAIL | 2/0/-2.221221/FAIL | 0/0/NA/FAIL
+ETH lighter 10000 SELL USDC | 0/0/NA/FAIL | 1/0/-5.360451/FAIL | 1/0/+2.652149/FAIL
+ETH rh_lighter 100 BUY USDG | 4/0/-0.009757/FAIL | 13/0/-0.009294/FAIL | 6/0/-0.048992/FAIL
+ETH rh_lighter 100 SELL USDG | 5/1/+0.005926/FAIL | 4/0/-0.017816/FAIL | 10/0/-0.007619/FAIL
+ETH rh_lighter 1000 BUY USDG | 2/0/-0.193636/FAIL | 5/0/-0.116126/FAIL | 3/0/-0.617513/FAIL
+ETH rh_lighter 1000 SELL USDG | 3/1/-0.075694/FAIL | 1/0/-0.513961/FAIL | 5/0/-0.130892/FAIL
+ETH rh_lighter 10000 BUY USDG | 0/0/NA/FAIL | 1/0/-0.372238/FAIL | 2/0/-6.661414/FAIL
+ETH rh_lighter 10000 SELL USDG | 1/0/-2.344376/FAIL | 0/0/NA/FAIL | 1/0/-1.449710/FAIL
+SOL lighter 100 BUY USDC | 3/1/-0.026881/FAIL | 4/0/-0.019634/FAIL | 6/0/-0.045366/FAIL
+SOL lighter 100 SELL USDC | 7/1/-0.004551/FAIL | 4/2/-0.025957/FAIL | 11/1/-0.018780/FAIL
+SOL lighter 1000 BUY USDC | 1/0/-0.513314/FAIL | 0/0/NA/FAIL | 3/0/-0.294229/FAIL
+SOL lighter 1000 SELL USDC | 1/1/NA/FAIL | 3/1/-0.262274/FAIL | 4/0/-0.072695/FAIL
+SOL lighter 10000 BUY USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+SOL lighter 10000 SELL USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+SOL rh_lighter 100 BUY USDG | 0/0/NA/FAIL | 2/0/-0.037454/FAIL | 3/0/-0.054198/FAIL
+SOL rh_lighter 100 SELL USDG | 0/0/NA/FAIL | 2/1/+0.012041/FAIL | 2/0/-0.035650/FAIL
+SOL rh_lighter 1000 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+SOL rh_lighter 1000 SELL USDG | 0/0/NA/FAIL | 1/1/NA/FAIL | 1/0/-0.469454/FAIL
+SOL rh_lighter 10000 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+SOL rh_lighter 10000 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+HYPE lighter 100 BUY USDC | 4/0/-0.022710/FAIL | 2/1/+0.001230/FAIL | 4/0/-0.022454/FAIL
+HYPE lighter 100 SELL USDC | 4/1/-0.006012/FAIL | 3/0/+0.013304/PASS | 8/3/-0.012789/FAIL
+HYPE lighter 1000 BUY USDC | 1/0/+0.068487/FAIL | 0/0/NA/FAIL | 1/0/-0.005586/FAIL
+HYPE lighter 1000 SELL USDC | 0/0/NA/FAIL | 1/0/-0.030229/FAIL | 6/2/-0.105509/FAIL
+HYPE lighter 10000 BUY USDC | 1/0/+0.527965/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+HYPE lighter 10000 SELL USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+HYPE rh_lighter 100 BUY USDG | 1/1/NA/FAIL | 1/0/-0.044722/FAIL | 0/0/NA/FAIL
+HYPE rh_lighter 100 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 1/0/-0.080666/FAIL
+HYPE rh_lighter 1000 BUY USDG | 0/0/NA/FAIL | 1/0/-0.447576/FAIL | 0/0/NA/FAIL
+HYPE rh_lighter 1000 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 1/0/-0.832780/FAIL
+HYPE rh_lighter 10000 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+HYPE rh_lighter 10000 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+XRP lighter 100 BUY USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 3/0/+0.023680/PASS
+XRP lighter 100 SELL USDC | 1/1/NA/FAIL | 1/1/NA/FAIL | 3/1/-0.021849/FAIL
+XRP lighter 1000 BUY USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 1/0/+0.332900/FAIL
+XRP lighter 1000 SELL USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 1/1/NA/FAIL
+XRP lighter 10000 BUY USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+XRP lighter 10000 SELL USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+XRP rh_lighter 100 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+XRP rh_lighter 100 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+XRP rh_lighter 1000 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+XRP rh_lighter 1000 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+XRP rh_lighter 10000 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+XRP rh_lighter 10000 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+SUI lighter 100 BUY USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+SUI lighter 100 SELL USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 1/1/NA/FAIL
+SUI lighter 1000 BUY USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+SUI lighter 1000 SELL USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+SUI lighter 10000 BUY USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+SUI lighter 10000 SELL USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+SUI rh_lighter 100 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+SUI rh_lighter 100 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+SUI rh_lighter 1000 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+SUI rh_lighter 1000 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+SUI rh_lighter 10000 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+SUI rh_lighter 10000 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+NEAR lighter 100 BUY USDC | 0/0/NA/FAIL | 3/0/-0.034029/FAIL | 2/0/+0.000207/FAIL
+NEAR lighter 100 SELL USDC | 1/1/NA/FAIL | 2/0/-0.068557/FAIL | 5/0/-0.104842/FAIL
+NEAR lighter 1000 BUY USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 1/0/+0.229837/FAIL
+NEAR lighter 1000 SELL USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 2/0/-1.237238/FAIL
+NEAR lighter 10000 BUY USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+NEAR lighter 10000 SELL USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+NEAR rh_lighter 100 BUY USDG | 0/0/NA/FAIL | 3/1/-0.012008/FAIL | 1/0/-0.033492/FAIL
+NEAR rh_lighter 100 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 3/2/-0.078802/FAIL
+NEAR rh_lighter 1000 BUY USDG | 0/0/NA/FAIL | 1/1/NA/FAIL | 1/0/-0.334916/FAIL
+NEAR rh_lighter 1000 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+NEAR rh_lighter 10000 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+NEAR rh_lighter 10000 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+ZEC lighter 100 BUY USDC | 4/0/-0.054487/FAIL | 4/0/-0.047149/FAIL | 1/0/-0.159507/FAIL
+ZEC lighter 100 SELL USDC | 1/0/+0.009766/FAIL | 4/0/+0.005511/PASS | 9/0/-0.024942/FAIL
+ZEC lighter 1000 BUY USDC | 1/0/-0.559471/FAIL | 1/0/-0.988656/FAIL | 0/0/NA/FAIL
+ZEC lighter 1000 SELL USDC | 0/0/NA/FAIL | 1/0/+0.305276/FAIL | 6/0/-0.298158/FAIL
+ZEC lighter 10000 BUY USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+ZEC lighter 10000 SELL USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+ZEC rh_lighter 100 BUY USDG | 4/2/-0.026529/FAIL | 0/0/NA/FAIL | 1/0/-0.174197/FAIL
+ZEC rh_lighter 100 SELL USDG | 0/0/NA/FAIL | 1/1/NA/FAIL | 0/0/NA/FAIL
+ZEC rh_lighter 1000 BUY USDG | 3/1/-0.286371/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+ZEC rh_lighter 1000 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+ZEC rh_lighter 10000 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+ZEC rh_lighter 10000 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+VVV lighter 100 BUY USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+VVV lighter 100 SELL USDC | 2/1/-0.022877/FAIL | 1/1/NA/FAIL | 1/0/-0.184886/FAIL
+VVV lighter 1000 BUY USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+VVV lighter 1000 SELL USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 1/0/-1.852335/FAIL
+VVV lighter 10000 BUY USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+VVV lighter 10000 SELL USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+VVV rh_lighter 100 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+VVV rh_lighter 100 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+VVV rh_lighter 1000 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+VVV rh_lighter 1000 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+VVV rh_lighter 10000 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+VVV rh_lighter 10000 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+LIT lighter 100 BUY USDC | 0/0/NA/FAIL | 1/0/-0.096239/FAIL | 2/0/+0.053089/FAIL
+LIT lighter 100 SELL USDC | 3/3/NA/FAIL | 1/0/-0.059917/FAIL | 6/1/-0.028894/FAIL
+LIT lighter 1000 BUY USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+LIT lighter 1000 SELL USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+LIT lighter 10000 BUY USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+LIT lighter 10000 SELL USDC | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+LIT rh_lighter 100 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+LIT rh_lighter 100 SELL USDG | 0/0/NA/FAIL | 1/1/NA/FAIL | 2/1/-0.111157/FAIL
+LIT rh_lighter 1000 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+LIT rh_lighter 1000 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+LIT rh_lighter 10000 BUY USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+LIT rh_lighter 10000 SELL USDG | 0/0/NA/FAIL | 0/0/NA/FAIL | 0/0/NA/FAIL
+
+Validation: 8 targeted synthetic tests passed before freeze; root and independent Sol reviewed source. Root then checked 48,389 saved-output assertions plus publication cap, including all 610 witness bounds and 557 native-cash calculations. Independent Sol reconciled the saved denominators, identities and gates.
+No raw replay or scientific rescue followed the result. Quote sweeps/path reconstruction rely on frozen reviewed source and targeted synthetics; the output audit does not independently reconstruct full books.
+Freeze commit 58a4f6a. PlanSHA256:f773daf99f71df97494ca3b377fa17c57a542f58f9d437390cea7c87c5e18c62
+One nice 19 run:2026-10-02T07:42:45. 537778Z–07:47:21.637289Z;276.099170645s;return0;no timeout/stdout/stderr.
+Files: summary.json.gz (all arms), chunk-00000{1,2,3}.json.gz (all profiles), first-stage-summary.json.gz + first-stage-sha.json (closed barrier), provenance.json and root-receipt.json (checks), ../passive-through-v1-run.json (outer receipt).
+Next decision: no execution branch or tuning follows this fixed screen; continue distinct mechanisms and the already frozen news/carry observations.
