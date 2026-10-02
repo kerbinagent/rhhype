@@ -1,0 +1,39 @@
+{
+  "audit": "passed_terminal_record_arithmetic",
+  "reviewed_utc": "2026-10-02T16:31:19.109566+00:00",
+  "source": {
+    "path": "reports/live-review-catchup/review217-positive-record.json.gz",
+    "bytes": 2005,
+    "sha256": "068a59ec0a9cff124dd1f252bb3189b648177d83edeacdc06a0e000ad5c425c7"
+  },
+  "classification": "CoreONDO long closes after Hyperliquidshort price-limit rejection; failed-hedge rescue.",
+  "record": {
+    "id": "1790958149735179-24945-convergence",
+    "quantity": "1946.0",
+    "entry_value": "990.427896",
+    "exit_value": "990.973176",
+    "gross_cash": "0.545280",
+    "fees": "0",
+    "five_bp_stress": "0.4952139480",
+    "capital_at_five_percent_year": "0.000001884545033179840182648401826",
+    "net": "0.05006416745496682015981735160",
+    "unhedged_seconds": "1.2001078",
+    "entry_latency": [
+      {
+        "key": "lighter:38",
+        "source_seconds": "0.4309473",
+        "receipt_seconds": "0.4956903",
+        "model_delay_seconds": "0.4"
+      },
+      {
+        "key": "hyperliquid:ONDO",
+        "source_seconds": "0.5108203",
+        "receipt_seconds": "1.2023389",
+        "model_delay_seconds": "0.15"
+      }
+    ],
+    "closed_at": 1790958151.4309778,
+    "settled_at": 1790958151.439133
+  },
+  "limitations": "Terminal public paper record; lot/minima, fill totals, flatstate, zero fees/funding,5bpstress and5%annualcapital reconcile within1e-9USD. Model400msCore/150msHL source and receipt delays pass; exitreceipt400mspasses. No independent raw-depth/first-eligible reconstruction or private fills. Larger990.43nativeUSDC modeled entry is in user scope. This+.05006 rescue does not establish a paired gain or repeatability;3completion batch remains\u22124.03018USD."
+}

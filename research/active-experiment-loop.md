@@ -2218,3 +2218,8 @@ Complete coverage;zero completions/gains/estimates/aborts/rejects,cumulativeunch
 ### Routine review 216 — 2026-10-02 16:06:33 UTC
 
 Complete coverage;6exact convergence losses−$2.4576028265157674,5HLprice_limitrejects,no gains/estimates/aborts. Cumulative2,910=2,867exact losses+1estimated loss+7audited paired+35audited rescue. Explicit wall-clock/archive guards passed,hashes in review-loop. Paperfresh/busy93.92%CPU/64.37mslag,rootnotified;rolling79healthy,gap retained. NEARselected76commandfilenames19/no terminal16:05, no outcomes/rawreads. Carry474sampled/2invalid/388future. Archive3,974,749B;97futurepairs project4,492,923B,margin749,957B. Commitwaitsrootindexrelease. Next16:26:33UTC.
+
+
+### Routine review 217 — 2026-10-02 16:26:33 UTC
+
+Complete coverage;3exact convergence completions net−$4.030180368215952=2losses+1rescue passed root audit,3HLprice_limitrejects,no estimates/aborts. Cumulative2,913=2,869exact losses+1estimated loss+7audited paired+36audited rescue. Guards/hashchecks passed. Paperfresh/ok63.33%CPU/42.91mslag;rolling81healthy,gap retained. NEARterminalsuccess16:11:30,rootarchived/pinreleased,no promotedresult; routineoperationalfields only. HIP4live18:22timerrootverifiedwaiting/control-onlyscope,expiryunchanged. Carry478sampled/2invalid/384future. Archive3,982,795B;96futurepairs project4,495,627B,margin747,253B; export/rootaudit3,728B included; ONDOrescue terminalauditpassed+$0.05006416745,no rawdepth/privatefillproof. Next16:46:33UTC.

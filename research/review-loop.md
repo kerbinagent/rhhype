@@ -6541,3 +6541,20 @@ Snapshot read 2026-10-02T16:06:49.309484Z, updated epoch seconds 1790957208.6412
 Paperfresh15:51ok79.13%CPU/46.16mslag,15:55ok72.01%/48.35ms,16:00ok74.57%/46.12ms,16:05busy83.45%/68.38ms; reviewfresh/busy93.92%/64.37ms,RSS297.38MiB,111pairs,rootnotified. Rolling79healthy265.37s/11,545,652compressed B/77,934records,two connections/no errors/economics false; chunks1,791,950,141B/controls51,680B under separate2GB. Recovery gap retained; no routine raw decode/intervention. NEARselected76offlinecommandfilenames progressed8→12→16→19 through16:05,no terminal yet; filenames only read, no outcomes. Root monitor scope/source pins unchanged. Shared index briefly held for root separateHIP4freeze; routine waits to stage.
 
 Carry16:05:00.173729UTC:474sampled,two invalid(71,389),388future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–216:2,910completions=2,867exact losses,one estimated loss,seven audited paired gains,35audited rescue gains. Archive3,974,749/5,242,880B;97future pairs at5,342B project4,492,923B,margin749,957B. Next **16:26:33 UTC**.
+
+
+### Review 217 — 2026-10-02 16:26:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Explicit UTC wall-clock pre-read guard passed. Exact report and independently timed snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap and growth guards.
+
+`review-20261002T162633Z.json.gz` raw 18,480 B SHA-256 `1fcc367db4a104719baff23da267f9f0c392428185923f9e6b9026477eef76e9`; gzip 2,579 B SHA-256 `53eabaf7fb26e60ce65a1740e7bc15a894c10ba2805a144718687a9cd32fc79b`.
+
+`current-epoch-at-review217.json.gz` raw 9,283 B SHA-256 `d498ec45ad4d3e75ad4cf160d80073ad53f5f4300b9701eafadabebc39aac472`; gzip 1,739 B SHA-256 `b258a2079cb824ad1f228d7b2c1227453a559bc1f7e5c200ac52659a19b5e616`.
+
+Snapshot read 2026-10-02T16:26:45.093256Z, updated epoch seconds 1790958404.6824648; counts not pooled. Three exact convergence completions net−$4.030180368215952:two losses and one failed-hedge rescue gain passed root terminal audit, immediately flagged. Three HL price_limit rejects;no estimates or aborts. Fees0/other$1.4919981790000065/capital$0.000006189215911771295.
+
+Paper16:11recoveredok69.03%CPU/46.72mslag,16:16busy87.27%/45.83ms,16:21ok71.57%/43.84ms; reviewfresh/ok63.33%/42.91ms,RSS297.66MiB,111pairs. Rolling81healthy249.31s/10,694,289compressed B/70,933records,two connections/no errors/economics false; chunks1,841,549,948B/controls52,933B under separate2GB. Recovery gap retained; no routine raw decode/intervention.
+
+NEARselected76 terminalcompleted/success true ended16:11:30.370771UTC,24commandcontrols; observed16:11:54,rootnotified,operationalfields only. Root archived33756fd,all24commands/100rows/20audits passed,primaryCoreNEARfollow/fade bothzeroattempts/closes/no promotedresult; rootowns economics. Root pin release recordeddec30f1, remainingpins[]; routine performed no pin mutation. HIP4live timerrootverifiedwaiting18:22UTC, plan982619f2837589e06146e9608fbf859db4fa3661d3f31fd1e7c1a66d36ee74c9,window18:35..20:50; expiryOct3timerunchanged. Routinecontrol-only monitoring scope, no raw/economic reads. Localonlycommits, pushawaitsrootuserapproval.
+
+Carry16:25:00.127649UTC:478sampled,two invalid(71,389),384future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–217:2,913completions=2,869exact losses,one estimated loss,seven audited paired gains,36audited rescue gains. Archive3,982,795/5,242,880B;96future pairs at5,342B project4,495,627B,margin747,253B. RootONDOrescue terminal audit passed1946Corelong:entry$990.427896→exit$990.973176,gross$0.545280−stress$0.495213948−capital$0.00000188454503318=+$0.0500641674549668,within1e−9ofrecord;flatqty/source+receipt400msCore150msHLpassed,HLshortrejected,no rawdepth/private-fill proof. Batch remains−$4.03018. Scoped root-requested exportreview217-positive-record.json.gz2,005B SHA068a59ec0a9cff124dd1f252bb3189b648177d83edeacdc06a0e000ad5c425c7;rootaudit1,723B SHA6619efb4c6c9ed340023668e5a0e89e1198ed824bcfc89be2b3906639da8c826 included. Next **16:46:33 UTC**.
