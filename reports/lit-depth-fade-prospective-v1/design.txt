@@ -1,0 +1,166 @@
+LIT depth fade: fixed two-block prospective preparation v1
+
+Authority and ownership
+Allocation: reports/experiment-storage/lit-depth-fade-prospective-preparation-v1.json,
+5850 bytes, SHA25683f012d4726ee58c41a6788736dab39a160418e1997f8bbf2eef3480b4a3c793.
+Only the new source, test, this design and draft are preparation deliverables.
+Root owns reports/experiment-storage/lit-depth-fade-prospective-v1.json and its
+freeze, source pins, store identity pin, launch and review. This draft cannot run.
+No new collector, network endpoint, data copy, order, raw processing or live
+nomination is authorized by preparation. Default CLI performs zero store reads,
+nominations, pinning, writes, data decoding and HTTP calls.
+
+Fixed experiment
+Chunks96 and100, in that order, role reserved_validation. Their exact number is
+the selection rule; success, captures, coverage and outcomes cannot substitute a
+different attempt. Source freezes no later than18:40UTC October2 2026; frozen_ns
+and initial launch must be strictly before18:40. Neither fixed reservation may
+already exist or be expired. The immutable common nomination is written under
+the rolling Store lock while both are absent, so producer reservation cannot
+race the commitment. Selected identity is later written once from number, role
+and launched_ns before any input validation/decode. Missing, expired, failed,
+censored, capped or incomplete attempts remain the fixed denominator.
+Input admission deadlines:96 at20:15UTC;100 at21:00UTC. No extension, replacement,
+rerun or success-selected retry. Each deadline bounds waiting for a complete seal,
+not a new capture request. A failed96 does not remove100 or prevent its fixed
+attempt from being observed. If an earlier analysis consumes a later admission
+deadline, the later input remains unavailable rather than being substituted.
+
+Analysis is exactly depth/LIT with four independent native ledgers:
+lighter depth_fade/depth_follow (USDC), rh_lighter depth_fade/depth_follow (USDG).
+RH fade is primary; RH follow is its fixed comparator. Core is descriptive and
+cannot replace the primary. Both chunks retain four rows and one audit each.
+The full ten-asset capture universe stays intact, including all selected markets,
+metadata/feed integrity and native source/receipt clocks. Only analysis narrows.
+No threshold, price selection, delay, sizing, fee, stress, capital or simulator
+change. The entire execution_parameters dictionary must equal strategy.PARAMS.
+Admission offsets122..480s,120s reference warmup and all other original offsets
+use each capture's actual started_utc. Duration is the original600s. There is no
+calendar news anchor, pooled ledger or additional asset selection.
+
+Reuse and module routing
+The allocation pins reviewed news_candidate_rolling_v1 source/test/final plan and
+root-review identity. old.source_contracts() checks its original allocation,
+news inventory repair, original capture contract, rolling parent/chunk/recovery
+contracts and their exact source pin chains. These full source checks precede
+every alias scope. The new plan independently pins new source/test/design and
+unchanged complete execution/capture dictionaries; final plan <=16384 bytes,
+matching the inherited ordinary adapter's plan-read cap.
+Fresh subprocesses invoke this wrapper, not old entrypoints with altered argv.
+An outer finally-restored scope routes old PLAN/OUT/STEM/OWNER/BOUNDS/CAPS and
+verify/nomination/configure callbacks to this experiment and chunk. Existing
+old.bindings() saves/restores strategy.snapshot, runner.inputs, shared cash audit
+callbacks, replay/capture/event aliases and compact logger changes. Inside it,
+news.ASSETS as well as study.ASSETS/NAMES become LIT-only. This matters because
+unchanged fix.replay loops news.ASSETS. capture.SELECTED remains complete.
+Inner publisher and news.ASSETS are restored BEFORE old.bindings exits, avoiding
+a leaked publisher closure. No old source file or 31-request module is changed.
+The frozen plan has one shared control_root; provenance readers are explicitly
+routed to the selected controls(n)/input-pins.json. chunk_pins performs the exact
+unchanged BASE_SNAPSHOT comparison and optional manifest check. chunk_events
+checks the same manifest/analysis-plan SHA and raw-byte bound, then calls the
+unchanged ordinary.iter_events with raw SHA and all original decoding/ID bounds.
+fix.require_pins, fix.events and study.iter_events use these callbacks; they are
+restored in correct nested-scope order. No in-memory altered plan or on-disk
+control_root rewrite is used. A generated fixture exercises both real routing
+callbacks with only per-chunk provenance present and exact iterator arguments.
+
+Exactly three commands per admitted chunk:
+1) fix.replay('depth', digest), unchanged DepthStudy and original ordinary stream;
+2) fix.audit('depth','LIT',digest), unchanged depth SignalAudit plus IOC/cash audit;
+3) new four-row report, with exact one-summary/trace/audit bindings.
+Original study.market_alias maps LIT constructor slots without changing real
+market identity. Foreign assets only advance the physical clock, exactly as in
+the original dispatch and independent audit asset_events paths. Each subprocess
+rechecks frozen plan/source pins and the complete input snapshot before/after.
+There is no use of the old40/100-row reporter or filtering of an old result.
+
+Complete input identity and status contract
+Only sealed_complete is pinned, through unchanged Store.pin, with owner
+lit_depth_fade_v1_96 or _100. No automatic release. Reuse old.input_snapshot()
+unchanged: exact inventory includes full CAPTURE_NAMES plus seal.json; all
+declared hashes/sizes are compared with actual files. It binds selected identity,
+store identity, seal/raw/manifest/capture terminal/status/metadata/embedded chunk
+plan and new analysis plan. Complete600..601s duration, duration_limit endpoint,
+zero truncation/dropped frame and producer returncode0 are required. Original
+capture status can be a final prior heartbeat: errors empty, counts bounded by
+manifest totals and elapsed bounded by actual span. It must not be interpreted
+as a second terminal or infer final row counts. Ordinary metadata validation
+retains full market-plan identity; raw is hashed opaquely before first decode.
+Input snapshot is immutable input-pins.json <=8192B. Require_pins reproduces the
+entire snapshot before and after all analysis. Failed producer identities retain
+their reservation/seal declarations only; they are not verified raw/cash zeros.
+
+Reporter and gate
+Reporter validates asset/sample/source/manifest/plan and exact four arm keys,
+audit passed/raw_capture_verified, audit summary/trace hashes and summary trace
+hash. All summaries/metrics/trace/audit remain in one chunk ledger directory.
+For each independent arm, it reports attempts/closes/no-fill entries, episode
+cash after capital,5bp stressed episode cash, final cash change, completeness,
+unknown obligations and open/pending states. Flat cash is reconciled against
+the unchanged initial600 collateral cash. Nonflat rows retain conditional closed
+episode sums but cannot pass the gate; these are not total strategy profit.
+USDC and USDG are not converted or summed. All four flat-known plus one passed
+audit are required, including Core descriptive rows. In EACH chunk RH fade needs
+>=1attempt,>=1close, stressedUSDG>0 and stressed fade-minus-follow USDG>0.
+Both chunk gates plus >=3 combined primary closes are required. Combined close
+count is an event count, not summed cash. Zero activation fails coverage even
+when all ledgers flat-known. Passing is conditional_candidate_only, never the
+full repeatability/research objective. Previous100-row/20-audit studies, selected
+ordinary LIT positive and earlier LIT news negative remain immutable evidence.
+
+Work and resource bounds
+No logs/bytecode. Analysis commands are nice19, stdin/stdout/stderr /dev/null,
+-B and PYTHONDONTWRITEBYTECODE. Per child wall600s, CPU570s (hard575), address
+space4GiB, core0. Process group kill with <=5s cleanup; child PR_SET_PDEATHSIG
+SIGKILL plus parent PID recheck closes spawn/PID-publication orphan race. Analysis
+per chunk1900s (three600s children plus bounded local accounting). The overall
+supervisor alarm ends work15s before fixed22:00UTC, retaining closeout allowance.
+Waiting uses both wall deadline and a monotonic bound; sleeps <=15s. No retries.
+Original raw bound67108864+262144, decoded1GiB, records1M, tradeIDs500k and
+metadata131072 retained unchanged. CPU/RAM bounds contain helper replay work.
+Collection/API request count remains zero: only existing rolling files are read.
+
+Storage/publication contract, shared total1048576B
+Source/test/design/draft/final plus sequential synthetic scratch <=262144B.
+Two ledger directories <=131072B EACH,262144 total: trace98304, summary gzip16384,
+metrics8192, audit8192. Both venues/rules live in one asset directory per chunk.
+Comparisons <=49152/chunk (gzip<=16384 + CSV<=32768),98304 shared.
+Readout <=16384/chunk,32768 shared. Controls <=32768/chunk plus32768 shared,
+98304 total including allocation/reviews/root receipts. The shared32768 is split:
+runtime<=16384, outside allocation/reviews/launch verification<=16384. Root's
+5850 allocation+preflight<=6000+launch verification<=4000 fit the outside15850B;
+these outside records must stay outside the runtime OUT category. Margin294912.
+Normal runtime controls stop at24576/category, reserving8192 for terminal.
+Shared runtime controls stop at8192, reserving another8192 for shared terminal.
+Common controls count only their own files, not nested chunk categories again.
+All pending/failed files count. Distinct-inode accounting avoids double-counting
+temporary/final hard links but never exempts a second physical copy. No raw copy.
+Summary, metrics, audit, comparisons, readout and controls use exclusive .pending
+files, fsync, hard-link no-overwrite publication and unlink of the same inode's
+temporary name. Trace Archive itself is unchanged and retained on interruption.
+Existing control root, ledger, comparison or readout refuses rerun. All completed
+and partial artifacts stay; no failure deletes them or fabricates replacements.
+
+Failure closeout
+Per-chunk failures publish four unknown-cash rows and one audit-unavailable record,
+plus terminal with commands completed and economic evaluation status when known.
+Earlier successful commands remain retained, with no attempt to relabel them as
+complete. On unrecovered interruption, dispatch/count/evaluation fields are null,
+all four rows/audit unavailable, never asserted not-reached after possible work.
+Future fixed input failure still receives its denominator. Launch failure has
+both4-row unknown denominators and shared2-chunk/8-row/2-audit closeout; existing
+child-written terminals are retained. Terminal slots do not overwrite receipts.
+Abrupt external SIGKILL or host loss cannot be caught by Python: retained claim,
+pending files and absent terminal are unavailable and cannot be resumed/retried
+without a separately reviewed operational record preserving fixed selection.
+Root must launch on a persistent host and verify supervisor persistence. Python
+does not authenticate that environment. No remote messages are sent by source.
+
+Synthetic verification scope
+Eight focused tests cover dry/pins/science/cutoff; fixed failed/missing/expired
+number/deadline; actual nested analysis routing with full SELECTED and restoration;
+four rows/gate/each chunk/three closes; new reporter/audit bindings; three-command
+barrier with first-chunk failure; category pending caps/no-overwrite/interrupted
+unknown dispatch; child timeout/group cleanup/argv. Only tiny generated fixtures,
+no real data/model replay/network. Root will review and freeze final pins later.
