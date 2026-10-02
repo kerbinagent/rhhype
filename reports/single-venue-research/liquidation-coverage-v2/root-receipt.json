@@ -1,0 +1,435 @@
+{
+  "schema": "liquidation-coverage-v2-root-receipt-v1",
+  "recorded_utc": "2026-10-02T11:19:11.618072+00:00",
+  "freeze_commit": "be0a49f",
+  "plan_sha256": "a0a4b363f4136816c6ea04355dc32e6084ec79cf41166a0daa013af177f8d65a",
+  "projection_sha256": "10fe820c9abe07c852b052bb991d2706f232bcb677bc84cd5a98e64f39e819a9",
+  "batches": [
+    {
+      "batch": 1,
+      "available_chunks": 3,
+      "unavailable_chunks": 0,
+      "live_label_rows": 10,
+      "episodes": 6,
+      "complete_episodes": 6,
+      "complete_witnessed_episodes": 0,
+      "valid_stale_frames": 59,
+      "quarantined_trade_frames": 164
+    },
+    {
+      "batch": 2,
+      "available_chunks": 3,
+      "unavailable_chunks": 0,
+      "live_label_rows": 24,
+      "episodes": 8,
+      "complete_episodes": 8,
+      "complete_witnessed_episodes": 1,
+      "valid_stale_frames": 38,
+      "quarantined_trade_frames": 95
+    },
+    {
+      "batch": 3,
+      "available_chunks": 3,
+      "unavailable_chunks": 0,
+      "live_label_rows": 0,
+      "episodes": 0,
+      "complete_episodes": 0,
+      "complete_witnessed_episodes": 0,
+      "valid_stale_frames": 80,
+      "quarantined_trade_frames": 282
+    },
+    {
+      "batch": 4,
+      "available_chunks": 2,
+      "unavailable_chunks": 1,
+      "live_label_rows": 3,
+      "episodes": 2,
+      "complete_episodes": 2,
+      "complete_witnessed_episodes": 0,
+      "valid_stale_frames": 29,
+      "quarantined_trade_frames": 84
+    },
+    {
+      "batch": 5,
+      "available_chunks": 2,
+      "unavailable_chunks": 1,
+      "live_label_rows": 0,
+      "episodes": 0,
+      "complete_episodes": 0,
+      "complete_witnessed_episodes": 0,
+      "valid_stale_frames": 24,
+      "quarantined_trade_frames": 57
+    },
+    {
+      "batch": 6,
+      "available_chunks": 3,
+      "unavailable_chunks": 0,
+      "live_label_rows": 1,
+      "episodes": 1,
+      "complete_episodes": 1,
+      "complete_witnessed_episodes": 0,
+      "valid_stale_frames": 57,
+      "quarantined_trade_frames": 181
+    }
+  ],
+  "totals": {
+    "history_rows": 22488,
+    "valid_stale_array_rows": 391,
+    "valid_stale_frames": 287,
+    "quarantined_trade_frames": 863,
+    "live_rows": 162674,
+    "live_liquidation_rows": 38,
+    "episodes": 17,
+    "complete_episodes": 17,
+    "qualifying_order_firsts": 1,
+    "observed_continuation_episodes": 1,
+    "complete_continuation_episodes": 1
+  },
+  "episode_directions": {
+    "buy": 11,
+    "sell": 6
+  },
+  "support_by_cell": [
+    {
+      "asset": "BTC",
+      "venue": "lighter",
+      "complete_witnesses": [
+        1,
+        0
+      ],
+      "represented_blocks": [
+        1,
+        0
+      ]
+    },
+    {
+      "asset": "BTC",
+      "venue": "rh_lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "ETH",
+      "venue": "lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "ETH",
+      "venue": "rh_lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "SOL",
+      "venue": "lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "SOL",
+      "venue": "rh_lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "HYPE",
+      "venue": "lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "HYPE",
+      "venue": "rh_lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "XRP",
+      "venue": "lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "XRP",
+      "venue": "rh_lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "SUI",
+      "venue": "lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "SUI",
+      "venue": "rh_lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "NEAR",
+      "venue": "lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "NEAR",
+      "venue": "rh_lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "ZEC",
+      "venue": "lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "ZEC",
+      "venue": "rh_lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "VVV",
+      "venue": "lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "VVV",
+      "venue": "rh_lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "LIT",
+      "venue": "lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "LIT",
+      "venue": "rh_lighter",
+      "complete_witnesses": [
+        0,
+        0
+      ],
+      "represented_blocks": [
+        0,
+        0
+      ]
+    }
+  ],
+  "passing_cells": 0,
+  "witnesses": [
+    {
+      "batch": 2,
+      "chunk": "chunk-000019",
+      "asset": "BTC",
+      "venue": "lighter",
+      "side": "sell",
+      "anchor_ns": 1790919602766498330,
+      "qualifying_orders": [
+        {
+          "side": "ask",
+          "order_id": 562953466402440,
+          "order_version": 0,
+          "first_source_ns": 1790919603688000000,
+          "first_received_ns": 1790919603761941378
+        }
+      ],
+      "censor_reason": null
+    }
+  ],
+  "unknown_chunks": [
+    "chunk-000033",
+    "chunk-000039"
+  ],
+  "decision": "Fixed support gate failed; stop before matching, price outcomes or execution. Sparse retained label continuation is not evidence that a trading strategy is profitable or unprofitable. Missing chunks remain unknown.",
+  "checks": "Root reconciled six output/provenance hashes, plan chain, fixed 18-chunk availability, 120 group rows, episode and witness totals, and the two-superblock support rule. Collector verified exact raw identities and gzip EOF before/after. Independent saved-result audit reconciled source pins, freeze blobs, hashes, all 120 batch and 360 chunk groups, clocks, spacing, counters and support; no mismatches. Neither reviewer separately replayed raw causal history or inspected economics.",
+  "limits": "Different observations/chunks than v1: no paired coverage-improvement claim. Valid_stale_array_rows counts array entries before dedupe; live_rows and labels are deduplicated. First observed public order is not proof of actual order birth, complete public feed, parent flow or displayed-book consumption.",
+  "artifact_identities": [
+    {
+      "path": "reports/single-venue-research/liquidation-coverage-v2/liquidation-coverage-batch1-provenance.json",
+      "bytes": 1243,
+      "sha256": "3c15190a05893c1ff7ce01b827603e347e4e7d3367fd55bcec3067b27d007883"
+    },
+    {
+      "path": "reports/single-venue-research/liquidation-coverage-v2/liquidation-coverage-batch1.json.gz",
+      "bytes": 1571,
+      "sha256": "aa27725324b12ed2f24b48303d359555b9d45763d36165a937d1b3a51c613b8d"
+    },
+    {
+      "path": "reports/single-venue-research/liquidation-coverage-v2/liquidation-coverage-batch2-provenance.json",
+      "bytes": 1243,
+      "sha256": "a1885c437a4295ce285297edb29d58ca48d9b16851e4199cb804ad63f169ce90"
+    },
+    {
+      "path": "reports/single-venue-research/liquidation-coverage-v2/liquidation-coverage-batch2.json.gz",
+      "bytes": 1703,
+      "sha256": "2e0049bd5d60ef0423efae65988d97ab8c403e86d49808a87432df296ab5104c"
+    },
+    {
+      "path": "reports/single-venue-research/liquidation-coverage-v2/liquidation-coverage-batch3-provenance.json",
+      "bytes": 1243,
+      "sha256": "7c3809bf68543559a1b2b6292d259af675a7ebdea27dcf8a059b7316fe4b010b"
+    },
+    {
+      "path": "reports/single-venue-research/liquidation-coverage-v2/liquidation-coverage-batch3.json.gz",
+      "bytes": 1300,
+      "sha256": "7dc92aa7fdf1d9f35122242208ff00a41a66eaa0c36afb4ad235660fb557d23f"
+    },
+    {
+      "path": "reports/single-venue-research/liquidation-coverage-v2/liquidation-coverage-batch4-provenance.json",
+      "bytes": 1242,
+      "sha256": "b1c0a1527cbeec84ac1cd0da484593369bcd7a0a50b5e33b77865c1866ec09a2"
+    },
+    {
+      "path": "reports/single-venue-research/liquidation-coverage-v2/liquidation-coverage-batch4.json.gz",
+      "bytes": 1314,
+      "sha256": "77c1ad8dd823190aad867c6f179755575866890a36ac9827537f2938a1a712b1"
+    },
+    {
+      "path": "reports/single-venue-research/liquidation-coverage-v2/liquidation-coverage-batch5-provenance.json",
+      "bytes": 1242,
+      "sha256": "747b0c0d318ab8b616434013e86535f60df3eb18dc4de95f0e999147754c48d8"
+    },
+    {
+      "path": "reports/single-venue-research/liquidation-coverage-v2/liquidation-coverage-batch5.json.gz",
+      "bytes": 1220,
+      "sha256": "810efaf85805a0bd428a450696f19b84ee9cba183e92089975dc5e929f6400eb"
+    },
+    {
+      "path": "reports/single-venue-research/liquidation-coverage-v2/liquidation-coverage-batch6-provenance.json",
+      "bytes": 1243,
+      "sha256": "d50edf0a48c526de50fd04be8e03dcc34e47ecc75d49329b73f567562d979e90"
+    },
+    {
+      "path": "reports/single-venue-research/liquidation-coverage-v2/liquidation-coverage-batch6.json.gz",
+      "bytes": 1362,
+      "sha256": "47eb8f89d65c352401978d67de142285456b12cbaa58233f5d8a32543f43514c"
+    },
+    {
+      "path": "reports/single-venue-research/liquidation-coverage-v2/run-receipt.json",
+      "bytes": 803,
+      "sha256": "ecbf0685804d7f3e41451eb2cc1644665ab388700edb79d54ebc1686aa4ebbeb"
+    }
+  ],
+  "independent_audit": {
+    "path": "reports/single-venue-research/liquidation-coverage-v2/independent-audit.json",
+    "bytes": 6358,
+    "sha256": "ae4ab984a28b80b443a8c9a179d0ecab4f0632b6bbd9d59a3a163c9066fb6a41",
+    "status": "artifact_checks_pass_support_gate_failed"
+  }
+}

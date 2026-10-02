@@ -143,6 +143,13 @@ Stale ordinary evidence suppresses 4,129/9,041 later frames; admitted windows
 are not a full-market denominator. Adequate distinct episodes and controls
 remain prerequisites for a cost-aware study. No execution branch is justified.
 
+The separately frozen [coverage successor](../reports/single-venue-research/liquidation-coverage-v2/readout.txt)
+retains valid stale identities and applies a brief quarantine. Its six fixed
+exploratory blocks include 16 complete chunks and 2 unavailable captures.
+They contain 17 admitted episodes and one qualifying delayed order; no cell
+meets the two-superblock support threshold. This version stops before controls
+or prices. Different inputs prevent a paired coverage comparison with v1.
+
 Public-data impact studies also distinguish reconstructing average impact from
 identifying a tradable entry: synthetic order groupings can reproduce impact
 patterns, while models can misrepresent the source of correlated order flow.

@@ -1,0 +1,55 @@
+Delayed liquidation identity coverage — fixed successor, 2 October 2026
+
+Decision: the predeclared support gate failed in all 20 asset/venue cells.
+Stop before matched controls, price outcomes or an execution study. This is
+an insufficient-support result; it does not establish trading profitability
+or unprofitability.
+
+Frozen plan a0a4b363f4136816c6ea04355dc32e6084ec79cf41166a0daa013af177f8d65a
+was committed as be0a49f before the one all-six run. Fifteen synthetic tests
+passed independently. The earlier v1 source, captures and result are intact.
+
+The calendar fixed 18 exploratory chunks in six groups: 13–15, 19–21, 25–27,
+31–33, 37–39, 43–45. Sixteen complete chunks were processed; 33 and 39 remain
+unknown after pre-existing capture failures. No substitution or extra data.
+These are 160 scheduled minutes spread across 04:37:31–10:10:03 UTC, not one
+continuous interval. Reserved chunks were not opened.
+
+Batch   available/selected   live liquidation rows   episodes   witnesses
+1       3/3                  10                       6          0
+2       3/3                  24                       8          1
+3       3/3                   0                       0          0
+4       2/3                   3                       2          0
+5       2/3                   0                       0          0
+6       3/3                   1                       1          0
+
+There were 162,674 deduplicated live rows, 38 live liquidation rows and 17
+retained episodes: 11 buy, 6 sell. All 17 admitted windows were complete;
+this does not remove the two unavailable captures or excluded periods.
+The parser recorded 287 valid-stale frames, 391 stale array entries before
+deduplication, and 863 quarantined trade frames. No later fatal-suppression
+counter was observed in these saved outputs. Counts are observations under
+the method, not a claim of a complete exchange feed.
+
+The sole qualifying episode was a BTC/Core sell in chunk 19. A distinct
+public ask order was first observed 0.921501670 s by source and 0.995443048 s
+by receipt after the anchor, within the frozen 400 ms–2.4 s window. The
+first superblock therefore has one witnessed BTC/Core episode in one
+constituent block; the second has zero. Every other cell has zero observed
+witnesses. None reaches the required 10 complete witnessed episodes and
+representation in at least 2 constituent blocks in EACH superblock.
+
+V2 retains well-formed stale identities, censors affected open windows and
+quarantines fresh triggers through stale receipt+2.4s. Malformed identities,
+future clocks, source regression and generation/channel failures keep the
+v1 fatal behavior. It is a separate method on different chunks; no paired
+coverage improvement versus v1 is claimed. A public liquidation label or
+different order ID establishes neither a common parent nor displayed-book
+consumption. No price, size, position, account or economic field was analyzed.
+
+Root reconciled all six result/provenance hashes, 120 group rows, episode
+totals and the fixed support rule. Collector input checks covered exact
+sealed identities and gzip EOF. Independent review reconciled all saved
+results, source pins, clocks, spacing, unknown captures and support counts.
+The saved summaries alone cannot independently prove raw first-seen history.
+See root-receipt.json, independent-audit.json and the six immutable outputs.
