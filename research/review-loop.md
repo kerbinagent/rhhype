@@ -6667,3 +6667,20 @@ Paperfresh18:31ok83.01%CPU/44.63mslag,18:35busy78.40%/52.82ms,18:40busy93.53%/59
 Root LITfixedprospect frozen c401c63/plan a8e349abfa9b82dba697c0b6f34f60b22ce977eeaa59ad7f0f046f57adf95b29,8rootchecksPASS, hostPID1798675/rootverifiedpersistent. Fixed96/100 nominated before both absent18:32:59,reserved_validation; fourLITdepthrows+oneauditperchunk. Routine18:47read operationalnomination schema/plan/role only and three controlfilenames,no selectedraw/economics. HIP4window opened18:35, frozen source/timer unchanged; no early economics.
 
 Carry18:45:00.139874UTC:506sampled,two invalid(71,389),356future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–224:2,956completions=2,909exact losses,one estimated loss,seven audited paired gains,39audited rescue gains. Archive4,023,352/5,242,880B;89future pairs at5,342B project4,498,790B,margin744,090B. Root independently reconciled all three terminal rescue records:source/exit quantities,VWAPvalues,gross,venuefees,5bpstress,5%capital margin_fraction1,flat/status/window within1.1e−13. DOGE+$0.9673430926752473,VVV+$0.8311485568313979,PUMP+$1.222443118451947; full24tradebatch remains−$31.589452178489637. No paired gain or raw/private-fill proof implied. Root packets10,034B included:review224-positive-record.json.gz3,289B SHAcae4ad4583ddca1ea505201294144fe4886962e6c785d5d50387df33b3d7fda9;rootaudit6,745B SHAc3b1f44ae7d1b7d704ce2667bc4b165660f10437458787212202312293b5a2b6. Next **19:06:33 UTC**.
+
+
+### Review 225 — 2026-10-02 19:06:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Explicit UTC wall-clock pre-read guard blocked one premature attempt before any report open; proper due read passed. Exact report and independently timed snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap and growth guards.
+
+`review-20261002T190633Z.json.gz` raw 18,320 B SHA-256 `b626803873c08b74a042da2d24b7f556cc654f95996fc5e14f162549c0668fb6`; gzip 2,535 B SHA-256 `441568c5c8516b065dea5bf7c0aa62909dcc0d53b95e9ee4c753e690d61ae7c8`.
+
+`current-epoch-at-review225.json.gz` raw 9,282 B SHA-256 `dba6cf9c72002dff3e7b1b86b80f49697f553d058f8193f1ae4e7f71f2239b1d`; gzip 1,734 B SHA-256 `efe939376c09c425df7b04d8a689e1f93233103aea7f7c8359f019fede68da6b`.
+
+Snapshot read 2026-10-02T19:07:14.896922Z, updated epoch seconds 1790968034.4748807; counts not pooled. Two exact convergence losses net−$0.6622223780573222;two HL price_limit rejects;no gains, estimates or aborts. Fees0/other$0.991823383499991/capital$0.000003994557273375235.
+
+Paperfresh18:49ok84.56%CPU/47.90mslag,18:53ok71.78%/49.33ms,18:58ok72.96%/47.90ms,19:02ok76.21%/49.56ms; reviewfresh/busy64.37%/50.47ms,RSS300.70MiB,118pairs. Rolling97healthy189.24s/7,914,905compressed B/52,296records,two connections/no errors/economics false; chunks1,919,225,665B/controls59,616B under separate2GB. Frozenpressure lifecycle/pins unchanged,recovery gap retained,no routine mutation/rawdecode. FixedLIT96closed/analysisdir appeared per root19:05,rootwaitsterminal;96/100raw offlimitsroutine. HIP4liveactive/frozen,no early economics.
+
+Review224rootauditpackets committed9e6d78c,three terminalrescues independently reconciled/39auditedtotal; whole24batch−$31.589452178489637 retained. RootHIP4v6offlinepackage b16cc36 passed25+9synthetics,noQ357raw; timeruntouched. Routine only controlhealth.
+
+Carry19:05:00.137067UTC:510sampled,two invalid(71,389),352future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–225:2,958completions=2,911exact losses,one estimated loss,seven audited paired gains,39audited rescue gains. Archive4,027,621/5,242,880B;88future pairs at5,342B project4,497,717B,margin745,163B. Next **19:26:33 UTC**.
