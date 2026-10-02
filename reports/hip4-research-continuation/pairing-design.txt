@@ -1,0 +1,206 @@
+HIP-4 continuation pairing v1: offline funded replay design (preparation only, unimplemented on data)
+
+Status
+- Prepared under reports/experiment-storage/hip4-pairing-preparation-allocation-v1.json (cab88f4d...), committed 02272c7.
+- Independent ownership under reports/experiment-storage/independent-research-ownership-v1.json (b2dc0e5c...), committed 72bf920.
+- It implements revision 4 of reports/hip4-research-continuation/pairing-spec-v1.md (f04c50da...).
+- Default mode is dry: 0 raw reads, 0 writes, 0 network calls.
+- Plans are sealed locally under reports/hip4-independent-research/ as pairing-plan-primary-v6.json (zero fees) and pairing-plan-sensitivity-v6.json (three predeclared fee points, never pooled with the primary). The root-owned final-plan path is left untouched.
+- Earlier seals are kept unchanged but superseded; their pins no longer match, so verification refuses them. Both were sealed before any capture data existed.
+  - v1 (17:44 UTC).
+  - v2 (18:00 UTC) fixed a stale docstring, this file's test count and the staging directory.
+  - v3 (18:18 UTC) applies root's 18:05 and 18:06 pre-data repairs: per-role output shares, decoder-aligned caps, exact seal checks, re-verification before publication, retained failure outputs, labelled rates and bounded, time-gated admission.
+  - v4 applies root's 18:24 operations repairs:
+    - an unconfirmed kill leaves staging untouched and writes a separate receipt;
+    - the seal binds the exact primary plan, and the sensitivity plan names it;
+    - the admission child stops before the conclusion replay if live verification fails.
+  - v5 is a blinded, during-collection implementation amendment. It was written after the window opened at 18:35 UTC, with no capture data read. It is not a pre-window freeze.
+    - A full-scale stress synthetic showed that the 20M-step cap could end the scan on a busy window.
+    - v5 caches each episode's closure-gate terms between state changes and holds one exact decimal context per scan; outputs are unchanged.
+    - It raises the step cap to 150M, inside the unchanged CPU, RAM, wall and output limits.
+    - The exact v4 source is kept at reports/hip4-independent-research/snapshots/hip4_continuation_pairing_v4.py (sha256 bc7e9204...). pairing-equivalence-v5.py compares v4 and v5 byte for byte, including work caps, and checks for no lookahead.
+  - v6 carries the same blinded during-collection label and is a consistency fix only. The draft-derived top-level bounds still declared 20M steps, 512 episodes, category-total output caps and the old 150,291-record timing. Every redundant bound is now generated from the enforced constants, and verify_plan refuses any stale or conflicting declaration (declared_bounds_conflict). This covers bounds, category shares, the question, and the predeclared costs and limits.
+  - No economic rule, gate, fee point, cap on decisions or claim changed in any successor.
+- After the frozen Q357 window (18:35-20:50 UTC, 2 October 2026) closes, `--admit --plan-sha256 P` seals q357-input-seal-v1.json once, as admitted or unavailable. `--run ROLE` then needs the plan and seal sha256 values.
+
+Files (owned)
+- scripts/hip4_continuation_pairing.py: replay, episodes, reconciliation, plan check, run and dry modes.
+- tests/test_hip4_continuation_pairing.py: 25 offline synthetics.
+- reports/hip4-research-continuation/pairing-draft-plan.json: the earlier unpinned draft, kept as history; the sealed role plans replace it.
+- reports/hip4-research-continuation/pairing-design.txt: this file.
+
+1. Kernel
+- The frozen live-v1 replay (scripts/hip4_continuation_live.py) keeps no per-coin touches or accepted times in its marks.
+- decorated_replay is an isolated, statement-for-statement copy of lv.replay. It calls only lv's pure helpers (gate, parse_bbo, meta_relevance, route_cash, note) and adds one snapshot per mark:
+  - the usable view (bid and ask per coin);
+  - each viewed coin's accepted source time and receipt;
+  - whether the acknowledgements are complete.
+- kernel_checked runs the unchanged lv.replay on the same records, then the copy, comparing every mark as it is produced and all other outputs at the end. Any difference refuses the run (kernel_mismatch).
+- No lv global, file or ordering is changed. A test asserts that the identity of every lv global is unchanged.
+
+2. Time, support and gates
+- Clock. There is one anchored monotonic clock. Segments are half-open [a, z) inside [open, min(close, stop)). They are cut at every frame and at every liveness expiry: the last application message on any channel + 35,000 ms.
+- Usable view. A segment's usable view is empty unless the acknowledgements are complete, the stream is live and the window is not invalidated.
+- Ages. Touches are never re-aged; source-clock gates ran at receipt. Each trade or miss records per-leg [source age ms, receipt age ms], and each decision records them for its legs.
+- Intervals. A predicate holds over maximal continuously true stretches with a constant key. It qualifies at start + 1,000 ms, strictly before the end. There is one evaluation, at qualification + 500 ms, on the state in force (frames at that instant are applied first).
+- Event bound. e = min(censoring stop, first invalidation, window close). Rank breaks only equal instants: censored, then invalidated, then window end. An evaluation runs only strictly before e.
+- Entry intervals are global per route and fee schedule, with one episode per qualifying interval. Episode state changes restart only that episode's closure gates.
+- Misses. An all-miss attempt changes nothing and cannot retry until its gate is false and then true again. Inverse-first negation counts as a state change.
+
+3. Policies (spec revision 4) and the unit policy
+- Units. Displayed sizes are floored to whole tokens for m and for every fill. An episode is admitted only with an integer m >= 1; otherwise its class is not_admitted_size.
+- Prices. Limits come from the state at qualification, and fills are priced at the evaluation-time touch.
+- Forward-first (FF):
+  - Key: S = the usable members with a bid; all named legs must be usable.
+  - Decision gate: sum over S of b(1-f) - (1 + c_split + c_neg) > 0. At zero fees this equals the live-v1 forward runs, which a test checks against lv.runs_of.
+  - Entry: make m sets, sell min(m, floor(bid size)) where the bid is at least its limit, then merge U = min h.
+  - Closure gate: T(1 - c_merge) - sum(o*a) >= 0.
+  - Attempt: buy min(o, floor(ask size)) where the ask is at most its limit, then merge M = min h.
+- Inverse-first (IF), named only:
+  - Decision gate: 1 - c_split - c_merge - sum(named asks) > 0.
+  - Entry: buy min(m, floor(ask size)), then split and merge M = min p.
+  - Gate: sum(k*b)(1-f) - NO_F*c_neg + cash >= 0, which is the spec's sum(k*b)(1-f) - N*c_neg >= B - R.
+  - Attempt: negate pending NO_F, then sell min(k, floor(bid size)).
+- Conversions of amount 0 are skipped. Misses are logged as miss_buy or miss_sell with their causes (not_usable, limit, size) and ages.
+
+4. Classes and denominators (per route and fee schedule)
+- Classes: not_admitted_size, entry_censored, entry_invalidated, entry_after_close, entry_unfilled, entry_closed, closed, censored_open, invalidated_open, open_at_window_end, work_cap.
+- filled = entry_closed + closed + censored_open + invalidated_open + open_at_window_end.
+- decision_to_fill = [filled, decisions - not_admitted_size - entry_censored]; the upper form adds work_cap.
+- closure_within_window = [entry_closed + closed, filled + work_cap]; the upper form adds censored_open, invalidated_open and work_cap.
+- complete_case_conditional = [entry_closed + closed, entry_closed + closed + open_at_window_end].
+- Rates are exact [numerator, denominator] pairs, and null when the denominator is 0. Decimal division is never rounded.
+- Rate status:
+  - exact: only for a complete scan with no unbuilt overflow.
+  - conservative_bounds_possibly_undefined: some decisions beyond the 256-episode cap were never built, so their size admission and entry class are unknown. Each is counted as admitted and unknown (work_cap_unbuilt). The pairs still bound the truth, but the true denominator may be 0.
+  - unavailable_incomplete_scan: the step cap ended the entry scan. Every full-window rate is null, and any rates over the seen prefix sit under prefix_only with an explicit label. They are never a full-window result.
+- Value v is quote-token cash with residuals at 0. Open classes add a formal envelope [v, v + W(1 - f)], valid only under A1 to A3 of the spec:
+  - FF: W = T;
+  - IF: W = max over named legs of (held + NO_F).
+- Capital is the negative chronological minimum of the cash prefix, per episode, under the unlimited-prefunding convention.
+- The episode sum of v overlaps and is never portfolio cash.
+
+4b. Retention and publication
+- Entry decisions are a lazy generator. At most 256 Episode objects are built per route and schedule; later decisions are only counted, as work_cap.
+- Each built episode is reconciled and tallied as it ends, and is offered to a TraceBuffer.
+- The TraceBuffer sizes the wrapper with 16-digit counters, keeps an exact encoded prefix (it stops at the first record that does not fit) and checks the final encoding against the cap.
+- The projection is size-checked inside analyze.
+- Output shares. The two roles split the one shared grant. Each role's retained, staged and failed outputs count against its share, with each inode counted once, and run.json records within_role_shares.
+
+  | | trace | projection | receipts (run.json + refusal) |
+  | --- | --- | --- | --- |
+  | primary | 524,288 | 65,536 | 8,192 |
+  | sensitivity | 262,144 | 65,536 | 8,192 |
+  | total | 786,432 = category | 131,072 = category | within controls |
+
+  Every trace cap is at most the strict JSON decoder's 524,288-byte body cap, so the parent can re-read any admitted trace.
+- run():
+  - Verifies the plan, the seal and every pin of the chain.
+  - Forks a child under RLIMIT_AS = 4 GiB and RLIMIT_CPU = 600 s. It is killed after 900 s of wall time and re-joined within 30 s. A start failure is an explicit cause.
+  - If the kill is unconfirmed, the child may still be alive. Its staging directory is then left untouched: it is not read, renamed or published. A separate parent receipt, <out name>.failure.json, records the unavailable run.
+  - The child compares the actual bundle's bytes and sha256 with the seal's input pin (input_changed). It then serializes both outputs and admits both sizes before writing either into reports/hip4-independent-research/<out name>.pending/ (owned, same filesystem).
+  - The parent re-reads both outputs, then re-verifies the plan, sources, chain, seal and input (pins_changed_after_run). Only then does it rename the directory atomically to the output path.
+- On any failure, nothing is deleted. The run's own staged outputs are renamed not-admitted-* and listed with their bytes and sha256, and run.json records status unavailable, its cause and any refusal code.
+  - Causes: refused, cpu_limit, wall_limit, memory_limit, start_failed, exit_N, output_admission_failed, pins_changed_after_run, output_share_exceeded.
+  - A failed final rename leaves the staged directory and its receipt in place.
+- Admission (`--admit`):
+  - Authenticates the primary plan chain before any capture read.
+  - Refuses without writing before the declared close, while supervisor.json is absent (until close + 3,900 s; after that the seal is unavailable), or when a seal already exists.
+  - Runs lv.verify in a child under the same limits. Only if it passes does the child run lv.conclusion_checks (decompression, records and reproduced projection). A start, wall, CPU or memory failure is recorded as its cause.
+  - The seal records the primary plan sha256.
+  - The seal is admitted only if exactly the 13 required checks are all true and all four receipts and the bundle are pinned. Otherwise it is written once as unavailable, with every available pin.
+- Plan binding:
+  - the sensitivity plan names the exact primary plan by path and sha256, and verify_plan authenticates that plan in full;
+  - verify_seal binds the seal's recorded plan sha256 to that primary plan before reading any capture pin.
+- verify_seal() requires:
+  - the seal schema, question 357, the live plan sha256 and the primary plan sha256;
+  - status admitted;
+  - the four receipts (claim, terminal, supervisor, projection), in order, at their exact paths;
+  - the bundle at its exact path;
+  - exactly the 13 required checks, each true;
+  - every pin authentic.
+- verify() authenticates, by exact relative path, bytes and sha256:
+  - the pairing source and tests;
+  - the live source and live tests;
+  - the books source and both helpers;
+  - the spec, the pairing review and this design;
+  - the allocation and ownership records;
+  - the frozen live plan and the frozen cohort metadata;
+  - every pin in the input seal.
+
+5. Independent reconciliation
+- reconcile() recomputes cash, holdings (including NO_F), the prefix minimum and flatness from the stringified action trace alone.
+- It refuses any negative holding.
+- analyze() refuses unless every episode matches the engine's v, capital and flatness, and each class has the right shape:
+  - non-open classes are flat;
+  - open classes hold inventory;
+  - work_cap may be either.
+- A test tampers with one price and shows that reconciliation detects it.
+
+6. Bounds (all finite; hitting a cap gives unknown, never zero or negative)
+- Input: the bundle is at most 3,670,016 gzip bytes (the live cap), and lv.parse_bundle refuses above 67,108,864 decompressed bytes.
+- Records: at most 370,000. A framed record is at least 184 bytes, so the raw limit admits at most 364,722, and this cap never binds first.
+- Episodes: at most 256 per route per schedule; later decisions are still counted, as work_cap.
+- Attempts: at most 32 per episode; beyond that the class is work_cap.
+- Scan steps: at most 150,000,000 in total (20,000,000 through v4). If the entry scan exhausts them, decisions are null (incomplete).
+- Outputs: the per-role shares above (a kept trace prefix, with episodes_kept and episodes_total explicit).
+- Hard limits: address space 4 GiB, CPU 600 s, wall 900 s (tested by forcing each in a forked child).
+- Measured on a 150,291-record in-memory random-walk synthetic:
+  - 28.7 s CPU, 395 MB RSS above the input, and 1,250,246 steps for 71 episodes;
+  - projection 1,825 bytes, trace 73,913 bytes.
+- Measured with v5 on in-memory stress synthetics whose named bid sum hovers near 1. Each ran in a forked child under the 4 GiB address-space limit.
+  - 364,291 records, primary: 28.0M steps (445 FF decisions, 107 episodes open at window end), 96 s CPU, 1.62 GB peak RSS.
+  - The same stream, sensitivity: 6.9M steps, 76 s CPU.
+  - At about 1.7 us per step plus the kernel replay, 150M steps stay near 315 s, so the step cap binds well before the 600 s CPU limit.
+- The host has 64 GB of RAM.
+- There are no network calls. The primary run writes once into reports/hip4-research-continuation/pairing-v1-run/, and the sensitivity run into reports/hip4-independent-research/pairing-sensitivity-run/.
+
+7. Tests (25, offline, sequential, small tempfiles)
+- The largest sampled peak of all temp bytes was 36,204 in the final suites, with the temp directory empty afterwards. An earlier intermediate run peaked at 517,646; that run is disclosed. Large-trace cases are scaled down by patching the shares and the decoder cap.
+
+| Audit item | Test |
+| --- | --- |
+| 1 s qualification and 500 ms evaluation | decisions at start + 1,000 ms and evaluations at + 500 ms in every forward test |
+| false 999 ms run | test_funded_close_and_false_999ms_gate |
+| partial-fill restart | test_partial_fill_restarts_only_its_own_gate (attempts at 21.6, 23.1, 24.6 and 26.1 s) |
+| all-miss suppression | test_all_miss_suppressed_until_false_then_true |
+| first-negation miss | test_first_negation_miss_is_a_state_change_then_closes |
+| zero M | test_zero_merge_skips_conversions |
+| same-time cuts and missing support | test_same_time_cuts_and_missing_support |
+| quiet-coin ages and all-member closes | test_quiet_coin_ages_and_all_member_entries (entry_closed when equal; open with W = T when unequal) |
+| fee repricing and capital | test_fee_schedule_changes_decisions_and_capital_exceeds_m (f = 0.01 removes the decision; capital 10.10 > m) |
+| cap exhaustion | test_caps_are_unknown_not_negative and test_episode_and_trace_caps_and_determinism (overflow counted, never allocated) |
+| hard CPU, wall and memory limits | test_hard_limits_publish_unavailable |
+| atomic once-only publication, no staging left | test_run_publishes_atomically_once |
+| pin-chain authentication | test_verify_authenticates_the_whole_chain |
+| exact admitted seal (empty pins, other input, false or missing checks, changed bundle) | test_verify_seal_requires_the_exact_admitted_capture |
+| role shares and decoder-aligned trace | test_role_shares_fit_and_a_large_trace_round_trips |
+| input bytes in the child; re-verification before publication | test_child_checks_input_bytes_and_run_reverifies_before_publish |
+| retained not-admitted partials; explicit start failure | test_failures_keep_labelled_partial_outputs_and_start_failure_is_explicit |
+| incomplete-scan and overflow rate labels | test_caps_are_unknown_not_negative, test_episode_and_trace_caps_and_determinism |
+| admission seal once, unavailable preserved | test_admission_seals_once_and_preserves_unavailable |
+| no write or capture read before close, supervisor and plan chain | test_premature_or_unauthenticated_admission_refuses_without_writing |
+| bounded admission stage (CPU, wall, start) | test_admission_stage_is_bounded |
+| no conclusion replay after failed live verification | test_admission_child_stops_when_live_verification_fails |
+| unconfirmed kill leaves staging untouched | test_unconfirmed_kill_leaves_staging_untouched |
+| sensitivity bound to the exact primary plan | test_verify_authenticates_the_whole_chain |
+| stale or conflicting declared bounds refuse | test_verify_authenticates_the_whole_chain |
+| kernel equality and no mutation | test_decorated_copy_matches_unchanged_kernel_and_never_mutates_it |
+| live-v1 equivalence at zero fees | test_zero_fee_entries_equal_kernel_forward_runs |
+| exact class partition | asserted in every projection by the helper |
+| trace reconciliation | test_reconcile_detects_tampering |
+
+8. Claims and limits
+- This is a displayed conditional evaluation of causally reachable supported states. There is no fill, queue, executability, USD, collateral identity or profit claim. Zero fees are optimistic, and every fee schedule is a separate replay.
+- Overlapping episodes may count the same displayed size.
+- Depth is coherent only at the touch, because bbo carries no deeper levels. Fills are capped at the floored touch size, and no deeper level is ever assumed.
+- Carry is an unverified change-feed premise. A stale non-probe touch can be carried all window, so ages are reported for review.
+- All results are conditional on claims C (trading open), D and M (granularity), E and F (conversion timing) and I (quote identity).
+
+9. Root decisions applied (17:38 UTC; repairs 18:05 and 18:06 UTC)
+- Episode and attempt caps are 256 and 32, with genuinely bounded retention.
+- The primary run uses zero fees. Sensitivities are separately predeclared: f = 0.001; f = 0.005; and conversion fees of 0.0005 each.
+- The unchanged live tests are pinned.
+- 18:05, 18:06 and 18:24 repairs: as listed in the Status section above, all before any capture data was read.
+- A secondary single-account analysis was predeclared separately: reports/hip4-independent-research/sequential-v1.py and its plan. It is never pooled with the primary.
+- An independent 100 ms-grid reference simulator (reports/hip4-independent-research/pairing-audit-v1.py) matched the engine exactly on 300 seeded synthetic streams under 5 fee schedules (3,638 episodes). Both harness revisions corrected only the reference's ground truth.

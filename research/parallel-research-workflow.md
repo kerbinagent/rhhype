@@ -221,7 +221,7 @@ Root independently reconciled every response with rational arithmetic. No
 positive candidate remains at these recorded quotes. The result is conditional
 on conversion/payoff assumptions, not proof of simultaneous executable depth.
 
-Claude independently owns funded pairing under the [grant](../reports/experiment-storage/independent-research-ownership-v1.json). The frozen Q357 service started 18:22 UTC for 18:35–20:50; 21 causal tests passed. V4 operational repairs passed static review; v5 optimizes synthetic work limits while blinded during collection. Residual claims are not closed cash.
+Claude independently owns funded pairing under the [grant](../reports/experiment-storage/independent-research-ownership-v1.json). The frozen Q357 service started 18:22 UTC for 18:35–20:50; 21 causal tests passed. V6 source and 25+9 root checks passed. It was amended during collection before reading data; no economic result yet.
 
 ## Conversion price screens, 2 October 12:02 UTC
 
@@ -250,7 +250,7 @@ The [corrected news result](../reports/single-venue-news-inventory-fix-v2/root-r
 
 News Core NEAR follow returned +0.5889 stressed USDC. The [ordinary successor](../reports/news-candidate-rolling-v1/run-v1/root-review.json), fixed chunk 76, had zero primary/comparator attempts: 100 flat-known policies, 20 passed audits and 24 descriptive closes rechecked. Coverage failed; no news replication or repeatable profit.
 
-RH LIT fade remains separate: ordinary +0.0216 stressed USDG versus earlier news −0.1152. Its [prospective pair](../reports/experiment-storage/lit-depth-fade-prospective-v1.json) froze before chunks 96/100; the host supervisor is waiting. Each has four ledgers and one audit, no replacement. Both need positive stressed primary cash and advantage over follow, with at least three combined closes.
+RH LIT fade remains separate: ordinary +0.0216 stressed USDG versus earlier news −0.1152. Its [prospective pair](../reports/experiment-storage/lit-depth-fade-prospective-v1.json) froze before chunks 96/100; the host supervisor is active. Each has four ledgers and one audit, no replacement. Both need positive stressed primary cash and advantage over follow, with at least three combined closes.
 
 The [Comet reproduction](../reports/comet-reproduction-v1/root-reconciliation.json) matched 18,599 runtime bytes and 70 immutable ranges. The [31-call pass](../reports/comet-eligibility-live-v1/root-reconciliation.json) reported open sale prerequisites but only 438,676,007,750 native WETH stock. The [gas floor](../reports/comet-inventory-gas-bound-v1/root-reconciliation.json) rejects that parent under its model; child economics are unavailable because simulated base fee is zero. Dependencies remain unproved.
 
