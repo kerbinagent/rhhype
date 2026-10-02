@@ -225,21 +225,18 @@ Claude independently owns funded pairing under the [grant](../reports/experiment
 
 ## Conversion price screens, 2 October 12:02 UTC
 
-The independently reviewed [issuance screen](../reports/primary-issuance-bound-local-v1/readout.txt)
-ran once after frozen commit c439df1. All four sizes passed metadata/domain
-and final-parent checks but returned negative optimistic bounds: approximately
-−6.08 to −6.09 basis points before gas. Root reconciled all 19 saved responses,
-request payloads and integer share/balance arithmetic. Park this fixed model
-and sample; no composed route, inclusion, source equivalence or profit was proved.
+The [issuance screen](../reports/primary-issuance-bound-local-v1/readout.txt), frozen
+at c439df1, ran once. Four sizes passed metadata/domain/final-parent checks;
+optimistic bounds were −6.08 to −6.09 bp before gas. Root reconciled all 19
+responses, requests and integer share/balance arithmetic. Parked at this model
+and sample; route composition, inclusion, source equivalence and profit unproved.
 
 The [Polymarket extension](../reports/polymarket-no-basket/subset-conversion-books-v1/readout.txt)
-fixed all 30 proper NO subsets, the full-NO reference and one full-YES
-creation/resale route before quotes. All 480 route-slots were field-valid and
-nonpositive: 320 at −0.009Q and 160 at −0.019Q nominal pUSD before costs. Only one
-of 15 sets passed the frozen timing diagnostics; all 32 routes in that set were
-negative. The other 14 support recorded-quote bounds only. Root independently
-reconciled all raw bodies and route arithmetic. This family is parked at the
-sampled prices, with no entire-interval or executable-liquidity claim.
+froze 30 proper NO subsets, full-NO and full-YES creation/resale. All 480 valid
+route-slots were negative: 320 at −0.009Q, 160 at −0.019Q nominal pUSD before costs.
+One of 15 sets passed timing; its 32 routes were negative. The other 14 give
+recorded-quote bounds only. Root reconciled every body and route. Parked at
+these prices; no entire-interval or executable-depth claim.
 
 Both runs retained their full denominators and evidence within their existing
 reservations; the linked receipts record the source-category adjustment.
