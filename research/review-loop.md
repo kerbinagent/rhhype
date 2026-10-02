@@ -6165,3 +6165,18 @@ Snapshot read 2026-10-02T08:07:31.408111Z, updated epoch seconds 1790928451.1317
 Root passive-through scan finished07:47:21 return0; no continuing CPU from that run. 07:52 paper fresh0.44s/busy CPU58.88%,lag52.44ms; recovered07:58/08:04 lag46.14/44.01ms. Review fresh/running/ok,four feeds,CPU68.50%,p95 42.23ms,RSS287.61MiB,105pairs. Rolling chunk000033 recorded Core socket close08:03:12.246222UTC CLOSED,None; operational anomaly immediately flagged. Connections3, bytes/records kept advancing; no intervention. At review499.67s/20,730,002compressedB/143,615records,same single error,economicsfalse. Controller chunks695,438,596B/controls683,112B under separate decimal2GB. Three news helpers waiting/fresh/economicsfalse. No raw/reserved economics,carry samples or news outcomes opened;no competing jobs/changes.
 
 Carry 2026-10-02T08:05:00.108435+00:00: 379sampled,persistent invalid slot71,484future/interrupted,running/no errors/evaluation. Reviews66–192:2,603completions=2,568exactlosses,one estimatedloss,five auditedpairedgains,29auditedrescuegains. Archive 3,841,198/5,242,880B;121futurepairs at5,342B project 4,487,580B,margin 755,300B. Next **08:26:33 UTC**.
+
+
+### Review 193 — 2026-10-02 08:26:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Exact report and independent snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap/growth guards.
+
+`review-20261002T082633Z.json.gz` raw 20,422 B SHA-256 `dcb5ca5a4c415680fab097d64b1924ac7595320fefa02b5e0e497539ead12144`; gzip 3,168 B SHA-256 `d1c5ffcef222541aafdc478aca80931663cab5a8c528715e00deadea2946dcd6`.
+
+`current-epoch-at-review193.json.gz` raw 9,284 B SHA-256 `c4db661371426acbf0c0a35fa16295d42c092d06cefceb6bdda640a3f6dd8a1f`; gzip 1,732 B SHA-256 `67a5f0cb0ba5ecc1b12fb2ea6e1c9bcda4c25ed344fbac2478e0e54d9063eb80`.
+
+Snapshot read 2026-10-02T08:27:17.021063Z, updated epoch seconds 1790929636.8235211; counts not pooled. 22 exact losses: convergence seven / −$7.7294470324, Premium fifteen / −$25.7686206065; no gains/estimates/aborts. HL price_limit rejects nine. Convergence fees$0.1795502520/other$3.4916415465/capital$0.0000462339; Premium fees$12.6380258288/other$7.4873253375/capital$0.0004314402.
+
+08:12 fresh0.71s/busy CPU79.88%,p95 60.65ms/four feeds, parent notified;08:18 fresh/busy CPU71.13%,51.06ms;08:25 recoveredok43.61ms. Review fresh/running/ok CPU55.25%,p95 38.87ms,RSS285.79MiB,105pairs. Rolling advanced to chunk000035:480.63s/19,590,386compressedB/136,343records,two connections/no errors/economicsfalse. Chunk34/35 operational checks no new error after prior33socketclose. Controller chunks741,498,939B/controls704,955B under separate decimal2GB. Three newshelpers waiting/fresh/economicsfalse. No raw/reserved economics,carry samples/news outcomes opened;no competing jobs/interventions.
+
+Carry 2026-10-02T08:25:00.109643+00:00: 383sampled,persistent invalid slot71,480future/interrupted,running/no errors/evaluation. Reviews66–193:2,625completions=2,590exactlosses,one estimatedloss,five auditedpairedgains,29auditedrescuegains. Archive 3,846,098/5,242,880B;120futurepairs at5,342B project 4,487,138B,margin 755,742B. Next **08:46:33 UTC**.
