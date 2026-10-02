@@ -1,0 +1,101 @@
+{
+  "active_research_headroom_bytes": 16384,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 254738432,
+  "added_reserved_bytes": 37748736,
+  "comet": {
+    "candidate_requests_after_freeze": [
+      "https://binaries.soliditylang.org/linux-amd64/list.json",
+      "https://binaries.soliditylang.org/linux-amd64/solc-linux-amd64-v0.8.15+commit.e14f2714",
+      "https://sourcify.dev/server/v2/contract/1/0x63e749153baf1838f63ca22c275370bd2b1ceb15?fields=sources"
+    ],
+    "categories_bytes": {
+      "both_session_messages": 32768,
+      "compiler_raw": 20971521,
+      "compiler_stderr": 65536,
+      "compiler_stdout": 8388608,
+      "controls_allocation_reviews_receipts": 65536,
+      "margin": 1540093,
+      "official_manifest_raw": 131073,
+      "projection": 65536,
+      "source_tests_design_draft_final_and_sequential_temporary_fixtures": 196608,
+      "sourcify_sources_raw": 1048577,
+      "standard_input": 1048576
+    },
+    "claim_limit": "At best exact independent source reproduction for the historical retained implementation runtime, including immutable values. External token/oracle/AssetList dependencies, proxy behavior, future upgrades, eligibility and economic cash remain unproved.",
+    "expected_compiler": "0.8.15+commit.e14f2714",
+    "inputs": [
+      {
+        "bytes": 124569,
+        "path": "reports/comet-sourcify-lookup-v1/run-v1/response.raw",
+        "sha256": "5c314b54024ea40dca7463793ca74cccfc7ee6b9a28275b0c5b3d5ac952cab68"
+      },
+      {
+        "bytes": 2017,
+        "path": "reports/comet-sourcify-lookup-v1/literal-metadata-root-review.json",
+        "sha256": "61fba9a302d6e601dda0496e3ce97795f21ff870a3a0f22f7326b83f0984af6c"
+      },
+      {
+        "bytes": 1375,
+        "path": "reports/comet-identity-v1/run-v1/projection.json",
+        "sha256": "a6025a1fde7811d92a050da087f34083c875de86c32e45825b1f664d9f590a07"
+      }
+    ],
+    "official_documents": [
+      "https://docs.soliditylang.org/en/latest/installing-solidity.html#static-binaries",
+      "https://docs.soliditylang.org/en/v0.8.15/using-the-compiler.html",
+      "https://docs.sourcify.dev/blog/apiv2-lookup-endpoints/"
+    ],
+    "paths": [
+      "scripts/comet_reproduction_v1.py",
+      "tests/test_comet_reproduction_v1.py",
+      "reports/comet-reproduction-v1/",
+      "reports/experiment-storage/comet-reproduction-v1.json"
+    ],
+    "process_design": "Single-inode raw downloads; no duplicate binary staging. Fixed publicGETs only after separate freeze. Separate sandboxed compile, nice19, empty workdir, content-only standard JSON, local all11units, no libraries/remappings; bounded stdout/stderr,240s wall/180sCPU/1GiBaddressspace, no core dump or compiler-created output files. Pins before/after, retain failures. Tests use small synthetic files within source/test category, not production binary copies.",
+    "reserved_bytes": 33554432,
+    "scope": "Prepare bounded artifact acquisition and a separate offline compilation step. Verify compiler SHA256 and Keccak against official manifest before execution, exact11 source-unit names and metadata Keccaks, pinned settings/target, compiler metadata and immutable AST mapping, then full runtime substitution equality to retained deployment. No artifact GET or compiler execution under this preparation allocation alone. No source URL following, installer, extra dependencies, verification POST, RPC, state/price/eligibility/economic calls."
+  },
+  "hip4": {
+    "accepted_correction": {
+      "bytes": 5520,
+      "path": "reports/experiment-storage/hip4-live-causal-correction-closeout-v1.json",
+      "sha256": "bd8a481f1d7d0ad3bfd8e5752dc043fbf9b3910d07727a1e9d92bd88b0526473"
+    },
+    "categories_bytes": {
+      "both_session_messages": 32768,
+      "controls_allocation_final_plan_preflight_run_receipts": 65536,
+      "launcher_source_tests_and_sequential_temporary_fixtures": 32768,
+      "margin": 327680,
+      "projection": 65536,
+      "raw_bundle": 3670016
+    },
+    "paths": [
+      "reports/experiment-storage/hip4-continuation-live-v1.json",
+      "reports/hip4-research-continuation/live-v1/",
+      "reports/hip4-research-continuation/live-v1-root-preflight.json",
+      "scripts/launch_hip4_live_v1.py",
+      "tests/test_launch_hip4_live_v1.py"
+    ],
+    "planned_window_utc": [
+      "2026-10-02T18:35:00+00:00",
+      "2026-10-02T20:50:00+00:00"
+    ],
+    "reserved_bytes": 4194304,
+    "schedule_hint_utc": "2026-10-02T18:45:00+00:00",
+    "scope": "Prepare separate final live plan for accepted unchanged collector, target357. Existing source/fixture correction stays archived; original fixture reserve is closed. One bounded live capture after committed freeze and host schedule. No pairing implementation, orders, accounts or execution/profit claims. Captured supported-path results remain conditional and residual dispositions distinct.",
+    "selected_question": 357,
+    "selection_reason": "Earliest scheduled candidate not yet in its launch window; same prior books sample showed named-bid sum within0.00024 of par. This selection is before new quotes; no post-outcome alternate."
+  },
+  "overall_reservation_bytes": 2850605312,
+  "previous_active_research_reserved_bytes": 216989696,
+  "previous_global_allocation": {
+    "bytes": 16197,
+    "path": "reports/experiment-storage/completed-news-export-queue-passive-closeout-v1.json",
+    "sha256": "b0f8620511c627fdbabcbd2d8f6e7381b145bfc1cb1370963463cc67af61dc94"
+  },
+  "recorded_utc": "2026-10-02T16:00:49.051545+00:00",
+  "resource_rules": "Separate hard categories; temporary and pending files count by unique inode. Disable bytecode and retained test logs. Preserve all older artifacts and failures. No user2GB rolling-cap change. New stages require independent source review and final committed pinning before data or scheduled launch.",
+  "schema": "comet-reproduction-hip4-live-preparation-allocation-v1",
+  "status": "offline_preparation_only_separate_freezes_required"
+}
