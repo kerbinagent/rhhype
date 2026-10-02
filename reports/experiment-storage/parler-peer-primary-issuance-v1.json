@@ -1,0 +1,34 @@
+{
+  "schema": "parler-peer-primary-issuance-v1-budget",
+  "status": "raw_reclassified_exact_probe_source_freeze_pending",
+  "recorded_utc": "2026-10-02T07:45:52.939823+00:00",
+  "previous": "reports/experiment-storage/single-venue-passive-through-v1.json",
+  "previous_sha256": "f773daf99f71df97494ca3b377fa17c57a542f58f9d437390cea7c87c5e18c62",
+  "peer_grant": "reports/experiment-storage/parler-peer-research-v1.json",
+  "peer_grant_sha256": "66bfce0bd3c893749d2f1606b584738c6d16e3b64b87a19ac280cc8c60b02a56",
+  "reserved_bytes": 0,
+  "peer_total_reserved_bytes_unchanged": 8388608,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 240910336,
+  "active_research_headroom_bytes": 13844480,
+  "overall_reservation_bytes": 2836777216,
+  "replacement_peer_categories_bytes": {
+    "peer_sources_tests_docs_and_protocols": 2097152,
+    "peer_derived_outputs": 5767168,
+    "bounded_primary_issuance_metadata_raw_all_session_copies": 524288
+  },
+  "proposal": {
+    "path": "reports/peer-research/20261002-0743/peer-primary-issuance-v1-proposal.json",
+    "bytes": 18887,
+    "sha256": "f096be8addac4f1f4b8acdb276fff920afd56dfb557a6ac6ae97c66841fc0757"
+  },
+  "scope": "Reclassify 524288 bytes from the existing peer derived allowance as bounded raw metadata. No additional global reservation and no release of prior retained results. Two session copies at most 262144 bytes each, including retained transport envelopes. Existing peer source/test/docs allowance covers this amendment and proposal. Prior source and derived results stay charged to their categories.",
+  "authorized_next_step": "Complete isolated offline source, runtime and targeted synthetic checks, then send exact source/test/protocol pins for root review. No RPC until exact probe freeze and root run handoff. One fixed PublicNode capability/contract metadata probe is the intended bounded task, with at most20 sequential requests over180 seconds, no retries/fallback, no market quotes or balances/supply/ratio/history.",
+  "probe_subcaps_bytes": {
+    "source_tests_proposal_protocol_and_remote_copies": 131072,
+    "derived_receipts_and_remote_copies": 131072,
+    "raw_per_session_including_return_envelope": 262144
+  },
+  "primary_source_review": "Root checked official Lido contract/deployment/integration documentation, Curve legacy source, Geth eth_simulateV1 documentation, EIP1898 and the official PublicNode endpoint page. Metadata accessibility and simulated gas/status do not prove live bytecode equivalence, route correctness, inclusion or economic value.",
+  "execution_exclusions": "No signed/submitted transaction, credentials, real wallet, contract deployment, live-state mutation, new endpoint or pool search. Synthetic RPC overrides are ephemeral and confined to the fixed scratch identities. No later economic collection is authorized by a positive probe; a new frozen economic design remains necessary."
+}
