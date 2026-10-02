@@ -1,0 +1,98 @@
+{
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 151781376,
+  "active_research_headroom_bytes": 102973440,
+  "overall_reservation_bytes": 2836777216,
+  "schema": "single-venue-directional-response-v1",
+  "recorded_utc": "2026-10-02T02:30:56.669830+00:00",
+  "previous": "reports/experiment-storage/rolling-capture-budget-v1.json",
+  "previous_sha256": "a3470cc395d5bcf253aff1d75b8030d060659400845b97534fd5fc808fa31df5",
+  "reserved_bytes": 0,
+  "allocation_note": "262144suballocation inside alreadyfunded2097152offlineanalysis in research-capture-campaign-preparation-v1.json, retained byrolling-capture-budget-v1.json. No additional global reservation. Source/tests49152protocol16384outputs196608;1835008analysisbytesremain.",
+  "suballocation_bytes": 262144,
+  "categories_bytes": {
+    "source_tests": 49152,
+    "protocol": 16384,
+    "output": 196608
+  },
+  "output_caps": {
+    "gzip": 180224,
+    "readout": 16384
+  },
+  "windows": [
+    {
+      "index": 1,
+      "capture": "reports/single-venue-broad/capture",
+      "manifest_sha256": "eed280dd18fb6da31ad858d794735af75bc331e61564554d94758e7de8d62843",
+      "raw_sha256": "2a0082cb0b3865a75ac04a1b33034b6af49826bf7c2dbbbc37e43bacccb262bd",
+      "metadata_sha256": "decfa350ccc31b9c1ad09f9dffec368a7820b4d1368a7bfcea25584ffadc45f6"
+    },
+    {
+      "index": 2,
+      "capture": "reports/single-venue-broad-relative/capture",
+      "manifest_sha256": "44c423889dc2a49bf5a27377eb2a21c09c466c9280e9718e725b4ddc2800abc0",
+      "raw_sha256": "f0d9d94a000555430544305b6bbb056978c3c715cd5cb52bb09ae951ab99da24",
+      "metadata_sha256": "7c2100475a63e5a0f81ad5ac81970fdc3964747912cb40bd3d5cec02cc1166e1"
+    }
+  ],
+  "pins": [
+    {
+      "path": "scripts/single_venue_directional_response.py",
+      "sha256": "a5b220963fe3c6075e3d79096be9a350ea7a85e6b425eb89639852c7c5e4b5ea"
+    },
+    {
+      "path": "tests/test_single_venue_directional_response.py",
+      "sha256": "70f69a67058fc487988a15c73a28bac2fa794bba06288873fe59d0f3b8e3f9d7"
+    },
+    {
+      "path": "scripts/single_venue_shock_controls.py",
+      "sha256": "591192d0563d636b21ee4c8a05a03e203928c8ed8723f360a6a69bc7adfec6f9"
+    },
+    {
+      "path": "scripts/single_venue_residual_profile.py",
+      "sha256": "e3a9a11ce389cffe46f990fe7cc7279dccb18bc59ab58672cc5fed3a6de6e23d"
+    },
+    {
+      "path": "scripts/single_venue_broad_quotes.py",
+      "sha256": "96f0c5a8b435ab4fd30429eb873a49614b7eed299a1be0071c7c0bc01530f341"
+    },
+    {
+      "path": "scripts/single_venue_broad_relative.py",
+      "sha256": "1eeddcf8ba6b87861a3236bc4c16e082f362491b61c2c7ecc2e46bcc104b135a"
+    },
+    {
+      "path": "scripts/single_venue_depth_events.py",
+      "sha256": "a6e681b4e9469422c29b6a27a4647223149dabe9637564539e71386e1c0d5fcc"
+    },
+    {
+      "path": "scripts/single_venue_depth_capture.py",
+      "sha256": "f5230d15c2bcaa0ce32f767b75f058d01eacae292f27977be55e41cdd6d2a4ed"
+    },
+    {
+      "path": "scripts/maker_book_archive.py",
+      "sha256": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2"
+    },
+    {
+      "path": "scripts/audit_single_venue_study.py",
+      "sha256": "a306e4272648f4c098de6f015d2e5f293f2aa40ac9799b0a51d6ff7a86c81bb6"
+    },
+    {
+      "path": "scripts/single_venue_strategy.py",
+      "sha256": "5f4a8684e76781c311eb9dfbd9c2f46f9600bb2369db09aafda7fbc2c0c02679"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-broad-relative-v1.json",
+      "sha256": "9e10bef5d159da56799b578905a35eda9498291222ff548047c2252812b930c6"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-broad-v1.json",
+      "sha256": "caf9ab26627c767deed9f903445ccbe47b714302a588db5e9dcdea8c85b8a8d1"
+    },
+    {
+      "path": "reports/single-venue-research/relative-gate-audit.json",
+      "sha256": "84b35b28201e58fa913454de0f3945b86e37cc827f7b8b72af5a8bf167b3d0cc"
+    }
+  ],
+  "scope": "Exploratory delayed directional response on two completed ten-asset Core/RH windows; earlier outcomes inspected, not unseen validation. All ten assets and both observed-mover/target assignments, windows separate. First book callback in each integer elapsed second122..479 is sole evaluation; nonfresh callbacks count and have no within-second replacement. Paired book freshness/source/receipt skew250ms and max2seconds age unchanged. History samples fresh pairs at>=100ms spacing; use latest pair <=t-1second and >=t-1.25seconds. Same generations and BOTH source times and book sequences must advance. Source clocks not synchronized/calibrated across exchanges: receipt order only establishes observations available to collector. Large observed-mover 1second absolute log return>=3bp; side from this return; target absolute change<=onehalf mover magnitude. Threshold3bp/half-response inherited from earlier directional sketch; absolute target bound is new explicit mechanism choice. No120second median residual or staticcrossvenuepremium gate. First lag perasset across both assignments in30seconds; counts retain repeats/dependence and allstages. SignalC0=target samequantity immediate full-depth closed crossingcost with each side fee;nativeqty floor100/(ask1.01),minima,entry<=100; A=side*(moverreturn-targetreturn); costplausible only A>C0, an assumedfullcatchupbudget not calibrated forecast. ALLselectedprofiles ANDpredefinedcostsubsetreported. Reuse frozenQuoteProfiles native quantity,400ms entrydelay then10second holdplus400ms exitdelay, bothreceiptandsource>=due, firsteligiblebook<=due+2seconds, validfreshsamegeneration, fullunlimiteddepth quote, entrycap100, no retry. Fullfailure/minimum/cap/invalidation/unresolvedcounts. Explicit fees on both local notionals (archivedfeesverifiedzero), extra1/2/5bpseparatestress. Report movementconsumed decisiontoactualentry andmovementremaining entrytoexit. At EXACTactualtargetentry/exit observe freshestqualifyingotherbook underpairclockgates, requireotherSOURCE>=thatendpointdue (withclockvalidsource<=receipt thisalsoensuresreceipt>=due),sameothergeneration, identicalbaseqtycompatiblewithothernativegrid/minima,fullotherdepth andcontrolentry<=100. Failedcontrolfrozenatendpoint,neverlaterreplacement;targetretainedwhencontrolmissing. Same-direction movercontrolreturnincludingownfees, target-minus-control quote andsignedmidpoint excess; conditionalcomparatorsnotcausalorhedgedcash. BaselinequotenotIOC/portfolio/privatefills/capital/funding; theseoldwindowsdo notcrosshourlyfunding. All40rows retained includingzeros, allselectedeventprofiles retained, <=2000events/window; allgatecountsreconcile. Stopaftertwoarchivesandonefixedprotocol. Noevents=inconclusive; nocostplausible=parkobservedversion; negativequotemeans/norelativebenefit=parkobservedversion; sameasset/target positivecostplausiblemeantargetquoteANDmeanpairedquoteexcess inbothwindowsonlymotivates separatelyfrozenreplication. Sparse/missingcontrols preventattribution;reportdenominators withoutinventedprecision or minimumoverlapcount. No tuning/relaxation/additionalcapture followsautomatically. Existingordinarygapfamilyfailure does nottestthismechanismbecauseitscommongateadmittednothing.",
+  "verification": "Five targeted synthetic tests independently rerun byroot andPASS: receiptcausality/sourceadvancement/stationarypremiuminvariance; exactendpointcontrolfailures grid/minimum/source/cap preserve local/noreplacement; delayconsumptionvsremainingmovement; sharedassetepisodethinningacrossvenues; lifecyclemarkers/emptyrows/terminal/ownandreferenceinvalidation. Earlierdevelopmentfixtures corrected beforeanymarketdataevaluation."
+}
