@@ -1,0 +1,284 @@
+{
+  "audit": "passed_terminal_record_arithmetic",
+  "reviewed_utc": "2026-10-02T13:52:43.482285+00:00",
+  "source": {
+    "path": "reports/live-review-catchup/review209-positive-records.json.gz",
+    "bytes": 5498,
+    "sha256": "4f90d96106aaafcc7739f09eac72ff32b950fa4ab4f72955bfa83a75f5311bbc"
+  },
+  "window_start_at": 1790947592.8723564,
+  "window_end_at": 1790948792.5870736,
+  "model": {
+    "network_ms": 100,
+    "hyperliquid_processing_ms": 50,
+    "core_rh_processing_ms": 300,
+    "extra_cost_bps": 5,
+    "capital_rate_per_year": ".05",
+    "margin_fraction": 1,
+    "notional_ceiling_usd": 1000,
+    "configuration_source": "Readonly engine_state configuration and scripts/paper_engine.py; captured at root audit."
+  },
+  "records": [
+    {
+      "id": "1790947807950950-24800-convergence",
+      "asset": "SNDK",
+      "classification": "paired",
+      "legs": [
+        {
+          "key": "hyperliquid:xyz:SNDK",
+          "side": "long",
+          "quantity": "0.565",
+          "entry_cash": "996.2645",
+          "exit_cash": "994.4",
+          "gross_cash": "-1.8645",
+          "fees": "0.179159805",
+          "signal_to_source_seconds": "1.3040494",
+          "signal_to_receipt_seconds": "1.8086837",
+          "model_delay_seconds": "0.15",
+          "hold_seconds": "0.9713704",
+          "entry_result": "filled"
+        },
+        {
+          "key": "lighter:139",
+          "side": "short",
+          "quantity": "0.565",
+          "entry_cash": "998.0499",
+          "exit_cash": "994.0271",
+          "gross_cash": "4.0228",
+          "fees": "0.0",
+          "signal_to_source_seconds": "0.4158104",
+          "signal_to_receipt_seconds": "0.7892521",
+          "model_delay_seconds": "0.4",
+          "hold_seconds": "1.5463013",
+          "entry_result": "filled"
+        }
+      ],
+      "gross_cash": "2.1583",
+      "fees": "0.179159805",
+      "five_bp_stress": "0.49902495",
+      "capital_at_five_percent_year": "0.000003981208307498842592592592593",
+      "net": "1.480111263791692501157407407",
+      "closed_at": 1790947810.7310047,
+      "settled_at": 1790947811.1664445
+    },
+    {
+      "id": "1790947859366291-24811-convergence",
+      "asset": "SOXL",
+      "classification": "paired",
+      "legs": [
+        {
+          "key": "rh_lighter:35",
+          "side": "long",
+          "quantity": "6.08",
+          "entry_cash": "995.7824",
+          "exit_cash": "994.7488",
+          "gross_cash": "-1.0336",
+          "fees": "0.0",
+          "signal_to_source_seconds": "0.462884",
+          "signal_to_receipt_seconds": "0.5341318",
+          "model_delay_seconds": "0.4",
+          "hold_seconds": "2.7048202",
+          "entry_result": "filled"
+        },
+        {
+          "key": "hyperliquid:xyz:SOXL",
+          "side": "short",
+          "quantity": "6.08",
+          "entry_cash": "997.7298",
+          "exit_cash": "995.4784",
+          "gross_cash": "2.2514",
+          "fees": "0.179388738",
+          "signal_to_source_seconds": "0.237709",
+          "signal_to_receipt_seconds": "0.884405",
+          "model_delay_seconds": "0.15",
+          "hold_seconds": "2.9722456",
+          "entry_result": "filled"
+        }
+      ],
+      "gross_cash": "1.2178",
+      "fees": "0.179388738",
+      "five_bp_stress": "0.49886490",
+      "capital_at_five_percent_year": "0.000008972143515923642820903094876",
+      "net": "0.5395373898564840763571790969",
+      "closed_at": 1790947863.2229416,
+      "settled_at": 1790947863.8020918
+    },
+    {
+      "id": "1790947900766356-24825-convergence",
+      "asset": "CRCL",
+      "classification": "unequal_partial_hedge_rescue",
+      "legs": [
+        {
+          "key": "hyperliquid:xyz:CRCL",
+          "side": "long",
+          "quantity": "0.919",
+          "entry_cash": "79.1259",
+          "exit_cash": "79.044109",
+          "gross_cash": "-0.081791",
+          "fees": "0.014235300810000002",
+          "signal_to_source_seconds": "0.5496433",
+          "signal_to_receipt_seconds": "1.3028326",
+          "model_delay_seconds": "0.15",
+          "hold_seconds": "0.9969227",
+          "entry_result": "partial"
+        },
+        {
+          "key": "lighter:121",
+          "side": "short",
+          "quantity": "11.584",
+          "entry_cash": "998.726144",
+          "exit_cash": "997.26656",
+          "gross_cash": "1.459584",
+          "fees": "0.0",
+          "signal_to_source_seconds": "0.4384373",
+          "signal_to_receipt_seconds": "0.5277373",
+          "model_delay_seconds": "0.4",
+          "hold_seconds": "1.3005727",
+          "entry_result": "filled"
+        }
+      ],
+      "gross_cash": "1.377793",
+      "fees": "0.014235300810000002",
+      "five_bp_stress": "0.4993630720",
+      "capital_at_five_percent_year": "0.000002184484975156327371892440386",
+      "net": "0.8641924427050248416726281076",
+      "closed_at": 1790947903.066112,
+      "settled_at": 1790947903.5689907
+    },
+    {
+      "id": "1790947931582195-24832-convergence",
+      "asset": "SOXL",
+      "classification": "one_sided_rescue",
+      "legs": [
+        {
+          "key": "lighter:197",
+          "side": "long",
+          "quantity": "6.1",
+          "entry_cash": "997.533",
+          "exit_cash": "998.509",
+          "gross_cash": "0.976",
+          "fees": "0.0",
+          "signal_to_source_seconds": "0.413229",
+          "signal_to_receipt_seconds": "0.5234573",
+          "model_delay_seconds": "0.4",
+          "hold_seconds": "1.0248695",
+          "entry_result": "filled"
+        },
+        {
+          "key": "hyperliquid:xyz:SOXL",
+          "side": "short",
+          "quantity": "0.0",
+          "entry_cash": "0.0",
+          "exit_cash": "0.0",
+          "gross_cash": "-0.0",
+          "fees": "0.0",
+          "signal_to_source_seconds": "0.227805",
+          "signal_to_receipt_seconds": "1.0404406",
+          "model_delay_seconds": "0.15",
+          "hold_seconds": null,
+          "entry_result": "rejected"
+        }
+      ],
+      "gross_cash": "0.976",
+      "fees": "0.0",
+      "five_bp_stress": "0.4987665",
+      "capital_at_five_percent_year": "0.000001620911255301084474885844749",
+      "net": "0.4772318790887446989155251142",
+      "closed_at": 1790947933.1305218,
+      "settled_at": 1790947934.0267804
+    },
+    {
+      "id": "1790948130435331-24868-convergence",
+      "asset": "COIN",
+      "classification": "one_sided_rescue",
+      "legs": [
+        {
+          "key": "lighter:109",
+          "side": "long",
+          "quantity": "5.038",
+          "entry_cash": "997.478658",
+          "exit_cash": "999.221806",
+          "gross_cash": "1.743148",
+          "fees": "0.0",
+          "signal_to_source_seconds": "0.4114177",
+          "signal_to_receipt_seconds": "0.5052503",
+          "model_delay_seconds": "0.4",
+          "hold_seconds": "1.3637444",
+          "entry_result": "filled"
+        },
+        {
+          "key": "hyperliquid:xyz:COIN",
+          "side": "short",
+          "quantity": "0.0",
+          "entry_cash": "0.0",
+          "exit_cash": "0.0",
+          "gross_cash": "-0.0",
+          "fees": "0.0",
+          "signal_to_source_seconds": "0.5376687",
+          "signal_to_receipt_seconds": "1.3407569",
+          "model_delay_seconds": "0.15",
+          "hold_seconds": null,
+          "entry_result": "rejected"
+        }
+      ],
+      "gross_cash": "1.743148",
+      "fees": "0.0",
+      "five_bp_stress": "0.4987393290",
+      "capital_at_five_percent_year": "0.000002156750910018732876712328767",
+      "net": "1.244406514249089981267123288",
+      "closed_at": 1790948132.304326,
+      "settled_at": 1790948132.5371048
+    },
+    {
+      "id": "1790948136180030-24870-convergence",
+      "asset": "SOXL",
+      "classification": "one_sided_rescue",
+      "legs": [
+        {
+          "key": "rh_lighter:35",
+          "side": "long",
+          "quantity": "6.04",
+          "entry_cash": "996.3584",
+          "exit_cash": "997.3248",
+          "gross_cash": "0.9664",
+          "fees": "0.0",
+          "signal_to_source_seconds": "0.4465387",
+          "signal_to_receipt_seconds": "0.5321281",
+          "model_delay_seconds": "0.4",
+          "hold_seconds": "1.4919215",
+          "entry_result": "filled"
+        },
+        {
+          "key": "hyperliquid:xyz:SOXL",
+          "side": "short",
+          "quantity": "0.0",
+          "entry_cash": "0.0",
+          "exit_cash": "0.0",
+          "gross_cash": "-0.0",
+          "fees": "0.0",
+          "signal_to_source_seconds": "0.6529697",
+          "signal_to_receipt_seconds": "1.4777470",
+          "model_delay_seconds": "0.15",
+          "hold_seconds": null,
+          "entry_result": "rejected"
+        }
+      ],
+      "gross_cash": "0.9664",
+      "fees": "0.0",
+      "five_bp_stress": "0.49817920",
+      "capital_at_five_percent_year": "0.000002356812085657026889903602232",
+      "net": "0.4682184431879143429731100964",
+      "closed_at": 1790948138.2040799,
+      "settled_at": 1790948138.704102
+    }
+  ],
+  "summary": {
+    "paired_gains": 2,
+    "unequal_partial_hedge_rescues": 1,
+    "one_sided_rescues": 3,
+    "positive_net_sum": "5.073697932878950442342973110",
+    "all_110_completions_net_usd": -150.27206104427523,
+    "convergence_all_11_paired_net_usd": -7.897006303065
+  },
+  "limitations": "Terminal quantities, native lots/minima, fee and exit-fill cash, five-basis-point reserve, capital, flat state and zero funding reconcile within 1e-9 USD. Entry source and receipt clocks meet the venue-specific model delay; Hyperliquid is 150 ms and Core/RH 400 ms. Timing of each exit intent and first eligible book was not independently reconstructed. Public paper-model observations only; no private fills or independent raw-depth audit. Targeted REST Hyperliquid observations have source ages up to 0.825 s. Larger 1000 USD sizing was user-authorized. The whole batch and all paired convergence closes remain negative; neither selected gains nor failed-entry rescues establish repeatable profit."
+}
