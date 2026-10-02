@@ -2013,3 +2013,8 @@ Six exact losses: convergence two / −$2.2099200530, Premium four / −$7.23867
 ### Routine review 175 — 2026-10-02 02:26:33 UTC
 
 One exact Premium loss / −$1.8972010536; no gains or estimates, complete coverage. Independent snapshot advanced two closes across boundary and is not pooled. Exact deterministic archives/guards passed. Cumulative 2,531: 2,498 exact losses, one estimate, five paired gains, 27 rescue gains. Paper fresh/ok, four feeds; carry 311 sampled / one invalid / 552 future. News helpers waiting/fresh, economics false. Archive 3,761,335 B; projection 4,498,531 B under 5 MiB; next 02:46:33 UTC.
+
+
+### Routine review 176 — 2026-10-02 02:46:33 UTC
+
+Five exact Premium losses / −$8.6618455094, no gains or estimates; complete coverage, report/snapshot boundary counts separate. Exact archives and guards passed. Cumulative 2,536: 2,503 exact losses, one estimate, five paired gains, 27 rescue gains. Paper fresh/four feeds but busy 55.13 ms review lag; prior 64.37/57.06 ms pulses retained. Rolling operational-only scope added: chunk 000002 healthy, two connections/no errors/economics false; separate 2 GB store unchanged. Carry 315 sampled / one invalid / 548 future; news helpers waiting/fresh. Archive 3,765,696 B; projection 4,497,550 B under 5 MiB; next 03:06:33 UTC.
