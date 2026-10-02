@@ -1949,3 +1949,15 @@ invalidslot71,584future/interrupted; no errors/retries/evaluation. Added
 news capture and analysis-companion status supervision; both waiting with
 fresh heartbeats, no economic outputs read or competing jobs launched.
 Next review2October00:06:33UTC.
+
+
+### Review 168, 2 October 00:06 UTC
+
+Complete coverage: seven exact losses, three convergence failed hedges/
+−$3.74442 and four Premium/−$6.83679 (three paired, one failed hedge).
+One convergence abort, no gains/estimates; five HL and one Lighter price
+limits. Four feeds/101 pairs fresh, running/ok. Separate epoch increments
+match report. Archive3,730,151 B;145 future pairs project4,504,741 B,
+margin738,139 B. Carry00:05:283sampled,invalidslot71,580future/interrupted;
+no errors/retries/evaluation. News/analysis helpers waiting with fresh
+heartbeats/hash matches. Next00:26:33UTC.
