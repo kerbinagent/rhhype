@@ -6496,3 +6496,18 @@ Paper14:51ok71.75%CPU/44.00mslag,14:55busy77.09%/51.72ms,15:00busy83.59%/72.82ms
 NEARrun-v1 only four initial controls through15:05,no nomination/terminal observed after cutoff; root notified. Preserve first eligible reserved sample rule, no early raw access. HIP4historical host timer receipt matches frozenplan, targetOct3 05:05UTC; historical receipt is not current host process proof. No routine timer mutations, outcomes reads or launches. Root briefly owns index for separate metadata/control archival; routine journals/archives prepared without staging until release.
 
 Carry15:05:00.123902UTC:462sampled,two invalid(71,389),400future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–213:2,901completions=2,858exact losses,one estimated loss,seven audited paired gains,35audited rescue gains. Archive3,961,758/5,242,880B;100future pairs at5,342B project4,495,958B,margin746,922B. Next **15:26:33 UTC**.
+
+
+### Review 214 — 2026-10-02 15:26:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Explicit UTC wall-clock pre-read guard passed. Exact report and independently timed snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap and growth guards.
+
+`review-20261002T152633Z.json.gz` raw 18,675 B SHA-256 `ef93b7817359e59bdbe3d31b9b0bf010e5ee7c6e5391f8805ce23273b0037f8a`; gzip 2,697 B SHA-256 `0fc2a877bb57011e99086844e16c57cadb6b2e60ea64e68fe72b116890846d65`.
+
+`current-epoch-at-review214.json.gz` raw 9,278 B SHA-256 `5c9ba7ea8fdec70ed69d8671f6fdf2ffd5a9d24767832567bbf758ecaaf31a36`; gzip 1,726 B SHA-256 `c19c09b11bcc2ce13ffdd8437d301b496b507f1ea89aad975766b78095b18153`.
+
+Snapshot read 2026-10-02T15:27:02.121581Z, updated epoch seconds 1790954821.860164; counts not pooled. Three exact convergence losses net−$2.172543552668458;two HL price_limit rejects;no gains, estimates or aborts. Fees$0.17976791564998962/other$1.4969943449999619/capital$0.000041292018567462736.
+
+Paper fresh pulses:15:11busy76.76%CPU/50.51mslag,15:16busy74.09%/52.13ms,15:20busy84.78%/59.58ms,15:25ok75.21%/46.13ms. Reviewfresh/busy71.12%/52.73ms,RSS298.92MiB,109pairs. Rolling75healthy15:25at194.26s/9,002,770compressed B/58,121records,two connections/no errors/economics false; chunks1,681,810,346B/controls49,072B under separate2GB. Recovery gap retained; no routine raw decode/intervention. NEARinitialfourcontrols only through15:25,no nomination/terminal; preserve exact first eligible reserved rule, no early raw read. HIP4timer metadata historical receipt unchanged; no routine mutation/launch/economic read.
+
+Carry15:25:00.123933UTC:466sampled,two invalid(71,389),396future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–214:2,904completions=2,861exact losses,one estimated loss,seven audited paired gains,35audited rescue gains. Archive3,966,181/5,242,880B;99future pairs at5,342B project4,495,039B,margin747,841B. Next **15:46:33 UTC**.
