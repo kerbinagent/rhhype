@@ -1,0 +1,72 @@
+{
+  "schema": "single-venue-queue-ofi-publication-fix-v1",
+  "status": "frozen",
+  "recorded_utc": "2026-10-02T06:07:07.458421+00:00",
+  "previous": "reports/experiment-storage/single-venue-queue-ofi-v1.json",
+  "previous_sha256": "27073af951c7d8fd08e24978314e662810d17e0b56645f894b710fbdf11ace70",
+  "reserved_bytes": 4194304,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 236716032,
+  "active_research_headroom_bytes": 18038784,
+  "overall_reservation_bytes": 2836777216,
+  "allocation_note": "New4MiB from existing headroom for larger publication allowance; original2MiB reservation and partial output retained. No new raw capture or change to rolling ceiling. Reused base scientific source/tests/input artifacts already funded.",
+  "categories_bytes": {
+    "source": 65536,
+    "tests": 32768,
+    "protocol": 16384,
+    "six_chunk_gzip_outputs": 3145728,
+    "model_and_summary": 131072,
+    "readout": 32768,
+    "provenance": 32768,
+    "control": 8192,
+    "margin": 729088
+  },
+  "parent_plan": "reports/experiment-storage/single-venue-queue-ofi-v1.json",
+  "parent_plan_sha256": "27073af951c7d8fd08e24978314e662810d17e0b56645f894b710fbdf11ace70",
+  "reason": "Parent run failed at publication of FIT chunk2 with output_byte_cap after156.828613 seconds. Only FIT chunk1 was saved; no model or evaluation output. No human feature/economic-result inspection informed this successor. Larger byte cap is operational, with scientific parameters unchanged.",
+  "parent_run_record": "reports/single-venue-research/queue-ofi-v1-run.json",
+  "parent_pre_feature_commit": "5938061",
+  "output_root": "reports/single-venue-research/queue-ofi-publication-fix-v1",
+  "output_caps": {
+    "source": 65536,
+    "tests": 32768,
+    "protocol": 16384,
+    "gzip_per_chunk": 524288,
+    "model": 32768,
+    "summary": 98304,
+    "readout": 32768,
+    "provenance": 32768,
+    "control": 8192
+  },
+  "scientific_contract": "Inherit the complete frozen parent question, all six chunks,28 calendar anchors,5/6 features,minimum40 training labels,OLS fit/rank/condition rules,model-before-evaluation barrier,delays,250ms clock limits,notionals100/1000/10000,native quotes,fees,capital,funding exclusion,missingness and advance gate verbatim. No thresholds,model arms,cohort or economic interpretation changed.",
+  "saved_fit_chunk": {
+    "chunk": "chunk-000001",
+    "path": "reports/single-venue-research/queue-ofi-v1/chunk-000001.json.gz",
+    "sha256": "2834825384d8abe5226ee00bda3c444673b88667d464ebc1da413f338ddbc78b",
+    "bytes": 219661,
+    "decoded_bytes_cap": 16777216
+  },
+  "resumption": "Reuse the exact saved first fit table, verify bytes/hash and complete calendar and require identical canonical gzip re-encoding. Stream other five chunks with unchanged parent stream_chunk. Do not human-inspect features or outcomes for redesign. Publish into a distinct directory; preserve original files.",
+  "source_pins": [
+    {
+      "path": "scripts/single_venue_queue_ofi_publication_fix.py",
+      "sha256": "c2b6502ae5c8da78e01290205194c3e76922f3a7d2cb16a731138dc7ea65efcd"
+    },
+    {
+      "path": "tests/test_single_venue_queue_ofi_publication_fix.py",
+      "sha256": "b8407af1b91fbe04cb583a2b301cf0eb6afd943886f4bccbac3d2ddbdf6f9ed9"
+    }
+  ],
+  "freeze_requirement": "Frozen after source review and four synthetic tests, before any successor table loading. Parent scientific contract remains unchanged; all further changes require a separately recorded protocol.",
+  "execution_bound": "Single detached supervised run; nice19; external1800-second timeout. Preserve partial output on failure. Total control artifacts<=8192 bytes, native quote tables<=524288 bytes each,summary<=98304 compressed and2097152 decoded,model<=32768,provenance<=32768 total.",
+  "parent_run_record_sha256": "b7828aeb6a56dd2b9244b3ca7b0016f50c4550c455188597bbb92c5b39650c60",
+  "validation": {
+    "targeted_tests": 4,
+    "root_test_seconds": 0.106,
+    "independent_test_seconds": 0.102,
+    "test_command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest tests.test_single_venue_queue_ofi_publication_fix -v",
+    "review": "Root and independent focused review found no material publication/scientific inconsistency. Tests cover scope restoration, parent/source pins, resume corruption/calendar/byte identity and unchanged model publication barrier.",
+    "real_table_content_or_raw_read_before_freeze": false
+  },
+  "frozen_utc": "2026-10-02T06:14:32.818079+00:00"
+}
