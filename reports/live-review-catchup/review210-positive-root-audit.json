@@ -1,0 +1,41 @@
+{
+  "audit": "passed_terminal_record_arithmetic",
+  "reviewed_utc": "2026-10-02T14:08:24.194144+00:00",
+  "source": {
+    "path": "reports/live-review-catchup/review210-positive-records.json.gz",
+    "bytes": 1728,
+    "sha256": "10a37ad8e1e06dd9badb88761de00816eab924a0978194db21b7476ecb0577e5"
+  },
+  "window_start_at": 1790948792.5870736,
+  "window_end_at": 1790949992.3381486,
+  "classification": "Core SPCX long closed after Hyperliquid short price-limit rejection; one-sided rescue, not a paired gain.",
+  "record": {
+    "id": "1790949070836197-24902-convergence",
+    "quantity": "6.4",
+    "entry_value": "996.608",
+    "exit_value": "997.12",
+    "gross_cash": "0.512",
+    "fees": "0",
+    "five_bp_stress": "0.4983040",
+    "capital_at_five_percent_year": "0.000002110195929416539827498731608",
+    "net": "0.01369388980407058346017250127",
+    "unhedged_seconds": "1.3354727",
+    "latency": [
+      {
+        "key": "lighter:194",
+        "source_seconds": "0.4237851",
+        "receipt_seconds": "0.5284131",
+        "model_delay_seconds": "0.4"
+      },
+      {
+        "key": "hyperliquid:xyz:SPCX",
+        "source_seconds": "0.7238021",
+        "receipt_seconds": "1.2964885",
+        "model_delay_seconds": "0.15"
+      }
+    ],
+    "closed_at": 1790949072.7000837,
+    "settled_at": 1790949072.9371185
+  },
+  "limitations": "Native lots/minima, entry/exit fill totals, zero fees, flat state, five-basis-point reserve, full-notional capital at5%/year and no-hour-boundary zero funding reconcile within1e-9USD. Source and receipt clocks meet the model150msHL/400msCore delay. Terminal public paper record only; no private fills or independent raw-depth/first-eligible-book reconstruction. Actual996.608USD entry is user-authorized larger sizing. The23-completion batch remains negative at\u221227.172046476301148USD; this0.01369USD failed-entry rescue does not establish repeatable profit."
+}
