@@ -1,0 +1,76 @@
+{
+  "schema": "aave-trace-access-preparation-v1",
+  "recorded_utc": "2026-10-02T19:31:42Z",
+  "status": "offline_preparation_only_no_RPC",
+  "previous_global_allocation": {
+    "path": "reports/experiment-storage/lit-depth-fade-prospective-preparation-v1.json",
+    "bytes": 5850,
+    "sha256": "83f012d4726ee58c41a6788736dab39a160418e1997f8bbf2eef3480b4a3c793"
+  },
+  "added_reserved_bytes": 524288,
+  "previous_active_research_reserved_bytes": 247529472,
+  "active_research_reserved_bytes": 248053760,
+  "active_research_pool_bytes": 254754816,
+  "active_research_headroom_bytes": 6701056,
+  "overall_reservation_bytes": 2843396352,
+  "categories_bytes": {
+    "source_tests_design_plans_and_sequential_synthetic_fixtures": 98304,
+    "raw_responses_and_per_request_receipts": 360448,
+    "controls_allocation_root_reviews_and_terminal": 32768,
+    "margin": 32768
+  },
+  "question": "Can the declared public Ethereum endpoint return bounded historical transaction call traces and pre/post state differences? This is an observability preflight for a possible later Aave V3 atomic liquidation cash audit, not a liquidation census, economic study, public-profit claim or strategy launch.",
+  "motivation": "Aave liquidation and immediate collateral disposal can close within one transaction under repayment rather than debt-opening mode. A log or whole-block wallet delta cannot prove transaction-level cash closure. Check trace access before any liquidation selection or economic implementation.",
+  "source_basis": [
+    {
+      "url": "https://aave.com/docs/aave-v3/smart-contracts/pool",
+      "fact": "Pool liquidation accepts debt repayment for collateral; flashLoan can open debt, while flashLoanSimple requires repayment. Current docs do not establish historical implementation or fees."
+    },
+    {
+      "url": "https://aave.com/docs/aave-v3/guides/flash-loans",
+      "fact": "Repayment plus premium occurs within one transaction for repayment mode. Approved flash borrowers may have distinct fees; no fee assumption adopted."
+    },
+    {
+      "url": "https://ethereum.publicnode.com/",
+      "fact": "Provider publishes https://ethereum-rpc.publicnode.com as public Ethereum mainnet RPC. Trace support is unknown."
+    }
+  ],
+  "proposed_selection": "One endpoint, chainId1, finalized block returned after reviewed freeze, first transaction hash in that block, no selection by transaction kind or profit. Empty or unavailable block is unknown without replacement. Final re-read of selected block number must match its original hash.",
+  "proposed_requests": [
+    "eth_chainId",
+    "eth_getBlockByNumber(finalized,false)",
+    "eth_getTransactionReceipt(selected first hash)",
+    "debug_traceTransaction(selected hash,callTracer)",
+    "debug_traceTransaction(selected hash,prestateTracer diffMode=true)",
+    "eth_getBlockByNumber(selected block number,false)"
+  ],
+  "proposed_bounds": {
+    "max_RPC_requests": 6,
+    "retries": 0,
+    "redirects": 0,
+    "response_bytes_by_request": [
+      4096,
+      32768,
+      32768,
+      98304,
+      98304,
+      32768
+    ],
+    "per_request_seconds": 20,
+    "overall_wall_seconds": 150,
+    "CPU_seconds": 15,
+    "RAM_bytes": 268435456,
+    "source_tests_design_plans_and_simultaneous_fixture_bytes": 98304
+  },
+  "success_limit": "At most reports a structurally usable provider response for this one transaction. Does not prove complete token balance decoding, Aave configuration, callback identity, opportunity availability, inclusions, ordering, costs, profit, failed-attempt coverage or repeatability.",
+  "failure_rule": "Transport, HTTP/RPC error, nulls, incompatible schema, size/time caps, receipt/block mismatch or changed canonical hash remain unavailable/unknown. Preserve request and response bytes and failures. No fallback provider, retry, replacement transaction, alternate block or automatic larger cap.",
+  "owned_paths": [
+    "scripts/aave_trace_access_v1.py",
+    "tests/test_aave_trace_access_v1.py",
+    "reports/aave-trace-access-v1/design.txt",
+    "reports/aave-trace-access-v1/draft-plan.json"
+  ],
+  "root_owned_final_plan": "reports/experiment-storage/aave-trace-access-v1.json",
+  "preparation_rule": "No network or actual chain input for author. Dry default makes zero requests and writes nothing. Root full review and focused synthetic evidence precede separately frozen final plan and any RPC. Immutable failed/staged outputs and all scratch count toward categories.",
+  "accounting": "512KiB from existing active headroom only; no overall expansion, deletion, raw reprocessing, user2GB rolling change, or modifications to LIT, HIP4, Comet or existing monitors."
+}
