@@ -1,0 +1,23 @@
+{
+  "schema": "parler-peer-clipper-source-allocation-v1",
+  "recorded_utc": "2026-10-02T13:55:01.128726+00:00",
+  "status": "offline_source_math_tests_and_plan_only",
+  "parent": {
+    "path": "reports/experiment-storage/parler-peer-contractual-closures-and-cache-reconciliation-v1.json",
+    "bytes": 3147,
+    "sha256": "b2e2ea23d0d24d2552bae50494021cd5c6c9f29d6679e0eef37820fd4fccb373"
+  },
+  "global_change_bytes": 0,
+  "peer_total_grant_bytes": 9437184,
+  "peer_source_category_bytes": 3145728,
+  "previous_source_commitment_all_copies_bytes": 2924746,
+  "new_clipper_package_all_copies_bytes": 131072,
+  "this_allocation_and_all_copies_reserved_bytes": 8192,
+  "source_commitment_after_bytes": 3064010,
+  "source_headroom_after_bytes": 81718,
+  "package_scope": "Clipper reset-reward source, math, adversarial offline tests, exact bounded census plan and source pins. Package cap includes both hosts, drafts, tests, design, plans, transport encodings, handoff attachments, temporary copies and output. Disable bytecode; do not persist test logs. Root receipt must fit package before transfer.",
+  "retention": "Keep every prior artifact and allowance. Existing Comet package262144B is fully reserved and almost full; do not add more Comet package copies. Root Comet receipt3097B is charged once inside that package; source ledger commitment is unchanged.",
+  "authorization": "Continue long-horizon contractual-closure research. Build a price-free complete-census eligibility test for Clipper reset incentives: frozen chain and deployment identity, count/list/recheck of all active auctions with a64-item predeclared completeness ceiling, exact calldata, gate predicates, source provenance and fail-closed bounds. Source and offline fixtures only. No API, RPC, economic/book/price query, account, order, compiler download or broad clone. A separate committed exact live plan and raw allocation are required before live reads.",
+  "handoff": "Keep the completed code stable for independent review. Before transfer report all file pins, all-copy byte inventory and complete source-category reconciliation. Prefer one compact encoded source package, and leave room for root receipt/corrections.",
+  "prior_provenance_note": "research/peer-clipper-source-provenance-v1.txt retains the earlier failed API attempt; no successful response or data was obtained."
+}
