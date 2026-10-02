@@ -90,7 +90,7 @@ class ShockControlsTest(unittest.TestCase):
         self.assertEqual(unfinished["status"],"unresolved_at_end")
 
     def test_episode_spacing_crosses_venues_and_control_uses_past_only(self):
-        events=[]
+        events=[dict(type="control",asset=None,venue="lighter",received_ns=0)]
         for t,venue in ((20,None),(50,"lighter"),(55,"rh_lighter"),(85,"rh_lighter")):
             order = tuple(v for v in s.VS if v != venue) + (venue,) if venue else s.VS
             for v in order:
@@ -101,6 +101,7 @@ class ShockControlsTest(unittest.TestCase):
         with patch.object(s,"Detector",FixedDetector):
             result=s.diagnose(events,META,0,["BTC"])
         self.assertEqual(len(result["events"]),2)
+        self.assertEqual(result["non_market_events"],{"control":1})
         first,second=result["events"]
         self.assertEqual(first["control_anchor"]["t"],round(20.1*s.NS))
         self.assertEqual(first["control_profile"]["direction"],-1)

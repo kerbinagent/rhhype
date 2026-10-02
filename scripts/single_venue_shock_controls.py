@@ -21,7 +21,7 @@ from scripts.single_venue_residual_profile import exactmid, sweep
 from scripts.single_venue_strategy import dec, rounded
 from scripts.single_venue_broad_quotes import distribution
 
-PLAN = ROOT / "reports/experiment-storage/single-venue-shock-controls-v1.json"
+PLAN = ROOT / "reports/experiment-storage/single-venue-shock-controls-adapter-fix-v1.json"
 OUTPUT = ROOT / "reports/single-venue-research/shock-controls.json.gz"
 DELAY = 400_000_000
 HOLD = 10 * NS
@@ -179,10 +179,15 @@ def diagnose(stream, metadata, start, assets):
     last_anchor, last_shock, last_episode = {}, {}, {}
     observed_since = {a:start for a in assets}
     shock_times = defaultdict(list)
+    non_market_events = Counter()
     selected, ended = [], False
     for event in stream:
-        profiles.process(event)
         kind, now = event["type"], event["received_ns"]
+        if kind != "end" and event.get("asset") not in detectors:
+            assert kind == "control", "unexpected event without selected market"
+            non_market_events[kind] += 1
+            continue
+        profiles.process(event)
         if kind == "end":
             for detector in detectors.values():
                 detector.process(event)
@@ -247,6 +252,7 @@ def diagnose(stream, metadata, start, assets):
     return dict(rows=summarize(selected, counts, assets), events=selected,
                 ordinary_profile_outcomes=dict(Counter(p["status"] for p in profiles.rows if p["label"] == "ordinary")),
                 reused_control_profiles=sum(n-1 for n in Counter(references).values()),
+                non_market_events=dict(non_market_events),
                 detector_counts={a:dict(d.counts) for a,d in detectors.items()},
                 dependence="30-second first-event spacing per asset across both venues; cross-asset and session dependence remains. Controls may contain subsequent shocks; no future filtering.")
 

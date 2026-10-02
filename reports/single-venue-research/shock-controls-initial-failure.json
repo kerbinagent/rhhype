@@ -1,0 +1,10 @@
+{
+  "recorded_utc": "2026-10-02T02:13:08.257407+00:00",
+  "plan_sha256": "b8769d955e121ddd456aecffbb4d55664e5dce0f9740fbf5b65cf94beaa7fa78",
+  "command": "nice -n 19 python scripts/single_venue_shock_controls.py",
+  "returncode": 1,
+  "error": "KeyError: None at detectors[asset] on non-market adapter lifecycle marker",
+  "output_created": false,
+  "economic_results_computed": false,
+  "source_and_test_preserved": true
+}
