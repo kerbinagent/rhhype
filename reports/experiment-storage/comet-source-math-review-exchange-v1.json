@@ -1,0 +1,20 @@
+{
+  "added_all_copy_package_bytes": 16384,
+  "claims": "Source-model arithmetic only; no current reserves, inventory, price, execution, gas, source equivalence, cash closure or profitability.",
+  "global_change_bytes": 0,
+  "math_premise": "Root independently browsed pinned official CometWithExtendedAssetList f766f51583c23acc33b2a7824654ef2029a96804 source; source deployment equivalence stays unresolved. Independent Sol algebra review was read-only in chat.",
+  "parent": {
+    "bytes": 2000,
+    "path": "reports/experiment-storage/comet-runtime-trailer-offline-exchange-reconciliation-v2.json",
+    "sha256": "da35375378db12b09ec0c2a3412391e348b335451127e9f2471dbca22f0cc9a3"
+  },
+  "peer_source_cap_bytes": 3145728,
+  "previous_source_commitment_bytes": 3088586,
+  "recorded_utc": "2026-10-02T15:22:28.750766+00:00",
+  "rules": "Reserve allocation+rootreceipt<=6144B; complete both-session message body copies<=10240B. Existing peer/source files and raw runtime evidence are referenced, never recopied. Later Sourcify artifact-stage result messages may use their separately reserved16384B transport allowance with explicit assignment.",
+  "schema": "comet-source-math-review-exchange-v1",
+  "scope": "One compact root conditional arithmetic/source review and subsequent source-only peer message bodies, all complete copies counted. No peer artifact copy, new source-body file, compiler, API/RPC/data query or economic evaluation. This does not expand the separate terminal trailer package.",
+  "source_commitment_after_bytes": 3104970,
+  "source_headroom_after_bytes": 40758,
+  "source_url": "https://raw.githubusercontent.com/compound-finance/comet/f766f51583c23acc33b2a7824654ef2029a96804/contracts/CometWithExtendedAssetList.sol"
+}

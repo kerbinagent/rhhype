@@ -1,0 +1,44 @@
+{
+  "allocation": {
+    "bytes": 1742,
+    "path": "reports/experiment-storage/comet-source-math-review-exchange-v1.json",
+    "sha256": "d1836a3e155295d207372484478f6bb5abc6c868a76b2f37558d8f233c3126f7"
+  },
+  "definitions": {
+    "B": "positive basePrice",
+    "D": "positive assetPriceDiscounted",
+    "M": "min(observed collateral stock,2^128-1)",
+    "U": "2^256-1",
+    "b": "positive baseScale",
+    "d": "D*b computed offchain with unbounded integers",
+    "p": "B*s computed offchain with unbounded integers",
+    "q": "Actual base token balance increase returned by doTransferIn, not necessarily submitted token spend.",
+    "s": "positive assetInfo.scale"
+  },
+  "derived_bounds": {
+    "maximum_q": "min(floor(U/p), floor(((M+1)*d-1)/p))",
+    "positive_output_minimum_q": "ceil(d/p)",
+    "quote": "C(q)=floor(p*q/d)",
+    "required_output_m_positive_minimum_q": "ceil(m*d/p)"
+  },
+  "edge_cases": [
+    "Successive floors equal division by the product of positive divisors.",
+    "Because s>=1, final p*q<=U also enforces the earlier B*q intermediate for positive q.",
+    "If mathematical p>U, no positive q fits; q=0 does not execute a standalone B*s multiplication.",
+    "If mathematical d>U, every checked numerator gives C=0; source never multiplies D*b, so this fact alone is not denominator overflow.",
+    "The pre-transfer reserves gate does not imply q<=target-reserves. There is no post-transfer target cap in the inspected purchase body.",
+    "If discounted price is zero or an upstream checked computation fails, the quote is unavailable; these formulas do not cure that failure."
+  ],
+  "inspected_source_lines": {
+    "buyCollateral": "1024-1039",
+    "doTransferIn": "601-620",
+    "quoteCollateral": "1047-1058"
+  },
+  "limitations": "This is an exact conditional integer bound for the inspected source body only. Token behavior, returned values, future state, proxy/dependency binding, fee/gas and executable cash exit remain unresolved. No source-equivalence or economic claim.",
+  "recorded_utc": "2026-10-02T15:22:28.751103+00:00",
+  "review": "Root read the pinned official source through the browser; independent Sol first confirmed the algebra alone, then confirmed it under the exact source operation order supplied by root. No source-body file, source compilation, live call or numeric economic input was created.",
+  "schema": "comet-source-math-root-review-v1",
+  "source_operations": "The source multiplies B by q, then s, then divides by D and b. buyCollateral checks pause and reserves before transfer, then quote, min output, stock and safe128 before transfer out. Upstream price/discount and transfer success are separate prerequisites.",
+  "source_url": "https://raw.githubusercontent.com/compound-finance/comet/f766f51583c23acc33b2a7824654ef2029a96804/contracts/CometWithExtendedAssetList.sol",
+  "status": "conditional_source_model_confirmed_not_deployment_proof"
+}
