@@ -1,0 +1,57 @@
+Historical searcher access for the same oracle-prefix transaction
+
+Post-hoc continuation of the admitted health/price crossing. Is this exact
+prefix identifiable in a fixed public historical-hint subset, and what
+fields/time labels were associated with it? No new borrower or winner search.
+
+The official Flashbots event-stream documentation describes historical hints
+at /api/v1/history, with /info metadata, block/time filters, limit and offset.
+Hint root hashes can be keccak256(transaction hash) or bundle hashes; an
+optional txs[].hash identifies an underlying transaction. History block/time
+labels describe the provider's view when it generated the hint. Fields may
+be withheld. Mainnet host is mev-share.flashbots.net.
+https://docs.flashbots.net/flashbots-mev-share/searchers/event-stream
+
+Exactly two fixed GET slots, no retries/fallbacks/redirects/streaming:
+1 /api/v1/history/info,4096B body. Required count/minBlock/maxBlock/
+minTimestamp/maxTimestamp/maxLimit integer fields. Reported coverage must
+include the complete fixed range and maxLimit must allow100, otherwise stop.
+2 /api/v1/history?blockStart=26103136&blockEnd=26103141&limit=100&offset=0,
+262144B body. Fixed six-block range ending at the original event, first100
+returned hints only. Never paginate, extend time or repeat on an empty sample.
+
+Match categories are distinct: underlying tx hash or documented root double
+hash establishes a hash identity match within provider data. Exact recipient
+plus complete calldata is a content match, weaker than transaction identity.
+Missing fields stay missing. Preserve all returned raw hints and report every
+match; counts include duplicate rows, not independent opportunities.
+No match means only absence from this returned subset. Even fewer than100
+rows does not establish archive completeness. Exactly100 marks the page limit.
+Returned rows outside the range or malformed schemas invalidate the study.
+
+For matches retain supplied fields, timestamp, provider head block and target
+block timestamp minus hint timestamp. This difference is a provider-label
+comparison, not local network arrival or measured actionable lead time.
+Hash/calldata matches do not prove the historical winning auction, builder
+delivery, our ability to execute, net profit or repeatability. No signing,
+bundle submission, funded account, contract deployment or trading occurs.
+
+Reserve512KiB before collection:352KiB raw,64KiB source/tests/design/plan,
+32KiB controls/reviews,16KiB projection,48KiB margin. Two direct anonymous
+HTTPS requests, identity encoding,20s each,80s work/90s wall,20CPU seconds,
+512MiB RAM. Body total≤266242 including sentinel space. Eight raw files
+(request,header,body,receipt per request); body streamed+fsynced, one overrun
+sentinel retained, entire next request/body/header/receipt reservation checked
+before dispatch. Header cap2048B with bounded prefix retained on excess.
+Require one valid Content-Length matching exact retained body bytes, or a
+single chunked Transfer-Encoding completed by the HTTP parser. Reject absent,
+conflicting or unsupported framing. Premature EOF is unavailable even if the
+retained prefix is valid JSON. Offline replay also checks declared length.
+Transport/schema failure remains unavailable, not a no-match observation.
+Default dry, frozen source/input/runtime pins, exclusive output claim, exact
+offline replay and final pin verification before success publication.
+
+Chainlink's guide supplies the separate mechanism hypothesis: forward to
+transmitSecondary, then bundle the update and liquidation with a competitive
+fee-recipient payment. This study tests historical hint presence only.
+https://docs.chain.link/data-feeds/svr-feeds/searcher-onboarding-ethereum

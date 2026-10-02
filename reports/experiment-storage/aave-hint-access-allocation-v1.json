@@ -1,0 +1,40 @@
+{
+  "active_research_headroom_bytes": 487424,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 254267392,
+  "bounds": {
+    "body_bytes": 266242,
+    "cpu_seconds": 20,
+    "ram_bytes": 536870912,
+    "raw_bytes": 360448,
+    "request_seconds": 20,
+    "requests": 2,
+    "wall_seconds": 90
+  },
+  "categories_bytes": {
+    "controls_reviews": 32768,
+    "margin": 49152,
+    "projection": 16384,
+    "raw": 360448,
+    "source_tests_design_plan": 65536
+  },
+  "headroom_after_pending_escrow_bytes": 487424,
+  "interpretation": "Post-hoc access evidence only. Hash identity and to+calldata content matches separate. No match is absent only from retained subset. Provider time labels are not local delivery latency, inclusion, opportunity or profit.",
+  "new_reserved_bytes": 524288,
+  "overall_reservation_bytes": 2849347840,
+  "owned_paths": [
+    "scripts/aave_hint_access_v1.py",
+    "tests/test_aave_hint_access_v1.py",
+    "reports/aave-hint-access-v1/"
+  ],
+  "pending_mac_expansion_escrow_bytes": 0,
+  "previous_global_allocation": {
+    "path": "reports/experiment-storage/continuation-mac-escrow-consumption-v1.json",
+    "sha256": "965985ffac67f17d59a8a9c547fd0bc77d940a5011ca0908c27ccd2d2ed8e62b"
+  },
+  "question": "Is the same historical prefix identifiable in a bounded public Flashbots history subset, and what data/time labels does its hint expose?",
+  "recorded_utc": "2026-10-02T22:58:06.123666+00:00",
+  "schema": "aave-hint-access-allocation-v1",
+  "scope": "Two unauthenticated HTTPS GETs only: history/info, then fixed block26103136..26103141 limit100 offset0. No signing, orders, live streams, retries, providers or adaptive range changes.",
+  "status": "funded_single_frozen_run"
+}
