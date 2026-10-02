@@ -1,0 +1,49 @@
+{
+  "schema": "polymarket-no-basket-metadata-v1-root-receipt",
+  "recorded_utc": "2026-10-02T09:05:06.034816+00:00",
+  "status": "inconclusive_frozen_utc_date_gate_failed",
+  "plan_sha256": "118815a62a774caab5251518cb6e674503585a8027bcc960c0bfbc60d9a7b90f",
+  "requests": 1,
+  "http_status": 200,
+  "source_outputs_unchanged": true,
+  "outputs": [
+    {
+      "path": "reports/polymarket-no-basket/metadata-v1/claim.json",
+      "bytes": 415,
+      "sha256": "f7b988d6744db8898bc43cb59a4369d22225b35f7884a7c516fbc0effc450b33"
+    },
+    {
+      "path": "reports/polymarket-no-basket/metadata-v1/metadata.json",
+      "bytes": 643,
+      "sha256": "d3d53d53e6b62fda3211ec19850be95590d287bb63e511c0e7416c1d77fb0613"
+    },
+    {
+      "path": "reports/polymarket-no-basket/metadata-v1/response.body",
+      "bytes": 26716,
+      "sha256": "e2de566d2a70f5e10627ddc33c595aaceef5324ad0c44bdff92bd7c0a3f998e8"
+    },
+    {
+      "path": "reports/polymarket-no-basket/metadata-v1/supervisor.json",
+      "bytes": 273,
+      "sha256": "0560d321acc2cf126e2296bea6ca991f5d31edbabb6c0ee3fc570fec46c12202"
+    },
+    {
+      "path": "reports/polymarket-no-basket/metadata-v1/terminal.json",
+      "bytes": 458,
+      "sha256": "437a3e4b5ea8c7f8efe80ce8174df397a435fcbc8c8746e1a11091462b2e31fd"
+    }
+  ],
+  "result": {
+    "event_count": 1,
+    "candidate_count": 0,
+    "returned_event_id": "606422",
+    "title_match": true,
+    "required_end_utc_date": "2026-10-28",
+    "observed_end_utc": "2026-10-29T03:59:00Z",
+    "converted_end_America_New_York": "2026-10-28T23:59:00-04:00"
+  },
+  "interpretation": "One title-matched event was returned, but the frozen UTC-day criterion failed. No full candidate metadata was projected and no quotes, fills or economics were inspected. The observed timestamp is on the selected meeting day in New York. A separately recorded metadata-only calendar correction may reuse this exact response; the original result remains inconclusive and is not relabeled as a pass.",
+  "request_or_source_retries": 0,
+  "raw_economic_fields_inspected": false,
+  "new_global_reservation_bytes": 0
+}

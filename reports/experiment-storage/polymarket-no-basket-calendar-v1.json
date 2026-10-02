@@ -1,0 +1,44 @@
+{
+  "schema": "polymarket-no-basket-calendar-v1",
+  "status": "frozen_offline_metadata_projection",
+  "recorded_utc": "2026-10-02T09:08:58.373545+00:00",
+  "previous": "reports/experiment-storage/polymarket-no-basket-metadata-v1.json",
+  "previous_sha256": "118815a62a774caab5251518cb6e674503585a8027bcc960c0bfbc60d9a7b90f",
+  "original_plan_sha256": "118815a62a774caab5251518cb6e674503585a8027bcc960c0bfbc60d9a7b90f",
+  "reserved_bytes": 0,
+  "allocation": "Reuse the existing 2 MiB Polymarket metadata reservation; source/protocol and derived categories only. No new raw copy or global reservation.",
+  "active_research_reserved_bytes": 243007488,
+  "active_research_headroom_bytes": 11747328,
+  "reason": "The first fixed public-search response returned exactly one matching event title but failed the frozen end UTC date test. Its recorded end 2026-10-29T03:59:00Z is 2026-10-28T23:59:00-04:00 in America/New_York, on the preselected official FOMC meeting day. The initial assumption equating market end UTC date with the meeting calendar date was too restrictive. This is an explicit post-observation metadata correction, with the original inconclusive output preserved. No observed economic value motivates the correction.",
+  "input": {
+    "path": "reports/polymarket-no-basket/metadata-v1/response.body",
+    "bytes": 26716,
+    "sha256": "e2de566d2a70f5e10627ddc33c595aaceef5324ad0c44bdff92bd7c0a3f998e8"
+  },
+  "identified_event": {
+    "id": "606422",
+    "slug": "fed-decision-in-october-20260617190323537",
+    "title_from_original_summary": "Fed Decision in October?",
+    "end_utc": "2026-10-29T03:59:00Z",
+    "meeting_local_date": "2026-10-28",
+    "calendar_timezone": "America/New_York",
+    "projection_end_utc_date": "2026-10-29"
+  },
+  "source_pin": {
+    "path": "scripts/polymarket_no_basket_calendar_review.py",
+    "bytes": 3358,
+    "sha256": "edbe76ed30a622155f655766cc21337ea93c26229bf511df5e533f284449b2e3"
+  },
+  "projection": "Reuse the already reviewed metadata-only allowlist and missing-core checks from the original pinned module. Change only its date selector in memory after asserting the exact identified event, timestamp and New York date. Publish an explicitly labeled successor record. Raw indicative prices/depth/volume/reward fields are not inspected or used.",
+  "output": "reports/polymarket-no-basket/calendar-review-v1.json",
+  "output_cap_bytes": 131072,
+  "network_requests": 0,
+  "run_count": 1,
+  "no_query_or_market_substitution": true,
+  "maximum_conclusion": "Structural metadata for manual semantic review only; no fee completeness, chain mapping, quote, fill, conversion or profit claim. Missing or contradictory structural facts remain unknown.",
+  "verification": "Root read the complete short adapter. It only verifies pins, reads the one bounded local response, asserts the explicit metadata correction and invokes the already tested allowlist projection. No new HTTP transport or economic code.",
+  "sources": [
+    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "https://docs.polymarket.com/api-reference/search/search-markets-events-and-profiles"
+  ]
+}
