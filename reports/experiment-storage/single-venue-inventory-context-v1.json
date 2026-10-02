@@ -1,0 +1,155 @@
+{
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 151781376,
+  "active_research_headroom_bytes": 102973440,
+  "overall_reservation_bytes": 2836777216,
+  "schema": "single-venue-inventory-context-v1",
+  "recorded_utc": "2026-10-02T03:11:32.329621+00:00",
+  "previous": "reports/experiment-storage/single-venue-flow-recovery-v1.json",
+  "previous_sha256": "5faf358d440b18a4ab7c85ade9305748364c20967325ae162b8b9002ad6406ca",
+  "reserved_bytes": 0,
+  "suballocation_bytes": 524288,
+  "allocation_note": "524288 bytes within the existing 2097152-byte offline analysis allocation. Directional262144 + flow524288 + inventory524288 leaves786432. No new global reservation or raw capture. Outputs442368 =2*(180224 gzip +16384 provenance +16384 readout)+16384 shared liquidation-availability memo.",
+  "categories_bytes": {
+    "source_tests": 65536,
+    "protocol": 16384,
+    "outputs": 442368
+  },
+  "output_caps": {
+    "gzip_per_batch": 180224,
+    "provenance_per_batch": 16384,
+    "readout_per_batch": 16384
+  },
+  "store_root": "data/rolling/market-research-v1",
+  "store_identity_sha256": "ba96b82b718a1439f87d9dce327f44ac4ff5e90ba32cfe0f8ddcac8188390cc7",
+  "capture_parent_plan_sha256": "e19c6ed52ace7310e8a717bf39b2cf707976b2fe92c6ff8eb6ed34f738936ac4",
+  "pin_owner": "inventory_context_v1",
+  "batches": [
+    {
+      "index": 1,
+      "chunks": [
+        "chunk-000001",
+        "chunk-000002",
+        "chunk-000003"
+      ]
+    },
+    {
+      "index": 2,
+      "chunks": [
+        "chunk-000007",
+        "chunk-000008",
+        "chunk-000009"
+      ]
+    }
+  ],
+  "source_pins": [
+    {"path":"scripts/analyze_maker_capture.py","sha256":"d87ce8f116e039976b7afac20ede5704d14b3d49eb626473d214a7d47811b359"},
+    {"path":"scripts/analyze_maker_equity.py","sha256":"85d4de8cfd523b4a4497e3e2f6411b05f3737f2133d4c167ddce708af363843f"},
+    {"path":"scripts/analyze_maker_roundtrip.py","sha256":"d7d23b255fcffc294069a77486cc944a9a64a32d6755cc515a960d1ae03a9c93"},
+    {"path":"scripts/audit_single_venue_study.py","sha256":"a306e4272648f4c098de6f015d2e5f293f2aa40ac9799b0a51d6ff7a86c81bb6"},
+    {"path":"scripts/core_rh_small_shortterm.py","sha256":"65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3"},
+    {"path":"scripts/maker_book_archive.py","sha256":"8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2"},
+    {"path":"scripts/maker_capture.py","sha256":"a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9"},
+    {"path":"scripts/monitor.py","sha256":"7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"},
+    {"path":"scripts/paper_engine.py","sha256":"45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"},
+    {"path":"scripts/paper_streams.py","sha256":"c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"},
+    {"path":"scripts/rolling_research_capture.py","sha256":"af0e22b484a34ee2678bdaacb19c1b3a18d7c4097ddc14618dc6b2fac756b59b"},
+    {"path":"scripts/run_single_venue_study.py","sha256":"81b12f74f8d9c3e8f88e1a7741c10d64fea793cf46a409da8c7aa83b3bdab9a0"},
+    {"path":"scripts/single_venue_broad.py","sha256":"d948761f48a7a367d51f65ec16aa21782ba241a5ec846461119ebd080c880ab8"},
+    {"path":"scripts/single_venue_broad_quotes.py","sha256":"96f0c5a8b435ab4fd30429eb873a49614b7eed299a1be0071c7c0bc01530f341"},
+    {"path":"scripts/single_venue_broad_relative.py","sha256":"1eeddcf8ba6b87861a3236bc4c16e082f362491b61c2c7ecc2e46bcc104b135a"},
+    {"path":"scripts/single_venue_compact_evidence.py","sha256":"5be023f9b4f365e3d8df3d65b660bf69a4d61a89ccdf401cf96c861e9e018524"},
+    {"path":"scripts/single_venue_depth.py","sha256":"a06b2da1b0d290c71964ea8b2e585df835a5787876d40c80ce47754c6cffefed"},
+    {"path":"scripts/single_venue_depth_capture.py","sha256":"f5230d15c2bcaa0ce32f767b75f058d01eacae292f27977be55e41cdd6d2a4ed"},
+    {"path":"scripts/single_venue_depth_events.py","sha256":"a6e681b4e9469422c29b6a27a4647223149dabe9637564539e71386e1c0d5fcc"},
+    {"path":"scripts/single_venue_depth_strategy.py","sha256":"a76fc598fac5c7022494b08afc228fe38540d6f89db6eecac5f8405b2396e0eb"},
+    {"path":"scripts/single_venue_executable_shock.py","sha256":"8a54db80b62f970f84cc40590a2c0bd94595ccabc868651af66bd6461f8c8b02"},
+    {"path":"scripts/single_venue_executable_strategy.py","sha256":"a5796f9723b4c4c54fab1bcc199ed30c9c8ccdee440d7a16ea513014ba0d1f22"},
+    {"path":"scripts/single_venue_fast_print.py","sha256":"480aa8ef4416e1f993718f7fbbd72919f1f1790784fc1b879663cca6023487d2"},
+    {"path":"scripts/single_venue_inventory_context.py","sha256":"0a825735cecb8bcb431193080bae0b67cafb849859351ec5eddba74872bec406"},
+    {"path":"scripts/single_venue_multi.py","sha256":"a834ddc458bc1f935b7e2fead605d7a0c84ee40e39c23220bebbf0f8f05c187c"},
+    {"path":"scripts/single_venue_multi_capture.py","sha256":"6137ea554407ddaa061f14c1d9de0330421fee5eb35aeda03693bc2c53a52538"},
+    {"path":"scripts/single_venue_multi_events.py","sha256":"89597d57108558c617b479e6de2e03be6deaec05a552a1dc9ccff9e815cdfe3d"},
+    {"path":"scripts/single_venue_residual_profile.py","sha256":"e3a9a11ce389cffe46f990fe7cc7279dccb18bc59ab58672cc5fed3a6de6e23d"},
+    {"path":"scripts/single_venue_shock_controls.py","sha256":"591192d0563d636b21ee4c8a05a03e203928c8ed8723f360a6a69bc7adfec6f9"},
+    {"path":"scripts/single_venue_shock_diagnostic.py","sha256":"612a29bd691e13f366f9bc3158739380544fc65c60882ef8cfefdc9774b1a303"},
+    {"path":"scripts/single_venue_strategy.py","sha256":"5f4a8684e76781c311eb9dfbd9c2f46f9600bb2369db09aafda7fbc2c0c02679"},
+    {"path":"tests/test_single_venue_inventory_context.py","sha256":"aa6df03e73d21399294bf5d91cb4650eb473d18dadc523d82eb72c361d88edc3"}
+  ],
+  "parameters": {
+    "anchor_start_seconds": 30,
+    "anchor_stop_seconds": 570,
+    "anchor_step_seconds": 30,
+    "latest_trade_max_age_ms": 2000,
+    "decision_book_max_age_ms": 2000,
+    "prior_return_seconds": 10,
+    "prior_book_tolerance_ms": 250,
+    "flow_seconds": 10,
+    "book_history_max_points": 50000,
+    "control_lookback_seconds": 180,
+    "control_c0_caliper_bps": "1",
+    "control_signed_return_caliper_bps": "2",
+    "control_signed_flow_caliper": "0.25",
+    "direction": "fade_latest_aggressor",
+    "native_notional_cap": "100",
+    "entry_delay_ms": 400,
+    "hold_seconds": 10,
+    "exit_delay_ms": 400,
+    "stage_max_lateness_ms": 2000,
+    "funding_exclusion_span_ms": 14800,
+    "extra_roundtrip_stress_bps": [
+      1,
+      2,
+      5
+    ],
+    "followup_min_pairs_each_batch": 3,
+    "classification": "sample_supported_signed_per_fill",
+    "chronology_failure": "latest_source_group_unusable",
+    "optional_flag": "descriptive_only",
+    "control_tie": "earlier_anchor",
+    "control_distance": "sum_normalized_absolute_feature_distance"
+  },
+  "stage": "Exploratory conditional forecast diagnostic, fixed before rolling economics. No orders, passive-fill claims, cash ledger or fitted model. Prior position schema audit used old data; rolling liquidation schema audit uses no forward price data. Flow recovery is separate and feature-only.",
+  "input_contract": "Require named chunks sealed_complete, exploratory and already pinned by inventory_context_v1. Verify store/parent identity, index/seal SHA and exact inventory, manifest/raw/metadata hashes and all source pins. Lock only snapshot and final recheck; root-owned pins protect streaming. Recheck sources, protocol, pin and seals afterward. No input substitution or reserved reads. Reset all features, controls and pending quotes at capture/generation/invalidation boundaries.",
+  "calendar": "Exact elapsed calendar anchors 30,60,...,570 seconds in each 600-second chunk: 19 per asset/venue/chunk, 57 per three-chunk batch, 1140 scheduled across 20 asset/venue groups per batch. At each anchor use only events received at or before it. Process every same-receipt event before an equal-time anchor. A later callback may service pending execution observations, but cannot repair a failed decision anchor. Keep all scheduled denominator rows, including missing latest trade/book/history and unknown class.",
+  "latest_trade": "Choose the latest chronological ordinary live deduplicated trade among events received by the anchor, ordered by source_ns, transaction_time, trade_id. Require source and receipt age <=2 seconds. Parse chronological fields independently of optional position fields: unknown inventory must not let an older known-class trade win. If ordering within the latest source-time group is genuinely unavailable, reject the anchor as latest_source_chronology_unknown, with no fallback. Use exact raw Decimal quantity and explicit pre-fill taker position. Missing/null/malformed position is unknown, never zero. No account IDs in output or grouping. Observed public taker-order ID may group already received message fills; dedup/classifier cache respects generation boundaries.",
+  "inventory_class": "Empirical interpretation from old sample: p is signed base-unit position immediately before this fill; buy quantity is positive and sell quantity negative. reducing: p opposes aggressor and q<=abs(p), including exact flattening. adding: p has aggressor sign or p is explicitly zero. A reversal, missing/malformed field, native-grid failure or failed within-message semantic arithmetic is unknown. Within each received message/taker-order group, sort by transaction_time and trade_id and require adjacent p_next=p_before+signed_current_fill_qty; a failure makes that observed group unknown. Never use future messages to retroactively filter an earlier decision. Optional sign_changed flag remains descriptive; absence or malformed content is recorded as unknown and does not override valid position/quantity arithmetic. The internal circuit compares old and new signs, so its sign-change flag can include opening from zero and flattening as well as crossing; wire serialization correspondence remains inferred. Full flattening is not evidence of parent-order completion.",
+  "decision_features": "Fade the latest aggressor for both reducing and adding classes. No predicted-profit entry filter. Current book source and receipt ages <=2s and known latest aggressor side can create a local quote profile even when inventory class is unknown or prior 10-second context is unusable; such context failures cannot match. C0 uses immediate full-depth entry and exit of the same native quantity, with both taker fees, divided by the actual entry-side notional. An immediate entry above100 makes the matching feature unusable. Quantity follows reused QuoteProfiles native sizing and gross entry notional <=100. Prior 10-second signed midpoint return uses the latest valid same-generation book received <=anchor-10s, at most 250ms old in both source and receipt at that past instant, with uninterrupted history through the decision. Ten-second received-flow imbalance=(buy_qty-sell_qty)/(buy_qty+sell_qty); no prints, invalidation or missing required history makes the matching feature unusable. Signed return and flow use the current aggressor direction.",
+  "execution": "Reuse QuoteProfiles native quantity and full displayed depth:400ms entry delay,10s hold from observed entry,400ms exit delay. Receipt AND source must reach each due time; first eligible observation must be <=2s late, same generation and valid under reused clocks. Failed first eligible observations cannot be replaced. Charge fees on actual entry and exit notionals; stress an additional1/2/5bp round-trip. Public quote observations do not establish fills or realized profit.",
+  "funding_boundary": "Before any outcome, exclude every calendar anchor whose maximum 14.8-second possible execution interval crosses a UTC hour, because funding is not included. Count excluded anchors explicitly. Do not use actual future completion time to choose the exclusion. Maximum =400ms+2s entry delay allowance +10s hold +400ms+2s exit allowance.",
+  "matching": "For each reducing anchor with usable context, select an EARLIER adding anchor of the SAME asset, venue and aggressor side, at most 180 seconds earlier and within the SAME chunk. Absolute calipers: C0 <=1bp, prior 10-second signed midpoint return <=2bp, signed 10-second flow imbalance <=.25. Minimize sum of the three normalized absolute distances; tie goes to earlier calendar anchor. Selection uses only decision features, never returns, quote completion or reference availability. Do not relax calipers or replace a selected missing control. Record reuse and distinct control counts.",
+  "comparisons": "Complete selected reducing/control profiles: paired net quote difference and signed local midpoint difference. Retain every unpaired/failed/missing profile. Reused paired-book rules yield other-venue midpoint contribution at actual local endpoints: conditional reference accounting, not executable hedge or causal decomposition. Missing reference leaves local comparison intact. Report all20 asset/venue groups in each batch, per-chunk counts, distinct controls, reuse and absolute reducing quote stress.",
+  "followup_gate": "Same asset/venue must have >=3 complete matched reducing/control observations IN EACH batch and positive mean paired net quote improvement AND positive mean paired signed local midpoint improvement in BOTH batches. This is only minimum incremental forecast support; samples and controls are dependent. Nonpositive absolute reducing net quote means no active execution profit candidate even if improvement is positive. Failure of taker economics does not disprove all passive-order hypotheses. Positive active quotes do not prove passive fill value. Missing matched/ref attribution remains explicit. No tuning to observed results.",
+  "limitations": "Two exploratory blocks are dependent and share market regimes. Public quotes do not identify our fills, queue priority, cancellations, trader intent or parent completion. Signed per-fill API interpretation remains empirical. No forward cash test without a separately frozen protocol and research gate.",
+  "outputs": "Immutable bounded atomic gzip and provenance per batch; refuse overwrite. Root readout <=16384 bytes/batch. inventory-context-batch{1,2}.json.gz and matching -provenance.json under reports/single-venue-research. Retain all scheduled anchors, quote/control/reference failures and complete plan/source/input hashes.",
+  "preparation_memo": "reports/single-venue-research/inventory-field-availability.txt",
+  "primary_motivation": [
+    {
+      "url": "https://apidocs.lighter.xyz/docs/websocket-reference",
+      "note": "Optional pre-fill position and sign-change fields exist; signed per-fill semantics here rely on the separately recorded sample arithmetic, not a normative guarantee."
+    },
+    {
+      "url": "https://arxiv.org/html/2409.12721",
+      "note": "Adverse selection and fill probability must be considered jointly. This paper does not establish the inventory feature used here."
+    },
+    {
+      "url": "https://github.com/elliottech/lighter-prover/blob/main/circuit/src/apply_trade.rs",
+      "note": "Official circuit adds signed executed base quantity to old signed position and compares old/new signs. This supports the interpretation internally; an API serialization guarantee was not found."
+    },
+    {
+      "url": "https://github.com/elliottech/lighter-prover/blob/main/circuit/src/matching_engine.rs",
+      "note": "Current positions are passed into trade application and updated per execution. This strengthens, but does not universally guarantee, the interpretation of wire position_size_before."
+    }
+  ],
+  "shared_preparation_output_cap_bytes": 16384,
+  "shared_preparation_memo": "reports/single-venue-research/liquidation-field-availability.txt",
+  "verification": {
+    "command": ".venv/bin/python -m unittest discover -s tests -p test_single_venue_inventory_context.py -v",
+    "root_result": "6 tests passed; full source reviewed before market execution. Covers calendar/chronology, signed per-fill arithmetic, outcome-independent matching, fees/clocks/caps/funding, lifecycle and immutable role/pin checks.",
+    "verified_utc": "2026-10-02T03:24:36.331955+00:00"
+  },
+  "budget_verification": {
+    "new_source_test_bytes": 48112,
+    "dependency_pins": "Existing funded files; no copies."
+  }
+}

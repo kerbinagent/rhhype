@@ -71,16 +71,27 @@ and carry studies retain their own analysis boundaries and ownership.
    found explicit pre-fill positions on all 14,138 ordinary trades in the two
    old captures. Chronologically ordered within-message position changes
    reconcile. The signed, per-fill interpretation remains a stated empirical
-   assumption. Next register a past-only conditional-value question before
-   calculating returns or building another passive execution branch.
+   assumption. The fixed [inventory protocol](../reports/experiment-storage/single-venue-inventory-context-v1.json)
+   compares delayed fade quotes after reducing versus adding flow, using earlier
+   controls matched on entry cost and recent return/flow. It uses chunks 1–3 and
+   7–9 and retains all 1,140 scheduled anchors per batch. Any conditional
+   improvement must also survive absolute costs before an execution study.
 
 Liquidation events are a possible separate mechanism. The ordinary adapter
 counts and excludes `liquidation_trades`; the raw capture retains the field.
-The two completed broad windows contained zero live liquidation rows on either
-venue, so they do not test forced-flow recovery. The official Core
+The two old broad windows contained zero live liquidation rows. The first three
+rolling chunks contain 0, 3 and 61 rows in those arrays before deduplication.
+A separate schema/clock/grouping audit will establish what they represent;
+64 rows are not 64 independent episodes. The official Core
 [WebSocket schema](https://apidocs.lighter.xyz/docs/websocket-reference)
 defines separate ordinary and liquidation arrays; RH availability requires its
 own observed evidence.
+
+Lighter documents partial liquidations as IOC orders, while full liquidation
+and deleveraging involve position takeovers or matched transfers. This motivates
+checking row subtypes and order identities before interpreting them as book
+pressure. The public API serialization boundary remains a separate question.
+[Liquidation mechanism](https://docs.lighter.xyz/trading/liquidations-and-llp-insurance-fund).
 
 Public-data impact studies also distinguish reconstructing average impact from
 identifying a tradable entry: synthetic order groupings can reproduce impact
