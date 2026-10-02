@@ -1,0 +1,80 @@
+Cross-asset observed-frame OFI v1 — saved-output decision
+
+Decision: insufficient_feature_support. Park this fixed18-cell diagnostic. This is inconclusive coverage, not evidence of profitable trading or a rejection of all cross-asset effects. No training labels or economic outcomes were used after the failed preflight; JSON decoding physically included the producer outcome fields.
+
+The single root run completed at2026-10-02T06:58:02.038030+00:00 with returncode0 in0.775099242s and empty stderr. No retry, threshold change, control deletion or subset evaluation was performed. The original return-lag mechanism remains separately parked.
+
+Frozen production protocol SHA256 f04869f0afebc76d8d25dee58e4c4272382238c5f5d66898daa7be2e3544eaaa; frozen06:56:35.910909UTC; root pre-feature commit3717128. The local exact copy is research/peer-cross-asset-ofi-v1-frozen-root.json; the original candidate remains at research/peer-cross-asset-ofi-v1.json. Only status, frozen_utc and production_validation differ. Peer source/test candidate commit336eaf318cf2ac4ab9ba86a523fbdb8e6046a1a8.
+
+Focused tests:12/12 passed under local Python3.14.3/NumPy2.5.3 in12.825s; the same12/12 passed under production Python3.13.9/NumPy2.5.3 in32.375s (32.936965s supervisor). These are the same twelve synthetic cases on two runtimes, not24 independent tests. All56 source pins and six immutable table identities were preserved.
+
+TRAINING FEATURE SUPPORT:
+The fixed rule requires all18cells, at least65of84 valid feature rows per cell, at least20of28 in each training chunk, and full7/12/13-column designs. Only ETH/SOL/HYPE/ZEC on lighter pass. All14 other cells fail coverage; three also have a constant target ordinary-trade-imbalance column4. Fifteen cells have full7/12/13 feature-design ranks. Available feature design does not mean a trained prediction model exists.
+
+Cell                     chunk1 chunk2 chunk3 total  design status  support
+ETH:lighter                  27     25     27    79  available        passed
+ETH:rh_lighter               14     24     19    57  available        insufficient_feature_support
+SOL:lighter                  26     24     27    77  available        passed
+SOL:rh_lighter               10     18     16    44  available        insufficient_feature_support
+HYPE:lighter                 21     23     24    68  available        passed
+HYPE:rh_lighter               7     10     14    31  available        insufficient_feature_support
+XRP:lighter                  14     18     18    50  available        insufficient_feature_support
+XRP:rh_lighter                6      7     10    23  constant_columns insufficient_feature_support
+SUI:lighter                   4      8      7    19  constant_columns insufficient_feature_support
+SUI:rh_lighter                4     11     11    26  available        insufficient_feature_support
+NEAR:lighter                 14     17     18    49  available        insufficient_feature_support
+NEAR:rh_lighter               6     15     16    37  available        insufficient_feature_support
+ZEC:lighter                  24     25     27    76  available        passed
+ZEC:rh_lighter               13     17     16    46  available        insufficient_feature_support
+VVV:lighter                   5     12     15    32  available        insufficient_feature_support
+VVV:rh_lighter                0      2      7     9  constant_columns insufficient_feature_support
+LIT:lighter                  14     18     19    51  available        insufficient_feature_support
+LIT:rh_lighter                8      8     15    31  available        insufficient_feature_support
+
+Training totals:805/1512 valid cell rows;217/282/306 by chunk;707 first failures. Recorded first-failure counts:
+  target:stale_boundary_book: 354
+  target:missing_start_book: 273
+  BTC:stale_boundary_book: 32
+  target:unknown_trade_history: 21
+  decision_funding_excluded: 18
+  BTC:missing_start_book: 6
+  target:stale_trade_window: 2
+  BTC:stale_trade_window: 1
+
+APPLICATION FEATURE SUPPORT:
+At each fixed calendar anchor the same decision-time mask requires valid features for all18cells. All84 scheduled slots fail this common mask; counts are0/0/0 against the required21/28 per application chunk. The saved failure maps imply744/1512 individually valid cell rows (298/259/187); such rows cannot replace the frozen common cohort. There are768 cell-level first failures. Recorded first-failure counts:
+  target:stale_boundary_book: 311
+  target:missing_start_book: 238
+  BTC:missing_start_book: 164
+  BTC:stale_boundary_book: 40
+  target:unknown_trade_history: 15
+
+Application individually valid cell rows inferred from saved failure maps (chunks7/8/9):
+  ETH:lighter: 27/25/27
+  ETH:rh_lighter: 19/15/0
+  SOL:lighter: 22/24/27
+  SOL:rh_lighter: 14/9/0
+  HYPE:lighter: 17/21/19
+  HYPE:rh_lighter: 10/7/0
+  XRP:lighter: 16/18/19
+  XRP:rh_lighter: 4/6/0
+  SUI:lighter: 9/4/7
+  SUI:rh_lighter: 13/8/0
+  NEAR:lighter: 17/21/21
+  NEAR:rh_lighter: 13/11/0
+  ZEC:lighter: 28/25/25
+  ZEC:rh_lighter: 14/10/0
+  VVV:lighter: 23/24/23
+  VVV:rh_lighter: 6/3/0
+  LIT:lighter: 27/19/19
+  LIT:rh_lighter: 19/9/0
+Blocking-cell count to slot frequency: 1->2, 3->5, 4->5, 5->4, 6->3, 7->5, 8->3, 9->12, 10->13, 11->14, 12->8, 13->4, 14->3, 16->1, 18->2.
+Failure tallies count target-cell rows and can repeat the same BTC failure across targets. They are first-failure attributions, not all simultaneous causes or independent market events.
+
+STAGE AND REPORTING LIMITS:
+The result has models=null and evaluation=null. No training-label fit, coefficients, forecasts, cash ledger, admission profile or profit estimate was produced. The three root output files total63244bytes; root run receipt adds1825bytes. The retained readout has a generic final sentence referring to coefficients/forecasts/admitted profiles. That sentence is inapplicable here; the authoritative null fields and this correction govern interpretation. Frozen source and original output remain unchanged.
+
+REVIEW:
+Parent85 saved-output/provenance checks pass, including exact returned file hashes/bytes,56 unchanged source pins, allowed plan-field changes, test-before-freeze-before-run chronology, standalone/embedded preflight identity, caps and absence of downstream evaluation. Independent Sol xhigh read-only review reconciled54 training cell-by-chunk partitions,54 model-design records and84 application-slot failure maps. No discrepancy affects selection, arithmetic, classification or stage boundaries. These are saved-record consistency checks; no raw table read, feature extraction, model fitting or economic replay was performed by the peer reviewer.
+
+No validation, strategy-promotion or realized-fill claim follows. No new raw capture, authenticated API, order, wallet, reserved input or push was used. The broader research lane can now consider one materially different hypothesis under a new predeclared design; this diagnostic is not reopened.

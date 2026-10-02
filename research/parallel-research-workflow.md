@@ -168,7 +168,8 @@ Only 4/18 cells passed training feature support; each application block had zero
 common usable calendars. The run stopped before fitting or economics. This is
 inconclusive, with no subset or threshold rescue. The six existing tables were
 read through their [immutable inventory](../reports/peer-research/20261002-0627-shared-ofi-inputs.json);
-no raw or reserved inputs were copied. Independent peer output review is pending.
+no raw or reserved inputs were copied. The [peer review](../reports/peer-research/20261002-0714/decision.txt)
+reconciled the saved support records and confirmed the inconclusive classification.
 The [immutable input export](../data/evidence/rolling-exploratory-000001-000003-v1-inventory.json)
 contains only chunks 1–3, 45 verified members, 55,818,240 tar bytes through Git LFS.
 Its [64 MiB reservation](../reports/experiment-storage/rolling-exploratory-peer-export-v1.json)
