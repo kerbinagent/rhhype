@@ -5918,3 +5918,24 @@ Snapshot read 2026-10-02T03:07:11.629046Z, updated 2026-10-02T03:07:10.956647+00
 Carry 2026-10-02T03:05:00.109895+00:00: 319 sampled, persistent invalid slot 71, 544 future/interrupted, running without errors or economic evaluation. News waiting heartbeat 2026-10-02T03:07:44.932104+00:00; companion waiting_for_capture_terminal heartbeat 2026-10-02T03:07:39.814465+00:00; economics false. No carry sample/news economics reads, competing jobs or operational changes.
 
 Reviews 66–177: 2,539 completions = 2,506 exact losses, one estimated loss, five audited paired gains, 27 audited rescue gains. Archive 3,770,058 / 5,242,880 B; 136 future pairs at 5,342 B project 4,496,570 B, margin 746,310 B. Next **03:26:33 UTC**.
+
+
+### Review 178 — 2026-10-02 03:26:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Exact report and separately timed epoch snapshot preserved with deterministic gzip, exclusive creation, decompression verification and each pre-write cap/growth guard.
+
+`review-20261002T032633Z.json.gz`: raw 18,521 B SHA-256
+`25540fa57c75804cb1ef1df2b71f4cd96221c772fab42d76df7ea8806b49623a`; gzip 2,670 B SHA-256
+`6e3c6b19bca6656f1e1e00a2c9813c7015e9badfd13a1f5b10f786baa21b751f`.
+
+`current-epoch-at-review178.json.gz`: raw 9,285 B SHA-256
+`ceea00961fb912b1d1f75df518f377d3787f3add1383399b7063627c807e302b`; gzip 1,726 B SHA-256
+`bfba477ad98d53d0583e41636188f3118271fc075a55bca04246d3b4401be148`.
+
+Snapshot read 2026-10-02T03:27:07.181961Z, updated 2026-10-02T03:27:06.699472+00:00; counts not pooled. Three exact Premium losses / −$5.3185196153; no gains, estimates or aborts. Hyperliquid price_limit rejects two. Fees $2.2731555391, other costs $1.4956823385, capital $0.0000397377. Epoch Premium 1,325 / −$2,373.3495285599 exact, convergence unchanged 655 / −$767.6937242732.
+
+03:11 pulse fresh 0.77 s, running/busy, four feeds, CPU 62.40%, p95 52.04 ms; returned ok at 03:17 (34.30 ms), 03:22 (43.50 ms). Review fresh/running/ok, four feeds, CPU 56.53%, p95 31.81 ms, RSS 256.82 MiB, 102 pairs. Rolling advanced through reserved-repeat chunk 000005 to 000006; operational status only: 13.02 s, 761,932 compressed B, 2,842 records, two connections/no errors/economics false. Store chunks 91,340,619 B / controls 107,756 B against separate decimal 2 GB. Root reports two nice-19 offline analyses on pinned exploratory chunks 1–3, no store lock during streaming; no reserved economics read or collector changes.
+
+Carry 2026-10-02T03:25:00.101628+00:00: 323 sampled, persistent invalid slot 71, 540 future/interrupted, running without errors or economic evaluation. News waiting heartbeat 2026-10-02T03:27:44.956329+00:00; companion waiting_for_capture_terminal heartbeat 2026-10-02T03:27:39.839508+00:00; economics false. No carry sample/news economics reads, competing jobs or service changes.
+
+Reviews 66–178: 2,542 completions = 2,509 exact losses, one estimated loss, five audited paired gains, 27 audited rescue gains. Archive 3,774,454 / 5,242,880 B; 135 future pairs at 5,342 B project 4,495,624 B, margin 747,256 B. Next **03:46:33 UTC**.
