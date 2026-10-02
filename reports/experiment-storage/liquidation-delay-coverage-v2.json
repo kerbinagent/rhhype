@@ -1,6 +1,6 @@
 {
   "schema": "liquidation-delay-coverage-v2",
-  "status": "offline_implementation_only",
+  "status": "frozen",
   "recorded_utc": "2026-10-02T10:51:31.803656+00:00",
   "previous": "reports/experiment-storage/parler-peer-primary-issuance-bound-v1.json",
   "previous_sha256": "8c33b976b008e973abcbe4989c840376c13c0b1201c15147d6429073e11b07db",
@@ -97,14 +97,30 @@
   "outputs": {
     "gzip_per_batch": 24576,
     "provenance_per_batch": 8192,
-    "derived_plaintext_memory_per_batch": 1048576,
     "one_batch_wall_seconds": 240,
     "overall_wall_seconds": 1500,
-    "receipt_total_bytes": 32768
+    "receipt_total_bytes": 32768,
+    "derived_plaintext_bytes_per_batch": 1048576
   },
   "decision": "Report admitted/censored/quarantined/suppressed evidence and delayed witnesses in every fixed block/cell. A supported next comparison requires >=10 complete witnessed episodes per same asset/venue in each of the two prespecified superblocks (batches1-3 and4-6), each represented in>=2 constituent blocks. Direction counts remain explicit; no pooled-cell rescue. This is a design support threshold, not power or profit. If unmet, stop before matching/prices; if met, only consider a separately frozen matched cost-aware study.",
   "run_gate": "No raw reading until source/tests and a compact18input seal/manifest/store identity projection are root reviewed, SHA pinned and committed. Default dry mode; explicit run plus exactplanSHA; refuse existing batch outputs. Input checks before/after, verified gzip EOF and frozen byte/record/state bounds. Preserve failed/pending batch states under bounded receipts.",
-  "source_pins": [],
+  "source_pins": [
+    {
+      "path": "scripts/liquidation_delay_coverage_v2.py",
+      "bytes": 31561,
+      "sha256": "98ffc7fb8ea461ec5dc8a47e622a66fb9261c20ef15ae9a5e341a0b7e05b1cda"
+    },
+    {
+      "path": "tests/test_liquidation_delay_coverage_v2.py",
+      "bytes": 14594,
+      "sha256": "d08fea8aa5a6efac43c0e1f7e4b4334b4763d3d894c268cc7baa95e64eec8265"
+    },
+    {
+      "path": "reports/experiment-storage/liquidation-delay-observability-v1.json",
+      "bytes": 7291,
+      "sha256": "ccab482a1baeff718d91e8447c5de567efcfda46bbdb7f54c7983911f641b2f2"
+    }
+  ],
   "input_identity_projection": {
     "path": "reports/experiment-storage/liquidation-delay-coverage-v2-inputs.json",
     "bytes": 37547,
@@ -117,5 +133,16 @@
     "https://raw.githubusercontent.com/edwinyeeshunwan/forced-or-frantic/main/scripts/build_event_table_liq.py",
     "https://arxiv.org/abs/2607.27070"
   ],
-  "source_context": "Official book continuity rules do not establish trade-channel completeness. Partial liquidation IOC differs from full takeover/ADL. The external event-study class uses future OI through2h and cannot serve as our live signal. No outside study proves seconds-scale value here."
+  "source_context": "Official book continuity rules do not establish trade-channel completeness. Partial liquidation IOC differs from full takeover/ADL. The external event-study class uses future OI through2h and cannot serve as our live signal. No outside study proves seconds-scale value here.",
+  "serialization_limit": "One serialized report representation <=1048576 bytes, enforced during encoding. This is a content-length bound, not a total process RSS bound; Python objects, encoding fragments and transient joined copies also use memory. Existing raw-line/state/input limits remain unchanged.",
+  "frozen_utc": "2026-10-02T11:07:52.237443+00:00",
+  "offline_validation": {
+    "root_tests_passed": 15,
+    "root_test_seconds": 0.02,
+    "command": ".venv/bin/python -B -m unittest tests.test_liquidation_delay_coverage_v2 -v",
+    "dry_raw_opened": false,
+    "review": "Root full source/test review plus final deltas: stale identity/quarantine, inherited fatal checks, fixed calendar and failed-input metadata, all-six/20cell unknown denominator, partial batch states, bounded serialization and immutable publication. Final root field rename clarifies serialized length versus total memory; no method change.",
+    "run_authority": "One all-six run after local freeze commit; no raw read before that commit.",
+    "final_root_test_seconds": 0.064
+  }
 }
