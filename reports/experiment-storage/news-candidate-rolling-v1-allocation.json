@@ -1,0 +1,47 @@
+{
+  "schema": "news-candidate-rolling-v1-allocation",
+  "status": "allocated_offline_preparation_only",
+  "recorded_utc": "2026-10-02T13:37:42.066627+00:00",
+  "previous": {
+    "path": "reports/experiment-storage/hip4-continuation-books-v1.json",
+    "bytes": 12136,
+    "sha256": "16b1113976c4a7b4c495314659b210dc14a1f24cfd031c726e6894658a1fc432"
+  },
+  "global_budget_reference": {
+    "path": "reports/experiment-storage/parler-peer-contractual-closures-and-cache-reconciliation-v1.json",
+    "bytes": 3147,
+    "sha256": "b2e2ea23d0d24d2552bae50494021cd5c6c9f29d6679e0eef37820fd4fccb373"
+  },
+  "reserved_bytes": 3145728,
+  "previous_active_research_reserved_bytes": 246153216,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 249298944,
+  "active_research_headroom_bytes": 5455872,
+  "overall_reservation_bytes": 2845165824,
+  "categories_bytes": {
+    "source": 98304,
+    "tests_and_temporary_fixtures": 65536,
+    "protocol_and_preparation": 32768,
+    "ledger_outputs": 2621440,
+    "comparison_outputs": 98304,
+    "control_provenance": 49152,
+    "readout": 16384,
+    "margin": 163840
+  },
+  "raw_copy_bytes": 0,
+  "input_retention": "Reuse exactly one nominated future reserved-validation attempt in the existing 2 GB rolling store. Pin a successfully sealed selected chunk before raw reads; preserve pin through study and any promoted result. No raw copy/export or new collector is funded here. Failed/missing input remains unavailable and is not replaced.",
+  "research_scope": "One ordinary-regime generalization/falsification of the corrected October2 news candidate. Primary Core NEAR depth_follow; comparator unchanged Core NEAR depth_fade. All100 policies and20 audit statuses retained descriptively. No threshold/size/latency/cost changes or substitution of a different winning arm. This is not independent scheduled-news replication.",
+  "selection_draft": "Before any selection or raw read, final protocol must freeze a future UTC cutoff and bounded waiting deadline; select the first reserved-validation reservation launched at or after that cutoff regardless of eventual success. All already launched attempts excluded. Selection uses only role/order/launch metadata, never coverage success or economics. Root must commit the final source/plan before cutoff.",
+  "preparation_authority": "Write and synthetically test a small new wrapper reusing unchanged corrected replay, ordinary adapter, two strategy families and independent auditors. All command entrypoints stay dry until a separately reviewed exact plan SHA and root commit. No network/API/new capture, current or reserved raw decode, nomination/pinning, or economic replay is authorized by this preparation record.",
+  "method": "Preserve the entire frozen execution parameter dictionary and constructor anchor at capture start, including admission122<=seconds<480 and600s total capture. Only rolling identity/inventory/64MiB input-bound and disjoint output routing differ. Failure branches retain100 unavailable rows with unknown cash and20 unavailable audit records; never convert failure to flat zero.",
+  "owned_paths": [
+    "scripts/news_candidate_rolling_v1.py",
+    "tests/test_news_candidate_rolling_v1.py",
+    "reports/news-candidate-rolling-v1/",
+    "reports/experiment-storage/news-candidate-rolling-v1.json",
+    "reports/experiment-storage/news-candidate-rolling-v1-allocation.json",
+    "reports/single-venue-research/news-candidate-rolling-v1-*"
+  ],
+  "retention": "All prior raw/results/failures/source and reservations remain. Bytecode disabled. One root workspace implementation; every draft, fixture, temporary file and later copy counts inside categories. Existing helper source is referenced by pinned hashes without duplicating files.",
+  "disk_free_bytes_at_allocation": 470589222912
+}
