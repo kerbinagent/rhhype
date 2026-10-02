@@ -1,0 +1,275 @@
+{
+  "schema": "rolling-exploratory-peer-export-inventory-v1",
+  "created_utc": "2026-10-02T05:14:41.166339+00:00",
+  "protocol": "reports/experiment-storage/rolling-exploratory-peer-export-v1.json",
+  "protocol_sha256": "20c1a113938eeb26c479d3f6f05ee50c9b56a665f2137dcc658530857f9d6aa1",
+  "archive": {
+    "path": "data/evidence/rolling-exploratory-000001-000003-v1.tar",
+    "bytes": 55818240,
+    "sha256": "534adf702946c5ea8b0a59ff79641aadf2f2de5e3c8a454baaa12ad907f773cf"
+  },
+  "members": [
+    {
+      "path": "chunk-000001/capture/frames.jsonl.gz",
+      "bytes": 14739134,
+      "sha256": "dda4b7dd07eb33404218b4f4ea07cdaf492a0d7c109e445c1b7866834588c93a"
+    },
+    {
+      "path": "chunk-000001/capture/manifest.json",
+      "bytes": 3357,
+      "sha256": "2451c63cd8bc200ae1408af42ccf8e512676afa2ddda7f50846f5d4c377b2824"
+    },
+    {
+      "path": "chunk-000001/capture/metadata/core_assets.json.gz",
+      "bytes": 1008,
+      "sha256": "03aca3ee38928b793083de70cf53f6fceff8a17dca309b7c11176c6d23b682b9"
+    },
+    {
+      "path": "chunk-000001/capture/metadata/core_assets.request.json",
+      "bytes": 458,
+      "sha256": "2b3480f9a681ca9d2796b10f43cb5c4be62653103a10f44305c4d62ab6493e0f"
+    },
+    {
+      "path": "chunk-000001/capture/metadata/core_markets.json.gz",
+      "bytes": 23337,
+      "sha256": "5550a4dc2af4ffbf4a2e4d9d6a9d0ead6c7c1a89e0416cddfea2fe51d8c3f7bb"
+    },
+    {
+      "path": "chunk-000001/capture/metadata/core_markets.request.json",
+      "bytes": 465,
+      "sha256": "e1aedf0d920a5dcfbc84d4921d6a4f306fcee5326469723aed4e19aad4e890ac"
+    },
+    {
+      "path": "chunk-000001/capture/metadata/market_plan.json",
+      "bytes": 3112,
+      "sha256": "ab5e7e39a48ecde0e7e5f6205b325984659606867773c9ad984bc633267414cb"
+    },
+    {
+      "path": "chunk-000001/capture/metadata/normalized.json",
+      "bytes": 12260,
+      "sha256": "de3642e64fc13b08335906589a78386466165494604fd5910d52370975f93acd"
+    },
+    {
+      "path": "chunk-000001/capture/metadata/rh_assets.json.gz",
+      "bytes": 1781,
+      "sha256": "ee06f117ce49cbd4a1569c943301faaa5b62424b9e98e591eca2edacdb6576e6"
+    },
+    {
+      "path": "chunk-000001/capture/metadata/rh_assets.request.json",
+      "bytes": 448,
+      "sha256": "260e04709ceb9c8db9749ddc63c1d0505cd69692e8e037b2db1c3afd29fbe626"
+    },
+    {
+      "path": "chunk-000001/capture/metadata/rh_markets.json.gz",
+      "bytes": 8004,
+      "sha256": "376aca4f1c44371c06a43f164496e3f8f8ae924b38f874b6186af093b975d0c9"
+    },
+    {
+      "path": "chunk-000001/capture/metadata/rh_markets.request.json",
+      "bytes": 453,
+      "sha256": "a31a0b3db8bf36932f662d1351a316875ac27163b0fc42d51974d46c6a8eac14"
+    },
+    {
+      "path": "chunk-000001/capture/status.json",
+      "bytes": 164,
+      "sha256": "7f0744e619d806cc398e7f62be6f855f5dbcba4d40473db74f699498025606d0"
+    },
+    {
+      "path": "chunk-000001/capture/terminal.json",
+      "bytes": 316,
+      "sha256": "fa7b8975547c35a0f34b576798c07ddc903ea0d919c98c3235b7f916b795fd90"
+    },
+    {
+      "path": "chunk-000001/seal.json",
+      "bytes": 23411,
+      "sha256": "385a2ad5b3f61f7d4a375b59885f4a78b90fd4224354341b5b384dc50e0635ef"
+    },
+    {
+      "path": "chunk-000002/capture/frames.jsonl.gz",
+      "bytes": 18494389,
+      "sha256": "f9684cd2e8c708562eb30c20af64c3524cb8103d819bc93e4ed175fe5a12ac57"
+    },
+    {
+      "path": "chunk-000002/capture/manifest.json",
+      "bytes": 3362,
+      "sha256": "37890294eb9c95c9baa4dccb32eb06053150e86e5545d7ae13ff4340ebe3ac6e"
+    },
+    {
+      "path": "chunk-000002/capture/metadata/core_assets.json.gz",
+      "bytes": 1018,
+      "sha256": "4afb05131165da0832ff33967c65331a8b870d03c8737ff79d19523d1b5e20ac"
+    },
+    {
+      "path": "chunk-000002/capture/metadata/core_assets.request.json",
+      "bytes": 458,
+      "sha256": "b0f0261a9f0062232f255820a88827a14020e0c074da805a4233e190d85f2e40"
+    },
+    {
+      "path": "chunk-000002/capture/metadata/core_markets.json.gz",
+      "bytes": 23261,
+      "sha256": "6c4a52dbd9e6ac31259630b14fc63bfc8be20a6412a8a329dbc6faf87b66a5af"
+    },
+    {
+      "path": "chunk-000002/capture/metadata/core_markets.request.json",
+      "bytes": 465,
+      "sha256": "9968ac3574a32b93c640422f2c05a328c75d0257d7600e92dc30035456043ac4"
+    },
+    {
+      "path": "chunk-000002/capture/metadata/market_plan.json",
+      "bytes": 3112,
+      "sha256": "ab5e7e39a48ecde0e7e5f6205b325984659606867773c9ad984bc633267414cb"
+    },
+    {
+      "path": "chunk-000002/capture/metadata/normalized.json",
+      "bytes": 12260,
+      "sha256": "c6f0eb1b53d652216dd6dd1900599611f50f213b9c64566d3687baad29a2879d"
+    },
+    {
+      "path": "chunk-000002/capture/metadata/rh_assets.json.gz",
+      "bytes": 1784,
+      "sha256": "caecc1fb45d9130954b5682430366ce197afdd08dfd96ae1fc641504b2727279"
+    },
+    {
+      "path": "chunk-000002/capture/metadata/rh_assets.request.json",
+      "bytes": 448,
+      "sha256": "a3b6061291c80795d28bebc035c0b262724a9c871936755748e1ae239658271c"
+    },
+    {
+      "path": "chunk-000002/capture/metadata/rh_markets.json.gz",
+      "bytes": 7999,
+      "sha256": "17d44772fc96a64c2b0af4a0bd7fa817e47522d235aa9949fc6f72182479bad9"
+    },
+    {
+      "path": "chunk-000002/capture/metadata/rh_markets.request.json",
+      "bytes": 453,
+      "sha256": "42899f6e822723f0ce3cd0254192870633c308adba38efb2093da2e275345b1b"
+    },
+    {
+      "path": "chunk-000002/capture/status.json",
+      "bytes": 164,
+      "sha256": "44e25ff8532e4fcf293c76eaf5f3f333b08a77e6262866a329d117b3e1397627"
+    },
+    {
+      "path": "chunk-000002/capture/terminal.json",
+      "bytes": 316,
+      "sha256": "9110b0b830aaa14d673ab2cc5598733713b4f18e2e10626e6396c7fe0d17aa88"
+    },
+    {
+      "path": "chunk-000002/seal.json",
+      "bytes": 23423,
+      "sha256": "4f42d2c1571aca9cf2e37faa253fe052efc7fe753f8e865a9a62276db8a87007"
+    },
+    {
+      "path": "chunk-000003/capture/frames.jsonl.gz",
+      "bytes": 22316879,
+      "sha256": "3e9498d70586dea53865f136739de140eff17d35348e8b1fe73829bdce2fe101"
+    },
+    {
+      "path": "chunk-000003/capture/manifest.json",
+      "bytes": 3367,
+      "sha256": "048cff9286e416e9f302890d173ca758fe92c6f08d49851ae07d36121f09d2cd"
+    },
+    {
+      "path": "chunk-000003/capture/metadata/core_assets.json.gz",
+      "bytes": 1017,
+      "sha256": "72a82b1d7ebda140a167cb8eb5c3fada5eb353498371a42e97b7a5c81c0634b2"
+    },
+    {
+      "path": "chunk-000003/capture/metadata/core_assets.request.json",
+      "bytes": 458,
+      "sha256": "ad1725c64def92edd099ee42b71a26b46da337b6ff65ad9f99f340b9b8a53e5d"
+    },
+    {
+      "path": "chunk-000003/capture/metadata/core_markets.json.gz",
+      "bytes": 23240,
+      "sha256": "a87bb07b9a51610cdf5332287a62aa0f8b5bad933086c764824feb962815ddd8"
+    },
+    {
+      "path": "chunk-000003/capture/metadata/core_markets.request.json",
+      "bytes": 465,
+      "sha256": "e1436f3b5cb80508dbb9e66ffc37994846b9f9044047796a9e9afa8ab46a5021"
+    },
+    {
+      "path": "chunk-000003/capture/metadata/market_plan.json",
+      "bytes": 3112,
+      "sha256": "ab5e7e39a48ecde0e7e5f6205b325984659606867773c9ad984bc633267414cb"
+    },
+    {
+      "path": "chunk-000003/capture/metadata/normalized.json",
+      "bytes": 12260,
+      "sha256": "7be9c85f4800ca8f2d88a2a29bef782b94526e7ce639b1920f32114ceb0ba7b1"
+    },
+    {
+      "path": "chunk-000003/capture/metadata/rh_assets.json.gz",
+      "bytes": 1798,
+      "sha256": "be88478edf6d53ffb401dba2ce407f5b95f954467a854821c56f19a9c911c18b"
+    },
+    {
+      "path": "chunk-000003/capture/metadata/rh_assets.request.json",
+      "bytes": 448,
+      "sha256": "6986015ebe6742aaa0baf7a4cdbd0257ad3053a4f8dc1b79bd9a469965ba6cd3"
+    },
+    {
+      "path": "chunk-000003/capture/metadata/rh_markets.json.gz",
+      "bytes": 8002,
+      "sha256": "76fa7217f5c9f957a2daf6877dc405a04c83c94ea77561df8c95223dbf40eb5a"
+    },
+    {
+      "path": "chunk-000003/capture/metadata/rh_markets.request.json",
+      "bytes": 453,
+      "sha256": "beb6d24218e083e694ee8e756ef474f47bfeba7f98452295ed252035d0ae3181"
+    },
+    {
+      "path": "chunk-000003/capture/status.json",
+      "bytes": 164,
+      "sha256": "18af8bb59a66cb17a0ca7e519d37ea39801bc227058c6472c4aa7717826d4222"
+    },
+    {
+      "path": "chunk-000003/capture/terminal.json",
+      "bytes": 316,
+      "sha256": "325ca1f50b55dad4e0d9ed4d480b312b0ab20f462869dfd1af8137727283be35"
+    },
+    {
+      "path": "chunk-000003/seal.json",
+      "bytes": 23442,
+      "sha256": "0904aee68eb2804b575e5c6e467d849b4f2fbc7266b201a8fc6bf62f7de74c8e"
+    }
+  ],
+  "chunks": [
+    {
+      "chunk": "chunk-000001",
+      "seal_sha256": "385a2ad5b3f61f7d4a375b59885f4a78b90fd4224354341b5b384dc50e0635ef",
+      "seal_bytes": 23411,
+      "started_utc": "2026-10-02T02:36:30.998286+00:00",
+      "ended_utc": "2026-10-02T02:46:31.918648+00:00",
+      "sealed_file_bytes": 14794297,
+      "sealed_files": 14
+    },
+    {
+      "chunk": "chunk-000002",
+      "seal_sha256": "4f42d2c1571aca9cf2e37faa253fe052efc7fe753f8e865a9a62276db8a87007",
+      "seal_bytes": 23423,
+      "started_utc": "2026-10-02T02:46:36.335551+00:00",
+      "ended_utc": "2026-10-02T02:56:37.129673+00:00",
+      "sealed_file_bytes": 18549489,
+      "sealed_files": 14
+    },
+    {
+      "chunk": "chunk-000003",
+      "seal_sha256": "0904aee68eb2804b575e5c6e467d849b4f2fbc7266b201a8fc6bf62f7de74c8e",
+      "seal_bytes": 23442,
+      "started_utc": "2026-10-02T02:56:40.934999+00:00",
+      "ended_utc": "2026-10-02T03:06:41.775658+00:00",
+      "sealed_file_bytes": 22371979,
+      "sealed_files": 14
+    }
+  ],
+  "verification": {
+    "all_originals_checked_before_and_after": true,
+    "all_tar_members_independently_stream_hashed": true,
+    "member_count": 45,
+    "reserved_inputs_included": false,
+    "economics_read": false
+  },
+  "usage": "Extract only this tar to a fresh directory; names are chunk-00000N/capture/... and chunk-00000N/seal.json. Verify archive SHA256 and every inventory member before analysis. These captures use the same public Core/RH cohort and raw record schema as the rolling collector. Use corrected ordinary-subtype adapter; do not apply the original mixed-subtype reader."
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "rolling-exploratory-peer-export-v1",
+  "status": "frozen",
+  "recorded_utc": "2026-10-02T05:13:41.971826+00:00",
+  "previous": "reports/experiment-storage/liquidation-delay-observability-v1.json",
+  "previous_sha256": "ccab482a1baeff718d91e8447c5de567efcfda46bbdb7f54c7983911f641b2f2",
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 230424576,
+  "active_research_headroom_bytes": 24330240,
+  "overall_reservation_bytes": 2836777216,
+  "reserved_bytes": 67108864,
+  "categories_bytes": {
+    "tar_archive": 66060288,
+    "protocol": 16384,
+    "export_inventory": 65536,
+    "margin": 966656
+  },
+  "archive_path": "data/evidence/rolling-exploratory-000001-000003-v1.tar",
+  "inventory_path": "data/evidence/rolling-exploratory-000001-000003-v1-inventory.json",
+  "chunks": [
+    {
+      "chunk": "chunk-000001",
+      "seal_sha256": "385a2ad5b3f61f7d4a375b59885f4a78b90fd4224354341b5b384dc50e0635ef",
+      "seal_bytes": 23411,
+      "started_utc": "2026-10-02T02:36:30.998286+00:00",
+      "ended_utc": "2026-10-02T02:46:31.918648+00:00",
+      "sealed_file_bytes": 14794297,
+      "sealed_files": 14
+    },
+    {
+      "chunk": "chunk-000002",
+      "seal_sha256": "4f42d2c1571aca9cf2e37faa253fe052efc7fe753f8e865a9a62276db8a87007",
+      "seal_bytes": 23423,
+      "started_utc": "2026-10-02T02:46:36.335551+00:00",
+      "ended_utc": "2026-10-02T02:56:37.129673+00:00",
+      "sealed_file_bytes": 18549489,
+      "sealed_files": 14
+    },
+    {
+      "chunk": "chunk-000003",
+      "seal_sha256": "0904aee68eb2804b575e5c6e467d849b4f2fbc7266b201a8fc6bf62f7de74c8e",
+      "seal_bytes": 23442,
+      "started_utc": "2026-10-02T02:56:40.934999+00:00",
+      "ended_utc": "2026-10-02T03:06:41.775658+00:00",
+      "sealed_file_bytes": 22371979,
+      "sealed_files": 14
+    }
+  ],
+  "scope": "One immutable transport copy of the first chronological exploratory block, all seal-listed capture files plus seals. No reserved chunks, new capture or mutable rolling controls. Underlying public captures remain exploratory. Archive added through Git LFS; no history rewrite. Selectively hydrate/extract this archive only.",
+  "validation": "Check each sealed path for safe relative membership, regular-file status, exact bytes and SHA256 before tar; deterministic root-relative tar names, no symlinks or directories; independently stream-check every archive member and all originals after packaging; fail without publication if anything changes. No raw JSON decoding or economics.",
+  "pin_policy": "Retain existing inventory_context_v1 source pins through packaging and active root audit. Committed immutable export supports peer research independently thereafter.",
+  "peer_use": "Authorize the previously requested unchanged cross-asset signal-availability audit on these three captures. Peer freezes input identities, implementation and bounds before reading new features; this grants no reserved-data or fresh-capture access. Retained peer derived output remains in its existing8MiB allocation.",
+  "accounting": "64MiB subreservation from existing254754816-byte active research pool; no increase of its ceiling or the overall2836777216-byte reservation. Rolling2GB grant remains separate. Logical immutable input artifact counted once; Git/LFS transport copies follow existing repository artifact accounting."
+}
