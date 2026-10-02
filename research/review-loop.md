@@ -6240,3 +6240,18 @@ Snapshot read 2026-10-02T09:48:44.545986Z, updated epoch seconds 1790934524.5064
 Paper pulses fresh/ok/fourfeeds;review CPU65.50%,p95 36.21ms,RSS293.12MiB,106pairs. Rolling chunk000043 healthy531.64s/15,232,044compressedB/116,571records,two connections/no errors/economicsfalse. Controller chunks885,748,903B/controls854,564B against separate decimal2GB. Three newshelperswaiting/fresh/economicsfalse. No raw/reserved economics,carry samples/news outcomes opened;no interventions.
 
 Carry 2026-10-02T09:45:00.111058+00:00: 398sampled,two invalid(71,389),464future/interrupted,running/no error/retry/evaluation. Reviews66–197:2,650completions=2,615exactlosses,one estimatedloss,five auditedpairedgains,29auditedrescuegains. Archive 3,864,055/5,242,880B;116futurepairs at5,342B project 4,483,727B,margin 759,153B. Next **10:06:33 UTC**.
+
+
+### Review 198 — 2026-10-02 10:06:33 UTC
+
+Original nominal timestamp retained. All eight coverage and aborted-coverage checks complete. Exact report and independent snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap/growth guards.
+
+`review-20261002T100633Z.json.gz` raw 19,119 B SHA-256 `49e88ee444f8f151de90252b1b79b43d9f86f45a5db986a1fc24487218cd1f9a`; gzip 2,897 B SHA-256 `ddee4d2129677c6e3e5cebe0eec5ec870134c368d1cabd792371bfb60ac2a8df`.
+
+`current-epoch-at-review198.json.gz` raw 9,300 B SHA-256 `dfae301812d1ca9714c4185b5d97c1c95882b7cebaefe45f12fcb9e0211de300`; gzip 1,773 B SHA-256 `c215adb6e10a1baddecb120706f18d2e3bb28afb531c8555d21cf3fb7e223c5a`.
+
+Snapshot read 2026-10-02T10:12:20.875344Z, updated epoch seconds 1790935940.579012;counts not pooled. Convergence three exact failed-hedge closes/one win,aggregate−$2.6174059879;Premium four exactlosses−$6.9447202594. New rescuegain immediately flagged rootaudit,pending;no newpairedwin/estimates/aborts. HLprice_limit4. Convergence other$1.1451114310/capital$0.0000045569;Premium fees$3.3323302004/other$1.9956652945/capital$0.0001107645.
+
+Paper pulses fresh/ok/fourfeeds;review CPU50.60%,p95 36.60ms,RSS292.98MiB,106pairs. Rolling chunk000046 healthy133.16s/4,032,490compressedB/29,494records,two connections/no errors/economicsfalse. Controller chunks927,475,049B/controls918,422B against separate decimal2GB. Three newshelperswaiting/fresh/economicsfalse. No raw/reserved economics,carry samples/news outcomes opened;no interventions.
+
+Carry 2026-10-02T10:10:00.115273+00:00: 403sampled,two invalid(71,389),459future/interrupted,running/no error/retry/evaluation. Reviews66–198:2,657completions=2,621exactlosses,one estimatedloss,five auditedpairedgains,30rescuegains(latest one pendingrootaudit). Archive 3,868,725/5,242,880B;115futurepairs at5,342B project 4,483,055B,margin 759,825B. Next **10:26:33 UTC**.
