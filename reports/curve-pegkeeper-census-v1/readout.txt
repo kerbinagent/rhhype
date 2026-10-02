@@ -1,0 +1,22 @@
+The fixed census is unavailable. Request13, the lower boundary block response,
+reached32768B and retained its extra1B sentinel. It stopped after13attempts,
+1566ms,50456body bytes and65030raw bytes. No logs or final boundary rechecks
+were requested. No complete projection exists; no event denominator or first
+three transaction selection is available. The original failure is preserved.
+
+An independent no-collector audit verified all7pins and52raw files,including
+12complete RPC replies and the exact capped HTTP200chunked failure. As a
+post-hoc observation only, the completed prefix contains5distinct registry
+tuples,including previously unlisted index4:
+keeper0x53876b157decf04389eed66c7c29d73863f8c50b
+pool0x635ef0056a597d13863b73825cca297236578595
+is_inverse=false,include_index=true.
+Indices5..7 returned RPCcode3 without data; that is not proven absence.
+The regulator reported crvUSD as stablecoin and is_killed=0. These replies
+used the original canonical block hash, but final recheck was never reached.
+
+This is not a completed registry/history census or economic result. A separate
+coverage extension will first revalidate the exact new tuple and same anchor
+before asking for its reward; it does not rerun the failed history request.
+Plan SHA84becc3885a2488b4aa9dda1ea6b07a6fd9903b1805fe478bed94ff541c68ec3.
+Evidence:run-v1/raw/,run-v1/terminal.json. Independent audit:root-review.json.

@@ -1,0 +1,30 @@
+Coverage extension at the exact original state, not a failed-census retry.
+The failed census retained a complete registry-index4 response identifying
+one keeper omitted by the original four-address directory sample. Its raw
+response is pinned and independently audited as prefix evidence only.
+No historical event,final boundary recheck or completed census is claimed.
+
+Recheck index4 tuple at anchor26107811 and its original hash; require the
+same keeper,pool,and two canonical flags before proceeding. Then query
+pool,pegged,regulator,caller_share,last_change,estimate_caller_profit,update
+for only that fixed new keeper. Both chain/header and final header recheck
+are mandatory. All metadata/update errors remain explicit unavailable;
+pool or token/regulator mismatch is separately visible, not runtime proof.
+Do not replace or add targets,change anchor,repeat earlier keepers or fetch
+any history. No retry,narrowing,fallback,proxy or real transaction.
+
+11requests:chain,anchor,registry4,seven fixed fields,recheck. All eth_calls
+use EIP1898 requireCanonical,diagnostic from/beneficiary0x1,value0,gasPrice0.
+Registry300k gas;metadata5x300k;estimate1.5M;update2M,total5.3M. Independent
+state calls; no state override or ownership/funding/free-gas inference.
+Positive update return is only a simulated LP reward amount. Actual transfer,
+LP cash,gas,inclusion and repetition would remain to be measured. Zero
+estimate does not reject a reward; unavailable update is not zero or loss.
+
+256KiB:raw128KiB,source/tests/design/plan64KiB,controls16KiB,projection8KiB,
+margin40KiB.98,304B bodies,131,072B raw,20s/request,165s work/180s wall,
+20CPU seconds,512MiB RAM. Shared immutable helpers retain original charges.
+Pin source,input,runtime and plan; commit before collection. Exclusive run,
+stream+fsync evidence,retain failures,exact offline replay,default dry.
+Primary source context stays in the two earlier pinned Curve source-notes
+files; registry membership here will be freshly rechecked at the fixed hash.
