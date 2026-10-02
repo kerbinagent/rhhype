@@ -1,0 +1,154 @@
+Comet eligibility live v1: offline preparation, no current live authority
+
+Purpose and admission
+Prepare exactly one future fixed Ethereum-mainnet metadata pass. Root independently
+reviews/freezes the final plan with exact wrapper/test/design and old source/plan
+pins before one persistent host launch. Default CLI checks only fixed local
+source/control pins, writes nothing and performs no requests. Existing output
+refuses another attempt. Historical failures, sources and plans remain unchanged.
+No compiler, artifact download, provider request, economic/raw source processing
+or full binding certificate is authorized by the preparation allocation.
+
+The unchanged peer_comet_eligibility_v1 engine is instantiated with binding=None.
+Its entire result, including source_binding_unavailable, economics=None,
+source_equivalence_proven_by_collector=False, network_requests_permitted=0 and
+offline_transport label, is preserved as a component result. These context labels
+do not describe the new adapter's eventual live transport. The wrapper separately
+reports metadata_collection_complete only for a fully received, independently
+replayed pass. Complete metadata is not transitive source binding, eligibility
+verification, arm capacity, price, execution or profit. An engine failure remains
+unavailable and retains earlier metadata/partial runtime roles. No negative or
+zero economic result is inferred from failure, missing views or inventory.
+
+Frozen inputs
+The new10063B allocation pins the old30601B engine,14403B offline plan and23578B
+Comet identity helper package. The old plan itself binds its test/design source
+chain; validate it and verify that chain before and after new collection. The
+3539B independent reproduction root reconciliation is fixed by hash. The new
+known implementation is0x63e749153baf1838f63ca22c275370bd2b1ceb15,18599B with
+SHA256 b942614560ef7218a52173cc501ce9198f74a558348edf957cda62a218aa20fe.
+A narrow subclass rejects a different slot address at request4 or different
+runtime at request5 before further WETH/AssetList/eligibility evaluation. It adds
+no RPC. No proxy or dependency source-equivalence is inferred from fingerprints.
+No original module globals, plan, source or scientific methods are modified.
+The imported identity module supplies only pure encoding/runtime/framing finalizer
+helpers and its exact pinned engine. Its original live run/verify is never invoked.
+Frozen execution is .venv/bin/python, CPython3.13.9 and exact recorded runtime/
+OpenSSL identity. Python bytecode and retained logs are disabled.
+
+Fixed manifest and model assumptions
+Reuse all31 ordered engine manifest entries. Normal child-ineligible completion
+executes23 and conditionally skips8 factory/pool checks. Child-eligible completion
+executes31. Every terminal engine result has requests+unexecuted_steps=31; skipped
+conditions and not-reached failures remain separate. USDC/WETH, fee3000, fixed
+factory identity and tickspacing60 are unchanged. No slot0, balances for arm size,
+oracle answers, quotes, swaps, account/key/wallet state or arbitrary extra RPCs.
+
+First chainId must equal0x1. The engine chooses one latest parent, uses EIP1898
+blockHash/requireCanonical for state calls, and rechecks the original parent
+number plus Comet/USDC implementation slots at the end. Preserve its five-field
+number/hash/parentHash/timestamp/stateRoot final comparison. Complete original
+block JSON is retained in raw bodies, despite projected engine trace headers.
+This is provider-asserted canonicality, not independent consensus, recomputed
+header hashes or a proof against reorg-out-and-back. Getter/proxy/dependency
+interpretations remain frozen conditional models, including legacy USDC slots.
+
+Decision UTC milliseconds are sampled immediately before engine execution and
+saved. Engine child_time imposes decision+400ms on a12s grid after the chosen
+parent, with uint40 bounds. eth_simulateV1 uses one numeric parent and explicit
+child number/time, validation=False, no state overrides, four fixed view calls,
+200000gas each, zero sender/value, no logs, return receipt status/gas validation.
+It is a conditional provider counterfactual; neither acknowledgments nor private
+receipts prove future inclusion. Buy-unpaused, reserves<target and positive WETH
+inventory are source-model prerequisites only. Inventory sufficiency for a trade
+arm, depth, price feeds and full dependency equivalence remain unevaluated.
+
+One-run transport and clocks
+Future command after committed freeze only:
+  .venv/bin/python -B scripts/comet_eligibility_live_v1.py --run
+  --plan-sha256 ROOT_FROZEN_SHA
+One exclusive output directory and immutable claim precede any transport.
+Direct TLS POSTs only to https://ethereum-rpc.publicnode.com/ with fixed anonymous
+JSON-RPC manifest. No retries, redirects, environment proxies, alternate provider,
+latest fallback, source URL or transport expansion. HTTPSConnection supplies
+certificate verification; identity encoding is required. Numeric HTTP status and
+all parsed HTTP header pairs, including duplicates, are retained. These are full
+parsed headers, not an exact wire-header/line-ending transcript. If http.client
+rejects malformed status/header syntax during getresponse, retain B/E/error and
+report unavailable; no header prefix is asserted. If successfully parsed headers
+exceed the serialization cap, retain the bounded8192B encoded prefix and stop
+before body reads. Header truncation is explicitly unavailable, never success.
+
+Request SIGALRM starts before connection/SSL construction and spans DNS, headers,
+body drip and stream close,<=10s; nesting honors the earlier worker deadline.
+Worker absolute120s includes verification, requests, raw replay and terminal/fsync
+cleanup. Main work reserves the last2s; a separate outer worker alarm enforces the
+whole120s. Supervisor absolute125s starts before verify; wait ends by122s, internal
+work cutoff123s, bounded kill/join and receipt cleanup remain within125s. A killed,
+interrupted or silent worker is unavailable even if process exit0. Unknown attempt
+counts are null, never fabricated0. Known attempt counts mean transport-helper
+invocations, not authenticated wire dispatch. UTC/monotonic begin/end and actual
+launch runtime/PID/namespace are receipts, not latency or isolation proofs.
+
+Raw storage and bounded failure
+One append-only responses.frames.pending inode, final via hardlink/unlink. Every
+magic/frame/body-fragment append is fsynced. B begins exact request/name/timeout/
+clocks; H contains HTTP status/full parsed header list; D is the exact received
+body fragment; E records status/body bytes/SHA256/EOF/error/end clocks. Full RPC
+bodies, including complete block responses and provider errors, remain untouched.
+No base64 export, gzip duplicate, normalized raw response or second header file.
+Frames have <=8192B payload, total655360B. Header<=8192B. Each response<=65536B,
+with at most the engine's counted65537B sentinel, cumulative body<=524288B. Every
+read1 limit also respects remaining raw space and a4096B end-frame reserve; it
+never overreads merely to prove EOF. Exact exhausted cumulative boundaries are
+unavailable. Tiny fragments can exhaust framing before body budget; that is a
+retained resource failure. IncompleteRead partial bytes are fsynced and returned
+once to the engine, then the deferred failure stops further reads. Earlier drip
+prefixes survive timeout. Any transport/resource/identity failure ends the engine
+path; no rerun, replacement, API fallback or economic observation is invented.
+
+Saved replay, projections and admission
+Successful collection is independently replayed from raw frames with the same
+pinned subclass/engine. Every generated request/name/timeout must match its saved
+B frame; HTTP200, explicit EOF, body hashes/counts/order and bounded full bodies
+must agree. Replay uses a <=512-sample monotone finite engine-clock transcript,
+so exact original elapsed fields and engine trace/result hashes reproduce without
+new network calls. Parent independently replays success again and compares the
+saved projection and derived trace. Unknown/failed paths preserve the engine
+result but do not claim complete replay. Partial malformed raw frames need not
+parse in order to retain a failure projection and safe terminal.
+
+trace.json contains the complete engine trace,<=524288B. projection.json,<=32768B,
+preserves engine metadata/status, all31 denominator and role failures, known
+historical identity, raw hash and separate collection/source-binding claims.
+expected_historical_implementation is the frozen expectation, not an observation.
+observed_implementation_matched is true only when the actual address/fingerprint
+matches that expectation and the implementation role was checked; the subclass
+also enforced runtime length. Early or implementation-mismatch failures are false.
+A later failure can retain a true implementation match without complete collection
+or transitive binding. adapter_transport_model labels the wrapper's fixed anonymous
+HTTPS JSON-RPC transport separately from unchanged engine offline-context fields.
+clock-samples.json<=16384B is a control, not another raw-body copy. No data is
+printed. All source/input pins recheck before publication, after publication and
+after supervisor saved replay. Admission requires exact metadata_collection_complete
+terminal status, exact planSHA, errorNone, exit0, successful replay and final pins.
+A projection with failed/unavailable supervisor is never an admitted success.
+
+Budget reconciliation
+New reservation2097152B categories: source/test/design/draft/final+sequential
+synthetic fixtures262144; raw655360; trace524288; projection32768; controls65536;
+both-session messages32768; margin524288. Allocation10063B and root reviews are
+controls. Runtime output controls hard-cap32768B, leaving32768B for allocation/
+root controls (22505B after allocation). Terminal/claim/supervisor each<=8192B;
+clock<=16384B with aggregate output controls cap; ordinary clock count is far
+smaller than its512-sample ceiling. Raw pending/final counts once by inode; JSON
+pending/final also share one inode. No old raw/source/compiler artifact copies,
+compiler run, fixture logs or package installation. Tests use small closed fake
+HTTP responses from existing synthetic fixtures; no retained economic inputs.
+
+Required external interpretation
+One observation does not establish eventual liquidatability, amounts available
+to a sender, fill/slippage, oracle validity or closed cash. Later studies would
+need separate dependency binding and execution/cost designs. This preparation
+changes neither the original offline plan's scientific assumptions nor historical
+failure/provenance/source claims.
