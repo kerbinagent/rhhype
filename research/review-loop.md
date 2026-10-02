@@ -6716,3 +6716,20 @@ Snapshot read 2026-10-02T19:47:11.374103Z, updated epoch seconds 1790970430.9129
 Paperfresh19:31busy69.80%CPU/52.14mslag,19:35busy79.65%/50.46ms,19:40busy78.90%/54.39ms,19:45ok77.85%/47.72ms; reviewfresh/busy92.35%/50.66ms,RSS299.07MiB,122pairs. Rolling101healthy19:45at59.08s/1,802,280compressed B/10,417records,two connections/no errors/economics false; chunks1,920,434,336B/controls61,333B under separate2GB. Frozenpressure lifecycle/pins unchanged,recovery gap retained,no routine mutation/rawdecode. Fixed100observedcollecting19:35rootnotified; next101collecting19:45, no selectedraw/economics read. RootownsLITanalysis. HIP4livewindowstill20:50endpoint, control-only routine.
 
 Carry19:45:00.138046UTC:518sampled,two invalid(71,389),344future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–227:2,964completions=2,917exact losses,one estimated loss,seven audited paired gains,39audited rescue gains. Archive4,036,187/5,242,880B;86future pairs at5,342B project4,495,599B,margin747,281B. Next **20:06:33 UTC**.
+
+
+### Review 228 — 2026-10-02 20:06:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Explicit UTC wall-clock pre-read guard passed. Exact report and independently timed snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap and growth guards.
+
+`review-20261002T200633Z.json.gz` raw 18,528 B SHA-256 `84cf4d1c1a723f8bf177e6c64df03b349834eca4a769fac219e75ffb27396653`; gzip 2,568 B SHA-256 `1ee32d972d30bdc303c4576d4b827a7b4309051201fd6d57498b7447e6c51a6f`.
+
+`current-epoch-at-review228.json.gz` raw 9,281 B SHA-256 `7d2d1f1fc9793ce7299c2a8f2e38192b5c79fae472d7c9338cdb2cec5550e20b`; gzip 1,731 B SHA-256 `28f4596fb4ddb533d8e9784c62d3456d2af68632fbac282e09797777e2f4feef`.
+
+Snapshot read 2026-10-02T20:07:17.315932Z, updated epoch seconds 1790971637.1834505; counts not pooled. Three exact convergence losses net−$2.871521420257068;three HL price_limit rejects;no gains, estimates or aborts. Fees0/other$1.4975093570000126/capital$0.000006063257137863681.
+
+Paperfresh19:51ok72.55%CPU/47.44mslag,19:56busy84.02%/51.23ms,20:00busy70.99%/51.74ms,20:04ok75.32%/40.07ms; reviewfresh/ok64.24%/43.56ms,RSS307.38MiB,122pairs. Rolling103healthy20:04at17.02s/1,014,068compressed B/4,362records,two connections/no errors/economics false; chunks1,922,459,055B/controls62,247B under separate2GB. Frozenpressure lifecycle/pins unchanged,recovery gap retained,no routine mutation/rawdecode.
+
+RootLIT100terminal19:47:43.757896,three commands/fourflat-known/auditPASS; root+independent cashchecks passed. Primaryfiveattempts/fourcloses stressed−$0.5914428370397607116387620497,fade-minus-follow−$1.014008616427390945261853120. Both fixed96/100gatefailed,all8ledgersflatknown,no replacement/comparatorpromotion. Rootarchivee90e88f; routine didnotreadselectedraw/outcomes. HIP4stillfixed20:50endpoint/control-only.
+
+Carry20:05:00.137653UTC:522sampled,two invalid(71,389),340future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–228:2,967completions=2,920exact losses,one estimated loss,seven audited paired gains,39audited rescue gains. Archive4,040,486/5,242,880B;85future pairs at5,342B project4,494,556B,margin748,324B. Next **20:26:33 UTC**.
