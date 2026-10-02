@@ -1,0 +1,26 @@
+{
+  "independent_review": {
+    "agent": "aave_census_review",
+    "checks": [
+      "first-event and prefix identity",
+      "original fee and nonce mapping",
+      "historical block context and validation=true",
+      "no state/balance overrides",
+      "both receipt gas and log sequence matches before flows",
+      "one gas deduction with conditional grouping",
+      "response/raw pre-dispatch reserves and failure retention"
+    ],
+    "result": "No concrete pre-freeze blocker found"
+  },
+  "plan_sha256": "a07214cb94cacb76a340e01f4025206b2d1af70a28da89aeb72921974ede843c",
+  "recorded_utc": "2026-10-02T22:22:26.231005+00:00",
+  "schema": "aave-ordered-replay-preflight-v1",
+  "source_references_added_after_review": "Geth TransactionArgs official source URL only; no implementation change",
+  "source_sha256": "bf520660bf886bbdf71ed92b9b8d42b9ad078fc6472304a4a532a610333478ce",
+  "tests": {
+    "command": "/home/harry/miniconda3/bin/python -B -m unittest discover -s tests -p test_aave_ordered_replay_v1.py -v",
+    "failed": 0,
+    "passed": 11
+  },
+  "zero_live_requests_before_freeze": true
+}

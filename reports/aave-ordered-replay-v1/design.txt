@@ -1,0 +1,97 @@
+One historical ordered liquidation replay, version 1
+
+Question and prospective selection
+The completed fixed 7,200-block census found three LiquidationCall events.
+All three borrowers were above the health-factor threshold at the end of
+the prior block. The first chronological event is transaction index 1 in
+Ethereum block 26,103,141. Retained public block data identifies exactly one
+earlier transaction. This experiment attempts one ordered simulation of
+that pair on the retained parent state. The pair was fixed before reading
+its transaction payloads or native transfer results. There is no replacement
+transaction, new window, retry, endpoint fallback, or failed-plan rerun.
+
+Target: 0xb71c422001da07370bb52ac46be01551c20b2bfa6c0f4cddf6b7765e9c94644f
+Prefix: 0xf04ac291f6537bd58059aa48decd78e82291bc7d53a34a8185fe3e7d051387d2
+Parent: 0x117289c9738aa8b952a190eafb8881ffc7711cb5e79205ff92e52b26fb179c10
+
+Eight-request maximum, fixed order
+1. eth_chainId (must be 1).
+2. Parent block header by retained block number, false for transactions.
+3. Prefix transaction by exact retained hash.
+4. Target transaction by exact retained hash.
+5. Prefix receipt by exact retained hash; target receipt is already retained.
+6. One eth_simulateV1, two calls in their original order, parent block number.
+7. Parent header recheck.
+8. Target block header and two-transaction prefix recheck.
+Any missing input, unsupported method/type, invalid schema, divergent result,
+resource limit or transport error stops the sequence. Later slots are unused.
+
+Simulation construction
+Only original transaction types 0, 1 and 2 with a nonnull destination are
+supported. Preserve sender, destination, calldata, nonce, value, gas limit,
+type-specific fee fields, chain ID for typed transactions and access list.
+Geth TransactionArgs infers types from fee and access-list fields. No signature
+is supplied or created. Validation is true, traceTransfers true and
+returnFullTransactions false. The block override copies actual number,
+timestamp (time), gas limit, miner (feeRecipient), mixHash (prevRandao), and
+base fee. There are no state/balance overrides or fabricated funding. Public
+historical calls are simulations, not submission or control of those accounts.
+
+The parent is selected by number as supported across documented interfaces;
+its hash, parent hash, state root and relevant block fields must equal the
+retained data before and after. The target header and transaction prefix
+must also remain equal. This is a provider-asserted consistency check, not
+independent consensus verification. Parent beacon-root/system transitions,
+withdrawals and the rest of the target block are not reconstructed. In
+particular, matching the full canonical block state root is not expected.
+
+Acceptance and accounting
+Check transaction and receipt block/hash/index/from/to identities, status,
+gas bounds, effective gas price and cumulative gas linkage. The prefix gas
+plus target gas must equal target cumulativeGasUsed. Both simulated calls
+must succeed, match each real receipt's gasUsed exactly, and match all regular
+logs in order by emitting address, topics and data. Check the returned block
+context too. Simulated transaction hashes/roots can differ because calls
+are unsigned simulations. Exclude only the documented 0xeeee...eeee native
+ETH events from regular-log comparison; strictly decode those as Transfer.
+The chosen target's real receipt has a WETH withdrawal, so a result without
+any native transfer event is unavailable, not zero native income.
+
+Only after both calls match, decode target Transfer-shaped token logs and
+synthetic native movements. Report vectors separately for transaction sender
+and top-level recipient, then a conditional aggregate assuming both addresses
+share economic control. Internal group transfers cancel. Synthetic native
+events exclude gas; subtract the real target gasUsed * effectiveGasPrice
+once. Do not add the prefix payer's gas to an unproved operator group.
+Record all decoded transfer endpoints, including third-party payments.
+Token event deltas are not verified balances; ownership, private/off-chain
+costs, execution competition, future eligibility and repeatable profit remain
+unproved. Even matching logs/gas is a necessary reproduction check rather
+than proof of all intermediate state, native-trace correctness or causality.
+Unsupported or divergent simulation yields unavailable with retained raw
+evidence, never an invented zero return or a profit/loss claim.
+
+Bounds and evidence
+The existing allocation reserves 768 KiB with 384 KiB raw, 128 KiB source/test/
+design/plan/sequential fixtures, 64 KiB controls/reviews, 32 KiB projection and
+160 KiB margin. Total response bodies cap 320 KiB, each request cap in the
+frozen SLOTS. A one-byte overrun sentinel is retained. Before dispatch reserve
+the entire response cap plus sentinel, fixed chunk framing, header and final
+receipt; if insufficient room stop without the request. Stream into 4,096-byte
+raw frames and flush the remainder on completion/error. B is the request,
+H parsed HTTP headers, D body fragments, E transport receipt with body hash.
+Raw file cap is 393,216 bytes, request frame 32,768 bytes, H/E 2,048 bytes.
+Strict JSON rejects duplicate keys, floats, nonfinite values and excessive
+structure through the immutable prior helper. HTTPS publicnode only, no
+proxy, redirects or credentials. Maximum 8 requests, 20 seconds each,
+110-second work deadline, 120 seconds absolute, 20 CPU seconds, 512 MiB address
+space, 6,000,000 aggregate supplied gas. Persistent claim directory is created
+exclusively after exact plan, source, input and Python/runtime pin checks.
+Terminal and source rechecks close the run. Successful output is replayed from
+its exact framed request/response sequence before projection publication.
+
+Primary API references reviewed 2026-10-02
+https://ethereum.github.io/execution-apis/docs/ethsimulatev1-notes/
+https://ethereum.github.io/execution-apis/api/methods/eth_simulateV1/
+https://geth.ethereum.org/docs/interacting-with-geth/rpc/objects
+https://raw.githubusercontent.com/ethereum/go-ethereum/master/internal/ethapi/transaction_args.go

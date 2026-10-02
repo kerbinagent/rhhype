@@ -1,0 +1,67 @@
+{
+  "active_research_headroom_bytes": 2752512,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 252002304,
+  "bounds": {
+    "body_bytes": 327680,
+    "cpu_seconds": 20,
+    "fallbacks": 0,
+    "ram_bytes": 536870912,
+    "raw_bytes": 393216,
+    "request_seconds": 20,
+    "requests": 8,
+    "retries": 0,
+    "total_call_gas": 6000000,
+    "wall_seconds": 120
+  },
+  "categories_bytes": {
+    "controls_and_reviews": 65536,
+    "margin": 163840,
+    "projection": 32768,
+    "raw_framed_rpc_responses": 393216,
+    "source_tests_design_plan_and_sequential_fixtures": 131072
+  },
+  "census_closeout": {
+    "actual_named_bytes": 365266,
+    "all_evidence_preserved": true,
+    "future_collection_authority_remaining": false,
+    "old_reserved_bytes": 2097152,
+    "release_bytes": 1048576,
+    "retained_reserved_bytes": 1048576,
+    "run_terminal_review": "reports/aave-liquidation-census-v1/root-review.json"
+  },
+  "headroom_after_pending_escrow_bytes": 655360,
+  "interpretation": "Both regular log sequences andgas usage must match retained/queried receipts before transfer accounting. Whole-block state root not expected to match a two-transaction prefix. Unsupported or divergent simulation is unavailable, never zero income. Conditional account grouping must be explicit; recipient ownership/privatepayments/newexecutionprofit unproved.",
+  "new_reserved_bytes": 786432,
+  "overall_reservation_bytes": 2847082752,
+  "owned_paths": [
+    "scripts/aave_ordered_replay_v1.py",
+    "tests/test_aave_ordered_replay_v1.py",
+    "reports/aave-ordered-replay-v1/"
+  ],
+  "pending_mac_expansion_escrow_bytes": 2097152,
+  "previous_global_allocation": {
+    "path": "reports/experiment-storage/aave-liquidation-census-preparation-v1.json",
+    "sha256": "f5b3a459c9b25dc9f596ab0f3663969745bdb86fc81f5d7f30e4c0bb798ad8d9"
+  },
+  "prospective_manifest": [
+    "chainId",
+    "historical_parent_header",
+    "prefix_transaction_by_hash",
+    "liquidation_transaction_by_hash",
+    "prefix_receipt",
+    "one_eth_simulateV1_of_two_original_calls",
+    "parent_header_recheck",
+    "event_header_recheck"
+  ],
+  "question": "Does one public eth_simulateV1 ordered replay of the first historical liquidation and its single preceding transaction match both real receipts and expose native ETH movements?",
+  "recorded_utc": "2026-10-02T22:13:37.068706+00:00",
+  "schema": "aave-ordered-replay-preparation-v1",
+  "scope": "Public historical simulation only, validation=true, traceTransfers=true, original senders/data/values/gas/fees and historical block context. No state or balance overrides; no fabricated funding, signing or transaction submission. Calls are RPC simulations and do not imply control of historical accounts.",
+  "selection": "First chronological event from frozen completed7200block census. No new search/window, no replacement on failure.",
+  "source_references": [
+    "https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-eth",
+    "https://ethereum.github.io/execution-apis/docs/ethsimulatev1-notes/"
+  ],
+  "status": "offline_preparation_only"
+}
