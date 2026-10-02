@@ -1,0 +1,160 @@
+{
+  "schema": "news-candidate-rolling-v1",
+  "status": "draft_not_runnable",
+  "allocation": {
+    "path": "reports/experiment-storage/news-candidate-rolling-v1-allocation.json",
+    "sha256": "f179818fbac5f6f062c19631665806cde8b9e40bce10f0cce83183fb0c5418d8"
+  },
+  "original_analysis": {
+    "path": "reports/experiment-storage/single-venue-news-inventory-fix-v2.json",
+    "sha256": "e4e5d4b56e2a2a461123fe23067e749b44ae043c4e97f6f9b37291b6d1d42793"
+  },
+  "rolling_parent": {
+    "path": "reports/experiment-storage/rolling-research-capture-v1.json",
+    "sha256": "e19c6ed52ace7310e8a717bf39b2cf707976b2fe92c6ff8eb6ed34f738936ac4"
+  },
+  "rolling_chunk_plan": {
+    "path": "reports/experiment-storage/rolling-research-chunk-v1.json",
+    "sha256": "ab5e7e39a48ecde0e7e5f6205b325984659606867773c9ad984bc633267414cb"
+  },
+  "rolling_recovery": {
+    "path": "reports/experiment-storage/rolling-research-capture-recovery-v1.json",
+    "sha256": "c4fb5e6519c10dbc2e4c2f353fbece5f4754a3f2a4cfe7ca251fb84fddae470f"
+  },
+  "control_root": "reports/news-candidate-rolling-v1/run-v1",
+  "output_stem": "news-candidate-rolling-v1",
+  "store_root": "data/rolling/market-research-v1",
+  "pin_owner": "news_candidate_rolling_v1",
+  "cutoff_ns": 1790953200000000000,
+  "selection_deadline_ns": 1790964000000000000,
+  "assets": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "HYPE",
+    "XRP",
+    "SUI",
+    "NEAR",
+    "ZEC",
+    "VVV",
+    "LIT"
+  ],
+  "selected": {
+    "rh_lighter": {
+      "BTC": "1",
+      "ETH": "0",
+      "SOL": "3",
+      "HYPE": "2",
+      "XRP": "6",
+      "SUI": "9",
+      "NEAR": "7",
+      "ZEC": "4",
+      "VVV": "8",
+      "LIT": "5"
+    },
+    "lighter": {
+      "BTC": "1",
+      "ETH": "0",
+      "SOL": "2",
+      "HYPE": "24",
+      "XRP": "7",
+      "SUI": "16",
+      "NEAR": "10",
+      "ZEC": "90",
+      "VVV": "69",
+      "LIT": "120"
+    }
+  },
+  "families": [
+    "relative",
+    "depth"
+  ],
+  "execution_parameters": {
+    "pair_skew_ms": 250,
+    "book_age_seconds": 2,
+    "reference_seconds": 120,
+    "reference_embargo_seconds": 2,
+    "reference_min_count": 60,
+    "reference_min_span_seconds": 89,
+    "signal_interval_seconds": 1,
+    "admission_start_seconds": 122,
+    "admission_stop_seconds": 480,
+    "budget": 100,
+    "sizing_headroom_fraction": 0.01,
+    "initial_cash": 600,
+    "delay_ms": 400,
+    "confirmation_timeout_seconds": 2,
+    "entry_limit_bps": 1,
+    "exit_limit_bps": 10,
+    "max_exit_attempts": 3,
+    "hold_seconds": 10,
+    "cooldown_seconds": 30,
+    "max_attempts": 20,
+    "gap_min_bps": 5,
+    "other_gap_min_bps": 3,
+    "forecast_buffer_bps": 2,
+    "leader_min_move_bps": 3,
+    "target_max_leader_fraction": 0.5,
+    "shock_min_local_move_bps": 2,
+    "shock_max_reference_move_bps": 1,
+    "shock_flow_multiple": 5,
+    "shock_imbalance": 0.8,
+    "shock_depth_fraction": 0.25,
+    "shock_depth_band_bps": 5,
+    "shock_min_baseline_bins": 20,
+    "shock_min_baseline_span_seconds": 60,
+    "capital_rate": 0.05,
+    "stress_bps": 5,
+    "funding_guard_seconds": 120
+  },
+  "adapter_bounds": {
+    "decoded_bytes": 1073741824,
+    "records": 1000000,
+    "trade_ids": 500000,
+    "metadata_bytes": 131072,
+    "raw_bytes": 67371008
+  },
+  "output_caps": {
+    "per_directory": 131072,
+    "trace": 98304,
+    "summary": 16384,
+    "metrics": 8192,
+    "audit": 8192,
+    "comparison_gzip_per_family": 16384,
+    "comparison_csv_per_family": 32768,
+    "controls": 49152,
+    "readout": 16384
+  },
+  "duration_seconds": 600,
+  "analysis_seconds": 3600,
+  "child_seconds": 600,
+  "primary": {
+    "family": "depth",
+    "asset": "NEAR",
+    "venue": "lighter",
+    "rule": "depth_follow"
+  },
+  "comparator": {
+    "family": "depth",
+    "asset": "NEAR",
+    "venue": "lighter",
+    "rule": "depth_fade"
+  },
+  "frozen_utc_ns": null,
+  "store_identity_sha256": null,
+  "preparation_authority": "Offline implementation/synthetic fixtures only; root final review/freeze before any store selection.",
+  "selection": "First reserved reserve-entry launched at or after cutoff; select before observing state or input; failed/missing is final, no replacement.",
+  "interpretation": "One ordinary-regime conditional public-book IOC study; primary NEAR Core follow versus unchanged fade. Other100 rows descriptive. Independent native-collateral ledgers not additive; coverage advancement only.",
+  "source_pins": [
+    {
+      "path": "scripts/news_candidate_rolling_v1.py",
+      "bytes": 32459,
+      "sha256": "06705e57105bdb3d4c1874b377d8950836e2106070e93cacf094747c826ecad8"
+    },
+    {
+      "path": "tests/test_news_candidate_rolling_v1.py",
+      "bytes": 17205,
+      "sha256": "7fa21c2180b4b9044386fe6fce32bb06f813400ed3c8c589b61053710c592f2e"
+    }
+  ]
+}

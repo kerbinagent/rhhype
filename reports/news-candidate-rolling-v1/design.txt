@@ -1,0 +1,116 @@
+NEWS CANDIDATE: ONE FUTURE RESERVED ROLLING ATTEMPT
+Offline preparation checkpoint. No request, nomination, pin or replay is authorized
+by this document or the draft. Root reviews, commits and freezes the final plan.
+
+Scientific scope
+The sole primary is Core/USDC NEAR depth_follow; comparator is the unchanged
+Core/USDC NEAR depth_fade. All 100 asset/venue/rule rows and 20 matching audit
+statuses remain descriptive. Never substitute another winner or add independent
+ledgers. This ordinary-regime observation is not a scheduled-news replication.
+
+The corrected replay, two strategy classes, ordinary adapter, compact logging,
+independent signal/IOC/cash auditors and successful-input reporter are unchanged.
+The wrapper changes only reporter scope labels to ordinary rolling and records
+its source SHA in comparison metadata; every row, cash value and CSV stays intact.
+The entire execution_parameters dictionary must equal the immutable news parent
+and the runtime strategy.PARAMS. Constructor anchor is capture start. Admission
+is 122 <= elapsed seconds < 480; total capture 600s; reference120s/embargo2s,
+native budget100 with1% sizing headroom,400ms action delay,10s hold,30s cooldown,
+20 attempts, entry limit1bp/exit10bp,3 exit attempts,2s confirmation/book clocks,
+5% annual capital,5bp entry-notional stress and existing funding guard remain.
+Published collateral stays USDC/Core and USDG/RH. Future native metadata remains
+the original collector's zero-fee/native-contract validation, not a new fee rule.
+
+Selection and waiting
+Cutoff: 2026-10-02T15:00:00Z. Selection deadline: 2026-10-02T18:00:00Z.
+The plan freeze and launch claim must precede cutoff. A missed cutoff fails; no
+adaptive extension. Choose the first reserved-validation reservation launched
+at/after cutoff and by deadline, by number/order and launch time only. Its final
+capture state cannot rank selection. Expired reservation identities also count.
+The store has actual reserve-entry timestamps, not an absolute cron timetable.
+An immutable nomination is published before opening any selected seal/input.
+No immediate retry/replacement exists. An attempt nominated by18:00 gets at most
+its original720s child plus60s sealing allowance; selection does not extend.
+Monotonic and wall limits both bound waiting. The existing collector is untouched.
+
+Bindings and identities
+New final plan: reports/experiment-storage/news-candidate-rolling-v1.json.
+New controls: reports/news-candidate-rolling-v1/run-v1/.
+New result stem: reports/single-venue-research/news-candidate-rolling-v1-*.
+The allocation, corrected news parent, rolling parent/chunk/recovery plans and
+their original direct/transitive sources are SHA verified without calling old
+capture/calendar gates. The new source/test are uniquely pinned in final plan.
+Root supplies static store_identity_sha256 and frozen_utc_ns at freeze.
+The new analysis plan never replaces the embedded rolling metadata market plan.
+
+Only a complete selected chunk is pinned using the existing Store.pin, before
+raw reads/checksums. Pin persists until root releases it, including failure after
+pinning. Validate exact seal inventory, role, reservation identity, producer
+status, final capture status/terminal/manifest, metadata files, embedded chunk
+plan, and raw SHA before features and after each replay/audit/publication stage.
+No copied raw data. A failed attempt's seal may supply authenticated producer
+file hash declarations; its unpinned raw payload is never opened or decoded.
+
+Rolling input bound is64MiB+262144;600s, metadata131072, decoded1GiB, records1M,
+trade identities500k. This resource change does not alter economics. The existing
+inventory_context validator is not called: it hardcodes different exploratory
+chunks/schema/owner/parameters. This wrapper uses the same narrow seal/file
+identity checks. Every native book/print validity rule stays in the ordinary
+adapter and strategies; sealed_complete is not paired-book validity or profit.
+
+Process and publication contracts
+Default CLI dry performs zero store/plan reads, HTTP, nominations or pins.
+Run requires the exact final frozen --plan-sha256. Existing controls, ledgers,
+comparisons or readout refuse launch. All processes suppress bytecode.
+There are24 fresh nice19 subprocesses:2 family replays,20 independent audits,
+2 family reporters. Each child<=600s, analysis commands<=3600s. Each child receipt
+binds exact command, source SHA, final analysis SHA and selected manifest SHA.
+Final result follows all24 commands, all100 row identities and all20 passed
+audit/trace/summary bindings. Source and selected input checks are repeated.
+
+Scoped routing restores finally: fix's plan/bounds/caps/verify/configure/input
+snapshot; shared depth module's class,plan,names,assets,params,event stream; its
+capture module's plan/output/selection/bounds; ordinary and legacy adapter bounds;
+news plan alias; compact logger snapshot; runner inputs; auditor plan,inputs,
+matcher and signal verifier. No shared source is edited. Depth auditor imports
+shared depth bindings at call time. Fresh child processes isolate audit trackers.
+
+Control JSON: UTF-8 compact newline JSON, per-file8192B, decoded body<=131072B.
+Control unavailable.json.gz: deterministic gzip(mtime0), compressed<=8192B,
+decoded<=131072B. Control total49152B includes transient copies. Atomic controls
+use name.pending,fsync,hard-link no-replace,then unlink; the two copies count at
+peak. A crash/pending output is retained and existing-output refusal prevents
+automatic resumption. Controls:launch-claim/process/nomination/pin/input-pins,
+command-01..24,result or unavailable,terminal; failed-attempt or launch-terminal
+may also be retained. There is no mutable heartbeat or hidden temporary copy.
+
+Ledger output contracts remain those of the frozen helper:20 directories each
+<=131072B; trace gzip<=98304, summary gzip<=16384, metrics<=8192,audit<=8192.
+Trace records are unchanged signal/request/IOC/closed objects with arm, source
+and receipt identities, generation, native quantities/cash and compact book SHA.
+Inherited ledger/comparison writes use exclusive creation, not new atomic rename;
+partial files remain on failure and cannot pass final audit/publication gates.
+Two comparison gzip<=16384 and CSV<=32768 per family:98304B total.
+Readout<=16384B. No temporary raw copy; one selected store chunk stays pinned.
+
+Failure and outcome contract
+Failure before or during pipeline creates unavailable.json.gz with all100 row
+identities, unknown cash/attempt/close counts (null,neverzero), and20 unavailable
+audit-denominator records. These are study-level unavailable records, not claims
+that previously produced audit files failed or vanished. Partial outputs remain
+immutable; no comparison can rescue a failed final terminal. No-fill zeros only
+come from the unchanged fully observed eligible IOC model.
+
+Primary gate: primary and fade comparator flat known; primary>=1close; primary
+stressed cash>0; primary-minus-fade stressed cash>0. Other100-row completeness is
+reported, not an additional tuned gate. All20 audit and100identity checks remain
+mandatory. Passing advances coverage only; objective_achieved is always false.
+No actual fills, simultaneous deployment, scale capacity, durable profitability,
+independent news regimes, composite P&L or selected alternative is established.
+
+Preparation budget
+Committed allocation3145728B: source98304; tests+temporary fixtures65536;
+protocol including allocation32768; ledgers2621440; comparisons98304; controls49152;
+readout16384; margin163840. No raw copy. Focused fixtures are temporary synthetic
+files, deleted after each test; their peak plus test source stays within65536.
+Root controls final freeze, cutoff review, nomination/run authority and pin release.

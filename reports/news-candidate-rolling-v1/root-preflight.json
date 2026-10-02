@@ -1,0 +1,33 @@
+{
+  "schema": "news-candidate-rolling-v1-root-preflight",
+  "recorded_utc": "2026-10-02T14:01:09.291971+00:00",
+  "status": "source_reviewed_and_frozen_before_future_cutoff",
+  "final_plan": {
+    "path": "reports/experiment-storage/news-candidate-rolling-v1.json",
+    "bytes": 5256,
+    "sha256": "e3a09177b2e38ca78ee7f1a97b2ce5e00ce14bd15cdc6c53164472888cd2ee33"
+  },
+  "source_pins": [
+    {
+      "path": "scripts/news_candidate_rolling_v1.py",
+      "bytes": 32459,
+      "sha256": "06705e57105bdb3d4c1874b377d8950836e2106070e93cacf094747c826ecad8"
+    },
+    {
+      "path": "tests/test_news_candidate_rolling_v1.py",
+      "bytes": 17205,
+      "sha256": "7fa21c2180b4b9044386fe6fce32bb06f813400ed3c8c589b61053710c592f2e"
+    }
+  ],
+  "checks": {
+    "root_tests": "9 focused synthetic tests passed in0.052s; no bytecode/logs retained",
+    "root_dry": "zero store reads, nomination, pin, HTTP, economics",
+    "root_static_preflight": "All direct/transitive original analysis and rolling source/protocol pins passed; execution dictionary unchanged",
+    "independent_sol": "Read-only source review found no blocker in selection, expired identities, nomination/pin/raw order, seal/inventory/timing/source binding, scoped inherited replay/audit/report pipeline or deadline barrier",
+    "root_review": "Full wrapper, tests, design and inherited execution/audit/report paths read. Confirmed first failure cannot be replaced, null-cash failure denominator100/audits20, all24stage barrier, exclusive output and final source/input rechecks.",
+    "preparation_input_access": "Only immutable store identity read for final plan pin. No store index, selected seal/raw, reservation nomination or pin by root or reviewers."
+  },
+  "interpretation": "Core/USDC NEAR depth_follow primary and unchanged depth_fade comparator. Ordinary-regime generalization only. Primary>=1close, both flat known, stress>0 and follow-minus-fade>0 advances coverage only; objective_achieved remains false. All100policy rows/20audits remain, other winners cannot replace primary. Independent native collateral ledgers are not summed.",
+  "operational_limits": "15:00UTC cutoff,18:00 selection deadline, first reserved reservation by number/launch regardless failure. Frozen 600..601s capture-span guard intentionally more conservative than producer720s. No raw copy; successful selected input remains pinned through review.",
+  "storage": "3MiB allocation preserved. Source<=98304; tests plus temporary fixtures<=65536; protocols/drafts/design/allocation/thisreceipt<=32768; outputs and49,152B controls separately reserved. No test logs or bytecode retained."
+}
