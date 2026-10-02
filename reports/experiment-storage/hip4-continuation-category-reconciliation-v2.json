@@ -1,0 +1,46 @@
+{
+  "schema": "hip4-continuation-category-reconciliation-v2",
+  "recorded_utc": "2026-10-02T14:33:47.881153+00:00",
+  "status": "category_amendment_no_new_data_authority",
+  "previous": {
+    "path": "reports/experiment-storage/hip4-research-continuation-allocation-v1.json",
+    "bytes": 3314,
+    "sha256": "5f0053c23c3c46ead5863665e8fb80b8a0aaa66ce1a71422f7740e101a2e3a60"
+  },
+  "global_change_bytes": 0,
+  "continuation_total_bytes": 1048576,
+  "old_categories": {
+    "source_tests_docs_protocols_including_all_drafts": 393216,
+    "future_raw_gzip_including_pending_copy": 524288,
+    "derived_outputs_reviews_controls": 131072
+  },
+  "new_categories": {
+    "source_tests_docs_protocols_including_all_drafts": 425984,
+    "future_raw_gzip_including_pending_copy": 491520,
+    "derived_outputs_reviews_controls": 131072
+  },
+  "transfer": "Move32768B of previously unassigned raw capacity tosource. Preserve every existing book/expiry reservation and all artifacts. No increase in global grant.",
+  "source_reconciliation": {
+    "source_test_and_top_level_report_subtotal_bytes": 374433,
+    "omitted_retained_book_final_protocol_bytes": 12136,
+    "omitted_retained_original_allocation_bytes": 3314,
+    "source_total_before_this_amendment_bytes": 389883,
+    "old_remaining_before_amendment_bytes": 3333,
+    "explanation": "Earlier collaborator/root subtotal excluded two retained reports/experiment-storage files, although the category includes protocols. This correction counts them; no files or failures are erased."
+  },
+  "raw_commitments_bytes": {
+    "books_v1_preserved": 393216,
+    "expiry_v1_earmarked_subject_to_separate_frozen_plan": 49152,
+    "remaining_unassigned_after_these": 49152
+  },
+  "derived_commitments_bytes": {
+    "books_v1_projection": 49152,
+    "books_v1_controls": 16384,
+    "books_v1_root_review": 16384,
+    "expiry_v1_projection_earmarked": 24576,
+    "expiry_v1_controls_earmarked": 12288,
+    "remaining_root_expiry_review_or_other_unassigned": 12288
+  },
+  "source_next": "Root expiry final plan andpreflight target<=12288B; prior peer correction/source allowance6495B remains within amended source category. Count this amendment and every other final protocol, draft, source/test/doc and temporary copy. No new collector scope is granted here.",
+  "retention": "Original allocation, book protocol and all prior findings remain immutable. This amendment changes future category capacity only. One local amendment copy; no remote attachment or duplicate. No HIP4live/settle or template query is authorized."
+}
