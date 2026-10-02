@@ -11,6 +11,7 @@ window, not a limit on how long an idea may be studied.
 | Public collector and routine monitor | Reuse a fixed ten-asset Core/RH cohort; publish sealed ten-minute chunks independently of research. Monitor coverage, gaps and storage. | Verified raw chunks and operational metadata, without trading decisions. |
 | Root researcher | Read prior evidence and relevant primary research, prioritize distinct mechanisms, define falsifiers and controls, decide advance/park/inconclusive. | A short current [decision register](research-decision-register.md), not a new collector per idea. |
 | Two Sol analysis assignments | Answer bounded questions on explicitly assigned completed chunks; reuse existing quote/replay components. | Full denominators, cost-aware comparisons, missing outcomes and a decision recommendation. |
+| Autonomous Parler peer | Own cross-asset propagation and other distinct mechanisms on an isolated branch; freeze bounded diagnostics before outcomes and coordinate shared inputs. | Continuing research, implementation and falsification within the [8 MiB allocation](../reports/experiment-storage/parler-peer-research-v1.json); updates at material decisions. |
 
 ## Shared data and retention
 
@@ -86,9 +87,19 @@ and carry studies retain their own analysis boundaries and ownership.
    controls matched on entry cost and recent return/flow. It uses chunks 1–3 and
    7–9 and retains all 1,140 scheduled anchors per batch. Any conditional
    improvement must also survive absolute costs before an execution study.
-   The corrected [first-block result](../reports/single-venue-research/ordinary-feed-fix-v1/inventory-context-batch1-readout.txt)
-   restores all 25,720 ordinary prints. BTC/Core alone meets the first block's
-   minimum matched-comparison gate, while its absolute quote return is negative.
+   The corrected [two-block result](../reports/single-venue-research/ordinary-feed-fix-v1/inventory-context-batch2-readout.txt)
+   processes 25,720 and 26,565 ordinary prints. No group meets the fixed gate
+   in both blocks. BTC/Core has only four/two pairs and negative absolute
+   reducing quote means in both. Park this version without tuning calipers.
+   RH/BTC also exceeded the frozen 5,000-level decoder state bound in chunks
+   8 and 9; 22 anchors have unusable books and one adding profile lacks a close.
+   These failures remain explicit, including missing reference contributions.
+
+The [corrected news companion](../reports/experiment-storage/single-venue-news-ordinary-feed-fix-v1.json)
+is separately frozen and armed for the original October 2 capture. It applies
+the same ordinary-subtype correction to both families, then uses the existing
+independent signal/cash auditors. Original capture, helper, methods and outputs
+remain intact. Capture and corrected analysis hashes have separate roles.
 
 Liquidation events are a possible separate mechanism. The ordinary adapter
 counts and excludes `liquidation_trades`; the raw capture retains the field.

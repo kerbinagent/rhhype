@@ -1,0 +1,132 @@
+Inventory context, ordinary-feed correction, batch 2 and fixed two-block decision
+
+Status: no asset/venue group meets the frozen two-block advancement gate.
+Park this version; do not launch an execution study or tune the calipers.
+The comparison is exploratory and sample-limited. A failed gate does not
+establish that every inventory-conditioned or passive strategy is unprofitable.
+
+Plan SHA256: f8b045d2692cf5641a83a72f734d3b0fc4936db13986379f0d6fd88f9d845dfd
+Result SHA256: 5e9ff4f0f57280d53640741a27239aee33c0983c41b4004134d3b1223f9f9216
+Provenance: inventory-context-batch2-provenance.json
+Process record: inventory-context-batch2-run.json
+Batch 1: inventory-context-batch1-readout.txt (preserved as its dated conclusion)
+
+Methods: the same original inventory rule, anchor schedule, earlier-control
+matching, 400 ms entry delay, 10-second hold, 400 ms exit delay, native <=100
+entry notional, observed fees, source/receipt clocks and cost sensitivities.
+Only the separately frozen ordinary-subtype adapter changed from the initial
+coverage-limited v1. No rule changed after the first corrected block was seen.
+Chunks 7-9 were designated exploratory before collection. Reserved chunks
+4-6 and 10-12 were not used. Nearby blocks are not independent market regimes.
+
+Coverage: 428,652 decoded records; 8,699 / 9,377 / 8,489 = 26,565 ordinary
+prints, Core 19,631 and RH 6,934. Ten liquidation occurrences were excluded
+from trades[] (2 / 3 / 5; Core 9, RH 1); their overlapping liquidation_trades[]
+counts are not additional distinct events. No ordinary-trade invalidation or
+suppressed-trade failure is reported. Initial subscribed history is excluded.
+All ordinary rows have explicit numeric-string positions: 13,429 adding,
+12,593 reducing, 543 unknown reversals. Optional sign flags are descriptive:
+20,963 absent/unknown, 5,602 true; they do not override valid position arithmetic.
+
+There are genuine book-coverage failures. RH/BTC exceeded the frozen decoder's
+5,000-level per-side state bound once in each of chunks 8 and 9. Two initial
+book_overflow invalidations were followed by 10,756 delta_without_snapshot
+invalidations. The offline reader cannot obtain a replacement snapshot.
+These invalidate quote state and historical matching context; ordinary trade
+rows continue to be counted. The guard remains unchanged. This is a separate
+coverage limitation from the repaired mixed-subtype defect.
+
+Denominators: 1,140 scheduled anchors, 57 per asset/venue group. 767 fail before
+a profile: 745 latest trade absent/stale, 22 unusable books (all RH/BTC).
+373 profiles: 193 adding, 169 reducing, 11 unknown reversals. 372 complete and
+one adding RH/BTC profile invalidated while awaiting its exit. Its open quote
+obligation has no imputed close or zero return. All 169 reducing profiles
+complete. 332 matching-feature sets are usable; 41 fail prior-book/history.
+Of 169 reducing anchors: 130 have no earlier adding control within fixed
+calipers, 24 have unusable features, and 15 select controls. All 15 pairs
+complete; 13 distinct controls and two repeated selections. Eleven pairs have
+both conditional reference contributions; 68 of 372 completed local profiles
+lack a reference contribution. Missing references do not delete local outcomes.
+
+Chunk | Profiles | Reducing | Adding | Unknown | Complete pairs | Missing refs
+7 | 112 | 57 | 53 | 2 | 4 | 11
+8 | 146 | 59 | 81 | 6 | 6 | 26
+9 | 115 | 53 | 59 | 3 | 5 | 31
+The incomplete adding profile is in chunk 8. Distinct controls / reuse by chunk
+are 4/0, 5/1 and 4/1. No independence claim follows from fifteen paired rows.
+
+All 20 groups follow. Means are basis points; dash means no observation.
+Reduce n counts complete reducing profiles. Positive counts deduct an extra
+round-trip 0/1/2/5 bp. Each venue keeps its own native collateral; cash balances
+and alternative quote profiles are not summed into portfolio profit.
+Venue | Asset | Reduce n | Reduce net mean | Pairs | Net delta | Mid delta | Ref pairs | Ref-adjusted net delta | Positive 0/1/2/5
+lighter | BTC | 19 | -0.341148 | 2 | +0.478983 | +0.376420 | 0 | - | 8/4/1/0
+rh_lighter | BTC | 8 | -1.073222 | 2 | -0.861140 | -0.840595 | 2 | +0.122898 | 1/1/1/0
+lighter | ETH | 21 | +0.072961 | 4 | -0.032673 | +0.040778 | 4 | -0.009088 | 9/5/1/0
+rh_lighter | ETH | 10 | -1.604622 | 3 | +0.416099 | +0.434834 | 3 | -0.349784 | 1/1/1/0
+lighter | SOL | 16 | -2.045128 | 2 | -3.288889 | -3.488714 | 1 | +1.694904 | 5/2/1/0
+rh_lighter | SOL | 2 | +0.394278 | 0 | - | - | 0 | - | 1/1/1/0
+lighter | HYPE | 8 | -0.844934 | 1 | -4.307843 | -3.352425 | 1 | -1.214109 | 1/0/0/0
+rh_lighter | HYPE | 8 | -2.260943 | 0 | - | - | 0 | - | 1/0/0/0
+lighter | XRP | 2 | -1.226430 | 0 | - | - | 0 | - | 0/0/0/0
+rh_lighter | XRP | 1 | -2.653576 | 0 | - | - | 0 | - | 0/0/0/0
+lighter | SUI | 0 | - | 0 | - | - | 0 | - | 0/0/0/0
+rh_lighter | SUI | 2 | -12.103067 | 0 | - | - | 0 | - | 0/0/0/0
+lighter | NEAR | 6 | +2.421892 | 0 | - | - | 0 | - | 4/3/2/1
+rh_lighter | NEAR | 1 | +5.697774 | 0 | - | - | 0 | - | 1/1/1/1
+lighter | ZEC | 9 | -0.404556 | 0 | - | - | 0 | - | 6/3/3/0
+rh_lighter | ZEC | 5 | -4.537616 | 0 | - | - | 0 | - | 1/1/1/0
+lighter | VVV | 5 | -2.552281 | 0 | - | - | 0 | - | 1/1/0/0
+rh_lighter | VVV | 0 | - | 0 | - | - | 0 | - | 0/0/0/0
+lighter | LIT | 35 | -2.947951 | 1 | +3.698682 | +3.296692 | 0 | - | 10/9/6/3
+rh_lighter | LIT | 11 | -6.541279 | 0 | - | - | 0 | - | 1/1/0/0
+
+Fixed two-block decision:
+- BTC/Core is the only group meeting the minimum in block 1: four pairs,
+  +0.361223 bp net quote improvement and +0.372311 bp midpoint improvement.
+  Block 2 has only two pairs, below the required three, despite +0.478983 bp
+  quote and +0.376420 bp midpoint improvement. Both block-2 pairs fade sells;
+  neither has a complete paired reference contribution. Matched reducing
+  quotes average -0.304625 bp versus -0.783608 bp controls. All nineteen
+  reducing quotes average -0.341148 bp, with 8/4/1/0 positives after extra
+  0/1/2/5 bp. Block 1's absolute reducing mean was also negative (-0.468873 bp).
+- ETH/Core has four block-2 pairs, but quote improvement is -0.032673 bp,
+  and block 1 had only two. Midpoint improvement alone is insufficient.
+- ETH/RH has three positive quote/midpoint comparisons in block 2, but none
+  in block 1. Its block-2 matched reducing quotes average -1.716639 bp;
+  reference-adjusted paired improvement is -0.349784 bp.
+- The other seventeen groups lack the required matched support. Positive
+  isolated SOL/NEAR or other cohort values do not satisfy the fixed gate.
+No group meets >=3 complete pairs and positive mean quote AND midpoint
+improvement in EACH block. No active execution profit candidate is established.
+
+Interpretation: these are delayed full-depth public quotes, with exact native
+quantity/minimum/cap checks and recorded fees on entry and exit. Actual metadata
+has zero standard taker fees here; spreads and depth still impose costs.
+The fixed funding-hour exclusion is applied before outcomes. Public quotes
+do not certify fills, queue access, trader intent or parent-order completion.
+A known position reduction can be one execution within a larger unknown order.
+
+Independent Sol audit: 11,612 arithmetic/control/summary/hash/cap checks plus
+475 anchor-derived counter checks passed at 1e-22 bp Decimal tolerance.
+Verified all 45 source pins and sealed input inventory/hashes, saved entry/exit
+cash, fees, quote/midpoint/reference/stress arithmetic, native sizes/minima,
+source/receipt deadlines, funding guard, fifteen pair differences, recorded
+control eligibility/minimum-distance choices and 20 batch / 60 chunk summaries.
+Raw decision-book C0 and past book/flow features cannot be reconstructed from
+saved anchors alone. Control validation uses recorded features and saved
+generation boundaries. Print/reset counters were aggregated and reconciled,
+not independently replayed from raw. No claim of an independent full raw replay
+or exact first-eligible callback certification follows from this audit.
+
+Operational provenance: an earlier foreground batch-2 process was interrupted
+by user steering before any output. Root verified that it had stopped and that
+no partial result existed. The same frozen command was relaunched once under
+a detached, bounded supervisor at 04:23:41 UTC and finished normally at
+04:26:59 UTC on 2 October 2026 (return code 0). No outcome was used to alter it.
+
+Storage: gzip 121,685 / 180,224 bytes; canonical provenance 10,636 plus process
+record 1,352 = 11,988 / 16,384 bytes. This readout is below 16,384 bytes.
+All use the original inventory output suballocation; prior coverage-limited
+v1 evidence remains separately retained under the adapter-repair allocation.
+No new raw data or allocation was required for this result.
