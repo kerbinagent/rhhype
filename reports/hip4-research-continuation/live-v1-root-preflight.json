@@ -1,0 +1,50 @@
+{
+  "accounting": "Finalplan+preflight+timer record+transientunit files+runcontrols fit65536B stagecontrol cap. Combined allocation file charged once to Comet controls. Raw3670016,projection65536,runcontrols16384 remain frozen; unused launcher allowance32768 and margin327680 stay reserved.",
+  "allocation": {
+    "bytes": 5982,
+    "path": "reports/experiment-storage/comet-reproduction-hip4-live-preparation-allocation-v1.json",
+    "sha256": "1d2a63ddd166129959108c936fbeaf1bf0311e5c5ad54da0599169b0677b0bd4"
+  },
+  "allocation_commit": "b4d7d8d",
+  "economic_scope": "Displayed-touch supported paths only. Forward residual inventory stays separate from closed dispositions. Zero costs optimistic; carry, takerability, conversion granularity, quote identity and native units remain unproved. Qualification-time math is causal; delayed pairing is unimplemented and outside this capture. No execution/profit or whole-window negative claim.",
+  "independent_review": "Root read full final source/tests/design; independent Sol reviewed all causal fixes and final plan/source/target/timer. No remaining concrete blocker for limited conditional capture. All5 source/test and parent/projection/allocation pins matched.",
+  "operations": "Exactly2 public outcomeMeta reads and1 websocket/6 subscriptions after committed freeze; no reconnect/retry/proxy/redirect/substitute. Direct transient user timer with persistent=false,restart=no,nice19,control-group kill,nullstdout/stderr; no extra launcher source. Timer installation recorded separately; missed/failed/capped runs remain unavailable or censored. No collector output dir exists now.",
+  "plan": {
+    "bytes": 10083,
+    "path": "reports/experiment-storage/hip4-continuation-live-v1.json",
+    "sha256": "982619f2837589e06146e9608fbf859db4fa3661d3f31fd1e7c1a66d36ee74c9"
+  },
+  "recorded_utc": "2026-10-02T16:06:15.281400+00:00",
+  "schema": "hip4-continuation-live-root-preflight-v1",
+  "source_correction_commit": "bde5821",
+  "status": "reviewed_before_future_schedule_no_new_quotes",
+  "target": {
+    "fallback": 6519,
+    "launch_allowed_utc": [
+      "2026-10-02T18:20:00Z",
+      "2026-10-02T18:33:00Z"
+    ],
+    "named": [
+      6520,
+      6521,
+      6522
+    ],
+    "planned_service_runtime_seconds": 9500,
+    "question": 357,
+    "scheduled_hint_utc": "2026-10-02T18:45:00Z",
+    "selection": "Earliest eligible future scheduled match in existing metadata; prior books screen margin\u22120.00024 per unit; selection before fresh quotes.",
+    "supervisor_deadline_utc": "2026-10-02T20:55:00Z",
+    "supervisor_runtime_from_trigger_seconds": 9180,
+    "timer_utc": "2026-10-02T18:22:00Z",
+    "window_utc": [
+      "2026-10-02T18:35:00Z",
+      "2026-10-02T20:50:00Z"
+    ]
+  },
+  "test_receipt": {
+    "bytes": 5520,
+    "path": "reports/experiment-storage/hip4-live-causal-correction-closeout-v1.json",
+    "sha256": "bd8a481f1d7d0ad3bfd8e5752dc043fbf9b3910d07727a1e9d92bd88b0526473"
+  },
+  "tests": "Root21 live collector tests and11 shared-settlement compatibility tests passed; unchanged final pins, no bytecode or retained test files. Exact results and fixture closeout in the linked receipt. No test rerun needed for target selection."
+}
