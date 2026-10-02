@@ -1,0 +1,78 @@
+{
+  "schema": "peer-primary-issuance-v2-root-review",
+  "recorded_utc": "2026-10-02T08:50:20.276441+00:00",
+  "message": "568880b6-ab60-4afc-aa87-9ae7e15a1628",
+  "peer_commit": "1593013",
+  "status": "corrected_package_review_passed_one_peer_metadata_run_ready",
+  "files": [
+    {
+      "path": "reports/peer-research/20261002-0846/peer-primary-issuance-v2-handoff.txt",
+      "bytes": 2555,
+      "sha256": "fcfe2d56c357e999c4304186073f258834cbeeffb7330d88e201bf533fc7114e"
+    },
+    {
+      "path": "reports/peer-research/20261002-0846/peer-primary-issuance-v2.json",
+      "bytes": 3041,
+      "sha256": "da062e6bf8381404470776a87514be9b328db4035347b4ceb478f539a9f6cad7"
+    },
+    {
+      "path": "reports/peer-research/20261002-0846/peer_primary_issuance_preflight_v2.py",
+      "bytes": 31282,
+      "sha256": "7d43d16ecaac0c8cb72940beb11d434091fcd6c539d052f3d8327f1419da9ec4"
+    },
+    {
+      "path": "reports/peer-research/20261002-0846/primary-issuance-preflight-v2-offline-validation.json",
+      "bytes": 4718,
+      "sha256": "182dd1d56583989b63e25aed434ccd99f08a45106e09f6dfa674307d7b65dfdd"
+    },
+    {
+      "path": "reports/peer-research/20261002-0846/primary-issuance-preflight-v2-source-accounting.json",
+      "bytes": 3146,
+      "sha256": "f51e5c6937ba5974526d24c2a2152c1c7db732d6fd39490b62fb854ab3357cf7"
+    },
+    {
+      "path": "reports/peer-research/20261002-0846/test_peer_primary_issuance_preflight_v2.py",
+      "bytes": 15965,
+      "sha256": "fdef40036a640d3506670ec138366e06aa0fd15bdcc70b861bd7abae99b127e5"
+    }
+  ],
+  "review": "Complete targeted source/test diff and full protocol, handoff, offline-validation and source-accounting read; six advertised byte counts and hashes matched. Scientific request manifest, endpoint, gas checks and economic exclusions unchanged. Original v1 files retained. No additional source installation.",
+  "root_targeted_regression": {
+    "runtime": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:16:10) [GCC 11.2.0]",
+    "production_runtime": false,
+    "network_calls": 0,
+    "injected_response_count": 8,
+    "body_bytes": 1048576,
+    "read_limits": [
+      131073,
+      131073,
+      131073,
+      131073,
+      131073,
+      131073,
+      131073,
+      131072
+    ],
+    "eof_unproven_boundary_failed": true,
+    "exhausted_admission_refused_without_transport": true,
+    "temporary_outputs_removed": true,
+    "errors": [
+      "cumulative response body boundary reached; EOF unproven",
+      "cumulative response body budget exhausted before request"
+    ]
+  },
+  "peer_production_validation": {
+    "evidence": "Retained peer offline validation, 14 focused tests reported; exact real package/runtime and zero-request dry CLI checked by peer parent.",
+    "runtime_file": "reports/peer-research/20261002-0821/peer-primary-issuance-v1-runtime.json",
+    "runtime_sha256": "c42a21452f0c9840e41523339608390ec05a9ce52872a997f1776fb98d1fb23c"
+  },
+  "scope": "One Mac peer run only; <=20 sequential requests, fixed PublicNode endpoint, 180 seconds, no retries/fallbacks/quotes. Positive metadata is not route or profit proof. Failure is observability-only. Later economics separately frozen.",
+  "storage": {
+    "existing_source_subcap_bytes": 294912,
+    "peer_reconciled_all_session_source_bytes": 267493,
+    "prior_all_session_derived_bytes": 36625,
+    "this_record_category": "derived",
+    "all_session_derived_subcap_bytes": 131072,
+    "new_global_reservation_bytes": 0
+  }
+}

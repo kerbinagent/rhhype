@@ -1,0 +1,68 @@
+{
+  "schema": "peer-primary-issuance-v2-source-accounting",
+  "recorded_utc": "2026-10-02T08:43:33.175666+00:00",
+  "authority": "e1d30215-38d4-4c85-935c-34812280f4bf",
+  "preserved_v1_accounting": {
+    "path": "reports/peer-research/primary-issuance-preflight-v1-source-accounting.json",
+    "bytes": 3610,
+    "sha256": "95c9365b1111faa5f0fb395373cf4c749d4d6da4d3f14f7b13ebc45c12d49dc1",
+    "conservative_all_session_source_bytes": 160563
+  },
+  "new_source_files_and_reserved_review_copies": [
+    {
+      "path": "scripts/peer_primary_issuance_preflight_v2.py",
+      "bytes": 31282,
+      "sha256": "7d43d16ecaac0c8cb72940beb11d434091fcd6c539d052f3d8327f1419da9ec4",
+      "session_copies": 2
+    },
+    {
+      "path": "tests/test_peer_primary_issuance_preflight_v2.py",
+      "bytes": 15965,
+      "sha256": "fdef40036a640d3506670ec138366e06aa0fd15bdcc70b861bd7abae99b127e5",
+      "session_copies": 2
+    },
+    {
+      "path": "research/peer-primary-issuance-v2.json",
+      "bytes": 3041,
+      "sha256": "da062e6bf8381404470776a87514be9b328db4035347b4ceb478f539a9f6cad7",
+      "session_copies": 2
+    },
+    {
+      "path": "research/peer-primary-issuance-v2-handoff.txt",
+      "bytes": 2555,
+      "sha256": "fcfe2d56c357e999c4304186073f258834cbeeffb7330d88e201bf533fc7114e",
+      "session_copies": 2
+    }
+  ],
+  "new_root_source_cap_record": {
+    "path": "reports/experiment-storage/parler-peer-primary-issuance-source-cap-v3.json",
+    "bytes": 1244,
+    "sha256": "d42f80eed3bf1c951f3e3dccc80ca8dc44b61bbb63ed1820f6574f5dd6f0042a",
+    "session_copies": 1
+  },
+  "total_source_including_v1_and_all_reserved_review_copies_bytes": 267493,
+  "source_subcap_bytes": 294912,
+  "mechanical_core_package_plus_additional_allowance_bytes": 276550,
+  "ledger_growth_allowance_already_included_in_v1_bytes": 8192,
+  "ledger_baseline_bytes": 21348,
+  "accounting_note": "V1 accounting already includes both original source copies, shared proposal/runtime/amendment, local envelope bodies, prior root source-cap allowance and 8192B ledger growth. Do not double-count those shared artifacts. New files reserve peer plus one main review copy; no extra installed source copies. This derived accounting receipt itself is counted in derived storage.",
+  "raw_scope": {
+    "all_session_cap_bytes": 524288,
+    "per_session_cap_bytes": 262144,
+    "new_rpc_requests": 0,
+    "response_bytes": 0
+  },
+  "derived_scope": {
+    "all_session_subcap_bytes": 131072,
+    "retained_v1_and_root_review_bytes": 20897,
+    "v2_validation_per_copy": {
+      "path": "reports/peer-research/primary-issuance-preflight-v2-offline-validation.json",
+      "bytes": 4718,
+      "sha256": "182dd1d56583989b63e25aed434ccd99f08a45106e09f6dfa674307d7b65dfdd"
+    },
+    "v2_validation_copies": 2,
+    "v2_accounting_copies": 2,
+    "reconciliation": "Current derived total is 20897 plus twice the actual validation and accounting file lengths; mutable ledger records exact measured total. Future claim/terminal/supervisor receipts remain within this same subcap."
+  },
+  "execution_gate": "Exact corrected package review and main launch handoff remain pending."
+}

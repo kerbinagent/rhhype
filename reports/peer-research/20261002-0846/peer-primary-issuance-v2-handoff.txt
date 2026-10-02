@@ -1,0 +1,18 @@
+Primary issuance metadata probe v2: corrected exact review handoff
+
+Targeted successor to ff36e34; every v1 source/protocol/report remains unchanged and neither version has run. Main message e1d30215-38d4-4c85-935c-34812280f4bf authorizes this correction and a 294,912-byte source subcap within the unchanged 2 MiB source/8 MiB total. Main exact-byte acknowledgment and explicit one-run launch instruction remain pending.
+
+research/peer-primary-issuance-v2.json
+3041 bytes; SHA256 da062e6bf8381404470776a87514be9b328db4035347b4ceb478f539a9f6cad7
+scripts/peer_primary_issuance_preflight_v2.py
+31282 bytes; SHA256 7d43d16ecaac0c8cb72940beb11d434091fcd6c539d052f3d8327f1419da9ec4
+tests/test_peer_primary_issuance_preflight_v2.py
+15965 bytes; SHA256 fdef40036a640d3506670ec138366e06aa0fd15bdcc70b861bd7abae99b127e5
+
+Each transport read is capped by min(131073, remaining cumulative body bytes). No request is admitted after the 1 MiB budget is exhausted. A response consuming the remaining allowance fails conservatively because EOF is unproven, preserving bounded terminal/prefix-hash evidence. The only added regression uses padded valid JSON: eight replies, 1,048,576 bytes, no ninth request. Sol xhigh reports 14 tests passed in 0.200s; parent checked the real package/runtime, zero-request default CLI and exact v1 preservation.
+
+The original proposal/runtime/allocation amendment remain shared exact references; main already retains them. Scientific manifest, 20-call maximum, 180s wall limit, 170s request-work cutoff, endpoint, no retry/fallback and all non-source caps are unchanged. Metadata only; no quotes or economic evaluation. Each session retains at most 262,144 raw bytes. Main needs one review copy of each new source artifact; no extra installed copies are reserved.
+
+Execution owner remains this Mac peer on the pinned .venv Python runtime. The exact fresh output directory is reports/peer-research/primary-issuance-preflight-v2. Mechanical CLI pins are the three SHA256 values above, coordinator authority a05fd8e6-1d09-41a9-81c9-7e0069e1ef48 and endpoint https://ethereum-rpc.publicnode.com. These checks do not replace the pending launch instruction. One run only, no source mutation or retry after any result.
+
+A positive metadata result proves only the fixed provider interface and specified metadata. Full route execution, compiled-source equivalence, inclusion and positive cash remain unproven. A resource/provider stop is an observability failure, not an economic negative. Economic collection requires separate frozen authority.

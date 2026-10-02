@@ -1,0 +1,107 @@
+{
+  "schema": "polymarket-no-basket-metadata-v1",
+  "status": "frozen_metadata_probe",
+  "recorded_utc": "2026-10-02T08:35:40.782051+00:00",
+  "previous": "reports/experiment-storage/parler-peer-primary-issuance-source-cap-v3.json",
+  "previous_sha256": "d42f80eed3bf1c951f3e3dccc80ca8dc44b61bbb63ed1820f6574f5dd6f0042a",
+  "reserved_bytes": 2097152,
+  "previous_active_research_reserved_bytes": 240910336,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 243007488,
+  "active_research_headroom_bytes": 11747328,
+  "overall_reservation_bytes": 2838874368,
+  "categories_bytes": {
+    "source_tests_protocol_docs": 262144,
+    "raw_public_metadata": 1310720,
+    "derived_receipts": 524288
+  },
+  "mechanism": "Acquire equal actual quantities of every NO token in one fixed nonaugmented negative-risk event; convert all registered question indices to pUSD. No event-resolution waiting and no post-conversion market sales are credited.",
+  "conversion_algebra": "For n>1 registered outcomes and native integer Q of each NO, F=floor(Q*b/10000), R=Q-F; complete-index conversion returns(n-1)*R collateral and no YES. This is source-based algebra, not observed live execution.",
+  "current_documented_wrapper": "0xadA2005600Dec949baf300f4C6120000bDB6eAab",
+  "documentation_discrepancy": "The current registry, position guide and July14 changelog agree on the wrapper; the official repository README lists a different address. Use the current documented address for any later fixed chain binding; deployed code/source equivalence is not yet established.",
+  "event_selection": {
+    "topic": "The next scheduled Federal Reserve rate decision, October28,2026; selected from the official calendar before any market response.",
+    "query": "Fed decision October 2026",
+    "candidate_title_pattern": "(?i)^Fed decision in October(?: 2026)?[?]?$",
+    "candidate_end_utc_date": "2026-10-28",
+    "max_returned_events": 10,
+    "required_unique_candidate": 1,
+    "candidate_market_count_range": [
+      2,
+      8
+    ],
+    "required_later_properties": "All registered outcomes; same event and neg-risk market ID; active, not closed/archived, no augmented placeholders; resolution text exhaustive and mutually exclusive; contract-derived question count/index/token mapping; all required fields observable. Missing or ambiguous facts remain unavailable."
+  },
+  "request_plan": {
+    "count": 1,
+    "method": "GET",
+    "url": "https://gamma-api.polymarket.com/public-search?q=Fed%20decision%20October%202026",
+    "purpose": "Discover one event and project its structural metadata, without inspecting prices or depth.",
+    "max_body_bytes": 524288,
+    "max_total_body_bytes": 524288,
+    "request_deadline_seconds": 20,
+    "process_deadline_seconds": 60,
+    "retry": false,
+    "redirects": false,
+    "environment_proxies": false,
+    "pagination": false,
+    "fallbacks": []
+  },
+  "output_dir": "reports/polymarket-no-basket/metadata-v1",
+  "output_limits_bytes": {
+    "raw_body_or_partial": 524288,
+    "metadata_projection": 131072,
+    "claim_terminal_and_supervisor_receipts": 32768
+  },
+  "metadata_projection": "Search summaries: id,title,slug,endDate and match reasons for every returned event. For the unique candidate only, retain description/timing/state/negative-risk fields and every market question/description/condition ID/outcome/token IDs/trading constraints/fee schedule. Preserve unknown/missing values. Exclude prices, best bids/asks, last trades, volume, liquidity, rewards and unrelated profiles from analytical outputs. Raw metadata may contain incidental indicative prices; they are not inspected or used.",
+  "run_gate": "Root reviewed source and focused offline tests and pinned both below. One root metadata GET is authorized only with this exact plan SHA; existing output directory is refused. No subsequent query, retry, contract RPC or economics is authorized by this plan.",
+  "decision_rule": {
+    "advance": "One unambiguous structurally plausible candidate warrants semantic review and a separately frozen contract-mapping preflight.",
+    "inconclusive": "Transport/resource/schema failure, zero or multiple candidates, missing/contradictory metadata, or incomplete event structure. No silent query/market substitution.",
+    "maximum_conclusion": "Availability of projected public event metadata only; no quote, price edge, fill, conversion completion or profit conclusion."
+  },
+  "later_economic_requirements": "Before quotes: validate complete event-to-chain mapping and actual metadata/fees. Freeze native sizes, calendar, depth, receipt/source clocks, freshness and all missing states. Book inequalities are only necessary conditions. Any subsequent paper cycle requires every acquisition debit and fill, conversion cost/timing, reserved capital, failed/partial basket unwind, and zero terminal inventory. No marked residual profit or held-to-resolution substitute.",
+  "sources": [
+    "https://docs.polymarket.com/concepts/negative-risk",
+    "https://docs.polymarket.com/market-data/discover-markets",
+    "https://docs.polymarket.com/market-data/market-details",
+    "https://docs.polymarket.com/concepts/order-lifecycle",
+    "https://docs.polymarket.com/trading/fees",
+    "https://docs.polymarket.com/resources/contracts",
+    "https://docs.polymarket.com/changelog/predictions",
+    "https://github.com/Polymarket/ctf-exchange-v2/blob/main/src/adapters/NegRiskCtfCollateralAdapter.sol",
+    "https://github.com/Polymarket/neg-risk-ctf-adapter/blob/main/src/NegRiskAdapter.sol",
+    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "https://arxiv.org/html/2608.00666v1"
+  ],
+  "literature_limit": "The2026 paper motivates studying an executable conversion direction. Its historical conversion profit estimate mixes sales with marked residual positions, and its supported-side duration sample is small. It does not establish our current closed-cash edge.",
+  "exclusions": "No orders, credentials, wallet access, real balances, transaction submission, contract deployment, shared/reserved captures, economic search, fee/reward account claims or market alternatives.",
+  "frozen_utc": "2026-10-02T08:51:04.267847+00:00",
+  "source_pins": [
+    {
+      "path": "scripts/polymarket_no_basket_metadata.py",
+      "bytes": 23534,
+      "sha256": "ee03c52b7496dd658b8e81e0f71e5fad695ae36f9c9cfa42ee562030287ebd73"
+    },
+    {
+      "path": "tests/test_polymarket_no_basket_metadata.py",
+      "bytes": 14512,
+      "sha256": "9bed79381c1a26e98782b17c274217704bade2ef4fdeac92b1139e8ac0e011ff"
+    }
+  ],
+  "offline_validation": {
+    "source_review": "Root full source/test review, then narrow final delta; independent Sol review of request/body/time scope, metadata allowlist and missing core fields found no further blocker. Final changes add market neg-risk availability checks, exact two source pins and pre-claim verification timer.",
+    "command": ".venv/bin/python -B -m unittest tests.test_polymarket_no_basket_metadata -v",
+    "root_tests_passed": 8,
+    "root_suite_seconds": 0.131,
+    "network_calls": 0,
+    "coder_tests_passed": 8,
+    "coder_suite_seconds": 0.15,
+    "dry_status": "dry_no_http",
+    "dry_request_count": 0,
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:16:10) [GCC 11.2.0]",
+    "executable": "/home/harry/projects/research/rhhype/.venv/bin/python",
+    "openssl": "OpenSSL 3.5.5 27 Jan 2026",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "peer-primary-issuance-v2-offline-validation",
+  "recorded_utc": "2026-10-02T08:43:33.175666+00:00",
+  "source_pins": [
+    {
+      "path": "scripts/peer_primary_issuance_preflight_v2.py",
+      "bytes": 31282,
+      "sha256": "7d43d16ecaac0c8cb72940beb11d434091fcd6c539d052f3d8327f1419da9ec4"
+    },
+    {
+      "path": "tests/test_peer_primary_issuance_preflight_v2.py",
+      "bytes": 15965,
+      "sha256": "fdef40036a640d3506670ec138366e06aa0fd15bdcc70b861bd7abae99b127e5"
+    }
+  ],
+  "frozen_protocol": {
+    "path": "research/peer-primary-issuance-v2.json",
+    "bytes": 3041,
+    "sha256": "da062e6bf8381404470776a87514be9b328db4035347b4ceb478f539a9f6cad7"
+  },
+  "focused_tests": {
+    "reported_by": "Sol xhigh agent /root/funding_boundary_mechanism",
+    "command": ".venv/bin/python -m unittest discover -s tests -p test_peer_primary_issuance_preflight_v2.py -v",
+    "tests_passed": 14,
+    "tests_failed": 0,
+    "reported_suite_seconds": 0.2,
+    "retained_prior_cases": 13,
+    "new_cases": 1,
+    "new_case": "Eight valid JSON replies padded to 131072 bytes consume exactly 1048576 bytes. Read limits are seven 131073 then 131072; the eighth conservatively fails because EOF is unproven. Terminal and prefix-hash evidence are retained. A fully exhausted budget separately prevents any request admission or transport call.",
+    "evidence_note": "Implementing agent report for these exact bytes; parent inspected the complete targeted diff and independently validated the real frozen package and dry CLI below. No redundant suite rerun."
+  },
+  "parent_real_package_validation": {
+    "protocol_sha256": "da062e6bf8381404470776a87514be9b328db4035347b4ceb478f539a9f6cad7",
+    "source_pins": [
+      {
+        "path": "scripts/peer_primary_issuance_preflight_v2.py",
+        "sha256": "7d43d16ecaac0c8cb72940beb11d434091fcd6c539d052f3d8327f1419da9ec4"
+      },
+      {
+        "path": "tests/test_peer_primary_issuance_preflight_v2.py",
+        "sha256": "fdef40036a640d3506670ec138366e06aa0fd15bdcc70b861bd7abae99b127e5"
+      }
+    ],
+    "proposal": {
+      "path": "research/peer-primary-issuance-v1-proposal.json",
+      "sha256": "f096be8addac4f1f4b8acdb276fff920afd56dfb557a6ac6ae97c66841fc0757"
+    },
+    "coordinator_authority": "a05fd8e6-1d09-41a9-81c9-7e0069e1ef48",
+    "raw_authority_bytes": 524288,
+    "package_two_copy_bytes": 276550,
+    "allocation_amendment": {
+      "path": "reports/experiment-storage/parler-peer-primary-issuance-v1.json",
+      "sha256": "da22971ab71885b344f5ff153f9c50520fecb6313a7432aaed72786c52141da2",
+      "bytes": 2923
+    },
+    "runtime": {
+      "path": "research/peer-primary-issuance-v1-runtime.json",
+      "sha256": "c42a21452f0c9840e41523339608390ec05a9ce52872a997f1776fb98d1fb23c"
+    },
+    "actual_runtime": {
+      "python_version": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+      "python_executable": "/Users/houze/projects/research/rhhype-peer/.venv/bin/python",
+      "python_implementation": "CPython",
+      "machine": "arm64",
+      "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+      "openssl": "OpenSSL 3.6.3 9 Jun 2026"
+    },
+    "source_cap_authority_message": "e1d30215-38d4-4c85-935c-34812280f4bf",
+    "source_envelope_allowance_bytes": 131072
+  },
+  "parent_dry_cli": {
+    "command": [
+      "/Users/houze/projects/research/rhhype-peer/.venv/bin/python",
+      "-B",
+      "scripts/peer_primary_issuance_preflight_v2.py",
+      "--plan",
+      "research/peer-primary-issuance-v2.json"
+    ],
+    "returncode": 0,
+    "stdout": {
+      "economic_observations": 0,
+      "manifest_calls": 20,
+      "native_arms_wei": [
+        "10000000000000000",
+        "100000000000000000",
+        "1000000000000000000",
+        "10000000000000000000"
+      ],
+      "protocol_sha256": "da062e6bf8381404470776a87514be9b328db4035347b4ceb478f539a9f6cad7",
+      "reorg_limitation": "numeric_simulation_parent_with_header_recheck_cannot_exclude_reorg_out_and_back",
+      "requests_permitted": 0,
+      "status": "dry_validated_no_rpc_authority"
+    },
+    "stderr": "",
+    "v1_or_v2_run_output_directory_created": false
+  },
+  "parent_scope_review": {
+    "source_changes": "v2 path/default output and approved source budget pins; compute remaining body budget before request admission, cap transport reads by it, conservatively fail at unproven cumulative EOF boundary. Scientific request manifest and synthetic specification unchanged.",
+    "v1_files_verified_byte_identical_to_commit": "ff36e34daf96ff2c301d0bd7ca2854a9ab5c4591",
+    "preserved_v1_file_count": 9
+  },
+  "new_rpc_requests": 0,
+  "market_quotes": 0,
+  "economic_evaluation": false,
+  "execution_handoff_pending": true
+}
