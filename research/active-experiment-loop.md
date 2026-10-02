@@ -2163,3 +2163,8 @@ FiveexactPremiumlosses/−$8.4095248531;nogains/estimates/aborts/rejects. Comple
 ### Routine review 205 — 2026-10-02 12:26:33 UTC
 
 Complete coverage;16exact Premium losses −$28.82330618596643,no positives/estimates/aborts/rejects. Cumulative2,726=2,690exact losses+1estimated loss+5audited paired gains+30audited rescue gains. Exact report and independent snapshot archived with deterministic gzip and pre-write cap/growth guards; full hashes in review-loop. Paper healthy CPU58.25%/p95lag37.77ms,four feeds; rolling57 healthy,two connections/no errors,recorded recovery gap retained. News began on schedule12:26:00.000525UTC; both companions waiting, operational reads only. Carry430sampled/2invalid/432future, no economics read. Archive3,905,100B;108future pairs project4,482,036B,margin760,844B under5MiB. Next12:46:33UTC.
+
+
+### Routine review 206 — 2026-10-02 12:46:33 UTC
+
+Complete coverage;10exact losses (2convergence−$3.7143508151,8Premium−$14.1661363251),2convergence aborts,no positives/estimates. Cumulative2,736=2,700exact losses+1estimated loss+5paired+30rescue audited gains. Exact report/snapshot archived and hash verified with pre-write cap/growth guards. Paper event interval12:31busy90.05%CPU/91.31mslag retained; recovered, review61.48%/40.31ms fresh/ok. Rolling59 healthy; recovery gap retained. News normal covered terminal12:36:01.719087; original companion evaluating. Corrected companion failed capture_inventory_changed before economics; root owns separate inventory-only repair, original failure and pins retained. Operational reads only. Carry434sampled/2invalid/428future. Archive3,909,810B;107future pairs project4,481,404B,margin761,476B. Next13:06:33UTC.

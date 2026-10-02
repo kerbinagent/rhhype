@@ -6366,3 +6366,20 @@ Paper fresh and ok, four feeds connected; review CPU58.25%, p95 lag37.77ms, RSS2
 News capture launched on schedule12:26:00.000525UTC, original frozen plan unchanged; early operational status25.03s/1,237,092compressed B/6,493records,two connections,no errors,economics false. Original and corrected analysis companions remain waiting with fresh heartbeats and own their outputs. No early outcomes read or competing analysis launched. Root12:15preflight verified94pins and all three host helpers alive.
 
 Carry12:25:00.119795UTC:430sampled,two arrival invalid(71,389),432future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–205:2,726completions=2,690exact losses,one estimated loss,five audited paired gains,30audited rescue gains. Archive3,905,100/5,242,880B;108future pairs at5,342B project4,482,036B,margin760,844B. Next **12:46:33 UTC**.
+
+
+### Review 206 — 2026-10-02 12:46:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Exact report and independently timed snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap and growth guards.
+
+`review-20261002T124633Z.json.gz` raw 19,475 B SHA-256 `4930706db798b1d9cc79e0a78a1fde8a44a5f757589553ae367255528520e90d`; gzip 2,977 B SHA-256 `15be5b6223f3229a9c19bdb2f8095761c22847feda0e3813ef538c1ca297bd49`.
+
+`current-epoch-at-review206.json.gz` raw 9,277 B SHA-256 `eda606fa496b326ccde2be7458733aca1557e05eb2aea841fde7ae1af3824144`; gzip 1,733 B SHA-256 `2d7081452d38b489a68856f2f5723d9adae11884057f72ecf6ead921adeca1dc`.
+
+Snapshot read 2026-10-02T12:46:52.366961Z, updated epoch seconds 1790945211.892909; counts not pooled. Ten exact losses: two convergence −$3.714350815097532 and eight Premium −$14.1661363251078. Two convergence aborts; no gains or estimates. Convergence fees0/other$0.9992730794999716/capital$0.000005735597670896049; Premium fees$6.6723436135489465/other$3.994214061499406/capital$0.000219650058275081.
+
+Paper12:31busy CPU90.05%,p95lag91.31ms but fresh0.65s/four connected feeds; root notified. Recovered12:35ok65.995%/46.33ms and12:40ok64.77%/43.29ms. Review fresh/ok CPU61.48%,p95lag40.31ms,RSS286.88MiB,107pairs. Rolling59 healthy391.52s/22,809,494compressed B/134,677records,two connections/no errors/economics false; chunks1,214,222,832B/controls38,783B under separate2GB. Recovery gap retained; no routine raw decode or intervention.
+
+News original capture terminal12:36:01.719087UTC, return0,normal endpoint and event coverage valid. Original companion evaluating completed capture; routine reads operational fields only. Corrected companion finished before economics with AssertionError:capture_inventory_changed; root notified promptly. Root diagnosed allowlist omission of legitimate final capture/status.json, with no missing files or economic read in failed path. Original frozen source/failure preserved; separate inventory-only repair belongs to root/inventory agent. No routine restart, source changes, competing analysis or outcomes reads.
+
+Carry12:45:00.120282UTC:434sampled,two invalid(71,389),428future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–206:2,736completions=2,700exact losses,one estimated loss,five audited paired gains,30audited rescue gains. Archive3,909,810/5,242,880B;107future pairs at5,342B project4,481,404B,margin761,476B. Next **13:06:33 UTC**.
