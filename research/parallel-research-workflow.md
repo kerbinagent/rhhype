@@ -38,6 +38,16 @@ a count of malformed frames. The first chunk's 20 such market frames were
 all valid initial snapshots; downstream analysis uses the adapter's actual
 quality checks. The frozen collector continues with this field documented.
 
+Its `live_trade_prints` field counts rows in `trades[]`, which can include
+liquidations also listed in `liquidation_trades[]`. Use explicit subtype and
+deduplication checks for ordinary-flow counts; do not sum the arrays as distinct
+events. The initial inventory run exposed the old adapter's rejection of these
+known mixed types. Preserve that [coverage-limited result](../reports/single-venue-research/inventory-context-batch1-readout.txt)
+and repair the adapter under the [separate allocation](../reports/experiment-storage/ordinary-feed-adapter-repair-v1.json)
+before interpreting the full cohort. The corrected reruns use the same frozen
+methods and separate outputs under `reports/single-venue-research/ordinary-feed-fix-v1`.
+Original raw frames remain intact.
+
 ## Exploration and validation
 
 Assign roles before collection: three exploratory chunks followed by three
@@ -61,7 +71,7 @@ and carry studies retain their own analysis boundaries and ownership.
    directly. Its 26 selected episodes and nine cost-plausible episodes were
    negative on average in both old windows. Park this version; no group passed
    its replication criterion. See the [readout](../reports/single-venue-research/directional-response-readout.txt).
-3. **Changing order flow:** the fixed [feature preflight](../reports/experiment-storage/single-venue-flow-recovery-v1.json)
+3. **Changing order flow:** the corrected [feature preflight](../reports/experiment-storage/single-venue-flow-recovery-ordinary-feed-fix-v1.json)
    measures continued trade flow and restoration of depth in the original
    price band. It uses exploratory chunks 1–3 and 7–9; the reserved chunks stay
    unopened. Establish support for both flow states before an outcome study.
@@ -71,7 +81,7 @@ and carry studies retain their own analysis boundaries and ownership.
    found explicit pre-fill positions on all 14,138 ordinary trades in the two
    old captures. Chronologically ordered within-message position changes
    reconcile. The signed, per-fill interpretation remains a stated empirical
-   assumption. The fixed [inventory protocol](../reports/experiment-storage/single-venue-inventory-context-v1.json)
+   assumption. The corrected [inventory protocol](../reports/experiment-storage/single-venue-inventory-context-ordinary-feed-fix-v1.json)
    compares delayed fade quotes after reducing versus adding flow, using earlier
    controls matched on entry cost and recent return/flow. It uses chunks 1–3 and
    7–9 and retains all 1,140 scheduled anchors per batch. Any conditional
@@ -81,8 +91,9 @@ Liquidation events are a possible separate mechanism. The ordinary adapter
 counts and excludes `liquidation_trades`; the raw capture retains the field.
 The two old broad windows contained zero live liquidation rows. The first three
 rolling chunks contain 0, 3 and 61 rows in those arrays before deduplication.
-A separate schema/clock/grouping audit will establish what they represent;
-64 rows are not 64 independent episodes. The official Core
+A [schema and clock audit](../reports/single-venue-research/liquidation-field-availability.txt)
+found 64 unique liquidations but only 11 asset episodes at 30-second spacing;
+these episodes are still dependent. The official Core
 [WebSocket schema](https://apidocs.lighter.xyz/docs/websocket-reference)
 defines separate ordinary and liquidation arrays; RH availability requires its
 own observed evidence.

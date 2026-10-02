@@ -1,0 +1,23 @@
+{
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 151781376,
+  "active_research_headroom_bytes": 102973440,
+  "overall_reservation_bytes": 2836777216,
+  "schema": "ordinary-feed-adapter-repair-v1",
+  "recorded_utc": "2026-10-02T03:35:47.898015+00:00",
+  "previous": "reports/experiment-storage/single-venue-inventory-context-v1.json",
+  "previous_sha256": "fb7d1e6cefe75b05579d9d9db820dc6996d1124e820f4da19d893349bdabd01f",
+  "reserved_bytes": 0,
+  "suballocation_bytes": 262144,
+  "categories_bytes": {
+    "common_source_tests": 65536,
+    "protocols": 40960,
+    "retained_prior_evidence": 155648
+  },
+  "remaining_offline_analysis_bytes": 524288,
+  "allocation_note": "262144 bytes within the existing2097152 offline analysis allocation. Prior directional262144 + flow524288 + inventory524288 + this262144 =1572864, leaving524288. Global reservations unchanged. No new raw data. Common adapter/tests use65536. Repair ledger plus two successor protocols use40960 (8192+16384+16384). Preserve original inventory result98329+provenance8929+readout<=16384 and flow abort<=8192 under retained evidence155648. Original v1 plans/sources remain in their existing categories. The two tiny successor launch wrappers fit the unused original flow/inventory source-test categories. Corrected two-batch outputs use the respective original study output allocations; prior v1 result/provenance/readout move to this retention category, never deleted or overwritten. Shared availability memos retain their original output allocations.",
+  "confirmed_issue": "Known liquidation rows occur in BOTH live trades[] and liquidation_trades[]. The old ordinary-only adapter calls _trade on every trades[] row, rejects type!=trade as an identity failure, and suppresses all later trade frames for that market/generation. Chunks1/2/3 contain6199/8348/11173 actual ordinary rows, plus0/3/61 cross-listed liquidation rows. All inspected nonordinary rows have correct market identity. The original inventory run processed18261 of25720 ordinary rows:7459 ordinary rows omitted after10 invalidations. All raw inputs are still intact.",
+  "correction_scope": "New derivative adapter explicitly counts/skips known nonordinary types liquidation/deleverage/market-settlement within live trades[]; ordinary parsing, unknown/malformed/identity rejection, history exclusion, dedup, clocks/generations, archive bounds and hash checks remain. Excluded subtype counts and liquidation-array counts overlap and must not be added as separate events. No edits to old adapter, collector, armed news/carry sources or frozen study source. Thin successor launchers reuse the frozen flow/inventory implementations with the new adapter, separate output directory and successor plans.",
+  "interpretation": "Original inventory output is preserved as a coverage-limited diagnostic, not a completed test of the intended population. Flow v1 was stopped while streaming after this bug was confirmed; no feature output or economic result was produced. No threshold, calendar, matching, latency, cost, holding-period or research gate is changed. Corrected runs remain exploratory; prior output has been seen. Reserved chunks are not used.",
+  "followup": "Freeze and test the new adapter and successor protocols before corrected execution on the same pinned exploratory chunks1-3 and7-9. Keep all original evidence. Note the same old-adapter limitation for any separately frozen news analysis; do not silently change its code or helper ownership."
+}

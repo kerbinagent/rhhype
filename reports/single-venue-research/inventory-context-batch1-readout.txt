@@ -1,0 +1,81 @@
+Inventory context v1, batch1 — preserved coverage-limited diagnostic
+
+STATUS: input-adapter population failure; superseded for the intended study.
+This result is retained intact. Do not promote a strategy or apply its research
+gate to the intended full ordinary-trade population from these surviving rows.
+No parameter is changed in the successor: the repair only handles known
+nonordinary trade subtypes explicitly. Original v1 batch2 will not be run.
+
+Confirmed root cause: liquidation rows are cross-listed in trades[] and
+liquidation_trades[]. The old ordinary adapter rejects type!=trade, then
+suppresses the affected market trade stream for that generation. All10 first
+failures in this block were liquidation type with correct market identity.
+Raw actual ordinary rows:6199/8348/11173=25720. Adapter yielded6199/7319/4743
+=18261;7459 ordinary rows were omitted after10 invalid batches. Suppressed
+frame counts687+3822=4509. Raw archives remain intact. Collector live_trade_prints
+counts trades-array rows, including the64 cross-listed liquidations.
+
+Frozen plan SHA256: fb7d1e6cefe75b05579d9d9db820dc6996d1124e820f4da19d893349bdabd01f
+Result SHA256: d1c936bc02db3464fd432b6a66e2ae2d75aca793083d09bee28e6622ccc67cff
+Repair ledger: reports/experiment-storage/ordinary-feed-adapter-repair-v1.json
+
+Denominators:1140 scheduled anchors=57 for each of20 asset/venue groups.
+845 anchor failures:844 latest ordinary trade absent/stale,1 unusable book.
+295 profiles:114 reducing,173 adding,8 unknown reversals;294 completed,
+1 adding SOL/RH profile invalidated.254 feature-usable,41 prior-book/history
+failures. Of114 reducing anchors:95 lacked a control within fixed calipers,
+11 had unusable features,8 selected controls. All8 pairs complete,8 distinct
+controls,0 reuse.6 pairs have both conditional reference contributions.
+58 of294 completed local profiles lack a full reference contribution.
+
+All processed18261 prints had explicit finite numeric-string positions:
+8995 adding,8876 reducing,390 reversal-unknown. Flags14813 absent-unknown
+and3448 true. These counts describe surviving adapter coverage only.
+
+All20 groups below. Means in basis points; dash means no observation.
+Venue | Asset | Reducing n | Reducing net mean | Pairs | Net delta | Signed mid delta | Reference pairs | Reference-adjusted net delta
+lighter | BTC | 19 | -0.392904 | 3 | +0.693031 | +0.653009 | 3 | +0.038150
+rh_lighter | BTC | 17 | -1.003538 | 1 | +0.183630 | -0.317811 | 1 | +0.101173
+lighter | ETH | 17 | -0.742736 | 2 | +0.585040 | +0.649819 | 1 | -1.010051
+rh_lighter | ETH | 9 | -1.043867 | 0 | - | - | 0 | -
+lighter | SOL | 7 | -0.873460 | 0 | - | - | 0 | -
+rh_lighter | SOL | 2 | +1.357429 | 0 | - | - | 0 | -
+lighter | HYPE | 5 | +0.471589 | 1 | +3.380569 | +3.103173 | 1 | +0.554413
+rh_lighter | HYPE | 10 | -1.253396 | 0 | - | - | 0 | -
+lighter | XRP | 0 | - | 0 | - | - | 0 | -
+rh_lighter | XRP | 1 | +0.667334 | 0 | - | - | 0 | -
+lighter | SUI | 0 | - | 0 | - | - | 0 | -
+rh_lighter | SUI | 0 | - | 0 | - | - | 0 | -
+lighter | NEAR | 2 | +2.849666 | 1 | +0.145716 | -0.038472 | 0 | -
+rh_lighter | NEAR | 1 | -10.862131 | 0 | - | - | 0 | -
+lighter | ZEC | 9 | +2.102032 | 0 | - | - | 0 | -
+rh_lighter | ZEC | 5 | -4.559101 | 0 | - | - | 0 | -
+lighter | VVV | 1 | -0.224660 | 0 | - | - | 0 | -
+rh_lighter | VVV | 1 | -3.783007 | 0 | - | - | 0 | -
+lighter | LIT | 4 | -1.446530 | 0 | - | - | 0 | -
+rh_lighter | LIT | 4 | -3.099384 | 0 | - | - | 0 | -
+
+In this restricted population, BTC/Core alone has3 complete matched pairs
+and positive paired net/midpoint means(+0.693031/+0.653009bp). All3 latest
+aggressors sell, hence all3 profiles fade long. Their reducing absolute net
+mean is-0.589788bp; the broader19 reducing BTC/Core quotes average-0.392904bp.
+8/19 positive;3/19 exceed1bp extra cost,1/19 exceeds2bp,0/19 exceeds5bp.
+The three-pair reference-adjusted improvement averages only+0.038150bp.
+These restricted-population results neither establish active profit nor
+validate the inventory feature. Sparse positive asset averages without
+matched controls remain descriptive. Public quotes are not fills or cash P&L.
+
+Independent Sol review:10991 result/provenance/source/metadata checks, no
+material arithmetic/control-selection inconsistencies at1e-22bp Decimal
+tolerance. Recomputed294 complete profiles,8 paired differences, all20 batch
+and60 chunk summaries, actual fees(all metadata taker fees0), native minima,
+entry caps, source/receipt due times, stress costs and funding exclusion.
+All selected controls minimize the eligible decision-feature distance;
+eventual outcomes and reference availability were not used in matching.
+Immediate C0 and past-book/flow inputs cannot be independently rebuilt from
+saved result rows alone; the result omits their book inputs. The frozen formula
+and saved matching values were checked, without a second raw economics replay.
+
+Funding: this retained v1 result98329B, provenance8929B and readout<=16384B
+are covered by the repair ledger retained_prior_evidence allocation. Corrected
+batches use the original study output allowance in a separate directory.

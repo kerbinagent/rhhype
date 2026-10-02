@@ -1,0 +1,20 @@
+{
+  "schema": "flow-recovery-v1-aborted",
+  "recorded_utc": "2026-10-02T03:35:47.898015+00:00",
+  "plan_sha256": "5faf358d440b18a4ab7c85ade9305748364c20967325ae162b8b9002ad6406ca",
+  "script_sha256": "fb1d17c0716b3428a837050acc1d29e28f895710e3b7bfa2de886c96feab1bad",
+  "batch": 1,
+  "inputs": [
+    "chunk-000001",
+    "chunk-000002",
+    "chunk-000003"
+  ],
+  "stopped_pid": 3259445,
+  "signal": "SIGTERM",
+  "exit_code": 143,
+  "reason": "Known liquidation rows occur in BOTH live trades[] and liquidation_trades[]. The old ordinary-only adapter calls _trade on every trades[] row, rejects type!=trade as an identity failure, and suppresses all later trade frames for that market/generation. Chunks1/2/3 contain6199/8348/11173 actual ordinary rows, plus0/3/61 cross-listed liquidation rows. All inspected nonordinary rows have correct market identity. The original inventory run processed18261 of25720 ordinary rows:7459 ordinary rows omitted after10 invalidations. All raw inputs are still intact.",
+  "output_produced": false,
+  "economic_evaluation": false,
+  "repair_ledger": "reports/experiment-storage/ordinary-feed-adapter-repair-v1.json",
+  "source_unchanged": true
+}

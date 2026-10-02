@@ -1,0 +1,130 @@
+Liquidation field availability — first rolling exploration block
+
+Stage: schema, clock and clustering audit only. No forward book response,
+returns, execution quotes or price/size values were analyzed. No account IDs
+were used as grouping keys, printed or retained in derived output. Only pinned,
+sealed exploratory chunks000001–000003 were read, owner liquidation_schema_v1.
+Sol verified exact identities, seal inventories and all inventory byte counts
+and SHA-256 values in locked before/after snapshots; streaming was unlocked.
+Bounds:64MiB raw per chunk,1GiB decoded,1million records,500000 trade IDs.
+Each gzip EOF and manifest record/decoded/raw count reconciled.
+
+Chunk | Records | Decoded bytes | Raw gzip bytes | Live raw/unique/repeats | History rows/newly distinct/repeats | Taker groups | 30s anchors
+1 |115212|110968853|14739134|0/0/0|448/448/0|0|0
+2 |135834|136962215|18494389|3/3/0|448/0/448|3|2
+3 |154541|163954442|22316879|61/61/0|450/3/447|53|9
+Total |405587|411885510|55550402|64/64/0|1346/451/895|56|11
+
+Live denominator: update/trade.liquidation_trades, deduplicated across all three
+chunks by venue/market/trade ID. History has a separate deduplication pool and
+is excluded. All live arrays/rows, market identities and trade IDs were valid.
+The64 unique live records exactly reconcile with operational array counts0/3/61.
+
+All20 asset/venue cells follow. Entries are chunk1/chunk2/chunk3.
+Live raw=live unique in every cell; repeats=0 in every cell.
+Venue | Asset | Live unique | History rows | Taker groups | 30s anchor attribution
+rh_lighter |BTC |0/0/11|50/50/50|0/0/10|0/0/1
+rh_lighter |ETH |0/0/1|45/45/45|0/0/1|0/0/1
+rh_lighter |SOL |0/0/1|12/12/12|0/0/1|0/0/1
+rh_lighter |HYPE|0/0/0|28/28/28|0/0/0|0/0/0
+rh_lighter |XRP |0/0/0|5/5/5|0/0/0|0/0/0
+rh_lighter |SUI |0/0/0|11/11/11|0/0/0|0/0/0
+rh_lighter |NEAR|0/0/1|4/4/4|0/0/1|0/0/1
+rh_lighter |ZEC |0/0/0|19/19/19|0/0/0|0/0/0
+rh_lighter |VVV |0/0/0|5/5/5|0/0/0|0/0/0
+rh_lighter |LIT |0/0/0|50/50/50|0/0/0|0/0/0
+lighter |BTC |0/1/40|50/50/50|0/1/33|0/1/3
+lighter |ETH |0/2/0|20/20/22|0/2/0|0/1/0
+lighter |SOL |0/0/1|12/12/12|0/0/1|0/0/0
+lighter |HYPE|0/0/1|27/27/27|0/0/1|0/0/1
+lighter |XRP |0/0/0|5/5/5|0/0/0|0/0/0
+lighter |SUI |0/0/0|5/5/5|0/0/0|0/0/0
+lighter |NEAR|0/0/5|50/50/50|0/0/5|0/0/1
+lighter |ZEC |0/0/0|50/50/50|0/0/0|0/0/0
+lighter |VVV |0/0/0|0/0/0|0/0/0|0/0/0
+lighter |LIT |0/0/0|0/0/0|0/0/0|0/0/0
+
+Grouping: venue/market/public taker order ID/order version/source millisecond,
+reset within each chunk. All64 live records groupable. Spaced anchors greedily
+retain the first received event per asset across venues, then the first event
+>=30s after that anchor; reset per chunk. Chunk3 counts:BTC4,ETH1,SOL1,HYPE1,
+NEAR2. These11 anchors show clustering and remain dependent; they are not
+completed parent liquidation orders or independent causal trials.
+
+Live fields:
+- type:liquidation64; all other subtypes0.
+- is_maker_ask:64 present Boolean true, hence buy takers; invalid/missing/null0.
+- ask_id and bid_id:64 present positive integers each; zero/missing/null/bad0.
+- ask_id_str and bid_id_str:64 positive decimal strings each; all failures0.
+- ask_order_version and bid_order_version:64 integer zero values each;
+  positive/missing/null/malformed0. Zero is an observed version value.
+- annotation quality:wire_ok64; source-regression annotations0.
+Receipt UTC and monotonic clocks were valid and nondecreasing within each stream.
+
+Receipt-source age in milliseconds (timestamp interpreted as milliseconds):
+Scope | Min | p50 | p90 | p95 | p99 | Max | Future/malformed/outside0–500ms
+chunk1 | - | - | - | - | - | - |0/0/0
+chunk2 |110.049|128.247|128.247|128.247|128.247|135.087|0/0/0
+chunk3 |66.692|82.915|147.221|174.915|205.649|205.649|0/0/0
+combined|66.692|82.928|140.281|169.344|205.649|205.649|0/0/0
+Quantiles use sorted index floor((n-1)*p). Separately, transaction_time treated
+as microseconds yielded age61.075–201.365ms,median64.554ms; future/malformed/
+outside500ms all0. All451 distinct history rows had valid source timestamps
+but ages>500ms; minimum8287.550ms. They are not live event evidence.
+
+Root follow-up schema audit exposed a material old-adapter failure:
+trades[] also contains the same liquidation records. Per chunk, actual ordinary
+type=trade rows are6199/8348/11173, plus0/3/61 type=liquidation rows. Every first
+nonordinary row per affected market had correct market identity and the same
+trade ID in liquidation_trades[]. The frozen ordinary adapter rejected these
+mixed types and suppressed10 market/generation streams afterward. Original
+inventory v1 retained18261 of25720 ordinary prints, losing7459 after those
+rejections. The raw capture is intact; repair uses explicit subtype exclusion.
+The collector field live_trade_prints is a trades-array row count, not an
+ordinary-trade-only count. Do not sum both arrays as separate executions.
+See ordinary-feed-adapter-repair-v1.json and inventory-context-batch1-readout.txt.
+
+Mechanism interpretation: positive public order IDs and liquidation subtype
+are consistent with documented partial-liquidation reduce-only IOC orders.
+They do not prove every wire serialization boundary or that every row consumed
+displayed liquidity. Full takeover and ADL have distinct mechanisms. This
+one-sided clustered sample only establishes availability; ordinary-flow controls,
+common-market effects, delayed costs and later untouched data remain necessary
+before any profitability claim. No liquidation recovery model was fitted.
+Sources:
+https://docs.lighter.xyz/trading/liquidations-and-llp-insurance-fund
+https://github.com/elliottech/lighter-prover/blob/main/circuit/src/transactions/internal_liquidate_position.rs
+https://apidocs.lighter.xyz/docs/websocket-reference
+
+Provenance:
+Store identity ba96b82b718a1439f87d9dce327f44ac4ff5e90ba32cfe0f8ddcac8188390cc7
+Parent plan e19c6ed52ace7310e8a717bf39b2cf707976b2fe92c6ff8eb6ed34f738936ac4
+Whole index at audit before=after:
+547e45c4e4b46340d731834b0b20d8bf1173aee4f1be1defe0f60cd47fabd495
+The live index may change subsequently; selected input seals are immutable.
+Selected index entry hashes1/2/3:
+cdb03c6a0b21872cd93d5053580123a942f461aabc4489f9716aaad6ae2dcf23
+424e65b831c556e98d47eb7c084a78b57f53201be96b39da57f6993f26a47048
+e4f0bf160d78b5ed5ac933030baf9f63fc3af73cd4784ef38afb08c97f515b41
+Seals1/2/3 (complete inventories, including every metadata/request file):
+385a2ad5b3f61f7d4a375b59885f4a78b90fd4224354341b5b384dc50e0635ef
+4f42d2c1571aca9cf2e37faa253fe052efc7fe753f8e865a9a62276db8a87007
+0904aee68eb2804b575e5c6e467d849b4f2fbc7266b201a8fc6bf62f7de74c8e
+Raw gzip hashes1/2/3:
+dda4b7dd07eb33404218b4f4ea07cdaf492a0d7c109e445c1b7866834588c93a
+f9684cd2e8c708562eb30c20af64c3524cb8103d819bc93e4ed175fe5a12ac57
+3e9498d70586dea53865f136739de140eff17d35348e8b1fe73829bdce2fe101
+Manifest hashes1/2/3:
+2451c63cd8bc200ae1408af42ccf8e512676afa2ddda7f50846f5d4c377b2824
+37890294eb9c95c9baa4dccb32eb06053150e86e5545d7ae13ff4340ebe3ac6e
+048cff9286e416e9f302890d173ca758fe92c6f08d49851ae07d36121f09d2cd
+Normalized metadata hashes1/2/3:
+de3642e64fc13b08335906589a78386466165494604fd5910d52370975f93acd
+c6f0eb1b53d652216dd6dd1900599611f50f213b9c64566d3687baad29a2879d
+7be9c85f4800ca8f2d88a2a29bef782b94526e7ce639b1920f32114ceb0ba7b1
+
+Funding: this memo<=16384B is the shared preparation output within the original
+inventory-context524288-byte suballocation. It adds no global reservation or
+raw capture. Root transcribed Sol aggregates and independently confirmed the
+mixed-type schema failure in bounded, hash-verified streams without forward
+price calculations. Full selected seal inventories remain in the pinned store.

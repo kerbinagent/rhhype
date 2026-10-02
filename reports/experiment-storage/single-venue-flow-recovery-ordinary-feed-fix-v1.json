@@ -1,0 +1,204 @@
+{
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 151781376,
+  "active_research_headroom_bytes": 102973440,
+  "overall_reservation_bytes": 2836777216,
+  "schema": "single-venue-flow-recovery-v1",
+  "revision": "ordinary-feed-fix-v1",
+  "recorded_utc": "2026-10-02T03:45:12.521478+00:00",
+  "previous": "reports/experiment-storage/ordinary-feed-adapter-repair-v1.json",
+  "previous_sha256": "fdaa82156b33fce08633467702c2e6d72a3de18dbbd1a66034e11f05879e93ba",
+  "reserved_bytes": 0,
+  "suballocation_bytes": 0,
+  "allocation_note": "No new reservation or suballocation. This protocol uses the ordinary-feed-adapter-repair-v1 protocols category. Common adapter/tests and preserved old evidence use that repair allocation. This small wrapper uses the unused original study source/tests allowance. Corrected results/provenance/readouts use the original study outputs allowance; old v1 inventory evidence is retained under the repair category. The original protocol remains the authoritative method except for the explicit reader/output correction below.",
+  "allocation_reference": {
+    "path": "reports/experiment-storage/ordinary-feed-adapter-repair-v1.json",
+    "sha256": "fdaa82156b33fce08633467702c2e6d72a3de18dbbd1a66034e11f05879e93ba"
+  },
+  "method_reference": {
+    "path": "reports/experiment-storage/single-venue-flow-recovery-v1.json",
+    "sha256": "5faf358d440b18a4ab7c85ade9305748364c20967325ae162b8b9002ad6406ca",
+    "instruction": "Inherit every definition, source-clock rule, calendar, parameter, matching rule, cost/latency/native-grid check, denominator, failure, research gate and limitation. The revision scope below is the complete set of changes."
+  },
+  "revision_scope": {
+    "reader": "scripts/single_venue_ordinary_events.py",
+    "change": "Validate object/market/type envelope in live trades[]. Count and skip known nonordinary liquidation/deleverage/market-settlement types. Keep invalid ordinary, unknown/malformed subtype and wrong-market rejection, generation invalidation, dedup, history exclusion, archive/hash/clock checks. Exclusion counts can overlap liquidation_trades[] counts; never sum them as independent events. Frozen study implementation is imported unchanged.",
+    "launcher": "scripts/run_flow_recovery_ordinary_fix.py",
+    "output_directory": "reports/single-venue-research/ordinary-feed-fix-v1",
+    "previous_evidence": "Old inventory batch1 is preserved but superseded as an intended-population test:7459 ordinary rows were omitted after mixed-type invalidations. Old flow batch1 was aborted before any result. Corrected runs remain exploratory because old outcomes were seen; no threshold was tuned."
+  },
+  "output_caps": {
+    "gzip_per_batch": 180224,
+    "readout_per_batch": 16384,
+    "provenance_per_batch": 16384,
+    "shared_inventory_field_availability_readout": 16384
+  },
+  "store_root": "data/rolling/market-research-v1",
+  "store_identity_sha256": "ba96b82b718a1439f87d9dce327f44ac4ff5e90ba32cfe0f8ddcac8188390cc7",
+  "capture_parent_plan_sha256": "e19c6ed52ace7310e8a717bf39b2cf707976b2fe92c6ff8eb6ed34f738936ac4",
+  "pin_owner": "flow_recovery_v1",
+  "batches": [
+    {
+      "index": 1,
+      "chunks": [
+        "chunk-000001",
+        "chunk-000002",
+        "chunk-000003"
+      ]
+    },
+    {
+      "index": 2,
+      "chunks": [
+        "chunk-000007",
+        "chunk-000008",
+        "chunk-000009"
+      ]
+    }
+  ],
+  "parameters": {
+    "receipt_bucket_seconds": 1,
+    "background_seconds": 60,
+    "min_background_live_prints": 20,
+    "min_background_distinct_receipt_buckets": 10,
+    "dominant_share": "0.80",
+    "dominant_quantity_over_predepth": "0.25",
+    "fixed_band_bps": "5",
+    "minimum_depletion": "0.25",
+    "prebook_max_age_ms": 250,
+    "postbook_max_lateness_ms": 500,
+    "confirmation_seconds": 2,
+    "confirmation_max_lateness_ms": 500,
+    "max_trade_receipt_source_age_ms": 500,
+    "slow_continuation_max": "0.25",
+    "recovery_min": "0.50",
+    "persistent_continuation_min": "0.75",
+    "persistent_recovery_max": "0",
+    "episode_spacing_seconds": 30,
+    "admission_start_seconds": 60,
+    "admission_stop_seconds": 570,
+    "anchor_book_max_age_ms": 250
+  },
+  "input_contract": "Require each named chunk to be sealed_complete, exploratory, and already pinned by flow_recovery_v1. Refuse unsealed, reserved, missing or unpinned input. Verify store identity, parent plan, index/seal SHA, exact seal inventory, capture manifest, raw and metadata hashes, and source pins. Hold the store lock for provenance snapshot and final recheck only; root-owned pins protect the intervening stream. No automatic input replacement. Each batch contains three independent 600-second captures with explicit gaps. Reset all features at capture boundaries and invalidations. Retain all ten assets and both venues.",
+  "source_pins": [
+    {
+      "path": "reports/experiment-storage/ordinary-feed-adapter-repair-v1.json",
+      "sha256": "fdaa82156b33fce08633467702c2e6d72a3de18dbbd1a66034e11f05879e93ba"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-flow-recovery-v1.json",
+      "sha256": "5faf358d440b18a4ab7c85ade9305748364c20967325ae162b8b9002ad6406ca"
+    },
+    {
+      "path": "scripts/analyze_maker_capture.py",
+      "sha256": "d87ce8f116e039976b7afac20ede5704d14b3d49eb626473d214a7d47811b359"
+    },
+    {
+      "path": "scripts/analyze_maker_equity.py",
+      "sha256": "85d4de8cfd523b4a4497e3e2f6411b05f3737f2133d4c167ddce708af363843f"
+    },
+    {
+      "path": "scripts/analyze_maker_roundtrip.py",
+      "sha256": "d7d23b255fcffc294069a77486cc944a9a64a32d6755cc515a960d1ae03a9c93"
+    },
+    {
+      "path": "scripts/core_maker_capture.py",
+      "sha256": "db704b735932205bfd5f188a849804cd93774373f6dd4accb32ed69f32c5507c"
+    },
+    {
+      "path": "scripts/core_maker_events.py",
+      "sha256": "4b29411baaf2ea0d7624ba6c35d752fe137e6108214ec7289125b2d7c52303f3"
+    },
+    {
+      "path": "scripts/core_rh_small_shortterm.py",
+      "sha256": "65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3"
+    },
+    {
+      "path": "scripts/maker_book_archive.py",
+      "sha256": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2"
+    },
+    {
+      "path": "scripts/maker_capture.py",
+      "sha256": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/passive_three_venue_capture.py",
+      "sha256": "d5b3c943bd6acfd28fbfd258e3f3523ca8cecabe5794ab73e6db420c5abfbe23"
+    },
+    {
+      "path": "scripts/passive_three_venue_events.py",
+      "sha256": "66c8c813e86aa229fc49539f7d0fe4be39bd3e6468b7a9313a1545909354fcca"
+    },
+    {
+      "path": "scripts/rh_maker_capture.py",
+      "sha256": "8a075d1b454752e0852f1a8ab6d40189c60bfba7bf62c7ff781b7349571b45b4"
+    },
+    {
+      "path": "scripts/rolling_research_capture.py",
+      "sha256": "af0e22b484a34ee2678bdaacb19c1b3a18d7c4097ddc14618dc6b2fac756b59b"
+    },
+    {
+      "path": "scripts/run_flow_recovery_ordinary_fix.py",
+      "sha256": "af4efc53d02d30091311b78c859a2cf7d9f20bc306555232fc43e137382d8040"
+    },
+    {
+      "path": "scripts/single_venue_depth_capture.py",
+      "sha256": "f5230d15c2bcaa0ce32f767b75f058d01eacae292f27977be55e41cdd6d2a4ed"
+    },
+    {
+      "path": "scripts/single_venue_depth_events.py",
+      "sha256": "a6e681b4e9469422c29b6a27a4647223149dabe9637564539e71386e1c0d5fcc"
+    },
+    {
+      "path": "scripts/single_venue_flow_recovery.py",
+      "sha256": "fb1d17c0716b3428a837050acc1d29e28f895710e3b7bfa2de886c96feab1bad"
+    },
+    {
+      "path": "scripts/single_venue_ordinary_events.py",
+      "sha256": "7faa7cb9ab44fb46abdf7cdfa878cb9d3fac5347226d8c4d79751c66e3935903"
+    },
+    {
+      "path": "tests/test_core_maker_events.py",
+      "sha256": "e193aa0d29b18fe17d01e3f63e076e962a668068e5168d365dbe7c4f7f491ecc"
+    },
+    {
+      "path": "tests/test_passive_three_venue_events.py",
+      "sha256": "d620ddca59c23688129201aa1f467ee946f8bc506758e2e0abc7f9251d618ff2"
+    },
+    {
+      "path": "tests/test_single_venue_flow_recovery.py",
+      "sha256": "46ebc311e8861e0d6fac6cb5a42185d3fb979b602990245a554a198012d716f2"
+    },
+    {
+      "path": "tests/test_single_venue_ordinary_events.py",
+      "sha256": "b2e6b648a44d178af0b823d3bdcbf4c2574ebddadbf3c9a53b91c68be3510208"
+    }
+  ],
+  "stage": "Corrected exploratory rerun on the identical named blocks. Flow remains feature-only; inventory remains conditional public-quote analysis. Neither establishes fills or realized profit. Reserved chunks remain excluded.",
+  "verification": {
+    "ordinary_adapter": "Root independently ran 4 synthetic tests successfully before correction execution, including mixed types, genuine malformed batches, history/dedup/generation behavior and preserved trade hook.",
+    "original_study": {
+      "command": ".venv/bin/python -m unittest discover -s tests -p test_single_venue_flow_recovery.py -v",
+      "root_result": "6 tests passed; source reviewed before market execution. Tests include exact closed buckets, source anchors and stale advancing books, additive split fills, fixed price band, resets/missing anchors, episode spacing, role/pin rejection and immutable publication.",
+      "verified_utc": "2026-10-02T03:12:17.667566+00:00"
+    },
+    "launcher": "Root checked new-adapter binding, bounded adapter configuration, absence of old-adapter mutation, normal restoration and restoration after synthetic failure using a mocked study.run; no captured-data access."
+  },
+  "budget_verification": {
+    "original_source_tests_plus_wrapper_bytes": 41844,
+    "source_tests_cap_bytes": 65536,
+    "common_adapter_tests_bytes": 35101,
+    "protocol_cap_bytes": 16384
+  }
+}
