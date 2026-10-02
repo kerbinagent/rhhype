@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "sample": "single-venue-news-inventory-fix-depth-xrp",
+  "counts": {
+    "signal": 16,
+    "request": 29,
+    "ioc": 29,
+    "closed": 13
+  },
+  "raw_capture_verified": true,
+  "signal_checks_vacuous": false,
+  "fill_checks_vacuous": false,
+  "summary_sha256": "c35c7c84268b3e14cbf946edba86b869d0edbe65d997decb161c41ed4b1ef1fe",
+  "trace_sha256": "04b2c7611ffba1b7b5f1403c433f64d11fb407bbde86741b26bf9a5a2662f2cf",
+  "limits": "Conditional public-book IOC execution. Signal and first-eligible book checks plus cash reconciliation; no private order acknowledgments or authenticated fills. Independent arms must not be summed."
+}

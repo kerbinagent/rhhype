@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "sample": "single-venue-news-depth-hype",
+  "counts": {
+    "signal": 6,
+    "request": 10,
+    "ioc": 10,
+    "closed": 4
+  },
+  "raw_capture_verified": true,
+  "signal_checks_vacuous": false,
+  "fill_checks_vacuous": false,
+  "summary_sha256": "c3b7d2c2c8b4db8cae55a3fafb44713d146eb95eda89a6d8b3f6f0f9b66f2da6",
+  "trace_sha256": "422256f12a9009f2147a459739073d4687ed94bdb5dccf8216cd376ade95c909",
+  "limits": "Conditional public-book IOC execution. Signal and first-eligible book checks plus cash reconciliation; no private order acknowledgments or authenticated fills. Independent arms must not be summed."
+}

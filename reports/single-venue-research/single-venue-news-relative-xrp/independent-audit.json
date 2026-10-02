@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "sample": "single-venue-news-relative-xrp",
+  "counts": {
+    "signal": 3,
+    "request": 5,
+    "ioc": 5,
+    "closed": 2
+  },
+  "raw_capture_verified": true,
+  "signal_checks_vacuous": false,
+  "fill_checks_vacuous": false,
+  "summary_sha256": "791caaa8f24a5359a6d75d94d68525b24a5e576202196fbbb322065eb33f5b99",
+  "trace_sha256": "d6a07c9fa9153d0c236ed21680013bd4760266bab8752d45c71f7929976d8494",
+  "limits": "Conditional public-book IOC execution. Signal and first-eligible book checks plus cash reconciliation; no private order acknowledgments or authenticated fills. Independent arms must not be summed."
+}

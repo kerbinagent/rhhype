@@ -1,0 +1,16 @@
+{
+  "pid": 2806818,
+  "command": [
+    "/home/harry/miniconda3/bin/python",
+    "/home/harry/projects/research/rhhype/scripts/single_venue_news_analysis.py",
+    "supervise"
+  ],
+  "launched_utc": "2026-10-01T23:45:09.363361+00:00",
+  "plan_sha256": "c0a2a61379bb075f630ca8c7ebeb06d59ef5200aa8b008ed4f4e1f2684c887ff",
+  "public_data_only": true,
+  "offline_after_capture": true,
+  "terminal_deadline_epoch": 1790944800.0,
+  "max_wait_seconds": 50400,
+  "max_analysis_seconds": 3600,
+  "no_retry": true
+}

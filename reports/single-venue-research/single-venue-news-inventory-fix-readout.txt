@@ -1,0 +1,73 @@
+CORRECTED NEWS WINDOW: AUTOMATED PAPER READOUT
+All 100 independent asset/venue/rule rows remain in the two comparison files. All 20 matching independent audits passed.
+Conditional public-book IOC model; no private acknowledgments or authenticated fills. Independent ledgers must not be summed. USDG/USDC collateral remains separate.
+Cash is native collateral after modeled fees/capital. Stress deducts 5bp of entry notional. Empty audits are vacuous; zero-entry arms provide no profitability evidence. One exploratory regime is not durable profitability.
+Total arms=100; flat_known=100; arms_with_attempts=67
+Vacuous signal audits=2; vacuous fill audits=2
+relative/ETH/lighter/gap_fade: attempts=1, closed=0, cash=0, stress=0, complete=True, unknown=False
+relative/ETH/rh_lighter/gap_fade: attempts=1, closed=0, cash=0, stress=0, complete=True, unknown=False
+relative/ETH/lighter/leader_follow: attempts=1, closed=0, cash=0, stress=0, complete=True, unknown=False
+relative/ETH/rh_lighter/leader_follow: attempts=1, closed=1, cash=-0.0561616, stress=-0.105658, complete=True, unknown=False
+relative/SOL/lighter/gap_fade: attempts=3, closed=2, cash=-0.197368, stress=-0.296328, complete=True, unknown=False
+relative/SOL/rh_lighter/gap_fade: attempts=3, closed=1, cash=0.144000, stress=0.0944984, complete=True, unknown=False
+relative/SOL/rh_lighter/leader_follow: attempts=3, closed=1, cash=-0.107084, stress=-0.156559, complete=True, unknown=False
+relative/HYPE/lighter/gap_fade: attempts=1, closed=1, cash=0.332854, stress=0.283612, complete=True, unknown=False
+relative/HYPE/rh_lighter/gap_fade: attempts=2, closed=0, cash=0, stress=0, complete=True, unknown=False
+relative/HYPE/rh_lighter/leader_follow: attempts=1, closed=0, cash=0, stress=0, complete=True, unknown=False
+relative/XRP/lighter/gap_fade: attempts=1, closed=0, cash=0, stress=0, complete=True, unknown=False
+relative/XRP/rh_lighter/gap_fade: attempts=1, closed=1, cash=-0.0192797, stress=-0.0687791, complete=True, unknown=False
+relative/XRP/rh_lighter/leader_follow: attempts=1, closed=1, cash=-0.0746647, stress=-0.124137, complete=True, unknown=False
+relative/SUI/lighter/gap_fade: attempts=1, closed=0, cash=0, stress=0, complete=True, unknown=False
+relative/SUI/rh_lighter/gap_fade: attempts=2, closed=1, cash=0.0477073, stress=-0.00178196, complete=True, unknown=False
+relative/SUI/rh_lighter/leader_follow: attempts=2, closed=1, cash=0.00370780, stress=-0.00239068, complete=True, unknown=False
+relative/NEAR/lighter/gap_fade: attempts=2, closed=2, cash=0.0449427, stress=-0.0538554, complete=True, unknown=False
+relative/NEAR/rh_lighter/gap_fade: attempts=1, closed=0, cash=0, stress=0, complete=True, unknown=False
+relative/ZEC/lighter/gap_fade: attempts=3, closed=0, cash=0, stress=0, complete=True, unknown=False
+relative/ZEC/rh_lighter/gap_fade: attempts=1, closed=0, cash=0, stress=0, complete=True, unknown=False
+relative/ZEC/lighter/leader_follow: attempts=3, closed=1, cash=0.0863084, stress=0.0374857, complete=True, unknown=False
+relative/ZEC/rh_lighter/leader_follow: attempts=1, closed=0, cash=0, stress=0, complete=True, unknown=False
+relative/ZEC/lighter/local_shock_fade: attempts=1, closed=0, cash=0, stress=0, complete=True, unknown=False
+relative/VVV/lighter/gap_fade: attempts=3, closed=0, cash=0, stress=0, complete=True, unknown=False
+relative/VVV/rh_lighter/gap_fade: attempts=3, closed=1, cash=0.00989232, stress=-0.0396156, complete=True, unknown=False
+relative/VVV/lighter/leader_follow: attempts=1, closed=0, cash=0, stress=0, complete=True, unknown=False
+relative/VVV/rh_lighter/leader_follow: attempts=2, closed=1, cash=0.00989232, stress=-0.0396156, complete=True, unknown=False
+relative/LIT/lighter/gap_fade: attempts=5, closed=2, cash=0.0156267, stress=-0.0833789, complete=True, unknown=False
+relative/LIT/rh_lighter/gap_fade: attempts=1, closed=1, cash=0.0164987, stress=-0.0216293, complete=True, unknown=False
+relative/LIT/lighter/leader_follow: attempts=1, closed=0, cash=0, stress=0, complete=True, unknown=False
+relative/LIT/lighter/local_shock_fade: attempts=1, closed=1, cash=-0.0897117, stress=-0.139189, complete=True, unknown=False
+depth/ETH/lighter/depth_fade: attempts=3, closed=3, cash=0.353969, stress=0.205624, complete=True, unknown=False
+depth/ETH/rh_lighter/depth_fade: attempts=4, closed=1, cash=-0.0259217, stress=-0.0754226, complete=True, unknown=False
+depth/ETH/lighter/depth_follow: attempts=3, closed=3, cash=-0.574746, stress=-0.723107, complete=True, unknown=False
+depth/ETH/rh_lighter/depth_follow: attempts=3, closed=1, cash=0.00287835, stress=-0.0466474, complete=True, unknown=False
+depth/SOL/lighter/depth_fade: attempts=4, closed=4, cash=0.117604, stress=-0.0802862, complete=True, unknown=False
+depth/SOL/rh_lighter/depth_fade: attempts=3, closed=2, cash=0.274288, stress=0.175370, complete=True, unknown=False
+depth/SOL/lighter/depth_follow: attempts=4, closed=3, cash=0.143571, stress=-0.00481994, complete=True, unknown=False
+depth/SOL/rh_lighter/depth_follow: attempts=3, closed=2, cash=0.109774, stress=0.0108443, complete=True, unknown=False
+depth/HYPE/lighter/depth_fade: attempts=1, closed=1, cash=0.0668544, stress=0.0176824, complete=True, unknown=False
+depth/HYPE/rh_lighter/depth_fade: attempts=2, closed=2, cash=-0.103294, stress=-0.202230, complete=True, unknown=False
+depth/HYPE/lighter/depth_follow: attempts=1, closed=0, cash=0, stress=0, complete=True, unknown=False
+depth/HYPE/rh_lighter/depth_follow: attempts=2, closed=1, cash=-0.0128504, stress=-0.0245461, complete=True, unknown=False
+depth/XRP/lighter/depth_fade: attempts=4, closed=4, cash=0.0363434, stress=-0.160187, complete=True, unknown=False
+depth/XRP/rh_lighter/depth_fade: attempts=4, closed=4, cash=-0.291525, stress=-0.489487, complete=True, unknown=False
+depth/XRP/lighter/depth_follow: attempts=4, closed=2, cash=0.242601, stress=0.144368, complete=True, unknown=False
+depth/XRP/rh_lighter/depth_follow: attempts=4, closed=3, cash=-0.0184480, stress=-0.0483062, complete=True, unknown=False
+depth/SUI/lighter/depth_fade: attempts=1, closed=1, cash=-0.195052, stress=-0.244532, complete=True, unknown=False
+depth/SUI/rh_lighter/depth_fade: attempts=4, closed=3, cash=-0.675952, stress=-0.824356, complete=True, unknown=False
+depth/SUI/lighter/depth_follow: attempts=1, closed=1, cash=0.0190883, stress=-0.0303436, complete=True, unknown=False
+depth/SUI/rh_lighter/depth_follow: attempts=4, closed=3, cash=0.0169199, stress=-0.0462549, complete=True, unknown=False
+depth/NEAR/lighter/depth_fade: attempts=3, closed=2, cash=-0.488237, stress=-0.587128, complete=True, unknown=False
+depth/NEAR/rh_lighter/depth_fade: attempts=1, closed=0, cash=0, stress=0, complete=True, unknown=False
+depth/NEAR/lighter/depth_follow: attempts=3, closed=3, cash=0.737097, stress=0.588920, complete=True, unknown=False
+depth/NEAR/rh_lighter/depth_follow: attempts=1, closed=1, cash=-0.265932, stress=-0.315331, complete=True, unknown=False
+depth/ZEC/lighter/depth_fade: attempts=4, closed=2, cash=0.0972667, stress=-0.00167926, complete=True, unknown=False
+depth/ZEC/rh_lighter/depth_fade: attempts=3, closed=3, cash=-0.768169, stress=-0.916562, complete=True, unknown=False
+depth/ZEC/lighter/depth_follow: attempts=4, closed=2, cash=0.387343, stress=0.288772, complete=True, unknown=False
+depth/ZEC/rh_lighter/depth_follow: attempts=3, closed=1, cash=0.398746, stress=0.349291, complete=True, unknown=False
+depth/VVV/lighter/depth_fade: attempts=1, closed=0, cash=0, stress=0, complete=True, unknown=False
+depth/VVV/rh_lighter/depth_fade: attempts=4, closed=4, cash=-0.688047, stress=-0.885895, complete=True, unknown=False
+depth/VVV/lighter/depth_follow: attempts=1, closed=0, cash=0, stress=0, complete=True, unknown=False
+depth/VVV/rh_lighter/depth_follow: attempts=4, closed=3, cash=-0.0610768, stress=-0.173479, complete=True, unknown=False
+depth/LIT/lighter/depth_fade: attempts=5, closed=5, cash=-0.483691, stress=-0.731096, complete=True, unknown=False
+depth/LIT/rh_lighter/depth_fade: attempts=4, closed=4, cash=0.0826504, stress=-0.115213, complete=True, unknown=False
+depth/LIT/lighter/depth_follow: attempts=6, closed=5, cash=-0.175999, stress=-0.421297, complete=True, unknown=False
+depth/LIT/rh_lighter/depth_follow: attempts=4, closed=1, cash=0.0450136, stress=0.0329479, complete=True, unknown=False

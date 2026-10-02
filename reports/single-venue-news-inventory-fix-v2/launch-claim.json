@@ -1,0 +1,1 @@
+{"schema":"single-venue-news-inventory-fix-launch-v2","plan_sha256":"e4e5d4b56e2a2a461123fe23067e749b44ae043c4e97f6f9b37291b6d1d42793","started_utc":"2026-10-02T12:48:07.064754+00:00","analysis_seconds":3600,"child_seconds":600,"no_retry":true,"source":"reports/single-venue-news/capture/status.json"}

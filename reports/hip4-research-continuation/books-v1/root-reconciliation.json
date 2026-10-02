@@ -1,0 +1,214 @@
+{
+  "schema": "hip4-continuation-books-root-reconciliation-v1",
+  "recorded_utc": "2026-10-02T13:19:51.488863+00:00",
+  "status": "passed",
+  "method": "Independent standard-library strict JSON/framed gzip parse and Fraction arithmetic; no import or call of collector analysis/certificate. Exact raw baseline question/member/binary specs compared at both brackets, full requested identities/lengths/digests/clocks/book order/caps and every YES/NO mirrored level checked. All18 touch interval sums, missing-side treatment and timing independently reconciled. H2 independently evaluated via six-state clamped bucket intervals, with F=0 intersection in its semantic variant.",
+  "freeze_commit": "bd35dce",
+  "plan": {
+    "path": "reports/experiment-storage/hip4-continuation-books-v1.json",
+    "bytes": 12136,
+    "sha256": "16b1113976c4a7b4c495314659b210dc14a1f24cfd031c726e6894658a1fc432"
+  },
+  "artifacts": [
+    {
+      "path": "reports/hip4-research-continuation/books-v1/claim.json",
+      "bytes": 332,
+      "sha256": "b69167a9d2a62aad38bdef9a714c41e23df1f93c9b6c43e7cdf82f10bf93e9af"
+    },
+    {
+      "path": "reports/hip4-research-continuation/books-v1/terminal.json",
+      "bytes": 497,
+      "sha256": "de2427622e83908147d940716f2207345120585edbd90cc8da739c2ee4a7811b"
+    },
+    {
+      "path": "reports/hip4-research-continuation/books-v1/supervisor.json",
+      "bytes": 561,
+      "sha256": "5d2e8eaa17dcaee9f82d30d67ac4a3fe697890fc79e1e966834d1545a1f0855c"
+    },
+    {
+      "path": "reports/hip4-research-continuation/books-v1/responses.bundle.gz",
+      "bytes": 33049,
+      "sha256": "b5b6e244404d3f9b2d4a44a143026c9112cd87a7680d2bdd82f549d179a04763"
+    },
+    {
+      "path": "reports/hip4-research-continuation/books-v1/projection.json",
+      "bytes": 7510,
+      "sha256": "3ee79d925548dd726eafa80d07f12a3bdf756288436a0d3a8b7bbbb8c326bd6f"
+    }
+  ],
+  "records": 91,
+  "http_200_records": 91,
+  "connections_reported": 1,
+  "decoded_bundle_bytes": 288076,
+  "book_count": 89,
+  "questions": 18,
+  "usable": 18,
+  "certified": 18,
+  "candidates": 0,
+  "fallback_books_empty": 18,
+  "observed_book_age_ms_min_max": [
+    274,
+    962
+  ],
+  "request_duration_ms_min_max": [
+    149.450446,
+    668.06451
+  ],
+  "question_checks": [
+    {
+      "question": 198,
+      "members": 7,
+      "sum_bid": "0.87764",
+      "sum_ask": "2.04705",
+      "server_spread_ms": 1052,
+      "local_window_ns": 1384219947
+    },
+    {
+      "question": 199,
+      "members": 7,
+      "sum_bid": "0.80844",
+      "sum_ask": "1.80851",
+      "server_spread_ms": 1707,
+      "local_window_ns": 1645376196
+    },
+    {
+      "question": 200,
+      "members": 7,
+      "sum_bid": "0.49804",
+      "sum_ask": "1.50836",
+      "server_spread_ms": 1073,
+      "local_window_ns": 1076365372
+    },
+    {
+      "question": 250,
+      "members": 9,
+      "sum_bid": "0.07632",
+      "sum_ask": "8.97336",
+      "server_spread_ms": 1593,
+      "local_window_ns": 1443332266
+    },
+    {
+      "question": 289,
+      "members": 4,
+      "sum_bid": "0.99871",
+      "sum_ask": "2.01632",
+      "server_spread_ms": 563,
+      "local_window_ns": 690896874
+    },
+    {
+      "question": 331,
+      "members": 4,
+      "sum_bid": "0.50833",
+      "sum_ask": "3.04",
+      "server_spread_ms": 501,
+      "local_window_ns": 636959257
+    },
+    {
+      "question": 357,
+      "members": 4,
+      "sum_bid": "0.99976",
+      "sum_ask": "2.00141",
+      "server_spread_ms": 0,
+      "local_window_ns": 621798348
+    },
+    {
+      "question": 358,
+      "members": 4,
+      "sum_bid": "0.99735",
+      "sum_ask": "2.00372",
+      "server_spread_ms": 535,
+      "local_window_ns": 639628503
+    },
+    {
+      "question": 359,
+      "members": 4,
+      "sum_bid": "0.99257",
+      "sum_ask": "2.00365",
+      "server_spread_ms": 530,
+      "local_window_ns": 773184572
+    },
+    {
+      "question": 361,
+      "members": 4,
+      "sum_bid": "0.99708",
+      "sum_ask": "2.01156",
+      "server_spread_ms": 547,
+      "local_window_ns": 629673797
+    },
+    {
+      "question": 362,
+      "members": 4,
+      "sum_bid": "0.99364",
+      "sum_ask": "2.00258",
+      "server_spread_ms": 516,
+      "local_window_ns": 639079537
+    },
+    {
+      "question": 363,
+      "members": 4,
+      "sum_bid": "0.99983",
+      "sum_ask": "2.00417",
+      "server_spread_ms": 551,
+      "local_window_ns": 644446759
+    },
+    {
+      "question": 366,
+      "members": 4,
+      "sum_bid": "0.99470",
+      "sum_ask": "2.00613",
+      "server_spread_ms": 508,
+      "local_window_ns": 622104617
+    },
+    {
+      "question": 367,
+      "members": 4,
+      "sum_bid": "0.99780",
+      "sum_ask": "2.01601",
+      "server_spread_ms": 569,
+      "local_window_ns": 635699259
+    },
+    {
+      "question": 368,
+      "members": 4,
+      "sum_bid": "0.99849",
+      "sum_ask": "2.00473",
+      "server_spread_ms": 530,
+      "local_window_ns": 639564081
+    },
+    {
+      "question": 369,
+      "members": 4,
+      "sum_bid": "0.99699",
+      "sum_ask": "2.00648",
+      "server_spread_ms": 546,
+      "local_window_ns": 623449934
+    },
+    {
+      "question": 370,
+      "members": 4,
+      "sum_bid": "0.99884",
+      "sum_ask": "2.00961",
+      "server_spread_ms": 465,
+      "local_window_ns": 636487603
+    },
+    {
+      "question": 371,
+      "members": 4,
+      "sum_bid": "0.00063",
+      "sum_ask": "3.08373",
+      "server_spread_ms": 540,
+      "local_window_ns": 775896217
+    }
+  ],
+  "dominance_btc": {
+    "agnostic_six_state_feasible": true,
+    "fallback_zero_semantic_feasible": true,
+    "usable": true,
+    "clock": {
+      "server_spread_ms": 540,
+      "local_window_ns": 930502369
+    },
+    "premises": "Index map and common quote-asset identity remain assumed; observed labels alone do not establish identity."
+  },
+  "interpretation": "Park static conversion for the recorded vector only. Both BTC semantic models feasible at these recorded quotes. No simultaneous-state, fill, fee, native precision, active/orderable or profit claim; zero costs are optimistic and missing sides are valuation bounds, not orders."
+}

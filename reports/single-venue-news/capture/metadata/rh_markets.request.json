@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.rh.lighter.xyz/api/v1/orderBookDetails",
+  "json_body": null,
+  "status": 200,
+  "raw_bytes": 98487,
+  "sha256": "41598b09173c2c9ae70d8c21c806814a039f926d1a78b201a0717111ab81d66e",
+  "compressed_sha256": "8219e8298f6ff24c8abe3003b6fc9b0d1f2dbf5b8fe4504944ac5c904c5eb5c7",
+  "request_started_utc_ns": 1790943960246818446,
+  "response_completed_utc_ns": 1790943960332945793,
+  "raw_file": "rh_markets.json.gz"
+}

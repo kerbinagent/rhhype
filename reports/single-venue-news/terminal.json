@@ -1,0 +1,22 @@
+{
+  "state": "finished",
+  "started_utc": "2026-10-01T23:40:14.677831+00:00",
+  "economic_evaluation": false,
+  "plan_sha256": "e9efab93a06e4e53fdb76b2f4b0e955f25f37a749c810062736a66f04ec90ffe",
+  "scheduled_start_epoch": 1790943960.0,
+  "event_epoch": 1790944200.0,
+  "heartbeat_utc": "2026-10-02T12:26:00.000551+00:00",
+  "capture_launch_utc": "2026-10-02T12:26:00.000525+00:00",
+  "returncode": 0,
+  "normal_endpoint": true,
+  "event_coverage_valid": true,
+  "terminal": {
+    "status": "capture_completed",
+    "started_ns": 1790943960246501996,
+    "plan_sha256": "e9efab93a06e4e53fdb76b2f4b0e955f25f37a749c810062736a66f04ec90ffe",
+    "end_reason": "duration_limit",
+    "manifest_sha256": "00195f93594d48f67751371b16a487e0c0d31f5f79b505170b2e399915a8c29f",
+    "ended_ns": 1790944561617076967
+  },
+  "ended_utc": "2026-10-02T12:36:01.719087+00:00"
+}

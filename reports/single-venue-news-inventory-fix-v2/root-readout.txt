@@ -1,0 +1,23 @@
+NEWS RELEASE PAPER STUDY — 2 October 2026
+
+Decision: retain exploratory candidates and require untouched validation. No strategy yet meets the repeatability objective.
+
+Capture: 12:26:00.636132–12:36:01.536566 UTC; 200,610 records; 35,052,051 compressed raw bytes. Both public feeds completed the 600-second target, with two connections, no recorded errors and no truncation. The BLS calendar and published Employment Situation release page agree on the 12:30 UTC scheduled event. Those pages were checked after collection; exact dissemination latency and causality are not established.
+
+Measurement: the original output remains coverage limited by the known mixed-subtype adapter. The ordinary-feed correction was frozen before this capture. Its first helper stopped before economics because the final status heartbeat was absent from its allowlist. The separately frozen inventory successor (commit 0dd268a) repaired that inventory check and evaluated the same capture once, with every scientific rule unchanged. Original outputs and the pre-economic failure are retained.
+
+Corrected denominator: 100 independent asset/venue/rule policies; 20 matching independent audits passed; 100 flat, known final accounts; no open positions or pending/unknown orders. Sixty-seven policies attempted entries, 48 closed positions, 27 made positive net cash, 21 lost and 52 ended at zero. Twelve remained positive after the extra 5 bp stress. There were 164 policy attempts, 99 policy closes and 65 no-fill entries. These counts overlap across alternative policies and are not distinct market events. BTC relative/depth signal and fill audits were vacuous.
+
+Original denominator: 100 flat-known policies and 20 passed audits; 67 active, 46 with closes, 25 positive, 21 negative, 54 zero; 12 stress positive; 150 attempts, 89 closes and 61 zero fills. The identical stress-positive count does not mean identical winners: corrected Core ZEC leader_follow/depth_follow entered the set; Core SOL depth_fade and Core ZEC depth_fade left it. Ten policies on SOL/ZEC changed. Use corrected results as the current measurement, not two independent replications.
+
+Example candidate: Core NEAR depth_follow closed three positions (short, long, short) at roughly 12:30:04, 12:31:01 and 12:33:13 UTC. Net cash was +0.73709705 USDC and stressed cash +0.58892042, on 296.3532543 total entry notional across its three closes. Stressed episode values were +0.37775535, +0.17657090 and +0.03459418. All three used the full requested native quantity. This candidate was selected after observing the 100-policy screen.
+
+Dependence: the twelve stress-positive policies contain twenty closes, including fourteen shorts and six longs. Six candidate closes overlapped the first release move across SOL/HYPE/ETH/NEAR. These are correlated evidence. RH LIT depth_follow's one close used only 6.34 of 26.01 requested units (about 24.4%); its 0.03294794 stressed USDG result is not a filled 100-unit entry. The full cohort contains eleven partial entries.
+
+Execution interpretation: each arm has a separate 600-unit native-collateral account, nominal 100-unit entry budget, 400 ms modeled delay and 10-second holding target. Results include frozen modeled fees and capital charges; stress is an additional 5 bp of entry notional, not a measured fill cost. Public-book IOC fills are conditional assumptions, not authenticated trades. Do not sum alternative ledgers or combine USDC and USDG as identical collateral.
+
+Evidence: root-reconciliation.json pins capture, protocols, terminals, comparisons and input provenance. Each comparison pins all ten summaries and independent audits; those pin their traces and raw-capture verification. Root separately reconciled full cohort membership, evidence hashes, episode cash/notional/stress sums, win counts and flat balances. This did not duplicate each auditor's raw signal replay.
+
+Full tables: ../single-venue-research/single-venue-news-inventory-fix-{relative,depth}-comparison.csv. All original tables remain alongside them. The automated per-policy readout is ../single-venue-research/single-venue-news-inventory-fix-readout.txt.
+
+Next: freeze one primary candidate and its unchanged comparator before fresh observations. Ordinary future data can falsify broader applicability; it is not another independent scheduled-release replication. Do not change thresholds, migrate to a different winner or omit no-fill/failed windows after seeing validation outcomes.

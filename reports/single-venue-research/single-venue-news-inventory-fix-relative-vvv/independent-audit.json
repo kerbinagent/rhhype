@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "sample": "single-venue-news-inventory-fix-relative-vvv",
+  "counts": {
+    "signal": 9,
+    "request": 11,
+    "ioc": 11,
+    "closed": 2
+  },
+  "raw_capture_verified": true,
+  "signal_checks_vacuous": false,
+  "fill_checks_vacuous": false,
+  "summary_sha256": "27c2152ceac520e970326f250e204f39aea50c2b86d1a7c2d0c0648f8a645b43",
+  "trace_sha256": "160aebd79ec4a87d5bd9a19bc9896ca9592a553723a22495279d1e6357e1a414",
+  "limits": "Conditional public-book IOC execution. Signal and first-eligible book checks plus cash reconciliation; no private order acknowledgments or authenticated fills. Independent arms must not be summed."
+}

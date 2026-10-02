@@ -11,7 +11,7 @@ window, not a limit on how long an idea may be studied.
 | Public collector and routine monitor | Reuse a fixed ten-asset Core/RH cohort; publish sealed ten-minute chunks independently of research. Monitor coverage, gaps and storage. | Verified raw chunks and operational metadata, without trading decisions. |
 | Root researcher | Read prior evidence and relevant primary research, prioritize distinct mechanisms, define falsifiers and controls, decide advance/park/inconclusive. | A short current [decision register](research-decision-register.md), not a new collector per idea. |
 | Two Sol analysis assignments | Answer bounded questions on explicitly assigned completed chunks; reuse existing quote/replay components. | Full denominators, cost-aware comparisons, missing outcomes and a decision recommendation. |
-| Autonomous Parler peer | Own cross-asset propagation and other distinct mechanisms on an isolated branch; freeze bounded diagnostics before outcomes and coordinate shared inputs. | Continuing research, implementation and falsification within the [8 MiB allocation](../reports/experiment-storage/parler-peer-research-v1.json); updates at material decisions. |
+| Autonomous Parler peer | Own distinct mechanisms on an isolated branch; freeze bounded diagnostics before outcomes and coordinate shared inputs. | Continuing research within the [9 MiB allocation](../reports/experiment-storage/parler-peer-contractual-closures-and-cache-reconciliation-v1.json); updates at material decisions. |
 
 ## Shared data and retention
 
@@ -109,11 +109,8 @@ and carry studies retain their own analysis boundaries and ownership.
    Public witnesses remain conditional on accepted/live placement and matching
    assumptions. Park this version without an execution branch or tuning.
 
-The [corrected news companion](../reports/experiment-storage/single-venue-news-ordinary-feed-fix-v1.json)
-is separately frozen and armed for the original October 2 capture. It applies
-the same ordinary-subtype correction to both families, then uses the existing
-independent signal/cash auditors. Original capture, helper, methods and outputs
-remain intact. Capture and corrected analysis hashes have separate roles.
+The corrected news companion and its original outputs are complete; see the
+result below. Capture and analysis hashes have separate roles.
 
 Liquidation events are a possible separate mechanism. The ordinary adapter
 counts and excludes `liquidation_trades`; the raw capture retains the field.
@@ -224,11 +221,13 @@ records this missing interval explicitly.
 
 ## HIP-4 metadata and continuing ownership
 
-The [single metadata probe](../reports/hip4-outcome-v1/metadata-v1/readout.txt)
-returned 260 outcomes and 18 disjoint, structurally complete questions covering
-86 members. Root reconciled the raw response and all pins independently.
-Active status, collateral identity and native precision remain unverified;
-there is no price or execution conclusion.
+The metadata probe returned 260 outcomes and 18 complete questions with 86
+members. The separately frozen [book screen](../reports/hip4-research-continuation/books-v1/readout.txt)
+read 91 responses once: all 18 questions passed the timing gates and static
+no-cycle certificate; both BTC cross-question constraint sets were feasible.
+Root independently reconciled every response with rational arithmetic. No
+positive candidate remains at these recorded quotes. The result is conditional
+on conversion/payoff assumptions, not proof of simultaneous executable depth.
 
 The local Claude session owns continuing HIP-4 research over the coming hours
 under a separate [1 MiB allocation](../reports/experiment-storage/hip4-research-continuation-allocation-v1.json).
@@ -260,16 +259,21 @@ category received 98,304 bytes from its unused derived category before collectio
 including the retained preparation draft; the overall 2 MiB reservation did not
 change. The issuance run used its separate preallocated 512 KiB envelope.
 
-## News inventory repair and next source research
+## Completed news study and continuing source research
 
-The news capture finished normally at 12:36 UTC with complete event coverage.
-The corrected companion stopped before economics because its file allowlist
-omitted the collector's legitimate final status.json heartbeat. The separate
-[inventory successor](../reports/experiment-storage/single-venue-news-inventory-fix-v2.json)
-pins that file and preserves all original methods, inputs and failures. Seven
-synthetic tests, independent source review and the opaque input check passed.
-It launched once at 12:48 UTC after commit 0dd268a; all 100 rows and 20 audits
-remain required before a result. No capture was repeated.
+The [corrected result](../reports/single-venue-news-inventory-fix-v2/root-readout.txt)
+contains 100 flat-known policies and 20 passed audits: 67 active, 48 with closes,
+27 net positive and 12 positive after extra 5 bp stress. The original output
+and pre-economic inventory failure remain retained. The frozen inventory repair
+changed no scientific rule or raw data; both complete versions reconciled.
+The correction changed which policies were positive, despite the same count.
+Several winners overlap the release move; alternative ledgers cannot be added.
+
+Core NEAR depth-follow's three closes returned +0.7371 USDC net and +0.5889
+stressed. Select it with its unchanged depth-fade comparator for an untouched
+test; keep all 100 policies visible without substituting winners. Ordinary
+future windows test broader applicability, not independent news replication.
+One event and conditional public-book fills do not meet the research objective.
 
 The remote peer owns continuing source/design work on Compound's already
 absorbed collateral and Clipper auction-reset rewards. No live availability

@@ -1,0 +1,17 @@
+{
+  "pid": 2794210,
+  "command": [
+    "/home/harry/miniconda3/bin/python",
+    "/home/harry/projects/research/rhhype/scripts/single_venue_news.py",
+    "supervise"
+  ],
+  "launched_utc": "2026-10-01T23:40:14.481772+00:00",
+  "scheduled_start_epoch": 1790943960.0,
+  "event_epoch": 1790944200.0,
+  "seconds": 600,
+  "raw_cap_bytes": 50331648,
+  "max_wait_seconds": 50400,
+  "capture_timeout_seconds": 720,
+  "public_read_only": true,
+  "plan_sha256": "e9efab93a06e4e53fdb76b2f4b0e955f25f37a749c810062736a66f04ec90ffe"
+}

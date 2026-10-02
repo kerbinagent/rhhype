@@ -1,0 +1,365 @@
+{
+  "capture": {
+    "connections": 2,
+    "end_reason": "duration_limit",
+    "ended_utc": "2026-10-02T12:36:01.536566+00:00",
+    "errors": [],
+    "records": 200610,
+    "started_utc": "2026-10-02T12:26:00.636132+00:00",
+    "truncated": false
+  },
+  "capture_plan": {
+    "bytes": 19340,
+    "path": "reports/experiment-storage/single-venue-news-v1.json",
+    "sha256": "e9efab93a06e4e53fdb76b2f4b0e955f25f37a749c810062736a66f04ec90ffe"
+  },
+  "changed_stress_membership": {
+    "added": [
+      [
+        "depth",
+        "ZEC",
+        "lighter",
+        "depth_follow"
+      ],
+      [
+        "relative",
+        "ZEC",
+        "lighter",
+        "leader_follow"
+      ]
+    ],
+    "note": "An unchanged count of twelve is not robustness across measurement versions.",
+    "removed": [
+      [
+        "depth",
+        "SOL",
+        "lighter",
+        "depth_fade"
+      ],
+      [
+        "depth",
+        "ZEC",
+        "lighter",
+        "depth_fade"
+      ]
+    ]
+  },
+  "corrected_input_pins": {
+    "bytes": 2930,
+    "path": "reports/single-venue-news-inventory-fix-v2/input-pins.json",
+    "sha256": "3911ab7df8a662feba800ae32bd61a237532f427a4570031fe9d3ca175613cf0"
+  },
+  "corrected_stress_positive_policies": [
+    {
+      "asset": "SOL",
+      "attempts": 3,
+      "closed": 1,
+      "closed_cash_after_capital": "0.1440003477631612962253900304",
+      "closed_entry_notional": "99.003802",
+      "closed_stressed_cash": "0.0944984467631612962253900304",
+      "collateral": "USDG",
+      "family": "relative",
+      "rule": "gap_fade",
+      "stressed_winning_closes": 1,
+      "venue": "rh_lighter",
+      "winning_closes": 1
+    },
+    {
+      "asset": "HYPE",
+      "attempts": 1,
+      "closed": 1,
+      "closed_cash_after_capital": "0.3328543600776982049136986301",
+      "closed_entry_notional": "98.484336",
+      "closed_stressed_cash": "0.2836121920776982049136986301",
+      "collateral": "USDC",
+      "family": "relative",
+      "rule": "gap_fade",
+      "stressed_winning_closes": 1,
+      "venue": "lighter",
+      "winning_closes": 1
+    },
+    {
+      "asset": "ZEC",
+      "attempts": 3,
+      "closed": 1,
+      "closed_cash_after_capital": "0.08630836762759899066615930999",
+      "closed_entry_notional": "97.645310",
+      "closed_stressed_cash": "0.03748571262759899066615930999",
+      "collateral": "USDC",
+      "family": "relative",
+      "rule": "leader_follow",
+      "stressed_winning_closes": 1,
+      "venue": "lighter",
+      "winning_closes": 1
+    },
+    {
+      "asset": "ETH",
+      "attempts": 3,
+      "closed": 3,
+      "closed_cash_after_capital": "0.3539689588161633442721017250",
+      "closed_entry_notional": "296.689806",
+      "closed_stressed_cash": "0.2056240558161633442721017250",
+      "collateral": "USDC",
+      "family": "depth",
+      "rule": "depth_fade",
+      "stressed_winning_closes": 2,
+      "venue": "lighter",
+      "winning_closes": 2
+    },
+    {
+      "asset": "SOL",
+      "attempts": 3,
+      "closed": 2,
+      "closed_cash_after_capital": "0.2742877062622309087362760021",
+      "closed_entry_notional": "197.835784",
+      "closed_stressed_cash": "0.1753698142622309087362760021",
+      "collateral": "USDG",
+      "family": "depth",
+      "rule": "depth_fade",
+      "stressed_winning_closes": 1,
+      "venue": "rh_lighter",
+      "winning_closes": 1
+    },
+    {
+      "asset": "SOL",
+      "attempts": 3,
+      "closed": 2,
+      "closed_cash_after_capital": "0.1097736906275368779015791476",
+      "closed_entry_notional": "197.858866",
+      "closed_stressed_cash": "0.01084425762753687790157914760",
+      "collateral": "USDG",
+      "family": "depth",
+      "rule": "depth_follow",
+      "stressed_winning_closes": 1,
+      "venue": "rh_lighter",
+      "winning_closes": 1
+    },
+    {
+      "asset": "HYPE",
+      "attempts": 1,
+      "closed": 1,
+      "closed_cash_after_capital": "0.06685435535933905805205479452",
+      "closed_entry_notional": "98.343828",
+      "closed_stressed_cash": "0.01768244135933905805205479452",
+      "collateral": "USDC",
+      "family": "depth",
+      "rule": "depth_fade",
+      "stressed_winning_closes": 1,
+      "venue": "lighter",
+      "winning_closes": 1
+    },
+    {
+      "asset": "XRP",
+      "attempts": 4,
+      "closed": 2,
+      "closed_cash_after_capital": "0.2426007078559060580869165398",
+      "closed_entry_notional": "196.464478",
+      "closed_stressed_cash": "0.1443684688559060580869165398",
+      "collateral": "USDC",
+      "family": "depth",
+      "rule": "depth_follow",
+      "stressed_winning_closes": 1,
+      "venue": "lighter",
+      "winning_closes": 2
+    },
+    {
+      "asset": "NEAR",
+      "attempts": 3,
+      "closed": 3,
+      "closed_cash_after_capital": "0.7370970508254377158949486302",
+      "closed_entry_notional": "296.353254",
+      "closed_stressed_cash": "0.5889204238254377158949486302",
+      "collateral": "USDC",
+      "family": "depth",
+      "rule": "depth_follow",
+      "stressed_winning_closes": 3,
+      "venue": "lighter",
+      "winning_closes": 3
+    },
+    {
+      "asset": "ZEC",
+      "attempts": 4,
+      "closed": 2,
+      "closed_cash_after_capital": "0.3873427105042268554916333714",
+      "closed_entry_notional": "197.141923",
+      "closed_stressed_cash": "0.2887717490042268554916333714",
+      "collateral": "USDC",
+      "family": "depth",
+      "rule": "depth_follow",
+      "stressed_winning_closes": 2,
+      "venue": "lighter",
+      "winning_closes": 2
+    },
+    {
+      "asset": "ZEC",
+      "attempts": 3,
+      "closed": 1,
+      "closed_cash_after_capital": "0.3987463441174353823276113014",
+      "closed_entry_notional": "98.911421",
+      "closed_stressed_cash": "0.3492906336174353823276113014",
+      "collateral": "USDG",
+      "family": "depth",
+      "rule": "depth_follow",
+      "stressed_winning_closes": 1,
+      "venue": "rh_lighter",
+      "winning_closes": 1
+    },
+    {
+      "asset": "LIT",
+      "attempts": 4,
+      "closed": 1,
+      "closed_cash_after_capital": "0.04501359445663511968337772704",
+      "closed_entry_notional": "24.131308",
+      "closed_stressed_cash": "0.03294794045663511968337772704",
+      "collateral": "USDG",
+      "family": "depth",
+      "rule": "depth_follow",
+      "stressed_winning_closes": 1,
+      "venue": "rh_lighter",
+      "winning_closes": 1
+    }
+  ],
+  "corrected_wrapper_terminal": {
+    "bytes": 205,
+    "path": "reports/single-venue-news-inventory-fix-v2/wrapper-terminal.json",
+    "sha256": "2e86a16e95f0644509c21f50d5b2db60afff19f6ecd809fb158903b431c9d4fd"
+  },
+  "event_status": {
+    "calendar_url": "https://www.bls.gov/schedule/2026/10_sched.htm",
+    "checked_utc_interval": [
+      "2026-10-02T13:04:00+00:00",
+      "2026-10-02T13:06:00+00:00"
+    ],
+    "interpretation": "Official calendar and release page agree with the scheduled event. Page checked after the capture; exact first dissemination latency and causal attribution are not established.",
+    "observed_release": "Employment Situation, September 2026; USDL-26-1549; displayed release time 08:30 ET Friday 2 October 2026",
+    "release_url": "https://www.bls.gov/news.release/empsit.nr0.htm"
+  },
+  "interpretation": {
+    "costs": "Net includes frozen modeled fees/capital. Stress subtracts an additional 5 bp of closed entry notional. USDC and USDG remain separate.",
+    "dependence": "One scheduled release and correlated asset moves; selection from 100 policies. Several positive arms overlap one release move. Zero-entry arms and vacuous BTC audits are not positive evidence.",
+    "execution": "Conditional public-book IOC model; no authenticated orders, acknowledgments or fills. All modeled positions closed; partials and zero fills retained.",
+    "ledger": "Every arm uses a separate 600 native-collateral cash account with nominal 100 entry budget, 400 ms delay and 10 second hold. Independent alternatives and policy episode counts cannot be added into a portfolio or distinct-event count.",
+    "next": "Freeze an untouched test before opening more data; do not tune the winning thresholds on this capture.",
+    "result": "Exploratory candidates, not repeatable profit"
+  },
+  "manifest": {
+    "bytes": 3380,
+    "path": "reports/single-venue-news/capture/manifest.json",
+    "sha256": "00195f93594d48f67751371b16a487e0c0d31f5f79b505170b2e399915a8c29f"
+  },
+  "method_identity": "Same original scientific parameters and capture in both versions. Ordinary-feed subtype correction was frozen before collection. The separately frozen inventory successor only admitted and pinned the legitimate final status heartbeat after the first corrected helper failed before economics.",
+  "prior_failed_terminal": {
+    "bytes": 345,
+    "path": "reports/single-venue-news-ordinary-fix-v1/analysis-terminal.json",
+    "sha256": "ae05e9613584fae6605340974c2a1e6b7ee0b1b30339aad89e4daef543c059b7"
+  },
+  "raw": {
+    "bytes": 35052051,
+    "path": "reports/single-venue-news/capture/frames.jsonl.gz",
+    "sha256": "ef51c396df8a6039b0eda4e0a1b020500ff499eb603a8cb4c686c5a34061d0b0"
+  },
+  "recorded_utc": "2026-10-02T13:29:08.744428+00:00",
+  "schema": "single-venue-news-root-reconciliation-v1",
+  "status": "passed",
+  "verification_scope": "Both completed analyses. Root independently verified source and input hashes, exact cohort membership, report evidence chains, all summaries and audit/trace hashes, episode cash/notional/stress sums, wins, flat balances and unresolved-position fields. The existing independent auditors separately replayed signals and cash from the raw capture. Root did not claim a second independent raw replay.",
+  "versions": {
+    "corrected": {
+      "active_policies": 67,
+      "all_flat_known": true,
+      "analysis_terminal": {
+        "bytes": 545,
+        "path": "reports/single-venue-news-inventory-fix-v2/analysis-terminal.json",
+        "sha256": "b4b962547521eacc3a3efe1b71aca032f3e820cb8468abb189e98e82a310e8a5"
+      },
+      "comparisons": [
+        {
+          "bytes": 5077,
+          "path": "reports/single-venue-research/single-venue-news-inventory-fix-relative-comparison.json.gz",
+          "sha256": "b82430fe81bd4919e183db662531c363c8ffc98f71a7c16ffd65c334ae108a95"
+        },
+        {
+          "bytes": 6293,
+          "path": "reports/single-venue-research/single-venue-news-inventory-fix-relative-comparison.csv",
+          "sha256": "d62f58b4aa87de627bdd00836466f021f647fd161b8436b25542f38b0c960acd"
+        },
+        {
+          "bytes": 5352,
+          "path": "reports/single-venue-research/single-venue-news-inventory-fix-depth-comparison.json.gz",
+          "sha256": "827d13f23abf2cefcfc9aa142eede71ac44d4259d1739913deab5c3ef7a67360"
+        },
+        {
+          "bytes": 6258,
+          "path": "reports/single-venue-research/single-venue-news-inventory-fix-depth-comparison.csv",
+          "sha256": "a99e0b38b726228332aa20cd005ba4db183cfcff7c8fe2f3af20f1cbdbe226d9"
+        }
+      ],
+      "completed_commands": 24,
+      "fill_vacuous_audits": 2,
+      "matching_independent_audits": 20,
+      "net_negative_policies": 21,
+      "net_positive_policies": 27,
+      "plan": {
+        "bytes": 11211,
+        "path": "reports/experiment-storage/single-venue-news-inventory-fix-v2.json",
+        "sha256": "e4e5d4b56e2a2a461123fe23067e749b44ae043c4e97f6f9b37291b6d1d42793"
+      },
+      "policies_with_closes": 48,
+      "policy_attempts": 164,
+      "policy_closes": 99,
+      "policy_zero_fill_entries": 65,
+      "rows": 100,
+      "signal_vacuous_audits": 2,
+      "stress_positive_policies": 12,
+      "zero_net_policies": 52
+    },
+    "original": {
+      "active_policies": 67,
+      "all_flat_known": true,
+      "analysis_terminal": {
+        "bytes": 513,
+        "path": "reports/single-venue-news/analysis-terminal.json",
+        "sha256": "c7653c8ac3b31513f6e702d45900e3249e6bee24edbc6ecb80bf418ff65703ad"
+      },
+      "comparisons": [
+        {
+          "bytes": 5163,
+          "path": "reports/single-venue-research/single-venue-news-relative-comparison.json.gz",
+          "sha256": "2ebae1e2e150f951d0457fa9df35dbf9d99e9043c0d64b2871d51431307d79fc"
+        },
+        {
+          "bytes": 6293,
+          "path": "reports/single-venue-research/single-venue-news-relative-comparison.csv",
+          "sha256": "1c0c06057f3c6c467da3fd77ab9f8fd539cde69845d2a8a147a191eb47b3bd85"
+        },
+        {
+          "bytes": 5076,
+          "path": "reports/single-venue-research/single-venue-news-depth-comparison.json.gz",
+          "sha256": "4598e49129cfb01521123c1f09c1746a0fc5a18ed809a851ba17798fbb8093b5"
+        },
+        {
+          "bytes": 6065,
+          "path": "reports/single-venue-research/single-venue-news-depth-comparison.csv",
+          "sha256": "653de0c9605ecdeccc44fe848b3136eada657bb9fc26548f47509ec55fcfe745"
+        }
+      ],
+      "completed_commands": 24,
+      "fill_vacuous_audits": 2,
+      "matching_independent_audits": 20,
+      "net_negative_policies": 21,
+      "net_positive_policies": 25,
+      "plan": {
+        "bytes": 3208,
+        "path": "reports/experiment-storage/single-venue-news-analysis-v1.json",
+        "sha256": "c0a2a61379bb075f630ca8c7ebeb06d59ef5200aa8b008ed4f4e1f2684c887ff"
+      },
+      "policies_with_closes": 46,
+      "policy_attempts": 150,
+      "policy_closes": 89,
+      "policy_zero_fill_entries": 61,
+      "rows": 100,
+      "signal_vacuous_audits": 2,
+      "stress_positive_policies": 12,
+      "zero_net_policies": 54
+    }
+  }
+}

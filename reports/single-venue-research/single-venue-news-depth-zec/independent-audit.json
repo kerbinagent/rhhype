@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "sample": "single-venue-news-depth-zec",
+  "counts": {
+    "signal": 10,
+    "request": 15,
+    "ioc": 15,
+    "closed": 5
+  },
+  "raw_capture_verified": true,
+  "signal_checks_vacuous": false,
+  "fill_checks_vacuous": false,
+  "summary_sha256": "f7cd5f51080782c0602cd36f095d78a4c05d27ba468ae1fed4338cdfbb8d4c31",
+  "trace_sha256": "412fdac928acfb889ccd10245e9454235d8f1c74def914806a7ab7f566f054dd",
+  "limits": "Conditional public-book IOC execution. Signal and first-eligible book checks plus cash reconciliation; no private order acknowledgments or authenticated fills. Independent arms must not be summed."
+}
