@@ -1,0 +1,121 @@
+{
+  "schema": "liquidation-delay-coverage-v2",
+  "status": "offline_implementation_only",
+  "recorded_utc": "2026-10-02T10:51:31.803656+00:00",
+  "previous": "reports/experiment-storage/parler-peer-primary-issuance-bound-v1.json",
+  "previous_sha256": "8c33b976b008e973abcbe4989c840376c13c0b1201c15147d6429073e11b07db",
+  "reserved_bytes": 0,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 243007488,
+  "active_research_headroom_bytes": 11747328,
+  "overall_reservation_bytes": 2838874368,
+  "suballocation_bytes": 360448,
+  "allocation": "Within existing rolling offline-analysis2097152. Previously allocated1703936; this360448 makes2064384 and leaves32768. No new global reservation, raw capture or raw copy. Prior results stay retained.",
+  "categories_bytes": {
+    "source": 32768,
+    "tests": 16384,
+    "protocol": 16384,
+    "input_identity_projection": 65536,
+    "six_batch_outputs_and_provenance": 196608,
+    "root_readout_and_receipts": 32768
+  },
+  "parent_method": "reports/experiment-storage/liquidation-delay-observability-v1.json",
+  "parent_method_sha256": "ccab482a1baeff718d91e8447c5de567efcfda46bbdb7f54c7983911f641b2f2",
+  "batches": [
+    {
+      "index": 1,
+      "chunks": [
+        "chunk-000013",
+        "chunk-000014",
+        "chunk-000015"
+      ]
+    },
+    {
+      "index": 2,
+      "chunks": [
+        "chunk-000019",
+        "chunk-000020",
+        "chunk-000021"
+      ]
+    },
+    {
+      "index": 3,
+      "chunks": [
+        "chunk-000025",
+        "chunk-000026",
+        "chunk-000027"
+      ]
+    },
+    {
+      "index": 4,
+      "chunks": [
+        "chunk-000031",
+        "chunk-000032",
+        "chunk-000033"
+      ]
+    },
+    {
+      "index": 5,
+      "chunks": [
+        "chunk-000037",
+        "chunk-000038",
+        "chunk-000039"
+      ]
+    },
+    {
+      "index": 6,
+      "chunks": [
+        "chunk-000043",
+        "chunk-000044",
+        "chunk-000045"
+      ]
+    }
+  ],
+  "store_root": "data/rolling/market-research-v1",
+  "pin_owner": "liquidation_coverage_v2",
+  "output_root": "reports/single-venue-research/liquidation-coverage-v2",
+  "calendar_rule": "All six named chronological exploratory blocks fixed before new raw reads; no adaptive extension, substitutions, early success stopping or reserved input. All six batch/20cell denominators survive failures.",
+  "scope": "Only public label/clock/identity support. No prices, sizes, positions, books, economic outcomes, controls, fills or accounts enter analysis/output. No economic gate or alpha claim.",
+  "parameters": {
+    "episode_spacing_ns": 30000000000,
+    "delay_ns": 400000000,
+    "window_end_ns": 2400000000,
+    "max_source_age_ns": 500000000,
+    "source_clock": "timestamp milliseconds",
+    "first_seen_scope": "all ordinary and nonordinary rows in both arrays including subscription history, within each chunk",
+    "max_decoded_bytes_per_chunk": 1073741824,
+    "max_records_per_chunk": 1000000,
+    "max_line_bytes": 8388608,
+    "max_trade_ids_per_chunk": 500000,
+    "max_order_keys_per_chunk": 500000,
+    "max_label_rows_per_chunk": 10000
+  },
+  "change": "Separate valid identity from live freshness. A well-formed live row older than500ms remains in full deduplicated observed identity history; it is not a trigger or qualifying continuation. Any such row censors open same-market windows and blocks new anchors/qualifications from that message through receipt+2.4s; keep tracking otherwise valid identities during quarantine. Resume afterward only with fresh valid data. Timestamp-future, malformed identity, source regression, unknown market/channel/generation and existing strict errors retain v1 fatal suppression. No other delay/spacing/candidate changes.",
+  "quarantine_ns": 2400000000,
+  "semantics": "First seen means first in retained observations, not actual order birth or complete exchange history. Both source and receipt must still be strictly after anchor+400ms and <=anchor+2.4s for a first-observed distinct order. Initial-message keys/history excluded. Cross-array deduplication and every v1 identity limit retained.",
+  "motivation": "One otherwise-valid old timestamp does not erase previously retained identities. Quarantine gives a new full observation window after the late evidence. This is a distinct measurement method proposed from source logic and v1 coverage failures; original v1 remains immutable.",
+  "outputs": {
+    "gzip_per_batch": 24576,
+    "provenance_per_batch": 8192,
+    "derived_plaintext_memory_per_batch": 1048576,
+    "one_batch_wall_seconds": 240,
+    "overall_wall_seconds": 1500,
+    "receipt_total_bytes": 32768
+  },
+  "decision": "Report admitted/censored/quarantined/suppressed evidence and delayed witnesses in every fixed block/cell. A supported next comparison requires >=10 complete witnessed episodes per same asset/venue in each of the two prespecified superblocks (batches1-3 and4-6), each represented in>=2 constituent blocks. Direction counts remain explicit; no pooled-cell rescue. This is a design support threshold, not power or profit. If unmet, stop before matching/prices; if met, only consider a separately frozen matched cost-aware study.",
+  "run_gate": "No raw reading until source/tests and a compact18input seal/manifest/store identity projection are root reviewed, SHA pinned and committed. Default dry mode; explicit run plus exactplanSHA; refuse existing batch outputs. Input checks before/after, verified gzip EOF and frozen byte/record/state bounds. Preserve failed/pending batch states under bounded receipts.",
+  "source_pins": [],
+  "input_identity_projection": {
+    "path": "reports/experiment-storage/liquidation-delay-coverage-v2-inputs.json",
+    "bytes": 37547,
+    "sha256": "10fe820c9abe07c852b052bb991d2706f232bcb677bc84cd5a98e64f39e819a9"
+  },
+  "preparation_failure": "First all18 pin attempt refused chunk33 before any pin mutation. Metadata then showed33 sealed_failed after venue socket termination,39 sealed_failed for absent selected-market book coverage. Original calendar unchanged; pin16 complete only, never open failed raw. Explicit unavailable chunk rows in batches4/5, not zero witnesses. Observed support count can only refer to processed complete windows, with all missing chunks preserved.",
+  "sources": [
+    "https://apidocs.lighter.xyz/docs/websocket-reference",
+    "https://docs.lighter.xyz/trading/liquidations-and-llp-insurance-fund",
+    "https://raw.githubusercontent.com/edwinyeeshunwan/forced-or-frantic/main/scripts/build_event_table_liq.py",
+    "https://arxiv.org/abs/2607.27070"
+  ],
+  "source_context": "Official book continuity rules do not establish trade-channel completeness. Partial liquidation IOC differs from full takeover/ADL. The external event-study class uses future OI through2h and cannot serve as our live signal. No outside study proves seconds-scale value here."
+}
