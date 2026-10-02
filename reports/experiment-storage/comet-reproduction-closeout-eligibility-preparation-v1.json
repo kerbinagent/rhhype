@@ -1,0 +1,203 @@
+{
+  "accounting": "Thisrecordchargedonce to neweligibilitycontrols. No changes to user2GBrollingallocation, HIP4liveallocation, priorfailures orotherreservations. Allraw/binary/sources retained by identity; releaseonlyunusedreservation afterterminalcompletion. No files deleted.",
+  "active_research_headroom_bytes": 14696448,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 240058368,
+  "closeout": {
+    "actual_retained_unique_inode_bytes": 15726932,
+    "all_existing_bytes_preserved": true,
+    "archive_commit": "7b7b188",
+    "network_or_compile_authority_remaining": false,
+    "old_reserved_bytes": 33554432,
+    "old_runs_cannot_retry": true,
+    "released_unused_reservation_bytes": 16777216,
+    "retained_categories_bytes": {
+      "both_session_messages": 32768,
+      "compiler_raw_retained": 14230072,
+      "compiler_stderr_retained": 0,
+      "compiler_stdout_retained": 1203044,
+      "controls_and_reviews": 65536,
+      "margin": 841204,
+      "official_manifest_raw_retained": 47730,
+      "projection_retained": 8446,
+      "source_tests_design_draft_final_retained": 196608,
+      "sourcify_sources_raw_retained": 75632,
+      "standard_input_retained": 76176
+    },
+    "retained_files": [
+      {
+        "bytes": 9517,
+        "path": "reports/comet-reproduction-v1/design.txt",
+        "sha256": "81b8cf5199b85a36df77bc25a25ab9997dfcba0a33fbc8800d170ab24a5106bd"
+      },
+      {
+        "bytes": 2831,
+        "path": "reports/comet-reproduction-v1/draft-plan.json",
+        "sha256": "4b938d8482e3ab28a115de67c336ed86647aa19a812f7591a6dcea880885456d"
+      },
+      {
+        "bytes": 1984,
+        "path": "reports/comet-reproduction-v1/root-acquisition-review.json",
+        "sha256": "8341b278cc348feda60b658a1adada49321171f71f9925c04bf5c4cca96fc2ae"
+      },
+      {
+        "bytes": 4165,
+        "path": "reports/comet-reproduction-v1/root-preflight.json",
+        "sha256": "cf2a5b7be4ea52e3cb00454d1925e4708185262d7f6c381a5bee1663e89fc906"
+      },
+      {
+        "bytes": 3539,
+        "path": "reports/comet-reproduction-v1/root-reconciliation.json",
+        "sha256": "b7b9c7b26ee0efbd8088f1899e88484620a1b7a15509b7a4361045fa2113edfd"
+      },
+      {
+        "bytes": 449,
+        "path": "reports/comet-reproduction-v1/run-v1/acquire-claim.json",
+        "sha256": "68244127b246b66d56175dc667b47254a7d4aed21315e4c5fb1da1dc6b1022aa"
+      },
+      {
+        "bytes": 732,
+        "path": "reports/comet-reproduction-v1/run-v1/acquire-supervisor.json",
+        "sha256": "f4d990d6224a96ef50ef7cd50577d149cf2d2b504ad0bfa770e16381ca13b2de"
+      },
+      {
+        "bytes": 482,
+        "path": "reports/comet-reproduction-v1/run-v1/compile-claim.json",
+        "sha256": "c170f8254085b1c2fbe1fa34cc11a48da4b850f1c7152ea8f110c70ec124999b"
+      },
+      {
+        "bytes": 787,
+        "path": "reports/comet-reproduction-v1/run-v1/compile-supervisor.json",
+        "sha256": "bd0b5a58e053baa87bd937e9c84fe089743ca195907d544b302c020ba7e7da84"
+      },
+      {
+        "bytes": 491,
+        "path": "reports/comet-reproduction-v1/run-v1/compile-terminal.json",
+        "sha256": "f21971e0fa0fbad51c46ee23a9bec33a05f6450b12a878c903f71708dec4b0ab"
+      },
+      {
+        "bytes": 14230072,
+        "path": "reports/comet-reproduction-v1/run-v1/compiler.raw",
+        "sha256": "5189155ce322d57fb75e8518d9b39139627edea4fb25b5f0ebed0391c52e74cc"
+      },
+      {
+        "bytes": 1331,
+        "path": "reports/comet-reproduction-v1/run-v1/download-terminal.json",
+        "sha256": "61ac32d21dcfbeee4ee1e9b2bf3ae3e9cbc757a2a1d6348eeab1e67cb2e66a9a"
+      },
+      {
+        "bytes": 47730,
+        "path": "reports/comet-reproduction-v1/run-v1/manifest.raw",
+        "sha256": "ee1a2b4811bd1225c220cd2342e2b49a58cbe18f5687f230f456c443b29497d6"
+      },
+      {
+        "bytes": 8446,
+        "path": "reports/comet-reproduction-v1/run-v1/projection.json",
+        "sha256": "30e747aa8da0539e8885cc2ffaf7d74afa9c490d9f4e92353f1cb565432e91ac"
+      },
+      {
+        "bytes": 75632,
+        "path": "reports/comet-reproduction-v1/run-v1/sources.raw",
+        "sha256": "1483b51828b9570daff1c3579daf0cf4781461cb1a8d779a6877c7925ff8bba2"
+      },
+      {
+        "bytes": 76176,
+        "path": "reports/comet-reproduction-v1/run-v1/standard-input.json",
+        "sha256": "7daea1a70e4f7a04162c0849647613414c55d236535fc7862a983a1f6e94f4f0"
+      },
+      {
+        "bytes": 0,
+        "path": "reports/comet-reproduction-v1/run-v1/stderr.raw",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 1203044,
+        "path": "reports/comet-reproduction-v1/run-v1/stdout.raw",
+        "sha256": "3fe562fd189d414b8822b5ce1a7fbe189d6c48ac4efe1abcbb69df1ceed69e01"
+      },
+      {
+        "bytes": 5982,
+        "path": "reports/experiment-storage/comet-reproduction-hip4-live-preparation-allocation-v1.json",
+        "sha256": "1d2a63ddd166129959108c936fbeaf1bf0311e5c5ad54da0599169b0677b0bd4"
+      },
+      {
+        "bytes": 4509,
+        "path": "reports/experiment-storage/comet-reproduction-v1.json",
+        "sha256": "5838b0c91c0dd4d69b04548b947b51830b9dac4f6ae721aabc6a6ed0965628e4"
+      },
+      {
+        "bytes": 30854,
+        "path": "scripts/comet_reproduction_v1.py",
+        "sha256": "247f837e5b6b783fa9490c5bcc2c328e05a3e58bdb9c7bfc2794b7d3be44ce1c"
+      },
+      {
+        "bytes": 18179,
+        "path": "tests/test_comet_reproduction_v1.py",
+        "sha256": "bc3f93ee7b2cdb5016ebd36f6a0a272bd67d2798b23fa776c067e679b54b02b3"
+      }
+    ],
+    "retained_reserved_bytes": 16777216,
+    "status": "completed_both_stages_independently_reconciled",
+    "transport": "Keep32768B for future both-session Comet source/math messages. Two rejected outbound assignments created no Parler message. First incoming after reproduction completion is charged here; no further outbound to remote peer until automatic-review destination approval is resolved."
+  },
+  "new_preparation": {
+    "categories_bytes": {
+      "both_session_messages": 32768,
+      "controls_allocation_reviews_receipts": 65536,
+      "derived_trace": 524288,
+      "margin": 524288,
+      "projection": 32768,
+      "raw_framed_responses": 655360,
+      "source_tests_design_draft_final_sequential_fixtures": 262144
+    },
+    "implementation_scope": "Prepare a small bounded root adapter around the unchanged reviewed offline engine. Reuse existing raw framing/deadline helpers by pin where suitable. Add persistent exclusiveclaim, one hostsupervisor, fixedanonymousHTTPS endpoint, streamed raw prefixes includingfullheaders, strictbudgets and terminal admission. NoHTTPcalls until separatefinalsource/test/designreview, exactplanfreeze androotcommit.",
+    "interpretation": "Conditional returned metadata only. Preserve observed eligibility values even when transitive sourcebinding isunavailable; separate collection-complete and sourcebinding fields. Counterfactual child is provider simulation, not future inclusion or observedfuturestate. All scope and outputlabelchanges must be reviewed before live authority.",
+    "known_implementation_binding": {
+      "address": "0x63e749153baf1838f63ca22c275370bd2b1ceb15",
+      "runtime_bytes": 18599,
+      "runtime_sha256": "b942614560ef7218a52173cc501ce9198f74a558348edf957cda62a218aa20fe",
+      "scope": "Historicalimplementationonly. New wrapper must reject currentimplementation identity mismatch before further evaluation. Proxy/dependencies remain unproved; binding=None does not become a fullcertificate.",
+      "source_reproduction": {
+        "bytes": 3539,
+        "path": "reports/comet-reproduction-v1/root-reconciliation.json",
+        "sha256": "b7b9c7b26ee0efbd8088f1899e88484620a1b7a15509b7a4361045fa2113edfd"
+      }
+    },
+    "owned_paths": [
+      "scripts/comet_eligibility_live_v1.py",
+      "tests/test_comet_eligibility_live_v1.py",
+      "reports/comet-eligibility-live-v1/",
+      "reports/experiment-storage/comet-eligibility-live-v1.json"
+    ],
+    "preparation_limits": "Synthetic fixturesonly within262144B includingallsource/design/draft/final andtemporaryfiles; disablebytecode/no logs. No oldsource edits, new compiler invocation, runtimeartifactdownload, accounts/orders/keys, reservedrollingdata or economics. Actualcollectionmax120sworker plus bounded125ssupervisor, atmost31RPC, each10s and65536B, totalbody524288B; raw framingcap655360B.",
+    "prospective_manifest": "Preserve unchanged peer engine31maximumrequests/23normalineligible, fixedUSDC/WETH and3000fee factory path onlyifchildeligible. Hash-bound state reads, numericparent simulation+finalrecheck. No price/quote/slot0/RPCexpansion, no certificates for unproveddependencies.",
+    "question": "Are the fixed EthereumComet USDC/WETH source-model sale prerequisites reported at one chosen parent and one explicit simulated child? This is metadata availability, not purchase capacity, prices, execution or profit.",
+    "reserved_bytes": 2097152,
+    "reuse_without_modification": [
+      {
+        "bytes": 30601,
+        "path": "scripts/peer_comet_eligibility_v1.py",
+        "sha256": "879f58149d222bdfaa627d28b4335c2b01c72aba51a3771655f61764f473a908"
+      },
+      {
+        "bytes": 14403,
+        "path": "research/peer-comet-eligibility-v1.json",
+        "sha256": "25ae206579b13cf6b4f4329e2615a1bdf4ee6301f8cc5e8d480f543de2cc8dde"
+      },
+      {
+        "bytes": 23578,
+        "path": "scripts/comet_identity_v1.py",
+        "sha256": "ba41a82ed270803d8cef7488c2dfdd5345db9ea49d906e6301a51b28006bebf9"
+      }
+    ]
+  },
+  "overall_reservation_bytes": 2835925248,
+  "previous_active_research_reserved_bytes": 254738432,
+  "previous_global_allocation": {
+    "bytes": 5982,
+    "path": "reports/experiment-storage/comet-reproduction-hip4-live-preparation-allocation-v1.json",
+    "sha256": "1d2a63ddd166129959108c936fbeaf1bf0311e5c5ad54da0599169b0677b0bd4"
+  },
+  "recorded_utc": "2026-10-02T16:41:40.596407+00:00",
+  "schema": "comet-reproduction-closeout-eligibility-preparation-v1"
+}
