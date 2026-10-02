@@ -1,0 +1,124 @@
+Comet implementation identity v1 — offline preparation, not runnable
+
+Purpose and exclusions
+One prospective identity pass against Ethereum chain 1 and the fixed Comet proxy
+0xc3d688b66703497daa19211eedff47f25384cdc3. There are exactly six sequential
+JSON-RPC POSTs to https://ethereum-rpc.publicnode.com/, with no retries,
+redirects, provider fallback, environment proxy, account, key or transaction.
+No eth_call, simulation, balance, reserves, inventory or price request is present.
+Every output keeps source_equivalence, eligibility and economics false.
+
+Primary specification basis
+https://eips.ethereum.org/EIPS/eip-1898 specifies blockHash with
+requireCanonical for eth_getCode and eth_getStorageAt; unsupported/error
+responses stop the pass. https://eips.ethereum.org/EIPS/eip-1967 identifies the
+fixed implementation slot. Its beacon alternative is outside this study.
+The endpoint page reviewed by root is https://ethereum.publicnode.com/.
+Only pinned pure JSON/hex/address/header helpers from the archived source are
+used; no old collector/gate/CLI or package mutation. Loading uses a distinct
+in-memory module name, SHA checking and disabled bytecode.
+
+Exact request sequence
+1. eth_chainId []: require exactly "0x1".
+2. eth_getBlockByNumber ["latest",false]: select the original parent.
+3. eth_getCode [fixed proxy,{blockHash:parent.hash,requireCanonical:true}].
+4. eth_getStorageAt [fixed proxy,fixed ERC1967 implementation slot,same selector].
+5. eth_getCode [decoded implementation,same selector].
+6. eth_getBlockByNumber [ORIGINAL parent.number,false].
+Only parent.hash, parent.number and the validated implementation address may
+resolve the exported build_manifest() templates. Slot data must be exactly
+32 bytes with twelve zero high bytes and a nonzero twenty-byte address.
+Both code responses must be exact-width hex DATA and nonempty. Their decoded
+bytes get SHA256 fingerprints and lengths; these are not keccak/EVM codehashes.
+
+JSON and block identity
+Require JSON-RPC2.0, exact integer ID (not bool) and result/error schema.
+Duplicate keys, nonfinite numbers, excessive depth/nodes, malformed JSON,
+oversized bodies and RPC errors fail closed without fallback/retry.
+The reviewed header validator requires canonical quantities for number/time,
+uint64 number, uint40 time, and 32-byte hash/parentHash/stateRoot. Complete
+returned block objects from calls 2 and 6 must match under compact sorted
+JSON serialization, including every extra field and transactions list. This
+is provider-asserted identity, not a recomputed cryptographic header hash or
+independent consensus/canonicality proof. No previously observed runtime
+fingerprint or expected implementation is assumed.
+
+Execution, deadlines and refusal
+Default CLI prints one bounded dry receipt and performs zero HTTP/output writes.
+--run requires --plan-sha256 plus frozen_comet_identity status, exact immutable
+scope/runtime and unique source/test/helper pins. Fixed allocation is also
+rechecked. The plan is bounded to 16KiB. Existing output directory refuses the
+run before any request; outputs are exclusively created and never overwritten.
+Root must freeze/launch the exact final plan later on the persistent host.
+A parent SIGALRM bounds the process to 75s from run() entry, including verify.
+Worker work deadline is 72s; supervisor joins through 73s then kills the known
+worker and permits up to 0.5s join. Per-request SIGALRM covers TLS construction,
+DNS, connection, headers, body drip and incremental retention, using at most
+10s or the remaining worker budget. These POSIX timers require the CLI main
+thread. Source pins are checked before every call, before/after successful
+projection, in worker cleanup, and again before supervisor publication.
+Any failure halts future requests; future observations remain unavailable.
+Attempt counts mean transport-helper invocations, not authenticated packet
+send counts. Interrupted supervisor fallback uses null counts, never zero.
+
+Exact raw body retention and worst-case accounting
+responses.frames.pending is one exclusive append-only inode. Its magic is
+COMET-ID-V1 followed by LF. Each frame is one ASCII byte B/D/E, four unsigned
+big-endian payload-length bytes, and payload. B holds compact sorted begin
+JSON (request, body cap, admission clock, dispatch uncertainty). D holds exact
+body bytes returned by the HTTP reader, unencoded and unmodified. E holds
+compact sorted JSON (HTTP status if available, body length/SHA256, outcome,
+receipt clock). Reader fragments are coalesced into4096B blocks; any residual prefix is
+flushed on EOF/error. Each emitted complete frame is flushed and fsynced
+immediately. The worker supervisor can kill before a buffered prefix has
+been emitted; in that case the durable raw prefix is explicitly partial.
+No base64/export/body duplicate is written to disk. Hardlink publication to
+responses.frames shares the inode; .pending is then unlinked. After worker
+kill, the supervisor finalizes the same partial inode, including any incomplete
+last frame. Received application prefixes survive transport/timeout failure;
+bytes never returned from TLS/HTTP buffering are not claimed as observed.
+IncompleteRead.partial bytes are retained up to the remaining body allowance.
+
+Body caps are 4096,65536,65536,4096,65536,65536, sum270336. HTTP requests identity
+encoding only. Reads request no more than remaining cap, never a cap+1 byte.
+Declared oversized length refuses before body reading. An exact-cap body is
+unavailable without reading an extra byte to prove EOF. Unknown-length bodies
+also stop at the boundary; they cannot consume the next byte. Every D payload
+is at most4096 after transport coalescing, with at most66 D frames (330B
+framing) across the six allowed bodies. B frames contain the bounded exact
+manifest, admission clock and cap; each is below1000B. E frames contain
+bounded status/outcome, length/SHA and receipt clock; each is below500B. Thus
+270336+330+6*(1005+505)+12 magic bytes <280000B, below327680B. The explicit
+frame-write cap independently refuses any violated expectation. Raw .pending/final names
+share one inode; no independently allocated temporary raw copy exists.
+
+Successful replay and admission
+Before projection, reopen the bounded raw file, enforce frame/request order,
+reconstruct all six exact bodies, verify each end length/SHA/status/outcome,
+reparse every envelope and rerun the full identity state machine. Compare the
+replayed identity projection with the in-memory result. Only then publish the
+separate <=16384B projection, linked exclusively from a same-inode .pending.
+Terminal controls bind the whole raw-file SHA and retained byte length. A
+projection is admitted only when terminal AND supervisor statuses are
+identity_fingerprints_available, worker exitcode zero and final source-pin
+checks passed. A projection alone is insufficient: a later pin failure or
+supervisor interruption leaves the pass unavailable without overwriting it.
+Failure never exports a guessed implementation or successful identity.
+
+Controls and budget
+claim.json <=4096B; terminal.json <=4096B; supervisor.json <=2048B. Their total
+is <=10240B, below12288B even with same-inode pending publication names.
+Claim includes final plan/source pins/manifest SHA and clock. Terminal records
+attempts, retained response bytes, failure class and raw identity when worker
+completed cleanup. Supervisor records worker exit, terminal SHA, elapsed time
+and post-run pin result. Protected terminal fallback retains partial raw and
+uses unknown counts if worker did not publish. No stdout includes bodies,
+RPC errors, addresses discovered from responses or fingerprints; normal CLI
+prints only status and the three false claims. No bytecode or retained logs.
+
+Offline verification and root handoff
+Nine focused synthetics verify manifest, identity, strict JSON/ABI, raw replay,
+transport boundaries, timeout/error-prefix preservation, same-inode publication,
+dry behavior and frozen pins. Tests use small removed fixtures and no network.
+Root reviews and freezes the final plan, exact source/test/helper pins and runtime
+before one persistent-host run. No live identity observation was made here.
