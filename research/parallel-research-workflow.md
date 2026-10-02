@@ -275,7 +275,8 @@ USDG remains exploratory. The primary coverage gate failed. No winner replaces
 the primary, and neither news replication nor repeatable profit is established.
 
 The [Comet reproduction](../reports/comet-reproduction-v1/root-reconciliation.json)
-matched all 18,599 runtime bytes, 70 immutable ranges and literal metadata from
-11 authenticated sources. Root and Sol independently reconciled one sandboxed
-compile. Dependencies, proxy behavior, sale availability and economics remain
-unproved. The failed gateway stays retained; Clipper is offline.
+matched all 18,599 runtime bytes and 70 immutable ranges. The subsequent
+[31-call pass](../reports/comet-eligibility-live-v1/root-reconciliation.json)
+reported sale prerequisites open at its parent and simulated child, but WETH
+stock was only 438,676,007,750 native units. A separate minimum-gas filter is
+frozen. Dependencies and economics remain unproved. Clipper is offline.
