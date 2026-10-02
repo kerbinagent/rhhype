@@ -1,0 +1,25 @@
+{
+  "schema": "comet-runtime-trailer-offline-exchange-v1",
+  "recorded_utc": "2026-10-02T14:46:08.098094+00:00",
+  "status": "offline_retained_input_decode_and_small_message_only",
+  "parent": {
+    "path": "reports/experiment-storage/parler-peer-clipper-source-allocation-v1.json",
+    "bytes": 2363,
+    "sha256": "e42538044b465d2db3d76e79872bfe50184a5aebcd941d64b547a634e460bc9b"
+  },
+  "global_change_bytes": 0,
+  "peer_source_cap_bytes": 3145728,
+  "previous_source_commitment_bytes": 3064010,
+  "all_copy_micro_package_reserved_bytes": 12288,
+  "source_commitment_after_bytes": 3076298,
+  "source_headroom_after_bytes": 69430,
+  "scope": "Root decodes only the already-retained proxy and implementation runtime trailers from identity result55b8437. Read final2bytes as big-endian length; if<=256B parse exact CBOR map offline and send at most2048ASCII bytes for both runtimes. If larger or invalid, report length/unavailable only. No RPC/API/document fetch, compiler download, raw-runtime transfer or new economic input.",
+  "input": {
+    "path": "reports/comet-identity-v1/run-v1/responses.frames",
+    "bytes": 89870,
+    "sha256": "7f01d33af090049e42bf70e9b04ac29f91b924d1185f97ed0398bf102721fe3e"
+  },
+  "claims": "Embedded compiler/hash fields are bytecode claims only. They do not prove source/compiler/deployment equivalence, authority, eligibility or economics.",
+  "copies": "This allocation, one compact root extraction receipt, all control/result transport body copies across both sessions fit12288B. Existing raw and peer packages are not recopied. No new workspace artifact or raw copy at peer.",
+  "method_source": "https://docs.soliditylang.org/en/v0.8.15/metadata.html"
+}
