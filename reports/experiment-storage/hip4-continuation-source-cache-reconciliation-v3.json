@@ -1,0 +1,50 @@
+{
+  "schema": "hip4-continuation-source-cache-reconciliation-v3",
+  "recorded_utc": "2026-10-02T14:38:40.819308+00:00",
+  "status": "retrospective_omission_disclosed_and_future_capacity_allocated",
+  "previous_category_amendment": {
+    "path": "reports/experiment-storage/hip4-continuation-category-reconciliation-v2.json",
+    "bytes": 2559,
+    "sha256": "ce1ef95d83b1ae98267e50bc6462186b2c0dd66b157b2197b425ebe52a8b1a34"
+  },
+  "previous_global_allocation": {
+    "path": "reports/experiment-storage/comet-identity-v1-allocation.json",
+    "bytes": 2945,
+    "sha256": "fa3a78f729ced1c332dc281e7fa8d7ec00672f954c2d7b4e5e377551b0c4f62c"
+  },
+  "added_global_source_reservation_bytes": 786432,
+  "continuation_total_after_bytes": 1835008,
+  "categories_after_bytes": {
+    "source_tests_docs_protocols_and_all_copies": 1212416,
+    "raw_exact_gzip_and_all_copies": 491520,
+    "derived_outputs_reviews_controls": 131072
+  },
+  "previous_active_research_reserved_bytes": 249823232,
+  "active_research_reserved_bytes": 250609664,
+  "active_research_pool_bytes": 254754816,
+  "active_research_headroom_bytes": 4145152,
+  "overall_reservation_bytes": 2846476544,
+  "omission": {
+    "repo_source_protocol_after_authorized_corrections_bytes": 393696,
+    "previously_unreported_scratchpad_bytes": 466803,
+    "scratchpad_files": 35,
+    "peer_reported_task_output_bytes": 59399,
+    "root_observed_task_output_bytes": 56130,
+    "task_output_observation": "Harness outputs are mutable;26 files in peer inventory and27 at root read. Reserve131072B for all extant and future intentional poll outputs; do not assume immutable sizes.",
+    "root_observed_source_bytes_without_task_output": 860499,
+    "category_before_this_amendment_bytes": 425984,
+    "violation": "Temporary documentation downloads and staged copies had not been counted before materialization. Even without task outputs, source exceeded its category by434515B. This amendment records the prior failure; it does not retroactively claim preallocation."
+  },
+  "scratch_base": "/tmp/claude-1000/-home-harry-projects-research-rhhype/e2c9ac4e-a5d3-480f-a2c6-31db27dc1069",
+  "source_commitments": {
+    "repo_and_scratch_snapshot_bytes": 860499,
+    "all_poll_output_reserved_bytes": 131072,
+    "root_final_expiry_plan_and_preflight_reserved_bytes": 12288,
+    "root_source_archive_and_inventory_reserved_bytes": 147456,
+    "worker_remaining_corrections_pairing_review_reserved_bytes": 32768,
+    "this_amendment_reserved_bytes": 4096,
+    "unassigned_margin_bytes": 24237
+  },
+  "next_authority": "Preserve every original/cache/draft and record a complete hash inventory. Root may archive the31 downloaded source files once within147456B. Worker may finish the existing forward/inverse source/math review within32768B including copies after reconciliation; no fresh downloads, new collector or data request. Stop routine polling materialization before131072B.",
+  "unchanged": "Existing393216B book raw,49152B expiry raw earmark,49152B unassigned raw, all derived reservations and the remote peer9MiB remain intact. HIP4live/settle/template reads are ungranted. Retain original omission and all evidence."
+}
