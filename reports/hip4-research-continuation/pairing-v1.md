@@ -6,7 +6,10 @@ This review uses existing metadata, documents and the books-v1 bundle only; it m
 - depth reported only as observed;
 - inverse-first with its NO_F residual, which root's 14:50 correction says is an asset claim, not a debt.
 
-Later additions: contingent closure (section 2), and section 4 aligned with the [live correction design](live-v1-correction-design.md).
+Later additions:
+- contingent closure (section 2);
+- the round-trip swing (section 3);
+- section 4 now points to the [pre-registered specification](pairing-spec-v1.md).
 
 The staged 14:34 draft is preserved in the session scratchpad.
 
@@ -51,7 +54,7 @@ The staged 14:34 draft is preserved in the session scratchpad.
 
 - The baseline −m(c_conv + c_merge) plus the two increments gives the closed-pair total. The closure row also holds with partial legs, because the merge recovers the unsold (m − qᵢ)·YES_Ni that were valued at 0.
 - A closure with Σ qᵢaᵢ(t_C) > m(1 − c_merge) is dominated. It pays cash now to give up m·YES_F, which settles to `settleFraction` quote tokens (A) and so is worth at least 0, provided settleFraction ≥ 0 (its range is not stated).
-- The earlier trigger, "pair total ≥ θ", admitted such dominated closures. Section 4 now uses the closure row as the trigger.
+- The earlier trigger, "pair total ≥ θ", admitted such dominated closures. The [specification](pairing-spec-v1.md) uses the closure row as the trigger.
 - At zero fees the two tests are Σb > 1 and then Σa < 1. A forward-first pair is therefore a forward excursion followed, in the same window, by an inverse excursion that uses the held YES_F.
 
 **Inverse first.** The documented paths to a YES_F are:
@@ -113,53 +116,33 @@ The forward margin is 1 − Σb(q) and the inverse margin is Σa(q) − 1. Each 
 - Fees add f/(1 − f) to the forward margin.
 - This is one static snapshot. Depth during a future excursion is unknown, so no executable size is inferred.
 
-## 4. Proposed causal statistics (source and math proposal; no live code)
+**Round-trip swing.** At zero fees, a forward-first pair needs Σb to rise through 1 and then, later in the same window, Σa to fall through 1. With the displayed spread unchanged, the basket mid must therefore rise and then fall by at least the sum of the two margins:
 
-**Decision.** Decisions use the causal screen of the [live correction design](live-v1-correction-design.md), section 2:
-- receipt-order state with frozen source-clock gates;
-- qualification at r_Q = r₀ + 1,000 ms of receipt time, with no ending frame by then;
-- all named legs supported;
-- r_Q before any relevant meta receipt and before any falsification receipt.
+| Q | q = 1 | q = 500 |
+| --- | --- | --- |
+| 357 | 0.00165 | 0.00574 |
+| 358 | 0.00637 | 0.01222 |
+| 359 | 0.01108 | 0.01170 |
+| 361 | 0.01448 | 0.02900 |
+| 362 | 0.00894 | 0.00986 |
+| 363 | 0.00434 | 0.00709 |
+| 366 | 0.01143 | 0.01190 |
+| 367 | 0.01821 | 0.01878 |
+| 368 | 0.00624 | 0.39467 |
+| 369 | 0.00949 | 0.01142 |
+| 370 | 0.01077 | 0.01281 |
 
-Nothing is backdated. The limits bᵢᴰ and m (the minimum named bid size) are fixed at r_Q.
+- The q = 1 sums are exact touch sums. The q = 500 sums add rounded entries, so they are good to ±0.00001.
+- Q357 and Q358 have schedule hints of 18:45 UTC on 2 October, and no live run is authorized.
+- Of the other nine, Q363 needs the smallest swing at both depths, which is consistent with proposing it in live-v1. This is a static ranking only.
 
-**Entry.**
-- **Arrival time.** Sell orders are assumed to arrive at source time s_A = S(r_Q) + δ. S(r) is the largest accepted source time received by r, and δ is fixed in advance. The proposal is δ = 500 ms; this repo's perp probe measured p95 receipt ages of 0.499 s and 0.512 s.
-- **Pricing the fill.** Fills are priced on the book in force at s_A, rebuilt from accepted frames with source time ≤ s_A. That includes frames received after r_Q, because it is the book the order would meet; it never alters the decision.
-- **Leg fills.** Leg i fills qᵢ = min(m, bid size) if its bid is at least bᵢᴰ, and 0 otherwise. Any unfilled quantity stays residual.
-- **Censoring.** If the stream stops before any accepted frame with source time ≥ s_A, the decision is `entry_censored`.
+## 4. Statistic and open assumptions
 
-**Closure attempts.**
-- **Trigger.** Each later qualifying causal run of Σ qᵢaᵢ ≤ m(1 − c_merge − θ_c) gives at most one attempt, arriving at S(r_Q′) + δ, where r_Q′ is that run's qualification time. This is the closure row of section 2; the zero-fee proposal is θ_c = 0.
-- **Success.** The attempt succeeds only if, in the arrival book, every leg with qᵢ > 0 shows an ask no higher than its attempt-time ask and a size of at least qᵢ.
-- **Miss.** Otherwise it is a `close_miss`, and no fills are assumed. Partial fills are not modelled, which is optimistic, and misses are counted.
+The proposal formerly in this section is superseded by the pre-registered [supported-path pairing specification](pairing-spec-v1.md). That specification fixes:
+- decisions, displayed conditional evaluation at r_Q + 500 ms, and partial closure;
+- classes, bounds and denominators, for forward-first and inverse-first separately;
+- one counterexample per unresolved settlement assumption.
 
-**Classes.** Each decision falls in exactly one class:
-- `entry_censored`;
-- `closed`;
-- `open_at_window_end`;
-- `censored_open`: a stop other than `window_closed` before closure;
-- `invalidated`: a relevant meta event or falsification before closure.
+The specification is unimplemented.
 
-**Denominators and bounds.** No class leaves the denominator.
-- **Counts.** Let decisions = all classes and admitted = decisions − entry_censored.
-- **Closure before window end.** Report closed / admitted, with the bound [closed / admitted, (closed + censored_open + invalidated) / admitted]. Show closed / (closed + open_at_window_end) only as a conditional complete-case rate.
-- **Conservative value.** For each admitted decision, the value v is the entry increment plus any closure increment from section 2, with residuals at 0. For `censored_open` the bound is [v, v + m(1 − c_merge)]; for `invalidated`, v is a lower bound only.
-- **No survival estimator.** Stops such as `cap_reserve_reached` plausibly track message rate, and so repricing, so censoring cannot be assumed independent of closure.
-- **Rate.** Report decisions per supported hour, using the coverage partition of the correction design.
-- **Capital.** Each decision gets its own notional m sets, and the maximum concurrent Σm is reported descriptively only. A capital-limited replay must fix n in advance and keep decisions without free sets in the denominator as `capacity_skipped`.
-
-**Inverse-first** is reported separately and never pooled with forward-first.
-- Its entry cash is −m(Σa(E) + c_split + c_merge), with NO_F counted at 0, so it is never positive before closure.
-- Its closure, by `negateOutcome` and sale, therefore uses the pair rule Σ qᵢbᵢ(C)(1 − f) ≥ m(Σa(E) + c_conv + c_merge + θ_c).
-- The same classes and denominators apply.
-
-## 5. Required before any economic claim
-
-- the base fee rate and conversion fees (H);
-- the mainnet fee formula (L);
-- amount granularity and minimum size (D, M);
-- residual settlement timing and post-settlement handling (A, B, E, F);
-- quote identity (I).
-
-On existing data, no forward route, inverse route or same-instant pair is positive for any match question at any shown depth. The proposed statistics measure only displayed, causally reachable states. They do not measure fills.
+**Conclusion on existing data.** No forward route, inverse route or same-instant pair is positive for any match question at any shown depth. Any future statistic measures displayed, causally reachable states, not fills. It stays conditional on fees (H, L), granularity (D, M), settlement handling (A, B, C, E, F) and quote identity (I).
