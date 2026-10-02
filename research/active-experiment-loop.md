@@ -2008,3 +2008,8 @@ Two exact Premium losses / −$3.3443028994, no gains or estimates; HL price-lim
 ### Routine review 174 — 2026-10-02 02:06:33 UTC
 
 Six exact losses: convergence two / −$2.2099200530, Premium four / −$7.2386710458; no gains or estimates, two HL price-limit rejects. Complete coverage and exact report/independent snapshot archived with guards. Cumulative 2,530: 2,497 exact losses, one estimate, five paired gains, 27 rescue gains. 02:02 fresh busy lag 52.39 ms retained; review fresh/ok 42.25 ms, four feeds. Carry 307 sampled / one invalid / 556 future; news helpers waiting/fresh, economics false. Archive 3,757,011 B; projection 4,499,549 B under 5 MiB; next 02:26:33 UTC.
+
+
+### Routine review 175 — 2026-10-02 02:26:33 UTC
+
+One exact Premium loss / −$1.8972010536; no gains or estimates, complete coverage. Independent snapshot advanced two closes across boundary and is not pooled. Exact deterministic archives/guards passed. Cumulative 2,531: 2,498 exact losses, one estimate, five paired gains, 27 rescue gains. Paper fresh/ok, four feeds; carry 311 sampled / one invalid / 552 future. News helpers waiting/fresh, economics false. Archive 3,761,335 B; projection 4,498,531 B under 5 MiB; next 02:46:33 UTC.
