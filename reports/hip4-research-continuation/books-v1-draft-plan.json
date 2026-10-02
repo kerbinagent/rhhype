@@ -1,0 +1,162 @@
+{
+  "schema": "hip4-continuation-books-v1",
+  "status": "draft_book_snapshot",
+  "draft_note": "Collaborator draft. Root sets status frozen_book_snapshot, pins and validation, and commits it as reports/experiment-storage/hip4-continuation-books-v1.json. No request is authorized by this draft.",
+  "previous": "reports/experiment-storage/hip4-research-continuation-allocation-v1.json",
+  "previous_sha256": "5f0053c23c3c46ead5863665e8fb80b8a0aaa66ce1a71422f7740e101a2e3a60",
+  "reserved_bytes": 0,
+  "allocation_reference": "Within the continuation grant: raw bundle <= 393216 of 524288; projection 49152 + receipts 16384 of 131072.",
+  "frozen_inputs": {
+    "metadata_projection": "reports/hip4-outcome-v1/metadata-v1/metadata.json",
+    "sha256": "66913ed2f88aca6f05c4f32f81b438d0abd8228e660c9b97a8165e4cf6bf8788",
+    "protocol_freeze_commit": "9fac381 (pre-request metadata protocol and source)",
+    "result_commit": "341ee58 (metadata.json, raw gzip and root receipt)"
+  },
+  "hypotheses": {
+    "H1": "At one bracketed snapshot some fixed question admits a zero-fee static conversion cycle at the touch (sum of YES bids > 1 or sum of YES asks < 1).",
+    "H2": "Recurring BTC binary 7544 and bucket question 371 are valuation-infeasible at the touch in the agnostic six-state model or in the F=0 semantic model (each conditional; hold-to-settlement candidate only; infeasibility authorizes no naked short)."
+  },
+  "premises": {
+    "P1": "Membership equals the frozen projection and the pre and post outcomeMeta reads show the question unchanged (checked).",
+    "P2": "Members active and orderable during the snapshot (not proven; bracketing only).",
+    "P3": "Documented split/merge/mergeQuestion/negate available at zero cost in the books' quote token (label USDC; identity unverified).",
+    "P4": "Merged YES/NO book: probed by two NO-side mirrors comparing every displayed level (price complement, size, count) exactly; a same-time mismatch falsifies. Touch and deeper levels are displayed orders, not proof of takerability.",
+    "P5": "Member book server times within 2000 ms, each book received at most 5000 ms after and at most 250 ms before its server time, and member requests from first send to last receive within 2000 ms compared in exact nanoseconds (all checked; together they define one recorded quote vector, not proven simultaneity).",
+    "P6": "Recurring bucket index map index:0=L, index:1=M, index:2=H (assumed; checkable after settlement).",
+    "P7": "Binary 7544 spec byte-identical (canonical JSON) to the frozen baseline in both outcomeMeta reads, present exactly once (checked; required for H2).",
+    "P8": "Contract-spec common interpolated mark and expiry for 7544 and question 371 (official spec; assumed in both H2 models).",
+    "P9": "Common quote collateral for 7544 and question 371: both labelled USDC; identity unresolved beyond the label; H2 makes no USD claim."
+  },
+  "exact_claim": "Conditional on P1-P5 and on reading the frozen vector of recorded quotes as one executable state: if sum(bid) <= 1 <= sum(ask) for a usable question (missing bid=0, missing ask=1, exact arithmetic), no sequence of taker trades and documented zero-cost conversions against that state yields positive closed cash, at the touch or at depth. Fees, discrete lots and minimum sizes can only remove such cycles. The gates do not prove simultaneity: prices that change during the request window could create routes that this snapshot cannot exclude. A failed certificate is only a candidate.",
+  "request_plan": {
+    "method": "POST",
+    "url": "https://api.hyperliquid.xyz/info",
+    "connection": "sequential requests on one keep-alive connection; after any protocol-indicated close (response.will_close or Connection: close) the connection is retired and a new one is opened only for the next distinct planned request; never a retry; every open, including any implicit reconnect, is counted in connections_opened",
+    "order": "outcomeMeta; per question ascending, members ascending YES l2Book, mirror NO probe right after its YES book, binary 7544 YES after question 371; outcomeMeta",
+    "request_count": 91,
+    "documented_weight": 218,
+    "meta_body_cap": 196608,
+    "book_body_cap": 8192,
+    "bundle_gzip_cap": 393216,
+    "request_deadline_seconds": 10,
+    "process_deadline_seconds": 150,
+    "min_spacing_seconds": 0.05,
+    "retry": false,
+    "redirects": false,
+    "environment_proxies": false,
+    "fallbacks": [],
+    "any_stop_is_failure": true
+  },
+  "analysis_plan": {
+    "question_ids": [
+      198,
+      199,
+      200,
+      250,
+      289,
+      331,
+      357,
+      358,
+      359,
+      361,
+      362,
+      363,
+      366,
+      367,
+      368,
+      369,
+      370,
+      371
+    ],
+    "groups": {
+      "tournament_winner": [
+        198,
+        199,
+        200,
+        250
+      ],
+      "policy_rate": [
+        289,
+        331
+      ],
+      "match_result": [
+        357,
+        358,
+        359,
+        361,
+        362,
+        363,
+        366,
+        367,
+        368,
+        369,
+        370
+      ],
+      "recurring_btc_bucket": [
+        371
+      ]
+    },
+    "mirrors": [
+      1472,
+      7551
+    ],
+    "mirror_scope": "every returned level on both sides: price complement, size and count",
+    "dominance": {
+      "binary": 7544,
+      "question": 371,
+      "binary_spec": {
+        "outcome": 7544,
+        "name": "Recurring",
+        "description": "class:priceBinary|underlying:BTC|expiry:20261003-0600|targetPrice:85971|period:1d",
+        "sideSpecs": [
+          {
+            "name": "Yes"
+          },
+          {
+            "name": "No"
+          }
+        ],
+        "quoteToken": "USDC"
+      },
+      "index_map": {
+        "L": 7551,
+        "M": 7552,
+        "H": 7553,
+        "F": 7550
+      },
+      "models": {
+        "agnostic_six_state": "states L,M1,M2,H,F0,F1 with B=M2+H+F1: conversions plus the contract-spec common mark; nothing assumed about B in the fallback state",
+        "fallback_zero_semantic": "adds the semantic premise F=0, intersected with the F quotes (a positive F bid is a premise conflict)"
+      },
+      "premises": {
+        "P8": "contract-spec common interpolated mark and expiry for 7544 and question 371",
+        "P9": "common quote collateral for 7544 and question 371: both labelled USDC; identity unresolved beyond the label; no USD claim"
+      },
+      "scope": "conditional valuation feasibility only; infeasibility authorizes no naked short; construction, collateral and settlement gates remain future work"
+    },
+    "max_server_book_spread_ms": 2000,
+    "max_local_request_window_ms": 2000,
+    "max_book_age_ms": 5000,
+    "max_book_future_ms": 250,
+    "min_usable_questions": 12,
+    "arithmetic": "exact decimal context (prec 120, Inexact and Rounded trapped); px/sz at most 20 integer and 30 fractional digits"
+  },
+  "output_dir": "reports/hip4-research-continuation/books-v1",
+  "output_limits_bytes": {
+    "bundle_gzip": 393216,
+    "projection": 49152,
+    "claim_terminal_and_supervisor_receipts": 16384
+  },
+  "decision_rule": {
+    "park_static_conversion_at_snapshot": "At least 12 of 18 questions usable, every usable question certified, and P4 not falsified.",
+    "candidates_for_separate_review": "Any usable question fails the certificate; next is a separately frozen fee/depth/precision/timing review, never execution or profit.",
+    "inconclusive": "Merged-book premise falsified, fewer than 12 usable questions, any stop (retained prefix and terminal only, no projection), or any supervisor gate failure. Candidates and gated certificate failures are listed even when inconclusive.",
+    "H2": "Reported for both models with blockers; usable only with Q371 and 7544 metadata unchanged in both reads, fresh books within the windows, and P4 not falsified.",
+    "denominator": "All 18 questions with per-question status and group totals (tournament 4, policy rate 2, match 11, recurring BTC 1); groups are correlated clusters, not independent regimes."
+  },
+  "timing": "Run once at a root-chosen time; prefer before 18:45 UTC 2 October (scheduled match starts per labels, used only for timing advice). Pre/post reads invalidate any changed question.",
+  "exclusions": "No orders, signing, accounts, websocket, RPC, trades, asset contexts, tokenDetails, spotMeta, settledOutcome, retries or alternative endpoints. No rolling/news data.",
+  "design": "reports/hip4-research-continuation/books-v1-design.md",
+  "source_pins": [],
+  "offline_validation": {}
+}
