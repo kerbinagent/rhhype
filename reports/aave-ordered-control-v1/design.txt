@@ -1,0 +1,60 @@
+Control: omit the one transaction preceding the fixed first liquidation
+
+The original ordered replay is complete and independently audited. It
+reproduced both real receipts and exposed two native transfers. The prefix
+emits an AnswerUpdated-shaped event. The present question is whether the
+same original liquidation, with original block context, also succeeds without
+the prefix. This control was selected after inspecting that positive replay;
+it is not an untouched prospective strategy sample or an economic backtest.
+
+Copy the exact retained eth_simulateV1 params from the successful positive
+run. Remove only calls[0]; the original calls[1] remains unchanged. Preserve
+the parent block number and all block overrides, original sender, destination,
+calldata, value, gas limit, fees, nonce, access list and chain ID. Validation
+and traceTransfers remain true. No state overrides, funding changes, signatures
+or transaction submission. Do not optimize fees or introduce another call.
+
+Fixed maximum five RPCs against https://ethereum-rpc.publicnode.com:
+1 eth_chainId, must be1.
+2 Parent header by retained number, must match retained hash/state/context.
+3 Exactly one eth_simulateV1, original liquidation without its prefix.
+4 Parent header recheck.
+5 Target header and original two-transaction prefix recheck.
+No alternate block, target, provider, retry, transport fallback or rerun.
+
+The observed control outcomes are distinct:
+- status0 with no logs: reverted_without_prefix; retain returnData and strictly
+  decode a canonical Error(string) if present. Gas is simulated and not spent.
+- status1, original gas and regular logs: same_receipt_reproduced_without_prefix.
+- status1 with other gas/logs: succeeded_with_different_effects.
+Transport/RPC/schema/context/cap failures are unavailable and never counted
+as an observed EVM revert. Both success and revert still require canonical
+header rechecks. One-call result must preserve the target block context.
+Successful calls require a logs array; failed-call API responses may omit it.
+Failed calls require a nonempty structured error; missing error is unavailable.
+Any present synthetic native events are strictly decoded before comparison.
+
+A revert with the prefix absent, versus matched success with it present,
+would show dependence on that prefix under the provider's historical model.
+It does not alone identify which internal prefix state change is responsible,
+independently prove the oracle's identity/wiring, or establish our ability to
+capture a liquidation. There is no economic accounting in this control.
+
+Allocate320KiB from existing unreserved research headroom:192KiB raw files,
+64KiB source/tests/design/plan,32KiB controls/review,8KiB projection,24KiB margin.
+Existing Mac expansion escrow and all original evidence remain reserved.
+Body cap160KiB; per-slot caps4096/32768/65536/32768/32768B plus one retained
+sentinel; raw cap196608B; request cap8192B; header and receipt caps2048B each.
+Reserve full cap+sentinel+request+header+receipt before dispatch. Each fixed
+slot has request.json, headers.json, body and receipt.json. Body fragments
+are written and fsynced as received. Failed prefixes remain on disk; successful
+projection requires all20 raw files and exact offline replay with body hashes.
+
+Maximum20s per request,110s work,120s wall,20 CPU seconds,512MiB address space,
+1,200,000 supplied gas. Default dry; exact frozen plan SHA/runtime/source/input
+pins and an exclusive output directory required for the single run. Recheck
+pins before publication and terminal. No collector/frozen predecessor changes.
+
+Primary API semantics are inherited from the reviewed positive replay:
+https://ethereum.github.io/execution-apis/docs/ethsimulatev1-notes/
+https://geth.ethereum.org/docs/interacting-with-geth/rpc/objects

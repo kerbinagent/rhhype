@@ -1,0 +1,51 @@
+{
+  "active_research_headroom_bytes": 2424832,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 252329984,
+  "bounds": {
+    "body_bytes": 163840,
+    "cpu_seconds": 20,
+    "fallbacks": 0,
+    "ram_bytes": 536870912,
+    "raw_bytes": 196608,
+    "request_seconds": 20,
+    "requests": 5,
+    "retries": 0,
+    "total_call_gas": 1200000,
+    "wall_seconds": 120
+  },
+  "categories_bytes": {
+    "controls_reviews": 32768,
+    "margin": 24576,
+    "projection": 8192,
+    "raw_requests_headers_bodies_receipts": 196608,
+    "source_tests_design_plan": 65536
+  },
+  "headroom_after_pending_escrow_bytes": 327680,
+  "manifest": [
+    "chainId",
+    "parent_header",
+    "single_eth_simulateV1_without_prefix",
+    "parent_recheck",
+    "event_recheck"
+  ],
+  "new_reserved_bytes": 327680,
+  "overall_reservation_bytes": 2847410432,
+  "owned_paths": [
+    "scripts/aave_ordered_control_v1.py",
+    "tests/test_aave_ordered_control_v1.py",
+    "reports/aave-ordered-control-v1/"
+  ],
+  "pending_mac_expansion_escrow_bytes": 2097152,
+  "preserved_evidence": "All census and positive replay sources/results remain unchanged; no reservations released or evidence deleted.",
+  "previous_global_allocation": {
+    "path": "reports/experiment-storage/aave-ordered-replay-preparation-v1.json",
+    "sha256": "cf97308b9d185554607a3bd823f714be55aef6d84db2582ba3d536fe3c209620"
+  },
+  "question": "At identical retained parent state and target block context, does the original first liquidation succeed when its one preceding transaction is omitted?",
+  "recorded_utc": "2026-10-02T22:28:54.680076+00:00",
+  "schema": "aave-ordered-control-allocation-v1",
+  "scope": "Copy the retained successful ordered simulation payload, remove only the preceding call, preserve original target transaction and all context/validation/trace options. Public RPC simulation only, no state overrides or transaction submission.",
+  "selection": "Post-positive-replay causal control for the same fixed event; selected after observing original ordered result. No alternate target, search, replacements, parameter tuning or economic optimization.",
+  "status": "offline_preparation_only"
+}

@@ -1,0 +1,27 @@
+{
+  "active_research_headroom_bytes": 2420736,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 252334080,
+  "control_record_allocation": "existing root continuation coordination16KiB, not this4KiB document supplement",
+  "current_named_documentation_bytes": 33730,
+  "headroom_after_pending_escrow_bytes": 323584,
+  "legacy_documentation_allocation": "reports/experiment-storage/research-process-review-v1.json",
+  "legacy_documentation_cap_bytes": 30720,
+  "new_combined_documentation_cap_bytes": 34816,
+  "new_reserved_bytes": 4096,
+  "overall_reservation_bytes": 2847414528,
+  "owned_paths": [
+    "research/01-methodology.md",
+    "research/active-idea-research.md",
+    "research/research-decision-register.md"
+  ],
+  "pending_mac_expansion_escrow_bytes": 2097152,
+  "previous_global_allocation": {
+    "path": "reports/experiment-storage/aave-ordered-control-allocation-v1.json",
+    "sha256": "5fb24c1d615eb28fa8cf8899444ccf3cb03361b3b128473608c18982b47983b0"
+  },
+  "recorded_utc": "2026-10-02T22:32:33.785137+00:00",
+  "remaining_documentation_bytes": 1086,
+  "schema": "continuation-documentation-retention-reconciliation-v1",
+  "scope": "Conservative supplemental documentation retention for three existing root research documents; all evidence preserved. No HTTP, collection or analysis authority added."
+}
