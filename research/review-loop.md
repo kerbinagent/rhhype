@@ -6573,3 +6573,18 @@ Snapshot read 2026-10-02T16:47:03.193118Z, updated epoch seconds 1790959622.8445
 Paper pulses fresh/ok16:31CPU65.94%/38.89mslag,16:35CPU70.26%/42.31ms,16:40CPU70.73%/42.85ms,16:45CPU67.75%/43.65ms; reviewfresh/ok65.34%/45.29ms,RSS298.52MiB,113pairs. Rolling83healthy16:45at135.17s/5,531,934compressed B/36,232records,two connections/no errors/economics false; chunks1,883,143,655B/controls54,227B under separate2GB. Recovery gap retained; no routine raw decode/intervention. NEARterminal and rootarchive/pinrelease retained, no routine outcomes read. HIP4live18:22/expiryOct3timers remain control-only scope; historical receipts not current process proof. Local commits only, no push.
 
 Carry16:45:00.182659UTC:482sampled,two invalid(71,389),380future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–218:2,915completions=2,871exact losses,one estimated loss,seven audited paired gains,36audited rescue gains. Archive3,987,077/5,242,880B;95future pairs at5,342B project4,494,567B,margin748,313B. Next **17:06:33 UTC**.
+
+
+### Review 219 — 2026-10-02 17:06:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Explicit UTC wall-clock pre-read guard passed. Exact report and independently timed snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap and growth guards.
+
+`review-20261002T170633Z.json.gz` raw 18,145 B SHA-256 `3d43b9a50afc198d34d26b2a2bf982e2b0e90283a7408f2fa59e261b012170ca`; gzip 2,491 B SHA-256 `c5d8ca0db2e0043c521391d713ec3babc481dddddb551cda44b5399f4e6087e0`.
+
+`current-epoch-at-review219.json.gz` raw 9,282 B SHA-256 `6d4ccd4b54456d24c57c6a357c2a14302213a400cf1e958520c2069be1b4c749`; gzip 1,732 B SHA-256 `1336d302d6807b64f9151aaa609c8a19b06e979984f06c419a4cf7fc8e9b41e1`.
+
+Snapshot read 2026-10-02T17:06:58.382263Z, updated epoch seconds 1790960818.3254259; counts not pooled. One exact convergence loss net−$1.1142463698761276;one HL price_limit reject;no gains, estimates or aborts. Fees0/other$0.49903937900000983/capital$0.00000199087597949673.
+
+Paper16:51ok60.90%CPU/46.18mslag,16:55busy91.42%/57.79ms,17:00ok65.93%/40.97ms,17:05ok71.32%/40.30ms; reviewfresh/ok62.23%/45.99ms,RSS296.81MiB,113pairs. Rolling85healthy17:05at125.16s/4,030,365compressed B/27,650records,two connections/no errors/economics false; chunks1,925,491,721B/controls55,514B under separate2GB. Pressure-only eligibility/expiry remains original collector-owned; routine no mutation or raw decode. Recovery gap retained. NEARterminal/rootauditarchive retained; HIP4live/expirycontrol-only scope unchanged,no economic reads. Local commits only, no push. Root requests shared index after this routine commit for separate source freezes.
+
+Carry17:05:00.128476UTC:486sampled,two invalid(71,389),376future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–219:2,916completions=2,872exact losses,one estimated loss,seven audited paired gains,36audited rescue gains. Archive3,991,300/5,242,880B;94future pairs at5,342B project4,493,448B,margin749,432B. Next **17:26:33 UTC**.
