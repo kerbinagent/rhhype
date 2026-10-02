@@ -6105,3 +6105,18 @@ Snapshot read 2026-10-02T06:47:22.868926Z, updated epoch seconds 1790923642.1611
 06:32 paper fresh 0.46 s/busy, CPU 89.50%, lag 39.30 ms/four feeds; parent notified, no intervention. Root confirmed queue-OFI successor finished 06:23:51 and no longer CPU competitor. Later pulses fresh/ok CPU 50.40/46.20%, lag 39.42/35.76 ms. Review CPU 65.56%, p95 33.80 ms, RSS 278.79 MiB, 104 pairs. Rolling advanced normally to chunk 000025: 528.69 s / 15,065,086 compressed B / 113,961 records, two connections/no errors/economics false. Controller chunks 540,684,467 B / controls 512,721 B under separate decimal 2 GB. All three news helpers waiting/fresh/economics false. No raw/reserved economics, carry samples or news outcomes opened; no competing jobs/interventions. Routine commits remain local; root noted push auto-review blocked.
 
 Carry 2026-10-02T06:45:00.141121+00:00: 363 sampled, persistent invalid slot 71, 500 future/interrupted, running/no errors/evaluation. Reviews 66–188: 2,584 completions = 2,549 exact losses, one estimated loss, five audited paired gains, 29 audited rescue gains. Archive 3,823,437 / 5,242,880 B; 125 future pairs at 5,342 B project 4,491,187 B, margin 751,693 B. Next **07:06:33 UTC**.
+
+
+### Review 189 — 2026-10-02 07:06:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Exact report and independent snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap/growth guards.
+
+`review-20261002T070633Z.json.gz` raw 18,253 B SHA-256 `0c27622e02d5235c70d9f3e3e3f47d545799b72a624e369f4d5c24e87d9821a2`; gzip 2,624 B SHA-256 `8c160cfa87cde2d791de8fb401ea7cef0e3a70804cb9076a9e347598cdc86416`.
+
+`current-epoch-at-review189.json.gz` raw 9,284 B SHA-256 `62b72d92016d6e61bde941d2287fc97dae54ed9556b6bf49eb6ee9263cb1c75d`; gzip 1,729 B SHA-256 `3b0d3afd77c79942f4318d66745bee72b1c68717752c5cddaf245dae12deff0f`.
+
+Snapshot read 2026-10-02T07:07:20.059399Z, updated epoch seconds 1790924839.855741; counts not pooled. Three exact Premium losses / −$5.1630704036; no gains/estimates/aborts/rejects. Fees $2.6361846268, other costs $1.4980552025, capital $0.0001085743.
+
+Routine pulses fresh/ok/four feeds, lag 35.69/31.95/34.34 ms; review CPU 52.89%, p95 44.77 ms, RSS 283.22 MiB, 104 pairs. Rolling advanced normally to chunk 000027: 516.63 s / 18,627,868 compressed B / 132,153 records, two connections/no errors/economics false. Controller chunks 579,324,309 B / controls 555,313 B under separate decimal 2 GB. Three news helpers waiting/fresh/economics false. No raw/reserved economics, carry samples or news outcomes opened; no competing jobs/interventions.
+
+Carry 2026-10-02T07:05:00.117365+00:00: 367 sampled, persistent invalid slot 71, 496 future/interrupted, running/no errors/evaluation. Reviews 66–189: 2,587 completions = 2,552 exact losses, one estimated loss, five audited paired gains, 29 audited rescue gains. Archive 3,827,790 / 5,242,880 B; 124 future pairs at 5,342 B project 4,490,198 B, margin 752,682 B. Next **07:26:33 UTC**.
