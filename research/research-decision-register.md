@@ -2,9 +2,10 @@
 
 ## Objective and process correction
 
-Find convincing closed paper profit at at most $100 entry notional over
-seconds to minutes, using public data. Directional one-venue trades are within
-scope. No strategy currently meets that objective.
+Find convincing closed paper profit over seconds to minutes using public data.
+Directional one-venue trades and larger sizes are in scope: the user clarified
+on 2 October that $100 was an example. Evaluate size against depth, costs and
+required capital. No strategy currently meets the repeatability objective.
 
 The main process failure has been allocating too much work to execution
 variants before demonstrating a cost-adjusted predictive signal. Accounting

@@ -44,5 +44,6 @@
       "budget": 1000
     }
   ],
-  "limitations": "Terminal native quantities, exit-fill totals, entry/exit cash, zero fees,5bp reserve, capital at5%/year/full margin and no-hour funding reconcile within1e-9USD. Legacy1000USD budget; actual entries ~997USD, outside current <=100 objective. Public paper model observations, not private fills. No new independent raw-depth/first-eligible-book audit. The two venue paths share the same ZEC move and cannot establish independent profitable events."
+  "limitations": "Terminal native quantities, exit-fill totals, entry/exit cash, zero fees,5bp reserve, capital at5%/year/full margin and no-hour funding reconcile within1e-9USD. Legacy1000USD budget; actual entries ~997USD. Larger sizes are in scope under the user clarification. Public paper model observations, not private fills. No new independent raw-depth/first-eligible-book audit. The two venue paths share the same ZEC move and cannot establish independent profitable events.",
+  "scope_correction": "User clarified on2October2026 that100USD was an example and larger paper trades are allowed. These~997USD entries are in scope. This corrects the earlier size-based exclusion; arithmetic and correlated-rescue classification are unchanged."
 }

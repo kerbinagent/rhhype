@@ -3,9 +3,11 @@
 ## Current scope: short-term trading, including one venue
 
 The user's latest instruction excludes buy-and-hold yield and maturity
-strategies. Research now targets $100-sized trading cycles lasting seconds
-to minutes, including directional paper trades on one venue following the
-user's 1 October instruction. The completed carry work below is historical context, not the
+strategies. Research targets trading cycles lasting seconds to minutes,
+including directional paper trades on one venue. On 2 October the user clarified
+that $100 was an example and larger sizes are allowed; assess their depth,
+execution costs and capital use. Existing frozen tests retain their declared
+sizes. The completed carry work below is historical context, not the
 active plan. The already frozen BTC collector remains unchanged, with its
 economic evidence unopened until its endpoint.
 

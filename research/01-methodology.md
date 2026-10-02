@@ -2,10 +2,12 @@
 
 ## Current research decisions — 2 October 2026
 
-The active question is whether a public-data paper strategy with at most $100
-entry notional can earn positive closed cash returns over seconds to minutes.
-The user has allowed directional trades on one venue. Earlier carry questions
-and larger size screens below remain historical methodology. Current decisions
+The active question is whether a public-data paper strategy can earn convincing
+closed cash returns over seconds to minutes. On 2 October the user clarified
+that $100 was an example; larger sizes are in scope. Evaluate size against
+depth, delayed execution, costs and required capital. Keep each frozen test's
+declared size and preregister new size comparisons. Directional one-venue
+trades are allowed; earlier carry questions remain historical. Current decisions
 and the evidence needed to reopen a parked idea live in the
 [decision register](research-decision-register.md).
 
