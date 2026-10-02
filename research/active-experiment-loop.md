@@ -1961,3 +1961,14 @@ match report. Archive3,730,151 B;145 future pairs project4,504,741 B,
 margin738,139 B. Carry00:05:283sampled,invalidslot71,580future/interrupted;
 no errors/retries/evaluation. News/analysis helpers waiting with fresh
 heartbeats/hash matches. Next00:26:33UTC.
+
+
+### Review 169, 2 October 00:26 UTC
+
+Complete coverage: 16 exact losses, four convergence failed hedges/
+−$3.90837 and 12 Premium/−$23.64698 (seven paired, five failed hedges).
+No gains/estimates/aborts; nine HL price limits. Four feeds/101 pairs fresh,
+running/ok. Separate Premium increase13 versus report12 retained. Archive
+3,734,859 B;144 future pairs project4,504,107 B,margin738,773 B. Carry
+00:25:287sampled,invalidslot71,576future/interrupted;noerrors/retries/evaluation.
+News/analysiswaitingfreshheartbeats. Next00:46:33UTC.
