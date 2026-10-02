@@ -2193,3 +2193,8 @@ Complete coverage;23exact convergence completions net−$27.172046476301148=22lo
 ### Routine review 211 — 2026-10-02 14:26:33 UTC
 
 Complete coverage;6exact convergence losses−$4.88063671712348,6HLprice_limit rejects,no gains/estimates/aborts. Cumulative2,894=2,851exact losses+1estimated loss+7audited paired+35audited rescue. Exact report/snapshot hash verified, pre-write guards passed. Paper busy interval14:09peak82.79mslag retained, recoveredok review71.35%CPU/44.90mslag. Rolling69 healthy, recovery gap retained. Prospective NEAR host metadata pinned762163/sourceplan unchanged, no nomination/terminal observed; routine control-only reads. News outcomes root-owned. Carry454sampled/2invalid/408future. Archive3,953,006B;102futurepairs project4,497,890B,margin744,990B. Next14:46:33UTC.
+
+
+### Routine review 212 — 2026-10-02 14:46:33 UTC
+
+Complete coverage;3exact convergence losses−$3.170325105760412,2aborts,4HLprice_limit+2notional_cap rejects,no gains/estimates. Cumulative2,897=2,854exact losses+1estimated loss+7audited paired+35audited rescue. Exact report/snapshot hash verified, guards passed. Early14:46:29previous-report validation stopped before writes; proper due archive14:47,no duplicate,rootnotified,explicit wall-clock guard adopted. Paper recoveredok75.54%CPU/45.63mslag;rolling71healthy,gap retained. NEAR initialcontrols unchanged; HIP4Oct3timerrootverifiedwaiting,control-only scope. Carry458sampled/2invalid/404future. Archive3,957,429B;101futurepairs project4,496,971B,margin745,909B. Next15:06:33UTC.

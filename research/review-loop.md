@@ -6464,3 +6464,18 @@ Paper14:09fresh1.35s/busyCPU81.23%/p95lag82.79ms,root notified;14:12busy70.22%/6
 Root prospective NEAR persistent host startup repaired separately before original cutoff, frozen scientific plan unchanged: original plan e3a09177b2e38ca78ee7f1a97b2ce5e00ce14bd15cdc6c53164472888cd2ee33/recovery784ce715d0a34823a1253d80a423a2726c503c0abd4f53cffa71c076ec0c091f. Metadata reports/news-candidate-rolling-v1/run-v1/host-process.json PID762163/startticks13674762/persistentnamespace, initial zero nominations/pins/raw/HTTP. Only four initial controls present through14:21,no nomination/terminal observed; no routine market reads or launch. Initial sandboxPID3failure retained byroot; actualhostsurvival rootverified14:07:16. News helpers terminal success, outcomes root-owned.
 
 Carry14:25:00.128125UTC:454sampled,two invalid(71,389),408future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–211:2,894completions=2,851exact losses,one estimated loss,seven audited paired gains,35audited rescue gains. Archive3,953,006/5,242,880B;102future pairs at5,342B project4,497,890B,margin744,990B. Next **14:46:33 UTC**.
+
+
+### Review 212 — 2026-10-02 14:46:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Exact report and independently timed snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap and growth guards.
+
+`review-20261002T144633Z.json.gz` raw 18,587 B SHA-256 `368dacfdf7f755017a2e5bdc8a0652df32b21e6de057156fb5317c4f782ba364`; gzip 2,687 B SHA-256 `fe2691fa2d0813908dc5b4f80b8b3e64b834e78d57a24f1af7efcc943ce07e56`.
+
+`current-epoch-at-review212.json.gz` raw 9,282 B SHA-256 `1f533a583f8900fbeb3102fadb7c1e0051b8d96d4d51a26089d954c05df20a58`; gzip 1,736 B SHA-256 `e1e32d75aadc2371098ae23510fc60c9ae1e75b1cc5fd8c1ce1ca06de8855653`.
+
+Snapshot read 2026-10-02T14:47:00.670414Z, updated epoch seconds 1790952420.1006913; counts not pooled. Three exact convergence losses net−$3.170325105760412,two aborts;four HL price_limit and one each Core/RH notional_cap rejects;no gains or estimates. Fees$0.8969278050000042/other$1.495586974499929/capital$0.00004032626026484118. Initial validation inadvertently read previous report14:46:29,four seconds before due; expected timestamp assertion stopped before writes. Proper due report archived14:47, no duplicate row. Root notified; future reads receive explicit wall-clock guard before opening latest.
+
+Paper14:31busy74.93%CPU/52.45mslag and14:35busy82.68%/52.53ms; recovered14:40ok74.12%/48.23ms. Reviewfresh/ok75.54%CPU/45.63ms,RSS291.45MiB,109pairs. Rolling71healthy326.41s/14,996,699compressed B/98,734records,two connections/no errors/economics false; chunks1,564,454,265B/controls46,505B under separate2GB. Recovery gap retained; no routine raw decode/intervention. NEAR controlfiles unchanged through14:40,no nomination/terminal observed. Root HIP4 once-only timer active/waiting forOct3 05:05UTC, serviceinactive/Restart=no/RuntimeMaxSec4200/Nice19 per rootverified receipt8c8aed6; plan d66493af3f7739b1f7899a21c817513bac5d1c522b64ca7551ec7a6f8788fb95. Routine adds operational-control scope only, no economic reads.
+
+Carry14:45:00.129553UTC:458sampled,two invalid(71,389),404future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–212:2,897completions=2,854exact losses,one estimated loss,seven audited paired gains,35audited rescue gains. Archive3,957,429/5,242,880B;101future pairs at5,342B project4,496,971B,margin745,909B. Next **15:06:33 UTC**.
