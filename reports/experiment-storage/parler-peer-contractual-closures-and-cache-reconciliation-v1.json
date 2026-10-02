@@ -1,0 +1,49 @@
+{
+  "schema": "parler-peer-contractual-closures-and-cache-reconciliation-v1",
+  "recorded_utc": "2026-10-02T12:50:02.621373+00:00",
+  "status": "allocated_storage_reconciliation_and_offline_preparation_only",
+  "previous": {
+    "path": "reports/experiment-storage/single-venue-news-inventory-fix-v2.json",
+    "bytes": 11211,
+    "sha256": "e4e5d4b56e2a2a461123fe23067e749b44ae043c4e97f6f9b37291b6d1d42793"
+  },
+  "reserved_bytes": 1048576,
+  "previous_active_research_reserved_bytes": 245104640,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 246153216,
+  "active_research_headroom_bytes": 8601600,
+  "overall_reservation_bytes": 2842020096,
+  "peer_original_grant": {
+    "path": "reports/experiment-storage/parler-peer-research-v1.json",
+    "bytes": 1684,
+    "sha256": "66bfce0bd3c893749d2f1606b584738c6d16e3b64b87a19ac280cc8c60b02a56"
+  },
+  "peer_total_grant_bytes": 9437184,
+  "replacement_peer_categories_bytes": {
+    "source_tests_docs_protocols_and_all_task_bytecode": 3145728,
+    "derived_outputs": 5767168,
+    "primary_issuance_raw_all_session_copies_and_temporary_files": 524288
+  },
+  "issuance_source_subcap_preserved": {
+    "path": "reports/experiment-storage/parler-peer-primary-issuance-bound-v1.json",
+    "bytes": 3651,
+    "sha256": "8c33b976b008e973abcbe4989c840376c13c0b1201c15147d6429073e11b07db"
+  },
+  "source_reconciliation_bytes": {
+    "pre_issuance_source_commitment_all_known_copies": 908677,
+    "full_prior_issuance_reserved_source": 393216,
+    "new_contractual_closure_package_all_copies_and_temporary_files": 262144,
+    "observed_peer_module_bytecode": 338448,
+    "observed_baseline_module_bytecode": 1015967,
+    "conservative_commitment_before_this_record": 2918452,
+    "headroom_before_this_record": 227276
+  },
+  "accounting": "Charge both reported bytecode groups as retained task artifacts rather than exempting baseline-module caches as tooling. No deletion or prior allowance reclaim. Peer initially cited the superseded294912B issuance source subcap; preserve the full393216B amendment. This record and all later copies/ledger growth also consume source headroom. Separate root issuance-review copies64670B stay charged to their existing root allocation.",
+  "peer_report_provenance": {
+    "parler_message_id": "4b5db6da-ba6a-4ca5-9b22-65c4daad666f",
+    "created_utc": "2026-10-02T12:47:18.952Z",
+    "status": "Peer-reported read-only inventory; root checked arithmetic and prior reserved subcap, not the remote filesystem."
+  },
+  "authorization": "Continue Comet already-absorbed collateral and Clipper reset-reward source/math/design/offline code under the existing ongoing peer mandate. New package max262144B across both hosts, all drafts/test output/temp/copies. Disable bytecode. No economic/API/RPC/book/price query, compiler download/install, bulk clone or account/trading access until separately bounded exact plan/source pins are reviewed and committed.",
+  "retention": "All prior failures/raw/derived records and allowances preserved. Every new artifact stays inside category and package caps. Checkpoints do not terminate the research task."
+}

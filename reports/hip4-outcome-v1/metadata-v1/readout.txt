@@ -1,0 +1,27 @@
+HIP-4 MAINNET METADATA: STRUCTURE AVAILABLE, EXECUTION UNVERIFIED
+
+One frozen outcomeMeta POST completed at 2026-10-02 12:34:11 UTC, after
+commit 9fac381. HTTP 200; 84,207 response bytes, retained as 5,895-byte gzip.
+Root independently checked the complete raw response, source/plan pins,
+exact membership, field types, duplicate identities and counts. All supervisor
+conclusion gates passed. No price request was made.
+
+The response lists 260 distinct outcomes and 18 structurally complete,
+disjoint questions containing 86 members: fourteen sets of four, three sets
+of seven, and one set of nine. Every set includes its named outcomes and
+fallback, with an empty settledNamedOutcomes list. The remaining 174 outcomes
+are standalone within this response. All quote labels are USDC.
+
+These are structural candidates only. Listing does not prove active status;
+the USDC string does not establish collateral identity; native precision,
+fallback orderability, fees and actual conversions remain unverified.
+No fills, completed cash cycle or profit were demonstrated.
+
+Decision: continue the separately allocated source/design investigation.
+Any later book screen needs its own reviewed, frozen manifest. Mirrored
+YES/NO books share liquidity. Missing disposal leaves residual tokens and
+cannot count as a completed cash trade.
+
+Evidence: metadata.json, response.json.gz, terminal.json, supervisor.json
+and root-receipt.json here. Original plan:
+reports/experiment-storage/hip4-outcome-metadata-v1.json.

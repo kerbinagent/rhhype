@@ -1,0 +1,99 @@
+{
+  "schema": "hip4-outcome-root-receipt-v1",
+  "recorded_utc": "2026-10-02T12:35:32.294377+00:00",
+  "status": "independent_raw_reconciliation_passed",
+  "frozen_commit": "9fac381",
+  "plan_sha256": "d467f4e9d537dd995b6302589a6b30dbbbf5a329fe48e4271686a841f318598e",
+  "raw_response_bytes": 84207,
+  "raw_response_sha256": "5a84b5984bd5565217ae9c7a4491be6d8dfb1b24909ed60dc6c4ae5ae88a44f6",
+  "raw_gzip": {
+    "path": "reports/hip4-outcome-v1/metadata-v1/response.json.gz",
+    "bytes": 5895,
+    "sha256": "84c66367adb38910a516372d4115e8da161022041419fed7a73f357bd649ce48"
+  },
+  "http_requests": 1,
+  "response_http_status": 200,
+  "files": [
+    {
+      "path": "reports/hip4-outcome-v1/metadata-v1/claim.json",
+      "bytes": 395,
+      "sha256": "112b4ea3721d4ecf43b733e8f487f3f0a1ac6c0e43777cc880099ec9d61fa81e"
+    },
+    {
+      "path": "reports/hip4-outcome-v1/metadata-v1/metadata.json",
+      "bytes": 26240,
+      "sha256": "66913ed2f88aca6f05c4f32f81b438d0abd8228e660c9b97a8165e4cf6bf8788"
+    },
+    {
+      "path": "reports/hip4-outcome-v1/metadata-v1/response.json.gz",
+      "bytes": 5895,
+      "sha256": "84c66367adb38910a516372d4115e8da161022041419fed7a73f357bd649ce48"
+    },
+    {
+      "path": "reports/hip4-outcome-v1/metadata-v1/supervisor.json",
+      "bytes": 563,
+      "sha256": "ceff0414ba7b523b2434f9cdf16189cd0c9ddef55ef2f9e1517646cc60b4d053"
+    },
+    {
+      "path": "reports/hip4-outcome-v1/metadata-v1/terminal.json",
+      "bytes": 550,
+      "sha256": "3c7649e8afd0f717b6b47526fca7ec6f72edac61586b29dd1d57007900422c8c"
+    }
+  ],
+  "independent_counts": {
+    "duplicate_outcome_ids": 0,
+    "invalid_outcome_entries": 0,
+    "invalid_question_entries": 0,
+    "outcome_entries": 260,
+    "outcomes_with_deployer": 0,
+    "outcomes_with_issues": 0,
+    "questions": 18,
+    "standalone_outcomes": 174,
+    "structural_candidates": 18,
+    "structured_questions": 18,
+    "unique_outcomes": 260
+  },
+  "question_ids": [
+    198,
+    199,
+    200,
+    250,
+    289,
+    331,
+    357,
+    358,
+    359,
+    361,
+    362,
+    363,
+    366,
+    367,
+    368,
+    369,
+    370,
+    371
+  ],
+  "question_member_count": 86,
+  "member_sizes": {
+    "4": 14,
+    "7": 3,
+    "9": 1
+  },
+  "all_listed_quote_labels": "USDC",
+  "observed_only": "18 structurally complete disjoint question sets and174 standalone outcomes in one mainnet metadata response. No book, order or fee query.",
+  "still_unverified": {
+    "active_state": "listing and empty settledNamedOutcomes do not prove an unsettled, tradable question",
+    "native_precision": "no documented outcome size/price precision field",
+    "quote_asset_identity": "quoteToken is a string label; HIP-1 names are not unique"
+  },
+  "source_review_checks": [
+    "Exact runtime,test,helper,supporting docs and predecessor pins",
+    "Full raw single gzip member, bounded length and SHA256",
+    "Strict duplicate-free JSON and exact documented field types",
+    "Unique question and outcome IDs, full named/fallback membership, empty settled lists and no member sharing",
+    "Independent counts, label counts, full projected membership and singleton set",
+    "All worker/supervisor/publication gates and caps"
+  ],
+  "math_review": "Independent Sol valuation proof and explicit zero-token forward/inverse ledgers completed before launch. Clipped bounds never create missing trades; matched mirrored books share capacity. No price calculation was performed.",
+  "decision": "Advance only to a separately reviewed design. Structural availability does not establish active state, collateral identity, native precision, fees, fills, conversion completion or profit."
+}

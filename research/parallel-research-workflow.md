@@ -188,54 +188,26 @@ contains only chunks 1–3, 45 verified members, 55,818,240 tar bytes through Gi
 Its [64 MiB reservation](../reports/experiment-storage/rolling-exploratory-peer-export-v1.json)
 comes from existing headroom. Rolling and reserved data retain their rules.
 
-## Peer primary-issuance compatibility proposal
+## Peer primary-issuance compatibility work
 
-The peer's next [proposal](../reports/peer-research/20261002-0743/peer-primary-issuance-v1-proposal.json)
-examines native ETH issuance through Lido followed by a sale on one fixed Curve
-pool. An executable premium must cover the complete transaction, gas, residual
-share disposal and capital; no premium or profit has been observed.
-
-The [single metadata probe](../reports/peer-research/20261002-0910/root-receipt.json)
-completed 20 requests in 19.36 seconds. Synthetic return/revert gas, the fixed
-contract identities and the final header check passed. All four native issuance
-sizes were eligible at the observed block. Root verified the saved manifest,
-ABI selectors, code hashes and resource limits without further RPC. Economics
-remains null: no composed route, obtainable inclusion or profit was tested.
-
-The [budget amendment](../reports/experiment-storage/parler-peer-primary-issuance-v1.json)
-reclassifies 512 KiB within the existing peer grant for both raw metadata copies;
-the total ceiling is unchanged. A strict cumulative-read correction was reviewed
-before the run; both original and corrected sources remain retained. The peer
-has derived a post-submit quote bound for the fixed balanceOf-only sale policy.
-Its [design](../reports/peer-research/20261002-0941/peer-primary-issuance-bound-design-v1.json)
-allows a compiler-free necessary-condition test, conditional on the stated
-runtime/source provenance. A pre-submit quote is insufficient because issuance
-can change the pool's reserve rounding. Offline implementation is authorized
-within the existing grant; economic collection still needs an exact freeze.
+The [metadata probe](../reports/peer-research/20261002-0910/root-receipt.json)
+completed 20 requests and verified fixed identities, synthetic gas and parent
+checks. Its [post-submit bound design](../reports/peer-research/20261002-0941/peer-primary-issuance-bound-design-v1.json)
+accounts for issuance changing reserve rounding. The completed negative result
+is below. Original failures, source versions and both-session copies remain
+retained under the existing peer grant.
 
 ## Polymarket full-NO conversion metadata
 
-One fixed query selected the October FOMC event by calendar and title, without
-price inspection. Its UTC end-day mismatch remains an inconclusive original
-result. A separately frozen offline correction used the same response and the
-New York meeting date; no second query ran. The [metadata readout](../reports/polymarket-no-basket/metadata-readout.txt)
-records five coherent outcome definitions, token identifiers and fee schedules.
-The first contract preflight stopped on a documented implementation mismatch;
-its failure remains preserved. The observed implementation also appears in
-the official current deployment repository. A separately frozen successor
-passed all55 metadata checks: five registered questions, all ten positions,
-zero conversion fee and required wrapper bindings/permissions at one stable
-block. [Root receipt](../reports/polymarket-no-basket/chain-metadata-v2/root-receipt.json).
-Actual conversion and deployed-source equivalence remain unproven. The fixed
-[five-NO book screen](../reports/polymarket-no-basket/optimistic-books-v1/readout.txt)
-completed all15 requests. Every recorded set had a cost floor of4.009Q against
-at most4Q gross conversion return, giving a conditional zero-cost margin
-of−0.009Q nominal pUSD. All15 sets failed the frozen timestamp diagnostics,
-so no simultaneous all-slot conclusion is available. Park this displayed-taker
-candidate at these recorded quotes; larger equal size cannot improve the bound.
-There is no depth/execution branch or profit claim, and no conclusion about
-other events or later periods. Root reconciled all15 raw responses and kept
-the original timing gates.
+The [calendar correction](../reports/polymarket-no-basket/metadata-readout.txt)
+used the original response; the first implementation mismatch remains retained.
+A separately frozen [contract successor](../reports/polymarket-no-basket/chain-metadata-v2/root-receipt.json)
+passed all 55 metadata checks, covering five questions, ten positions and
+wrapper permissions. Actual conversion and source equivalence remain unproved.
+The [five-NO screen](../reports/polymarket-no-basket/optimistic-books-v1/readout.txt)
+returned −0.009Q nominal pUSD before costs in all 15 recorded sets; none passed
+the frozen timestamp checks. Park this sample without a simultaneous-liquidity
+claim. The later subset extension is summarized below.
 
 ## Rolling collector recovery, 2 October 11:39 UTC
 
@@ -250,15 +222,20 @@ The resumed chunk 53 sealed complete; the actual handoff gap was
 [recovery receipt](../reports/rolling-capture-recovery-v1/handoff-receipt.json)
 records this missing interval explicitly.
 
-## HIP-4 preparation and shared-host ownership
+## HIP-4 metadata and continuing ownership
 
-The local Claude collaborator owns only the four HIP-4 source/review paths in
-the committed [allocation](../reports/experiment-storage/hip4-outcome-research-allocation-v1.json).
-Root owns shared logs, storage ledgers, the git index, commits and data launches.
-The first assignment covers official schemas, conversion arithmetic and an
-offline metadata-probe package. Its 512 KiB reservation comes from existing
-headroom. No market API request is authorized until the package is reviewed
-and a concrete request manifest is frozen.
+The [single metadata probe](../reports/hip4-outcome-v1/metadata-v1/readout.txt)
+returned 260 outcomes and 18 disjoint, structurally complete questions covering
+86 members. Root reconciled the raw response and all pins independently.
+Active status, collateral identity and native precision remain unverified;
+there is no price or execution conclusion.
+
+The local Claude session owns continuing HIP-4 research over the coming hours
+under a separate [1 MiB allocation](../reports/experiment-storage/hip4-research-continuation-allocation-v1.json).
+Its new paths are exclusive; the first four files and completed evidence are
+read-only. Checkpoints do not end the task. It may choose hypotheses, write
+designs and test code independently. Root coordinates shared files, commits and
+prospective data gates. The original 512 KiB grant stays reserved.
 
 ## Conversion price screens, 2 October 12:02 UTC
 
@@ -282,3 +259,20 @@ Both runs retained their full denominators and evidence. The Polymarket source
 category received 98,304 bytes from its unused derived category before collection,
 including the retained preparation draft; the overall 2 MiB reservation did not
 change. The issuance run used its separate preallocated 512 KiB envelope.
+
+## News inventory repair and next source research
+
+The news capture finished normally at 12:36 UTC with complete event coverage.
+The corrected companion stopped before economics because its file allowlist
+omitted the collector's legitimate final status.json heartbeat. The separate
+[inventory successor](../reports/experiment-storage/single-venue-news-inventory-fix-v2.json)
+pins that file and preserves all original methods, inputs and failures. Seven
+synthetic tests, independent source review and the opaque input check passed.
+It launched once at 12:48 UTC after commit 0dd268a; all 100 rows and 20 audits
+remain required before a result. No capture was repeated.
+
+The remote peer owns continuing source/design work on Compound's already
+absorbed collateral and Clipper auction-reset rewards. No live availability
+or price has been observed. A [storage reconciliation](../reports/experiment-storage/parler-peer-contractual-closures-and-cache-reconciliation-v1.json)
+counts all reported bytecode, preserves prior grants and funds a bounded new
+source package. Each prospective data stage still requires an exact freeze.
