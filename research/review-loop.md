@@ -6684,3 +6684,20 @@ Paperfresh18:49ok84.56%CPU/47.90mslag,18:53ok71.78%/49.33ms,18:58ok72.96%/47.90m
 Review224rootauditpackets committed9e6d78c,three terminalrescues independently reconciled/39auditedtotal; whole24batch−$31.589452178489637 retained. RootHIP4v6offlinepackage b16cc36 passed25+9synthetics,noQ357raw; timeruntouched. Routine only controlhealth.
 
 Carry19:05:00.137067UTC:510sampled,two invalid(71,389),352future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–225:2,958completions=2,911exact losses,one estimated loss,seven audited paired gains,39audited rescue gains. Archive4,027,621/5,242,880B;88future pairs at5,342B project4,497,717B,margin745,163B. Next **19:26:33 UTC**.
+
+
+### Review 226 — 2026-10-02 19:26:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Explicit UTC wall-clock pre-read guard passed. Exact report and independently timed snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap and growth guards.
+
+`review-20261002T192633Z.json.gz` raw 18,315 B SHA-256 `7ba8246452531c1ea11090f38efeae04212ab9bcd79c2718266c3fe58ec9f7a8`; gzip 2,524 B SHA-256 `d41448b021817ae66102b7ad4e1e212d5b0cd0f8ffd0eb046723135038633e4f`.
+
+`current-epoch-at-review226.json.gz` raw 9,280 B SHA-256 `69a3bf9c6dab93dd422488afda3d1bbf82bf07016ba4ee56708f16135f5e2e16`; gzip 1,727 B SHA-256 `a6a06ee93a5b43729b1c75ef21d7d6a19eede20f950c28196f1fc431d224b420`.
+
+Snapshot read 2026-10-02T19:27:01.040224Z, updated epoch seconds 1790969220.949593; counts not pooled. Two exact convergence losses net−$1.556276577402059;two HL price_limit rejects;no gains, estimates or aborts. Fees0/other$0.9977002465000169/capital$0.000004330902111802232.
+
+Paperfresh19:11ok82.73%CPU/49.35mslag,19:16ok78.52%/48.89ms,19:20busy79.92%/51.59ms,19:25busy70.96%/50.54ms; reviewfresh/busy77.08%/51.83ms,RSS300.58MiB,118pairs. Rolling99healthy19:25at46.06s/2,524,967compressed B/14,050records,two connections/no errors/economics false; chunks1,925,559,971B/controls60,517B under separate2GB. Frozenpressure lifecycle/pins unchanged,recovery gap retained,no routine mutation/rawdecode.
+
+Root LIT96 terminal19:07:43.72,three commands/fourflat/auditPASS/10closecashchecksPASS; primaryRHfade2attempts/1close−$0.064804655859 beforestress/−$0.114294766359 afterstress,follow+$0.021320367104,difference−$0.135615133464,fixedpairgatefailed. Rootarchived/pushed1f8303d, no pendinggain/rerun. Fixed100unchanged/future,no routine selectedrawreads. HIP4window still20:50endpoint, routine control-only.
+
+Carry19:25:00.145263UTC:514sampled,two invalid(71,389),348future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–226:2,960completions=2,913exact losses,one estimated loss,seven audited paired gains,39audited rescue gains. Archive4,031,872/5,242,880B;87future pairs at5,342B project4,496,626B,margin746,254B. Next **19:46:33 UTC**.

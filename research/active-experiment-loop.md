@@ -2263,3 +2263,8 @@ Complete coverage;24exact convergence completions−$31.589452178489637=21losses
 ### Routine review 225 — 2026-10-02 19:06:33 UTC
 
 Complete coverage;2exact convergence losses−$0.6622223780573222,2HLprice_limitrejects,no gains/estimates/aborts. Cumulative2,958=2,911exact losses+1estimated loss+7audited paired+39audited rescue. Pre-readclockguard prevented prematurelatestopen; due/hash/archiveguards passed. Paperfresh/busy64.37%CPU/50.47mslag;rolling97healthy under2GB,pressure/gap retained,no routine mutation/rawdecode. LIT96analysisrootowned/100future,HIP4live frozen/no earlyeconomics. Carry510sampled/2invalid/352future. Archive4,027,621B;88futurepairs project4,497,717B,margin745,163B. Next19:26:33UTC.
+
+
+### Routine review 226 — 2026-10-02 19:26:33 UTC
+
+Complete coverage;2exact convergence losses−$1.556276577402059,2HLprice_limitrejects,no gains/estimates/aborts. Cumulative2,960=2,913exact losses+1estimated loss+7audited paired+39audited rescue. Guards/hashchecks passed. Paperfresh/busy77.08%CPU/51.83mslag;rolling99healthy under2GB,pressure/gap retained,no routine mutation/rawdecode. RootLIT96sealed/auditedfixedpairgatefailed,100unchanged/future;HIP4stillactive/no earlyeconomics. Carry514sampled/2invalid/348future. Archive4,031,872B;87futurepairs project4,496,626B,margin746,254B. Next19:46:33UTC.
