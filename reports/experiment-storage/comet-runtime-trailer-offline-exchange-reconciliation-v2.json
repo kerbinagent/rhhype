@@ -1,0 +1,36 @@
+{
+  "added_source_reservation_bytes": 12288,
+  "global_change_bytes": 0,
+  "known_previous_excess_at_least_bytes": 699,
+  "micro_package_reserved_after_bytes": 24576,
+  "peer_source_cap_bytes": 3145728,
+  "previous": {
+    "bytes": 1695,
+    "path": "reports/experiment-storage/comet-runtime-trailer-offline-exchange-v1.json",
+    "sha256": "e5534ae26df2d102969e1a50b813caf47d169d46b32df3ab9ef0574d21d0e023"
+  },
+  "previous_actual_derivation": "5963 original allocation/extraction/result bodies +7024 omitted proposal/reconciliation copies =12987 before message1497c16b. The exact old peak additionally includes that incoming control body; no deletion or reclassification hides the failure.",
+  "previous_actual_minimum_bytes": 12987,
+  "previous_cap_bytes": 12288,
+  "previous_source_commitment_bytes": 3076298,
+  "recorded_utc": "2026-10-02T15:06:58.533447+00:00",
+  "retention": "Keep previous receipt and all failures immutable. This correction adds prospective capacity and does not retroactively make the earlier package compliant.",
+  "schema": "comet-runtime-trailer-offline-exchange-reconciliation-v2",
+  "scope": "Existing trailer extraction only. New capacity counts this amendment, all complete incoming/outgoing control message body copies across both sessions and existing artifact bytes. No new raw/receipt copies at peer, source GETs, metadata GETs, compiler fetch, or live economics.",
+  "separate_metadata_scope": "Metadata proposals30ed04a2 and hashing-validation messages remain charged with both copies to the distinct16384B metadata-stage transport category, along with its result.",
+  "source_commitment_after_bytes": 3088586,
+  "source_headroom_after_bytes": 57142,
+  "status": "prospective_capacity_and_historical_undercount_disclosed",
+  "underestimated_items": [
+    {
+      "complete_body_bytes": 2392,
+      "copies": 2,
+      "message_prefix": "cb9829f4"
+    },
+    {
+      "complete_body_bytes": 1120,
+      "copies": 2,
+      "message_prefix": "9f62e91b"
+    }
+  ]
+}

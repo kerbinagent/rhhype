@@ -1,0 +1,63 @@
+{
+  "claims": {
+    "economics": false,
+    "eligibility": false,
+    "source_equivalence": false
+  },
+  "freeze_commit": "3a24182",
+  "gateway_observation": "Exact retained body says this IPFS gateway is switching to a service worker gateway only. The numeric HTTP status and headers were not retained; no numeric status is inferred.",
+  "historical_source_overrun": "Earlier preparation exceeded its original category before the amendment, range531..2585B, exact fixture peak unmeasured. This remains recorded in root-preflight.json.",
+  "interpretation": "Metadata retrieval unavailable. This says nothing about Comet profitability or source equivalence.",
+  "launch_exitcode": 1,
+  "plan": {
+    "bytes": 1239,
+    "path": "reports/experiment-storage/comet-source-metadata-v1.json",
+    "sha256": "147afa79d2c3a562728bbaa8484b25160d685fbf875e2e6393a92ca0888db2bb"
+  },
+  "recorded_utc": "2026-10-02T15:06:58.532830+00:00",
+  "request_scope": "One fixed GET; no redirect, retry, fallback or source URL follow. No second request is authorized by this result.",
+  "root_checks": [
+    "Final plan/source/test/design/allocation/amendment pins unchanged.",
+    "Claim, terminal and supervisor identify the exact frozen plan.",
+    "One raw inode,175 bytes, terminal received count and SHA256 match.",
+    "Worker exited0 but both terminal and supervisor report unavailable/http_status; command exited1.",
+    "No projection or content-address verification admitted; raw body has a different multihash."
+  ],
+  "run_files": [
+    {
+      "bytes": 175,
+      "path": "reports/comet-source-metadata-v1/run-v1/body.raw",
+      "sha256": "4f62ad11df896830f0c0adcce08d636bf475314b106b3198aee05178aaad3895"
+    },
+    {
+      "bytes": 567,
+      "path": "reports/comet-source-metadata-v1/run-v1/claim.json",
+      "sha256": "5e66f5f29f9dbdac76e94116322bfb1cec9b76f0a62ab0e4f20efe73112b90ce"
+    },
+    {
+      "bytes": 276,
+      "path": "reports/comet-source-metadata-v1/run-v1/supervisor.json",
+      "sha256": "8d3179c230fe8d1907693a64a99e394bfbb7154b9ee4614f2120b22dd67034fa"
+    },
+    {
+      "bytes": 311,
+      "path": "reports/comet-source-metadata-v1/run-v1/terminal.json",
+      "sha256": "73ca8d5ca3f8d18a5ed321b9e46c82313bb730ecc279d8e04c331f8761a6f417"
+    }
+  ],
+  "schema": "comet-source-metadata-v1-root-reconciliation",
+  "status": "unavailable_http_status",
+  "storage": {
+    "controls_before_this_receipt_bytes": 8202,
+    "controls_reserved_bytes": 20479,
+    "package_reserved_bytes": 131072,
+    "projection_actual_bytes": 0,
+    "projection_reserved_bytes": 8192,
+    "raw_actual_bytes": 175,
+    "raw_reserved_bytes": 65537,
+    "source_final_and_draft_bytes": 18531,
+    "source_peak_with_fixture_bytes": 18537,
+    "source_reserved_bytes": 20480,
+    "transport_both_session_cap_bytes": 16384
+  }
+}
