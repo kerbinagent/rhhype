@@ -1,0 +1,60 @@
+{
+  "schema": "single-venue-news-inventory-fix-preparation-v2",
+  "recorded_utc": "2026-10-02T12:39:37.358437+00:00",
+  "status": "allocated_technical_repair_only",
+  "previous": {
+    "path": "reports/experiment-storage/hip4-outcome-metadata-v1.json",
+    "bytes": 12762,
+    "sha256": "d467f4e9d537dd995b6302589a6b30dbbbf5a329fe48e4271686a841f318598e"
+  },
+  "reserved_bytes": 0,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 244056064,
+  "active_research_headroom_bytes": 10698752,
+  "overall_reservation_bytes": 2839922944,
+  "allocation_reference": {
+    "path": "reports/experiment-storage/single-venue-news-ordinary-feed-fix-v1.json",
+    "bytes": 9906,
+    "sha256": "45ba5e949a317eef63fdd1e4dede1748a488a85f0cfa8a27fe5fcc0210dc126d"
+  },
+  "original_allocation_bytes": 3145728,
+  "reallocation": "Transfer65536 of unused margin to source32768,tests16384,protocol16384. Preserve original failed controls and all source/plan bytes. No new raw or global allocation.",
+  "categories_bytes": {
+    "source": 65536,
+    "tests": 32768,
+    "protocol": 32768,
+    "ledger_outputs": 2621440,
+    "comparison_outputs": 98304,
+    "control_provenance": 65536,
+    "readout": 16384,
+    "margin": 212992
+  },
+  "failure_receipt": {
+    "path": "reports/single-venue-news-ordinary-fix-v1/analysis-terminal.json",
+    "bytes": 345,
+    "sha256": "ae05e9613584fae6605340974c2a1e6b7ee0b1b30339aad89e4daef543c059b7"
+  },
+  "legitimate_added_control": {
+    "path": "reports/single-venue-news/capture/status.json",
+    "bytes": 164,
+    "sha256": "29302929d711fa4d7a61d15a67f458550e804916bbe52235cb4c37d27977ca6f"
+  },
+  "scope": "Technical inventory repair only: require and independently pin final status.json in addition to the exact prior capture file list. Corrected companion failed before economics and created no replay/audit/comparison outputs. A separate successor reuses original corrected methods, adapter, independent auditors and complete denominator. No outcomes read while implementing this repair.",
+  "owned_paths": [
+    "scripts/single_venue_news_inventory_fix_v2.py",
+    "tests/test_single_venue_news_inventory_fix_v2.py"
+  ],
+  "owner": "inventory_second_audit_sol; root owns final successor plan, shared logs, git index, launch and result review",
+  "implementation_caps_bytes": {
+    "wrapper": 32768,
+    "tests": 16384,
+    "new_final_protocol": 16384,
+    "this_preparation": 4096
+  },
+  "control_partition_bytes": {
+    "preserved_original_failed_controls": 16384,
+    "new_successor_controls": 49152
+  },
+  "planned_outputs": "Repurpose the original unused20-ledger/comparison/readout allocation to distinct single-venue-news-inventory-fix outputs. Original failed process remains terminal and will not rerun. No output replacement, capture copy, raw decode during preparation, method tuning, additional data or network.",
+  "unchanged": "Original capture/source and failed corrected source/plan;100 independent arms,20 matching audits,24serialcommands,600seconds per command and3600seconds analysis, native collateral/costs/stress/timing. First retain/review exact source/test/protocol pins and commit before one offline run."
+}

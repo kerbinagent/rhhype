@@ -1,0 +1,39 @@
+{
+  "schema": "hip4-research-continuation-allocation-v1",
+  "recorded_utc": "2026-10-02T12:39:37.358437+00:00",
+  "status": "allocated_long_horizon_source_design_and_offline_work",
+  "previous": {
+    "path": "reports/experiment-storage/single-venue-news-inventory-fix-preparation-v2.json",
+    "bytes": 3185,
+    "sha256": "5867d94fcf0244de6ec1605a3343f9d080b7193f085c6e172f1343f48433787c"
+  },
+  "reserved_bytes": 1048576,
+  "previous_active_research_reserved_bytes": 244056064,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 245104640,
+  "active_research_headroom_bytes": 9650176,
+  "overall_reservation_bytes": 2840971520,
+  "categories_bytes": {
+    "source_tests_docs_protocols_including_all_drafts": 393216,
+    "future_raw_gzip_including_pending_copy": 524288,
+    "derived_outputs_reviews_controls": 131072
+  },
+  "original_hip4_grant_unchanged": {
+    "path": "reports/experiment-storage/hip4-outcome-research-allocation-v1.json",
+    "bytes": 3276,
+    "sha256": "1085b374de62449b9df52c08b583e3aa44cabfbdd543beaf7c97f29a35b1982d"
+  },
+  "owner": "Local Claude Code Parler session f0ba21b0-a741-4804-a646-c405993cfa08/80be8295-bc8c-4296-b615-b7fb37e49947",
+  "exclusive_write_prefixes": [
+    "reports/hip4-research-continuation/",
+    "scripts/hip4_continuation_",
+    "tests/test_hip4_continuation_"
+  ],
+  "protected": "All original HIP4 metadata files and outputs, shared logs/ledgers, .git, rolling/news files and other workers paths are read-only. Root alone stages/commits and coordinates live endpoint quotas.",
+  "mandate": "Own HIP4 public-data research across successive source reviews, concrete hypotheses, cheapest falsifiers, offline implementations and evidence reviews over the coming hours. Choose routine implementation and prioritization independently; a checkpoint is not task termination. Continue useful independent source/math work while waiting on a data-plan freeze.",
+  "permitted_now": "Primary source/documentation browsing, read-only original HIP4 source/metadata/receipt, new design/code/tests within exclusive prefixes and caps. No installs or bulk clone. All temporary and retained copies count; disable bytecode.",
+  "data_gate": "Any new info/RPC/websocket/L2/price/data request needs a separately bounded manifest, source/method pins and root-reviewed commit BEFORE outcomes. Proposed raw and derived grants here reserve capacity and do not authorize collection. No private data, accounts, credentials, signing or orders.",
+  "research_hurdle": "Demonstrate an explicitly conditional closed cash ledger with zero residual token inventory, realistic latency/fees/capital and complete selected-case denominators. Do not promote labels to asset identity or membership, public books to private fills, or positive bounds to profit. Source/runtime and active-state gaps remain explicit.",
+  "reporting": "Concise updates at material decisions or about every30minutes; keep working within mandate after checkpoints. Handoff concrete reviewed packages for data gates; no need to request approval for routine reversible work in owned paths.",
+  "retention": "Never reclaim prior evidence or exceed category/overall caps. Root must review any category reallocation before materialization. Old HIP4 and remote-peer grants remain fully reserved."
+}
