@@ -1,0 +1,119 @@
+{
+  "schema": "rolling-research-capture-recovery-v1",
+  "status": "frozen_recovery",
+  "recorded_utc": "2026-10-02T11:28:34.008910+00:00",
+  "scope": "One separately reviewed recovery of the index-publication failure at chunk52. Original collector, capture plans, seals, raw files, roles, pins and original deadline remain unchanged. New controller compacts duplicate coverage from the mutable index into references to existing sealed coverage.",
+  "allocation": {
+    "reserved_bytes": 0,
+    "source_preparation_envelope_bytes": 131072,
+    "existing_conservative_source_docs_bytes": 74217,
+    "new_caps_bytes": {
+      "source": 24576,
+      "tests": 12288,
+      "this_protocol": 8192,
+      "claim_and_recovery_receipts": 8192
+    },
+    "worst_case_total_bytes": 127465,
+    "remaining_bytes": 3607,
+    "store_ceiling_bytes": 2000000000,
+    "active_research_reserved_bytes": 243007488,
+    "active_research_headroom_bytes": 11747328,
+    "overall_reservation_bytes": 2838874368
+  },
+  "original_plan": {
+    "path": "reports/experiment-storage/rolling-research-capture-v1.json",
+    "bytes": 5535,
+    "sha256": "e19c6ed52ace7310e8a717bf39b2cf707976b2fe92c6ff8eb6ed34f738936ac4"
+  },
+  "original_source": {
+    "path": "scripts/rolling_research_capture.py",
+    "bytes": 32331,
+    "sha256": "af0e22b484a34ee2678bdaacb19c1b3a18d7c4097ddc14618dc6b2fac756b59b"
+  },
+  "store_root": "data/rolling/market-research-v1",
+  "identity": {
+    "path": "data/rolling/market-research-v1/identity.json",
+    "bytes": 213,
+    "sha256": "ba96b82b718a1439f87d9dce327f44ac4ff5e90ba32cfe0f8ddcac8188390cc7"
+  },
+  "identity_values": {
+    "schema": "rolling-research-store-v1",
+    "plan_sha256": "e19c6ed52ace7310e8a717bf39b2cf707976b2fe92c6ff8eb6ed34f738936ac4",
+    "budget_bytes": 2000000000,
+    "created_ns": 1790908590277402345,
+    "deadline_ns": 1791081390277402345
+  },
+  "observed_preconditions": {
+    "index.json": {
+      "path": "data/rolling/market-research-v1/index.json",
+      "bytes": 1045942,
+      "sha256": "5dd1637a862302ad62bc2c7ba00df4fb913da0d03197cd81e768b71848e5fefa"
+    },
+    "status.json": {
+      "path": "data/rolling/market-research-v1/status.json",
+      "bytes": 274,
+      "sha256": "e6d1ff76f94bb889cce33506130061dbddce8c52e4a9b34b1037ac3b61bff67c"
+    },
+    "process.json": {
+      "path": "data/rolling/market-research-v1/process.json",
+      "bytes": 170,
+      "sha256": "9f615f9d4995cec72a05b008f6ca27e39f8cf2dc358e153f8b36235d5a7e1db8"
+    },
+    "chunk-000052/seal.json": {
+      "path": "data/rolling/market-research-v1/chunk-000052/seal.json",
+      "bytes": 23420,
+      "sha256": "104769688bf49bb72d842aed7e1c669e53ac29acdfb528909a48bf9b33880487"
+    },
+    "chunk-000052/capture/manifest.json": {
+      "path": "data/rolling/market-research-v1/chunk-000052/capture/manifest.json",
+      "bytes": 3361,
+      "sha256": "3c4867c1486dc44f10c3f8765b27421e21860d52c39d14ac99dd66b1a9688bb7"
+    },
+    "chunk-000052/capture/terminal.json": {
+      "path": "data/rolling/market-research-v1/chunk-000052/capture/terminal.json",
+      "bytes": 316,
+      "sha256": "45a9f8cc432e98a66e12e20a3be1535de15b98d0c2b1dc8788cd359de8f7b5a4"
+    }
+  },
+  "expected_old_process_pid": 3064206,
+  "expected_next_number": 53,
+  "orphan_chunk": "chunk-000052",
+  "orphan_role": "reserved_validation",
+  "failure": "At2026-10-02T11:20:37.925908159UTC the original controller failed with control record exceeds bound after publishing complete seal52. Index1045942B remains collecting52; duplicated coverage values serialize to1018632B. No capture economics read for diagnosis.",
+  "recovery_contract": [
+    "Require exact reviewed protocol/source/tests pins, expected store identity and fixed precondition hashes before any real mutation or launch; dry mode does not open raw or write store.",
+    "Hold exclusive controller and store locks as appropriate; require old PID absent, no active child/controller, no user stop flag, original deadline leaves one full child timeout. Refuse existing recovery claim. Never kill another process.",
+    "Before compacting, match every sealed entry to its unchanged seal hash and coverage value. Replace only duplicate coverage with an explicit reference to seal.json plus its SHA256; all other entry data and pins remain exact.",
+    "For orphan52 require exact published seal identity/role/state plus file inventory, byte counts and digests matching every member. Hash compressed frames as opaque bytes only; do not decompress or analyze reserved outcomes. Validate manifest/terminal and seal consistency. Do not create or alter any seal/capture.",
+    "Adopt seal52 state into its existing collecting index entry using the original seal fields, including original sealed_ns and source/receipt times, and compute handoff gap by the original rule. Preserve number52 role and next_number53.",
+    "Archive prior process/status payloads and all pre/post identity hashes in a bounded receipt. Existing raw/seals are sufficient coverage evidence; no duplicate full index/raw backup is created.",
+    "Keep index1MiB, controls4MiB, store2GB, chunk64MiB raw,600s target720s timeout, minimum2h retention, all pins, fixed cohort/role schedule,288 total chunk limit and original48h absolute deadline. Only duplicate coverage representation and recorded restart change. Startup receipt plus pending replacement reserves2048 bytes within the8192 output cap.",
+    "Use original frozen child process/capture and original supervision/cadence/expiry semantics, with a reviewed Store subclass compacting each future index publication. Record the real gap from52 end to53 start. No immediate substitute for any prior failed capture.",
+    "One explicit launch after root tests/review/freeze commit. Failure stays reviewable and refuses automatic relaunch; no retries, deadline extension or source changes to armed news."
+  ],
+  "outputs": {
+    "directory": "reports/rolling-capture-recovery-v1",
+    "maximum_total_bytes": 8192
+  },
+  "source_pins": [
+    {
+      "path": "scripts/rolling_research_capture_recovery_v1.py",
+      "bytes": 19940,
+      "sha256": "a818f08b15db9ea8b431ca24bc5fee2ef8c67e4a6a764c5af65c43d6bde01b4e"
+    },
+    {
+      "path": "tests/test_rolling_research_capture_recovery_v1.py",
+      "bytes": 12232,
+      "sha256": "8cdb6a3273d3ead53b58d0117c9ed7c73daa9edeb942b1e8d33a8e286ab858ce"
+    }
+  ],
+  "run_gate": "Root reviewed source and tests. After committing this exact frozen package, one --run --plan-sha256 invocation is authorized for the recorded recovery and continuation only. Existing recovery claim refuses any repeat. Original absolute deadline, chunk and storage limits remain enforced.",
+  "frozen_utc": "2026-10-02T11:38:55.735720+00:00",
+  "verification": {
+    "source_review": "Root full source/test review and final handoff/accounting delta. Receipt is read only after parent releases controller lock; child acceptance/failure is retained. Startup old+pending peak reserves2048 bytes. Synthetic output paths isolated from live receipt existence.",
+    "synthetic_tests_passed": 6,
+    "network_calls": 0,
+    "live_store_mutations_before_freeze": 0,
+    "new_raw_decodes": 0
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "schema": "primary-issuance-bound-local-v1",
+  "status": "offline_implementation_only",
+  "recorded_utc": "2026-10-02T11:30:28.853683+00:00",
+  "previous": {
+    "path": "reports/experiment-storage/parler-peer-primary-issuance-bound-v1.json",
+    "bytes": 3651,
+    "sha256": "8c33b976b008e973abcbe4989c840376c13c0b1201c15147d6429073e11b07db"
+  },
+  "reserved_bytes": 524288,
+  "previous_active_research_reserved_bytes": 243007488,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 243531776,
+  "active_research_headroom_bytes": 11223040,
+  "overall_reservation_bytes": 2839398656,
+  "categories_bytes": {
+    "new_source_tests_protocol_review_copies": 131072,
+    "new_raw_gzip_and_pending_copy": 262144,
+    "derived_receipts_and_review_copies": 131072
+  },
+  "allocation_note": "Separate local subdivision funded from existing pool headroom. Existing peer grant and its outstanding source allowance remain reserved in full; none is reclaimed or double-spent. No compiler artifact or package installation. Root owns this implementation and any later run; peer instructed to retain prior evidence and review only on resuming.",
+  "peer_coordination_message": "a2405b3b-7b57-450d-9e40-029d3a38d4ba",
+  "design": {
+    "path": "reports/peer-research/20261002-0941/peer-primary-issuance-bound-design-v1.json",
+    "bytes": 11247,
+    "sha256": "3718dd5c2e05448dcfd51cce3e528d74efa4fda78dbca27da5559c14b7b76866"
+  },
+  "prior_metadata_receipt": {
+    "path": "reports/peer-research/20261002-0910/root-receipt.json",
+    "bytes": 3687,
+    "sha256": "64addb0ce5f6a9f1a42c62f264c64e08fcadc9c70fc984f6e00aa4f1ee2fe8e8"
+  },
+  "endpoint": "https://ethereum-rpc.publicnode.com",
+  "output_dir": "reports/primary-issuance-bound-local-v1",
+  "fixed_principals_wei": [
+    "10000000000000000",
+    "100000000000000000",
+    "1000000000000000000",
+    "10000000000000000000"
+  ],
+  "policy": "For each independent arm starting with zero shares, submit native P to Lido and define sale quantity as actual post-submit displayed balance B. Use post-submit Curve get_dy(1,0,P)+1 wei as conditional optimistic payout bound only if B<=P and all domain/source/state checks pass. No exchange or transaction submission.",
+  "proposed_manifest": [
+    "eth_chainId",
+    "one latest parent header",
+    "empty sender code",
+    "empty fee-recipient code",
+    "Lido proxy code",
+    "implementation getter",
+    "implementation code",
+    "Curve code",
+    "proxyType",
+    "Lido version",
+    "decimals",
+    "Curve coin0",
+    "Curve coin1",
+    "nine-view domain child simulation",
+    "arm0.01ETH five-call simulation",
+    "arm0.1ETH five-call simulation",
+    "arm1ETH five-call simulation",
+    "arm10ETH five-call simulation",
+    "same parent-number final header"
+  ],
+  "resource_limits": {
+    "rpc_requests": 19,
+    "request_seconds": 12,
+    "minimum_start_spacing_seconds": 1,
+    "process_seconds": 180,
+    "response_bytes": 131072,
+    "cumulative_response_bytes": 1048576,
+    "trace_plaintext_bytes_in_memory": 262144,
+    "trace_gzip_bytes": 131072,
+    "gzip_copies_including_pending": 2,
+    "derived_run_bytes": 16384
+  },
+  "state_model": {
+    "state_overrides": "Only synthetic sender native funding11ETH and nonce0. No contract code/storage, shares, token balance or allowance override. Empty-code sender/fee recipient fixed and distinct from each other and all contracts.",
+    "child_time": "Fixed parent timestamp+12s; at initial header decision receipt require modeled time>=decision UTC+400ms, otherwise unavailable without replacement. Before economic calls require monotonic decision+400ms. All arms independently reset to same numeric parent/time. Requests may finish after modeled child; no obtainable inclusion claim.",
+    "block_overrides": "Fixed gasLimit30000000, baseFeePerGas1000000000, empty-code feeRecipient, withdrawals[]. No unrelated transactions. Exact keys/payloads must be reviewed and frozen before RPC.",
+    "transactions": "Gas1000000 per call, sequential nonce, maxFeePerGas2000000000,maxPriorityFeePerGas1000000000; metadata checks9calls, economic arms5calls each. Synthetic gas is not measured composed-route cost."
+  },
+  "domain_views": [
+    "getTotalShares()",
+    "getExternalShares()",
+    "getTotalPooledEther()",
+    "getExternalEther()",
+    "getBufferedEther()",
+    "isStakingPaused()",
+    "getCurrentStakeLimit()",
+    "fee()",
+    "admin_fee()"
+  ],
+  "arm_views": [
+    "sharesOf(sender)",
+    "submit(zero referral) value=P",
+    "balanceOf(sender)",
+    "get_dy(1,0,P)",
+    "fee()"
+  ],
+  "domain_checks": "Require I=totalShares-externalShares>0, E=totalPooledEther-externalEther>0, externalShares<totalShares; P<2^128-1; buffer+P<2^128; totalShares+floor(P*I/E)<2^128; unpaused/within child stake limit; initial shares0; returned minted shares equal floor(P*I/E), displayed B equals predicted amount and B<=P; fee between0 and10^10; exact ABI, status, gas, child headers and unchanged final parent. Uncertainty is unavailable, never negative.",
+  "decision_rule": "All four valid U<=P may park this fixed route/sample before further nonnegative costs. U>P is only failure to reject, not profit. Any unavailable arm prevents all-arm negative conclusion. Source/runtime provenance conditional, numeric parent can reorg out and back undetected, no gas/exchange/flatness/inclusion validation.",
+  "exclusions": "No new event/pool, price-driven size changes, RPC retry or endpoint fallback, account credentials, real wallet/balances, approvals, dust transfers, execution/deployment, compiler/install or reserved research raw. Prior peer v1/v2 artifacts remain immutable.",
+  "source_pins": [],
+  "request_manifest": null,
+  "run_gate": "Root full source/tests/exact19request manifest review and frozen plan commit required before one explicit --run --plan-sha256 command. This draft permits only offline implementation."
+}
