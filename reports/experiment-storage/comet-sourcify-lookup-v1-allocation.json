@@ -1,0 +1,77 @@
+{
+  "active_research_headroom_bytes": 16384,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 254738432,
+  "categories_bytes": {
+    "both_session_messages": 16384,
+    "controls_allocation_root_reviews_run_receipts": 40960,
+    "exact_raw_body_including_failure_sentinel": 131073,
+    "margin": 24575,
+    "new_source_tests_design_draft_final_and_temporary_fixtures": 40960,
+    "projection": 8192
+  },
+  "claims": "Exact returned runtime fingerprint agreement only ties repository claim to the already-retained bytes. Repository match labels, recompiledBytecode and transformations are untrusted claims, not independent compilation. Metadata object is not the original Solidity metadata byte string; no content-address proof from reserialization in this stage. source_equivalence/eligibility/economics remain false.",
+  "documentation_observation": "Official docs say v1 turned off2026-07-07 and v2 contract GET supports selected dot-path fields. Root browsed docs only; no implementation-artifact lookup occurred before this allocation.",
+  "frozen_expected": {
+    "chain_id": "1",
+    "implementation": "0x63e749153baf1838f63ca22c275370bd2b1ceb15",
+    "metadata_multihash_hex": "1220dd4d8e5db53112439967db2c464c1ea494a86bff16c12971539081501f5c3643",
+    "runtime_bytes": 18599,
+    "runtime_sha256": "b942614560ef7218a52173cc501ce9198f74a558348edf957cda62a218aa20fe"
+  },
+  "inputs": [
+    {
+      "bytes": 1375,
+      "path": "reports/comet-identity-v1/run-v1/projection.json",
+      "sha256": "a6025a1fde7811d92a050da087f34083c875de86c32e45825b1f664d9f590a07"
+    },
+    {
+      "bytes": 1808,
+      "path": "reports/comet-identity-v1/runtime-trailer-receipt.json",
+      "sha256": "479355ca1c0a7dd26ff33e23d5f0983fc9fdf906bf3c4f0773e346d0ce475f68"
+    },
+    {
+      "bytes": 10650,
+      "path": "scripts/comet_source_metadata_v1.py",
+      "sha256": "39f2838aa32151e426731f5133712df3941f0e73c6d327ce140d1790bed5e566"
+    }
+  ],
+  "official_documents": [
+    "https://docs.sourcify.dev/docs/api/",
+    "https://docs.sourcify.dev/blog/apiv2-lookup-endpoints/"
+  ],
+  "overall_reservation_bytes": 2850605312,
+  "paths": [
+    "scripts/comet_sourcify_lookup_v1.py",
+    "tests/test_comet_sourcify_lookup_v1.py",
+    "reports/comet-sourcify-lookup-v1/",
+    "reports/experiment-storage/comet-sourcify-lookup-v1.json"
+  ],
+  "previous_active_research_reserved_bytes": 254476288,
+  "previous_global_allocation": {
+    "bytes": 5050,
+    "path": "reports/experiment-storage/hip4-live-causal-correction-fixture-v1.json",
+    "sha256": "56d562cbc18ca25f5161ea2bb774230db321813609d1888dd16d632cb6ce52f9"
+  },
+  "prior_failure": {
+    "bytes": 2819,
+    "path": "reports/comet-source-metadata-v1/root-reconciliation.json",
+    "sha256": "221d954f8b485a73a5b98d20a4c64285822129dcd05b6b3ecac334fe08e7f490"
+  },
+  "purpose": "Retrieve a verification repository claim for the exact already-observed implementation. Independently compare returned onchain runtime bytes with the retained identity SHA256; preserve compilation/metadata/transformations as provider claims. This is a new source-artifact stage following the terminal ipfs.io failure, not continuation of that one-shot plan. No outcome/economic source selection.",
+  "recorded_utc": "2026-10-02T15:20:54.641767+00:00",
+  "request_after_separate_freeze": {
+    "accept_encoding": "identity",
+    "body_accept_cap_bytes": 131072,
+    "body_received_cap_including_failure_sentinel_bytes": 131073,
+    "count": 1,
+    "method": "GET",
+    "request_seconds": 60,
+    "supervisor_seconds": 65,
+    "url": "https://sourcify.dev/server/v2/contract/1/0x63e749153baf1838f63ca22c275370bd2b1ceb15?fields=metadata,compilation,runtimeBytecode.onchainBytecode,runtimeBytecode.recompiledBytecode,runtimeBytecode.transformations,runtimeBytecode.transformationValues,runtimeBytecode.immutableReferences,runtimeBytecode.linkReferences,runtimeBytecode.cborAuxdata"
+  },
+  "reserved_bytes": 262144,
+  "resource_rules": "Exclusive output claim; no rerun, redirect, retry, fallback, environment proxy, alternate contract/chain, source URL follow, verification POST, compiler or library download. Retain exact returned raw prefix in one fsynced inode before later parsing. Bound duplicate-free strict UTF8 finite-object JSON depth/count and every projection field. Final admission requires successful worker/terminal/supervisor and unchanged source/input/plan pins. Preserve all unavailable outcomes.",
+  "schema": "comet-sourcify-lookup-v1-allocation",
+  "status": "offline_preparation_only_no_request_yet"
+}
