@@ -1,0 +1,72 @@
+{
+  "schema": "liquidation-delay-observability-v1",
+  "status": "draft_not_runnable",
+  "recorded_utc": "2026-10-02T04:41:33.609322+00:00",
+  "previous": "reports/experiment-storage/parler-peer-research-v1.json",
+  "previous_sha256": "66bfce0bd3c893749d2f1606b584738c6d16e3b64b87a19ac280cc8c60b02a56",
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 163315712,
+  "active_research_headroom_bytes": 91439104,
+  "overall_reservation_bytes": 2836777216,
+  "reserved_bytes": 0,
+  "suballocation_bytes": 131072,
+  "allocation_note": "131072 from the existing rolling offline-analysis2097152 allowance. Prior allocations direction262144+flow524288+inventory524288+adapterrepair262144=1572864; this makes1703936 and leaves393216. No new raw data, global reservation, or ceiling increase. Existing referenced sources are already funded.",
+  "categories_bytes": {
+    "source": 32768,
+    "tests": 16384,
+    "protocol": 8192,
+    "batch_outputs_and_provenance": 65536,
+    "root_readout": 8192
+  },
+  "output_caps": {
+    "gzip_per_batch": 24576,
+    "provenance_per_batch": 8192,
+    "readout": 8192
+  },
+  "input_validation_plan": "reports/experiment-storage/single-venue-inventory-context-ordinary-feed-fix-v1.json",
+  "input_validation_plan_sha256": "f8b045d2692cf5641a83a72f734d3b0fc4936db13986379f0d6fd88f9d845dfd",
+  "store_root": "data/rolling/market-research-v1",
+  "pin_owner": "inventory_context_v1",
+  "pin_note": "Retain existing inventory_context_v1 pins on all six named inputs throughout this new preflight; reuse unchanged inventory.check_inputs only for sealed-input validation, not feature or outcome processing.",
+  "batches": [
+    {
+      "index": 1,
+      "chunks": [
+        "chunk-000001",
+        "chunk-000002",
+        "chunk-000003"
+      ]
+    },
+    {
+      "index": 2,
+      "chunks": [
+        "chunk-000007",
+        "chunk-000008",
+        "chunk-000009"
+      ]
+    }
+  ],
+  "output_root": "reports/single-venue-research/liquidation-delay-v1",
+  "parameters": {
+    "episode_spacing_ns": 30000000000,
+    "delay_ns": 400000000,
+    "window_end_ns": 2400000000,
+    "max_source_age_ns": 500000000,
+    "source_clock": "timestamp milliseconds",
+    "first_seen_scope": "all ordinary and nonordinary rows in both arrays including subscription history, within each chunk",
+    "max_decoded_bytes_per_chunk": 1073741824,
+    "max_records_per_chunk": 1000000,
+    "max_line_bytes": 8388608,
+    "max_trade_ids_per_chunk": 500000,
+    "max_order_keys_per_chunk": 500000,
+    "max_label_rows_per_chunk": 10000
+  },
+  "stage": "Economics-free observability preflight only. No prices, sizes, book reconstruction, returns, cash, matched controls, statistical significance or validation claim. Freeze source/tests/protocol before reading any new continuation outcome.",
+  "prior_observation": "Schema/clock/count audit of first block already observed64 unique live liquidation rows,11 first-per-asset episodes at30s spacing, all buy-aggressor. Second corrected inventory result reports10 excluded liquidation rows. Neither analysis calculated delayed first-seen different-order continuation. All retained inputs remain exploratory.",
+  "event_definition": "Within each chunk, anchor at receipt UTC of the first valid live liquidation per ASSET across venues, then the first >=30s later. If tied receipt, preserve captured record/array order. Include every valid episode even near endpoint; no future-conditioned anchor selection. Same-message liquidation rows are one received batch; exclude ALL its observed order keys from continuation. Record all20 asset/venue cells including zeros.",
+  "candidate_definition": "For the anchor venue/market/aggressor, a liquidation from a different public taker-order key (side,order ID,order version) must be first observed strictly after t0+400ms and <=t0+2400ms by BOTH source and receipt clocks. A key seen earlier in the chunk, including any ordinary/nonordinary subscription-history row, is not new. Same initial-message fills and all initial-message order keys cannot count. Use explicit subtype=liquidation, Boolean side, consistent numeric/string trade/order identities, nonnegative integer version, and timestamp milliseconds with0<=receipt-source<=500ms. Zero versions are valid. No account IDs are used or output. Deduplicate cross-listed trades[]/liquidation_trades[] by venue/market/trade ID.",
+  "censoring": "Track complete observed window and generation/trade-channel continuity. Connection end/change, malformed trade message/identity/clock, trade source regression or unknown trade evidence affecting the market censors its open episode and prevents fabricated absence. EOF before window end is censored. Missing or stale labels are counted explicitly and cannot be ignored to infer no continuation. Book-only invalidation does not censor this label-only test; future price studies must separately handle book failures. Stream to verified gzip EOF with exact manifest record/decoded-byte reconciliation and input/source rechecks.",
+  "decision": "Primary result: any fully observed episode with >=1 qualifying distinct-order continuation, by block and all20 groups. One witnessed episode establishes only observable delayed label persistence in these captures and permits consideration of a separately frozen adequately supported matched cost-aware question. Zero on uncensored windows means no observed support for this400ms-2.4s version in these captures; it does not prove absent underlying flow or completeness of the public channel. Censored episodes remain unknown. Do not tune delay/window/spacing from observed outcomes or construct a trading wrapper.",
+  "limitations": "Different public orders need not share a parent, trader or causal cascade. Labels need not represent consumption of displayed liquidity. Nearby/all-buy episodes and venues/assets are dependent;<=21 prior episode upper bound is not statistical power. A control comparison and positive delayed absolute economics remain necessary for any alpha claim.",
+  "source_pins": []
+}

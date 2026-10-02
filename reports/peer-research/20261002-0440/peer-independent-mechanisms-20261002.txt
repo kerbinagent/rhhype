@@ -1,0 +1,121 @@
+Independent mechanism checkpoint — 2 October 2026
+
+Checkout: e69f21a39d543649080aaa1f92b2542e1e4b0341, isolated branch
+peer/independent-signal-research. Initial review used committed research/source
+and primary public documentation. No new outcomes informed these choices.
+The coordinator subsequently authorized continuing research and8MiB of new
+retained artifacts; peer-independent-research-v1.json records that grant.
+
+Priority: investigate one fixed BTC-to-alt propagation diagnostic. Park the
+funding-boundary idea for current inputs. Neither is a trading recommendation.
+
+1. Cross-asset response after a BTC move
+
+Mechanism hypothesis: systematic traders or market makers may adjust alt
+exposure after BTC moves, leaving part of the directional response after our
+entry delay. This is a behavioral inference. It does not imply causation, a
+stable beta or a one-for-one catch-up price. It differs from same-asset
+cross-venue convergence, while sharing its serious latency/cost obstacles.
+
+Kurihara and Matsumoto study minute-price BTC-to-alt relationships on Binance,
+with small illiquid assets outside this ten-asset cohort. That evidence does
+not establish executable delayed Core returns. Huth and Abergel explicitly
+find useful high-frequency prediction whose naive market-order value is
+eliminated by spread. These are motivation and an adverse prior, respectively.
+[Price transmission research](https://link.springer.com/article/10.1007/s10690-026-09589-z)
+[High-frequency leadership research](https://arxiv.org/abs/1111.7103)
+
+Existing negative Core/RH response results used the SAME asset on the other
+venue, with26 selected episodes and negative average quote returns in both
+windows. They weaken a generic lag story but do not test BTC-to-alt response.
+Static imbalance, residual fade and local shock tests also lack this leader
+feature. The ordinary inventory study's small conditional improvement is
+between negative quote cohorts, not evidence for this proposed mechanism.
+
+The cheapest decisive test uses existing two ten-minute broad captures, Core
+only, BTC leader and all nine other assets. At fixed one-second anchors, take
+BTC10-second absolute midpoint return>=10bp and target absolute return<=2bp;
+follow BTC for a60-second hold after delayed entry. These are fixed proposed
+choices, not tuned thresholds. Shared90-second BTC episodes prevent counting
+each target or callback as a new shock. The complete operational definition,
+calipers and failure accounting are in peer-cross-asset-v1.json.
+
+Existing capture/source supports native depth, identity, ordinary prints,
+receipt UTC/monotonic clocks, source times, sequence and generation, and
+metadata lot/minimum/fee/collateral checks. The official schema describes50ms
+book batching and distinguishes engine nonce from API offset. Actual leader
+causation, synchronized source clocks and accessible private fills remain
+unverified. No raw market observations were examined in this proposal phase.
+[Official schema](https://apidocs.lighter.xyz/docs/websocket-reference)
+
+Use earlier quiet-BTC controls for the same target/direction matched on target
+past return, immediate round-trip crossing cost,60-second realized volatility
+and ordinary trade count. Select controls using features only, at least66s
+before the event so their maximum modeled holding intervals end before it.
+Keep missing controls and every selected failure. First pass chooses features
+and controls; second pass alone calculates selected forward quotes. Both passes
+use identical hash-pinned archives.
+
+400ms baseline combines300ms documented Standard taker processing with100ms
+assumed network allowance;800ms is a fixed sensitivity. Fresh-book, source-due,
+receipt-due and timeout checks apply to entry and exit. Current official Core
+Standard regular-order fees are zero; Premium's lower latency has2.8bp taker
+fee per leg at its unstaked tier, so it cannot be substituted cost-free.
+[Account types](https://apidocs.lighter.xyz/docs/account-types)
+[Trading fees](https://docs.lighter.xyz/trading/trading-fees)
+
+Fix native quantity at decision, retain actual entry notional<=100, full-depth
+same-quantity exit and each leg's own fees. Separate1/2/5bp stress from measured
+crossing costs. Use Core USDC throughout. Exclude the whole maximum65.6s
+execution span around funding boundaries; unexpected exposure means unknown
+funding. Nine alternatives are not a900-dollar portfolio. Quoted cash
+differences remain hypothetical book observations, not attributed fills.
+
+Falsifier: after delay and actual costs there is no positive absolute target
+value or no increment over matched quiet-BTC controls. Lag disappearing under
+strict freshness also rejects its observation premise. Zero/sparse episodes
+are inconclusive. Two short historical sessions cannot validate durable profit;
+even a positive screen only motivates an untouched follow-up. Retain all nine
+asset rows, missing endpoints, episode dependence and latency arms.
+
+2. Post-funding position unwind — parked
+
+Hypothesis: after positive funding, recipient shorts buy to close and paying
+longs rebuild exposure, creating upward pressure; reverse for negative funding.
+This behavioral prediction is materially different from constant carry. Core
+and RH document hourly margin transfers, but payment requires no book trade
+or deterministic price reset. The rate averages prior premium observations;
+the terminal book premium is not the settled rate. A funding receipt alone is
+not profit when the price move and exit costs are included.
+[Core funding](https://docs.lighter.xyz/trading/funding)
+[RH funding and settlement](https://robinhood.com/us/en/support/articles/robinhood-wallet-perpetual-futures/)
+
+The current rolling source subscribes only to order_book/trade and performs
+four startup metadata requests. It lacks timestamped pre-boundary upcoming
+funding estimates and observed settlement updates. Official market_stats
+separates current_funding_rate from the previous funding_rate/timestamp, so
+joining a settled rate afterward would introduce hindsight into this signal.
+Startup metadata cannot establish boundary paths of index, premium or open
+interest. Adjacent capture chunks also do not guarantee continuous coverage.
+These are source-level availability findings, not a raw-data audit.
+
+If the missing observations later become authorized, the fixed diagnostic
+would use the estimate received byT-5s, enter in its sign after confirmed
+settlement andT+1s plus Standard/network delay, and hold60s. Compare earlier
+same-asset, same-direction minute anchors with fixed past-feature matching;
+retain every scheduled hour and all missing signal/control/exit cases, clustered
+by hour across assets. Validate own native size<=100, full-depth closes and
+fees. Credit zero funding only when the confirmed payment precedes entry and
+no later payment is owned; ambiguous timing stays unknown. Any pre-payment
+variant must include actual signed q*index*rate cash at the owned settlement.
+
+Park this version because the defining decision-time state is absent, and
+there is no evidence that its move survives delayed entry. Do not request new
+capture or inspect the root's armed funding study to rescue it. Prior carry
+negatives and the older0.41bp paired-rate arithmetic neither prove nor refute
+this separate single-venue price effect. A future revisit requires an explicit
+observability change, then positive absolute and comparative economics.
+
+Local review: two gpt-6.1-sol agents at xhigh independently examined mechanisms,
+source reuse and protocol risks. Only the local main session communicates via
+Parler. Existing frozen source and historical results remain intact.

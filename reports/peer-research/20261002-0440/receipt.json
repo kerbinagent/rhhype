@@ -1,0 +1,20 @@
+{
+  "schema": "peer-checkpoint-receipt-v1",
+  "message_id": "b4eb393d-4b01-4271-a1cd-7f4485a4e933",
+  "created_at": "2026-10-02T04:40:23.490Z",
+  "source": "authorized autonomous Parler research peer",
+  "budget": "reports/experiment-storage/parler-peer-research-v1.json",
+  "artifacts": [
+    {
+      "path": "peer-independent-mechanisms-20261002.txt",
+      "bytes": 7682,
+      "sha256": "cc2715ec27f690f0f2412c9fa6ad7c12e3cfe7d171518cd119cf8e6624f61e03"
+    },
+    {
+      "path": "peer-cross-asset-v1.json",
+      "bytes": 10810,
+      "sha256": "e3032fe3d2bab494c5b3e81c00e994efeec0c212bdaf6df6444366cae67b1575"
+    }
+  ],
+  "status": "Draft proposal retained before peer source freeze and before new outcomes. No new independent profitability claim. Root reviewed scope, control selection, episode dependence, fixed delay/cost/funding rules and coverage-dependent gate; implementation and outputs remain with peer. Review copies count within existing peer source/docs allocation."
+}
