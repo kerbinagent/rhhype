@@ -5981,3 +5981,20 @@ Paper pulses: 03:51 fresh/ok 32.72 ms; 03:57 fresh/busy CPU 65.57%, p95 57.23 ms
 Carry 2026-10-02T04:05:00.101998+00:00: 331 sampled, persistent invalid slot 71, 532 future/interrupted, running with no errors or economic evaluation. News waiting heartbeat 2026-10-02T04:07:45.009552+00:00; companion waiting_for_capture_terminal heartbeat 2026-10-02T04:07:39.888958+00:00; economics false. No carry sample/news economic reads, competing jobs or service changes.
 
 Reviews 66–180: 2,550 completions = 2,517 exact losses, one estimated loss, five audited paired gains, 27 audited rescue gains. Archive 3,783,346 / 5,242,880 B; 133 future pairs at 5,342 B project 4,493,832 B, margin 749,048 B. Next **04:26:33 UTC**.
+
+
+### Review 181 — 2026-10-02 04:26:33 UTC
+
+Resumed after user turn interruption; original nominal timestamp retained with no duplicate row. All eight coverage and aborted-coverage checks complete. Exact report and independent epoch snapshot archived with deterministic gzip, exclusive create, decompression verification and per-write cap/growth guards.
+
+`review-20261002T042633Z.json.gz` raw 18,311 B SHA-256 `dce25f3285421d26ae50632ec1df7677906afe486dc8a6c0852eaa6e93d15426`; gzip 2,521 B SHA-256 `7c56ef1270ddfe65db87d428a90334470fb6505148a300df10f22e108160fba3`.
+
+`current-epoch-at-review181.json.gz` raw 9,284 B SHA-256 `feb41294a487640e28afa79741a8767f5581084c1c704282744f4edec01722a7`; gzip 1,730 B SHA-256 `86376073e71ab5864769eaf0c4782c88614a885a668ca814e4f3602546cafa7a`.
+
+Snapshot read 2026-10-02T04:30:40.875450Z, updated epoch seconds 1790915440.7318006; not pooled across boundaries. Two exact convergence losses / −$1.8518889091; no gains, estimates or aborts; two Hyperliquid price_limit rejects. Other costs $0.9964278130, capital $0.0000040961.
+
+Paper fresh/running/ok, four feeds, CPU 55.51%, p95 lag 34.09 ms, RSS 265.71 MiB, 102 pairs. Root confirmed interrupted foreground analyses exited without partial outputs; detached nice-19 flow batches 1/2 now state running, inventory batch 2 finished 04:26:59 exit 0. Runtime records share original allowances, no process changes. Runtime read included stdout tail; subsequent operational reads select state/timing/PID/return code only. Rolling chunk 000012 collecting 194.26 s / 11,960,550 compressed B / 66,240 records, two connections/no errors/economics false; controller chunks 232,810,726 B / controls 235,618 B against separate decimal 2 GB. No raw/reserved economics opened.
+
+Carry 2026-10-02T04:30:00.114335+00:00: 336 sampled, one persistent invalid slot 71, 527 future/interrupted; running/no error/evaluation. News waiting heartbeat 2026-10-02T04:31:15.039536+00:00; companion waiting_for_capture_terminal heartbeat 2026-10-02T04:31:09.917170+00:00; economics false. No carry sample/news economics reads or competing jobs.
+
+Reviews 66–181: 2,552 completions = 2,519 exact losses, one estimated loss, five audited paired gains, 27 audited rescue gains. Archive 3,787,597 / 5,242,880 B; 132 future pairs at 5,342 B project 4,492,741 B, margin 750,139 B. Next **04:46:33 UTC**.
