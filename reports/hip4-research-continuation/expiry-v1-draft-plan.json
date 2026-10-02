@@ -1,0 +1,183 @@
+{
+ "allocation_request": {
+  "derived": 36864,
+  "raw_gzip_exact": 49152,
+  "source": "existing continuation raw headroom (131072 B after the books-v1 suballocation), per root"
+ },
+ "analysis_plan": {
+  "arithmetic": "exact decimal context (prec 120, Inexact and Rounded trapped); px/sz at most 20 integer and 30 fractional digits",
+  "binary_spec": {
+   "description": "class:priceBinary|underlying:BTC|expiry:20261003-0600|targetPrice:85971|period:1d",
+   "name": "Recurring",
+   "outcome": 7544,
+   "quoteToken": "USDC",
+   "sideSpecs": [
+    {
+     "name": "Yes"
+    },
+    {
+     "name": "No"
+    }
+   ]
+  },
+  "control": 1473,
+  "ex_post": "one unit at the touch, zero fee, valued only when every role in the route has a valid bound settlement; otherwise the route lists its premise failures and carries no value",
+  "models": {
+   "agnostic_six_state": "states L,M1,M2,H,F0,F1 with B=M2+H+F1: conversions plus the contract-spec common mark; nothing assumed about B in the fallback state",
+   "fallback_zero_semantic": "adds the semantic premise F=0, intersected with the F quotes (a positive F bid is a premise conflict)"
+  },
+  "p6": "consistent_at_observed_price if every role matches its expected 0/1 at the one observed X; falsified_at_observed_price on any mismatch; unavailable on any premise failure; a match does not identify the mapping at unobserved prices",
+  "price_detail_premise": "B, L, M and H must each carry details \"price:X\" and all X must agree; F may omit details or carry an empty string, but a present F price must parse and agree; a missing, unparsable or conflicting price is a premise failure, never agreement",
+  "question": 371,
+  "removal": "classified only from a final outcomeMeta that parses with outcomes and questions lists, integer ids and no duplicates, and in which the long-dated control question 198 matches its frozen structure (book-gate meta check) with control outcome 1473 listed; otherwise unavailable",
+  "roles": {
+   "B": 7544,
+   "F": 7550,
+   "H": 7553,
+   "L": 7551,
+   "M": 7552
+  },
+  "settlement_binding": "a settledOutcome object counts only if spec.outcome is the requested id, the spec equals the frozen canonical spec exactly, and settleFraction is a decimal in [0, 1]",
+  "settlement_observation": "observation bounds only: each read keeps its send and receive times and shape, and a valid bound object proves the record existed by that read's receipt; no protocol settlement lower bound is derived, because a null response is not proof of an unsettled state",
+  "snapshot_gates": "book-gate freshness, local window and server spread; Q371 and 7544 brackets unchanged at meta_pre and meta_mid",
+  "target": "85971",
+  "thresholds": [
+   "84251",
+   "87690"
+  ]
+ },
+ "decision_rule": {
+  "failure": "Any stop (schedule missed, transport, HTTP, cap admission, truncation, deadline) keeps the retained members and terminal and accepts no projection; a killed worker leaves the fsynced pending prefix; the supervisor re-parses, validates the 30 planned records including schedule and clock fields, and reproduces the projection.",
+  "h2": "no_violation if every usable snapshot is feasible in the agnostic six-state model; candidate if any usable snapshot is infeasible (separate fee, settlement-latency and depth review; no naked short); inconclusive if no snapshot is usable. One expiry gives no repeatability.",
+  "other": "Settlement observations keep both read intervals and shapes; only a valid bound object is evidence, observed by its read's receipt; null never yields a settlement lower bound. Removal statuses (listed or absent) come only from a strictly parsed final outcomeMeta in which the long-dated control question 198 is unchanged and control 1473 is listed; otherwise unavailable; the control response shape is recorded without interpretation.",
+  "p6": "consistent_at_observed_price, falsified_at_observed_price or unavailable (with every premise failure listed) from the 06:10 round; consistency at one price does not identify the bucket mapping at unobserved prices"
+ },
+ "design": "reports/hip4-research-continuation/expiry-v1-design.md",
+ "draft_note": "Collaborator draft, revised after root review (13:40 UTC). Root sets status frozen_expiry_schedule and pins, and commits it as reports/experiment-storage/hip4-continuation-expiry-v1.json. No request is authorized by this draft.",
+ "exclusions": "No orders, signing, accounts, websocket, RPC, trades, asset contexts, tokenDetails, spotMeta, retries or alternative endpoints. No rolling/news data.",
+ "frozen_inputs": {
+  "binary_spec_baseline": "analysis_plan.binary_spec",
+  "metadata_projection": "reports/hip4-outcome-v1/metadata-v1/metadata.json",
+  "protocol_freeze_commit": "9fac381",
+  "result_commit": "341ee58",
+  "sha256": "66913ed2f88aca6f05c4f32f81b438d0abd8228e660c9b97a8165e4cf6bf8788"
+ },
+ "offline_validation": {},
+ "output_dir": "reports/hip4-research-continuation/expiry-v1",
+ "output_limits_bytes": {
+  "bundle_gzip": 49152,
+  "claim_terminal_and_supervisor_receipts": 12288,
+  "projection": 24576
+ },
+ "previous": "reports/experiment-storage/hip4-research-continuation-allocation-v1.json",
+ "previous_sha256": "5f0053c23c3c46ead5863665e8fb80b8a0aaa66ce1a71422f7740e101a2e3a60",
+ "questions": [
+  "H2 near expiry: valuation infeasibility of 7544 and Q371 in the agnostic six-state and F=0 semantic models (each conditional), from 15 YES l2Book snapshots",
+  "P6 at the observed price: do bound settleFraction values match index:0/1/2 = <84251, [84251,87690), >=87690 and B = 1{X>=85971} at the one realized X? A match is consistency at X only",
+  "Settlement observation: send and receive times and shapes of the two settledOutcome reads; a valid bound object proves the record existed by that read's receipt; no protocol settlement lower bound is derived",
+  "Absence of settled outcomes and question 371 from a strictly parsed final outcomeMeta",
+  "Response shape of settledOutcome for an unsettled control outcome (1473)"
+ ],
+ "request_plan": {
+  "any_stop_is_failure": true,
+  "bundle": "one gzip member per record, written and fsynced to a pending file before the next request and hard-linked to the final name at the end (a killed worker leaves the pending prefix); a request is sent only if a worst-case empty record still fits; a record that does not fit keeps a bounded body prefix whose stored (level 0) member fits (bounded, not proven maximal), is flagged truncated, and stops the run as a failure",
+  "caps": {
+   "bundle_gzip_exact": 49152,
+   "meta_body": 196608,
+   "other_body": 8192
+  },
+  "connection": "one keep-alive connection per scheduled group via the reused book-gate fetch, which retires a connection after any protocol-indicated close and counts every open; never a retry",
+  "day_utc": "2026-10-03",
+  "documented_weight": 330,
+  "end_utc": "06:12:30",
+  "environment_proxies": false,
+  "late_tolerance_seconds": 5,
+  "launch_window_utc": [
+   "05:00:00",
+   "05:38:00"
+  ],
+  "method": "POST",
+  "redirects": false,
+  "request_count": 30,
+  "retry": false,
+  "schedule": [
+   [
+    "05:40:00",
+    "meta_pre",
+    [
+     "meta"
+    ]
+   ],
+   [
+    "05:40:05",
+    "S1",
+    [
+     7550,
+     7551,
+     7552,
+     7553,
+     7544
+    ]
+   ],
+   [
+    "05:50:00",
+    "S2",
+    [
+     7550,
+     7551,
+     7552,
+     7553,
+     7544
+    ]
+   ],
+   [
+    "05:57:00",
+    "S3",
+    [
+     7550,
+     7551,
+     7552,
+     7553,
+     7544
+    ]
+   ],
+   [
+    "05:57:10",
+    "meta_mid",
+    [
+     "meta"
+    ]
+   ],
+   [
+    "06:01:00",
+    "settled_0601",
+    [
+     7544,
+     7550,
+     7551,
+     7552,
+     7553,
+     1473
+    ]
+   ],
+   [
+    "06:10:00",
+    "settled_0610",
+    [
+     7544,
+     7550,
+     7551,
+     7552,
+     7553,
+     1473,
+     "meta"
+    ]
+   ]
+  ],
+  "url": "https://api.hyperliquid.xyz/info"
+ },
+ "reserved_bytes": 0,
+ "schema": "hip4-continuation-expiry-v1",
+ "source_pins": [],
+ "status": "draft_expiry_schedule"
+}

@@ -1,0 +1,188 @@
+{
+  "schema": "hip4-source-cache-inventory-v1",
+  "recorded_utc": "2026-10-02T14:39:37.299649+00:00",
+  "base": "/tmp/claude-1000/-home-harry-projects-research-rhhype/e2c9ac4e-a5d3-480f-a2c6-31db27dc1069/scratchpad",
+  "files": [
+    {
+      "name": "avenues.staged",
+      "bytes": 4891,
+      "sha256": "da880d5ded260aab37ff7b8037cd7ab7676386d1ff9085a4de988ef6adc23fdf"
+    },
+    {
+      "name": "cb-blog.html",
+      "bytes": 5678,
+      "sha256": "5e42df30e43e7a0ea4ce65b2bfe6e75bdaf227ec1b79a566404a3ff766661117"
+    },
+    {
+      "name": "doc-aqa.md",
+      "bytes": 6814,
+      "sha256": "14ebdc13e0521440601d0f0d95ff93abfaef74ca0f5dbf5afe60081383d00230"
+    },
+    {
+      "name": "doc-assetids.md",
+      "bytes": 2265,
+      "sha256": "eec6b95ef1bf184fef4e29effb3f23e6297757c899aa77110d108686011ae0ae"
+    },
+    {
+      "name": "doc-deployer.md",
+      "bytes": 13905,
+      "sha256": "1030b37bffd5e69e55e335c146b1737a602fa025f1b595306a2cacb048cb8975"
+    },
+    {
+      "name": "doc-fees.md",
+      "bytes": 12174,
+      "sha256": "75e55504b1b887a89e1668a9544d09b013242747bcc29f8648a5410142a71258"
+    },
+    {
+      "name": "doc-hip1.md",
+      "bytes": 8423,
+      "sha256": "db370738d60ee82835403b4fdb34a096641d0615a37506dcee48a46c38931ddc"
+    },
+    {
+      "name": "doc-hip4.md",
+      "bytes": 3452,
+      "sha256": "087859f228fc6d64d8cec8d43d3e544d054c144f4343cf4cf1cba58e44f64fa6"
+    },
+    {
+      "name": "doc-hist.md",
+      "bytes": 2331,
+      "sha256": "b9ba8cc7be9949cb9911d09014b2577381deacdf1ea844a7a58dbf73b0cd11ae"
+    },
+    {
+      "name": "doc-info.md",
+      "bytes": 55013,
+      "sha256": "f4228fc7734af5dbf420e5bdf2b25c248a5b5287035ab2d8a645dc14ce64f0bd"
+    },
+    {
+      "name": "doc-l1.md",
+      "bytes": 7837,
+      "sha256": "79b34dd9987220facbf6d646f6dbc8a1bf15221a56b3cba01226c46602ded9be"
+    },
+    {
+      "name": "doc-margining.md",
+      "bytes": 3823,
+      "sha256": "95891a47102caca3171f406873178efc0d456ecda5636ed89fd5dc797f6c90a7"
+    },
+    {
+      "name": "doc-nodes.md",
+      "bytes": 495,
+      "sha256": "b5b1568e21fff7d279b7d3893868cabc7b20cb09258ad635393c2d8a141a98a5"
+    },
+    {
+      "name": "doc-pm.md",
+      "bytes": 7721,
+      "sha256": "87b796c37c4fc777bb93e62042fa73e7eb5d6f3aae5d5d9194cd3ee23e1d3662"
+    },
+    {
+      "name": "doc-pqa.md",
+      "bytes": 2278,
+      "sha256": "fdeddfaa9adc1c5cd32aa65d00f71ee0092cfb0630bc8eb23294e8c9f3baaffd"
+    },
+    {
+      "name": "doc-specs.md",
+      "bytes": 5192,
+      "sha256": "59ef08be4b7e3d7cc0f4245abd4f133d743a983820df5b2ef0ce1ceb6af50ea3"
+    },
+    {
+      "name": "doc-spot.md",
+      "bytes": 13114,
+      "sha256": "2790494f02e91dea175643bc803d8659406c5aea213c6382e9a2bb8090c9a679"
+    },
+    {
+      "name": "doc-subs.md",
+      "bytes": 18564,
+      "sha256": "761f00c20ba21c0396621d6271a1c62405489b5e5400e60088c5fe93befd9a2c"
+    },
+    {
+      "name": "doc-ticklot.md",
+      "bytes": 1561,
+      "sha256": "1114a12bc134c7d0e004002e67a3103bb7835f13ec34329d5409c1f895830a10"
+    },
+    {
+      "name": "exchange-endpoint.md",
+      "bytes": 119366,
+      "sha256": "6df658a502e587db9cd5ae4bbe30c4e7cfde8e8a96cd5b11d6ca1ea39928c687"
+    },
+    {
+      "name": "hl-llms.txt",
+      "bytes": 21219,
+      "sha256": "1c712a65803e2be8cda816d62167cfd41770cd6f1ab4e1c7ded8e79f1faa3071"
+    },
+    {
+      "name": "node-misc.md",
+      "bytes": 1364,
+      "sha256": "92b1b57f1acaa9904f85e03c2c0f7b3c8b7d01426156a7b8a6dfa07b43b8e1f8"
+    },
+    {
+      "name": "node-readme.md",
+      "bytes": 23047,
+      "sha256": "51115647477b18c91e83739d8b26444ac6ab4ff15612101cae6c255a95d21f41"
+    },
+    {
+      "name": "pairing-v1.staged.md",
+      "bytes": 4194,
+      "sha256": "f45e1fc5e4ec5721d52c25e468cfb1342215bb3e17a4c541c8ab28a1062e87d2"
+    },
+    {
+      "name": "poll_parler.sh",
+      "bytes": 1075,
+      "sha256": "bdf5c7c26b21a87b18cccf960e83973464d8aeeeda9225e4e1cd97177ccce921"
+    },
+    {
+      "name": "sdk-exchange.py",
+      "bytes": 38359,
+      "sha256": "0bd885c5b64fd77893db58d4982b0d24e92b5be5036d0e9d6d05c40a1812d432"
+    },
+    {
+      "name": "sdk-info.py",
+      "bytes": 27783,
+      "sha256": "fc36d225a2b865d474e5682ad4f095d9917e84ef5dba9c80de3d4600467f4882"
+    },
+    {
+      "name": "sdk-types.py",
+      "bytes": 7944,
+      "sha256": "5161dfcfc5ea39f1540d4e68ffd79520b9f5ab7aff9ce88a8440d6e6dabb88ba"
+    },
+    {
+      "name": "txyz-architecture.md",
+      "bytes": 3415,
+      "sha256": "978eeadf49c7efb369abe5cfff9d1c5659579e2a7b5edf6fd4a6e94e68c1935c"
+    },
+    {
+      "name": "txyz-fees.md",
+      "bytes": 4976,
+      "sha256": "a8d09bf0c3240745b2e8fc14e3fb6d7d9f55e40084acf6ed8f7887d3563098f2"
+    },
+    {
+      "name": "txyz-llms.txt",
+      "bytes": 9484,
+      "sha256": "fccbc4d16dde4c88c64555bf85603ea4d05803ae087465975eb62bf380af7e84"
+    },
+    {
+      "name": "txyz-mech.md",
+      "bytes": 4117,
+      "sha256": "e71506a19edf14f9ad4af57e4ddb7fbf2e370d434ca44436e07a3f4ab6c04b7e"
+    },
+    {
+      "name": "txyz-res.md",
+      "bytes": 5241,
+      "sha256": "a87afb12b782c3dbda60c5c098c30c49ee2a7f87a626dbb33573ec1e78a2d4ff"
+    },
+    {
+      "name": "txyz-risk.md",
+      "bytes": 13351,
+      "sha256": "91e9d5f2bcd056b7c0f2f3169d30ed62d376ac82cbdf1927e0f2f5912fd0fc81"
+    },
+    {
+      "name": "v3.staged",
+      "bytes": 6337,
+      "sha256": "b453d75111bc4284cf5328d08890e2ce6ade51260b39083994e8c69766036063"
+    }
+  ],
+  "total_bytes": 466803,
+  "claims": "Inventory only. These bytes were omitted from the prior source category and disclosed in source-cache-reconciliation-v3; no retrospective preallocation claim. Existing originals are preserved at these paths. No documentation body or archive copy is added by this inventory. Source notes separately identify URLs and limits of claims.",
+  "task_output_reservation_bytes": 131072,
+  "task_output_note": "Mutable harness outputs under sibling tasks are reserved at their full cap rather than used as immutable evidence. Peer reported59399B/26 files; root observed56130B/27 files. No intentional cleanup was requested or performed.",
+  "source_allocation": "reports/experiment-storage/hip4-continuation-source-cache-reconciliation-v3.json",
+  "inventory_charged_to_root_archive_and_inventory_reservation_bytes": 147456
+}
