@@ -155,12 +155,11 @@ reservation. Capture data and analysis outputs have separate funded limits.
 
 ## Peer input handoff
 
-The initial cross-asset diagnostic found zero qualifying BTC episodes in its
-old windows; economic means remain missing. The peer is checking unchanged
-signal availability on the first chronological exploratory rolling block.
+The [unchanged return-lag audit](../reports/peer-research/20261002-0544/decision.txt)
+found one BTC episode but no target/control pairs; economics remain unevaluated.
+The separate cross-asset OFI draft will reuse the
+[frozen own-market tables](../reports/experiment-storage/single-venue-queue-ofi-v1.json).
 The [immutable input export](../data/evidence/rolling-exploratory-000001-000003-v1-inventory.json)
 contains only chunks 1–3, 45 verified members, 55,818,240 tar bytes through Git LFS.
 Its [64 MiB reservation](../reports/experiment-storage/rolling-exploratory-peer-export-v1.json)
-comes from existing headroom. Live rolling storage and reserved chunks remain
-under their original rules. The [peer review package](../reports/peer-research/20261002-0506/decision.txt)
-retains its own frozen protocol, source, tests, results and runtime provenance.
+comes from existing headroom. Rolling and reserved data retain their rules.

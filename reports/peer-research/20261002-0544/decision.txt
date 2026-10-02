@@ -1,0 +1,68 @@
+Decision: insufficient_feature_support. Park the unchanged return-lag mechanism.
+
+This audit cannot support a separate outcome protocol: all three chunks have zero
+eligible target events and zero chosen prior controls. No forward quotes, economic
+returns, cash profit or execution success were evaluated. One BTC episode makes
+this insufficient feature support rather than complete leader nonactivation.
+The result is neither a profitability claim nor a rejection of all cross-asset
+mechanisms. Do not lower the threshold or relax gates in response.
+
+Input and freeze
+First chronological sealed exploratory chunks 000001-000003, independently reset
+at each capture; adjacent chunks and assets are dependent. Export commit
+90e99c80244cfb69251f863760be1af969802baa, 55,818,240-byte LFS archive SHA256
+534adf702946c5ea8b0a59ff79641aadf2f2de5e3c8a454baaa12ad907f773cf.
+All 45 exact inventory members were checked before feature processing.
+Protocol research/peer-cross-asset-availability-v1.json SHA256
+372e5bf16230c5d2e5e81ceee059bfcd99d25168266a17abbaefe71e94b64b19,
+frozen 2026-10-02T05:30:13.666563+00:00; pre-feature commit
+4a7e9a5eb7e4bb4c1383c7b0fc4cd57060f4817f. Baseline v1 rules are unchanged.
+
+Coverage
+Each chunk: 408 scheduled BTC decisions and 3,672 target decisions across all
+nine fixed targets. Total: 1,224 BTC decisions and 11,016 target decisions.
+Chunk 1: 404 below the 10bp/10s threshold; 4 leader clock failures; 0 episodes.
+Chunk 2: 408 below threshold; 0 leader clock failures; 0 episodes.
+Chunk 3: 401 below threshold; 6 suppressed inside the selected BTC episode;
+1 selected upward episode at 2026-10-02T03:01:20.934999+00:00, return
+10.27544979518839957947221985bp. This is one episode, not seven independent events.
+
+At that episode, the first failing target gate was target_not_quiet for ETH,
+SOL, SUI, NEAR, ZEC and VVV; volatility_history_missing for HYPE;
+target_clock_failure for XRP; intermarket_source_skew for LIT. These are first
+failure tags, not proof that every subsequent gate would have passed.
+Selected target events / matched controls / BTC episodes with a matched control:
+0 / 0 / 0 in each chunk. The predeclared floor of three such episodes in EACH
+chunk fails in all three. No missing-control claim is made because no target
+event reached matching.
+
+Quiet-control features existed, but they are not selected pairs or outcomes.
+Distinct asset/time catalog sizes by chunk: 539 / 522 / 313. Directional feature
+counts are twice those values; both directions and all target failures remain in
+the result JSON. SUI has zero eligible control features in every chunk. Control
+catalog availability does not overcome absent event support.
+
+Verification and retained evidence
+The single bounded pass per chunk decoded 405,587 total records and finished in
+57.724 seconds under a 300-second external timeout, return code 0, empty stderr.
+Before freezing, 10 synthetic input-identity rejection cases and syntax checks
+passed; the reused baseline had 44 focused decision tests and 4 corrected
+ordinary-trade adapter tests passing. No full suite or raw replay was run here.
+Saved-output checks reconcile all 27 asset rows and 54 directional control
+funnels, all scheduled counts, the protocol hash and unchanged source hashes.
+Independent review is reported separately by the coordinator handoff.
+
+result.json.gz: 4,904 bytes; SHA256
+f2060462d0abec0312553bd3c294f8b0c89ef6883a78d442ba272e859490d910.
+readout.txt: 4,283 bytes; SHA256
+b1c72901bc2f7befc9fab4ac01082f6ab5dfda6cf7135aca9f14ee595b8a1371.
+execution.json: 1,214 bytes; SHA256
+8904defa1fc2075045e18e0627fd58169874bc9b7c8c0283903b2c238b92b93b.
+
+Scope
+The 100 USDC quantity convention is a fixed v1 diagnostic baseline, not a user
+ceiling. A distinct lagged cross-asset observed-book-transition OFI hypothesis
+may be designed separately using the coordinator's shared extraction layer.
+Its mechanism, controls, sizes and causal evaluation require a new freeze;
+this sparse return-lag result does not validate it. No reserved inputs, new
+capture, authenticated service, order, wallet operation, push or main merge.

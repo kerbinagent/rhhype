@@ -1,0 +1,48 @@
+{
+  "verified_utc": "2026-10-02T05:25:16.643851+00:00",
+  "source_commit": "90e99c80244cfb69251f863760be1af969802baa",
+  "archive_path_in_commit": "data/evidence/rolling-exploratory-000001-000003-v1.tar",
+  "archive_bytes": 55818240,
+  "archive_sha256": "534adf702946c5ea8b0a59ff79641aadf2f2de5e3c8a454baaa12ad907f773cf",
+  "inventory_sha256": "f3ce24fc4854d6c2b29cd997b6e5b8754434c00779d24b78723edb8b7cdc6537",
+  "export_protocol_sha256": "20c1a113938eeb26c479d3f6f05ee50c9b56a665f2137dcc658530857f9d6aa1",
+  "member_count": 45,
+  "member_bytes": 55786041,
+  "all_member_hashes_verified": true,
+  "destination": "data/peer-inputs/rolling-exploratory-000001-000003-v1/extracted",
+  "chunks": [
+    {
+      "chunk": "chunk-000001",
+      "seal_state": "sealed_complete",
+      "role": "exploratory",
+      "started_utc": "2026-10-02T02:36:30.998286+00:00",
+      "ended_utc": "2026-10-02T02:46:31.918648+00:00",
+      "configured_seconds": 600,
+      "configured_total_bytes": 67371008,
+      "frames_sha256": "dda4b7dd07eb33404218b4f4ea07cdaf492a0d7c109e445c1b7866834588c93a"
+    },
+    {
+      "chunk": "chunk-000002",
+      "seal_state": "sealed_complete",
+      "role": "exploratory",
+      "started_utc": "2026-10-02T02:46:36.335551+00:00",
+      "ended_utc": "2026-10-02T02:56:37.129673+00:00",
+      "configured_seconds": 600,
+      "configured_total_bytes": 67371008,
+      "frames_sha256": "f9684cd2e8c708562eb30c20af64c3524cb8103d819bc93e4ed175fe5a12ac57"
+    },
+    {
+      "chunk": "chunk-000003",
+      "seal_state": "sealed_complete",
+      "role": "exploratory",
+      "started_utc": "2026-10-02T02:56:40.934999+00:00",
+      "ended_utc": "2026-10-02T03:06:41.775658+00:00",
+      "configured_seconds": 600,
+      "configured_total_bytes": 67371008,
+      "frames_sha256": "3e9498d70586dea53865f136739de140eff17d35348e8b1fe73829bdce2fe101"
+    }
+  ],
+  "raw_json_decoded": false,
+  "features_or_economics_computed": false,
+  "transport": "Git LFS exact pointer smudge; LFS ref fetch interrupted during partial-clone metadata scan; committed source object and extracted copies follow export accounting."
+}

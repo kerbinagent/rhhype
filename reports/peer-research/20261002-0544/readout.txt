@@ -1,0 +1,37 @@
+Unchanged cross-asset signal: exploratory feature availability only.
+No forward quotes, economic returns, cash profit or strategy promotion.
+Full nine-target gates, both-direction control funnels and selected causal provenance are in the result JSON.
+{"classification": "insufficient_feature_support", "economic_evaluation": false, "interpretation": "Operational feature support only; adjacent chunks and assets remain dependent.", "separate_outcome_protocol_supported": false, "strategy_promotion": false}
+Chunk 000001: {"btc_episodes_with_chosen_prior_control": 0, "chosen_prior_controls": 0, "selected_btc_episodes": 0, "selected_target_events": 0}
+Leader funnel: {"below_leader_threshold": 404, "leader_clock_failure": 4, "scheduled": 408, "scheduled_signal_ticks": 408}
+ETH: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+SOL: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+HYPE: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+XRP: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+SUI: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+NEAR: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+ZEC: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+VVV: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+LIT: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+Chunk 000002: {"btc_episodes_with_chosen_prior_control": 0, "chosen_prior_controls": 0, "selected_btc_episodes": 0, "selected_target_events": 0}
+Leader funnel: {"below_leader_threshold": 408, "scheduled": 408, "scheduled_signal_ticks": 408}
+ETH: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+SOL: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+HYPE: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+XRP: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+SUI: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+NEAR: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+ZEC: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+VVV: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+LIT: scheduled 408; BTC episode decisions 0; eligible target events 0; chosen controls 0; missing controls 0.
+Chunk 000003: {"btc_episodes_with_chosen_prior_control": 0, "chosen_prior_controls": 0, "selected_btc_episodes": 1, "selected_target_events": 0}
+Leader funnel: {"below_leader_threshold": 401, "same_btc_episode": 6, "scheduled": 408, "scheduled_signal_ticks": 408, "selected_btc_episode": 1}
+ETH: scheduled 408; BTC episode decisions 1; eligible target events 0; chosen controls 0; missing controls 0.
+SOL: scheduled 408; BTC episode decisions 1; eligible target events 0; chosen controls 0; missing controls 0.
+HYPE: scheduled 408; BTC episode decisions 1; eligible target events 0; chosen controls 0; missing controls 0.
+XRP: scheduled 408; BTC episode decisions 1; eligible target events 0; chosen controls 0; missing controls 0.
+SUI: scheduled 408; BTC episode decisions 1; eligible target events 0; chosen controls 0; missing controls 0.
+NEAR: scheduled 408; BTC episode decisions 1; eligible target events 0; chosen controls 0; missing controls 0.
+ZEC: scheduled 408; BTC episode decisions 1; eligible target events 0; chosen controls 0; missing controls 0.
+VVV: scheduled 408; BTC episode decisions 1; eligible target events 0; chosen controls 0; missing controls 0.
+LIT: scheduled 408; BTC episode decisions 1; eligible target events 0; chosen controls 0; missing controls 0.

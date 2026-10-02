@@ -1,0 +1,87 @@
+{
+  "schema": "peer-cross-asset-availability-v1",
+  "status": "frozen-before-features",
+  "question": "Does the unchanged cross-asset signal and its decision-time control selection activate with operationally sufficient support in the first chronological exploratory rolling block?",
+  "authority": "Coordinator message72fbde25-243f-478f-bec5-0d7f431761f4; continuing8MiB peer allocation.",
+  "baseline_protocol_path": "research/peer-cross-asset-v1.json",
+  "baseline_protocol_sha256": "54836695f93d9a34d14fa141d88176dab7c67511bfa44d1d16a4fb0a701ae3a0",
+  "chunk_numbers": [
+    1,
+    2,
+    3
+  ],
+  "input_selection": "First chronological sealed exploratory chunks000001-000003; selected before inspecting their cross-asset features. These are already historically inspected research inputs, not untouched validation. No reserved chunks or economic selection.",
+  "boundaries": "Reset all books, feature history, controls and episode state at each independent capture. Do not bridge metadata/reconnection gaps or call adjacent chunks independent regimes. Scheduled signal ticks remain127..534 from each own capture start;408 per chunk.",
+  "unchanged_design": "Reuse every baseline signal, clock, feature, matching, native100USDC baseline cost and funding-exclusion rule. Larger trades remain in the overall objective; this audit does not compare sizes or forward performance.",
+  "decision": "Count distinct BTC episodes with at least one selected target and chosen earlier control. At least3 such episodes in EACH of all3chunks supports only writing a separate frozen outcome protocol. If all3chunks have zero BTC episodes, classify nonactivation. Otherwise classify insufficient_feature_support. The operational floor is not statistical independence or a profitability claim. Do not tune thresholds, calipers, assets, delays, size or endpoints in response.",
+  "outputs": "All9 target gates and both-direction control feature funnels per chunk, selected causal features, episode/control counts and adapter provenance. No outcome pass, selected forward quotes, returns, cash profits or private fills. Full zeros and missing feature support remain explicit.",
+  "bounds": {
+    "raw_bytes_per_capture": 67371008,
+    "metadata_bytes_per_capture": 131072,
+    "decoded_bytes_per_pass_per_capture": 1073741824,
+    "records_per_pass_per_capture": 1000000,
+    "trade_ids_per_capture": 500000,
+    "run_timeout_seconds": 300,
+    "output_gzip_bytes": 262144,
+    "readout_bytes": 16384,
+    "max_feature_anchors_per_window": 6000,
+    "max_selected_target_events_per_window": 45
+  },
+  "input_export": {
+    "commit": "90e99c80244cfb69251f863760be1af969802baa",
+    "manifest_path": "data/peer-inputs/rolling-exploratory-000001-000003-v1/export-inventory.json",
+    "manifest_sha256": "f3ce24fc4854d6c2b29cd997b6e5b8754434c00779d24b78723edb8b7cdc6537",
+    "inventory_path_in_commit": "data/evidence/rolling-exploratory-000001-000003-v1-inventory.json",
+    "archive_path_in_commit": "data/evidence/rolling-exploratory-000001-000003-v1.tar",
+    "archive_bytes": 55818240,
+    "archive_sha256": "534adf702946c5ea8b0a59ff79641aadf2f2de5e3c8a454baaa12ad907f773cf",
+    "export_protocol_path_in_commit": "reports/experiment-storage/rolling-exploratory-peer-export-v1.json",
+    "export_protocol_sha256": "20c1a113938eeb26c479d3f6f05ee50c9b56a665f2137dcc658530857f9d6aa1",
+    "import_verification": "reports/peer-research/cross-asset-availability-v1/import-verification.json",
+    "funding": "64MiB separately funded coordinator transport grant; peer8MiB source/derived grant unchanged. Logical committed input counted once; Git/LFS transport copies follow repository accounting."
+  },
+  "windows": [
+    {
+      "index": 1,
+      "capture": "data/peer-inputs/rolling-exploratory-000001-000003-v1/extracted/chunk-000001/capture",
+      "manifest_sha256": "2451c63cd8bc200ae1408af42ccf8e512676afa2ddda7f50846f5d4c377b2824",
+      "raw_sha256": "dda4b7dd07eb33404218b4f4ea07cdaf492a0d7c109e445c1b7866834588c93a",
+      "metadata_sha256": "de3642e64fc13b08335906589a78386466165494604fd5910d52370975f93acd"
+    },
+    {
+      "index": 2,
+      "capture": "data/peer-inputs/rolling-exploratory-000001-000003-v1/extracted/chunk-000002/capture",
+      "manifest_sha256": "37890294eb9c95c9baa4dccb32eb06053150e86e5545d7ae13ff4340ebe3ac6e",
+      "raw_sha256": "f9684cd2e8c708562eb30c20af64c3524cb8103d819bc93e4ed175fe5a12ac57",
+      "metadata_sha256": "c6f0eb1b53d652216dd6dd1900599611f50f213b9c64566d3687baad29a2879d"
+    },
+    {
+      "index": 3,
+      "capture": "data/peer-inputs/rolling-exploratory-000001-000003-v1/extracted/chunk-000003/capture",
+      "manifest_sha256": "048cff9286e416e9f302890d173ca758fe92c6f08d49851ae07d36121f09d2cd",
+      "raw_sha256": "3e9498d70586dea53865f136739de140eff17d35348e8b1fe73829bdce2fe101",
+      "metadata_sha256": "7be9c85f4800ca8f2d88a2a29bef782b94526e7ce639b1920f32114ceb0ba7b1"
+    }
+  ],
+  "source_pins": [
+    {
+      "path": "scripts/peer_cross_asset_availability.py",
+      "sha256": "b5f09a0267b9542556444010bc82938b3b72f6a37890b1ad20931ca3db4b1054"
+    },
+    {
+      "path": "scripts/peer_cross_asset_diagnostic.py",
+      "sha256": "123b594c380dbec405aa4a1f47b8e9d4c71e608615d0a12623ba47ed578a7a75"
+    }
+  ],
+  "freeze_requirement": "Populate committed export/input/source hashes and set frozen-before-features only after source review. Record explicit protocol SHA before processing any imported raw records. Parent imposes300-second subprocess timeout; source/input hashes are rechecked before each pass and exclusive publication.",
+  "frozen_utc": "2026-10-02T05:30:13.666563+00:00",
+  "validation": {
+    "baseline_decision_synthetic_tests": 44,
+    "baseline_ordinary_adapter_synthetic_tests": 4,
+    "availability_identity_rejection_smoke_cases": 10,
+    "availability_syntax": "pass",
+    "independent_source_review": "Both input-binding and unrelated-old-archive findings resolved before freeze. No remaining blocker from those findings.",
+    "raw_json_decoded_before_freeze": false,
+    "input_members_verified_before_freeze": 45
+  }
+}

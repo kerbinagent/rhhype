@@ -1,0 +1,92 @@
+{
+  "schema": "peer-cross-asset-observed-ofi-proposal-v1",
+  "status": "draft-not-executable-no-features-read",
+  "authority": "Continuing coordinator allocation b53f1ba8-e798-479a-9df2-d09c7b759843 and distinct cross-asset mechanism lead 1dd31aaf-49de-4955-941d-908ff4c3f03b. Shared extractor coordination 6f61369b-0644-497a-9c32-c932810a4a70; shared-table route approved e89052e2-a07a-41ed-92bf-98fd749106df.",
+  "question": "Does same-venue BTC observed-frame order-flow imbalance improve delayed target forecasts and conditional quoted net cash beyond the specified own-flow and BTC return, trade and queue-endpoint controls?",
+  "mechanism_hypothesis": "Portfolio demand may propagate across assets over time. A BTC queue-transition path could contain predictive information not contained in the target's own state or BTC's endpoint state. Trader linkage and structural causality are unobserved; this tests a conditional forecast, not causal leadership inferred from update ordering.",
+  "research_context": {
+    "primary_lead": "https://arxiv.org/html/2112.13213v4",
+    "interpretation": "The equity study motivates a conditional lagged-flow comparison. It does not establish delayed, costed crypto profitability. Our batched observations are a transition proxy rather than the full event-level order flow observed in exchange message data.",
+    "distinct_from_parked_v1": "No BTC-return trigger or quiet-target rescue. The unchanged return-lag mechanism remains parked after its frozen availability audit. Every fixed calendar anchor is eligible for the new diagnostic."
+  },
+  "cohort": {
+    "venues": ["lighter", "rh_lighter"],
+    "leader": "BTC",
+    "targets": ["ETH", "SOL", "HYPE", "XRP", "SUI", "NEAR", "ZEC", "VVV", "LIT"],
+    "cells": 18,
+    "selection": "All same-venue leader-target cells, separately fit. No cell, venue, size, sign or model winner selection."
+  },
+  "calendar_and_data": {
+    "training_chunks": [1, 2, 3],
+    "application_chunks": [7, 8, 9],
+    "calendar_seconds": {"start": 30, "step": 20, "stop_inclusive": 570},
+    "rows_per_capture": 28,
+    "feature_window": "Completed receipt interval (t-1s,t], with the shared extractor's exact boundary/grouping rules frozen before use.",
+    "causality": "Own and same-venue BTC features are both known at calendar t; target prediction begins at the shared delayed entry. Reset across captures and invalidations; never stitch missing history or fills.",
+    "data_role": "Exploratory historical blocks, not untouched validation. No reserved inputs.",
+    "transfer": "Approved: six immutable gzip tables, each at most262144bytes with560 original calendar rows, all failures, exact BBO start/end receipt/source clocks and generations, labels, decision costs and six size/direction quote profiles. Reuse published schema/source/input pins. No second raw transfer. Tables are not to be loaded before the new peer freeze."
+  },
+  "features_and_models": {
+    "normalization": "Each market uses D_start=(bidQty_start+askQty_start)/2 from its own feature-window start.",
+    "five_non_ofi_controls": [
+      "own backward mid return over the completed window",
+      "current static best-queue imbalance",
+      "ordinary-trade imbalance over the completed window",
+      "(bidQty_start-askQty_start)/D_start",
+      "(bidQty_current-askQty_current)/D_start"
+    ],
+    "flow": "Shared source's standard best-queue transition sum divided by D_start, explicitly labelled observed-frame OFI.",
+    "M0": "Intercept plus target five controls plus target OFI: 7 parameters. Descriptive own-market reference.",
+    "M1": "M0 plus same-venue BTC five non-OFI controls: 12 parameters. Primary reference.",
+    "M2": "M1 plus same-venue BTC OFI: 13 parameters. Primary candidate.",
+    "primary_comparison": "M2 versus M1 only; M1 versus M0 is descriptive. All models fit identical complete M2-feature and TRAINING-label rows within each cell. Application eligibility is fixed using features at decision time alone.",
+    "fit": "Fixed OLS; fit-only standardization; no tuning, refitting, alternative lag, coefficient-sign reversal or regularization rescue after application.",
+    "endpoint_identity": "With unchanged best prices, summed OFI telescopes to the change in queue differences. BTC start and current endpoints therefore belong in M1. Rank failure after these controls is missing incremental support, not a reason to drop the controls.",
+    "claim_limit": "The increment is conditional on these five baseline controls plus own OFI only. They remove the exact unchanged-BBO telescoping identity, not all spread, depth, trade-intensity or nonlinear omitted-state explanations."
+  },
+  "support_gates": {
+    "training_complete_rows_per_cell_min": 65,
+    "training_complete_rows_per_chunk_per_cell_min": 20,
+    "training_max_rows_per_cell": 84,
+    "feature_preflight": "Before reading training labels or application outcomes, require the declared feature-only coverage and numerical rank on each cell's complete M2-feature rows, plus the application feature mask below. This check cannot establish training-label variance or outcome completeness.",
+    "fit_recheck": "Then use complete TRAINING labels: reapply per-cell/per-chunk count floors and full numerical rank on the actual training rows, fit standardization on those rows only, and require nonzero training-label variance. Removing label-missing rows may destroy rank.",
+    "rank": "Exact solver, scaling, tolerances and finite-number rules await the shared source contract and must be fixed before features.",
+    "application_fitted_cells_required": 18,
+    "common_application_calendar_rows_per_chunk_min": 21,
+    "application_mask": "At each declared calendar time, include the anchor only when all18cells have valid decision-time M2 features under the frozen causal rules. Compute the mask and >=21 floor without using future labels, future quote availability, predictions or outcomes. The mask is immutable during scoring. Later missing labels or admitted quote profiles remain explicit unavailable evidence and prevent advancement; never trim the mask to improve results.",
+    "failure": "Report every missing/rank/zero-variance cell and calendar reason. An incomplete broad cohort is inconclusive; do not silently form an easier subset. Missing data or failed execution is never flat cash."
+  },
+  "forecast_decision": {
+    "metric": "Squared forecast error normalized by each cell's frozen training-label variance. Equal weights across the fixed18cells, then across the3application chunks, on the feature-only common calendar mask. Later missing labels make the primary aggregate unavailable; conditional available-row diagnostics cannot satisfy advancement.",
+    "advance_requirement": "Positive M2-vs-M1 loss improvement in every application chunk. Leave-one-application-chunk-out aggregates are reported descriptively; they add no independent evidence when every equally weighted chunk is positive.",
+    "dependence": "Shared BTC observations, simultaneous targets and adjacent chunks are dependent. No pooled iid significance claim. Record calendar support and block results rather than multiplying evidence by the number of assets."
+  },
+  "economic_decision": {
+    "native_notional_arms": [100, 1000, 10000],
+    "entry_delay_ms": 400,
+    "hold_seconds": 10,
+    "exit_delay_ms": 400,
+    "contract": "Reuse the shared frozen target label, action gate, sizing, native constraints, endpoint selection, fees, funding exclusion and failure/accounting rules exactly. The contract is pending; this draft authorizes no calculation.",
+    "quote_units": "Preserve the shared table's native quote currency. Keep USDC and USDG separate; never sum, average or silently convert their cash amounts. Native notional arms apply separately within each venue/currency.",
+    "advance_requirement": "On the immutable feature-only mask, positive absolute M2 conditional quoted net cash and positive paired M2-minus-M1 conditional quoted net cash in every application chunk for every fixed size arm, separately within each venue/currency, plus the forecast criterion. Equal weight the nine targets within each venue. Report all arms and no selected winner. BOTH reference and candidate admitted outcomes must be complete for a calendar cash difference; unavailable requested legs prevent advancement and cannot improve the aggregate by exclusion. Decision-time known no-action is distinct from later unavailable execution evidence.",
+    "interpretation": "These are conditional quoted net cash ledgers, not closed cash, authenticated fills or realized trading profit. Alternative size/model ledgers are not one simultaneously executable portfolio. Passing supports only proposing later untouched replication; it is not strategy validation or promotion."
+  },
+  "execution_boundaries": {
+    "feature_preflight": "Use causal feature coverage/rank and the immutable application feature mask first, without consuming labels. If that fails, report every failed cell and park the broad test. If it passes, perform the distinct training-label fit stage before consuming application outcomes. Insufficient support does not reject all cross-asset effects.",
+    "source_tests_docs_existing_allocation_bytes": 2097152,
+    "derived_existing_allocation_bytes": 6291456,
+    "new_raw_capture_bytes": 0,
+    "peer_result_gzip_cap_bytes_proposed": 1048576,
+    "peer_readout_cap_bytes_proposed": 32768,
+    "peer_runtime_seconds_proposed": 300,
+    "scope": "No collector, authenticated API, wallet, order, root-owned economics change, reserved input, push or main merge."
+  },
+  "required_before_freeze": [
+    "Read and pin the reviewed shared extractor and its exact causal feature schema.",
+    "Resolve shared target-label, action, quantity, quote and accounting contracts without viewing their results.",
+    "Pin authorized input or immutable shared-table hashes and categories; use LFS for large retained files.",
+    "Specify numerical solver, rank tolerances, normalized-loss definition and source/skew/coverage rules.",
+    "Review the bounded implementation and focused causal/rank/failure checks.",
+    "Record a new source/protocol freeze before extracting or loading any new-study features/outcomes."
+  ]
+}

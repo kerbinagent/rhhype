@@ -1,0 +1,21 @@
+{
+  "started_utc": "2026-10-02T05:30:56.936555+00:00",
+  "ended_utc": "2026-10-02T05:31:54.660064+00:00",
+  "elapsed_seconds": 57.724105125293136,
+  "timeout_seconds": 300,
+  "command": [
+    "/Users/houze/projects/research/rhhype-peer/.venv/bin/python",
+    "scripts/peer_cross_asset_availability.py",
+    "--plan",
+    "research/peer-cross-asset-availability-v1.json",
+    "--expected-plan-sha256",
+    "372e5bf16230c5d2e5e81ceee059bfcd99d25168266a17abbaefe71e94b64b19",
+    "--output",
+    "/Users/houze/projects/research/rhhype-peer/reports/peer-research/cross-asset-availability-v1/result.json.gz",
+    "--readout",
+    "/Users/houze/projects/research/rhhype-peer/reports/peer-research/cross-asset-availability-v1/readout.txt"
+  ],
+  "returncode": 0,
+  "stdout": "{\"decision\": {\"classification\": \"insufficient_feature_support\", \"economic_evaluation\": false, \"interpretation\": \"Operational feature support only; adjacent chunks and assets remain dependent.\", \"separate_outcome_protocol_supported\": false, \"strategy_promotion\": false}, \"gzip_bytes\": 4904, \"protocol_sha256\": \"372e5bf16230c5d2e5e81ceee059bfcd99d25168266a17abbaefe71e94b64b19\", \"readout_bytes\": 4283}\n",
+  "stderr": ""
+}

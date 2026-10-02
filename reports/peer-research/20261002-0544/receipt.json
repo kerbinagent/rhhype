@@ -1,0 +1,75 @@
+{
+  "schema": "root-peer-availability-review-v1",
+  "reviewed_utc": "2026-10-02T05:53:18.335721+00:00",
+  "message_id": "5e3a0080-e4af-4937-8b32-862fc440ba55",
+  "retained_directory": "reports/peer-research/20261002-0544",
+  "files": [
+    {
+      "path": "peer_cross_asset_availability.py",
+      "bytes": 16040,
+      "sha256": "b5f09a0267b9542556444010bc82938b3b72f6a37890b1ad20931ca3db4b1054"
+    },
+    {
+      "path": "peer-cross-asset-availability-v1.json",
+      "bytes": 6096,
+      "sha256": "372e5bf16230c5d2e5e81ceee059bfcd99d25168266a17abbaefe71e94b64b19"
+    },
+    {
+      "path": "peer-cross-asset-availability-v1-freeze.json",
+      "bytes": 607,
+      "sha256": "1925360de302cb8e46f83f10f70df3708152b56aa0959c11257d1b64ac19027d"
+    },
+    {
+      "path": "import-verification.json",
+      "bytes": 2119,
+      "sha256": "747a1e32ef87d79b69e1faf1859485b900c0dde11d1db987a961475d2e27f0ae"
+    },
+    {
+      "path": "result.json.gz",
+      "bytes": 4904,
+      "sha256": "f2060462d0abec0312553bd3c294f8b0c89ef6883a78d442ba272e859490d910"
+    },
+    {
+      "path": "readout.txt",
+      "bytes": 4283,
+      "sha256": "b1c72901bc2f7befc9fab4ac01082f6ab5dfda6cf7135aca9f14ee595b8a1371"
+    },
+    {
+      "path": "execution.json",
+      "bytes": 1214,
+      "sha256": "8904defa1fc2075045e18e0627fd58169874bc9b7c8c0283903b2c238b92b93b"
+    },
+    {
+      "path": "decision.txt",
+      "bytes": 4101,
+      "sha256": "4f51ee1519b2a0be8a0d0816cfe7bf53d355b6291498e6814e7f731089908e6b"
+    }
+  ],
+  "root_checks": 401,
+  "source_pins_verified": 42,
+  "classification": "insufficient_feature_support",
+  "btc_episodes": [
+    0,
+    0,
+    1
+  ],
+  "selected_target_events": [
+    0,
+    0,
+    0
+  ],
+  "chosen_prior_controls": [
+    0,
+    0,
+    0
+  ],
+  "decoded_records": 405587,
+  "review_scope": "All eight attachment hashes/bytes,42 direct+baseline source pins,all27 target and54 directional control funnels,source/input metadata provenance and support decision. Root read the complete availability wrapper; underlying baseline retained from prior review.",
+  "limitations": "No root raw replay or independent reconstruction of feature histories; peer reports its separate source/saved-result review and focused pre-freeze tests. No economics evaluated. Adjacent chunks are dependent.",
+  "draft_artifact": {
+    "path": "peer-cross-asset-ofi-v1-draft.json",
+    "bytes": 7791,
+    "sha256": "31b7278027f5d5ecd017cadf7b073a542d900e6ef778736b6523928810d2f4f2",
+    "status": "draft only; not executable"
+  }
+}
