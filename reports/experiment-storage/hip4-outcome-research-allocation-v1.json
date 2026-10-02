@@ -1,0 +1,36 @@
+{
+  "schema": "hip4-outcome-research-allocation-v1",
+  "status": "allocated_source_and_offline_preparation_only",
+  "recorded_utc": "2026-10-02T11:53:10.405726+00:00",
+  "reserved_bytes": 524288,
+  "previous": {
+    "path": "reports/experiment-storage/primary-issuance-bound-local-v1.json",
+    "bytes": 20731,
+    "sha256": "8741abf29647bdf31a619d55fba6087c6e40c1847ed8b8d3e62aba4f61eade62"
+  },
+  "previous_active_research_reserved_bytes": 243531776,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 244056064,
+  "active_research_headroom_bytes": 10698752,
+  "overall_reservation_bytes": 2839922944,
+  "categories_bytes": {
+    "source_tests_protocol_and_retained_docs": 131072,
+    "future_raw_gzip_including_pending_copy": 327680,
+    "derived_receipts_and_reviews": 65536
+  },
+  "owner": "Local Claude Code Parler session f0ba21b0-a741-4804-a646-c405993cfa08/80be8295-bc8c-4296-b615-b7fb37e49947",
+  "exclusive_write_paths": [
+    "reports/hip4-outcome-v1/source-review.md",
+    "reports/hip4-outcome-v1/draft-protocol.json",
+    "scripts/hip4_outcome_metadata_v1.py",
+    "tests/test_hip4_outcome_metadata_v1.py"
+  ],
+  "owner_source_package_cap_bytes": 102400,
+  "coordination": "Root owns this allocation, all shared research logs, global ledgers, git index/commits and any later data launch. Collaborator leaves files uncommitted and does not modify other paths, collectors, sources or data. Shared filesystem access needs no transfer copies. No subagents during this initial assignment.",
+  "goal": "Determine whether authoritative complete question membership, active status, quote asset and native outcome precision can be established before testing documented HIP4 conversion cycles. Prepare bounded metadata-only protocol and offline implementation if sources support it.",
+  "permitted_inputs": "Read-only research docs, existing scripts for patterns, public official protocol/API/SDK source pages. No reserved or unassigned rolling raw chunks; no account data. Source downloads, retained test outputs, drafts and temporary copies all count within source cap. Disable bytecode caches.",
+  "network_scope_now": "Public documentation/source browsing only. No exchange info/API, RPC, L2, trades, prices, websocket, account, signing or orders; no installs/bulk clone. Exact future non-price metadata requests require source review, a separate frozen manifest, pins and root commit before invocation.",
+  "future_probe_scope": "Proposed only: bounded outcomeMeta and separately enumerated spotMeta if necessary for authoritative joins. Do not infer membership from names/expiry; do not access asset contexts or tokenDetails price fields. No launch granted here.",
+  "mathematical_screen": "For a complete common-collateral question, ell_i=max(0,bY_i,1-aN_i), u_i=min(1,aY_i,1-bN_i); if all ell<=u and sum(ell)<=1<=sum(u), a consistent valuation certifies no positive static zero-cost cash cycle using documented conversions and taker trades. Failure is only a candidate. Standalone binary uses only its interval check. Review assumptions and dual-liquidity accounting.",
+  "retention": "No cleanup of prior evidence, no reclaim of other grants. New grant funded from unallocated headroom. Stop before any cap; no implicit extension."
+}
