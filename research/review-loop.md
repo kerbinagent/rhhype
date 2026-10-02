@@ -6225,3 +6225,18 @@ Snapshot read 2026-10-02T09:27:19.773917Z, updated epoch seconds 1790933239.6462
 Routine pulses fresh/ok/four feeds,lag33.58/35.80/34.41ms;review CPU61.95%,p95 32.67ms,RSS291.69MiB,106pairs. Rolling chunk000041 healthy455.59s/13,056,986compressedB/99,045records,two connections/no errors/economicsfalse. Controller chunks847,141,850B/controls811,989B against separate decimal2GB. Three newshelperswaiting/fresh/economicsfalse. No raw/reserved economics,carry samples/news outcomes opened;no interventions.
 
 Carry 2026-10-02T09:25:00.111388+00:00: 394sampled,two invalid(71,389),468future/interrupted,running/no error/retry/evaluation. Reviews66–196:2,643completions=2,608exactlosses,one estimatedloss,five auditedpairedgains,29auditedrescuegains. Archive 3,859,422/5,242,880B;117futurepairs at5,342B project 4,484,436B,margin 758,444B. Next **09:46:33 UTC**.
+
+
+### Review 197 — 2026-10-02 09:46:33 UTC
+
+Original nominal timestamp retained. All eight coverage and aborted-coverage checks complete. Exact report and independent snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap/growth guards.
+
+`review-20261002T094633Z.json.gz` raw 19,167 B SHA-256 `55791045823c61f4e571b07fa37594e5737f9b1b24c0e67eb5b744309cb07ede`; gzip 2,907 B SHA-256 `c5c84b50d07da0df71c87ea31365f944934248589c7244418a7c904f2c79625b`.
+
+`current-epoch-at-review197.json.gz` raw 9,281 B SHA-256 `2ea9d7f2d7844eba58d4e484f8394859e6450267368a6c5249683b2acb6ec21b`; gzip 1,726 B SHA-256 `8818450da2f5c3a1d96d7a69643aea9989fde9521d39b5afb8374e198bbe14c0`.
+
+Snapshot read 2026-10-02T09:48:44.545986Z, updated epoch seconds 1790934524.5064342; counts not pooled. Seven exactlosses:convergence3/−$3.8568606433,Premium4/−$7.7739493798;no gains/estimates/aborts. HLprice_limit4. Convergence other$1.4974050290/capital$0.0000056143;Premium fees$3.3313288022/other$1.9948508580/capital$0.0001077196.
+
+Paper pulses fresh/ok/fourfeeds;review CPU65.50%,p95 36.21ms,RSS293.12MiB,106pairs. Rolling chunk000043 healthy531.64s/15,232,044compressedB/116,571records,two connections/no errors/economicsfalse. Controller chunks885,748,903B/controls854,564B against separate decimal2GB. Three newshelperswaiting/fresh/economicsfalse. No raw/reserved economics,carry samples/news outcomes opened;no interventions.
+
+Carry 2026-10-02T09:45:00.111058+00:00: 398sampled,two invalid(71,389),464future/interrupted,running/no error/retry/evaluation. Reviews66–197:2,650completions=2,615exactlosses,one estimatedloss,five auditedpairedgains,29auditedrescuegains. Archive 3,864,055/5,242,880B;116futurepairs at5,342B project 4,483,727B,margin 759,153B. Next **10:06:33 UTC**.
