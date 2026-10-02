@@ -1,0 +1,379 @@
+{
+  "schema": "single-venue-passive-through-v1",
+  "status": "frozen",
+  "recorded_utc": "2026-10-02T07:19:05.074591+00:00",
+  "previous": "reports/experiment-storage/single-venue-queue-ofi-publication-fix-v1.json",
+  "previous_sha256": "485213e9cc671344d228724ee3be1462e91de352156bb8ffbf0bd2de7fc0e881",
+  "reserved_bytes": 4194304,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 240910336,
+  "active_research_headroom_bytes": 13844480,
+  "overall_reservation_bytes": 2836777216,
+  "categories_bytes": {
+    "source": 65536,
+    "tests": 32768,
+    "protocol": 32768,
+    "six_chunk_gzip_outputs": 3145728,
+    "summary": 131072,
+    "readout": 32768,
+    "provenance": 32768,
+    "control": 16384,
+    "margin": 704512
+  },
+  "allocation_note": "New4MiB reservation from existing research-pool headroom. Six possible outputs funded before the conditional second stage. No new raw capture, copies or ceiling increase. Prior failed/successful allocations remain reserved.",
+  "question": "Among isolated passive-PERP counterfactuals with one full-quantity strict trade-through witness, is conditional same-venue close cash after captured fees and conservative capital positive and adequately observable across all three initial blocks?",
+  "mechanism_and_novelty": "Passive entry can avoid aggressive spread payment but is exposed to adverse selection. This changes the earlier unobservable SPOT passive/hedge setup to corrected ordinary PERP prints and same-venue flatten. It is a small conditional-value scanner, with no predictive fit, queue simulator, transaction grouping or execution engine.",
+  "primary_sources": [
+    {
+      "url": "https://docs.lighter.xyz/trading/order-types-and-matching",
+      "used_for": "Core price-time matching at maker price and explicit post-only/risk rejection possibilities. Verified by root2026-10-02. Do not authenticate acceptance from public data or infer current RH account delay from Core documentation."
+    },
+    {
+      "url": "https://apidocs.lighter.xyz/docs/websocket-reference",
+      "used_for": "Ordinary trade ID, exact size/price and aggressor flag; batched public books. One print avoids transaction-completeness assumptions."
+    },
+    {
+      "url": "https://arxiv.org/abs/2502.18625",
+      "used_for": "Adverse-selection motivation. Root read the introduction, Section7 features/results and conclusion: strategy results use best maker rebates and minimum-size orders, while latency is treated as negligible. The173-feature model and threshold comparisons do not establish400ms delayed profit at our venues or sizes. No fitted coefficient or threshold transferred."
+    },
+    {
+      "url": "https://arxiv.org/abs/1610.00261",
+      "used_for": "Limit placement value depends on adverse selection and latency. No calibrated parameters transferred."
+    }
+  ],
+  "store_root": "data/rolling/market-research-v1",
+  "pin_owner": "inventory_context_v1",
+  "input_validation_plan": "reports/experiment-storage/single-venue-inventory-context-ordinary-feed-fix-v1.json",
+  "input_validation_plan_sha256": "f8b045d2692cf5641a83a72f734d3b0fc4936db13986379f0d6fd88f9d845dfd",
+  "helper_source": "scripts/single_venue_queue_ofi.py",
+  "helper_source_sha256": "b549671eede741992df7d47dddb9247278b308f2775facb515c66de15014ff96",
+  "first_stage_chunks": [
+    "chunk-000001",
+    "chunk-000002",
+    "chunk-000003"
+  ],
+  "conditional_second_stage_chunks": [
+    "chunk-000007",
+    "chunk-000008",
+    "chunk-000009"
+  ],
+  "input_role": "All six are already inspected exploratory inputs from other mechanisms. No untouched validation claim. Check all seals and full inventories before use/publication; initial scan decodes only first three. Retain existing pins.",
+  "output_root": "reports/single-venue-research/passive-through-v1",
+  "parameters": {
+    "assets": [
+      "BTC",
+      "ETH",
+      "SOL",
+      "HYPE",
+      "XRP",
+      "SUI",
+      "NEAR",
+      "ZEC",
+      "VVV",
+      "LIT"
+    ],
+    "venues": [
+      "lighter",
+      "rh_lighter"
+    ],
+    "directions": [
+      1,
+      -1
+    ],
+    "anchor_start_seconds": 30,
+    "anchor_stop_seconds_inclusive": 570,
+    "anchor_step_seconds": 20,
+    "entry_delay_ns": 400000000,
+    "fixed_exit_request_after_ns": 10000000000,
+    "exit_delay_ns": 400000000,
+    "max_execution_lateness_ns": 2000000000,
+    "maximum_profile_span_ns": 12400000000,
+    "book_age_ns": 250000000,
+    "max_interbook_gap_ns": 500000000,
+    "max_trade_age_ns": 500000000,
+    "notionals": [
+      "100",
+      "1000",
+      "10000"
+    ],
+    "sizing_headroom": "1.01",
+    "annual_capital_rate": "0.05",
+    "year_seconds": 31536000,
+    "extra_cost_stress_bps": [
+      1,
+      2,
+      5
+    ],
+    "minimum_witnessed_anchors_per_chunk": 3,
+    "max_decoded_bytes_per_chunk": 1073741824,
+    "max_records_per_chunk": 1000000,
+    "max_ids_per_chunk": 500000,
+    "max_same_receipt_events": 10000,
+    "max_profiles_per_chunk": 3360
+  },
+  "runtime_requirements": {
+    "python": "3.13.9",
+    "decimal_precision": 28
+  },
+  "output_caps": {
+    "source": 65536,
+    "tests": 32768,
+    "protocol": 32768,
+    "gzip_per_chunk": 524288,
+    "decoded_per_chunk": 16777216,
+    "summary_gzip": 131072,
+    "summary_decoded": 4194304,
+    "readout": 32768,
+    "provenance": 32768,
+    "control": 16384
+  },
+  "decision": {
+    "calendar": "Create all560 cell/calendar rows and all3360 side/size profiles per capture, including decision/native/funding failures. No fitted signal or side selection.",
+    "limit": "At t, use the latest valid complete native book with both receipt/source age<=250ms. Buy limit is its best bid, sell limit its best ask. The original limit never follows later quotes.",
+    "quantity": "Same q for both sides at a given N: floor(N/(decision_ask*1.01)/qty_step)*qty_step. Entry E=q*limit must meet captured native quantity/notional minima, positive native grids, known maximum quantity/quote and E<=N. No resizing. Unpublished bounds remain explicit unknowns.",
+    "funding": "Exclude at decision if the next hourly boundary is <=t+12.4s, the entire maximum modeled interval; no inference from unknown actual fill time.",
+    "unverified_validity": "Account margin, accepted/live status, post-only acknowledgment, expiry, risk/self-trade checks and any dynamic price/mark restrictions not present in captured metadata are unverified assumptions. Static native checks do not prove valid acceptance."
+  },
+  "placement_proxy": {
+    "selection": "First book after t with both source and receipt>=t+400ms. Its first eligible outcome is final; require both ages<=250ms, receipt<=t+2.4s, intact book generation/continuity and native book. No wait for a later favorable endpoint.",
+    "crossing": "Original buy limit>=proxy best ask or original sell limit<=proxy best bid is unresolved/ineligible for this conditional calculation. Do not call this an authenticated rejection or zero cash; an earlier execution may have occurred.",
+    "meaning": "The book is a public placement-state proxy, not proof of state at delivery. Search for witnesses only strictly after its receipt. Assumed accepted/live order may have partially or fully filled earlier."
+  },
+  "witness": {
+    "identity": "First qualifying unique ordinary LIVE trade from the unchanged adapter: same venue/market and generation as decision/proxy, retained trade_id. Preserve exact raw Decimal price AND quantity via scoped hooks. Validate native print grids. Ignore subscription history, liquidations and known nonordinary types.",
+    "clocks": "Source and receipt strictly greater than the placement-proxy receipt; source<=receipt and receipt-source<=500ms. Receipt strictly less than t+10s. Equal-clock ambiguity cannot qualify.",
+    "condition": "For buy, sell-aggressor price strictly below fixed limit; for sell, buy-aggressor price strictly above fixed limit. A single print exact quantity>=q suffices. Never sum prints, infer executions from quote decrements, subtract cancellations or assume same-price queue priority.",
+    "bound": "Conditional on accepted/live placement with the same aggressive executable quantity, price priority implies full q executed by this witness time at maker limit L. It does not locate exact fill time or authenticate any actual order.",
+    "unresolved": "Record smaller-through observations separately. Smaller-only/no witness leaves quantity and cash unknown, including possible earlier same-price full/partial fills. No cancellation-success, expiry-success, partial-flatten or zero-inventory fallback.",
+    "invalidations": "Before a witness, interrupted book/generation/snapshot evidence remains unresolved. Trade-only invalidation prevents later missing-flow evidence from becoming zero; it does not erase an already selected full witness or an intact exit-book obligation. Book failures after full witness retain known conditional quantity but make valuation unavailable."
+  },
+  "exit_and_cash": {
+    "fixed_clock": "Exit request is t+10s from the original decision. First book with source and receipt>=t+10.4s, both ages<=250ms and receipt<=t+12.4s. Full native same-q taker sweep opposite the entry side; first eligible failure final. No witness-timed horizon or later endpoint rescue.",
+    "entry_cash": "Full conditional entry value E=q*L, including any earlier same-price maker fills; exact timing unknown.",
+    "cash": "For direction s and exit sweep value X: gross=s*(X-E); fees=E*maker_fee_bps/10000+X*taker_fee_bps/10000 using captured per-market fee metadata; capital=N*0.05*(exit_receipt-(t+0.4s))/year_seconds. Net=gross-fees-capital. Report1/2/5bp extra entry-value stresses separately.",
+    "bounds": "Validate captured grids and static quantity/notional/maximum constraints at close too; no target cap on exit proceeds, no partial-depth valuation. Fee fields must be finite and nonnegative; missing metadata is unknown.",
+    "collateral": "lighter cash is USDC; rh_lighter cash is USDG. All120 market/side/size alternatives remain separate. No conversions or aggregate portfolio sums.",
+    "strategy_cash": "All-calendar strategy cash remains unknown. These are isolated counterfactual observations, each conditional on its initial state. Observation windows do not overlap, but unresolved positions/orders could persist; a later calendar does not establish that an earlier unknown position is flat.",
+    "comparator": "No primary taker-entry comparator: identical exit/quantity would mostly measure mechanical entry-price and fee advantage, not independent predictive information.",
+    "capital_interpretation": "The5% annual rate is a fixed opportunity-cost scenario applied to the full native target N from earliest modeled eligibility. It is not a measured borrowing charge; no leverage or undocumented fee rebate is assumed."
+  },
+  "summary_and_gate": {
+    "denominators": "Per all120 alternatives and each chunk:28 scheduled, decision/native/funding failures, missing/stale/crossing proxy, no/smaller/full witness, full-witness close failures, complete conditional cash, distinct anchor and witness IDs. Preserve all missing states and known conditional positions.",
+    "first_gate": "An alternative passes only if EACH first-stage chunk has>=3 distinct full-witness anchors, EVERY full witness has a complete close valuation, and mean conditional net after captured fees and capital is strictly positive. The3-anchor floor is operational, not statistical validation.",
+    "second_stage": "Publish first-stage-summary.json.gz and a first-stage-sha.json control BEFORE any second-stage raw decode. Check that saved summary hash before each later input. Only if at least one prespecified alternative passes, scan ALL120 alternatives in chunks7/8/9 unchanged. Otherwise explicitly report second_stage_not_opened and park this fixed screen.",
+    "final_gate": "Only an alternative satisfying the identical support/complete-close/positive-cash gate in every one of all six chunks may justify a later order-observability research proposal. Report all120 alternatives regardless. Passing is not strategy promotion, an unbiased policy expectation or proof of actual fills.",
+    "dependence": "One print can witness several alternative sizes; simultaneous markets and adjacent chunks are dependent. No pooled iid significance, independent-trade count inflation or winner-based profit claim.",
+    "scope_of_negative": "Failure parks this strict-through conditional-value screen on these data. It does not reject all passive policies or price favorable unseen fills."
+  },
+  "execution": "One bounded low-priority detached run, external1800s hard timeout. Verify own/helper/transitive sources and sealed input identities before each publication and after processing. Retain every partial output/terminal error; no retry, source rescue or scientific change after outcomes.",
+  "source_pins": [
+    {
+      "path": "scripts/single_venue_passive_through.py",
+      "bytes": 37531,
+      "sha256": "c3d29bda0ee1efba4251cf74cd320344961e6c78c80731e6c9afd59a29c6e728"
+    },
+    {
+      "path": "tests/test_single_venue_passive_through.py",
+      "bytes": 21473,
+      "sha256": "e800926381c81f48ac00c7e1a6e013479b7295493282abd4003f259d9952ec77"
+    },
+    {
+      "path": "scripts/single_venue_queue_ofi.py",
+      "bytes": 40433,
+      "sha256": "b549671eede741992df7d47dddb9247278b308f2775facb515c66de15014ff96"
+    }
+  ],
+  "freeze_requirement": "After targeted native cash/clock/witness/unknown-state/stage-barrier synthetics and source review, freeze exact source/test/helper pins and this protocol before any data pass.",
+  "matching_and_latency_assumptions": {
+    "lighter_priority": "Official Core documentation verifies price-time matching at maker price; successful acceptance/live state and counterfactual unchanged aggressor flow remain unverified.",
+    "rh_lighter_priority": "Price priority and maker-price execution are explicit unverified venue-model assumptions. Root could not access RH-specific matching/account documentation on2026-10-02 and does not transfer Core documentation as RH proof. Any RH conditional result requires these assumptions and can justify only further observability research.",
+    "delay": "400ms is a fixed conservative model scenario for both action legs, not a claim of actual measured account processing latency or delivery acknowledgment. Captured per-venue fees remain the economic inputs; current Core fee/latency documentation is not copied to RH."
+  },
+  "event_grouping_and_book_path": "Process events sharing one receipt timestamp as a group. Apply invalidations to existing obligations before considering witnesses/exit quotes; a failed obligation cannot recover from a later event in the same group. At decision anchors, use only books known through that complete group. An active obligation requires native BBOs and book source/receipt validity, same generation, no new snapshot, and no interbook receipt gap>500ms from decision through close; a breach makes valuation unavailable while retaining any already selected full-witness identity/quantity. A missing later book/endpoint is unknown, not zero. First eligible proxy/exit selection is final even if its native/cost checks fail.",
+  "frozen_input_identities": {
+    "provenance_path": "reports/single-venue-research/queue-ofi-publication-fix-v1/provenance.json",
+    "provenance_sha256": "e3c3220f97c70226b9c48cd7340af497deddce59d0d384d96bdd07df73458100",
+    "snapshot": {
+      "1": {
+        "store_identity_sha256": "ba96b82b718a1439f87d9dce327f44ac4ff5e90ba32cfe0f8ddcac8188390cc7",
+        "capture_parent_plan_sha256": "e19c6ed52ace7310e8a717bf39b2cf707976b2fe92c6ff8eb6ed34f738936ac4",
+        "inputs": [
+          {
+            "chunk": "chunk-000001",
+            "capture": "/home/harry/projects/research/rhhype/data/rolling/market-research-v1/chunk-000001/capture",
+            "seal_sha256": "385a2ad5b3f61f7d4a375b59885f4a78b90fd4224354341b5b384dc50e0635ef",
+            "manifest_sha256": "2451c63cd8bc200ae1408af42ccf8e512676afa2ddda7f50846f5d4c377b2824",
+            "raw_sha256": "dda4b7dd07eb33404218b4f4ea07cdaf492a0d7c109e445c1b7866834588c93a",
+            "started_ns": 1790908590998286000,
+            "ended_ns": 1790909191918648000,
+            "metadata_sha256": {
+              "capture/metadata/core_markets.request.json": "e1aedf0d920a5dcfbc84d4921d6a4f306fcee5326469723aed4e19aad4e890ac",
+              "capture/metadata/rh_markets.request.json": "a31a0b3db8bf36932f662d1351a316875ac27163b0fc42d51974d46c6a8eac14",
+              "capture/metadata/core_markets.json.gz": "5550a4dc2af4ffbf4a2e4d9d6a9d0ead6c7c1a89e0416cddfea2fe51d8c3f7bb",
+              "capture/metadata/rh_assets.request.json": "260e04709ceb9c8db9749ddc63c1d0505cd69692e8e037b2db1c3afd29fbe626",
+              "capture/metadata/rh_markets.json.gz": "376aca4f1c44371c06a43f164496e3f8f8ae924b38f874b6186af093b975d0c9",
+              "capture/metadata/core_assets.request.json": "2b3480f9a681ca9d2796b10f43cb5c4be62653103a10f44305c4d62ab6493e0f",
+              "capture/metadata/rh_assets.json.gz": "ee06f117ce49cbd4a1569c943301faaa5b62424b9e98e591eca2edacdb6576e6",
+              "capture/metadata/normalized.json": "de3642e64fc13b08335906589a78386466165494604fd5910d52370975f93acd",
+              "capture/metadata/market_plan.json": "ab5e7e39a48ecde0e7e5f6205b325984659606867773c9ad984bc633267414cb",
+              "capture/metadata/core_assets.json.gz": "03aca3ee38928b793083de70cf53f6fceff8a17dca309b7c11176c6d23b682b9"
+            }
+          },
+          {
+            "chunk": "chunk-000002",
+            "capture": "/home/harry/projects/research/rhhype/data/rolling/market-research-v1/chunk-000002/capture",
+            "seal_sha256": "4f42d2c1571aca9cf2e37faa253fe052efc7fe753f8e865a9a62276db8a87007",
+            "manifest_sha256": "37890294eb9c95c9baa4dccb32eb06053150e86e5545d7ae13ff4340ebe3ac6e",
+            "raw_sha256": "f9684cd2e8c708562eb30c20af64c3524cb8103d819bc93e4ed175fe5a12ac57",
+            "started_ns": 1790909196335551000,
+            "ended_ns": 1790909797129673000,
+            "metadata_sha256": {
+              "capture/metadata/core_markets.request.json": "9968ac3574a32b93c640422f2c05a328c75d0257d7600e92dc30035456043ac4",
+              "capture/metadata/rh_markets.request.json": "42899f6e822723f0ce3cd0254192870633c308adba38efb2093da2e275345b1b",
+              "capture/metadata/core_markets.json.gz": "6c4a52dbd9e6ac31259630b14fc63bfc8be20a6412a8a329dbc6faf87b66a5af",
+              "capture/metadata/rh_assets.request.json": "a3b6061291c80795d28bebc035c0b262724a9c871936755748e1ae239658271c",
+              "capture/metadata/rh_markets.json.gz": "17d44772fc96a64c2b0af4a0bd7fa817e47522d235aa9949fc6f72182479bad9",
+              "capture/metadata/core_assets.request.json": "b0f0261a9f0062232f255820a88827a14020e0c074da805a4233e190d85f2e40",
+              "capture/metadata/rh_assets.json.gz": "caecc1fb45d9130954b5682430366ce197afdd08dfd96ae1fc641504b2727279",
+              "capture/metadata/normalized.json": "c6f0eb1b53d652216dd6dd1900599611f50f213b9c64566d3687baad29a2879d",
+              "capture/metadata/market_plan.json": "ab5e7e39a48ecde0e7e5f6205b325984659606867773c9ad984bc633267414cb",
+              "capture/metadata/core_assets.json.gz": "4afb05131165da0832ff33967c65331a8b870d03c8737ff79d19523d1b5e20ac"
+            }
+          },
+          {
+            "chunk": "chunk-000003",
+            "capture": "/home/harry/projects/research/rhhype/data/rolling/market-research-v1/chunk-000003/capture",
+            "seal_sha256": "0904aee68eb2804b575e5c6e467d849b4f2fbc7266b201a8fc6bf62f7de74c8e",
+            "manifest_sha256": "048cff9286e416e9f302890d173ca758fe92c6f08d49851ae07d36121f09d2cd",
+            "raw_sha256": "3e9498d70586dea53865f136739de140eff17d35348e8b1fe73829bdce2fe101",
+            "started_ns": 1790909800934999000,
+            "ended_ns": 1790910401775658000,
+            "metadata_sha256": {
+              "capture/metadata/core_markets.request.json": "e1436f3b5cb80508dbb9e66ffc37994846b9f9044047796a9e9afa8ab46a5021",
+              "capture/metadata/rh_markets.request.json": "beb6d24218e083e694ee8e756ef474f47bfeba7f98452295ed252035d0ae3181",
+              "capture/metadata/core_markets.json.gz": "a87bb07b9a51610cdf5332287a62aa0f8b5bad933086c764824feb962815ddd8",
+              "capture/metadata/rh_assets.request.json": "6986015ebe6742aaa0baf7a4cdbd0257ad3053a4f8dc1b79bd9a469965ba6cd3",
+              "capture/metadata/rh_markets.json.gz": "76fa7217f5c9f957a2daf6877dc405a04c83c94ea77561df8c95223dbf40eb5a",
+              "capture/metadata/core_assets.request.json": "ad1725c64def92edd099ee42b71a26b46da337b6ff65ad9f99f340b9b8a53e5d",
+              "capture/metadata/rh_assets.json.gz": "be88478edf6d53ffb401dba2ce407f5b95f954467a854821c56f19a9c911c18b",
+              "capture/metadata/normalized.json": "7be9c85f4800ca8f2d88a2a29bef782b94526e7ce639b1920f32114ceb0ba7b1",
+              "capture/metadata/market_plan.json": "ab5e7e39a48ecde0e7e5f6205b325984659606867773c9ad984bc633267414cb",
+              "capture/metadata/core_assets.json.gz": "72a82b1d7ebda140a167cb8eb5c3fada5eb353498371a42e97b7a5c81c0634b2"
+            }
+          }
+        ]
+      },
+      "2": {
+        "store_identity_sha256": "ba96b82b718a1439f87d9dce327f44ac4ff5e90ba32cfe0f8ddcac8188390cc7",
+        "capture_parent_plan_sha256": "e19c6ed52ace7310e8a717bf39b2cf707976b2fe92c6ff8eb6ed34f738936ac4",
+        "inputs": [
+          {
+            "chunk": "chunk-000007",
+            "capture": "/home/harry/projects/research/rhhype/data/rolling/market-research-v1/chunk-000007/capture",
+            "seal_sha256": "c410b7d47d91f5e543bc070eb209bb62d62d9e2a58511bde579a180046711ceb",
+            "manifest_sha256": "73d0fa4c2c9ddaa7999a92ea72bf9702fb7e44f96a0c00416fbc8057f053dccd",
+            "raw_sha256": "6c51dbefbdb46af2c560a1f5aa91a3aa2b4c10426fe98f0452fa72425b618fe3",
+            "started_ns": 1790912218791085000,
+            "ended_ns": 1790912819572727000,
+            "metadata_sha256": {
+              "capture/metadata/core_markets.request.json": "d0e2454ccd44109152ec5cd2af38273dadb210d027d6750eaad3e52e6c9a78a2",
+              "capture/metadata/rh_markets.request.json": "9f9fe07fd1c66148388a518a282973edc7f22b374b3fad53871eec69cee68d47",
+              "capture/metadata/core_markets.json.gz": "2eca506d3901b577402714e3e8de54a21240f4d11c5b9eaf8be726a6cf55b675",
+              "capture/metadata/rh_assets.request.json": "365e294ccb81e7c751164a5c5a9cb8ac4a77968ea6b9cb7c44a8e7ec48ec85a0",
+              "capture/metadata/rh_markets.json.gz": "e9ea4b0125949291f7f0be9d57986ce167c9505fc8ed38e572f77d071238ac6b",
+              "capture/metadata/core_assets.request.json": "07fb5a85d7b6c5ec56dd6af18f2682c898e0d712652a4ecc2f4eff74c85760ba",
+              "capture/metadata/rh_assets.json.gz": "68f441a3bf5a0df36d14e18bf9f7dbcee5a0e82b84b526781da6494cfa66cfad",
+              "capture/metadata/normalized.json": "02fd81ab5835ae2f0b850c3531d9964b83d3ce2c51b467213eed6a21b126baaf",
+              "capture/metadata/market_plan.json": "ab5e7e39a48ecde0e7e5f6205b325984659606867773c9ad984bc633267414cb",
+              "capture/metadata/core_assets.json.gz": "bb129a934a53a5cc0ab29d378e419c5a398234c1ef908ee5047f4d4e44c09975"
+            }
+          },
+          {
+            "chunk": "chunk-000008",
+            "capture": "/home/harry/projects/research/rhhype/data/rolling/market-research-v1/chunk-000008/capture",
+            "seal_sha256": "991dce5da5e3bab442edb122af59d77b0dbb494e203db4311f82db36b38e1164",
+            "manifest_sha256": "62867724b7956315d0643353f2ebb6133dc1bc7264ea97437b83c1bf79728e68",
+            "raw_sha256": "3f385c72882b50fb62bf50574effc2ae80a1e02a4c80bc574522ab8470818e0b",
+            "started_ns": 1790912824584990000,
+            "ended_ns": 1790913425439447000,
+            "metadata_sha256": {
+              "capture/metadata/core_markets.request.json": "91fdd18fccc25e2e91593ea5c11470b76eb558ee022983acb7980b69c92e8d6b",
+              "capture/metadata/rh_markets.request.json": "37e3c9e51a7cb4867770965e5470b762691dba5f47245bd6823e56716af308c7",
+              "capture/metadata/core_markets.json.gz": "d4e033894f8f8153ef0c2ec9f739e67bd7e2fca7e95eb89f44049f6f973f911c",
+              "capture/metadata/rh_assets.request.json": "65568369e5ae940f1f466e9c2a38a22e258e50aea33b465869d02e10ee4d7876",
+              "capture/metadata/rh_markets.json.gz": "c4462225435ddfe31f241c63c8ec6f6b41a12287c4ec5a8266cef5e2345d98ff",
+              "capture/metadata/core_assets.request.json": "bd13a408ed77d4fd084efb2f14a3addee8581ec2285cb489641a2b40921f951e",
+              "capture/metadata/rh_assets.json.gz": "db6b013c9c5b99427b536ccf5578015dab8d902756b3ab79f94bbaabee7cc091",
+              "capture/metadata/normalized.json": "3e7552a2f6b189d5f2db88376794b68e84089f61df615204d116a0b778fc658f",
+              "capture/metadata/market_plan.json": "ab5e7e39a48ecde0e7e5f6205b325984659606867773c9ad984bc633267414cb",
+              "capture/metadata/core_assets.json.gz": "d14a85711819678787e1b3c8364d15b0893cb8db18a2cc141aaa9e8dc6b1ee08"
+            }
+          },
+          {
+            "chunk": "chunk-000009",
+            "capture": "/home/harry/projects/research/rhhype/data/rolling/market-research-v1/chunk-000009/capture",
+            "seal_sha256": "ffa6c7205461c7533def00029e6c46952420d59c9026a149a52899e1dff8b04d",
+            "manifest_sha256": "c6579fd4a7d9e0db6b22f3ee267376c3a4d9f39c12504717909bb6c3b068094d",
+            "raw_sha256": "39e67c6eea4db44d18c934fde5bc0cffd40eeaea100280758a7593f5cedac741",
+            "started_ns": 1790913430459587000,
+            "ended_ns": 1790914031262321000,
+            "metadata_sha256": {
+              "capture/metadata/core_markets.request.json": "2cd1486b8238b3cbc0abe209f1e897a4250c541f47418b94999251bcc7d017bd",
+              "capture/metadata/rh_markets.request.json": "02a485f7f90cc8e24743d2d33b92882f1014b9be27c157bb36568cddbcc7463e",
+              "capture/metadata/core_markets.json.gz": "8146ba854130997d112014d836a1524355a7cd343d64054426c9f379d89f26bb",
+              "capture/metadata/rh_assets.request.json": "e9a4240687d587ee36d4e138f6d95c657718f27d1432092b3338c889dd32f71a",
+              "capture/metadata/rh_markets.json.gz": "75cf2e9654433dbe6b480ab61efe10a1a8680eac413bb1cf26d540312b9d4e15",
+              "capture/metadata/core_assets.request.json": "a5f75ae2fd85acace7c4f7a5483edb893916096cfd7d31ccdb7d7d3fb5fa1d59",
+              "capture/metadata/rh_assets.json.gz": "561af2c5b884184d492c1b6cc671a2f6daec3da15b108b3c5f6141f88703255f",
+              "capture/metadata/normalized.json": "cb650c12b3e3d9f1f6f4d89db53973f750a4a6119065dd4aed36e5a4aceb3848",
+              "capture/metadata/market_plan.json": "ab5e7e39a48ecde0e7e5f6205b325984659606867773c9ad984bc633267414cb",
+              "capture/metadata/core_assets.json.gz": "a55bfb1d4ae24bb91e9db452c990f16199f14546b4c9b990f0e3f0bbbdbd4074"
+            }
+          }
+        ]
+      }
+    },
+    "meaning": "Identity-only reuse of the complete six sealed capture/metadata inventories recorded by the earlier producer. No earlier forecasts or cash outcomes enter this scanner. Require live check_inputs snapshots to match these identities before decode and before every publication."
+  },
+  "cap_interpretation": "summary_gzip131072 is the TOTAL across first-stage and final compressed summary files; summary_decoded4194304 applies to each before compression. provenance32768 is total; control16384 is total across internal controls and external supervisor receipt/logs. Up to six524288-byte tables are already funded. Partial failure outputs stay retained.",
+  "frozen_utc": "2026-10-02T07:40:02.332Z",
+  "pre_freeze_validation": {
+    "root_synthetics": {
+      "started_utc": "2026-10-02T07:38:40.351957+00:00",
+      "ended_utc": "2026-10-02T07:38:41.424943+00:00",
+      "elapsed_seconds": 1.0729777189990273,
+      "python": "3.13.9",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "unittest",
+        "tests.test_single_venue_passive_through",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_exact_hook_restores_all_scoped_globals_after_error (tests.test_single_venue_passive_through.PassiveThroughTest.test_exact_hook_restores_all_scoped_globals_after_error) ... ok\ntest_first_eligible_cross_stale_missing_and_depth_failures_are_final (tests.test_single_venue_passive_through.PassiveThroughTest.test_first_eligible_cross_stale_missing_and_depth_failures_are_final) ... ok\ntest_invalidation_priority_snapshot_gap_and_unknown_nonwitness (tests.test_single_venue_passive_through.PassiveThroughTest.test_invalidation_priority_snapshot_gap_and_unknown_nonwitness) ... ok\ntest_native_bounds_funding_all_calendars_and_witness_failure_gate (tests.test_single_venue_passive_through.PassiveThroughTest.test_native_bounds_funding_all_calendars_and_witness_failure_gate) ... ok\ntest_one_unique_strict_full_native_print_and_clock_rules (tests.test_single_venue_passive_through.PassiveThroughTest.test_one_unique_strict_full_native_print_and_clock_rules) ... ok\ntest_pipeline_summary_barrier_no_second_decode_on_failure_and_bounded_refusal (tests.test_single_venue_passive_through.PassiveThroughTest.test_pipeline_summary_barrier_no_second_decode_on_failure_and_bounded_refusal) ... ok\ntest_three_sizes_exact_native_close_fees_and_earliest_capital (tests.test_single_venue_passive_through.PassiveThroughTest.test_three_sizes_exact_native_close_fees_and_earliest_capital) ... ok\ntest_verify_refuses_draft_missing_duplicate_changed_sources_and_parent (tests.test_single_venue_passive_through.PassiveThroughTest.test_verify_refuses_draft_missing_duplicate_changed_sources_and_parent) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.769s\n\nOK\n",
+      "sources": {
+        "scripts/single_venue_passive_through.py": {
+          "bytes": 37531,
+          "sha256": "c3d29bda0ee1efba4251cf74cd320344961e6c78c80731e6c9afd59a29c6e728"
+        },
+        "tests/test_single_venue_passive_through.py": {
+          "bytes": 21473,
+          "sha256": "e800926381c81f48ac00c7e1a6e013479b7295493282abd4003f259d9952ec77"
+        },
+        "scripts/single_venue_queue_ofi.py": {
+          "bytes": 40433,
+          "sha256": "b549671eede741992df7d47dddb9247278b308f2775facb515c66de15014ff96"
+        },
+        "tests/test_single_venue_queue_ofi.py": {
+          "bytes": 17542,
+          "sha256": "c78c5905dae91aae71cf4dcb231af6ea7a6bee924a2858ef90be0d8da9d12d2f"
+        }
+      }
+    },
+    "source_review": "Root read the full source and tests; independent Sol reviewed source be2794ab81472e80b4d9d0fd7fe16a5337e0a77f4918d7b1a4070111e82509db with no blocker. Its distinct-witness generation reporting finding is corrected in the frozen source and covered synthetically. Root reviewed that correction and the pre-start input verification order.",
+    "input_use": "No passive-through raw, feature or economic processing before this freeze. Final helper verification and seal/inventory checks remain mandatory before decoding.",
+    "control_allowance": "External supervisor receipt and capped stdout/stderr logs share the 16384-byte control allowance with internal controls. Plain-text root readout uses the 32768-byte readout allowance."
+  }
+}
