@@ -278,5 +278,6 @@ The [Comet reproduction](../reports/comet-reproduction-v1/root-reconciliation.js
 matched all 18,599 runtime bytes and 70 immutable ranges. The subsequent
 [31-call pass](../reports/comet-eligibility-live-v1/root-reconciliation.json)
 reported sale prerequisites open at its parent and simulated child, but WETH
-stock was only 438,676,007,750 native units. A separate minimum-gas filter is
-frozen. Dependencies and economics remain unproved. Clipper is offline.
+stock was only 438,676,007,750 native units. The [gas floor](../reports/comet-inventory-gas-bound-v1/root-reconciliation.json)
+rejects that parent state under its model; child economics are unavailable
+because simulation reports zero base fee. Dependencies remain unproved.
