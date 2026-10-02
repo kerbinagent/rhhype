@@ -6195,3 +6195,18 @@ Snapshot read 2026-10-02T08:47:23.927668Z, updated epoch seconds 1790930843.5623
 Routine pulses fresh/ok/four feeds,lag40.90/35.78/31.10ms; review CPU68.75%,p95 35.93ms,RSS284.37MiB,106pairs. Rolling advanced normally to chunk000037:477.64s/14,244,624compressedB/108,405records,two connections/no errors/economicsfalse. Controller chunks780,893,065B/controls747,585B under separate decimal2GB. Three newshelpers waiting/fresh/economicsfalse. No raw/reserved economics,carry samples/news outcomes opened;no competing jobs/interventions.
 
 Carry 2026-10-02T08:45:00.112679+00:00: 387sampled,persistent invalid slot71,476future/interrupted,running/no errors/evaluation. Reviews66–194:2,630completions=2,595exactlosses,one estimatedloss,five auditedpairedgains,29auditedrescuegains. Archive 3,850,491/5,242,880B;119futurepairs at5,342B project 4,486,189B,margin 756,691B. Next **09:06:33 UTC**.
+
+
+### Review 195 — 2026-10-02 09:06:33 UTC
+
+Original nominal timestamp retained. All eight coverage and aborted-coverage checks complete. Exact report and independent snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap/growth guards.
+
+`review-20261002T090633Z.json.gz` raw 18,785 B SHA-256 `26f4aea7967ff03e9622fa36781a3155df1c18e2826f221739d5778f7970a773`; gzip 2,820 B SHA-256 `40328c88a00b6aadb857ed376ed66c656231eaebfa982b75cad88c3b8f62011e`.
+
+`current-epoch-at-review195.json.gz` raw 9,284 B SHA-256 `7cfba3702b49ba1b599a22af326f9772cc21f09410d6045e4089338b1e7b8ff4`; gzip 1,733 B SHA-256 `f9228756fb5372aa4b9256aef3d647ba1da8443004352c5b7e8700198eaedba2`.
+
+Snapshot read 2026-10-02T09:09:21.284564Z, updated epoch seconds 1790932161.2745037; counts not pooled. Nine exact losses: convergence two / −$1.7558274191, Premium seven / −$11.9089083999;no gains/estimates/aborts. HLprice_limit rejects two. Convergence other$0.9960731770/capital$0.0000042421;Premium fees$6.1515683007/other$3.4956672250/capital$0.0002508742.
+
+Paper pulses fresh/ok/four feeds;review CPU63.06%,p95 35.45ms,RSS287.70MiB,106pairs. Rolling chunk000039 healthy585.72s/12,082,106compressedB/88,330records,two connections/no errors/economicsfalse. Controller chunks813,041,991B/controls790,174B against separate decimal2GB. Three newshelperswaiting/fresh/economicsfalse. No raw/reserved economics,carry samples/news outcomes opened;no interventions.
+
+Carry new arrival_invalid slot389 at08:55, decisionfalse, metadata-only parentnotification;prior71retained. At 2026-10-02T09:10:00.110249+00:00: 391sampled,two invalid(71,389),471future/interrupted,running/no error/retry/evaluation. Reviews66–195:2,639completions=2,604exactlosses,one estimatedloss,five auditedpairedgains,29auditedrescuegains. Archive 3,855,044/5,242,880B;118futurepairs at5,342B project 4,485,400B,margin 757,480B. Next **09:26:33 UTC**.
