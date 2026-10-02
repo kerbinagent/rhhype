@@ -1,0 +1,468 @@
+{
+  "schema": "polymarket-subset-conversion-books-v1",
+  "status": "offline_preparation_only",
+  "recorded_utc": "2026-10-02T11:54:35.395124+00:00",
+  "reserved_bytes": 0,
+  "previous_polymarket_plan": {
+    "path": "reports/experiment-storage/polymarket-no-basket-optimistic-books-v1.json",
+    "bytes": 11489,
+    "sha256": "4bb8628338054ba1442b1a3568f5474b775d83bcfcf4841204522d9b620e4673"
+  },
+  "global_allocation_reference": {
+    "path": "reports/experiment-storage/hip4-outcome-research-allocation-v1.json",
+    "bytes": 3276,
+    "sha256": "1085b374de62449b9df52c08b583e3aa44cabfbdd543beaf7c97f29a35b1982d"
+  },
+  "active_research_reserved_bytes": 244056064,
+  "active_research_headroom_bytes": 10698752,
+  "overall_reservation_bytes": 2839922944,
+  "allocation": {
+    "total_polymarket_bytes": 2097152,
+    "source_before": 262144,
+    "source_after": 327680,
+    "raw_unchanged": 1310720,
+    "derived_before": 524288,
+    "derived_after": 458752,
+    "transfer_derived_to_source": 65536,
+    "new_source_test_plan_package_cap": 65536,
+    "prior_source_estimate_bytes": 255199,
+    "prior_raw_bytes": 160508,
+    "new_raw_peak_bytes": 393216,
+    "raw_peak_total_bytes": 553724
+  },
+  "event_id": "606422",
+  "endpoint": "https://clob.polymarket.com/books",
+  "output_dir": "reports/polymarket-no-basket/subset-conversion-books-v1",
+  "chain_plan": {
+    "path": "reports/experiment-storage/polymarket-no-basket-chain-metadata-v2.json",
+    "bytes": 29554,
+    "sha256": "690f657d353ad965debddc8dc00e2a74a6eaa4a64cb722a86f7cc797e3fb5e02"
+  },
+  "chain_summary": {
+    "path": "reports/polymarket-no-basket/chain-metadata-v2/summary.json",
+    "bytes": 8030,
+    "sha256": "bbca4e635dd829766be7bd8e3a77afeccf5502b1d3ce8962aee6c4b5dbfadf4a"
+  },
+  "markets": [
+    {
+      "index": 0,
+      "market_id": "2589810",
+      "question_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a00",
+      "condition_id": "0xa69ef420d8b4075ad8ba8611d02c63cb2ece46f5c8c643af223c272689b0c96f",
+      "yes_token_id": "17010377994663817312158123655937348199252960045746746128731746451645055725586",
+      "no_token_id": "61725366781282351729996972759460154434089275036953062948669003249092837754960"
+    },
+    {
+      "index": 1,
+      "market_id": "2589811",
+      "question_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a01",
+      "condition_id": "0x9cf563d7b55aa9aa876d5d7e55126347eee473f0ae56d799e325fdef2bf25297",
+      "yes_token_id": "33268510350568915228897273528353467773422190590579607471427765079749830445947",
+      "no_token_id": "110888499829195123034987289109543572302716575133123608254293945182185650232552"
+    },
+    {
+      "index": 2,
+      "market_id": "2589812",
+      "question_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a02",
+      "condition_id": "0xdf9bf27ee5757c55b44b8b9826ddc9ec3a8809aa3278634c45edbb7fc8f1a3e3",
+      "yes_token_id": "111061902544814266207267295505639408607400625795891618462682726460921782993748",
+      "no_token_id": "42038775866198212615491650114881818219665139981763207699110491615333273795415"
+    },
+    {
+      "index": 3,
+      "market_id": "2589813",
+      "question_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a03",
+      "condition_id": "0x12aa13b3da17ceae1b0a59b5d5b77121e91bb79b4bb0b52bf6543ed3f8d0953b",
+      "yes_token_id": "55159722761418013044126414276680602270318000841690689684819994448621694923050",
+      "no_token_id": "78632395083310670734315205502061249602319069653915932320155846460019107676757"
+    },
+    {
+      "index": 4,
+      "market_id": "2589814",
+      "question_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a04",
+      "condition_id": "0xde5d75ab7702875623ba509bc923241e1211da74a113521b3b70ddac930d7316",
+      "yes_token_id": "18246296022868501258060085368606280205967114341141276439803424448463050819498",
+      "no_token_id": "41864497411878191766967581422432961750808440991174085516384293402629587721839"
+    }
+  ],
+  "request_body": [
+    {
+      "token_id": "61725366781282351729996972759460154434089275036953062948669003249092837754960"
+    },
+    {
+      "token_id": "17010377994663817312158123655937348199252960045746746128731746451645055725586"
+    },
+    {
+      "token_id": "110888499829195123034987289109543572302716575133123608254293945182185650232552"
+    },
+    {
+      "token_id": "33268510350568915228897273528353467773422190590579607471427765079749830445947"
+    },
+    {
+      "token_id": "42038775866198212615491650114881818219665139981763207699110491615333273795415"
+    },
+    {
+      "token_id": "111061902544814266207267295505639408607400625795891618462682726460921782993748"
+    },
+    {
+      "token_id": "78632395083310670734315205502061249602319069653915932320155846460019107676757"
+    },
+    {
+      "token_id": "55159722761418013044126414276680602270318000841690689684819994448621694923050"
+    },
+    {
+      "token_id": "41864497411878191766967581422432961750808440991174085516384293402629587721839"
+    },
+    {
+      "token_id": "18246296022868501258060085368606280205967114341141276439803424448463050819498"
+    }
+  ],
+  "request_body_sha256": "e709135e3d16e357e5958fe1bbe636d789eae69aeef34e2dff6b367255e374ff",
+  "fixed_routes": [
+    {
+      "route_id": 0,
+      "kind": "mint_full_yes",
+      "fixed_bridge_index": 0,
+      "formula": "sum(all YES best bids)-1"
+    },
+    {
+      "route_id": 1,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        0
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 2,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        1
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 3,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        0,
+        1
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 4,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        2
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 5,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        0,
+        2
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 6,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        1,
+        2
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 7,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        0,
+        1,
+        2
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 8,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        3
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 9,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        0,
+        3
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 10,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        1,
+        3
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 11,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        0,
+        1,
+        3
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 12,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        2,
+        3
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 13,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        0,
+        2,
+        3
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 14,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        1,
+        2,
+        3
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 15,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 16,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        4
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 17,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        0,
+        4
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 18,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        1,
+        4
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 19,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        0,
+        1,
+        4
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 20,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        2,
+        4
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 21,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        0,
+        2,
+        4
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 22,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        1,
+        2,
+        4
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 23,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 24,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        3,
+        4
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 25,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        0,
+        3,
+        4
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 26,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        1,
+        3,
+        4
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 27,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 28,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        2,
+        3,
+        4
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 29,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 30,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    },
+    {
+      "route_id": 31,
+      "kind": "convert_no_subset",
+      "selected_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "formula": "(cardinality(S)-1)+sum(YES best bids outside S)-sum(NO best asks inside S)"
+    }
+  ],
+  "route_semantics": "All32 fixed before quotes. Route0: split Q nominal pUSD for fixed question0, keep YES0, convert NO0 to YES1..4, sell all five YES; gross margin Q*(sum bids-1). Routes1..31: buy Q of each NO in nonempty S, convert to (|S|-1)Q collateral plus Q YES for each question outside S, sell complement YES; margin Q*((|S|-1)+sum complement bids-sum selected asks). Mask31 is previous fullNO reference; other30 proper subsets are a new prospective family. No residual YES assumed discarded or valued subjectively. Actual source/deployment equivalence and conversions unproved.",
+  "limits": {
+    "slots": 15,
+    "slot_interval_seconds": 4,
+    "anchor_after_claim_seconds": 2,
+    "maximum_start_lateness_seconds": 0.25,
+    "request_seconds": 3,
+    "request_work_seconds": 64,
+    "process_seconds": 75,
+    "response_bytes": 131072,
+    "total_response_bytes": 1048576,
+    "trace_plaintext_bytes_in_memory": 1048576,
+    "trace_gzip_bytes": 196608,
+    "derived_receipts_bytes": 98304,
+    "maximum_levels_per_side": 5000
+  },
+  "sampling": "ONE run. At claim, choose wall+monotonic anchor two seconds ahead before any HTTP; preserve its literal UTC in claim. Slot k starts at anchor+4*k for k0..14. A slot more than250ms late is missed and never rescheduled. Each slot issues at most one fixed ten-token POST. Slots remain in the final denominator regardless of observation. First transport/resource/JSON/identity failure stops future HTTP and marks all remaining slots unavailable; after exact ten-token identity validation, empty asks, invalid numeric/tick/hash/timestamp fields or crossed books are slot-level unavailable states with no derived bound and do not change subsequent sampling. Freshness/coherence failure alone is diagnostic and also continues. A subsequent scheduled slot is not a retry of a failed slot. No retry, fallback, redirects, proxies, pagination, early success stop or size/event substitution.",
+  "identity_validation": "Exactly ten response objects: each fixed market NO then YES request token appears once, matching condition_id and neg_risk true. No unknown/extra/missing/duplicate token IDs. Verify all immutable chainv2 and inherited helper/source pins. Requests use no economic selector.",
+  "book_validation": "Strict bounded JSON. price,size,tick_size,min_order_size must be bounded nonnegative plain-decimal strings with at most6 fractional digits and32 total chars; reject signs/exponents/nonfinite. Require0<price<=1,size>0,tick>0<=1,min_order_size>0; price is an integer tick multiple. Both sides required arrays <=5000 levels each; validate levels, normalize order in memory (do not assume wire ordering) and derive best ask=min ask price and best bid=max bid price. NO asks and YES bids are economic inputs; all other sides are integrity-only (maxbid>=minask invalid). Require nonempty bounded hash string <=128 chars. Require nonempty NO asks and YES bids for the common32-route family; missing economic side means all routes unavailable for that slot. Empty integrity-only side is allowed. No depth walk, quantity choice, fill model or parameter selection.",
+  "time_validation": "timestamp must be10-digit Unix-seconds or13-digit Unix-milliseconds decimal string; record inferred unit and original value. The docs call this snapshot time without specifying a unit, so conversion/freshness remain explicitly interpretive. Record local request start/end UTC and monotonic duration, plus bounded HTTP Date if present. For diagnostics define fresh/coherent only if each timestamp is no later than receipt+250ms, no older than5s at receipt, and cross-ten-book timestamp span<=500ms. These criteria are frozen; neither common response nor freshness proves atomic/executable liquidity.",
+  "bound": {
+    "unit": "Conditional nominal pUSD accounting, using official docs assertion that all Polymarket trading uses pUSD; individual book objects have no unit field. No real USD/USDC redemption/equivalence assertion.",
+    "arithmetic": "Exact Decimal from bounded plain strings, all32 route margins per common valid slot. Zero fees/gas/latency/setup, no rebate/dust subsidy. Buy costs can only rise and sell proceeds only fall with depth, so margin<=0 rejects positive equal-Q displayed taker margin under this conditional conversion model at these recorded quotes for any Q>0. Fee deductions cannot improve this upper bound.",
+    "states": [
+      "unavailable_slot",
+      "conditional_nominal_nonpositive_recorded_route",
+      "necessary_price_condition_only"
+    ],
+    "decision": "Preserve15 slots and480 planned route-slots, missing/invalid and freshness separately. Field-valid nonpositive recorded routes can be conditionally rejected at their recorded prices; positive margin is only a necessary candidate, never paper profit. No common-time statement on asynchronous books. An all-family observed-set rejection requires all15 field-valid fresh/coherent sets and all480 margins<=0; no continuous-interval/general absence claim. Continue whole calendar regardless of signs.",
+    "remaining_gates": "Deployed-source conversion equivalence, actual successful conversion, authoritative fee rounding/units/delay,depth/minimums,fillable five-leg acquisition/settlement/partial-fill liquidation,gas/setup/dust disposition and inclusion are unproved. None is needed for this conditional zero-cost necessary-condition screen; all remain before a profit claim."
+  },
+  "retention": "Bounded gzip JSONL of original response bodies encoded base64 plus request/receipt metadata; no plaintext raw file. Each attempted or missed slot checkpoints atomically. Only selected NO asks and YES bids used economically; other sides integrity only, last_trade_price/history/rewards never used. Compact derived summary/terminal/supervisor; preserve partial trace and all missing slots on every stop. Default dry mode0HTTP,required --run --plan-sha256 exactpins, refuse existing output. Derived book hash and HTTP Date use SHA256 fingerprints; originals remain in raw trace. Interrupted attempts are unknown, never zero.",
+  "implementation": "Own only scripts/polymarket_subset_conversion_books.py and tests/test_polymarket_subset_conversion_books.py. Leave uncommitted. Pure imports of unchanged old modules allowed with pins; no global mutation or monkeypatch in production, no old live gate/output. Root owns plan. Hardcode ten-token identities, caps/output/routes. Default dry0HTTP; root review exactpins+commit before ONE run. Seven focused economic/resource/timing/failure synthetic families sufficient; no live API tests. Compact summary to remain<=98304 total derived old+pending+supervisor/receipts, not merely per-file. Preserve unknown interrupted attempts.",
+  "sources": [
+    "https://docs.polymarket.com/api-reference/market-data/get-order-books-request-body",
+    "https://docs.polymarket.com/concepts/pusd",
+    "https://docs.polymarket.com/trading/fees",
+    "https://github.com/Polymarket/neg-risk-ctf-adapter/blob/main/src/NegRiskAdapter.sol",
+    "https://github.com/Polymarket/ctf-exchange-v2/blob/main/src/adapters/NegRiskCtfCollateralAdapter.sol"
+  ],
+  "source_pins": [],
+  "run_gate": "No HTTP before final root source/math/resource review, pin verification and exact frozen commit. No endpoint retries/fallback, no new event/sizes/route selection after quotes."
+}

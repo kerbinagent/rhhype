@@ -236,3 +236,26 @@ candidate at these recorded quotes; larger equal size cannot improve the bound.
 There is no depth/execution branch or profit claim, and no conclusion about
 other events or later periods. Root reconciled all15 raw responses and kept
 the original timing gates.
+
+## Rolling collector recovery, 2 October 11:39 UTC
+
+The controller stopped when duplicated coverage tables filled its 1 MiB index.
+Chunk 52 had already sealed successfully. A separately reviewed and frozen
+[recovery](../reports/experiment-storage/rolling-research-capture-recovery-v1.json)
+verified the existing seal and file hashes, adopted that completion and replaced
+duplicate index tables with references to unchanged seals. The original capture
+source, role schedule, pins, 2 GB ceiling and 48-hour deadline remain fixed.
+The resumed chunk 53 sealed complete; the actual handoff gap was
+1,151.452925 seconds. No reserved raw data was decoded. The
+[recovery receipt](../reports/rolling-capture-recovery-v1/handoff-receipt.json)
+records this missing interval explicitly.
+
+## HIP-4 preparation and shared-host ownership
+
+The local Claude collaborator owns only the four HIP-4 source/review paths in
+the committed [allocation](../reports/experiment-storage/hip4-outcome-research-allocation-v1.json).
+Root owns shared logs, storage ledgers, the git index, commits and data launches.
+The first assignment covers official schemas, conversion arithmetic and an
+offline metadata-probe package. Its 512 KiB reservation comes from existing
+headroom. No market API request is authorized until the package is reviewed
+and a concrete request manifest is frozen.

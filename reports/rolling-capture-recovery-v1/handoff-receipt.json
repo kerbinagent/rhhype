@@ -1,0 +1,19 @@
+{
+  "schema": "rolling-recovery-handoff-receipt-v1",
+  "recorded_utc": "2026-10-02T11:55:40.925873+00:00",
+  "seal53": {
+    "path": "data/rolling/market-research-v1/chunk-000053/seal.json",
+    "bytes": 23418,
+    "sha256": "166ee79dea280e766195f5d595584f3fe00be02bf9f1568ba85f7370eab82f28"
+  },
+  "previous_capture_ended_utc": "2026-10-02T11:20:35.272231+00:00",
+  "recovered_capture_started_utc": "2026-10-02T11:39:46.725156+00:00",
+  "handoff_gap_ns": 1151452925000,
+  "recovered_capture_ended_utc": "2026-10-02T11:49:47.480902+00:00",
+  "state": "sealed_complete",
+  "role": "reserved_validation",
+  "payload_records": 130080,
+  "reconnect_or_feed_errors": [],
+  "current_chunk": "chunk-000054",
+  "scope": "Operational seal/index metadata only; no raw decode, economic evaluation, validation claim or gap-free assertion. Original absolute deadline and caps remain fixed."
+}

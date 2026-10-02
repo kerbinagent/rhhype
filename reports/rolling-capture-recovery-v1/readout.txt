@@ -1,0 +1,9 @@
+Rolling collector recovery, 2 October 2026
+
+The original controller stopped at 11:20:37 UTC when its 1 MiB index could no longer store duplicated coverage tables. Chunk 52 had already completed and sealed successfully; only catalog publication failed.
+
+Frozen recovery 27c7f97 passed 6 synthetic tests. Its one launch verified the orphan seal and each capture file by opaque size/hash, adopted the existing complete seal, and replaced duplicate index coverage with references to unchanged seals. The catalog shrank from 1,045,942 B to 33,978 B after adoption. Source, raw files, seals, pins, cohort, role schedule, original 48 h deadline and 2 GB store cap remain unchanged.
+
+New controller 236713 accepted the handoff and began reserved chunk 53 with 2 live connections and no reported errors at the audit. The missing interval remains explicit; no gap-free coverage is claimed. Root inspected operational metadata only. See receipt.json and root-audit.json.
+
+Chunk 53 subsequently sealed complete at 11:49:47 UTC with 130,080 records and no reported feed errors. Its recorded start was 11:39:46.725156 UTC, leaving a 1,151.452925-second gap after chunk 52. Chunk 54 is collecting; the recovery did not extend the deadline. See handoff-receipt.json.
