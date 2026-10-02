@@ -1,0 +1,1 @@
+{"schema":"news-candidate-rolling-v1-nomination","plan_sha256":"e3a09177b2e38ca78ee7f1a97b2ce5e00ce14bd15cdc6c53164472888cd2ee33","nominated_utc":"2026-10-02T15:32:17.436731+00:00","selection_fields":["role","number","launched_ns"],"chunk":"chunk-000076","number":76,"role":"reserved_validation","launched_ns":1790955125217590095}

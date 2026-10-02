@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "sample": "news-candidate-rolling-v1-depth-zec",
+  "counts": {},
+  "raw_capture_verified": true,
+  "signal_checks_vacuous": true,
+  "fill_checks_vacuous": true,
+  "summary_sha256": "6110e930ea48fd6097a8f378c3718606effc66d088fd8ea4a5d5dac61320da28",
+  "trace_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "limits": "Conditional public-book IOC execution. Signal and first-eligible book checks plus cash reconciliation; no private order acknowledgments or authenticated fills. Independent arms must not be summed."
+}

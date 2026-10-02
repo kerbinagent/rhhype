@@ -226,11 +226,12 @@ Root independently reconciled every response with rational arithmetic. No
 positive candidate remains at these recorded quotes. The result is conditional
 on conversion/payoff assumptions, not proof of simultaneous executable depth.
 
-The local Claude session continues HIP-4 research under its
-[1 MiB allocation](../reports/experiment-storage/hip4-research-continuation-allocation-v1.json).
-It owns new paths and offline work; completed evidence remains read-only.
-Root coordinates shared files, commits and data gates. The original 512 KiB stays
-reserved, and checkpoints do not end the task.
+Claude continues offline source and pairing research on owned paths. The
+[accepted collector](../reports/experiment-storage/hip4-live-causal-correction-closeout-v1.json)
+passed 21 causal tests. The [frozen live plan](../reports/experiment-storage/hip4-continuation-live-v1.json)
+selects question 357 before fresh quotes; its host timer launches at 18:22 UTC
+today for the 18:35–20:50 window. Pairing remains unimplemented. Root coordinates
+files and data gates; observations alone cannot establish closed profit.
 
 ## Conversion price screens, 2 October 12:02 UTC
 
@@ -265,16 +266,15 @@ changed no scientific rule or raw data; both complete versions reconciled.
 The correction changed which policies were positive, despite the same count.
 Several winners overlap the release move; alternative ledgers cannot be added.
 
-Core NEAR depth-follow's three closes returned +0.7371 USDC net and +0.5889
-stressed. The [frozen successor](../reports/experiment-storage/news-candidate-rolling-v1.json)
-keeps it and the unchanged fade comparator, plus all 100 descriptive policies.
-It selects the first reserved chunk launched at or after 15:00 UTC, retaining failure
-without replacement. A [pre-cutoff host startup repair](../reports/experiment-storage/news-candidate-host-startup-recovery-v1.json)
-preserves the failed sandbox launch. One ordinary block tests applicability;
-it does not establish news replication or repeatable profit.
+Core NEAR depth-follow's news closes returned +0.5889 stressed USDC. The fixed
+[ordinary successor](../reports/news-candidate-rolling-v1/run-v1/root-review.json)
+completed on the preselected reserved chunk 76: primary and fade comparator
+both had zero attempts. All 100 policies were flat-known and all 20 audits
+passed. Root recomputed all 24 descriptive closes; RH LIT fade's +0.0216 stressed
+USDG remains exploratory. The primary coverage gate failed. No winner replaces
+the primary, and neither news replication nor repeatable profit is established.
 
 The [Comet artifact check](../reports/comet-sourcify-lookup-v1/root-reconciliation.json)
-matched the retained runtime, including all 70 immutable substitutions. Its
-literal metadata bytes match the embedded content hash. Independent compilation
-and economics remain unproved. The failed gateway request stays retained;
-Clipper remains offline.
+matched the retained runtime and literal metadata content hash. A bounded
+independent compiler reproduction is being prepared; deployed dependencies and
+economics remain unproved. The failed gateway stays retained; Clipper is offline.

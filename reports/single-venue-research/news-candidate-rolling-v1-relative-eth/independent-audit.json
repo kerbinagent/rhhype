@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "sample": "news-candidate-rolling-v1-relative-eth",
+  "counts": {},
+  "raw_capture_verified": true,
+  "signal_checks_vacuous": true,
+  "fill_checks_vacuous": true,
+  "summary_sha256": "a7e7fba9c8a59488a00bd837c95f0681a2eac0254d2b7a88ddfbad0752e6e667",
+  "trace_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "limits": "Conditional public-book IOC execution. Signal and first-eligible book checks plus cash reconciliation; no private order acknowledgments or authenticated fills. Independent arms must not be summed."
+}

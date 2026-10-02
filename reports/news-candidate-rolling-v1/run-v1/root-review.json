@@ -1,0 +1,142 @@
+{
+  "claim": "One ordinary-regime conditional public-book observation. Primary rule did not activate; no evidence of generalization, news replication, actual fills or repeatable closed profit. Descriptive LIT winner does not replace frozen NEAR primary.",
+  "comparator": {
+    "attempts": 0,
+    "cash_after_capital": "0",
+    "closed": 0,
+    "final_cash": "600",
+    "flat_known": true,
+    "rule": "depth_fade",
+    "stressed_cash": "0"
+  },
+  "descriptive_only": {
+    "arms_with_attempts": 19,
+    "attempts": 4,
+    "closed": 3,
+    "net_native_USDG": "0.1699919966889689220783580670",
+    "positive_arm": "LIT/rh_lighter/depth_fade",
+    "promoted": false,
+    "stressed_native_USDG": "0.02160111118896892207835806705",
+    "stressed_positive_arms": 1
+  },
+  "independent_sol_review": "Read-only Sol independently verified16inputs,24commands,100rows,20audits and primary/comparator zero activation. Root independently verified these and recomputed every closed trace episode.",
+  "objective_achieved": false,
+  "outputs": {
+    "bytes": 151217,
+    "files": 85,
+    "inventory_encoding": "SHA256 of compact sorted-key JSON list sorted by relative path",
+    "inventory_sha256": "2ea29b352642a345d20a0b7fdde9f99d1b11745e653e2b78e500c9c565b8775d"
+  },
+  "pin_disposition": "Root may release after committing all outputs: study complete and no result promoted. Existing rolling retention rules then apply. No raw copy is funded.",
+  "plan": {
+    "bytes": 5256,
+    "path": "reports/experiment-storage/news-candidate-rolling-v1.json",
+    "sha256": "e3a09177b2e38ca78ee7f1a97b2ce5e00ce14bd15cdc6c53164472888cd2ee33"
+  },
+  "primary": {
+    "asset": "NEAR",
+    "attempts": 0,
+    "cash_after_capital": "0",
+    "closed": 0,
+    "collateral": "USDC",
+    "final_cash": "600",
+    "flat_known": true,
+    "rule": "depth_follow",
+    "stressed_cash": "0",
+    "venue": "lighter"
+  },
+  "primary_gate_passes": false,
+  "primary_minus_comparator_stressed_cash": "0",
+  "recorded_utc": "2026-10-02T16:19:25.877191+00:00",
+  "root_checks": {
+    "all_100_comparison_rows_complete_flat_known": true,
+    "all_16_input_pins_match": true,
+    "all_20_audits_pass_and_summary_trace_hashes_match": true,
+    "all_24_closed_episodes_independently_recomputed_from_trace": true,
+    "cash_formula": "side*(exit_value-entry_value)-entry_fee-exit_fee-capital",
+    "command_receipts_1_to_24_sequential": true,
+    "no_alternative_ledgers_summed": true,
+    "stress_formula": "cash_after_capital-entry_value*0.0005",
+    "vacuous_fill_audits": 11,
+    "vacuous_signal_audits": 11
+  },
+  "schema": "news-candidate-rolling-v1-root-review",
+  "selected_artifact_pins": [
+    {
+      "bytes": 3428,
+      "path": "reports/news-candidate-rolling-v1/run-v1/input-pins.json",
+      "sha256": "6aa69a7c13748bf5777e3a99a6615bd0add889da2e8c5c19b3ba9c72bacb7fdd"
+    },
+    {
+      "bytes": 331,
+      "path": "reports/news-candidate-rolling-v1/run-v1/nomination.json",
+      "sha256": "3e5e8032a010402421fe6ab91ea56da1d26f0693b2bd8dfd9df5b2c3156a1b9d"
+    },
+    {
+      "bytes": 258,
+      "path": "reports/news-candidate-rolling-v1/run-v1/pin.json",
+      "sha256": "3c9926f6c5988237204ca33a20f25463ef441fb1a1f04c205c9529c45952d063"
+    },
+    {
+      "bytes": 455,
+      "path": "reports/news-candidate-rolling-v1/run-v1/result.json",
+      "sha256": "55a35d5d196af005df93aae02f188e5f8b8bea412dcb1afb0fd3dda34dab80e0"
+    },
+    {
+      "bytes": 369,
+      "path": "reports/news-candidate-rolling-v1/run-v1/terminal.json",
+      "sha256": "fd21b6cdbb1e28808bb55498746a2169715a495ce2250ab2f2bb2b68f2c7bbe5"
+    },
+    {
+      "bytes": 4771,
+      "path": "reports/single-venue-research/news-candidate-rolling-v1-relative-comparison.csv",
+      "sha256": "9a93685b5452f6f2407f91a8232eb02538913e1732b4315bff52c66c47838605"
+    },
+    {
+      "bytes": 3669,
+      "path": "reports/single-venue-research/news-candidate-rolling-v1-relative-comparison.json.gz",
+      "sha256": "c9abf2c4625ceb4a4982a33c45cfb58aa69be7efb1d6e224305d1ecf500f6eed"
+    },
+    {
+      "bytes": 4377,
+      "path": "reports/single-venue-research/news-candidate-rolling-v1-depth-comparison.csv",
+      "sha256": "760f029f423f194a0ded937d789314de829b6d83ab83fee0581013caed42b755"
+    },
+    {
+      "bytes": 3810,
+      "path": "reports/single-venue-research/news-candidate-rolling-v1-depth-comparison.json.gz",
+      "sha256": "583eaed982f709acc97c166df1a2a003fe9f34ccce63c45e3e273a31117ccf78"
+    },
+    {
+      "bytes": 2882,
+      "path": "reports/single-venue-research/news-candidate-rolling-v1-readout.txt",
+      "sha256": "684a5950310e44aa81cfafadcc21847775206cc335847b5b65dc10bf5e805255"
+    },
+    {
+      "bytes": 3447,
+      "path": "reports/single-venue-research/news-candidate-rolling-v1-depth-near/summary.json.gz",
+      "sha256": "a711197ebb3769d44243bde2217b479276b63393fc728c1fdfebe460a2c0feca"
+    },
+    {
+      "bytes": 3394,
+      "path": "reports/single-venue-research/news-candidate-rolling-v1-depth-near/trace.jsonl.gz",
+      "sha256": "d370230e03e408d131ddb40b5354d41508a1c93b7f08a9934523f05c7b6cbd62"
+    },
+    {
+      "bytes": 647,
+      "path": "reports/single-venue-research/news-candidate-rolling-v1-depth-near/independent-audit.json",
+      "sha256": "3fdfcb1518c5e473c0546891cc07d527b68e26a5910dd8d10da9a76b309087c7"
+    }
+  ],
+  "selection": {
+    "capture_end_utc": "2026-10-02T15:42:07.192250+00:00",
+    "capture_seconds": "600.784697",
+    "capture_start_utc": "2026-10-02T15:32:06.407553+00:00",
+    "chunk": "chunk-000076",
+    "nominated_before_seal": true,
+    "role": "reserved_validation",
+    "selection_not_changed_after_outcomes": true
+  },
+  "status": "completed_no_coverage_advancement",
+  "zero_primary_trace_events": true
+}

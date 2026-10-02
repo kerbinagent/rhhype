@@ -1,0 +1,1 @@
+{"schema":"news-candidate-rolling-v1-terminal","plan_sha256":"e3a09177b2e38ca78ee7f1a97b2ce5e00ce14bd15cdc6c53164472888cd2ee33","status":"completed","success":true,"economic_evaluation":true,"completed_commands":24,"reason":null,"ended_utc":"2026-10-02T16:11:30.370771+00:00","no_retry":true,"objective_achieved":false,"retained_pin_owner":"news_candidate_rolling_v1"}
