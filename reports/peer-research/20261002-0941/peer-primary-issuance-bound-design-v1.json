@@ -1,0 +1,101 @@
+{
+  "schema": "peer-primary-issuance-bound-design-v1",
+  "status": "design_only_no_execution_authority",
+  "recorded_utc": "2026-10-02T09:37:14.139746+00:00",
+  "main_design_authority": "2a4d08fb-f4ae-4ac6-a1d9-065345eb7099",
+  "basis_commit": "f35cd5ab7c4166056d9adefe169265cf3581a68a",
+  "decision": "A cheap compiler-free necessary-condition design is mathematically available for the frozen displayed-balance sale policy, conditional on matching the reviewed Curve arithmetic to the live runtime and freezing exact post-submit state/timing. A standalone pre-submit get_dy(P) has not been proved to bound the later exchange. No new RPC or compiler download is authorized.",
+  "fixed_policy": {
+    "principal_wei": [
+      "10000000000000000",
+      "100000000000000000",
+      "1000000000000000000",
+      "10000000000000000000"
+    ],
+    "sale_amount": "Exactly the actual post-submit balanceOf of a sender/executor starting with zero shares. All four arms retained independently; no outcome-driven resizing.",
+    "excluded_generalization": "Do not replace this with the maximum nominal transfer argument. Curve prices the nominal dx before transferFrom and does not remeasure actual received token delta."
+  },
+  "lido_bound": {
+    "symbols": "P is principal; E>0 internal ether; T total shares; X external shares; I=T-X>0. V4 converts using E/I, not total pooled ether/total shares.",
+    "normal_transition": "m=floor(P*I/E); I_post=I+m; E_post=E+P. Sender initial shares are zero.",
+    "proof": "Let r=P*I-m*E, so 0<=r<E. B=floor(m*(E+P)/(I+m))=P-ceil(r/(I+m))<=P. Therefore the four stETH upper inputs equal the four principal integers; this is an inequality, not exact 1:1 issuance.",
+    "domains": "Require a successful submit, 0<=X<T, valid conversion domain P<2^128-1, and successful total-share capacity. Zero E or I is outside this derivation; submit has no bootstrap fallback. m=0 is possible and gives B=0.",
+    "buffer_caveat": "The buffered-ether setter masks to low128 bits. Require bufferedEther+P<2^128 for the displayed equality E_post=E+P; on truncation E_post is smaller and B<=P remains conservative. Fail closed on domain or arithmetic uncertainty.",
+    "finite_reads_for_exact_arithmetic": "Same-block getTotalShares, getExternalShares, getTotalPooledEther, getExternalEther give I and E; getBufferedEther verifies no truncation. Eligibility and initial sharesOf(sender)==0 are additional checks. A post-submit balance observation can directly verify B<=P for the sampled state.",
+    "nominal_transfer_caveat": "The inherited transfer computes floor(dx*I_post/E_post) and checks shares. Its maximum nominal dx for m shares is min(2^128-2, floor(((m+1)*E_post-1)/I_post)). Without buffer truncation this is P+floor((E+P-r-1)/(I+m)) before the cap; it may exceed P. nominal transferFrom(P) moves exactly m shares. These observations do not change the already frozen balanceOf-only policy."
+  },
+  "curve_bound": {
+    "state_problem": "Curve _balances reads live stETH balanceOf(pool) less admin balances. Submit changes the share ratio and can change that reserve before any transfer. Pre-submit and post-submit quote states are therefore not interchangeable.",
+    "recommended_condition": "Quote after the hypothetical submit, at the same exact reserves xp, amplification, fee and EVM time as the hypothetical exchange. For successful arithmetic, actual payout(B)<=get_dy(1,0,P)+1 native wei when B<=P and 0<=fee<=10^10.",
+    "coefficient_ordering": "For fixed xp and A, get_D is identical across dx. With x=xp[1]+dx, the two-coin get_y coefficient c is nonincreasing in x and b is increasing. The larger nonnegative root r of y^2+(b-D)*y-c is therefore nonincreasing in dx.",
+    "rounding_lemma": "Let a=b-D, t=floor(r), Q(y)=y^2+a*y-c, L(y)=2*y+a. For every successful update N(y)=(y^2+c)/L(y), N(y)-r=(y-r)^2/L(y)>=0, so floor(N(y))>=t. Q(t+1)>=1 and L(t+1)>=1. For y=t+1+delta, Q(y)-L(y)=Q(t+1)+(delta-1)*L(t+1)+delta*(delta-2). delta>=2 forces a drop of at least two, so cannot trigger the <=1 stopping rule; delta=1 returns at most t+1, and lower starts that stop also return at most t+1. Thus each successful solver return lies in [floor(r),floor(r)+1]. The larger root matters when c=0 and a<0.",
+    "payout_derivation": "Since r(B)>=r(P), y(B)>=floor(r(P)) and y(P)<=floor(r(P))+1. Thus pre-fee dy(B)<=dy(P)+1. h(z)=z-floor(fee*z/10^10) is nondecreasing and 1-Lipschitz for 0<=fee<=10^10, retaining the one-wei margin after the pool fee.",
+    "failure_policy": "Overflow, underflow, zero denominator, nonconvergence, failed submit, failed quote, malformed ABI, missing state or changed identity are unavailable observations, not negative samples. Quotes and exchange must use the same post-submit state; no intervening fee payment may credit the pool.",
+    "review": "Parent derivation independently checked by Sol xhigh /root/cross_asset_mechanism. Parent searched 86400 small-integer Newton cases in0.110639s with no interval counterexample; that finite search is not the proof or market evidence."
+  },
+  "proposed_partial_simulation_not_frozen": {
+    "unit": "One future calendar anchor and all four independently reset principal arms, from the same pinned parent and one predefined hypothetical child position. No compiler or full executor is needed.",
+    "per_arm_concept": "One eth_simulateV1 blockStateCalls with fixed sender transactions: sharesOf(sender) before issuance; submit(P); balanceOf(sender); get_dy(1,0,P); fee(). Require initial zero shares, successful submit and views, B<=P, and valid fee. No exchange, approval, dust transfer, wallet or transaction submission.",
+    "state_constraints": "Override only hypothetical sender funding/nonce, never Lido/Curve code or storage. Sender must have no code and differ from fixed contracts. Keep exact child EVM time fixed. Reject a fee recipient or other intervening credit that changes the pool reserve; account for transaction-boundary effects rather than assuming equivalence to a single transaction. Every arm starts from a fresh copy of the same parent, never the preceding arm state.",
+    "timing": "Freeze receipt/decision clock, one child-slot convention and the >=400ms action floor before any economic call. Retain all missed/unavailable arms. A hypothetical child quote is conditional on its position and is not obtainable-inclusion evidence. No favorable later block or retry.",
+    "read_budget_target": "At most20 RPC calls,180s wall cap,12s request timeout,1s request spacing,131072 bytes per response and1048576 bytes cumulative. Exact identity/domain/header calls, payloads, gas/sender funding, calendar anchor and retention must be frozen and separately authorized before launch.",
+    "rejection": "For a valid arm define U=get_dy_after_submit(P)+1. If U<=P, the frozen route cannot return positive native cash in that sampled state even before gas, setup, disposal and capital charges. All four valid nonpositive bounds can park this version for the fixed sample. Missing arms prevent an all-arm negative conclusion.",
+    "positive_limit": "U>P merely fails to reject. No full composed sale, gas/setup cost, exact flatness, inclusion probability or net cash is established. It does not authorize broader collection."
+  },
+  "source_binding": {
+    "curve_source": {
+      "url": "https://raw.githubusercontent.com/curvefi/curve-contract/395e612cb2d32292aaeaf0169707195b8baf0415/contracts/pools/steth/StableSwapSTETH.vy",
+      "path_commit": "395e612cb2d32292aaeaf0169707195b8baf0415",
+      "version_comment": "0.2.8",
+      "lines": "175-180,339-437"
+    },
+    "lido_source": {
+      "url": "https://raw.githubusercontent.com/lidofinance/core/v4.0.1/contracts/0.4.24/Lido.sol",
+      "lines": "1142-1188,1327-1337"
+    },
+    "steth_source": {
+      "url": "https://raw.githubusercontent.com/lidofinance/core/v4.0.1/contracts/0.4.24/StETH.sol",
+      "lines": "164-165,294-310,397-400,458-467"
+    },
+    "storage_helper": "https://raw.githubusercontent.com/lidofinance/core/v4.0.1/contracts/0.4.24/utils/UnstructuredStorageExt.sol",
+    "permit_source": {
+      "url": "https://raw.githubusercontent.com/lidofinance/core/v4.0.1/contracts/0.4.24/StETHPermit.sol",
+      "bytes_read_without_retaining_file": 6461,
+      "sha256": "cc4e37048f98024a92c337b6209ba3dd7c2cc4e8cfbc526b6f755057fac9baef",
+      "parent_review": "Complete source adds permit/nonce/domain functions and does not override the share conversions, balanceOf, transfer or submit."
+    },
+    "live_runtime_equivalence_proven": false,
+    "limitation": "The saved preflight binds live addresses, selected ABI getters and code SHA256 values. It does not prove compilation equivalence to these source references. Etherscan code-page access returned403 and Sourcify full-match metadata returned404. This is a source-level conditional bound until that binding or equivalent direct runtime validation is accepted/provided."
+  },
+  "compiler_option_not_download_authority": {
+    "scope": "Smaller of current-stable official distributions checked; not a global minimum across historical compiler versions.",
+    "version": "0.8.37+commit.f401782d",
+    "full_commit": "f401782df49be312ea4ef52a2d467cf5183b5906",
+    "soljson": {
+      "url": "https://binaries.soliditylang.org/wasm/soljson-v0.8.37+commit.f401782d.js",
+      "bytes": 9222701,
+      "sha256": "d73fead3cbc860438f56f4d1723677499cdef212d0f8890241748d2d5afc1c5f",
+      "keccak256": "3873b65439aaf47a2d500adf87c4396dc5fcf354d0744f0ef50dcef7af37076d"
+    },
+    "linux_static": {
+      "url": "https://binaries.soliditylang.org/linux-amd64/solc-linux-amd64-v0.8.37+commit.f401782d",
+      "bytes": 15473648,
+      "sha256": "5de843c2c93563cc66425c99a4fb13fdbf32b4c4ae07469480faaf126e14404a"
+    },
+    "global_headroom_at_main_request_bytes": 11747328,
+    "one_soljson_copy_headroom_after_artifact_only_bytes": 2524627,
+    "two_soljson_copies_bytes": 18445402,
+    "wrapper": "Node24 can bind solidity_compile via cwrap with string/number/number parameters, using fully inlined Standard JSON and (input,0,0). Agent reports a206-byte skeleton; bounded production wrapper, source and outputs still require measured allocation and runtime validation. No npm package is required for this narrow interface.",
+    "provenance": [
+      "https://api.github.com/repos/argotorg/solidity/releases/tags/v0.8.37",
+      "https://api.github.com/repos/argotorg/solidity/git/ref/tags/v0.8.37",
+      "https://binaries.soliditylang.org/wasm/list.json",
+      "https://binaries.soliditylang.org/linux-amd64/list.json",
+      "https://github.com/argotorg/solc-js/blob/master/bindings/compile.ts"
+    ],
+    "verification": "Sol xhigh agent checked official release API asset sizes/digests and matching identity-encoding HEAD Content-Length. No compiler body downloaded, no package installed and no compiler file retained. One main-side copy only could fit the stated headroom; peer subcaps are not additional headroom."
+  },
+  "new_economic_rpc_requests": 0,
+  "compiler_downloads": 0,
+  "next_gate": "Main review of the proof and source-binding requirement, then an exact budgeted protocol/source/runtime freeze and separate launch handoff. Existing v1/v2 metadata artifacts remain immutable."
+}

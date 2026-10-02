@@ -1,0 +1,52 @@
+{
+  "schema": "parler-peer-primary-issuance-bound-v1-budget",
+  "status": "offline_implementation_and_source_binding_review_authorized_no_economic_rpc",
+  "recorded_utc": "2026-10-02T09:53:31.769941+00:00",
+  "previous": "reports/experiment-storage/parler-peer-primary-issuance-v1.json",
+  "reserved_bytes": 0,
+  "peer_total_reserved_bytes_unchanged": 8388608,
+  "peer_categories_bytes_unchanged": {
+    "source_tests_docs_protocols": 2097152,
+    "derived_outputs": 5767168,
+    "primary_issuance_raw_all_session_copies_and_temporary_files": 524288
+  },
+  "primary_issuance_source_study_subcap_bytes": 393216,
+  "previous_source_study_subcap_bytes": 294912,
+  "source_scope": "Increase only the study subdivision by 98304 bytes within the existing peer source category, as requested by the peer. All older source, proposals, review copies and ledger growth remain charged. No additional global allocation or compiler artifact.",
+  "primary_issuance_derived_study_subcap_bytes_unchanged": 131072,
+  "known_usage_before_this_amendment": {
+    "source_conservative_all_session_bytes": 291011,
+    "derived_all_session_bytes_including_root_v2_receipt": 82436,
+    "raw_all_session_bytes": 45204
+  },
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 243007488,
+  "active_research_headroom_bytes": 11747328,
+  "overall_reservation_bytes": 2838874368,
+  "design": {
+    "path": "reports/peer-research/20261002-0941/peer-primary-issuance-bound-design-v1.json",
+    "bytes": 11247,
+    "sha256": "3718dd5c2e05448dcfd51cce3e528d74efa4fda78dbca27da5559c14b7b76866"
+  },
+  "next_step": "Retain a compact source-binding receipt and implement the compiler-free post-submit quote bound offline, with source/test/protocol/runtime pins and a fixed four-arm future sampling schedule for root review. Runtime/source provenance is a condition of the candidate-model bound, not independently reproduced compilation. No economic RPC until root reviews the exact package and issues a launch handoff.",
+  "prospective_limits": {
+    "fixed_principal_wei": [
+      "10000000000000000",
+      "100000000000000000",
+      "1000000000000000000",
+      "10000000000000000000"
+    ],
+    "rpc_requests": 20,
+    "request_seconds": 12,
+    "minimum_request_spacing_seconds": 1,
+    "process_seconds": 180,
+    "response_bytes": 131072,
+    "cumulative_response_bytes": 1048576,
+    "new_trace_gzip_bytes_per_session": 131072,
+    "new_trace_plaintext_bytes_in_memory": 262144,
+    "new_derived_bytes_per_session": 16384
+  },
+  "peak_raw_accounting": "Existing 45204 plus at most two simultaneous new 131072-byte trace copies =307348, below524288. During peer checkpoints those are old and pending; after completion those are peer and root review. Do not create a root copy while a peer checkpoint is pending. No retained plaintext raw copy.",
+  "economic_interpretation": "Each arm independently resets from the same fixed parent. For successful observed B<=P and a valid source-bound post-submit quote, U=get_dy(P)+1 wei is an optimistic upper bound for the frozen balanceOf-only sale policy. U<=P rejects that sampled arm before costs; U>P merely fails to reject. Preserve missing/unavailable arms. No closed cash cycle, gas, flatness or obtainable inclusion is proved by this partial simulation.",
+  "exclusions": "No compiler download/install, real wallet, authentication, signed/submitted transaction, deployment, live-state write, pool/event substitution, retries or fallback endpoint. Prior evidence stays immutable. Exact payloads, code identities, same-state timing, sender/fee-recipient handling and manifest remain launch prerequisites."
+}

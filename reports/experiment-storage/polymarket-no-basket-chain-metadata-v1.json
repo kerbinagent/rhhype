@@ -1,0 +1,830 @@
+{
+  "schema": "polymarket-no-basket-chain-metadata-v1",
+  "status": "frozen_chain_metadata_probe",
+  "recorded_utc": "2026-10-02T09:25:46.005926+00:00",
+  "previous": "reports/experiment-storage/polymarket-no-basket-calendar-v1.json",
+  "previous_sha256": "f79cd021e936c8471afdd28af8eb03a9af0ee1b4256abf286b2d4d10c64d8372",
+  "reserved_bytes": 0,
+  "allocation": "Within existing 2 MiB Polymarket allocation: source/tests/protocol/docs262144,raw1310720,derived524288. Existing raw26716 bytes. This probe trace plus simultaneous temporary copy <=2*524288, so total raw peak <=1075292. No new global reservation.",
+  "active_research_reserved_bytes": 243007488,
+  "active_research_headroom_bytes": 11747328,
+  "input_projection": {
+    "path": "reports/polymarket-no-basket/calendar-review-v1.json",
+    "bytes": 20256,
+    "sha256": "60fd720f615d2531e4e12b1e8c8e75b4f154290ebfa7335c596ac98870ddfabe"
+  },
+  "original_metadata_plan_sha256": "118815a62a774caab5251518cb6e674503585a8027bcc960c0bfbc60d9a7b90f",
+  "event_id": "606422",
+  "neg_risk_market_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a00",
+  "markets": [
+    {
+      "index": 0,
+      "market_id": "2589810",
+      "question_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a00",
+      "condition_id": "0xa69ef420d8b4075ad8ba8611d02c63cb2ece46f5c8c643af223c272689b0c96f",
+      "yes_token_id": "17010377994663817312158123655937348199252960045746746128731746451645055725586",
+      "no_token_id": "61725366781282351729996972759460154434089275036953062948669003249092837754960"
+    },
+    {
+      "index": 1,
+      "market_id": "2589811",
+      "question_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a01",
+      "condition_id": "0x9cf563d7b55aa9aa876d5d7e55126347eee473f0ae56d799e325fdef2bf25297",
+      "yes_token_id": "33268510350568915228897273528353467773422190590579607471427765079749830445947",
+      "no_token_id": "110888499829195123034987289109543572302716575133123608254293945182185650232552"
+    },
+    {
+      "index": 2,
+      "market_id": "2589812",
+      "question_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a02",
+      "condition_id": "0xdf9bf27ee5757c55b44b8b9826ddc9ec3a8809aa3278634c45edbb7fc8f1a3e3",
+      "yes_token_id": "111061902544814266207267295505639408607400625795891618462682726460921782993748",
+      "no_token_id": "42038775866198212615491650114881818219665139981763207699110491615333273795415"
+    },
+    {
+      "index": 3,
+      "market_id": "2589813",
+      "question_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a03",
+      "condition_id": "0x12aa13b3da17ceae1b0a59b5d5b77121e91bb79b4bb0b52bf6543ed3f8d0953b",
+      "yes_token_id": "55159722761418013044126414276680602270318000841690689684819994448621694923050",
+      "no_token_id": "78632395083310670734315205502061249602319069653915932320155846460019107676757"
+    },
+    {
+      "index": 4,
+      "market_id": "2589814",
+      "question_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a04",
+      "condition_id": "0xde5d75ab7702875623ba509bc923241e1211da74a113521b3b70ddac930d7316",
+      "yes_token_id": "18246296022868501258060085368606280205967114341141276439803424448463050819498",
+      "no_token_id": "41864497411878191766967581422432961750808440991174085516384293402629587721839"
+    }
+  ],
+  "contracts": {
+    "wrapper": "0xadA2005600Dec949baf300f4C6120000bDB6eAab",
+    "legacy_adapter": "0xd91E80cF2E7be2e162c6513ceD06f1dD0dA35296",
+    "ctf": "0x4D97DCd97eC945f40cF65F87097ACe5EA0476045",
+    "pusd_proxy": "0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB",
+    "pusd_implementation": "0x6bBCef9f7ef3B6C592c99e0f206a0DE94Ad0925f"
+  },
+  "discovered_address_scope": "Only canonical nonzero addresses from wrapper USDCE() and WRAPPED_COLLATERAL(); require legacy and pUSD getter relationships, query only their decimals and code. Their names are on-chain bindings, not independently established underlying-asset identity. No wallet/account state or balances.",
+  "endpoint": "https://polygon-bor-rpc.publicnode.com",
+  "limits": {
+    "rpc_requests": 55,
+    "request_seconds": 12,
+    "request_work_seconds": 170,
+    "process_seconds": 180,
+    "minimum_start_spacing_seconds": 1,
+    "response_bytes": 131072,
+    "total_response_bytes": 1048576,
+    "retained_trace_plaintext_bytes": 524288,
+    "retained_trace_gzip_bytes": 524288,
+    "derived_receipts_bytes": 65536
+  },
+  "output_dir": "reports/polymarket-no-basket/chain-metadata-v1",
+  "transport": "One fixed anonymous HTTPS JSON-RPC endpoint, no environment proxy, redirects, retries, fallback, batch or pagination. Strict remaining cumulative response budget before reading; conservatively fail at unproven EOF boundary. All contract/storage/code requests use EIP1898 hash+requireCanonical; fail if unsupported. Header reads retain only number,hash,parentHash,timestamp,stateRoot plus original-body byte/hash receipts; no transaction history is analyzed.",
+  "manifest": [
+    {
+      "id": 1,
+      "method": "eth_chainId",
+      "label": "chain",
+      "expect": "0x89"
+    },
+    {
+      "id": 2,
+      "method": "eth_getBlockByNumber",
+      "label": "initial_header",
+      "params": [
+        "latest",
+        false
+      ],
+      "expect": "valid projected header"
+    },
+    {
+      "id": 3,
+      "method": "eth_getCode",
+      "label": "wrapper.code",
+      "target": "wrapper",
+      "block": "frozen_hash_requireCanonical",
+      "expect": "nonempty; retain code and sha256, no compiled-source-equivalence claim"
+    },
+    {
+      "id": 4,
+      "method": "eth_call",
+      "label": "wrapper.NEG_RISK_ADAPTER()",
+      "target": "wrapper",
+      "signature": "NEG_RISK_ADAPTER()",
+      "args": [],
+      "expect": {
+        "address_equals": "legacy_adapter"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 5,
+      "method": "eth_call",
+      "label": "wrapper.CONDITIONAL_TOKENS()",
+      "target": "wrapper",
+      "signature": "CONDITIONAL_TOKENS()",
+      "args": [],
+      "expect": {
+        "address_equals": "ctf"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 6,
+      "method": "eth_call",
+      "label": "wrapper.COLLATERAL_TOKEN()",
+      "target": "wrapper",
+      "signature": "COLLATERAL_TOKEN()",
+      "args": [],
+      "expect": {
+        "address_equals": "pusd_proxy"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 7,
+      "method": "eth_call",
+      "label": "wrapper.USDCE()",
+      "target": "wrapper",
+      "signature": "USDCE()",
+      "args": [],
+      "expect": {
+        "capture_nonzero_address": "usdce"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 8,
+      "method": "eth_call",
+      "label": "wrapper.WRAPPED_COLLATERAL()",
+      "target": "wrapper",
+      "signature": "WRAPPED_COLLATERAL()",
+      "args": [],
+      "expect": {
+        "capture_nonzero_address": "wrapped_collateral"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 9,
+      "method": "eth_getCode",
+      "label": "legacy_adapter.code",
+      "target": "legacy_adapter",
+      "block": "frozen_hash_requireCanonical",
+      "expect": "nonempty; retain code and sha256, no compiled-source-equivalence claim"
+    },
+    {
+      "id": 10,
+      "method": "eth_call",
+      "label": "legacy_adapter.ctf()",
+      "target": "legacy_adapter",
+      "signature": "ctf()",
+      "args": [],
+      "expect": {
+        "address_equals": "ctf"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 11,
+      "method": "eth_call",
+      "label": "legacy_adapter.col()",
+      "target": "legacy_adapter",
+      "signature": "col()",
+      "args": [],
+      "expect": {
+        "address_equals": "usdce"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 12,
+      "method": "eth_call",
+      "label": "legacy_adapter.wcol()",
+      "target": "legacy_adapter",
+      "signature": "wcol()",
+      "args": [],
+      "expect": {
+        "address_equals": "wrapped_collateral"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 13,
+      "method": "eth_getCode",
+      "label": "ctf.code",
+      "target": "ctf",
+      "block": "frozen_hash_requireCanonical",
+      "expect": "nonempty; retain code and sha256, no compiled-source-equivalence claim"
+    },
+    {
+      "id": 14,
+      "method": "eth_getCode",
+      "label": "pusd_proxy.code",
+      "target": "pusd_proxy",
+      "block": "frozen_hash_requireCanonical",
+      "expect": "nonempty; retain code and sha256, no compiled-source-equivalence claim"
+    },
+    {
+      "id": 15,
+      "method": "eth_getStorageAt",
+      "label": "pusd_proxy.implementation",
+      "target": "pusd_proxy",
+      "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+      "block": "frozen_hash_requireCanonical",
+      "expect": {
+        "address_equals": "pusd_implementation"
+      }
+    },
+    {
+      "id": 16,
+      "method": "eth_getCode",
+      "label": "pusd_implementation.code",
+      "target": "pusd_implementation",
+      "block": "frozen_hash_requireCanonical",
+      "expect": "nonempty; retain code and sha256, no compiled-source-equivalence claim"
+    },
+    {
+      "id": 17,
+      "method": "eth_call",
+      "label": "pusd_proxy.USDCE()",
+      "target": "pusd_proxy",
+      "signature": "USDCE()",
+      "args": [],
+      "expect": {
+        "address_equals": "usdce"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 18,
+      "method": "eth_call",
+      "label": "pusd_proxy.decimals()",
+      "target": "pusd_proxy",
+      "signature": "decimals()",
+      "args": [],
+      "expect": {
+        "uint_equals": 6
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 19,
+      "method": "eth_call",
+      "label": "usdce.decimals()",
+      "target": "usdce",
+      "signature": "decimals()",
+      "args": [],
+      "expect": {
+        "uint_equals": 6
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 20,
+      "method": "eth_call",
+      "label": "wrapped_collateral.decimals()",
+      "target": "wrapped_collateral",
+      "signature": "decimals()",
+      "args": [],
+      "expect": {
+        "uint_equals": 6
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 21,
+      "method": "eth_getCode",
+      "label": "usdce.code",
+      "target": "usdce",
+      "block": "frozen_hash_requireCanonical",
+      "expect": "nonempty; retain code and sha256, no compiled-source-equivalence claim"
+    },
+    {
+      "id": 22,
+      "method": "eth_getCode",
+      "label": "wrapped_collateral.code",
+      "target": "wrapped_collateral",
+      "block": "frozen_hash_requireCanonical",
+      "expect": "nonempty; retain code and sha256, no compiled-source-equivalence claim"
+    },
+    {
+      "id": 23,
+      "method": "eth_call",
+      "label": "wrapper.paused(address)",
+      "target": "wrapper",
+      "signature": "paused(address)",
+      "args": [
+        "$usdce"
+      ],
+      "expect": {
+        "bool_equals": false
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 24,
+      "method": "eth_call",
+      "label": "pusd_proxy.rolesOf(address)",
+      "target": "pusd_proxy",
+      "signature": "rolesOf(address)",
+      "args": [
+        "$wrapper"
+      ],
+      "expect": {
+        "uint_has_bits": 2
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 25,
+      "method": "eth_call",
+      "label": "ctf.isApprovedForAll(address,address)",
+      "target": "ctf",
+      "signature": "isApprovedForAll(address,address)",
+      "args": [
+        "$wrapper",
+        "$legacy_adapter"
+      ],
+      "expect": {
+        "bool_equals": true
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 26,
+      "method": "eth_call",
+      "label": "legacy_adapter.getOracle(bytes32)",
+      "target": "legacy_adapter",
+      "signature": "getOracle(bytes32)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a00"
+      ],
+      "expect": {
+        "nonzero_address": true
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 27,
+      "method": "eth_call",
+      "label": "legacy_adapter.getQuestionCount(bytes32)",
+      "target": "legacy_adapter",
+      "signature": "getQuestionCount(bytes32)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a00"
+      ],
+      "expect": {
+        "uint_equals": 5
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 28,
+      "method": "eth_call",
+      "label": "legacy_adapter.getFeeBips(bytes32)",
+      "target": "legacy_adapter",
+      "signature": "getFeeBips(bytes32)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a00"
+      ],
+      "expect": {
+        "uint_range": [
+          0,
+          10000
+        ]
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 29,
+      "method": "eth_call",
+      "label": "legacy_adapter.getDetermined(bytes32)",
+      "target": "legacy_adapter",
+      "signature": "getDetermined(bytes32)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a00"
+      ],
+      "expect": {
+        "bool_equals": false
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 30,
+      "method": "eth_call",
+      "label": "question0.condition",
+      "target": "legacy_adapter",
+      "signature": "getConditionId(bytes32)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a00"
+      ],
+      "expect": {
+        "bytes32_equals": "0xa69ef420d8b4075ad8ba8611d02c63cb2ece46f5c8c643af223c272689b0c96f"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 31,
+      "method": "eth_call",
+      "label": "question0.yes",
+      "target": "legacy_adapter",
+      "signature": "getPositionId(bytes32,bool)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a00",
+        true
+      ],
+      "expect": {
+        "uint_equals": "17010377994663817312158123655937348199252960045746746128731746451645055725586"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 32,
+      "method": "eth_call",
+      "label": "question0.no",
+      "target": "legacy_adapter",
+      "signature": "getPositionId(bytes32,bool)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a00",
+        false
+      ],
+      "expect": {
+        "uint_equals": "61725366781282351729996972759460154434089275036953062948669003249092837754960"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 33,
+      "method": "eth_call",
+      "label": "question0.slots",
+      "target": "ctf",
+      "signature": "getOutcomeSlotCount(bytes32)",
+      "args": [
+        "0xa69ef420d8b4075ad8ba8611d02c63cb2ece46f5c8c643af223c272689b0c96f"
+      ],
+      "expect": {
+        "uint_equals": 2
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 34,
+      "method": "eth_call",
+      "label": "question0.unresolved",
+      "target": "ctf",
+      "signature": "payoutDenominator(bytes32)",
+      "args": [
+        "0xa69ef420d8b4075ad8ba8611d02c63cb2ece46f5c8c643af223c272689b0c96f"
+      ],
+      "expect": {
+        "uint_equals": 0
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 35,
+      "method": "eth_call",
+      "label": "question1.condition",
+      "target": "legacy_adapter",
+      "signature": "getConditionId(bytes32)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a01"
+      ],
+      "expect": {
+        "bytes32_equals": "0x9cf563d7b55aa9aa876d5d7e55126347eee473f0ae56d799e325fdef2bf25297"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 36,
+      "method": "eth_call",
+      "label": "question1.yes",
+      "target": "legacy_adapter",
+      "signature": "getPositionId(bytes32,bool)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a01",
+        true
+      ],
+      "expect": {
+        "uint_equals": "33268510350568915228897273528353467773422190590579607471427765079749830445947"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 37,
+      "method": "eth_call",
+      "label": "question1.no",
+      "target": "legacy_adapter",
+      "signature": "getPositionId(bytes32,bool)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a01",
+        false
+      ],
+      "expect": {
+        "uint_equals": "110888499829195123034987289109543572302716575133123608254293945182185650232552"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 38,
+      "method": "eth_call",
+      "label": "question1.slots",
+      "target": "ctf",
+      "signature": "getOutcomeSlotCount(bytes32)",
+      "args": [
+        "0x9cf563d7b55aa9aa876d5d7e55126347eee473f0ae56d799e325fdef2bf25297"
+      ],
+      "expect": {
+        "uint_equals": 2
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 39,
+      "method": "eth_call",
+      "label": "question1.unresolved",
+      "target": "ctf",
+      "signature": "payoutDenominator(bytes32)",
+      "args": [
+        "0x9cf563d7b55aa9aa876d5d7e55126347eee473f0ae56d799e325fdef2bf25297"
+      ],
+      "expect": {
+        "uint_equals": 0
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 40,
+      "method": "eth_call",
+      "label": "question2.condition",
+      "target": "legacy_adapter",
+      "signature": "getConditionId(bytes32)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a02"
+      ],
+      "expect": {
+        "bytes32_equals": "0xdf9bf27ee5757c55b44b8b9826ddc9ec3a8809aa3278634c45edbb7fc8f1a3e3"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 41,
+      "method": "eth_call",
+      "label": "question2.yes",
+      "target": "legacy_adapter",
+      "signature": "getPositionId(bytes32,bool)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a02",
+        true
+      ],
+      "expect": {
+        "uint_equals": "111061902544814266207267295505639408607400625795891618462682726460921782993748"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 42,
+      "method": "eth_call",
+      "label": "question2.no",
+      "target": "legacy_adapter",
+      "signature": "getPositionId(bytes32,bool)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a02",
+        false
+      ],
+      "expect": {
+        "uint_equals": "42038775866198212615491650114881818219665139981763207699110491615333273795415"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 43,
+      "method": "eth_call",
+      "label": "question2.slots",
+      "target": "ctf",
+      "signature": "getOutcomeSlotCount(bytes32)",
+      "args": [
+        "0xdf9bf27ee5757c55b44b8b9826ddc9ec3a8809aa3278634c45edbb7fc8f1a3e3"
+      ],
+      "expect": {
+        "uint_equals": 2
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 44,
+      "method": "eth_call",
+      "label": "question2.unresolved",
+      "target": "ctf",
+      "signature": "payoutDenominator(bytes32)",
+      "args": [
+        "0xdf9bf27ee5757c55b44b8b9826ddc9ec3a8809aa3278634c45edbb7fc8f1a3e3"
+      ],
+      "expect": {
+        "uint_equals": 0
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 45,
+      "method": "eth_call",
+      "label": "question3.condition",
+      "target": "legacy_adapter",
+      "signature": "getConditionId(bytes32)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a03"
+      ],
+      "expect": {
+        "bytes32_equals": "0x12aa13b3da17ceae1b0a59b5d5b77121e91bb79b4bb0b52bf6543ed3f8d0953b"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 46,
+      "method": "eth_call",
+      "label": "question3.yes",
+      "target": "legacy_adapter",
+      "signature": "getPositionId(bytes32,bool)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a03",
+        true
+      ],
+      "expect": {
+        "uint_equals": "55159722761418013044126414276680602270318000841690689684819994448621694923050"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 47,
+      "method": "eth_call",
+      "label": "question3.no",
+      "target": "legacy_adapter",
+      "signature": "getPositionId(bytes32,bool)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a03",
+        false
+      ],
+      "expect": {
+        "uint_equals": "78632395083310670734315205502061249602319069653915932320155846460019107676757"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 48,
+      "method": "eth_call",
+      "label": "question3.slots",
+      "target": "ctf",
+      "signature": "getOutcomeSlotCount(bytes32)",
+      "args": [
+        "0x12aa13b3da17ceae1b0a59b5d5b77121e91bb79b4bb0b52bf6543ed3f8d0953b"
+      ],
+      "expect": {
+        "uint_equals": 2
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 49,
+      "method": "eth_call",
+      "label": "question3.unresolved",
+      "target": "ctf",
+      "signature": "payoutDenominator(bytes32)",
+      "args": [
+        "0x12aa13b3da17ceae1b0a59b5d5b77121e91bb79b4bb0b52bf6543ed3f8d0953b"
+      ],
+      "expect": {
+        "uint_equals": 0
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 50,
+      "method": "eth_call",
+      "label": "question4.condition",
+      "target": "legacy_adapter",
+      "signature": "getConditionId(bytes32)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a04"
+      ],
+      "expect": {
+        "bytes32_equals": "0xde5d75ab7702875623ba509bc923241e1211da74a113521b3b70ddac930d7316"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 51,
+      "method": "eth_call",
+      "label": "question4.yes",
+      "target": "legacy_adapter",
+      "signature": "getPositionId(bytes32,bool)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a04",
+        true
+      ],
+      "expect": {
+        "uint_equals": "18246296022868501258060085368606280205967114341141276439803424448463050819498"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 52,
+      "method": "eth_call",
+      "label": "question4.no",
+      "target": "legacy_adapter",
+      "signature": "getPositionId(bytes32,bool)",
+      "args": [
+        "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a04",
+        false
+      ],
+      "expect": {
+        "uint_equals": "41864497411878191766967581422432961750808440991174085516384293402629587721839"
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 53,
+      "method": "eth_call",
+      "label": "question4.slots",
+      "target": "ctf",
+      "signature": "getOutcomeSlotCount(bytes32)",
+      "args": [
+        "0xde5d75ab7702875623ba509bc923241e1211da74a113521b3b70ddac930d7316"
+      ],
+      "expect": {
+        "uint_equals": 2
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 54,
+      "method": "eth_call",
+      "label": "question4.unresolved",
+      "target": "ctf",
+      "signature": "payoutDenominator(bytes32)",
+      "args": [
+        "0xde5d75ab7702875623ba509bc923241e1211da74a113521b3b70ddac930d7316"
+      ],
+      "expect": {
+        "uint_equals": 0
+      },
+      "block": "frozen_hash_requireCanonical"
+    },
+    {
+      "id": 55,
+      "method": "eth_getBlockByNumber",
+      "label": "final_header",
+      "params": [
+        "$frozen_number",
+        false
+      ],
+      "expect": "same five projected header fields as initial"
+    }
+  ],
+  "decision_rule": "First transport/resource/ABI/identity/state/count/token mismatch stops, preserves partial trace and bounded terminal/supervisor receipts, and remains inconclusive. A complete pass is metadata_mapping_compatible_conversion_unproven only. No complete-set inference unless exactly five registered questions and all five conditions/ten positions match. No alternative event, extra question or token substitution.",
+  "scope_exclusions": "No prices/orderbooks/get_dy, trades, balances, real wallets/auth, approvals mutations, transaction simulation/submission, deployments, history, account eligibility or economics. rolesOf/isApprovedForAll are read-only checks of these fixed public protocol contracts only.",
+  "limitations": "Code hashes and getters are identity observations, not independent compiled-source/deployed-bytecode equivalence or guaranteed successful conversion. USDCE/wrapped collateral bindings alone do not establish issuer backing/liquidity. Fees may still need authoritative trading field and rounding/delay/unit resolution before any later book screen.",
+  "run_gate": "Offline implementation and focused synthetic tests only until root reviews exact sources and freezes pins+plan SHA. Existing output directory refuses run. One run only after freeze.",
+  "implementation_guidance": "Reuse pinned metadata module JSON/deadline helpers where useful. Keep new collector minimal and hardcode allowed endpoint/caps/contracts/event/source paths; exact manifest must be reconstructed/verified so editing JSON cannot broaden RPC scope. No new dependency install; Crypto.Hash.keccak already available. Dry mode makes zero network calls.",
+  "sources": [
+    "https://polygon.publicnode.com/",
+    "https://docs.polymarket.com/resources/contracts",
+    "https://docs.polymarket.com/changelog/predictions",
+    "https://raw.githubusercontent.com/Polymarket/ctf-exchange-v2/main/src/adapters/NegRiskCtfCollateralAdapter.sol",
+    "https://raw.githubusercontent.com/Polymarket/ctf-exchange-v2/main/src/adapters/CtfCollateralAdapter.sol",
+    "https://raw.githubusercontent.com/Polymarket/ctf-exchange-v2/main/src/collateral/CollateralToken.sol",
+    "https://raw.githubusercontent.com/Polymarket/ctf-exchange-v2/main/src/collateral/abstract/Pausable.sol",
+    "https://raw.githubusercontent.com/Polymarket/ctf-exchange-v2/main/src/adapters/interfaces/IConditionalTokens.sol",
+    "https://raw.githubusercontent.com/Polymarket/neg-risk-ctf-adapter/main/src/NegRiskAdapter.sol",
+    "https://raw.githubusercontent.com/Polymarket/neg-risk-ctf-adapter/main/src/modules/MarketDataManager.sol",
+    "https://raw.githubusercontent.com/Vectorized/solady/main/src/auth/OwnableRoles.sol"
+  ],
+  "frozen_utc": "2026-10-02T09:53:31.769941+00:00",
+  "source_pins": [
+    {
+      "path": "scripts/polymarket_no_basket_chain_metadata.py",
+      "bytes": 24336,
+      "sha256": "484bfee4e6565574eb92799c67e53db46f3fd3c5d604dea88a7bdb78511cd38f"
+    },
+    {
+      "path": "tests/test_polymarket_no_basket_chain_metadata.py",
+      "bytes": 17606,
+      "sha256": "0595d7c5593c4d7ef7dd3037d857fd8089a569f8349b462b4c525ca26f4363f3"
+    }
+  ],
+  "root_review": {
+    "source_read": "Entire initial source plus final bounded partial-read delta; full focused test source reviewed. No blocking issue found.",
+    "tests": "7 focused unittest tests PASS, root 0.522 seconds; independent implementer 0.619 seconds. No live network in tests.",
+    "dry_mode": "dry_no_http; 0 RPC requests; pinned manifest 55 maximum",
+    "runtime": {
+      "python": "3.13.9",
+      "python_build": [
+        "main",
+        "Oct 21 2025 19:16:10"
+      ],
+      "openssl": "OpenSSL 3.5.5 27 Jan 2026"
+    },
+    "scope": "ONE bounded root run of the frozen 55-request manifest. Pass establishes metadata compatibility only. No price/economic observation or retry."
+  }
+}

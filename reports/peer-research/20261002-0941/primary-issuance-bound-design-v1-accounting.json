@@ -1,0 +1,39 @@
+{
+  "schema": "peer-primary-issuance-bound-design-v1-accounting",
+  "recorded_utc": "2026-10-02T09:38:31.955197+00:00",
+  "design_authority": "2a4d08fb-f4ae-4ac6-a1d9-065345eb7099",
+  "new_source": {
+    "path": "research/peer-primary-issuance-bound-design-v1.json",
+    "bytes": 11247,
+    "sha256": "3718dd5c2e05448dcfd51cce3e528d74efa4fda78dbca27da5559c14b7b76866",
+    "session_copies": 2
+  },
+  "prior_source_conservative_all_session_bytes": 267493,
+  "incremental_ledger_growth_reserve_bytes": 1024,
+  "source_conservative_all_session_bytes": 291011,
+  "source_study_subcap_bytes": 294912,
+  "source_category_bytes": 2097152,
+  "ledger": {
+    "baseline_bytes": 21348,
+    "previous_growth_allowance_bytes": 8192,
+    "new_growth_allowance_bytes": 9216,
+    "actual_growth_bytes": 8306,
+    "note": "The extra1024B reserve uses already granted study source headroom; no category, study or global cap is raised. The mutable ledger is not source-pinned."
+  },
+  "prior_derived_all_session_bytes": 74467,
+  "this_derived_receipt_bytes": 2141,
+  "this_derived_receipt_session_copies": 2,
+  "derived_all_session_bytes": 78749,
+  "derived_study_subcap_bytes": 131072,
+  "raw_retained_and_reserved_review_bytes_unchanged": 45204,
+  "new_economic_rpc_requests": 0,
+  "compiler_artifact_downloads": 0,
+  "external_source_context": "Official source/API text and compiler release/HEAD metadata were read for the authorized source-only design; no new source/metadata response files or compiler bodies retained. The exact design file above contains the retained synthesis.",
+  "compiler_option": "A prospective single main-side9222701B artifact needs separate global allocation and explicit download permission; none of that future storage is counted as already authorized or already retained here.",
+  "prior_output_handoff": {
+    "message": "2848112f-c550-45a1-ac4f-6560e46541b4",
+    "correct_attachment_bytes": 39782,
+    "correction_message": "bf65d961-1a7b-4e0f-bede-f1fa884ed722"
+  },
+  "remaining_gate": "Main design/source-binding review, exact new protocol freeze and separate collection handoff. Existing snapshots remain unchanged."
+}
