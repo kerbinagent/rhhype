@@ -6795,3 +6795,29 @@ Snapshot read 2026-10-02T21:27:17.996224Z, updated epoch seconds 1790976437.4377
 Paperfresh/ok21:11CPU52.66%/37.84mslag,21:16CPU66.39%/35.17ms,21:21CPU57.62%/35.68ms; reviewfresh/ok61.75%/36.40ms,RSS309.86MiB,122pairs. Rolling111healthy123.15s/3,523,136compressed B/25,117records,two connections/no errors/economics false; chunks1,926,777,421B/controls65,500B under separate2GB. Frozenpressure lifecycle/pins unchanged,recovery gap retained,no routine mutation/rawdecode. HIP4terminalmetadata previouslyflagged, actualresearchdata/replayroot/peerowned,no routineeconomics. ExpiryOct3timerscope unchanged.
 
 Carry21:25:00.136620UTC:538sampled,two invalid(71,389),324future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–232:2,982completions=2,935exact losses,one estimated loss,seven audited paired gains,39audited rescue gains. Archive4,057,818/5,242,880B;81future pairs at5,342B project4,490,520B,margin752,360B. Next **21:46:33 UTC**.
+
+
+### Review 233 — 2026-10-02 21:46:33 UTC (automatic capture; journaled later)
+
+The automatic loop captured the due checkpoint at 21:46:33.038566 UTC before routine recovery; no manual catch-up audit or baseline advance was made. All eight completion and aborted-coverage checks are complete. Exact report and a separately timed epoch snapshot were preserved with deterministic gzip, exclusive create, decompression verification and the per-write 5,242,880 B cap. The snapshot was read at 22:00:04.754631 UTC, about 13 minutes 32 seconds after the checkpoint; it is labelled as a later state, not as the 21:46 state.
+
+`review-20261002T214633Z.json.gz` raw 17,819 B SHA-256 `e5585723b7b25192b63b419c06c53176aa9bfba388350d8e31ee924bb56711e0`; gzip 2,333 B SHA-256 `0bcef3f8c9f9a927db316821cf08d6c62093fd47d61914326c293391ac25597e`.
+
+`current-epoch-at-review233.json.gz` raw 9,283 B SHA-256 `82a39ef26dcb949d9da5081c6532996ab097b0d25d601622ea66d25e22a80db9`; gzip 1,734 B SHA-256 `daba433ae2cc7fabff25507c1de184529b5bbf135244d76d8569d3cdccb71a85`.
+
+Review interval 21:26:32.518664–21:46:33.038566 UTC had zero completions, aborts, gains, estimates, fees or other/capital costs across all eight portfolios. No entry rejections were recorded. At review time, paper status running/ok, four feeds connected, 122 pairs, CPU 59.35% of one core, p95 event-loop lag 35.74 ms, RSS 308.13 MiB. The later 22:00:04 epoch snapshot still showed no new current-epoch closes, three prior pending-funding reservations and no active positions; counts were not pooled with the 21:46 ledger window. The 22:00:21 paper pulse was running/busy at 97.24% CPU and 59.34 ms p95 lag; this is a later transient observation, not the checkpoint status.
+
+Rolling control at 21:59:57 showed chunk114 collecting/healthy, 294.44 s elapsed, 6,158,764 compressed B and 49,436 records, two connections, no errors, economics false; controller chunks 1,929,786,525 B and controls 66,937 B under the separate 2 GB budget. Collector pressure lifecycle, original eligibility/expiry/pins and recovery gap remain unchanged; no routine raw decode, restart or mutation. Carry index at 22:00:00.214834 UTC: 545 sampled, two arrival-invalid slots (71,389), 317 future/interrupted, running, no error, retry or economic evaluation. No carry sample contents opened. HIP4 terminal/replay and other selected experimental economics remain root/peer owned; routine made no new selected-output read.
+
+Reviews66–233 remain 2,982 completions: 2,935 exact losses, one estimated loss, seven audited paired gains, 39 audited rescue gains. Manual archive 4,061,885/5,242,880 B; 80 future scheduled pairs at 5,342 B project 4,489,245 B, margin 753,635 B. Next automatic deadline **22:06:33 UTC**. No Git/index/production change by routine.
+
+
+### Review 234 — 2026-10-02 22:06:32.684662 UTC
+
+The automatic loop completed the 21:46:33.038566–22:06:32.684662 UTC checkpoint before routine inspection. All eight completion and abort coverages are complete; zero closes, aborts, wins, estimates, fees, other/capital costs, or entry rejections. No manual audit or baseline advance. Paper at review: running/ok, four feeds connected, 122 pairs, 79.66% CPU of one core, 40.63 ms p95 event-loop lag, 308.51 MiB RSS. A separately timed epoch snapshot was read at 22:16:02.644483 UTC (updated 22:16:01.766339), about 9.5 minutes after the checkpoint; its counts are not pooled with the review window.
+
+Exact report `review-20261002T220633Z.json.gz`: raw 17,818 B SHA-256 `745073575943f53a7f9fa5bce6ae22a13fa44c6c656f218f4cab5350e65262ec`; gzip 2,345 B SHA-256 `da1367ad4ec97535d42d85a8d80c46445816b55b3a7664f1d5c53b884abcba7e`. Independent snapshot `current-epoch-at-review234.json.gz`: raw 9,282 B SHA-256 `4c648ec9a4f0ae8f76e96ed04f4fda9d0cac813a358be261490f37fc90e0ee42`; gzip 1,734 B SHA-256 `5d1de072a99717edb5255c9886db3d738a2298c476713cf1542544b7ed638847`. Both used deterministic gzip, exclusive create, decompression and per-write archive-cap verification; prior artifacts were unchanged.
+
+Rolling control at 22:15 showed chunk116 collecting, 19.03 s/802,577 compressed B/3,413 records, two connections/no errors/economics false; controller chunks 1,919,414,816 B plus controls 67,849 B under its separate 2 GB budget. Pressure lifecycle and prior recovery gap retained; no routine raw decode/restart/mutation. Dated-carry index 22:15:00.140501: 548 sampled, two arrival-invalid (71,389), 314 future/interrupted; running/no error/retry/economic evaluation. No carry samples or blinded experimental economics opened.
+
+Reviews66–234 remain 2,982 completions: 2,935 exact losses, one estimated loss, seven audited paired gains, 39 audited rescue gains. Manual archive 4,065,964/5,242,880 B; 79 future scheduled pairs at 5,342 B project 4,487,982 B, margin 754,898 B. Next automatic due **22:26:33.239257 UTC**. No Git/index/production change by routine.

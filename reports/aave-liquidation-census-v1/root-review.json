@@ -1,0 +1,84 @@
+{
+  "artifacts": [
+    {
+      "bytes": 857,
+      "path": "reports/aave-liquidation-census-v1/run-v1/claim.json",
+      "sha256": "70ab65a9f4be80c28f21ae3a1bbf8216489a45558821419cdfe3772154e6236e"
+    },
+    {
+      "bytes": 7703,
+      "path": "reports/aave-liquidation-census-v1/run-v1/projection.json",
+      "sha256": "e147c5928370fc5fe43c797087a9584fda4f34ac157be1c911295afb7c845622"
+    },
+    {
+      "bytes": 298608,
+      "path": "reports/aave-liquidation-census-v1/run-v1/responses.frames",
+      "sha256": "e671de3c4cee8177a98f2db9a3174e97e8b18656e1e75f2db9d273ec63b5f6d9"
+    },
+    {
+      "bytes": 300,
+      "path": "reports/aave-liquidation-census-v1/run-v1/terminal.json",
+      "sha256": "786b42bb260542569a065b511c947f65cc043a01c7bad625c9e29a38f8e3578e"
+    }
+  ],
+  "closed_cash": false,
+  "economics": false,
+  "exit_code": 0,
+  "health_factor_wad": [
+    "1000279249870886769",
+    "1000363658276977087",
+    "1025051001998054214"
+  ],
+  "independent_review": {
+    "agent": "aave_census_review",
+    "method": "Separate decoder without collector import;332frames,37ordered requests,16pages,ABI/receipts/health/headerlinkage/finalanchor/sourcepins/terminal",
+    "result": "No discrepancy"
+  },
+  "interpretation": "All3 sampled borrowers were above health1 at preceding-block state. The enabling transition therefore is not reproduced by reading that snapshot alone. This does not identify its cause or establish lack of liquidation profit.",
+  "next": "Examine ordered prefix replay for the first chronological event, whose transaction index is1; do not search later winners or extend the censused window.",
+  "plan_sha256": "da2e0cf7667ddaaf288a8a32a1ae3958018a4d4abb22edfb3b5bb20e63f7f04c",
+  "recorded_utc": "2026-10-02T22:13:35.276123+00:00",
+  "result": {
+    "anchor": {
+      "hash": "0x40d3500415ab5107d6716d52e0fa6a94b54d57404726ba3ee41c7f75b1c4ce3d",
+      "number": 26107462,
+      "parentHash": "0x1db4352fe8cfebe9c1928e408ec31e6103ccbe42d33d39d622c21d27fe683ff1",
+      "stateRoot": "0x6352eb9ed4a9befa51100278a30a877e24369fdcf12eed331f424f9cbca883fb",
+      "timestamp": 1790978135
+    },
+    "borrower_count": 2,
+    "event_count": 3,
+    "historical_simulation_candidates": 0,
+    "missing_preceding_health": 0,
+    "page_counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "range_start": {
+      "hash": "0xcd8c278a366be82af8933f273c467218dd8eb7ff9037d1f0b656fbd622ca0d35",
+      "number": 26100263,
+      "parentHash": "0xd37efaaf295f35d66c9ae8c549c80b4995c2b3c0e45b4cedeee00c1b9ad08b6b",
+      "stateRoot": "0x66388b54130ece0455b39da5165e93d12b375e5e9a5fa57520ec95fd5ad2bfde",
+      "timestamp": 1790891387
+    },
+    "transaction_count": 3
+  },
+  "root_replay": "Exact raw replay matched projection and258008bodybytes;plan andsource pins reverified.37requests=22+5*3.",
+  "schema": "aave-liquidation-census-root-review-v1",
+  "source_freeze_commit": "0e3e80f",
+  "status": "PASS_historical_observability_only"
+}
