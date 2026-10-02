@@ -33,7 +33,7 @@ their relationship to the current schedule remains unresolved. Conversion
 fee and secondsDelay are missing and are not assigned zero. The tick sizes
 are respectively 0.001, 0.001, 0.01, 0.01, 0.001. orderMinSize is 5 for every market;
 its unit is unresolved here. Current market-details documentation describes
-minimum USDC notional, while older sources use shares; the independent review's
+minimum USDC notional, while place-orders documentation uses shares; the independent review's
 initial five-shares wording is not adopted. All records report restricted true;
 no account, geographic eligibility or ability to place orders was tested.
 
@@ -44,7 +44,11 @@ condition and ten position IDs, prepared/undetermined state and actual conversio
 fee. Any mismatch or extra question fails complete-set mapping. Code presence
 and matching getters alone cannot establish deployed-source equivalence or a
 successful conversion. Trading fee authority, rounding, order-size unit and
-matching delay remain prerequisites before an economic screen.
+matching delay remain prerequisites for an execution model. A separately frozen
+optimistic rejection screen may assume zero fees and gas: if all five valid
+same-unit best NO asks sum to at least 4, deeper displayed taker acquisition cannot
+have a strictly positive nominal margin at that quote state. A sum below 4 only
+fails to reject; it proves neither fills nor conversion nor profit.
 
 If contract mapping ultimately proves n = 5 and fee b, the reviewed source algebra
 for native integer Q of each NO is 4 * (Q-floor(Q*b/10000)) collateral, with no YES
@@ -59,6 +63,29 @@ Original plan SHA256 118815a62a774caab5251518cb6e674503585a8027bcc960c0bfbc60d9a
 Calendar plan SHA256 f79cd021e936c8471afdd28af8eb03a9af0ee1b4256abf286b2d4d10c64d8372.
 All artifacts use the existing 2 MiB Polymarket allocation; no new reservation.
 
+Chain-v1 update, 2026-10-02 09:54 UTC: the one frozen run attempted 15 requests,
+passed 14 and stopped at the pUSD implementation binding. The proxy's EIP1967
+slot returned 0xce84e053301a82937f90ee2c2c1889cab1db25de, while the docs registry
+listed 0x6bBCef9f7ef3B6C592c99e0f206a0DE94Ad0925f. The observed address is listed
+for this same proxy in the official polymarket-v2-external repository. Its
+CollateralToken source preserves USDCE(), six decimals, wrapper role bit2 and
+the legacy five-argument wrap overload. This is source/provenance evidence, not
+independently reproduced runtime equivalence. The original failure remains
+inconclusive; remaining question/token checks and the final header were not run.
+The retained trace is31947 bytes, SHA256
+d87bde66002a366f7c99b80ee172b26210f96da4148be6464613ff40421a175e.
+A separately frozen successor can recheck the exact observed implementation;
+no economic fields have been observed before that metadata correction.
+
+Fee-source review: current docs and SDK imply the nominal taker fee
+Q*0.05*p*(1-p) in collateral cash for the reported exponent1 schedule. Makers
+have zero nominal fees. Five-decimal precision is documented; exact per-fill
+tie rounding and precedence over conflicting legacy base-fee fields are not
+established here. CLOB metadata itode=true describes a250ms taker hold and
+omission is explicitly false; oas is minimum order age. Those fields have not
+been fetched for these markets. Settlement delay remains distinct. These
+unknowns cannot make the zero-cost optimistic purchase bound more favorable.
+
 Primary references:
 https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 https://docs.polymarket.com/market-data/market-details
@@ -66,3 +93,10 @@ https://docs.polymarket.com/resources/contracts
 https://docs.polymarket.com/changelog/predictions
 https://github.com/Polymarket/ctf-exchange-v2/blob/main/src/adapters/NegRiskCtfCollateralAdapter.sol
 https://github.com/Polymarket/neg-risk-ctf-adapter/blob/main/src/NegRiskAdapter.sol
+https://github.com/Polymarket/polymarket-v2-external/blob/main/README.md
+https://github.com/Polymarket/polymarket-v2-external/blob/main/src/collateral/CollateralToken.sol
+https://docs.polymarket.com/concepts/pusd
+https://docs.polymarket.com/trading/fees
+https://docs.polymarket.com/trading/place-orders
+https://raw.githubusercontent.com/Polymarket/py-clob-client-v2/main/py_clob_client_v2/fees.py
+https://docs.polymarket.com/api-reference/markets/get-clob-market-info

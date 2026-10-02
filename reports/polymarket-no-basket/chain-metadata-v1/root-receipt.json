@@ -1,0 +1,29 @@
+{
+  "schema": "polymarket-no-basket-chain-root-receipt-v1",
+  "reviewed_utc": "2026-10-02T09:58:11.566416+00:00",
+  "status": "inconclusive_documented_implementation_binding_mismatch",
+  "plan_sha256": "3b62ab7ae49bda6b9a4b3a7705c1be4e58a0eec3d31dd63548fb97a81c78506c",
+  "manifest_sha256": "8946c4bed375754e7f7a2c0cb09f1acfa09c32de768c236ecb614b80f56421f5",
+  "trace_sha256": "d87bde66002a366f7c99b80ee172b26210f96da4148be6464613ff40421a175e",
+  "requests_attempted": 15,
+  "passed_requests": 14,
+  "total_response_bytes": 100093,
+  "retained_trace_plaintext_bytes": 134517,
+  "minimum_request_start_spacing_seconds": 0.997061,
+  "observed_implementation": "0xce84e053301a82937f90ee2c2c1889cab1db25de",
+  "expected_documented_implementation": "0x6bBCef9f7ef3B6C592c99e0f206a0DE94Ad0925f",
+  "frozen_header": {
+    "hash": "0x4edfd2cb8f7f8118b7b9b3a69c914f42d06801c40583dec8af6036996df97b8d",
+    "number": "0x5a6d5dd",
+    "parentHash": "0x0c683248cf2db6b508400b15634b3ecbed5e98829bd51394fb0d7a616791edc8",
+    "stateRoot": "0xca02078f2433a029f4923b025fb4302a173ed7f94635bef1cd018ed39190425b",
+    "timestamp": "0x6abf7f40"
+  },
+  "checks": [
+    "All15 request IDs, frozen manifest params and EIP1898 hash constraints checked.",
+    "All14 retained non-header bodies match byte counts and SHA256; getter/code observations and exact request15 failure reproduced offline.",
+    "First failure stopped before request16. No summary or final-header confirmation was produced.",
+    "Original code, protocol and output evidence remain unchanged."
+  ],
+  "limitations": "Remaining implementation code, collateral permissions, all5 question/condition/token mappings, conversion fee and final header were NOT checked. No quote, fee-adjusted margin or economic conclusion. Observed implementation address may support a separately frozen metadata successor with deployed-source equivalence explicitly unverified."
+}
