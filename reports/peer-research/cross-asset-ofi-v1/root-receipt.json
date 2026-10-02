@@ -1,0 +1,344 @@
+{
+  "schema": "peer-cross-asset-ofi-root-result-review-v1",
+  "reviewed_utc": "2026-10-02T07:03:32.726379+00:00",
+  "checks_passed": 348,
+  "source_pins_verified": 56,
+  "scope": "Complete peer source/test/plan review and independent pre-run source review; saved-result identity, funnel and fixed-gate reconciliation. No additional raw replay or feature/economic rerun. Whole JSON tables were decoded by production preflight, but label/profile fields were not used.",
+  "classification": "insufficient_feature_support",
+  "interpretation": "Broad fixed-cohort OFI comparison is inconclusive. No labels used for fitting, model published, forecast scored or economic ledger evaluated. Do not select the four supported cells or relax gates after this result.",
+  "pre_feature_commit": "3717128",
+  "protocol_sha256": "f04869f0afebc76d8d25dee58e4c4272382238c5f5d66898daa7be2e3544eaaa",
+  "elapsed_seconds": 0.7750992420042166,
+  "fit_cells": [
+    {
+      "cell": "ETH:lighter",
+      "training_counts": {
+        "chunk-000001": 27,
+        "chunk-000002": 25,
+        "chunk-000003": 27
+      },
+      "training_total": 79,
+      "feature_support_passed": true,
+      "constant_columns": []
+    },
+    {
+      "cell": "ETH:rh_lighter",
+      "training_counts": {
+        "chunk-000001": 14,
+        "chunk-000002": 24,
+        "chunk-000003": 19
+      },
+      "training_total": 57,
+      "feature_support_passed": false,
+      "constant_columns": []
+    },
+    {
+      "cell": "SOL:lighter",
+      "training_counts": {
+        "chunk-000001": 26,
+        "chunk-000002": 24,
+        "chunk-000003": 27
+      },
+      "training_total": 77,
+      "feature_support_passed": true,
+      "constant_columns": []
+    },
+    {
+      "cell": "SOL:rh_lighter",
+      "training_counts": {
+        "chunk-000001": 10,
+        "chunk-000002": 18,
+        "chunk-000003": 16
+      },
+      "training_total": 44,
+      "feature_support_passed": false,
+      "constant_columns": []
+    },
+    {
+      "cell": "HYPE:lighter",
+      "training_counts": {
+        "chunk-000001": 21,
+        "chunk-000002": 23,
+        "chunk-000003": 24
+      },
+      "training_total": 68,
+      "feature_support_passed": true,
+      "constant_columns": []
+    },
+    {
+      "cell": "HYPE:rh_lighter",
+      "training_counts": {
+        "chunk-000001": 7,
+        "chunk-000002": 10,
+        "chunk-000003": 14
+      },
+      "training_total": 31,
+      "feature_support_passed": false,
+      "constant_columns": []
+    },
+    {
+      "cell": "XRP:lighter",
+      "training_counts": {
+        "chunk-000001": 14,
+        "chunk-000002": 18,
+        "chunk-000003": 18
+      },
+      "training_total": 50,
+      "feature_support_passed": false,
+      "constant_columns": []
+    },
+    {
+      "cell": "XRP:rh_lighter",
+      "training_counts": {
+        "chunk-000001": 6,
+        "chunk-000002": 7,
+        "chunk-000003": 10
+      },
+      "training_total": 23,
+      "feature_support_passed": false,
+      "constant_columns": [
+        4
+      ]
+    },
+    {
+      "cell": "SUI:lighter",
+      "training_counts": {
+        "chunk-000001": 4,
+        "chunk-000002": 8,
+        "chunk-000003": 7
+      },
+      "training_total": 19,
+      "feature_support_passed": false,
+      "constant_columns": [
+        4
+      ]
+    },
+    {
+      "cell": "SUI:rh_lighter",
+      "training_counts": {
+        "chunk-000001": 4,
+        "chunk-000002": 11,
+        "chunk-000003": 11
+      },
+      "training_total": 26,
+      "feature_support_passed": false,
+      "constant_columns": []
+    },
+    {
+      "cell": "NEAR:lighter",
+      "training_counts": {
+        "chunk-000001": 14,
+        "chunk-000002": 17,
+        "chunk-000003": 18
+      },
+      "training_total": 49,
+      "feature_support_passed": false,
+      "constant_columns": []
+    },
+    {
+      "cell": "NEAR:rh_lighter",
+      "training_counts": {
+        "chunk-000001": 6,
+        "chunk-000002": 15,
+        "chunk-000003": 16
+      },
+      "training_total": 37,
+      "feature_support_passed": false,
+      "constant_columns": []
+    },
+    {
+      "cell": "ZEC:lighter",
+      "training_counts": {
+        "chunk-000001": 24,
+        "chunk-000002": 25,
+        "chunk-000003": 27
+      },
+      "training_total": 76,
+      "feature_support_passed": true,
+      "constant_columns": []
+    },
+    {
+      "cell": "ZEC:rh_lighter",
+      "training_counts": {
+        "chunk-000001": 13,
+        "chunk-000002": 17,
+        "chunk-000003": 16
+      },
+      "training_total": 46,
+      "feature_support_passed": false,
+      "constant_columns": []
+    },
+    {
+      "cell": "VVV:lighter",
+      "training_counts": {
+        "chunk-000001": 5,
+        "chunk-000002": 12,
+        "chunk-000003": 15
+      },
+      "training_total": 32,
+      "feature_support_passed": false,
+      "constant_columns": []
+    },
+    {
+      "cell": "VVV:rh_lighter",
+      "training_counts": {
+        "chunk-000001": 0,
+        "chunk-000002": 2,
+        "chunk-000003": 7
+      },
+      "training_total": 9,
+      "feature_support_passed": false,
+      "constant_columns": [
+        4
+      ]
+    },
+    {
+      "cell": "LIT:lighter",
+      "training_counts": {
+        "chunk-000001": 14,
+        "chunk-000002": 18,
+        "chunk-000003": 19
+      },
+      "training_total": 51,
+      "feature_support_passed": false,
+      "constant_columns": []
+    },
+    {
+      "cell": "LIT:rh_lighter",
+      "training_counts": {
+        "chunk-000001": 8,
+        "chunk-000002": 8,
+        "chunk-000003": 15
+      },
+      "training_total": 31,
+      "feature_support_passed": false,
+      "constant_columns": []
+    }
+  ],
+  "fit_failure_occurrences": {
+    "target:stale_boundary_book": 354,
+    "BTC:stale_boundary_book": 32,
+    "target:stale_trade_window": 2,
+    "decision_funding_excluded": 18,
+    "target:missing_start_book": 273,
+    "BTC:missing_start_book": 6,
+    "BTC:stale_trade_window": 1,
+    "target:unknown_trade_history": 21
+  },
+  "application": {
+    "chunk-000007": {
+      "common_usable_slots": 0,
+      "required_minimum": 21,
+      "failed_cell_slot_occurrences": 206,
+      "failure_reasons": {
+        "target:stale_boundary_book": 105,
+        "target:missing_start_book": 82,
+        "target:unknown_trade_history": 1,
+        "BTC:stale_boundary_book": 18
+      },
+      "per_cell_usable_slots": {
+        "ETH:lighter": 27,
+        "ETH:rh_lighter": 19,
+        "SOL:lighter": 22,
+        "SOL:rh_lighter": 14,
+        "HYPE:lighter": 17,
+        "HYPE:rh_lighter": 10,
+        "XRP:lighter": 16,
+        "XRP:rh_lighter": 4,
+        "SUI:lighter": 9,
+        "SUI:rh_lighter": 13,
+        "NEAR:lighter": 17,
+        "NEAR:rh_lighter": 13,
+        "ZEC:lighter": 28,
+        "ZEC:rh_lighter": 14,
+        "VVV:lighter": 23,
+        "VVV:rh_lighter": 6,
+        "LIT:lighter": 27,
+        "LIT:rh_lighter": 19
+      }
+    },
+    "chunk-000008": {
+      "common_usable_slots": 0,
+      "required_minimum": 21,
+      "failed_cell_slot_occurrences": 245,
+      "failure_reasons": {
+        "target:missing_start_book": 82,
+        "target:stale_boundary_book": 105,
+        "target:unknown_trade_history": 6,
+        "BTC:stale_boundary_book": 13,
+        "BTC:missing_start_book": 39
+      },
+      "per_cell_usable_slots": {
+        "ETH:lighter": 25,
+        "ETH:rh_lighter": 15,
+        "SOL:lighter": 24,
+        "SOL:rh_lighter": 9,
+        "HYPE:lighter": 21,
+        "HYPE:rh_lighter": 7,
+        "XRP:lighter": 18,
+        "XRP:rh_lighter": 6,
+        "SUI:lighter": 4,
+        "SUI:rh_lighter": 8,
+        "NEAR:lighter": 21,
+        "NEAR:rh_lighter": 11,
+        "ZEC:lighter": 25,
+        "ZEC:rh_lighter": 10,
+        "VVV:lighter": 24,
+        "VVV:rh_lighter": 3,
+        "LIT:lighter": 19,
+        "LIT:rh_lighter": 9
+      }
+    },
+    "chunk-000009": {
+      "common_usable_slots": 0,
+      "required_minimum": 21,
+      "failed_cell_slot_occurrences": 317,
+      "failure_reasons": {
+        "target:stale_boundary_book": 101,
+        "BTC:missing_start_book": 125,
+        "target:unknown_trade_history": 8,
+        "target:missing_start_book": 74,
+        "BTC:stale_boundary_book": 9
+      },
+      "per_cell_usable_slots": {
+        "ETH:lighter": 27,
+        "ETH:rh_lighter": 0,
+        "SOL:lighter": 27,
+        "SOL:rh_lighter": 0,
+        "HYPE:lighter": 19,
+        "HYPE:rh_lighter": 0,
+        "XRP:lighter": 19,
+        "XRP:rh_lighter": 0,
+        "SUI:lighter": 7,
+        "SUI:rh_lighter": 0,
+        "NEAR:lighter": 21,
+        "NEAR:rh_lighter": 0,
+        "ZEC:lighter": 25,
+        "ZEC:rh_lighter": 0,
+        "VVV:lighter": 23,
+        "VVV:rh_lighter": 0,
+        "LIT:lighter": 19,
+        "LIT:rh_lighter": 0
+      }
+    }
+  },
+  "generic_readout_correction": "The final generic sentence mentions coefficients and forecasts. Those fields were not produced: models and evaluation are null. Frozen output retained unchanged.",
+  "input_and_output_pins": [
+    {
+      "path": "reports/peer-research/cross-asset-ofi-v1/preflight.json",
+      "bytes": 50893,
+      "sha256": "5cb9664356d3483eac9a989446887f8f421c350e85111ac30afa5d3393048e59"
+    },
+    {
+      "path": "reports/peer-research/cross-asset-ofi-v1/readout.txt",
+      "bytes": 5122,
+      "sha256": "ffee0207be3b0e7ae1d36450dadf4e1f153789b421c1fea828d4b4e3350a66c3"
+    },
+    {
+      "path": "reports/peer-research/cross-asset-ofi-v1/result.json.gz",
+      "bytes": 7229,
+      "sha256": "1883d7a3d43061a6a2d5d55959141c2f18709fabfe202b50f1adbaa30a228c5e"
+    }
+  ],
+  "checks_scope": "346 saved identity/funnel checks plus receipt and aggregate output-cap checks"
+}

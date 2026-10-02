@@ -1,0 +1,51 @@
+{
+  "schema": "peer-cross-asset-ofi-local-run-v1",
+  "state": "finished",
+  "started_utc": "2026-10-02T06:58:01.262971+00:00",
+  "protocol_sha256": "f04869f0afebc76d8d25dee58e4c4272382238c5f5d66898daa7be2e3544eaaa",
+  "pre_feature_commit": "3717128",
+  "command": [
+    "nice",
+    "-n",
+    "19",
+    "/home/harry/projects/research/rhhype/.venv/bin/python",
+    "scripts/peer_cross_asset_ofi.py",
+    "--plan",
+    "research/peer-cross-asset-ofi-v1.json",
+    "--expected-plan-sha256",
+    "f04869f0afebc76d8d25dee58e4c4272382238c5f5d66898daa7be2e3544eaaa",
+    "--output-root",
+    "reports/peer-research/cross-asset-ofi-v1"
+  ],
+  "external_timeout_seconds": 320,
+  "supervisor_pid": 3921652,
+  "root_output_plus_logs_receipts_cap_bytes": 1671168,
+  "child_pid": 3921675,
+  "ended_utc": "2026-10-02T06:58:02.038030+00:00",
+  "elapsed_seconds": 0.7750992420042166,
+  "returncode": 0,
+  "timed_out": false,
+  "stdout": "{\"classification\": \"insufficient_feature_support\", \"protocol_sha256\": \"f04869f0afebc76d8d25dee58e4c4272382238c5f5d66898daa7be2e3544eaaa\", \"readout_bytes\": 5122, \"result_gzip_bytes\": 7229}\n",
+  "stderr": "",
+  "stdout_bytes": 188,
+  "stderr_bytes": 0,
+  "logs_truncated": false,
+  "outputs": [
+    {
+      "path": "reports/peer-research/cross-asset-ofi-v1/preflight.json",
+      "bytes": 50893,
+      "sha256": "5cb9664356d3483eac9a989446887f8f421c350e85111ac30afa5d3393048e59"
+    },
+    {
+      "path": "reports/peer-research/cross-asset-ofi-v1/readout.txt",
+      "bytes": 5122,
+      "sha256": "ffee0207be3b0e7ae1d36450dadf4e1f153789b421c1fea828d4b4e3350a66c3"
+    },
+    {
+      "path": "reports/peer-research/cross-asset-ofi-v1/result.json.gz",
+      "bytes": 7229,
+      "sha256": "1883d7a3d43061a6a2d5d55959141c2f18709fabfe202b50f1adbaa30a228c5e"
+    }
+  ],
+  "output_bytes": 63244
+}

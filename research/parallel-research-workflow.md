@@ -162,9 +162,13 @@ reservation. Capture data and analysis outputs have separate funded limits.
 
 The [unchanged return-lag audit](../reports/peer-research/20261002-0544/decision.txt)
 found one BTC episode but no target/control pairs; economics remain unevaluated.
-The separate cross-asset OFI draft will use the
-[immutable table inventory](../reports/peer-research/20261002-0627-shared-ofi-inputs.json)
-through bounded local execution after its own source, test and protocol freeze.
+The separate [cross-asset OFI test](../reports/peer-research/cross-asset-ofi-v1/root-receipt.json)
+completed under its frozen root runtime after 12 synthetic tests and source review.
+Only 4/18 cells passed training feature support; each application block had zero
+common usable calendars. The run stopped before fitting or economics. This is
+inconclusive, with no subset or threshold rescue. The six existing tables were
+read through their [immutable inventory](../reports/peer-research/20261002-0627-shared-ofi-inputs.json);
+no raw or reserved inputs were copied. Independent peer output review is pending.
 The [immutable input export](../data/evidence/rolling-exploratory-000001-000003-v1-inventory.json)
 contains only chunks 1–3, 45 verified members, 55,818,240 tar bytes through Git LFS.
 Its [64 MiB reservation](../reports/experiment-storage/rolling-exploratory-peer-export-v1.json)

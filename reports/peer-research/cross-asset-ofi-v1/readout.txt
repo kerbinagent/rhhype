@@ -1,0 +1,25 @@
+Cross-asset observed-frame OFI: conditional exploratory diagnostic.
+Classification: insufficient_feature_support
+18 fixed cells; three dependent application chunks. USDC/USDG and size alternatives stay separate.
+Conditional quoted cash is not realized fills or an executable simultaneous portfolio.
+Preflight: insufficient_feature_support
+Feature-only application mask counts: {"chunk-000007": 0, "chunk-000008": 0, "chunk-000009": 0}
+ETH:lighter feature support: {"counts": {"chunk-000001": 27, "chunk-000002": 25, "chunk-000003": 27}, "models": {"M0": "available", "M1": "available", "M2": "available"}, "ranks": {"M0": 7, "M1": 12, "M2": 13}, "status": "passed"}
+ETH:rh_lighter feature support: {"counts": {"chunk-000001": 14, "chunk-000002": 24, "chunk-000003": 19}, "models": {"M0": "available", "M1": "available", "M2": "available"}, "ranks": {"M0": 7, "M1": 12, "M2": 13}, "status": "insufficient_feature_support"}
+SOL:lighter feature support: {"counts": {"chunk-000001": 26, "chunk-000002": 24, "chunk-000003": 27}, "models": {"M0": "available", "M1": "available", "M2": "available"}, "ranks": {"M0": 7, "M1": 12, "M2": 13}, "status": "passed"}
+SOL:rh_lighter feature support: {"counts": {"chunk-000001": 10, "chunk-000002": 18, "chunk-000003": 16}, "models": {"M0": "available", "M1": "available", "M2": "available"}, "ranks": {"M0": 7, "M1": 12, "M2": 13}, "status": "insufficient_feature_support"}
+HYPE:lighter feature support: {"counts": {"chunk-000001": 21, "chunk-000002": 23, "chunk-000003": 24}, "models": {"M0": "available", "M1": "available", "M2": "available"}, "ranks": {"M0": 7, "M1": 12, "M2": 13}, "status": "passed"}
+HYPE:rh_lighter feature support: {"counts": {"chunk-000001": 7, "chunk-000002": 10, "chunk-000003": 14}, "models": {"M0": "available", "M1": "available", "M2": "available"}, "ranks": {"M0": 7, "M1": 12, "M2": 13}, "status": "insufficient_feature_support"}
+XRP:lighter feature support: {"counts": {"chunk-000001": 14, "chunk-000002": 18, "chunk-000003": 18}, "models": {"M0": "available", "M1": "available", "M2": "available"}, "ranks": {"M0": 7, "M1": 12, "M2": 13}, "status": "insufficient_feature_support"}
+XRP:rh_lighter feature support: {"counts": {"chunk-000001": 6, "chunk-000002": 7, "chunk-000003": 10}, "models": {"M0": "constant_columns", "M1": "constant_columns", "M2": "constant_columns"}, "ranks": {"M0": null, "M1": null, "M2": null}, "status": "insufficient_feature_support"}
+SUI:lighter feature support: {"counts": {"chunk-000001": 4, "chunk-000002": 8, "chunk-000003": 7}, "models": {"M0": "constant_columns", "M1": "constant_columns", "M2": "constant_columns"}, "ranks": {"M0": null, "M1": null, "M2": null}, "status": "insufficient_feature_support"}
+SUI:rh_lighter feature support: {"counts": {"chunk-000001": 4, "chunk-000002": 11, "chunk-000003": 11}, "models": {"M0": "available", "M1": "available", "M2": "available"}, "ranks": {"M0": 7, "M1": 12, "M2": 13}, "status": "insufficient_feature_support"}
+NEAR:lighter feature support: {"counts": {"chunk-000001": 14, "chunk-000002": 17, "chunk-000003": 18}, "models": {"M0": "available", "M1": "available", "M2": "available"}, "ranks": {"M0": 7, "M1": 12, "M2": 13}, "status": "insufficient_feature_support"}
+NEAR:rh_lighter feature support: {"counts": {"chunk-000001": 6, "chunk-000002": 15, "chunk-000003": 16}, "models": {"M0": "available", "M1": "available", "M2": "available"}, "ranks": {"M0": 7, "M1": 12, "M2": 13}, "status": "insufficient_feature_support"}
+ZEC:lighter feature support: {"counts": {"chunk-000001": 24, "chunk-000002": 25, "chunk-000003": 27}, "models": {"M0": "available", "M1": "available", "M2": "available"}, "ranks": {"M0": 7, "M1": 12, "M2": 13}, "status": "passed"}
+ZEC:rh_lighter feature support: {"counts": {"chunk-000001": 13, "chunk-000002": 17, "chunk-000003": 16}, "models": {"M0": "available", "M1": "available", "M2": "available"}, "ranks": {"M0": 7, "M1": 12, "M2": 13}, "status": "insufficient_feature_support"}
+VVV:lighter feature support: {"counts": {"chunk-000001": 5, "chunk-000002": 12, "chunk-000003": 15}, "models": {"M0": "available", "M1": "available", "M2": "available"}, "ranks": {"M0": 7, "M1": 12, "M2": 13}, "status": "insufficient_feature_support"}
+VVV:rh_lighter feature support: {"counts": {"chunk-000001": 0, "chunk-000002": 2, "chunk-000003": 7}, "models": {"M0": "constant_columns", "M1": "constant_columns", "M2": "constant_columns"}, "ranks": {"M0": null, "M1": null, "M2": null}, "status": "insufficient_feature_support"}
+LIT:lighter feature support: {"counts": {"chunk-000001": 14, "chunk-000002": 18, "chunk-000003": 19}, "models": {"M0": "available", "M1": "available", "M2": "available"}, "ranks": {"M0": 7, "M1": 12, "M2": 13}, "status": "insufficient_feature_support"}
+LIT:rh_lighter feature support: {"counts": {"chunk-000001": 8, "chunk-000002": 8, "chunk-000003": 15}, "models": {"M0": "available", "M1": "available", "M2": "available"}, "ranks": {"M0": 7, "M1": 12, "M2": 13}, "status": "insufficient_feature_support"}
+Full failures, immutable masks, coefficients, per-cell forecasts and admitted profile statuses are in the JSON outputs.
