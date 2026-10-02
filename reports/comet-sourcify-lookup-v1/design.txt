@@ -1,0 +1,35 @@
+Comet Sourcify lookup v1 — offline preparation; root final freeze only.
+
+One future GET to the allocation's exact Sourcify v2 URL and selected dot-path
+fields, after separately committed exact final plan and root approval. Default
+dry performs no reads/writes/HTTP. No redirect, retry, fallback, proxy, POST,
+compiler, source URL fetch or artifact copy. Output directory creation is an
+exclusive one-run claim. Source/test/design, allocation and three retained
+input bytes are exact SHA and size checked before request and after response.
+
+Direct validated TLS and identity encoding. A 60s nested-preserving SIGALRM
+bounds DNS, headers, read1 body delivery and fsync. Parent's absolute65s
+deadline starts before plan verification. It stops joining at63s to reserve
+cleanup; any hard timer kills the known worker and propagates. An incomplete
+run is unavailable even if no final receipt can be published. At most131072 response
+body bytes can succeed. A 131073rd byte is charged and fsynced as a failure
+sentinel; no next byte is requested. Every returned chunk is written, flushed
+and fsynced in one raw inode. Pending/final names hardlink that inode. Response
+status gets its own fsynced control as soon as headers arrive and is copied to
+terminal/supervisor even on ordinary failure. Unknown status is null.
+
+Only a complete HTTP200 body is parsed. Strict UTF8, unique JSON keys, finite
+numbers, object root, depth<=32 and nodes<=16384. Require exact chain1 and
+implementation address, and decode the returned onchain runtime as exact
+18599-byte hex SHA256 b942... . All other match labels, recompiled bytecode,
+transformations, compiler and metadata are provider claims. The bounded
+projection gives hashes/summaries, never source content or a metadata CID from
+JSON reserialization. It keeps source_equivalence, eligibility and economics
+false. Successful raw/projection, worker terminal, exit0, supervisor and final
+pins are jointly required. Any failure keeps raw prefixes and is unavailable.
+
+Allocation: 262144B total; 40960B includes source, tests, design, draft/final
+plan and temporary fixtures; 131073B exact raw including sentinel; 8192B
+projection, 16384B transport messages, 40960B controls/reviews,24575B margin.
+The prior ipfs.io failure remains separate and unchanged. No lookup is made by
+this preparation package.

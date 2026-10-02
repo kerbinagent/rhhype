@@ -1,0 +1,66 @@
+{
+  "claims": {
+    "economics": false,
+    "eligibility": false,
+    "metadata_cid_verified": false,
+    "source_equivalence": false
+  },
+  "deadline_review": "Absolute supervisor deadline starts before verification; join only to63s, cleanup stays under armed65s alarm. Hard TimeoutError propagates through start/join/kill/status-recovery/final-pin checks. At hard timeout an incomplete run may lack final receipt and remains unavailable.",
+  "next": "Commit source/tests/design/draft/plan/preflight before the single root request.",
+  "plan": {
+    "bytes": 2117,
+    "path": "reports/experiment-storage/comet-sourcify-lookup-v1.json",
+    "sha256": "cbc4b0727a5a6b41339e14c5547ed4abc908000b5c98430a5bd1fecc57c20d71"
+  },
+  "prior_result": "Original ipfs.io stage stays terminal unavailable, with its175B body retained. This is the separately allocated fixed repository lookup; no lookup has occurred before this preflight.",
+  "recorded_utc": "2026-10-02T15:32:50.725661+00:00",
+  "request_rules": [
+    "Exact allocated Sourcifyv2 URL and selected fields; one GET over validated TLS; identity encoding.",
+    "No redirect, retry, fallback, proxy, source URL follow, verification POST, library/compiler fetch or original metadata fetch/run.",
+    "Incremental read1 fsync, one raw inode, maximum131073B including sentinel; accepted<=131072B.",
+    "Numeric HTTP status fsynced immediately and preserved on failures when available.",
+    "Strict object JSON, unique keys, finite numbers, depth32/nodes16384; exact chain/address/runtime bytes and SHA256.",
+    "All metadata/compiler/match/transformation fields remain provider claims; no CID verification from JSON reserialization.",
+    "Exclusive output; final worker/terminal/supervisor and unchanged plan/source/input pins jointly required for success."
+  ],
+  "root_review": "Read complete source/tests/design/draft and both deadline corrections. Independent Sol reviewer confirms no remaining concrete blocker on final source.",
+  "schema": "comet-sourcify-lookup-v1-root-preflight",
+  "source_pins": [
+    {
+      "bytes": 15997,
+      "path": "scripts/comet_sourcify_lookup_v1.py",
+      "sha256": "9c971b056e5cdd32ec49f9c3a9effa542fe1289cacabe1462dd87195c00f096d"
+    },
+    {
+      "bytes": 11152,
+      "path": "tests/test_comet_sourcify_lookup_v1.py",
+      "sha256": "49807473799010dc5f6db618d6e26a048be1dd90a8ca672306d462757fdf12d9"
+    },
+    {
+      "bytes": 2336,
+      "path": "reports/comet-sourcify-lookup-v1/design.txt",
+      "sha256": "afed8d38a7bbf39d84fecf99883a616a60ed7957deb4d95ca2dcedd1da780a45"
+    }
+  ],
+  "status": "frozen_ready_for_one_root_GET_after_commit",
+  "storage": {
+    "controls_category_bytes": 40960,
+    "messages_category_bytes": 16384,
+    "projection_category_bytes": 8192,
+    "raw_category_bytes": 131073,
+    "source_category_bytes": 40960,
+    "source_draft_final_bytes": 33388,
+    "source_fixture_peak_bytes": 34396,
+    "source_margin_bytes": 6564,
+    "total_reserved_bytes": 262144,
+    "unassigned_margin_bytes": 24575
+  },
+  "tests": {
+    "count": 8,
+    "mode": "Synthetic fake transport only, bytecode disabled, no retained log. Root publication hook measured existing fixture unique inodes without extra output files.",
+    "remaining_temporary_directories": 0,
+    "result": "PASS",
+    "seconds": 0.173,
+    "temporary_unique_inode_high_water_bytes": 1008
+  }
+}
