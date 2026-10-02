@@ -274,7 +274,8 @@ passed. Root recomputed all 24 descriptive closes; RH LIT fade's +0.0216 stresse
 USDG remains exploratory. The primary coverage gate failed. No winner replaces
 the primary, and neither news replication nor repeatable profit is established.
 
-The [Comet artifact check](../reports/comet-sourcify-lookup-v1/root-reconciliation.json)
-matched the retained runtime and literal metadata content hash. A bounded
-independent compiler reproduction is being prepared; deployed dependencies and
-economics remain unproved. The failed gateway stays retained; Clipper is offline.
+The [Comet reproduction](../reports/comet-reproduction-v1/root-reconciliation.json)
+matched all 18,599 runtime bytes, 70 immutable ranges and literal metadata from
+11 authenticated sources. Root and Sol independently reconciled one sandboxed
+compile. Dependencies, proxy behavior, sale availability and economics remain
+unproved. The failed gateway stays retained; Clipper is offline.

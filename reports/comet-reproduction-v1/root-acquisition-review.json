@@ -1,0 +1,51 @@
+{
+  "all_statuses_200": true,
+  "compile_authorization": "One separate compilation of these exact bytes under use_default tool sandbox with network restriction, exact frozen command and no rerun. Acquisition performed no compiler invocation.",
+  "compiler_invocations_so_far": 0,
+  "compiler_keccak256": "0x3811602585e07c5404735f5bd329b11619a855f40ff2e1428bf95cb10c1a57ff",
+  "economics": false,
+  "freeze_commit": "dec30f1",
+  "get_requests": 3,
+  "historical_identity_not_yet_proved": true,
+  "independent_checks": [
+    "all raw lengths and SHA256",
+    "official manifest exact unique release/build/version/path",
+    "compiler SHA256 and Keccak256 match official manifest",
+    "all11exact source unit names and individual UTF8content Keccak match authenticated metadata"
+  ],
+  "plan_sha256": "5838b0c91c0dd4d69b04548b947b51830b9dac4f6ae721aabc6a6ed0965628e4",
+  "raw_pins": [
+    {
+      "bytes": 47730,
+      "name": "manifest",
+      "sha256": "ee1a2b4811bd1225c220cd2342e2b49a58cbe18f5687f230f456c443b29497d6"
+    },
+    {
+      "bytes": 14230072,
+      "name": "compiler",
+      "sha256": "5189155ce322d57fb75e8518d9b39139627edea4fb25b5f0ebed0391c52e74cc"
+    },
+    {
+      "bytes": 75632,
+      "name": "sources",
+      "sha256": "1483b51828b9570daff1c3579daf0cf4781461cb1a8d779a6877c7925ff8bba2"
+    }
+  ],
+  "recorded_utc": "2026-10-02T16:24:51.445073+00:00",
+  "schema": "comet-reproduction-v1-root-acquisition-review",
+  "source_units": [
+    "contracts/CometConfiguration.sol",
+    "contracts/CometCore.sol",
+    "contracts/CometMainInterface.sol",
+    "contracts/CometMath.sol",
+    "contracts/CometStorage.sol",
+    "contracts/CometWithExtendedAssetList.sol",
+    "contracts/IAssetList.sol",
+    "contracts/IAssetListFactory.sol",
+    "contracts/IAssetListFactoryHolder.sol",
+    "contracts/IERC20NonStandard.sol",
+    "contracts/IPriceFeed.sol"
+  ],
+  "status": "artifacts_authenticated_root_reconciled",
+  "terminal_and_supervisor_success_without_error": true
+}
