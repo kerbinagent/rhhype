@@ -1,0 +1,124 @@
+Observed queue OFI: fixed exploratory comparison
+Decision: no cell/size passes the three-chunk advance gate. Park this linear own-market increment.
+
+Question: does observed-frame best-queue OFI improve the specified five-feature baseline after a 400 ms entry delay, and does the forecast clear delayed displayed-quote costs?
+Fit chunks 1-3; apply the frozen model to chunks 7-9. All six inputs were already exploratory. Adjacent chunks and simultaneous assets are dependent. This is not prospective validation.
+All 20 asset/venue cells and all three native target sizes (100, 1,000, 10,000) are retained. Sizes, directions and models are alternative ledgers. Native USDC and USDG results are separate; the cash columns below must not be added into a portfolio.
+
+Protocol and execution
+Original scientific protocol SHA256 27073af951c7d8fd08e24978314e662810d17e0b56645f894b710fbdf11ace70; frozen before processing, commit 5938061.
+Original run hit the 262,144-byte publication cap on FIT chunk 2 before any model/evaluation output. Its saved first table and failure record are preserved. No human feature/outcome inspection informed the capacity change.
+Publication-only successor SHA256 485213e9cc671344d228724ee3be1462e91de352156bb8ffbf0bd2de7fc0e881; frozen before loading, commit e8f3c27. Per-table cap became 524,288 bytes; first table reused byte-identically; all scientific rules unchanged.
+Run 2026-10-02T06:15:26.796702+00:00 to 2026-10-02T06:23:51.193771+00:00; 504.398 seconds, return 0, empty stderr. Runtime Python 3.13.9 / NumPy 2.5.3.
+Model SHA256 f299e255b29dbffff494283e57fd9251826e3747abc3d4e7bf944d2569aa8d78 was published and re-read before evaluation decoding. No refit, feature/size selection or rank rescue.
+
+Coverage and complete denominators
+chunk | calendar | usable features | complete midpoint labels | label feature-unavailable | funding excluded | first-eligible miss | complete / requested quote profiles
+01 | 560 | 278 | 277 | 282 | 0 | 1 | 1662 / 1668
+02 | 560 | 355 | 355 | 205 | 0 | 0 | 2130 / 2130
+03 | 560 | 370 | 362 | 178 | 20 | 0 | 2172 / 2172
+07 | 560 | 368 | 368 | 192 | 0 | 0 | 2208 / 2208
+08 | 560 | 358 | 358 | 202 | 0 | 0 | 2148 / 2148
+09 | 560 | 348 | 348 | 212 | 0 | 0 | 2088 / 2088
+Total: 3,360 calendar anchors; 2,077 usable features; 2,068 complete midpoint labels; 12,414 requested direction/size profiles, 12,408 complete. The six profile failures arise from one training anchor. Both evaluation policies have zero admitted unresolved outcomes.
+Feature failures: 689 stale boundary books, 555 missing start books, 36 unknown trade histories, 3 stale trade windows. Twelve of these also lie at the funding boundary; label status prioritizes the 20 funding exclusions. Failure counts therefore use their stated denominators.
+Coverage caveat: RH/BTC decoder book overflow occurs once in chunks 8 and 9, followed by 1,892 and 8,864 delta-without-snapshot resets. RH/BTC has zero paired evaluation labels in chunk 9. This remains missing coverage, not a flat price or negative economic observation.
+
+Forecast fits: 13 cells have both models; 7 have fewer than 40 complete training labels. No fitted cell failed rank/condition after constant-column treatment.
+cell | training labels | paired apply labels 7/8/9 | baseline MSE 7/8/9 | augmented MSE 7/8/9 | augmented better in each chunk
+BTC:lighter | 81 | 28,26,27 | 3.9131,3.7995,2.7296 | 3.9115,3.8079,2.7454 | YNN
+BTC:rh_lighter | 70 | 24,21,0 | 3.8936,3.2130,NA | 3.9275,2.7653,NA | NY-
+ETH:lighter | 81 | 27,27,28 | 2.7079,3.9083,2.3595 | 2.8742,3.9127,2.3921 | NNN
+ETH:rh_lighter | 64 | 21,21,22 | 3.7694,4.9476,2.4728 | 2.3596,5.0291,2.9851 | YNN
+SOL:lighter | 79 | 22,26,28 | 5.6148,29.5290,8.6744 | 5.5284,29.3246,8.7946 | YYN
+SOL:rh_lighter | 44 | 15,15,16 | 6.8955,61.2121,11.3892 | 6.3254,54.3784,10.4832 | YYY
+HYPE:lighter | 69 | 17,23,20 | 7.8440,14.3250,2.7320 | 8.5450,14.5198,2.6113 | NNY
+HYPE:rh_lighter | 33 | 0,0,0 | NA,NA,NA | NA,NA,NA | ---
+XRP:lighter | 51 | 16,18,20 | 7.5886,10.2797,6.5241 | 8.4351,11.5457,5.5100 | NNY
+XRP:rh_lighter | 24 | 0,0,0 | NA,NA,NA | NA,NA,NA | ---
+SUI:lighter | 20 | 0,0,0 | NA,NA,NA | NA,NA,NA | ---
+SUI:rh_lighter | 28 | 0,0,0 | NA,NA,NA | NA,NA,NA | ---
+NEAR:lighter | 51 | 17,23,22 | 88.8601,103.7198,54.0585 | 89.0099,103.8141,53.2548 | NNY
+NEAR:rh_lighter | 40 | 16,17,13 | 63.6337,108.5583,54.5358 | 60.8289,114.1729,63.6081 | YNN
+ZEC:lighter | 78 | 28,27,26 | 33.8699,49.6228,19.2648 | 34.8655,53.4166,18.5740 | NNY
+ZEC:rh_lighter | 51 | 17,17,18 | 55.4783,51.6054,22.4131 | 57.3473,52.7520,24.4725 | NNN
+VVV:lighter | 33 | 0,0,0 | NA,NA,NA | NA,NA,NA | ---
+VVV:rh_lighter | 10 | 0,0,0 | NA,NA,NA | NA,NA,NA | ---
+LIT:lighter | 52 | 27,20,20 | 161.2399,58.6580,21.8454 | 165.3673,59.0833,27.9437 | NNN
+LIT:rh_lighter | 35 | 0,0,0 | NA,NA,NA | NA,NA,NA | ---
+
+Policy results: cash is native collateral; stress is additional basis points on actual entry value, not an invented venue fee. All captured taker-fee metadata were zero. Capital is 5% annually on target N for the actual holding interval. All recorded native maximum base quantities are treated as unknown where unpublished.
+Counts below describe alternative policies, not distinct trades or independent evidence. Baseline: 434 admissions across 60 alternatives; augmented: 493. Separate chunk gate passes: 5 / 2 / 5; no same cell/size passes all three.
+cell N | augmented admissions 7/8/9 | pooled baseline net | pooled augmented net | augmented mean net bp | augmented pooled stress cash 1/2/5bp | chunk gate bits
+BTC:lighter 100 | 12,14,16 | -0.001680 | -0.013438 | -0.0327 | -0.426431,-0.839424,-2.078402 | NNN
+BTC:lighter 1000 | 10,9,11 | -0.709118 | -0.716505 | -0.2414 | -3.685779,-6.655054,-15.562878 | YNN
+BTC:lighter 10000 | 8,6,8 | -12.839458 | -8.209023 | -0.3769 | -29.990342,-51.771662,-117.115621 | YNN
+BTC:rh_lighter 100 | 1,0,0 | -0.066732 | -0.030592 | -3.1150 | -0.040412,-0.050233,-0.079695 | NNN
+BTC:rh_lighter 1000 | 1,0,0 | -0.300864 | -0.339716 | -3.4322 | -0.438694,-0.537672,-0.834606 | NNN
+BTC:rh_lighter 10000 | 0,0,0 | -0.026171 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+ETH:lighter 100 | 5,6,10 | 0.119474 | 0.111318 | 0.5358 | -0.096462,-0.304242,-0.927582 | NNN
+ETH:lighter 1000 | 4,6,9 | 0.778401 | 1.096341 | 0.5829 | -0.784612,-2.665566,-8.308428 | NNN
+ETH:lighter 10000 | 1,3,6 | 6.711893 | 4.016407 | 0.4057 | -5.884364,-15.785135,-45.487449 | NNN
+ETH:rh_lighter 100 | 3,0,1 | -0.058447 | 0.017101 | 0.4329 | -0.022455,-0.062011,-0.180680 | YNN
+ETH:rh_lighter 1000 | 2,0,0 | -0.164011 | 0.217029 | 1.0959 | 0.019067,-0.178894,-0.772779 | NNN
+ETH:rh_lighter 10000 | 1,0,0 | 0.000000 | 3.063810 | 3.0943 | 2.073655,1.083501,-1.886962 | NNN
+SOL:lighter 100 | 6,11,16 | -0.097585 | -0.000902 | -0.0026 | -0.327458,-0.654013,-1.633680 | YYN
+SOL:lighter 1000 | 5,7,12 | -0.250181 | -0.736438 | -0.3099 | -3.112531,-5.488624,-12.616902 | YNN
+SOL:lighter 10000 | 0,2,4 | 7.288918 | 5.522562 | 0.9296 | -0.418080,-6.358722,-24.180649 | NNN
+SOL:rh_lighter 100 | 0,3,0 | 0.044937 | 0.079304 | 2.6715 | 0.049625,0.019945,-0.069093 | NYN
+SOL:rh_lighter 1000 | 0,2,0 | 0.000000 | 0.939948 | 4.7474 | 0.741970,0.543993,-0.049938 | NNN
+SOL:rh_lighter 10000 | 0,1,0 | 0.000000 | 2.610593 | 2.6376 | 1.620829,0.631065,-2.338226 | NNN
+HYPE:lighter 100 | 6,8,6 | -0.267736 | -0.169937 | -0.8644 | -0.367023,-0.564108,-1.155365 | NNN
+HYPE:lighter 1000 | 6,7,4 | -1.485592 | -0.906966 | -0.5387 | -2.589110,-4.271254,-9.317688 | NNY
+HYPE:lighter 10000 | 1,5,1 | -3.031469 | -1.140297 | -0.1645 | -8.070100,-14.999903,-35.789312 | NNN
+HYPE:rh_lighter 100 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+HYPE:rh_lighter 1000 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+HYPE:rh_lighter 10000 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+XRP:lighter 100 | 5,1,4 | -0.092603 | -0.069926 | -0.7183 | -0.167861,-0.265796,-0.559601 | NNY
+XRP:lighter 1000 | 5,1,4 | -0.482690 | -0.826018 | -0.8351 | -1.815296,-2.804574,-5.772408 | NNY
+XRP:lighter 10000 | 1,0,2 | -4.988482 | -7.237341 | -2.4372 | -10.206923,-13.176505,-22.085249 | NNN
+XRP:rh_lighter 100 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+XRP:rh_lighter 1000 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+XRP:rh_lighter 10000 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+SUI:lighter 100 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+SUI:lighter 1000 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+SUI:lighter 10000 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+SUI:rh_lighter 100 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+SUI:rh_lighter 1000 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+SUI:rh_lighter 10000 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+NEAR:lighter 100 | 1,10,7 | -0.269235 | -0.476816 | -2.6809 | -0.654634,-0.832451,-1.365904 | NNN
+NEAR:lighter 1000 | 1,8,7 | -3.347907 | -3.938056 | -2.4867 | -5.521707,-7.105359,-11.856313 | NNN
+NEAR:lighter 10000 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+NEAR:rh_lighter 100 | 1,1,1 | 0.000000 | -0.365984 | -12.3265 | -0.395677,-0.425370,-0.514448 | NNN
+NEAR:rh_lighter 1000 | 1,0,1 | 0.000000 | -0.663303 | -3.3501 | -0.861326,-1.059348,-1.653416 | NNN
+NEAR:rh_lighter 10000 | 1,0,0 | 0.000000 | 5.332180 | 5.3851 | 4.342003,3.351826,0.381295 | NNN
+ZEC:lighter 100 | 7,18,11 | -0.003837 | -0.142043 | -0.3943 | -0.496549,-0.851055,-1.914573 | NNY
+ZEC:lighter 1000 | 7,18,9 | -1.444269 | -2.590288 | -0.7701 | -5.954829,-9.319370,-19.412992 | NNY
+ZEC:lighter 10000 | 4,10,7 | -17.232001 | -34.282355 | -1.6489 | -55.072339,-75.862323,-138.232274 | NNN
+ZEC:rh_lighter 100 | 1,3,2 | -0.079458 | -0.198461 | -3.3437 | -0.257808,-0.317155,-0.495196 | NNN
+ZEC:rh_lighter 1000 | 1,2,2 | -0.974316 | -2.359529 | -4.7670 | -2.854486,-3.349443,-4.834315 | NNN
+ZEC:rh_lighter 10000 | 1,1,0 | -12.611042 | -6.102234 | -3.0821 | -8.082384,-10.062534,-16.002985 | NNN
+VVV:lighter 100 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+VVV:lighter 1000 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+VVV:lighter 10000 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+VVV:rh_lighter 100 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+VVV:rh_lighter 1000 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+VVV:rh_lighter 10000 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+LIT:lighter 100 | 16,12,9 | -1.003351 | -1.394704 | -3.8082 | -1.760931,-2.127158,-3.225840 | NNN
+LIT:lighter 1000 | 12,8,3 | -9.790413 | -12.567886 | -5.5193 | -14.844837,-17.121788,-23.952641 | NNN
+LIT:lighter 10000 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+LIT:rh_lighter 100 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+LIT:rh_lighter 1000 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+LIT:rh_lighter 10000 | 0,0,0 | 0.000000 | 0.000000 | NA | 0.000000,0.000000,0.000000 | NNN
+
+Interpretation
+SOL/RH is the only fitted cell with lower augmented MSE in all three chunks (15/15/16 paired labels). At target 100 it admits 0/3/0 profiles; at 1,000 it admits 0/2/0; at 10,000, 0/1/0. It fails the required support in each chunk.
+The closest per-size result is SOL/Core target 100: chunks 7 and 8 pass; chunk 9 has worse augmented MSE, negative mean net cash and a negative paired policy difference. Its three augmented mean net cash values are +0.008502499, +0.000113963, -0.003323167 USDC; paired calendar cash differences are +0.076726664, +0.105639675, -0.085683330. Do not select only the first two chunks.
+Positive pooled cash in a few alternative ledgers does not satisfy the frozen joint forecast, support and per-chunk cash criterion. Unavailable models are explicitly abstaining policies, not evidence of break-even strategy performance.
+The five baseline controls remove the exact unchanged-BBO telescoping identity. They do not fully control spread, depth, trade intensity or nonlinear state effects. Any increment would remain relative to this specified baseline; it would not establish independent path information or causality.
+
+Verification and limits
+Root reviewed the scientific source and wrapper and ran six parent and four wrapper synthetic tests before freezing. Independent review checked all source pins, six sealed input inventories/hashes, published output hashes and first-table byte identity; refit all 20 cells; reconciled all calendars, predictions, admissions, gross/fee/capital/net/stress arithmetic, native grids/caps where reconstructible and source/receipt timing.
+Independent summary recomputation: 6,960 checks, zero discrepancies; decision/cost/admission reconciliation: 47,160 checks, zero discrepancies. The larger field sweep passed after tolerating normal floating-point serialization differences and interpreting the overwritten exit-due field correctly.
+Saved rows do not contain the complete native books or every raw OFI transition. This audit does not independently reconstruct those mappings. Displayed quotes are not authenticated fills, market-impact-adjusted executions or a closed paper portfolio.
+Full-precision per-chunk forecasts, costs, profiles, all failures and all 60 decisions are preserved in the six row tables, model.json, summary.json.gz and provenance.json. No outcome-guided threshold, endpoint, model, asset or size tuning follows this result.

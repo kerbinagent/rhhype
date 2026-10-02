@@ -97,6 +97,11 @@ and carry studies retain their own analysis boundaries and ownership.
    RH/BTC also exceeded the frozen 5,000-level decoder state bound in chunks
    8 and 9; 22 anchors have unusable books and one adding profile lacks a close.
    These failures remain explicit, including missing reference contributions.
+5. **Observed queue OFI:** the [fixed linear comparison](../reports/single-venue-research/queue-ofi-publication-fix-v1/readout.txt)
+   fits 13 of 20 cells; seven lack 40 training labels. None of 60 cell/size
+   policies meets the three-chunk forecast, support and cash gate. Park this
+   version. A publication-only successor increased the file allowance and
+   reused the first table exactly; scientific rules stayed frozen.
 
 The [corrected news companion](../reports/experiment-storage/single-venue-news-ordinary-feed-fix-v1.json)
 is separately frozen and armed for the original October 2 capture. It applies
@@ -157,8 +162,9 @@ reservation. Capture data and analysis outputs have separate funded limits.
 
 The [unchanged return-lag audit](../reports/peer-research/20261002-0544/decision.txt)
 found one BTC episode but no target/control pairs; economics remain unevaluated.
-The separate cross-asset OFI draft will reuse the
-[frozen own-market tables](../reports/experiment-storage/single-venue-queue-ofi-v1.json).
+The separate cross-asset OFI draft will use the
+[immutable table inventory](../reports/peer-research/20261002-0627-shared-ofi-inputs.json)
+through bounded local execution after its own source, test and protocol freeze.
 The [immutable input export](../data/evidence/rolling-exploratory-000001-000003-v1-inventory.json)
 contains only chunks 1–3, 45 verified members, 55,818,240 tar bytes through Git LFS.
 Its [64 MiB reservation](../reports/experiment-storage/rolling-exploratory-peer-export-v1.json)

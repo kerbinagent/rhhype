@@ -1,0 +1,25 @@
+{
+  "schema": "queue-ofi-supervised-run-v1",
+  "started_utc": "2026-10-02T06:15:26.796702+00:00",
+  "supervisor_pid": 3787705,
+  "pid": 3787706,
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "19",
+    "/home/harry/projects/research/rhhype/.venv/bin/python",
+    "scripts/single_venue_queue_ofi_publication_fix.py",
+    "run"
+  ],
+  "timeout_seconds": 1800,
+  "protocol_sha256": "485213e9cc671344d228724ee3be1462e91de352156bb8ffbf0bd2de7fc0e881",
+  "pre_feature_commit": "e8f3c27",
+  "state": "finished",
+  "returncode": 0,
+  "timed_out": false,
+  "ended_utc": "2026-10-02T06:23:51.193771+00:00",
+  "elapsed_seconds": 504.3979968929925,
+  "stderr_bytes": 0,
+  "stderr": "",
+  "stderr_truncated": false
+}
