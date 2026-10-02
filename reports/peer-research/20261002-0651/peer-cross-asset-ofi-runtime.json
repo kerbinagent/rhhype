@@ -1,0 +1,15 @@
+{
+  "schema": "peer-cross-asset-ofi-runtime-v1",
+  "python": "3.14.3",
+  "numpy": "2.5.3",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "executable": "/Users/houze/projects/research/rhhype-peer/.venv/bin/python",
+  "purpose": "Local synthetic-test environment only. Production execution is fixed separately before any shared table loading.",
+  "production_requirements": {
+    "python": "3.13.9",
+    "numpy": "2.5.3",
+    "dtype": "float64",
+    "execution_workspace": "/home/harry/projects/research/rhhype"
+  },
+  "production_authority": "Coordinator message1864fc1d-9a2e-49c7-a1f4-0712d04ad57a"
+}

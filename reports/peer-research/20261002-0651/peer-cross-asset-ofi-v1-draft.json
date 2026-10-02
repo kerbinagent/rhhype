@@ -1,0 +1,153 @@
+{
+  "schema": "peer-cross-asset-observed-ofi-proposal-v1",
+  "status": "scientific-design-reviewed-pending-production-validation-and-freeze",
+  "authority": "Continuing coordinator allocation b53f1ba8-e798-479a-9df2-d09c7b759843 and distinct cross-asset mechanism lead 1dd31aaf-49de-4955-941d-908ff4c3f03b. Shared extractor coordination 6f61369b-0644-497a-9c32-c932810a4a70; shared-table route approved e89052e2-a07a-41ed-92bf-98fd749106df. Root-side execution and fixed production runtime approved in coordinator message1864fc1d-9a2e-49c7-a1f4-0712d04ad57a; immutable input identities supplied in6a9b5f23-4478-4be2-9511-e91e9bf6e193.",
+  "question": "Does same-venue BTC observed-frame order-flow imbalance improve delayed target forecasts and conditional quoted net cash beyond the specified own-flow and BTC return, trade and queue-endpoint controls?",
+  "mechanism_hypothesis": "Portfolio demand may propagate across assets over time. A BTC queue-transition path could contain predictive information not contained in the target's own state or BTC's endpoint state. Trader linkage and structural causality are unobserved; this tests a conditional forecast, not causal leadership inferred from update ordering.",
+  "research_context": {
+    "primary_lead": "https://arxiv.org/html/2112.13213v4",
+    "interpretation": "The equity study motivates a conditional lagged-flow comparison. It does not establish delayed, costed crypto profitability. Our batched observations are a transition proxy rather than the full event-level order flow observed in exchange message data.",
+    "distinct_from_parked_v1": "No BTC-return trigger or quiet-target rescue. The unchanged return-lag mechanism remains parked after its frozen availability audit. Every fixed calendar anchor is eligible for the new diagnostic."
+  },
+  "cohort": {
+    "venues": [
+      "lighter",
+      "rh_lighter"
+    ],
+    "leader": "BTC",
+    "targets": [
+      "ETH",
+      "SOL",
+      "HYPE",
+      "XRP",
+      "SUI",
+      "NEAR",
+      "ZEC",
+      "VVV",
+      "LIT"
+    ],
+    "cells": 18,
+    "selection": "All same-venue leader-target cells, separately fit. No cell, venue, size, sign or model winner selection."
+  },
+  "calendar_and_data": {
+    "training_chunks": [
+      1,
+      2,
+      3
+    ],
+    "application_chunks": [
+      7,
+      8,
+      9
+    ],
+    "calendar_seconds": {
+      "start": 30,
+      "step": 20,
+      "stop_inclusive": 570
+    },
+    "rows_per_capture": 28,
+    "feature_window": "Completed receipt interval (t-1s,t], with the shared extractor's exact boundary/grouping rules frozen before use.",
+    "causality": "Own and same-venue BTC features are both known at calendar t; target prediction begins at the shared delayed entry. Reset across captures and invalidations; never stitch missing history or fills.",
+    "data_role": "Exploratory historical blocks, not untouched validation. No reserved inputs.",
+    "transfer": "Execute in the authorized main repository /home/harry/projects/research/rhhype against six existing immutable shared tables totaling1772095bytes. No incoming table copies or new raw transfer. The exact inventory SHA4d64aa71acd4b5299c5c9ed60c6a48b37f37d1d5553c47f80357422965177b54 binds table hashes, roles and capture clocks. Source/protocol freeze and production-runtime synthetic validation precede table loading.",
+    "funding_gate": "Compute the shared funding_crosses(decision_ns,PARAMS) before labels for every train/app calendar. Exclude a calendar when its known worst-case14.8s interval reaches/crosses the next hourly boundary. This is an additional known decision-time gate; never infer exclusion from a future label or profile status."
+  },
+  "features_and_models": {
+    "normalization": "Each market uses D_start=(bidQty_start+askQty_start)/2 from its own feature-window start.",
+    "five_non_ofi_controls": [
+      "own_backward_mid_return_bps",
+      "current_queue_imbalance",
+      "start_queue_difference_over_D_start",
+      "current_queue_difference_over_D_start",
+      "ordinary_trade_imbalance"
+    ],
+    "flow": "Shared source's standard best-queue transition sum divided by D_start, explicitly labelled observed-frame OFI.",
+    "M0": "Intercept plus target five controls plus target OFI: 7 parameters. Descriptive own-market reference.",
+    "M1": "M0 plus same-venue BTC five non-OFI controls: 12 parameters. Primary reference.",
+    "M2": "M1 plus same-venue BTC OFI: 13 parameters. Primary candidate.",
+    "primary_comparison": "M2 versus M1 only; M1 versus M0 is descriptive. All models fit identical complete M2-feature and TRAINING-label rows within each cell. Application eligibility is fixed using features at decision time alone.",
+    "fit": "Fixed float64 OLS with numpy.linalg.lstsq rcond1e-10, condition cap1e8, populationSD fit-only standardization, finite-only inputs/outputs. Fixed7/12/13 parameter designs: a constant column or rank deficiency makes that design unavailable, without dropping controls. Root own-market models drop constant columns; this peer contract intentionally preserves the predeclared full-rank requirement. No tuning, refitting, clipping, coefficient reversal or regularization rescue.",
+    "endpoint_identity": "With unchanged best prices, summed OFI telescopes to the change in queue differences. BTC start and current endpoints therefore belong in M1. Rank failure after these controls is missing incremental support, not a reason to drop the controls.",
+    "claim_limit": "The increment is conditional on these five baseline controls plus own OFI only. They remove the exact unchanged-BBO telescoping identity, not all spread, depth, trade-intensity or nonlinear omitted-state explanations.",
+    "return_formula": "Match shared producer:10000*(mid_end-mid_start)/mid_start over the completed1s window. The delayed training/application label likewise uses arithmetic midpoint return between the first eligible entry and exit observations.",
+    "producer_policy_fields": "Ignore the root models/policy forecasts already carried in shared application rows. Compute the peer M1/M2 forecasts and admissions from its own frozen training fit and the shared decision-cost fields only; M0 is a descriptive forecasting reference."
+  },
+  "support_gates": {
+    "training_complete_rows_per_cell_min": 65,
+    "training_complete_rows_per_chunk_per_cell_min": 20,
+    "training_max_rows_per_cell": 84,
+    "feature_preflight": "Before using training labels or application outcomes, require the declared feature-only coverage and numerical rank on each cell's complete M2-feature rows, plus the application feature mask below. JSON decoding physically includes the producer label/profile fields; this stage does not use them. This check cannot establish training-label variance or outcome completeness.",
+    "fit_recheck": "Then use complete TRAINING labels: reapply per-cell/per-chunk count floors and full numerical rank on the actual training rows, fit standardization on those rows only, and require nonzero training-label variance. Removing label-missing rows may destroy rank.",
+    "rank": "Finite float64 fixed design including intercept; exact constant columns unavailable. numpy.linalg.lstsq rcond1e-10, full13-column M2 rank (and nested full7/12 ranks), largest/smallest returned singular-value ratio<=1e8. Standardization uses only each stage eligible training rows; no application moments. After feature-only preflight, recheck counts and rank on actual training-label-complete rows; require finite positive population training-label variance.",
+    "application_fitted_cells_required": 18,
+    "common_application_calendar_rows_per_chunk_min": 21,
+    "application_mask": "At each declared calendar time, apply the known funding guard and require all18cells to have valid decision-time M2 features. Compute the mask and>=21 floor without future labels, quote availability, predictions or outcomes; keep it immutable during scoring. Later missing labels/admitted profiles remain unavailable evidence and prevent advancement; never trim the mask.",
+    "failure": "Report every missing/rank/zero-variance cell and calendar reason. An incomplete broad cohort is inconclusive; do not silently form an easier subset. Missing data or failed execution is never flat cash.",
+    "feature_clock_contract": "For each own and same-venue BTC record, validate available start/end source and receipt clocks against t-1s and t, each age<=250ms, source<=receipt. Same-generation and intermediate continuity are certified by the pinned QueueFeatures.at producer code; the table exposes one generation value, not raw start/end BBOs or separate start_generation. Do not invent missing audit fields, equate generation counters across markets, or add an interasset skew gate. This cannot independently replay raw-book continuity."
+  },
+  "forecast_decision": {
+    "metric": "Squared forecast error normalized by each cell's frozen training-label variance. Equal weights across the fixed18cells, then across the3application chunks, on the feature-only common calendar mask. Later missing labels make the primary aggregate unavailable; conditional available-row diagnostics cannot satisfy advancement.",
+    "advance_requirement": "Positive M2-vs-M1 loss improvement in every application chunk. Leave-one-application-chunk-out aggregates are reported descriptively; they add no independent evidence when every equally weighted chunk is positive.",
+    "dependence": "Shared BTC observations, simultaneous targets and adjacent chunks are dependent. No pooled iid significance claim. Record calendar support and block results rather than multiplying evidence by the number of assets."
+  },
+  "economic_decision": {
+    "native_notional_arms": [
+      100,
+      1000,
+      10000
+    ],
+    "entry_delay_ms": 400,
+    "hold_seconds": 10,
+    "exit_delay_ms": 400,
+    "contract": "Reuse the SHA-pinned shared target-label, action gate, sizing, native constraints, endpoint selection, fees, funding exclusion and failure/accounting rules exactly. Entry is first eligible book at/after t+400ms; exit is first eligible book at/after actual entry receipt+10s+400ms, with source/receipt ages<=250ms and maximum lateness2s at each endpoint. Same native-grid quantity floor(N/(decision ask*1.01)) at both endpoints. Full visible depth only. Fees charge actual entry and exit notional; capital uses N*0.05*actual hold/year. The decision gate uses its frozen worst-case14.8s span; require positive predicted conditional net value. First eligible endpoint failure is final.",
+    "quote_units": "Fixed producer mapping:lighter->USDC;rh_lighter->USDG. Keep all cash and stresses separate by venue/currency; never sum, average or silently convert across them. Notional arms100/1000/10000 are native collateral units within each venue.",
+    "advance_requirement": "On the immutable feature-only mask, positive absolute M2 conditional quoted net cash and positive paired M2-minus-M1 conditional quoted net cash in every application chunk for every fixed size arm, separately within each venue/currency, plus the forecast criterion. Equal weight the nine targets within each venue. Report all arms and no selected winner. BOTH reference and candidate admitted outcomes must be complete for a calendar cash difference; unavailable requested legs prevent advancement and cannot improve the aggregate by exclusion. Decision-time known no-action is distinct from later unavailable execution evidence.",
+    "interpretation": "These are conditional quoted net cash ledgers, not closed cash, authenticated fills or realized trading profit. Alternative size/model ledgers are not one simultaneously executable portfolio. Passing supports only proposing later untouched replication; it is not strategy validation or promotion.",
+    "minimum_candidate_admitted_calendar_slots_per_venue_size_chunk": 3,
+    "admission_floor_interpretation": "Count distinct common calendar slots with at least one complete admitted M2 profile within that venue/size/chunk; simultaneous targets do not multiply this count. This is an operational floor, not independence or power.",
+    "calendar_denominator": "Primary cash means divide by the original28 calendar anchors in each capture. Causal feature-mask exclusions are known abstentions with zero cash; later missing outcomes for admitted mask actions remain unknown and cannot become zeros. Also report conditional feature-mask means separately. Equal-target means average nine alternative target ledgers within a single venue/currency; they are not summed portfolio cash."
+  },
+  "execution_boundaries": {
+    "feature_preflight": "Use causal feature coverage/rank and the immutable application feature mask first, without using labels. If that fails, report every failed cell and park the broad test. If it passes, perform the distinct training-label fit stage, publish its exact coefficients, and verify that saved model hash before using application outcomes. Insufficient support does not reject all cross-asset effects.",
+    "source_tests_docs_existing_allocation_bytes": 2097152,
+    "derived_existing_allocation_bytes": 6291456,
+    "new_raw_capture_bytes": 0,
+    "peer_result_gzip_cap_bytes_proposed": 1048576,
+    "peer_readout_cap_bytes_proposed": 32768,
+    "peer_runtime_seconds_proposed": 300,
+    "scope": "No collector, authenticated API, wallet, order, root-owned economics change, reserved input, push or main merge.",
+    "incoming_shared_table_gzip_cap_bytes": 524288,
+    "incoming_shared_tables_total_cap_bytes": 0,
+    "incoming_shared_table_decoded_cap_bytes": 16777216,
+    "root_publication_failure": "Root first run stopped at FIT chunk2 output cap after156.828613s; only exact FIT chunk1 retained. Publication-only wrapper e8f3c27 changed caps/outputroot and reused that table, with unchanged scientific source. Its bounded run completed504.398s,rc0. This peer received only source/protocol/input identities and did not inspect table or root model/economic results.",
+    "existing_shared_tables_total_read_cap_bytes": 3145728
+  },
+  "required_before_freeze": [
+    "Preserve the reviewed scientific contract and exact source/test/producer/input inventory pins.",
+    "Run the focused synthetic tests under production Python3.13.9/NumPy2.5.3 in the bound main workspace.",
+    "Record final source/protocol hashes and UTC freeze after tests and before table loading.",
+    "Execute one bounded run in a fresh peer output directory; retain every failure and all fixed cohort results."
+  ],
+  "runtime_requirements": {
+    "python": "3.13.9",
+    "numpy": "2.5.3",
+    "dtype": "float64",
+    "execution_workspace": "/home/harry/projects/research/rhhype"
+  },
+  "shared_source": {
+    "snapshot_root": "research/peer-shared-ofi-v1/snapshot",
+    "producer_path": "scripts/single_venue_queue_ofi.py",
+    "producer_sha256": "b549671eede741992df7d47dddb9247278b308f2775facb515c66de15014ff96",
+    "producer_protocol_sha256": "27073af951c7d8fd08e24978314e662810d17e0b56645f894b710fbdf11ace70",
+    "transitive_plan_sha256": "f8b045d2692cf5641a83a72f734d3b0fc4936db13986379f0d6fd88f9d845dfd",
+    "existing_helper_pins_verified": 45,
+    "publication_wrapper_sha256": "c2b6502ae5c8da78e01290205194c3e76922f3a7d2cb16a731138dc7ea65efcd",
+    "publication_protocol_sha256": "485213e9cc671344d228724ee3be1462e91de352156bb8ffbf0bd2de7fc0e881"
+  },
+  "local_synthetic_environment": {
+    "python": "3.14.3",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "scope": "Focused synthetic checks only; production3.13.9 checks remain required before features."
+  }
+}

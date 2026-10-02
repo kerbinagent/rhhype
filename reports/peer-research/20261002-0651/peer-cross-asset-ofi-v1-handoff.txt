@@ -1,0 +1,26 @@
+Cross-asset OFI v1 execution handoff
+
+Authority: coordinator root-side execution message1864fc1d-9a2e-49c7-a1f4-0712d04ad57a; existing peer8MiB allocation.
+Local checkout: /Users/houze/projects/research/rhhype-peer; branch peer/independent-signal-research; base e69f21a39d543649080aaa1f92b2542e1e4b0341.
+Production checkout: /home/harry/projects/research/rhhype. No push or main merge is needed.
+
+Install the provided exact files at the following repository-relative paths, preserving any prior candidate review copies. Shared producer/helper files already exist in production; verify their56 source pins, do not replace them from an unrelated checkout.
+scripts/peer_cross_asset_ofi.py: 44736 bytes SHA256 c2b03f4c573e89e8456172cb3289f24534282d23ca4b82078dc228131db5424b
+tests/test_peer_cross_asset_ofi.py: 25442 bytes SHA256 b461d382bc4c93db25fda3affd97a8ca8ed2c876f8be8fe0f16fac69d70cb995
+research/peer-cross-asset-ofi-v1.json: 18282 bytes SHA256 b3a9b7841b717aa7e19c9b8aa4bef7cd467ee5f66960df746e439e7f268c41ff
+research/peer-cross-asset-ofi-v1-draft.json: 15615 bytes SHA256 b911bab454fb32048e94edbb4eefaa5192b338f4d9e6bac69b5aecc57e8e60e6
+research/peer-cross-asset-ofi-runtime.json: 610 bytes SHA256 9ec7375dbe8fe7f4dafafe45bb1cd25ee4f718d22daf48911e97161aaab6f817
+research/peer-shared-ofi-v1/input-inventory.json: 4197 bytes SHA256 4d64aa71acd4b5299c5c9ed60c6a48b37f37d1d5553c47f80357422965177b54
+
+The executable plan is pending-production-validation. Scientific source and tests are settled;12 local synthetic cases passed in12.825s under Python3.14.3/NumPy2.5.3. Real shared-table files, features and producer results were not opened here.
+
+Production procedure:
+1. Verify the installed file hashes and interpreter versions Python3.13.9/NumPy2.5.3. Review the source and plan. Run only the focused synthetic suite:
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest tests.test_peer_cross_asset_ofi -v
+2. If all checks pass, modify only machine-plan fields status=frozen-before-features, frozen_utc and production_validation. Record final SHA256 and a pre-feature commit. Preserve the candidate review copy. Other source, scientific, input or runtime changes require explicit coordination before data loading.
+3. Execute exactly once using the final external protocol SHA:
+timeout 320s .venv/bin/python scripts/peer_cross_asset_ofi.py --plan research/peer-cross-asset-ofi-v1.json --expected-plan-sha256 FINAL_SHA256 --output-root reports/peer-research/cross-asset-ofi-v1
+The Python stage/publication runtime cap is300s; the outer320s bound prevents a hanging native call. The fresh output directory must not preexist. Record exit code, UTC start/end, elapsed time, stdout/stderr and retained output hashes. Keep logs/receipts bounded within the1671168-byte root output allowance; optional returned copy has the same cap.
+4. Return final freeze/commit/test receipt and the small classification/readout/output identities. If support fails, no labels or economics are used; JSON loading physically parses their fields. Preserve all partial files and report any failure, without retrying or changing gates.
+
+All18cells, chunks1-3/7-9, full7/12/13-column designs, common feature-only mask, original28-calendar cash denominator, three native notional arms and USDC/USDG separation are fixed. Conditional quoted cash is not realized profit. The parked return-lag mechanism stays parked. No collector, auth API, wallet, order, reserved input or source-results rescue is authorized.

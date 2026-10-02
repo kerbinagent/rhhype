@@ -1,0 +1,95 @@
+{
+  "schema": "peer-shared-ofi-input-inventory-v1",
+  "created_utc": "2026-10-02T06:27:23.387767+00:00",
+  "purpose": "Immutable input identities for an independently frozen peer cross-asset analysis; no result summary or model coefficient information.",
+  "execution_workspace": "/home/harry/projects/research/rhhype",
+  "producer_protocol": {
+    "path": "reports/experiment-storage/single-venue-queue-ofi-publication-fix-v1.json",
+    "bytes": 4493,
+    "sha256": "485213e9cc671344d228724ee3be1462e91de352156bb8ffbf0bd2de7fc0e881"
+  },
+  "scientific_parent_protocol": {
+    "path": "reports/experiment-storage/single-venue-queue-ofi-v1.json",
+    "bytes": 14481,
+    "sha256": "27073af951c7d8fd08e24978314e662810d17e0b56645f894b710fbdf11ace70"
+  },
+  "producer_source": {
+    "path": "scripts/single_venue_queue_ofi_publication_fix.py",
+    "bytes": 6827,
+    "sha256": "c2b6502ae5c8da78e01290205194c3e76922f3a7d2cb16a731138dc7ea65efcd"
+  },
+  "scientific_source": {
+    "path": "scripts/single_venue_queue_ofi.py",
+    "bytes": 40433,
+    "sha256": "b549671eede741992df7d47dddb9247278b308f2775facb515c66de15014ff96"
+  },
+  "provenance": {
+    "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/provenance.json",
+    "bytes": 11288,
+    "sha256": "e3c3220f97c70226b9c48cd7340af497deddce59d0d384d96bdd07df73458100"
+  },
+  "table_gzip_cap_bytes": 524288,
+  "table_decoded_cap_bytes": 16777216,
+  "rows_per_table": 560,
+  "rows_per_cell": 28,
+  "clock_contract": "Exact fixed28 calendar slots, causal start/end BBO source/receipt timestamps and generation; own-market profiles remain independent conditional displayed quotes. Peer source/protocol must be frozen before table loading.",
+  "root_forecasts": "Ignore embedded root model/policy predictions; independently frozen peer analysis supplies its own models and decision scores. Input provenance includes producer output hashes but these are not peer selection criteria.",
+  "role": "All six captures already exploratory; not untouched prospective validation.",
+  "tables": [
+    {
+      "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000001.json.gz",
+      "bytes": 219661,
+      "sha256": "2834825384d8abe5226ee00bda3c444673b88667d464ebc1da413f338ddbc78b",
+      "chunk": "chunk-000001",
+      "role": "fit",
+      "started_ns": 1790908590998286000,
+      "ended_ns": 1790909191918648000
+    },
+    {
+      "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000002.json.gz",
+      "bytes": 279747,
+      "sha256": "0fc16c7f3233b131dc46b70bde2d455d5caa8c7189195c6680ceb4791f287304",
+      "chunk": "chunk-000002",
+      "role": "fit",
+      "started_ns": 1790909196335551000,
+      "ended_ns": 1790909797129673000
+    },
+    {
+      "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000003.json.gz",
+      "bytes": 288355,
+      "sha256": "6d18dbb0e7c6be7675908456e891910d99aad769e495fb37cad55f70c01aece1",
+      "chunk": "chunk-000003",
+      "role": "fit",
+      "started_ns": 1790909800934999000,
+      "ended_ns": 1790910401775658000
+    },
+    {
+      "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000007.json.gz",
+      "bytes": 336027,
+      "sha256": "7e547cb983edf5dbc937d503fad56e4dfa347d6719acc712969579056195d4a6",
+      "chunk": "chunk-000007",
+      "role": "application",
+      "started_ns": 1790912218791085000,
+      "ended_ns": 1790912819572727000
+    },
+    {
+      "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000008.json.gz",
+      "bytes": 330624,
+      "sha256": "6a570948327537e14b4e763e884b6acf728fea2ea7b8466182a9771146bd4a28",
+      "chunk": "chunk-000008",
+      "role": "application",
+      "started_ns": 1790912824584990000,
+      "ended_ns": 1790913425439447000
+    },
+    {
+      "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000009.json.gz",
+      "bytes": 317681,
+      "sha256": "17394e08d6f8228465322a31eed64bc1fc1b639068a0f5f0a53880c7e1b6ea9b",
+      "chunk": "chunk-000009",
+      "role": "application",
+      "started_ns": 1790913430459587000,
+      "ended_ns": 1790914031262321000
+    }
+  ],
+  "total_table_bytes": 1772095
+}

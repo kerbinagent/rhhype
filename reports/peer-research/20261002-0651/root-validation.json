@@ -1,0 +1,24 @@
+{
+  "schema": "peer-cross-asset-ofi-root-validation-v1",
+  "started_utc": "2026-10-02T06:55:16.178941+00:00",
+  "ended_utc": "2026-10-02T06:55:49.115903+00:00",
+  "elapsed_seconds": 32.93696502999228,
+  "python": "3.13.9",
+  "numpy": "2.5.3",
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "unittest",
+    "tests.test_peer_cross_asset_ofi",
+    "-v"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "test_exact_six_calendars_and_same_venue_identity_joins (tests.test_peer_cross_asset_ofi.CrossAssetOFITest.test_exact_six_calendars_and_same_venue_identity_joins) ... ok\ntest_feature_clocks_own_generation_and_observed_flow_identity (tests.test_peer_cross_asset_ofi.CrossAssetOFITest.test_feature_clocks_own_generation_and_observed_flow_identity) ... ok\ntest_feature_preflight_never_reads_outcomes_and_one_cell_blocks_cohort (tests.test_peer_cross_asset_ofi.CrossAssetOFITest.test_feature_preflight_never_reads_outcomes_and_one_cell_blocks_cohort) ... ok\ntest_funding_is_causal_and_future_fields_cannot_select_application_mask (tests.test_peer_cross_asset_ofi.CrossAssetOFITest.test_funding_is_causal_and_future_fields_cannot_select_application_mask) ... ok\ntest_known_no_action_is_zero_and_simultaneous_targets_are_one_admission_slot (tests.test_peer_cross_asset_ofi.CrossAssetOFITest.test_known_no_action_is_zero_and_simultaneous_targets_are_one_admission_slot) ... ok\ntest_later_missing_label_does_not_trim_mask_or_primary_forecast_loss (tests.test_peer_cross_asset_ofi.CrossAssetOFITest.test_later_missing_label_does_not_trim_mask_or_primary_forecast_loss) ... ok\ntest_missing_reference_candidate_and_exact_side_size_profiles_block_cash (tests.test_peer_cross_asset_ofi.CrossAssetOFITest.test_missing_reference_candidate_and_exact_side_size_profiles_block_cash) ... ok\ntest_missing_training_labels_can_destroy_rank_without_failing_counts (tests.test_peer_cross_asset_ofi.CrossAssetOFITest.test_missing_training_labels_can_destroy_rank_without_failing_counts) ... ok\ntest_native_collateral_ledgers_and_equal_target_weights_are_kept_separate (tests.test_peer_cross_asset_ofi.CrossAssetOFITest.test_native_collateral_ledgers_and_equal_target_weights_are_kept_separate) ... ok\ntest_rank_gate_keeps_fixed_columns_and_rejects_near_endpoint_identity (tests.test_peer_cross_asset_ofi.CrossAssetOFITest.test_rank_gate_keeps_fixed_columns_and_rejects_near_endpoint_identity) ... ok\ntest_real_nested_ols_uses_training_only_and_recovers_consistent_forecast (tests.test_peer_cross_asset_ofi.CrossAssetOFITest.test_real_nested_ols_uses_training_only_and_recovers_consistent_forecast) ... ok\ntest_training_labels_reapply_cell_chunk_counts_and_nonzero_variance (tests.test_peer_cross_asset_ofi.CrossAssetOFITest.test_training_labels_reapply_cell_chunk_counts_and_nonzero_variance) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 32.375s\n\nOK\n",
+  "verified_source_pins": 56,
+  "real_tables_decoded": 0,
+  "root_full_source_plan_test_review": "no blocking mismatch",
+  "independent_focused_source_review": "no blocking mismatch; full JSON decode includes future fields but feature preflight does not access them",
+  "source_sha256": "c2b03f4c573e89e8456172cb3289f24534282d23ca4b82078dc228131db5424b",
+  "tests_sha256": "b461d382bc4c93db25fda3affd97a8ca8ed2c876f8be8fe0f16fac69d70cb995"
+}

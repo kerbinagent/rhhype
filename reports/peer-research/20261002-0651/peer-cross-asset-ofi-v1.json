@@ -1,0 +1,518 @@
+{
+  "schema": "peer-cross-asset-ofi-v1",
+  "status": "pending-production-validation",
+  "created_utc": "2026-10-02T06:44:19.073246+00:00",
+  "authority": "Coordinator messages b53f1ba8-e798-479a-9df2-d09c7b759843,1dd31aaf-49de-4955-941d-908ff4c3f03b,1864fc1d-9a2e-49c7-a1f4-0712d04ad57a,6a9b5f23-4478-4be2-9511-e91e9bf6e193",
+  "question": "Does same-venue BTC observed-frame OFI improve the fixed18-target-cell conditional forecast and quoted cash beyond own features and BTC return/trade/queue-endpoint controls?",
+  "scientific_design": {
+    "path": "research/peer-cross-asset-ofi-v1-draft.json",
+    "sha256": "b911bab454fb32048e94edbb4eefaa5192b338f4d9e6bac69b5aecc57e8e60e6",
+    "bytes": 15615
+  },
+  "parameters": {
+    "training_chunks": [
+      "chunk-000001",
+      "chunk-000002",
+      "chunk-000003"
+    ],
+    "application_chunks": [
+      "chunk-000007",
+      "chunk-000008",
+      "chunk-000009"
+    ],
+    "assets": [
+      "BTC",
+      "ETH",
+      "SOL",
+      "HYPE",
+      "XRP",
+      "SUI",
+      "NEAR",
+      "ZEC",
+      "VVV",
+      "LIT"
+    ],
+    "venues": [
+      "lighter",
+      "rh_lighter"
+    ],
+    "targets": [
+      "ETH",
+      "SOL",
+      "HYPE",
+      "XRP",
+      "SUI",
+      "NEAR",
+      "ZEC",
+      "VVV",
+      "LIT"
+    ],
+    "leader": "BTC",
+    "calendar_start_second": 30,
+    "calendar_step_seconds": 20,
+    "calendar_stop_second": 570,
+    "rows_per_table": 560,
+    "slots_per_chunk": 28,
+    "training_rows_min": 65,
+    "training_rows_per_chunk_min": 20,
+    "application_common_slots_min": 21,
+    "economic_admitted_slots_min": 3,
+    "notionals": [
+      "100",
+      "1000",
+      "10000"
+    ],
+    "funding_excluded_at_decision": true,
+    "shared_parameters": {
+      "anchor_start_seconds": 30,
+      "anchor_stop_seconds_inclusive": 570,
+      "anchor_step_seconds": 20,
+      "lookback_ns": 1000000000,
+      "book_age_ns": 250000000,
+      "max_interbook_gap_ns": 500000000,
+      "max_trade_age_ns": 500000000,
+      "entry_delay_ns": 400000000,
+      "exit_delay_ns": 400000000,
+      "hold_ns": 10000000000,
+      "max_execution_lateness_ns": 2000000000,
+      "maximum_profile_span_ns": 14800000000,
+      "notionals": [
+        "100",
+        "1000",
+        "10000"
+      ],
+      "sizing_headroom": "1.01",
+      "annual_capital_rate": "0.05",
+      "year_seconds": 31536000,
+      "extra_cost_stress_bps": [
+        1,
+        2,
+        5
+      ],
+      "minimum_training_labels": 40,
+      "ols_rcond": 1e-10,
+      "maximum_design_condition_number": 100000000,
+      "max_decoded_bytes_per_chunk": 1073741824,
+      "max_records_per_chunk": 1000000,
+      "max_ids_per_chunk": 500000,
+      "max_history_records_per_market": 10000,
+      "max_same_receipt_events": 10000,
+      "max_profiles_per_chunk": 4000
+    }
+  },
+  "numerical_contract": {
+    "dtype": "float64",
+    "population_sd": true,
+    "ols_rcond": 1e-10,
+    "maximum_design_condition_number": 100000000,
+    "constant_columns": "unavailable",
+    "feature_identity_tolerance": 1e-12
+  },
+  "caps": {
+    "protocol_bytes": 65536,
+    "table_gzip_bytes": 524288,
+    "table_total_gzip_bytes": 3145728,
+    "table_decoded_bytes": 16777216,
+    "preflight_bytes": 131072,
+    "model_bytes": 262144,
+    "result_decoded_bytes": 8388608,
+    "result_gzip_bytes": 1048576,
+    "readout_bytes": 32768,
+    "runtime_seconds": 300
+  },
+  "runtime_requirements": {
+    "python": "3.13.9",
+    "numpy": "2.5.3"
+  },
+  "execution_workspace": "/home/harry/projects/research/rhhype",
+  "output_root": "reports/peer-research/cross-asset-ofi-v1",
+  "shared_contract": {
+    "source_path": "scripts/single_venue_queue_ofi.py",
+    "source_sha256": "b549671eede741992df7d47dddb9247278b308f2775facb515c66de15014ff96",
+    "protocol_path": "reports/experiment-storage/single-venue-queue-ofi-v1.json",
+    "protocol_sha256": "27073af951c7d8fd08e24978314e662810d17e0b56645f894b710fbdf11ace70"
+  },
+  "source_pins": [
+    {
+      "path": "reports/experiment-storage/ordinary-feed-adapter-repair-v1.json",
+      "sha256": "fdaa82156b33fce08633467702c2e6d72a3de18dbbd1a66034e11f05879e93ba",
+      "bytes": 3525
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-flow-recovery-ordinary-feed-fix-v1.json",
+      "sha256": "a1c602397819504d9fa7697822750ec7306eb98dd30470000ac5157c9255f47e",
+      "bytes": 10122
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-inventory-context-ordinary-feed-fix-v1.json",
+      "sha256": "f8b045d2692cf5641a83a72f734d3b0fc4936db13986379f0d6fd88f9d845dfd",
+      "bytes": 13121
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-inventory-context-v1.json",
+      "sha256": "fb7d1e6cefe75b05579d9d9db820dc6996d1124e820f4da19d893349bdabd01f",
+      "bytes": 16261
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-queue-ofi-publication-fix-v1.json",
+      "sha256": "485213e9cc671344d228724ee3be1462e91de352156bb8ffbf0bd2de7fc0e881",
+      "bytes": 4493
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-queue-ofi-v1.json",
+      "sha256": "27073af951c7d8fd08e24978314e662810d17e0b56645f894b710fbdf11ace70",
+      "bytes": 14481
+    },
+    {
+      "path": "research/peer-cross-asset-ofi-runtime.json",
+      "sha256": "9ec7375dbe8fe7f4dafafe45bb1cd25ee4f718d22daf48911e97161aaab6f817",
+      "bytes": 610
+    },
+    {
+      "path": "research/peer-cross-asset-ofi-v1-draft.json",
+      "sha256": "b911bab454fb32048e94edbb4eefaa5192b338f4d9e6bac69b5aecc57e8e60e6",
+      "bytes": 15615
+    },
+    {
+      "path": "scripts/analyze_maker_capture.py",
+      "sha256": "d87ce8f116e039976b7afac20ede5704d14b3d49eb626473d214a7d47811b359",
+      "bytes": 29477
+    },
+    {
+      "path": "scripts/analyze_maker_equity.py",
+      "sha256": "85d4de8cfd523b4a4497e3e2f6411b05f3737f2133d4c167ddce708af363843f",
+      "bytes": 25648
+    },
+    {
+      "path": "scripts/analyze_maker_roundtrip.py",
+      "sha256": "d7d23b255fcffc294069a77486cc944a9a64a32d6755cc515a960d1ae03a9c93",
+      "bytes": 18227
+    },
+    {
+      "path": "scripts/audit_single_venue_study.py",
+      "sha256": "a306e4272648f4c098de6f015d2e5f293f2aa40ac9799b0a51d6ff7a86c81bb6",
+      "bytes": 13533
+    },
+    {
+      "path": "scripts/core_maker_capture.py",
+      "sha256": "db704b735932205bfd5f188a849804cd93774373f6dd4accb32ed69f32c5507c",
+      "bytes": 8068
+    },
+    {
+      "path": "scripts/core_maker_events.py",
+      "sha256": "4b29411baaf2ea0d7624ba6c35d752fe137e6108214ec7289125b2d7c52303f3",
+      "bytes": 24464
+    },
+    {
+      "path": "scripts/core_rh_small_shortterm.py",
+      "sha256": "65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3",
+      "bytes": 20672
+    },
+    {
+      "path": "scripts/maker_book_archive.py",
+      "sha256": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2",
+      "bytes": 18974
+    },
+    {
+      "path": "scripts/maker_capture.py",
+      "sha256": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9",
+      "bytes": 28133
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88",
+      "bytes": 40963
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b",
+      "bytes": 59902
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734",
+      "bytes": 31735
+    },
+    {
+      "path": "scripts/passive_three_venue_capture.py",
+      "sha256": "d5b3c943bd6acfd28fbfd258e3f3523ca8cecabe5794ab73e6db420c5abfbe23",
+      "bytes": 22478
+    },
+    {
+      "path": "scripts/passive_three_venue_events.py",
+      "sha256": "66c8c813e86aa229fc49539f7d0fe4be39bd3e6468b7a9313a1545909354fcca",
+      "bytes": 24482
+    },
+    {
+      "path": "scripts/peer_cross_asset_ofi.py",
+      "sha256": "c2b03f4c573e89e8456172cb3289f24534282d23ca4b82078dc228131db5424b",
+      "bytes": 44736
+    },
+    {
+      "path": "scripts/rh_maker_capture.py",
+      "sha256": "8a075d1b454752e0852f1a8ab6d40189c60bfba7bf62c7ff781b7349571b45b4",
+      "bytes": 32409
+    },
+    {
+      "path": "scripts/rolling_research_capture.py",
+      "sha256": "af0e22b484a34ee2678bdaacb19c1b3a18d7c4097ddc14618dc6b2fac756b59b",
+      "bytes": 32331
+    },
+    {
+      "path": "scripts/run_inventory_context_ordinary_fix.py",
+      "sha256": "3d69a5ecbdfd25aeef47fa6b07d05eeccf745ae2979cde6e05910577679d02a8",
+      "bytes": 936
+    },
+    {
+      "path": "scripts/run_single_venue_study.py",
+      "sha256": "81b12f74f8d9c3e8f88e1a7741c10d64fea793cf46a409da8c7aa83b3bdab9a0",
+      "bytes": 3812
+    },
+    {
+      "path": "scripts/single_venue_broad.py",
+      "sha256": "d948761f48a7a367d51f65ec16aa21782ba241a5ec846461119ebd080c880ab8",
+      "bytes": 4942
+    },
+    {
+      "path": "scripts/single_venue_broad_quotes.py",
+      "sha256": "96f0c5a8b435ab4fd30429eb873a49614b7eed299a1be0071c7c0bc01530f341",
+      "bytes": 5235
+    },
+    {
+      "path": "scripts/single_venue_broad_relative.py",
+      "sha256": "1eeddcf8ba6b87861a3236bc4c16e082f362491b61c2c7ecc2e46bcc104b135a",
+      "bytes": 4607
+    },
+    {
+      "path": "scripts/single_venue_compact_evidence.py",
+      "sha256": "5be023f9b4f365e3d8df3d65b660bf69a4d61a89ccdf401cf96c861e9e018524",
+      "bytes": 1992
+    },
+    {
+      "path": "scripts/single_venue_depth.py",
+      "sha256": "a06b2da1b0d290c71964ea8b2e585df835a5787876d40c80ce47754c6cffefed",
+      "bytes": 5746
+    },
+    {
+      "path": "scripts/single_venue_depth_capture.py",
+      "sha256": "f5230d15c2bcaa0ce32f767b75f058d01eacae292f27977be55e41cdd6d2a4ed",
+      "bytes": 8241
+    },
+    {
+      "path": "scripts/single_venue_depth_events.py",
+      "sha256": "a6e681b4e9469422c29b6a27a4647223149dabe9637564539e71386e1c0d5fcc",
+      "bytes": 24461
+    },
+    {
+      "path": "scripts/single_venue_depth_strategy.py",
+      "sha256": "a76fc598fac5c7022494b08afc228fe38540d6f89db6eecac5f8405b2396e0eb",
+      "bytes": 3674
+    },
+    {
+      "path": "scripts/single_venue_executable_shock.py",
+      "sha256": "8a54db80b62f970f84cc40590a2c0bd94595ccabc868651af66bd6461f8c8b02",
+      "bytes": 4369
+    },
+    {
+      "path": "scripts/single_venue_executable_strategy.py",
+      "sha256": "a5796f9723b4c4c54fab1bcc199ed30c9c8ccdee440d7a16ea513014ba0d1f22",
+      "bytes": 4003
+    },
+    {
+      "path": "scripts/single_venue_fast_print.py",
+      "sha256": "480aa8ef4416e1f993718f7fbbd72919f1f1790784fc1b879663cca6023487d2",
+      "bytes": 8455
+    },
+    {
+      "path": "scripts/single_venue_inventory_context.py",
+      "sha256": "0a825735cecb8bcb431193080bae0b67cafb849859351ec5eddba74872bec406",
+      "bytes": 33377
+    },
+    {
+      "path": "scripts/single_venue_multi.py",
+      "sha256": "a834ddc458bc1f935b7e2fead605d7a0c84ee40e39c23220bebbf0f8f05c187c",
+      "bytes": 5966
+    },
+    {
+      "path": "scripts/single_venue_multi_capture.py",
+      "sha256": "6137ea554407ddaa061f14c1d9de0330421fee5eb35aeda03693bc2c53a52538",
+      "bytes": 8241
+    },
+    {
+      "path": "scripts/single_venue_multi_events.py",
+      "sha256": "89597d57108558c617b479e6de2e03be6deaec05a552a1dc9ccff9e815cdfe3d",
+      "bytes": 24461
+    },
+    {
+      "path": "scripts/single_venue_ordinary_events.py",
+      "sha256": "7faa7cb9ab44fb46abdf7cdfa878cb9d3fac5347226d8c4d79751c66e3935903",
+      "bytes": 25918
+    },
+    {
+      "path": "scripts/single_venue_queue_ofi.py",
+      "sha256": "b549671eede741992df7d47dddb9247278b308f2775facb515c66de15014ff96",
+      "bytes": 40433
+    },
+    {
+      "path": "scripts/single_venue_queue_ofi_publication_fix.py",
+      "sha256": "c2b6502ae5c8da78e01290205194c3e76922f3a7d2cb16a731138dc7ea65efcd",
+      "bytes": 6827
+    },
+    {
+      "path": "scripts/single_venue_residual_profile.py",
+      "sha256": "e3a9a11ce389cffe46f990fe7cc7279dccb18bc59ab58672cc5fed3a6de6e23d",
+      "bytes": 8143
+    },
+    {
+      "path": "scripts/single_venue_shock_controls.py",
+      "sha256": "591192d0563d636b21ee4c8a05a03e203928c8ed8723f360a6a69bc7adfec6f9",
+      "bytes": 15192
+    },
+    {
+      "path": "scripts/single_venue_shock_diagnostic.py",
+      "sha256": "612a29bd691e13f366f9bc3158739380544fc65c60882ef8cfefdc9774b1a303",
+      "bytes": 6874
+    },
+    {
+      "path": "scripts/single_venue_strategy.py",
+      "sha256": "5f4a8684e76781c311eb9dfbd9c2f46f9600bb2369db09aafda7fbc2c0c02679",
+      "bytes": 20505
+    },
+    {
+      "path": "tests/test_core_maker_events.py",
+      "sha256": "e193aa0d29b18fe17d01e3f63e076e962a668068e5168d365dbe7c4f7f491ecc",
+      "bytes": 4008
+    },
+    {
+      "path": "tests/test_passive_three_venue_events.py",
+      "sha256": "d620ddca59c23688129201aa1f467ee946f8bc506758e2e0abc7f9251d618ff2",
+      "bytes": 17686
+    },
+    {
+      "path": "tests/test_peer_cross_asset_ofi.py",
+      "sha256": "b461d382bc4c93db25fda3affd97a8ca8ed2c876f8be8fe0f16fac69d70cb995",
+      "bytes": 25442
+    },
+    {
+      "path": "tests/test_single_venue_inventory_context.py",
+      "sha256": "aa6df03e73d21399294bf5d91cb4650eb473d18dadc523d82eb72c361d88edc3",
+      "bytes": 14735
+    },
+    {
+      "path": "tests/test_single_venue_ordinary_events.py",
+      "sha256": "b2e6b648a44d178af0b823d3bdcbf4c2574ebddadbf3c9a53b91c68be3510208",
+      "bytes": 9183
+    },
+    {
+      "path": "tests/test_single_venue_queue_ofi.py",
+      "sha256": "c78c5905dae91aae71cf4dcb231af6ea7a6bee924a2858ef90be0d8da9d12d2f",
+      "bytes": 17542
+    },
+    {
+      "path": "tests/test_single_venue_queue_ofi_publication_fix.py",
+      "sha256": "b8407af1b91fbe04cb583a2b301cf0eb6afd943886f4bccbac3d2ddbdf6f9ed9",
+      "bytes": 9218
+    }
+  ],
+  "input_inventory": {
+    "path": "research/peer-shared-ofi-v1/input-inventory.json",
+    "sha256": "4d64aa71acd4b5299c5c9ed60c6a48b37f37d1d5553c47f80357422965177b54",
+    "bytes": 4197
+  },
+  "tables": [
+    {
+      "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000001.json.gz",
+      "bytes": 219661,
+      "sha256": "2834825384d8abe5226ee00bda3c444673b88667d464ebc1da413f338ddbc78b",
+      "chunk": "chunk-000001",
+      "role": "fit",
+      "started_ns": 1790908590998286000,
+      "ended_ns": 1790909191918648000
+    },
+    {
+      "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000002.json.gz",
+      "bytes": 279747,
+      "sha256": "0fc16c7f3233b131dc46b70bde2d455d5caa8c7189195c6680ceb4791f287304",
+      "chunk": "chunk-000002",
+      "role": "fit",
+      "started_ns": 1790909196335551000,
+      "ended_ns": 1790909797129673000
+    },
+    {
+      "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000003.json.gz",
+      "bytes": 288355,
+      "sha256": "6d18dbb0e7c6be7675908456e891910d99aad769e495fb37cad55f70c01aece1",
+      "chunk": "chunk-000003",
+      "role": "fit",
+      "started_ns": 1790909800934999000,
+      "ended_ns": 1790910401775658000
+    },
+    {
+      "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000007.json.gz",
+      "bytes": 336027,
+      "sha256": "7e547cb983edf5dbc937d503fad56e4dfa347d6719acc712969579056195d4a6",
+      "chunk": "chunk-000007",
+      "role": "application",
+      "started_ns": 1790912218791085000,
+      "ended_ns": 1790912819572727000
+    },
+    {
+      "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000008.json.gz",
+      "bytes": 330624,
+      "sha256": "6a570948327537e14b4e763e884b6acf728fea2ea7b8466182a9771146bd4a28",
+      "chunk": "chunk-000008",
+      "role": "application",
+      "started_ns": 1790912824584990000,
+      "ended_ns": 1790913425439447000
+    },
+    {
+      "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000009.json.gz",
+      "bytes": 317681,
+      "sha256": "17394e08d6f8228465322a31eed64bc1fc1b639068a0f5f0a53880c7e1b6ea9b",
+      "chunk": "chunk-000009",
+      "role": "application",
+      "started_ns": 1790913430459587000,
+      "ended_ns": 1790914031262321000
+    }
+  ],
+  "local_validation": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest tests.test_peer_cross_asset_ofi -v",
+    "python": "3.14.3",
+    "numpy": "2.5.3",
+    "tests": 12,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds": 12.825,
+    "source_sha256": "c2b03f4c573e89e8456172cb3289f24534282d23ca4b82078dc228131db5424b",
+    "test_sha256": "b461d382bc4c93db25fda3affd97a8ca8ed2c876f8be8fe0f16fac69d70cb995",
+    "scope": "Focused generated synthetic inputs only; independent test author. Parent source review complete. Production verification remains required."
+  },
+  "production_validation": null,
+  "freeze_contract": {
+    "prerequisite": "Verify exact provided source/test/docs/runtime/inventory files at their paths, then run focused12 tests under Python3.13.9/NumPy2.5.3 without loading real tables. Independently review pinned stage/quote contracts.",
+    "allowed_finalize_fields": [
+      "status",
+      "frozen_utc",
+      "production_validation"
+    ],
+    "final_status": "frozen-before-features",
+    "instruction": "After passing production checks, change only allowed fields, record external final protocol SHA and a commit before table loading, then execute one bounded run. Any source/scientific/input discrepancy must be resolved before freeze without inspecting outcomes; no data-driven rescue.",
+    "table_loading": "JSON decode physically includes label/profile fields. Feature preflight must not use them; failed support is inconclusive and stops before fitting/scoring.",
+    "on_failure": "Retain all partial outputs/execution evidence and report first failure. No silent retry, cell removal, control dropping, tuning, parser rescue or threshold change."
+  },
+  "claims": {
+    "exploratory_only": true,
+    "untouched_validation": false,
+    "realized_fills": false,
+    "strategy_promotion": false
+  },
+  "budget": {
+    "existing_source_tests_docs_protocol_allocation_bytes": 2097152,
+    "existing_derived_allocation_bytes": 6291456,
+    "new_raw_bytes": 0,
+    "incoming_table_copies_bytes": 0,
+    "root_output_plus_logs_receipts_cap_bytes": 1671168,
+    "optional_peer_review_copy_cap_bytes": 1671168,
+    "source_review_export_and_install_copy_cap_bytes": 262144
+  }
+}
