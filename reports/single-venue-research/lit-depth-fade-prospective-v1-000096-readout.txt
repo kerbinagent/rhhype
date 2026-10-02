@@ -1,0 +1,4 @@
+LIT fixed prospective chunk 96: four independent ledgers, one matching audit.
+Separate native-collateral counterfactual IOC ledgers; no actual fills or portfolio sum. Core descriptive.
+gate={"all_four_flat_known": true, "audit_passed": true, "fade_minus_follow_stressed_USDG": "-0.1356151334635910924122510781", "objective_achieved": false, "passed": false, "primary_attempts": 2, "primary_closed": 1, "primary_stressed_USDG": "-0.1142947663593605952374476788"}
+Candidate only; previous ordinary positive and earlier news negative remain archived.

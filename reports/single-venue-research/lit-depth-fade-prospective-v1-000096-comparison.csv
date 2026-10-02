@@ -1,0 +1,5 @@
+asset,family,rule,venue,collateral,attempts,closed,zero_fill_entries,closed_cash_after_capital,closed_stressed_cash,realized_cash_change,complete,unknown,position_open,pending_order
+LIT,depth,depth_fade,lighter,USDC,6,3,3,-0.07155396042685142672359684171,-0.2199956199268514267235968417,-0.0715539604268514267235968,True,,False,False
+LIT,depth,depth_fade,rh_lighter,USDG,2,1,1,-0.06480465585936059523744767884,-0.1142947663593605952374476788,-0.0648046558593605952374477,True,,False,False
+LIT,depth,depth_follow,lighter,USDC,5,5,0,-0.3015872778267498622547643962,-0.5490277003267498622547643962,-0.3015872778267498622547644,True,,False,False
+LIT,depth,depth_follow,rh_lighter,USDG,3,1,2,0.07081132860423049717480339929,0.02132036710423049717480339929,0.0708113286042304971748034,True,,False,False
