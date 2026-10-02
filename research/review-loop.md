@@ -6447,3 +6447,20 @@ Snapshot read 2026-10-02T14:06:51.778239Z, updated epoch seconds 1790950011.5272
 Paper pulses fresh but busy13:51CPU68.23%/p95lag56.40ms,13:55CPU72.99%/54.99ms,14:00CPU82.98%/52.14ms,14:04CPU67.35%/51.06ms; reviewCPU73.87%/54.00ms,RSS296.34MiB,107pairs. Rolling67 healthy at14:04check230.30s/12,159,642compressed B/74,847records,two connections/no errors/economics false; chunks1,435,807,006B/controls43,931B under separate2GB. Recovery gap retained; no routine raw decode/intervention. Root prospective NEAR startup repair is separate, no collector mutation or scientific cutoff change; routine index held while root freezes its repair. News helpers terminal, outputs root-owned.
 
 Carry14:05:00.121153UTC:450sampled,two invalid(71,389),412future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–210:2,888completions=2,845exact losses,one estimated loss,seven audited paired gains,35audited rescue gains. Archive3,948,658/5,242,880B;103future pairs at5,342B project4,498,884B,margin743,996B. Root auditSPCXone-sided rescue+$0.01369388980407:Core6.4unitsentry$996.608→exit$997.12,gross$0.512−stress$0.498304−capital$0.000002110196,HLshortprice_limitreject. Source/receipt400msCore/150msHL and native terminalcash/fees/funding passed; no raw/first-book proof. Root packets3,640B included: review210-positive-records.json.gz1,728B SHA10a37ad8e1e06dd9badb88761de00816eab924a0978194db21b7476ecb0577e5; audit1,912B SHA89f7295f81219ccd58f7a5936fb2bc5e84fca1621a9c916189bca7b556a787f6. Next **14:26:33 UTC**.
+
+
+### Review 211 — 2026-10-02 14:26:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Exact report and independently timed snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap and growth guards.
+
+`review-20261002T142633Z.json.gz` raw 18,834 B SHA-256 `16c188df40ea5f3719010378220f3f92f3a90174693237b04099e8bd54d9d132`; gzip 2,622 B SHA-256 `9974c487e27b1825534697b3157fe6d017c6eb0564bbd3a40a1bf5df28ad99cd`.
+
+`current-epoch-at-review211.json.gz` raw 9,282 B SHA-256 `50c7b0e62d790e6b95980c9e7d8903ee1a14ebe907e76b8a0fa0d475749f9e5f`; gzip 1,726 B SHA-256 `cf3d3d256049216f67a44e1f01400be261bf894ef87f168d886cf05e2c868f03`.
+
+Snapshot read 2026-10-02T14:27:00.301890Z, updated epoch seconds 1790951219.8246222; counts not pooled. Six exact convergence losses net−$4.88063671712348; six HL price_limit rejects; no gains, estimates or aborts. Fees0/other$2.9905296824998686/capital$0.000012034623498361624.
+
+Paper14:09fresh1.35s/busyCPU81.23%/p95lag82.79ms,root notified;14:12busy70.22%/61.06ms,14:17busy76.92%/50.58ms,14:21recoveredok64.44%/47.67ms. Review fresh/okCPU71.35%/44.90ms,RSS293.51MiB,107pairs. Rolling69 healthy338.45s/15,679,635compressed B/102,291records,two connections/no errors/economics false; chunks1,502,127,112B/controls45,211B under separate2GB. Recovery gap retained; no routine raw decode/intervention.
+
+Root prospective NEAR persistent host startup repaired separately before original cutoff, frozen scientific plan unchanged: original plan e3a09177b2e38ca78ee7f1a97b2ce5e00ce14bd15cdc6c53164472888cd2ee33/recovery784ce715d0a34823a1253d80a423a2726c503c0abd4f53cffa71c076ec0c091f. Metadata reports/news-candidate-rolling-v1/run-v1/host-process.json PID762163/startticks13674762/persistentnamespace, initial zero nominations/pins/raw/HTTP. Only four initial controls present through14:21,no nomination/terminal observed; no routine market reads or launch. Initial sandboxPID3failure retained byroot; actualhostsurvival rootverified14:07:16. News helpers terminal success, outcomes root-owned.
+
+Carry14:25:00.128125UTC:454sampled,two invalid(71,389),408future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–211:2,894completions=2,851exact losses,one estimated loss,seven audited paired gains,35audited rescue gains. Archive3,953,006/5,242,880B;102future pairs at5,342B project4,497,890B,margin744,990B. Next **14:46:33 UTC**.
