@@ -6526,3 +6526,18 @@ Snapshot read 2026-10-02T15:47:02.430231Z, updated epoch seconds 1790956022.2357
 NEARnomination observed15:35:53: frozenplan matches, selectedchunk76 reserved_validation, launched15:32:05.217590UTC, nominated15:32:17.436731UTC; selectionfields onlyrole/number/launched_ns. Root notified. At15:45pin/input-pins/command01/02filenames appeared, no terminal; routine read only filenames and nomination metadata, no command outcomes/raw. Exact first eligible reserved rule preserved. HIP4timer unchanged historical receipt, no mutation or launches.
 
 Carry15:45:00.185348UTC:470sampled,two invalid(71,389),392future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–215 cumulative unchanged:2,904completions=2,861exact losses,one estimated loss,seven audited paired gains,35audited rescue gains. Archive3,970,241/5,242,880B;98future pairs at5,342B project4,493,757B,margin749,123B. Next **16:06:33 UTC**.
+
+
+### Review 216 — 2026-10-02 16:06:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Explicit UTC wall-clock pre-read guard passed. Exact report and independently timed snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap and growth guards.
+
+`review-20261002T160633Z.json.gz` raw 19,212 B SHA-256 `6ddb185b92141add5deb8173a3aa261bf5903897e966e1eb78707ba1cfcab783`; gzip 2,772 B SHA-256 `5d39582b859c8f369de6ca180da11c7f91fd909b9dce27f79dcddb00035454a5`.
+
+`current-epoch-at-review216.json.gz` raw 9,282 B SHA-256 `80531047a56f181410685cad722f449427da3bfbed63c95221a28cf5eda987cc`; gzip 1,736 B SHA-256 `e7b2f813a86696d7fcfc1ba3dd3e1aec986a0566fb788693d54be73ff6626c50`.
+
+Snapshot read 2026-10-02T16:06:49.309484Z, updated epoch seconds 1790957208.641291; counts not pooled. Six exact convergence losses net−$2.4576028265157674;five HL price_limit rejects;no gains, estimates or aborts. Fees$0.17951566499999672/other$2.9922120900000664/capital$0.00004507151583209128.
+
+Paperfresh15:51ok79.13%CPU/46.16mslag,15:55ok72.01%/48.35ms,16:00ok74.57%/46.12ms,16:05busy83.45%/68.38ms; reviewfresh/busy93.92%/64.37ms,RSS297.38MiB,111pairs,rootnotified. Rolling79healthy265.37s/11,545,652compressed B/77,934records,two connections/no errors/economics false; chunks1,791,950,141B/controls51,680B under separate2GB. Recovery gap retained; no routine raw decode/intervention. NEARselected76offlinecommandfilenames progressed8→12→16→19 through16:05,no terminal yet; filenames only read, no outcomes. Root monitor scope/source pins unchanged. Shared index briefly held for root separateHIP4freeze; routine waits to stage.
+
+Carry16:05:00.173729UTC:474sampled,two invalid(71,389),388future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–216:2,910completions=2,867exact losses,one estimated loss,seven audited paired gains,35audited rescue gains. Archive3,974,749/5,242,880B;97future pairs at5,342B project4,492,923B,margin749,957B. Next **16:26:33 UTC**.
