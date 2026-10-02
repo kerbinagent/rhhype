@@ -184,12 +184,10 @@ comes from existing headroom. Rolling and reserved data retain their rules.
 
 ## Peer primary-issuance compatibility work
 
-The [metadata probe](../reports/peer-research/20261002-0910/root-receipt.json)
-completed 20 requests and verified fixed identities, synthetic gas and parent
-checks. Its [post-submit bound design](../reports/peer-research/20261002-0941/peer-primary-issuance-bound-design-v1.json)
-accounts for issuance changing reserve rounding. The completed negative result
-is below. Original failures, source versions and both-session copies remain
-retained under the existing peer grant.
+The [metadata probe](../reports/peer-research/20261002-0910/root-receipt.json) and
+[post-submit bound design](../reports/peer-research/20261002-0941/peer-primary-issuance-bound-design-v1.json)
+preceded the negative issuance result below. All evidence and transport copies
+remain retained under the peer grant.
 
 ## Polymarket full-NO conversion metadata
 
@@ -269,4 +267,4 @@ the primary, and neither news replication nor repeatable profit is established.
 
 The [Comet reproduction](../reports/comet-reproduction-v1/root-reconciliation.json) matched 18,599 runtime bytes and 70 immutable ranges. The [31-call pass](../reports/comet-eligibility-live-v1/root-reconciliation.json) reported open sale prerequisites but only 438,676,007,750 native WETH stock. The [gas floor](../reports/comet-inventory-gas-bound-v1/root-reconciliation.json) rejects that parent under its model; child economics are unavailable because simulated base fee is zero. Dependencies remain unproved.
 
-The Mac peer independently owns Comet sale-route research. Root and Sol accepted its [USDC cash bound](../reports/comet-usdc-sale-bound-v1/root-review.json) as conditional source mathematics. An all 13-collateral inventory collector is in preparation; no current positive cash route is established.
+The Mac peer independently owns Comet sale-route research. Root and Sol accepted its [USDC cash bound](../reports/comet-usdc-sale-bound-v1/root-review.json) as conditional source mathematics. The [census](../reports/comet-collateral-inventory-v1/root-reconciliation.json) found 11 positive stocks and two zeros. Price and route checks are next.
