@@ -2,3 +2,16 @@
 *.csv whitespace=cr-at-eol
 # Matplotlib emits harmless trailing spaces in SVG path data.
 reports/figures/*.svg -whitespace
+reports/single-venue-broad-relative/capture/frames.jsonl.gz filter=lfs diff=lfs merge=lfs -text
+data/derived/rh-passive-exit-v1-restart-ack-exploratory-base/analysis.json filter=lfs diff=lfs merge=lfs -text
+data/derived/rh-passive-exit-v1-restart-ack-exploratory-plus200/analysis.json filter=lfs diff=lfs merge=lfs -text
+data/derived/rh-passive-exit-v1-restart-corrected/audit.jsonl.gz filter=lfs diff=lfs merge=lfs -text
+data/derived/rh-passive-exit-v1-restart/analysis.json filter=lfs diff=lfs merge=lfs -text
+reports/maker-book-archive-v1/derived/book-events.jsonl.gz filter=lfs diff=lfs merge=lfs -text
+reports/passive-rare-spread/0252Z-fixed-1s-v1/observations.csv filter=lfs diff=lfs merge=lfs -text
+data/derived/rh-passive-exit-v1-restart-ack-readout/readout.json filter=lfs diff=lfs merge=lfs -text
+data/derived/rh-passive-exit-v1-restart-corrected/analysis.json filter=lfs diff=lfs merge=lfs -text
+data/derived/rh-passive-exit-v1-restart/audit.jsonl.gz filter=lfs diff=lfs merge=lfs -text
+data/evidence/monitor-audit-20260929T115958Z/observations.jsonl.gz filter=lfs diff=lfs merge=lfs -text
+data/evidence/public-market-evidence.tar.gz filter=lfs diff=lfs merge=lfs -text
+reports/single-venue-broad/capture/frames.jsonl.gz filter=lfs diff=lfs merge=lfs -text
