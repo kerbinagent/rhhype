@@ -23,6 +23,21 @@
     "sha256": "45af227ecef9bc5bc1f409bff17f8dc632340ad0f55b3f68d6208e01f0d3407e"
   },
   "plan_pins_verified": 10,
+  "post_hoc_cost_review": {
+    "additional_gas_units": 47097,
+    "additional_price_wei": 5318516,
+    "denominator": "gross unwrapped ETH, not total trade notional",
+    "gas_unit_boundary_remainders_wei": [
+      "41964158",
+      "-47281499"
+    ],
+    "independent_read_cap_bytes": 32768,
+    "profit_or_inclusion_claim": false,
+    "remainder_above_threshold_wei": "-587281",
+    "remainder_at_threshold_wei": "203023",
+    "status": "passed",
+    "stress_rounding": "ceil"
+  },
   "post_hoc_nested_decoder_review": {
     "independent_read_bytes": 10756,
     "limitations": "No cryptographic signature verification or historical runtime identity",

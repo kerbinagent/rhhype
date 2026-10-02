@@ -42,9 +42,21 @@ causal role is unproved. Neither diagnostic sender is an account we control.
 Execution competition remains decisive: the prior conditional cash ledger
 left only 0.000004203244671887 ETH after direct fee-recipient payment and gas,
 under its account-grouping assumptions. This is not verified operator profit.
-The next question is whether this exact update was available to searchers
-before inclusion; a historical hint match would still not establish our live
-latency, winning bid, fills or repeatability.
+The [cost sensitivity](cost-sensitivity.json), calculated from admitted inputs
+by [this script](cost_sensitivity.py), shows that this equals only 0.955489bp
+of gross unwrapped ETH (not total trade notional). Holding everything else
+fixed, a 5.959412% higher gas fee erases it. The integer allowance is at most
+5,318,516 additional wei/gas or47,097 additional gas units at the observed
+gas price. An extra cost of1bp of gross unwrap or10% of the gas fee makes the
+conditional remainder negative. These are scenarios, not measured new costs.
+Lower bids or a cheaper executor may change the arithmetic, but their inclusion
+and realized proceeds cannot be assumed. This case does not justify advancing
+the copied execution path as a robust profit candidate.
+
+The subsequent [historical access check](../aave-hint-access-v1/readout.md)
+was unavailable because its fixed response cap was exceeded. Advance update
+availability therefore remains unproved. Even a future historical hint match
+would not establish our live latency, winning bid, fills or repeatability.
 
 The fixed run completed 13 requests in 1,475ms, retaining 61,914 response-body
 bytes and 82,046 raw-file bytes. All 12 offline tests passed. Exact offline

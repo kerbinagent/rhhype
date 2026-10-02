@@ -1,0 +1,31 @@
+{
+  "attempted_requests": 2,
+  "body_bytes": 262266,
+  "checks": [
+    "Fixed GET metadata only",
+    "First body121B complete and metadata covers fixed range",
+    "Second HTTP200 chunked body262145B equals cap+1",
+    "Both body hashes/receipts/attempts agree with terminal",
+    "Terminal unavailable and no projection",
+    "No partial history rows salvaged"
+  ],
+  "collector_imported": false,
+  "economics": false,
+  "independent_read_cap_bytes": 524288,
+  "match_conclusion": "unavailable",
+  "new_network_requests": 0,
+  "pins_verified": 9,
+  "plan.json": {
+    "bytes": 2141,
+    "sha256": "b14676fd3f1d809adcb0c087809d9ac4394b8753430de4ab8805ffa476dd7209"
+  },
+  "raw_bytes": 263581,
+  "raw_files_verified": 8,
+  "reviewer": "aave_census_review",
+  "run-v1/terminal.json": {
+    "bytes": 281,
+    "sha256": "29389cdf82671fe2ac34a946f57efaeb2f2a9a5a7839abf3bfec654bf199553c"
+  },
+  "schema": "aave-hint-access-failure-review-v1",
+  "status": "passed"
+}
