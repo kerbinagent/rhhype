@@ -1,0 +1,33 @@
+Fixed five-NO optimistic price screen — 2 October 2026
+
+Frozen before prices in commit aae72c1. One 15-slot calendar ran from
+10:39:41.414430884 to the last receipt at10:40:37.575374105 UTC. All15
+requests completed; all15 had exact identities and valid fields. No missing
+or invalid slot, no retry, substitute event or additional quote request.
+
+Every set had best asks0.998,0.995,0.26,0.76,0.996 in registered order.
+For equal net Q of each NO token, the displayed taker cost floor is4.009Q
+against source-model gross conversion return at most4Q. The optimistic
+margin is therefore -0.009Q nominal pUSD even with all costs set to zero.
+This conditional best-ask inequality applies to every equal Q>0; larger
+size cannot improve it under the candidate's taker-acquisition model.
+No depth, minimum-order sizing, fill or profitable cycle was modeled.
+
+Timestamp diagnostics failed for all15 sets. Inferred cross-book spans
+were11.238–46.785 seconds, and each set's oldest timestamp was11.632–52.841
+seconds before receipt. Units/meaning remain interpretive; the frozen
+5-second age and0.5-second span gates were not relaxed. Thus the flag for
+all scheduled sets being fresh and nonpositive is FALSE. The result is a
+negative bound on these recorded books, not verified simultaneous liquidity
+or a claim covering the continuous minute, other events or later periods.
+
+Decision: park this displayed-taker candidate without a depth/execution
+branch. No positive necessary price condition was found. Actual deployed
+conversion equivalence, pUSD redemption equivalence, conversion success,
+fees, acquisition/settlement/partial fills and gas remain unproved.
+
+Root checked raw response hashes, all15 identities/slot observations, exact
+Decimal best-ask sums, time diagnostics, request caps and post-run pins.
+243673 response bytes; compressed trace52466 bytes; plaintext377311 bytes
+was memory-only. See root-receipt.json and the immutable trace/summary.
+The original metadata mismatch and its corrected successor remain separate.

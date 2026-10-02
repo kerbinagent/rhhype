@@ -1,0 +1,80 @@
+{
+  "schema": "polymarket-no-basket-optimistic-books-root-receipt-v1",
+  "recorded_utc": "2026-10-02T10:42:47.910085+00:00",
+  "freeze_commit": "aae72c1",
+  "plan_sha256": "4bb8628338054ba1442b1a3568f5474b775d83bcfcf4841204522d9b620e4673",
+  "anchor_utc": "2026-10-02T10:39:41.414430884Z",
+  "ended_utc": "2026-10-02T10:40:37.623098+00:00",
+  "counts": {
+    "field_valid": 15,
+    "fresh_coherent_valid": 0,
+    "invalid": 0,
+    "missing": 0,
+    "nonpositive": 15,
+    "positive": 0,
+    "requests_attempted": 15,
+    "requests_attempted_known_lower_bound": 15,
+    "requests_attempted_unknown_slots": 0,
+    "scheduled": 15
+  },
+  "checks": "Root verified all15 raw body digests/sizes and observations against saved summary, exact five-token/condition/neg-risk identity, fixed body digest/calendar, measured dispatch lateness<=250ms, independent Decimal best-ask sums and frozen timestamp calculations, total response bytes and post-run source pins. No further HTTP.",
+  "best_asks_in_registered_order": [
+    "0.998",
+    "0.995",
+    "0.26",
+    "0.76",
+    "0.996"
+  ],
+  "displayed_cost_floor_per_equal_Q": "4.009",
+  "optimistic_margin_per_equal_Q": "-0.009",
+  "margin_units": "conditional nominal pUSD; no real USD/USDC equivalence established",
+  "all_scheduled_sets_fresh_nonpositive": false,
+  "timestamp_diagnostics": {
+    "fresh_coherent_slots": 0,
+    "cross_book_span_seconds_range": [
+      11.238,
+      46.785
+    ],
+    "maximum_inferred_age_seconds_range": [
+      11.631950975,
+      52.841374105
+    ],
+    "interpretive_units": true
+  },
+  "timing": {
+    "maximum_measured_dispatch_lateness_seconds": 0.009859102996415459,
+    "request_duration_seconds_range": [
+      0.13598892200388946,
+      0.16522477399848867
+    ]
+  },
+  "decision": "Park this displayed-taker candidate at the recorded sets: all15 conditional zero-cost margins negative. Contemporaneous all-slot conclusion remains unavailable; do not relax timestamp gates or escalate to depth/execution from these prices. No claim about other times, events or mechanisms.",
+  "remaining_limits": "Conditional same-unit conversion source model only; deployed-source equivalence, conversion success, liquidity, fees, fills, settlement and inclusion unproved. No orders or profit.",
+  "files": [
+    {
+      "path": "reports/polymarket-no-basket/optimistic-books-v1/claim.json",
+      "bytes": 454,
+      "sha256": "b67c189bb21d68f00eaeddd24b6fff32870b6c2ff63a3f40a8aaf754e164f853"
+    },
+    {
+      "path": "reports/polymarket-no-basket/optimistic-books-v1/summary.json",
+      "bytes": 41077,
+      "sha256": "2d4d67a1cfc2f74359b00208940e2f311cd8b0fe05900bda3d9804fd545264ca"
+    },
+    {
+      "path": "reports/polymarket-no-basket/optimistic-books-v1/supervisor.json",
+      "bytes": 238,
+      "sha256": "fac7a50f1db468ee1554a3b43344f28185f399674c960a1e2cb27bbd547cd3c2"
+    },
+    {
+      "path": "reports/polymarket-no-basket/optimistic-books-v1/terminal.json",
+      "bytes": 1280,
+      "sha256": "582af32021a37215a9fda425e3c3d8459ee729ec3931a7cdaf104b33ead347db"
+    },
+    {
+      "path": "reports/polymarket-no-basket/optimistic-books-v1/trace.jsonl.gz",
+      "bytes": 52466,
+      "sha256": "36ed09f1e46ac9b22d94e243bc544d37df2c19f3e98e9009ec2f7e08fd685321"
+    }
+  ]
+}

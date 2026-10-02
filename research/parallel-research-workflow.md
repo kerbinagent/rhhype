@@ -219,7 +219,13 @@ the official current deployment repository. A separately frozen successor
 passed all55 metadata checks: five registered questions, all ten positions,
 zero conversion fee and required wrapper bindings/permissions at one stable
 block. [Root receipt](../reports/polymarket-no-basket/chain-metadata-v2/root-receipt.json).
-Actual conversion and deployed-source equivalence remain unproven. A fixed
-five-NO book screen is being prepared to test the conditional zero-cost bound
-4 minus the sum of best asks, with all sampled slots retained. No price has
-yet been observed for this study.
+Actual conversion and deployed-source equivalence remain unproven. The fixed
+[five-NO book screen](../reports/polymarket-no-basket/optimistic-books-v1/readout.txt)
+completed all15 requests. Every recorded set had a cost floor of4.009Q against
+at most4Q gross conversion return, giving a conditional zero-cost margin
+of−0.009Q nominal pUSD. All15 sets failed the frozen timestamp diagnostics,
+so no simultaneous all-slot conclusion is available. Park this displayed-taker
+candidate at these recorded quotes; larger equal size cannot improve the bound.
+There is no depth/execution branch or profit claim, and no conclusion about
+other events or later periods. Root reconciled all15 raw responses and kept
+the original timing gates.
