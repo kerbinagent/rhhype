@@ -1998,3 +1998,8 @@ waitingfreshheartbeats. Next01:26:33UTC.
 ### Routine review 172 — 2026-10-02 01:26:33 UTC
 
 Two exact Premium losses / −$3.3787819758; no new gains or estimates. All coverage complete; report and independent epoch snapshot archived with exact verification and pre-write guards. Cumulative 2,522 completions: 2,489 exact losses, one estimate, five paired gains, 27 rescue gains. Fresh four-feed paper health; carry 299 sampled / one invalid / 564 future. News and offline companion waiting with fresh heartbeats, economics false; no competing jobs. Archive 3,748,059 B, projection 4,501,281 B against 5 MiB; next 01:46:33 UTC.
+
+
+### Routine review 173 — 2026-10-02 01:46:33 UTC
+
+Two exact Premium losses / −$3.3443028994, no gains or estimates; HL price-limit and Core notional-cap rejects one each. Complete coverage, independently timed snapshot and exact deterministic archives verified. Cumulative 2,524 completions: 2,491 exact losses, one estimate, five paired gains, 27 rescue gains. Paper fresh/ok, four feeds; carry 303 sampled / one invalid / 560 future. Both news helpers waiting with fresh heartbeats, economics false. Archive 3,752,453 B, projected 4,500,333 B under 5 MiB; next 02:06:33 UTC.
