@@ -6349,3 +6349,20 @@ Paper pulses fresh/ok/fourfeeds;review CPU70.39%,p95 38.12ms,RSS283.27MiB,102pai
 Newsoperationalpreflight12:07:allthreehelpersfreshwaiting/economicsfalse,advertisedhashesmatch originalcapturee9efab93a06e4e53fdb76b2f4b0e955f25f37a749c810062736a66f04ec90ffe/originalanalysisc0a2a61379bb075f630ca8c7ebeb06d59ef5200aa8b008ed4f4e1f2684c887ff/corrected45ba5e949a317eef63fdd1e4dede1748a488a85f0cfa8a27fe5fcc0210dc126d. Target12:26UTC/event12:30epochsunchanged. Root11:56:50verified80originalpins/14correctedpins;routinehealthreadnoearlyraw/sourcechanges/competinganalysis. Capturemustremainoriginal600sec/noextension;companionsownofflineoutputs.
 
 Carry 2026-10-02T12:05:00.117827+00:00: 426sampled,twoinvalid(71,389),436future/interrupted,running/noerror/retry/evaluation. No carrysamplecontents/newsoutcomesopened. Reviews66–204:2,710completions=2,674exactlosses,oneestimatedloss,fiveauditedpairedgains,30auditedrescuegains. Archive 3,900,675/5,242,880B;109futurepairs at5,342B project 4,482,953B,margin 759,927B. Next **12:26:33 UTC**.
+
+
+### Review 205 — 2026-10-02 12:26:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Exact report and independently timed snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap and growth guards.
+
+`review-20261002T122633Z.json.gz` raw 18,449 B SHA-256 `0f481b61479693847ee4fa15c626489eecb61c85ed4685c3135c900cfca3d9a9`; gzip 2,696 B SHA-256 `4fa0aeca06c24c26d3e6381574ebe914724fb86a9ef626a85aa990f5f748b23a`.
+
+`current-epoch-at-review205.json.gz` raw 9,283 B SHA-256 `30333dca145ca790fa3875621dbc4e446cdbe1b4c8455677983c398d8c1a1f3d`; gzip 1,729 B SHA-256 `c9b9f8f0d8eb16fcb3b03fdb09947553460aed02498c8578e1ac7068de30246f`.
+
+Snapshot read 2026-10-02T12:27:04.904361Z, updated epoch seconds 1790944024.2697272; counts not pooled. Sixteen exact Premium losses / −$28.82330618596643; no gains, estimates, aborts or rejects. Fees $14.061768383247909, other costs $7.989872301499872, capital $0.000568501213508904.
+
+Paper fresh and ok, four feeds connected; review CPU58.25%, p95 lag37.77ms, RSS284.11MiB,102pairs. Rolling chunk57 healthy at423.53s,15,792,613 compressed B,111,544records,two connections,no errors,economics false; store chunks1,145,659,241B and controls37,489B under separate2GB. Recovery gap1,151.452925s remains recorded; no routine raw reads or intervention.
+
+News capture launched on schedule12:26:00.000525UTC, original frozen plan unchanged; early operational status25.03s/1,237,092compressed B/6,493records,two connections,no errors,economics false. Original and corrected analysis companions remain waiting with fresh heartbeats and own their outputs. No early outcomes read or competing analysis launched. Root12:15preflight verified94pins and all three host helpers alive.
+
+Carry12:25:00.119795UTC:430sampled,two arrival invalid(71,389),432future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–205:2,726completions=2,690exact losses,one estimated loss,five audited paired gains,30audited rescue gains. Archive3,905,100/5,242,880B;108future pairs at5,342B project4,482,036B,margin760,844B. Next **12:46:33 UTC**.
