@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "sample": "lit-depth-fade-prospective-v1-000100-depth-lit",
+  "counts": {
+    "signal": 18,
+    "request": 31,
+    "ioc": 31,
+    "closed": 13
+  },
+  "raw_capture_verified": true,
+  "signal_checks_vacuous": false,
+  "fill_checks_vacuous": false,
+  "summary_sha256": "e25dd5dc0254e3a321802be9105633f4132a66012a1e03c0ed60194e4b178e8b",
+  "trace_sha256": "8750c50def9998bab4009bcb1c4053f17c7f394454916b2b08f6228d838b0c4d",
+  "limits": "Conditional public-book IOC execution. Signal and first-eligible book checks plus cash reconciliation; no private order acknowledgments or authenticated fills. Independent arms must not be summed."
+}

@@ -250,7 +250,7 @@ The [corrected news result](../reports/single-venue-news-inventory-fix-v2/root-r
 
 News Core NEAR follow returned +0.5889 stressed USDC. The [ordinary successor](../reports/news-candidate-rolling-v1/run-v1/root-review.json), fixed chunk 76, had zero primary/comparator attempts: 100 flat-known policies, 20 passed audits and 24 descriptive closes rechecked. Coverage failed; no news replication or repeatable profit.
 
-RH LIT fade: prior ordinary +0.0216 stressed USDG, news −0.1152. The [prospective pair](../reports/experiment-storage/lit-depth-fade-prospective-v1.json) froze before96/100. Chunk96 failed: primary2attempts/1close, −0.114295 stressed USDG, fade-minus-follow −0.135615. All four ledgers flat and audited; root reconciled10closes. Fixed100 remains scheduled; no replacement or comparator promotion.
+RH LIT fade: prior ordinary +0.0216 stressed USDG, news −0.1152. The [fixed pair](../reports/lit-depth-fade-prospective-v1/root-review-000100.json) failed both blocks:96/100 primary2/5 attempts,1/4 closes, stressed −0.114295/−0.591443 USDG; fade-minus-follow −0.135615/−1.014009. All8 ledgers flat and audited; root checked23closes. Parked; no replacement, tuning or comparator promotion.
 
 The [Comet reproduction](../reports/comet-reproduction-v1/root-reconciliation.json) matched 18,599 runtime bytes and 70 immutable ranges. The [31-call pass](../reports/comet-eligibility-live-v1/root-reconciliation.json) reported open sale prerequisites but only 438,676,007,750 native WETH stock. The [gas floor](../reports/comet-inventory-gas-bound-v1/root-reconciliation.json) rejects that parent under its model; child economics are unavailable because simulated base fee is zero. Dependencies remain unproved.
 
