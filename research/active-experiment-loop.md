@@ -2143,3 +2143,8 @@ Nine exact Premium losses/−$15.1536149266;no gains/estimates/aborts/rejects. C
 ### Routine review201 — 2026-10-02 11:06:33 UTC
 
 14exactlosses:convergence2/−$2.1242413242,Premium12/−$20.2232362807;no gains/estimates/aborts,two HLprice-limit rejects. Completecoverage/exactarchiveguards. Cumulative2,686:2,650exactlosses,oneestimate,fivepairedgains,30auditedrescuegains. Paperfresh/ok lag34.11ms/CPU63.93%;rollingchunk51healthy/economicsfalse;three newshelperswaiting/fresh. Carry 414sampled/twoinvalid(71,389)/448future. Archive 3,887,144B,projection 4,485,448B under5MiB;next11:26:33UTC.
+
+
+### Routine review202 — 2026-10-02 11:26:33 UTC
+
+10exactlosses:convergence3/−$1.3938995039,Premium7/−$11.2793757103;no gains/estimates/aborts,four HLprice-limit rejects. Completecoverage/exactarchiveguards. Cumulative2,696:2,660exactlosses,oneestimate,fivepairedgains,30auditedrescuegains. Paperfresh/ok lag36.67ms/CPU65.22%. Rollingfailed11:20:37control-record bound,rootnotified/repairowned;chunk52preserved,no routineintervention. Three newshelperswaiting/fresh. Carry 418sampled/twoinvalid(71,389)/444future. Archive 3,891,863B,projection 4,484,825B under5MiB;next11:46:33UTC.

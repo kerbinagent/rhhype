@@ -6302,3 +6302,18 @@ Snapshot read 2026-10-02T11:07:17.176557Z,updated epochseconds 1790939236.743002
 Paper pulses fresh/ok/fourfeeds,lag33.40/35.42/39.84ms;review CPU63.93%,p95 34.11ms,RSS293.75MiB,103pairs. Rollingchunk000051 healthy407.51s/13,934,099compressedB/102,101records,two connections/no errors/economicsfalse. Controller chunks1,030,308,250B/controls1,025,278B under separate decimal2GB. Three newshelperswaiting/fresh/economicsfalse. No raw/reserved economics,carry samples/news outcomes opened;no interventions.
 
 Carry 2026-10-02T11:05:00.117226+00:00: 414sampled,two invalid(71,389),448future/interrupted,running/no error/retry/evaluation. Reviews66–201:2,686completions=2,650exactlosses,one estimatedloss,five auditedpairedgains,30auditedrescuegains. Archive 3,887,144/5,242,880B;112futurepairs at5,342B project 4,485,448B,margin 757,432B. Next **11:26:33 UTC**.
+
+
+### Review 202 — 2026-10-02 11:26:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Exact report and independent snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap/growth guards.
+
+`review-20261002T112633Z.json.gz` raw 19,537 B SHA-256 `696b8c2aded7aef660760c1841005aa344451ba43359b5b648ee4a89dcb1f876`; gzip 2,989 B SHA-256 `f88c454d793ab3b64ff161ac9b263f67753e8a682030f8fbf9e4b976267d223a`.
+
+`current-epoch-at-review202.json.gz` raw 9,284 B SHA-256 `94df8ae669cd0bfd75583c3667446e6e838931c22a4a3da1aa8539a0de405db0`; gzip 1,730 B SHA-256 `b9c0627979cfeed14ccfb40f5de31d9e43fe8d4265257a40c29ca2a76575f466`.
+
+Snapshot read 2026-10-02T11:27:55.782256Z,updated epochseconds 1790940475.4921446;counts not pooled. Ten exactlosses:convergence3/−$1.3938995039,Premium7/−$11.2793757103;no gains/estimates/aborts. HLprice_limit4. Convergence other$1.4931257330/capital$0.0000057709;Premium fees$5.9701726431/other$3.4947377770/capital$0.0002152902.
+
+Paper pulses fresh/ok/fourfeeds;review CPU65.22%,p95 36.67ms,RSS295.18MiB,103pairs. Rollingcontroller failed11:20:37.925908UTC,observed11:23,statusfailed/capture_runningfalse/economicsfalse,error StoreError:control record exceeds bound. Index retainedchunk52 collecting/reserved_validation;root urgentlynotified andownsrepair. Exactpaths data/rolling/market-research-v1/status.json,index.json,chunk-000052/capture/status.json;exception scripts/rolling_research_capture.py:91. No relaunch/mutation byroutine. Operational indexread inadvertently printed recentsealed coverage counters,withoutprices/economics;subsequentreads selectsstateonly. Statuschunks1,054,818,084B/controls1,046,582B under separate2GB,notcap exhaustionclaim. Three newshelperswaiting/fresh/economicsfalse;no carrysamples/newsoutcomes opened.
+
+Carry 2026-10-02T11:25:00.114597+00:00: 418sampled,two invalid(71,389),444future/interrupted,running/no error/retry/evaluation. Reviews66–202:2,696completions=2,660exactlosses,one estimatedloss,five auditedpairedgains,30auditedrescuegains. Archive 3,891,863/5,242,880B;111futurepairs at5,342B project 4,484,825B,margin 758,055B. Next **11:46:33 UTC**.
