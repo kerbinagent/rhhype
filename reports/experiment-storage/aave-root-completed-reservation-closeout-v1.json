@@ -1,0 +1,50 @@
+{
+  "active_research_headroom_bytes": 3633152,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 251121664,
+  "all_evidence_preserved": true,
+  "control_allocation": "existing continuation root coordination16KiB",
+  "experiments": [
+    {
+      "completed_and_independently_audited": true,
+      "current_named_bytes": 355222,
+      "experiment": "aave-liquidation-census-v1",
+      "future_collection_authority_remaining": false,
+      "old_reservation_bytes": 1048576,
+      "release_unused_bytes": 524288,
+      "retained_reservation_bytes": 524288,
+      "terminal_review": "reports/aave-liquidation-census-v1/root-review.json"
+    },
+    {
+      "completed_and_independently_audited": true,
+      "current_named_bytes": 182090,
+      "experiment": "aave-ordered-replay-v1",
+      "future_collection_authority_remaining": false,
+      "old_reservation_bytes": 786432,
+      "release_unused_bytes": 524288,
+      "retained_reservation_bytes": 262144,
+      "terminal_review": "reports/aave-ordered-replay-v1/root-review.json"
+    },
+    {
+      "completed_and_independently_audited": true,
+      "current_named_bytes": 102539,
+      "experiment": "aave-ordered-control-v1",
+      "future_collection_authority_remaining": false,
+      "old_reservation_bytes": 327680,
+      "release_unused_bytes": 163840,
+      "retained_reservation_bytes": 163840,
+      "terminal_review": "reports/aave-ordered-control-v1/root-review.json"
+    }
+  ],
+  "headroom_after_pending_escrow_bytes": 1536000,
+  "interpretation": "Release only unused reservations from completed exclusive-claim runs. Retain every source, test, plan, raw response, terminal, review and report. Shared predecessor helpers remain funded by their prior allocations. No new collection or remote budget approval.",
+  "overall_reservation_bytes": 2846202112,
+  "pending_mac_expansion_escrow_bytes": 2097152,
+  "previous_global_allocation": {
+    "path": "reports/experiment-storage/continuation-documentation-retention-reconciliation-v1.json",
+    "sha256": "1035caf2c16683d8b9fc48d2babb80e98ac78dca3882a52dd3c1fe3a374bff88"
+  },
+  "recorded_utc": "2026-10-02T22:37:21.894932+00:00",
+  "release_unused_bytes": 1212416,
+  "schema": "aave-root-completed-reservation-closeout-v1"
+}

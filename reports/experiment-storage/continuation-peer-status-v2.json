@@ -1,0 +1,62 @@
+{
+  "control_allocation": "existing continuation root coordination16KiB",
+  "local_claude": {
+    "address": "f0ba21b0-a741-4804-a646-c405993cfa08/80be8295-bc8c-4296-b615-b7fb37e49947",
+    "ownership": "Peer source/results remain peer owned; no shared index writes by peer.",
+    "q357": "Peer report: no supported causal coverage after bbo/l2Book premise failed; no positive or negative economic inference. Root read the interpretation and user authority record; did not redo the complete peer replay audit.",
+    "q359": "User-approved 4MiB l2Book capture and sealed post-window analysis. Root verified all three timer ActiveState=active/SubState=waiting on host.",
+    "timers_utc": {
+      "hip4-live-v2-q359-merge.timer": "2026-10-03T18:40:00Z",
+      "hip4-live-v2-q359-post.timer": "2026-10-03T18:20:00Z",
+      "hip4-live-v2-q359.timer": "2026-10-03T15:37:00Z"
+    }
+  },
+  "mac": {
+    "address": "07b1b113-966a-4dab-bc55-54f41193f9bf/c1f31b3b-ebf4-49f9-9b84-236d4a61338d",
+    "latest_notice_utc": "2026-10-02T22:16:44.636Z",
+    "message_budget": "62856/65536B reported;2680B left; coordination kept brief.",
+    "retained_result": "Peer reported fixed61RPC direct discovery with28nonzero and24zero pool rows; price/execution/economic proof still pending. Offline tools reviewed in RAM, no new live collection.",
+    "status": "Direct-user answer on expansion from2MiB to4MiB still pending; root has not inferred approval. No new remote RPC/files/transfers planned under existing cap."
+  },
+  "read_peer_file_pins": [
+    {
+      "bytes": 4929,
+      "path": "reports/hip4-independent-research/q357-interpretation-v1.md",
+      "sha256": "de37fb1c91ee58b82ec4f6d2967bbdbbd9165a000ac84e53938229992a655b46"
+    },
+    {
+      "bytes": 2817,
+      "path": "reports/hip4-independent-research/live-v2/authority-v1.json",
+      "sha256": "b156941fa067873e78eea98455ab21eeed51e6974a3cc00ec844d2b4f73f392f"
+    },
+    {
+      "bytes": 1770,
+      "path": "reports/hip4-independent-research/live-v2/host-timer-q359-v1.json",
+      "sha256": "d10316dbcbb93132cb1edbaff8704ebbe4acafc27527b653fd1cfd475d019b25"
+    },
+    {
+      "bytes": 2024,
+      "path": "reports/hip4-independent-research/live-v2/host-timer-q359-post-v1.json",
+      "sha256": "e55604bcb5ceb21cd4391cbee5d131b5395464428905cb1742f79acf81c93dd4"
+    },
+    {
+      "bytes": 1604,
+      "path": "reports/hip4-independent-research/live-v2/host-timer-q359-merge-v1.json",
+      "sha256": "a02322a1048274e723e6f16a5f1f5a6efaae7e2e8b708bae214b636100a98a1b"
+    }
+  ],
+  "recorded_utc": "2026-10-02T22:37:21.894932+00:00",
+  "root": {
+    "address": "f0ba21b0-a741-4804-a646-c405993cfa08/4ed07c1a-8f05-486f-8cb8-7fdda2e24e41",
+    "work": "Implemented, tested, ran and independently audited Aave census, ordered replay and omission control; 31 offline tests across the three runners; first event depends on prior transaction, nearly all unwrapped ETH paid to fee recipient. No deployable profit claim."
+  },
+  "routine": {
+    "checkpoint_utc": "2026-10-02T22:26:33.046605Z",
+    "latest_archived_review": 235,
+    "new_aborts": 0,
+    "new_closes": 0,
+    "next_due_utc": "2026-10-02T22:46:33.239257Z",
+    "rolling_and_carry": "Healthy at latest routine observations; no root restart or blind economic read."
+  },
+  "schema": "continuation-peer-status-v2"
+}

@@ -39,6 +39,11 @@ The current experiment does not establish the feed's relationship to the
 borrower or isolate the effect of that update. A separate control can replay
 the same liquidation without the preceding transaction at the same timestamp.
 
+The completed [same-event control](../aave-ordered-control-v1/readout.md) now
+shows that removing only the preceding transaction causes a revert. This
+supports dependence on that transaction under the provider's model; the
+specific internal cause remains unidentified.
+
 The eight-request run finished in 986 ms, retained 94,128 response-body bytes
 and 109,142 framed bytes, and passed exact offline replay. An independent
 decoder checked all requests, source/input pins, block context, both complete

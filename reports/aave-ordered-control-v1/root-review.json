@@ -1,0 +1,147 @@
+{
+  "artifacts": [
+    {
+      "bytes": 1293,
+      "path": "reports/aave-ordered-control-v1/run-v1/claim.json",
+      "sha256": "a74bca0c422f443c9cda384c2599b3e3b1bc4af3aca8dbcc4f3dad7fe7b1ad14"
+    },
+    {
+      "bytes": 1407,
+      "path": "reports/aave-ordered-control-v1/run-v1/projection.json",
+      "sha256": "33c8d9f9491455ff87802a8ce49086cc9ad47d594293061bc69c61f022e31140"
+    },
+    {
+      "bytes": 40,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/01.body",
+      "sha256": "208c0be5a34cd9b241311e625b3035aa89cb237969cbc1a0c9cbd8c8517087eb"
+    },
+    {
+      "bytes": 552,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/01.headers.json",
+      "sha256": "2ab63f0f7ed797fe27f58baf960e9ee543e6d67203be26fead0c0db3ffc9a579"
+    },
+    {
+      "bytes": 194,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/01.receipt.json",
+      "sha256": "8ded154f1b787284b057fd4b53dcaed31fe2511b1f3dbcbe67b878f1f3f8a642"
+    },
+    {
+      "bytes": 86,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/01.request.json",
+      "sha256": "e3fe5b2b7b0cc78a5ca046c76dacc95bc468fc83cc9da5b4ac619f46eef3c03f"
+    },
+    {
+      "bytes": 10286,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/02.body",
+      "sha256": "3fc0cd44d671861cf4a453de6f2fcaa009a264d374137684e852f83244ecf5ff"
+    },
+    {
+      "bytes": 561,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/02.headers.json",
+      "sha256": "02285fd25f6650be88feb26ecce6e580e0693ff484f9d048d7741b3fa0ecb4f1"
+    },
+    {
+      "bytes": 197,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/02.receipt.json",
+      "sha256": "fa177ab85de69d9eabf1b26ff67654be38db3f44448a764e167068b5f5221fd5"
+    },
+    {
+      "bytes": 113,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/02.request.json",
+      "sha256": "3a04f7bd9971bc3fc33c940e5f3eeecc507dea85e04233096723ff08b2b7ec43"
+    },
+    {
+      "bytes": 2033,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/03.body",
+      "sha256": "e351e2bb4b271d868d1dfae0335d4eeeb914b249f12ce0a1b8605a415d197d1c"
+    },
+    {
+      "bytes": 555,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/03.headers.json",
+      "sha256": "2ad294abc274dcc11a335548ab762269f7e816226d6c5f5737e2cb7ab720aecd"
+    },
+    {
+      "bytes": 196,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/03.receipt.json",
+      "sha256": "4b3db6a9040a6af0e4d7295f4b2d8206b0f5b2f51995c03b38ec1941c6c194b6"
+    },
+    {
+      "bytes": 2583,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/03.request.json",
+      "sha256": "88244b23db39d97e4727da13c597f0eee187e5911f618aeaea0d673e9ae45e0d"
+    },
+    {
+      "bytes": 10286,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/04.body",
+      "sha256": "e39284d05eb9636e4809e08ac1a97a269ddcf7887712a28c76ae1ae705068e99"
+    },
+    {
+      "bytes": 561,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/04.headers.json",
+      "sha256": "5d8b08606e471e694a499de57d2cf2379ca266f398c9b5dc4a2a14b6f85bcca3"
+    },
+    {
+      "bytes": 197,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/04.receipt.json",
+      "sha256": "d8b30d2385c32874ef5fb4fc1ef79d307d2b9b76253a3519814f0a274e0a401a"
+    },
+    {
+      "bytes": 121,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/04.request.json",
+      "sha256": "0378053934c7907d0be4315d27c8ff6dc8cfdc648bcb8685af1dd185822b3ed7"
+    },
+    {
+      "bytes": 29951,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/05.body",
+      "sha256": "562c4998c482e73dbc64a2668a0f7629736a7603268fcccc91dc12d9b293ba44"
+    },
+    {
+      "bytes": 560,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/05.headers.json",
+      "sha256": "99261e1a397b641dfca2e142df4f726666e447d96318c00c43c1281b98f85615"
+    },
+    {
+      "bytes": 197,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/05.receipt.json",
+      "sha256": "336d113cb0726a82e1396c02c500454acdca42d0e68f6ac80a1311dc20d02b0f"
+    },
+    {
+      "bytes": 120,
+      "path": "reports/aave-ordered-control-v1/run-v1/raw/05.request.json",
+      "sha256": "47d36e013e0ebf6d9d5035ba37b25020f86e069b6b5eff16aff6ce491aee5d8f"
+    },
+    {
+      "bytes": 289,
+      "path": "reports/aave-ordered-control-v1/run-v1/terminal.json",
+      "sha256": "6f9368731a420a2dd3bf7f5148f21ad454f19143c9504abfb1131746d88d3903"
+    }
+  ],
+  "closed_cash": false,
+  "control": {
+    "internal_cause_attributed": false,
+    "logs": 0,
+    "published_health_factor_custom_error_selector": "0x930bb771",
+    "return_data": "0x",
+    "separate_call_error": {
+      "code": 3,
+      "data": "0x57a5829c",
+      "message": "execution reverted"
+    },
+    "simulated_gas_used": 631437,
+    "status": 0
+  },
+  "economics": false,
+  "exit_code": 0,
+  "independent_review": {
+    "agent": "aave_census_review",
+    "method": "Separate decoder without collector import;344210 combined read bytes;all8pins;exact20rawfiles;5RPC identities/transport receipts;single deletion compared against positive raw;parent/context/target fields and header rechecks",
+    "result": "No discrepancy or blocker"
+  },
+  "interpretation": "Under the public provider historical model, original success depends on the prefix transaction; identical target block context without prefix reverts. Specific internal cause and obtainability of ordering remain unproved. Control uses no economic outcome or actual gas expenditure.",
+  "plan_sha256": "78856bf87932c7665756c46227df934b621908821d3afd6d54ea00e3b189ab09",
+  "recorded_utc": "2026-10-02T22:35:46.492303+00:00",
+  "root_replay": "Exact five-slot replay matched projection,52596bodybytes,59389rawbytes",
+  "schema": "aave-ordered-control-root-review-v1",
+  "source_freeze_commit": "70298ff",
+  "status": "PASS_control_reverted_without_prefix"
+}
