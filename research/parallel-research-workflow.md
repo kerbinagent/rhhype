@@ -184,10 +184,7 @@ comes from existing headroom. Rolling and reserved data retain their rules.
 
 ## Peer primary-issuance compatibility work
 
-The [metadata probe](../reports/peer-research/20261002-0910/root-receipt.json) and
-[post-submit bound design](../reports/peer-research/20261002-0941/peer-primary-issuance-bound-design-v1.json)
-preceded the negative issuance result below. All evidence and transport copies
-remain retained under the peer grant.
+Retained [metadata](../reports/peer-research/20261002-0910/root-receipt.json) and [bound design](../reports/peer-research/20261002-0941/peer-primary-issuance-bound-design-v1.json) preceded the negative issuance result below.
 
 ## Polymarket full-NO conversion metadata
 
@@ -224,7 +221,7 @@ Root independently reconciled every response with rational arithmetic. No
 positive candidate remains at these recorded quotes. The result is conditional
 on conversion/payoff assumptions, not proof of simultaneous executable depth.
 
-Claude owns funded pairing under the [continuing research grant](../reports/experiment-storage/independent-research-ownership-v1.json), with no per-step wait for root. Its implementation is being revised. The [live plan](../reports/experiment-storage/hip4-continuation-live-v1.json) launches at 18:22 UTC for Q357's 18:35–20:50 window; 21 causal tests passed. Residual claims do not count as closed cash.
+Claude independently owns funded pairing under the [grant](../reports/experiment-storage/independent-research-ownership-v1.json). The frozen Q357 service started 18:22 UTC for 18:35–20:50; 21 causal tests passed. V4 operational repairs passed static review; v5 optimizes synthetic work limits while blinded during collection. Residual claims are not closed cash.
 
 ## Conversion price screens, 2 October 12:02 UTC
 
@@ -249,22 +246,12 @@ reservations; the linked receipts record the source-category adjustment.
 
 ## Completed news study and continuing source research
 
-The [corrected result](../reports/single-venue-news-inventory-fix-v2/root-readout.txt)
-contains 100 flat-known policies and 20 passed audits: 67 active, 48 with closes,
-27 net positive and 12 positive after extra 5 bp stress. The original output
-and pre-economic inventory failure remain retained. The frozen inventory repair
-changed no scientific rule or raw data; both complete versions reconciled.
-The correction changed which policies were positive, despite the same count.
-Several winners overlap the release move; alternative ledgers cannot be added.
+The [corrected news result](../reports/single-venue-news-inventory-fix-v2/root-readout.txt) has 100 flat-known policies and 20 passed audits: 67 active, 48 with closes, 27 net positive, 12 positive after 5 bp stress. Original output and pre-economic failure remain retained. Inventory repair changed no rule/raw data; both versions reconciled, but different policies were positive. Overlapping alternatives cannot be added.
 
-Core NEAR depth-follow's news closes returned +0.5889 stressed USDC. The fixed
-[ordinary successor](../reports/news-candidate-rolling-v1/run-v1/root-review.json)
-completed on the preselected reserved chunk 76: primary and fade comparator
-both had zero attempts. All 100 policies were flat-known and all 20 audits
-passed. Root recomputed all 24 descriptive closes; RH LIT fade's +0.0216 stressed
-USDG remains exploratory. The primary coverage gate failed. No winner replaces
-the primary, and neither news replication nor repeatable profit is established.
+News Core NEAR follow returned +0.5889 stressed USDC. The [ordinary successor](../reports/news-candidate-rolling-v1/run-v1/root-review.json), fixed chunk 76, had zero primary/comparator attempts: 100 flat-known policies, 20 passed audits and 24 descriptive closes rechecked. Coverage failed; no news replication or repeatable profit.
+
+RH LIT fade remains separate: ordinary +0.0216 stressed USDG versus earlier news −0.1152. Its [prospective pair](../reports/experiment-storage/lit-depth-fade-prospective-v1.json) froze before chunks 96/100; the host supervisor is waiting. Each has four ledgers and one audit, no replacement. Both need positive stressed primary cash and advantage over follow, with at least three combined closes.
 
 The [Comet reproduction](../reports/comet-reproduction-v1/root-reconciliation.json) matched 18,599 runtime bytes and 70 immutable ranges. The [31-call pass](../reports/comet-eligibility-live-v1/root-reconciliation.json) reported open sale prerequisites but only 438,676,007,750 native WETH stock. The [gas floor](../reports/comet-inventory-gas-bound-v1/root-reconciliation.json) rejects that parent under its model; child economics are unavailable because simulated base fee is zero. Dependencies remain unproved.
 
-The Mac peer independently owns Comet sale-route research. Root and Sol accepted its [USDC cash bound](../reports/comet-usdc-sale-bound-v1/root-review.json) as conditional source mathematics. The [census](../reports/comet-collateral-inventory-v1/root-reconciliation.json) found 11 positive stocks and two zeros. Price and route checks are next.
+The Mac peer owns Comet routes. The [USDC bound](../reports/comet-usdc-sale-bound-v1/root-review.json) and [toolkit](../reports/peer-comet-independent-toolkit-v1/root-review.json) passed root/Sol review; 31 root tests passed. The [census](../reports/comet-collateral-inventory-v1/root-reconciliation.json) has 11 positive stocks and two zeros. Fixed route/price work continues; these are conditional models.
