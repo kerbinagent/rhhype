@@ -273,7 +273,8 @@ without replacement. A [pre-cutoff host startup repair](../reports/experiment-st
 preserves the failed sandbox launch. One ordinary block tests applicability;
 it does not establish news replication or repeatable profit.
 
-The [Comet identity pass](../reports/comet-identity-v1/root-reconciliation.json)
-reconciled six reads at block 26105238. Its [metadata GET](../reports/comet-source-metadata-v1/root-reconciliation.json)
-returned a gateway retirement notice: unavailable, with no retry. Source binding
-and economics remain unproved. The reviewed Clipper census stays offline.
+The [Comet artifact check](../reports/comet-sourcify-lookup-v1/root-reconciliation.json)
+matched the retained runtime, including all 70 immutable substitutions. Its
+literal metadata bytes match the embedded content hash. Independent compilation
+and economics remain unproved. The failed gateway request stays retained;
+Clipper remains offline.

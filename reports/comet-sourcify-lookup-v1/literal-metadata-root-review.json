@@ -1,0 +1,28 @@
+{
+  "byte_slice": {
+    "bytes": 40230,
+    "end_exclusive": 40242,
+    "sha256": "386c4a9822d4475b90c59addf8153cb0b10f83a237af2a60b75aa3eeb2f03b6a",
+    "start_inclusive": 12
+  },
+  "claims": {
+    "economics": false,
+    "eligibility": false,
+    "independent_compilation": false,
+    "source_equivalence": false
+  },
+  "frozen_stage_unchanged": "Original run projection keeps metadata_cid_verified:false as specified. This separate offline observation follows the retained successful request and does not alter its claim or make another request.",
+  "input": {
+    "bytes": 124569,
+    "path": "reports/comet-sourcify-lookup-v1/run-v1/response.raw",
+    "sha256": "5c314b54024ea40dca7463793ca74cccfc7ee6b9a28275b0c5b3d5ac952cab68"
+  },
+  "multihash_hex": "1220dd4d8e5db53112439967db2c464c1ea494a86bff16c12971539081501f5c3643",
+  "not_reserialized": "No JSON serialization, key/escape/order variant, normalization or alternate candidate was used. The metadata slice is never written as a second raw file.",
+  "recorded_utc": "2026-10-02T15:41:11.395749+00:00",
+  "schema": "comet-sourcify-literal-metadata-root-review-v1",
+  "scope": "This authenticates the literal metadata content named by the retained runtime trailer. Metadata compiler/settings/source entries are now content-address bound claims; independent compilation, actual source-unit hashes and deployed dependencies remain unverified. It is not a source-equivalence or economic proof.",
+  "status": "literal_retained_metadata_bytes_match_embedded_content_hash",
+  "storage": "One root-only receipt charged to the existing Sourcify40960B controls category. No raw slice, compiler/source download or peer artifact copy.",
+  "verification": "Independent Sol extracted the exact original lexical value bytes and used the reviewed Solidity0.8.15 UnixFS helper. Root separately verified wrapper offsets, complete JSON value equality and reconstructed single-leaf DAG-PB framing with an independent varint implementation. Exact embedded multihash matches."
+}
