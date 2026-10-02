@@ -2088,3 +2088,8 @@ Three exact Premium losses / −$5.1630704036; no gains/estimates/aborts/rejects
 ### Routine review 190 — 2026-10-02 07:26:33 UTC
 
 Five exact losses: convergence one / −$0.7088411617, Premium four / −$6.8927556473; no gains/estimates/aborts, one HL price-limit reject. Complete coverage/exact archive guards. Cumulative 2,592: 2,557 exact losses, one estimate, five paired gains, 29 audited rescue gains. Paper fresh/ok lag33.99ms/CPU66.46%; rolling chunk29 healthy/economics false; three news helpers waiting/fresh. Carry 371 sampled / one invalid / 492 future. Archive 3,832,312 B, projection 4,489,378 B under 5 MiB; next 07:46:33 UTC.
+
+
+### Routine review191 — 2026-10-02 07:46:33 UTC
+
+Two exact convergence losses/−$3.9210484925;no gains/estimates/aborts,two HLprice-limit rejects. Completecoverage/exactarchiveguards. Cumulative2,594:2,559exactlosses,oneestimate,fivepairedgains,29auditedrescuegains. Paperfresh/ok lag32.76ms/CPU57.37%;rootnice19 passive-through scan context retained,outcomesunopened. Rollingchunk31healthy/economicsfalse;three newshelperswaiting/fresh. Carry 375sampled/oneinvalid/488future. Archive 3,836,576B,projection 4,488,300B under5MiB;next08:06:33UTC.
