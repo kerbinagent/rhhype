@@ -1,0 +1,18 @@
+{
+  "action": "unpin",
+  "archive_commit": "33756fd",
+  "chunk": "chunk-000076",
+  "owner": "news_candidate_rolling_v1",
+  "raw_copied": false,
+  "recorded_utc": "2026-10-02T16:22:13.560246+00:00",
+  "result_promoted": false,
+  "retention": "Standard2GBrolling-store retention and expiry continue; no direct raw deletion.",
+  "root_review": {
+    "bytes": 5727,
+    "path": "reports/news-candidate-rolling-v1/run-v1/root-review.json",
+    "sha256": "d1b472292ea8c753c95ad0ea064999acb5e40f24401fe0a88f8db2e40e99a27f"
+  },
+  "schema": "news-candidate-rolling-v1-pin-release",
+  "study_complete": true,
+  "verified_remaining_pins": []
+}

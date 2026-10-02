@@ -1,0 +1,87 @@
+{
+  "allocation": {
+    "bytes": 5982,
+    "path": "reports/experiment-storage/comet-reproduction-hip4-live-preparation-allocation-v1.json",
+    "sha256": "1d2a63ddd166129959108c936fbeaf1bf0311e5c5ad54da0599169b0677b0bd4"
+  },
+  "claims": {
+    "economics": false,
+    "eligibility": false,
+    "external_dependencies_equivalent": false,
+    "future_upgrades_equivalent": false,
+    "proxy_equivalent": false
+  },
+  "compiler": "0.8.15+commit.e14f2714",
+  "crypto": {
+    "native_bytes": 41632,
+    "native_sha256": "78e30b92f3c32ab063ccf462b3d1079fc8291a692242b502c33ff878287e522e",
+    "python_sha256": "f798f27e64aa5bd3ebd9dbea293cba4930de3c26d6579a0e805b8c2abac6a244",
+    "version": "3.23.0"
+  },
+  "freeze_notes": [
+    "Root must fill exact source/test/design pins and separately commit/freeze final plan.",
+    "Root must separately authorize acquisition and tool-sandbox compile. No authority follows from draft.",
+    "No real source artifact parsing/HTTP/compiler invocation during offline preparation."
+  ],
+  "input_pins": [
+    {
+      "bytes": 124569,
+      "path": "reports/comet-sourcify-lookup-v1/run-v1/response.raw",
+      "sha256": "5c314b54024ea40dca7463793ca74cccfc7ee6b9a28275b0c5b3d5ac952cab68"
+    },
+    {
+      "bytes": 2017,
+      "path": "reports/comet-sourcify-lookup-v1/literal-metadata-root-review.json",
+      "sha256": "61fba9a302d6e601dda0496e3ce97795f21ff870a3a0f22f7326b83f0984af6c"
+    },
+    {
+      "bytes": 1375,
+      "path": "reports/comet-identity-v1/run-v1/projection.json",
+      "sha256": "a6025a1fde7811d92a050da087f34083c875de86c32e45825b1f664d9f590a07"
+    }
+  ],
+  "limits": {
+    "address_space_bytes": 1073741824,
+    "compile_seconds": 240,
+    "compile_supervisor_seconds": 245,
+    "cpu_seconds": 180,
+    "download_seconds": 150,
+    "download_supervisor_seconds": 155,
+    "input_bytes": 1048576,
+    "projection_bytes": 65536,
+    "stderr_bytes": 65536,
+    "stdout_bytes": 8388608
+  },
+  "output_dir": "reports/comet-reproduction-v1/run-v1",
+  "requests": [
+    {
+      "cap": 131072,
+      "host": "binaries.soliditylang.org",
+      "name": "manifest",
+      "path": "/linux-amd64/list.json",
+      "seconds": 30
+    },
+    {
+      "cap": 20971520,
+      "host": "binaries.soliditylang.org",
+      "name": "compiler",
+      "path": "/linux-amd64/solc-linux-amd64-v0.8.15+commit.e14f2714",
+      "seconds": 90
+    },
+    {
+      "cap": 1048576,
+      "host": "sourcify.dev",
+      "name": "sources",
+      "path": "/server/v2/contract/1/0x63e749153baf1838f63ca22c275370bd2b1ceb15?fields=sources",
+      "seconds": 30
+    }
+  ],
+  "runtime": {
+    "executable": ".venv/bin/python",
+    "python": "3.13.9"
+  },
+  "sandbox_ack": "empty-workdir-network-isolated-external-sandbox",
+  "schema": "comet-reproduction-v1",
+  "source_pins": [],
+  "status": "draft_not_runnable"
+}

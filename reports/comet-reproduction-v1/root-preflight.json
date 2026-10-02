@@ -1,0 +1,90 @@
+{
+  "admission_review": [
+    "Only3exact anonymousGETs; no redirects/retries/proxy/fallback/RPC/installer.",
+    "Official compiler manifest path/version/unique build and SHA256+Keccak required.",
+    "11exact source unit names and per-content Keccak required; no sourceURL resolution.",
+    "Metadata settings unchanged except removing compilationTarget and selecting requested output; empty remappings/libraries.",
+    "Compiler argv standard-json/base-path/allow-paths with emptycwd; external tool sandbox is required, explicit acknowledgment alone is not isolation proof.",
+    "Child parent-death guard closes Popen/sharedPID race; wall240s CPU180s AS1GiB core0 nice19.",
+    "Streamed stdout8MiB stderr64KiB; fixed raw+sentinel caps and no staging binary copy.",
+    "Exact compiler metadata literal/trailer and entire runtime equality; references must resolve to locally compiled immutable AST declarations.",
+    "Final acquisition pin errors reset unavailable; supervisor requires exactstage status,planSHA,errorNone,exit0."
+  ],
+  "budget": {
+    "allocation_control_bytes": 5982,
+    "controls_category_bytes": 65536,
+    "future_stage_controls_max_bytes": 49152,
+    "package_before_final_plan_bytes": 61381,
+    "package_category_bytes": 196608,
+    "package_including_final_plan_bytes": 65890,
+    "reservation_bytes": 33554432,
+    "root_review_and_launch_receipts_max_combined_bytes": 10402,
+    "sampled_test_peak_before_plan_bytes": 63148
+  },
+  "claims": {
+    "economics": false,
+    "eligibility": false,
+    "external_dependencies_equivalent": false,
+    "future_upgrades_equivalent": false,
+    "proxy_equivalent": false
+  },
+  "compiler_launch_requirement": {
+    "ack": "empty-workdir-network-isolated-external-sandbox",
+    "network_policy": "configured execution sandbox restricts network; do not escalate compilation",
+    "sandbox_permissions": "use_default",
+    "tool": "exec_command",
+    "working_directory": "/home/harry/projects/research/rhhype"
+  },
+  "dry": {
+    "compiler_invocations": 0,
+    "http_requests": 0,
+    "outputs": 0
+  },
+  "independent_review": "Sol read-only review of stable package and final false-success correction found no remaining blocker. Acquisition supervisor checks worker success status/hash/error; it does not independently revalidate HTTP details. Compile admission revalidates orderedHTTP200 and raw pins.",
+  "package_pins": [
+    {
+      "bytes": 30854,
+      "path": "scripts/comet_reproduction_v1.py",
+      "sha256": "247f837e5b6b783fa9490c5bcc2c328e05a3e58bdb9c7bfc2794b7d3be44ce1c"
+    },
+    {
+      "bytes": 18179,
+      "path": "tests/test_comet_reproduction_v1.py",
+      "sha256": "bc3f93ee7b2cdb5016ebd36f6a0a272bd67d2798b23fa776c067e679b54b02b3"
+    },
+    {
+      "bytes": 9517,
+      "path": "reports/comet-reproduction-v1/design.txt",
+      "sha256": "81b8cf5199b85a36df77bc25a25ab9997dfcba0a33fbc8800d170ab24a5106bd"
+    },
+    {
+      "bytes": 2831,
+      "path": "reports/comet-reproduction-v1/draft-plan.json",
+      "sha256": "4b938d8482e3ab28a115de67c336ed86647aa19a812f7591a6dcea880885456d"
+    }
+  ],
+  "plan": {
+    "bytes": 4509,
+    "path": "reports/experiment-storage/comet-reproduction-v1.json",
+    "sha256": "5838b0c91c0dd4d69b04548b947b51830b9dac4f6ae721aabc6a6ed0965628e4"
+  },
+  "recorded_utc": "2026-10-02T16:22:13.560246+00:00",
+  "root_read": "Full source and tests read, final corrected acquisition/supervisor delta read, exact0.8.15compiler flags checked against primary documentation.",
+  "run_directory_absent_at_freeze": true,
+  "schema": "comet-reproduction-v1-root-preflight",
+  "status": "reviewed_ready_to_commit_then_acquire",
+  "synthetic_suite": {
+    "command": ".venv/bin/python -B -m unittest discover -s tests -p test_comet_reproduction_v1.py -v",
+    "passed": true,
+    "real_compiler_invocations": 0,
+    "real_http_requests": 0,
+    "root_harness_seconds": 0.4276866410218645,
+    "sampled_peak_is_not_exact_high_water": true,
+    "sampled_unique_inode_temp_peak_bytes": 1767,
+    "sampling_seconds": 0.001,
+    "source_pins_unchanged": true,
+    "temporary_directory_removed": true,
+    "tests": 15,
+    "unittest_seconds": 0.364
+  }
+}

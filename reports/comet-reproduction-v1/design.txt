@@ -1,0 +1,137 @@
+Comet historical implementation reproduction v1 — offline preparation
+
+Authority and claims
+The committed preparation allocation authorizes these four new files and small
+synthetic fixtures only. This draft is not runnable. Root must independently
+review and freeze reports/experiment-storage/comet-reproduction-v1.json with exact
+source/test/design pins, then separately authorize artifact acquisition and a
+tool-sandbox compiler execution. No RPC, balances, eligibility or economics.
+Success means exact independent reproduction of the retained historical
+implementation runtime, with immutable values inferred from that same runtime.
+It says nothing about external token/oracle/AssetList code, proxy behavior,
+future upgrades or execution eligibility. Provider recompiled code and reference
+tables are not used to prove reproduction.
+
+Inputs and dry contract
+The fixed allocation and three existing input hashes are embedded in source.
+Default CLI (with no --run) streams only these fixed local identity pins; it does
+not parse the retained source-metadata response, write output, contact HTTP or
+invoke a compiler. Python bytecode is disabled. Runtime is .venv/bin/python,
+CPython3.13.9; pycryptodome3.23.0 Keccak Python/native module pins are checked in
+frozen verification. No crypto implementation is copied or installed.
+
+Acquisition stage
+Future command: .venv/bin/python -B scripts/comet_reproduction_v1.py acquire
+  --run --plan-sha256 ROOT_FROZEN_SHA
+An exclusive new fixed run-v1 directory and acquire-claim.json forbid reruns.
+Exactly three sequential anonymous HTTPS GETs, in fixed order:
+1 official linux-amd64/list.json, accept131072+one counted sentinel,30s;
+2 exact solc-linux-amd64-v0.8.15+commit.e14f2714,20MiB+sentinel,90s;
+3 exact Sourcify implementation fields=sources,1MiB+sentinel,30s.
+No retries, redirects, environment proxies, URL following, fallback or POST.
+Direct HTTPSConnection uses default certificate verification and identity
+encoding. Numeric HTTP status is retained, including failure. DNS/headers/body
+drip are inside nested SIGALRM deadlines. Worker absolute bound150s includes
+verification and artifact validation; supervisor absolute155s includes cleanup.
+Each read1 fragment is appended and fsynced. A .pending path becomes .raw via
+hardlink/unlink, one inode; no binary staging copy or base64/export is retained.
+Error prefixes and the sentinel are retained. Any transport, resource, malformed
+manifest, compiler-hash or source-hash failure stops all later requests. Failure
+never establishes a negative economic result. Interrupted request counts are
+null when the supervisor cannot recover a worker terminal, never fabricated0.
+
+The official manifest must have exactly one matching release/build entry, exact
+path/version/build/longVersion and well-formed SHA256/Keccak256. Compiler bytes
+must match both before executable use. Sources must be exactly the11 names in
+the authenticated literal metadata, each path->{content:string}, and every
+UTF8-content Keccak must equal its metadata entry. No source URLs are followed.
+Download-terminal.json binds all three raw file hashes and official build; the
+compile stage rechecks them, not just a success flag. Admission also requires an
+authenticated acquisition supervisor with exact plan hash/exit0/errorNone and
+terminal with exactly three ordered HTTP200 observations; a failed acquisition
+supervisor cannot be salvaged. Worker and supervisor UTC/monotonic timestamps,
+PIDs and actual launch context are compact receipts, not proof of sandbox isolation. Fixed original input and
+source pins are checked before/after either stage.
+
+Metadata and compiler input
+Only after frozen stage execution, read the existing124569B pinned response.
+Use its unchanged bytes12:40242 (40230B, fixed SHA256) and require parsed value
+equality with the metadata member. The separately pinned root receipt records
+the content-address verification against the retained runtime trailer. Compiler
+version must be0.8.15+commit.e14f2714. Retained onchain bytecode must be18599B
+and exact SHA256 b942614560ef7218a52173cc501ce9198f74a558348edf957cda62a218aa20fe.
+The11 source units are content-only. Copy metadata settings, remove only
+compilationTarget, and add the requested outputSelection: AST for every unit;
+metadata/deployedBytecode.object/immutableReferences/linkReferences only for
+the one exact target. Libraries/remappings must be empty; no resolver, external
+source or library is allowed. Preserve every other compiler setting. Standard
+input is a single fsynced <=1048576B file, not a second raw-source export.
+
+Separate compile stage
+Future command, only through root's separate network-isolated tool sandbox:
+  .venv/bin/python -B scripts/comet_reproduction_v1.py compile --run
+  --plan-sha256 ROOT_FROZEN_SHA
+  --sandbox-ack empty-workdir-network-isolated-external-sandbox
+The acknowledgment is an explicit external launch prerequisite, not proof that
+Python created or authenticated a sandbox. Root must record the actual tool
+execution context separately. Acquisition never invokes any subprocess/compiler.
+Compile-claim.json is exclusive; a failed compile is immutable and cannot retry.
+The authenticated compiler is the only executable; chmod affects permission,
+not content. Empty compile-work is checked afterward for created files.
+Arguments: --standard-json --base-path EMPTY_WORKDIR --allow-paths EMPTY_WORKDIR.
+Solidity0.8.15 permits reads only within CLI source/remapping/explicit allow/base
+directories. There are no CLI sources or remappings; both authorized directories
+are the same empty directory, checked before and after. A missing source must
+fail rather than resolve a host source. Root tool sandbox adds an external boundary.
+No PATH lookup, source files, host package environment or output-dir flags.
+Child environment contains LANG/LC_ALL only. Child nice19, wall240s, CPU180s,
+address space1GiB, core0. stdout/stderr are selector-drained incrementally to
+fsynced single-inode pending/raw files; caps8MiB/65536B retain prefixes then kill.
+No communicate buffers, binary copy, compiler version command or second compile.
+Worker alarm243s; supervisor absolute245s includes verification/cleanup. Compiler
+preexec sets Linux PR_SET_PDEATHSIG=SIGKILL, then rechecks its expected worker
+parent PID; this closes worker death before shared PID publication. Failure to
+establish this guard aborts execution. A shared compiler PID enables supervisor cleanup after worker kill; exact argv and process
+group are checked before killing a compiler process. Parent termination kills
+worker/compiler, finalizes retained pending files and publishes unavailable
+terminal/supervisor when the bounded cleanup window allows. Deadline interruption
+or failed final pin check must prevent a successful supervisor claim.
+
+Reproduction checks
+Compiler exit0 alone is insufficient: all error-severity output items reject.
+Strict finite/duplicate-free JSON is bounded by stdout cap, nodes and depth.
+Require exactly the11 AST source IDs/names, unique IDs, exact SourceUnit paths.
+Each immutable reference ID must resolve to an immutable VariableDeclaration;
+its source file ID/path/span must be valid for the UTF8 source. All reference
+ranges must be32B, bounded, globally nonoverlapping, entirely before the runtime
+metadata trailer and zero in the compiled placeholder. Repeated onchain values
+at locally compiled offsets must agree. Substitute only these ranges; no provider
+transformation or CBOR rewrite. Exact equality must hold across all18599B.
+Compiled metadata string's UTF8 bytes must equal the literal40230B slice; unchanged
+compiled trailer must exactly equal the retained runtime trailer. Output link
+references must be empty. Output contracts must contain only the exact target.
+Projection records AST declarations/ranges/inferred immutable values, input and
+stdout/stderr hashes; source claims remain limited to the historical implementation.
+Success is assigned only after all final raw fingerprints. Supervisor admission
+requires the exact stage-specific terminal status, matching plan hash, errorNone
+and exit0. Success requires both stage terminal and supervisor success. A retained projection
+with an unavailable supervisor must not be accepted as an admitted success.
+
+Files, budgets and failure
+Existing old raw124569B is read by pin, not copied. New raw maxima by unique inode:
+manifest131073, compiler20971521, sources1048577 =22151171B. Standard input1048576;
+stdout8388608; stderr65536; projection65536. Controls fit65536, including stage
+claims/terminals/supervisors; allocation5982B is retained in its existing category.
+All source/test/design/draft/final plan and sequential small fixtures fit196608B;
+root must add final plan/review/message copies before final freeze reconciliation.
+No logs, compiler output files, bytecode or copies. Three GET bodies each have one
+counted sentinel; stdout/stderr retain cap-sized prefixes rather than a sentinel.
+Raw/controls remain after failure; no rerun or cleanup of prior evidence. Existing
+acquire directory or compile claim always refuses another attempt. Failed/capped
+requests and compile output remain unavailable, never source-equivalence false
+economic observations. Original metadata/source collectors are unchanged.
+
+Primary references supplied by root
+https://docs.soliditylang.org/en/latest/installing-solidity.html#static-binaries
+https://docs.soliditylang.org/en/v0.8.15/using-the-compiler.html
+https://docs.sourcify.dev/blog/apiv2-lookup-endpoints/
