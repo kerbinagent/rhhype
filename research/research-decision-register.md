@@ -52,36 +52,28 @@ strategy in its family. “Inconclusive” is not a successful economic result.
 | Static top-of-book imbalance | **Parked at the tested 10-second horizon.** The [broad quote screen](../reports/single-venue-research/broad-queue-readout.txt) had 19 of 20 high-imbalance asset/venue means negative; the lone positive was +0.300454 bp on overlapping profiles. | A separately motivated forecast and cost budget. Any different horizon or dynamic-flow feature is a new hypothesis, not a reinterpretation of this result. |
 | Higher-activity scheduled news regime | **Frozen, awaiting observation.** One ten-minute, ten-asset [capture protocol](../reports/experiment-storage/single-venue-news-v1.json) and separate [corrected analysis companion](../reports/experiment-storage/single-venue-news-ordinary-feed-fix-v1.json) are armed for 2 October 12:26–12:36 UTC. Original sources and helper remain intact. Both families and all arms will be reported. | First establish complete event coverage and usable signals. A favorable result warrants a separately frozen replication; this one event cannot establish durable profit. Incomplete data or zero entries remain inconclusive. |
 | Inventory-reducing aggressive flow | **Parked: fixed gate failed.** Corrected [two-block result](../reports/single-venue-research/ordinary-feed-fix-v1/inventory-context-batch2-readout.txt) has 11/15 pairs. BTC/Core has only 4/2 pairs and negative absolute reducing quote means in both blocks. No group qualifies in both; RH/BTC also has explicit book-coverage failures. | A materially different, motivated hypothesis with adequate matched support and positive absolute value after costs. No caliper relaxation or execution study follows from these sparse comparisons. |
-| Slowing flow with depth restoration | **Feature preflight running.** Two fixed exploratory blocks test whether both recovered/slow and unrecovered/persistent states have enough observable episodes. | Pass the measurement gate before defining a separate cost-aware outcome comparison. |
+| Slowing flow with depth restoration | **Parked: measurement gate failed.** [Both blocks](../reports/single-venue-research/ordinary-feed-fix-v1/flow-recovery-batch2-readout.txt) contain zero persistent/unrecovered episodes; slow/recovered counts are 5/3. | Adequate observable support for both states under a separately motivated rule. No threshold tuning or economic replay follows this version. |
+| Liquidation-label continuation | **Observable, insufficient support.** [Frozen preflight](../reports/single-venue-research/liquidation-delay-v1/readout.txt) witnesses one delayed different-order event among 9/2 complete episodes; stale evidence suppresses substantial later coverage. | Enough distinct observable episodes and comparable ordinary-flow controls before delayed absolute economics. One public-order witness establishes no common parent or trading edge. |
+| Within-venue cross-asset propagation | **Inactive.** Peer’s [fixed diagnostic](../reports/peer-research/20261002-0506/decision.txt) has zero qualifying BTC episodes and no economics. | Unchanged signal-availability audit on the first chronological exploratory rolling block. |
 
 ## Rules for the next research decision
 
-1. Use retained data to answer one missing question before authoring another
-   strategy. For local shocks, that question is whether later executable
-   recovery is local and event-specific after accounting for common movement
-   and ordinary same-direction price behavior.
-2. Register the event definition, comparator, cost treatment and failure
-   denominator before calculating that new diagnostic. Historical outcomes
-   have already been inspected, so label the result exploratory regardless
-   of when its analysis code was written.
-3. Prefer concurrent cohorts and retain every tested asset and rule. Cluster
-   repeated signals from the same market episode and describe dependence
-   across assets and venues. Do not sum alternative ledgers or call a count
-   of overlapping profiles an independent sample size.
-4. Use baseline closed cash plus explicit cost/delay sensitivities. Additional
-   5 bp stress is a robustness scenario; it is neither a venue fee nor a
-   substitute for measuring slippage and public-fill uncertainty.
-5. The next live paper test requires a concrete result that can change the
-   decision. If a screen fails, park that version and research a different
-   mechanism or materially different, justified regime.
+1. Define one missing question, event, comparator, costs and failure denominator
+   before calculation. Prior-inspected inputs remain exploratory. For local
+   shocks, distinguish executable event-specific recovery from common drift.
+2. Retain every tested asset/rule and missing outcome. Cluster repeated signals;
+   adjacent chunks and correlated assets are not independent regimes. Alternative
+   ledgers cannot be summed into a portfolio.
+3. Require delayed absolute closed value after costs as well as conditional
+   improvement. Extra 5 bp stress is a scenario, not a measured fee or fill cost.
+4. Advance only when a concrete result changes the decision. Park a failed
+   version; a new mechanism or justified regime needs a separately frozen test.
 
 ## Experiment implementation and operations
 
-For future studies, prefer one capture with reusable replay and independent
-accounting, configured per hypothesis. Keep existing frozen sources intact.
-Do not undertake a broad refactor as part of this process review. Add a test
-when it protects a concrete economic invariant, clock boundary or previously
-observed defect; do not multiply tests and audit wrappers for empty branches.
+Reuse captures, replay and independent accounting across hypotheses. Preserve
+frozen sources. Test concrete economic invariants, clock boundaries and observed
+defects; avoid broad refactors or more wrappers for empty branches.
 
 Report gate activation, data coverage, delayed execution, forecast quality,
 closed cash and uncertainty separately. Preserve original failures and

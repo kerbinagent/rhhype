@@ -76,7 +76,10 @@ and carry studies retain their own analysis boundaries and ownership.
    measures continued trade flow and restoration of depth in the original
    price band. It uses exploratory chunks 1–3 and 7–9; the reserved chunks stay
    unopened. Establish support for both flow states before an outcome study.
-   A large print or subsequent quiet does not establish parent-order completion.
+   The [completed preflight](../reports/single-venue-research/ordinary-feed-fix-v1/flow-recovery-batch2-readout.txt)
+   contains 17/14 selected episodes, with 5/3 slow states and zero persistent
+   states. The fixed measurement gate fails; park this version. A large print
+   or subsequent quiet does not establish parent-order completion.
 4. **Inventory context of aggressive flow:** the economics-free
    [field audit](../reports/single-venue-research/inventory-field-availability.txt)
    found explicit pre-fill positions on all 14,138 ordinary trades in the two
@@ -123,7 +126,11 @@ same-direction liquidation from a different public taker order within two
 seconds, beyond comparable ordinary position-reducing flow. This would test
 forced-flow persistence before another price-recovery replay. Initial-message
 fills, late clocks, missing controls and interrupted windows must remain
-explicit. The design is queued; no recurrence outcome has been calculated.
+explicit. The [frozen observability preflight](../reports/single-venue-research/liquidation-delay-v1/readout.txt)
+witnessed one different public order after 400 ms–2.4 s among 9/2 complete episodes.
+Stale ordinary evidence suppresses 4,129/9,041 later frames; admitted windows
+are not a full-market denominator. Adequate distinct episodes and controls
+remain prerequisites for a cost-aware study. No execution branch is justified.
 
 Public-data impact studies also distinguish reconstructing average impact from
 identifying a tradable entry: synthetic order groupings can reproduce impact
@@ -145,3 +152,15 @@ that a detected burst marks a completed parent order.
 The [budget amendment](../reports/experiment-storage/rolling-capture-budget-v1.json)
 records the new grant and releases the superseded, unlaunched one-hour capture
 reservation. Capture data and analysis outputs have separate funded limits.
+
+## Peer input handoff
+
+The initial cross-asset diagnostic found zero qualifying BTC episodes in its
+old windows; economic means remain missing. The peer is checking unchanged
+signal availability on the first chronological exploratory rolling block.
+The [immutable input export](../data/evidence/rolling-exploratory-000001-000003-v1-inventory.json)
+contains only chunks 1–3, 45 verified members, 55,818,240 tar bytes through Git LFS.
+Its [64 MiB reservation](../reports/experiment-storage/rolling-exploratory-peer-export-v1.json)
+comes from existing headroom. Live rolling storage and reserved chunks remain
+under their original rules. The [peer review package](../reports/peer-research/20261002-0506/decision.txt)
+retains its own frozen protocol, source, tests, results and runtime provenance.

@@ -1,0 +1,54 @@
+{
+  "schema": "parler-research-package-receipt-v1",
+  "received_utc": "2026-10-02T05:21:13.690931+00:00",
+  "message_id": "916371c3-2e45-4440-97c8-8ccdd895ecfb",
+  "sender": "07b1b113-966a-4dab-bc55-54f41193f9bf/c1f31b3b-ebf4-49f9-9b84-236d4a61338d",
+  "peer_base": "e69f21a39d543649080aaa1f92b2542e1e4b0341",
+  "peer_freeze_commit": "11b09efc1be2dc2cfb5b07d12dc748b62f2cf364",
+  "peer_final_commit": "0d6e9eb",
+  "files": [
+    {
+      "name": "decision.txt",
+      "bytes": 3161,
+      "sha256": "4750fffd93b8012200b8a388ff8b2c1cfb68dab14669789d5966a36908fd8664"
+    },
+    {
+      "name": "execution.json",
+      "bytes": 886,
+      "sha256": "2683812b8e99865ef99574418e41b63be2d9b9dd693073a46ffbe47028b9496e"
+    },
+    {
+      "name": "peer-cross-asset-v1.json",
+      "bytes": 17943,
+      "sha256": "54836695f93d9a34d14fa141d88176dab7c67511bfa44d1d16a4fb0a701ae3a0"
+    },
+    {
+      "name": "peer-runtime-20261002.json",
+      "bytes": 629,
+      "sha256": "4f92cd2f33d11c6d661644a2116433083f0b1c4e3eb24a56924bcabeaa53a9b5"
+    },
+    {
+      "name": "peer_cross_asset_diagnostic.py",
+      "bytes": 42417,
+      "sha256": "123b594c380dbec405aa4a1f47b8e9d4c71e608615d0a12623ba47ed578a7a75"
+    },
+    {
+      "name": "readout.txt",
+      "bytes": 5861,
+      "sha256": "c1223f240d6f35c7a5754480a68405121f787f0747ff0f641d81f2f4365b7dd4"
+    },
+    {
+      "name": "result.json.gz",
+      "bytes": 4153,
+      "sha256": "c9b33ec7c9890f808b8650455618d6335bb88049ee639c19638270e44609195f"
+    },
+    {
+      "name": "test_peer_cross_asset_diagnostic.py",
+      "bytes": 37798,
+      "sha256": "db6656816fb1a347c31861feef37305a0845b8278d6ed456f31a9bb6c55e28ad"
+    }
+  ],
+  "root_checks": 374,
+  "root_review": "All40 source/runtime/test pins match retained attachments or unchanged root sources. Root reconciled two408-tick leader gates, complete36 asset/window/delay rows, empty episodes/profiles, zero entries/exits/pairs and null economics. No raw replay or full source audit performed by root. Peer reports independent Sol saved-output review and44+4 synthetic tests. Zero signal means inconclusive coverage, not rejected economic value. Larger trade sizes remain in scope;100USDC is only this frozen baseline.",
+  "next": "Unchanged activation-only audit authorized on the first chronological three exploratory rolling captures through immutable LFS export90e99c8; no forward economics or reserved data."
+}

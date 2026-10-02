@@ -1,0 +1,67 @@
+Cross-asset fixed diagnostic: exploratory conditional public quotes.
+No private fills, causal leadership, beta-one catch-up, realized closed cash or portfolio claims.
+Full exact means, profile failures, provenance and control feature funnels are in the result JSON.
+Text bp fields are absolute event / paired event / paired improvement / unmatched event; NA means missing.
+{"classification": "inconclusive_coverage", "followup_proposal": false, "reason": "Every requested profile and at least three paired BTC episodes per window/arm are required."}
+Window 1: leader anchors 408; episodes 0; selected targets 0.
+ETH target gates: {"below_leader_threshold": 400, "leader_clock_failure": 8, "scheduled": 408}
+SOL target gates: {"below_leader_threshold": 400, "leader_clock_failure": 8, "scheduled": 408}
+HYPE target gates: {"below_leader_threshold": 400, "leader_clock_failure": 8, "scheduled": 408}
+XRP target gates: {"below_leader_threshold": 400, "leader_clock_failure": 8, "scheduled": 408}
+SUI target gates: {"below_leader_threshold": 400, "leader_clock_failure": 8, "scheduled": 408}
+NEAR target gates: {"below_leader_threshold": 400, "leader_clock_failure": 8, "scheduled": 408}
+ZEC target gates: {"below_leader_threshold": 400, "leader_clock_failure": 8, "scheduled": 408}
+VVV target gates: {"below_leader_threshold": 400, "leader_clock_failure": 8, "scheduled": 408}
+LIT target gates: {"below_leader_threshold": 400, "leader_clock_failure": 8, "scheduled": 408}
+400 ms episode means: NA / NA / NA; paired BTC episodes 0; all profiles matched True.
+800 ms episode means: NA / NA / NA; paired BTC episodes 0; all profiles matched True.
+ETH 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+SOL 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+HYPE 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+XRP 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+SUI 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+NEAR 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+ZEC 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+VVV 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+LIT 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+ETH 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+SOL 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+HYPE 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+XRP 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+SUI 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+NEAR 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+ZEC 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+VVV 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+LIT 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+Selected control interval overlaps: 0; shared BTC and asset dependence remains.
+Window 2: leader anchors 408; episodes 0; selected targets 0.
+ETH target gates: {"below_leader_threshold": 396, "leader_clock_failure": 12, "scheduled": 408}
+SOL target gates: {"below_leader_threshold": 396, "leader_clock_failure": 12, "scheduled": 408}
+HYPE target gates: {"below_leader_threshold": 396, "leader_clock_failure": 12, "scheduled": 408}
+XRP target gates: {"below_leader_threshold": 396, "leader_clock_failure": 12, "scheduled": 408}
+SUI target gates: {"below_leader_threshold": 396, "leader_clock_failure": 12, "scheduled": 408}
+NEAR target gates: {"below_leader_threshold": 396, "leader_clock_failure": 12, "scheduled": 408}
+ZEC target gates: {"below_leader_threshold": 396, "leader_clock_failure": 12, "scheduled": 408}
+VVV target gates: {"below_leader_threshold": 396, "leader_clock_failure": 12, "scheduled": 408}
+LIT target gates: {"below_leader_threshold": 396, "leader_clock_failure": 12, "scheduled": 408}
+400 ms episode means: NA / NA / NA; paired BTC episodes 0; all profiles matched True.
+800 ms episode means: NA / NA / NA; paired BTC episodes 0; all profiles matched True.
+ETH 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+SOL 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+HYPE 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+XRP 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+SUI 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+NEAR 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+ZEC 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+VVV 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+LIT 400 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+ETH 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+SOL 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+HYPE 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+XRP 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+SUI 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+NEAR 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+ZEC 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+VVV 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+LIT 800 ms: NA / NA / NA / NA; entries requested/completed 0/0; exits 0; pairs 0.
+Selected control interval overlaps: 0; shared BTC and asset dependence remains.

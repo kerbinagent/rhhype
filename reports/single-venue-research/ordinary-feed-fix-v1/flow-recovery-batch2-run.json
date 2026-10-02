@@ -1,0 +1,31 @@
+{
+  "schema": "offline-study-process-provenance-v1",
+  "state": "finished",
+  "requested_utc": "2026-10-02T04:23:41.336458+00:00",
+  "cwd": "/home/harry/projects/research/rhhype",
+  "command": [
+    "nice",
+    "-n",
+    "19",
+    "/home/harry/projects/research/rhhype/.venv/bin/python",
+    "scripts/run_flow_recovery_ordinary_fix.py",
+    "--batch",
+    "2"
+  ],
+  "provenance_file": "/home/harry/projects/research/rhhype/reports/single-venue-research/ordinary-feed-fix-v1/flow-recovery-batch2-provenance.json",
+  "runtime_record_cap_bytes": 4096,
+  "combined_provenance_cap_bytes": 16384,
+  "supervisor_source_sha256": "7f9c96ef1b1057efd5c8c59f0f555d12d0973180474f3fc1f9e83927be60417f",
+  "allocation": "Runtime record and canonical provenance share the original per-batch 16384-byte provenance allowance. No new raw data or allocation.",
+  "prior_attempt_interrupted_before_output": false,
+  "timeout_seconds": 7200,
+  "supervisor_pid": 3518589,
+  "started_utc": "2026-10-02T04:23:41.362458+00:00",
+  "updated_utc": "2026-10-02T04:53:24.035674+00:00",
+  "analysis_pid": 3518591,
+  "returncode": 0,
+  "success": true,
+  "stdout_tail": "{\"batch\": 2, \"gzip_bytes\": 9633, \"provenance_bytes\": 8218, \"chunks\": 3, \"economic_evaluation\": false}\n",
+  "stderr_tail": "",
+  "ended_utc": "2026-10-02T04:53:24.035645+00:00"
+}

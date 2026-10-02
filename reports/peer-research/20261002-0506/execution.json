@@ -1,0 +1,21 @@
+{
+  "started_utc": "2026-10-02T04:59:47.271279+00:00",
+  "ended_utc": "2026-10-02T05:00:49.254793+00:00",
+  "elapsed_seconds": 61.9836025419645,
+  "timeout_seconds": 600,
+  "command": [
+    "/Users/houze/projects/research/rhhype-peer/.venv/bin/python",
+    "scripts/peer_cross_asset_diagnostic.py",
+    "--plan",
+    "research/peer-cross-asset-v1.json",
+    "--expected-plan-sha256",
+    "54836695f93d9a34d14fa141d88176dab7c67511bfa44d1d16a4fb0a701ae3a0",
+    "--output",
+    "/Users/houze/projects/research/rhhype-peer/reports/peer-research/cross-asset-v1/result.json.gz",
+    "--readout",
+    "/Users/houze/projects/research/rhhype-peer/reports/peer-research/cross-asset-v1/readout.txt"
+  ],
+  "returncode": 0,
+  "stdout": "{\"gzip_bytes\": 4153, \"readout_bytes\": 5861, \"protocol_sha256\": \"54836695f93d9a34d14fa141d88176dab7c67511bfa44d1d16a4fb0a701ae3a0\"}\n",
+  "stderr": ""
+}

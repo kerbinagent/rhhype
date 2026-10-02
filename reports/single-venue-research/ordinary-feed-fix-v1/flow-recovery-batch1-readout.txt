@@ -1,0 +1,52 @@
+Flow and depth-restoration feature preflight — corrected batch 1
+
+Decision: frozen measurement gate fails across both blocks. No asset/venue has the required persistent/unrecovered state, so no cost or execution study follows this version. No profit, future-return, causal or validation claim.
+
+Protocol: reports/experiment-storage/single-venue-flow-recovery-ordinary-feed-fix-v1.json
+Protocol SHA256: a1c602397819504d9fa7697822750ec7306eb98dd30470000ac5157c9255f47e
+Result SHA256: bdfcf1ba0bbfb2b6ffebd80d34627bc29a1911b0e04aeebdc80f2326eb44e3d3
+Provenance SHA256: 6e0fa29659347cf8fdb73c57a218178aeaeb5612ec0f172076a1ac2aaffc46fb
+Inputs: chunk-000001, chunk-000002, chunk-000003; all exploratory.
+
+Observed 25720 ordinary prints; 6883 one-second candidates considered, 6866 rejected and 17 selected. Selected categories: 5 slow/recovered, 0 persistent/unrecovered, 12 intermediate, zero selected missing outcomes. These are flow/depth states, not return outcomes.
+
+The fixed rule required BOTH extreme states in the same asset/venue in each 30-minute block, with at least three episodes of EACH state across blocks. Batch1 has 5 slow and 12 intermediate; batch2 has 3 slow and 11 intermediate; persistent is zero in both. Do not tune continuation or restoration thresholds using this result.
+
+Full 20-cell denominator (Core=lighter, RH=rh_lighter):
+asset venue ordinary candidates rejected selected slow persistent intermediate
+BTC   lighter    10337 1274 1274 0 0 0 0
+BTC   rh_lighter 2395 694 694 0 0 0 0
+ETH   lighter    4288 1097 1097 0 0 0 0
+ETH   rh_lighter 1163 506 506 0 0 0 0
+SOL   lighter    1745 698 698 0 0 0 0
+SOL   rh_lighter 398 201 201 0 0 0 0
+HYPE  lighter    1105 481 481 0 0 0 0
+HYPE  rh_lighter 592 189 188 1 0 0 1
+XRP   lighter    133 68 68 0 0 0 0
+XRP   rh_lighter 115 78 78 0 0 0 0
+SUI   lighter    62 43 43 0 0 0 0
+SUI   rh_lighter 26 23 23 0 0 0 0
+NEAR  lighter    841 241 235 6 2 0 4
+NEAR  rh_lighter 280 144 143 1 1 0 0
+ZEC   lighter    483 268 268 0 0 0 0
+ZEC   rh_lighter 120 71 71 0 0 0 0
+VVV   lighter    221 125 125 0 0 0 0
+VVV   rh_lighter 20 16 16 0 0 0 0
+LIT   lighter    900 432 428 4 2 0 2
+LIT   rh_lighter 496 234 229 5 0 0 5
+
+All rejection counts:
+reject:dominant_share: 638
+reject:insufficient_first_post_depletion: 17
+reject:prebook_clock: 313
+reject:quantity_depth_fraction: 4412
+reject:same_asset_episode_repeat: 14
+reject:sparse_or_interrupted_background: 1454
+reject:stale_trade_interval: 18
+
+Coverage and interpretation:
+Decoded 405587 records to exact verified EOF. Corrected ordinary adapter excludes 64 cross-listed liquidation rows. Its ignored_liquidations counters refer to overlapping arrays and must not be added as distinct events. Ordinary trade batches have no subtype invalidation. Background staleness remains explicit (60 prints).
+The same-asset 30-second spacing reduces repeated entries but does not make adjacent chunks or correlated assets independent regimes. Net displayed restoration can arise from additions/cancellations as well as executions. Quiet observed prints do not certify parent-order completion or complete trade nonce continuity.
+
+Verification: independent Sol review reported 957 saved-result/provenance checks without discrepancy across both batches, including 26 source pins, seals, aggregates and recorded state formulas. Root independently reconciled every group and gate, result/source hashes and rejection totals. Full raw depth/flow histories were not independently reconstructed a second time.
+Operational provenance: the original v1 attempt was aborted after the confirmed mixed-subtype adapter defect; the first corrected attempt was interrupted before producing output. The unchanged corrected protocol then completed under the detached bounded supervisor at 04:56:18 UTC. No partial feature/economic result was used to change the method.

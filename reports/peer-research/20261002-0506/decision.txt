@@ -1,0 +1,52 @@
+Cross-asset v1: no qualifying leader episode in either historical window.
+
+Frozen protocol: research/peer-cross-asset-v1.json
+SHA256: 54836695f93d9a34d14fa141d88176dab7c67511bfa44d1d16a4fb0a701ae3a0
+Pre-outcome commit: 11b09efc1be2dc2cfb5b07d12dc748b62f2cf364
+Base: e69f21a39d543649080aaa1f92b2542e1e4b0341
+Branch: peer/independent-signal-research
+
+Window 1: 408 scheduled leader ticks, 400 below the fixed 10 bp / 10 s
+threshold, 8 clock failures. Window 2: 408 scheduled ticks, 396 below that
+threshold, 12 clock failures. There were zero admitted BTC episodes, target
+events, selected controls, entries or exits in either window. All nine targets
+and both 400/800 ms arms remain in the output: 36 asset-window-delay rows.
+
+Classification: inconclusive_coverage. Net cash and return means are missing,
+not zero. The empty-arm all_requested_profiles_matched=true is a vacuous
+condition; zero paired episodes separately fails the required three-episode
+minimum. No signal economics or private fills were observed. This result
+neither rejects nor supports the proposed conditional response mechanism.
+
+The decision pass found 479 distinct eligible quiet-control asset/ticks in
+window 1 and 319 in window 2, each represented in both directions. Those are
+past-feature observations, not selected controls or forward return evidence.
+Some targets have none, with source skew, clock freshness and uninterrupted
+volatility history prominent in the complete control-feature failure counts.
+Do not select assets or loosen these gates using that coverage information.
+
+The run completed in 61.9836 seconds under an external 600-second limit.
+Both passes consumed identical pinned archives and verified adapter provenance.
+There were 115196 and 103801 source records per pass for the respective windows.
+The unchanged decoder retained its 5000-level bound. Forty source/test/runtime
+pins and both input sets were verified again after publication. Forty-four new
+synthetic tests and four corrected-adapter synthetic tests passed before the
+run; no full suite or collector was used.
+
+An independent Sol xhigh review of the saved results found no substantive
+arithmetic or classification defect. It reconciled both leader and control
+funnels, all 36 rows, zero selected profiles, null economics and all 40 source
+pins. It did not reopen raw inputs, rerun tests or edit evidence.
+
+The 100 USDC notional is this test's baseline. Larger profitable paper trades
+are in overall objective scope. No size, threshold, asset, delay, horizon or
+caliper changes follow this empty result. The next useful question is whether
+the unchanged signal activates in a prespecified chronological batch of
+existing eligible inputs, before spending effort on further economic branches.
+Any such audit needs its own input pins and limits; reserved validation data
+and new captures remain outside the current grant.
+
+Files result.json.gz, readout.txt and execution.json are small ordinary Git
+artifacts (4153, 5861 and 886 bytes). Git LFS 3.8.0 is available, but base
+.gitattributes has no LFS patterns. No large files were added or existing
+history migrated. Larger future artifacts must use LFS.

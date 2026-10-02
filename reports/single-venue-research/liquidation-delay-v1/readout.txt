@@ -1,0 +1,45 @@
+Delayed liquidation-label observability — two exploratory blocks
+
+Decision: one witnessed delayed different-public-order continuation; insufficient coverage and sample support for a matched cost-aware trading study. Keep this mechanism at the observability stage. No prices, sizes, quote returns, fills, cash, significance, common parent or causal cascade have been established.
+
+Frozen protocol: reports/experiment-storage/liquidation-delay-observability-v1.json
+SHA256: ccab482a1baeff718d91e8447c5de567efcfda46bbdb7f54c7983911f641b2f2
+
+Batch1 (chunks 1–3): 9 complete retained episodes, 1 with a qualifying distinct public order. Batch2 (chunks 7–9): 2 complete retained episodes, 0 with a qualifying order. All 11 are buy-aggressor and remain correlated. A qualifying first observation must be strictly after 400 ms and no later than 2.4 s on BOTH source and receipt clocks, same venue/market/direction, outside the initial message/orders, unseen earlier anywhere in that chunk's observed ordinary/nonordinary history.
+
+The sole witness is BTC/Core in chunk3. Anchor receipt 1790910059271388253 ns; initial public bid order 844421382536397 version 0. A different bid order 844421382535690 version 0 first appears at source 1790910061131000000 ns and receipt 1790910061271280974 ns: 1.859611747 s and 1.999892721 s after anchor receipt. It was absent in preceding same-market raw rows. One liquidation trade appears identically in both arrays and is deduplicated. Public order identifiers are not account identities or proof of a parent order.
+
+Coverage is the material limitation. The frozen rule conservatively treats stale ordinary trade evidence as loss of reliable first-seen history for that market/generation. Batch1 has 17 such failures and 4,129 later suppressed trade frames; batch2 has 21 and 9,041. Retained valid live liquidation rows are 49 of 64 previously counted raw labels, and 4 of 10 in batch2. Those 21 unavailable labels cannot be counted as negative continuation evidence. All 11 admitted episode windows are complete, but no new anchors are admitted after a suppression; therefore zero censored episode rows does not mean full market coverage. Batch2's zero concerns only two locally observable windows.
+
+Full 20-cell denominators per block; absent keys are zero.
+asset venue B1 labels/episodes/witnesses/stale/suppressed B2 same
+BTC   lighter    40/4/1/1/335         3/1/0/2/3307
+BTC   rh_lighter 0/0/0/3/1555         0/0/0/3/1808
+ETH   lighter    0/0/0/1/1081         0/0/0/1/766
+ETH   rh_lighter 1/1/0/2/425          0/0/0/3/1257
+SOL   lighter    1/0/0/0/0            1/1/0/0/0
+SOL   rh_lighter 1/1/0/2/128          0/0/0/1/245
+HYPE  lighter    1/1/0/0/0            0/0/0/0/0
+HYPE  rh_lighter 0/0/0/2/179          0/0/0/2/104
+XRP   lighter    0/0/0/0/0            0/0/0/0/0
+XRP   rh_lighter 0/0/0/0/0            0/0/0/1/37
+SUI   lighter    0/0/0/0/0            0/0/0/0/0
+SUI   rh_lighter 0/0/0/0/0            0/0/0/0/0
+NEAR  lighter    5/2/0/0/0            0/0/0/0/0
+NEAR  rh_lighter 0/0/0/1/167          0/0/0/0/0
+ZEC   lighter    0/0/0/1/115          0/0/0/2/294
+ZEC   rh_lighter 0/0/0/2/58           0/0/0/2/96
+VVV   lighter    0/0/0/0/0            0/0/0/1/62
+VVV   rh_lighter 0/0/0/1/4            0/0/0/0/0
+LIT   lighter    0/0/0/0/0            0/0/0/1/690
+LIT   rh_lighter 0/0/0/1/82           0/0/0/2/375
+
+All six captures were streamed to verified gzip EOF under frozen decoded-byte/record/identity bounds. Independent Sol review checked 920 saved-result/provenance/episode conditions without discrepancy, including 3 direct and 45 transitive source pins, six input inventories, all group totals and the sole positive raw slice. Root reconciled aggregate coverage and qualification arithmetic.
+
+A valid witness answers the narrow observability question only. Consider a separately frozen, adequately supported comparison if enough distinct episodes and earlier ordinary-flow controls become observable. Do not create a trade wrapper or tune delays/spacing from this outcome. Preserve frozen conservative failures; any future change to handling late ordinary rows is a new coverage method, with an explicit reason and fresh pre-outcome protocol.
+
+Artifacts:
+liquidation-delay-batch1.json.gz 1587bytes SHA256 0f3f5a969e70b6b591300e3d3724bc544666a7e10c71bfe93912b099f414acbb
+liquidation-delay-batch1-provenance.json 5551bytes SHA256 9aff50277ad1c5f5f36353b6a9cd8391dd0c3e6f0448b8775f525e0374366839
+liquidation-delay-batch2.json.gz 1288bytes SHA256 703d7e217af01f3918a1ed2c4d97d478e4cef33273d33683fefae988fb05d9c4
+liquidation-delay-batch2-provenance.json 5551bytes SHA256 7604b08585353630670d37edd3ff0b7d48ea73b6f84393256d6c9836d13833aa

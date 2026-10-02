@@ -1,0 +1,297 @@
+{
+  "schema": "peer-cross-asset-v1",
+  "status": "frozen-before-outcomes",
+  "base_commit": "e69f21a39d543649080aaa1f92b2542e1e4b0341",
+  "allocation": "reports/experiment-storage/peer-independent-research-v1.json",
+  "question": "Does a large receipt-observed BTC move predict a same-direction, delayed, cost-adjusted move in an otherwise quiet Core alt market, beyond earlier matched quiet-BTC observations?",
+  "interpretation": "Exploratory conditional quote profiles. No causal leadership, beta-one catch-up, private fills, realized closed paper cash or portfolio claims. Existing historical windows have already informed prior research.",
+  "venue": "lighter",
+  "leader": "BTC",
+  "targets": [
+    "ETH",
+    "SOL",
+    "HYPE",
+    "XRP",
+    "SUI",
+    "NEAR",
+    "ZEC",
+    "VVV",
+    "LIT"
+  ],
+  "selected": {
+    "rh_lighter": {
+      "BTC": "1",
+      "ETH": "0",
+      "SOL": "3",
+      "HYPE": "2",
+      "XRP": "6",
+      "SUI": "9",
+      "NEAR": "7",
+      "ZEC": "4",
+      "VVV": "8",
+      "LIT": "5"
+    },
+    "lighter": {
+      "BTC": "1",
+      "ETH": "0",
+      "SOL": "2",
+      "HYPE": "24",
+      "XRP": "7",
+      "SUI": "16",
+      "NEAR": "10",
+      "ZEC": "90",
+      "VVV": "69",
+      "LIT": "120"
+    }
+  },
+  "params": {
+    "snapshot_start_second": 1,
+    "control_start_second": 61,
+    "signal_start_second": 127,
+    "anchor_stop_second": 534,
+    "anchor_step_seconds": 1,
+    "return_seconds": 10,
+    "return_formula": "10000*ln(mid_now/mid_prior)",
+    "leader_min_abs_return_bps": "10",
+    "target_max_abs_return_bps": "2",
+    "leader_control_max_abs_return_bps_exclusive": "1",
+    "shared_episode_seconds": 90,
+    "book_max_age_ms": 500,
+    "intermarket_source_skew_ms": 100,
+    "feature_seconds": 60,
+    "control_min_age_seconds": 66,
+    "control_max_age_seconds": 180,
+    "control_return_caliper_bps": "1",
+    "control_cost_caliper_bps": "0.5",
+    "control_volatility_relative_caliper": "0.25",
+    "control_trade_count_relative_caliper": "0.25",
+    "native_notional_cap": "100",
+    "decision_size_headroom_multiplier": "1.01",
+    "delays_ms": [
+      400,
+      800
+    ],
+    "primary_delay_ms": 400,
+    "hold_seconds": 60,
+    "endpoint_lateness_ms": 2000,
+    "funding_exclusion_span_ms": 65600,
+    "extra_roundtrip_cost_bps": [
+      1,
+      2,
+      5
+    ],
+    "minimum_paired_btc_episodes_per_window": 3
+  },
+  "calendar": "Ticks are exactly capture_start+n seconds. Process all events with receipt<=tick, including the entire equal-receipt group, before evaluating that tick; a later record cannot repair it. Emit each scheduled anchor even with no callback. Snapshot ticks 1..534 provide feature history. Candidate controls begin61; signals127..534. At most five signal BTC episodes per600s window. The two windows are only two short dependent historical sessions.",
+  "features": "Both current and exact ten-second-prior snapshots must have valid own-generation books, nonfuture source timestamps, receipt and source ages<=500ms, and BTC-target source skew<=100ms at each endpoint. Source timestamps and per-market sequences must strictly advance over ten seconds; do not compare nonce values across assets. Target volatility is sqrt(sum of60 squared one-second log returns in bp), requiring61 consecutive valid target snapshots. The ordinary trade count uses receipt times in(t-60s,t], corrected subtype filtering/deduplication and60s uninterrupted own trade-feed coverage. Missing optional fields are never zero. No price/volatility/beta fitting.",
+  "trade_coverage": "The unchanged corrected adapter has no positive trade-subscription or empty-update marker. Conservatively start own-market trade coverage at the first valid ordinary print in the current generation, reset on own trade invalidation or generation change, and require60s since that start without interruption. Connection_open does not prove own-channel readiness. This observable proxy can reject genuinely subscribed but silent channels; count those failures, never assume zero trades for unknown coverage. Do not alter adapter suppression/recovery semantics.",
+  "episodes": "Consume the90s BTC cooldown at the first clock-valid leader shock, independent of target eligibility, costs, funding gates and controls. All nine targets are evaluated at this one tick; failures cannot move to a later callback. Direction follows BTC sign. No BTC-to-alt one-for-one catch-up budget.",
+  "controls": "Build the earlier feature catalog before any forward outcome calculation. Eligible controls are same asset and direction, abs BTC10s return<1bp, abs target10s return<=2bp,66..180s earlier, with the same clock/feature/funding/native gates. Match abs(control target return-event target return)<=1bp and abs(C0_control-C0_event)<=0.5bp. Volatility and trade count each differ by<=25% of the EVENT value; when the event value is zero require control zero. Choose the nearest earlier unused eligible anchor, deterministic latest timestamp then stable ID, without inspecting any outcome. Reuse is forbidden for an asset/direction/control anchor. Keep a selected missing/failed control; no outcome-based replacement. Report temporal overlap between selected controls as dependence even though each control interval ends before its event.",
+  "quantity_and_cost": "At each event/control decision independently fix q=floor_to_native_step(100/(best_ask*1.01)); this inherits the existing study size headroom. Validate q, native minima and order quote limit. C0 walks both book sides for exactly q and charges both actual metadata taker fees; it is a matching feature, not a return forecast. A short crosses bids first. Later entry above100 is a failure, never resized; validate actual endpoint native minima/limits on both legs and require full q depth with no extrapolation. Report cash in native Core USDC and bp normalized to its own entry notional. Nine target profiles and two latency arms are alternative diagnostic ledgers, not additive capital or profit.",
+  "execution": "Two passes over identical pinned archives: first choose events/controls from decision features only; second calculate only those selected forward profiles. Reuse unchanged Decimal sizing/depth primitives with isolated quote scheduling. Entry is the first own-market book with source AND receipt>=decision+delay and receipt<=due+2s; it must also pass500ms source age, generation, book quality, actual minima/limits/depth/cap. A first eligible failure is terminal, no retry. Exit due is actual entry receipt+60s+delay, same first-eligible rules. Expire pending stages on any timeline advancement, including silence; a book exactly at the deadline remains eligible. Book invalidation ends local pending profiles; trade-only invalidation affects feature availability, not existing valid book quotes. BTC invalidation prevents new signals but does not cancel a target's existing quote observation. Preserve missing entries, missing exits and EOF obligations separately.",
+  "funding": "Exclude an event or control when the inclusive decision-to-decision+65.6s span touches a UTC funding hour; count it before outcomes. Core documentation supports hourly funding. If an actual quoted interval unexpectedly crosses a boundary, funding and total economics are unknown, not zero. No RH cash/USDC-USDG parity or funding assumptions enter this Core-only study.",
+  "outputs": "All nine target rows per window and both delay arms, including zeros. Gate funnel from408 scheduled leader signal ticks and9 target decisions each through leader clocks/moves/episode thinning, target clocks/lag/features/funding/native gates, control selection, requested entry, completed entry, completed exit, missing/unresolved outcomes and complete pairs. Keep selected event features and chosen control features, exact decision/due/source/receipt clocks and quantity, fees, cash/net bp, decision-to-entry movement consumed and entry-to-exit midpoint movement, contemporaneous BTC movement as descriptive context, additional1/2/5bp costs and profile dependencies. Do not impute missing economic values.",
+  "decision": "Primary paired summaries weight complete selected pairs equally within each BTC episode and then weight BTC episodes equally, separately by window and delay. Absolute all-event means use the same two-level weighting over complete event profiles; paired-event absolute means restrict to complete pairs. Report every asset row and unmatched controls separately. Complete-case means are conditional, not unconditional profit estimates. Adequate coverage means at least3 distinct complete paired BTC episodes in EACH window and delay arm, AND every admitted event and selected-control profile in both arms is matched. Otherwise classify inconclusive_coverage, while still reporting measured negative or positive conditional results. With adequate coverage, nonpositive baseline all-event absolute, paired-event absolute or paired-difference means in either window park this observed version. Advancement only means a proposal for separately frozen untouched evidence: all three means must be strictly positive in BOTH windows and BOTH400/800ms arms, and all their leave-one-BTC-episode-out means must remain strictly positive. Three episodes is an operational floor, not statistical independence or a confidence guarantee. No strategy promotion from two historical sessions. No thresholds, calipers, horizons or selected assets change after these outcomes; a later version must document a new motivated question.",
+  "bounds": {
+    "raw_bytes_per_capture": 67371008,
+    "metadata_bytes_per_capture": 131072,
+    "decoded_bytes_per_pass_per_capture": 1073741824,
+    "records_per_pass_per_capture": 1000000,
+    "trade_ids_per_capture": 500000,
+    "run_timeout_seconds": 600,
+    "output_gzip_bytes": 1048576,
+    "readout_bytes": 32768,
+    "max_feature_anchors_per_window": 6000,
+    "max_selected_target_events_per_window": 45
+  },
+  "windows": [
+    {
+      "index": 1,
+      "capture": "reports/single-venue-broad/capture",
+      "manifest_sha256": "eed280dd18fb6da31ad858d794735af75bc331e61564554d94758e7de8d62843",
+      "raw_sha256": "2a0082cb0b3865a75ac04a1b33034b6af49826bf7c2dbbbc37e43bacccb262bd",
+      "metadata_sha256": "decfa350ccc31b9c1ad09f9dffec368a7820b4d1368a7bfcea25584ffadc45f6"
+    },
+    {
+      "index": 2,
+      "capture": "reports/single-venue-broad-relative/capture",
+      "manifest_sha256": "44c423889dc2a49bf5a27377eb2a21c09c466c9280e9718e725b4ddc2800abc0",
+      "raw_sha256": "f0d9d94a000555430544305b6bbb056978c3c715cd5cb52bb09ae951ab99da24",
+      "metadata_sha256": "7c2100475a63e5a0f81ad5ac81970fdc3964747912cb40bd3d5cec02cc1166e1"
+    }
+  ],
+  "source_pins": [
+    {
+      "path": "research/peer-runtime-20261002.json",
+      "sha256": "4f92cd2f33d11c6d661644a2116433083f0b1c4e3eb24a56924bcabeaa53a9b5"
+    },
+    {
+      "path": "scripts/analyze_maker_capture.py",
+      "sha256": "d87ce8f116e039976b7afac20ede5704d14b3d49eb626473d214a7d47811b359"
+    },
+    {
+      "path": "scripts/analyze_maker_equity.py",
+      "sha256": "85d4de8cfd523b4a4497e3e2f6411b05f3737f2133d4c167ddce708af363843f"
+    },
+    {
+      "path": "scripts/analyze_maker_roundtrip.py",
+      "sha256": "d7d23b255fcffc294069a77486cc944a9a64a32d6755cc515a960d1ae03a9c93"
+    },
+    {
+      "path": "scripts/audit_single_venue_study.py",
+      "sha256": "a306e4272648f4c098de6f015d2e5f293f2aa40ac9799b0a51d6ff7a86c81bb6"
+    },
+    {
+      "path": "scripts/core_maker_capture.py",
+      "sha256": "db704b735932205bfd5f188a849804cd93774373f6dd4accb32ed69f32c5507c"
+    },
+    {
+      "path": "scripts/core_maker_events.py",
+      "sha256": "4b29411baaf2ea0d7624ba6c35d752fe137e6108214ec7289125b2d7c52303f3"
+    },
+    {
+      "path": "scripts/core_rh_small_shortterm.py",
+      "sha256": "65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3"
+    },
+    {
+      "path": "scripts/maker_book_archive.py",
+      "sha256": "8c9b86a8024298b78f6a6890cb2ad97a267dacd357ee992432a52f9a9c756dd2"
+    },
+    {
+      "path": "scripts/maker_capture.py",
+      "sha256": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/passive_three_venue_capture.py",
+      "sha256": "d5b3c943bd6acfd28fbfd258e3f3523ca8cecabe5794ab73e6db420c5abfbe23"
+    },
+    {
+      "path": "scripts/passive_three_venue_events.py",
+      "sha256": "66c8c813e86aa229fc49539f7d0fe4be39bd3e6468b7a9313a1545909354fcca"
+    },
+    {
+      "path": "scripts/peer_cross_asset_diagnostic.py",
+      "sha256": "123b594c380dbec405aa4a1f47b8e9d4c71e608615d0a12623ba47ed578a7a75"
+    },
+    {
+      "path": "scripts/rh_maker_capture.py",
+      "sha256": "8a075d1b454752e0852f1a8ab6d40189c60bfba7bf62c7ff781b7349571b45b4"
+    },
+    {
+      "path": "scripts/run_single_venue_study.py",
+      "sha256": "81b12f74f8d9c3e8f88e1a7741c10d64fea793cf46a409da8c7aa83b3bdab9a0"
+    },
+    {
+      "path": "scripts/single_venue_broad.py",
+      "sha256": "d948761f48a7a367d51f65ec16aa21782ba241a5ec846461119ebd080c880ab8"
+    },
+    {
+      "path": "scripts/single_venue_broad_quotes.py",
+      "sha256": "96f0c5a8b435ab4fd30429eb873a49614b7eed299a1be0071c7c0bc01530f341"
+    },
+    {
+      "path": "scripts/single_venue_broad_relative.py",
+      "sha256": "1eeddcf8ba6b87861a3236bc4c16e082f362491b61c2c7ecc2e46bcc104b135a"
+    },
+    {
+      "path": "scripts/single_venue_compact_evidence.py",
+      "sha256": "5be023f9b4f365e3d8df3d65b660bf69a4d61a89ccdf401cf96c861e9e018524"
+    },
+    {
+      "path": "scripts/single_venue_depth.py",
+      "sha256": "a06b2da1b0d290c71964ea8b2e585df835a5787876d40c80ce47754c6cffefed"
+    },
+    {
+      "path": "scripts/single_venue_depth_capture.py",
+      "sha256": "f5230d15c2bcaa0ce32f767b75f058d01eacae292f27977be55e41cdd6d2a4ed"
+    },
+    {
+      "path": "scripts/single_venue_depth_events.py",
+      "sha256": "a6e681b4e9469422c29b6a27a4647223149dabe9637564539e71386e1c0d5fcc"
+    },
+    {
+      "path": "scripts/single_venue_depth_strategy.py",
+      "sha256": "a76fc598fac5c7022494b08afc228fe38540d6f89db6eecac5f8405b2396e0eb"
+    },
+    {
+      "path": "scripts/single_venue_executable_shock.py",
+      "sha256": "8a54db80b62f970f84cc40590a2c0bd94595ccabc868651af66bd6461f8c8b02"
+    },
+    {
+      "path": "scripts/single_venue_executable_strategy.py",
+      "sha256": "a5796f9723b4c4c54fab1bcc199ed30c9c8ccdee440d7a16ea513014ba0d1f22"
+    },
+    {
+      "path": "scripts/single_venue_fast_print.py",
+      "sha256": "480aa8ef4416e1f993718f7fbbd72919f1f1790784fc1b879663cca6023487d2"
+    },
+    {
+      "path": "scripts/single_venue_multi.py",
+      "sha256": "a834ddc458bc1f935b7e2fead605d7a0c84ee40e39c23220bebbf0f8f05c187c"
+    },
+    {
+      "path": "scripts/single_venue_multi_capture.py",
+      "sha256": "6137ea554407ddaa061f14c1d9de0330421fee5eb35aeda03693bc2c53a52538"
+    },
+    {
+      "path": "scripts/single_venue_multi_events.py",
+      "sha256": "89597d57108558c617b479e6de2e03be6deaec05a552a1dc9ccff9e815cdfe3d"
+    },
+    {
+      "path": "scripts/single_venue_ordinary_events.py",
+      "sha256": "7faa7cb9ab44fb46abdf7cdfa878cb9d3fac5347226d8c4d79751c66e3935903"
+    },
+    {
+      "path": "scripts/single_venue_residual_profile.py",
+      "sha256": "e3a9a11ce389cffe46f990fe7cc7279dccb18bc59ab58672cc5fed3a6de6e23d"
+    },
+    {
+      "path": "scripts/single_venue_shock_diagnostic.py",
+      "sha256": "612a29bd691e13f366f9bc3158739380544fc65c60882ef8cfefdc9774b1a303"
+    },
+    {
+      "path": "scripts/single_venue_strategy.py",
+      "sha256": "5f4a8684e76781c311eb9dfbd9c2f46f9600bb2369db09aafda7fbc2c0c02679"
+    },
+    {
+      "path": "tests/test_core_maker_events.py",
+      "sha256": "e193aa0d29b18fe17d01e3f63e076e962a668068e5168d365dbe7c4f7f491ecc"
+    },
+    {
+      "path": "tests/test_passive_three_venue_events.py",
+      "sha256": "d620ddca59c23688129201aa1f467ee946f8bc506758e2e0abc7f9251d618ff2"
+    },
+    {
+      "path": "tests/test_peer_cross_asset_diagnostic.py",
+      "sha256": "db6656816fb1a347c31861feef37305a0845b8278d6ed456f31a9bb6c55e28ad"
+    },
+    {
+      "path": "tests/test_single_venue_ordinary_events.py",
+      "sha256": "b2e6b648a44d178af0b823d3bdcbf4c2574ebddadbf3c9a53b91c68be3510208"
+    }
+  ],
+  "freeze_requirement": "Set status=frozen-before-outcomes and fill source/test/dependency pins only after synthetic tests, then record protocol SHA256 before reading new feature or outcome results. Require explicit expected protocol SHA256 at runtime; verify all input and source pins before both passes and before exclusive no-overwrite publication. No raw capture, full test suite or rebuild command is authorized by this protocol.",
+  "size_design": "The overall research objective includes profitable larger paper trades. 100 USDC is this first diagnostic baseline, not a user ceiling. This version isolates signal availability and conditional response at one fixed size; any later size study must be separately frozen with all sizes, observed depth, costs and required capital reported. No size is selected from winning outcomes.",
+  "frozen_utc": "2026-10-02T04:58:52.334021+00:00",
+  "synthetic_validation": {
+    "diagnostic_tests": 44,
+    "corrected_ordinary_adapter_tests": 4,
+    "new_test_command": ".venv/bin/python -m unittest tests.test_peer_cross_asset_diagnostic -q",
+    "adapter_test_command": ".venv/bin/python -m unittest tests.test_single_venue_ordinary_events -q",
+    "formatting_preflight_bytes": 18583,
+    "readout_cap_bytes": 32768,
+    "market_archive_processing_before_freeze": false
+  }
+}
