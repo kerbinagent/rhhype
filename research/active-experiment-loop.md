@@ -1983,3 +1983,13 @@ increase three versus report four retained. Archive3,739,354 B;143future
 pairs project4,503,260 B,margin739,620 B. Carry00:45:291sampled,invalidslot71,
 572future/interrupted;noerrors/retries/evaluation. News/analysiswaitingfresh
 heartbeats. Next01:06:33UTC.
+
+
+### Review 171, 2 October 01:06 UTC
+
+Complete coverage: two exact Premium paired losses/−$3.18521; no other
+closes/gains/estimates/aborts/rejections. Four feeds/102 pairs fresh,
+running/ok. Separate epoch increments match report. Archive3,743,713 B;
+142future pairs project4,502,277 B,margin740,603 B. Carry01:05:295sampled,
+invalidslot71,568future/interrupted;noerrors/retries/evaluation. News/analysis
+waitingfreshheartbeats. Next01:26:33UTC.

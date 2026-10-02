@@ -5763,3 +5763,37 @@ Reviews 66–170: 2,518 completions, 2,485 exact losses, one estimated loss,
 five audited paired gains and 27 audited failed-hedge rescue gains.
 Archive 3,739,354 / 5,242,880 B; 143 future pairs at 5,342 B project
 4,503,260 B, margin 739,620 B. Next review **01:06:33 UTC**.
+
+
+## Review 171 — 2 October 2026 01:06:33 UTC
+
+All eight strategy and aborted coverage fields complete. Exact report
+`review-20261002T010633Z.json.gz`: raw 18,242 B, SHA-256
+`5e9366ed7aae2984372975a1b7bd58d8d59df703f97bf8b4c4cb6006909b0362`;
+gzip 2,622 B, SHA-256
+`f6dce881c954ef04937f4a738b648a84880b601c3dd724ffc56dd578d27d244d`.
+Independent `current-epoch-at-review171.json.gz`: read 01:07:20.471325 UTC,
+updated 01:07:19.891459 UTC; raw 9,295 B, SHA-256
+`ff138bb76aa4964926aa3f12e9a6083b1109e0dccf721a4a2bdae7a898202371`;
+gzip 1,737 B, SHA-256
+`4c77b938eededd089387fd971f5484219ed09311cd7c97c0acba864fd8974f8b`.
+Exact decompression and per-write cap/growth guards passed.
+
+Two exact Premium paired losses/−$3.1852071911. No other closes, gains,
+estimates, aborts or entry rejections. Fees $1.7572537617, other costs
+$0.9986715315, capital $0.0000738979.
+
+Separate epoch convergence unchanged 653 / −$765.4838042202, Premium
+1,305 / −$2,338.3215241092; increments match report. Health running/ok,
+four feeds, 102 pairs, CPU 58.17%, p95 lag 32.60 ms, RSS 250.84 MiB,
+741.5 books/s, metadata age 1,468.0 s. Routine pulses fresh/ok; no service
+change. Carry 01:05: 295 sampled, persistent invalid slot 71, 568 future/
+interrupted; running, no errors/retries/economic evaluation. News waiting
+heartbeat 01:07:14 and analysis waiting_for_capture_terminal heartbeat
+01:07:09; both hashes match/economic evaluation false. No carry samples/
+economic news outputs opened, no competing jobs.
+
+Reviews 66–171: 2,520 completions, 2,487 exact losses, one estimated loss,
+five audited paired gains and 27 audited failed-hedge rescue gains.
+Archive 3,743,713 / 5,242,880 B; 142 future pairs at 5,342 B project
+4,502,277 B, margin 740,603 B. Next review **01:26:33 UTC**.
