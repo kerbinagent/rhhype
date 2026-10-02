@@ -1,0 +1,165 @@
+{
+  "reserved_bytes": 262144,
+  "categories_bytes": {
+    "source_tests": 49152,
+    "protocol": 16384,
+    "output": 196608
+  },
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 149528576,
+  "active_research_headroom_bytes": 4612096,
+  "overall_reservation_bytes": 836777216,
+  "schema": "single-venue-shock-controls-v1",
+  "recorded_utc": "2026-10-02T02:11:32.974350+00:00",
+  "previous": "reports/experiment-storage/single-venue-shock-controls-preparation-v1.json",
+  "previous_sha256": "7a698b525b5d39ab0bfbc7f111b5f5ab708d84b75b5671bbaed5ef093e007c49",
+  "preparation_included_no_double_allocation": true,
+  "windows": [
+    {
+      "index": 1,
+      "capture": "reports/single-venue-broad/capture",
+      "manifest_sha256": "eed280dd18fb6da31ad858d794735af75bc331e61564554d94758e7de8d62843",
+      "raw_sha256": "2a0082cb0b3865a75ac04a1b33034b6af49826bf7c2dbbbc37e43bacccb262bd",
+      "metadata_sha256": "decfa350ccc31b9c1ad09f9dffec368a7820b4d1368a7bfcea25584ffadc45f6"
+    },
+    {
+      "index": 2,
+      "capture": "reports/single-venue-broad-relative/capture",
+      "manifest_sha256": "44c423889dc2a49bf5a27377eb2a21c09c466c9280e9718e725b4ddc2800abc0",
+      "raw_sha256": "f0d9d94a000555430544305b6bbb056978c3c715cd5cb52bb09ae951ab99da24",
+      "metadata_sha256": "7c2100475a63e5a0f81ad5ac81970fdc3964747912cb40bd3d5cec02cc1166e1"
+    }
+  ],
+  "pins": [
+    {
+      "path": "scripts/single_venue_residual_profile.py",
+      "sha256": "e3a9a11ce389cffe46f990fe7cc7279dccb18bc59ab58672cc5fed3a6de6e23d"
+    },
+    {
+      "path": "tests/test_single_venue_residual_profile.py",
+      "sha256": "55d43232ed380a8fef0c3d46ae49e22045353163c8a9645c092852538cff9f0c"
+    },
+    {
+      "path": "scripts/single_venue_broad_quotes.py",
+      "sha256": "96f0c5a8b435ab4fd30429eb873a49614b7eed299a1be0071c7c0bc01530f341"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-broad-relative-v1.json",
+      "sha256": "9e10bef5d159da56799b578905a35eda9498291222ff548047c2252812b930c6"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-broad-v1.json",
+      "sha256": "caf9ab26627c767deed9f903445ccbe47b714302a588db5e9dcdea8c85b8a8d1"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-btc/independent-audit.json",
+      "sha256": "26eabb046fdb4b2f52e98819ab916b6758d56d87640207878c7b3cdfa6aa786b"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-eth/independent-audit.json",
+      "sha256": "f31e023197a7edfb6ecee7056af353e146e2ebb87c4ccb0d3cb36a076472faef"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-hype/independent-audit.json",
+      "sha256": "08c0d62af8a40f22b65a1414cacc394b17e5ad98d2933558bbdbac1d476f0660"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-lit/independent-audit.json",
+      "sha256": "a472b130ae8fbd844658ada08a684c3c2bf80ba3d2ad7281e9fe1c961918ba66"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-near/independent-audit.json",
+      "sha256": "a477730a175ea1abc0e9657013fdfa7c188d9afa8c73df8a07734f31fc9c5239"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-sol/independent-audit.json",
+      "sha256": "d52482a143e8a48d20892ccd3d485c0d4d62f014de4a8c981b740f100f3ecb53"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-sui/independent-audit.json",
+      "sha256": "e20859f4452694c2b4c348b8d70602471d0faaf3b3af140d11eda9960e97beb3"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-vvv/independent-audit.json",
+      "sha256": "acedef5a8cb7f182ff321ad1f866efc6485ab4c85e50f2a98b09aaef109c0f72"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-xrp/independent-audit.json",
+      "sha256": "e5cafd5ba96364179e401665a2993200656b9f070e1e3110c55c7039ccf1bb86"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-zec/independent-audit.json",
+      "sha256": "9b909026513adf13231146b293b3e589e8f9c0b5d8b9dbbe9568e4f56eb327f1"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-btc/independent-audit.json",
+      "sha256": "568b3e89cb6363fc1c94d33748184ce95ac695152d19d983a8f240548a89738c"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-eth/independent-audit.json",
+      "sha256": "15afd0b98c0c6072ef0cd575d9e4d8ef235af50bb5648c7212b235b408a9d904"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-hype/independent-audit.json",
+      "sha256": "39771973a07f3ce04b889f28f9f2a7ef86e764ca3b9e470d7235335ff4202ce3"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-lit/independent-audit.json",
+      "sha256": "1136c0599e3dfa67cf64a694e3045a7c303844b9b3b222c613a0d13ce2529752"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-near/independent-audit.json",
+      "sha256": "e4ae6a66d4ae68a29bd3f002e614411fc9ce2a2612f409a691ca15fbe4bb931c"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-sol/independent-audit.json",
+      "sha256": "9069e59bf2fc3719e3e140721547d793903f682c96035ac182177a2a0a50d082"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-sui/independent-audit.json",
+      "sha256": "ac842e88293e3674fc0cf0228d76c3478d4f5550f67ec78521049c52abd8a53b"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-vvv/independent-audit.json",
+      "sha256": "fdd40e7aa2fa575e9ee7049ce3d1af1998b1d24bc482d5f12465cd5824438d05"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-xrp/independent-audit.json",
+      "sha256": "970ae34d20a190a69b2005ccdb6932d55c253178acb6e699282c38bdffa4e9de"
+    },
+    {
+      "path": "reports/single-venue-research/single-venue-broad-relative-zec/independent-audit.json",
+      "sha256": "a032a9eed75665208f90d3eb3649f043d8f0842781fc44cb20c20fd3646c8a02"
+    },
+    {
+      "path": "scripts/single_venue_shock_controls.py",
+      "sha256": "34d8c372560fb3ad21e77c11fe264af8b8aaa4890813df325b8c90d26dcce2f1"
+    },
+    {
+      "path": "tests/test_single_venue_shock_controls.py",
+      "sha256": "895d88419e2338e40c468111697057c6f2204ec151b55b3c5f38af2e6976626f"
+    },
+    {
+      "path": "scripts/single_venue_depth_strategy.py",
+      "sha256": "a76fc598fac5c7022494b08afc228fe38540d6f89db6eecac5f8405b2396e0eb"
+    },
+    {
+      "path": "scripts/single_venue_fast_print.py",
+      "sha256": "480aa8ef4416e1f993718f7fbbd72919f1f1790784fc1b879663cca6023487d2"
+    },
+    {
+      "path": "scripts/audit_single_venue_study.py",
+      "sha256": "a306e4272648f4c098de6f015d2e5f293f2aa40ac9799b0a51d6ff7a86c81bb6"
+    },
+    {
+      "path": "scripts/single_venue_strategy.py",
+      "sha256": "5f4a8684e76781c311eb9dfbd9c2f46f9600bb2369db09aafda7fbc2c0c02679"
+    }
+  ],
+  "output_caps": {
+    "gzip": 180224,
+    "readout": 16384
+  },
+  "scope": "Exploratory diagnostic on two completed ten-asset two-venue windows with historical economics already inspected; not unseen validation. Reuse the exact original Detector and keep only depth_fade signals (ordinary individual print >=25% of prior displayed 5bp depth, strict preceding source clocks, fresh post pair within250ms, signed local midpoint impact>=2bp and absolute reference move<=1bp). All original gate counts retained. Admission3<=elapsed<570seconds, first signal per asset across BOTH venues in each fixed30second interval; later signals in that interval counted as same_episode, not additional observations. All raw shocks update the quiet-period clock. Ordinary control candidates: first fresh paired local-book callback at least1second after its previous candidate, same3..570window. Quiet requires15seconds of capture since start/latest invalidation and no detected same-asset shock on EITHER venue in the preceding15seconds. No requirement about future shocks. Each event selects a control on the same asset/venue at event_time minus30seconds, within plus/minus2seconds; match PRE-PRINT event spread bucket to control decision spread bucket: below1bp/[1,3)/[3,10)/atleast10. Choose smallest absolute time distance, tie earlier. Same fade direction. Selection reads no future outcome, fill completeness, return or reference availability; no farther fallback and no replacement of failed controls. All unmatched events retained with reason. Quiet-control candidates precompute both directions for reproducibility; only selected control rows and full count denominator are published. Reused controls counted; subsequent observed same-asset shocks through matched quote exit counted post hoc without exclusion. All quotes use native rounded100/(ask*1.01) quantity and minima; first local book with both receipt and source >=decision+400ms, <=due+2seconds, fresh valid same generation; no retry after first eligible failure. Full unrestricted-depth entry quote must fit100cap; exit same quantity opposite side at first eligible book >=entry_receipt+10seconds+400ms with identical clock/depth rules. All missing/minimum/cap/invalidation/generation/end failures retained. Local quote and midpoint changes, fresh paired reference-midpoint accounting at entry/exit, and quote minus reference retained. Reference assumes USDC/USDG parity, is not causal or hedged execution; local result retained if reference missing. Both metadata taker fees must be zero. Quote returns omit capital, funding, actual IOC price limits, partial fills, order competition/private acknowledgments and portfolio exposure. Windows do not cross scheduled hourly funding. 0/1/2/5bp separate stress sensitivities reported without double-counting displayed costs. Report all40asset/venue/window rows including empty; event quote mean, event quote-minus-reference, event-minus-control local quote, and event-minus-control quote-minus-reference only for matched pairs, with denominators. Descriptive interpretation: local temporary-impact story needs positive event quote return and positive reference-adjusted event-minus-control in the same asset/venue across both windows; report every qualifying or failing group with counts, not optimized threshold, significance or a live-test pass. Sparse/missing controls make inference inconclusive; two sessions and dependent assets do not establish an edge. No new capture, source mutation, ledger replay or hypothesis promotion.",
+  "verification": "Five targeted tests pass: outcome-blind control selection/fixed no-fallback band; shared-market gain has negative spread-cost residual; both-clock first-eligible/no retry/100cap; missing reference retains local and own invalidation/end fails explicitly; episode spacing across venues plus past-only control selection. Initial synthetic episode fixture lacked a fresh paired callback for the target control venue; fixture corrected before any market-data evaluation. Original detector and prior validated adapter/walker reused unchanged."
+}

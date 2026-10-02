@@ -1,0 +1,17 @@
+{
+  "schema": "single-venue-shock-controls-preparation-v1",
+  "recorded_utc": "2026-10-02T02:04:18.278612+00:00",
+  "previous": "reports/experiment-storage/research-process-review-v1.json",
+  "previous_sha256": "1b906c55777762073d9833360b03ccd527e72895dfcb5f5b19483441b4048646",
+  "reserved_bytes": 262144,
+  "categories_bytes": {
+    "source_tests": 49152,
+    "protocol": 16384,
+    "output": 196608
+  },
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 149528576,
+  "active_research_headroom_bytes": 4612096,
+  "overall_reservation_bytes": 836777216,
+  "scope": "One bounded offline event/control diagnostic on the two completed ten-asset broad windows. Reuse original local-depth-shock detector and raw adapter. No new capture, network or trading engine; no armed sources changed. Full protocol/source pins will be frozen before economic calculation. Historical strategy outcomes already known: exploratory, not holdout validation."
+}
