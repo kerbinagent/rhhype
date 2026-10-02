@@ -1,0 +1,209 @@
+{
+  "schema": "single-venue-news-ordinary-feed-fix-v1",
+  "recorded_utc": "2026-10-02T03:55:52.229161+00:00",
+  "previous": "reports/experiment-storage/single-venue-inventory-context-ordinary-feed-fix-v1.json",
+  "previous_sha256": "f8b045d2692cf5641a83a72f734d3b0fc4936db13986379f0d6fd88f9d845dfd",
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 154927104,
+  "active_research_headroom_bytes": 99827712,
+  "overall_reservation_bytes": 2836777216,
+  "reserved_bytes": 3145728,
+  "categories_bytes": {
+    "source": 32768,
+    "tests": 16384,
+    "protocol": 16384,
+    "ledger_outputs": 2621440,
+    "comparison_outputs": 98304,
+    "control_provenance": 65536,
+    "readout": 16384,
+    "margin": 278528
+  },
+  "allocation_note": "3 MiB from the existing research-pool headroom, separate from the rolling offline-analysis suballocation and the user 2 GB rolling-store grant. No new raw capture or copy. Preserve original armed news capture, helper, methods, sources and outputs. Common corrected adapter/tests remain funded under ordinary-feed-adapter-repair-v1. This separately frozen offline companion corrects the known mixed-subtype population defect in both original families.",
+  "capture_plan": "reports/experiment-storage/single-venue-news-v1.json",
+  "capture_root": "reports/single-venue-news/capture",
+  "control_root": "reports/single-venue-news-ordinary-fix-v1",
+  "output_stem": "single-venue-news-ordinary-fix",
+  "assets": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "HYPE",
+    "XRP",
+    "SUI",
+    "NEAR",
+    "ZEC",
+    "VVV",
+    "LIT"
+  ],
+  "selected": {
+    "rh_lighter": {
+      "BTC": "1",
+      "ETH": "0",
+      "SOL": "3",
+      "HYPE": "2",
+      "XRP": "6",
+      "SUI": "9",
+      "NEAR": "7",
+      "ZEC": "4",
+      "VVV": "8",
+      "LIT": "5"
+    },
+    "lighter": {
+      "BTC": "1",
+      "ETH": "0",
+      "SOL": "2",
+      "HYPE": "24",
+      "XRP": "7",
+      "SUI": "16",
+      "NEAR": "10",
+      "ZEC": "90",
+      "VVV": "69",
+      "LIT": "120"
+    }
+  },
+  "families": [
+    "relative",
+    "depth"
+  ],
+  "execution_parameters": {
+    "pair_skew_ms": 250,
+    "book_age_seconds": 2,
+    "reference_seconds": 120,
+    "reference_embargo_seconds": 2,
+    "reference_min_count": 60,
+    "reference_min_span_seconds": 89,
+    "signal_interval_seconds": 1,
+    "admission_start_seconds": 122,
+    "admission_stop_seconds": 480,
+    "budget": 100,
+    "sizing_headroom_fraction": 0.01,
+    "initial_cash": 600,
+    "delay_ms": 400,
+    "confirmation_timeout_seconds": 2,
+    "entry_limit_bps": 1,
+    "exit_limit_bps": 10,
+    "max_exit_attempts": 3,
+    "hold_seconds": 10,
+    "cooldown_seconds": 30,
+    "max_attempts": 20,
+    "gap_min_bps": 5,
+    "other_gap_min_bps": 3,
+    "forecast_buffer_bps": 2,
+    "leader_min_move_bps": 3,
+    "target_max_leader_fraction": 0.5,
+    "shock_min_local_move_bps": 2,
+    "shock_max_reference_move_bps": 1,
+    "shock_flow_multiple": 5,
+    "shock_imbalance": 0.8,
+    "shock_depth_fraction": 0.25,
+    "shock_depth_band_bps": 5,
+    "shock_min_baseline_bins": 20,
+    "shock_min_baseline_span_seconds": 60,
+    "capital_rate": 0.05,
+    "stress_bps": 5,
+    "funding_guard_seconds": 120
+  },
+  "capture_hard_bytes": 50593792,
+  "duration_seconds": 600,
+  "scheduled_start_epoch": 1790943960.0,
+  "event_epoch": 1790944200.0,
+  "adapter_bounds": {
+    "decoded_bytes": 1073741824,
+    "records": 1000000,
+    "trade_ids": 500000,
+    "metadata_bytes": 131072,
+    "raw_bytes": 50593792
+  },
+  "output_caps": {
+    "per_directory": 131072,
+    "trace": 98304,
+    "summary": 16384,
+    "metrics": 8192,
+    "audit": 8192,
+    "comparison_gzip_per_family": 16384,
+    "comparison_csv_per_family": 32768,
+    "controls": 65536,
+    "readout": 16384
+  },
+  "source_pins": [
+    {
+      "path": "reports/experiment-storage/ordinary-feed-adapter-repair-v1.json",
+      "sha256": "fdaa82156b33fce08633467702c2e6d72a3de18dbbd1a66034e11f05879e93ba"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-news-v1.json",
+      "sha256": "e9efab93a06e4e53fdb76b2f4b0e955f25f37a749c810062736a66f04ec90ffe"
+    },
+    {
+      "path": "scripts/analyze_maker_capture.py",
+      "sha256": "d87ce8f116e039976b7afac20ede5704d14b3d49eb626473d214a7d47811b359"
+    },
+    {
+      "path": "scripts/analyze_maker_equity.py",
+      "sha256": "85d4de8cfd523b4a4497e3e2f6411b05f3737f2133d4c167ddce708af363843f"
+    },
+    {
+      "path": "scripts/analyze_maker_roundtrip.py",
+      "sha256": "d7d23b255fcffc294069a77486cc944a9a64a32d6755cc515a960d1ae03a9c93"
+    },
+    {
+      "path": "scripts/passive_three_venue_capture.py",
+      "sha256": "d5b3c943bd6acfd28fbfd258e3f3523ca8cecabe5794ab73e6db420c5abfbe23"
+    },
+    {
+      "path": "scripts/passive_three_venue_events.py",
+      "sha256": "66c8c813e86aa229fc49539f7d0fe4be39bd3e6468b7a9313a1545909354fcca"
+    },
+    {
+      "path": "scripts/rh_maker_capture.py",
+      "sha256": "8a075d1b454752e0852f1a8ab6d40189c60bfba7bf62c7ff781b7349571b45b4"
+    },
+    {
+      "path": "scripts/single_venue_news_ordinary_fix.py",
+      "sha256": "569021bac1b4769d84fb6e95518be8951c3063b69ab92b0c24407411958d0bcf"
+    },
+    {
+      "path": "scripts/single_venue_news_ordinary_fix_readout.py",
+      "sha256": "6b4b6c4ce3b5539b8f2045038a7318cc8bfba57fcb2c97e09eaf17ba69739e0c"
+    },
+    {
+      "path": "scripts/single_venue_ordinary_events.py",
+      "sha256": "7faa7cb9ab44fb46abdf7cdfa878cb9d3fac5347226d8c4d79751c66e3935903"
+    },
+    {
+      "path": "tests/test_passive_three_venue_events.py",
+      "sha256": "d620ddca59c23688129201aa1f467ee946f8bc506758e2e0abc7f9251d618ff2"
+    },
+    {
+      "path": "tests/test_single_venue_news_ordinary_fix.py",
+      "sha256": "23dc385ac10b1f95a0deb76f38a5d6b1f3f43cfb1e41ddf37e4ee74a8a301cb1"
+    },
+    {
+      "path": "tests/test_single_venue_ordinary_events.py",
+      "sha256": "b2e6b648a44d178af0b823d3bdcbf4c2574ebddadbf3c9a53b91c68be3510208"
+    }
+  ],
+  "status": "frozen",
+  "scope": "Correction only: skip and count known nonordinary types within trades[], preserve all ordinary validation/history/dedup/clock safeguards; no signal/parameter/arm/latency/cost changes. Original 60 relative and 40 depth arms are independent ledgers and cannot be summed. Both families are affected by old trade invalidations; relative Features also clears book/reference state. Corrected outputs have distinct names and analysis hashes. Prior rolling results informed this technical repair, not the future news outcomes.",
+  "input_contract": "Do not evaluate before the original capture reaches normal duration_limit, not truncated, with required event coverage and exact original capture-plan hash. Verify original news source pins and corrected source pins. Independently pin original supervisor/capture terminal, manifest, raw and complete metadata/request inventory; verify raw hash independently of manifest and recheck inputs, plans and sources after all commands. Original capture-plan hash remains in terminal/manifest/metadata; successor analysis-plan hash belongs to corrected summaries and provenance. No reserved rolling input or extra capture.",
+  "execution_contract": "Fresh process for each of 24 serial commands: family replay, ten matching independent signal/cash audits, comparison; repeat for other family. Each child nice19, <=600 seconds and within <=3600 seconds total analysis budget. Wait <=14 hours and no later than Oct2 12:40UTC for original capture terminal; heartbeat <=30 seconds. No retry, automatic input replacement, overwrite or old-helper output ownership. Keep partial/failed evidence and explicit state. Require all100 rows and20 passed matching audits before successful readout; empty audits are vacuous.",
+  "interpretation": "Conditional public-book IOC execution only, no private acknowledgments or fills. Preserve no-fills, partials, unknown obligations, native USDG/USDC distinction, fees/capital and extra5bp stress. The scheduled window is one exploratory regime, not independent replication or durable profitability. A correction changes measurement, not the research hurdle.",
+  "method_reference": {
+    "path": "reports/experiment-storage/single-venue-news-v1.json",
+    "sha256": "e9efab93a06e4e53fdb76b2f4b0e955f25f37a749c810062736a66f04ec90ffe",
+    "inherit": "All methods, selection, scope, fees, collateral, signal/execution clocks, parameter values, ledgers, limitations and exact original independent auditors. Only corrected ordinary subtype parsing and disjoint analysis/output identities change."
+  },
+  "verification": {
+    "command": ".venv/bin/python -m unittest discover -s tests -p test_single_venue_news_ordinary_fix.py -v",
+    "root_result": "6 synthetic tests passed independently. Root read full runner/reporter/tests and checked copied replay event dispatch, signal/ledger identity, original capture terminal/metadata format, independent audit routing, deadlines, immutable output caps and all100 rows/20audit requirements. No future capture or news outcome was read.",
+    "ordinary_adapter": "Previously independently tested and now verified on all25720 ordinary rows of rolling batch1, excluding64 overlapping liquidations with no genuine invalid/suppressed trade frames. Same adapter source hash."
+  },
+  "original_capture_plan_sha256": "e9efab93a06e4e53fdb76b2f4b0e955f25f37a749c810062736a66f04ec90ffe",
+  "source_reuse": "The exact original capture protocol is pinned here. Unchanged news.verify validates every source pin in that protocol before each corrected command and again after all commands. The successor pins all added runtime/test modules and extra test helpers. This is transitive verification of the existing source set, not an exemption from verification.",
+  "frozen_utc": "2026-10-02T04:24:51.473359+00:00",
+  "budget_verification": {
+    "source_bytes": 23298,
+    "tests_bytes": 13665,
+    "reservation_bytes": 3145728
+  }
+}

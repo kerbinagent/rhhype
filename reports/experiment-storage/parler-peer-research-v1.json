@@ -1,0 +1,18 @@
+{
+  "schema": "parler-peer-research-v1",
+  "recorded_utc": "2026-10-02T04:26:45.454271+00:00",
+  "previous": "reports/experiment-storage/single-venue-news-ordinary-feed-fix-v1.json",
+  "previous_sha256": "45ba5e949a317eef63fdd1e4dede1748a488a85f0cfa8a27fe5fcc0210dc126d",
+  "reserved_bytes": 8388608,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 163315712,
+  "active_research_headroom_bytes": 91439104,
+  "overall_reservation_bytes": 2836777216,
+  "categories_bytes": {
+    "peer_sources_tests_docs_and_this_protocol": 2097152,
+    "peer_derived_outputs": 6291456
+  },
+  "scope": "User-authorized autonomous Parler research lane: investigate hypotheses, preregister bounded analyses before outcomes, implement and test isolated new code, analyze existing authorized committed archives as exploratory, and deliver complete evidence. No new raw capture grant, orders, credentials or main-branch merge. Shared fresh captures, retention and API quotas remain coordinated by root. Existing checkout files are baseline project copies; new retained deliverables must fit this8MiB reservation. Root rolling2GB store and existing offline suballocations remain unchanged.",
+  "authorization": "User requested a longer-horizon general research direction and much more autonomy for the peer, and explicitly approved all detailed project task assignments via Parler.",
+  "notes": "8MiB within existing research-pool headroom, no ceiling increase. Peer owns isolated branch. Preserve frozen sources and prior failures; full denominators, latency/cost/source identity and no independent-ledger sums. Interim20minute update is a checkpoint, not task termination."
+}
