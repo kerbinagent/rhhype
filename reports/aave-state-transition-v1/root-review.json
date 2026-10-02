@@ -1,0 +1,51 @@
+{
+  "body_bytes": 61914,
+  "checks": [
+    "Every frozen pin and request/body hash",
+    "Seven parent-hash getter identities and optional flags",
+    "Original prefix copied unchanged from original replay",
+    "Probe sender, nonces, fees, context, gas and order",
+    "Original prefix receipt status, gas and every log",
+    "Parent and target header/prefix rechecks",
+    "ABI health, prices, metadata, eligibility and projection"
+  ],
+  "collector_imported": false,
+  "independent_read_bytes": 262742,
+  "limitations": [
+    "Parent wiring only",
+    "Selected price causality not independently isolated",
+    "Custom executor error unknown",
+    "No account control, inclusion, closed cash or repeatable profit"
+  ],
+  "new_network_requests": 0,
+  "plan.json": {
+    "bytes": 2709,
+    "sha256": "45af227ecef9bc5bc1f409bff17f8dc632340ad0f55b3f68d6208e01f0d3407e"
+  },
+  "plan_pins_verified": 10,
+  "post_hoc_nested_decoder_review": {
+    "independent_read_bytes": 10756,
+    "limitations": "No cryptographic signature verification or historical runtime identity",
+    "median_raw": "1431020466",
+    "observations": 31,
+    "signature_array_lengths": [
+      11,
+      11
+    ],
+    "status": "passed"
+  },
+  "raw_bytes": 82046,
+  "raw_files_verified": 52,
+  "requests_verified": 13,
+  "reviewer": "aave_census_review",
+  "run-v1/projection.json": {
+    "bytes": 3370,
+    "sha256": "76ddae0e183cdfb65b9e1413179fea839c17f675291305fc752a0ce723df3a47"
+  },
+  "run-v1/terminal.json": {
+    "bytes": 296,
+    "sha256": "bd276d3f8a6c03f157d6b474015ecf82a0f352de886ef57307e18286910d7a8f"
+  },
+  "schema": "aave-state-transition-root-review-v1",
+  "status": "passed"
+}

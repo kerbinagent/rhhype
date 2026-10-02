@@ -1,0 +1,24 @@
+{
+  "active_research_headroom_bytes": 1011712,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 253743104,
+  "authority": {
+    "basis": "Retained peer record of direct user approving the exact 4MiB proposal at22:54:10UTC",
+    "path": "reports/experiment-storage/peer-comet-budget-amendment-v3.json",
+    "peer_message": "6f69c619-4aaf-4806-906e-09bfada6dc1a",
+    "sha256": "ab049a3b7e8924e6a117077ebbbd5ab34d56795b69a50831a9bdec14b6f8e877"
+  },
+  "consumed_escrow_bytes": 2097152,
+  "control_record_allocation": "existing root continuation coordination16KiB; amendment copy within peer four-copy controls",
+  "headroom_after_pending_escrow_bytes": 1011712,
+  "mac_total_reserved_bytes": 4194304,
+  "overall_reservation_bytes": 2848823552,
+  "pending_mac_expansion_escrow_bytes": 0,
+  "previous_global_allocation": {
+    "path": "reports/experiment-storage/aave-state-transition-allocation-v1.json",
+    "sha256": "e90fe5c02f9b3c5bfdcd6858cad8aadd9002e4609e24aefa8c6755ff50580691"
+  },
+  "recorded_utc": "2026-10-02T22:56:49.487966+00:00",
+  "schema": "continuation-mac-escrow-consumption-v1",
+  "scope": "All original public request/time/preservation limits unchanged; peer proceeds with preselected WETH57 and price55 stages. No root new collection authorized by this accounting record."
+}

@@ -1,0 +1,1 @@
+{"allow_unavailable":true,"name":"source_aggregator","request":{"id":8,"jsonrpc":"2.0","method":"eth_call","params":[{"data":"0x245a7bfc","from":"0x74d68ccd5085ec6aa2e20d133d806fe6f7d3eaf4","gas":"0x493e0","to":"0xc7e9b623ed51f033b32ae7f1282b1ad62c28c183"},{"blockHash":"0x117289c9738aa8b952a190eafb8881ffc7711cb5e79205ff92e52b26fb179c10","requireCanonical":true}]}}

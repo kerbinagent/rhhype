@@ -1,0 +1,1 @@
+{"allow_unavailable":false,"name":"provider_oracle","request":{"id":3,"jsonrpc":"2.0","method":"eth_call","params":[{"data":"0xfca513a8","from":"0x74d68ccd5085ec6aa2e20d133d806fe6f7d3eaf4","gas":"0x493e0","to":"0x2f39d218133afab8f2b819b1066c7e434ad94e9e"},{"blockHash":"0x117289c9738aa8b952a190eafb8881ffc7711cb5e79205ff92e52b26fb179c10","requireCanonical":true}]}}
