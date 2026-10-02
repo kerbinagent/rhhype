@@ -1,0 +1,14 @@
+{
+  "schema": "parler-peer-primary-issuance-source-cap-v2",
+  "recorded_utc": "2026-10-02T08:06:13.734403+00:00",
+  "previous": "reports/experiment-storage/parler-peer-primary-issuance-v1.json",
+  "previous_sha256": "da22971ab71885b344f5ff153f9c50520fecb6313a7432aaed72786c52141da2",
+  "reserved_bytes": 0,
+  "previous_probe_source_subcap_bytes": 131072,
+  "probe_source_tests_protocol_and_remote_copies_subcap_bytes": 163840,
+  "peer_source_category_bytes_unchanged": 2097152,
+  "peer_total_reserved_bytes_unchanged": 8388608,
+  "basis": "Measured135599-byte two-session source/test/proposal/protocol/runtime/amendment package before handoff growth. Preserve targeted regression tests. No RPC or economic observation before this adjustment.",
+  "unchanged": "Raw524288 across both sessions, derived5767168, endpoint,20-request/180-second one-run limits, no retry/fallback, scope and every execution/freeze gate from previous amendment. No new global headroom.",
+  "authorization": "Supersedes only the131072-byte source/protocol/remote-copy subcap in the prior peer metadata amendment."
+}
