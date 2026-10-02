@@ -1,0 +1,1 @@
+{"state":"finished","started_utc":"2026-10-02T04:31:32.347694+00:00","plan_sha256":"45ba5e949a317eef63fdd1e4dede1748a488a85f0cfa8a27fe5fcc0210dc126d","economic_evaluation":false,"heartbeat_utc":"2026-10-02T12:35:33.089727+00:00","success":false,"error":"AssertionError: capture_inventory_changed","ended_utc":"2026-10-02T12:36:03.151618+00:00"}
