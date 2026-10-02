@@ -1,0 +1,36 @@
+{
+  "active_research_headroom_bytes": 2228224,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 252526592,
+  "coordination": "Mac owns scripts/tests peer_comet*, research/peer-comet*, reports/peer-comet* and experiment-storage/peer-comet*. Local Claude owns reports/hip4-independent-research/. Both status requests acknowledged at new coordinator address; Mac reply received and acknowledged. Fresh Claude reply pending. Shared git/index untouched.",
+  "coordination_control_reservation_bytes": 16384,
+  "current_session": "01a0fe88-e381-7b93-9889-b2fde80ee203",
+  "headroom_after_pending_escrow_and_coordination_bytes": 131072,
+  "headroom_after_pending_escrow_bytes": 147456,
+  "hip4_direct_user_authority": {
+    "bytes": 2817,
+    "path": "reports/hip4-independent-research/live-v2/authority-v1.json",
+    "reservation_bytes": 4194304,
+    "sha256": "b156941fa067873e78eea98455ab21eeed51e6974a3cc00ec844d2b4f73f392f",
+    "status": "existing peer-recorded direct user approval; substantive source/timer review pending"
+  },
+  "limitations": "Arithmetic reconciliation of named plans, not a full filesystem inventory. Does not release previous reservations or erase failed artifacts. Rolling capture 2GB grant remains separate.",
+  "overall_reservation_bytes": 2847607040,
+  "pending_comet_authority": "Mac peer reports a direct-user question pending. Escrow only; elapsed time is not approval. Existing 2MiB grant remains in previous total. No new collection or transfer authorized here.",
+  "pending_comet_expansion_bytes": 2097152,
+  "previous_active_research_reserved_bytes": 248315904,
+  "previous_global_allocation": {
+    "bytes": 4866,
+    "path": "reports/experiment-storage/creation-callback-access-preparation-v1.json",
+    "sha256": "6f7fdaee187af0a47294bc966a2983e4e3385ada9adf0b3fcbc333c0a8002843"
+  },
+  "previous_session": "01a0eb3e-c114-76e1-be82-00327eafbf9c",
+  "recorded_utc": "2026-10-02T21:43:28.105530+00:00",
+  "schema": "continuation-peer-reservation-reconciliation-v1",
+  "scope": "Recover peer coordination and reservations before further experimentation. No collection, transfer, source edit, approval of pending amendment, or economic result admission.",
+  "status_messages": {
+    "claude_request": "d8441bbf-f010-4e56-8abe-26f714570b09",
+    "mac_reply": "220bc612-0c05-4e4e-bb88-ee82cf2f306b",
+    "mac_request": "e60085e1-bdf7-4390-b587-27c60d4b10f6"
+  }
+}

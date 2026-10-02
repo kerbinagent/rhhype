@@ -1,0 +1,218 @@
+{
+  "accounting": "Release only unused terminal-study reservations; preserve all files and prior identity pins. This record charged to new controls. Separate2GB rolling capture and peer-owned reservations unchanged.",
+  "active_research_headroom_bytes": 2490368,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 252264448,
+  "bounds": {
+    "cpu_seconds": 30,
+    "cumulative_body_bytes": 1048576,
+    "fallbacks": 0,
+    "overall_seconds": 240,
+    "per_request_seconds": 12,
+    "per_response_bytes": 65536,
+    "ram_bytes": 536870912,
+    "raw_bytes": 1572864,
+    "requests": 62,
+    "retries": 0
+  },
+  "categories_bytes": {
+    "controls_and_reviews": 65536,
+    "derived_projection": 131072,
+    "margin": 65536,
+    "raw_framed_rpc_responses": 1572864,
+    "source_tests_design_plan_and_sequential_fixtures": 262144
+  },
+  "closeouts": [
+    {
+      "actual_named_artifact_bytes": 578716,
+      "files": [
+        {
+          "bytes": 10703,
+          "path": "reports/comet-eligibility-live-v1/design.txt",
+          "sha256": "154db45e556a4983f3ea621b898874194a685147d166152917850fefbdbaa58c"
+        },
+        {
+          "bytes": 2985,
+          "path": "reports/comet-eligibility-live-v1/draft-plan.json",
+          "sha256": "6a7e73d903f3a0a1e3e8ad4aaa87ccfe71ad851e9431f7849606cc8f31373dd6"
+        },
+        {
+          "bytes": 3139,
+          "path": "reports/comet-eligibility-live-v1/root-preflight.json",
+          "sha256": "f4ff6b07c6d40c61e8b4d76d233155a485d3da784258ff3c1616a11346cafb20"
+        },
+        {
+          "bytes": 4116,
+          "path": "reports/comet-eligibility-live-v1/root-reconciliation.json",
+          "sha256": "33c84789ca9e2e5d4f37c932258ec58bed45633252f6e3bda8ca8f7962706c03"
+        },
+        {
+          "bytes": 1244,
+          "path": "reports/comet-eligibility-live-v1/run-v1/claim.json",
+          "sha256": "4a6958c36c9bd71aef51e951ce4da1225879f7c195d594803ede39f8527b10d1"
+        },
+        {
+          "bytes": 2167,
+          "path": "reports/comet-eligibility-live-v1/run-v1/clock-samples.json",
+          "sha256": "de6b9f34dec4a942415682da5788a03800192e57e8f62047be4a373e043b59d3"
+        },
+        {
+          "bytes": 5091,
+          "path": "reports/comet-eligibility-live-v1/run-v1/projection.json",
+          "sha256": "627eb90ab6b9d15f994bfbb8e6a620c2f84e593b8ac29880e6f3ded75eef8ef0"
+        },
+        {
+          "bytes": 283638,
+          "path": "reports/comet-eligibility-live-v1/run-v1/responses.frames",
+          "sha256": "e223a6ede38da447c54ead54103f4d73d856a219ce495270db4a2c253ffc2b7e"
+        },
+        {
+          "bytes": 1009,
+          "path": "reports/comet-eligibility-live-v1/run-v1/supervisor.json",
+          "sha256": "ed846395ebfa26960d7a435b3e437097d00c6777532ddd581bfb8e487d41aaae"
+        },
+        {
+          "bytes": 783,
+          "path": "reports/comet-eligibility-live-v1/run-v1/terminal.json",
+          "sha256": "dd3b2a962d095ce3783a19326bf2ad898dfc904b1913e68517d36bdb533e9b17"
+        },
+        {
+          "bytes": 219528,
+          "path": "reports/comet-eligibility-live-v1/run-v1/trace.json",
+          "sha256": "6f0c9c8cf9e80b5a9d4b4c926d7411083d60c72489c7ad8942d760df57f3c932"
+        },
+        {
+          "bytes": 3584,
+          "path": "reports/experiment-storage/comet-eligibility-live-v1.json",
+          "sha256": "dc088bd30dd438f22dff779f9c84579be32d139098b54da7898fe864a2143f13"
+        },
+        {
+          "bytes": 25331,
+          "path": "scripts/comet_eligibility_live_v1.py",
+          "sha256": "fd47105e387bd05bb5a32e59c737d471efc47b91af911956c312bb8e5a00953b"
+        },
+        {
+          "bytes": 15398,
+          "path": "tests/test_comet_eligibility_live_v1.py",
+          "sha256": "648821c7f49e27132b86a3c894b83c8b9d795199dd34e3b1fbeabab53825ac8f"
+        }
+      ],
+      "old_reserved_bytes": 2097152,
+      "released_unused_reservation_bytes": 1048576,
+      "reserve_note": "Retained amount includes all named bytes, at least128KiB for earlier messages/controls/fixtures and remaining margin. Completed one-shot run cannot restart. Existing shared dependencies retain their separate reservations.",
+      "retained_reserved_bytes": 1048576,
+      "study": "comet-eligibility-live-v1"
+    },
+    {
+      "actual_named_artifact_bytes": 335684,
+      "files": [
+        {
+          "bytes": 10282,
+          "path": "reports/comet-collateral-inventory-v1/design.txt",
+          "sha256": "30e36bf6d0a007f9826d1d48a2a1f2d7492a8e2b3cf8145f64d6f00b80388345"
+        },
+        {
+          "bytes": 3776,
+          "path": "reports/comet-collateral-inventory-v1/draft-plan.json",
+          "sha256": "7ad6e2504b924f792f5f59e67b39f1dadd4796f0331a10b051c7b15a3c6cf326"
+        },
+        {
+          "bytes": 3320,
+          "path": "reports/comet-collateral-inventory-v1/root-preflight.json",
+          "sha256": "ff5dadb7443173169d0648d9c8f3267c3cbe5e476f4d70f4564e51fecbabfb91"
+        },
+        {
+          "bytes": 6063,
+          "path": "reports/comet-collateral-inventory-v1/root-reconciliation.json",
+          "sha256": "a3b1577cae9bc935d72c443ad4d20907d7c772e81e27b1d2e211406757bddca0"
+        },
+        {
+          "bytes": 1249,
+          "path": "reports/comet-collateral-inventory-v1/run-v1/claim.json",
+          "sha256": "2862b5901f45520393a9dcb0f2e0b275a65a8b3c612de8d017163b6f63e561a1"
+        },
+        {
+          "bytes": 2662,
+          "path": "reports/comet-collateral-inventory-v1/run-v1/clock-samples.json",
+          "sha256": "81afdb30fe73592c92a021365c555ed62cd1dfb888c18019ae1c5cb3a37de90f"
+        },
+        {
+          "bytes": 12368,
+          "path": "reports/comet-collateral-inventory-v1/run-v1/projection.json",
+          "sha256": "77ece9feac7ee802ad9ec675b1d058c015b19aa510f3a6a00783abe6a5f171c0"
+        },
+        {
+          "bytes": 149135,
+          "path": "reports/comet-collateral-inventory-v1/run-v1/responses.frames",
+          "sha256": "cda935fa13d73b609b500f2c5bcee3e469a8ad3ba8f384d7a3806731ec16f518"
+        },
+        {
+          "bytes": 1006,
+          "path": "reports/comet-collateral-inventory-v1/run-v1/supervisor.json",
+          "sha256": "7aa2ad168c1d4c008964b8dd7491c3207581d20994632dfe8959d9f15be396d1"
+        },
+        {
+          "bytes": 749,
+          "path": "reports/comet-collateral-inventory-v1/run-v1/terminal.json",
+          "sha256": "f1dc7eefd0a3cb805aaf542cd6e20fdbc60b1a8b45466f9428e6c8bb4bcd8c8f"
+        },
+        {
+          "bytes": 89845,
+          "path": "reports/comet-collateral-inventory-v1/run-v1/trace.json",
+          "sha256": "12f6326efd66088e9b6be5bf1fb76ec9d3dd5f9bbfebcfa88c3ca8b5612d5214"
+        },
+        {
+          "bytes": 5871,
+          "path": "reports/experiment-storage/comet-collateral-inventory-preparation-v1.json",
+          "sha256": "ff6c15b29607e01639d208dc61668ba03f73bdb0c8580e6e895d2277a4722e5b"
+        },
+        {
+          "bytes": 4028,
+          "path": "reports/experiment-storage/comet-collateral-inventory-v1.json",
+          "sha256": "4dca48f9c06d310306a5d8e026bd819975b6554d484e4f5a577653211b0a1e7a"
+        },
+        {
+          "bytes": 28786,
+          "path": "scripts/comet_collateral_inventory_v1.py",
+          "sha256": "6ec85d01f4b1eeb1d93b7039bb8b1acad3750664a739b0e1dd7cba3e91dc6371"
+        },
+        {
+          "bytes": 16544,
+          "path": "tests/test_comet_collateral_inventory_v1.py",
+          "sha256": "aadf63ff9a144f64963df7aec563c353a97dfae4b7f7b994bc9dc40d8e4911f3"
+        }
+      ],
+      "old_reserved_bytes": 2097152,
+      "released_unused_reservation_bytes": 1310720,
+      "reserve_note": "Retained amount includes all named bytes, at least128KiB for earlier messages/controls/fixtures and remaining margin. Completed one-shot run cannot restart. Existing shared dependencies retain their separate reservations.",
+      "retained_reserved_bytes": 786432,
+      "study": "comet-collateral-inventory-v1"
+    }
+  ],
+  "headroom_after_pending_escrow_bytes": 393216,
+  "new_reserved_bytes": 2097152,
+  "overall_reservation_bytes": 2847344896,
+  "owned_paths": [
+    "scripts/aave_liquidation_census_v1.py",
+    "tests/test_aave_liquidation_census_v1.py",
+    "reports/aave-liquidation-census-v1/"
+  ],
+  "pending_mac_expansion_escrow_bytes": 2097152,
+  "previous_global_allocation": {
+    "path": "reports/experiment-storage/continuation-peer-reservation-reconciliation-v1.json",
+    "sha256": "e7c4f720b0ac01f8f206a7edf313d99bdd7c3018bf2f50a5995c1f50ff035526"
+  },
+  "question": "How many Aave V3 Ethereum LiquidationCall events appear in7200 finalized blocks, and for the first8 chronological events can public historical state provide before/after health and a receipt? This selects reproducible historical simulation cases, not profits.",
+  "recorded_utc": "2026-10-02T22:00:15.734831+00:00",
+  "released_unused_reservation_bytes": 2359296,
+  "rules": "Prepare and test offline; freeze exact source/test/design pins and request/selection rules before one live run. Preserve all failure/raw prefixes. No complete census claim after partial pages. Event transaction gas is shared transaction cost, not standalone liquidation cost. Preceding-block health is not exact pretransaction eligibility. Neither events nor collateral bonuses establish closed cash.",
+  "schema": "aave-liquidation-census-preparation-v1",
+  "scope": "One Ethereum public endpoint; anonymous read-only62RPC maximum.16non-overlapping450block pages. All events determine census; first8 chronological event identities selected before receipt/health reads. No asset or outcome filtering/replacement. Per-event missing history stays unavailable.",
+  "source_references": [
+    "https://raw.githubusercontent.com/bgd-labs/aave-address-book/main/src/AaveV3Ethereum.sol",
+    "https://github.com/aave-dao/aave-v3-origin/blob/main/src/contracts/interfaces/IPool.sol",
+    "https://aave.com/docs/aave-v3/smart-contracts/pool",
+    "https://ethereum.org/developers/docs/apis/json-rpc/"
+  ],
+  "status": "offline_preparation_only"
+}

@@ -1,0 +1,29 @@
+{
+  "decision": "One frozen public read-only run, invoking the interpreter executable recorded in plan; no retry or replacement. Outcome is historical observability and event counts only.",
+  "independent_review": {
+    "agent": "aave_census_review",
+    "model": "gpt-6-sol/high",
+    "result": "No concrete blocker found",
+    "scope": "Full source/design/pin and bounded transport review;62call count;missing state;receipt/headerlinks;bodyreserve65537;raw E reserve;helper isolation;pre/postsourcecheck",
+    "tests": 9
+  },
+  "plan": {
+    "bytes": 2045,
+    "path": "reports/aave-liquidation-census-v1/plan.json",
+    "sha256": "da2e0cf7667ddaaf288a8a32a1ae3958018a4d4abb22edfb3b5bb20e63f7f04c"
+  },
+  "recorded_utc": "2026-10-02T22:08:46.897557+00:00",
+  "root_tests": {
+    "commands": [
+      ".venv/bin/python -B -m unittest -v tests.test_aave_liquidation_census_v1",
+      "python -B -m unittest -q tests.test_aave_liquidation_census_v1"
+    ],
+    "network": "mocked;noHTTP",
+    "passed": 11,
+    "scope": "fixed-window andfirst8selection,emptycensus,unavailablehealth,ABI,duplicate/receipt/headererrors,HF integerboundary,rawreplay,fullmockedrun,HTTPfailureprefix,exclusiveclaim"
+  },
+  "schema": "aave-liquidation-census-root-preflight-v1",
+  "source_and_fixture_category_cap_bytes": 262144,
+  "source_and_plan_bytes": 40428,
+  "source_reference_scope": "Officialaddressbook/interface/docs checked;historicalruntime source equivalence not claimed."
+}

@@ -1,0 +1,35 @@
+{
+  "allocation": "reports/experiment-storage/continuation-peer-reservation-reconciliation-v1.json",
+  "claude": {
+    "address": "f0ba21b0-a741-4804-a646-c405993cfa08/80be8295-bc8c-4296-b615-b7fb37e49947",
+    "handled_and_acknowledged": true,
+    "ownership": [
+      "scripts/hip4_continuation_pairing.py",
+      "tests/test_hip4_continuation_pairing.py",
+      "reports/hip4-research-continuation/pairing-design.txt",
+      "reports/hip4-research-continuation/pairing-draft-plan.json",
+      "reports/hip4-research-continuation/pairing-v1-run/",
+      "reports/hip4-independent-research/"
+    ],
+    "reply_message": "8c71e893-400c-4bcd-8c2c-2cfd101431aa",
+    "status": "Reports Q357 invalidated by bbo/l2Book mismatch, zero decisions and no economic conclusion. Q359 collector12tests sealed and capture timer3Oct15:37UTC, window15:50-18:05. Depth replay9tests passed; primary/sensitivity/readout plans and drycheck to finish about23:00UTC. Existing4MiB reservation only."
+  },
+  "coordination_control_share_bytes": 16384,
+  "mac": {
+    "address": "07b1b113-966a-4dab-bc55-54f41193f9bf/c1f31b3b-ebf4-49f9-9b84-236d4a61338d",
+    "handled_and_acknowledged": true,
+    "ownership": [
+      "scripts/peer_comet*",
+      "tests/peer_comet*",
+      "research/peer-comet*",
+      "reports/peer-comet*",
+      "reports/experiment-storage/peer-comet*"
+    ],
+    "reply_message": "220bc612-0c05-4e4e-bb88-ee82cf2f306b",
+    "status": "Reports successful fixed61RPC direct census; 28 distinct nonzero reported pools and24 zero rows. No economic or execution proof. WETH57 and price55 manifests pending direct-user storage expansion. Continue bounded offline work."
+  },
+  "recorded_utc": "2026-10-02T21:45:19.261176+00:00",
+  "root": "Both independent queues confirmed. Shared git/index remains root-owned. Current experimental headroom2228224B; pending2MiB Mac escrow leaves131072B. No new market experiment or transfer in this coordination step.",
+  "schema": "continuation-peer-status-v1",
+  "scope": "Reported peer status and ownership, not independent admission of experimental claims."
+}

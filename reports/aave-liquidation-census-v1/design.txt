@@ -1,0 +1,88 @@
+Aave Ethereum liquidation census v1
+
+Purpose: find whether a fixed recent historical window supplies cases whose
+preceding-block state can be simulated. The creation/callback access probe
+passed, but no eligible Aave borrower or closed-cash result has been observed.
+This census avoids spending effort on a full executor without suitable cases.
+
+Freeze before data: Ethereum chain1, documented AaveV3Ethereum Pool
+0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2, provider
+0x2f39d218133afab8f2b819b1066c7e434ad94e9e. Fetch one finalized header H.
+Exactly7200 blocks [H-7199,H],16 ascending disjoint450-block eth_getLogs pages,
+only the Pool and LiquidationCall event signature. No asset/size/profit filter.
+Select at most the first8 events sorted by block, transaction and log index,
+before any receipt or borrower health reads. No replacement after failure,
+healthy preceding state or apparently poor economics. No second time window.
+
+Manifest: chainId; finalized header; Pool runtime; ADDRESSES_PROVIDER at anchor
+hash;16log pages; range-start header; five calls for each selected event:
+transaction receipt, event block by hash, preceding block by number,
+getUserAccountData(borrower) at preceding block hash and at event block hash.
+Final anchor reread by number. At most62 RPCs; zero events requires22.
+Pool code is retained/fingerprinted, not matched to a full source certificate.
+Every call is anonymous/read-only, fixed ethereum-rpc.publicnode.com HTTPS,
+no retry, proxy, redirect, endpoint fallback, account, wallet, transaction,
+state override, dependency installation or compiler. Live requires exact
+frozen plan SHA, source/test/design/allocation/helper pins and runtime.
+
+Event ABI: three indexed addresses (collateral,debt,borrower); four data words
+(debt repaid,collateral liquidated,liquidator,bool receiveAToken). Require
+exact widths, canonical address padding/bool, removed=false, exact Pool/topic,
+page-bound block number and unique block/log identity. Source order may vary;
+chronological selection is explicit.512-event/128-pair work caps are fixed.
+All raw events retained; projection contains complete pair/page counts and
+the fixed selected subset. Counts describe this provider's returned logs,
+not proof of no omitted logs or complete protocol-wide market coverage.
+
+Receipt must bind transaction hash, block hash, number/index, success and
+the exact selected log. A null/error receipt is retained unavailable. Mismatch
+is a study failure. Whole-transaction gasUsed*effectiveGasPrice is denominated
+in wei; do not assign it wholly to a liquidation or treat it as standalone
+simulation gas. It can cover swaps, multiple liquidations and unrelated work.
+No token decimals, USD conversion, collateral bonus valuation or profit claim.
+
+Hash-bound health calls return six canonical uint256 words. RPC error, null
+or malformed health is unavailable, not healthy/zero, and does not replace
+the event. Positive debt and healthFactor<1e18 identifies a necessary
+preceding-block condition only. Exact pretransaction state may differ due to
+oracle updates and other transactions in the same block. Event-block health
+is after the whole block, not immediately after this event. Other liquidation
+conditions, available underlying liquidity, reserve flags, executable sale,
+financing/premium, remaining assets/debt and gas remain untested.
+
+All other transport/schema/canonicality/cap errors stop dispatch and leave
+the experiment unavailable. Incomplete pages cannot become a zero census.
+Parent/event hashes must link; initial/final five-field anchor must agree.
+These are provider assertions rather than independent consensus verification.
+
+Storage allocation: reports/experiment-storage/aave-liquidation-census-
+preparation-v1.json.2MiB: raw1572864,source/tests/design/plan/fixtures262144,
+projection131072,controls65536,margin65536. Old root Comet studies are terminal;
+unused reservations released after retaining all named artifacts with margins.
+No evidence is deleted. Pending Mac expansion remains separately escrowed.
+
+One exclusive output directory/claim. Raw B/H/D/E framing reuses the pinned
+unchanged Aave trace transport's bounded streaming behavior. Frames <=2048B
+metadata/4096B body fragments;2053B final-frame reserve.65536B response plus
+one retained overflow sentinel.1MiB cumulative body; reserve65537B before
+dispatch so a single response can fit. Raw cap may censor earlier due to
+framing; retain prefix, never silently truncate/admit. Controls use exclusive
+files; partial files after hard termination remain unavailable. Do not rerun
+into a claimed directory. Exact raw replay regenerates manifest/selection and
+projection before admission. Terminal must be complete, matching plan and
+successful process exit; a lone projection is insufficient.
+
+12s/request,225s work and240s wall deadline including closeout,30s CPU,
+512MiB address space, core dumps disabled. SIGALRM guards network/wall work;
+hard process interruption may prevent terminal publication, interpreted as
+unknown. No background worker, descendant, retry or automatic limit expansion.
+Default is dry and makes no output files/RPCs. Offline fixtures are bounded,
+sequential, synthetic, and removed by TemporaryDirectory; bytecode disabled.
+
+Primary references read before implementation on2026-10-02:
+https://raw.githubusercontent.com/bgd-labs/aave-address-book/main/src/AaveV3Ethereum.sol
+https://github.com/aave-dao/aave-v3-origin/blob/main/src/contracts/interfaces/IPool.sol
+https://aave.com/docs/aave-v3/smart-contracts/pool
+https://ethereum.org/developers/docs/apis/json-rpc/
+Addresses, event schema and health interface derive from these references.
+Their mutable main branches do not establish historical implementation identity.
