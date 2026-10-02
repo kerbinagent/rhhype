@@ -1,5 +1,65 @@
 # Measurement and economic comparability
 
+## Current research decisions — 2 October 2026
+
+The active question is whether a public-data paper strategy with at most $100
+entry notional can earn positive closed cash returns over seconds to minutes.
+The user has allowed directional trades on one venue. Earlier carry questions
+and larger size screens below remain historical methodology. Current decisions
+and the evidence needed to reopen a parked idea live in the
+[decision register](research-decision-register.md).
+
+Use this sequence for new work:
+
+1. **State the mechanism and its falsifier.** Describe whose activity should
+   move the price, why the effect should persist until our delayed entry, and
+   what observable result would contradict it. A stable cross-venue premium
+   is not itself a forecast of convergence.
+2. **Check observability and the cost budget first.** Establish native units,
+   executable size, spread/depth, ordinary live trade coverage, both clocks,
+   and missing-data rates. Calculate how much movement is needed for a closed
+   cycle. Reject a test whose intended signal or fills cannot be measured.
+3. **Run a small descriptive screen before building execution variants.**
+   Reuse retained captures where possible. Include the relevant non-event,
+   same-time or direction control; specify matching using information available
+   at the decision. Report local movement, reference-market movement and
+   delayed executable quote return separately. Explain what each control can
+   and cannot identify. Screen results from already inspected data are exploratory.
+4. **Freeze the next decision, not just code.** Name the primary hypothesis,
+   comparator, economic criterion, request/byte/time limit, and advance/park/
+   inconclusive outcomes before inspecting new results. A changed threshold,
+   horizon or selected asset is another research choice. Keep the full selection
+   history and require untouched time blocks before claiming validation.
+5. **Spend execution effort on surviving questions.** Use existing capture,
+   replay and accounting components with configuration where feasible. Keep
+   pinned historical and armed sources fixed. Add machinery only for a named
+   missing capability or a demonstrated measurement defect.
+
+Count distinct market episodes and time blocks alongside quotes, variants and
+trades. Multiple horizons, venues and rules can reuse the same price move;
+their returns and sample counts are not independent evidence. Ten minutes
+with hundreds of callbacks remains one short session. When independent blocks
+are too few to estimate precision credibly, report that limitation rather than
+substituting an arbitrary minimum quote count.
+
+Every experiment needs a gate funnel: eligible observations, events, admissions,
+orders requested, attributed fills, closed episodes, unresolved outcomes and
+missing measurements. State which gates were actually exercised. A passing
+audit with zero fills verifies no fill arithmetic. A parameter change that
+would not alter any decision does not warrant a full strategy rerun.
+
+Separate measured cash costs (spread, depth, actual modeled delay, fees and
+applicable funding/financing) from capital assumptions and additional stress.
+Show baseline cash and relevant 1/2/5 bp sensitivities; do not treat the 5 bp
+allowance as an observed fee or double-count slippage already in delayed fills.
+Public maker attribution and hypothetical taker fills remain conditional.
+Technical health, forecast skill and economic performance are separate results.
+
+After a result, update one current decision row and link its retained evidence.
+Continue research when an idea is parked; repeating a negative baseline or a
+healthy collector check is not a new research result. Operational monitoring
+and untouched frozen studies keep their existing authorized endpoints.
+
 ## Questions
 
 1. Which canonical Robinhood Chain assets have sufficient public pool liquidity and equivalent Hyperliquid hedges?

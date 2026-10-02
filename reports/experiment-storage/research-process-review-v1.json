@@ -1,0 +1,22 @@
+{
+  "schema": "research-process-review-v1",
+  "recorded_utc": "2026-10-02T01:59:32.449484+00:00",
+  "previous": "reports/experiment-storage/single-venue-news-analysis-v1.json",
+  "previous_sha256": "c0a2a61379bb075f630ca8c7ebeb06d59ef5200aa8b008ed4f4e1f2684c887ff",
+  "reserved_bytes": 32768,
+  "active_research_pool_bytes": 154140672,
+  "active_research_reserved_bytes": 149266432,
+  "active_research_headroom_bytes": 4874240,
+  "overall_reservation_bytes": 836777216,
+  "allocation": {
+    "methodology_scope_and_decision_register_bytes": 30720,
+    "control_bytes": 2048
+  },
+  "scope": "Repository documentation only: review accumulated research, record decision gates and a compact current hypothesis register. No market requests, raw data, source changes, replays or modifications to armed news plans. Historical results and assumptions remain intact.",
+  "owned_paths": [
+    "research/01-methodology.md",
+    "research/active-idea-research.md",
+    "research/research-decision-register.md",
+    "reports/experiment-storage/research-process-review-v1.json"
+  ]
+}

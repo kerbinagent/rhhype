@@ -1,0 +1,93 @@
+# Current research decisions — 2 October 2026
+
+## Objective and process correction
+
+Find convincing closed paper profit at at most $100 entry notional over
+seconds to minutes, using public data. Directional one-venue trades are within
+scope. No strategy currently meets that objective.
+
+The main process failure has been allocating too much work to execution
+variants before demonstrating a cost-adjusted predictive signal. Accounting
+checks have caught real defects and should remain, but they cannot establish
+an edge. Prior plans already called for forward samples and controls; the
+improvement is enforcing those requirements before the expensive stage.
+
+Specific lessons from retained evidence:
+
+- The [short-horizon loss audit](../reports/short-horizon-loss-audit/REPORT.md)
+  reconciled trade and wallet arithmetic while finding overwhelmingly negative
+  economics. Healthy collectors and correct cashflows are measurement results.
+- The [basis forecast diagnostic](../reports/basis-forecast-diagnostic/readout.md)
+  improved forecast error without making its execution branch profitable.
+  Score the forecast against the movement required to close the trade.
+- The [cash-only maker exit replay](../reports/core-maker-cash-exit/readout.md)
+  reproduced both prior traces exactly: the changed exit gate never fired.
+  Check decision activation before implementing another full variant.
+- The [ETH passive sample](../reports/core-spot-passive-eth-cash/readout.md)
+  had no ordinary live spot trade updates and an unresolved cancellation.
+  Measure channel suitability before interpreting a sparse execution test.
+- The [three-window LIT result](../reports/single-venue-research/single-venue-executable-shock-readout.txt)
+  relied on one favorable move entered by two alternative rules. The winning
+  move also occurred on the reference venue. It is neither two replications
+  nor evidence that a local liquidity shock caused the gain.
+- The [residual profiles](../reports/single-venue-research/residual-profile-readout.txt)
+  contained thousands of overlapping profiles but no positive group that
+  persisted across both short windows. More rows did not provide more regimes.
+
+## Decision register
+
+“Parked” applies to the tested version and assumptions, not every possible
+strategy in its family. “Inconclusive” is not a successful economic result.
+
+| Mechanism | Current evidence and decision | Evidence that would justify the next stage |
+| --- | --- | --- |
+| Simple Core/RH spread entry and short hold | **Parked.** The [$100 primary test](../reports/core-rh-small-shortterm/readout.md) closed 11 paired trades with no winners and −$0.183554 cash; costs removed did not rescue it. Entry deteriorated in 10 of 11. | A prospective forecast of the closing executable gap exceeding measured entry and exit costs, with a same-time control and delayed entry. A large opening gap alone is insufficient. |
+| Constant carry / maturity holding | **Outside current scope.** Historical funding work is retained in [active idea research](active-idea-research.md). The already frozen BTC study continues to its endpoint without interim economic inspection. | A user scope change would be needed to make this the active research objective. |
+| Same-block atomic round trips | **Parked at tested routes and size.** [Base](../reports/base-atomic-cycle-slow-transport/readout.md) and [RH stock routes](../reports/rh-atomic-stock-cycle/readout.md) were negative before gas. [NVDA](../reports/rh-nvda-complete-input-cycles/readout.md) retained incomplete-input quotes as unknown. | A changed route, price discrepancy or fee structure that first clears an exact full-cycle quote including full input consumption and gas. |
+| Passive spot entry with delayed hedge | **Parked pending observable flow and conditional value.** [LIT](../reports/core-spot-passive-cashentry/readout.md) had one partial close, −$0.013952; [ETH](../reports/core-spot-passive-eth-cash/readout.md) had no ordinary live trades and an unknown cancel. | Concurrent assets with sufficient live trade coverage; predicted profit conditional on an attributed passive fill, adverse selection and the hedge delay. More unfilled quotes alone do not qualify. |
+| Local large-trade / depth shock fade | **Exploratory, no established edge.** A selected [LIT depth win](../reports/single-venue-research/depth-readout.txt) did not lead to a robust [three-window result](../reports/single-venue-research/single-venue-executable-shock-readout.txt). RH positives were dominated by one common market move; every aggregate was negative after the separate stress. | A cost-aware comparison with matched non-shock observations and reference-market movement, followed by untouched independent episodes. Demonstrate executable local recovery rather than last-trade bounce or common drift. |
+| Persistent cross-venue premium and smaller residual fade | **Parked for the observed ordinary windows.** [NEAR's premium](../reports/single-venue-research/broad-basis-dynamics-readout.txt) persisted. [Original relative gates](../reports/single-venue-research/single-venue-broad-relative-readout.txt) admitted nothing; [smaller residual profiles](../reports/single-venue-research/residual-profile-readout.txt) had no positive group in both windows. | Temporary residual movement with enough subsequent local executable recovery to cover costs, replicated in untouched blocks. A stable premium is not sufficient. |
+| Static top-of-book imbalance | **Parked at the tested 10-second horizon.** The [broad quote screen](../reports/single-venue-research/broad-queue-readout.txt) had 19 of 20 high-imbalance asset/venue means negative; the lone positive was +0.300454 bp on overlapping profiles. | A separately motivated forecast and cost budget. Any different horizon or dynamic-flow feature is a new hypothesis, not a reinterpretation of this result. |
+| Higher-activity scheduled news regime | **Frozen, awaiting observation.** One ten-minute, ten-asset [capture protocol](../reports/experiment-storage/single-venue-news-v1.json) and [analysis companion](../reports/experiment-storage/single-venue-news-analysis-v1.json) are armed for 2 October 12:26–12:36 UTC. Both existing strategy families and all arms will be reported. | First establish complete event coverage and usable signals. A favorable result warrants a separately frozen replication; this one event cannot establish durable profit. Incomplete data or zero entries remain inconclusive. |
+
+## Rules for the next research decision
+
+1. Use retained data to answer one missing question before authoring another
+   strategy. For local shocks, that question is whether later executable
+   recovery is local and event-specific after accounting for common movement
+   and ordinary same-direction price behavior.
+2. Register the event definition, comparator, cost treatment and failure
+   denominator before calculating that new diagnostic. Historical outcomes
+   have already been inspected, so label the result exploratory regardless
+   of when its analysis code was written.
+3. Prefer concurrent cohorts and retain every tested asset and rule. Cluster
+   repeated signals from the same market episode and describe dependence
+   across assets and venues. Do not sum alternative ledgers or call a count
+   of overlapping profiles an independent sample size.
+4. Use baseline closed cash plus explicit cost/delay sensitivities. Additional
+   5 bp stress is a robustness scenario; it is neither a venue fee nor a
+   substitute for measuring slippage and public-fill uncertainty.
+5. The next live paper test requires a concrete result that can change the
+   decision. If a screen fails, park that version and research a different
+   mechanism or materially different, justified regime.
+
+## Experiment implementation and operations
+
+For future studies, prefer one capture with reusable replay and independent
+accounting, configured per hypothesis. Keep existing frozen sources intact.
+Do not undertake a broad refactor as part of this process review. Add a test
+when it protects a concrete economic invariant, clock boundary or previously
+observed defect; do not multiply tests and audit wrappers for empty branches.
+
+Report gate activation, data coverage, delayed execution, forecast quality,
+closed cash and uncertainty separately. Preserve original failures and
+unresolved outcomes. One compact decision register points to detailed
+historical reports; routine health logs stay with the monitor.
+
+User questions and status checks do not stop the ongoing research request.
+Answer them and continue unless the user explicitly asks to stop. The armed
+news jobs and existing routine monitor do not replace active research.
+
+This documentation change has a 32,768-byte allocation in
+[the storage ledger](../reports/experiment-storage/research-process-review-v1.json).
+It changes no strategy source, armed protocol, raw capture or historical result.

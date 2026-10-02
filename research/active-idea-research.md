@@ -1,12 +1,20 @@
-# Active idea research — 1 October 2026
+# Active idea research — updated 2 October 2026
 
-## Current scope: short-term trading
+## Current scope: short-term trading, including one venue
 
 The user's latest instruction excludes buy-and-hold yield and maturity
 strategies. Research now targets $100-sized trading cycles lasting seconds
-to minutes. The completed carry work below is historical context, not the
+to minutes, including directional paper trades on one venue following the
+user's 1 October instruction. The completed carry work below is historical context, not the
 active plan. The already frozen BTC collector remains unchanged, with its
 economic evidence unopened until its endpoint.
+
+The [current decision register](research-decision-register.md) records which
+mechanisms are parked, what the latest single-venue evidence shows, and what
+would justify another experiment. The [revised method](01-methodology.md)
+requires a cost-aware signal screen and explicit controls before another
+execution variant. The older research below explains the path taken; it is
+not the current experiment queue.
 
 - [Fresh Core/RH paper test](../reports/core-rh-small-shortterm/readout.md):
   the primary $100-per-leg, ten-second branch closed 11 paired trades,
@@ -41,8 +49,10 @@ records motivate testing different execution structures; they do not
 justify assuming faster fills or retuning this sample into a winner.
 
 No profitable strategy has been established. Public quotes and simulated
-fills remain distinct from actual account execution. The next branch stays
-market neutral unless the user chooses to allow directional paper exposure.
+fills remain distinct from actual account execution. Recent one-venue studies
+have not established a repeatable positive signal. The already frozen 2 October
+12:26–12:36 UTC news study tests a different activity regime with the existing
+rules; it is one additional event window, not sufficient validation by itself.
 
 ## Division of work
 
