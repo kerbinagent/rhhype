@@ -1,0 +1,51 @@
+Creation/callback access v1: offline preparation; root freezes/runs separately.
+Default dry: zero RPCs/files. Frozen_creation_callback_probe plus exact planSHA
+and six pins(source/test/design/draft/helper/allocation) required before claim.
+Fixed endpoint https://ethereum-rpc.publicnode.com; exclusive run-v1 directory.
+Five slots: chain1; finalized block(false); constant creation eth_call; callback
+creation eth_call; original number(false) recheck. No to/state overrides, retry,
+redirect, provider fallback, replacement, borrower/token/price selection. Exact
+from/input/value0/gasPrice0/gas500000 are simulation fields, not account ownership,
+funding validity or execution cost. All calls discard state; both use one parent.
+
+Handwritten bytes/expected markers/offsets are in bytecode_spec()/draft/final.
+Constant initcode41B returns11 repeated32B. Outer236B copies child init164B from
+offset72, CREATE(value0), rejects zero address/empty EXTCODESIZE, calls installed
+child with empty calldata, rejects failed CALL or returndata!=32B, returns it.
+Child constructor12B only copies152B runtime from offset12 and returns it: no
+constructor callback. Runtime empty-calldata entry at106 stores4B selector abcd
+and CALLs itself. Callback requires calldata length4, CALLER==ADDRESS, and exact
+selector; returns22 repeated32B. Entry rejects failed CALL/returndata!=32B then
+propagates it. Runtime failure destination147; outer failure67. Reports become
+hypothetical outer runtime, never executed; prefixes11/22 avoid EF. Zero-value
+CREATE and message calls are transient. Authentication is SELF, not Aave Pool.
+The tiny bounded interpreter tests stack/memory/jumps/install/CALL propagation;
+it does not validate fork gas metering, CREATE address derivation or client RPC.
+
+Pinned prior helper27936B reused read-only for HTTPS fetch/alarm/strictJSON,
+envelope/hex/runtime helpers. No old verify/run/global mutation. CPU15s/core0/
+AS256MiB apply to this single one-shot process. 120s absolute alarm includes
+verification/replay/terminal; work cutoff115s reserves closeout. Each request
+<=20s, including DNS/TLS/headers/drip. No child/process cleanup or compiler.
+Hard CPU kill, outer timeout or I/O failure may prevent terminal: absence is
+unknown. Root admits only exact success terminal+planSHA+errorNone and CLIexit0;
+projection alone is provisional. The CLI is the intended execution context.
+
+Raw single fsynced inode responses.frames: magic; B/H/D/E, one type byte+uint32BE
+length. B exact request/UTC/pre-dispatch unknown; H parsed status/header bytes;
+D exact read fragments; E status/invocation/body-prefix bytes/SHA/error/UTC.
+B/H/E<=2048,D<=4096. Bodies4096/32768/4096/4096/32768 plus one sentinel each<=77829.
+Raw cap147456 with2053 final-E reserve; fragmentation overhead can hit it first,
+which remains unavailable. Parser failure promises no header/status prefix;
+parsed header overflow retains2048B prefix+numeric status. Reuse no-retry TLS
+transport: count/retain sentinel, partial body and failed HTTP prefix. Exactly5
+denominator even after stop. Replay checks exact B,H,D*,E manifest/order/body
+SHA/HTTP/RPC/expected32B results and entire returned block equality. Canonicality
+and creation execution are provider assertions, not independent proofs.
+
+Claim/projection/terminal each<=4096, combined16384 incl pending inode, reserving
+4096 for terminal; root allocation/review share16384 separately. Raw147456,
+new package+final8192+sequential synthetic scratch<=49152; margin32768 untouched.
+No old raw copy or retained test logs. All failures stay unavailable, never zero
+economics. No flash loan, liquidation, external protocol callback, token ledger,
+gas-cost result, profitability, delayed opportunity or inclusion is tested.
