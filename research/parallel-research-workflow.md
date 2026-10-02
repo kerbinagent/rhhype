@@ -274,6 +274,6 @@ preserves the failed sandbox launch. One ordinary block tests applicability;
 it does not establish news replication or repeatable profit.
 
 The [Comet identity pass](../reports/comet-identity-v1/root-reconciliation.json)
-reconciled six fixed reads at block 26105238 after freeze 63a09a7. The remote peer
-now studies source/artifact equivalence and dependencies. The reviewed Clipper
-census stays offline. No economic eligibility, prices or profit were observed.
+reconciled six reads at block 26105238. Its [metadata GET](../reports/comet-source-metadata-v1/root-reconciliation.json)
+returned a gateway retirement notice: unavailable, with no retry. Source binding
+and economics remain unproved. The reviewed Clipper census stays offline.

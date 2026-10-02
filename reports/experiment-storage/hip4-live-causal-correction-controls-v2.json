@@ -1,0 +1,51 @@
+{
+  "global_change_bytes": 0,
+  "historical_report": {
+    "date_utc": "2026-10-02",
+    "live_module_runs_utc": [
+      "13:40:34",
+      "13:48:57",
+      "13:49:18",
+      "13:50:16",
+      "13:51:17",
+      "14:02:34",
+      "14:10:35",
+      "14:14:52",
+      "14:15:44",
+      "14:36:09"
+    ],
+    "message": "21c7f9c0-9f64-4e1c-840c-e3a55cefe924",
+    "peak_derivation": "Live c.gz<=3670016 plus d.gz<=64 simultaneously; same-inode pending/final counted once. Settle reserve<=2097152, expiry<=49152, books<=393216. Sequential tests; exact past high-water unmeasured.",
+    "reported_original_peak_upper_bound_bytes": 3670080,
+    "reporter_cleanup": "Worker reports TemporaryDirectory removed these at test end and no tmp*/c.gz/d.gz remained in /tmp at15:12. Root has not treated this report as an independent historical disk measurement.",
+    "settle_reserve_runs_utc": [
+      "14:10:35",
+      "14:14:52",
+      "14:15:10",
+      "14:15:28",
+      "14:15:44",
+      "14:15:55",
+      "14:16:01",
+      "14:36:09"
+    ],
+    "violation": "Original transient bundles were absent from the earlier source/cache reconciliation. Their cleanup does not erase the prior unallocated peak; successful assertions only bound possible sizes."
+  },
+  "persistent_source_controls_messages_bytes": 65536,
+  "persistent_subcategories_after_bytes": {
+    "both_session_control_messages": 16384,
+    "margin": 0,
+    "root_allocation_preflight_reviews_and_reconciliation": 16384,
+    "worker_live_source_tests_design_draft_growth": 32768
+  },
+  "previous": {
+    "bytes": 5050,
+    "path": "reports/experiment-storage/hip4-live-causal-correction-fixture-v1.json",
+    "sha256": "56d562cbc18ca25f5161ea2bb774230db321813609d1888dd16d632cb6ce52f9"
+  },
+  "prospective_rules": "Current fixture cap stays3670016B, so the old3670080B conservative peak is not admitted unchanged. Worker proposes an in-memory production-size compressed-member bound plus small disk publication tests; settle tests remain sequential within cap. Root runs no concurrent fixtures. Record final test proof/peak and verify cleanup before release.",
+  "recorded_utc": "2026-10-02T15:16:35.910326+00:00",
+  "schema": "hip4-live-causal-correction-controls-v2",
+  "scope": "Retain reported historical synthetic fixture omission and move8192B unused persistent margin to both-session control-message capacity; no live authority.",
+  "sequential_temporary_fixture_cap_unchanged_bytes": 3670016,
+  "transport_assignment": "The earlier1345B root design message1560f321 (both copies2690B), the1649B implementation grant7c3b26b8 (both3298B), incoming21c7f9c0 and subsequent concise controls belong to this complete16384B stage allowance. No complete body may be omitted or counted as only a digest."
+}
