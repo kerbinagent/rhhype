@@ -1,0 +1,50 @@
+{
+  "schema": "peer-clipper-census-v1-root-review",
+  "reviewed_utc": "2026-10-02T14:25:37.894966+00:00",
+  "status": "offline_source_package_reviewed_no_live_authority",
+  "files": [
+    {
+      "path": "scripts/peer_clipper_census_v1.py",
+      "bytes": 17643,
+      "sha256": "53603883391ba48d4b316e2292b449afc94ccab952a739f318a76bd571bf8d2e"
+    },
+    {
+      "path": "tests/test_peer_clipper_census_v1.py",
+      "bytes": 16035,
+      "sha256": "8489f9e6ea25c13bff7f4d6acf1e0e9821b519b1a6c6bfca8e951ef7b1dcf686"
+    },
+    {
+      "path": "research/peer-clipper-census-v1-design.txt",
+      "bytes": 4754,
+      "sha256": "2177f01ded299f9f5244bfcd714fe8e30a4e7871b1b9c92593ee43864e58420c"
+    },
+    {
+      "path": "research/peer-clipper-census-v1.json",
+      "bytes": 3804,
+      "sha256": "f05aadbe6a60ff4559acbf23235e13d80bfa25822cf0d1ee7ca7b8d968987e81"
+    }
+  ],
+  "transport_message": "96911dce-553f-4f02-a64c-c86ac064d632",
+  "checks": {
+    "root_unit_tests": "13 passed in 0.028 seconds; bytecode disabled; no retained test log",
+    "root_dry_run": "Verified exact source pins and manifest; zero HTTP/RPC calls",
+    "manifest_sha256": "018de9dc69ad797e24f09b6512b5692d3e7e7c8f497295a5a754c704425f5eab",
+    "source_read": "Root read complete source, tests, design and plan. Independent Sol review found no false-complete or economic overclaim.",
+    "primary_source": "Root checked pinned dss clip.sol: immutable ilk; count returns active.length; list returns the full active array. Redo requires lock/stopped/sale/status/feed/top gates, uses cached chost and conditional Vat reward. Deployed artifact equivalence remains unproved."
+  },
+  "scope": "Exact ETH-A Clipper candidate and chain1. At most8 calls at one blockHash with requireCanonical: chain, parent, code, ilk, count, conditional full list, count and numbered-header rechecks. Count0 skips list; count1..64 requires exact complete positive unique IDs in returned order; count>64 stops unavailable, never samples. Header recheck compares the five projected identity fields. A complete returned census is metadata only. Caller runtime certificates do not authenticate review, source equivalence or dependency closure. No reset eligibility, inclusion, reward, gas, liquidity or cash closure observed. No HTTP adapter, live flag, durable launch claim or output writer; future live use needs a separately frozen plan and allocation.",
+  "limits": {
+    "requests": 8,
+    "accepted_response_body_bytes": 65536,
+    "response_read_with_failure_sentinel_bytes": 65537,
+    "cumulative_read_bytes": 196608,
+    "in_memory_trace_bytes": 196608,
+    "run_seconds": 90,
+    "requested_call_seconds": 10
+  },
+  "cap_qualification": "One counted sentinel byte may be read to prove oversize, within the cumulative cap. At exact cumulative exhaustion EOF cannot be proved, yielding conservative resource_unavailable. Callback clocks alone cannot interrupt a blocking transport; a future live adapter must enforce a hard deadline.",
+  "source_url": "https://raw.githubusercontent.com/sky-ecosystem/dss/3f30552a586264b32ebdb5bac94ba67020282e53/src/clip.sol",
+  "retention": "One root receipt copy only; no envelope, bytecode, retained test log or temporary package copy. Both hosts42236B each plus both transport bodies18318B each are charged. Existing Comet/provenance package is unchanged.",
+  "package_bytes_before_receipt": 121108,
+  "package_cap_bytes": 131072
+}

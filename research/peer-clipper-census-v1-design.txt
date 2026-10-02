@@ -1,0 +1,81 @@
+Clipper complete census v1: offline source model, no launch authority
+
+Authority and boundary
+
+Main message 5b5752da-05f5-4bcb-b5b4-bd3c0d9c5b5a and allocation commit
+1be3bc1 authorize offline source/math/tests and this exact prospective census.
+There is no HTTP adapter, endpoint, live flag, output writer, account or order.
+The CLI validates local manifest/pins and permits zero network requests. The
+injected-stream collector is synthetic; one-use is per instance, not a durable
+cross-process launch claim. Future live use needs a separately reviewed adapter,
+exclusive claim, raw allocation, exact freeze and root authorization.
+
+The existing Comet files and peer-clipper-source-provenance-v1.txt stay in their
+closed package. That note preserves the single failed prohibited registry API
+attempt; it is not availability evidence and is not copied into this package.
+
+Source and frozen route
+
+Ethereum mainnet ETH-A Clipper candidate:
+0xc67963a226eddd77b91ad8c421630a1b0adff270.
+Reference model: dss tag 1.3.0, commit
+3f30552a586264b32ebdb5bac94ba67020282e53:
+https://raw.githubusercontent.com/sky-ecosystem/dss/3f30552a586264b32ebdb5bac94ba67020282e53/src/clip.sol
+The model's ilk/count/list getters only read local data. Exact deployed
+compiler/import/immutable/artifact equivalence is unproved. A supplied runtime
+certificate is a caller claim; its kind/reference do not establish authority.
+Matched/unverified roles are explicit. Source/dependency proof remains false.
+
+Exact census and interpretation
+
+Eight maximum requests: chainId, parent header, anchored Clipper code, ilk,
+count, conditional full list, anchored count recheck, numbered header recheck.
+Require chain1 and exact padded ETH-A. Every state read uses parent blockHash
+with requireCanonical=true. View sender is zero, value zero, gas200000.
+Selectors ilk/count/list are c5ce281e/06661abd/0f560cd7; offline Keccak derivation
+checked empty-hash, transfer and decimals reference values.
+
+Count N is an exact uint256 word. N>64 stops incomplete/unavailable at request5;
+never sample/truncate. N=0 skips list and uses7 calls. N=1..64 uses8 calls and
+requires the whole dynamic list: offset32, lengthN, exactly64+32N bytes,
+positive unique uint256 IDs in returned storage order. Require final count=N
+and identical projected parent header including hash and stateRoot. Any failure
+leaves provider_census_complete=false. Preserve all selected failure records.
+
+A completed provider transcript is metadata only. Without a certificate the
+status remains source_binding_unavailable. Zero means a returned empty census
+at one parent, not continuing absence. Positive membership proves neither
+reset eligibility nor reward. No child, inclusion or reorg-out-and-back proof
+is made. No sales/getStatus/price/oracle/gas/quote calls are in this manifest.
+
+Later reset model, not evaluated here
+
+redo is public but needs unlocked state, stopped<2, an existing resettable sale,
+a valid returned feed value and positive new top. Calculator evaluation occurs
+even when age exceeds tail; source does not promise oracle freshness. Reward
+uses cached chost and both tab>=chost and lot*feedPrice>=chost. With incentives,
+C=tip+floor(tab*chip/1e18) rad, subject to checked arithmetic and Vat authority.
+Q=floor(C/1e27) external DAI wei; explicitly dispose R=C-Q*1e27 internal rad to
+a fixed non-executor sink, restore introduced permissions, then sell all Q.
+Keeper and Vow must be distinct to avoid assigning the keeper protocol debt.
+For fixed standard V2 DAI/WETH reserves D,W>0,
+F(q)=floor(997qW/(1000D+997q))<=F(Q)<=floor(QW/(D+Q)) for 0<=q<=Q.
+Full cash closure needs actual transfer/runtime behavior and all native costs;
+no gas, liquidity, inclusion, reward or profit is observed by this collector.
+
+Bounds and accounting
+
+Per response65536B, cumulative body/trace196608B each, requests8, deadline90s
+with10s completion reserve; each requested read is bounded. EOF must be proved.
+Trace admission reserves4096B and terminal handling2048B. Duplicate/nonfinite/
+deep JSON and noncanonical ABI fail. Body digests/lengths survive failures;
+header projections omit unrelated transaction hashes. Trace is memory-only,
+not raw retention. Future transport must enforce hard deadlines; callback
+clock checks alone cannot interrupt a blocking or malicious transport.
+
+The new package cap131072B includes both hosts, all source/test/design/plan,
+transport encodings, temporary copies and receipts. Allocation copies have a
+separate8192B reservation. Source commitment3064010/3145728B leaves81718B
+outside this fully reserved package; no old evidence/allowance is reclaimed.
+No bytecode or persisted test logs. Final pins and all-copy arithmetic precede
+handoff, with correction/root-receipt space retained.

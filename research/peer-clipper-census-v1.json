@@ -1,0 +1,160 @@
+{
+ "schema": "peer-clipper-census-v1",
+ "status": "offline_draft_no_network_authority",
+ "network_authorized": false,
+ "raw_allocation_bytes": 0,
+ "census_limit": 64,
+ "contracts": {
+  "clipper": "0xc67963a226eddd77b91ad8c421630a1b0adff270",
+  "ilk": "0x4554482d41000000000000000000000000000000000000000000000000000000"
+ },
+ "caps": {
+  "requests": 8,
+  "response_bytes": 65536,
+  "total_body_bytes": 196608,
+  "trace_bytes": 196608,
+  "request_seconds": 10,
+  "run_seconds": 90,
+  "file_bytes": 65536,
+  "source_package_all_copies_bytes": 131072
+ },
+ "manifest": [
+  {
+   "name": "chain",
+   "method": "eth_chainId",
+   "params": [],
+   "condition": "always"
+  },
+  {
+   "name": "parent",
+   "method": "eth_getBlockByNumber",
+   "params": [
+    "latest",
+    false
+   ],
+   "condition": "always"
+  },
+  {
+   "name": "clipper_code",
+   "method": "eth_getCode",
+   "params": [
+    "0xc67963a226eddd77b91ad8c421630a1b0adff270",
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "always"
+  },
+  {
+   "name": "ilk",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "0xc67963a226eddd77b91ad8c421630a1b0adff270",
+     "input": "0xc5ce281e",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "always"
+  },
+  {
+   "name": "count",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "0xc67963a226eddd77b91ad8c421630a1b0adff270",
+     "input": "0x06661abd",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "always"
+  },
+  {
+   "name": "list",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "0xc67963a226eddd77b91ad8c421630a1b0adff270",
+     "input": "0x0f560cd7",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "1<=count<=64"
+  },
+  {
+   "name": "final_count",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "0xc67963a226eddd77b91ad8c421630a1b0adff270",
+     "input": "0x06661abd",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "always"
+  },
+  {
+   "name": "final_parent",
+   "method": "eth_getBlockByNumber",
+   "params": [
+    "$parent.number",
+    false
+   ],
+   "condition": "always"
+  }
+ ],
+ "runtime_binding": null,
+ "source_pins": [
+  {
+   "path": "scripts/peer_clipper_census_v1.py",
+   "bytes": 17643,
+   "sha256": "53603883391ba48d4b316e2292b449afc94ccab952a739f318a76bd571bf8d2e"
+  },
+  {
+   "path": "tests/test_peer_clipper_census_v1.py",
+   "bytes": 16035,
+   "sha256": "8489f9e6ea25c13bff7f4d6acf1e0e9821b519b1a6c6bfca8e951ef7b1dcf686"
+  },
+  {
+   "path": "research/peer-clipper-census-v1-design.txt",
+   "bytes": 4754,
+   "sha256": "2177f01ded299f9f5244bfcd714fe8e30a4e7871b1b9c92593ee43864e58420c"
+  }
+ ],
+ "source_model": {
+  "url": "https://raw.githubusercontent.com/sky-ecosystem/dss/3f30552a586264b32ebdb5bac94ba67020282e53/src/clip.sol",
+  "deployed_equivalence_proven": false
+ },
+ "gate_predicates": [
+  "mainnet, exact collateral identity, nonempty runtime",
+  "complete 0..64 active-ID cohort; larger count unavailable",
+  "canonical exact ABI, positive unique IDs; preserve order",
+  "same anchored count and original parent rechecked"
+ ],
+ "claim_limit": "provider-returned parent metadata only; not reset eligibility, source authority, child execution or economics"
+}
