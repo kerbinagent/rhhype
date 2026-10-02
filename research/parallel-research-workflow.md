@@ -259,3 +259,26 @@ The first assignment covers official schemas, conversion arithmetic and an
 offline metadata-probe package. Its 512 KiB reservation comes from existing
 headroom. No market API request is authorized until the package is reviewed
 and a concrete request manifest is frozen.
+
+## Conversion price screens, 2 October 12:02 UTC
+
+The independently reviewed [issuance screen](../reports/primary-issuance-bound-local-v1/readout.txt)
+ran once after frozen commit c439df1. All four sizes passed metadata/domain
+and final-parent checks but returned negative optimistic bounds: approximately
+−6.08 to −6.09 basis points before gas. Root reconciled all 19 saved responses,
+request payloads and integer share/balance arithmetic. Park this fixed model
+and sample; no composed route, inclusion, source equivalence or profit was proved.
+
+The [Polymarket extension](../reports/polymarket-no-basket/subset-conversion-books-v1/readout.txt)
+fixed all 30 proper NO subsets, the full-NO reference and one full-YES
+creation/resale route before quotes. All 480 route-slots were field-valid and
+nonpositive: 320 at −0.009Q and 160 at −0.019Q nominal pUSD before costs. Only one
+of 15 sets passed the frozen timing diagnostics; all 32 routes in that set were
+negative. The other 14 support recorded-quote bounds only. Root independently
+reconciled all raw bodies and route arithmetic. This family is parked at the
+sampled prices, with no entire-interval or executable-liquidity claim.
+
+Both runs retained their full denominators and evidence. The Polymarket source
+category received 98,304 bytes from its unused derived category before collection,
+including the retained preparation draft; the overall 2 MiB reservation did not
+change. The issuance run used its separate preallocated 512 KiB envelope.

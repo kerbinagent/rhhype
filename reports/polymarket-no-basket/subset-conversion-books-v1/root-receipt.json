@@ -1,0 +1,97 @@
+{
+  "schema": "polymarket-subset-conversion-root-reconciliation-v1",
+  "recorded_utc": "2026-10-02T12:06:29.499554+00:00",
+  "freeze_commit": "c439df1",
+  "plan_sha256": "8da4721528306a0f0bcb33d0b7eab2f0076cb735d018c467b32cb7ea5834af57",
+  "status": "recorded_route_bounds_reconciled",
+  "counts": {
+    "field_valid_route_slots": 480,
+    "field_valid_slots": 15,
+    "fresh_coherent_valid_slots": 1,
+    "invalid_slots": 0,
+    "missing_slots": 0,
+    "nonpositive_route_slots": 480,
+    "planned_route_slots": 480,
+    "positive_route_slots": 0,
+    "requests_attempted": 15,
+    "requests_attempted_known_lower_bound": 15,
+    "requests_attempted_unknown_slots": 0,
+    "scheduled_slots": 15,
+    "unavailable_route_slots": 0
+  },
+  "margin_histogram_nominal_pusd_per_Q": {
+    "-0.009": 320,
+    "-0.019": 160
+  },
+  "fresh_coherent_slot_indices": [
+    10
+  ],
+  "fresh_slot_all32_margin": "-0.019",
+  "all_scheduled_sets_fresh_nonpositive": false,
+  "all_observed_complement_sums_equal_one": true,
+  "observed_algebra": "For these15 recorded sets only, each NOask+YESbid equals1. Therefore all32 planned route margins coincide within a slot. This is an observed relation, not an independently proven matching guarantee.",
+  "first_request_utc": "2026-10-02T12:02:47.396271372Z",
+  "last_receipt_utc": "2026-10-02T12:03:43.547826943Z",
+  "response_bytes": 482316,
+  "trace_decoded_bytes": 732506,
+  "trace_bytes": 130789,
+  "trace_sha256": "a1e950d632142df91ca44b80483826501ea6c19d3977580aac12b02836819015",
+  "cross_book_span_ns_range": [
+    116000000,
+    51051000000
+  ],
+  "oldest_book_age_ns_range": [
+    158615568,
+    51531877766
+  ],
+  "request_duration_seconds_range": [
+    0.1362547359894961,
+    0.1717300619930029
+  ],
+  "representative_vectors": [
+    {
+      "slot": 0,
+      "no_best_asks": [
+        "0.998",
+        "0.995",
+        "0.25",
+        "0.77",
+        "0.996"
+      ],
+      "yes_best_bids": [
+        "0.002",
+        "0.005",
+        "0.75",
+        "0.23",
+        "0.004"
+      ]
+    },
+    {
+      "slot": 10,
+      "no_best_asks": [
+        "0.998",
+        "0.995",
+        "0.26",
+        "0.77",
+        "0.996"
+      ],
+      "yes_best_bids": [
+        "0.002",
+        "0.005",
+        "0.74",
+        "0.23",
+        "0.004"
+      ]
+    }
+  ],
+  "checks": [
+    "Independently decompressed15 retained bodies, recomputed lengths/hashes and ten-token/condition identities.",
+    "Recomputed NOasks/YESbids from unsorted full levels; other sides used for integrity only; excluded last-trade fields not analyzed.",
+    "Independent integer mask enumeration and exactDecimal arithmetic reconciled all480 margins with saved summaries.",
+    "Independently recomputed timestamp units, every freshness/coherence gate and claim-fixed calendar, lateness and request cap.",
+    "Source/plan/chain metadata pins and terminal/supervisor gates verified; all15planned slots retained."
+  ],
+  "conclusion": "No positive displayed-taker necessary price condition for any of32 planned equal-Q conversion routes in these15 recorded sets. One set met the frozen interpretive freshness/coherence gate;14 did not. No all-slot simultaneous statement or entire-interval rejection. Conditional nominal pUSD/source model only; no actual conversion, depth, inclusion, fills or profit.",
+  "additional_http": 0,
+  "additional_raw_copies": 0
+}

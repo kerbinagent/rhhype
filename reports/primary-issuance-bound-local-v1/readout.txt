@@ -1,0 +1,13 @@
+Lido primary issuance to Curve: conditional bound, 2 October 2026
+
+Frozen commit c439df1; single run with 19 public RPC requests. All four fixed principals passed the domain, child-state, final-parent and source-pin checks. Root independently reconciled all saved response bodies and integer arithmetic.
+
+Principal ETH | optimistic margin ETH | margin basis points
+0.01 | -0.000006083487036195 | -6.083487036195
+0.1  | -0.000060835537080691 | -6.0835537080691
+1    | -0.000608422045422410 | -6.0842204542241
+10   | -0.006090890661020111 | -6.090890661020111
+
+The actual modeled displayed stETH balance was principal minus one wei in each arm. The payout upper bound uses the post-submit get_dy(1,0,principal) plus one wei, conditional on the reviewed source model. It is already below principal before gas, approvals, residual disposal, inclusion or other costs. Park these four sizes at this fixed modeled state; no executable premium passed the necessary condition.
+
+This is a hypothetical child of parent block 26104512, hash df00afd65dee281f7269842eba46a52efd3e8508f196ae5045dd8d46eb2c344f. Source/runtime equivalence and obtainable inclusion remain unproved, and numeric parent checks cannot exclude a reorg out and back. No exchange, private fill, deployed helper or real transaction was performed. No closed paper profit is claimed. See root-receipt.json and the independent pre-run review.

@@ -1,0 +1,9 @@
+Polymarket subset conversion screen, 2 October 2026
+
+Frozen commit c439df1; one 15-slot calendar from 12:02:47 to 12:03:43 UTC. The fixed five-outcome October FOMC event supplies 30 proper NO subsets, one full-NO reference, and one full-YES creation/resale route. All 15 ten-token requests completed with valid fields; every planned route-slot remains in the 480 denominator.
+
+320 margins were -0.009Q and 160 were -0.019Q nominal pUSD, assuming zero fees, gas, latency and setup costs. No positive necessary price condition appeared. All 32 route margins coincided within each snapshot because each observed NO ask plus corresponding YES bid equaled one. That is an observation of these quotes, not an independently proven universal matching rule. Larger equal Q cannot rescue a nonpositive top-of-book bound.
+
+Only slot 10 met the frozen interpretive freshness/coherence gate (116 ms cross-book timestamp span); all its routes were -0.019Q. The other 14 sets failed timing checks. Their negatives apply to their recorded quotes; there is no all-slot simultaneous conclusion or claim about the entire interval. Snapshot ages ranged up to 51.53 seconds.
+
+Root independently decoded and reconciled all 15 raw responses, identities, Decimal margins, request calendar and timestamps. Actual conversion, deployed-source equivalence, pUSD redemption, multi-leg fills, depth, fees and inclusion remain unproved. Park this displayed-taker route family at the sampled prices. No profit claim or automatic continuation follows. See root-receipt.json.

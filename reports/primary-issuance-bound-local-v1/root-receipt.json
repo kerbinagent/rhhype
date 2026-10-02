@@ -1,0 +1,72 @@
+{
+  "schema": "primary-issuance-bound-root-reconciliation-v1",
+  "recorded_utc": "2026-10-02T12:05:30.519522+00:00",
+  "freeze_commit": "c439df1",
+  "status": "four_conditional_negative_bounds_reconciled",
+  "manifest_requests_verified": 19,
+  "response_bytes": 163320,
+  "trace_decoded_bytes": 243140,
+  "trace_bytes": 76435,
+  "trace_sha256": "e84d41527b3d90dd8a1bb242ddb75ba6cbe90cb842a488de2efb2d82ee6d044d",
+  "parent": {
+    "hash": "0xdf00afd65dee281f7269842eba46a52efd3e8508f196ae5045dd8d46eb2c344f",
+    "number": "0x18e52c0",
+    "parentHash": "0x567b94350add0a88f77ae1bc6d136a97bc1d9fe746373a0a9ad8ed0437637283",
+    "stateRoot": "0xf96f83118b0347b63081f9ad5a263fac86f1899b3a43e57d59c5db4e9226204d",
+    "timestamp": "0x6abf9d5b"
+  },
+  "child_time_utc": "2026-10-02T12:02:47+00:00",
+  "decision_utc": "2026-10-02T12:02:41.539968+00:00",
+  "first_request_utc": "2026-10-02T12:02:40.438153+00:00",
+  "last_receipt_utc": "2026-10-02T12:02:58.517095+00:00",
+  "minimum_helper_start_spacing_seconds": 1.0001372149999952,
+  "maximum_request_seconds": 0.10162681699148379,
+  "arms": [
+    {
+      "principal_eth": "0.01",
+      "displayed_balance_wei": "9999999999999999",
+      "upper_payout_wei": "9993916512963805",
+      "optimistic_margin_wei": "-6083487036195",
+      "optimistic_margin_bps": "-6.0834870361950000"
+    },
+    {
+      "principal_eth": "0.1",
+      "displayed_balance_wei": "99999999999999999",
+      "upper_payout_wei": "99939164462919309",
+      "optimistic_margin_wei": "-60835537080691",
+      "optimistic_margin_bps": "-6.08355370806910000"
+    },
+    {
+      "principal_eth": "1",
+      "displayed_balance_wei": "999999999999999999",
+      "upper_payout_wei": "999391577954577590",
+      "optimistic_margin_wei": "-608422045422410",
+      "optimistic_margin_bps": "-6.08422045422410000"
+    },
+    {
+      "principal_eth": "10",
+      "displayed_balance_wei": "9999999999999999999",
+      "upper_payout_wei": "9993909109338979889",
+      "optimistic_margin_wei": "-6090890661020111",
+      "optimistic_margin_bps": "-6.0908906610201110000"
+    }
+  ],
+  "checks": [
+    "Independently decoded all19 complete raw response bodies; verified every length/hash/request-id and exact resolved frozen request manifest.",
+    "Parent initial/final five-field projection identical; all fixed runtime code digests matched; empty sender and fee recipient.",
+    "Child headers, nonces/payloads, successful64hex ABI return words, gas limits and sums checked.",
+    "Recomputed domain, minted shares, post-submit balance, stake/capacity/fee checks and quote+1-P using integers.",
+    "Reconciled each arm with summary and all4 denominators; final source pins, terminal and supervisor passed.",
+    "Initial child time>=decision+400ms and economic requests after monotonic floor; helper invocation spacing>=1s."
+  ],
+  "limitations": [
+    "numeric_parent_reorg_out_and_back_not_excluded",
+    "hypothetical_child_no_unrelated_transactions_no_obtainable_inclusion_claim",
+    "simulated_view_transaction_gas_is_not_composed_route_cost",
+    "no_exchange_approval_flatness_or_closed_cash_execution",
+    "Conditional source/runtime equivalence remains unproved; no profit or real fill claimed.",
+    "Negative result applies only to this fixed four-size source-model sample; excluded nonnegative costs cannot rescue it."
+  ],
+  "additional_http": 0,
+  "additional_raw_copies": 0
+}
