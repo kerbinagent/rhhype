@@ -1,0 +1,14 @@
+{
+  "schema": "parler-peer-primary-issuance-source-cap-v3",
+  "recorded_utc": "2026-10-02T08:27:31.259866+00:00",
+  "previous": "reports/experiment-storage/parler-peer-primary-issuance-source-cap-v2.json",
+  "previous_sha256": "f0b9d612e53fac1d727cafefc35298f7601074d7cb1ba6af0379e7943c9a0ed1",
+  "reserved_bytes": 0,
+  "previous_probe_source_subcap_bytes": 163840,
+  "probe_source_tests_protocol_and_remote_copies_subcap_bytes": 294912,
+  "peer_source_category_bytes_unchanged": 2097152,
+  "peer_total_reserved_bytes_unchanged": 8388608,
+  "basis": "Retain the exact reviewed package and corrected successor with both session copies, after the pre-RPC cumulative response-cap defect. Current complete package accounted160563B; allowance covers targeted corrected source/tests/protocol and all amendment/transport records.",
+  "unchanged": "No new global reservation. Raw524288 across both sessions, derived5767168 category and131072 probe subcap. Endpoint,20-request/180-second one-run policy, no retry/fallback and economic exclusions remain frozen.",
+  "authorization": "Only source review allowance changes. This does not authorize RPC. Return exact corrected pins and focused regression evidence before root hands off the one peer run."
+}

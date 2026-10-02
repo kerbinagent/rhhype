@@ -1,0 +1,11 @@
+{
+  "schema": "peer-primary-issuance-preflight-runtime-v1",
+  "python_version": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "python_implementation": "CPython",
+  "python_executable": "/Users/houze/projects/research/rhhype-peer/.venv/bin/python",
+  "machine": "arm64",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "openssl": "OpenSSL 3.6.3 9 Jun 2026",
+  "dependencies": "Python standard library only; no credentials, local node or compiler.",
+  "scope": "Offline focused tests and intended peer metadata probe use this interpreter. This file records runtime identity, not RPC execution evidence."
+}

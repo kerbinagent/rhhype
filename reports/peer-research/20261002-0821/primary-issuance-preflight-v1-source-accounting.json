@@ -1,0 +1,84 @@
+{
+  "schema": "peer-primary-issuance-v1-source-accounting",
+  "recorded_utc": "2026-10-02T08:19:41.913916+00:00",
+  "authority": "68263996-4219-42ee-85a2-9229a7885f9b",
+  "source_files_and_reserved_review_copies": [
+    {
+      "path": "research/peer-primary-issuance-v1-proposal.json",
+      "bytes": 18887,
+      "sha256": "f096be8addac4f1f4b8acdb276fff920afd56dfb557a6ac6ae97c66841fc0757",
+      "session_copies": 2
+    },
+    {
+      "path": "scripts/peer_primary_issuance_preflight.py",
+      "bytes": 30618,
+      "sha256": "af3b29b7d09e6505535528b0bc64473b12a790d8ff35fa6c0098c91e11cafd96",
+      "session_copies": 2
+    },
+    {
+      "path": "tests/test_peer_primary_issuance_preflight.py",
+      "bytes": 14574,
+      "sha256": "40fe9498ab4b262778bdad2fb92322904e7d85f8947d21b86de1acee1fca19ed",
+      "session_copies": 2
+    },
+    {
+      "path": "research/peer-primary-issuance-v1.json",
+      "bytes": 2757,
+      "sha256": "ae6de89bf7eb7fb241c3b533c3815e5bb103df30ccbeb443ed6d941d994a5543",
+      "session_copies": 2
+    },
+    {
+      "path": "research/peer-primary-issuance-v1-runtime.json",
+      "bytes": 641,
+      "sha256": "c42a21452f0c9840e41523339608390ec05a9ce52872a997f1776fb98d1fb23c",
+      "session_copies": 2
+    },
+    {
+      "path": "reports/experiment-storage/parler-peer-primary-issuance-v1.json",
+      "bytes": 2923,
+      "sha256": "da22971ab71885b344f5ff153f9c50520fecb6313a7432aaed72786c52141da2",
+      "session_copies": 2
+    },
+    {
+      "path": "research/peer-primary-issuance-v1-handoff.txt",
+      "bytes": 3185,
+      "sha256": "51943884c735ba55a6f372e65a1e7b0b3449282cbcf1757e739984cf15fb08d4",
+      "session_copies": 2
+    }
+  ],
+  "local_only_message_bodies": [
+    {
+      "path": "research/peer-primary-issuance-v1-envelopes/68263996-4219-42ee-85a2-9229a7885f9b.txt",
+      "bytes": 744,
+      "sha256": "5460ea9259f32e8fe00d6864ca208fcbc0eb51b0882a240c53d988d8ab403e0c",
+      "session_copies": 1
+    },
+    {
+      "path": "research/peer-primary-issuance-v1-envelopes/f4363665-cc55-4985-92b4-71e3ecc7bceb.txt",
+      "bytes": 2409,
+      "sha256": "e4f15c17da4d3507e39f2d49f6dd14ac25882ad5c2646b8e62e920478ed1a133",
+      "session_copies": 1
+    }
+  ],
+  "main_source_cap_record_allowance_bytes": 2048,
+  "main_record_basis": "Main described a1100-byte-class record; conservatively allow2048B.",
+  "mutable_ledger_growth_allowance_bytes": 8192,
+  "mutable_ledger_baseline_commit": "903f988c8019a022ee53b16197739037792fdde6",
+  "mutable_ledger_baseline_bytes": 21348,
+  "total_source_including_all_reserved_review_copies_bytes": 160563,
+  "source_subcap_bytes": 163840,
+  "note": "Two copies means existing peer source plus one main retained review copy, including proposal and original amendment already at main. No additional installed source copies are reserved. Envelope and source-cap message body remain local-only. Ledger allowance is incremental over its previously funded baseline; the mutable ledger is not source-pinned.",
+  "raw_scope": {
+    "all_session_cap_bytes": 524288,
+    "per_session_cap_bytes": 262144,
+    "actual_new_rpc_calls": 0,
+    "actual_rpc_response_bytes": 0
+  },
+  "derived_scope": {
+    "all_session_subcap_bytes": 131072,
+    "validation_receipt_per_copy_bytes": 5267,
+    "accounting_receipt_classification": "derived byte-accounting output; two copies reserved",
+    "future_run_receipts": "claim/terminal and supervisor receipt remain inside the same derived subcap; actual bytes will be reconciled after the one authorized run."
+  },
+  "execution_gate": "Main exact-package review and run handoff still pending."
+}

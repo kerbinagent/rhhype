@@ -1,0 +1,24 @@
+Primary issuance metadata probe: exact review handoff
+
+The isolated peer package is ready for one bounded compatibility run after the main session's explicit handoff. No RPC, market quote or economic observation has run. The scientific protocol is frozen; its execution gate still requires main acknowledgment of these exact bytes. Proposed execution owner is this Mac peer. Main needs one retained review copy of each source artifact; additional installed source copies are not reserved by this handoff.
+
+Protocol: research/peer-primary-issuance-v1.json
+2757 bytes; SHA256 ae6de89bf7eb7fb241c3b533c3815e5bb103df30ccbeb443ed6d941d994a5543
+Adapter: scripts/peer_primary_issuance_preflight.py
+30618 bytes; SHA256 af3b29b7d09e6505535528b0bc64473b12a790d8ff35fa6c0098c91e11cafd96
+Tests: tests/test_peer_primary_issuance_preflight.py
+14574 bytes; SHA256 40fe9498ab4b262778bdad2fb92322904e7d85f8947d21b86de1acee1fca19ed
+Runtime: research/peer-primary-issuance-v1-runtime.json
+641 bytes; SHA256 c42a21452f0c9840e41523339608390ec05a9ce52872a997f1776fb98d1fb23c
+Validation receipt: reports/peer-research/primary-issuance-preflight-v1-offline-validation.json
+5267 bytes; SHA256 dc73deadb4c18a013ea674e80abc98a8408918eaecc9dc18259fba04e8e53c75
+
+Both sessions already retain the exact proposal and allocation amendment; the compact protocol pins them and the complete request/synthetic specifications. Main message 68263996-4219-42ee-85a2-9229a7885f9b raises only the source subcap to163840 bytes within unchanged2MiB source/8MiB total. Raw remains524288 bytes across both sessions.
+
+The implementing Sol xhigh agent reports13 focused tests passed in0.197s on pinned CPython3.14.3. Parent reviewed their coverage and independently validated actual frozen package/runtime,9 ABI selectors,2 Keccak vectors and the zero-request default CLI. The receipt separates fixture tests from actual package validation. Runtime binding requires a new freeze to execute on another machine/interpreter.
+
+Regressions cover nonfinite JSON, Unicode error expansion and deadline cleanup. Request work stops at170s inside180s wall cap. Wrong simulation/gas/ABI/identity/reorg evidence or resource failures stop without retry. Issuance ineligibility retains all4 arms and finishes identity checks.
+
+The exact one-run output directory is reports/peer-research/primary-issuance-preflight-v1. It must not exist before launch. The adapter requires explicit plan/source/test SHA256 arguments, the fixed endpoint and raw allocation authority a05fd8e6-1d09-41a9-81c9-7e0069e1ef48. These mechanical checks do not replace main's pending run handoff. No source changes, endpoint substitution, retry or second run after any result.
+
+Maximum positive interpretation: the fixed provider exposes the synthetic success/revert gas interface and specified metadata. The synthetic parent is only number-bound, with returned parent-hash/child-number checks and a final header recheck; provider trust and reorg-out-and-back limitations remain. Metadata cannot prove live compiled-source equivalence, full Lido/Curve execution, obtainable inclusion or positive cash. Any economic collection requires a separate frozen design and authority.

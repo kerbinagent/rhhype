@@ -1,0 +1,68 @@
+{
+  "schema": "root-peer-primary-issuance-v1-review",
+  "recorded_utc": "2026-10-02T08:27:31.259866+00:00",
+  "peer_commit": "ff36e34",
+  "peer_message": "90670ff9-fc6c-4725-944e-9ab3e07f0c46",
+  "status": "one_resource_blocker_before_any_rpc",
+  "attachments_verified": [
+    {
+      "name": "peer_primary_issuance_preflight.py",
+      "bytes": 30618,
+      "sha256": "af3b29b7d09e6505535528b0bc64473b12a790d8ff35fa6c0098c91e11cafd96"
+    },
+    {
+      "name": "test_peer_primary_issuance_preflight.py",
+      "bytes": 14574,
+      "sha256": "40fe9498ab4b262778bdad2fb92322904e7d85f8947d21b86de1acee1fca19ed"
+    },
+    {
+      "name": "peer-primary-issuance-v1.json",
+      "bytes": 2757,
+      "sha256": "ae6de89bf7eb7fb241c3b533c3815e5bb103df30ccbeb443ed6d941d994a5543"
+    },
+    {
+      "name": "peer-primary-issuance-v1-runtime.json",
+      "bytes": 641,
+      "sha256": "c42a21452f0c9840e41523339608390ec05a9ce52872a997f1776fb98d1fb23c"
+    },
+    {
+      "name": "peer-primary-issuance-v1-handoff.txt",
+      "bytes": 3185,
+      "sha256": "51943884c735ba55a6f372e65a1e7b0b3449282cbcf1757e739984cf15fb08d4"
+    },
+    {
+      "name": "primary-issuance-preflight-v1-offline-validation.json",
+      "bytes": 5267,
+      "sha256": "dc73deadb4c18a013ea674e80abc98a8408918eaecc9dc18259fba04e8e53c75"
+    },
+    {
+      "name": "primary-issuance-preflight-v1-source-accounting.json",
+      "bytes": 3610,
+      "sha256": "95c9365b1111faa5f0fb395373cf4c749d4d6da4d3f14f7b13ebc45c12d49dc1"
+    }
+  ],
+  "read_scope": "Root read complete source/tests/protocol/runtime/handoff/validation/accounting and matched both canonical proposal subobject hashes. Sol independently reviewed transport, resource and synthetic evidence paths. No full test rerun or real RPC.",
+  "passed_review": "Fixed twenty-request semantic manifest, chain/contracts/ABI checks, hash-based contract reads, numeric simulation parent/child/reorg caveat, fixed four size eligibilities, no quotes/transactions, endpoint/proxy/redirect guards, timer, existing-output refusal and retained trace bounds.",
+  "blocker": {
+    "lines": [
+      425,
+      428,
+      435,
+      477
+    ],
+    "description": "Cumulative body-byte cap is checked only after a full per-response read. Valid whitespace-padded replies can exceed the declared1MiB limit while retained decoded JSON remains small.",
+    "root_offline_reproduction": {
+      "network_calls": 0,
+      "fixture_responses": 9,
+      "bytes_each": 131072,
+      "total_response_bytes": 1179648,
+      "declared_limit_bytes": 1048576,
+      "excess_bytes": 131072,
+      "status": "resource failure only after excess read"
+    },
+    "independent_review": "Sol confirmed the same defect; no other concrete blocker."
+  },
+  "required_successor": "Bound admission and each transport body read by the remaining cumulative allowance; preserve terminal evidence when exhausted. Retain old package, target the concrete regression, return new exact pins before one peer run. No market observation has occurred.",
+  "execution_owner": "Pinned Mac peer; root Linux fixture check was not a probe run.",
+  "economic_conclusion": null
+}

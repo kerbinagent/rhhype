@@ -1,0 +1,121 @@
+{
+  "schema": "peer-primary-issuance-v1-offline-validation",
+  "recorded_utc": "2026-10-02T08:14:55.106823+00:00",
+  "source_pins": [
+    {
+      "path": "scripts/peer_primary_issuance_preflight.py",
+      "sha256": "af3b29b7d09e6505535528b0bc64473b12a790d8ff35fa6c0098c91e11cafd96"
+    },
+    {
+      "path": "tests/test_peer_primary_issuance_preflight.py",
+      "sha256": "40fe9498ab4b262778bdad2fb92322904e7d85f8947d21b86de1acee1fca19ed"
+    }
+  ],
+  "frozen_protocol": {
+    "path": "research/peer-primary-issuance-v1.json",
+    "bytes": 2757,
+    "sha256": "ae6de89bf7eb7fb241c3b533c3815e5bb103df30ccbeb443ed6d941d994a5543"
+  },
+  "focused_tests": {
+    "reported_by": "Sol xhigh agent /root/funding_boundary_mechanism",
+    "command": ".venv/bin/python -m unittest discover -s tests -p test_peer_primary_issuance_preflight.py -v",
+    "tests_passed": 13,
+    "tests_failed": 0,
+    "reported_suite_seconds": 0.197,
+    "cases": [
+      "test_authorization_has_no_side_effects",
+      "test_semantics_cannot_change_calls_addresses_sizes",
+      "test_package_cap_rejects_before_output_or_transport",
+      "test_twenty_calls_header_projection_no_economics",
+      "test_synthetic_nonce_fees_and_sender_override",
+      "test_unsupported_stops_before_metadata",
+      "test_gas_revert_and_child_evidence",
+      "test_identity_abi_and_reorg",
+      "test_four_fixed_size_eligibilities",
+      "test_oversize_partial_and_retention_caps_preserve_receipts",
+      "test_deadline_cleanup_receipt",
+      "test_nonfinite_and_unicode_errors_leave_terminal",
+      "test_redirect_proxy_and_overwrite"
+    ],
+    "runtime_ref": {
+      "path": "research/peer-primary-issuance-v1-runtime.json",
+      "sha256": "c42a21452f0c9840e41523339608390ec05a9ce52872a997f1776fb98d1fb23c"
+    },
+    "evidence_note": "Agent final execution report for these exact source/test pins. Parent read complete test coverage; no redundant second run. Fault tests use immutable small source fixtures to isolate the authorization gate; actual source package is independently verified below."
+  },
+  "parent_real_package_validation": {
+    "protocol_sha256": "ae6de89bf7eb7fb241c3b533c3815e5bb103df30ccbeb443ed6d941d994a5543",
+    "source_pins": [
+      {
+        "path": "scripts/peer_primary_issuance_preflight.py",
+        "sha256": "af3b29b7d09e6505535528b0bc64473b12a790d8ff35fa6c0098c91e11cafd96"
+      },
+      {
+        "path": "tests/test_peer_primary_issuance_preflight.py",
+        "sha256": "40fe9498ab4b262778bdad2fb92322904e7d85f8947d21b86de1acee1fca19ed"
+      }
+    ],
+    "proposal": {
+      "path": "research/peer-primary-issuance-v1-proposal.json",
+      "sha256": "f096be8addac4f1f4b8acdb276fff920afd56dfb557a6ac6ae97c66841fc0757"
+    },
+    "coordinator_authority": "a05fd8e6-1d09-41a9-81c9-7e0069e1ef48",
+    "raw_authority_bytes": 524288,
+    "package_two_copy_bytes": 145744,
+    "allocation_amendment": {
+      "path": "reports/experiment-storage/parler-peer-primary-issuance-v1.json",
+      "sha256": "da22971ab71885b344f5ff153f9c50520fecb6313a7432aaed72786c52141da2",
+      "bytes": 2923
+    },
+    "runtime": {
+      "path": "research/peer-primary-issuance-v1-runtime.json",
+      "sha256": "c42a21452f0c9840e41523339608390ec05a9ce52872a997f1776fb98d1fb23c"
+    },
+    "actual_runtime": {
+      "python_version": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+      "python_executable": "/Users/houze/projects/research/rhhype-peer/.venv/bin/python",
+      "python_implementation": "CPython",
+      "machine": "arm64",
+      "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+      "openssl": "OpenSSL 3.6.3 9 Jun 2026"
+    },
+    "source_cap_authority_message": "68263996-4219-42ee-85a2-9229a7885f9b",
+    "source_envelope_allowance_bytes": 4944
+  },
+  "parent_dry_cli": {
+    "returncode": 0,
+    "stdout": {
+      "economic_observations": 0,
+      "manifest_calls": 20,
+      "native_arms_wei": [
+        "10000000000000000",
+        "100000000000000000",
+        "1000000000000000000",
+        "10000000000000000000"
+      ],
+      "protocol_sha256": "ae6de89bf7eb7fb241c3b533c3815e5bb103df30ccbeb443ed6d941d994a5543",
+      "reorg_limitation": "numeric_simulation_parent_with_header_recheck_cannot_exclude_reorg_out_and_back",
+      "requests_permitted": 0,
+      "status": "dry_validated_no_rpc_authority"
+    },
+    "stderr": "",
+    "run_output_directory_created": false
+  },
+  "independent_reviews": {
+    "proposal_sha256": "f096be8addac4f1f4b8acdb276fff920afd56dfb557a6ac6ae97c66841fc0757",
+    "source_response_reviewed_sha256": "7172a3ab1dbd1c863a56315715ca4a3259de3d99c81c507618494019c9e82e23",
+    "fixed_findings": [
+      "nonfinite parsed JSON numbers prevented terminal publication",
+      "unbounded header error diagnostics bypassed raw-cap omission"
+    ],
+    "parent_findings_fixed": [
+      "request work cutoff170s reserves10s inside180s wall cap for terminal cleanup"
+    ],
+    "final_source_changes_since_response_review": "Runtime pin and approved source-cap authority validation plus corresponding offline cases; parent reviewed the final authorization section.",
+    "abi_selector_checks": 9,
+    "known_keccak_vectors": 2
+  },
+  "new_rpc_requests": 0,
+  "market_quotes": 0,
+  "economic_evaluation": false
+}
