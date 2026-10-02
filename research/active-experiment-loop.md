@@ -1972,3 +1972,14 @@ running/ok. Separate Premium increase13 versus report12 retained. Archive
 3,734,859 B;144 future pairs project4,504,107 B,margin738,773 B. Carry
 00:25:287sampled,invalidslot71,576future/interrupted;noerrors/retries/evaluation.
 News/analysiswaitingfreshheartbeats. Next00:46:33UTC.
+
+
+### Review 170, 2 October 00:46 UTC
+
+Complete coverage: five exact losses, one convergence failed hedge/
+−$1.19891 and four Premium paired/−$6.83118. No gains/estimates/aborts;
+one HL price limit. Four feeds/102 pairs fresh, running/ok. Separate Premium
+increase three versus report four retained. Archive3,739,354 B;143future
+pairs project4,503,260 B,margin739,620 B. Carry00:45:291sampled,invalidslot71,
+572future/interrupted;noerrors/retries/evaluation. News/analysiswaitingfresh
+heartbeats. Next01:06:33UTC.
