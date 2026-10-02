@@ -1,0 +1,26 @@
+LOCAL DEPTH SHOCKS WITH FIXED EARLIER ORDINARY CONTROLS
+Exploratory archived windows:2026-10-01 22:35..22:45UTC and23:05..23:15UTC.
+All ten assets and both venues retained; original Detector unchanged. One first event per asset across both venues in each30second interval. Target100notional,400ms delayed entry,10second hold plus400ms delayed exit; full-depth quotes, native grids and first-eligible clock/failure rules. These are quote profiles, not actual IOC fills or closed cash ledgers.
+
+Window1:12rawshocks,3outside admission,6grouped with an earlier episode,3selected.
+Window2:5rawshocks,0outside,1grouped,4selected.
+All7selected local quote profiles completed;2positive before additional stress.
+
+Window  Asset Venue  Direction  Quote bp  Reference bp  Quote minus reference bp
+1       LIT   RH     short      +2.7355     +6.5862          -3.8506
+1       LIT   Core   short      -2.6371     missing          missing
+1       NEAR  RH     long      -12.1453     -9.3393          -2.8060
+2       HYPE  RH     long       -3.2112     -0.9576          -2.2535
+2       SUI   RH     long       -9.5437     -4.4310          -5.1127
+2       NEAR  Core   long       +5.9112    +10.3760          -4.4648
+2       ZEC   RH     long       -6.4222     -2.8863          -3.5360
+
+All6measurable event quote-minus-reference values are negative. This is accounting under assumed USDC/USDG parity, not causal attribution. The2positive local returns coincide with larger favorable reference movement. With separate extra1/2bp both remain positive; with5bp only CoreNEAR remains positive. Displayed spread/depth/delay already enter quotes; additional stress is not a measured fee. Capital/private execution/funding/portfolio constraints are not modeled. These windows do not cross an hourly funding boundary.
+
+CONTROL DENOMINATOR: fixed earlier30second observation within2seconds, same asset/venue/direction and pre-print spread bucket, no detected same-asset shock in preceding15seconds. Matching never reads later returns, completeness or reference availability.5of7events lack a matching control:3spread-bucket mismatches,2outside available time coverage.2controls have complete local quotes, no reused controls: RHLIT event-minus-control +6.1633bp; RHZEC -1.7921bp. BOTH controls lack fresh reference at an endpoint, leaving ZEROcomplete paired reference-adjusted comparisons. The intended event-specific controlled comparison is INCONCLUSIVE, not positive or disproven. No matching rule changed after outcomes.
+
+One selected CoreLIT episode has2subsequent detected shocks before exit; RHZEC has1. No future-shock exclusion was applied. Distinct-episode spacing does not remove cross-asset/session dependence. Ordinary candidate profiles were18400matched/64missing inwindow1 and17666matched/130missing inwindow2, with both hypothetical sides; these are overlapping computation records, not independent evidence or trades.
+
+All40asset/venue/window rows and everyselected event/control/missing reason remain in shock-controls.json.gz (8950bytes). Initial run failed before its first market event on an adapter lifecycle marker; original source/test/failure preserved. Corrected loop counts those markers (2perwindow); five targeted tests pass and frozen corrected protocol is single-venue-shock-controls-adapter-fix-v1.json. No old source, armed news protocol or prior outcome modified.
+
+Decision: retain the local-shock version as unestablished. This sample gives no positive event-specific evidence and has insufficient control coverage. Do not retune controls on these outcomes. Ongoing shared collection should provide more distinct events and regimes for a separately frozen analysis.

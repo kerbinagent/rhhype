@@ -1,0 +1,20 @@
+{
+  "schema": "rolling-capture-budget-v1",
+  "recorded_utc": "2026-10-02T02:19:28.551743+00:00",
+  "previous": "reports/experiment-storage/research-capture-campaign-preparation-v1.json",
+  "previous_sha256": "8d8c149bf852ef39d9bec6e64ce372ecaee707f8cc5af3838dba8e2ed2994e6d",
+  "authorization": "User: ok. re storage: I am allocating to you 2G disk space for rolling captures",
+  "interpretation": "Conservative decimal2GB=2,000,000,000 bytes hard cap for new rolling store including compressedraw, metadata, seals, catalog, leases and controller files. New rolling store separate from alreadyretained research evidence. Only its own expired unpinned chunks can be removed.",
+  "superseded_unlaunched_campaign_raw_and_control_reservation_bytes": 102629376,
+  "retained_preparation_and_analysis_reservation_bytes": 2228224,
+  "rolling_store_limit_bytes": 2000000000,
+  "rolling_store_root": "data/rolling/market-research-v1",
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 151781376,
+  "active_research_headroom_bytes": 102973440,
+  "previous_overall_reservation_bytes": 836777216,
+  "overall_reservation_bytes": 2836777216,
+  "additional_user_rolling_capture_reservation_bytes": 2000000000,
+  "raw_retention_scope": "Prior selected-raw studies and armed news retain their previous funded allocations and untouched sources. New rolling store is governed by user2GBcap rather than prior512MiBselected-raw planning ceiling. New minimum2h retention for unpinned chunks, active pins protected, storage-blocked if safe expiry cannot make room; no globalfile cleanup.",
+  "research_boundary": "Capture and idea work inparallel. Fixed cohort and sealed independent10minute chunks. Predetermined exploratory/reserved roles, no economics incollector. Reused historical chunks alwaysexploratory; prospectivevalidation needs rulefreeze before designatedchunkstarts. Source/preparation131072 and analysis2097152 remain funded from oldpool; newdatastorecap is separate, notdoubleallocated."
+}

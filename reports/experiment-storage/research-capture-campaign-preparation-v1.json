@@ -1,0 +1,20 @@
+{
+  "schema": "research-capture-campaign-preparation-v1",
+  "recorded_utc": "2026-10-02T02:16:28.907717+00:00",
+  "previous": "reports/experiment-storage/completed-ack-unused-reservation-rebalance-v5.json",
+  "previous_sha256": "034d40af492d7f7c2cf0553ce2554e0a28df55f25792e2e46cd93636a5160561",
+  "reserved_bytes": 104857600,
+  "categories_bytes": {
+    "raw": 100663296,
+    "metadata": 786432,
+    "chunk_control": 786432,
+    "source_preparation": 131072,
+    "offline_outputs": 2097152,
+    "campaign_control": 393216
+  },
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 254410752,
+  "active_research_headroom_bytes": 344064,
+  "overall_reservation_bytes": 836777216,
+  "scope": "Six independent ten-minute full-ten-asset Core/RH public capture chunks,16MiB raw each, within existing total reservation. Shared exploration data with designated future validation chunks; no economics or strategy in collector. Reuse existing capture/adapter and retain all evidence. Complete frozen controller/chunk protocol/source pins/inventory before launch. Offline analysis outputs2MiB included; no separate per-agent collector or duplicate allocation."
+}
