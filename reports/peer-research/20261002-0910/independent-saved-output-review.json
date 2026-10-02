@@ -1,0 +1,49 @@
+{
+  "schema": "peer-primary-issuance-v2-independent-saved-output-review",
+  "recorded_utc": "2026-10-02T09:07:36.663778+00:00",
+  "reviewer": "Sol xhigh /root/cross_asset_mechanism",
+  "basis": "Independent read-only saved-artifact review; no network, adapter/test reruns or writes by reviewer. Parent records the returned findings.",
+  "blocking_discrepancies": 0,
+  "exact_manifest_order_and_parameters": {
+    "matched": 20,
+    "total": 20
+  },
+  "all_http_200": true,
+  "failures": 0,
+  "truncated_responses": 0,
+  "prefix_hashes": 0,
+  "retries": 0,
+  "observed": {
+    "response_bytes": 117513,
+    "largest_response_bytes": 47749,
+    "raw_gzip_bytes": 22602,
+    "decoded_trace_bytes": 97170,
+    "claim_plus_terminal_bytes": 3300,
+    "mechanical_source_package_bytes": 276550,
+    "source_subcap_bytes": 294912,
+    "minimum_start_spacing_seconds": 1.001568,
+    "maximum_start_spacing_seconds": 1.010071,
+    "maximum_request_seconds": 0.147586,
+    "supervisor_seconds": 19.361113,
+    "returncode": 0,
+    "synthetic_return": 42,
+    "synthetic_success_gas": 21018,
+    "synthetic_revert_gas": 21006,
+    "header_number": 26103604,
+    "eligible_native_eth_arms": [
+      "0.01",
+      "0.1",
+      "1",
+      "10"
+    ],
+    "stake_limit_eth": "150000"
+  },
+  "checked_clear": [
+    "Branch, source commit, frozen protocol, source/test/runtime pins and artifact hashes",
+    "Fixed implementation, proxy type2, version4, decimals18 and Curve coin identities",
+    "Recorded code SHA256 values recompute correctly",
+    "Initial and final projected headers match",
+    "Economics null, full route false and numeric-parent limitation remain explicit"
+  ],
+  "interpretation": "Provider metadata compatibility only; composed execution, profitability and inclusion remain unproven."
+}

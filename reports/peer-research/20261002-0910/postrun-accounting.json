@@ -1,0 +1,101 @@
+{
+  "schema": "peer-primary-issuance-v2-postrun-accounting",
+  "recorded_utc": "2026-10-02T09:07:36.665025+00:00",
+  "launch_authority": "1e7982f9-3cf8-42f7-b767-f6c986c66c8e",
+  "source_commit": "15930131c17c73a86e81d0cca890cd6886a97eb2",
+  "artifacts_and_reserved_review_copies": [
+    {
+      "path": "reports/peer-research/primary-issuance-preflight-v2/claim.json",
+      "bytes": 1611,
+      "sha256": "2cc16cfa1ae18450fb366f67633362d76e75ac83930268dcb985c2d0a1a226a8",
+      "category": "derived_outputs",
+      "session_copies": 2
+    },
+    {
+      "path": "reports/peer-research/primary-issuance-preflight-v2/trace.json.gz",
+      "bytes": 22602,
+      "sha256": "71f4adc83abfbfdf410a4f62c6b0b5ecefc39b3f2cc337339d13ad72f4c01d42",
+      "category": "raw_metadata",
+      "session_copies": 2
+    },
+    {
+      "path": "reports/peer-research/primary-issuance-preflight-v2/terminal.json",
+      "bytes": 1689,
+      "sha256": "dc6baac3e7284860c35b18a1d197761409fc1b0f9916bb91324831ced2f29a97",
+      "category": "derived_outputs",
+      "session_copies": 2
+    },
+    {
+      "path": "reports/peer-research/primary-issuance-preflight-v2-run.json",
+      "bytes": 2259,
+      "sha256": "19dcd5735e5603c0983e3e624411a7d469c6c6a584670db8a5acee9b5567d0fe",
+      "category": "derived_outputs",
+      "session_copies": 2
+    },
+    {
+      "path": "reports/peer-research/primary-issuance-preflight-v2/parent-saved-output-checks.json",
+      "bytes": 3131,
+      "sha256": "1d3c62b3c97b19625d3529e1946d3cbfd6cb217bf3fe04955117f96666860024",
+      "category": "derived_outputs",
+      "session_copies": 2
+    },
+    {
+      "path": "reports/peer-research/primary-issuance-preflight-v2/independent-saved-output-review.json",
+      "bytes": 1796,
+      "sha256": "723801b93ec35d098b53b1c51a589434875fee542660f19ecd7aa576712a045b",
+      "category": "derived_outputs",
+      "session_copies": 2
+    },
+    {
+      "path": "reports/peer-research/primary-issuance-preflight-v2/decision.txt",
+      "bytes": 2512,
+      "sha256": "aa1414d13574e8a77930f3841555bae21730df28bdf48d01c2c4d69318cf3a0a",
+      "category": "derived_outputs",
+      "session_copies": 2
+    }
+  ],
+  "source": {
+    "retained_v1_v2_and_reserved_source_review_copies_bytes": 267493,
+    "subcap_bytes": 294912,
+    "prior_accounting": {
+      "path": "reports/peer-research/primary-issuance-preflight-v2-source-accounting.json",
+      "bytes": 3146,
+      "sha256": "f51e5c6937ba5974526d24c2a2152c1c7db732d6fd39490b62fb854ab3357cf7"
+    },
+    "mutable_ledger_baseline_bytes": 21348,
+    "mutable_ledger_actual_growth_bytes": 7705,
+    "mutable_ledger_growth_allowance_already_included_bytes": 8192,
+    "new_nonledger_source_bytes": 0
+  },
+  "raw": {
+    "peer_bytes": 22602,
+    "one_main_review_copy_bytes": 22602,
+    "all_session_bytes": 45204,
+    "all_session_cap_bytes": 524288,
+    "per_session_cap_bytes": 262144,
+    "http_response_bytes_read": 117513,
+    "http_body_read_cap_bytes": 1048576,
+    "classification": "Only exact trace.json.gz is raw metadata; no incoming raw envelope is retained."
+  },
+  "derived": {
+    "prior_v1_v2_preflight_receipts_and_reserved_review_copies_bytes": 36625,
+    "additional_root_v2_review_bytes": 3482,
+    "existing_before_run_bytes": 40107,
+    "new_nonaccounting_artifacts_with_review_copies_bytes": 25996,
+    "this_accounting_receipt_bytes": 4182,
+    "this_accounting_receipt_copies": 2,
+    "all_session_total_including_this_receipt_bytes": 74467,
+    "all_session_subcap_bytes": 131072
+  },
+  "overall_peer_category_limits": {
+    "source_bytes": 2097152,
+    "derived_bytes": 5767168,
+    "raw_bytes": 524288,
+    "total_bytes": 8388608
+  },
+  "pre_primary_study_conservative_totals": {
+    "source_bytes": 908677,
+    "derived_bytes": 319494
+  },
+  "note": "Every listed artifact reserves its existing peer copy and one exact main review copy. No additional installed/source/raw/envelope copies are reserved. V1 and v2 source/protocol/offline receipts remain unchanged. Counts describe retained experiment artifacts, with the existing conservative prior-study accounting carried forward. One authorized run is consumed; no new collection is authorized."
+}

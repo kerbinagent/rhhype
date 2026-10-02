@@ -188,14 +188,28 @@ examines native ETH issuance through Lido followed by a sale on one fixed Curve
 pool. An executable premium must cover the complete transaction, gas, residual
 share disposal and capital; no premium or profit has been observed.
 
-A capability and contract-metadata check is being implemented and reviewed.
-Its fixed first stage tests synthetic success/revert gas evidence before any
-Lido/Curve metadata. The proposed single run has at most 20 sequential requests,
-180 seconds and no endpoint fallback or retry. It excludes market quotes,
-balances, share ratios and economic collection. A positive compatibility result
-would not establish route correctness or obtainable inclusion.
+The [single metadata probe](../reports/peer-research/20261002-0910/root-receipt.json)
+completed 20 requests in 19.36 seconds. Synthetic return/revert gas, the fixed
+contract identities and the final header check passed. All four native issuance
+sizes were eligible at the observed block. Root verified the saved manifest,
+ABI selectors, code hashes and resource limits without further RPC. Economics
+remains null: no composed route, obtainable inclusion or profit was tested.
 
 The [budget amendment](../reports/experiment-storage/parler-peer-primary-issuance-v1.json)
 reclassifies 512 KiB within the existing peer grant for both raw metadata copies;
-the total ceiling is unchanged. Exact source/protocol review and freeze remain
-required before that probe. The later economic design remains separate.
+the total ceiling is unchanged. A strict cumulative-read correction was reviewed
+before the run; both original and corrected sources remain retained. The peer
+is now checking whether a rigorous gross-return bound can cheaply reject the
+route before compiling a transaction harness. Further collection needs its own
+frozen design.
+
+## Polymarket full-NO conversion metadata
+
+One fixed query selected the October FOMC event by calendar and title, without
+price inspection. Its UTC end-day mismatch remains an inconclusive original
+result. A separately frozen offline correction used the same response and the
+New York meeting date; no second query ran. The [metadata readout](../reports/polymarket-no-basket/metadata-readout.txt)
+records five coherent outcome definitions, token identifiers and fee schedules.
+On-chain completeness, conversion fee and current wrapper bindings remain
+unverified. A bounded contract-mapping preflight is the next justified step;
+no quote, execution or profit conclusion follows from metadata availability.

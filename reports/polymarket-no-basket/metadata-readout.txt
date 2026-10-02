@@ -1,0 +1,68 @@
+Polymarket full-NO basket: structural metadata available; economics untested
+
+The frozen metadata-v1 query ran once at 2026-10-02 08:52:47 UTC. It returned
+HTTP 200 and 26,716 bytes. Exactly one title-matched event was returned, id 606422,
+but its end 2026-10-29T03:59:00Z failed the frozen required UTC date 2026-10-28.
+The original candidate remains null and the original result inconclusive.
+
+That timestamp is October 28 23:59 in America/New_York, the preselected official
+FOMC meeting day. The separate calendar-v1 plan explicitly records this
+post-observation metadata correction. Its short offline adapter reuses the
+same pinned response, asserts the exact identified event and timestamp, and
+changes only the projection's date selector. Original sources, response and
+outputs remain untouched. No second query, market substitution or economic
+field inspection occurred. This correction is not an independent replication.
+
+The successor projection contains five markets: 50+ bps decrease, 25 bps decrease,
+no change, 25 bps increase, 50+ bps increase. Event and market descriptions agree on
+the upper federal-funds target, rounding of nonstandard moves, the October 27–28
+meeting and a no-statement fallback to no change. These describe an intended
+exhaustive and mutually exclusive partition, not proven oracle enforcement.
+
+All five markets share negative-risk market ID
+0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a00.
+Question IDs end in 00–04; all five conditions and ten token IDs are distinct.
+Each outcomes array is [Yes, No]. The event explicitly reports nonaugmented,
+showAllOutcomes true, active and not closed/archived. Each market reports
+negRisk true, negRiskOther false and acceptingOrders true. These are Gamma
+metadata claims; complete registered membership is not yet established.
+
+Every market reports feesEnabled true and feeSchedule exponent 1, rate 0.05, 
+takerOnly true. The older makerBaseFee/takerBaseFee fields both report 1000;
+their relationship to the current schedule remains unresolved. Conversion
+fee and secondsDelay are missing and are not assigned zero. The tick sizes
+are respectively 0.001, 0.001, 0.01, 0.01, 0.001. orderMinSize is 5 for every market;
+its unit is unresolved here. Current market-details documentation describes
+minimum USDC notional, while older sources use shares; the independent review's
+initial five-shares wording is not adopted. All records report restricted true;
+no account, geographic eligibility or ability to place orders was tested.
+
+Root and independent Sol reviewed only the projected metadata. The next step
+is a separately frozen Polygon metadata manifest: current documented wrapper
+and legacy/CTF/collateral bindings, exactly five registered questions, all five
+condition and ten position IDs, prepared/undetermined state and actual conversion
+fee. Any mismatch or extra question fails complete-set mapping. Code presence
+and matching getters alone cannot establish deployed-source equivalence or a
+successful conversion. Trading fee authority, rounding, order-size unit and
+matching delay remain prerequisites before an economic screen.
+
+If contract mapping ultimately proves n = 5 and fee b, the reviewed source algebra
+for native integer Q of each NO is 4 * (Q-floor(Q*b/10000)) collateral, with no YES
+residual. No balances, quotes, prices, cash edge, conversion cost/timing or paper
+profit have been observed. Partial acquisition and liquidation costs remain
+mandatory for any later complete-cycle study.
+
+Evidence: metadata-v1/{claim,terminal,supervisor,metadata,root-receipt}.json,
+metadata-v1/response.body and calendar-review-v1.json. The latter is20,256 bytes,
+SHA256 60fd720f615d2531e4e12b1e8c8e75b4f154290ebfa7335c596ac98870ddfabe.
+Original plan SHA256 118815a62a774caab5251518cb6e674503585a8027bcc960c0bfbc60d9a7b90f.
+Calendar plan SHA256 f79cd021e936c8471afdd28af8eb03a9af0ee1b4256abf286b2d4d10c64d8372.
+All artifacts use the existing 2 MiB Polymarket allocation; no new reservation.
+
+Primary references:
+https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+https://docs.polymarket.com/market-data/market-details
+https://docs.polymarket.com/resources/contracts
+https://docs.polymarket.com/changelog/predictions
+https://github.com/Polymarket/ctf-exchange-v2/blob/main/src/adapters/NegRiskCtfCollateralAdapter.sol
+https://github.com/Polymarket/neg-risk-ctf-adapter/blob/main/src/NegRiskAdapter.sol

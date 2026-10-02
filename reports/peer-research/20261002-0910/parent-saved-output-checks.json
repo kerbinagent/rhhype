@@ -1,0 +1,82 @@
+{
+  "schema": "peer-primary-issuance-v2-parent-saved-output-checks",
+  "recorded_utc": "2026-10-02T09:06:04.370575+00:00",
+  "basis": "Parent read and checked saved artifacts after the single run; no additional RPC or adapter/test rerun. This serializes the nineteen completed checks.",
+  "checks_passed": 19,
+  "checks_failed": 0,
+  "checks": [
+    "20 sequential requests",
+    "all HTTP200 received",
+    "no truncation or prefix-only hashes",
+    "all response sizes within per-response cap",
+    "aggregate bytes reconcile under cap",
+    "each read limit respects remaining allowance",
+    "spacing minimum one second",
+    "per-request latency within 12 seconds",
+    "requests stopped before 170 second request work cap",
+    "adapter completes within 180 seconds",
+    "trace hash matches terminal",
+    "raw retention bytes reconcile",
+    "RPC result correlation",
+    "two projected headers equal metadata",
+    "transaction history not retained",
+    "hash-bound contract and scratch metadata",
+    "all four fixed arms retained eligible",
+    "compatibility only",
+    "claim exact source pins"
+  ],
+  "measured": {
+    "requests": 20,
+    "method_counts": {
+      "eth_chainId": 1,
+      "eth_getBlockByNumber": 2,
+      "eth_getCode": 6,
+      "eth_simulateV1": 1,
+      "eth_call": 10
+    },
+    "minimum_request_start_spacing_seconds": 1.0015679588541389,
+    "maximum_request_seconds": 0.14758608303964138,
+    "adapter_elapsed_seconds": 19.25686595821753,
+    "supervisor_elapsed_seconds": 19.361113250255585,
+    "total_response_bytes": 117513,
+    "compressed_raw_bytes": 22602,
+    "contract_code_bytes": {
+      "lido_proxy": 1035,
+      "lido_implementation": 23855,
+      "curve_pool": 15735
+    },
+    "empty_scratch_accounts": 3,
+    "header_number": 26103604,
+    "header_utc": "2026-10-02T08:59:59+00:00"
+  },
+  "evidence": [
+    {
+      "path": "reports/peer-research/primary-issuance-preflight-v2/claim.json",
+      "bytes": 1611,
+      "sha256": "2cc16cfa1ae18450fb366f67633362d76e75ac83930268dcb985c2d0a1a226a8"
+    },
+    {
+      "path": "reports/peer-research/primary-issuance-preflight-v2/trace.json.gz",
+      "bytes": 22602,
+      "sha256": "71f4adc83abfbfdf410a4f62c6b0b5ecefc39b3f2cc337339d13ad72f4c01d42"
+    },
+    {
+      "path": "reports/peer-research/primary-issuance-preflight-v2/terminal.json",
+      "bytes": 1689,
+      "sha256": "dc6baac3e7284860c35b18a1d197761409fc1b0f9916bb91324831ced2f29a97"
+    },
+    {
+      "path": "reports/peer-research/primary-issuance-preflight-v2-run.json",
+      "bytes": 2259,
+      "sha256": "19dcd5735e5603c0983e3e624411a7d469c6c6a584670db8a5acee9b5567d0fe"
+    }
+  ],
+  "scope_limits": [
+    "Retained parsed responses/header projections do not reconstruct original HTTP bytes; original response SHA256 values are transport-recorded.",
+    "Matching metadata and synthetic simulation do not establish full-route execution, inclusion or economic return.",
+    "Numeric simulation parent plus final canonical header recheck cannot exclude reorg-out-and-back."
+  ],
+  "blocking_discrepancies": 0,
+  "economics": null,
+  "full_route_proven": false
+}

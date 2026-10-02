@@ -1,0 +1,92 @@
+{
+  "schema": "peer-primary-issuance-v2-root-saved-evidence-review",
+  "recorded_utc": "2026-10-02T09:18:06.234273+00:00",
+  "status": "metadata_compatibility_confirmed_full_route_unproven",
+  "input_message": "2848112f-c550-45a1-ac4f-6560e46541b4",
+  "arithmetic_correction_message": "bf65d961-1a7b-4e0f-bede-f1fa884ed722",
+  "evidence": [
+    {
+      "path": "reports/peer-research/20261002-0910/claim.json",
+      "bytes": 1611,
+      "sha256": "2cc16cfa1ae18450fb366f67633362d76e75ac83930268dcb985c2d0a1a226a8"
+    },
+    {
+      "path": "reports/peer-research/20261002-0910/decision.txt",
+      "bytes": 2512,
+      "sha256": "aa1414d13574e8a77930f3841555bae21730df28bdf48d01c2c4d69318cf3a0a"
+    },
+    {
+      "path": "reports/peer-research/20261002-0910/independent-saved-output-review.json",
+      "bytes": 1796,
+      "sha256": "723801b93ec35d098b53b1c51a589434875fee542660f19ecd7aa576712a045b"
+    },
+    {
+      "path": "reports/peer-research/20261002-0910/parent-saved-output-checks.json",
+      "bytes": 3131,
+      "sha256": "1d3c62b3c97b19625d3529e1946d3cbfd6cb217bf3fe04955117f96666860024"
+    },
+    {
+      "path": "reports/peer-research/20261002-0910/postrun-accounting.json",
+      "bytes": 4182,
+      "sha256": "815f01cab8ef1bab5c78f689a52966adeecb199ce0421705f1a42a3ff65e3332"
+    },
+    {
+      "path": "reports/peer-research/20261002-0910/primary-issuance-preflight-v2-run.json",
+      "bytes": 2259,
+      "sha256": "19dcd5735e5603c0983e3e624411a7d469c6c6a584670db8a5acee9b5567d0fe"
+    },
+    {
+      "path": "reports/peer-research/20261002-0910/terminal.json",
+      "bytes": 1689,
+      "sha256": "dc6baac3e7284860c35b18a1d197761409fc1b0f9916bb91324831ced2f29a97"
+    },
+    {
+      "path": "reports/peer-research/20261002-0910/trace.json.gz",
+      "bytes": 22602,
+      "sha256": "71f4adc83abfbfdf410a4f62c6b0b5ecefc39b3f2cc337339d13ad72f4c01d42"
+    }
+  ],
+  "checks": {
+    "manifest_requests_verified": 20,
+    "abi_selectors_independently_keccak_derived": true,
+    "hash_bound_contract_and_scratch_calls": true,
+    "headers_match": true,
+    "synthetic_parent_child_basefee_return_and_gas_pass": true,
+    "code_digests_recomputed": true,
+    "all_http200_untruncated": true,
+    "request_response_id_correlation": true,
+    "spacing_and_time_caps_pass": true,
+    "body_read_limits_and_cumulative_bytes_pass": true,
+    "source_plan_and_launch_pins_match": true,
+    "native_arms_unchanged": true,
+    "economics_null_full_route_false": true
+  },
+  "observed": {
+    "header": {
+      "hash": "0xb9bd9b12b04bef534fc3c127c2e4c874dab8b21d332cecdcce2099cc9e43b0dd",
+      "number": "0x18e4f34",
+      "parentHash": "0x0eec924d8a4db32b27d7646d5861d17c7ec31d004394f052ee0a7ce1ae5241c1",
+      "stateRoot": "0x1a190afd41d15f0cd764d49d602198348a73e04cd4e479958f66420253160bdc",
+      "timestamp": "0x6abf728f"
+    },
+    "response_bytes": 117513,
+    "compressed_trace_bytes": 22602,
+    "decoded_trace_bytes": 97170,
+    "supervisor_seconds": 19.361113250255585,
+    "minimum_spacing_seconds": 1.0015679588541389,
+    "maximum_request_seconds": 0.14758608303964138
+  },
+  "limitations": [
+    "Original transport body hashes cannot be independently recomputed from parsed responses/header projections.",
+    "Provider trust and numeric simulation parent with reorg-out-and-back limitation remain.",
+    "Synthetic gas and metadata do not establish composed route gas, deployment/setup, inclusion, fills or profit."
+  ],
+  "new_network_requests": 0,
+  "additional_raw_copies": 0,
+  "storage": {
+    "all_session_derived_before_this_record": 74467,
+    "all_session_derived_subcap": 131072,
+    "category": "derived",
+    "new_global_reservation": 0
+  }
+}

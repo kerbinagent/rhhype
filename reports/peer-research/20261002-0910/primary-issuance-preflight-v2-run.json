@@ -1,0 +1,59 @@
+{
+  "schema": "peer-primary-issuance-preflight-v2-supervisor",
+  "launch_authority": "1e7982f9-3cf8-42f7-b767-f6c986c66c8e",
+  "source_commit": "15930131c17c73a86e81d0cca890cd6886a97eb2",
+  "command": [
+    "/Users/houze/projects/research/rhhype-peer/.venv/bin/python",
+    "-B",
+    "scripts/peer_primary_issuance_preflight_v2.py",
+    "--plan",
+    "research/peer-primary-issuance-v2.json",
+    "--run",
+    "--out",
+    "reports/peer-research/primary-issuance-preflight-v2",
+    "--expected-plan-sha256",
+    "da062e6bf8381404470776a87514be9b328db4035347b4ceb478f539a9f6cad7",
+    "--coordinator-authority",
+    "a05fd8e6-1d09-41a9-81c9-7e0069e1ef48",
+    "--endpoint",
+    "https://ethereum-rpc.publicnode.com",
+    "--expected-source-sha256",
+    "7d43d16ecaac0c8cb72940beb11d434091fcd6c539d052f3d8327f1419da9ec4",
+    "--expected-test-sha256",
+    "fdef40036a640d3506670ec138366e06aa0fd15bdcc70b861bd7abae99b127e5"
+  ],
+  "started_utc": "2026-10-02T09:00:03.666082+00:00",
+  "ended_utc": "2026-10-02T09:00:23.027248+00:00",
+  "elapsed_seconds": 19.361113250255585,
+  "returncode": 0,
+  "supervisor_timeout": false,
+  "supervisor_timeout_seconds": 190,
+  "adapter_wall_cap_seconds": 180,
+  "run_attempts": 1,
+  "retry_attempts": 0,
+  "stdout": "{\"economics\":null,\"requests\":20,\"status\":\"metadata_compatible_full_route_unproven\",\"trace_sha256\":\"71f4adc83abfbfdf410a4f62c6b0b5ecefc39b3f2cc337339d13ad72f4c01d42\"}\n",
+  "stderr": "",
+  "stdout_total_bytes": 166,
+  "stderr_total_bytes": 0,
+  "artifacts": [
+    {
+      "path": "reports/peer-research/primary-issuance-preflight-v2/claim.json",
+      "category": "derived",
+      "bytes": 1611,
+      "sha256": "2cc16cfa1ae18450fb366f67633362d76e75ac83930268dcb985c2d0a1a226a8"
+    },
+    {
+      "path": "reports/peer-research/primary-issuance-preflight-v2/trace.json.gz",
+      "category": "raw_metadata",
+      "bytes": 22602,
+      "sha256": "71f4adc83abfbfdf410a4f62c6b0b5ecefc39b3f2cc337339d13ad72f4c01d42"
+    },
+    {
+      "path": "reports/peer-research/primary-issuance-preflight-v2/terminal.json",
+      "category": "derived",
+      "bytes": 1689,
+      "sha256": "dc6baac3e7284860c35b18a1d197761409fc1b0f9916bb91324831ced2f29a97"
+    }
+  ],
+  "economic_collection_authorized": false
+}
