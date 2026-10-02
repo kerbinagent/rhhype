@@ -1,0 +1,85 @@
+{
+  "schema": "creation-callback-access-preparation-v1",
+  "recorded_utc": "2026-10-02T20:05:44.065533+00:00",
+  "status": "offline_preparation_only_no_RPC",
+  "previous_global_allocation": {
+    "path": "reports/experiment-storage/aave-trace-access-preparation-v1.json",
+    "bytes": 4665,
+    "sha256": "d3f0e9a76ccc9f514eccda588e53176778da11d527c03447f5ed03a8899c09d7"
+  },
+  "added_reserved_bytes": 262144,
+  "previous_active_research_reserved_bytes": 248053760,
+  "active_research_reserved_bytes": 248315904,
+  "active_research_pool_bytes": 254754816,
+  "active_research_headroom_bytes": 6438912,
+  "overall_reservation_bytes": 2843396352,
+  "categories_bytes": {
+    "new_source_tests_design_draft_final_and_sequential_fixtures": 49152,
+    "raw_responses_and_request_receipts": 147456,
+    "controls_allocation_root_reviews_terminal": 32768,
+    "margin": 32768
+  },
+  "control_shares_bytes": {
+    "runtime": 16384,
+    "allocation_and_root_reviews": 16384
+  },
+  "question": "Can the same anonymous public Ethereum endpoint execute creation-form eth_call at one fixed finalized block and return exact bytes after a created child makes a nested callback? This observes simulation access only, without borrowers, token balances, prices, economics or gas-profit estimates.",
+  "source_basis": [
+    {
+      "url": "https://ethereum.org/developers/docs/apis/json-rpc/#eth_call",
+      "fact": "eth_call executes without a published transaction and returns execution bytes at a selected block; ordinary result supplies no receipt gasUsed. Endpoint creation-form support remains unverified."
+    },
+    {
+      "url": "https://docs.soliditylang.org/en/latest/contracts.html#constructors",
+      "fact": "Creation and initialization precede installed runtime. Child callback mechanics require explicit synthetic and independent bytecode review."
+    },
+    {
+      "url": "https://aave.com/docs/aave-v3/guides/flash-loans",
+      "fact": "A later flashLoanSimple composition needs repayment and a functioning external callback. No Aave call is part of this probe."
+    }
+  ],
+  "proposed_manifest": [
+    "eth_chainId",
+    "eth_getBlockByNumber(finalized,false)",
+    "eth_call(no to; fixed constant-return initcode; selected block)",
+    "eth_call(no to; fixed child-creation plus nested callback initcode; same block)",
+    "eth_getBlockByNumber(original number,false)"
+  ],
+  "selection": "Chain1 and finalized block returned after freeze. No type, transaction, borrower, asset, price or profit selection. Header identity rechecked.",
+  "proposed_bounds": {
+    "RPC_requests": 5,
+    "response_bytes": [
+      4096,
+      32768,
+      4096,
+      4096,
+      32768
+    ],
+    "maximum_body_bytes_including_sentinels": 77829,
+    "request_seconds": 20,
+    "overall_wall_seconds": 120,
+    "CPU_seconds": 15,
+    "RAM_bytes": 268435456,
+    "gas_per_creation_call": 500000,
+    "retries": 0,
+    "redirects": 0,
+    "fallbacks": 0
+  },
+  "code_rule": "Fixed hand-assembled tiny bytecode; exact bytes, expected return and all jump/codecopy offsets in final plan. No compiler/package downloads. Prove returns require actual child runtime and successful nested message call; a self-callback is acceptable but must not be described as an Aave callback or complete flash-loan test. No state overrides; value and gasPrice zero are simulation parameters, never costs or account ownership.",
+  "implementation_rule": "Reuse pinned unchanged prior transport helpers where useful, without altering the frozen trace probe or its globals. New files only; dry default makes no requests or outputs. One bounded process; exceptions/caps preserve prefixes and unknown outcomes, not fabricated zero calls. Preserve every attempted request/body/error. No worker process needed.",
+  "failure_rule": "Any unsupported call, RPC/schema/size/time error, output mismatch or header change leaves unavailable. No retry, replacement, fallback or automatic cap expansion. Passing proves only provider-asserted creation/callback output for this block.",
+  "owned_paths": [
+    "scripts/creation_callback_access_v1.py",
+    "tests/test_creation_callback_access_v1.py",
+    "reports/creation-callback-access-v1/design.txt",
+    "reports/creation-callback-access-v1/draft-plan.json"
+  ],
+  "root_owned_final_plan": "reports/experiment-storage/creation-callback-access-v1.json",
+  "shared_existing_reference": {
+    "path": "scripts/aave_trace_access_v1.py",
+    "bytes": 27936,
+    "sha256": "48697649d725daacef637181efea89d7376ea967426e4b1b2db55397c9fde6de",
+    "accounting": "Existing immutable source, referenced without another disk copy; charged to original allocation."
+  },
+  "accounting": "256KiB from existing active headroom only. Original trace failure and all existing reservations retained; no rolling2GB change. No code/run before root-reviewed final freeze for actual RPC."
+}
