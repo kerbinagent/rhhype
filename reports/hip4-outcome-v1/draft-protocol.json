@@ -1,0 +1,88 @@
+{
+  "schema": "hip4-outcome-metadata-v1",
+  "status": "draft_metadata_probe",
+  "draft_note": "Collaborator draft for root review. Root sets status frozen_metadata_probe, recorded/frozen times, source_pins and offline_validation, then commits the plan as reports/experiment-storage/hip4-outcome-metadata-v1.json. No launch is granted by this draft.",
+  "previous": "reports/experiment-storage/hip4-outcome-research-allocation-v1.json",
+  "previous_sha256": "1085b374de62449b9df52c08b583e3aa44cabfbdd543beaf7c97f29a35b1982d",
+  "reserved_bytes": 0,
+  "question": "Can one static mainnet outcomeMeta snapshot show at least one multi-outcome question whose documented QuestionSpec membership is structurally complete, before any book or price collection? Active state, quote asset identity and native precision remain explicitly unverified.",
+  "mechanism": "Documented HIP-4 conversions (split, merge, mergeQuestion, negate) link outcomes only within a complete question. Under the merged Yes/No book a standalone outcome cannot violate its interval, so a later static conversion screen is meaningful only for eligible questions.",
+  "request_plan": {
+    "count": 1,
+    "method": "POST",
+    "url": "https://api.hyperliquid.xyz/info",
+    "body": "{\"type\":\"outcomeMeta\"}",
+    "content_type": "application/json",
+    "max_body_bytes": 131072,
+    "max_raw_gzip_bytes": 163840,
+    "request_deadline_seconds": 20,
+    "process_deadline_seconds": 60,
+    "retry": false,
+    "redirects": false,
+    "environment_proxies": false,
+    "pagination": false,
+    "fallbacks": [],
+    "documented_rate_weight": 20
+  },
+  "excluded_requests": {
+    "spotMeta": "HIP-1 token names have no uniqueness constraint; a quoteToken name join is not authoritative and cannot supply outcome precision.",
+    "settledOutcome": "Unsettled response undocumented; not needed when settledNamedOutcomes must be empty.",
+    "outcomeMetaUpdates": "No guaranteed initial full snapshot; a partial update stream never establishes membership.",
+    "economic_reads": "l2Book, allMids, bbo, trades, asset contexts, tokenDetails, candles, fills and any account data."
+  },
+  "output_dir": "reports/hip4-outcome-v1/metadata-v1",
+  "output_limits_bytes": {
+    "raw_gzip": 163840,
+    "metadata_projection": 32768,
+    "claim_terminal_and_supervisor_receipts": 12288
+  },
+  "raw_retention": "Response bytes, including any partial body (at most 131072), are kept only as deterministic gzip (mtime 0) in response.json.gz; worst-case gzip of 131072 bytes fits the 163840 cap. The uncompressed sha256 and byte count are in the terminal receipt. No uncompressed copy is written.",
+  "parser_rules": [
+    "Strict JSON: UTF-8, no duplicate keys, no NaN/Infinity, depth <= 32, nodes <= 50000, body <= max_body_bytes (reused strict_json from scripts/polymarket_no_basket_metadata.py).",
+    "Top level must be an object with outcomes as a list. Absent questions key means membership unavailable, never an empty set.",
+    "Integers must be JSON integers >= 0; booleans and floats are rejected for ids.",
+    "Outcome ids must be unique; question ids must be unique.",
+    "Every outcome needs integer outcome, string name, string description and exactly two sideSpecs objects with string names. Missing fields stay missing.",
+    "quoteToken, venue, deployer and deployerFeeScale are projected only when present and of string type; side token is projected only when an integer. Unknown keys are listed by name only.",
+    "Descriptions and names are labels: classes are counted from the description/name prefix but never used for membership, expiry or eligibility."
+  ],
+  "projection": "Counts, top-level and per-object key sets, quote-label/venue/fee-scale value counts, description class counts, standalone outcome ids, every question with members, specs, issues and structural_candidate flag, plus the unverified block and maximum_conclusion. Strings truncate at 512 characters with a flag. If the projection exceeds its cap, member specs and then question detail are dropped deterministically with detail_level; raw gzip keeps everything. No prices, sizes or other economics are added.",
+  "precision_status": "Native outcome size/price precision is recorded as unavailable unless the response itself contains a documented precision field (none is documented). An integer sideSpecs token is recorded as an unjoined index only.",
+  "decision_rule": {
+    "structural_candidate": "At least one question meets every structural rule. At most this motivates a separately reviewed book-screen design; it never declares a question eligible for price or execution work.",
+    "park_no_question_structure": "Valid snapshot whose questions key is an empty list. Any malformed or degenerate question entry is inconclusive, never park.",
+    "inconclusive": "Transport, resource or parse failure (inconclusive per terminal code); missing questions key (inconclusive_membership_unavailable); outcomes list missing (inconclusive_schema); or structured questions present but none meets the rules (inconclusive_no_structural_candidate). No retry, substitution or update-stream fallback.",
+    "maximum_conclusion": "Public metadata structure at one instant only. No active-state, asset-identity, quote, fee, precision, fill, conversion or profit conclusion."
+  },
+  "run_gate": "Default command is dry and performs no HTTP. A run requires --run and the exact sha256 of the frozen plan, verified before claim, before parsing, before publication, after the worker ends and again by the supervisor, together with pins for the script, its test and the reused polymarket helper. An existing output directory is refused. One POST at most. The supervisor sets conclusion_eligible only if the worker exited 0, terminal/projection/raw gzip validate and match (plan sha, body sha, status), no .pending file remains and final pins verify; otherwise the conclusion is inconclusive and, without a valid terminal, request_attempts is unknown_0_or_1.",
+  "later_requirements": "A book screen needs its own frozen plan: one l2Book side per member (mirror never summed), common or bounded book times, outcomeMeta re-read at the end with any spec change invalidating the question, certificate per the source review, zero fee only as an optimistic bound, fee/precision/minimum-size gaps carried as unknown, and no fill or residual-marking claims.",
+  "sources": [
+    "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot#retrieve-outcome-metadata",
+    "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/websocket/subscriptions",
+    "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/hip-4-deployer-actions",
+    "https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-4-outcome-markets",
+    "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/exchange-endpoint#split-outcome",
+    "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/asset-ids",
+    "https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-1-native-token-standard",
+    "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/rate-limits-and-user-limits",
+    "reports/hip4-outcome-v1/source-review.md"
+  ],
+  "exclusions": "No orders, signing, credentials, wallet or account data, websocket, RPC, prices, books, trades, asset contexts, tokenDetails, spotMeta, settledOutcome, testnet, retries or alternative endpoints.",
+  "source_pins": [],
+  "offline_validation": {},
+  "allocation_reference": "Uses the existing 524288-byte grant in the previous allocation; no new reservation.",
+  "structural_candidate_rules": [
+    "Question has the six documented QuestionSpec fields with documented types, and its question id occurs exactly once (every duplicate occurrence is marked).",
+    "namedOutcomes nonempty, without duplicates, and fallbackOutcome not among them.",
+    "settledNamedOutcomes is empty, so no removed member needs an unproven zero settlement.",
+    "Members are namedOutcomes plus fallbackOutcome, at most 101, each listed exactly once with a valid spec.",
+    "Every member has the same nonempty, unclipped quoteToken string (a label only; a clipped label is a member spec issue).",
+    "No member belongs to another question."
+  ],
+  "unverified_by_design": {
+    "active_state": "Listing and empty settledNamedOutcomes do not prove an unsettled, tradable question; no status field is documented.",
+    "quote_asset_identity": "quoteToken is a string label; HIP-1 token names have no uniqueness constraint.",
+    "native_precision": "No documented outcome size/price precision field; recorded as unavailable.",
+    "note": "These gaps are recorded in every projection; they never make the metadata-only probe fail."
+  }
+}
