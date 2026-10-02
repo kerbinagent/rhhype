@@ -1,0 +1,147 @@
+{
+  "schema": "single-venue-queue-ofi-v1",
+  "status": "frozen",
+  "recorded_utc": "2026-10-02T05:33:41.013605+00:00",
+  "previous": "reports/experiment-storage/rolling-exploratory-peer-export-v1.json",
+  "previous_sha256": "20c1a113938eeb26c479d3f6f05ee50c9b56a665f2137dcc658530857f9d6aa1",
+  "reserved_bytes": 2097152,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 232521728,
+  "active_research_headroom_bytes": 22233088,
+  "overall_reservation_bytes": 2836777216,
+  "allocation_note": "2MiB from existing active-pool headroom. No new raw capture, no change to rolling2GB ceiling or existing393216-byte unallocated offline subpool. Reused sources/input artifacts are already funded.",
+  "categories_bytes": {
+    "source": 65536,
+    "tests": 32768,
+    "protocol": 16384,
+    "six_chunk_gzip_outputs": 1572864,
+    "model_and_summary": 131072,
+    "readout": 32768,
+    "provenance": 32768,
+    "control": 8192,
+    "margin": 204800
+  },
+  "output_caps": {
+    "source": 65536,
+    "tests": 32768,
+    "protocol": 16384,
+    "gzip_per_chunk": 262144,
+    "model": 32768,
+    "summary": 98304,
+    "readout": 32768,
+    "provenance": 32768,
+    "control": 8192
+  },
+  "question": "Does received-frame best-queue OFI improve prediction of local midpoint movement remaining after a400ms delay over the specified five-feature baseline, and can the frozen forecast clear delayed conditional quote costs?",
+  "interpretation": "Observed transitions between public book frames; not every underlying event, identified cancellation, causal economic effect, authenticated fill or closed paper portfolio. All six inputs already exploratory for other questions. Chronological fit/evaluation is a modeling safeguard, not untouched prospective validation. Larger sizes are in scope;100 is one diagnostic baseline. The provenance32768-byte output cap applies to the entire study, not each chunk.",
+  "input_validation_plan": "reports/experiment-storage/single-venue-inventory-context-ordinary-feed-fix-v1.json",
+  "input_validation_plan_sha256": "f8b045d2692cf5641a83a72f734d3b0fc4936db13986379f0d6fd88f9d845dfd",
+  "store_root": "data/rolling/market-research-v1",
+  "pin_owner": "inventory_context_v1",
+  "pin_note": "Keep all existing inventory_context_v1 pins on chunks1\u20133 and7\u20139 for this new study. Reuse unchanged inventory.check_inputs solely for exact sealed-input validation and45 source pins, no inventory analysis or parameter mutation.",
+  "fit_chunks": [
+    "chunk-000001",
+    "chunk-000002",
+    "chunk-000003"
+  ],
+  "evaluation_chunks": [
+    "chunk-000007",
+    "chunk-000008",
+    "chunk-000009"
+  ],
+  "output_root": "reports/single-venue-research/queue-ofi-v1",
+  "output_contract": "Six immutable gzip JSON row tables retain every original560-row calendar, causal start/end BBO receipt/source/generation provenance, all feature/label failures and six independent size/direction quote profiles. Each gzip is capped262144 bytes on disk. Model is plain JSON capped32768 bytes; summary is gzip JSON capped98304 bytes on disk. A peer may independently freeze a different cross-asset analysis using exact table/source/input hashes without duplicating raw extraction. Sharing does not authorize changing this study's models, inputs or accounting. Summary decoded JSON is additionally capped2097152 bytes before compression.",
+  "parameters": {
+    "anchor_start_seconds": 30,
+    "anchor_stop_seconds_inclusive": 570,
+    "anchor_step_seconds": 20,
+    "lookback_ns": 1000000000,
+    "book_age_ns": 250000000,
+    "max_interbook_gap_ns": 500000000,
+    "max_trade_age_ns": 500000000,
+    "entry_delay_ns": 400000000,
+    "exit_delay_ns": 400000000,
+    "hold_ns": 10000000000,
+    "max_execution_lateness_ns": 2000000000,
+    "maximum_profile_span_ns": 14800000000,
+    "notionals": [
+      "100",
+      "1000",
+      "10000"
+    ],
+    "sizing_headroom": "1.01",
+    "annual_capital_rate": "0.05",
+    "year_seconds": 31536000,
+    "extra_cost_stress_bps": [
+      1,
+      2,
+      5
+    ],
+    "minimum_training_labels": 40,
+    "ols_rcond": 1e-10,
+    "maximum_design_condition_number": 100000000,
+    "max_decoded_bytes_per_chunk": 1073741824,
+    "max_records_per_chunk": 1000000,
+    "max_ids_per_chunk": 500000,
+    "max_history_records_per_market": 10000,
+    "max_same_receipt_events": 10000,
+    "max_profiles_per_chunk": 4000
+  },
+  "features": {
+    "formula": "For successive valid same-generation BBO states: e=I(new_bid>=old_bid)*new_bid_qty-I(new_bid<=old_bid)*old_bid_qty-I(new_ask<=old_ask)*new_ask_qty+I(new_ask>=old_ask)*old_ask_qty. Initial state/snapshots do not contribute inferred flow. Sum transitions received in(t-lookback,t].",
+    "normalization": "D_start=(start_bid_qty+start_ask_qty)/2 from the last valid book received at/before t-lookback, with receipt AND source ages at that boundary<=250ms. OFI/D_start. End book is last causally available at t, same250ms clock limits. Both state prices/quantities are exact native Decimal values; all feature values finite.",
+    "baseline": [
+      "own_backward_mid_return_bps",
+      "current_queue_imbalance",
+      "start_queue_difference_over_D_start",
+      "current_queue_difference_over_D_start",
+      "ordinary_trade_imbalance"
+    ],
+    "augmented": "Exactly baseline plus normalized OFI. Store OFI components for unchanged-price versus price-changing transitions and zero-flow/zero-OFI flags descriptively; no extra model arms. When all BBO prices stay unchanged, OFI equals the difference between the two normalized endpoint-state features exactly.",
+    "ordinary_flow": "Signed exact ordinary base quantity divided by total ordinary base quantity for received trades in the same1s feature window. Zero observed flow is0 only after own trade channel has supplied a valid live print at/before the window's left boundary and no trade invalidation since. A stale print makes that feature window unusable; do not suppress otherwise valid future generations or interpret unknown coverage as zero. Genuine adapter invalidation resets trade-history coverage; preserve subsequent suppressed-frame counters.",
+    "control_limitations": "The five baseline features control the exact unchanged-BBO telescoping identity only. They do not fully control endpoint BBO state, spread, depth, nonlinear state relationships or ordinary trade intensity. A positive OFI increment may proxy those omitted features and cannot identify independent path information or a causal mechanism. This is a cheap delayed predictive/economic falsifier; any positive result needs a separately frozen follow-up addressing these limitations.",
+    "continuity": "Book feature window requires a valid same-generation predecessor at/before its left boundary, no invalidation/snapshot reset or >500ms adjacent-book gap, and valid nonfuture source ages<=250ms for feature transitions. Book invalidation resets book histories and quote obligations; trade-only invalidation resets trade feature history without erasing intact book price outcomes. No backfilled anchors. Group equal receipt timestamps: fire earlier calendar anchors before the group, equal-time anchors after its last event."
+  },
+  "calendar": "28 anchors per asset/venue/chunk at start+30,50,...570seconds, all20cells retained. All28*20=560 rows per chunk regardless of feature failure. First anchor or a later failed slot cannot be replaced. Each profile is bounded by14.8s;20s spacing prevents same-market quote holding-interval overlap. Exclude before requesting any profile when its worst-case interval can reach/cross the next known hourly funding boundary; retain funding exclusion. No reserved economics are read.",
+  "label": "At each feature-usable anchor, observe first book whose receipt and source are both>=t+400ms; require receipt<=due+2s and noncrossed native book whose source/receipt age is<=250ms; the2s lateness bound is a separate limit. The first eligible failure is final. From its receipt request the exit at+10s+400ms with the same first-eligible/bounded policy. Target y=10000*(exit_mid-entry_mid)/entry_mid. This is remaining movement over the delayed quote lifecycle, not a pure exactly10-second or contemporaneous label. Record movement consumed from decision to entry separately. Missing/censored labels remain null.",
+  "native_quote_profiles": "For each100/1000/10000 native collateral-unit target fix q=floor_to_qty_step(N/(decision_ask*1.01)), common to the two hypothetical directions and unchanged at exit. Enforce positive native price/quantity grids, minimum quantity/notional, published max_quote and max_qty when provided; explicitly retain maximum_base_quantity_unknown. At decision and both delayed endpoints walk full displayed side for exact q with no invented liquidity, no later favorable-book retry and no partials silently treated as full. Decision and entry value must not exceed that size N. Each direction/size is an independent conditional quote profile; no hypothetical market impact, fill or portfolio claim.",
+  "costs": "Subtract fees on actual entry and exit notionals using each capture market metadata. Subtract5% annual capital assumption on prefunded native targetN over actual entry-to-exit elapsed seconds/31536000; report gross,fees,capital,net separately. Costs1/2/5bp are extra stress only, not venue fees, applied to actual entry value. Native collateral unitsUSDC/USDG stay separate; no FX/peg assumption or leveraged ROI. No unobserved funding credited; crossing anchors excluded before outcomes.",
+  "model": "Two separate per-asset/venue OLS models. Same complete-feature-and-midpoint-label fit rows from chunks1\u20133, at least40. Standardize each feature using fit-only mean and population SD; constant columns dropped. Intercept included. numpy.linalg.lstsq with fixed rcond1e-10; report design rank/condition. Rank-deficient nonconstant or condition>1e8 design remains unavailable, with no solver/model/penalty rescue. Fit both models, publish exact means/scales/coefficients/training row identities and modelSHA before decoding any evaluation raw records. No retraining, clipping, direction reversal, hyperparameter search or cell/size selection. Evaluate exact same frozen models on7\u20139.",
+  "decision_policy": "For each model/size and feature-usable evaluation anchor, sign(predicted_y) fixes direction. At the decision book estimate gross favorable midpoint value=abs(predicted_y)*q*decision_mid/10000. Subtract exact immediate full-q buy/sell spread/depth difference, actual decision-notional fee estimate, and capitalN*0.05*14.8/31536000. Admit only if the resulting predicted cash score>0 and decision native constraints pass; zero forecast/cost failure is an explicit abstention. No evaluation outcome enters the selection. Request profile observations for both directions independent of admission so paired errors/abstentions and failures are reviewable. No-trade benchmark0; compare baseline and augmented on the identical calendar.",
+  "evaluation": "Retain all20cells and60cell/size policies, per-chunk and pooled. Forecast MSE/MAE and mean signed remaining midpoint on identical paired complete labels; report fit/feature/label failures and unavailable predictions. For each policy retain admissions, all entry/exit statuses, complete conditional net/capital/fee cash, net bp and1/2/5bp stress; abstentions are zero policy contributions, admitted missing outcomes are unknown and make the all-calendar cash mean unknown. Report policy differences paired on the same original anchors, plus all missing outcomes. Quantities and profiles remain distinct alternatives, never summed across sizes/assets/venues.",
+  "advance_gate": "A cell/size is an exploratory follow-up candidate only if both models are available, augmented forecast MSE is strictly lower than baseline in EACH of the three evaluation chunks, augmented policy has>=3 admitted complete profiles in EACH chunk, BOTH policies have no admitted unresolved outcome in EACH chunk, augmented mean net conditional cash after actual fees and capital before extra stress is>0 in EACH chunk and its all-calendar cash contribution exceeds baseline in EACH chunk. An unresolved admitted baseline outcome makes the paired all-calendar difference unknown and prevents advancement. Record all stress results; no hard5bp fee invented. This is minimum evidence to consider separately frozen prospective replication, not statistical power or profitability validation. Otherwise park this linear version or classify insufficient coverage. No endpoint/threshold/asset/size tuning follows the result.",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1011.6402v3",
+      "supports": "OFI definition and contemporaneous price-impact relation; does not establish lagged profit."
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/mafi.12413",
+      "supports": "Forecast evidence on granular Nasdaq books and effective horizon around two average price changes; direct transfer is unproven."
+    }
+  ],
+  "runtime_requirements": {
+    "python": "3.13.9",
+    "numpy": "2.5.3"
+  },
+  "source_pins": [
+    {
+      "path": "scripts/single_venue_queue_ofi.py",
+      "sha256": "b549671eede741992df7d47dddb9247278b308f2775facb515c66de15014ff96"
+    },
+    {
+      "path": "tests/test_single_venue_queue_ofi.py",
+      "sha256": "c78c5905dae91aae71cf4dcb231af6ea7a6bee924a2858ef90be0d8da9d12d2f"
+    }
+  ],
+  "freeze_requirement": "Frozen after root and independent source review and six targeted synthetic tests, before any feature/outcome processing. Direct runner/test hashes plus fixed45-pin validation chain cover local code. Changes require a separately recorded protocol.",
+  "validation": {
+    "targeted_tests": 6,
+    "test_command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest tests.test_single_venue_queue_ofi -v",
+    "root_test_seconds": 0.671,
+    "independent_review": "Independent source/protocol review resolved250ms endpoint freshness, required own source/test pins and decoded-summary bound; no remaining material contradiction under the explicitly narrowed five-control question.",
+    "raw_features_or_outcomes_processed": false
+  },
+  "execution_bound": "Single detached supervised run; nice19, external1800-second timeout, bounded4096-byte terminal error text, total study control files<=8192 bytes. Preserve any partial immutable output on failure; no outcome-guided rerun.",
+  "frozen_utc": "2026-10-02T05:55:46.203503+00:00"
+}
