@@ -2208,3 +2208,8 @@ Complete coverage;4exact convergence losses−$3.4119176958208755,4HLprice_limit
 ### Routine review 214 — 2026-10-02 15:26:33 UTC
 
 Complete coverage;3exact convergence losses−$2.172543552668458,2HLprice_limit rejects,no gains/estimates/aborts. Cumulative2,904=2,861exact losses+1estimated loss+7audited paired+35audited rescue. Explicit wall-clock pre-read/archive guards passed; hashes in review-loop. Fresh paperbusy71.12%CPU/52.73mslag;rolling75healthy,gap retained. NEARinitialcontrols only/no nomination-terminal, reserved rule retained, no raw/outcomes reads. Carry466sampled/2invalid/396future. Archive3,966,181B;99futurepairs project4,495,039B,margin747,841B. Next15:46:33UTC.
+
+
+### Routine review 215 — 2026-10-02 15:46:33 UTC
+
+Complete coverage;zero completions/gains/estimates/aborts/rejects,cumulativeunchanged2,904=2,861exact losses+1estimated loss+7audited paired+35audited rescue. Explicit wall-clock/archive guards passed,hashes in review-loop. Paperfresh/busy70.84%CPU/51.15mslag;rolling77healthy,gap retained. NEARselected76reserved_validation launched15:32:05.217590,nominated15:32:17.436731;pin/input/commandcontrolfilenames appeared,no terminal or outcomes read,rootnotified. Carry470sampled/2invalid/392future. Archive3,970,241B;98futurepairs project4,493,757B,margin749,123B. Next16:06:33UTC.

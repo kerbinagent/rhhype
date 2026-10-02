@@ -6511,3 +6511,18 @@ Snapshot read 2026-10-02T15:27:02.121581Z, updated epoch seconds 1790954821.8601
 Paper fresh pulses:15:11busy76.76%CPU/50.51mslag,15:16busy74.09%/52.13ms,15:20busy84.78%/59.58ms,15:25ok75.21%/46.13ms. Reviewfresh/busy71.12%/52.73ms,RSS298.92MiB,109pairs. Rolling75healthy15:25at194.26s/9,002,770compressed B/58,121records,two connections/no errors/economics false; chunks1,681,810,346B/controls49,072B under separate2GB. Recovery gap retained; no routine raw decode/intervention. NEARinitialfourcontrols only through15:25,no nomination/terminal; preserve exact first eligible reserved rule, no early raw read. HIP4timer metadata historical receipt unchanged; no routine mutation/launch/economic read.
 
 Carry15:25:00.123933UTC:466sampled,two invalid(71,389),396future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–214:2,904completions=2,861exact losses,one estimated loss,seven audited paired gains,35audited rescue gains. Archive3,966,181/5,242,880B;99future pairs at5,342B project4,495,039B,margin747,841B. Next **15:46:33 UTC**.
+
+
+### Review 215 — 2026-10-02 15:46:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Explicit UTC wall-clock pre-read guard passed. Exact report and independently timed snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap and growth guards.
+
+`review-20261002T154633Z.json.gz` raw 17,801 B SHA-256 `20e6bdffbe992d24cbe7662ad93b219c54091f3cff77a71f5864a44a66375a83`; gzip 2,334 B SHA-256 `7044cdf288931fc42684ca934e28ecb515dccf8b48ecc7377211f23316a8bf1f`.
+
+`current-epoch-at-review215.json.gz` raw 9,279 B SHA-256 `a69cb4f42f3459c46dce9a1f1e5f2ab7f6a5a3c10273fe75a1d89272169a8c2f`; gzip 1,726 B SHA-256 `f41f89647b0053d8449cf93683fc2955f0ec81bb01cbf02a7ff80da588a5989f`.
+
+Snapshot read 2026-10-02T15:47:02.430231Z, updated epoch seconds 1790956022.2357497; counts not pooled. No completions, gains, estimates, aborts or rejects. Paperfresh pulses15:31busy75.33%CPU/53.52mslag,15:35busy71.60%/51.83ms,15:40busy78.26%/61.39ms,15:45ok75.19%/49.67ms. Reviewfresh/busy70.84%/51.15ms,RSS295.06MiB,111pairs. Rolling77healthy290.38s/12,713,984compressed B/85,096records,two connections/no errors/economics false; chunks1,740,434,409B/controls50,393B under separate2GB. Recovery gap retained; no routine raw decode/intervention.
+
+NEARnomination observed15:35:53: frozenplan matches, selectedchunk76 reserved_validation, launched15:32:05.217590UTC, nominated15:32:17.436731UTC; selectionfields onlyrole/number/launched_ns. Root notified. At15:45pin/input-pins/command01/02filenames appeared, no terminal; routine read only filenames and nomination metadata, no command outcomes/raw. Exact first eligible reserved rule preserved. HIP4timer unchanged historical receipt, no mutation or launches.
+
+Carry15:45:00.185348UTC:470sampled,two invalid(71,389),392future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–215 cumulative unchanged:2,904completions=2,861exact losses,one estimated loss,seven audited paired gains,35audited rescue gains. Archive3,970,241/5,242,880B;98future pairs at5,342B project4,493,757B,margin749,123B. Next **16:06:33 UTC**.
