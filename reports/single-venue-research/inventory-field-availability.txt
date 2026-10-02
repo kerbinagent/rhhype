@@ -1,0 +1,86 @@
+Public position-field availability — economics-free preparation
+
+Question: does the existing raw ordinary-trade archive contain enough explicit
+pre-fill position information to consider a past-only conditional-value feature?
+This audit calculates no closing/opening classifier, future price return, fill,
+execution cost or cash result. No account IDs were used as grouping keys, queried,
+printed or retained in derived output.
+
+Decision: field availability passes. Treat signed base-unit, per-fill position
+state as an empirically supported interpretation in these samples, not a normative
+venue guarantee. Register the interpretation and failure cases before testing
+predictive value. Missing optional fields must never be converted to zero.
+A later fill's class cannot retroactively determine whether to post an earlier
+passive order. Position state does not reveal trader intent, remaining parent
+orders, liquidation proximity, or our fill accessibility.
+
+Method: Sol independently verified the two raw/manifest/normalized-metadata pins
+from single-venue-directional-response-v1.json before and after bounded streaming.
+Only update/trade ordinary rows were included; subscription history, duplicates,
+and liquidation/deleverage types were excluded. Bounds were1GiB decoded,
+1million records,500000tradeIDs; normal600s endpoints and gzipEOF/counts verified.
+Window1:115196records110095947decodedbytes7415ordinaryliveuniqueprints.
+Window2:103801records98189309decodedbytes6723ordinaryliveuniqueprints.
+Each window excluded1000ordinary subscription-history prints. No live liquidation
+rows, duplicate ordinary prints or source-age failures in this audited denominator.
+
+Both maker and taker position_size_before fields were present finite numeric
+STRINGS on EVERY included print: no absent,null,malformed,or other JSON types.
+Taker sign_changed, when present, was booltrue; otherwise absent. There were no
+explicitfalse/null/malformed flags. Absence remains unknown.
+
+All cells below are N / zero / positive / negative / sign_changed_true.
+Asset | W1Core | W1RH | W2Core | W2RH
+BTC |2915/277/1254/1384/751|631/9/305/317/34|2613/262/1300/1051/589|885/23/384/478/56
+ETH |1067/78/544/445/284|290/9/143/138/23|731/97/265/369/236|278/4/105/169/16
+SOL |629/82/344/203/259|163/9/52/102/63|461/87/251/123/206|181/15/59/107/25
+HYPE|401/37/250/114/150|77/16/38/23/29|287/27/175/85/88|58/3/35/20/11
+XRP |20/0/15/5/3|45/0/32/13/0|7/0/3/4/2|91/0/63/28/1
+SUI |9/0/7/2/1|8/0/1/7/0|17/0/4/13/2|9/0/6/3/1
+NEAR|138/3/61/74/11|40/2/11/27/4|143/5/79/59/17|27/0/19/8/3
+ZEC |313/17/207/89/53|64/3/19/42/6|241/21/120/100/65|48/2/11/35/6
+VVV |33/0/25/8/0|8/0/5/3/1|44/0/32/12/0|1/0/0/1/0
+LIT |340/1/108/231/16|224/2/125/97/4|404/5/153/246/22|197/2/116/79/3
+
+Maker totals zero/positive/negative:W1 262/5202/1951;W2 234/5090/1399.
+Maker sign_changedtrue509/456; absentotherwise.
+
+Chronology finding: multi-fill trade arrays are reverse ordered. Raw array order
+produced false position-arithmetic mismatches. Sorting observed taker-order rows
+within each message by(transaction_time,trade_id) produced:
+next_position_before = current_position_before + signed_current_fill_quantity
+for2364/2364 adjacentpairs across948 multi-fillmessage/ordergroups inW1 and
+2128/2128 across971groups inW2. Buyquantity is positive, sellquantity negative.
+No multi-fill group shared one constant priorposition.
+
+Across whole observed takerorders,2369/2369W1 and2136/2137W2 adjacentpairs matched.
+The lone cross-message exception remains unexplained; orderID alone does not
+prove uninterrupted ownership/version or all account activity. Do not repair it
+by inventing hidden trades or assuming the optional flag is false.
+The(order,tx_hash,transaction_time,block_height) versionproxy made everygroup a
+singleton, because transaction_time differed perprint. It is not a useful proxy
+for a multi-fill order version in these captures.
+
+Current official schema lists the optional position strings and sign-change
+booleans and shows negative maker position values. It does not clearly define
+per-fill versus order-level semantics in normative prose. The arithmetic above
+supports our sample-specific interpretation.
+Source: https://apidocs.lighter.xyz/docs/websocket-reference
+
+Hypothesis to consider next, not an empirical finding: recent risk reduction may
+predict less persistent adverse flow than recent same-direction position adds.
+Closing traders can also be informed. Test a strictly past-only classifier with
+asset/side/spread/queue/price-move/flow-size controls and realistic delayed entry
+before another passive execution branch. Count missing fields, reversals,
+non-fills, partialfills and missing exits; require positive conditional closed
+value as well as comparative improvement. These preparation counts do not show
+predictive value or paperprofit.
+
+Related primary research illustrates why fill probability and adverse selection
+must be considered jointly, but does not establish this inventory feature:
+https://arxiv.org/html/2409.12721
+
+Funding: this memo<=16384bytes fits the sharedpreparation margin within the
+alreadyfunded524288-byte flow/eventpreflight analysis suballocation. No additional
+raw data or global reservation was allocated. Root transcribed the independently
+reported aggregatecounts; no forward economics was run for this memo.

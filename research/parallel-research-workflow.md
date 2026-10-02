@@ -32,6 +32,12 @@ The controller has a 48-hour runtime bound and an explicit stop command. Root
 reviews continuation under the ongoing research instruction. This is an
 operational bound, not a two-day profitability claim.
 
+The v1 coverage field `invalid_frames` counts all qualities other than
+`wire_ok`, including valid initial books tagged `wire_ok_snapshot`. It is not
+a count of malformed frames. The first chunk's 20 such market frames were
+all valid initial snapshots; downstream analysis uses the adapter's actual
+quality checks. The frozen collector continues with this field documented.
+
 ## Exploration and validation
 
 Assign roles before collection: three exploratory chunks followed by three
@@ -55,10 +61,18 @@ and carry studies retain their own analysis boundaries and ownership.
    directly. Its 26 selected episodes and nine cost-plausible episodes were
    negative on average in both old windows. Park this version; no group passed
    its replication criterion. See the [readout](../reports/single-venue-research/directional-response-readout.txt).
-3. **Changing order flow:** establish whether live trade grouping and book
-   replenishment can be measured, then test continuation or exhaustion with
-   explicit controls. A large individual print does not establish that a larger
-   trading program has finished.
+3. **Changing order flow:** the fixed [feature preflight](../reports/experiment-storage/single-venue-flow-recovery-v1.json)
+   measures continued trade flow and restoration of depth in the original
+   price band. It uses exploratory chunks 1–3 and 7–9; the reserved chunks stay
+   unopened. Establish support for both flow states before an outcome study.
+   A large print or subsequent quiet does not establish parent-order completion.
+4. **Inventory context of aggressive flow:** the economics-free
+   [field audit](../reports/single-venue-research/inventory-field-availability.txt)
+   found explicit pre-fill positions on all 14,138 ordinary trades in the two
+   old captures. Chronologically ordered within-message position changes
+   reconcile. The signed, per-fill interpretation remains a stated empirical
+   assumption. Next register a past-only conditional-value question before
+   calculating returns or building another passive execution branch.
 
 Liquidation events are a possible separate mechanism. The ordinary adapter
 counts and excludes `liquidation_trades`; the raw capture retains the field.
