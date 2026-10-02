@@ -1,0 +1,71 @@
+{
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 151781376,
+  "active_research_headroom_bytes": 102973440,
+  "overall_reservation_bytes": 2836777216,
+  "schema": "rolling-research-capture-v1",
+  "recorded_utc": "2026-10-02T02:36:16.001153+00:00",
+  "previous": "reports/experiment-storage/single-venue-directional-response-v1.json",
+  "previous_sha256": "80670919b0fef870de93f1dd9a70545253781b03ed3afb6539c5b5fc39493043",
+  "reserved_bytes": 0,
+  "allocation_note": "Controller, tests, both plans and workflow documentation use the already-funded 131072 source/preparation bytes retained by rolling-capture-budget-v1.json. Store has the separate new user grant of 2000000000 bytes, already entered in that ledger. Offline analyses use the separate funded 2097152-byte allocation; directional-response suballocation262144 leaves1835008. No additional global reservation in this record.",
+  "store_root": "data/rolling/market-research-v1",
+  "store_budget_bytes": 2000000000,
+  "max_runtime_seconds": 172800,
+  "capture_plan": "reports/experiment-storage/rolling-research-chunk-v1.json",
+  "capture_plan_sha256": "ab5e7e39a48ecde0e7e5f6205b325984659606867773c9ad984bc633267414cb",
+  "source_pins": [
+    {
+      "path": "scripts/rolling_research_capture.py",
+      "sha256": "af0e22b484a34ee2678bdaacb19c1b3a18d7c4097ddc14618dc6b2fac756b59b"
+    },
+    {
+      "path": "tests/test_rolling_research_capture.py",
+      "sha256": "89b282bb03c0349adb650af993656022b03db3820e22eb87425e35035c379919"
+    },
+    {
+      "path": "scripts/core_rh_small_shortterm.py",
+      "sha256": "65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3"
+    },
+    {
+      "path": "scripts/maker_capture.py",
+      "sha256": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/single_venue_depth_capture.py",
+      "sha256": "f5230d15c2bcaa0ce32f767b75f058d01eacae292f27977be55e41cdd6d2a4ed"
+    }
+  ],
+  "limits": {
+    "capture_seconds": 600,
+    "child_timeout_seconds": 720,
+    "raw_bytes_per_chunk": 67108864,
+    "capture_bytes_per_chunk": 67371008,
+    "whole_chunk_reservation_bytes": 67436544,
+    "control_reservation_bytes": 4194304,
+    "minimum_retention_seconds_after_seal": 7200,
+    "max_chunks_per_campaign": 288,
+    "max_index_bytes": 1048576,
+    "max_expired_hash_records": 256,
+    "max_pin_owners_per_chunk": 32,
+    "heartbeat_seconds": 30
+  },
+  "role_schedule": "Assign by chunk number before any market capture: 1,2,3 exploratory;4,5,6 reserved_validation;repeat modulo6. A reserved role is not a validation claim. A prospective hypothesis must freeze before its designated capture begins, and outcomes used in construction always remain exploratory. Collector performs no economics.",
+  "expiry": "Account for every recognized file inside the store, including partial captures, copied plans, metadata, seals, catalog, pins, heartbeat and process records, lock files and atomic-write temporary records. Reserve the entire next chunk and4MiB controls before starting it. Under space pressure only, delete oldest own recognized sealed unpinned chunks that have aged at least2hours after sealing, only as many as needed; verify exact file inventory and hashes first. Keep older chunks while room remains. Never delete an active/pinned chunk or previous research archive. Unknown files, directories, hardlinks or symlinks halt expiry. Pins may cause storage_blocked with continuing heartbeat; never exceed budget.",
+  "reader_contract": "Pin sealed_complete chunks under the shared store lock before opening data; hold pins until all reads finish and retain pins for evidence of active or promoted studies. Unpin under same lock. Root assigns named chunks and bounded outputs to Sol analyses. Reserved economics stay unread until a separately frozen study names them.",
+  "process_contract": "One detached controller and at most one bounded child. Duplicate launch refused while any process record exists. Child uses parent-death signal and timeout; interrupted, capped or failed captures retained and sealed_failed. No immediate retry; next independent slot follows cadence. Explicit stop flag available. Runtime and chunk limits stop this controller; further continuation requires recorded review under ongoing user mandate. Current run does not automatically renew.",
+  "coverage_contract": "Record per-market/channel history versus live counts and source/receipt coverage, including separate live liquidation counts; preserve reconnect/generation annotations and handoff gaps. No gap-free or event-availability claim inferred from a successful process alone.",
+  "verification": "Root independently ran19 targeted unittest cases using.venv/bin/python; allpassed. Covers cap reservation, pressure-only minimum expiry, protected pins and concurrent locking, unsafe inventories/hashes, duplicate launch, partial/capped captures, source config/native IDs, fixedroles, history/live distinction, timeout and userstop. Initial attempt with environment python -m pytest could not start because pytest is not installed; it ran no tests."
+}

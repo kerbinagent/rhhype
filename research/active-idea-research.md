@@ -56,11 +56,13 @@ rules; it is one additional event window, not sufficient validation by itself.
 
 ## Division of work
 
-The user explicitly asked the primary agent to research ideas and a cheap
-model to monitor. A `gpt-6-luna` agent now owns scheduled report preservation
-and collection-health alerts. The root agent owns hypotheses, accounting and
-experiment decisions. Repeating healthy collection checks is not research
-progress. The fresh BTC dated-carry study continues unchanged to its frozen
+The user asked for parallel collection, broad root-led exploration and deeper
+Sol analysis, and allocated 2 GB for rolling captures. The
+[parallel workflow](parallel-research-workflow.md) separates those jobs.
+A `gpt-6-luna` agent owns scheduled report preservation and collection-health
+alerts; two `gpt-6.1-sol` assignments handle bounded implementation and analysis.
+The root owns hypothesis selection and experiment decisions. Repeating healthy
+collection checks is not research progress. The fresh BTC dated-carry study continues unchanged to its frozen
 endpoint, 4 October 00:30 UTC, with no interim economic inspection.
 
 ## Earlier carry research: absolute funding versus a funding difference

@@ -1,0 +1,85 @@
+{
+  "schema": "rolling-research-chunk-v1",
+  "recorded_utc": "2026-10-02T02:36:16.000453+00:00",
+  "assets": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "HYPE",
+    "XRP",
+    "SUI",
+    "NEAR",
+    "ZEC",
+    "VVV",
+    "LIT"
+  ],
+  "selected": {
+    "rh_lighter": {
+      "BTC": "1",
+      "ETH": "0",
+      "SOL": "3",
+      "HYPE": "2",
+      "XRP": "6",
+      "SUI": "9",
+      "NEAR": "7",
+      "ZEC": "4",
+      "VVV": "8",
+      "LIT": "5"
+    },
+    "lighter": {
+      "BTC": "1",
+      "ETH": "0",
+      "SOL": "2",
+      "HYPE": "24",
+      "XRP": "7",
+      "SUI": "16",
+      "NEAR": "10",
+      "ZEC": "90",
+      "VVV": "69",
+      "LIT": "120"
+    }
+  },
+  "source_pins": [
+    {
+      "path": "scripts/core_rh_small_shortterm.py",
+      "sha256": "65fce1a84455345faacc980d1e148c74e502c097311a3efc91458dea2fc43dd3"
+    },
+    {
+      "path": "scripts/maker_capture.py",
+      "sha256": "a4930f7a672ca668e9286eb2d270bc246cf7d672c44415b1a33d54532e0fd9b9"
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256": "7a83e68909d62c6ab53a8cdd218e0be499ccb2028f6b6c4738bfd3f267513c88"
+    },
+    {
+      "path": "scripts/paper_engine.py",
+      "sha256": "45e92db4f49db1650a369cbd402b41563d7049441afcc0d7ed644bb82772170b"
+    },
+    {
+      "path": "scripts/paper_streams.py",
+      "sha256": "c601270e365cc11ce04124095650a4bc79ceaffa8d4792bdd83cf7d9382a3734"
+    },
+    {
+      "path": "scripts/single_venue_depth_capture.py",
+      "sha256": "f5230d15c2bcaa0ce32f767b75f058d01eacae292f27977be55e41cdd6d2a4ed"
+    }
+  ],
+  "categories_bytes": {
+    "raw": 67108864,
+    "metadata_maximum": 131072,
+    "capture_auxiliary_reserve": 131072,
+    "seal_reserve": 65536
+  },
+  "capture_seconds": 600,
+  "child_timeout_seconds": 720,
+  "capture_total_limit_bytes": 67371008,
+  "scope": "Independent ten-minute read-only public Core/RH capture: one WebSocket per venue and order_book plus trade channels for each of ten fixed perpetual markets. Four public metadata GET requests before each chunk. Preserve subscription history, live ordinary/liquidation arrays, control markers, source and receipt clocks, disconnects and errors in raw records. Metadata validates current identities, native increments, minima, zero fees and collateral. Fail and retain partial data on metadata/schema/byte/time/clock bounds; no changed configuration or immediate replacement retry. No auth, orders, wallet, funding inference, economics, strategy selection, or host VPN/proxy.",
+  "closure": "Whole-file manifest and gzip hashes and record counts, terminal, duration and original metadata must verify. Sealed complete means a complete capture with annotated feed gaps, not uninterrupted valid market data. Downstream adapters must enforce frame quality, lifecycle, native market rules and subscription-history exclusion.",
+  "decode_limits": {
+    "max_line_bytes": 8388608,
+    "max_decoded_bytes": 1073741824,
+    "max_records": 1000000
+  },
+  "retention": "This copy accompanies each capture within the separate user-authorized 2,000,000,000-byte rolling store. Older study archives remain outside automatic expiry."
+}
