@@ -1,0 +1,36 @@
+{
+  "schema": "comet-source-metadata-v1-allocation",
+  "recorded_utc": "2026-10-02T14:52:39.476677+00:00",
+  "status": "offline_preparation_only_no_fetch_authority",
+  "previous_global_allocation": {
+    "path": "reports/experiment-storage/hip4-continuation-source-cache-reconciliation-v3.json",
+    "bytes": 3170,
+    "sha256": "1aa16bb8dc2885c821b7610a6adfcc9743b1a0ccf64d5bd39399238a5013a55b"
+  },
+  "reserved_bytes": 131072,
+  "categories_bytes": {
+    "raw_body_and_all_copies": 65537,
+    "source_tests_design_and_final_plan": 16384,
+    "derived_projection": 8192,
+    "all_transport_messages": 16384,
+    "controls_allocation_reviews_and_margin": 24575
+  },
+  "previous_active_research_reserved_bytes": 250609664,
+  "active_research_reserved_bytes": 250740736,
+  "active_research_pool_bytes": 254754816,
+  "active_research_headroom_bytes": 4014080,
+  "overall_reservation_bytes": 2846607616,
+  "scope": "Prepare one root-only HTTPS GET of the implementation metadata named by the already-retained runtime trailer. Exact source/final plan must be reviewed and committed before request. No RPC/API, source-URL following, compiler download, compilation, redirect, retry, fallback or full-body peer transport.",
+  "url": "https://ipfs.io/ipfs/QmdEXQFo6fLbUtMWGcpZ8Csb97ocAin4buQSCggLq5DGHg",
+  "expected_multihash_hex": "1220dd4d8e5db53112439967db2c464c1ea494a86bff16c12971539081501f5c3643",
+  "body_rules": "Accept<=65536B identity encoding; at most65537B with counted failure sentinel. Retain exact body/prefix before any later step. TLS validation;60s absolute request/collection deadline includingDNS/body, bounded supervisor cleanup. Strict UTF8/object/unique-key JSON only after exact Solidity0.8.15 UnixFS/DAG-PB metadata hash verification. No SHA256(raw)-as-CID substitution.",
+  "claims": "Even a matching content address and compiler metadata are embedded claims; no deployed bytecode/source equivalence or economic eligibility/profit.",
+  "source_math": "https://raw.githubusercontent.com/ethereum/solidity/v0.8.15/libsolutil/IpfsHash.cpp",
+  "paths": [
+    "scripts/comet_source_metadata_v1.py",
+    "tests/test_comet_source_metadata_v1.py",
+    "reports/comet-source-metadata-v1/",
+    "reports/experiment-storage/comet-source-metadata-v1.json"
+  ],
+  "retention": "Existing raw runtime evidence and all earlier source/cache failures remain unchanged. Every new source,draft,test,receipt,raw andtransport copy counts; disablebytecode. No new remote-peer artifact copies."
+}
