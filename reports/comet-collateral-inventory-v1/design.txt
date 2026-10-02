@@ -1,0 +1,150 @@
+Comet all13 collateral inventory v1 — offline preparation only
+
+Question and authority
+Prepare one prospective parent-only metadata pass for every collateral index0..12
+of the same historical reproduced USDCComet implementation. No oracle answers,
+prices, pool/quote calls, child simulation, account/funding/approval, economic arm
+size, execution or cash. The preparation allocation does not authorize HTTP.
+Root must review source/tests/design, pin/freeze the separate final plan and commit
+before one persistent host launch. Default dry checks only fixed local source/
+control pins, writes nothing and dispatches zero requests. Existing output refuses
+another attempt. Old source/scientific parameters/plans/results remain immutable.
+
+Frozen source and identity
+Import exactly the25331B reviewed comet_eligibility_live_v1 module by pinned bytes.
+It imports the pinned identity/offline engine helper chain. Invoke only pure
+encoding/ABI/clock/framing/stream/finalizer/publication functions, never old run,
+verify or31-request Collector. live.fixed_pins only validates its unchanged source/
+control chain. No module globals are changed; new39-limit transport and parser
+belong to this file. Frame/stream body/header/time/control caps equal the old caps;
+the only request-limit override is in the new transport. No old raw is decoded.
+
+Require current implementation slot0x63e749153baf1838f63ca22c275370bd2b1ceb15,
+code18599B/SHA b942614560ef7218a52173cc501ce9198f74a558348edf957cda62a218aa20fe.
+Require Comet numAssets13 and assetList0xc5a15cdc440fc22e6cf8114ee5771f4ef5e24c7f.
+Current proxy and AssetList code fingerprints must match the previously observed
+constraints in the allocation. These are fingerprint constraints, not source
+certificates. Record observed fingerprints and matching flags, including mismatch.
+Historical Comet reproduction proves neither proxy dispatch nor AssetList/token/
+USDC deployed dependencies, future upgrades or actual execution eligibility.
+The previous root reconciliation and reproduction/eligibility projections are
+referenced by exact bytes/SHA only; their old stock outcomes are not interpreted
+to select new indices, thresholds or a winner. All13 indices are unconditional.
+
+ABI and stock meaning
+Verified selectors from the reproduced AST:
+numAssets() a46fe83b ->uint8; assetList() e372f03a ->address;
+getAssetInfo(uint8) c8c7fe6b ->eight static32B words;
+getCollateralReserves(address)9ff567f8 ->uint256.
+Tuple order: uint8 offset,address asset,address priceFeed,uint64 scale,
+uint64 borrowCollateralFactor,uint64 liquidateCollateralFactor,
+uint64 liquidationFactor,uint128 supplyCap. Enforce exact widths/address padding,
+nonzero asset and scale. Preserve price-feed address even if zero; no price-feed
+validity is claimed. No WETH-specific factor or fixed18-decimal assumption.
+Offset/index discrepancy and duplicate asset addresses are explicit unverified
+AssetList-model inconsistencies. Never substitute a different index/address.
+Duplicates invalidate both affected rows for admission; earlier returned native
+stock remains descriptively retained. A bad tuple skips only that index's stock
+call, with its reason and39-step slot retained. Supply cap is not inventory.
+
+Reproduced getCollateralReserves returns token balanceOf(Comet) minus recorded
+totalSupplyAsset using checked subtraction. Underflow/revert is unavailable,
+never negative stock or zero. A valid stock word is an exact native integer string;
+stock/scale is an exact numerator/denominator, no float or dollar conversion.
+Native zero is a known selected-parent observation. Nonzero stock is insufficient
+for any amount, oracle validity, transfer behavior, gas/funding or closed cash.
+reported_sale_prerequisites_present means only reported unpaused, signed reserves
+below target and positive stock in an admitted parent state. It is a necessary
+source-model condition for positive output, not a sufficient execution condition.
+No cross-asset ranking, dollar sum, selected asset or economic hurdle.
+
+Fixed39 manifest
+1 chainId;2 latest parent;3 proxy code;4 implementation slot;5 implementation code;
+6 numAssets;7 assetList;8 AssetList code;9 buyPaused;10 signed getReserves;
+11 targetReserves;12..37,each index0..12 in order: getAssetInfo then stock if tuple
+valid;38 final anchored implementation slot;39 original-number parent recheck.
+All state requests use blockHash/requireCanonical. No latest fallback/provider
+fallback, source URL, arbitrary token/RPC or method expansion. Views use zero
+sender/value and200000gas, as in the reviewed model. Global view errors are fatal
+and leave remaining rows explicitly not-reached; valid paused/not-for-sale values
+never suppress inventory coverage. The all13 question is retained for every run.
+
+Initialize all39 trace steps and13 rows before dispatch. Each step ends as
+received,well-formed view_error,failed,skipped_tuple_unavailable ornot_reached.
+Only well-formed JSON-RPC eth_call errors or bad canonical tuple/stock words are
+row-local and allow the next fixed index. Malformed envelope/error schema,
+wrong ID, HTTP/transport/resource failure, identity mismatch or global view/ABI
+failure stops dispatch. Row errors have null stock, never manufactured0.
+request IDs count actual admissions; manifest positions remain fixed when a stock
+call is skipped. Actual requests+skipped+not_reached=39. Step outcome counts
+always sum39 and rows always span0..12. Return partial fields without repairing
+or relabeling them as complete quantities.
+
+Final identity and status
+Preserve the reviewed five-field final number/hash/parentHash/timestamp/stateRoot
+comparison and recheck the Comet implementation slot at the selected hash.
+Complete raw block responses are retained. This is provider canonicality, not
+header-hash recomputation, independent consensus or reorg-out-and-back proof.
+Final failure leaves earlier quantities descriptive only: admitted availability
+and sale-prerequisite flags become unavailable. It does not erase observations.
+parent_inventory_pass_complete means the fixed manifest has finished, with any
+permitted row skips/errors, and final identity/canonical checks passed. Separate
+all13_inventory_available requires all13 canonical/model-consistent stock rows.
+Thus a complete collection can be a partial availability screen. Fatal states
+are unavailable. Every result keeps source_binding unavailable and false source/
+transitive binding,price/quote,economic andcash claims.
+
+Bounded transport and saved replay
+One exclusive output/claim before direct fixed anonymous TLS JSON-RPC POSTs to
+https://ethereum-rpc.publicnode.com/. No redirects,retries,environment proxies,
+alternate endpoint or fallback. Stream initialization through close is inside a
+<=10s SIGALRM covering DNS/headers/body drip; nested timers honor earlier deadlines.
+Worker whole120s includes pin checks,replay/raw/terminal work, reserves2s for
+cleanup. Outer worker alarm stops even receipt cleanup; parent recovers missing
+receipt as unavailable. Supervisor125s starts before verification, waits only
+to122s, limits remaining main work to123s and bounds kill/join/receipt cleanup.
+One shared monotonic origin is used; it is not a demonstrated wire-delay bound.
+UTC/monotonic stamps and actual launch context are receipts, not consensus evidence.
+
+responses.frames.pending is one append-only fsynced inode, linked to final without
+a raw copy. B exact request/name/timeout/clocks; H numeric HTTP status and all
+parsed header pairs including duplicates; D each exact body fragment; E body
+count/SHA/EOF/error/end clocks. Raw full block JSON/provider errors are unchanged.
+Parsed HTTP headers are not an exact wire-header transcript. getresponse parser
+failure may leave B/E/error with no header prefix. Successfully parsed oversized
+header serialization keeps its bounded8192B prefix, fails and reads no body.
+Every body fragment is fsynced; incomplete/drip prefixes survive error. No base64,
+gzip duplicate or normalized raw export. Pending/final share an inode.
+
+Each response65536B plus at most one counted sentinel; cumulative bodies524288B;
+framed raw655360B; frame/header8192B. Every read respects remaining body/raw cap,
+with4096B end reserve. Never overread solely to prove EOF. Exhausted cumulative
+boundaries or too many tiny frames are unavailable, not substituted observations.
+Derived full39-step trace524288B; projection32768B. Recorded monotone finite engine
+clock samples<=512 and control16384B allow exact timing-field/trace reproduction.
+Successful collection replays raw through this new fixed39 engine, compares all
+requests/name/timeout/body hashes/HTTP200/EOF, exact trace and13-row result. Parent
+repeats saved replay before admission and checks final pins. Permitted RPC view
+errors still replay; transport/incomplete raw failures never claim replay success.
+
+Pin before/after publication and after parent replay. Admit only exact stage
+terminal status,parent plan SHA,errorNone,exit0,reproduced result/trace and final
+pins. Projection with unavailable supervisor is not admitted. Unknown receipts
+retain13/39 denominators, per-request dispatch/row values explicitly unavailable,
+null attempt counts and any raw/trace prefix; no invented not-reached/zero values
+after possible dispatch. No extra placeholder dataset is manufactured.
+
+Budgets and outputs
+Reservation2097152B: source/tests/design/draft/final+sequential fixtures262144;
+raw655360;trace524288;projection32768;controls65536;messages32768;margin524288.
+Runtime controls hard-cap32768, leaving32768 for allocation5871/root reviews;
+remaining root control room26897B. claim/terminal/supervisor<=8192 each, clock<=16384,
+aggregate output control cap unchanged. Source/raw inputs are referenced, not
+copied. No compiler/native artifact, logs, bytecode, installs or old raw processing.
+Synthetic fixtures use tiny mock bytecode/13tuples only, one temporary case at a
+time, removed by context managers. Root will measure source+scratch before freeze.
+Output stdout is only a bounded status, never raw bodies or stock data.
+
+Future root command after separate review/committed freeze:
+ .venv/bin/python -B scripts/comet_collateral_inventory_v1.py --run --plan-sha256 SHA
+Final plan is root-owned. Draft status is nonrunnable. No current live authority.

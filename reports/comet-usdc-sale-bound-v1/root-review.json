@@ -1,0 +1,76 @@
+{
+  "schema": "comet-usdc-sale-bound-root-review-v1",
+  "recorded_utc": "2026-10-02T17:54:12.724229+00:00",
+  "status": "conditional_source_math_only_no_current_economic_inputs",
+  "allocation": {
+    "path": "reports/experiment-storage/independent-research-ownership-v1.json",
+    "bytes": 7852,
+    "sha256": "b2dc0e5cbe0e3c11961a3fb62a0970a0d55a824eda0b7ff340479d405b1be730",
+    "charge": "This review uses the Mac path controls category131072B. No source body or raw market data was copied. Both message bodies through098f9d1d use17654/65536B; up to four ownership attachment copies reserve31408B controls. No global allocation increase."
+  },
+  "peer_result": {
+    "message_id": "849df9d3-fa7b-4e01-bd47-eb2c0d2c0979",
+    "created_at": "2026-10-02T17:41:58.708Z",
+    "body_bytes": 5717,
+    "body_sha256": "f54abe8043dfa943fd12c000d4c23cb0e9fe92294decf161f6fd8295f94a8398",
+    "root_disposition": "Accepted as conditional bounds after independent algebra/source review. Peer continues its independent toolkit and fixed-route work."
+  },
+  "definitions": {
+    "q": "Positive integer USDC actually credited to Comet; funding debit/principal t is separately measured and must satisfy t>=q for the stated cash bound.",
+    "C(q)": "floor(p*q/d) collateral quoted by the reproduced Comet source. p=B*a>0 and d=D_discounted*b>0 are arbitrary-precision offchain products of fixed valid oracle/scale inputs.",
+    "domain": "k>=1 is minimum Comet collateral, M=min(known collateral stock,2^128-1), U=2^256-1. qmin=ceil(k*d/p); qcap=min(floor(U/p),floor(((M+1)*d-1)/p)). Empty domain rejects. Other checked arithmetic, identity, transfer and execution guards remain separate.",
+    "pool": "Fixed standard V3 exact-input sale at actual sale-start sqrtPriceX96 S>0. F=1000000,0<=f<F. alpha/beta=S^2/2^192 for collateral token0 and its reciprocal for collateral token1. No decimal normalization."
+  },
+  "bounds": {
+    "sale_output": "O(c)<=h(c)=floor(alpha*floor(c*(F-f)/F)/beta)<=floor(c*alpha*(F-f)/(beta*F)). Requires actual sale input no greater than quoted c and no unmodeled positive settlement inflows.",
+    "cash": "A=p*alpha*(F-f),D=d*beta*F,E=A-D. G(q)=O(C(q))-t<=floor(q*E/D). E<=0 rules out strictly positive pre-cost USDC cash gain at every feasible size. For E>0 the global bound is floor(qcap*E/D), which can also be zero. Positive upper bounds are unknown, not profit.",
+    "interval": "For integer[l,u] within the feasible domain, upper=min(h(C(u))-l,floor((u if E>=0 else l)*E/D)). A valid same-state exact monotone endpoint permits an additional H(C(u))-l upper. Failed, reverting or truncated endpoint evaluations remain unknown.",
+    "plateau": "C(q)=c preimage is[ceil(c*d/p),floor(((c+1)*d-1)/p)] intersected with the domain. It can be empty. Only with t=q and fixed remaining guards may the cheapest q represent the whole plateau.",
+    "routes": "Independent alternatives take max output, not their sum. Splits with sum c_j<=C have upper floor(C*max_j(alpha_j*(F-f_j)/(beta_j*F))). Serial monotone outputs compose in order. Shared, reused or reverse pools need their actual evolving state."
+  },
+  "proof_review": [
+    "Completed V3 steps pay net n plus ceil(n*f/(F-f)); terminal partial steps recompute actual net n no greater than floor(gross*(F-f)/F). Equality with this floor is not required and must not be assumed. Summing the inequalities bounds total net input by floor(c*(F-f)/F).",
+    "For positive liquidity, the unrounded step output/net-input ratio is u*v/2^192 or its reciprocal. Input rounds upward and output downward. Both sale directions move their ratio adversely; tick crossings preserve direction and zero-liquidity gaps add no output. Summing and taking an integer floor gives h.",
+    "Comet floor composition and t>=q give the pointwise cash bound. Monotonic integer h composed with C gives its interval bound. Profit itself need not be monotone.",
+    "Exact source-model H is monotone for a fixed admissible state/direction/fee/limit: completed targets have fixed gross thresholds; within each segment increasing budget advances price monotonically. The token0 overflow fallback is monotone at its boundary because floor(N/S)+a >= N/S+(a-1). Limit saturation is allowed. Reverts are outside the usable endpoint domain."
+  ],
+  "independent_checks": {
+    "reviewers": "Root and separate Sol mathematical review; peer also reported independent reviews, not relied upon as root evidence.",
+    "root_ram_only": {
+      "range_cases": 2873,
+      "pointwise_q_checks": 94480,
+      "interval_checks": 28788,
+      "uint256_token0_fallback_transition_cases": 60,
+      "elapsed_seconds": 0.09640939100063406,
+      "cpu_limit_seconds": 15,
+      "address_space_limit_bytes": 134217728,
+      "artifact_bytes": 0,
+      "network_requests": 0,
+      "result": "All passed. Finite arithmetic checks support the algebra and are not deployed-contract tests."
+    },
+    "rounding_fixture": "c=1000,f=3000,Q=2^96,S=Q+floor(3Q/5000),L=10^12: net997,fee3,output998,h998. The incorrect floor((F-f)/F*floor(c*S^2/Q^2)) gives997 and is not an upper bound. This is an abstract fixture, not a market size."
+  },
+  "sources": [
+    {
+      "path": "reports/comet-reproduction-v1/run-v1/sources.raw",
+      "bytes": 75632,
+      "sha256": "1483b51828b9570daff1c3579daf0cf4781461cb1a8d779a6877c7925ff8bba2",
+      "read": "CometWithExtendedAssetList.sol659-677,1122-1160: net transfer receipt, pretransfer reserves gate, no target-minus-reserves amount cap,checked quote products,safe128 output."
+    },
+    {
+      "url": "https://github.com/Uniswap/v3-core/blob/v1.0.0/contracts/libraries/SwapMath.sol",
+      "read": "Official source browsed2026-10-02; net budget, recomputed deltas, terminal versus completed-step fee handling. No deployed bytecode identity inferred."
+    },
+    {
+      "url": "https://github.com/Uniswap/v3-core/blob/v1.0.0/contracts/libraries/SqrtPriceMath.sol",
+      "read": "Official source browsed2026-10-02; both input directions, amount delta rounding and token0 overflow fallback. No new source body retained."
+    }
+  ],
+  "limits": [
+    "Fixed p/d and actual sale-start price are essential. A parent observation does not establish the inclusion state or a favorable-rate bound after earlier pool-changing legs.",
+    "Net receipt, funding debit, collateral delivery and final USDC settlement need explicit validation. Rebases, rebates, callbacks and transfer changes are not assumed away.",
+    "Partial sales can obey every upper bound while retaining collateral and fail strict cash closure. Full principal/premium repayment and residual asset/debt closure are still required.",
+    "Nonnegative fees/financing/gas costs cannot rescue a nonpositive cash bound. Child simulated baseFee0 is never an execution cost. No gas conversion, capital feasibility, atomic financing, live price or executable profit is established.",
+    "A finite integer search may exceed a practical resource cap; exhaustion is unknown. No candidate or current amount was selected from these checks."
+  ]
+}

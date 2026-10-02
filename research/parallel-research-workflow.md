@@ -226,12 +226,7 @@ Root independently reconciled every response with rational arithmetic. No
 positive candidate remains at these recorded quotes. The result is conditional
 on conversion/payoff assumptions, not proof of simultaneous executable depth.
 
-Claude continues offline source and pairing research on owned paths. The
-[accepted collector](../reports/experiment-storage/hip4-live-causal-correction-closeout-v1.json)
-passed 21 causal tests. The [frozen live plan](../reports/experiment-storage/hip4-continuation-live-v1.json)
-selects question 357 before fresh quotes; its host timer launches at 18:22 UTC
-today for the 18:35–20:50 window. Pairing remains unimplemented. Root coordinates
-files and data gates; observations alone cannot establish closed profit.
+Claude owns funded pairing under the [continuing research grant](../reports/experiment-storage/independent-research-ownership-v1.json), with no per-step wait for root. Its implementation is being revised. The [live plan](../reports/experiment-storage/hip4-continuation-live-v1.json) launches at 18:22 UTC for Q357's 18:35–20:50 window; 21 causal tests passed. Residual claims do not count as closed cash.
 
 ## Conversion price screens, 2 October 12:02 UTC
 
@@ -251,10 +246,8 @@ negative. The other 14 support recorded-quote bounds only. Root independently
 reconciled all raw bodies and route arithmetic. This family is parked at the
 sampled prices, with no entire-interval or executable-liquidity claim.
 
-Both runs retained their full denominators and evidence. The Polymarket source
-category received 98,304 bytes from its unused derived category before collection,
-including the retained preparation draft; the overall 2 MiB reservation did not
-change. The issuance run used its separate preallocated 512 KiB envelope.
+Both runs retained their full denominators and evidence within their existing
+reservations; the linked receipts record the source-category adjustment.
 
 ## Completed news study and continuing source research
 
@@ -274,10 +267,6 @@ passed. Root recomputed all 24 descriptive closes; RH LIT fade's +0.0216 stresse
 USDG remains exploratory. The primary coverage gate failed. No winner replaces
 the primary, and neither news replication nor repeatable profit is established.
 
-The [Comet reproduction](../reports/comet-reproduction-v1/root-reconciliation.json)
-matched all 18,599 runtime bytes and 70 immutable ranges. The subsequent
-[31-call pass](../reports/comet-eligibility-live-v1/root-reconciliation.json)
-reported sale prerequisites open at its parent and simulated child, but WETH
-stock was only 438,676,007,750 native units. The [gas floor](../reports/comet-inventory-gas-bound-v1/root-reconciliation.json)
-rejects that parent state under its model; child economics are unavailable
-because simulation reports zero base fee. Dependencies remain unproved.
+The [Comet reproduction](../reports/comet-reproduction-v1/root-reconciliation.json) matched 18,599 runtime bytes and 70 immutable ranges. The [31-call pass](../reports/comet-eligibility-live-v1/root-reconciliation.json) reported open sale prerequisites but only 438,676,007,750 native WETH stock. The [gas floor](../reports/comet-inventory-gas-bound-v1/root-reconciliation.json) rejects that parent under its model; child economics are unavailable because simulated base fee is zero. Dependencies remain unproved.
+
+The Mac peer independently owns Comet sale-route research. Root and Sol accepted its [USDC cash bound](../reports/comet-usdc-sale-bound-v1/root-review.json) as conditional source mathematics. An all 13-collateral inventory collector is in preparation; no current positive cash route is established.
