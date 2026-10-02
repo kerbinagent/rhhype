@@ -1,6 +1,6 @@
 {
   "schema": "liquidation-delay-observability-v1",
-  "status": "draft_not_runnable",
+  "status": "frozen",
   "recorded_utc": "2026-10-02T04:41:33.609322+00:00",
   "previous": "reports/experiment-storage/parler-peer-research-v1.json",
   "previous_sha256": "66bfce0bd3c893749d2f1606b584738c6d16e3b64b87a19ac280cc8c60b02a56",
@@ -68,5 +68,28 @@
   "censoring": "Track complete observed window and generation/trade-channel continuity. Connection end/change, malformed trade message/identity/clock, trade source regression or unknown trade evidence affecting the market censors its open episode and prevents fabricated absence. EOF before window end is censored. Missing or stale labels are counted explicitly and cannot be ignored to infer no continuation. Book-only invalidation does not censor this label-only test; future price studies must separately handle book failures. Stream to verified gzip EOF with exact manifest record/decoded-byte reconciliation and input/source rechecks.",
   "decision": "Primary result: any fully observed episode with >=1 qualifying distinct-order continuation, by block and all20 groups. One witnessed episode establishes only observable delayed label persistence in these captures and permits consideration of a separately frozen adequately supported matched cost-aware question. Zero on uncensored windows means no observed support for this400ms-2.4s version in these captures; it does not prove absent underlying flow or completeness of the public channel. Censored episodes remain unknown. Do not tune delay/window/spacing from observed outcomes or construct a trading wrapper.",
   "limitations": "Different public orders need not share a parent, trader or causal cascade. Labels need not represent consumption of displayed liquidity. Nearby/all-buy episodes and venues/assets are dependent;<=21 prior episode upper bound is not statistical power. A control comparison and positive delayed absolute economics remain necessary for any alpha claim.",
-  "source_pins": []
+  "source_pins": [
+    {
+      "path": "scripts/liquidation_delay_observability.py",
+      "sha256": "b06219d45233513327b8659ea98852fd9577f69b2e8bd00c230cb0127d628cb5"
+    },
+    {
+      "path": "tests/test_liquidation_delay_observability.py",
+      "sha256": "22516e95d9cb814410d8299fd8a474d263356cdff319552c9802b60167d1ec6b"
+    },
+    {
+      "path": "reports/experiment-storage/single-venue-inventory-context-ordinary-feed-fix-v1.json",
+      "sha256": "f8b045d2692cf5641a83a72f734d3b0fc4936db13986379f0d6fd88f9d845dfd"
+    }
+  ],
+  "frozen_utc": "2026-10-02T05:02:36.860615+00:00",
+  "verification": {
+    "command": ".venv/bin/python -m unittest discover -s tests -p test_liquidation_delay_observability.py -v",
+    "root_result": "6 synthetic tests passed independently. Root read full source/tests and corrected duplicate-receipt handling, distinct split-fill order counting, first source across whole message, scoped censoring, generation/envelope and wrong-channel suppression before freeze. No continuation outcomes read.",
+    "transitive_pins": "45 unchanged pins in the hash-pinned input-validation protocol verified before freeze and required before/after runtime."
+  },
+  "budget_verification": {
+    "source_bytes": 22310,
+    "tests_bytes": 7924
+  }
 }
