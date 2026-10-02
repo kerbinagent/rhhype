@@ -1,0 +1,48 @@
+{
+  "audit": "passed_terminal_record_arithmetic",
+  "source_sha256": "558baede23b8195dde4bf32359b7e08ac8a1f03956a5b99a4cdfe294603e5b52",
+  "window_start_at": 1790915193.1199036,
+  "window_end_at": 1790916392.6638577,
+  "classification": "Two correlated one-sided ZEC short rescues at the exact same signal timestamp, after Hyperliquid hedge price-limit rejection. No paired gain; no new replication.",
+  "records": [
+    {
+      "id": "1790915316064018-24575-convergence",
+      "asset": "ZEC",
+      "filled_venue": "lighter",
+      "side": "short",
+      "rejected_venue": "hyperliquid",
+      "rejection": "price_limit",
+      "quantity": "0.72",
+      "actual_entry_value": "997.6212",
+      "exit_value": "994.87512",
+      "cash_after_fees": "2.74608",
+      "fees": "0.0",
+      "stress": "0.49881060",
+      "capital": "0.000002301254541434931506849315068",
+      "net": "2.247267098745458565068493151",
+      "unhedged_seconds": "1.4549082",
+      "signal_to_entry_seconds": "0.467596",
+      "budget": 1000
+    },
+    {
+      "id": "1790915316064018-24576-convergence",
+      "asset": "ZEC",
+      "filled_venue": "rh_lighter",
+      "side": "short",
+      "rejected_venue": "hyperliquid",
+      "rejection": "price_limit",
+      "quantity": "0.72",
+      "actual_entry_value": "997.3224",
+      "exit_value": "994.920595",
+      "cash_after_fees": "2.401805",
+      "fees": "0.0",
+      "stress": "0.49866120",
+      "capital": "0.000002214492151424657534246575342",
+      "net": "1.903141585507848575342465753",
+      "unhedged_seconds": "1.4004744",
+      "signal_to_entry_seconds": "0.4927976",
+      "budget": 1000
+    }
+  ],
+  "limitations": "Terminal native quantities, exit-fill totals, entry/exit cash, zero fees,5bp reserve, capital at5%/year/full margin and no-hour funding reconcile within1e-9USD. Legacy1000USD budget; actual entries ~997USD, outside current <=100 objective. Public paper model observations, not private fills. No new independent raw-depth/first-eligible-book audit. The two venue paths share the same ZEC move and cannot establish independent profitable events."
+}
