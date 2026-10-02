@@ -1,0 +1,7 @@
+Queue OFI v1: publication-cap failure, no modeling conclusion.
+
+Protocol27073af951c7d8fd08e24978314e662810d17e0b56645f894b710fbdf11ace70 was frozen and committed5938061 before the05:57:43 UTC run. It stopped06:00:20 UTC after156.828613 seconds, return1, while publishing FIT chunk2. The262144-byte gzip cap rejected the output before writing it. No model, model hash, evaluation table or summary was produced.
+
+The first immutable fit table is219661 bytes, SHA2562834825384d8abe5226ee00bda3c444673b88667d464ebc1da413f338ddbc78b. Preserve it, started/terminal records and supervised run record. Root has read file sizes, hashes and the error trace only; no human feature/economic result inspection preceded the publication-only successor design.
+
+A separately recorded successor reserves4MiB from existing headroom, doubles only each gzip publication cap to524288 bytes and reuses the exact saved first fit table. All scientific definitions,source code,chronological blocks,models,timing,sizes,costs and advancement rules stay frozen. This operational failure neither supports nor falsifies a market edge.

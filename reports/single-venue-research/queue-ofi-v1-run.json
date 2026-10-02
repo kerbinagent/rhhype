@@ -1,0 +1,25 @@
+{
+  "schema": "queue-ofi-supervised-run-v1",
+  "started_utc": "2026-10-02T05:57:43.583027+00:00",
+  "supervisor_pid": 3750776,
+  "pid": 3750777,
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "19",
+    "/home/harry/projects/research/rhhype/.venv/bin/python",
+    "scripts/single_venue_queue_ofi.py",
+    "run"
+  ],
+  "timeout_seconds": 1800,
+  "protocol_sha256": "27073af951c7d8fd08e24978314e662810d17e0b56645f894b710fbdf11ace70",
+  "pre_feature_commit": "5938061",
+  "state": "finished",
+  "returncode": 1,
+  "timed_out": false,
+  "ended_utc": "2026-10-02T06:00:20.410798+00:00",
+  "elapsed_seconds": 156.82861275800678,
+  "stderr_bytes": 1153,
+  "stderr": "Traceback (most recent call last):\n  File \"/home/harry/projects/research/rhhype/scripts/single_venue_queue_ofi.py\", line 563, in <module>\n    if __name__=='__main__':main()\n                            ~~~~^^\n  File \"/home/harry/projects/research/rhhype/scripts/single_venue_queue_ofi.py\", line 562, in main\n    globals()[sys.argv[1]]()\n    ~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/harry/projects/research/rhhype/scripts/single_venue_queue_ofi.py\", line 536, in run\n    save(record['chunk']+'.json.gz',result,CAPS['gzip_per_chunk'],True)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/harry/projects/research/rhhype/scripts/single_venue_queue_ofi.py\", line 526, in save\n    recheck();outputs[name]=publish(out/name,value,cap,compressed=compressed,decoded_cap=decoded_cap)\n                            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/harry/projects/research/rhhype/scripts/single_venue_queue_ofi.py\", line 45, in publish\n    if len(body)>cap:raise ValueError('output_byte_cap')\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: output_byte_cap\n",
+  "stderr_truncated": false
+}
