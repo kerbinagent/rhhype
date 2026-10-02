@@ -1,0 +1,49 @@
+Fixed Curve PegKeeper caller-reward gate
+
+New mechanism: a public protocol maintenance call can pay the caller LP tokens.
+Screen the four Ethereum keepers listed by Curve's deployment directory on
+2026-10-02, in directory order: USDC,USDT,pyUSD,frxUSD. This is a documented
+deployment sample, not a proof of all active deployments or bytecode identity.
+The directory itself warns that entries can be outdated or incorrect.
+
+Freeze31requests:chain1,finalized header; seven eth_calls for each of four
+listed addresses; original block-number recheck. Every eth_call uses one
+blockHash with requireCanonical=true. Seven fields:pool(),pegged(),regulator(),
+caller_share(),last_change(),estimate_caller_profit(),update(address).
+Keep all four regardless of positive/zero/missing/revert outcomes. No replacement
+or re-sampling. All eth_call results allow explicit unavailable/error outcomes;
+transport/identity/framing failure stops the run and retains failure bytes.
+Canonical return widths required; address getters cannot be zero; caller_share
+above100000 is unavailable. Documented regulator/crvUSD identity comparison is
+reported separately from reward observations, never a runtime certification.
+
+All calls use diagnostic sender and explicit update beneficiary address0x1,
+zero value and gasPrice0; these fields are simulation inputs, not evidence of
+account ownership, funding, a signed transaction or free real gas. Gas caps:
+300000 for each of five metadata getters,1500000 estimate,2000000 update;
+aggregate supplied gas20million. The update is executed only via eth_call,
+discarding state. No real protocol state is changed and no state override is
+used. Each update starts independently from the same parent state, so rewards
+cannot be summed as one obtainable sequence or portfolio.
+
+The update's returned amount is a provider-reported LP reward. Positive return
+permits investigating LP cash conversion, actual transfer/balance effects,
+gas and inclusion; it does not demonstrate any of them. Zero estimate alone
+is not a rejection because the estimator is approximate/conservative. An
+actual update returning zero is zero modeled reward at this state only; an
+RPC revert/malformed result remains unavailable and not a zero or loss.
+No valuation at virtual price, profit claim, capital estimate or winning-bid
+optimization follows from these calls. Every future step needs its own bound.
+
+512KiB reservation:256KiB raw,96KiB new source/tests/design/plan,48KiB controls
+and source notes,16KiB projection,96KiB margin. Shared immutable transport and
+parsers remain charged to their original reservations.31request maximum,
+192KiB total bodies,256KiB raw, per-slot4096B except two32768B headers.
+Use124fixed raw files through already pinned Capture/Reader helpers. Reserve
+the next request/body+sentinel/header/receipt before dispatch; stream+fsync,
+no retry/proxy/redirect/fallback. Prior transport checks Content-Length at EOF
+and retains partial/incomplete/chunked/sentinel failures. Exact replay required.
+20s/request,165s work/180s wall,20CPU seconds,512MiB RAM,default dry,frozen
+source/input/runtime pins and exclusive run directory. No compiler/downloads.
+
+Primary references and deployment addresses are pinned in source-notes.json.

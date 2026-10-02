@@ -1,0 +1,21 @@
+{
+  "schema": "curve-pegkeeper-primary-source-notes-v1",
+  "read_utc_date": "2026-10-02",
+  "sources": [
+    {"url":"https://docs.curve.finance/developer/crvusd/pegkeepers/overview/","fact":"Public callers may receive LP tokens for protocol upkeep."},
+    {"url":"https://docs.curve.finance/developer/crvusd/pegkeepers/peg-keeper-v2/","facts":["update(address) returns a uint256 LP reward to its beneficiary; it may return zero during cooldown or revert when action is unavailable.","estimate_caller_profit() is an approximation. Zero alone does not prove the update has no reward.","pool, pegged, regulator, caller_share and last_change have public getters; action_delay does not.","The documented update transfers the calculated caller share of newly generated LP profit. A return value alone does not verify that transfer or cash value."]},
+    {"url":"https://docs.curve.finance/developer/deployments","fact":"Lists the following four Ethereum PegKeepers and regulator. The directory warns that entries may be outdated or incorrect."}
+  ],
+  "keepers": [
+    ["USDC","0x9201da0d97caaaff53f01b2fb56767c7072de340"],
+    ["USDT","0xfb726f57d251ab5c731e5c64ed4f5f94351ef9f3"],
+    ["pyUSD","0x3fa20eaa107de08b38a8734063d605d5842fe09c"],
+    ["frxUSD","0x338cb2d827112d989a861cde87cd9ffd913a1f9d"]
+  ],
+  "regulator":"0x36a04caffc681fa179558b2aaba30395cddd855f",
+  "pegged":"0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
+  "endpoint":"https://ethereum-rpc.publicnode.com",
+  "source_text_is_not_deployment_bytecode_proof":true,
+  "all_calls_start_from_same_finalized_state_independently":true,
+  "positive_reward_requires_future_transfer_cash_gas_inclusion_checks":true
+}
