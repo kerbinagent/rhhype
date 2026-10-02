@@ -1,0 +1,103 @@
+Inventory context, ordinary-feed correction, batch 1
+
+Status: corrected exploratory result; second predefined block still pending.
+No strategy gate is complete and no public quote is an attributed fill or
+closed paper cash ledger. The earlier coverage-limited v1 result remains intact.
+
+Correction: process ordinary type=trade rows while explicitly counting/skipping
+known nonordinary types. No signal, calendar, matching rule, execution delay,
+holding time, cost, native constraint or research gate was changed. Prior v1
+outcomes had already been seen, so this remains exploratory.
+
+Plan SHA256: f8b045d2692cf5641a83a72f734d3b0fc4936db13986379f0d6fd88f9d845dfd
+Result SHA256: 9409e898f8f008c99173a19ea1d0da30c3638cd1c384a4a43ae9c273787a0aa8
+Provenance: inventory-context-batch1-provenance.json
+
+Input coverage: 405,587 decoded records across pinned exploratory chunks 1-3.
+Ordinary prints: 6,199 / 8,348 / 11,173 = 25,720; Core 20,115 and RH 5,605.
+Excluded liquidation rows: 0 / 3 / 61 = 64; Core 50 and RH 14. These overlap
+liquidation_trades[] counts and are not additional events. No invalid trade
+batches or suppressed trade frames remain. All 7,459 previously omitted
+ordinary prints are now included. Initial subscribed history remains excluded.
+
+Denominators: 1,140 scheduled anchors, 57 for each of 20 asset/venue groups.
+769 anchor failures: 768 latest ordinary trade absent/stale; one unusable book.
+371 profiles: 141 reducing, 219 adding, 11 unknown reversals. All 371 completed.
+329 anchors have usable matching features; 42 fail prior-book/history checks.
+Of 141 reducing anchors, 119 lack an earlier adding control within the fixed
+calipers, 11 have unusable features, and 11 select controls. All 11 pairs are
+complete; 11 distinct controls, zero reuse. Eight pairs have both reference
+contributions; 64 of 371 local profiles lack a complete reference contribution.
+No missing reference is imputed or used to discard a local observation.
+
+All 25,720 prints have explicit numeric-string positions. Under the stated
+signed per-fill interpretation: 12,718 adding, 12,461 reducing, 541 unknown
+reversals. Optional flags: 20,651 absent/unknown and 5,069 true. A flag does not
+override valid position arithmetic; a flattening fill is not parent completion.
+
+Per chunk: profiles / reducing / adding / unknown / complete pairs / missing refs
+1: 118 / 44 / 74 / 0 / 4 / 31
+2: 118 / 51 / 62 / 5 / 3 / 14
+3: 135 / 46 / 83 / 6 / 4 / 19
+
+All 20 groups follow. Means in basis points; dash means no observation.
+Core=lighter; RH=rh_lighter. Reduce n refers to complete reducing profiles.
+Positive counts are after an additional round-trip 0/1/2/5 bp deduction.
+Venue | Asset | Reduce n | Reduce net mean | Pairs | Net delta | Mid delta | Ref pairs | Ref-adjusted net delta | Positive 0/1/2/5
+lighter | BTC | 22 | -0.468873 | 4 | +0.361223 | +0.372311 | 4 | +0.143150 | 9/3/1/0
+rh_lighter | BTC | 20 | -0.612582 | 2 | +1.332734 | +1.226671 | 2 | +1.045471 | 6/3/2/0
+lighter | ETH | 23 | -0.802541 | 2 | +0.585040 | +0.649819 | 1 | -1.010051 | 7/1/0/0
+rh_lighter | ETH | 10 | -0.575713 | 0 | - | - | 0 | - | 3/2/2/0
+lighter | SOL | 12 | +0.079562 | 1 | +0.751077 | +0.876165 | 0 | - | 6/4/2/0
+rh_lighter | SOL | 3 | +0.947289 | 0 | - | - | 0 | - | 2/1/1/0
+lighter | HYPE | 9 | -0.162634 | 1 | +3.380569 | +3.103173 | 1 | +0.554413 | 4/3/3/0
+rh_lighter | HYPE | 10 | -1.253396 | 0 | - | - | 0 | - | 2/2/2/1
+lighter | XRP | 0 | - | 0 | - | - | 0 | - | 0/0/0/0
+rh_lighter | XRP | 1 | +0.667334 | 0 | - | - | 0 | - | 1/0/0/0
+lighter | SUI | 0 | - | 0 | - | - | 0 | - | 0/0/0/0
+rh_lighter | SUI | 0 | - | 0 | - | - | 0 | - | 0/0/0/0
+lighter | NEAR | 5 | +1.359738 | 1 | +0.145716 | -0.038472 | 0 | - | 4/4/3/1
+rh_lighter | NEAR | 2 | -4.433181 | 0 | - | - | 0 | - | 1/1/0/0
+lighter | ZEC | 9 | +2.102032 | 0 | - | - | 0 | - | 6/6/6/3
+rh_lighter | ZEC | 5 | -4.559101 | 0 | - | - | 0 | - | 1/1/1/0
+lighter | VVV | 1 | -0.224660 | 0 | - | - | 0 | - | 0/0/0/0
+rh_lighter | VVV | 1 | -3.783007 | 0 | - | - | 0 | - | 0/0/0/0
+lighter | LIT | 4 | -1.446530 | 0 | - | - | 0 | - | 1/1/1/0
+rh_lighter | LIT | 4 | -3.099384 | 0 | - | - | 0 | - | 1/1/1/0
+
+First-block decision: BTC/Core alone has at least three complete pairs and
+positive mean paired quote and midpoint improvements. Its four pairs improve
+net quotes by +0.361223 bp and signed midpoints by +0.372311 bp; conditional
+reference-adjusted quote improvement is +0.143150 bp. Three pairs fade sells
+(long) and one fades a buy (short). The matched reducing quotes average
+-0.844629 bp versus -1.205852 bp for their controls. All 22 reducing BTC/Core
+quotes average -0.468873 bp, with 9 positive; only 3/1/0 remain positive after
+1/2/5 bp extra cost. This is improvement between loss-making quote cohorts,
+not an active profit candidate. The predefined second-block gate remains open.
+
+Several other group means are positive, but none has three complete pairs.
+BTC/RH has only two pairs; its matched reducing mean +0.050149 bp is below
+even 1 bp extra cost, and its full reducing cohort averages -0.612582 bp.
+Positive SOL/NEAR/ZEC cohort means without adequate matching remain descriptive.
+No caliper relaxation, asset selection or new threshold follows from this table.
+
+Execution interpretation: delayed full-depth quotes at <=100 entry notional,
+400 ms entry delay, 10-second hold and 400 ms exit delay, both source and receipt
+due-time checks, native grid/minimum checks, actual metadata fees on both legs.
+These captures have zero standard taker fees; spread and depth still cost money.
+Anchors whose maximum execution span could cross a funding hour are excluded
+before outcomes. Quotes do not certify fills, queue access or realized profit.
+
+Independent Sol review: 11,438 checks; no material inconsistency at 1e-22 bp
+Decimal tolerance. Verified result/provenance/source/normalized-metadata hashes,
+371 quote/cash/fee/midpoint/reference/stress profiles, native quantity/minimum
+and entry caps, source/receipt deadlines, funding guard, 11 paired differences,
+all 20 group and 60 chunk summaries. All controls minimize the eligible
+decision-feature distance, without using future outcomes or reference coverage.
+Immediate C0 and historical book/flow features are not fully reconstructible
+from saved rows alone. A selected positive hypothesis would need a targeted
+raw-book audit; that limitation is not cured by summary arithmetic checks.
+
+Budget: corrected gzip/provenance/readout use the original inventory study
+output allowance, with this readout <=16,384 bytes. Old v1 evidence is retained
+under ordinary-feed-adapter-repair-v1, not overwritten. No new raw capture.

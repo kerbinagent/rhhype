@@ -86,6 +86,9 @@ and carry studies retain their own analysis boundaries and ownership.
    controls matched on entry cost and recent return/flow. It uses chunks 1–3 and
    7–9 and retains all 1,140 scheduled anchors per batch. Any conditional
    improvement must also survive absolute costs before an execution study.
+   The corrected [first-block result](../reports/single-venue-research/ordinary-feed-fix-v1/inventory-context-batch1-readout.txt)
+   restores all 25,720 ordinary prints. BTC/Core alone meets the first block's
+   minimum matched-comparison gate, while its absolute quote return is negative.
 
 Liquidation events are a possible separate mechanism. The ordinary adapter
 counts and excludes `liquidation_trades`; the raw capture retains the field.
@@ -103,6 +106,13 @@ and deleveraging involve position takeovers or matched transfers. This motivates
 checking row subtypes and order identities before interpreting them as book
 pressure. The public API serialization boundary remains a separate question.
 [Liquidation mechanism](https://docs.lighter.xyz/trading/liquidations-and-llp-insurance-fund).
+
+A distinct candidate question is whether a liquidation label predicts another
+same-direction liquidation from a different public taker order within two
+seconds, beyond comparable ordinary position-reducing flow. This would test
+forced-flow persistence before another price-recovery replay. Initial-message
+fills, late clocks, missing controls and interrupted windows must remain
+explicit. The design is queued; no recurrence outcome has been calculated.
 
 Public-data impact studies also distinguish reconstructing average impact from
 identifying a tradable entry: synthetic order groupings can reproduce impact
