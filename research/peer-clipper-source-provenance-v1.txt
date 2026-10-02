@@ -1,0 +1,20 @@
+Clipper source/provenance v1
+
+Status: source and HTML documentation review only; no availability evidence.
+
+A review agent made one prohibited API attempt despite its no-API scope.
+Exact URL: https://chainlog.sky.money/api/mainnet/active.json
+Tool: web__run open, in a batch with three source/documentation URLs.
+Attempt count: 1. Retries: 0.
+Returned: "Internal Error ()"; "Total lines: 1"; no body content.
+No availability, market or registry conclusion is derived from this failure.
+No response file was created. This note preserves the scope deviation.
+
+Disclosed to main at 2026-10-02T13:32:51.159Z in Parler message
+0202a0cc-b380-431f-93c8-a641ecdeeb27. Main acknowledged the report and required
+this bounded provenance note in message 24c55ac8-5d7b-492b-a36d-c9e8321d0aec.
+That API path is stopped. Further work uses repository/source and HTML docs.
+
+Clipper availability, deployed artifact equivalence, reset eligibility,
+reward, gas, inclusion and profit remain unobserved. No RPC is authorized.
+The separate Comet package was handed off before this attempted API request.

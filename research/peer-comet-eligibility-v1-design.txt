@@ -1,0 +1,174 @@
+Comet eligibility/runtime preflight v1: offline design, no launch authority
+
+Owner and scope
+
+Remote main assigned ongoing contractual-closure ownership in Parler message
+5a95aed8-c553-4b88-bc39-4b46cd137f0b. This package is the first Comet milestone.
+Clipper reset bounties remain a separate next avenue. No news/HIP4/rolling-data
+paths, credentials, accounts, trades, provider calls, raw capture, installs or
+compiler downloads are part of this preparation. Updates are checkpoints.
+
+The isolated checkout is /Users/houze/projects/research/rhhype-peer on
+peer/independent-signal-research, pre-change HEAD
+b582129d8896d9c407494187158d308a159ba54f. Prior files/evidence stay preserved.
+
+Decision supported by this package
+
+The dry CLI validates the proposed request manifest and prints zero requests
+permitted. Its settled source/test/design pins require exact fixed paths,
+lengths and SHA256 hashes; missing pins remain explicitly pending, and a
+symlink or mismatch fails. These local checks confer no network authority or
+deployed artifact equivalence. The injected-stream engine is for synthetic offline tests. It has no
+HTTP adapter, endpoint discovery, live flag, output directory, wallet, signed
+transaction, deployment or persistent run claim. It must not be used for live
+collection without a separately reviewed adapter, exact source/test/protocol
+pins, root commit, raw allocation and immutable exclusive one-run claim.
+
+The engine retains three separate concepts: returned ABI eligibility claims,
+checked runtime fingerprints matching a supplied certificate, and source equivalence.
+It never independently proves the last concept. With no certificate, even a
+well-formed favorable transcript ends source_binding_unavailable. A synthetic
+certificate stays labeled synthetic_fixture_only. Certificate kind and review
+reference are caller-supplied claims; the collector never establishes their
+authority. Matched and unverified role lists remain explicit: an ineligible
+path checks six roles and leaves factory/pool unverified; a favorable path
+checks eight. Even eight matching roles do not prove transitive dependency
+closure or source equivalence. Any actual external review must bind the exact
+artifact set; a certificate string or source branch name proves neither.
+The code never reports cash_closed, profit, execution or inclusion.
+
+Rights and source model
+
+The source-selected market is Ethereum chain1 Comet USDC proxy
+0xc3d688b66703497daa19211eedff47f25384cdc3, with canonical WETH collateral.
+Current CometWithExtendedAssetList source sells collateral through public
+buyCollateral. Its signed reserve test is R<T for nonnegative target T;
+negative R must not be cast to uint. Purchase also depends on pause, actual
+base-token transfer, quote, minimum output, available inventory and safe128
+collateral output. This stage reads no quote and cannot establish arm capacity.
+
+getReserves projects accrued indices at block.timestamp. Parent eligibility is
+not child eligibility. The child simulation therefore calls isBuyPaused,
+getReserves, targetReserves and getCollateralReserves(WETH) directly in that
+context. No real-contract state overrides occur. Reverts, invalid ABI or
+underflow are missing evidence rather than zero reserves/inventory.
+
+Immutable reference source models, with deployed equivalence still unverified:
+- [Comet purchase, reserves and asset delegation](https://raw.githubusercontent.com/compound-finance/comet/f766f51583c23acc33b2a7824654ef2029a96804/contracts/CometWithExtendedAssetList.sol)
+- [Configuration domains](https://raw.githubusercontent.com/compound-finance/comet/f766f51583c23acc33b2a7824654ef2029a96804/contracts/CometConfiguration.sol)
+- [AssetList packing](https://raw.githubusercontent.com/compound-finance/comet/f766f51583c23acc33b2a7824654ef2029a96804/contracts/AssetList.sol)
+- [Official deployment roots](https://raw.githubusercontent.com/compound-finance/comet/f766f51583c23acc33b2a7824654ef2029a96804/deployments/mainnet/usdc/roots.json)
+
+Runtime binding is a transitive dependency
+
+The current source is a model, not evidence of deployed implementation. Read
+the reviewed proxy's EIP1967 implementation slot, not implementation() through
+a potentially delegating non-admin call. Bind the implementation and its
+immutable AssetList. WETH AssetInfo is eight exact ABI words; validate padding,
+narrow domains, returned factor quantization and canonical asset/scale.
+Legacy Comet must not silently substitute for the extended model.
+
+The draft eight-role certificate covers Comet proxy/implementation, AssetList,
+WETH, USDC proxy/implementation, factory and pool fingerprints. The source model
+includes USDC.balanceOf in reserve computation. Five added hash-bound reads
+check its proxy, legacy implementation slot, implementation, legacy admin slot
+and final implementation stability; Comet cannot equal USDC proxy admin. This
+is the documented Circle proxy family, not proof of the mainnet proxy edition.
+Any extension delegate reached by the actual implementation must be included
+in the artifact review. Economic work additionally requires both oracle paths,
+proxy implementations, units, transfer/pause/blacklist semantics and swap
+independence. Merely filling hashes into a JSON object proves none of these.
+
+Circle model commit fc85788bc7c23cefe3df1a757133048bfddadeaa:
+- [Legacy implementation slot](https://raw.githubusercontent.com/circlefin/stablecoin-evm/fc85788bc7c23cefe3df1a757133048bfddadeaa/contracts/upgradeability/UpgradeabilityProxy.sol)
+- [Legacy admin and fallback gate](https://raw.githubusercontent.com/circlefin/stablecoin-evm/fc85788bc7c23cefe3df1a757133048bfddadeaa/contracts/upgradeability/AdminUpgradeabilityProxy.sol)
+- [Artifact verification caveats](https://raw.githubusercontent.com/circlefin/stablecoin-evm/fc85788bc7c23cefe3df1a757133048bfddadeaa/doc/bytecode_verification.md)
+The immutable Comet vendored proxy candidate path was not retrieved by the
+browser; proxy and complete import-set content verification remain pending.
+
+Exact compiled artifact identity must include compiler/settings, source set,
+linked libraries and immutable substitutions, then compare deployed runtime
+bytes at the anchored state. Verified-looking selectors, repository config,
+getters or newly observed code hashes are not that comparison. None of these
+deployment bindings has been observed in this phase.
+
+Prospective request manifest
+
+The JSON plan carries all 31 request templates, including method/params and
+fixed substitutions. There is one latest header selection, then ordinary
+state reads require its blockHash with requireCanonical=true. The original
+number's header and implementation slot are rechecked last. Numeric-parent
+eth_simulateV1 cannot eliminate a reorg-out-and-back interval; this limitation
+is explicit. No retries, endpoint fallback, fee-tier search or replacement
+contract discovery is allowed.
+
+Requests 1-11 establish chain, parent, code fingerprints, proxy/AssetList and
+the fixed base/collateral identities. Requests 12-15 add USDC transitive identity.
+Requests 16-19 collect all parent gate views. Request 20 runs all four views in
+one conditional child with validation false, gas 200000 each, zero value,
+explicit zero synthetic sender and no state
+overrides. This is eth_call-like metadata, not a successful transaction proof.
+All four receipts are retained even when a call fails. The child is exactly
+parent.number+1 with the earliest 12-second slot-grid timestamp at least 400ms
+after the recorded decision and at least one slot after the parent. Skipped
+slots are possible; actual inclusion is not established.
+
+Only a favorable child gate claim selects requests 21-28: fixed canonical V3
+factory code, getPool(USDC,WETH,3000), resulting pool code and its factory,
+token0, token1, fee and signed int24 tickSpacing. Require USDC/WETH/3000/60.
+The factory proves the chosen pair, not cheapest observed price. Requests 29-31
+recheck USDC/Comet implementations and parent. A normal ineligible path uses 23
+requests, a favorable path 31; a malformed/resource path preserves its failing
+prefix and cannot claim completed canonical verification. All later pool
+requests remain recorded as structurally unselected, not negative observations.
+
+No oracle value, slot0, price, liquidity quote, quoteCollateral, swap, history,
+borrower cohort or economic amount is in this manifest. Missing evidence stays
+unavailable. Positive inventory means stock exists, not a particular order
+size can be filled. Known pause/no-stock/target gates are conditional returned
+claims until source/runtime equivalence is established.
+
+- [V3 fixed factory and pair example](https://developers.uniswap.org/docs/protocols/v3/deployments/v3-ethereum-deployments)
+- [Geth simulation and call semantics](https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-eth)
+- [Geth block overrides](https://geth.ethereum.org/docs/interacting-with-geth/rpc/objects)
+- [Ethereum slot timing](https://ethereum.org/developers/docs/consensus-mechanisms/pos/)
+
+Resource and failure contract
+
+The prospective maximum is 31 calls, 65536 response bytes per request,
+524288 cumulative body bytes, 524288 in-memory trace bytes and 120 seconds with 10 reserved
+for completion. Each read is bounded by remaining cumulative allowance; an
+exact exhausted boundary without EOF fails. There is no retry after failure. The in-memory trace ceiling covers eight
+large runtime responses; it is not a raw-storage allocation. No trace file is
+written by this draft, and future retained/raw caps need separate root review.
+Duplicate/nonfinite/deep JSON, noncanonical ABI, wrong chain/context, bad pool
+identity or certificate mismatch terminates the selected prefix. Header
+projections omit unrelated transaction hashes while preserving body length
+and digest. Terminal accounting space is reserved before admitting a request.
+An eventual network adapter still needs a hard per-request/overall deadline,
+no redirects/environment proxies and persistent exclusive publication; the
+offline engine's clock checks are not a slow-drip network timeout guarantee.
+
+Storage
+
+Root allocation341ee58 and the exact3147-byte local copy of its allocation
+record supersede the stale local source ceiling. Source category3145728B,
+derived5767168B and raw524288B total9437184B. No new raw allowance is assigned
+to Comet. Preserve393216B of old issuance source reservation, not294912B.
+Conservative source commitment including the entire262144B new package is:
+908677+393216+262144+338448+1015967=2918452B.
+Root allocation record3147B and its local copy3147B bring this to2924746B,
+leaving220982B outside the already-reserved package. Separate64670B root
+issuance-review copies stay on the root's other grant. All old caches remain.
+New tests use -B/PYTHONDONTWRITEBYTECODE=1. New package source/docs/tests/plan,
+test receipts, temporary files and all host copies share the262144B ceiling.
+
+Next gates
+
+Finish focused synthetic tests and independent source review, reconcile exact
+file sizes/hashes including reserved review/install copies, and send the
+concrete package to main. Root chooses any subsequent source-binding discovery
+or collection allocation. Permission to prepare source does not authorize a
+single RPC. Once the eligibility/runtime stage is actually established, a
+separate prospective economic test may use the all-size inequality already
+reviewed; this draft performs no economic evaluation.

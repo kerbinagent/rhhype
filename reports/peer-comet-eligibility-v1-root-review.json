@@ -1,0 +1,57 @@
+{
+  "schema": "peer-comet-eligibility-v1-root-review",
+  "reviewed_utc": "2026-10-02T13:53:35.215467+00:00",
+  "status": "offline_source_package_reviewed_no_live_authority",
+  "files": [
+    {
+      "path": "scripts/peer_comet_eligibility_v1.py",
+      "bytes": 30601,
+      "sha256": "879f58149d222bdfaa627d28b4335c2b01c72aba51a3771655f61764f473a908"
+    },
+    {
+      "path": "tests/test_peer_comet_eligibility_v1.py",
+      "bytes": 32355,
+      "sha256": "9984725247359205f383677684e7530835947ffd0645b604e3203b6a84807017"
+    },
+    {
+      "path": "research/peer-comet-eligibility-v1-design.txt",
+      "bytes": 11440,
+      "sha256": "bee32d45f9848fc1c0eae77ea4bdd425000b8aa9d15678278718a95c4f9b30ce"
+    },
+    {
+      "path": "research/peer-comet-eligibility-v1.json",
+      "bytes": 14403,
+      "sha256": "25ae206579b13cf6b4f4329e2615a1bdf4ee6301f8cc5e8d480f543de2cc8dde"
+    },
+    {
+      "path": "research/peer-clipper-source-provenance-v1.txt",
+      "bytes": 1082,
+      "sha256": "a480a1f5dba37ea28aecf2ff11c20d662bc4d6a62f84a4c591f1f313d125899f"
+    }
+  ],
+  "transport_messages": [
+    "604d33bb",
+    "60114b06-2a94-49ac-adf5-a57905e057a1"
+  ],
+  "checks": {
+    "root_unit_tests": "19 passed in 0.246 seconds after correction; bytecode disabled",
+    "root_dry_run": "Verified every pinned input and manifest; zero RPC calls",
+    "manifest_sha256": "b29bacbcdb4f028f8ec64b62259979d12d9d3af4ec6bf32e66098c33edc9c4e2",
+    "manifest_calls": {
+      "favorable": 31,
+      "ineligible": 23
+    },
+    "independent_review": "Sol identified partial runtime-role matches being mislabeled as a full certificate match; corrected before archive. Root independently read source/design/tests and verified correction."
+  },
+  "scope": "Price-free Compound Comet collateral-sale eligibility at a numeric parent and one simulated child. Signed reserves, unsigned target, pause and collateral inventory gate eligibility. Eight runtime roles checked only on the favorable path; normal ineligible path checks six roles and explicitly leaves two unverified. Caller certificate kind/reference are claims; authority_verified remains false. No deployed-source equivalence or economic/closure claim. No live HTTP adapter, persistent claim, output writer or live CLI is present. Root must separately authorize an exact query plan, source binding and raw allocation before any live call.",
+  "limits": {
+    "response_raw_bytes": 524288,
+    "trace_bytes": 524288,
+    "single_response_bytes": 65536,
+    "elapsed_seconds": 120
+  },
+  "retention": "This receipt has one root copy. Package includes both hosts, original and correction transport bodies, all five final files on both hosts. No envelope file, diff file, temporary output, bytecode or test log was retained. Original content remains in encoded transport; drafts were corrected in place before archival.",
+  "package_bytes_before_receipt": 258946,
+  "package_cap_bytes": 262144,
+  "separate_provenance": "Included Clipper note records the unauthorized source-discovery API attempt returning InternalError; no body or subsequent query."
+}

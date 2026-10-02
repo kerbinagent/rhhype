@@ -1,0 +1,593 @@
+{
+ "schema": "peer-comet-eligibility-v1",
+ "status": "offline_draft_no_network_authority",
+ "network_authorized": false,
+ "raw_allocation_bytes": 0,
+ "contracts": {
+  "comet": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+  "usdc": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+  "weth": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+  "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+  "fee": 3000
+ },
+ "caps": {
+  "requests": 31,
+  "response_bytes": 65536,
+  "total_body_bytes": 524288,
+  "trace_bytes": 524288,
+  "request_seconds": 10,
+  "run_seconds": 120,
+  "file_bytes": 131072,
+  "source_package_all_copies_bytes": 262144
+ },
+ "manifest": [
+  {
+   "position": 1,
+   "name": "chain",
+   "method": "eth_chainId",
+   "params": [],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 2,
+   "name": "parent",
+   "method": "eth_getBlockByNumber",
+   "params": [
+    "latest",
+    false
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 3,
+   "name": "proxy_code",
+   "method": "eth_getCode",
+   "params": [
+    "0xc3d688b66703497daa19211eedff47f25384cdc3",
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 4,
+   "name": "implementation_slot",
+   "method": "eth_getStorageAt",
+   "params": [
+    "0xc3d688b66703497daa19211eedff47f25384cdc3",
+    "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 5,
+   "name": "implementation_code",
+   "method": "eth_getCode",
+   "params": [
+    "$implementation",
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 6,
+   "name": "weth_code",
+   "method": "eth_getCode",
+   "params": [
+    "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 7,
+   "name": "asset_list_address",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+     "input": "0xe372f03a",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 8,
+   "name": "asset_list_code",
+   "method": "eth_getCode",
+   "params": [
+    "$asset_list",
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 9,
+   "name": "base_token",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+     "input": "0xc55dae63",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 10,
+   "name": "base_scale",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+     "input": "0x44c1e5eb",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 11,
+   "name": "weth_asset_info",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+     "input": "0x3b3bec2e000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 12,
+   "name": "usdc_proxy_code",
+   "method": "eth_getCode",
+   "params": [
+    "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 13,
+   "name": "usdc_implementation_slot",
+   "method": "eth_getStorageAt",
+   "params": [
+    "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    "0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3",
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 14,
+   "name": "usdc_implementation_code",
+   "method": "eth_getCode",
+   "params": [
+    "$usdc_implementation",
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 15,
+   "name": "usdc_admin_slot",
+   "method": "eth_getStorageAt",
+   "params": [
+    "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    "0x10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b",
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 16,
+   "name": "parent_pause",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+     "input": "0xd8e5f611",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 17,
+   "name": "parent_reserves",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+     "input": "0x0902f1ac",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 18,
+   "name": "parent_target",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+     "input": "0x32176c49",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 19,
+   "name": "parent_inventory",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+     "input": "0x9ff567f8000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 20,
+   "name": "child_eligibility",
+   "method": "eth_simulateV1",
+   "params": [
+    {
+     "blockStateCalls": [
+      {
+       "blockOverrides": {
+        "number": "$child.number",
+        "time": "$child.timestamp"
+       },
+       "calls": [
+        {
+         "from": "0x0000000000000000000000000000000000000000",
+         "to": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+         "input": "0xd8e5f611",
+         "gas": "0x30d40",
+         "value": "0x0"
+        },
+        {
+         "from": "0x0000000000000000000000000000000000000000",
+         "to": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+         "input": "0x0902f1ac",
+         "gas": "0x30d40",
+         "value": "0x0"
+        },
+        {
+         "from": "0x0000000000000000000000000000000000000000",
+         "to": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+         "input": "0x32176c49",
+         "gas": "0x30d40",
+         "value": "0x0"
+        },
+        {
+         "from": "0x0000000000000000000000000000000000000000",
+         "to": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+         "input": "0x9ff567f8000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+         "gas": "0x30d40",
+         "value": "0x0"
+        }
+       ]
+      }
+     ],
+     "validation": false,
+     "traceTransfers": false,
+     "returnFullTransactions": false
+    },
+    "$parent.number"
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 21,
+   "name": "factory_code",
+   "method": "eth_getCode",
+   "params": [
+    "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "child_reported_eligible"
+  },
+  {
+   "position": 22,
+   "name": "factory_pool",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+     "input": "0x1698ee82000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000000000000000000000000000000000000000000bb8",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "child_reported_eligible"
+  },
+  {
+   "position": 23,
+   "name": "pool_code",
+   "method": "eth_getCode",
+   "params": [
+    "$pool",
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "child_reported_eligible"
+  },
+  {
+   "position": 24,
+   "name": "pool_factory",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "$pool",
+     "input": "0xc45a0155",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "child_reported_eligible"
+  },
+  {
+   "position": 25,
+   "name": "pool_token0",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "$pool",
+     "input": "0x0dfe1681",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "child_reported_eligible"
+  },
+  {
+   "position": 26,
+   "name": "pool_token1",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "$pool",
+     "input": "0xd21220a7",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "child_reported_eligible"
+  },
+  {
+   "position": 27,
+   "name": "pool_fee",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "$pool",
+     "input": "0xddca3f43",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "child_reported_eligible"
+  },
+  {
+   "position": 28,
+   "name": "pool_tick_spacing",
+   "method": "eth_call",
+   "params": [
+    {
+     "from": "0x0000000000000000000000000000000000000000",
+     "to": "$pool",
+     "input": "0xd0c93a7c",
+     "gas": "0x30d40",
+     "value": "0x0"
+    },
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "child_reported_eligible"
+  },
+  {
+   "position": 29,
+   "name": "final_usdc_implementation",
+   "method": "eth_getStorageAt",
+   "params": [
+    "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    "0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3",
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 30,
+   "name": "final_implementation",
+   "method": "eth_getStorageAt",
+   "params": [
+    "0xc3d688b66703497daa19211eedff47f25384cdc3",
+    "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+    {
+     "blockHash": "$parent.hash",
+     "requireCanonical": true
+    }
+   ],
+   "condition": "required_until_failure"
+  },
+  {
+   "position": 31,
+   "name": "final_parent",
+   "method": "eth_getBlockByNumber",
+   "params": [
+    "$parent.number",
+    false
+   ],
+   "condition": "required_until_failure"
+  }
+ ],
+ "runtime_binding": null,
+ "source_pins": [
+  {
+   "path": "scripts/peer_comet_eligibility_v1.py",
+   "bytes": 30601,
+   "sha256": "879f58149d222bdfaa627d28b4335c2b01c72aba51a3771655f61764f473a908"
+  },
+  {
+   "path": "tests/test_peer_comet_eligibility_v1.py",
+   "bytes": 32355,
+   "sha256": "9984725247359205f383677684e7530835947ffd0645b604e3203b6a84807017"
+  },
+  {
+   "path": "research/peer-comet-eligibility-v1-design.txt",
+   "bytes": 11440,
+   "sha256": "bee32d45f9848fc1c0eae77ea4bdd425000b8aa9d15678278718a95c4f9b30ce"
+  }
+ ],
+ "scope": "Reported permission/inventory and code fingerprints only. No oracle answers, pool prices, quote, trade, compiler, live adapter or data authority. Transitive source equivalence remains unverified.",
+ "required_before_collection": [
+  "root source/test review and exact commit",
+  "source/artifact/runtime certificate including dependencies actually interpreted",
+  "separate raw allocation and immutable single-run authority",
+  "persistent exclusive run claim and reviewed bounded network adapter"
+ ],
+ "allocation": {
+  "path": "reports/experiment-storage/peer-contractual-closures-cache-reconciliation-v1-root.json",
+  "bytes": 3147,
+  "sha256": "b2e2ea23d0d24d2552bae50494021cd5c6c9f29d6679e0eef37820fd4fccb373",
+  "root_commit": "341ee58",
+  "authority_message": "95faaf32-efb7-4beb-acc9-685c6fd67974"
+ },
+ "immutable_model_references": [
+  {
+   "repository": "compound-finance/comet",
+   "commit": "f766f51583c23acc33b2a7824654ef2029a96804",
+   "role": "Extended Comet, AssetList, storage/core and vendored proxy model; deployed binding unverified"
+  },
+  {
+   "repository": "circlefin/stablecoin-evm",
+   "commit": "fc85788bc7c23cefe3df1a757133048bfddadeaa",
+   "role": "Documented legacy proxy slots and balanceOf model; deployed binding unverified"
+  },
+  {
+   "repository": "Uniswap/v3-core",
+   "tag": "v1.0.0",
+   "role": "Fixed factory/pool identity model; deployed binding unverified"
+  }
+ ]
+}
