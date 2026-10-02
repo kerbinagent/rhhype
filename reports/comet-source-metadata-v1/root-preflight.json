@@ -1,0 +1,74 @@
+{
+  "claims": {
+    "economics": false,
+    "eligibility": false,
+    "source_equivalence": false
+  },
+  "historical_preparation_failure": {
+    "exact_peak_measured": false,
+    "original_overrun_range_bytes": [
+      531,
+      2585
+    ],
+    "original_source_cap_bytes": 16384,
+    "reported_source_fixture_peak_range_bytes": [
+      16915,
+      18969
+    ],
+    "retained_note": "Earlier preparation exceeded the original category before the amendment. The prospective amendment does not erase that historical failure; latest tests use only a 6-byte inode fixture."
+  },
+  "next": "Commit final source, tests, design, draft, plan and this receipt before any single GET. No request has occurred as of this preflight.",
+  "plan": {
+    "bytes": 1239,
+    "path": "reports/experiment-storage/comet-source-metadata-v1.json",
+    "sha256": "147afa79d2c3a562728bbaa8484b25160d685fbf875e2e6393a92ca0888db2bb"
+  },
+  "recorded_utc": "2026-10-02T15:05:27.133361+00:00",
+  "root_review": "Read complete source/tests/design/draft. Independent review found no remaining blocker on the exact final source and test hashes.",
+  "root_tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest tests.test_comet_source_metadata_v1 -v",
+    "elapsed_seconds": 0.065,
+    "result": "PASS",
+    "tests": 5
+  },
+  "schema": "comet-source-metadata-v1-root-preflight",
+  "source_pins": [
+    {
+      "bytes": 10650,
+      "path": "scripts/comet_source_metadata_v1.py",
+      "sha256": "39f2838aa32151e426731f5133712df3941f0e73c6d327ce140d1790bed5e566"
+    },
+    {
+      "bytes": 4496,
+      "path": "tests/test_comet_source_metadata_v1.py",
+      "sha256": "2481f2298084a4698792f0504a2e37c4f92141aec39dd910b3e08e6c5ef3cc67"
+    },
+    {
+      "bytes": 1246,
+      "path": "reports/comet-source-metadata-v1/design.txt",
+      "sha256": "9c1eb2a0c5c47744741407d10f1d26ea786351eee9da27c2812cf16c8b119f0f"
+    }
+  ],
+  "status": "frozen_ready_for_one_root_GET_after_commit",
+  "storage": {
+    "controls_category_cap_bytes": 20479,
+    "projection_cap_bytes": 8192,
+    "raw_cap_with_sentinel_bytes": 65537,
+    "reserved_bytes": 131072,
+    "source_category_cap_bytes": 20480,
+    "source_final_and_draft_bytes": 18531,
+    "source_headroom_bytes": 1943,
+    "source_peak_bytes": 18537,
+    "temporary_fixture_peak_bytes": 6,
+    "transport_both_sessions_cap_bytes": 16384
+  },
+  "verified_rules": [
+    "Default dry makes zero requests and writes.",
+    "Exact plan/source/design/tests/allocation/amendment pins; exclusive output prevents rerun.",
+    "One fixed direct TLS GET, identity encoding, no proxy/redirect/retry/fallback/source URLs/compiler.",
+    "Nested deadline takes earlier alarm; worker 60 seconds, outer supervisor 65 seconds.",
+    "read1 streams and fsyncs returned prefixes, counts oversize sentinel, retains failures in one raw inode.",
+    "Solidity0.8.15 single-leaf UnixFS DAG-PB exact multihash verified before strict object JSON.",
+    "Final admission requires worker exit0, terminal, supervisor and unchanged pins."
+  ]
+}

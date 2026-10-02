@@ -1,0 +1,17 @@
+Comet source metadata v1. Offline preparation; root freezes and launches later.
+Default dry has zero reads/writes/HTTP. Frozen SHA, source/test/design pins and
+allocation are rechecked. Exclusive output directory claims the single GET.
+Direct TLS to fixed ipfs.io path uses identity encoding, no proxy, redirect,
+retry, fallback, RPC, source-URL follow, compiler or transaction. SIGALRM
+bounds DNS/headers/body/fsync to60s; supervisor waits at most62s, kills worker,
+then records unavailable if it lacks a successful terminal.
+
+Read <=65537B total; <=65536B accepted. Every returned chunk is fsynced into
+one raw inode; pending/final names are hardlinks. EOF, partial/error, oversize
+and wrong CID retain the raw prefix. For N<=65536, Solidity0.8.15 IpfsHash.cpp
+single leaf is inner=08 02 + optional(12 varint(N) raw) +18 varint(N), outer=
+0a varint(len(inner)) inner, multihash=12 20 SHA256(outer). Raw SHA is separate.
+Only a matching CID allows strict UTF8 unique-key finite object JSON. Projection
+hashes compiler/settings/source entries and claims no deployed source equivalence,
+eligibility or economics. Source URLs are never fetched. Admission requires
+terminal, supervisor, worker exit0 and final pins; projection alone is not success.
