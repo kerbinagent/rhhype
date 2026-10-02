@@ -1,0 +1,24 @@
+This is an offline conditional cost sensitivity, not an executable USDC cost
+floor or a route rejection. The Mac peer's preliminary maximum optimistic
+gain is 4,275 native USDC units (0.004275 USDC); that aggregate bound was not
+sealed or independently admitted when this calculation was frozen.
+
+Both retained headers at parent26106263 agree on baseFee241660786 wei.
+A conventional standalone transaction paying at least21000 gas therefore
+costs at least5074876506000 wei at this parent fee. Valuing that ETH in USDC
+erases the provisional gain at842.385030442748669321 USDC/ETH. The four
+reported WETH/USDC slot0 spot marks,2683.55 through2704.94, exceed this
+threshold. They are price marks, not verified executable conversion values.
+
+An independent audit verified all4input pins/170590bytes,39frame records,
+both fee headers,exact fractions,token orientation and scenario flags.
+The raw pool replies were not imported or audited here. No depth, actual
+USDC gas debit,child-block fee,our account control,obtainable inclusion or
+closed cash is established. A batched,sponsored or externally paid route
+does not satisfy the standalone caller-paid premise. The peer bound retains
+all its own unverified source/token/principal/state premises. No network
+requests or new market captures were made for this sensitivity.
+
+Evidence:calculate.py,projection.json,root-review.json. Peer aggregate
+admission remains a separate review; this record is not retrospectively
+promoted when later peer work arrives.

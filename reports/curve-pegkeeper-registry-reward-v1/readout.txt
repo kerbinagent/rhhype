@@ -1,0 +1,24 @@
+The fifth keeper's exact registry tuple was rechecked successfully at the
+original block26107811/hash0xc2ec0a52daba625c38631a64c55f594fa04514f240b22878c1cb06f138e144e7.
+Its pool,crvUSD and regulator getters matched. The estimate returned0,while
+update(address) returned JSON-RPCcode3 with canonical Error(string) data
+decoding to "Regulator ban". There is no available update reward value and
+no positive reward candidate; this is not a zero-reward result or a loss.
+
+The single actual run completed11requests in1290ms,retaining44raw files,
+32733body bytes and44616raw bytes. Exact collector replay and independent
+no-collector raw audit both pass. Six preflight tests passed. An earlier
+launch used the wrong fingerprint and was refused before run-directory
+creation or any network request; launch-refusal.json records that root error.
+The source and plan were unchanged before the one actual capture.
+
+The prior failed event census remains unavailable. Its retained index4 reply
+was a selection input only; this run independently checked it before calling
+the keeper. No original keeper was resampled and no history request retried.
+The five examined addresses now supply no positive reward candidate at this
+one state. Future eligibility,actual transfers,LP cash,gas,ordering and
+repeatability remain unresolved. Local Claude is separately funded for an
+offline historical payout/receipt design; no new collection is implied.
+
+Plan SHA256:f8a33af5614043704b79a6f5cc24bc1393252c05d1ef2431639345062bf9edde
+Preflight commit:6b7cbcf. Evidence:run-v1/,root-review.json.
