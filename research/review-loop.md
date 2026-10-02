@@ -6383,3 +6383,20 @@ Paper12:31busy CPU90.05%,p95lag91.31ms but fresh0.65s/four connected feeds; root
 News original capture terminal12:36:01.719087UTC, return0,normal endpoint and event coverage valid. Original companion evaluating completed capture; routine reads operational fields only. Corrected companion finished before economics with AssertionError:capture_inventory_changed; root notified promptly. Root diagnosed allowlist omission of legitimate final capture/status.json, with no missing files or economic read in failed path. Original frozen source/failure preserved; separate inventory-only repair belongs to root/inventory agent. No routine restart, source changes, competing analysis or outcomes reads.
 
 Carry12:45:00.120282UTC:434sampled,two invalid(71,389),428future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–206:2,736completions=2,700exact losses,one estimated loss,five audited paired gains,30audited rescue gains. Archive3,909,810/5,242,880B;107future pairs at5,342B project4,481,404B,margin761,476B. Next **13:06:33 UTC**.
+
+
+### Review 207 — 2026-10-02 13:06:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Exact report and independently timed snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap and growth guards.
+
+`review-20261002T130633Z.json.gz` raw 19,361 B SHA-256 `0cdea813567464109bce35e5f44fbb8d1edb5c15c7a68dc4ea6890781f137b8b`; gzip 3,036 B SHA-256 `10351a6632cddda7606106e492f72870fad408d29769664fd0d761bd992cd7e2`.
+
+`current-epoch-at-review207.json.gz` raw 9,286 B SHA-256 `d66622f3cb7cb171931312bd8a21d1edd292e4e1f5ee831b76bb7dd0107d2ec3`; gzip 1,732 B SHA-256 `155e7275b63f8c6d1d6ca4e6643f9de03da1f771801e8abfacdd308634b3e342`.
+
+Snapshot read 2026-10-02T13:06:47.668852Z, updated epoch seconds 1790946406.9756079; counts not pooled. Ten exact losses: three convergence −$3.3501688783412646 and seven Premium −$12.748053014087418. Five Hyperliquid price_limit rejects; no gains, estimates or aborts. Convergence fees$0.17988301799999817/other$1.49583039099997/capital$0.00003846934135646324; Premium fees$5.61337231034986/other$3.4953220294996754/capital$0.0001516742370502172.
+
+Paper pulses fresh/ok while two news offline companions advance; review CPU67.42%,p95lag45.89ms,RSS290.63MiB,107pairs. Rolling61 healthy375.50s/17,390,712compressed B/114,410records,two connections/no errors/economics false; chunks1,266,365,062B/controls40,070B under separate2GB. Recovery gap retained; no routine raw decode/intervention.
+
+Root separate inventory-only news successor frozen0dd268a, planSHAe4e5d4b56e2a2a461123fe23067e749b44ae043c4e97f6f9b37291b6d1d42793, launched once12:48:07UTC/PID494305. Same sealed capture/methods/100rows/20audits,3600s total/600s child bounds. Original ordinary-fix failure and all original controls retained. Both original and successor operational states evaluating_completed_capture; root reports normal progress, routine opens no outcomes or raw. Outputs remain controller-owned; no competing launch or staging.
+
+Carry13:05:00.119548UTC:438sampled,two invalid(71,389),424future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–207:2,746completions=2,710exact losses,one estimated loss,five audited paired gains,30audited rescue gains. Archive3,914,578/5,242,880B;106future pairs at5,342B project4,480,830B,margin762,050B. Next **13:26:33 UTC**.
