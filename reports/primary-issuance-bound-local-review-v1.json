@@ -1,0 +1,48 @@
+{
+  "schema": "primary-issuance-bound-independent-review-v1",
+  "recorded_utc": "2026-10-02T12:02:22.863101+00:00",
+  "peer": "07b1b113-966a-4dab-bc55-54f41193f9bf/c1f31b3b-ebf4-49f9-9b84-236d4a61338d",
+  "message_id": "c5678b80-4fe0-486c-bcf0-0dbb0fa15ba2",
+  "message_created_utc": "2026-10-02T12:01:16.778Z",
+  "status": "no_blocker_for_declared_conditional_source_model",
+  "review_scope": "Two independent source/math/state reviews and peer parent transport/evidence review; static only, no tests/import/compiler/RPC. Root had separately completed seven tests in0.596s. Root will verify its prior metadata receipt before run.",
+  "reviewed_plan": {
+    "path": "reports/experiment-storage/primary-issuance-bound-local-v1.json",
+    "bytes": 20731,
+    "sha256": "8741abf29647bdf31a619d55fba6087c6e40c1847ed8b8d3e62aba4f61eade62"
+  },
+  "manifest": {
+    "requests": 19,
+    "sha256": "2887172d8a04339a05f39540c8716f7d24160f39e89850d5f583b16df89c5861"
+  },
+  "reviewed_source": {
+    "bytes": 27597,
+    "sha256": "5be9dbf027d0cb71ac6acfc97ef8120530aaeb79ec9420438eb788e91b7e9782"
+  },
+  "reviewed_tests": {
+    "bytes": 16342,
+    "sha256": "7297b0fbd4c424eae074593a71b32893f246791073635c6332e5be21a7433e1c"
+  },
+  "findings": [
+    "Exact independent forks, nonces, fixed funding, distinct empty-code fee recipient, empty withdrawals, headers/gas/ABI checks.",
+    "Nine domain views, zero initial shares, submit, actual displayed balance and post-submit get_dy(P)+1 bound.",
+    "I=T-X and E=pooled-externalEther positive; minted shares/final balance exact; capacity and eligibility checked; B<=P and fee unchanged in range.",
+    "Bounded no-retry transport, cumulative pre-read caps, evidence checkpoint before result admission. Helper invocation spacing only.",
+    "Fixed four principals and denominators; initial child/decision and400ms monotonic floors; final parent equality and source recheck gate economics.",
+    "Bounded worker, atomic receipts/traces, existing-output refusal and null unknown fallback. Frozen Linux runtime blocks peer launch."
+  ],
+  "limitations": [
+    "Conditional source/runtime binding unproved.",
+    "Numeric parent can reorg out and back without detection.",
+    "Modeled child excludes unrelated transactions and gives no obtainable inclusion proof.",
+    "No composed exchange/gas/approval/residual-disposal/flatness or execution proof.",
+    "All-four negative parks only this fixed conditional model/sample.",
+    "Peer did not rehash root0910 receipt; runner verifies it on root."
+  ],
+  "retention": {
+    "peer_review_copy_bytes": 64670,
+    "copies": "Three exact files only, charged to separate local source grant; no encoded envelope/report copy retained by peer.",
+    "this_receipt_category": "derived_receipts_and_review_copies",
+    "root_authority": "Root retains commit and launch ownership; reviewed plan bytes remain unchanged."
+  }
+}

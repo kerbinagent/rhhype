@@ -1,6 +1,6 @@
 {
   "schema": "polymarket-subset-conversion-books-v1",
-  "status": "offline_preparation_only",
+  "status": "frozen_subset_conversion_books_probe",
   "recorded_utc": "2026-10-02T11:54:35.395124+00:00",
   "reserved_bytes": 0,
   "previous_polymarket_plan": {
@@ -19,16 +19,17 @@
   "allocation": {
     "total_polymarket_bytes": 2097152,
     "source_before": 262144,
-    "source_after": 327680,
+    "source_after": 360448,
     "raw_unchanged": 1310720,
     "derived_before": 524288,
-    "derived_after": 458752,
-    "transfer_derived_to_source": 65536,
-    "new_source_test_plan_package_cap": 65536,
+    "derived_after": 425984,
+    "transfer_derived_to_source": 98304,
+    "new_source_test_plan_package_cap": 98304,
     "prior_source_estimate_bytes": 255199,
     "prior_raw_bytes": 160508,
     "new_raw_peak_bytes": 393216,
-    "raw_peak_total_bytes": 553724
+    "raw_peak_total_bytes": 553724,
+    "source_accounting": "Prior255199 + new98304 maximum=353503 <=360448. New allocation includes retained19816-byte committed preparation draft, final plan, source/tests and source readout. Additional32768 is transferred from unused derived before any new quote; overall Polymarket2MiB and global caps unchanged."
   },
   "event_id": "606422",
   "endpoint": "https://clob.polymarket.com/books",
@@ -439,7 +440,7 @@
     "derived_receipts_bytes": 98304,
     "maximum_levels_per_side": 5000
   },
-  "sampling": "ONE run. At claim, choose wall+monotonic anchor two seconds ahead before any HTTP; preserve its literal UTC in claim. Slot k starts at anchor+4*k for k0..14. A slot more than250ms late is missed and never rescheduled. Each slot issues at most one fixed ten-token POST. Slots remain in the final denominator regardless of observation. First transport/resource/JSON/identity failure stops future HTTP and marks all remaining slots unavailable; after exact ten-token identity validation, empty asks, invalid numeric/tick/hash/timestamp fields or crossed books are slot-level unavailable states with no derived bound and do not change subsequent sampling. Freshness/coherence failure alone is diagnostic and also continues. A subsequent scheduled slot is not a retry of a failed slot. No retry, fallback, redirects, proxies, pagination, early success stop or size/event substitution.",
+  "sampling": "ONE run. Claim fixes wall+monotonic anchor2s ahead before HTTP; slot k0..14 starts anchor+4*k. More than250mslate is missed, never rescheduled. Each slot at most one fixed ten-token POST. First transport/resource/JSON/identity failure stops future HTTP and marks remaining slots unavailable. After ten-token identity validation, empty required NOasks/YESbids or invalid numeric/tick/hash/timestamp/crossed books make a slot unavailable and continue calendar. Freshness/coherence failure alone is diagnostic and continues. Subsequent scheduled slots are not retries. No fallback/redirect/proxy/pagination/sign-driven stopping or size/event substitution.",
   "identity_validation": "Exactly ten response objects: each fixed market NO then YES request token appears once, matching condition_id and neg_risk true. No unknown/extra/missing/duplicate token IDs. Verify all immutable chainv2 and inherited helper/source pins. Requests use no economic selector.",
   "book_validation": "Strict bounded JSON. price,size,tick_size,min_order_size must be bounded nonnegative plain-decimal strings with at most6 fractional digits and32 total chars; reject signs/exponents/nonfinite. Require0<price<=1,size>0,tick>0<=1,min_order_size>0; price is an integer tick multiple. Both sides required arrays <=5000 levels each; validate levels, normalize order in memory (do not assume wire ordering) and derive best ask=min ask price and best bid=max bid price. NO asks and YES bids are economic inputs; all other sides are integrity-only (maxbid>=minask invalid). Require nonempty bounded hash string <=128 chars. Require nonempty NO asks and YES bids for the common32-route family; missing economic side means all routes unavailable for that slot. Empty integrity-only side is allowed. No depth walk, quantity choice, fill model or parameter selection.",
   "time_validation": "timestamp must be10-digit Unix-seconds or13-digit Unix-milliseconds decimal string; record inferred unit and original value. The docs call this snapshot time without specifying a unit, so conversion/freshness remain explicitly interpretive. Record local request start/end UTC and monotonic duration, plus bounded HTTP Date if present. For diagnostics define fresh/coherent only if each timestamp is no later than receipt+250ms, no older than5s at receipt, and cross-ten-book timestamp span<=500ms. These criteria are frozen; neither common response nor freshness proves atomic/executable liquidity.",
@@ -463,6 +464,30 @@
     "https://github.com/Polymarket/neg-risk-ctf-adapter/blob/main/src/NegRiskAdapter.sol",
     "https://github.com/Polymarket/ctf-exchange-v2/blob/main/src/adapters/NegRiskCtfCollateralAdapter.sol"
   ],
-  "source_pins": [],
-  "run_gate": "No HTTP before final root source/math/resource review, pin verification and exact frozen commit. No endpoint retries/fallback, no new event/sizes/route selection after quotes."
+  "source_pins": [
+    {
+      "path": "scripts/polymarket_subset_conversion_books.py",
+      "bytes": 24134,
+      "sha256": "26af2e5d5c5a30c4864ed5f5415a64eae9bdda89d3d931ca0bd9b03c36ee9e68"
+    },
+    {
+      "path": "tests/test_polymarket_subset_conversion_books.py",
+      "bytes": 18609,
+      "sha256": "89135a78efd126f502281f35119917f2647f1db6da8959bf91932cfeda697e49"
+    }
+  ],
+  "run_gate": "Root completed source, math, cap and failure-path review. After exact frozen commit, one --run --plan-sha256 invocation only. Preserve all15slots/480route-slots. No retries or quote-driven substitutions. Source/terminal/supervisor verification required for recorded-set conclusions; freshness remains separate and no execution/profit follows.",
+  "retained_preparation_plan": {
+    "commit": "2fdb3bc",
+    "bytes": 19816,
+    "sha256": "b7389020d5f2c96432e97280f49e2d55f9c23bdd7005dc1dbae2a6487a1abcd8"
+  },
+  "frozen_utc": "2026-10-02T12:02:22.851749+00:00",
+  "verification": {
+    "root_full_source_test_review": true,
+    "root_tests_passed": 9,
+    "root_suite_seconds": 0.299,
+    "http_before_freeze": 0,
+    "failure_gates": "Failed post-run source check or incomplete sampling disables economic conclusions. Unretained response cannot support its slot; preserve earlier retained slots and receipt hashes. Successful supervisor and terminal required in addition to summary."
+  }
 }
