@@ -1,6 +1,11 @@
 # HIP-4 continuation: live-v1 causal correction design (proposal for root review)
 
-**Status.** No source, test, plan or design edit happens until root approves. This replaces the hindsight timeline with a causal screen in receipt time.
+**Status.** Superseded. Root's decisions committed in `093c8c6` (15:11 UTC) were implemented; see [live-v1-design](live-v1-design.md). Where they differ from this proposal, root's decisions govern:
+- a single wall/mono anchor with no clock-step reset;
+- probe restoration only by a later compared match;
+- an identical equal-time repeat is ignored;
+- route-specific coverage precedence;
+- in-memory reserve proofs. This replaces the hindsight timeline with a causal screen in receipt time.
 
 **Trigger.** Sol's independent review of `scripts/hip4_continuation_live.py` (sha `69b3bc5b…`) found blockers, and root relayed them at 14:55 UTC on 2 October 2026.
 
