@@ -1,0 +1,124 @@
+{
+ "analysis_plan": {
+  "arithmetic": "exact decimal context (prec 120, Inexact and Rounded trapped)",
+  "excursion": "maximal run of positive route cash with all named states known",
+  "falsifier": "l2Book top of the probe coin vs reconstructed bbo state at its server time; two consecutive mismatches falsify the reconstruction",
+  "near_binding_margin": "0.001",
+  "park_probe_min_comparisons": 100,
+  "qualifying_min_duration_ms": 1000,
+  "routes": {
+   "forward": "hold complete sets made at par by splitOutcome+negateOutcome (basis 1 per unit); sell every member YES that has a bid; immediate cash = sum(bids) - 1; closed (zero residual) only when every member including the fallback is sold; otherwise unsold members are residual claims valued 0 until observable settlement",
+   "inverse_full": "buy every member YES at its ask, fallback included, then mergeQuestion; closed cash = 1 - sum(asks); available only with every ask present"
+  },
+  "scope": "recorded-vector bounds only: displayed touch, not takerability, fills, fees, conversion granularity, collateral identity or units",
+  "state": "per coin, the latest bbo at or before t, applied in (server time, receipt) order with equal times applied together; unknown before the first bbo for that coin"
+ },
+ "decision_rules": {
+  "candidate_recorded_vector": "any forward or inverse_full run with positive exact cash lasting at least 1000 ms of server time, all named states known, meta_pre unchanged, every subscription acked once, no bbo anomaly, falsifier not falsified, starting before any target meta event; a candidate is a recorded-vector bound for a separately frozen timing, depth, fee and conversion review, never execution or profit; forward runs with unsold members remain open residual claims until every claim retires",
+  "inconclusive": "otherwise; every run of any length is still listed",
+  "park_no_qualifying_excursion_in_window": "no candidate and no reason: uncensored window_closed stop, both meta reads unchanged, acks once, no anomaly or target meta event, falsifier >=100 comparisons and not falsified, all named states known by the hint, server time within 10 s of close",
+  "park_scope": "a negative bound for this one window and question only; it does not generalize to other matches"
+ },
+ "frozen_inputs": {
+  "books_v1_bundle_sha256": "b5b6e244404d3f9b2d4a44a143026c9112cd87a7680d2bdd82f549d179a04763",
+  "books_v1_freeze_commit": "bd35dce",
+  "frozen_projection": "reports/hip4-outcome-v1/metadata-v1/metadata.json",
+  "frozen_projection_sha256": "66913ed2f88aca6f05c4f32f81b438d0abd8228e660c9b97a8165e4cf6bf8788",
+  "metadata_protocol_freeze_commit": "9fac381",
+  "metadata_result_commit": "341ee58"
+ },
+ "not_established": [
+  "takerability or fills",
+  "queue position",
+  "fees",
+  "conversion amounts/granularity",
+  "collateral identity",
+  "native units",
+  "kickoff or end-of-play time",
+  "settlement",
+  "other matches",
+  "profit"
+ ],
+ "output_dir": "reports/hip4-research-continuation/live-v1",
+ "output_limits_bytes": {
+  "bundle_gzip": 3670016,
+  "claim_terminal_and_supervisor_receipts": 16384,
+  "projection": 65536
+ },
+ "premises": {
+  "P10_bbo_stream": "bbo is pushed only when the touch changes on a block and no update is lost, so the last bbo per coin is the touch until the next; falsifier: default l2Book on one named coin",
+  "P11_server_time": "bbo/l2Book time is the block time, equal across coins changed in one block; violations can only shorten or split runs, which the 1000 ms gate guards",
+  "P12_initial_state": "a bbo arrives at subscription; otherwise the coin is unknown until its first change and coverage starts later",
+  "P1_membership": "both outcomeMeta reads reproduce the frozen canonical question structure and no target questionUpdated/questionSettled/member outcomeSettled arrives; tested",
+  "P3_conversions": "documented splitOutcome, negateOutcome and mergeQuestion at par in the books quote token, fallback included in mergeQuestion; amounts, granularity and fees unverified",
+  "P4_merged_book": "one YES book per member carries both sides (books-v1 mirrors consistent); not retested",
+  "P9_collateral": "all members labelled USDC; identity unresolved beyond the label; no USD claim"
+ },
+ "previous": "reports/experiment-storage/hip4-research-continuation-allocation-v1.json",
+ "previous_sha256": "5f0053c23c3c46ead5863665e8fb80b8a0aaa66ce1a71422f7740e101a2e3a60",
+ "request_plan": {
+  "rest": {
+   "body_cap": 196608,
+   "payload": "{\"type\":\"outcomeMeta\"}",
+   "reads": [
+    "meta_pre at open-60 s",
+    "meta_post after the websocket closes (any stop after meta_pre succeeded)"
+   ],
+   "transport": "frozen books-v1 fetch_all: one request each, no retry, redirect or proxy",
+   "url": "https://api.hyperliquid.xyz/info",
+   "weight_each": 20
+  },
+  "retention": {
+   "cap": 3670016,
+   "cap_rule": "stop reading once the bundle reaches cap - reserve; the pending records, stop event and meta_post then fit; a stop is a censored prefix",
+   "every_frame": "sent and received frames, connection events, both REST bodies",
+   "members": "gzip member every 10 s or 32768 raw bytes",
+   "reserve": 524288
+  },
+  "stops": [
+   "window_closed",
+   "cap_reserve_reached",
+   "ws_closed",
+   "ws_error",
+   "liveness_lost",
+   "ws_connect_failed",
+   "transport_failure",
+   "meta_pre_failed"
+  ],
+  "websocket": {
+   "compression": false,
+   "connect_timeout_seconds": 10,
+   "connections": 1,
+   "liveness_stop_seconds": 90,
+   "max_frame_bytes": 262144,
+   "ping": {
+    "every_seconds": 30,
+    "payload": "{\"method\":\"ping\"}"
+   },
+   "proxies": false,
+   "reconnect": false,
+   "subscriptions": [
+    "bbo for each member YES coin #<10*outcome>, members ascending",
+    "l2Book {coin, no nSigFigs/mantissa/fast} for the lowest named member",
+    "outcomeMetaUpdates"
+   ],
+   "url": "wss://api.hyperliquid.xyz/ws"
+  },
+  "window": {
+   "close": "scheduledStart hint + 7500 s",
+   "launch": "between open - 900 s and open - 120 s, else refused",
+   "open": "scheduledStart hint - 600 s"
+  }
+ },
+ "schema": "hip4-continuation-live-v1",
+ "status": "draft_not_frozen",
+ "storage_request_bytes": {
+  "bundle_gzip_cap": 3670016,
+  "controls": 16384,
+  "note": "needs a separate root allocation; not drawn from the continuation grant; no compression ratio is assumed: a cap stop is a censored prefix",
+  "projection": 65536,
+  "total": 3751936
+ },
+ "target_note": "one question per frozen plan; 363 proposed (hint 2026-10-04T18:45Z; tightest books-v1 forward margin, -0.00017 at 13:16 UTC on 2 October); 359 (hint 2026-10-03T16:00Z) is the earlier alternate; root selects at freeze without a source change",
+ "target_question": 363
+}

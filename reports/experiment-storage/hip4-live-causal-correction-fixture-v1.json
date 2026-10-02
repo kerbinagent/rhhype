@@ -1,0 +1,76 @@
+{
+  "active_research_headroom_bytes": 278528,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 254476288,
+  "added_persistent_source_controls_messages_bytes": 65536,
+  "added_reserved_bytes": 3735552,
+  "approved_corrections": [
+    "Receipt-order causal state and r_Q after1000ms supported persistence, no server-time backdating.",
+    "Per-channel per-coin order and distinct BBO/probe state; every traded leg supported, unknown fallback residual only.",
+    "First observed probe mismatch suspends affected support immediately; causal restoration rule fixed, two mismatches classify falsification.",
+    "Required acknowledgements exactly once so far before decisions; later integrity failures disclosed without changing past decision attributes.",
+    "Explicit monotonic qualification/liveness/window/meta boundaries, invalidation wins ties, one anchored wall/mono mapping.",
+    "Exhaustive route-specific coverage with explicit precedence; carry remains unverified change-feed premise.",
+    "Three separate dispositions; bounded projections/anomalies/raw read cap; explicit unavailable denominators on supervisor failure.",
+    "No websocket redirect following; accurately label delivered application messages. Keep settle shared behavior isolated.",
+    "Pairing evaluation at r_Q+500ms uses only receipts available by then. Model partial close legs/residuals or label pairing unimplemented."
+  ],
+  "baseline_pins": [
+    {
+      "bytes": 43459,
+      "path": "scripts/hip4_continuation_live.py",
+      "sha256": "69b3bc5b6b6b6db1b7c3ea4b8739bc4eae11101717e5c36b7e17d250b345850c"
+    },
+    {
+      "bytes": 20714,
+      "path": "tests/test_hip4_continuation_live.py",
+      "sha256": "fbaa935067a4e5fb4cd49debd804432270981a4b29c97c3685a61e73f744891a"
+    },
+    {
+      "bytes": 9746,
+      "path": "reports/hip4-research-continuation/live-v1-design.md",
+      "sha256": "50f489d044a3ee9056e1fbd20a6af64762f5e4986385b2b579e7e707d00a5a1b"
+    },
+    {
+      "bytes": 6678,
+      "path": "reports/hip4-research-continuation/live-v1-draft-plan.json",
+      "sha256": "3ec1dafc56a2daf0193eb3cdcc3a6c3f82656bfb8800262bce8a97dc61e02313"
+    },
+    {
+      "bytes": 9394,
+      "path": "reports/hip4-research-continuation/live-v1-correction-design.md",
+      "sha256": "a837369632b5b218e4973bcf297445d99a88c5a483d02a4bd6ac5cf707003f34"
+    },
+    {
+      "bytes": 13301,
+      "path": "reports/hip4-research-continuation/pairing-v1.md",
+      "sha256": "060339fb4b47e4ec44d80918772cced16f6f0a75a8f46a0151520b16086ffa07"
+    }
+  ],
+  "existing_math_lane": "Existing32768B pairing/correction-design lane remains in the previous allocation; latest22695B before current corrections. Existing live baseline files are already charged, not recopied.",
+  "historical_failure": "Root inspection found prior live BundleTests and settle ReserveTests wrote production-size synthetic gzip bundles to TemporaryDirectory. These fixture peaks were omitted from previous source/cache reconciliation; exact original high-water and timing requested from worker. Preserve that omission; this prospective allocation does not retroactively authorize it.",
+  "overall_reservation_bytes": 2850343168,
+  "persistent_subcategories_bytes": {
+    "both_session_control_messages": 8192,
+    "margin": 8192,
+    "root_allocation_preflight_reviews_and_reconciliation": 16384,
+    "worker_live_source_tests_design_draft_growth": 32768
+  },
+  "previous_active_research_reserved_bytes": 250740736,
+  "previous_global_allocation": {
+    "bytes": 2491,
+    "path": "reports/experiment-storage/comet-source-metadata-v1-allocation.json",
+    "sha256": "bcef87b2721373045e6443edf67337c638cb7adf2d6f4107c1692d68d32f1c92"
+  },
+  "previous_hip4_source_allocation": {
+    "bytes": 3170,
+    "path": "reports/experiment-storage/hip4-continuation-source-cache-reconciliation-v3.json",
+    "sha256": "1aa16bb8dc2885c821b7610a6adfcc9743b1a0ccf64d5bd39399238a5013a55b"
+  },
+  "recorded_utc": "2026-10-02T15:10:23.847438+00:00",
+  "schema": "hip4-live-causal-correction-and-temporary-fixture-allocation-v1",
+  "scope": "Edit existing live source/tests/design/draft only plus existing pairing/correction proposal docs; no new collector, metadata, API, RPC, compiler, library download, scheduled live run or final live plan. Root independently reviews before any future data authority.",
+  "sequential_temporary_synthetic_fixture_cap_bytes": 3670016,
+  "status": "offline_corrections_and_sequential_synthetic_tests_only",
+  "test_rules": "One test process at a time across root and worker. Disable bytecode and retained test logs. All simultaneous temporary disk fixtures, including worker outputs and pending/hardlinks charged by unique inode, must fit3670016B. Production-size reserve test and smaller tests are sequential. Record observed high-water/upper bound and verify cleanup; no output/capture/source GET. Existing tests normal temporary cleanup is permitted. Do not release the fixture reserve until root reconciles tests and absence of temporary files."
+}
