@@ -1,0 +1,108 @@
+Aave trace-access v1: preparation only
+
+Question: can one fixed anonymous Ethereum endpoint provide bounded recursive
+callTracer and prestateTracer diffMode responses for the first transaction in
+one finalized block? This is not an Aave census, cash ledger, profitability
+claim, provider proof, or new trader opportunity test. An ordinary ETH transfer
+is a valid selected sample; zero nested calls/storage changes never cause a
+replacement. Exactly six slots remain the denominator after any stop.
+
+Root freezes reports/experiment-storage/aave-trace-access-v1.json with exact
+source/test/design/draft/allocation byte/SHA pins, runtime and manifest. The
+source only accepts frozen_trace_access_probe and --run --plan-sha256. Default
+prints one fixed dry message: zero requests, files or outputs. No existing
+output can be reused. Output: reports/aave-trace-access-v1/run-v1.
+
+Manifest, in order: chainId1; finalized block(false); first transaction receipt;
+debug_traceTransaction callTracer onlyTopCall=false, withLog=false, timeout10s;
+debug_traceTransaction prestateTracer diffMode=true, timeout10s; original block
+number(false) recheck. No alternative transaction, empty-block replacement,
+retry, redirect, proxy, fallback, eth_call, wallet, account, price or mutation.
+Selection has no transaction-type or profit condition.
+
+The receipt must match selected hash, block hash/number and transactionIndex0;
+status0 remains an eligible trace-access sample, not a successful liquidation.
+Both complete returned block JSON objects must agree. This is provider-asserted
+canonicality, without hash recomputation or independent consensus. Every RPC
+envelope has exact numeric ID, jsonrpc2.0 and one result or well-formed error.
+Null/error/incompatible/oversized/truncated/time-capped responses are unavailable.
+JSON rejects duplicates, nonfinite/floating numeric values, invalid UTF8/escaped
+surrogates, depth>32, nodes>60000, integers>80digits. ABI or token decoding is absent.
+
+callTracer is a recursively validated call structure, not cryptographic proof
+of complete execution. pre/post maps may have unequal keys and omitted fields;
+creation/deletion/unchanged-account omission are allowed. nonce is uint64 JSON
+integer; balance/code/storage are validated hex. The post storage count reports
+provided post-map slots, not an exhaustive token-balance change count. No
+tracer support or coverage beyond this one transaction is claimed.
+Primary schema references supplied by root:
+https://geth.ethereum.org/docs/developers/evm-tracing/built-in-tracers
+https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-debug
+https://aave.com/docs/aave-v3/smart-contracts/pool
+https://aave.com/docs/aave-v3/guides/flash-loans
+
+Retention: one uncompressed exclusive responses.frames inode. Magic followed
+by type byte + uint32BE payload length: B(request/admission), H(parsed numeric
+HTTP status and header serialization), D(exact body fragment), E(end/error,
+dispatch-attempt flag, body bytes/SHA, finish UTC). Each append is flushed/fsynced.
+B/H/E payload<=2048; D<=4096. Partial bodies are retained fragment by fragment.
+At most cap+1 body bytes read: one counted sentinel proves oversize and remains
+raw; no reads after it. Exact-cap EOF is checked with that same sentinel limit.
+IncompleteRead.partial is retained up to remaining cap+1. Failed HTTP bodies
+are also bounded/retained. Oversized parsed header serialization retains a
+2048B prefix and numeric status. Parser failure before headers become available
+retains B/E/error without asserting a header prefix or known HTTP status.
+B dispatch flag null is pre-request evidence; E true means invocation of the
+HTTP request method, not proof of transmission/acceptance. Worker recovery
+has attempts/bytes unknown, never zero or manufactured not-reached values.
+
+Per-body accepted caps4096/32768/32768/98304/98304/32768 sum299008; six sentinels
+maximum299014. Full4096B fragments use approximately79 D frames; six B/H/E
+frames at2053B each add36954B. Actual small read fragments add framing overhead;
+the independent360448B raw cap may therefore stop earlier than the body cap.
+Such a stop is unavailable, with retained prefix and final E reserve2053B.
+E response_bytes counts retained body bytes, not an assertion that no additional
+bytes reached transport before a retention-cap error. No complete response is
+inferred from a resource-truncated prefix.
+No pending raw copy, base64 copy, raw printing or second raw file. Successful
+raw replay reconstructs all requests/bodies and reruns binding/schema checks;
+projection is conditional until successful supervisor receipt with verified
+pins, exact terminal stage+planSHA, errorNone and worker exit0.
+
+Controls claim/projection/terminal/supervisor: each<=4096, combined<=16384,
+reserving8192 for terminal+supervisor before other publications. Remaining
+12288 of32768 controls pays allocation4665/root review/launch receipts. Runtime
+controls total20480: original run directory16384 plus one external4096 receipt,
+reports/aave-trace-access-v1/unavailable-v1.json. External receipt is exclusively
+created, bounded and unavailable only; it is not a reusable source artifact.
+Control publication uses one temporary inode hardlinked then unlinked, no
+overwrite. Failure raw/control prefixes remain immutable; no automatic rerun.
+Source/test/design/draft/final and sequential synthetic scratch<=98304; root
+measures final package and fixture peak. Margin32768 stays unallocated.
+
+Direct fixed HTTPS http.client; no environment proxies; identity encoding;
+20s/request SIGALRM covers DNS/TLS/headers/body drip. Worker CPU15s/AS256MiB/
+core0, absolute145s including verification/replay/control work; supervisor
+absolute150s including initial verification, with worker cleanup by147s.
+Nested alarms keep the earlier deadline. Parent kills/reaps known worker with
+bounded0.5s join limited by remaining deadline, then rechecks is_alive AND a
+non-null exitcode. If exit is unconfirmed, it never inspects/reads/writes the
+worker run directory again; it leaves that directory untouched and attempts
+only the external unavailable receipt, with dispatch/value/counts unknown.
+No source/post-run pin salvage occurs in that branch. An existing external
+receipt also refuses a new run. An outer deadline may prevent all closeout;
+absence/partial receipts are unknown, never success. When safe time remains,
+the same exclusive external receipt is attempted under a<=0.5s alarm; with
+no remaining time it is not written. No impossible cleanup guarantee is made.
+Confirmed dead-worker recovery can publish protected run-dir terminal with
+unknown dispatch. Prefixes remain even when the worker is forcibly killed.
+No descendants or compiler. Wall times and Python/OpenSSL runtime retained.
+CLI flushes its bounded output then uses os._exit(code), bypassing Python's
+unbounded multiprocessing active-child atexit joins. This does not terminate an
+unconfirmed worker or reinterpret its records. Imported run() is unchanged;
+root uses the one-shot CLI, not a long-lived importing process.
+
+Failure classification is unknown/unavailable, never a negative opportunity
+or zero cash. Successful support of this one response says nothing about
+Aave-specific callbacks, ERC20 accounting, historical configuration, private
+payments, failed-attempt population, delayed access or repeatability.

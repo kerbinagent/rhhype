@@ -1,0 +1,22 @@
+{
+  "schema": "aave-trace-access-v1",
+  "status": "draft_not_runnable",
+  "endpoint": "https://ethereum-rpc.publicnode.com",
+  "output_dir": "reports/aave-trace-access-v1/run-v1",
+  "external_receipt": "reports/aave-trace-access-v1/unavailable-v1.json",
+  "chain_id": 1,
+  "allocation": {"path":"reports/experiment-storage/aave-trace-access-preparation-v1.json","bytes":4665,"sha256":"d3f0e9a76ccc9f514eccda588e53176778da11d527c03447f5ed03a8899c09d7"},
+  "resource_limits": {"requests":6,"response_bytes":[4096,32768,32768,98304,98304,32768],"body_bytes":299014,"raw_bytes":360448,"runtime_controls_bytes":20480,"run_controls_bytes":16384,"external_receipt_bytes":4096,"request_seconds":20,"worker_seconds":145,"supervisor_seconds":150,"cpu_seconds":15,"ram_bytes":268435456,"json_depth":32,"json_nodes":60000},
+  "request_manifest": [
+    {"method":"eth_chainId","params":[]},
+    {"method":"eth_getBlockByNumber","params":["finalized",false]},
+    {"method":"eth_getTransactionReceipt","params":["$transaction"]},
+    {"method":"debug_traceTransaction","params":["$transaction",{"tracer":"callTracer","timeout":"10s","tracerConfig":{"onlyTopCall":false,"withLog":false}}]},
+    {"method":"debug_traceTransaction","params":["$transaction",{"tracer":"prestateTracer","timeout":"10s","tracerConfig":{"diffMode":true}}]},
+    {"method":"eth_getBlockByNumber","params":["$block.number",false]}
+  ],
+  "claims": {"source_equivalence":false,"eligibility":false,"economics":false,"complete_cash_ledger":false,"attainable_opportunity":false},
+  "runtime": null,
+  "source_pins": [],
+  "root_freeze_requirements": "Populate exact runtime and five direct pins; freeze status and exact final plan SHA. No author network/run authority. No Aave census or economic decoder."
+}
