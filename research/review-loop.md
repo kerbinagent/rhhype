@@ -6150,3 +6150,18 @@ Snapshot read 2026-10-02T07:47:20.889534Z, updated epoch seconds 1790927240.6576
 Routine pulses fresh/ok/four feeds, lag34.96/36.61/34.31ms; review CPU57.37%, p95 32.76ms, RSS293.23MiB,105pairs. Root offline passive-through scan started07:42:45 nice19, supervisor4021233/child4021234, hard1800s; source/plan frozen58a4f6a, outcomes unopened. Rolling advanced normally to chunk000031:498.64s/14,882,475compressedB/112,711records,two connections/no errors/economicsfalse. Controller chunks652,350,262B/controls640,525B under separate decimal2GB. Three news helpers waiting/fresh/economicsfalse. No raw/reserved economics, carry samples or news outcomes opened; no competing jobs/interventions.
 
 Carry 2026-10-02T07:45:00.116021+00:00: 375 sampled, persistent invalid slot71, 488 future/interrupted,running/no errors/evaluation. Reviews66–191:2,594completions=2,559exactlosses,one estimatedloss,five auditedpairedgains,29auditedrescuegains. Archive 3,836,576/5,242,880B;122futurepairs at5,342B project 4,488,300B,margin 754,580B. Next **08:06:33 UTC**.
+
+
+### Review 192 — 2026-10-02 08:06:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Exact report and independent snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap/growth guards.
+
+`review-20261002T080633Z.json.gz` raw 19,196 B SHA-256 `a23beb411bdd379a0f8be8f0e6559855c790901613361bfcc2d646cf312314e4`; gzip 2,889 B SHA-256 `bf832288ec4bc971d513cde35b5623638cfe5285936e7771bb6f710a24f5ce16`.
+
+`current-epoch-at-review192.json.gz` raw 9,282 B SHA-256 `57d0a394d6a2e73c922c9a3c61e4bd49a7853100e4017a8a98a51b70bb39edad`; gzip 1,733 B SHA-256 `7d9878a0673a53710611277c2538f7e0e615080b10905992819f2b0bf75012dd`.
+
+Snapshot read 2026-10-02T08:07:31.408111Z, updated epoch seconds 1790928451.131724; counts not pooled. Nine exact losses: convergence three / −$1.0342890071, Premium six / −$9.5962460378; no gains/estimates/aborts. HL price_limit rejects four. Convergence other costs $1.4975405000/capital $0.0000045071; Premium fees $5.0933470669/other $2.9962980525/capital $0.0001779184.
+
+Root passive-through scan finished07:47:21 return0; no continuing CPU from that run. 07:52 paper fresh0.44s/busy CPU58.88%,lag52.44ms; recovered07:58/08:04 lag46.14/44.01ms. Review fresh/running/ok,four feeds,CPU68.50%,p95 42.23ms,RSS287.61MiB,105pairs. Rolling chunk000033 recorded Core socket close08:03:12.246222UTC CLOSED,None; operational anomaly immediately flagged. Connections3, bytes/records kept advancing; no intervention. At review499.67s/20,730,002compressedB/143,615records,same single error,economicsfalse. Controller chunks695,438,596B/controls683,112B under separate decimal2GB. Three news helpers waiting/fresh/economicsfalse. No raw/reserved economics,carry samples or news outcomes opened;no competing jobs/changes.
+
+Carry 2026-10-02T08:05:00.108435+00:00: 379sampled,persistent invalid slot71,484future/interrupted,running/no errors/evaluation. Reviews66–192:2,603completions=2,568exactlosses,one estimatedloss,five auditedpairedgains,29auditedrescuegains. Archive 3,841,198/5,242,880B;121futurepairs at5,342B project 4,487,580B,margin 755,300B. Next **08:26:33 UTC**.

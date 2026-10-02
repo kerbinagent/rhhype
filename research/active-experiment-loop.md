@@ -2093,3 +2093,8 @@ Five exact losses: convergence one / −$0.7088411617, Premium four / −$6.8927
 ### Routine review191 — 2026-10-02 07:46:33 UTC
 
 Two exact convergence losses/−$3.9210484925;no gains/estimates/aborts,two HLprice-limit rejects. Completecoverage/exactarchiveguards. Cumulative2,594:2,559exactlosses,oneestimate,fivepairedgains,29auditedrescuegains. Paperfresh/ok lag32.76ms/CPU57.37%;rootnice19 passive-through scan context retained,outcomesunopened. Rollingchunk31healthy/economicsfalse;three newshelperswaiting/fresh. Carry 375sampled/oneinvalid/488future. Archive 3,836,576B,projection 4,488,300B under5MiB;next08:06:33UTC.
+
+
+### Routine review192 — 2026-10-02 08:06:33 UTC
+
+Nine exact losses:convergence3/−$1.0342890071,Premium6/−$9.5962460378;no gains/estimates/aborts,four HLprice-limit rejects. Completecoverage/exactarchiveguards. Cumulative2,603:2,568exactlosses,oneestimate,fivepairedgains,29auditedrescuegains. Busy52.44ms pulse retained;reviewfresh/ok lag42.23ms/CPU68.50%. Rollingchunk33 one Core socketclose08:03:12,3connections/advancingrecords,parentnotified;no intervention/economicreads. Three newshelperswaiting/fresh. Carry 379sampled/oneinvalid/484future. Archive 3,841,198B,projection 4,487,580B under5MiB;next08:26:33UTC.
