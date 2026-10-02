@@ -1,0 +1,29 @@
+{
+  "schema": "news-candidate-host-startup-recovery-v1",
+  "status": "frozen_preselection_environment_repair",
+  "frozen_utc_ns": 1790949990656090644,
+  "recorded_utc": "2026-10-02T14:06:30.656095+00:00",
+  "plan_sha256": "e3a09177b2e38ca78ee7f1a97b2ce5e00ce14bd15cdc6c53164472888cd2ee33",
+  "original_commit": "e7cd500",
+  "original_source_sha256": "06705e57105bdb3d4c1874b377d8950836e2106070e93cacf094747c826ecad8",
+  "launcher": {
+    "path": "scripts/launch_news_candidate_host_v1.py",
+    "bytes": 5263,
+    "sha256": "81a0c9641ec16863c7d5d156a2ca678c0cd53377032e27b81f177d1d8b685d49"
+  },
+  "preserved_startup_files": {
+    "launch-claim.json": {
+      "bytes": 364,
+      "sha256": "c89472a42c98cde4c593dec686f606f029155154723582bc1f5ec800b003d216"
+    },
+    "process.json": {
+      "bytes": 466,
+      "sha256": "521317dcd63ad0f06e987de47932d1a9eb656fadca54d4e149130293f457bd98"
+    }
+  },
+  "failure": "Tool sandbox launch returned namespace PID3 at14:01:36UTC; exact-argv host process inspection found no surviving supervisor. A subsequent sandbox os.kill(3,0) was not host liveness proof. Only the two original launch artifacts exist, with no nomination, pin, input, command, result or terminal. No economic evaluation or raw read occurred.",
+  "authorization": "One exact original supervisor invocation on the persistent host before15:00UTC after this recovery record is committed. Keep original plan/source/rules,15:00cutoff/18:00selectiondeadline and first future reserved attempt including failure. This is an explicitly recorded execution-environment repair before selection, not an economic replay or replacement capture.",
+  "guards": "Require exact original artifact inventory and pins, final frozen plan/source pins, systemd host PID namespace pid:[4026532219], no exact-argv live supervisor, and actual spawn request/return timestamps beforecutoff. Publish exclusive host-launch-claim and host-process with hostPID/startticks/argv; preserve original PID3record. If repair startup fails, retainfailure and no retry.",
+  "independent_review": "Implementer Sol read-only sanity review: no scientific blocker if no original supervisor or nomination, exactrules retained and actual host spawn beforecutoff is independently enforced. Root added those guards.",
+  "resource_scope": "Same3MiBallocation; newlauncher consumes sourcecategory98304B, thisrecord protocolcategory32768B, hostcontrols existing49152B. No raw export/copy, network or newcollector. Both original startup artifacts retained in controls."
+}
