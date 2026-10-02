@@ -1,0 +1,358 @@
+{
+  "active_research_headroom_bytes": 37765120,
+  "active_research_pool_bytes": 254754816,
+  "active_research_reserved_bytes": 216989696,
+  "closeout_receipt_charge": "This receipt uses the retained passive-through package margin; it is included prospectively in its524288B reservation, not released.",
+  "overall_reservation_bytes": 2812856576,
+  "packages": [
+    {
+      "actual_bytes_before_closeout": 295482,
+      "files": [
+        {
+          "bytes": 14481,
+          "path": "reports/experiment-storage/single-venue-queue-ofi-v1.json",
+          "sha256": "27073af951c7d8fd08e24978314e662810d17e0b56645f894b710fbdf11ace70"
+        },
+        {
+          "bytes": 40433,
+          "path": "scripts/single_venue_queue_ofi.py",
+          "sha256": "b549671eede741992df7d47dddb9247278b308f2775facb515c66de15014ff96"
+        },
+        {
+          "bytes": 17542,
+          "path": "tests/test_single_venue_queue_ofi.py",
+          "sha256": "c78c5905dae91aae71cf4dcb231af6ea7a6bee924a2858ef90be0d8da9d12d2f"
+        },
+        {
+          "bytes": 1875,
+          "path": "reports/single-venue-research/queue-ofi-v1-run.json",
+          "sha256": "b7828aeb6a56dd2b9244b3ca7b0016f50c4550c455188597bbb92c5b39650c60"
+        },
+        {
+          "bytes": 219661,
+          "path": "reports/single-venue-research/queue-ofi-v1/chunk-000001.json.gz",
+          "sha256": "2834825384d8abe5226ee00bda3c444673b88667d464ebc1da413f338ddbc78b"
+        },
+        {
+          "bytes": 1105,
+          "path": "reports/single-venue-research/queue-ofi-v1/readout.txt",
+          "sha256": "0f8066eb4f1512377b67dd7ca4a77c0de864a59fd04870887a5c2d8093607d49"
+        },
+        {
+          "bytes": 162,
+          "path": "reports/single-venue-research/queue-ofi-v1/started.json",
+          "sha256": "3cbc83444b1f2da6b9557e5f2b4d6b380529f00008dd801e657a0136c4fd07df"
+        },
+        {
+          "bytes": 223,
+          "path": "reports/single-venue-research/queue-ofi-v1/terminal.json",
+          "sha256": "eaed17800424e0e6942c5d66a790bd15c2ddfa11b9cea87e778892f3e157ed2f"
+        }
+      ],
+      "name": "queue-ofi-v1",
+      "previous_allocation": {
+        "bytes": 14481,
+        "path": "reports/experiment-storage/single-venue-queue-ofi-v1.json",
+        "sha256": "27073af951c7d8fd08e24978314e662810d17e0b56645f894b710fbdf11ace70"
+      },
+      "previous_reserved_bytes": 2097152,
+      "released_bytes": 1703936,
+      "retained_bytes": 393216,
+      "scope": "All own source/tests/protocol/run/output files retained. Reused helper sources and captured inputs retain existing separate allocations. Any later run/output requires a new reservation.",
+      "terminal": {
+        "ended_utc": "2026-10-02T06:00:20.275091+00:00",
+        "error": "ValueError: output_byte_cap",
+        "model_sha256": null,
+        "plan_sha256": "27073af951c7d8fd08e24978314e662810d17e0b56645f894b710fbdf11ace70",
+        "state": "finished",
+        "success": false
+      }
+    },
+    {
+      "actual_bytes_before_closeout": 1871560,
+      "files": [
+        {
+          "bytes": 4493,
+          "path": "reports/experiment-storage/single-venue-queue-ofi-publication-fix-v1.json",
+          "sha256": "485213e9cc671344d228724ee3be1462e91de352156bb8ffbf0bd2de7fc0e881"
+        },
+        {
+          "bytes": 6827,
+          "path": "scripts/single_venue_queue_ofi_publication_fix.py",
+          "sha256": "c2b6502ae5c8da78e01290205194c3e76922f3a7d2cb16a731138dc7ea65efcd"
+        },
+        {
+          "bytes": 9218,
+          "path": "tests/test_single_venue_queue_ofi_publication_fix.py",
+          "sha256": "b8407af1b91fbe04cb583a2b301cf0eb6afd943886f4bccbac3d2ddbdf6f9ed9"
+        },
+        {
+          "bytes": 707,
+          "path": "reports/single-venue-research/queue-ofi-publication-fix-v1-run.json",
+          "sha256": "fd6f83e1e5cf357569100850fe391ac78fb15677ba3472c218927084ba9ea7c7"
+        },
+        {
+          "bytes": 219661,
+          "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000001.json.gz",
+          "sha256": "2834825384d8abe5226ee00bda3c444673b88667d464ebc1da413f338ddbc78b"
+        },
+        {
+          "bytes": 279747,
+          "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000002.json.gz",
+          "sha256": "0fc16c7f3233b131dc46b70bde2d455d5caa8c7189195c6680ceb4791f287304"
+        },
+        {
+          "bytes": 288355,
+          "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000003.json.gz",
+          "sha256": "6d18dbb0e7c6be7675908456e891910d99aad769e495fb37cad55f70c01aece1"
+        },
+        {
+          "bytes": 336027,
+          "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000007.json.gz",
+          "sha256": "7e547cb983edf5dbc937d503fad56e4dfa347d6719acc712969579056195d4a6"
+        },
+        {
+          "bytes": 330624,
+          "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000008.json.gz",
+          "sha256": "6a570948327537e14b4e763e884b6acf728fea2ea7b8466182a9771146bd4a28"
+        },
+        {
+          "bytes": 317681,
+          "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/chunk-000009.json.gz",
+          "sha256": "17394e08d6f8228465322a31eed64bc1fc1b639068a0f5f0a53880c7e1b6ea9b"
+        },
+        {
+          "bytes": 165,
+          "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/model-sha.json",
+          "sha256": "e47385f8541042f4a13df1f0d23619e0ea194b71d943268eacf2bf4c2abad1ef"
+        },
+        {
+          "bytes": 16114,
+          "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/model.json",
+          "sha256": "f299e255b29dbffff494283e57fd9251826e3747abc3d4e7bf944d2569aa8d78"
+        },
+        {
+          "bytes": 11288,
+          "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/provenance.json",
+          "sha256": "e3c3220f97c70226b9c48cd7340af497deddce59d0d384d96bdd07df73458100"
+        },
+        {
+          "bytes": 13644,
+          "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/readout.txt",
+          "sha256": "a97f6018516858393122d00f7b3a92a66c3881c27c4783863996893dcc5596d6"
+        },
+        {
+          "bytes": 162,
+          "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/started.json",
+          "sha256": "aeaf51feabba535a30aed687155ac4919aa8750c1583da39548107b84affe26c"
+        },
+        {
+          "bytes": 36583,
+          "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/summary.json.gz",
+          "sha256": "26027e5d2e57a131257874572cc73a4b0c113081c4624eeebdd5912fc8e732ac"
+        },
+        {
+          "bytes": 264,
+          "path": "reports/single-venue-research/queue-ofi-publication-fix-v1/terminal.json",
+          "sha256": "958060cf58797c4941de1590a3251a151a4058b2401860fa7f1dd2acd968b661"
+        }
+      ],
+      "name": "queue-ofi-publication-fix-v1",
+      "previous_allocation": {
+        "bytes": 4493,
+        "path": "reports/experiment-storage/single-venue-queue-ofi-publication-fix-v1.json",
+        "sha256": "485213e9cc671344d228724ee3be1462e91de352156bb8ffbf0bd2de7fc0e881"
+      },
+      "previous_reserved_bytes": 4194304,
+      "released_bytes": 2228224,
+      "retained_bytes": 1966080,
+      "scope": "All own source/tests/protocol/run/output files retained. Reused helper sources and captured inputs retain existing separate allocations. Any later run/output requires a new reservation.",
+      "terminal": {
+        "ended_utc": "2026-10-02T06:23:51.060708+00:00",
+        "model_sha256": "f299e255b29dbffff494283e57fd9251826e3747abc3d4e7bf944d2569aa8d78",
+        "output_count": 10,
+        "plan_sha256": "485213e9cc671344d228724ee3be1462e91de352156bb8ffbf0bd2de7fc0e881",
+        "state": "finished",
+        "success": true
+      }
+    },
+    {
+      "actual_bytes_before_closeout": 433734,
+      "files": [
+        {
+          "bytes": 31355,
+          "path": "reports/experiment-storage/single-venue-passive-through-v1.json",
+          "sha256": "f773daf99f71df97494ca3b377fa17c57a542f58f9d437390cea7c87c5e18c62"
+        },
+        {
+          "bytes": 37531,
+          "path": "scripts/single_venue_passive_through.py",
+          "sha256": "c3d29bda0ee1efba4251cf74cd320344961e6c78c80731e6c9afd59a29c6e728"
+        },
+        {
+          "bytes": 21473,
+          "path": "tests/test_single_venue_passive_through.py",
+          "sha256": "e800926381c81f48ac00c7e1a6e013479b7295493282abd4003f259d9952ec77"
+        },
+        {
+          "bytes": 1126,
+          "path": "reports/single-venue-research/passive-through-v1-run.json",
+          "sha256": "4fd314e8ae8a8536b0de4385a1b7f7ad244afd5722e1447f250c44698c379bd4"
+        },
+        {
+          "bytes": 83789,
+          "path": "reports/single-venue-research/passive-through-v1/chunk-000001.json.gz",
+          "sha256": "d80abf7d0db25c33b019be0383f907d4dde6c98beab122048c71c06147b7ba7c"
+        },
+        {
+          "bytes": 92505,
+          "path": "reports/single-venue-research/passive-through-v1/chunk-000002.json.gz",
+          "sha256": "48fdb6533a85903ba293a8f9ab410b4f1bf1ad47add608cf77d07c4f52a19696"
+        },
+        {
+          "bytes": 99432,
+          "path": "reports/single-venue-research/passive-through-v1/chunk-000003.json.gz",
+          "sha256": "b25adb4c9fd23325fdd17ad4cab0c911e515fffbe225ce23b6942e716142a34a"
+        },
+        {
+          "bytes": 205,
+          "path": "reports/single-venue-research/passive-through-v1/first-stage-sha.json",
+          "sha256": "093678a451bc9d3019f1db5dbacad0134609a4d6fbe9e13c78df68f1bd5fe819"
+        },
+        {
+          "bytes": 15880,
+          "path": "reports/single-venue-research/passive-through-v1/first-stage-summary.json.gz",
+          "sha256": "48e2454f57fc9304937203b91bb49bc3ba3890d8a08c658dd742e004065f2e9e"
+        },
+        {
+          "bytes": 11689,
+          "path": "reports/single-venue-research/passive-through-v1/provenance.json",
+          "sha256": "bad26669bca3b8ca5056f1f370e946197729dbc1948819716ff55114fcb0a2cb"
+        },
+        {
+          "bytes": 14671,
+          "path": "reports/single-venue-research/passive-through-v1/readout.txt",
+          "sha256": "66c27dd7a2245f09c48a01aa37143fd6f1ec33a8bbca29e14a9c3c88f71d20d8"
+        },
+        {
+          "bytes": 7565,
+          "path": "reports/single-venue-research/passive-through-v1/root-receipt.json",
+          "sha256": "4c2aca6dbd2807b8ae374a32365fba8a522f2a89d64855cb9f0c0fdd981fa7d6"
+        },
+        {
+          "bytes": 170,
+          "path": "reports/single-venue-research/passive-through-v1/started.json",
+          "sha256": "01e93b9e40c251b4b5ecb19429c08b6d035e8ef5314444e9bf3c93c622969747"
+        },
+        {
+          "bytes": 16009,
+          "path": "reports/single-venue-research/passive-through-v1/summary.json.gz",
+          "sha256": "b6bcb0a6c31569bfa174f38b4571ddd753179211d870deb7ee8387787952d068"
+        },
+        {
+          "bytes": 334,
+          "path": "reports/single-venue-research/passive-through-v1/terminal.json",
+          "sha256": "0cf38e82c89d2b4e96697026fd5de385844ba8a68cbebfbc1c2206736ab72db3"
+        }
+      ],
+      "name": "passive-through-v1",
+      "previous_allocation": {
+        "bytes": 31355,
+        "path": "reports/experiment-storage/single-venue-passive-through-v1.json",
+        "sha256": "f773daf99f71df97494ca3b377fa17c57a542f58f9d437390cea7c87c5e18c62"
+      },
+      "previous_reserved_bytes": 4194304,
+      "released_bytes": 3670016,
+      "retained_bytes": 524288,
+      "scope": "All own source/tests/protocol/run/output files retained. Reused helper sources and captured inputs retain existing separate allocations. Any later run/output requires a new reservation.",
+      "terminal": {
+        "decision": "park_fixed_screen",
+        "ended_utc": "2026-10-02T07:47:21.503239+00:00",
+        "first_stage_barrier_sha256": "093678a451bc9d3019f1db5dbacad0134609a4d6fbe9e13c78df68f1bd5fe819",
+        "output_count": 8,
+        "plan_sha256": "f773daf99f71df97494ca3b377fa17c57a542f58f9d437390cea7c87c5e18c62",
+        "second_stage_open": false,
+        "state": "finished",
+        "success": true
+      }
+    },
+    {
+      "actual_bytes_before_closeout": 55831768,
+      "files": [
+        {
+          "bytes": 3359,
+          "path": "reports/experiment-storage/rolling-exploratory-peer-export-v1.json",
+          "sha256": "20c1a113938eeb26c479d3f6f05ee50c9b56a665f2137dcc658530857f9d6aa1"
+        },
+        {
+          "bytes": 55818240,
+          "path": "data/evidence/rolling-exploratory-000001-000003-v1.tar",
+          "sha256": "534adf702946c5ea8b0a59ff79641aadf2f2de5e3c8a454baaa12ad907f773cf"
+        },
+        {
+          "bytes": 10169,
+          "path": "data/evidence/rolling-exploratory-000001-000003-v1-inventory.json",
+          "sha256": "f3ce24fc4854d6c2b29cd997b6e5b8754434c00779d24b78723edb8b7cdc6537"
+        }
+      ],
+      "name": "rolling-exploratory-peer-export-v1",
+      "previous_allocation": {
+        "bytes": 3359,
+        "path": "reports/experiment-storage/rolling-exploratory-peer-export-v1.json",
+        "sha256": "20c1a113938eeb26c479d3f6f05ee50c9b56a665f2137dcc658530857f9d6aa1"
+      },
+      "previous_reserved_bytes": 67108864,
+      "released_bytes": 11206656,
+      "retained_bytes": 55902208,
+      "scope": "Immutable logical artifact counted once under original frozen accounting. Existing Git/LFS transport accounting unchanged. No new hydration/extraction copies, member decoding or source deletion."
+    },
+    {
+      "actual_bytes_before_closeout": 35052051,
+      "completion_pins": [
+        {
+          "bytes": 3380,
+          "path": "reports/single-venue-news/capture/manifest.json",
+          "sha256": "00195f93594d48f67751371b16a487e0c0d31f5f79b505170b2e399915a8c29f"
+        },
+        {
+          "bytes": 316,
+          "path": "reports/single-venue-news/capture/terminal.json",
+          "sha256": "14aeeccc82dc2d0bfa7050d059e8fbea03b0ebabfa3e9fefad2135b0977382bf"
+        },
+        {
+          "bytes": 438,
+          "path": "reports/single-venue-news/external-verification.json",
+          "sha256": "b52ebb68ed7625f993558409447ae14c813265810f7f26b6286653cd8f9f983d"
+        }
+      ],
+      "files": [
+        {
+          "bytes": 35052051,
+          "path": "reports/single-venue-news/capture/frames.jsonl.gz",
+          "sha256": "ef51c396df8a6039b0eda4e0a1b020500ff499eb603a8cb4c686c5a34061d0b0"
+        }
+      ],
+      "name": "single-venue-news-v1-raw-only",
+      "previous_allocation": {
+        "bytes": 19340,
+        "path": "reports/experiment-storage/single-venue-news-v1.json",
+        "sha256": "e9efab93a06e4e53fdb76b2f4b0e955f25f37a749c810062736a66f04ec90ffe"
+      },
+      "previous_reserved_bytes": 50331648,
+      "released_bytes": 15269888,
+      "retained_bytes": 35061760,
+      "scope": "Close only the completed raw-frame category; preserve full original source/preparation, metadata, output and control reservations, all original analysis failures and later separately funded corrections."
+    }
+  ],
+  "previous_active_research_reserved_bytes": 251068416,
+  "previous_global_allocation": {
+    "bytes": 5520,
+    "path": "reports/experiment-storage/hip4-live-causal-correction-closeout-v1.json",
+    "sha256": "bd8a481f1d7d0ad3bfd8e5752dc043fbf9b3910d07727a1e9d92bd88b0526473"
+  },
+  "recorded_utc": "2026-10-02T15:57:36.608141+00:00",
+  "released_unused_reservation_bytes": 34078720,
+  "retention": "No file deleted, recompressed, rewritten or repurposed. Root independently verified byte sizes and SHA256 against the reviewed completed inventories. Original failures remain. Only unused prospective reservation is released; every source, input, metadata and output remains retained. Active NEAR, carry, routine, expiry and user2GB rolling reservations unchanged.",
+  "review": "Independent Sol checked completion, absence of superseding closeouts and own-file scope; root rechecked exact inventory and arithmetic. Raw/export hashes read as bytes only; no new economics or reserved data decoded.",
+  "schema": "completed-news-export-queue-passive-reservation-closeout-v1"
+}
