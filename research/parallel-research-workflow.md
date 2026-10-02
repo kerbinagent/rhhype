@@ -51,10 +51,10 @@ and carry studies retain their own analysis boundaries and ownership.
 1. **Local shock recovery:** the old ordinary-window control check is sparse
    and inconclusive. Two local quote gains coincided with larger favorable
    reference moves. Keep its fixed matching rule and seek more distinct events.
-2. **Delayed directional response:** test movement remaining after observing
-   another venue move, including the entry delay and a simultaneous executable
-   comparison. The previous shared residual gate prevented this question from
-   being tested directly.
+2. **Delayed directional response:** the fixed diagnostic now tests this
+   directly. Its 26 selected episodes and nine cost-plausible episodes were
+   negative on average in both old windows. Park this version; no group passed
+   its replication criterion. See the [readout](../reports/single-venue-research/directional-response-readout.txt).
 3. **Changing order flow:** establish whether live trade grouping and book
    replenishment can be measured, then test continuation or exhaustion with
    explicit controls. A large individual print does not establish that a larger

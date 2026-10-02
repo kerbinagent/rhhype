@@ -6,6 +6,7 @@ __pycache__/
 .venv/
 .ipynb_checkpoints/
 data/raw/
+/data/rolling/
 *.log
 data/monitor/
 data/monitor-*/

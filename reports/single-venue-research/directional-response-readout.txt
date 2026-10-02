@@ -1,0 +1,100 @@
+Delayed directional response — exploratory readout
+Frozen plan SHA256: 80670919b0fef870de93f1dd9a70545253781b03ed3afb6539c5b5fc39493043
+Result SHA256: 57b8c25ddd206f47e97a76b575ede0bbb6d4bdcf12ccec94f5fbcb5d6c5900d5
+
+Decision: park this fixed version in the observed ordinary sessions. No asset/target has positive cost-plausible mean local quote returns in both windows, even before requiring positive paired executable excess. No group qualifies for the specified prospective replication. Missing-control attribution remains inconclusive; do not relax its clock/grid rules after seeing outcomes.
+
+Interpretation: the old relative-strategy common residual gate had admitted no events, so it did not directly test delayed directional response. This fixed diagnostic removes that gate, uses a one-second observed mover return >=3bp and target absolute return <=half its magnitude, and follows the mover direction. One episode per asset across both assignments every30seconds. All ten assets and both assignments retained; receipt observations do not establish synchronized exchange leadership.
+Native target size is at most100 entry notional; full-depth quote entry follows400ms on both source/receipt clocks, then10seconds plus400ms exit delay. These are executable quote profiles, not private fills, IOC cash, portfolio or funding results. Archived zero fees are checked and explicitly included. One, two and five additional basis points are robustness deductions, not asserted venue fees.
+The cost-plausible subset requires the still-unmatched observed move A to exceed the immediate full-depth round-trip cost C0 at the signal. This assumes full catch-up as a screening budget; it is not a forecast. Keep all selected episodes and the subset visible.
+
+Summary (window1 / window2):
+Selected/full local quotes:15/15 and11/11. Positive local quotes4/15 and2/11; none survives extra5bp. All-selected mean net quotes−2.814244bp /−3.939537bp.
+Cost-plausible4/5 episodes; means−2.011510bp /−4.301138bp; positives2/4 /1/5; extra1bp1/4 /1/5,extra2bp1/4 /0/5,extra5bp0/4 /0/5.
+Cost-subset mean movement consumed before entry+0.613970bp /+1.410769bp; mean remaining midpoint movement−0.745454bp /−1.933156bp. Some movement was lost before entry, but subsequent adverse movement also mattered. Do not attribute all losses to delay.
+Complete executable control pairs:all3/15 /1/11;costsubset2/4 /0/5. Native quantity compatibility and endpoint source-due/freshness rules are fixed. Local profiles remain when their controls are unavailable. Quote/control means use different available cohorts.
+Only two cost-subset controls are complete, both window1 losses:CoreZEC local−6.686199bp,quoteexcess+3.966001bp,midpointexcess+0.009041bp;CoreLIT local−6.061405bp,quoteexcess−0.053730bp,midpointexcess−0.924696bp. Their positive mean quoteexcess+1.956135bp compares localmean−6.373802bp with larger control losses−8.329937bp. ZEC advantage primarily reflects crossing-cost differences, not observed relative midpoint catch-up.
+
+All40 asset/target/window rows (NA means missing, never zero).
+window asset target | selected meanNetBP fullControls meanQuoteExcessBP | costCount costMeanNetBP costFullControls costMeanExcessBP | meanConsumedBP meanRemainingBP
+1 BTC lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+1 BTC rh_lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+1 ETH lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+1 ETH rh_lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+1 SOL lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+1 SOL rh_lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+1 HYPE lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+1 HYPE rh_lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+1 XRP lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+1 XRP rh_lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+1 SUI lighter | 1 -11.113751 0 NA | 0 NA 0 NA | 3.607159 -6.323997
+1 SUI rh_lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+1 NEAR lighter | 2 2.463993 0 NA | 1 0.104442 0 NA | -0.751905 5.209226
+1 NEAR rh_lighter | 2 -2.824859 1 -0.295182 | 0 NA 0 NA | 0.261499 0.679986
+1 ZEC lighter | 2 -1.044539 1 3.966001 | 2 -1.044539 1 3.966001 | 0.595241 -0.699159
+1 ZEC rh_lighter | 1 -6.765131 0 NA | 0 NA 0 NA | 0.338133 -3.944173
+1 VVV lighter | 2 -1.084727 0 NA | 0 NA 0 NA | 1.550260 1.113249
+1 VVV rh_lighter | 1 -6.471014 0 NA | 0 NA 0 NA | 0.000000 0.190387
+1 LIT lighter | 1 -6.061405 1 -0.053730 | 1 -6.061405 1 -0.053730 | 2.372417 -3.954341
+1 LIT rh_lighter | 3 -2.274033 0 NA | 0 NA 0 NA | -0.263685 1.406013
+2 BTC lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+2 BTC rh_lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+2 ETH lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+2 ETH rh_lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+2 SOL lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+2 SOL rh_lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+2 HYPE lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+2 HYPE rh_lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+2 XRP lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+2 XRP rh_lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+2 SUI lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+2 SUI rh_lighter | 1 -6.324786 0 NA | 0 NA 0 NA | -3.761053 -0.812231
+2 NEAR lighter | 2 -10.091018 0 NA | 1 -11.939209 0 NA | 0.230771 -6.702674
+2 NEAR rh_lighter | 2 -1.152810 0 NA | 1 1.469230 0 NA | 1.049033 3.095974
+2 ZEC lighter | 2 -4.091388 0 NA | 2 -4.091388 0 NA | 0.309698 -3.675571
+2 ZEC rh_lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+2 VVV lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+2 VVV rh_lighter | 1 -1.903457 0 NA | 0 NA 0 NA | 0.000000 4.188322
+2 LIT lighter | 0 NA 0 NA | 0 NA 0 NA | NA NA
+2 LIT rh_lighter | 3 -1.478744 1 -0.526772 | 1 -2.852934 0 NA | 1.625230 2.019236
+
+All selected episodes (30s spacing reduces repeats; cross-asset/session dependence remains).
+window asset target direction decisionElapsedSeconds | costPlausible localNetBP controlNetBP quoteExcessBP midpointExcessBP | entryDelayMS consumedBP remainingBP | controlEntry/controlExit
+1 NEAR rh_lighter +1 122.016 | False -1.882530 -1.587348 -0.295182 -0.427272 | 596.592656 0.627622 0.627582 | matched/matched
+1 ZEC rh_lighter -1 156.012 | False -6.765131 NA NA NA | 499.736232 0.338133 -3.944173 | native_grid_reject/native_grid_reject
+1 VVV lighter -1 159.011 | False 1.674417 NA NA NA | 551.484695 -0.742034 3.044592 | missing_pair/missing_pair
+1 NEAR lighter +1 173.016 | False 4.823544 NA NA NA | 499.323538 -0.396791 8.047610 | matched/source_before_due
+1 SUI lighter +1 181.012 | False -11.113751 NA NA NA | 557.277304 3.607159 -6.323997 | matched/source_before_due
+1 LIT rh_lighter -1 182.011 | False -0.000000 NA NA NA | 501.722648 -0.000000 4.086340 | source_before_due/missing_pair
+1 LIT rh_lighter +1 218.015 | False -2.849798 NA NA NA | 496.937760 -0.791056 0.395536 | source_before_due/source_before_due
+1 NEAR lighter -1 224.017 | True 0.104442 NA NA NA | 643.572120 -1.107020 2.370843 | matched/source_before_due
+1 VVV lighter -1 262.065 | False -3.843870 NA NA NA | 559.271261 3.842554 -0.818093 | matched/missing_pair
+1 NEAR rh_lighter -1 293.013 | False -3.767188 NA NA NA | 797.486732 -0.104624 0.732390 | native_grid_reject/native_grid_reject
+1 LIT rh_lighter +1 342.012 | False -3.972302 NA NA NA | 749.766464 0.000000 -0.263838 | matched/source_before_due
+1 ZEC lighter -1 379.064 | True -6.686199 -10.652200 3.966001 0.009041 | 551.410727 -0.000000 -6.676455 | matched/matched
+1 LIT lighter +1 452.010 | True -6.061405 -6.007674 -0.053730 -0.924696 | 461.687472 2.372417 -3.954341 | matched/matched
+1 ZEC lighter -1 460.011 | True 4.597121 NA NA NA | 459.057578 1.190483 5.278136 | source_before_due/matched
+1 VVV rh_lighter +1 474.071 | False -6.471014 NA NA NA | 590.823186 0.000000 0.190387 | source_before_due/source_before_due
+2 LIT rh_lighter -1 126.003 | True -2.852934 NA NA NA | 501.448428 4.084510 0.395364 | matched/source_before_due
+2 NEAR rh_lighter -1 126.054 | False -3.774851 NA NA NA | 549.453264 0.209670 0.209674 | source_before_due/source_before_due
+2 NEAR rh_lighter -1 158.004 | True 1.469230 NA NA NA | 500.178228 1.888396 5.982274 | native_grid_reject/native_grid_reject
+2 LIT rh_lighter +1 160.004 | False -2.373105 -1.846332 -0.526772 2.241778 | 498.849944 0.791181 1.318496 | matched/matched
+2 VVV rh_lighter +1 176.020 | False -1.903457 NA NA NA | 582.183867 0.000000 4.188322 | native_grid_reject/native_grid_reject
+2 ZEC lighter -1 289.003 | True -3.039257 NA NA NA | 515.920577 -1.191131 -2.732717 | matched/source_before_due
+2 NEAR lighter -1 290.004 | True -11.939209 NA NA NA | 515.809839 0.461541 -8.692275 | missing_pair/source_before_due
+2 ZEC lighter +1 330.003 | True -5.143518 NA NA NA | 461.186818 1.810527 -4.618425 | source_before_due/source_before_due
+2 LIT rh_lighter -1 354.021 | False 0.789806 NA NA NA | 582.733164 -0.000000 4.343849 | source_before_due/matched
+2 NEAR lighter -1 448.001 | False -8.242828 NA NA NA | 515.733454 -0.000000 -4.713073 | matched/source_before_due
+2 SUI rh_lighter +1 467.001 | False -6.324786 NA NA NA | 501.750698 -3.761053 -0.812231 | matched/source_before_due
+
+Coverage and gate denominators (scheduled counts include both venue assignments):
+Window1 2026-10-01T22:35:09.954317+00:00 through 2026-10-01T22:45:10.719028+00:00: {"scheduled_evaluations":7154,"usable_prior":3976,"below_move_threshold":3841,"nonfresh_pair":2592,"missing_prior":586,"large_observed_moves":135,"response_not_lagging":110,"observable_lags":25,"selected_episode":15,"same_episode":10}
+Window1 controlentry: {"matched":8,"native_grid_reject":2,"source_before_due":4,"missing_pair":1}
+Window1 controlexit: {"source_before_due":6,"matched":4,"native_grid_reject":2,"missing_pair":3}
+Window1 nonmarketmarkers: {"control":2}
+Window2 2026-10-01T23:05:23.060573+00:00 through 2026-10-01T23:15:23.879141+00:00: {"scheduled_evaluations":7144,"usable_prior":3560,"below_move_threshold":3457,"nonfresh_pair":2828,"missing_prior":756,"large_observed_moves":103,"response_not_lagging":87,"observable_lags":16,"selected_episode":11,"same_episode":5}
+Window2 controlentry: {"matched":5,"missing_pair":1,"source_before_due":3,"native_grid_reject":2}
+Window2 controlexit: {"source_before_due":7,"native_grid_reject":2,"matched":2}
+Window2 nonmarketmarkers: {"control":2}
+
+Verification: five targeted synthetic tests passed before raw evaluation. Independent Sol result review recomputed all26 local/control arithmetic, entry caps and recorded execution-clock boundaries; counts and all40rows reconcile. Root summary independently aggregated the frozen result. No source changed after the frozen replay. Old windows had previously inspected outcomes and remain exploratory. A larger set of repeated profiles is not additional independent evidence.
