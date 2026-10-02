@@ -1,0 +1,136 @@
+{
+  "schema": "polymarket-no-basket-optimistic-books-v1",
+  "status": "frozen_optimistic_books_probe",
+  "recorded_utc": "2026-10-02T10:12:31.945647+00:00",
+  "reserved_bytes": 0,
+  "event_id": "606422",
+  "endpoint": "https://clob.polymarket.com/books",
+  "output_dir": "reports/polymarket-no-basket/optimistic-books-v1",
+  "chain_plan": {
+    "path": "reports/experiment-storage/polymarket-no-basket-chain-metadata-v2.json",
+    "bytes": 29554,
+    "sha256": "690f657d353ad965debddc8dc00e2a74a6eaa4a64cb722a86f7cc797e3fb5e02"
+  },
+  "chain_summary": {
+    "path": "reports/polymarket-no-basket/chain-metadata-v2/summary.json",
+    "bytes": 8030,
+    "sha256": "bbca4e635dd829766be7bd8e3a77afeccf5502b1d3ce8962aee6c4b5dbfadf4a"
+  },
+  "markets": [
+    {
+      "index": 0,
+      "market_id": "2589810",
+      "question_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a00",
+      "condition_id": "0xa69ef420d8b4075ad8ba8611d02c63cb2ece46f5c8c643af223c272689b0c96f",
+      "yes_token_id": "17010377994663817312158123655937348199252960045746746128731746451645055725586",
+      "no_token_id": "61725366781282351729996972759460154434089275036953062948669003249092837754960"
+    },
+    {
+      "index": 1,
+      "market_id": "2589811",
+      "question_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a01",
+      "condition_id": "0x9cf563d7b55aa9aa876d5d7e55126347eee473f0ae56d799e325fdef2bf25297",
+      "yes_token_id": "33268510350568915228897273528353467773422190590579607471427765079749830445947",
+      "no_token_id": "110888499829195123034987289109543572302716575133123608254293945182185650232552"
+    },
+    {
+      "index": 2,
+      "market_id": "2589812",
+      "question_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a02",
+      "condition_id": "0xdf9bf27ee5757c55b44b8b9826ddc9ec3a8809aa3278634c45edbb7fc8f1a3e3",
+      "yes_token_id": "111061902544814266207267295505639408607400625795891618462682726460921782993748",
+      "no_token_id": "42038775866198212615491650114881818219665139981763207699110491615333273795415"
+    },
+    {
+      "index": 3,
+      "market_id": "2589813",
+      "question_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a03",
+      "condition_id": "0x12aa13b3da17ceae1b0a59b5d5b77121e91bb79b4bb0b52bf6543ed3f8d0953b",
+      "yes_token_id": "55159722761418013044126414276680602270318000841690689684819994448621694923050",
+      "no_token_id": "78632395083310670734315205502061249602319069653915932320155846460019107676757"
+    },
+    {
+      "index": 4,
+      "market_id": "2589814",
+      "question_id": "0x09ac0b2770dbcad3f2e4f5356a68af57cb8ca7502b02645a07b0290d46026a04",
+      "condition_id": "0xde5d75ab7702875623ba509bc923241e1211da74a113521b3b70ddac930d7316",
+      "yes_token_id": "18246296022868501258060085368606280205967114341141276439803424448463050819498",
+      "no_token_id": "41864497411878191766967581422432961750808440991174085516384293402629587721839"
+    }
+  ],
+  "request_body": [
+    {
+      "token_id": "61725366781282351729996972759460154434089275036953062948669003249092837754960"
+    },
+    {
+      "token_id": "110888499829195123034987289109543572302716575133123608254293945182185650232552"
+    },
+    {
+      "token_id": "42038775866198212615491650114881818219665139981763207699110491615333273795415"
+    },
+    {
+      "token_id": "78632395083310670734315205502061249602319069653915932320155846460019107676757"
+    },
+    {
+      "token_id": "41864497411878191766967581422432961750808440991174085516384293402629587721839"
+    }
+  ],
+  "limits": {
+    "slots": 15,
+    "slot_interval_seconds": 4,
+    "anchor_after_claim_seconds": 2,
+    "maximum_start_lateness_seconds": 0.25,
+    "request_seconds": 3,
+    "request_work_seconds": 64,
+    "process_seconds": 75,
+    "response_bytes": 131072,
+    "total_response_bytes": 1048576,
+    "trace_plaintext_bytes_in_memory": 1048576,
+    "trace_gzip_bytes": 196608,
+    "derived_receipts_bytes": 65536,
+    "maximum_levels_per_side": 5000
+  },
+  "source_budget": "New protocol/source/test package <=52000 bytes within existing262144 Polymarket source cap. Prior sources/tests/protocol/docs remain charged and unchanged. No compiler/install.",
+  "raw_budget": "Existing raw108042 bytes; new trace target+pending <=2*196608=393216 gives raw peak501258, below existing1310720. Plaintext is bounded memory only. No new global reservation.",
+  "active_research_reserved_bytes": 243007488,
+  "active_research_headroom_bytes": 11747328,
+  "sampling": "ONE run. At claim, choose wall+monotonic anchor two seconds ahead before any HTTP; preserve its literal UTC in claim. Slot k starts at anchor+4*k for k0..14. A slot more than250ms late is missed and never rescheduled. Each slot issues at most one fixed five-token POST. Slots remain in the final denominator regardless of observation. First transport/resource/JSON/identity failure stops future HTTP and marks all remaining slots unavailable; after exact five-token identity validation, empty asks, invalid numeric/tick/hash/timestamp fields or crossed books are slot-level unavailable states with no derived bound and do not change subsequent sampling. Freshness/coherence failure alone is diagnostic and also continues. A subsequent scheduled slot is not a retry of a failed slot. No retry, fallback, redirects, proxies, pagination, early success stop or size/event substitution.",
+  "identity_validation": "Exactly five response book objects, each expected NO asset_id exactly once, corresponding condition_id in market, neg_risk exactly true. No additional/missing/duplicate token IDs. Verify chain summary pinned and status metadata_mapping_compatible_conversion_unproven,55 observations,registered count5 and matching ten token IDs. Current quote snapshot need not be same time as earlier chain block; this limitation remains explicit.",
+  "book_validation": "Strict bounded JSON. price,size,tick_size,min_order_size must be bounded nonnegative plain-decimal strings with at most6 fractional digits and32 total chars; reject signs/exponents/nonfinite. Require0<price<=1,size>0,tick>0<=1,min_order_size>0; price is an integer tick multiple. Both sides required arrays <=5000 levels each; validate levels, normalize order in memory (do not assume wire ordering) and derive best ask=min ask price. Bids are used only to flag crossed book (maxbid>=minask invalid); never to model resale/rescue or profitability. Require nonempty bounded hash string <=128 chars. Empty asks produce unavailable slot. No depth walk, quantities, fill model or parameter selection.",
+  "time_validation": "timestamp must be10-digit Unix-seconds or13-digit Unix-milliseconds decimal string; record inferred unit and original value. The docs call this snapshot time without specifying a unit, so conversion/freshness remain explicitly interpretive. Record local request start/end UTC and monotonic duration, plus bounded HTTP Date if present. For diagnostics define fresh/coherent only if each timestamp is no later than receipt+250ms, no older than5s at receipt, and cross-book timestamp span<=500ms. These criteria are frozen; neither common response nor freshness proves atomic/executable liquidity.",
+  "bound": {
+    "quote_unit": "Conditional nominal pUSD accounting, using official docs assertion that all Polymarket trading uses pUSD; individual book objects have no unit field. No real USD/USDC redemption/equivalence assertion.",
+    "formula": "For equal netQ>0 of each of five NO tokens, displayed taker cost>=Q*sum(bestAsk_i); reviewed full-NO source gross collateral<=4Q. Define per-unit optimistic margin=4-sum(bestAsk_i), computed exactly with Decimal. Zero trading/conversion fees,gas,latency,capital/setup costs and no dust/rebate credit deliberately favor the candidate. Acquiring extra gross shares to cover fees cannot improve this bound.",
+    "states": [
+      "unavailable_slot",
+      "conditional_nominal_nonpositive_recorded_set",
+      "necessary_price_condition_only"
+    ],
+    "decision": "For a field-valid recorded set, margin<=0 rejects positive immediate displayed taker margin under the candidate same-unit conversion model at those recorded quotes; margin>0 merely fails to reject. Record freshness/coherence separately and do not call asynchronous/stale sets contemporaneous. Summary preserves all15 slots and separate counts of invalid/missing/fresh/positive/nonpositive. No all-slot rejection unless every scheduled slot is field-valid and fresh/coherent and nonpositive; even then claim only these15 observed sets under the stated model, not an entire continuous interval or universal absence of profit.",
+    "remaining_gates": "Deployed-source conversion equivalence, actual successful conversion, authoritative fee rounding/units/delay,depth/minimums,fillable five-leg acquisition/settlement/partial-fill liquidation,gas/setup/dust disposition and inclusion are unproved. None is needed for this conditional zero-cost necessary-condition screen; all remain before a profit claim."
+  },
+  "retention": "Bounded gzip JSONL of original response bodies encoded base64 plus request/receipt metadata; no plaintext raw file. Each attempted or missed slot checkpoints atomically. Excluded economic fields beyond asks are not reported/analyzed; bids only integrity, last_trade_price/history/rewards never used. Compact derived summary/terminal/supervisor; preserve partial trace and all missing slots on every stop. Default dry mode0HTTP,required --run --plan-sha256 exactpins, refuse existing output. Derived book hash and HTTP Date use SHA256 fingerprints; originals remain in raw trace. Interrupted attempts are unknown, never zero.",
+  "implementation_guidance": "Reuse unchanged metadata strictJSON/deadline/publish helpers and verify pinned chainv2 source chain where useful. Hardcode endpoint/output/caps/event and exact request-body/market mapping so editing a JSONplan cannot broaden targets. Ownsource/tests pins verified before and after run. Minimal collector and focused synthetics: known positive/zero/negative arithmetic, unordered/invalid/duplicate identities,crossed/empty books, timing slots/freshness, bounded partial-read cumulative failure and preserved terminal. Root review+commitfreeze required before ONE HTTP run.",
+  "sources": [
+    "https://docs.polymarket.com/api-reference/market-data/get-order-books-request-body",
+    "https://docs.polymarket.com/concepts/pusd",
+    "https://docs.polymarket.com/trading/fees",
+    "https://github.com/Polymarket/neg-risk-ctf-adapter/blob/main/src/NegRiskAdapter.sol",
+    "https://github.com/Polymarket/ctf-exchange-v2/blob/main/src/adapters/NegRiskCtfCollateralAdapter.sol"
+  ],
+  "request_body_sha256": "c12bb47d5d5d55012e7a7a9229cb30396dfa6bf884162a53008d87592ab5121b",
+  "frozen_utc": "2026-10-02T10:39:07.173296+00:00",
+  "source_pins": [
+    {
+      "path": "scripts/polymarket_no_basket_optimistic_books.py",
+      "bytes": 24781,
+      "sha256": "829f244edd870784cd8c6fddb9da44af1da3e523eaec5aaab097b7c2413432fb"
+    },
+    {
+      "path": "tests/test_polymarket_no_basket_optimistic_books.py",
+      "bytes": 15592,
+      "sha256": "73d33720e286b8132b80f7f0a338686276506ce1a9bfd2503bc391a006f5f4e3"
+    }
+  ],
+  "offline_validation": "Root full source/tests review; 7 focused tests pass in0.259s; coder7 in0.229s. Dry0HTTP. Reviewed denominator, conditional bound, strict caps, interrupted unknowns and pre-send250ms gate. Root local commit required before one run."
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "paper-rescue-evidence-availability-v1",
+  "recorded_utc": "2026-10-02T10:28:27.598915+00:00",
+  "review": 198,
+  "trade_id": "1790935317386135-24681-convergence",
+  "scope": "Source and exact-event evidence metadata only; no additional economic/raw-body reads.",
+  "database": "data/paper-monitor-10s/paper.sqlite3",
+  "path_check": "Root confirmed data/paper-monitor/paper.sqlite3 resolves to the same device/inode as data/paper-monitor-10s/paper.sqlite3.",
+  "observed_by_independent_source_review": {
+    "trade_status": "CLOSED",
+    "trade_payload_bytes": 5250,
+    "evidence_rows_for_trade_prefix": 0,
+    "evidence_rows_in_fixed_unix_window": [
+      1790935316,
+      1790935321,
+      0
+    ],
+    "current_evidence_rows": 2000,
+    "earliest_retained_evidence_ts": 1790936562.7065,
+    "latest_retained_evidence_ts": 1790936624.8431
+  },
+  "source_findings": "paper_engine.receive checks due/generation/source times; successful fill emits capped-book evidence plus available-side state. Rejected entry has no fill evidence. BookRing samples at0.5s and retains at most4 nearby books for a closed trade. The evidence table has independent age/row/byte pruning.",
+  "conclusion": "No contemporaneous evidence for this exact event remains in that live evidence table. The retained terminal record supports the completed arithmetic audit, not an independent replay of depth or first eligible books. No global claim about every possible archive was made; no new profitable replication."
+}
