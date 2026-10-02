@@ -2173,3 +2173,8 @@ Complete coverage;10exact losses (2convergence−$3.7143508151,8Premium−$14.16
 ### Routine review 207 — 2026-10-02 13:06:33 UTC
 
 Complete coverage;10exact losses (3convergence−$3.3501688783,7Premium−$12.7480530141),5HLprice_limit rejects,no positives/estimates/aborts. Cumulative2,746=2,710exact losses+1estimated loss+5paired+30rescue audited gains. Exact report/snapshot archived, hashes in review-loop, pre-write guards passed. Paper fresh/ok CPU67.42%/p95lag45.89ms; rolling61 healthy, recovery gap retained. Both original news analysis and once-launched inventory-only successor evaluating; prior corrected failure preserved, root owns outputs, routine operational fields only. Carry438sampled/2invalid/424future. Archive3,914,578B;106future pairs project4,480,830B,margin762,050B. Next13:26:33UTC.
+
+
+### Routine review 208 — 2026-10-02 13:26:33 UTC
+
+Complete coverage;9exact losses (6convergence−$6.3353722726,3Premium−$5.4975382473),1Premium abort,9HLprice_limit+1RHnotional_cap rejects,no positives/estimates. Cumulative2,755=2,719exact losses+1estimated loss+5paired+30rescue audited gains. Exact report/snapshot archived, hashes in review-loop, pre-write guards passed. Paper fresh/ok69.20%CPU/40.48mslag; rolling63 healthy, recovery gap retained. Both news analyses terminal success, root owns reconciliation; routine operational reads only and outputs untouched. Carry442sampled/2invalid/420future. Archive3,919,269B;105future pairs project4,480,179B,margin762,701B. Commit waits for root index release. Next13:46:33UTC.

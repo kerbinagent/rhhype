@@ -6400,3 +6400,20 @@ Paper pulses fresh/ok while two news offline companions advance; review CPU67.42
 Root separate inventory-only news successor frozen0dd268a, planSHAe4e5d4b56e2a2a461123fe23067e749b44ae043c4e97f6f9b37291b6d1d42793, launched once12:48:07UTC/PID494305. Same sealed capture/methods/100rows/20audits,3600s total/600s child bounds. Original ordinary-fix failure and all original controls retained. Both original and successor operational states evaluating_completed_capture; root reports normal progress, routine opens no outcomes or raw. Outputs remain controller-owned; no competing launch or staging.
 
 Carry13:05:00.119548UTC:438sampled,two invalid(71,389),424future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–207:2,746completions=2,710exact losses,one estimated loss,five audited paired gains,30audited rescue gains. Archive3,914,578/5,242,880B;106future pairs at5,342B project4,480,830B,margin762,050B. Next **13:26:33 UTC**.
+
+
+### Review 208 — 2026-10-02 13:26:33 UTC
+
+All eight coverage and aborted-coverage checks complete. Exact report and independently timed snapshot preserved with deterministic gzip, exclusive create, decompression verification and per-write cap and growth guards.
+
+`review-20261002T132633Z.json.gz` raw 19,593 B SHA-256 `d2abb482b12516ecc307b49b96d3118dfea03844069ad889f2e7467a876d795a`; gzip 2,954 B SHA-256 `07793321a88764f94a24e10e05e4db44271e949f63c2a95f2e6e0bb2e1d6ff79`.
+
+`current-epoch-at-review208.json.gz` raw 9,284 B SHA-256 `37eda17335efd827046b4471218a9676bc3e0c609bbb38123d94d4e391557636`; gzip 1,737 B SHA-256 `5c0d79074edf407d64cf49ac60cfb6799de387c0b1823d63a0c3fc48388b849b`.
+
+Snapshot read 2026-10-02T13:26:54.548601Z, updated epoch seconds 1790947614.125075; counts not pooled. Nine exact losses: six convergence −$6.335372272644918 and three Premium −$5.497538247271223. One Premium abort; nine Hyperliquid price_limit and one RH notional_cap rejects; no gains or estimates. Convergence fees$0.179493137999998/other$2.9941429369999923/capital$0.00004619764516747282; Premium fees$2.093953143100407/other$1.495849198000542/capital$0.000005906170160122071.
+
+Paper pulses fresh/ok; review CPU69.20%,p95lag40.48ms,RSS291.31MiB,107pairs. Rolling63 healthy at13:24check245.31s/9,368,471compressed B/65,562records,two connections/no errors/economics false; chunks1,310,265,486B/controls41,350B under separate2GB. Recovery gap retained; no routine raw decode or intervention.
+
+Both news analyses now finished successfully: original success observed13:10:51, successor success observed13:20:17 with final heartbeat13:18:52.635301. Routine read operational status only; root owns completed economic reconciliation/publication. Original ordinary-fix inventory failure remains preserved. No outputs staged or competing launch. Root requested brief shared-index hold for its research publication; routine archives/journals prepared without staging until release.
+
+Carry13:25:00.118898UTC:442sampled,two invalid(71,389),420future/interrupted,running/no error/retry/evaluation. No carry sample contents opened. Reviews66–208:2,755completions=2,719exact losses,one estimated loss,five audited paired gains,30audited rescue gains. Archive3,919,269/5,242,880B;105future pairs at5,342B project4,480,179B,margin762,701B. Next **13:46:33 UTC**.
