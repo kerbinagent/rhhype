@@ -1,0 +1,130 @@
+{
+ "analysis_plan": {
+  "arithmetic": "exact decimal context (prec 120, Inexact and Rounded trapped)",
+  "ex_post_bound": "per instrument, runs >= 1000 ms after the expiry where the bound winner would have paid against the displayed touch; reported separately, never used to select a trade",
+  "post_expiry_activity": "bbo changes with server time after the expiry; silence is not a halt",
+  "post_record_book": "the first l2Book for the instrument whose send time follows that record's receipt on the local monotonic clock; a winner gap is displayed if the winner YES ask < 1 or the loser YES bid > 0; after a record, tokens may be retired and post-settlement purchases, splits and redemption are unproven, so a displayed gap is a conditional display, never closed cash",
+  "pre_record_gap": "unavailable: no documented source timestamps the mark updates adjacent to the expiry",
+  "prompt_book_ns": 5000000000,
+  "record": "the first settledOutcome response that binds to the requested id and the frozen spec with a fraction of exactly 0 or 1 (expiry-v1 binding)"
+ },
+ "decision_rules": {
+  "candidate_post_record_display_conditional": "any instrument whose first causally later l2Book after its first bound record (fraction 0 or 1) displays a winner gap (winner YES ask < 1 or loser YES bid > 0); a conditional recorded post-settlement display only: tokens may already be retired and post-settlement purchases, splits and redemption are unproven, so it is never executable, closed cash or profit",
+  "inconclusive": "otherwise, with reasons; failure states per instrument: no bound record, record only from the sweep, late or missing post-record book, unparsable book",
+  "never_decisive": "pre-record gap (unavailable without timestamped adjacent marks), post-expiry bbo activity (silence is not a halt), ex-post runs (use the bound settlement; not knowable, not causal)",
+  "park_no_post_record_winner_gap_display": "every instrument has a bound record from the event-driven follow-up and a causally later l2Book sent within 5 s of it that is null or displays no winner gap; scope: these check times only"
+ },
+ "draft_note": "Collaborator draft (offline). The instruments are the 2026-10-03 06:00 UTC instances from the frozen snapshot, used for offline tests; expiry-v1 already covers that expiry, so a run needs root to pin a fresh outcomeMeta snapshot for a later expiry, list that day's ids, set status frozen_settle_window, add pins and a raw allocation. No request is authorized by this draft.",
+ "expiry_utc": "2026-10-03T06:00:00+00:00",
+ "instruments": [
+  {
+   "kind": "binary",
+   "outcome": 7544
+  },
+  {
+   "kind": "binary",
+   "outcome": 7545
+  },
+  {
+   "kind": "binary",
+   "outcome": 7546
+  },
+  {
+   "kind": "binary",
+   "outcome": 7549
+  },
+  {
+   "kind": "bucket",
+   "outcome": 7550,
+   "question": 371
+  },
+  {
+   "kind": "bucket",
+   "outcome": 7551,
+   "question": 371
+  },
+  {
+   "kind": "bucket",
+   "outcome": 7552,
+   "question": 371
+  },
+  {
+   "kind": "bucket",
+   "outcome": 7553,
+   "question": 371
+  }
+ ],
+ "not_established": [
+  "determination time",
+  "tradability, splitting or redemption after a settlement record",
+  "takerability or fills",
+  "fees",
+  "collateral identity",
+  "other days"
+ ],
+ "output_dir": "reports/hip4-research-continuation/settle-v1",
+ "output_limits_bytes": {
+  "bundle_gzip": 2097152,
+  "claim_terminal_and_supervisor_receipts": 16384,
+  "projection": 32768
+ },
+ "previous": "reports/experiment-storage/hip4-research-continuation-allocation-v1.json",
+ "previous_sha256": "5f0053c23c3c46ead5863665e8fb80b8a0aaa66ce1a71422f7740e101a2e3a60",
+ "request_plan": {
+  "rest": {
+   "body_cap": 8192,
+   "decompression": false,
+   "follow_up": "on the first outcomeSettled id of an instrument: settledOutcome, then l2Book for its YES coin sent only after the settledOutcome response is received (weights 20 and 2)",
+   "max_pairs_per_instrument": 2,
+   "meta_pre": "outcomeMeta at open - 60 s via the frozen books-v1 fetch_all (weight 20)",
+   "min_spacing_seconds": 0.05,
+   "proxies": false,
+   "redirects": false,
+   "retry": false,
+   "sweep": "after the window, the same pair for each instrument without a valid bound record",
+   "timeout_seconds": 10,
+   "url": "https://api.hyperliquid.xyz/info"
+  },
+  "retention": {
+   "cap": 2097152,
+   "reserve": 786432,
+   "rule": "stop reading the websocket at cap - reserve; queued follow-ups, the stop event and the sweep then fit; any stop other than window_closed censors the stream evidence"
+  },
+  "websocket": {
+   "compression": false,
+   "connections": 1,
+   "liveness_stop_seconds": 90,
+   "max_frame_bytes": 262144,
+   "ping": {
+    "every_seconds": 30,
+    "payload": "{\"method\":\"ping\"}"
+   },
+   "reconnect": false,
+   "subscriptions": [
+    "bbo for each instrument YES coin, ascending",
+    "outcomeMetaUpdates"
+   ],
+   "url": "wss://api.hyperliquid.xyz/ws"
+  },
+  "window": {
+   "close": "expiry + 480 s",
+   "launch": "between open - 900 s and open - 120 s, else refused",
+   "open": "expiry - 120 s"
+  }
+ },
+ "resolution_rule_source": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/contract-specifications#recurring-outcomes",
+ "schema": "hip4-continuation-settle-v1",
+ "snapshot": {
+  "gz_sha256": "84c66367adb38910a516372d4115e8da161022041419fed7a73f357bd649ce48",
+  "path": "reports/hip4-outcome-v1/metadata-v1/response.json.gz",
+  "raw_sha256": "5a84b5984bd5565217ae9c7a4491be6d8dfb1b24909ed60dc6c4ae5ae88a44f6"
+ },
+ "status": "draft_settle_window",
+ "storage_request_bytes": {
+  "bundle_gzip_cap": 2097152,
+  "controls": 16384,
+  "note": "separate root allocation; no compression ratio assumed; a cap stop censors the stream evidence only",
+  "projection": 32768,
+  "total": 2146304
+ }
+}
