@@ -1,0 +1,24 @@
+{
+  "schema": "comet-source-metadata-v1-category-amendment",
+  "recorded_utc": "2026-10-02T14:57:00.268940+00:00",
+  "status": "prospective_final_plan_and_fixture_capacity_no_fetch_authority",
+  "previous": {
+    "path": "reports/experiment-storage/comet-source-metadata-v1-allocation.json",
+    "bytes": 2491,
+    "sha256": "bcef87b2721373045e6443edf67337c638cb7adf2d6f4107c1692d68d32f1c92"
+  },
+  "overall_reserved_bytes": 131072,
+  "global_change_bytes": 0,
+  "transfer_bytes": 4096,
+  "from_category": "controls_allocation_reviews_and_margin",
+  "to_category": "source_tests_design_and_final_plan",
+  "categories_after_bytes": {
+    "raw_body_and_all_copies": 65537,
+    "source_tests_design_final_plan_and_temporary_fixtures": 20480,
+    "derived_projection": 8192,
+    "all_transport_messages": 16384,
+    "controls_allocation_reviews_and_margin": 20479
+  },
+  "reason": "The four complete offline files total16290B, leaving94B in the original16384B source category before the mandatory final plan and temporary-fixture peak. Reallocate unused controls/margin before final freeze or further tests; preserve meaningful checks and readable code. Any prior fixture excess, if present, must be reported rather than erased.",
+  "rules": "Original allocation remains immutable; the final plan pins this amendment as well. No changes to one-request,body,CID,deadline,endpoint orfailure rules. No network request or metadata fetch authorized by this amendment. Root reviews final source and freezes separately."
+}
