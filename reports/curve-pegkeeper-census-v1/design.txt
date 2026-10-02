@@ -1,0 +1,36 @@
+At the previous reward probe's exact anchor26107811, inspect eight regulator
+registry slots and the recent maintenance-event denominator. The documented
+source has MAX_LEN8; this is a bounded source model, not deployed-bytecode
+equivalence. Each unavailable slot remains unknown, not proven absence.
+Regulator stablecoin() and is_killed() are also read; bad enum values unknown.
+All ten eth_calls use canonical anchor hash, gas300000, diagnostic sender0x1,
+value0,gasPrice0. No update call, state mutation, override or real transaction.
+
+Query Provide(uint256)/Withdraw(uint256) logs for the union of the original
+four documented keepers and all available canonical registry addresses.
+The fixed7200inclusive blocks end at26107811 and start26100612. Read and
+recheck both boundary headers. Record actual elapsed block timestamp seconds;
+do not label it an exact calendar day. Keep every event and unavailable slot
+in raw evidence. Enforce128events and65536B logs response; no pagination,
+narrowing,retry or provider switch if unavailable. Complete capture is16RPC.
+Each log must have one expected topic,one canonical uint256,nonremoved flag,
+allowed emitter,in-range block,and strictly increasing block/transaction/log
+position; each repeated transaction hash must retain its block identity.
+Logs at either boundary must match its pinned header hash. Interior event
+headers are not fetched; their canonicality remains a provider assumption.
+
+The first three distinct transaction hashes in chronological event order are
+tagged for a subsequent receipt study. Selection is frozen before collection
+and uses no amount,reward or economics. No receipts are fetched by this run.
+Raw events remain the denominator; output includes counts and a digest of
+all parsed events. Provide/Withdraw amounts are protocol maintenance amounts,
+not caller rewards. Neither observed logs nor current registry entries prove
+historical pool identity,caller cash,gas,obtainable inclusion or profitability.
+Provider log completeness remains an assumption; no active-universe proof.
+
+384KiB reservation:256KiB raw,64KiB source/tests/design/plan,16KiB controls,
+16KiB projection,32KiB margin. Reuse immutable prior Capture/Reader/helpers.
+196608B total bodies,262144B raw,16requests,20s each,165s work/180s wall,
+20CPU seconds,512MiB RAM,3million total supplied call gas. Default dry;
+freeze source,input,runtime and manifest pins before network. Exclusive run,
+streamed failure bytes and exact offline replay, no evidence deletion.

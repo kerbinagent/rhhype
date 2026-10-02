@@ -1,0 +1,24 @@
+At finalized Ethereum block26107811, all four documented PegKeepers returned
+zero estimates and RPC errors for the independent update(address) simulations.
+There were zero available update return values, rather than four zero rewards
+or four economic losses. USDT's canonical Error(string) data says "peg
+unprofitable". USDC,pyUSD and frxUSD have no error data; their causes remain
+unknown. All four reported the documented crvUSD token and regulator.
+
+The fixed31request run completed in4134ms. All124raw files are preserved:
+34540body bytes and69370total raw bytes. Exact collector replay passes; an
+independent no-collector raw audit reconciled the6pins,31requests,framing,
+ABI results,errors,bytes,header recheck and projection. Ten preflight tests
+passed. Source and plan were committed before collection at530928b.
+
+This state supplies no positive reward candidate. An estimator zero is not
+an upper bound on reward, and unavailable simulation output is not a proof
+that future maintenance cannot pay. No transfer,balance,LP cash conversion,
+real gas,inclusion or repeatable profit has been verified. The next distinct
+question is coverage: the regulator's actual registered addresses and a fixed
+recent census of maintenance events. It does not repeat this reward probe.
+
+Plan:plan.json SHA256
+5ed6b70b5182863e049f6749cfb49518a1a6ffb21ac5d308eca50a8b470830b6
+Evidence:run-v1/projection.json,run-v1/terminal.json,run-v1/raw/
+Independent audit:root-review.json
