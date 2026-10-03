@@ -29,9 +29,6 @@ Specific lessons from retained evidence:
   relied on one favorable move entered by two alternative rules. The winning
   move also occurred on the reference venue. It is neither two replications
   nor evidence that a local liquidity shock caused the gain.
-- The [residual profiles](../reports/single-venue-research/residual-profile-readout.txt)
-  contained thousands of overlapping profiles but no positive group that
-  persisted across both short windows. More rows did not provide more regimes.
 
 ## Decision register
 
@@ -66,6 +63,7 @@ strategy in its family. “Inconclusive” is not a successful economic result.
 | Uniswap protocol-fee exchange | **Tested basket fails the gross screen.** [Audit](../reports/uniswap-fee-cash-screen-v1/readout.txt):9,070.143827 USDC proceeds versus36,449.016583 UNI acquisition cost;27,378.872756 deficit before transaction costs. | Six-token route after55pools. Fresh [LP](../reports/uniswap-v2-fee-harvest-v1/readout.txt) and [V4](../reports/uniswap-v4-fee-inventory-v1/readout.txt) inventories audited at later blocks; separate states. Historical [receipt](../reports/uniswap-fee-release-receipt-v2/readout.txt) audited; native payments unknown. No family-wide or cash claim. |
 | Liquity V2 public liquidator | **No economic result.** [History](../reports/liquity-public-liquidator-v2/readout.txt):provider returned no events in narrowed4096-block query. | Earlier16384-block query refused by archive gate. Both retained; no payout, cash or family-rejection claim. |
 | Sky Clipper keeper incentives | **No reward observed.** [ETH-A census](../reports/sky-clipper-keeper-v1/readout.txt):zero active auctions at one state. | [Event query](../reports/sky-clipper-reward-events-v1/readout.txt) refused:provider requires an emitter address. Not zero events; no cash or protocol-wide absence claim. |
+| Convex harvest caller rewards | **No cash profit shown.** [Receipt](../reports/convex-caller-incentive-v1/readout.txt):one positive,one zero,two reverts. | [Exits](../reports/convex-caller-exit-quotes-v1/readout.txt):two quotes0.00000694–0.00000705 WETH versus0.00005819 ETH unpaid harvest reference;two unknown. No paid-cost floor or family-wide rejection. |
 
 ## Rules for the next research decision
 
