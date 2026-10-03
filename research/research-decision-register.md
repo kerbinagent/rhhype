@@ -68,6 +68,8 @@ strategy in its family. “Inconclusive” is not a successful economic result.
 
 | Sky LitePSM conversion | **Conditional gross rejection at fixed state.** [Audit](../reports/sky-psm-pool-state-v1/readout.txt):four pools,both directions,all positive sizes nonpositive under standard V3/PSM formulas. | 12 quotes negative;20 unavailable retained. Runtime and future state remain unproved. |
 
+| Uniswap protocol-fee exchange | **Inventory study pending.** Public source exchanges a fixed UNI debit for selected fee assets. [First capture](../reports/uniswap-fee-auction-v1/root-review.json) stopped at its header cap before state views. | A separately funded seven-asset successor precedes same-state UNI acquisition, release, cash conversion and full costs. |
+
 ## Rules for the next research decision
 
 1. Define one missing question, event, comparator, costs and failure denominator

@@ -61,8 +61,10 @@ rules; it is one additional event window, not sufficient validation by itself.
 The user asked for parallel collection, broad root-led exploration and deeper
 Sol analysis, and allocated 2 GB for rolling captures. The
 [parallel workflow](parallel-research-workflow.md) separates those jobs.
-A `gpt-6-luna` agent owns scheduled report preservation and collection-health
-alerts; two `gpt-6.1-sol` assignments handle bounded implementation and analysis.
+The Mac mini peer owns Comet sales; local Claude Code owns Curve reward accounting
+and the frozen HIP-4 schedule. Both have autonomous assignments through
+3 October 08:00 UTC and report only a decisive result, hard blocker or that
+checkpoint. Internal reviewers audit captures and preserve scheduled reports.
 The root owns hypothesis selection and experiment decisions. Repeating healthy
 collection checks is not research progress. The fresh BTC dated-carry study continues unchanged to its frozen
 endpoint, 4 October 00:30 UTC, with no interim economic inspection.
