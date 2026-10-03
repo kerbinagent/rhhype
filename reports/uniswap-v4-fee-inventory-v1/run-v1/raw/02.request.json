@@ -1,0 +1,1 @@
+{"allow_unavailable":false,"name":"block","request":{"id":2,"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["finalized",false]}}
