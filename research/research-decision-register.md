@@ -68,7 +68,7 @@ strategy in its family. “Inconclusive” is not a successful economic result.
 
 | Sky LitePSM conversion | **Conditional gross rejection at fixed state.** [Audit](../reports/sky-psm-pool-state-v1/readout.txt):four pools,both directions,all positive sizes nonpositive under standard V3/PSM formulas. | 12 quotes negative;20 unavailable retained. Runtime and future state remain unproved. |
 
-| Uniswap protocol-fee exchange | **Collection simulation audited; no profit established.** [Result](../reports/uniswap-fee-collect-v1/readout.txt):55 pools returned fees; modeled six-token jar remains separate from4,000 UNI burn cost. | Frozen same-state cash screen buys UNI and exits the basket through six distinct pools. Quotes, release/payment, complete gas and inclusion remain separate gates. Earlier capped capture retained. |
+| Uniswap protocol-fee exchange | **Tested basket fails the gross screen.** [Audit](../reports/uniswap-fee-cash-screen-v1/readout.txt):9,070.143827 USDC proceeds versus36,449.016583 UNI acquisition cost;27,378.872756 deficit before transaction costs. | Conditional one-route result after55-pool collection simulation. Actual latest-nonce release history is separately planned to identify the selected basket. No family-wide or realized-cash claim. |
 
 ## Rules for the next research decision
 

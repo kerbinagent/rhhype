@@ -1,0 +1,7 @@
+At the audited historical block 26108195, all six fixed-pool QuoterV2 calls returned source-conditionally full amounts. The modeled UNI exit produces 0.248406078594696820 WETH; combined once with 1.729651003677825444 jar WETH, the WETH exit quotes 1.978057082272522264 WETH into USDC. Five exit legs use distinct pools from the UNI purchase leg.
+
+Modeled USDC proceeds are 9,070.143827, including 968.323407 jar USDC and the WETH, DAI, USDT and WBTC exit quotes. The exact-output quote for acquiring 4,000 UNI costs 36,449.016583 USDC. This fixed route therefore shows a 27,378.872756 USDC gross deficit before transaction costs. No intermediate WETH is counted as USDC twice; fees from these hypothetical swaps are not collected again.
+
+Independent raw audit verified all 13 pins, 36 files, nine requests/receipts, canonical block hash and final header, ABI quantities, six return words, full-quantity gates, dependency and cash arithmetic. Body 24,414 B, raw 36,059 B, projection 3,144 B; terminal complete in 1,053 ms.
+
+The quotes are historical and source-conditional. No release or swaps executed; payment, total gas, inclusion and closed cash remain unproved. This result rejects only the one fixed six-pool route under its assumptions, not other routes, sizes or future states. Evidence: run-v1/ and root-review.json.
