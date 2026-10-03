@@ -42,19 +42,11 @@ not the current experiment queue.
   future short-term test needs funding-index accounting. No paper trades
   or economic results were produced by this transport/schema check.
 
-The paper test separates cash from the extra 5 bp stress allowance. Its
-losses persist with zero Standard trading fees and without the stress or
-capital deductions. In 10 of the 11 primary trades the entry spread worsened
-between signal and delayed fill, with median deterioration $0.026716.
-Displayed take-profit marks also failed to survive delayed exits. These
-records motivate testing different execution structures; they do not
-justify assuming faster fills or retuning this sample into a winner.
-
-No profitable strategy has been established. Public quotes and simulated
-fills remain distinct from actual account execution. Recent one-venue studies
-have not established a repeatable positive signal. The already frozen 2 October
-12:26–12:36 UTC news study tests a different activity regime with the existing
-rules; it is one additional event window, not sufficient validation by itself.
+The paper losses persist with zero Standard fees and without stress or capital
+deductions. Entry worsened in 10/11 trades, with median deterioration $0.026716;
+take-profit marks failed to survive delayed exits. This does not justify faster
+fill assumptions or retuning. No profitable strategy is established. The decision
+register tracks the completed news study and its prospective successor.
 
 ## Division of work
 

@@ -64,6 +64,7 @@ strategy in its family. “Inconclusive” is not a successful economic result.
 | Liquity V2 public liquidator | **No economic result.** [History](../reports/liquity-public-liquidator-v2/readout.txt):provider returned no events in narrowed4096-block query. | Earlier16384-block query refused by archive gate. Both retained; no payout, cash or family-rejection claim. |
 | Sky Clipper keeper incentives | **No reward observed.** [ETH-A census](../reports/sky-clipper-keeper-v1/readout.txt):zero active auctions at one state. | [Event query](../reports/sky-clipper-reward-events-v1/readout.txt) refused:provider requires an emitter address. Not zero events; no cash or protocol-wide absence claim. |
 | Convex harvest caller rewards | **No cash profit shown.** [Receipt](../reports/convex-caller-incentive-v1/readout.txt):one positive,one zero,two reverts. | [Exits](../reports/convex-caller-exit-quotes-v1/readout.txt):two quotes0.00000694–0.00000705 WETH versus0.00005819 ETH unpaid harvest reference;two unknown. No paid-cost floor or family-wide rejection. |
+| Beefy public harvest rewards | **Measurement unavailable.** [Capture](../reports/beefy-caller-reward-v1/readout.txt):first simulation exceeded32768-byte response cap;11/13 requests,second branch unattempted. | Preserve failure; separately fund larger response capacity for the same candidates. No reward or cash conclusion. |
 
 ## Rules for the next research decision
 

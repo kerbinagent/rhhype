@@ -1,0 +1,5 @@
+Beefy public caller-reward diagnostic: unavailable.
+
+The fixed first two source-selected Ethereum vaults were yb-cbbtc and stakedao-susg-reusd. Both strategies resolved at the same parent; metadata estimates cannot establish receipts. The first harvest simulation response exceeded its32768-byte limit. Capture retained exactly32769 bytes as the overflow sentinel and stopped after11 of13 RPCs in1277ms. Body48756/raw61601 bytes,44 raw files, all exact manifests and hashes reconciled by root and independent reviewer.
+
+Neither branch has a usable harvest result. The second simulation and canonical parent recheck were not requested. No projection was published; incomplete raw replay refuses. This is a measurement failure, not zero rewards, a negative economics result or a family-wide rejection. No new call is permitted under the frozen grant. A separately funded measurement could enlarge response capacity, preserve this failure, retain both source-selected candidates and freeze its own limits before collection.
