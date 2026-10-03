@@ -1,0 +1,7 @@
+At historical block 26108195, the fixed public-adapter collect eth_call returned 55 ordered pool amount pairs. The factory owner, adapter factory and adapter TokenJar matched the documented addresses. The call's writes were discarded.
+
+Returned collection amounts, in separate native units: 67.818019948749110446 UNI; 0.01507559 WBTC; 182.841857609558722603 DAI; 968.229654 USDC; 1.729545180988143316 WETH; 1374.821906 USDT. Each return is used as reported, without subtracting the pool's retained unit again. Adding the audited same-block TokenJar stock gives modeled balances of 73.973824957316034389 UNI; 0.01507559 WBTC; 183.057387038427309407 DAI; 968.323407 USDC; 1.729651003677825444 WETH; 1375.137734 USDT. No prices or cross-token sum is implied.
+
+Independent raw audit verified all nine pins, 24 files, six requests/receipts, exact calldata and 55 response pairs, final header, and all native-unit totals. Body 30057 B, raw 47048 B, projection 3802 B; terminal complete in 872 ms.
+
+This is a historical discarded simulation, not a completed collection or release. Runtime correspondence, token payments, UNI funding/burn, exits, total gas, closed cash and profit remain unproved. Evidence: run-v1/ and root-review.json.
