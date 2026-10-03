@@ -1,0 +1,29 @@
+The single discovery run completed20 requests at finalized block26107971,
+hash0xb8fc296a98f902a658674459bb2f3936fa2b9b62cf2648832d8131fc7cb26069.
+All17 selected calls returned canonical values. LitePSM gem,dai,pocket,
+conversion10**12,and token decimals6/18 matched the documented expectations.
+Both tin and tout were0. Observed DAI inventory was
+800105587721317270548465826 native units (about800.106million DAI), and
+pocket USDC was4080567176041215 native units (about4.081billion USDC).
+The reported pocket allowance was positive. All four selected fee tiers
+100,500,3000,10000 returned nonzero pool addresses. The live getter was1;
+it is reported without inventing a swap gate absent from the reviewed source.
+
+The capture retained80raw files,15884body bytes and38913raw bytes, took2009ms,
+and passed exact collector replay. The initial/final headers matched. This
+is a historical snapshot selected via finalized, not current executable
+liquidity. No runtime-source equivalence, token transfer, price, slippage,
+full-transaction gas, obtainable inclusion or closed cash has been proved.
+
+The next prospective question is a fixed matrix of same-state round trips:
+four fee tiers,two directions,and four USDC lot sizes1000/10000/100000/1000000.
+Both DEX directions can use exact-output quotes; the source's no-price-limit
+exact-output path checks the full requested amount. Each direction keeps
+its own native settlement unit. This avoids treating a partial exact-input
+quote as a full fill. Every quote/error belongs in the denominator, with no
+best-size optimization or resampling. This proposal authorizes no collection;
+it requires a separate funded frozen plan, source ABI check and preflight.
+
+Plan SHA256:00e38932a4f509d107d2f1c5cd86ab955cf6291c97eb5dc3589b8b6299d5e48d.
+Preflight commit:ae2f155. Discovery evidence:run-v1/ and preflight-review.json;
+independent no-collector raw audit is recorded separately in root-review.json.
