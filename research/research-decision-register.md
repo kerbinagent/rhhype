@@ -66,7 +66,7 @@ strategy in its family. “Inconclusive” is not a successful economic result.
 
 | Curve maintenance caller rewards | **No positive candidate at fixed state.** [Four keepers](../reports/curve-pegkeeper-reward-v1/readout.txt) and [fifth](../reports/curve-pegkeeper-registry-reward-v1/readout.txt) all reverted; fifth says Regulator ban. | Event census unavailable at block-response cap. Claude designs historical receipt accounting offline; no cash or repeatability proof. |
 
-| Sky LitePSM conversion | **State matched; quotes frozen.** [Discovery](../reports/sky-psm-conversion-v1/readout.txt):zero fees,positive inventories,four pools. | [32-row design](../reports/sky-psm-fixed-quotes-v1/design.txt):four fixed sizes,both directions. Execution,total gas and cash remain unproved. |
+| Sky LitePSM conversion | **Conditional gross rejection at fixed state.** [Audit](../reports/sky-psm-pool-state-v1/readout.txt):four pools,both directions,all positive sizes nonpositive under standard V3/PSM formulas. | 12 quotes negative;20 unavailable retained. Runtime and future state remain unproved. |
 
 ## Rules for the next research decision
 

@@ -1,0 +1,7 @@
+At the audited historical block 26107971, all eight exact integer price bounds hold: both DAI and USDC round-trip directions at every one of the four fixed DAI/USDC pools have nonpositive modeled gross margin for every positive native-USDC amount. This is a sufficient, source-conditional all-size result, including sizes whose prior exact-output quote was unavailable. It is not a live executable-profit or net-gas claim.
+
+The 19 public state calls completed in 2318 ms. Independent raw audit validated all 76 files, requests, receipts and hashes; the same original/final header, all 16 ABI values, the eight cross-products and all 32 output-inventory comparisons. Body 17316 B, raw 38780 B, projection 9065 B; all caps passed.
+
+Thirteen output-inventory comparisons were sufficient and 19 insufficient at this snapshot. Nineteen of the 20 earlier quote-error rows requested more output than the pool token balance; the fee-100, one-million-USDC DAI-cycle row had enough balance but still errored. These balances do not identify the inner cause of any revert. All 20 quote results remain unavailable. Zero active liquidity would not prove no full-range liquidity.
+
+The conclusion depends on standard Uniswap V3 and PSM source semantics, unchanged state, ordinary token behavior, and the historical identity/unit observations. Deployed runtime correspondence, token payment, PSM swap, complete transaction gas, closed cash, obtainable inclusion and repeatable profit remain unverified. Evidence: run-v1/ and root-review.json.
