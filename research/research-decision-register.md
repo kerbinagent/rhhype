@@ -68,9 +68,9 @@ strategy in its family. “Inconclusive” is not a successful economic result.
 
 | Sky LitePSM conversion | **Conditional gross rejection at fixed state.** [Audit](../reports/sky-psm-pool-state-v1/readout.txt):four pools,both directions,all positive sizes nonpositive under standard V3/PSM formulas. | 12 quotes negative;20 unavailable retained. Runtime and future state remain unproved. |
 
-| Uniswap protocol-fee exchange | **Tested basket fails the gross screen.** [Audit](../reports/uniswap-fee-cash-screen-v1/readout.txt):9,070.143827 USDC proceeds versus36,449.016583 UNI acquisition cost;27,378.872756 deficit before transaction costs. | Conditional six-token route after55-pool collection. [Latest release](../reports/uniswap-fee-release-history-v1/readout.txt) selected20assets including native ETH; receipt capped/unavailable. No family-wide or cash claim. |
+| Uniswap protocol-fee exchange | **Tested basket fails the gross screen.** [Audit](../reports/uniswap-fee-cash-screen-v1/readout.txt):9,070.143827 USDC proceeds versus36,449.016583 UNI acquisition cost;27,378.872756 deficit before transaction costs. | Conditional six-token route after55-pool collection. [Latest release](../reports/uniswap-fee-release-history-v1/readout.txt) selected20assets including native ETH; receipt capped. [Fresh LP study](../reports/uniswap-v2-fee-harvest-v1/design.txt) frozen. No family-wide or cash claim. |
 
-| Liquity V2 public liquidator | **Source preparation complete; history probe frozen.** [Plan](../reports/liquity-public-liquidator-v1/design.txt):latest liquidation across three branches in a fixed16384-block window. | Separate caller reward, token inventory and gas; no cash or profit result yet. |
+| Liquity V2 public liquidator | **No economic result.** [History](../reports/liquity-public-liquidator-v2/readout.txt):provider returned no events in narrowed4096-block query. | Earlier16384-block query refused by archive gate. Both retained; no payout, cash or family-rejection claim. |
 
 ## Rules for the next research decision
 
