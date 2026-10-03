@@ -1,0 +1,25 @@
+At the previously frozen block26107971, the32-row matrix returned12 usable
+exact-output quotes. All12 had negative modeled round-trip margin before
+gas. They cover fees100/500, both native settlement units, and USDC lots
+1000/10000/100000. No positive conditional candidate was observed.
+
+For fee100, the DAI-cycle deficits were approximately0.047354,0.483025,
+5.778894 DAI at those three lots. USDC-cycle deficits were0.152881,1.538286,
+16.331658 USDC. For fee500, the corresponding deficits were0.132821,
+1.521725,34.572502 DAI and0.872119,8.916055,110.388645 USDC. Native integer
+amounts remain in projection.json; the different units are never summed.
+
+All20 other quotes returned RPCcode3 with canonical Error(string) data
+"Unexpected error": the four1million-lot rows at fees100/500 plus all16
+fee3000/10000 rows. This is the Quoter wrapper reason, not the underlying
+cause. They remain unknown, not20 losses. All17 metadata identities matched.
+
+The one run made52requests in6076ms, retaining208raw files,25556body bytes
+and94698raw bytes. Exact collector replay passed. Source/runtime binding,
+PSM token payments,full transaction gas,closed cash and obtainable inclusion
+remain unverified. The available negative rows do not reject smaller sizes,
+other states or routes; the finalized snapshot is historical.
+
+Plan99634b36c52c566fe319a6c7e0225a8b5e21a1595e7481745149cce0fa223be6.
+Preflight commit:e0e5564. Evidence:run-v1/,preflight-review.json; independent
+raw admission is recorded separately in root-review.json.
