@@ -1,0 +1,1 @@
+{"allow_unavailable":false,"name":"events","request":{"id":2,"jsonrpc":"2.0","method":"eth_getLogs","params":[{"fromBlock":"0x18e53c0","toBlock":"0x18e63bf","topics":[["0x7c5bfdc0a5e8192f6cd4972f382cec69116862fb62e6abff8003874c58e064b8","0x275de7ecdd375b5e8049319f8b350686131c219dd4dc450a08e9cf83b03c865f"]]}]}}

@@ -1,4 +1,4 @@
-# Current research decisions — 2 October 2026
+# Current research decisions — 3 October 2026
 
 ## Objective and process correction
 
@@ -7,11 +7,9 @@ Directional one-venue trades and larger sizes are in scope: the user clarified
 on 2 October that $100 was an example. Evaluate size against depth, costs and
 required capital. No strategy currently meets the repeatability objective.
 
-The main process failure has been allocating too much work to execution
-variants before demonstrating a cost-adjusted predictive signal. Accounting
-checks have caught real defects and should remain, but they cannot establish
-an edge. Prior plans already called for forward samples and controls; the
-improvement is enforcing those requirements before the expensive stage.
+Screen for a cost-adjusted predictive signal before implementing execution
+variants. Keep accounting checks, forward samples and controls; correct
+accounting alone does not establish an edge.
 
 Specific lessons from retained evidence:
 
@@ -63,14 +61,11 @@ strategy in its family. “Inconclusive” is not a successful economic result.
 | Hyperliquid HIP-4 outcome conversions | **Q357 coverage invalidated; economics unavailable.** Peer reported bbo/l2Book mismatches before the window. [Current peer status](../reports/experiment-storage/continuation-peer-status-v2.json): user-approved Q359 l2Book capture and sealed readouts scheduled for Oct3; root verified all three timers waiting. | Complete the untouched Q359 window and required coverage checks before economic interpretation. Q357 zero decisions are not an economic loss or gain; closed cash remains unproved. |
 | Contractual collateral sales and auction rewards | **Conditional bounds audited.** [152 routes](../reports/peer-comet-oct02-continuation/route-bounds-root-review.json):60 nonpositive,72 positive upper bounds,18 empty,2 unknown; maximum0.004275 USDC. | No executable cost floor,cash or positive-depth proof. Root gas comparison is conditional; Mac pursues an autonomous successor. |
 | Aave atomic liquidation cash | **Historical reproduction; fragile conditional margin.** [Census](../reports/aave-liquidation-census-v1/readout.md):three prior-state healthy events. [First replay](../reports/aave-ordered-replay-v1/readout.md):both receipts matched,99.8301% of unwrapped ETH paid to block recipient; remainder0.000004203244671887 ETH after gas. [Prefix removal](../reports/aave-ordered-control-v1/readout.md) reverted. | [Paired views](../reports/aave-state-transition-v1/readout.md):HF1.000279→0.992132,LINK−0.81451%,parent aggregator matches emitter. [Access capture](../reports/aave-hint-access-v1/readout.md) capped/unavailable. Extra1bp of gross unwrap erases remainder. Cash,account grouping,obtainable ordering and repeatability unproved. |
-
 | Curve maintenance caller rewards | **No positive candidate at fixed state.** [Four keepers](../reports/curve-pegkeeper-reward-v1/readout.txt) and [fifth](../reports/curve-pegkeeper-registry-reward-v1/readout.txt) all reverted; fifth says Regulator ban. | Claude reports a recent caller LP reward and gas debit; residual LP prevents cash closure. Exit research continues. Old-log provider token gate retained; peer results await root review. |
-
 | Sky LitePSM conversion | **Conditional gross rejection at fixed state.** [Audit](../reports/sky-psm-pool-state-v1/readout.txt):four pools,both directions,all positive sizes nonpositive under standard V3/PSM formulas. | 12 quotes negative;20 unavailable retained. Runtime and future state remain unproved. |
-
 | Uniswap protocol-fee exchange | **Tested basket fails the gross screen.** [Audit](../reports/uniswap-fee-cash-screen-v1/readout.txt):9,070.143827 USDC proceeds versus36,449.016583 UNI acquisition cost;27,378.872756 deficit before transaction costs. | Six-token route after55pools. Fresh [LP](../reports/uniswap-v2-fee-harvest-v1/readout.txt) and [V4](../reports/uniswap-v4-fee-inventory-v1/readout.txt) inventories audited at later blocks; separate states. Historical [receipt](../reports/uniswap-fee-release-receipt-v2/readout.txt) audited; native payments unknown. No family-wide or cash claim. |
-
 | Liquity V2 public liquidator | **No economic result.** [History](../reports/liquity-public-liquidator-v2/readout.txt):provider returned no events in narrowed4096-block query. | Earlier16384-block query refused by archive gate. Both retained; no payout, cash or family-rejection claim. |
+| Sky Clipper keeper incentives | **No reward observed.** [ETH-A census](../reports/sky-clipper-keeper-v1/readout.txt):zero active auctions at one state. | [Event query](../reports/sky-clipper-reward-events-v1/readout.txt) refused:provider requires an emitter address. Not zero events; no cash or protocol-wide absence claim. |
 
 ## Rules for the next research decision
 
@@ -91,14 +86,11 @@ Reuse captures, replay and independent accounting across hypotheses. Preserve
 frozen sources. Test concrete economic invariants, clock boundaries and observed
 defects; avoid broad refactors or more wrappers for empty branches.
 
-Report gate activation, data coverage, delayed execution, forecast quality,
-closed cash and uncertainty separately. Preserve original failures and
-unresolved outcomes. One compact decision register points to detailed
-historical reports; routine health logs stay with the monitor.
+Report activation, coverage, delayed execution, forecasts, closed cash and
+uncertainty separately. Preserve failures and unknowns in linked reports.
 
-User questions and status checks do not stop the ongoing research request.
-Answer them and continue unless the user explicitly asks to stop. Scheduled
-jobs and the routine monitor do not replace active research.
+Answer user questions and continue unless asked to stop. Scheduled jobs and
+monitoring do not replace active research.
 
 This documentation change has a 32,768-byte allocation in
 [the storage ledger](../reports/experiment-storage/research-process-review-v1.json).
