@@ -7008,3 +7008,14 @@ Exact report `review-20261003T034633Z.json.gz`: raw 18,168 B SHA-256 `6bc7c49d24
 Rolling control at 03:47:19 showed chunk148 collecting, 572.72 s/9,819,922 compressed B/81,969 records, two connections/no errors/economics false; controller chunks 1,911,215,502 B plus controls 84,287 B under separate 2 GB budget. Pressure lifecycle and recovery gap retained; no routine raw decode/restart/mutation. Dated-carry index at 03:45:00.151803: 614 sampled, two arrival-invalid (71,389), 248 future/interrupted; running/no error/retry/economic evaluation. No carry samples or blinded experimental outcomes opened.
 
 Reviews66–251: 2,996 completions = 2,948 exact losses, one estimated loss, seven audited paired gains, 40 audited rescue gains. Manual archive 4,137,143/5,242,880 B; 62 future scheduled pairs at 5,342 B project 4,468,347 B, margin 774,533 B. Next automatic due **2026-10-03 04:06:33.239257 UTC**. No Git/index/production change by routine.
+
+
+### Review 252 — 2026-10-03T04:06:32.603086+00:00
+
+Automatic 2026-10-03T03:46:32.590883+00:00–2026-10-03T04:06:32.603086+00:00 checkpoint, reviewed 2026-10-03T04:06:33.239444+00:00. All eight completion/abort coverages complete; zero closes, aborts, wins, estimates, costs or entry rejections. No manual baseline advance. Paper at review: running/ok, 4 feeds connected, 122 pairs, 58.67% CPU of one core, 37.28 ms p95 lag, 299.80 MiB RSS. Separately timed epoch snapshot read 2026-10-03T04:06:53.614292+00:00 (updated 2026-10-03T04:06:53.349861+00:00); counts not pooled into checkpoint.
+
+Exact report review-20261003T040633Z.json.gz: raw 17819 B SHA-256 52219a4e4b44ab87a4c82aa74078ee08ebd00d665588eccf99fc32348549eae0; gzip 2336 B SHA-256 ab1798e1074b189060352d7111467d40af8c71b38a840ffbc0b2df565a600d39. Independent snapshot current-epoch-at-review252.json.gz: raw 9302 B SHA-256 7621f4edde6b2ac3bca0b552e3a39a4bbaa8d614206fe2284548c42d9ec1ced8; gzip 1748 B SHA-256 fabef86d23e63160b38e265dcf3df7ceecfa18b2550c766b57fa2f3cd5d4aa12. Deterministic gzip, exclusive create, decompression and per-write archive-cap checks passed.
+
+Rolling control 2026-10-03T04:06:27.014040+00:00: chunk-000150 collecting, 536.74 s/10148132 compressed B/85121 records, 2 connections, errors [], economics False; controller chunks 1931567678 B plus controls 85579 B under separate 2000000000 B budget. Dated carry 2026-10-03T04:05:00.183330+00:00: sampled 618, arrival-invalid 2, interrupted 244; status running, error None, retries False, economics False. No routine raw decode/restart/mutation.
+
+No new completions; cumulative totals unchanged from review 251. Manual archive 4141227/5,242,880 B. Next automatic due **2026-10-03T04:26:33.239257+00:00**. No Git/index/production change by routine.

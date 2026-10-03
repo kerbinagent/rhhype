@@ -53,12 +53,13 @@ register tracks the completed news study and its prospective successor.
 The user asked for parallel collection, broad root-led exploration and deeper
 Sol analysis, and allocated 2 GB for rolling captures. The
 [parallel workflow](parallel-research-workflow.md) separates those jobs.
-The Mac mini peer owns Comet sales; local Claude Code owns Curve reward accounting
-and the frozen HIP-4 schedule. Both have autonomous assignments through
-3 October 08:00 UTC and report only a decisive result, hard blocker or that
-checkpoint. Internal reviewers audit captures and preserve scheduled reports.
-The root owns hypothesis selection and experiment decisions. Repeating healthy
-collection checks is not research progress. The fresh BTC dated-carry study continues unchanged to its frozen
+Mac owns collateral sales and joint batch bounds; local Claude owns keeper
+rewards, exit accounting and the frozen HIP-4 schedule. Both have standing queues
+and choose successors within existing grants without waiting for root. The
+3 October 08:00 UTC report is a checkpoint, not a stop. Send brief 45-minute
+heartbeats and immediate blockers or decisive results. Root checks idle gaps,
+pursues separate hypotheses and reviews evidence. Internal reviewers audit
+captures and preserve scheduled reports. The BTC dated-carry study retains its
 endpoint, 4 October 00:30 UTC, with no interim economic inspection.
 
 ## Earlier carry research: absolute funding versus a funding difference
