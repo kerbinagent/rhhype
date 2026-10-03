@@ -1,0 +1,7 @@
+At finalized Ethereum block 26108195, all 20 fixed views succeeded. Firepit pointed to UNI as its resource, 0xdead as resource recipient and the documented TokenJar; TokenJar named Firepit as releaser. The current threshold was 4,000 UNI and nonce 1,388. The six queried ERC20 decimals matched their expected units.
+
+The selected TokenJar balances were 6.155805008566923943 UNI, 0.093753 USDC, 0.215529428868586804 DAI, 0.315828 USDT, 0.000105822689682128 WETH, zero WBTC and zero native ETH. These are distinct native units; no prices were fetched and no basket value was computed. The seven assets are a fixed selection, not an all-token fee census.
+
+Independent raw audit verified all seven plan pins, 23 ordered requests, 92 raw files, response hashes, matching finalized/recheck headers, 19 ABI getters, the native balance quantity and every projection row. Capture retained 47,053 response-body bytes and 72,795 raw bytes in 2,572 ms, within its caps.
+
+A balance does not prove a release. Deployed runtime correspondence, caller UNI funding/allowance, token transfers, competition for nonce and inventory, complete gas, liquidation prices, closed cash and repeatable profit remain unverified. Evidence: run-v1/ and root-review.json.

@@ -1,0 +1,1 @@
+{"allow_unavailable":true,"name":"ETH_balance","request":{"id":22,"jsonrpc":"2.0","method":"eth_getBalance","params":["0xf38521f130fccf29db1961597bc5d2b60f995f85",{"blockHash":"0xb34142f46a23b8fb29f2f0a14a704bd10915891a566e718988a2e2555f68f9f4","requireCanonical":true}]}}
